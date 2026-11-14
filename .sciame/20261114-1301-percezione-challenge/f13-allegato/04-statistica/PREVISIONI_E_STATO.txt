@@ -1,0 +1,16 @@
+sciame-statistico, f13/04-statistica. Inizio lavoro: 2026-11-14T17:59:01+01:00 (date -Is).
+Previsioni scritte PRIMA di lanciare riconta.py e conti.py (ora del file: vedi sotto), dopo aver letto i verdetti (non cieche rispetto ai testi, cieche rispetto al mio riconteggio):
+ P1. Le cifre dei verdetti che riconto dai file grezzi tornano tutte (misura: numero di righe NON TORNA in ricontato.txt; smentita: >= 1).
+ P2. Numerosita' con binomiale esatta, alfa 0,05 a una coda, potenza 0,80: 0,90 contro 0,80 da' fra 80 e 95; 0,90 contro 0,95 da' fra 190 e 215; 0,90 contro 0,85 da' fra 300 e 420 (smentita: fuori dall'intervallo).
+ P3. «9 su 10: 55,5-99,7 %» e' Clopper-Pearson e non Wilson; «27 su 30: 0,74-0,97» e' Wilson (smentita: l'altro metodo da' quelle cifre).
+ P4. Con la correzione per 45 celle (z di Bonferroni) le celle sopra 0,90 fino a 2 s restano almeno 40 su 45 (smentita: meno di 40).
+ P5. Il flusso del seme s+1 e' quello del seme s avanzato di uno: 1000 su 1000 con un mio splitmix64 (smentita: < 1000).
+2026-11-14T18:01:06+01:00
+
+ESITI (scritti dopo i lanci; fine lavoro vedi ora sotto):
+ P1 regge: 31 righe TORNA, 0 NON TORNA (al primo lancio 1 NON TORNA per un'attribuzione mia sbagliata di «83 su 90»: e' della variante a soglia 40; con i parametri di partenza 36 su 46).
+ P2 mista: regge per l'n stabile (89 e 94; 203 e 191; 304), smentita per il primo n (78-82; 169-179; 270-281) e per 299.
+ P3 regge. P4 regge (45 su 45, limite peggiore 0,908). P5 regge (1000 su 1000; 0 dopo la riparazione).
+ Notato dopo: la potenza esatta e' a dente di sega; «2,67» e' la media su 20 celle (la cella citata accanto vale 6,02).
+ Consegna: FASCICOLO_VALUTAZIONE.md (parte I e II), riconta.py, conti.py, rifai.sh, ricontato.txt, conti.txt.
+2026-11-14T18:13:23+01:00

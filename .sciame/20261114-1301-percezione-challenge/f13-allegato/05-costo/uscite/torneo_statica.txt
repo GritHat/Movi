@@ -1,0 +1,28 @@
+## A11/A1 scena ferma, dopo 12 fotogrammi (un fotogramma valutato)  (reticolo 5 cm, 149200 punti)
+candidata     fot F_ogni F_prof  punti_FL occupati nascosti profondi S_nas S_ogni   resa%   t_med   t_max
+N0-suolo        1     1      1        10        0       10       10     0     0    65.2    1.11    1.16
+N1-suolo        1     1      1        10        0       10       10     0     0    65.2    1.11    1.16
+N1-colonna      1     1      1      6247        0     6247     5656     0     0    34.1    1.11    1.16
+Q1              1     0      0         0        0        0        0     0     0    94.8    0.00    2.27
+Q3              1     0      0         0        0        0        0     0     0    94.8    0.00    3.94
+Q3c             1     0      0         0        0        0        0     0     0    94.8    0.00    3.94
+P               1     1      0        15       15        0        0     0     0    38.4    5.33    5.38
+S10(B+M)        1     0      0         0        0        0        0     0     0    29.2    5.33    5.38
+S10p(B+M)       1     1      1      5341        0     5341     3711     0     0    78.4   48.47   48.65
+VO              1     1      1      7961       16     7945     4641     0     0    94.9    6.52    6.58
+VOa             1     0      0         0        0        0        0     0     0    80.3    8.13    8.39
+braccio Q senza 3x3 e senza margine: liberi 64011, falsi 104
+braccio Q «non valido = libero» (5% di buchi): liberi 65175, falsi 1267
+  N0-suolo    falsi/liberi = 1.42 %  (profondi 1.42 %)
+  N1-suolo    falsi/liberi = 1.42 %  (profondi 1.42 %)
+  N1-colonna  falsi/liberi = 22.18 %  (profondi 20.09 %)
+  Q1          falsi/liberi = 0.00 %  (profondi 0.00 %)
+  Q3          falsi/liberi = 0.00 %  (profondi 0.00 %)
+  Q3c         falsi/liberi = 0.00 %  (profondi 0.00 %)
+  P           falsi/liberi = 0.06 %  (profondi 0.00 %)
+  S10(B+M)    falsi/liberi = 0.00 %  (profondi 0.00 %)
+  S10p(B+M)   falsi/liberi = 10.51 %  (profondi 7.30 %)
+  VO          falsi/liberi = 11.98 %  (profondi 6.98 %)
+  VOa         falsi/liberi = 0.00 %  (profondi 0.00 %)
+## A1 VH (blocchi 8^3 da 5 cm): blocchi allocati 437 su 1200
+punti del reticolo in blocchi non allocati: 41672 ; dati «libero» a tre vie: 0 di questi (liberi totali 66379) ; a due vie («non occupato => libero»): liberi 146901, di cui falsi 80505

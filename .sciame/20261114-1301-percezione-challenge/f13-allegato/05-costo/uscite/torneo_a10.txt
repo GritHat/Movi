@@ -1,0 +1,8 @@
+## A10 tempi per fotogramma nello scenario C (ms): mediana / p95 / massimo / (massimo:mediana), per ripetizione
+  rip. 0: N1-suolo 1.12/1.18/1.67(1.49) Q1 0.34/0.50/0.66(1.95) Q3 0.71/1.19/1.63(2.29) Q3c 0.66/1.08/1.33(2.03) P 5.25/5.70/5.71(1.09) S10p(B+M) 40.81/49.26/49.74(1.22) VO 4.89/6.70/6.80(1.39) VOa 8.04/8.37/8.61(1.07)
+  rip. 1: N1-suolo 1.13/1.17/1.83(1.63) Q1 0.36/0.49/0.77(2.16) Q3 0.78/1.29/1.57(2.02) Q3c 0.70/1.07/1.35(1.93) P 5.23/5.68/7.16(1.37) S10p(B+M) 40.57/49.86/83.45(2.06) VO 4.61/5.60/7.49(1.63) VOa 6.93/7.40/9.20(1.33)
+  rip. 2: N1-suolo 1.13/1.22/1.99(1.76) Q1 0.34/0.47/0.84(2.48) Q3 0.70/1.15/1.61(2.29) Q3c 0.67/1.07/1.52(2.28) P 5.29/5.88/6.89(1.30) S10p(B+M) 41.90/50.30/51.67(1.23) VO 4.58/5.57/5.74(1.25) VOa 6.83/7.21/7.73(1.13)
+   (Q: 18640 punti interrogati per fotogramma; P: 313200 interrogazioni; N, S10p, VO: aggiornamento)
+  VH (5 cm, raggi 1 su 4) tetto nessuno: mediana 11.06 ms, p95 14.62, massimo 15.63 (fotogramma 0: 13.98 ms con 525 allocazioni; fotogramma 30: 4.96 ms con 0) ; blocchi alla fine 525 ; espulsi 0
+  VH (5 cm, raggi 1 su 4) tetto 300 blocchi: mediana 36.20 ms, p95 75.86, massimo 76.44 (fotogramma 0: 76.00 ms con 143526 allocazioni; fotogramma 30: 13.96 ms con 21622) ; blocchi alla fine 300 ; espulsi 7399036
+  passi di raggio per fotogramma (10 cm, raggi 1 su 4): VO 968850 ; VOa con le ombre 1195345 (+23 %)

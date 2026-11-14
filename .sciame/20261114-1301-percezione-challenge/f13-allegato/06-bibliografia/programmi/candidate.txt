@@ -1,0 +1,10 @@
+# area: chiavi candidate (scelte a mano dal curatore leggendo titoli e usi)
+sensori: realsense-d400-scheda realsense-d455 realsense-confronto-camere realsense-d400-accuratezza realsense-taratura-profondita realsense-bkm-taratura realsense-alta-velocita-d435 realsense-filtri-post orbbec-gemini-330-scheda orbbec-gemini-335 orbbec-femto-bolt st-um2884 st-vl53l5cx st-vl53l7cx st-vl53l8cx st-um3038 ldrobot-ld19 slamtec-rplidar-c1 librealsense
+rumore: ahn2019 nguyen2012 zhang2023 qiu2023 rossi2025
+mappe: hornung2013 octomap duberg2020 ufomap-deposito oleynikova2017 millane2024 niessner2013 nuss2018 moras2011 usenko2017 williams1978 bonxai openvdb
+seguimento: bewley2016 zhang2022 cao2023 aharon2022 weng2020 pang2021 luiten2021 kalman1960 kuhn1955 luiten-trackeval rlabbe-filterpy
+previsione: scholler2020 uhlemann2024 mercat2019 angelopoulos2021 lindemann2023 dixit2022 cleaveland2024 gibbs2021 barber2019 gneiting2007 cheraghipouria2026 kress2021 hetzel2024 gupta2018 pellegrini2009 lerner2007 clopper1934
+occlusione: khurana2021 tokmakov2021 vanhoorick2023 hsieh2023 scholl1999 koch2007 wyffels2015 orzechowski2018 koschi2021 krejci2026 guibas1997 balch2019
+sicurezza: iso-13855 iso-ts-15066 iso-10218-2 marvel2017 adamides2025 therobotreport-veo us-brevetto-11846916 iso-3691-4 iec-60825-1 us-49cfr-236-205
+ausili: kayukawa2019 xu2023 romlay2021 dossantos2025 kozlov2026 martinez2014 lupu2020 giudice2008 klatzky2006
+dati: thor thor-magni tum-rgbd depthtrack princeton-tracking-benchmark bonn-rgbd-dynamic realsense-file-di-esempio drow frog friburgo-rgbd-people zenodo-tof-vl53l5cx rosbags

@@ -1,0 +1,9 @@
+TEMPO geo=D tracce=10 celle_A=232 cicli=1500 mediana=0.295 ms p95=0.316 ms max=0.395 ms
+TEMPO geo=D tracce=10 celle_A=232 cicli=1500 mediana=0.290 ms p95=0.316 ms max=0.511 ms
+TEMPO geo=D tracce=10 celle_A=232 cicli=1500 mediana=0.289 ms p95=0.310 ms max=0.362 ms
+TEMPO geo=T tracce=10 celle_A=1034 cicli=1500 mediana=0.547 ms p95=0.709 ms max=1.089 ms
+TEMPO geo=T tracce=10 celle_A=1034 cicli=1500 mediana=0.534 ms p95=0.618 ms max=1.109 ms
+TEMPO geo=T tracce=10 celle_A=1034 cicli=1500 mediana=0.640 ms p95=1.024 ms max=3.454 ms
+TEMPO geo=L tracce=10 celle_A=1740 cicli=1500 mediana=0.986 ms p95=1.778 ms max=2.035 ms
+TEMPO geo=L tracce=10 celle_A=1740 cicli=1500 mediana=1.050 ms p95=1.934 ms max=2.202 ms
+TEMPO geo=L tracce=10 celle_A=1740 cicli=1500 mediana=1.064 ms p95=1.962 ms max=2.347 ms

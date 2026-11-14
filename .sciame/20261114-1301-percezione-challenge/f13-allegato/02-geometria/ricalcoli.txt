@@ -1,0 +1,196 @@
+
+== 1. Modello della camera ==
+D455 / D435i: f dal campo orizzontale 446.8 px; dal verticale 433.0 px
+Gemini 335: f dal campo orizzontale 424.0 px; dal verticale 415.7 px
+f = 424.0 px a 848x480: campo orizzontale 90.0 gradi, verticale 59.0 gradi
+f = 410.7 px a 848x480: campo orizzontale 91.8 gradi, verticale 60.6 gradi
+bordo basso 44.0 gradi sotto l'orizzonte; bordo alto 14.0 gradi sopra
+
+== 2. Dove il suolo e' visibile ==
+z_min (suolo, ogni colonna) = h/tan(theta+FOVv/2) = 1.2426 m
+   azimut  0.0 gradi: rho_min = z_min/cos(phi) = 1.243 m
+   azimut 20.0 gradi: rho_min = z_min/cos(phi) = 1.322 m
+   azimut 30.0 gradi: rho_min = z_min/cos(phi) = 1.435 m
+   azimut 43.5 gradi: rho_min = z_min/cos(phi) = 1.713 m
+   azimut 44.0 gradi: rho_min = z_min/cos(phi) = 1.727 m
+   spigolo del campo sul suolo: x = +-1.434 m, azimut 49.1 gradi, rho 1.897 m
+   bordo laterale del suolo visto: |x| <= 0.9166 z + 0.2947 (asintoto 42.5 gradi)
+   con f = 424 px (campo verticale 59,0): z_min = 1.2206 m; a 44 gradi 1.697 m; a 43,5 gradi 1.683 m
+ostacolo alto 0.07 m: cima nel campo solo da z >= (h-a)/tan(44) = 1.1701 m
+ostacolo alto 0.10 m: cima nel campo solo da z >= (h-a)/tan(44) = 1.1391 m
+ostacolo alto 0.15 m: cima nel campo solo da z >= (h-a)/tan(44) = 1.0873 m
+ostacolo alto 0.30 m: cima nel campo solo da z >= (h-a)/tan(44) = 0.9320 m
+tetto del campo: y_max(z) = 1.2 + 0.2493 z
+   z = 1.243 m: 1.510 m
+   z = 1.7 m: 1.624 m
+   z = 1.9 m: 1.674 m
+   z = 2.0 m: 1.699 m
+   z = 2.3 m: 1.773 m
+   z = 3.0 m: 1.948 m
+   quota 1.60 m vista solo da z >= 1.604 m
+   quota 1.70 m vista solo da z >= 2.005 m
+   quota 1.75 m vista solo da z >= 2.206 m
+   quota 1.80 m vista solo da z >= 2.406 m
+   quota 1.90 m vista solo da z >= 2.808 m
+   quota 2.00 m vista solo da z >= 3.209 m
+geometria per profilo (h = 1,2 m, theta = 15 gradi): z_min suolo / z ostacolo 0,15 m / pendenza del tetto / z per quota 1,8 m / tetto a 3 m
+   D455, D435i (58): 1.243 / 1.087 / 0.2493 / 2.406 / 1.948
+   Gemini 335 a 848x480 (60): 1.200 / 1.050 / 0.2679 / 2.239 / 2.004
+   Gemini 335 a 1280x800 (65): 1.100 / 0.962 / 0.3153 / 1.903 / 2.146
+   f = 424 px (59,0): 1.221 / 1.068 / 0.2588 / 2.318 / 1.976
+sensibilita' di z_min: campo verticale 58 -3/+3 gradi: 1.310 / 1.179 m; theta 15 -1/+1 gradi: 1.287 / 1.200 m; h 1,2 -0,05/+0,05 m: 1.191 / 1.294 m
+lancio di raggi: min z al suolo 1.2448 m (ultima riga: scarto fra le colonne 0.00e+00 m)
+disco di 3 m: 28.274 m2; settore d'anello 87 gradi fra z_min e 3 m: 5.661 m2 = 20.02 %
+   regione esatta del foro stenopeico (z >= z_min, |x| <= T_h (z cos + h sin)) nel disco: 5.791 m2 = 20.48 %
+   settore di 87 gradi tagliato dalla retta z >= z_min: 5.369 m2 = 18.99 %
+   3 ToF da 60 gradi fino a 2.0 m: 6.283 m2 = 22.2 % del disco
+   2 ToF da 60 gradi fino a 2.0 m: 4.189 m2 = 14.8 % del disco
+   3 ToF da 45 gradi fino a 2.0 m: 4.712 m2 = 16.7 % del disco
+   3 ToF da 60 gradi fino a 1.0 m: 1.571 m2 = 5.6 % del disco
+   3 ToF da 60 gradi fino a 0.5 m: 0.393 m2 = 1.4 % del disco
+
+== 3. Ombra ==
+ostacolo alto 1.0 m a 1.5 m: ombra al suolo fino a 9.00 m
+ostacolo alto 0.5 m a 1.5 m: ombra al suolo fino a 2.57 m
+ostacolo alto 0.3 m a 1.7 m: ombra al suolo fino a 2.27 m
+ostacolo alto 0.4 m a 1.7 m: ombra al suolo fino a 2.55 m
+ostacolo alto 0.5 m a 2.0 m: ombra al suolo fino a 3.43 m
+ostacolo alto 1.0 m a 1.83 m: ombra al suolo fino a 10.98 m
+ostacolo alto 1.2 m a 2.0 m: ombra al suolo fino a infinito
+altezza minima del pannello a z_o che nasconde per intero una persona di statura s a z_p = 2,3 m: a = h + z_o * min((s-h)/z_p, tan 14)
+   s = 1.60: z_o 1.15: 1.400  z_o 1.5: 1.461  z_o 1.7: 1.496  z_o 1.8: 1.513  z_o 1.9: 1.530  z_o 2.0: 1.548
+   s = 1.70: z_o 1.15: 1.450  z_o 1.5: 1.526  z_o 1.7: 1.570  z_o 1.8: 1.591  z_o 1.9: 1.613  z_o 2.0: 1.635
+   s = 1.75: z_o 1.15: 1.475  z_o 1.5: 1.559  z_o 1.7: 1.607  z_o 1.8: 1.630  z_o 1.9: 1.654  z_o 2.0: 1.678
+   s = 1.80: z_o 1.15: 1.487  z_o 1.5: 1.574  z_o 1.7: 1.624  z_o 1.8: 1.649  z_o 1.9: 1.674  z_o 2.0: 1.699
+   s = 1.90: z_o 1.15: 1.487  z_o 1.5: 1.574  z_o 1.7: 1.624  z_o 1.8: 1.649  z_o 1.9: 1.674  z_o 2.0: 1.699
+   pannello alto 1.5: a 2,3 m resta in vista sopra 1.606 m (z_o 1.7), 1.563 m (z_o 1.9); tetto del campo a 2,3 m 1.773
+   pannello alto 1.6: a 2,3 m resta in vista sopra 1.741 m (z_o 1.7), 1.684 m (z_o 1.9); tetto del campo a 2,3 m 1.773
+   pannello alto 1.7: a 2,3 m resta in vista sopra 1.876 m (z_o 1.7), 1.805 m (z_o 1.9); tetto del campo a 2,3 m 1.773
+   pannello alto 1.8: a 2,3 m resta in vista sopra 2.012 m (z_o 1.7), 1.926 m (z_o 1.9); tetto del campo a 2,3 m 1.773
+durata dell'occlusione totale: T = (L z_p/z_o - w)/v, w = 0,45 m, z_p = 2,3 m
+   L = 1.0 z_o = 1.7: ombra 1.353 m, tratto nascosto 0.903 m: 0.64 s a 1.4 m/s, 0.90 s a 1.0 m/s, 1.81 s a 0.5 m/s
+   L = 1.0 z_o = 1.8: ombra 1.278 m, tratto nascosto 0.828 m: 0.59 s a 1.4 m/s, 0.83 s a 1.0 m/s, 1.66 s a 0.5 m/s
+   L = 1.0 z_o = 1.9: ombra 1.211 m, tratto nascosto 0.761 m: 0.54 s a 1.4 m/s, 0.76 s a 1.0 m/s, 1.52 s a 0.5 m/s
+   L = 2.0 z_o = 1.7: ombra 2.706 m, tratto nascosto 2.256 m: 1.61 s a 1.4 m/s, 2.26 s a 1.0 m/s, 4.51 s a 0.5 m/s
+   L = 2.0 z_o = 1.8: ombra 2.556 m, tratto nascosto 2.106 m: 1.50 s a 1.4 m/s, 2.11 s a 1.0 m/s, 4.21 s a 0.5 m/s
+   L = 2.0 z_o = 1.9: ombra 2.421 m, tratto nascosto 1.971 m: 1.41 s a 1.4 m/s, 1.97 s a 1.0 m/s, 3.94 s a 0.5 m/s
+   campo orizzontale a 1,8 m: 3.42 m; a 2,3 m: 4.37 m (sull'asse ottico orizzontale; ordine di grandezza)
+banda d'occlusione stereo: b (d_s - d_o)/d_o [m sullo sfondo], f b (1/d_o - 1/d_s) [px]
+   D455: ostacolo 1.0 m, sfondo 3.0 m: 19.0 cm = 26.9 px
+   D455: ostacolo 1.5 m, sfondo 3.0 m: 9.5 cm = 13.4 px
+   D455: ostacolo 2.0 m, sfondo 3.0 m: 4.8 cm = 6.7 px
+   D455: ostacolo 1.0 m, sfondo 2.0 m: 9.5 cm = 20.1 px
+   D455: banda al bordo sinistro dell'immagine f b/d: 40.3 px a 1 m, 20.1 px a 2 m, 13.4 px a 3 m
+   D435i: ostacolo 1.0 m, sfondo 3.0 m: 10.0 cm = 14.1 px
+   D435i: ostacolo 1.5 m, sfondo 3.0 m: 5.0 cm = 7.1 px
+   D435i: ostacolo 2.0 m, sfondo 3.0 m: 2.5 cm = 3.5 px
+   D435i: ostacolo 1.0 m, sfondo 2.0 m: 5.0 cm = 10.6 px
+   D435i: banda al bordo sinistro dell'immagine f b/d: 21.2 px a 1 m, 10.6 px a 2 m, 7.1 px a 3 m
+   Gemini 335: ostacolo 1.0 m, sfondo 3.0 m: 10.0 cm = 13.7 px
+   Gemini 335: ostacolo 1.5 m, sfondo 3.0 m: 5.0 cm = 6.8 px
+   Gemini 335: ostacolo 2.0 m, sfondo 3.0 m: 2.5 cm = 3.4 px
+   Gemini 335: ostacolo 1.0 m, sfondo 2.0 m: 5.0 cm = 10.3 px
+   Gemini 335: banda al bordo sinistro dell'immagine f b/d: 20.5 px a 1 m, 10.3 px a 2 m, 6.8 px a 3 m
+   ritardo di ricomparsa a 1,2 m/s per 0,19 m: 0.158 s
+   verifica numerica (b = 0,095; d_o = 1; d_s = 3): larghezza vista dalla sola sinistra 0.1900 m
+
+== 4. Rumore di profondita': sigma_z = d^2 sigma_d / (f b) ==
+D455: f b = 40.280 px m; k_nom = 0.001986 1/m (sigma_d 0.0800 px); k_lim = 0.005 1/m (sigma_d 0.2014 px)
+   nominale [cm] a 1/2/3/4 m: 0.20 / 0.79 / 1.79 / 3.18   limite [cm]: 0.50 / 2.00 / 4.50 / 8.00
+   passo di quantizzazione (1/32 px) [mm] a 1/2/3/4 m: 0.8 / 3.1 / 7.0 / 12.4; scarto tipo della quantizzazione a 3 m: 2.0 mm
+   distanza a cui sigma_z = 5 cm: nominale 5.02 m, limite 3.16 m
+D435i: f b = 21.200 px m; k_nom = 0.003774 1/m (sigma_d 0.0800 px); k_lim = 0.01 1/m (sigma_d 0.2120 px)
+   nominale [cm] a 1/2/3/4 m: 0.38 / 1.51 / 3.40 / 6.04   limite [cm]: 1.00 / 4.00 / 9.00 / 16.00
+   passo di quantizzazione (1/32 px) [mm] a 1/2/3/4 m: 1.5 / 5.9 / 13.3 / 23.6; scarto tipo della quantizzazione a 3 m: 3.8 mm
+   distanza a cui sigma_z = 5 cm: nominale 3.64 m, limite 2.24 m
+Gemini 335: f b = 20.535 px m; k_nom = 0.004000 1/m (sigma_d 0.0821 px); k_lim = 0.0075 1/m (sigma_d 0.1540 px)
+   nominale [cm] a 1/2/3/4 m: 0.40 / 1.60 / 3.60 / 6.40   limite [cm]: 0.75 / 3.00 / 6.75 / 12.00
+   passo di quantizzazione (1/32 px) [mm] a 1/2/3/4 m: 1.5 / 6.1 / 13.7 / 24.3; scarto tipo della quantizzazione a 3 m: 4.0 mm
+   distanza a cui sigma_z = 5 cm: nominale 3.54 m, limite 2.58 m
+misura di terzi (D435): z = 1.0: 0.57 cm; rapporto col nominale D435i 1.52; sigma_d equivalente 0.122 px
+misura di terzi (D435): z = 2.0: 1.83 cm; rapporto col nominale D435i 1.21; sigma_d equivalente 0.097 px
+misura di terzi (D435): z = 2.1: 2.00 cm; rapporto col nominale D435i 1.20; sigma_d equivalente 0.096 px
+misura di terzi (D435): z = 3.0: 3.88 cm; rapporto col nominale D435i 1.14; sigma_d equivalente 0.091 px
+quota temporale 0,6 e fissa sqrt(1-0,36) = 0.80
+impronta di un pixel (f dal campo di 87 gradi, 446.8 px): 4.48 mm a 2 m, 6.71 mm a 3 m, 13.43 mm a 6 m; 5 pixel a 3 m = 3.36 cm; oggetto di 1 cm su 5 px entro 0.89 m
+impronta di un pixel (f = 424 px, 424.0 px): 4.72 mm a 2 m, 7.08 mm a 3 m, 14.15 mm a 6 m; 5 pixel a 3 m = 3.54 cm; oggetto di 1 cm su 5 px entro 0.85 m
+impronta di un pixel (f = 410,7 px, 410.7 px): 4.87 mm a 2 m, 7.30 mm a 3 m, 14.61 mm a 6 m; 5 pixel a 3 m = 3.65 cm; oggetto di 1 cm su 5 px entro 0.82 m
+rumore laterale: 1,5 px a 2 m (f = 424) = 7.1 mm; limite misurato da terzi 4,3 / 4,1 cm
+sfocatura da moto a 1,5 m/s: 12 mm con 8 ms, 45 mm con 30 ms
+incidenza sul suolo a rho = 1.243: 46.0 gradi dalla normale; distanza obliqua 1.73 m
+incidenza sul suolo a rho = 2.0: 59.0 gradi dalla normale; distanza obliqua 2.33 m
+incidenza sul suolo a rho = 2.078: 60.0 gradi dalla normale; distanza obliqua 2.40 m
+incidenza sul suolo a rho = 2.5: 64.4 gradi dalla normale; distanza obliqua 2.77 m
+incidenza sul suolo a rho = 3.0: 68.2 gradi dalla normale; distanza obliqua 3.23 m
+   60 gradi a rho = h tan 60 = 2.078 m
+
+== 5. Errore di posa ==
+errore di quota di un punto del suolo: dy = rho sin(dth) + h (1 - cos(dth))
+   rho = 2.8 m, 1.0 gradi: 4.90 cm (lineare 4.89 cm)
+   rho = 2.0 m, 1.0 gradi: 3.51 cm (lineare 3.49 cm)
+   rho = 3.0 m, 1.0 gradi: 5.25 cm (lineare 5.24 cm)
+   rho = 2.0 m, 2.0 gradi: 7.05 cm (lineare 6.98 cm)
+   rho = 3.0 m, 2.0 gradi: 10.54 cm (lineare 10.47 cm)
+   suolo oltre la soglia di 0,07 m con 2 gradi: da rho = 1.985 m
+   ostacolo di 0.10 m sotto la soglia 0,07 m se rho*dth > 0.03 m: 1.15 gradi a 1.5 m, 0.86 gradi a 2.0 m, 0.69 gradi a 2.5 m, 0.57 gradi a 3.0 m
+   ostacolo di 0.15 m sotto la soglia 0,07 m se rho*dth > 0.08 m: 3.06 gradi a 1.5 m, 2.29 gradi a 2.0 m, 1.83 gradi a 2.5 m, 1.53 gradi a 3.0 m
+   soglia d'errore oltre cui un ostacolo alto H a z = 2,55 m scende sotto 0,07 m: H = 10 cm: 0.67 gradi, H = 12 cm: 1.12 gradi, H = 15 cm: 1.78 gradi
+   scatola di 15 cm fra z = 2,00 e 2,15 m: 2.27 gradi a 2.0 m, 2.11 gradi a 2.15 m
+   intervalli di Wilson al 95 %: 0/10: [0.000, 0.278]; 1/10: [0.018, 0.404]; 2/10: [0.057, 0.510]; 9/10: [0.596, 0.982]; 10/10: [0.722, 1.000]; 7/7: [0.646, 1.000]; 0/7: [0.000, 0.354]
+regola mobile: K = 4.0825; soglia trasversale 1.179 gradi; finestra 0.8667 s
+   falsi 10 %: spostamento 3.0361 sigma = 0.8764 gradi sulla finestra = 1.011 gradi/s
+   falsi  1 %: spostamento 2.1830 sigma = 0.6302 gradi sulla finestra = 0.727 gradi/s
+   Monte Carlo a 3.036 sigma: 199824 su 2000000 = 0.0999, Wilson 95 % [0.0995, 0.1003]
+   Monte Carlo a 2.183 sigma: 19904 su 2000000 = 0.0100, Wilson 95 % [0.0098, 0.0101]
+   Q2 a    2 m: errore di velocita' al 10 %: trasversale 3.5 cm/s, radiale 5.3 cm/s
+   Q2 a    3 m: errore di velocita' al 10 %: trasversale 5.3 cm/s, radiale 11.9 cm/s
+   Q2 a   10 m: errore di velocita' al 10 %: trasversale 17.7 cm/s, radiale 10.5 cm/s
+   Q2 a   30 m: errore di velocita' al 10 %: trasversale 53.0 cm/s, radiale 10.5 cm/s
+   Q3 gradino di velocita' angolare 30 gradi/s: tau = 29.2 ms (10 %), 21.0 ms (1 %)
+   Q3 volo stazionario +-3 gradi a 1 Hz: tau al 10 % dei falsi = 74.4 ms
+   Q3 petto +-8 gradi a 1 Hz: tau al 10 % dei falsi = 27.7 ms
+   Q3 testa +-30 gradi a 0,5 Hz: tau al 10 % dei falsi = 5.9 ms
+   Q4 beccheggio: 10 % di celle di suolo oltre 0,07 m; sigma di quota = sigma_r h / distanza obliqua
+      rimbalzo +-0.0 cm: a 2/3/10/30 m [gradi (sigma di quota)]: 1.705 (0.78 cm) / 1.025 (1.26 cm) / 0.375 (0.36 cm) / 0.131 (0.12 cm)
+      rimbalzo +-2.5 cm: a 2/3/10/30 m [gradi (sigma di quota)]: 1.268 (0.78 cm) / 0.789 (1.26 cm) / 0.265 (0.36 cm) / 0.089 (0.12 cm)
+   Q5 copertura a scostamento zero 0.9200; copertura 0,90 a e = 0.482 sigma
+      t = 0.67 s: sigma 0.202 m, e = 0.097 m -> 2.79 / 1.86 / 0.56 / 0.19 gradi a 2/3/10/30 m
+      t = 1.0 s: sigma 0.334 m, e = 0.161 m -> 4.61 / 3.07 / 0.92 / 0.31 gradi a 2/3/10/30 m
+      t = 2.0 s: sigma 0.843 m, e = 0.406 m -> 11.63 / 7.75 / 2.33 / 0.78 gradi a 2/3/10/30 m
+   Q6 margine di 0,10 m: 2.86 gradi / 1.91 gradi / 0.57 gradi / 0.19 gradi; ritardo a 30 gradi/s: 95 ms / 64 ms / 19 ms / 6 ms
+   memoria del libero: mezza cella radiale (0,05 m) in 2 passi a 15 Hz: 0.375 m/s
+
+== 6. Tempo di volo multizona e LiDAR 2D ==
+VL53L7CX: zona 8x8 7.5 gradi, 4x4 15.0 gradi; a 2 m lato 26.2 cm (zona centrale su piano frontale 26.3, d'angolo 32.6), diagonale 37.1 cm; campo intero a 2 m 2.31 m; sigma = 1.85 % = 3.7 cm a 2 m; tre sensori 180 x 60 gradi; per 360 gradi ne servono 6
+   persona larga 0,5 m a 3.0 m: 1.27 zone
+   persona larga 0,5 m a 4.0 m: 0.95 zone
+VL53L8CX: zona 8x8 5.625 gradi, 4x4 11.25 gradi; a 2 m lato 19.7 cm (zona centrale su piano frontale 19.7, d'angolo 22.2), diagonale 27.8 cm; campo intero a 2 m 1.66 m; sigma = 1.85 % = 3.7 cm a 2 m; tre sensori 135 x 45 gradi; per 360 gradi ne servono 8
+   persona larga 0,5 m a 3.0 m: 1.69 zone
+   persona larga 0,5 m a 4.0 m: 1.27 zone
+distanza obliqua minima fra un sensore a 1,2 m e il suolo: 1,20 m; a rho = 1 m 1.56 m; a 2 m 2.33 m
+RPLIDAR C1: 500 punti per giro; passo a 3 m 3.8 cm; punti su 0,5 m a 3 m 13.3; su 0,12 m a 5 m 1.9; rotazione di 30 gradi/s in un giro di 0,1 s: 3 gradi = 1.57 m a 30 m
+LD19: 450 punti per giro; passo a 3 m 4.2 cm; punti su 0,5 m a 3 m 11.9; su 0,12 m a 5 m 1.7; rotazione di 30 gradi/s in un giro di 0,1 s: 3 gradi = 1.57 m a 30 m
+
+== 7. Fascia di guardia e distanza di separazione ==
+eta' del libero (2 passi a 15 Hz) 0.1333 s + latenza 0.155 s = 0.2883 s
+   v_max = 1.0 m/s: sola eta' 0.133 m; eta' + latenza 0.288 m; + e_ombra 0,20: 0.488 m
+   v_max = 1.4 m/s: sola eta' 0.187 m; eta' + latenza 0.404 m; + e_ombra 0,20: 0.604 m
+   v_max = 2.0 m/s: sola eta' 0.267 m; eta' + latenza 0.577 m; + e_ombra 0,20: 0.777 m
+   v_max = 2.5 m/s: sola eta' 0.333 m; eta' + latenza 0.721 m; + e_ombra 0,20: 0.921 m
+   fascia 0.4 m, e_ombra 0.0: velocita' coperta 1.387 m/s
+   fascia 0.4 m, e_ombra 0.2: velocita' coperta 0.694 m/s
+   fascia 0.4 m, e_ombra 0.3: velocita' coperta 0.347 m/s
+   S = v_H (T_R + T_S) + C + Z_S, v_H = 1.6: reazione umana 1,0 s: 2.798 m; arresto automatico 0,3 s: 1.678 m
+   S = v_H (T_R + T_S) + C + Z_S, v_H = 2.0: reazione umana 1,0 s: 3.260 m; arresto automatico 0,3 s: 1.860 m
+   velocita' coperta con 3 m di portata e 0,27 s di conferma (reazione 1 s): 1.439 m/s
+
+== 8. Bilancio di latenza ==
+   evento -> inizio esposizione (uniforme 0-33,3 ms): 16.7 ms
+   esposizione -> fotogramma nell'applicazione, 30 fps: 95.0 ms
+   fotogramma -> comando d'uscita: 22.0 ms
+   campioni -> scheda audio (1024/48000): 21.3 ms
+   somma delle medie: 155.0 ms; intervallo per la sola prima voce: 138.3-171.7 ms; 95-esimo percentile se le altre voci fossero costanti: 170.0 ms
+   a 15 fps: 203.7 ms
+   a 60 fps: 98.7 ms
+   a 90 fps: 87.9 ms
+   modello del sensore: latenza della camera 70 ms nominale (36,8 + 34 = 70.8), 120 ms limite

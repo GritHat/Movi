@@ -1,0 +1,34 @@
+33 sostituzioni applicate:
+ - semi-1 base dei semi di prova
+ - semi-2 mescolatore dello stato iniziale (fmix64 di MurmurHash3, tre volte)
+ - parametri nuovi (c3, c7, c5b, chiusura 5, estraneo, passo dei semi)
+ - c3-1 soggetto puntiforme
+ - c3-2 corpo esteso: distanza dal bordo vero
+ - c3-3
+ - c3-4 e bordo non rilevato con probabilita' 1 - c3p
+ - ch5-1 campo nout
+ - ch5-2 conta i membri fuori dall'area osservata
+ - contatori nuovi
+ - pass-1 variabili
+ - estraneo-1 nasce nell'ombra dopo che il soggetto e' nascosto; la sua prima misura valida prende il posto di quella del soggetto
+ - pass-2 i non confermati restano nel conto degli scoperti
+ - pass-3 istanti nascosti, tutti
+ - c7-1 una misura accettata spegne l'avviso c7; stato 4 = chiusa «fuori dall'area osservata»
+ - c5b-1 ultimo ciclo in cui il filtro era sotto 0,3 m/s
+ - c5b-2 «fermo negli ultimi 2 s» -> ampio
+ - c7-2 traccia confermata chiusa senza entrare
+ - c7-3 traccia non confermata con una misura mancata
+ - estraneo-2 decisione della porta sulla prima misura dell'estraneo
+ - pass-4 vuoto per passaggio; condizioni della chiusura 5 (debole: punto del filtro fuori area; scritta: tutti i membri fuori)
+ - pass-5 precisione: non confermati esclusi
+ - pass-6 precisione primaria: solo con il segno «previsto» (non «ampio»)
+ - pass-7 chiusura 5 eseguita; scoperto = nascosto senza traccia pendente e senza avviso
+ - pass-8 fine del passaggio
+ - semi-3 libreria
+ - semi-4 sessione
+ - semi-5 prova
+ - chiavi nuove
+ - semi-6 prova dei semi (con il controllo positivo: il seme di gen.h prima della riparazione)
+ - semi-7 modo «semi»
+ - uscita: una riga «R» per comportamento, con tutti i conteggi
+ - intestazione

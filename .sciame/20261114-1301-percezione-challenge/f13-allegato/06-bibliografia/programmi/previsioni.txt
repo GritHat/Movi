@@ -1,0 +1,6 @@
+Previsioni scritte prima dei controlli in rete e prima di bibtex. Ora: 2026-11-14T18:00:44+01:00
+P1. Delle voci riaperte oggi (registri Crossref, arXiv, Zenodo, pagine), almeno 16 su circa 22 rispondono con codice 200. Smentita: meno di 12.
+P2. Per kalman1960, kuhn1955, clopper1934 il registro Crossref conferma autore, rivista, volume e pagine scritti nell'elenco. Smentita: un campo diverso.
+P3. bibtex con lo stile numerico (plain) su allegato.bib: 0 errori e 0 avvisi. Smentita: almeno un errore o un avviso al primo giro registrato.
+P4. Le voci nuove proposte (Wilson 1927; Brown, Cai, DasGupta 2001; Bar-Shalom, Li, Kirubarajan 2001; Elfes 1989; Vovk, Gammerman, Shafer 2005) si trovano tutte su Crossref con i DOI che ricordo a memoria. Smentita: un DOI non risolve o porta a un altro scritto.
+P5. Voci citabili: fra 70 e 95 delle 108 candidate. Smentita: fuori dall'intervallo.

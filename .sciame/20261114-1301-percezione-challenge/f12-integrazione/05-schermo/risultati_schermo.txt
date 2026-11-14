@@ -1,0 +1,62 @@
+== P-int-2: intervalli del tabellone ==
+27 su 30  Wilson 95 % [0.744; 0.965]   esatto [0.735; 0.979]
+46 su 50  Wilson 95 % [0.812; 0.968]   esatto [0.808; 0.978]
+45 su 50  Wilson 95 % [0.786; 0.957]   esatto [0.782; 0.967]
+30 su 30  Wilson 95 % [0.886; 1.000]   esatto [0.884; 1.000]
+28 su 30  Wilson 95 % [0.787; 0.982]   esatto [0.779; 0.992]
+23 su 30  Wilson 95 % [0.591; 0.882]   esatto [0.577; 0.901]
+54 su 60  Wilson 95 % [0.799; 0.953]   esatto [0.795; 0.962]
+ 9 su 10  Wilson 95 % [0.596; 0.982]   esatto [0.555; 0.997]
+10 su 10  Wilson 95 % [0.722; 1.000]   esatto [0.692; 1.000]
+ 5 su  5  Wilson 95 % [0.566; 1.000]   esatto [0.478; 1.000]
+
+== P-int-3: tempi della demo dal conto in pianta ==
+pannello 1 m a 1.7 m: ombra 1.35 m; nascosto per intero 1.81 s a 0.5 m/s; 1.13 s a 0.8 m/s; 0.90 s a 1.0 m/s; 0.64 s a 1.4 m/s; in vista per intero per lato a 1,0 m/s: 1.06 s (solo campo), 0.80 s (campo e portata 3 m)
+pannello 2 m a 1.7 m: ombra 2.71 m; nascosto per intero 4.51 s a 0.5 m/s; 2.82 s a 0.8 m/s; 2.26 s a 1.0 m/s; 1.61 s a 1.4 m/s; in vista per intero per lato a 1,0 m/s: 0.38 s (solo campo), 0.12 s (campo e portata 3 m)
+pannello 1 m a 1.8 m: ombra 1.28 m; nascosto per intero 1.66 s a 0.5 m/s; 1.03 s a 0.8 m/s; 0.83 s a 1.0 m/s; 0.59 s a 1.4 m/s; in vista per intero per lato a 1,0 m/s: 1.09 s (solo campo), 0.84 s (campo e portata 3 m)
+pannello 2 m a 1.8 m: ombra 2.56 m; nascosto per intero 4.21 s a 0.5 m/s; 2.63 s a 0.8 m/s; 2.11 s a 1.0 m/s; 1.50 s a 1.4 m/s; in vista per intero per lato a 1,0 m/s: 0.45 s (solo campo), 0.20 s (campo e portata 3 m)
+pannello 1 m a 1.9 m: ombra 1.21 m; nascosto per intero 1.52 s a 0.5 m/s; 0.95 s a 0.8 m/s; 0.76 s a 1.0 m/s; 0.54 s a 1.4 m/s; in vista per intero per lato a 1,0 m/s: 1.13 s (solo campo), 0.87 s (campo e portata 3 m)
+pannello 2 m a 1.9 m: ombra 2.42 m; nascosto per intero 3.94 s a 0.5 m/s; 2.46 s a 0.8 m/s; 1.97 s a 1.0 m/s; 1.41 s a 1.4 m/s; in vista per intero per lato a 1,0 m/s: 0.52 s (solo campo), 0.27 s (campo e portata 3 m)
+bordo del campo sulla linea a 2,3 m: 2.18 m; bordo della portata di 3 m: 1.93 m
+
+== conti a mano messi qui: soggetto puntiforme del banco, C6 a 0,22 m dal bordo dell'ombra, linea a 2,3 m ==
+A (pannello 1 m a 1,9 m, 0,5 m/s): senza misura per 3.3 s; tratto misurabile per lato fino alla portata: 1.10 m
+B (pannello 2 m a 1,9 m, 0,9 m/s): senza misura per 3.2 s; tratto misurabile per lato fino alla portata: 0.50 m
+
+== P-int-4, P-int-5: geometria e passo (codice dello statistico di f8, semi 120000..120399, sd-1, Pd 0,9, maschera esatta, soggetto puntiforme) ==
+--- E: pannello 2 m a 1,9 m, attore 2,3 m, portata 3 m; passo 0,8-1,0 m/s  [E_larga_08-10.tsv]
+    # griglia 44x30 celle da 0,10 m; ombra stimata 2.44 m2; A (ombra+fascia) 3.58 m2; R100 4.50 m2
+    prosegue: validi 316, scartati (meno di 4 misure) 84 su 400 = 21.0 %
+    sul percorso: scartati 546 su 2000 = 27.3 %
+    prosegue: passaggi con un vuoto 0 su 316; cicli «ampio» (area > 80 % dell'ombra) 10197 su 20504 = 49.7 %; punto che arretra in 86 passaggi; salto mediano alla ricomparsa 0.621 m (ricomparsi 129)
+    sul percorso: passaggi con un vuoto 0; cicli della zona fuori dall'avviso 0; cicli della zona su visto libero oltre la fascia 0
+    a 1 s: zona/ombra (prosegue) 0.55, errore mediano del punto 0.197 m; dentro la zona: prosegue 240 su 256 [0.901; 0.961]; sul percorso 1206 su 1281 = 0.941 [0.927; 0.953]; usciti dall'area osservata 163; dentro l'avviso 1444 su 1444
+    a 2 s: zona/ombra (prosegue) 0.87, errore mediano del punto 0.398 m; dentro la zona: prosegue 222 su 256 [0.820; 0.903]; sul percorso 1128 su 1275 = 0.885 [0.866; 0.901]; usciti dall'area osservata 129; dentro l'avviso 1404 su 1404
+    a 3 s: zona/ombra (prosegue) 0.98, errore mediano del punto 0.544 m; dentro la zona: prosegue 165 su 198 [0.775; 0.879]; sul percorso 1004 su 1162 = 0.864 [0.843; 0.883]; usciti dall'area osservata 143; dentro l'avviso 1305 su 1305
+--- E, passo 0,45-0,55 m/s (braccio di confronto, senza previsione)  [E_lento_045-055.tsv]
+    # griglia 44x30 celle da 0,10 m; ombra stimata 2.44 m2; A (ombra+fascia) 3.58 m2; R100 4.50 m2
+    prosegue: validi 341, scartati (meno di 4 misure) 59 su 400 = 14.8 %
+    sul percorso: scartati 505 su 2000 = 25.2 %
+    prosegue: passaggi con un vuoto 0 su 341; cicli «ampio» (area > 80 % dell'ombra) 10607 su 23678 = 44.8 %; punto che arretra in 55 passaggi; salto mediano alla ricomparsa 0.543 m (ricomparsi 1)
+    sul percorso: passaggi con un vuoto 0; cicli della zona fuori dall'avviso 0; cicli della zona su visto libero oltre la fascia 0
+    a 1 s: zona/ombra (prosegue) 0.44, errore mediano del punto 0.171 m; dentro la zona: prosegue 280 su 287 [0.951; 0.988]; sul percorso 1385 su 1420 = 0.975 [0.966; 0.982]; usciti dall'area osservata 58; dentro l'avviso 1478 su 1478
+    a 2 s: zona/ombra (prosegue) 0.66, errore mediano del punto 0.310 m; dentro la zona: prosegue 260 su 287 [0.867; 0.935]; sul percorso 1321 su 1419 = 0.931 [0.917; 0.943]; usciti dall'area osservata 41; dentro l'avviso 1460 su 1460
+    a 3 s: zona/ombra (prosegue) 0.85, errore mediano del punto 0.462 m; dentro la zona: prosegue 254 su 287 [0.843; 0.917]; sul percorso 1277 su 1402 = 0.911 [0.895; 0.925]; usciti dall'area osservata 5; dentro l'avviso 1407 su 1407
+--- D: pannello 1 m a 1,9 m, attore 2,3 m; passo 0,45-0,55 m/s  [D_lento_045-055.tsv]
+    # griglia 44x30 celle da 0,10 m; ombra stimata 1.36 m2; A (ombra+fascia) 2.32 m2; R100 3.12 m2
+    prosegue: validi 400, scartati (meno di 4 misure) 0 su 400 = 0.0 %
+    sul percorso: scartati 0 su 2000 = 0.0 %
+    prosegue: passaggi con un vuoto 0 su 400; cicli «ampio» (area > 80 % dell'ombra) 11734 su 20755 = 56.5 %; punto che arretra in 84 passaggi; salto mediano alla ricomparsa 0.524 m (ricomparsi 389)
+    sul percorso: passaggi con un vuoto 0; cicli della zona fuori dall'avviso 0; cicli della zona su visto libero oltre la fascia 0
+    a 1 s: zona/ombra (prosegue) 0.52, errore mediano del punto 0.175 m; dentro la zona: prosegue 400 su 400 [0.990; 1.000]; sul percorso 1992 su 2000 = 0.996 [0.992; 0.998]; usciti dall'area osservata 0; dentro l'avviso 2000 su 2000
+    a 2 s: zona/ombra (prosegue) 1.05, errore mediano del punto 0.337 m; dentro la zona: prosegue 395 su 400 [0.971; 0.995]; sul percorso 1968 su 1999 = 0.984 [0.978; 0.989]; usciti dall'area osservata 0; dentro l'avviso 1999 su 1999
+    a 3 s: zona/ombra (prosegue) 1.22, errore mediano del punto 0.413 m; dentro la zona: prosegue 366 su 385 [0.924; 0.968]; sul percorso 1868 su 1929 = 0.968 [0.960; 0.975]; usciti dall'area osservata 0; dentro l'avviso 1929 su 1929
+--- D, passo 1,0-1,4 m/s (braccio di confronto, senza previsione)  [D_normale_10-14.tsv]
+    # griglia 44x30 celle da 0,10 m; ombra stimata 1.36 m2; A (ombra+fascia) 2.32 m2; R100 3.12 m2
+    prosegue: validi 390, scartati (meno di 4 misure) 10 su 400 = 2.5 %
+    sul percorso: scartati 33 su 2000 = 1.6 %
+    prosegue: passaggi con un vuoto 0 su 390; cicli «ampio» (area > 80 % dell'ombra) 4433 su 10647 = 41.6 %; punto che arretra in 41 passaggi; salto mediano alla ricomparsa 0.257 m (ricomparsi 353)
+    sul percorso: passaggi con un vuoto 0; cicli della zona fuori dall'avviso 0; cicli della zona su visto libero oltre la fascia 0
+    a 1 s: zona/ombra (prosegue) 0.84, errore mediano del punto 0.193 m; dentro la zona: prosegue 384 su 388 [0.974; 0.996]; sul percorso 1937 su 1961 = 0.988 [0.982; 0.992]; usciti dall'area osservata 5; dentro l'avviso 1966 su 1966
+    a 2 s: zona/ombra (prosegue) 0.89, errore mediano del punto 0.390 m; dentro la zona: prosegue 37 su 38 [0.865; 0.995]; sul percorso 1219 su 1274 = 0.957 [0.944; 0.967]; usciti dall'area osservata 13; dentro l'avviso 1287 su 1287
+    a 3 s: zona/ombra (prosegue) 0.87, errore mediano del punto 0.435 m; dentro la zona: prosegue 34 su 35 [0.855; 0.995]; sul percorso 918 su 965 = 0.951 [0.936; 0.963]; usciti dall'area osservata 14; dentro l'avviso 979 su 979

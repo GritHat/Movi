@@ -1,0 +1,12 @@
+scena=tipica lato_cm=5 k=4 fotogrammi=12 voxel=576000 | voxel con superficie misurata (rif.1)=22082/fot, con superficie vera (rif.2)=9874/fot, di cui sopra 0,10 m (rif.3)=6648/fot
+  a  k=1, somma dei log-odds, senza priorita'                    liberi/fot=  175850  falsi su rif.1= 165812  falsi su rif.2=  81317  su rif.3=  44482  (somma su 12 fot.)
+  b  k=1, priorita' al colpo, margine 0                          liberi/fot=  162309  falsi su rif.1=      0  falsi su rif.2=   5579  su rif.3=   4283  (somma su 12 fot.)
+  b3 k=1, priorita' al colpo, margine 3 sigma                    liberi/fot=  159313  falsi su rif.1=      0  falsi su rif.2=    931  su rif.3=    280  (somma su 12 fot.)
+  c  decimazione k (colpi e liberi solo sui campioni)            liberi/fot=  163393  falsi su rif.1= 106810  falsi su rif.2=  40879  su rif.3=  25151  (somma su 12 fot.)
+  d  minimo del blocco k, colpo sul raggio centrale              liberi/fot=  149772  falsi su rif.1=  18849  falsi su rif.2=   7502  su rif.3=   2272  (somma su 12 fot.)
+  e  colpi pieni + liberi a blocchi (rigido), margine 0          liberi/fot=  148862  falsi su rif.1=      0  falsi su rif.2=    354  su rif.3=    131  (somma su 12 fot.)
+  e3 colpi pieni + liberi a blocchi (rigido), margine 3 sigma    liberi/fot=  139638  falsi su rif.1=      0  falsi su rif.2=    121  su rif.3=    118  (somma su 12 fot.)
+  eL colpi pieni + liberi a blocchi (lasco), margine 3 sigma     liberi/fot=  139638  falsi su rif.1=      0  falsi su rif.2=    121  su rif.3=    118  (somma su 12 fot.)
+  p  proiezione dei voxel, margine 0                             liberi/fot=  110196  falsi su rif.1=      0  falsi su rif.2=      0  su rif.3=      0  (somma su 12 fot.)
+  p3 proiezione dei voxel, margine 3 sigma                       liberi/fot=   99246  falsi su rif.1=      0  falsi su rif.2=      0  su rif.3=      0  (somma su 12 fot.)
+  q3 proiezione lasca (minimo dei validi), margine 3 sigma       liberi/fot=   99246  falsi su rif.1=      0  falsi su rif.2=      0  su rif.3=      0  (somma su 12 fot.)

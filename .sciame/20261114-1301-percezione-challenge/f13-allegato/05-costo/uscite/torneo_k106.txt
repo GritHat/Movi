@@ -1,0 +1,22 @@
+## K-106 resa del libero vero (volume, quota >= 15 cm), scena B, 57 fotogrammi ; P e S10 costruiti su Q1
+  buchi sparsi  0 %, a chiazze  0 %: Q1 97.0 % ; Q3 97.0 % ; Q3c 97.0 % ; P 43.1 % ; S10 33.0 % ; N1 (suolo) 70.0 %   | falsi profondi (fotogrammi): Q1 0, Q3 0, Q3c 0
+      P: fotogrammi con falso profondo 3, punti falsi 1149 (profondi 3) ; S10: 0, 49 (0)
+  buchi sparsi  5 %, a chiazze  0 %: Q1 61.1 % ; Q3 91.9 % ; Q3c 87.7 % ; P 0.1 % ; S10 0.0 % ; N1 (suolo) 70.1 %   | falsi profondi (fotogrammi): Q1 0, Q3 0, Q3c 0
+      P: fotogrammi con falso profondo 1, punti falsi 204 (profondi 1) ; S10: 0, 0 (0)
+  buchi sparsi  0 %, a chiazze  5 %: Q1 90.9 % ; Q3 97.0 % ; Q3c 92.0 % ; P 30.0 % ; S10 19.2 % ; N1 (suolo) 69.9 %   | falsi profondi (fotogrammi): Q1 0, Q3 13, Q3c 0
+      P: fotogrammi con falso profondo 1, punti falsi 840 (profondi 1) ; S10: 0, 30 (0)
+  buchi sparsi 20 %, a chiazze  0 %: Q1 13.0 % ; Q3 33.7 % ; Q3c 28.9 % ; P 0.0 % ; S10 0.0 % ; N1 (suolo) 70.2 %   | falsi profondi (fotogrammi): Q1 0, Q3 0, Q3c 0
+      P: fotogrammi con falso profondo 0, punti falsi 1 (profondi 0) ; S10: 0, 0 (0)
+  buchi sparsi  0 %, a chiazze 20 %: Q1 73.4 % ; Q3 95.6 % ; Q3c 76.9 % ; P 9.8 % ; S10 2.5 % ; N1 (suolo) 70.1 %   | falsi profondi (fotogrammi): Q1 0, Q3 28, Q3c 0
+      P: fotogrammi con falso profondo 1, punti falsi 480 (profondi 1) ; S10: 0, 3 (0)
+## K-106 resa del libero vero (volume, quota >= 15 cm), scena B, 57 fotogrammi ; P e S10 costruiti su Q3c
+  buchi sparsi  0 %, a chiazze  0 %: Q1 97.0 % ; Q3 97.0 % ; Q3c 97.0 % ; P 43.1 % ; S10 33.0 % ; N1 (suolo) 70.0 %   | falsi profondi (fotogrammi): Q1 0, Q3 0, Q3c 0
+      P: fotogrammi con falso profondo 3, punti falsi 1149 (profondi 3) ; S10: 0, 49 (0)
+  buchi sparsi  5 %, a chiazze  0 %: Q1 61.1 % ; Q3 91.9 % ; Q3c 87.7 % ; P 0.8 % ; S10 0.0 % ; N1 (suolo) 70.1 %   | falsi profondi (fotogrammi): Q1 0, Q3 0, Q3c 0
+      P: fotogrammi con falso profondo 1, punti falsi 204 (profondi 1) ; S10: 0, 0 (0)
+  buchi sparsi  0 %, a chiazze  5 %: Q1 90.9 % ; Q3 97.0 % ; Q3c 92.0 % ; P 30.8 % ; S10 20.1 % ; N1 (suolo) 69.9 %   | falsi profondi (fotogrammi): Q1 0, Q3 13, Q3c 0
+      P: fotogrammi con falso profondo 1, punti falsi 855 (profondi 1) ; S10: 0, 33 (0)
+  buchi sparsi 20 %, a chiazze  0 %: Q1 13.0 % ; Q3 33.7 % ; Q3c 28.9 % ; P 0.0 % ; S10 0.0 % ; N1 (suolo) 70.2 %   | falsi profondi (fotogrammi): Q1 0, Q3 0, Q3c 0
+      P: fotogrammi con falso profondo 0, punti falsi 1 (profondi 0) ; S10: 0, 0 (0)
+  buchi sparsi  0 %, a chiazze 20 %: Q1 73.4 % ; Q3 95.6 % ; Q3c 76.9 % ; P 10.7 % ; S10 3.3 % ; N1 (suolo) 70.1 %   | falsi profondi (fotogrammi): Q1 0, Q3 28, Q3c 0
+      P: fotogrammi con falso profondo 1, punti falsi 482 (profondi 1) ; S10: 0, 3 (0)

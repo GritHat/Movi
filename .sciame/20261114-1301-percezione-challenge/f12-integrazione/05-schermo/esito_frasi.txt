@@ -1,0 +1,6 @@
+parole (wc -w): 3635   (soglia scritta prima: 3100)
+frasi da non dire fuori dal paragrafo 7: 0
+«dal vivo» fuori dal paragrafo 7 (ammessa solo nell'etichetta CAMERA DAL VIVO):
+50:usione virtuale · CAMERA DAL VIVO
+65:amma»; «SORGENTE: CAMERA DAL VIVO · [modell
+pagine: 4   (limite 4)

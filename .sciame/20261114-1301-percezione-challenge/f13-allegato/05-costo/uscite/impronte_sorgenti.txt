@@ -1,0 +1,7 @@
+432fe632fd913790 432fe632fd913790 f7-estensione/12-prestazioni/banco.c -> banco_strutture/banco.c
+05d6a49fa54b5aca 05d6a49fa54b5aca f7-estensione/06-tempo-reale/banco.c -> banco_sicurezza/banco.c
+18ba77934bec0c32 18ba77934bec0c32 f7-estensione/15-verifica/vq3c.c -> banco_lettura/vq3c.c
+defc35bae605696f defc35bae605696f f7-estensione/11-torneo/torneo.c -> banco_lettura/torneo.c
+2cf599a4e7addbbe 2cf599a4e7addbbe f8-continuita/14-attacco/att.c -> banco_previsione/att.c
+fbf16218ec933187 fbf16218ec933187 f8-continuita/14-attacco/tempo_py.py -> banco_previsione/tempo_py.py
+652c7aed1f75db0a 652c7aed1f75db0a f7-estensione/12-prestazioni/py_puro.py -> banco_strutture/py_puro.py

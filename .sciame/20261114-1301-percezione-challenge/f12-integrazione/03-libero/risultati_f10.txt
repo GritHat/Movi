@@ -1,0 +1,30 @@
+11-simulatore/sequenze/d435i_lim__pavimento_vuoto
+  modello D435i, livello limite, pavimento vuoto ; 424 x 240 ; posa dichiarata 1.20 m, 15.0 gradi ; k del margine 0.0100 ; fotogrammi 7-12 di 20 ; pixel validi 83.8 % ; celle con impronta 1506 di 2700 ; verita' delle piante: si'
+    V17   celle libere per fotogramma  596.2 (39.6 % delle celle con impronta) ; libero piu' lontano 3.0 m ; cambi 1.92 /s per cella ; libere col centro nella pianta di un ostacolo o soggetto noto: 0
+    V18-1 celle libere per fotogramma  521.8 (34.7 % delle celle con impronta) ; libero piu' lontano 3.0 m ; cambi 2.23 /s per cella ; libere col centro nella pianta di un ostacolo o soggetto noto: 0
+    V18-m celle libere per fotogramma  492.2 (32.7 % delle celle con impronta) ; libero piu' lontano 3.0 m ; cambi 1.97 /s per cella ; libere col centro nella pianta di un ostacolo o soggetto noto: 0
+    PR4   celle libere per fotogramma  239.0 (15.9 % delle celle con impronta) ; libero piu' lontano 2.2 m ; cambi 1.44 /s per cella ; libere col centro nella pianta di un ostacolo o soggetto noto: 0
+11-simulatore/sequenze/d435i_lim__pavimento_lucido
+  modello D435i, livello limite, pavimento lucido ; 424 x 240 ; posa dichiarata 1.20 m, 15.0 gradi ; k del margine 0.0100 ; fotogrammi 7-12 di 20 ; pixel validi 65.1 % ; celle con impronta 1506 di 2700 ; verita' delle piante: si'
+    V17   celle libere per fotogramma  120.2 (8.0 % delle celle con impronta) ; libero piu' lontano 3.0 m ; cambi 0.98 /s per cella ; libere col centro nella pianta di un ostacolo o soggetto noto: 0
+    V18-1 celle libere per fotogramma  172.8 (11.5 % delle celle con impronta) ; libero piu' lontano 3.0 m ; cambi 1.89 /s per cella ; libere col centro nella pianta di un ostacolo o soggetto noto: 0
+    V18-m celle libere per fotogramma   67.5 (4.5 % delle celle con impronta) ; libero piu' lontano 3.0 m ; cambi 0.93 /s per cella ; libere col centro nella pianta di un ostacolo o soggetto noto: 0
+    PR4   celle libere per fotogramma    0.8 (0.1 % delle celle con impronta) ; libero piu' lontano 1.5 m ; cambi 0.02 /s per cella ; libere col centro nella pianta di un ostacolo o soggetto noto: 0
+11-simulatore/sequenze/d435i_nom__cassa_persona__s00
+  modello D435i, nominale, cassa e persona ; 424 x 240 ; posa dichiarata 1.20 m, 15.0 gradi ; k del margine 0.0040 ; fotogrammi 39-44 di 84 ; pixel validi 97.1 % ; celle con impronta 1506 di 2700 ; verita' delle piante: si'
+    V17   celle libere per fotogramma 1064.3 (70.7 % delle celle con impronta) ; libero piu' lontano 3.0 m ; cambi 0.67 /s per cella ; libere col centro nella pianta di un ostacolo o soggetto noto: 0
+    V18-1 celle libere per fotogramma  961.7 (63.9 % delle celle con impronta) ; libero piu' lontano 3.0 m ; cambi 0.40 /s per cella ; libere col centro nella pianta di un ostacolo o soggetto noto: 0
+    V18-m celle libere per fotogramma  942.5 (62.6 % delle celle con impronta) ; libero piu' lontano 3.0 m ; cambi 0.62 /s per cella ; libere col centro nella pianta di un ostacolo o soggetto noto: 0
+    PR4   celle libere per fotogramma  764.7 (50.8 % delle celle con impronta) ; libero piu' lontano 3.0 m ; cambi 1.54 /s per cella ; libere col centro nella pianta di un ostacolo o soggetto noto: 0
+12-dati-veri/sequenze/tum_fr3_walking_static
+  VERO: Kinect v1, TUM fr3 walking_static (k assunto, non verificato) ; 640 x 480 ; posa dichiarata 1.42 m, 8.2 gradi ; k del margine 0.0040 ; fotogrammi 358-363 di 723 ; pixel validi 57.9 % ; celle con impronta 377 di 1860 ; verita' delle piante: no
+    V17   celle libere per fotogramma   69.8 (18.5 % delle celle con impronta) ; libero piu' lontano 3.0 m ; cambi 0.35 /s per cella ; libere col centro nella pianta di un ostacolo o soggetto noto: n.d.
+    V18-1 celle libere per fotogramma    4.0 (1.1 % delle celle con impronta) ; libero piu' lontano 3.0 m ; cambi 0.10 /s per cella ; libere col centro nella pianta di un ostacolo o soggetto noto: n.d.
+    V18-m celle libere per fotogramma    2.5 (0.7 % delle celle con impronta) ; libero piu' lontano 3.0 m ; cambi 0.06 /s per cella ; libere col centro nella pianta di un ostacolo o soggetto noto: n.d.
+    PR4   celle libere per fotogramma    0.0 (0.0 % delle celle con impronta) ; libero piu' lontano 0.0 m ; cambi 0.00 /s per cella ; libere col centro nella pianta di un ostacolo o soggetto noto: n.d.
+12-dati-veri/sequenze/tum_fr3_walking_static
+  VERO, lo stesso, ma con la POSA DEL FOTOGRAMMA (posa_per_fotogramma.csv; rollio ignorato) [altezza 1.420-1.424 m, inclinazione 8.45-8.87, rollio -1.79--1.64 gradi nei 6 fotogrammi] ; 640 x 480 ; posa dichiarata 1.42 m, 8.9 gradi ; k del margine 0.0040 ; fotogrammi 358-363 di 723 ; pixel validi 57.9 % ; celle con impronta 420 di 1860 ; verita' delle piante: no
+    V17   celle libere per fotogramma   79.5 (18.9 % delle celle con impronta) ; libero piu' lontano 3.0 m ; cambi 0.49 /s per cella ; libere col centro nella pianta di un ostacolo o soggetto noto: n.d.
+    V18-1 celle libere per fotogramma    9.2 (2.2 % delle celle con impronta) ; libero piu' lontano 3.0 m ; cambi 0.24 /s per cella ; libere col centro nella pianta di un ostacolo o soggetto noto: n.d.
+    V18-m celle libere per fotogramma    6.7 (1.6 % delle celle con impronta) ; libero piu' lontano 3.0 m ; cambi 0.14 /s per cella ; libere col centro nella pianta di un ostacolo o soggetto noto: n.d.
+    PR4   celle libere per fotogramma    0.3 (0.1 % delle celle con impronta) ; libero piu' lontano 3.0 m ; cambi 0.06 /s per cella ; libere col centro nella pianta di un ostacolo o soggetto noto: n.d.

@@ -1,0 +1,228 @@
+====================================================================================================
+A. CONTINUITA E REGIONE (f8): file TSV, righe P (passaggi) e H (istanti nascosti per tempo dall'ultima osservazione)
+====================================================================================================
+[TORNA] A1 passaggi con almeno un ciclo senza regione, regione tarata, D/T/L (13-soluzione/ris/prova_*.tsv)
+      scritto nei file: 0 su 2716 / 2800 / 2798
+      ricontato:        0 su 2716 / 0 su 2800 / 0 su 2798
+      limiti superiori: Wilson z^2/(N+z^2) = 0.00141, 0.00137, 0.00137; esatto a una coda 1-0.05^(1/N) = 0.00110, 0.00107, 0.00107; 3/N = 0.00110, 0.00107, 0.00107
+[TORNA] A2 sd-1, semi riparati: passaggi con un vuoto (15-statistica/ris/semi_*.tsv; file [5, 2, 2])
+      scritto nei file: 0 su 13 638 / 5600 / 5597
+      ricontato:        0 su 13638 / 0 su 5600 / 0 su 5597
+[TORNA] A2 sd-0, semi riparati: passaggi con un vuoto (15-statistica/ris/semi_*.tsv; file [5, 2, 2])
+      scritto nei file: 0 su 13 638 / 5600 / 5597
+      ricontato:        0 su 13638 / 0 su 5600 / 0 su 5597
+      insieme: 0 su 24835; limite superiore esatto a una coda 0.000121, Wilson 0.000155, 3/N 0.000121
+[TORNA] A3 sistema prima della modifica: passaggi con un vuoto, 5 comportamenti sul percorso (11-misure/risultati/prova_*_pd09.tsv)
+      scritto nei file: 1958 / 1991 / 1999 su 1958 / 2000 / 2000
+      ricontato:        1958 su 1958 / 1991 su 2000 / 1999 su 2000
+      su 7 comportamenti: 2736 su 2737 / 2790 su 2800 / 2797 su 2800
+[TORNA] A4 sd-1 semi riparati, denominatore «tutti i nascosti»: celle con limite inferiore di Wilson > 0,90 fino a 2 s; > 0,85 fino a 3 s; > 0,90 a 3 s
+      scritto nei file: 45 su 45; 60 su 60; 12 su 15; peggiore 826/879, limite 0,922
+      ricontato:        45 su 45; 60 su 60; 12 su 15; peggiore D prosegue 2.0 s 826/879 = 0.9397, limite inferiore 0.9220
+      correzione simultanea (Bonferroni, m = 45, z = 3.2608): celle con limite inferiore > 0,90: 45 su 45; peggior limite inferiore 0.9079
+      controllo: z per 12 celle giudicate insieme = 2.865 (nei file 2,87); 90 su 100 con quel z: [0.782-0.958] (nei file 0,78-0,96)
+[TORNA] A4 sd-0 semi riparati, denominatore «tutti i nascosti»: celle con limite inferiore di Wilson > 0,90 fino a 2 s; > 0,85 fino a 3 s; > 0,90 a 3 s
+      scritto nei file: 37 su 45; 60 su 60; 14 su 15; peggiore 715/800
+      ricontato:        37 su 45; 60 su 60; 14 su 15; peggiore T torna 1.0 s 715/800 = 0.8938, limite inferiore 0.8705
+
+   A5 tabella, regione tarata (sd-1), semi riparati, denominatore «tutti i nascosti»: dentro/n = quota [Wilson 95 %]
+     D prosegue   1s 1834/1872=0.980[0.972-0.985]  2s 826/879=0.940[0.922-0.954]  3s 461/513=0.899[0.869-0.922]  5s 174/221=0.787[0.729-0.836]
+     D rallenta   1s 1897/1920=0.988[0.982-0.992]  2s 1222/1274=0.959[0.947-0.969]  3s 803/859=0.935[0.916-0.949]  5s 399/461=0.866[0.831-0.894]
+     D sosta      1s 1906/1935=0.985[0.979-0.990]  2s 1780/1844=0.965[0.956-0.973]  3s 1738/1818=0.956[0.946-0.965]  5s 939/1026=0.915[0.897-0.931]
+     D torna      1s 1903/1931=0.985[0.979-0.990]  2s 1672/1720=0.972[0.963-0.979]  3s 1043/1068=0.977[0.966-0.984]  5s 358/371=0.965[0.941-0.979]
+     D sostalunga 1s 1910/1927=0.991[0.986-0.994]  2s 1775/1829=0.970[0.962-0.977]  3s 1733/1804=0.961[0.951-0.969]  5s 1711/1800=0.951[0.940-0.960]
+     D svolta     1s 1651/1911=0.864[0.848-0.879]  2s 894/1578=0.567[0.542-0.591]  3s 679/1504=0.451[0.426-0.477]  5s 515/1461=0.352[0.328-0.377]
+     D lontano    1s 1490/1933=0.771[0.752-0.789]  2s 574/1791=0.320[0.299-0.342]  3s 231/1762=0.131[0.116-0.148]  5s 33/1759=0.019[0.013-0.026]
+     D sd-1 area regione / ombra, media pesata sui 5 comportamenti sul percorso, a 1/2/3 s: 0.72 0.95 1.00
+     D sd-0 area regione / ombra, media pesata sui 5 comportamenti sul percorso, a 1/2/3 s: 1.12 1.61 1.55
+     T prosegue   1s 796/800=0.995[0.987-0.998]  2s 510/529=0.964[0.945-0.977]  3s 275/284=0.968[0.941-0.983]  5s 104/112=0.929[0.865-0.963]
+     T rallenta   1s 793/800=0.991[0.982-0.996]  2s 673/702=0.959[0.941-0.971]  3s 437/472=0.926[0.899-0.946]  5s 220/247=0.891[0.846-0.924]
+     T sosta      1s 793/800=0.991[0.982-0.996]  2s 763/781=0.977[0.964-0.985]  3s 745/770=0.968[0.953-0.978]  5s 532/580=0.917[0.892-0.937]
+     T torna      1s 794/800=0.993[0.984-0.997]  2s 725/748=0.969[0.954-0.979]  3s 568/582=0.976[0.960-0.986]  5s 224/243=0.922[0.881-0.949]
+     T sostalunga 1s 793/800=0.991[0.982-0.996]  2s 762/783=0.973[0.959-0.982]  3s 741/767=0.966[0.951-0.977]  5s 729/763=0.955[0.938-0.968]
+     T svolta     1s 697/800=0.871[0.846-0.893]  2s 361/667=0.541[0.503-0.579]  3s 206/538=0.383[0.343-0.425]  5s 87/441=0.197[0.163-0.237]
+     T lontano    1s 671/800=0.839[0.812-0.863]  2s 341/761=0.448[0.413-0.484]  3s 190/725=0.262[0.231-0.295]  5s 95/714=0.133[0.110-0.160]
+     T sd-1 area regione / ombra, media pesata sui 5 comportamenti sul percorso, a 1/2/3 s: 0.12 0.24 0.31
+     T sd-0 area regione / ombra, media pesata sui 5 comportamenti sul percorso, a 1/2/3 s: 0.14 0.99 1.21
+     L prosegue   1s 792/800=0.990[0.980-0.995]  2s 768/800=0.960[0.944-0.972]  3s 618/669=0.924[0.901-0.942]  5s 293/325=0.902[0.864-0.929]
+     L rallenta   1s 797/800=0.996[0.989-0.999]  2s 767/800=0.959[0.943-0.970]  3s 711/774=0.919[0.897-0.936]  5s 495/578=0.856[0.825-0.883]
+     L sosta      1s 790/799=0.989[0.979-0.994]  2s 766/799=0.959[0.943-0.970]  3s 743/791=0.939[0.920-0.954]  5s 671/763=0.879[0.854-0.901]
+     L torna      1s 789/799=0.987[0.977-0.993]  2s 740/774=0.956[0.939-0.968]  3s 648/693=0.935[0.914-0.951]  5s 441/487=0.906[0.876-0.928]
+     L sostalunga 1s 794/800=0.993[0.984-0.997]  2s 777/800=0.971[0.957-0.981]  3s 746/787=0.948[0.930-0.961]  5s 702/771=0.911[0.888-0.929]
+     L svolta     1s 751/798=0.941[0.923-0.955]  2s 553/792=0.698[0.665-0.729]  3s 380/735=0.517[0.481-0.553]  5s 180/632=0.285[0.251-0.321]
+     L lontano    1s 736/800=0.920[0.899-0.937]  2s 532/800=0.665[0.632-0.697]  3s 367/788=0.466[0.431-0.501]  5s 179/771=0.232[0.204-0.263]
+     L sd-1 area regione / ombra, media pesata sui 5 comportamenti sul percorso, a 1/2/3 s: 0.06 0.16 0.27
+     L sd-0 area regione / ombra, media pesata sui 5 comportamenti sul percorso, a 1/2/3 s: 0.07 0.79 1.12
+[TORNA] A5b D «prosegue» a 5 s
+      scritto nei file: 174/221 = 0,787 [0,729-0,836]
+      ricontato:        174 su 221 = 0.7873 [0.7287-0.8361]
+[TORNA] A5c D «prosegue» a 3 s, due denominatori
+      scritto nei file: 461/513 (tutti); 461/480 (dentro l'area osservata)
+      ricontato:        461/513; 461/480 (fuori griglia 33)
+[TORNA] A5d una cella, due denominatori (D, «prosegue», 3 s; semi originali)
+      scritto nei file: 86/92 e 86/98; 101/105 e 101/119
+      ricontato:        86/92 e 86/98; 101/105 e 101/119
+[TORNA] A6 istanti con il soggetto nascosto fuori dall'area d'avviso
+      scritto nei file: 0 su 175 802 (35 780 + 35 891 + 104 131)
+      ricontato:        0 su 175802 (35780 + 35891 + 104131); righe-campione del banco 572480 con [16] predittori
+      limite superiore con 0 su 175802 SE gli istanti fossero indipendenti: esatto 1.70e-05; NON lo sono (istanti dello stesso passaggio): per passaggio vale A2
+[TORNA] A6b cicli con la regione su suolo visto libero oltre la fascia; cicli con la regione fuori dall'area d'avviso (semi riparati, sd-1)
+      scritto nei file: 0 e 0
+      ricontato:        0 e 0
+[TORNA] A7 camminatori meno regolari della taratura, ombra larga (L): minimo sul percorso fino a 1/2/3 s (denominatore «dentro l'area osservata»)
+      scritto nei file: 0,944 / 0,835 [0,79-0,87] / 0,801 [0,75-0,84]
+      ricontato:        323/342=0.944 [0.915-0.964] (prosegue, 1 s) / 283/339=0.835 [0.792-0.871] (prosegue, 2 s) / 226/282=0.801 [0.751-0.844] (prosegue, 3 s)
+   A8 10 blocchi di 400 semi contigui in D, denominatore «tutti»: «prosegue» a 3 s da 0.726 a 0.977, chi2/gl = 6.02; sulle 20 celle sul percorso fino a 3 s: media 2.67, mediana 2.76, minimo 0.20, massimo 6.02; radice di media e massimo: 1.63 e 2.45
+   A8 10 blocchi di 400 semi contigui in D, denominatore «dentro l'area osservata»: «prosegue» a 3 s da 0.900 a 0.992, chi2/gl = 1.89; sulle 20 celle sul percorso fino a 3 s: media 1.62, mediana 1.75, minimo 0.14, massimo 4.45; radice di media e massimo: 1.27 e 2.11
+      scritto nei file: «prosegue» a 3 s da 0,726 a 0,977; rapporto 2,67 («tutti») e 1,62 (denominatore del banco); massimo 6,0; intervalli stretti di 1,3-2,5 volte (radice di 1,62 e di 6,0 = 1.27 e 2.45)
+      a semi riparati (5 lanci D): chi2/gl medio sulle 20 celle sul percorso fino a 3 s = 0.94 (nei file 0,94); massimo 2.04
+[TORNA] A9 generatore: flusso del seme 9001 = flusso del seme 9000 avanzato di 1 (mio splitmix64)
+      scritto nei file: 1000 uguali su 1000
+      ricontato:        1000 su 1000; con lo stato iniziale mescolato (riparazione): 0 coincidenze
+[TORNA] A10 costo del predittore per ciclo (14-attacco/ris/tempo_*.txt; cifre lette, non rimisurate)
+      scritto nei file: Python puro 10 tracce: 5,3 ms mediana, 6,2 al 95o; C 120 tracce: 5,4 ms al 95o
+      ricontato:        py [('1', '0.6', '0.7'), ('3', '1.8', '2.0'), ('10', '5.3', '6.2')]; C [('1', '0.055', '0.073'), ('10', '0.511', '0.615'), ('60', '2.526', '2.885'), ('120', '4.826', '5.444')]
+[TORNA] A11 passaggi in cui la traccia si chiude prima dell'ombra, rilevamento 0,7, corpo esteso, maschera esatta (14-attacco/ris/tutto_T_e0_pd07.txt)
+      scritto nei file: 130 su 1581
+      ricontato:        130 su 1581 = 0.0822 [0.0697-0.0968]; in quei lanci: centro nascosto fuori dall'area d'avviso 0, cicli senza regione 0
+      «tutto insieme» (corpo esteso, ombra a -20 cm, rilevamento 0,7), «prosegue», regione a 1 e 2 s: 136/364 e 43/152 (nei file 136/364 e 43/152)
+[TORNA] A12 cicli senza osservazione in cui e' emessa una regione: prima della modifica (5 comportamenti sul percorso) e dopo (semi riparati, 7 comportamenti)
+      scritto nei file: prima 19 / 38 / 33 %; dopo 100 %
+      ricontato:        prima 20020 su 105301 = 19.0 % / 45283 su 118875 = 38.1 % / 46339 su 139132 = 33.3 %; dopo 785645 su 785645 / 342552 su 342552 / 395479 su 395479
+[TORNA] A12b sistema prima della modifica, semi riparati: passaggi con un vuoto (5 comportamenti sul percorso)
+      scritto nei file: 9715 su 9735; 3981 su 4000; 3997 su 3999
+      ricontato:        9715 su 9735 / 3981 su 4000 / 3997 su 3999
+   A12c errore mediano del punto, miscela di riferimento, geometria T, righe M dei file (letto, non ricalcolato dai passaggi):
+      prova_T.tsv                  L1-fermo  tau 1.0 n=2400 err_med=0.983
+      prova_T.tsv                  L1-fermo  tau 2.0 n=2115 err_med=1.490
+      prova_T.tsv                  L1-fermo  tau 3.0 n=1734 err_med=1.659
+      prova_T.tsv                  sd-1      tau 1.0 n=2400 err_med=0.182
+      prova_T.tsv                  sd-1      tau 2.0 n=2115 err_med=0.386
+      prova_T.tsv                  sd-1      tau 3.0 n=1734 err_med=0.597
+      semi_T_80000x400.tsv         L1-fermo  tau 1.0 n=2400 err_med=1.000
+      semi_T_80000x400.tsv         L1-fermo  tau 2.0 n=2077 err_med=1.542
+      semi_T_80000x400.tsv         L1-fermo  tau 3.0 n=1674 err_med=1.648
+      semi_T_80000x400.tsv         sd-1      tau 1.0 n=2400 err_med=0.181
+      semi_T_80000x400.tsv         sd-1      tau 2.0 n=2077 err_med=0.369
+      semi_T_80000x400.tsv         sd-1      tau 3.0 n=1674 err_med=0.557
+      semi_T_80400x400.tsv         L1-fermo  tau 1.0 n=2400 err_med=0.972
+      semi_T_80400x400.tsv         L1-fermo  tau 2.0 n=2111 err_med=1.481
+      semi_T_80400x400.tsv         L1-fermo  tau 3.0 n=1697 err_med=1.592
+      semi_T_80400x400.tsv         sd-1      tau 1.0 n=2400 err_med=0.186
+      semi_T_80400x400.tsv         sd-1      tau 2.0 n=2111 err_med=0.383
+      semi_T_80400x400.tsv         sd-1      tau 3.0 n=1697 err_med=0.540
+
+====================================================================================================
+B. NUCLEO (f4): file di testo dei lanci
+====================================================================================================
+[TORNA] B1 avviso, rilevamento certo: passaggi falliti (v2_R8.txt, righe «principale»)
+      scritto nei file: 0 su 14 400 in 36 celle
+      ricontato:        0 su 14400 in 36 celle
+[TORNA] B2 identita' al ritorno, modello ideale, una persona: celle con riemersioni e quota riagganciata
+      scritto nei file: 100 % in 27 celle (N = 400 per cella; limite inferiore 99,25 %)
+      ricontato:        27 celle con riemersioni; tutte al 100,0 %: True; riemersioni per cella min 400 max 400; somma 10800
+      limite inferiore con 400 su 400: 1 - 3/400 = 0.9925; esatto a una coda 0.05^(1/400) = 0.9925; Wilson 0.9905
+[TORNA] B3 avviso, probabilita' di rilevamento 0,9: falliti con ombra stimata a -20 cm; a 0 e +20 cm (v2_R8_pd09.txt)
+      scritto nei file: 13 su 4800 in 8 celle su 12; 0 su 9600
+      ricontato:        13 su 4800 = 0.0027 [0.0016-0.0046], in 8 celle su 12; 0 su 9600
+[TORNA] B4 secondo soggetto mai tracciato che esce dalla stessa ombra: identita' assegnata per errore (v2_SECOND.txt)
+      scritto nei file: 2400 su 2400; 2 su 1200 (dalla portata)
+      ricontato:        ombra 2400 su 2400; portata 2 su 2400; campo 0 su 2400
+      nota: il denominatore «1200» della portata nei file e' la meta' delle righe; qui le righe sommate danno 2400
+   --- v2_WALLP.txt (prime righe, lette) ---
+      # muro fermo (largo 1,2 m a 2,8 m) con una persona (40 cm) che passa a 1,6 m: passaggi con almeno un'etichetta «mobile» falsa sul muro; N=400
+       curva nom: senza C6 400/400 (100.0%) ; con C6 0/400 (0.0%)
+       curva lim: senza C6 400/400 (100.0%) ; con C6 0/400 (0.0%)
+       curva tor: senza C6 400/400 (100.0%) ; con C6 0/400 (0.0%)
+      
+      real	0m0,210s
+      user	0m0,205s
+      sys	0m0,004s
+   --- v2_MOB.txt (prime righe, lette) ---
+      # regola «mobile» finale (finestra che cresce, media di 3): quota vista entro 1,0 s (k<=15) [entro 1 s + 1 fotogramma], 0,5 m/s, N=2000; fermo: etichette false entro 1 s, N=4000
+       nom da 2 m: di traverso 100.00% [100.00%] ; avvicinam. 100.00% [100.00%] ; FERMO 0.00% [0.00%]
+       nom da 3 m: di traverso 100.00% [100.00%] ; avvicinam. 100.00% [100.00%] ; FERMO 0.00% [0.00%]
+       lim da 2 m: di traverso 100.00% [100.00%] ; avvicinam. 100.00% [100.00%] ; FERMO 0.00% [0.00%]
+       lim da 3 m: di traverso 100.00% [100.00%] ; avvicinam. 85.85% [95.65%] ; FERMO 0.00% [0.00%]
+       tor da 2 m: di traverso 100.00% [100.00%] ; avvicinam. 100.00% [100.00%] ; FERMO 0.00% [0.00%]
+       tor da 3 m: di traverso 100.00% [100.00%] ; avvicinam. 26.60% [46.75%] ; FERMO 0.00% [0.00%]
+      
+      real	0m0,749s
+      user	0m0,738s
+      sys	0m0,004s
+
+====================================================================================================
+C. PROFONDITA' SIMULATA DA SCHEDA TECNICA E DATI PUBBLICI (f10): json e jsonl
+====================================================================================================
+[TORNA] C1 [sim] celle «libero» interamente dentro l'ombra vera (misura_libero.json)
+      scritto nei file: 0 su 2 907 032 celle·fotogramma; 135 sequenze (131 + 4 con filtri)
+      ricontato:        0 su 2907032; sequenze con ombra 135 (di cui con filtri 4); al bordo 0 su 356736; valori distinti di celle d'ombra [8, 12, 342, 454]; sequenze colpite 0
+      per sequenza: 0 su 131 -> limite superiore Wilson 0.0285; esatto a una coda 0.0226; 3/N 0.0229 (nei file 2,9 %)
+      per cella·fotogramma il limite 3/N = 1.0e-06 NON e' lecito: le celle di una sequenza non sono indipendenti
+[TORNA] C1 [sim_p40] celle «libero» interamente dentro l'ombra vera (misura_libero.json)
+      scritto nei file: 2 su 2 907 032 celle·fotogramma; 135 sequenze (131 + 4 con filtri)
+      ricontato:        2 su 2907032; sequenze con ombra 135 (di cui con filtri 4); al bordo 45 su 356736; valori distinti di celle d'ombra [8, 12, 342, 454]; sequenze colpite 1
+[TORNA] C2 [sim] passaggi dietro il pannello, profilo D435i nominale, tre geometrie x 30 semi (misura_passaggi.json)
+      scritto nei file: stessa identita' 0 su 90; semi dispari 0 su 45; pannello «in movimento» 79 su 90; regione 36 su 46
+      ricontato:        stessa identita' 0 su 90 = 0.0000 [0.0000-0.0409]; semi dispari 0 su 45 = 0.0000 [0.0000-0.0787]; pannello «in movimento» 79 su 90 = 0.8778 [0.7943-0.9304]; soggetto sempre nella regione 36 su 46 = 0.7826 [0.6443-0.8774]; passaggi con fusione persona-pannello 90
+      NOTA D'ATTRIBUZIONE: «regione 83 su 90» sta nella variante a soglia di punti corretta (sim_p40); con i parametri di partenza (sim) solo 46 passaggi su 90 hanno una previsione e la verita' resta sempre nella regione in 36 di essi. Al primo lancio di questo programma l'attesa «83 su 90» era messa su sim e dava NON TORNA.
+[TORNA] C3 [sim] cella del centro del soggetto nascosto, per fotogramma
+      scritto nei file: 2939 su 3038 nell'avviso; 99 in ombra senza avviso; 0 «libero»
+      ricontato:        2939 su 3038 = 0.9674 [0.9605-0.9732]; in ombra senza avviso 99; libero 0; occupato 0; non osservato 0
+      per passaggio (unita' indipendente): passaggi con almeno un fotogramma senza avviso 15 su 90 = 0.1667 [0.1037-0.2569]; con una cella «libero» 0 su 90 (limite superiore Wilson 0.0409)
+[TORNA] C2 [sim_p40] passaggi dietro il pannello, profilo D435i nominale, tre geometrie x 30 semi (misura_passaggi.json)
+      scritto nei file: stessa identita' 80 su 90; semi dispari 41 su 45; pannello «in movimento» 5 su 90; regione 83 su 90
+      ricontato:        stessa identita' 80 su 90 = 0.8889 [0.8074-0.9385]; semi dispari 41 su 45 = 0.9111 [0.7927-0.9649]; pannello «in movimento» 5 su 90 = 0.0556 [0.0240-0.1235]; soggetto sempre nella regione 83 su 90 = 0.9222 [0.8481-0.9618]; passaggi con fusione persona-pannello 6
+      cella del centro nascosto [sim_p40]: {'possibile_presenza': 3038, 'occupato': 0, 'non_osservato': 0, 'in_ombra_senza_avviso': 0, 'libero': 0, 'fuori_griglia': 0}
+[TORNA] C4 errore del bordo dell'ombra stimata, condizioni nominali (misura_ombra.json)
+      scritto nei file: da +2,0 a +14,6 cm, mediana +6,2; 115 sequenze su 115 entro ±20 cm; al limite 0 su 8, da -65 a +73 cm
+      ricontato:        nominale: da +2.0 a +14.6 cm, mediana delle mediane di lato +6.2; entro ±20 cm 115 su 115 = 1.0000 [0.9677-1.0000]; al limite: da -65.0 a +73.2 cm, entro ±20 cm 0 su 8
+[TORNA] C5 ostacoli fermi visti entro 15 cm (misura_ostacoli.json)
+      scritto nei file: cassa 84 su 84; scatola di 15 cm a 2 m 10 su 10
+      ricontato:        cassa 84 su 84; scatola a 2 m 10 su 10; scatola a 0,8 m 0 su 10; vetro 0 su 10; sospeso a 2,0 m 7 su 10
+      limite inferiore di Wilson: 84 su 84 -> 0.956 (fotogrammi di UNA sequenza, non indipendenti); 10 su 10 -> 0.722
+[TORNA] C6 tracce confermate su pavimento vuoto, 30 fotogrammi (riassunto.json)
+      scritto nei file: 28 (D435i) / 0 (D455) / 26 (Gemini 335) / 43 (D435i al limite)
+      ricontato:        {'d435i_nom__pavimento_vuoto': 28, 'd455_nom__pavimento_vuoto': 0, 'g335_nom__pavimento_vuoto': 26, 'd435i_lim__pavimento_vuoto': 43}
+[TORNA] C7 costo per ciclo della catena, 424x240, un filo di CPU da portatile (fotogrammi.jsonl di 162 sequenze)
+      scritto nei file: media 6,35 ms; 95o 18,6; massimo 105; 4 cicli su 9152 oltre 66 ms
+      ricontato:        cicli 9152; media 6.35 ms; mediana 4.13; 95o 18.6; massimo 105.0; oltre 66,7 ms: 4; oltre 66 ms: 4
+   C7b registrazioni pubbliche (vere/RIEPILOGO.jsonl; cifre lette da un riepilogo, non ricontabili):
+      {"sequenza": "tum_fr3_walking_static", "variante": "posa_mediana", "sensore": "Microsoft Kinect v1 (luce strutturata), profondità registrata sul colore dal driver OpenNI", "pixel": 307200, "ogni": 2, "min_punti_ostacolo": 3, "portata_m": 3.0, "posa_usata": {"a
+      {"sequenza": "tum_fr3_walking_static", "variante": "posa_per_fotogramma", "sensore": "Microsoft Kinect v1 (luce strutturata), profondità registrata sul colore dal driver OpenNI", "pixel": 307200, "ogni": 2, "min_punti_ostacolo": 3, "portata_m": 3.0, "posa_usat
+      {"sequenza": "tum_fr3_walking_static", "variante": "posa_per_fotogramma_p121", "sensore": "Microsoft Kinect v1 (luce strutturata), profondità registrata sul colore dal driver OpenNI", "pixel": 307200, "ogni": 2, "min_punti_ostacolo": 121, "portata_m": 3.0, "po
+      {"sequenza": "tum_fr3_walking_static", "variante": "posa_per_fotogramma_5m", "sensore": "Microsoft Kinect v1 (luce strutturata), profondità registrata sul colore dal driver OpenNI", "pixel": 307200, "ogni": 2, "min_punti_ostacolo": 3, "portata_m": 5.0, "posa_u
+      {"sequenza": "tum_fr3_walking_static", "variante": "solo stima del suolo", "posa_stimata": {"altezza_m": 1.564, "inclinazione_gradi": 19.51, "rollio_gradi": -0.54, "frazione_concorde": 0.152}, "posa_vera_primo_fotogramma": {"altezza_m": 1.377, "inclinazione_gr
+      {"sequenza": "realsense_stands_still", "variante": "nucleo", "sensore": "Intel RealSense D435I (stereo attivo a infrarossi)", "pixel": 230400, "ogni": 2, "min_punti_ostacolo": 3, "portata_m": 3.0, "errore": "ValueError: nessun piano del suolo plausibile trovat
+      {"sequenza": "realsense_stands_still", "variante": "p91", "sensore": "Intel RealSense D435I (stereo attivo a infrarossi)", "pixel": 230400, "ogni": 2, "min_punti_ostacolo": 91, "portata_m": 3.0, "errore": "ValueError: nessun piano del suolo plausibile trovato"
+      {"sequenza": "realsense_stands_still", "variante": "p91_rollio_vincolato", "sensore": "Intel RealSense D435I (stereo attivo a infrarossi)", "pixel": 230400, "ogni": 2, "min_punti_ostacolo": 91, "portata_m": 3.0, "posa_stimata": {"altezza_m": 0.342, "inclinazio
+      {"sequenza": "realsense_stairs", "variante": "nucleo", "sensore": "Intel RealSense 435 (stereo attivo a infrarossi)", "pixel": 921600, "ogni": 2, "min_punti_ostacolo": 3, "portata_m": 3.0, "posa_stimata": {"altezza_m": 0.61, "inclinazione_gradi": 32.01, "rolli
+      {"sequenza": "realsense_stairs", "variante": "p362", "sensore": "Intel RealSense 435 (stereo attivo a infrarossi)", "pixel": 921600, "ogni": 2, "min_punti_ostacolo": 362, "portata_m": 3.0, "posa_stimata": {"altezza_m": 0.61, "inclinazione_gradi": 32.01, "rolli
+      {"sequenza": "realsense_stairs", "variante": "p362_rollio_vincolato", "sensore": "Intel RealSense 435 (stereo attivo a infrarossi)", "pixel": 921600, "ogni": 2, "min_punti_ostacolo": 362, "portata_m": 3.0, "posa_stimata": {"altezza_m": 0.594, "inclinazione_gra
+      {"sequenza": "realsense_structured", "variante": "nucleo", "sensore": "Intel RealSense SR300 (NON stereo attivo: «Coded-Light Depth Sensor» (luce codificata))", "pixel": 307200, "ogni": 2, "min_punti_ostacolo": 3, "portata_m": 3.0, "posa_stimata": {"altezza_m"
+      {"sequenza": "realsense_structured", "variante": "p121", "sensore": "Intel RealSense SR300 (NON stereo attivo: «Coded-Light Depth Sensor» (luce codificata))", "pixel": 307200, "ogni": 2, "min_punti_ostacolo": 121, "portata_m": 3.0, "posa_stimata": {"altezza_m"
+      {"sequenza": "realsense_structured", "variante": "p121_rollio_vincolato", "sensore": "Intel RealSense SR300 (NON stereo attivo: «Coded-Light Depth Sensor» (luce codificata))", "pixel": 307200, "ogni": 2, "min_punti_ostacolo": 121, "portata_m": 3.0, "posa_stima
+      {"sequenza": "depthtrack_human02_indoor", "variante": "nucleo", "sensore": "Intel RealSense D415 (stereo attivo a infrarossi)", "pixel": 230400, "ogni": 2, "min_punti_ostacolo": 3, "portata_m": 4.0, "posa_stimata": {"altezza_m": 1.039, "inclinazione_gradi": 34
+      {"sequenza": "depthtrack_human02_indoor", "variante": "p91", "sensore": "Intel RealSense D415 (stereo attivo a infrarossi)", "pixel": 230400, "ogni": 2, "min_punti_ostacolo": 91, "portata_m": 4.0, "posa_stimata": {"altezza_m": 1.039, "inclinazione_gradi": 34.4
+      {"sequenza": "depthtrack_human02_indoor", "variante": "p91_rollio_vincolato", "sensore": "Intel RealSense D415 (stereo attivo a infrarossi)", "pixel": 230400, "ogni": 2, "min_punti_ostacolo": 91, "portata_m": 4.0, "posa_stimata": {"altezza_m": 0.722, "inclinaz
+      {"sequenza": "princeton_new_ex_occ4", "variante": "nucleo", "sensore": "Microsoft Kinect v1 (luce strutturata) via OpenNI; profondità registrata sul colore (non verificato)", "pixel": 307200, "ogni": 1, "min_punti_ostacolo": 3, "portata_m": 4.0, "posa_stimata"
+      {"sequenza": "princeton_new_ex_occ4", "variante": "p121", "sensore": "Microsoft Kinect v1 (luce strutturata) via OpenNI; profondità registrata sul colore (non verificato)", "pixel": 307200, "ogni": 1, "min_punti_ostacolo": 121, "portata_m": 4.0, "posa_stimata"
+      {"sequenza": "princeton_new_ex_occ4", "variante": "p121_rollio_vincolato", "sensore": "Microsoft Kinect v1 (luce strutturata) via OpenNI; profondità registrata sul colore (non verificato)", "pixel": 307200, "ogni": 1, "min_punti_ostacolo": 121, "portata_m": 4.
+      {"sequenza": "princeton_child_no1", "variante": "nucleo", "sensore": "Microsoft Kinect v1 (luce strutturata) via OpenNI; profondità registrata sul colore (non verificato)", "pixel": 307200, "ogni": 2, "min_punti_ostacolo": 3, "portata_m": 4.0, "posa_stimata": 
+      {"sequenza": "princeton_child_no1", "variante": "p121", "sensore": "Microsoft Kinect v1 (luce strutturata) via OpenNI; profondità registrata sul colore (non verificato)", "pixel": 307200, "ogni": 2, "min_punti_ostacolo": 121, "portata_m": 4.0, "posa_stimata": 
+      {"sequenza": "princeton_child_no1", "variante": "p121_rollio_vincolato", "sensore": "Microsoft Kinect v1 (luce strutturata) via OpenNI; profondità registrata sul colore (non verificato)", "pixel": 307200, "ogni": 2, "min_punti_ostacolo": 121, "portata_m": 4.0,
+      {"sequenza": "princeton_face_occ5", "variante": "nucleo", "sensore": "Microsoft Kinect v1 (luce strutturata) via OpenNI; profondità registrata sul colore (non verificato)", "pixel": 307200, "ogni": 1, "min_punti_ostacolo": 3, "portata_m": 4.0, "posa_stimata": 
+      {"sequenza": "princeton_face_occ5", "variante": "p121", "sensore": "Microsoft Kinect v1 (luce strutturata) via OpenNI; profondità registrata sul colore (non verificato)", "pixel": 307200, "ogni": 1, "min_punti_ostacolo": 121, "portata_m": 4.0, "posa_stimata": 
+      {"sequenza": "princeton_face_occ5", "variante": "p121_rollio_vincolato", "sensore": "Microsoft Kinect v1 (luce strutturata) via OpenNI; profondità registrata sul colore (non verificato)", "pixel": 307200, "ogni": 1, "min_punti_ostacolo": 121, "portata_m": 4.0,
+[TORNA] C8 tracciati pubblici di pedoni (cattura del moto): regione al 90 % del filtro con q = 0,2; N tratti e persone (banco_thor.json, riassunto)
+      scritto nei file: 219 tratti, 9 persone; copertura 0,977 / 1,000 / 1,000; errore mediano 0,21 / 0,49 / 0,81 m
+      ricontato:        N 219, persone 9; copertura ['0.977', '1.000', '1.000'] -> conteggi [214, 219, 219]; Wilson ['[0.948-0.990]', '[0.983-1.000]', '[0.983-1.000]']; errore mediano ['0.21', '0.49', '0.81']; IC nel file a 1 s [0.9424761386276236, 1.0]
+      q0.05_tutti: copertura a 1/2/3 s ['0.795', '0.804', '0.831']
+      q0.01_tutti: copertura a 1/2/3 s ['0.534', '0.521', '0.516']
+      taratura su exp1 (227 tratti): q=0.01 -> ['0.639', '0.626', '0.617']; q=0.05 -> ['0.855', '0.881', '0.877']; q=0.1 -> ['0.943', '0.960', '0.987']; q=0.2 -> ['0.996', '1.000', '1.000']; q=0.5 -> ['1.000', '1.000', '1.000']; q=1.0 -> ['1.000', '1.000', '1.000']; q=2.0 -> ['1.000', '1.000', '1.000']; q=5.0 -> ['1.000', '1.000', '1.000']
+      ricalcolo indipendente gia' nei file (21-statistica/tabelle/thor.json): tratti exp3 219; per persona {'0': 25, '1': 26, '2': 29, '3': 7, '4': 18, '5': 16, '6': 31, '7': 25, '8': 42}; q=0,2 con altri sfasamenti [219, 0.982, 0.995, 1.0]
+      tratti per persona: min 7 max 42; numerosita' efficace se i tratti di una persona fossero uno solo: 9; indice (somma)^2/somma dei quadrati = 7.8
+
+====================================================================================================
+ESITO: tornano 31, non tornano 0
+====================================================================================================

@@ -1,0 +1,186 @@
+# piano_mc.py — seme 20261114, 20000 estrazioni per caso; numpy 2.5.4; python 3.14.10
+# fattore di squadra lognormale sigma 0.12; fattore di persona lognormale sigma 0.2; efficienza d'orologio triangolare (0.78, 0.88, 0.96)
+# correlazione (Pearson) fra due compiti della stessa persona (B2, B3a di P2): 0.55; fra compiti di persone diverse (B2 di P2, A2 di P1): 0.13
+# somma delle durate probabili (ore-persona): RIF-5 54.00; DIV-5 55.00; RIF-4 52.50; DIV-4 53.50; NOC-5 52.50
+
+== 1. Probabilita' che il minimo dimostrabile sia chiuso (fine della prova generale) ==
+RIF-5      5 persone, B3 a una persona, nessun sensore                    P(<= 14.0 h) = 0.016 [0.014; 0.018] | ora di fine: p10 16.49  mediana 21.08  p80 24.92  p90 27.14
+DIV-5      5 persone, B3 diviso (P2 e P5), nessun sensore [ramo C]        P(<= 14.0 h) = 0.022 [0.020; 0.024] | ora di fine: p10 16.01  mediana 20.20  p80 23.54  p90 25.54
+DIV-5-A    5 persone, B3 diviso, arriva una camera di profondita' [A]     P(<= 14.0 h) = 0.016 [0.014; 0.017] | ora di fine: p10 16.39  mediana 20.66  p80 24.07  p90 26.18
+DIV-5-B    5 persone, B3 diviso, arriva solo altro [ramo B]               P(<= 14.0 h) = 0.018 [0.016; 0.020] | ora di fine: p10 16.21  mediana 20.40  p80 23.74  p90 25.74
+RIF-4      4 persone, B3 a una persona                                    P(<= 14.0 h) = 0.003 [0.003; 0.004] | ora di fine: p10 18.28  mediana 23.44  p80 27.73  p90 30.28
+DIV-4      4 persone, B3 diviso (P2 e P1)                                 P(<= 14.0 h) = 0.003 [0.002; 0.004] | ora di fine: p10 18.28  mediana 23.33  p80 27.55  p90 30.05
+NOC-5      nocciolo non tagliabile (senza D4 e VID; A4, J2, LAT a tempo chiuso) P(<= 14.0 h) = 0.079 [0.075; 0.082] | ora di fine: p10 14.34  mediana 17.80  p80 20.62  p90 22.37
+DIV-5      come sopra, entro l'ora 15                                     P(<= 15.0 h) = 0.050 [0.047; 0.053] | ora di fine: p10 16.01  mediana 20.20  p80 23.54  p90 25.54
+DIV-5      come sopra, entro l'ora 16                                     P(<= 16.0 h) = 0.100 [0.096; 0.104] | ora di fine: p10 16.01  mediana 20.20  p80 23.54  p90 25.54
+NOC-5      come sopra, entro l'ora 13                                     P(<= 13.0 h) = 0.033 [0.030; 0.035] | ora di fine: p10 14.34  mediana 17.80  p80 20.62  p90 22.37
+
+== 2. Tappe del piano consigliato DIV-5 (ore d'orologio di fine: p10 / mediana / p90) e criticita' ==
+  K0   tutti    inizio (mediana)  0.00 | fine  0.71 /  1.01 /  1.46 | sul percorso critico 100.0 % | Spearman(durata di base, fine PG) +0.06
+  A1   P1       inizio (mediana)  1.01 | fine  1.66 /  2.32 /  3.21 | sul percorso critico  21.7 % | Spearman(durata di base, fine PG) +0.02
+  B1   P2       inizio (mediana)  1.01 | fine  2.19 /  3.05 /  4.28 | sul percorso critico  37.1 % | Spearman(durata di base, fine PG) +0.05
+  C1   P3       inizio (mediana)  1.01 | fine  3.51 /  5.03 /  7.30 | sul percorso critico  15.0 % | Spearman(durata di base, fine PG) +0.06
+  D1   P4       inizio (mediana)  1.01 | fine  2.19 /  3.05 /  4.26 | sul percorso critico  13.6 % | Spearman(durata di base, fine PG) +0.04
+  E1   P5       inizio (mediana)  1.01 | fine  2.07 /  2.95 /  4.18 | sul percorso critico  12.6 % | Spearman(durata di base, fine PG) +0.02
+  A2   P1       inizio (mediana)  2.32 | fine  3.16 /  4.35 /  5.99 | sul percorso critico  21.7 % | Spearman(durata di base, fine PG) +0.03
+  B2   P2       inizio (mediana)  3.05 | fine  4.24 /  5.83 /  8.08 | sul percorso critico  37.1 % | Spearman(durata di base, fine PG) +0.07
+  C2   P3       inizio (mediana)  5.03 | fine  6.12 /  8.57 / 12.01 | sul percorso critico  15.0 % | Spearman(durata di base, fine PG) +0.04
+  D2   P4       inizio (mediana)  3.05 | fine  6.25 /  8.73 / 12.34 | sul percorso critico  13.6 % | Spearman(durata di base, fine PG) +0.06
+  E2   P5       inizio (mediana)  2.95 | fine  3.59 /  4.99 /  6.93 | sul percorso critico  12.6 % | Spearman(durata di base, fine PG) +0.02
+  A3   P1       inizio (mediana)  4.35 | fine  5.53 /  7.68 / 10.63 | sul percorso critico  21.7 % | Spearman(durata di base, fine PG) +0.06
+  B3a  P2       inizio (mediana)  5.83 | fine  7.09 /  9.73 / 13.48 | sul percorso critico  24.8 % | Spearman(durata di base, fine PG) +0.07
+  B3b  P5       inizio (mediana)  6.18 | fine  7.67 / 10.12 / 13.45 | sul percorso critico  24.9 % | Spearman(durata di base, fine PG) +0.07
+  C3   P3       inizio (mediana)  8.57 | fine  8.54 / 11.93 / 16.55 | sul percorso critico  15.0 % | Spearman(durata di base, fine PG) +0.04
+  D4   P4       inizio (mediana)  8.82 | fine  7.93 / 10.76 / 14.96 | sul percorso critico  13.6 % | Spearman(durata di base, fine PG) +0.02
+  A4   P1       inizio (mediana)  7.68 | fine  8.30 / 11.56 / 16.01 | sul percorso critico  21.4 % | Spearman(durata di base, fine PG) +0.07
+  J1   P2+P5    inizio (mediana) 10.87 | fine 10.38 / 13.51 / 17.75 | sul percorso critico  50.0 % | Spearman(durata di base, fine PG) +0.11
+  JS   P3       inizio (mediana) 14.32 | fine 12.19 / 15.64 / 20.16 | sul percorso critico  17.0 % | Spearman(durata di base, fine PG) +0.01
+  LAT  P5       inizio (mediana) 13.51 | fine 11.44 / 14.83 / 19.41 | sul percorso critico   4.9 % | Spearman(durata di base, fine PG) +0.00
+  D3   P4       inizio (mediana) 14.44 | fine 12.84 / 16.43 / 21.06 | sul percorso critico  78.1 % | Spearman(durata di base, fine PG) +0.12
+  J2   P1+P2    inizio (mediana) 16.43 | fine 14.63 / 18.70 / 23.89 | sul percorso critico  66.4 % | Spearman(durata di base, fine PG) +0.15
+  VID  P5       inizio (mediana) 16.97 | fine 14.57 / 18.39 / 23.34 | sul percorso critico  33.6 % | Spearman(durata di base, fine PG) +0.02
+  PG   tutti    inizio (mediana) 19.16 | fine 16.01 / 20.20 / 25.54 | sul percorso critico 100.0 % | Spearman(durata di base, fine PG) +0.06
+  fattori: squadra g +0.63; f_P1 +0.21; f_P2 +0.28; f_P3 +0.14; f_P4 +0.20; f_P5 +0.19; e_P1 -0.05; e_P2 -0.06; e_P3 -0.03; e_P4 -0.05; e_P5 -0.04
+  RIF-5, criticita': K0 100 %; PG 100 %; D3 80 %; J1 76 %; B1 72 %; B2 72 %; B3 72 %; J2 68 %; VID 32 %; JS 15 %
+
+== 3. Che cosa muove di piu' P(MD) nel piano DIV-5 (una leva alla volta) ==
+  tutte le durate x 1.2        dP = -0.021
+  tutte le durate x 1.1        dP = -0.016
+  +1 h su K0                   dP = -0.015
+  +1 h su PG                   dP = -0.015
+  +1 h su D3                   dP = -0.013
+  +1 h su J2                   dP = -0.012
+  +1 h su VID                  dP = -0.011
+  +1 h su J1                   dP = -0.009
+  +1 h su B1                   dP = -0.008
+  +1 h su B2                   dP = -0.008
+  +1 h su B3b                  dP = -0.007
+  +1 h su B3a                  dP = -0.006
+  +1 h su JS                   dP = -0.005
+  +1 h su A1                   dP = -0.005
+  +1 h su A2                   dP = -0.005
+  +1 h su A3                   dP = -0.005
+  +1 h su A4                   dP = -0.005
+  +1 h su D1                   dP = -0.004
+  +1 h su D2                   dP = -0.004
+  +1 h su D4                   dP = -0.004
+  +1 h su E1                   dP = -0.004
+  +1 h su E2                   dP = -0.004
+  +1 h su LAT                  dP = -0.004
+  +1 h su C1                   dP = -0.003
+  +1 h su C2                   dP = -0.003
+  +1 h su C3                   dP = -0.003
+  tutte le durate x 0.9        dP = +0.053
+  nessun difetto da correggere (J2 = 0) dP = +0.013
+  il riuso va male (riletture x 2, correzioni x 1,5) dP = -0.021
+
+== 4. Compiti fuori dal minimo: probabilita' che stiano nelle finestre libere prima della prova generale ==
+  ramo C, E3 (P3): finestra mediana 5.02 h; P(sta nella finestra) = 0.623; e con PG chiusa entro 14: 0.008
+  ramo C, B4 (P1): finestra mediana 4.46 h; P(sta nella finestra) = 0.440; e con PG chiusa entro 14: 0.005
+  ramo A, E4 (P4, dal'arrivo delle registrazioni, mediana ora 5.78): finestra mediana 7.87 h; P(prima ora col sensore chiusa prima di PG) = 0.877; e con PG entro 14: 0.010
+  ramo B, E4b (P4): P(sta nella finestra) = 0.935; e con PG entro 14: 0.015
+
+== 5. Stabilita': altri due semi (P(MD) entro 14 h) ==
+  seme 20261115: RIF-5 0.015; DIV-5 0.020; RIF-4 0.003; DIV-4 0.003; NOC-5 0.075
+  seme 20261116: RIF-5 0.017; DIV-5 0.021; RIF-4 0.004; DIV-4 0.003; NOC-5 0.083
+
+== 6. Punti di controllo nel piano DIV-5: P(tappa chiusa entro l'ora) ==
+  ora  2.0: K0+E1: inventario spedito, tutti con le 25 prove verdi             P = 0.082; mediana  2.95; p80  3.72
+  ora  5.0: A2, B2, C1 chiusi: «libero» corretto, sd-0, schermo che riproduce  P = 0.145; mediana  6.33; p80  7.68
+  ora  8.0: A3, B3a, B3b, D2 chiusi: pronti per l'integrazione                 P = 0.041; mediana 11.28; p80 13.46
+  ora 11.0: J1 chiusa e tabellone corso (D3)                                   P = 0.017; mediana 16.43; p80 19.30
+  ora 14.0: PG chiusa                                                          P = 0.022; mediana 20.20; p80 23.54
+  se all'ora 8 B3a o B3b non e' chiuso (succede nel 0.913 dei casi): P(MD) = 0.005; se sono chiusi: 0.199
+  stesso segnale, ma passando al nocciolo: P(nocciolo entro 14 | in ritardo all'ora 8) = 0.036
+  se all'ora 11 il tabellone non e' corso (0.983 dei casi): P(MD) = 0.010; P(nocciolo entro 14) = 0.066
+
+== 7. PIANO RIVISTO dopo il primo lancio (TC: integrazione continua, tempo chiuso). Stime dei compiti invariate ==
+# somma delle durate probabili (ore-persona): TC-5 44.50; TC-5-RID 41.50; TC-5-B3 43.50; TC-4 43.00; TC-4-RID 40.00
+TC-5       5 persone, B3 diviso, minimo intero, nessun sensore            P(<= 14.0 h) = 0.294 [0.288; 0.300] | ora di fine: p10 12.26  mediana 15.46  p80 18.08  p90 19.68
+TC-5-RID   5 persone, B3 diviso, con i tagli scritti                      P(<= 14.0 h) = 0.460 [0.453; 0.467] | ora di fine: p10 11.46  mediana 14.25  p80 16.51  p90 17.85
+TC-5-B3    5 persone, B3 a una persona (P2), minimo intero                P(<= 14.0 h) = 0.180 [0.175; 0.185] | ora di fine: p10 13.04  mediana 16.71  p80 19.75  p90 21.61
+TC-5-B3-RID 5 persone, B3 a una persona, con i tagli scritti               P(<= 14.0 h) = 0.292 [0.286; 0.298] | ora di fine: p10 12.15  mediana 15.61  p80 18.47  p90 20.25
+TC-4       4 persone, B3 diviso (P2 e P1), minimo intero                  P(<= 14.0 h) = 0.077 [0.073; 0.081] | ora di fine: p10 14.40  mediana 18.39  p80 21.75  p90 23.80
+TC-4-RID   4 persone, B3 diviso, con i tagli scritti                      P(<= 14.0 h) = 0.277 [0.270; 0.283] | ora di fine: p10 12.46  mediana 15.51  p80 17.98  p90 19.46
+TC-5       ramo A o B: come TC-5, piu' 0,25 h di cambio su TAB            P(<= 14.0 h) = 0.274 [0.268; 0.280] | ora di fine: p10 12.41  mediana 15.61  p80 18.24  p90 19.83
+TC-5-RID   ramo A o B: come TC-5-RID, piu' 0,25 h di cambio su TAB        P(<= 14.0 h) = 0.438 [0.431; 0.445] | ora di fine: p10 11.66  mediana 14.39  p80 16.62  p90 17.96
+           ramo A: P(prima ora col sensore, E4, chiusa nelle finestre di P4 prima di PG) = 0.468; insieme a PG entro 14: 0.155; finestra mediana 2.98 h
+TC-5-RID   come sopra, entro l'ora 13                                     P(<= 13.0 h) = 0.295 [0.289; 0.302] | ora di fine: p10 11.46  mediana 14.25  p80 16.51  p90 17.85
+TC-5-RID   come sopra, entro l'ora 15                                     P(<= 15.0 h) = 0.617 [0.610; 0.624] | ora di fine: p10 11.46  mediana 14.25  p80 16.51  p90 17.85
+TC-5-RID   come sopra, entro l'ora 16                                     P(<= 16.0 h) = 0.746 [0.740; 0.752] | ora di fine: p10 11.46  mediana 14.25  p80 16.51  p90 17.85
+TC-5       minimo intero, entro l'ora 16 (fine del raffinamento utile)    P(<= 16.0 h) = 0.571 [0.564; 0.578] | ora di fine: p10 12.26  mediana 15.46  p80 18.08  p90 19.68
+
+-- 7b. Tappe di TC-5-RID (ore d'orologio) e criticita'
+  K0   tutti    inizio (mediana)  0.00 | fine  0.71 /  1.01 /  1.46 | sul percorso critico 100.0 % | Spearman(durata di base, fine PG) +0.09
+  A1   P1       inizio (mediana)  1.01 | fine  1.66 /  2.32 /  3.21 | sul percorso critico   0.2 % | Spearman(durata di base, fine PG) -0.01
+  B1   P2       inizio (mediana)  1.01 | fine  2.19 /  3.05 /  4.28 | sul percorso critico  51.0 % | Spearman(durata di base, fine PG) +0.11
+  C1   P3       inizio (mediana)  1.01 | fine  3.51 /  5.03 /  7.30 | sul percorso critico  19.0 % | Spearman(durata di base, fine PG) +0.10
+  D1   P4       inizio (mediana)  1.01 | fine  2.19 /  3.05 /  4.26 | sul percorso critico  12.1 % | Spearman(durata di base, fine PG) +0.04
+  E1   P5       inizio (mediana)  1.01 | fine  2.07 /  2.95 /  4.18 | sul percorso critico  17.6 % | Spearman(durata di base, fine PG) +0.04
+  A2   P1       inizio (mediana)  2.32 | fine  3.16 /  4.35 /  5.99 | sul percorso critico   0.2 % | Spearman(durata di base, fine PG) -0.00
+  B2   P2       inizio (mediana)  3.05 | fine  4.24 /  5.83 /  8.08 | sul percorso critico  51.0 % | Spearman(durata di base, fine PG) +0.14
+  C2   P3       inizio (mediana)  5.03 | fine  6.12 /  8.57 / 12.01 | sul percorso critico  19.0 % | Spearman(durata di base, fine PG) +0.08
+  D2   P4       inizio (mediana)  3.05 | fine  6.25 /  8.73 / 12.34 | sul percorso critico  12.1 % | Spearman(durata di base, fine PG) +0.08
+  E2   P5       inizio (mediana)  2.95 | fine  3.59 /  4.99 /  6.93 | sul percorso critico  17.6 % | Spearman(durata di base, fine PG) +0.04
+  A3   P1       inizio (mediana)  4.35 | fine  4.65 /  5.85 /  7.49 | sul percorso critico   0.2 % | Spearman(durata di base, fine PG) +0.01
+  B3a  P2       inizio (mediana)  5.83 | fine  7.09 /  9.73 / 13.48 | sul percorso critico  33.4 % | Spearman(durata di base, fine PG) +0.13
+  B3b  P5       inizio (mediana)  6.18 | fine  7.67 / 10.12 / 13.45 | sul percorso critico  35.2 % | Spearman(durata di base, fine PG) +0.15
+  C3a  P3       inizio (mediana)  8.57 | fine  7.11 /  9.88 / 13.73 | sul percorso critico   3.7 % | Spearman(durata di base, fine PG) -0.01
+  PI   P2+P5    inizio (mediana) 11.09 | fine  9.46 / 12.05 / 15.61 | sul percorso critico  84.2 % | Spearman(durata di base, fine PG) +0.02
+  LAT  P5       inizio (mediana) 12.05 | fine  9.96 / 12.55 / 16.11 | sul percorso critico   0.5 % | Spearman(durata di base, fine PG) +0.00
+  TAB  P4       inizio (mediana) 12.27 | fine 10.74 / 13.50 / 17.07 | sul percorso critico  95.8 % | Spearman(durata di base, fine PG) +0.08
+  PG   tutti    inizio (mediana) 13.51 | fine 11.46 / 14.25 / 17.85 | sul percorso critico 100.0 % | Spearman(durata di base, fine PG) +0.01
+  fattori: squadra g +0.58; f_P1 +0.02; f_P2 +0.37; f_P3 +0.17; f_P4 +0.19; f_P5 +0.23; e_P1 -0.01; e_P2 -0.08; e_P3 -0.03; e_P4 -0.04; e_P5 -0.05
+
+-- 7c. Che cosa muove di piu' P(MD) in TC-5-RID (una leva alla volta)
+  il riuso va male (riletture x 2, correzioni x 1,5)   dP = -0.412
+  tutte le durate x 1.2                                dP = -0.312
+  +1 h su PG                                           dP = -0.201
+  +1 h su PI                                           dP = -0.186
+  tutte le durate x 1.1                                dP = -0.183
+  +1 h su TAB                                          dP = -0.174
+  +1 h su K0                                           dP = -0.165
+  +1 h su LAT                                          dP = -0.160
+  +1 h su B1                                           dP = -0.100
+  +1 h su B2                                           dP = -0.100
+  +1 h su B3b                                          dP = -0.078
+  +1 h su B3a                                          dP = -0.068
+  +1 h su C1                                           dP = -0.043
+  +1 h su C2                                           dP = -0.043
+  +1 h su E1                                           dP = -0.041
+  +1 h su E2                                           dP = -0.041
+  +1 h su A3                                           dP = -0.036
+  +1 h su D1                                           dP = -0.026
+  +1 h su D2                                           dP = -0.026
+  +1 h su C3a                                          dP = -0.016
+  +1 h su A1                                           dP = -0.000
+  +1 h su A2                                           dP = -0.000
+  avvio preparato prima dell'ora 0 (K0 = 0,25 h)       dP = +0.125
+  pause al minimo (efficienza 0,96 per tutti)          dP = +0.196
+  tutte le durate x 0.9                                dP = +0.203
+  tutte le durate x 0.8                                dP = +0.385
+
+-- 7d. Punti di controllo di TC-5-RID: P(tappa chiusa entro l'ora) e valore del segnale
+  ora  2.0: K0 + E1: prove verdi per tutti, inventario spedito   P = 0.082; mediana  2.95; p80  3.72 | P(PG entro 14 | tappa rispettata) = 0.788; | mancata) = 0.431
+  ora  5.0: A2, B2, C1, E2 chiusi                                P = 0.104; mediana  6.53; p80  7.83 | P(PG entro 14 | tappa rispettata) = 0.954; | mancata) = 0.403
+  ora  8.0: D2 chiuso e B3a, B3b cominciati                      P = 0.345; mediana  8.83; p80 11.02 | P(PG entro 14 | tappa rispettata) = 0.697; | mancata) = 0.335
+  ora 11.0: A3, B3a, B3b, C2, C3a chiusi (tutto nel tronco)      P = 0.405; mediana 11.56; p80 13.82 | P(PG entro 14 | tappa rispettata) = 0.914; | mancata) = 0.151
+  ora 14.0: PG chiusa                                            P = 0.460; mediana 14.25; p80 16.51 | P(PG entro 14 | tappa rispettata) = 1.000; | mancata) = 0.000
+  componenti non chiusi all'ora 12,0 (quota dei casi): A2 0.000; A3 0.000; B2 0.002; B3a 0.205; B3b 0.218; C1 0.001; C2 0.100; C3a 0.224; D2 0.120; E2 0.000
+  continuita' e sicurezza nel tronco (A2, A3, B2, B3a, B3b) entro: ora 10: 0.375; ora 11: 0.547; ora 12: 0.696; ora 13: 0.803; ora 14: 0.882; ora 16: 0.964
+-- 7f. [aggiunto dopo aver visto 7d] La misura della prima ora e i punti di controllo ritarati sulle mediane
+  rapporto (fine di K0 + rilettura B1) / 2,25 h in [0; 1.2): quota 0.319; P(PG entro 14) = 0.751
+  rapporto (fine di K0 + rilettura B1) / 2,25 h in [1.2; 1.5): quota 0.334; P(PG entro 14) = 0.496
+  rapporto (fine di K0 + rilettura B1) / 2,25 h in [1.5; 1.8): quota 0.207; P(PG entro 14) = 0.237
+  rapporto (fine di K0 + rilettura B1) / 2,25 h in [1.8; 9): quota 0.140; P(PG entro 14) = 0.041
+  rapporto (fine di K0) / 0,75 h in [0; 1.2): quota 0.343; P(PG entro 14) = 0.674
+  rapporto (fine di K0) / 0,75 h in [1.2; 1.6): quota 0.378; P(PG entro 14) = 0.442
+  rapporto (fine di K0) / 0,75 h in [1.6; 9): quota 0.279; P(PG entro 14) = 0.221
+  ora  2.5: K0 chiuso, A1 chiuso, inventario (E1) quasi: A1  P = 0.612 | P(PG entro 14 | rispettata) = 0.556; | mancata) = 0.309
+  ora  5.0: A2 ed E2 chiusi                                  P = 0.400 | P(PG entro 14 | rispettata) = 0.668; | mancata) = 0.322
+  ora  8.0: B2, C1, A3 chiusi                                P = 0.816 | P(PG entro 14 | rispettata) = 0.551; | mancata) = 0.059
+  ora 11.0: B3a, B3b, C2, D2 chiusi                          P = 0.422 | P(PG entro 14 | rispettata) = 0.977; | mancata) = 0.083
+  ora 12.5: PI chiusa                                        P = 0.572 | P(PG entro 14 | rispettata) = 0.802; | mancata) = 0.003
+-- 7e. Stabilita' su altri due semi
+  seme 20261115: TC-5 0.289; TC-5-RID 0.459; TC-5-B3 0.180; TC-4 0.071; TC-4-RID 0.273
+  seme 20261116: TC-5 0.296; TC-5-RID 0.462; TC-5-B3 0.186; TC-4 0.075; TC-4-RID 0.276

@@ -1,0 +1,10 @@
+# chiavi citabili nell'allegato, per area (decisione del curatore; motivi nella mappa del fascicolo)
+sensori: realsense-d400-scheda realsense-d455 realsense-confronto-camere realsense-d400-accuratezza realsense-taratura-profondita realsense-bkm-taratura realsense-alta-velocita-d435 realsense-filtri-post orbbec-gemini-330-scheda orbbec-gemini-335 orbbec-femto-bolt st-um2884 st-vl53l5cx st-vl53l7cx st-vl53l8cx st-um3038 ldrobot-ld19 slamtec-rplidar-c1 librealsense
+rumore: ahn2019 qiu2023
+mappe: hornung2013 octomap duberg2020 ufomap-deposito oleynikova2017 millane2024 niessner2013 nuss2018 moras2011 usenko2017 williams1978
+seguimento: bewley2016 zhang2022 cao2023 aharon2022 weng2020 pang2021 luiten2021 kalman1960 kuhn1955
+previsione: scholler2020 uhlemann2024 mercat2019 angelopoulos2021 lindemann2023 dixit2022 cleaveland2024 gibbs2021 barber2019 gneiting2007 cheraghipouria2026 kress2021 gupta2018 pellegrini2009 lerner2007 clopper1934
+occlusione: khurana2021 tokmakov2021 vanhoorick2023 hsieh2023 scholl1999 koch2007 wyffels2015 orzechowski2018 koschi2021 krejci2026 guibas1997 balch2019
+sicurezza: marvel2017 therobotreport-veo us-brevetto-11846916 us-49cfr-236-205
+ausili: kayukawa2019 xu2023 romlay2021 dossantos2025 kozlov2026 martinez2014 lupu2020 giudice2008
+dati: thor tum-rgbd depthtrack princeton-tracking-benchmark realsense-file-di-esempio

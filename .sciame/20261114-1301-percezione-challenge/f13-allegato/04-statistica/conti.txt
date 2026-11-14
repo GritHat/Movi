@@ -1,0 +1,98 @@
+1. INTERVALLI per k su n: Wilson al 95 % e Clopper-Pearson (esatto) al 95 %
+       9 su 10    = 0.9000 | Wilson [0.5958-0.9821] | esatto [0.5550-0.9975]
+      10 su 10    = 1.0000 | Wilson [0.7225-1.0000] | esatto [0.6915-1.0000]
+      27 su 30    = 0.9000 | Wilson [0.7438-0.9654] | esatto [0.7347-0.9789]
+      28 su 30    = 0.9333 | Wilson [0.7868-0.9815] | esatto [0.7793-0.9918]
+      30 su 30    = 1.0000 | Wilson [0.8865-1.0000] | esatto [0.8843-1.0000]
+      45 su 50    = 0.9000 | Wilson [0.7864-0.9565] | esatto [0.7819-0.9667]
+      46 su 50    = 0.9200 | Wilson [0.8116-0.9685] | esatto [0.8077-0.9778]
+      90 su 100   = 0.9000 | Wilson [0.8256-0.9448] | esatto [0.8238-0.9510]
+     108 su 120   = 0.9000 | Wilson [0.8333-0.9419] | esatto [0.8318-0.9473]
+     826 su 879   = 0.9397 | Wilson [0.9220-0.9536] | esatto [0.9219-0.9545]
+     461 su 513   = 0.8986 | Wilson [0.8695-0.9219] | esatto [0.8692-0.9234]
+      13 su 4800  = 0.0027 | Wilson [0.0016-0.0046] | esatto [0.0014-0.0046]
+      41 su 45    = 0.9111 | Wilson [0.7927-0.9649] | esatto [0.7878-0.9752]
+      80 su 90    = 0.8889 | Wilson [0.8074-0.9385] | esatto [0.8051-0.9454]
+      79 su 90    = 0.8778 | Wilson [0.7943-0.9304] | esatto [0.7918-0.9374]
+       5 su 90    = 0.0556 | Wilson [0.0240-0.1235] | esatto [0.0183-0.1249]
+      83 su 90    = 0.9222 | Wilson [0.8481-0.9618] | esatto [0.8463-0.9682]
+      36 su 46    = 0.7826 | Wilson [0.6443-0.8774] | esatto [0.6364-0.8905]
+    2939 su 3038  = 0.9674 | Wilson [0.9605-0.9732] | esatto [0.9605-0.9734]
+     214 su 219   = 0.9772 | Wilson [0.9477-0.9902] | esatto [0.9475-0.9925]
+     219 su 219   = 1.0000 | Wilson [0.9828-1.0000] | esatto [0.9833-1.0000]
+     115 su 115   = 1.0000 | Wilson [0.9677-1.0000] | esatto [0.9684-1.0000]
+     174 su 221   = 0.7873 | Wilson [0.7287-0.8361] | esatto [0.7274-0.8394]
+     283 su 339   = 0.8348 | Wilson [0.7916-0.8705] | esatto [0.7909-0.8727]
+     226 su 282   = 0.8014 | Wilson [0.7509-0.8438] | esatto [0.7500-0.8464]
+
+2. ZERO EVENTI su N: limite superiore della quota vera
+   N        | esatto una coda 95 %: 1-0,05^(1/N) | regola del tre 3/N | Wilson due code z^2/(N+z^2) | esatto due code 1-0,025^(1/N)
+   45       | 0.064404 | 0.066667 | 0.078652 | 0.078705
+   90       | 0.032738 | 0.033333 | 0.040936 | 0.040159
+   131      | 0.022609 | 0.022901 | 0.028489 | 0.027767
+   400      | 0.007461 | 0.007500 | 0.009512 | 0.009180
+   2716     | 0.001102 | 0.001105 | 0.001412 | 0.001357
+   2800     | 0.001069 | 0.001071 | 0.001370 | 0.001317
+   2798     | 0.001070 | 0.001072 | 0.001371 | 0.001318
+   5597     | 0.000535 | 0.000536 | 0.000686 | 0.000659
+   13638    | 0.000220 | 0.000220 | 0.000282 | 0.000270
+   14400    | 0.000208 | 0.000208 | 0.000267 | 0.000256
+   24835    | 0.000121 | 0.000121 | 0.000155 | 0.000149
+   -ln(0,05) = 2.9957 (da cui «3»); z^2 = 3.8415; -ln(0,025) = 3.6889
+   tutti i successi, 400 su 400: limite inferiore 1-3/400 = 0.9925; esatto una coda 0.9925; Wilson 0.9905
+
+3. CORREZIONE PER m CELLE GIUDICATE INSIEME (Bonferroni: z_m = quantile 1 - 0,05/(2m))
+   m = 1   z = 1.9600 | 826 su 879: limite inferiore 0.9220 | 90 su 100: [0.826-0.945] | 0 su N: limite superiore z^2/(N+z^2) con N = 2716: 0.00141
+   m = 12  z = 2.8653 | 826 su 879: limite inferiore 0.9124 | 90 su 100: [0.782-0.958] | 0 su N: limite superiore z^2/(N+z^2) con N = 2716: 0.00301
+   m = 15  z = 2.9352 | 826 su 879: limite inferiore 0.9116 | 90 su 100: [0.778-0.959] | 0 su N: limite superiore z^2/(N+z^2) con N = 2716: 0.00316
+   m = 45  z = 3.2608 | 826 su 879: limite inferiore 0.9079 | 90 su 100: [0.761-0.962] | 0 su N: limite superiore z^2/(N+z^2) con N = 2716: 0.00390
+   m = 60  z = 3.3415 | 826 su 879: limite inferiore 0.9070 | 90 su 100: [0.757-0.963] | 0 su N: limite superiore z^2/(N+z^2) con N = 2716: 0.00409
+   0 eventi in ciascuna di m = 3 geometrie, livello congiunto 95 % (una coda, Bonferroni): limite per geometria 1-(0,05/3)^(1/N): N = 2716 -> 0.00151; regola corrispondente -ln(0,05/3)/N = 4.09/N
+
+4. NUMEROSITA' (binomiale esatta, prova a una coda). «n minimo» = primo n che soddisfa; «n stabile» = da li' in poi vale per ogni n (la potenza esatta e' a dente di sega)
+   0,80 (H0) contro 0,90                        alfa 0.05 potenza 0.80: n minimo   82 (soglia >= 72; livello vero 0.0458; potenza vera 0.8057); n stabile 94
+   0,90 (H0) contro 0,80                        alfa 0.05 potenza 0.80: n minimo   78 (soglia <= 65; livello vero 0.0453; potenza vera 0.8082); n stabile 89
+   0,85 (H0) contro 0,90                        alfa 0.05 potenza 0.80: n minimo  281 (soglia >= 249; livello vero 0.0497; potenza vera 0.8110); n stabile 304
+   0,90 (H0) contro 0,85                        alfa 0.05 potenza 0.80: n minimo  270 (soglia <= 234; livello vero 0.0466; potenza vera 0.8015); n stabile 299
+   0,90 (H0) contro 0,95                        alfa 0.05 potenza 0.80: n minimo  179 (soglia >= 168; livello vero 0.0486; potenza vera 0.8129); n stabile 203
+   0,95 (H0) contro 0,90                        alfa 0.05 potenza 0.80: n minimo  169 (soglia <= 155; livello vero 0.0450; potenza vera 0.8063); n stabile 191
+   0,80 (H0) contro 0,90, due errori <= 0,10    alfa 0.10 potenza 0.90: n minimo   86 (soglia >= 74; livello vero 0.0990; potenza vera 0.9142); n stabile 98
+   0,70 (H0) contro 0,90, due errori <= 0,10    alfa 0.10 potenza 0.90: n minimo   25 (soglia >= 21; livello vero 0.0905; potenza vera 0.9020); n stabile 29
+   0,85 (H0) contro 0,90, due errori <= 0,10    alfa 0.10 potenza 0.90: n minimo  288 (soglia >= 253; livello vero 0.0995; potenza vera 0.9032); n stabile 318
+   approssimazione normale, 0.80 contro 0.90: n = 82.9
+   approssimazione normale, 0.85 contro 0.90: n = 282.1
+   approssimazione normale, 0.95 contro 0.90: n = 149.3
+   con n = 30, H0: 0,80 contro 0,90: soglia >= 28 su 30, livello vero 0.0442, potenza 0.411 (nei file 0,39)
+
+5. LETTURA DI UN TABELLONE «dentro k su n»
+   copertura vera 0.95: P(almeno 9 su 10) = 0.914; P(30 su 30) = 0.2146; P(almeno 27 su 30) = 0.939
+   copertura vera 0.90: P(almeno 9 su 10) = 0.736; P(30 su 30) = 0.0424; P(almeno 27 su 30) = 0.647
+   copertura vera 0.80: P(almeno 9 su 10) = 0.376; P(30 su 30) = 0.0012; P(almeno 27 su 30) = 0.123
+   copertura vera 0.70: P(almeno 9 su 10) = 0.149; P(30 su 30) = 0.0000; P(almeno 27 su 30) = 0.009
+   minimo k su 30 e su 50 con limite inferiore di Wilson >= 0,80: 29 su 30 (limite 0.833), 46 su 50 (limite 0.812)
+   minimo k con limite inferiore ESATTO >= 0,80: 29 su 30 (limite 0.828), 46 su 50 (limite 0.808)
+   semiampiezza di Wilson <= 0,10: n minimo con quota osservata 0,90: 38; 0,85: 51; 0,50 (caso peggiore): 93
+   n = 50, copertura vera 0.90: probabilita' che la semiampiezza di Wilson sia <= 0,10: 0.878
+   n = 50, copertura vera 0.85: probabilita' che la semiampiezza di Wilson sia <= 0,10: 0.519
+   passaggi correlati: m = 10 per persona, correlazione 0,2: effetto del disegno 1+(m-1)rho = 2.8; 40 passaggi ne valgono 14.3
+   THOR: 219 tratti di 9 persone (in media 24.3 a testa): con rho = 0,2 ne valgono 39; con rho = 0,05 101
+
+6. TARATURA PER QUANTILI (previsione conforme a insieme separato), livello 0,90
+   copertura realizzata ~ Beta(k, n+1-k), k = ceil(0,9 (n+1)); media k/(n+1)
+   n = 8    k = 9 > n: la soglia e' infinita (la regione e' tutto lo spazio)
+   n = 9    k = 9    media 0.9000; 5o percentile 0.7169; 95o percentile 0.9943; limiti teorici [0,9; 0,9 + 1/(n+1)] = [0.9000; 1.0000]
+   n = 20   k = 19   media 0.9048; 5o percentile 0.7839; 95o percentile 0.9819; limiti teorici [0,9; 0,9 + 1/(n+1)] = [0.9000; 0.9476]
+   n = 30   k = 28   media 0.9032; 5o percentile 0.8047; 95o percentile 0.9722; limiti teorici [0,9; 0,9 + 1/(n+1)] = [0.9000; 0.9323]
+   n = 60   k = 55   media 0.9016; 5o percentile 0.8327; 95o percentile 0.9555; limiti teorici [0,9; 0,9 + 1/(n+1)] = [0.9000; 0.9164]
+   n = 100  k = 91   media 0.9010; 5o percentile 0.8482; 95o percentile 0.9447; limiti teorici [0,9; 0,9 + 1/(n+1)] = [0.9000; 0.9099]
+   n = 200  k = 181  media 0.9005; 5o percentile 0.8637; 95o percentile 0.9327; limiti teorici [0,9; 0,9 + 1/(n+1)] = [0.9000; 0.9050]
+   n = 500  k = 451  media 0.9002; 5o percentile 0.8773; 95o percentile 0.9213; limiti teorici [0,9; 0,9 + 1/(n+1)] = [0.9000; 0.9020]
+   copertura realizzata >= 0.80 con probabilita' 0,95: primo n 14; n stabile 30
+   copertura realizzata >= 0.85 con probabilita' 0,95: primo n 68; n stabile 110
+   copertura realizzata >= 0.87 con probabilita' 0,95: primo n 228; n stabile 290
+
+7. ALTRI CONTROLLI
+   Fisher esatto, 86/92 contro 101/105 (stessa cella, due lanci, stesso denominatore): p = 0.519 (nei file 0,52)
+   Fisher esatto, 86/98 contro 101/119: p = 0.561
+   regola per n = 119 e soglia 0,85: Wilson di 101/119 = [0.774-0.902] -> non risolta
+   0,288 s x 2,5 m/s = 0.72 m

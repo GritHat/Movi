@@ -1,0 +1,135 @@
+1c1,4
+< /* att.c — simulatore dell'attacco alle modifiche (sciame-avversario, f8, fase f4). Scritto da capo.
+---
+> /* insieme.c — prova d'insieme della continuita' (sciame-validazione, f12). RICOMPOSTO da att.c di f8 con componi.py:
+>  * le righe cambiate sono in DIFFERENZE.txt; tutto il resto e' il codice dell'avversario di f8, non mio.
+>  * Sotto, l'intestazione originale.
+>  * att.c — simulatore dell'attacco alle modifiche (sciame-avversario, f8, fase f4). Scritto da capo.
+34c37
+< static long SEED0 = 200000;
+---
+> static long SEED0 = 7000000000L;
+36a40
+> static int C3 = 0, C7 = 0, C5B = 0, CH5 = 0, TOGLIE = 0, ESTR = 0; static double C3P = 1.0; static long SSTR = 1000003L, LIB0 = 9000000000L; static const char *NOME = "-"; /* f12 */
+44c48,49
+< static void rseed(Rng *r, uint64_t a, uint64_t b, uint64_t c) { r->s = (a + 1) * 0x9E3779B97F4A7C15ULL ^ (b + 7) * 0xC2B2AE3D27D4EB4FULL ^ (c + 13) * 0x165667B19E3779F9ULL; if (!r->s) r->s = 1; for (int i = 0; i < 8; i++) r64(r); }
+---
+> static uint64_t mix64(uint64_t z) { z ^= z >> 33; z *= 0xff51afd7ed558ccdULL; z ^= z >> 33; z *= 0xc4ceb9fe1a85ec53ULL; z ^= z >> 33; return z; }
+> static void rseed(Rng *r, uint64_t a, uint64_t b, uint64_t c) { r->s = mix64(mix64(a ^ 0x6A09E667F3BCC909ULL) + 3 * mix64(b * 0x10001ULL + 0x3243F6A8885A308DULL) + 5 * mix64(c + 0x13198A2E03707344ULL)); if (!r->s) r->s = 1; for (int i = 0; i < 8; i++) r64(r); }
+144,147c149,153
+<     if (RB <= 0) { int vis = indom(x, y) && !intrue(x, y); o.f = vis; o.grp = vis; o.cut = vis && dest(x, y) <= C6ADJ; o.zx = x + 0.05 * n1; o.zy = y + 0.05 * n2; }
+<     else { int nv = 0; double sx = 0, sy = 0, dmin = 1e9;
+<         for (int q = 0; q < NSP; q++) { double qx = x + RB * SPX[q], qy = y + RB * SPY[q]; if (!indom(qx, qy) || intrue(qx, qy)) continue; nv++; sx += qx; sy += qy; double d = dest(qx, qy); if (d < dmin) dmin = d; }
+<         o.f = (double)nv / NSP; o.grp = o.f >= 0.15; if (nv) { o.zx = sx / nv + 0.05 * n1; o.zy = sy / nv + 0.05 * n2; } o.cut = o.grp && dmin <= C6ADJ; }
+---
+>     if (RB <= 0) { int vis = indom(x, y) && !intrue(x, y); o.f = vis; o.grp = vis; o.cut = vis && (C3 ? dwedge(x, y, YP, TA) : dest(x, y)) <= C6ADJ; o.zx = x + 0.05 * n1; o.zy = y + 0.05 * n2; }
+>     else { int nv = 0; double sx = 0, sy = 0, dmin = 1e9, dtr = 1e9;
+>         for (int q = 0; q < NSP; q++) { double qx = x + RB * SPX[q], qy = y + RB * SPY[q]; if (!indom(qx, qy) || intrue(qx, qy)) continue; nv++; sx += qx; sy += qy; double d = dest(qx, qy); if (d < dmin) dmin = d; d = dwedge(qx, qy, YP, TA); if (d < dtr) dtr = d; }
+>         o.f = (double)nv / NSP; o.grp = o.f >= 0.15; if (nv) { o.zx = sx / nv + 0.05 * n1; o.zy = sy / nv + 0.05 * n2; } o.cut = o.grp && (C3 ? dtr : dmin) <= C6ADJ; }
+>     if (C3 && C3P < 1.0 && o.cut && ru(rm) >= C3P) o.cut = 0; /* f12: bordo in immagine non rilevato in questo ciclo */
+158c164
+< typedef struct { double p0x, p0y, v0x, v0y, ux, uy; float w[NM]; short frz[NM]; int ampio, floor_, ent, sw, hold, tok; double ptx, pty, tx, ty, area0; uint8_t *raw, *reg; int nraw, nreg; } Pred;
+---
+> typedef struct { double p0x, p0y, v0x, v0y, ux, uy; float w[NM]; short frz[NM]; int ampio, floor_, ent, sw, hold, tok, nout; double ptx, pty, tx, ty, area0; uint8_t *raw, *reg; int nraw, nreg; } Pred;
+185c191
+<     for (int j = 0; j < NM; j++) { double x, y; mpos(t, j, i, &x, &y); int cl = cls(x, y), s = j >= NM / 2; if (cl == 0 || cl == 3) continue; if (cl == 2) { t->w[j] *= 0.1f; continue; }
+---
+>     t->nout = 0; for (int j = 0; j < NM; j++) { double x, y; mpos(t, j, i, &x, &y); int cl = cls(x, y), s = j >= NM / 2; if (cl == 0) t->nout++; if (cl == 0 || cl == 3) continue; if (cl == 2) { t->w[j] *= 0.1f; continue; }
+207a214
+>     int nc_n, nc_scop, nc_scop3, scop3_p, c7_p, c7_vis, cyc_c7, gap_p, nD[NTAU], inD[NTAU], hid_all, f100c, ch5w_p, ch5s_p, ch5_n, ch5_nasc, ch5_cyc, ch5_f100, es_n, es_id, es_ril, es_amb, es_na, es_mai, es_ampio, mai_nasc; /* f12 */
+220a228
+>     int avv7 = 0, avv5 = 0, nonconf = 0, anygap = 0, c7on = 0, klow = -1000, w5 = 0, s5 = 0, fromB = 0, kb0 = -1, bdone = 0, run = 0, runmax = 0; double bx = 0, by = 0, bvx = 0, bvy = 0; Rng rB; rseed(&rB, seed, 3000 + beh, (uint64_t)GEO); /* f12 */
+225c233,238
+<         if (tuttonasc && !everhid) { everhid = 1; valid = everconf; if (!valid && !la) { st->invalid++; return 0; } if (!la) st->valid++; }
+---
+>         if (ESTR && !la && !bdone) { /* f12 */
+>             if (kb0 < 0 && state == 2 && tuttonasc) { kb0 = k + (int)(rr_(&rB, 0.5, 3.0) / DT); by = YS + rr_(&rB, -0.3, 0.3); double hw = TA * by - 0.35; if (hw < 0.05) hw = 0.05; bx = rr_(&rB, -hw, hw);
+>                 double v = rr_(&rB, 0.3, 1.8), hh = rr_(&rB, -15, 15) * M_PI / 180, dir = ru(&rB) < 0.5 ? -1 : 1; bvx = dir * v * cos(hh); bvy = v * sin(hh); }
+>             if (kb0 >= 0 && k >= kb0) { bx += bvx * DT; by += bvy * DT; Obs ob = sense(bx, by, &rB);
+>                 if (ob.acc) { if (state == 2 && !o.acc) { o = ob; fromB = 1; } else { st->es_na++; return 1; } } } }
+>         if (tuttonasc && !everhid) { everhid = 1; valid = everconf; if (!valid && !la) { st->invalid++; nonconf = 1; } else if (!la) st->valid++; }
+227c240
+<         if (!la && tuttonasc && tin) { if (!R100[ct]) any100 = 1; if (!AM[ct]) anyA = 1; }
+---
+>         if (!la && tuttonasc && tin) { if (!R100[ct]) any100 = 1; if (!AM[ct]) anyA = 1; st->hid_all++; if (!R100[ct]) st->f100c++; }
+230c243,244
+<         if (state == 0 || state == 3) { if (o.acc) { state = 1; nme = 1; miss = 0; kfirst = k; f1x = o.zx; f1y = o.zy; klast = k; lzx = o.zx; lzy = o.zy; nchange++; } }
+---
+>         if (o.acc) avv7 = 0;
+>         if (state == 0 || state == 3 || state == 4) { if (o.acc) { state = 1; nme = 1; miss = 0; kfirst = k; f1x = o.zx; f1y = o.zy; klast = k; lzx = o.zx; lzy = o.zy; nchange++; } }
+234c248
+<                 nme++; if (nme >= 4) everconf = 1; miss = 0; klast = k; lzx = o.zx; lzy = o.zy; sx_ = kx; sy_ = ky; }
+---
+>                 nme++; if (nme >= 4) everconf = 1; miss = 0; klast = k; lzx = o.zx; lzy = o.zy; sx_ = kx; sy_ = ky; if (nme >= 3 && hypot(kx.v, ky.v) < 0.3) klow = k; }
+242c256
+<                         state = 2; nchange++; pred_init(&PR, sx_, sy_); if (hypot(sx_.v, sy_.v) < VMIN) PR.ampio = 1; t_amp = -1; eux = PR.ux; euy = PR.uy; lhas = 0; ep_real = 0; ep_ampio = 0;
+---
+>                         state = 2; nchange++; pred_init(&PR, sx_, sy_); if (hypot(sx_.v, sy_.v) < VMIN) PR.ampio = 1; if (C5B && klast - klow <= 30) PR.ampio = 1; t_amp = -1; eux = PR.ux; euy = PR.uy; lhas = 0; ep_real = 0; ep_ampio = 0;
+245,246c259,260
+<                     else if (miss >= 3) { state = 3; nchange++; } }
+<                 else if (miss >= 3) { state = 0; nme = 0; } } }
+---
+>                     else if (miss >= 3) { state = 3; nchange++; if (C7 && dest(lzx, lzy) <= 0.75) { avv7 = 1; c7on = 1; } } }
+>                 else { if (C7 && dest(lzx, lzy) <= 0.75) { avv7 = 1; c7on = 1; } if (miss >= 3) { state = 0; nme = 0; } } } }
+251a266
+>                 if (fromB) { bdone = 1; st->es_n++; if (PR.ampio) st->es_ampio++; if (c1 && m7) { st->es_id++; if (tuttonasc) st->es_ril++; } else st->es_amb++; return 1; } /* f12 */
+258c273,274
+<                 pred_step(&PR, i, kx.p, ky.p); st->hidcyc++; if (PR.floor_) st->floorc++; if (PR.nreg == 0) st->gapc++;
+---
+>                 pred_step(&PR, i, kx.p, ky.p); st->hidcyc++; if (PR.floor_) st->floorc++; if (PR.nreg == 0) { st->gapc++; anygap = 1; }
+>                 if (!w5 && !indom(kx.p, ky.p)) { w5 = 1; st->ch5w_p++; } if (!s5 && PR.nout == NM) { s5 = 1; st->ch5s_p++; }
+266,267c282,286
+<                 for (int q = 0; q < NTAU; q++) if (TK[q] == i && hid) { st->n[q]++; if (tin && PR.raw[ct]) st->in_raw[q]++; if (tin && PR.reg[ct]) st->in_shown[q]++; st->ar[q] += PR.area0 / AREA_SH; if (tuttonasc) { st->nT[q]++; if (tin && PR.raw[ct]) st->inT[q]++; if (tin && PR.reg[ct]) st->shT[q]++; } } } }
+<         if (!la && tuttonasc && state != 2 && GHOSTS == 0) { anyscop = 1; st->cyc_scop++; }
+---
+>                 for (int q = 0; q < NTAU; q++) if (TK[q] == i && hid && !nonconf) { st->n[q]++; if (tin && PR.raw[ct]) st->in_raw[q]++; if (tin && PR.reg[ct]) st->in_shown[q]++; st->ar[q] += PR.area0 / AREA_SH; if (tuttonasc) { st->nT[q]++; if (!PR.ampio) { st->nD[q]++; if (tin && PR.raw[ct]) st->inD[q]++; } if (tin && PR.raw[ct]) st->inT[q]++; if (tin && PR.reg[ct]) st->shT[q]++; } } } }
+>         if (!la && state == 2 && k > klast && ((CH5 == 2 && !indom(kx.p, ky.p)) || (CH5 == 1 && PR.nout == NM))) { state = 4; nchange++; avv5 = !TOGLIE; st->ch5_n++; if (tuttonasc) st->ch5_nasc++; }
+>         if (!la && state == 4 && tuttonasc && tin) { st->ch5_cyc++; if (!R100[ct]) st->ch5_f100++; }
+>         if (!la && tuttonasc && state != 2 && GHOSTS == 0) { if (avv7 || avv5) { st->cyc_c7 += avv7; run = 0; } else { anyscop = 1; st->cyc_scop++; if (++run > runmax) runmax = run; } } else run = 0;
+>         if (!la && avv7 && o.f >= 1.0) st->c7_vis++;
+272c291,293
+<     if (!everhid) { if (beh == FERMOVISTA || beh == SBIRCIA) st->valid++; else { st->invalid++; return 0; } }
+---
+>     if (ESTR) { if (!bdone) st->es_mai++; return 1; }
+>     if (!everhid) { if (beh == FERMOVISTA || beh == SBIRCIA) st->valid++; else { st->mai_nasc++; return 0; } }
+>     st->gap_p += anygap; st->c7_p += c7on; if (nonconf) { st->nc_n++; st->nc_scop += anyscop; if (runmax >= 3) st->nc_scop3++; return 1; } if (runmax >= 3) st->scop3_p++;
+280c301
+<     NLIB = 0; for (long s = 100000; NLIB < NLIB_WANT && s < 100000 + 20 * NLIB_WANT; s++) if (pass(PROSEGUE, (uint64_t)s, LIB_LIVELY, LA[NLIB], LC[NLIB], NULL)) NLIB++;
+---
+>     NLIB = 0; for (long s = 0; NLIB < NLIB_WANT && s < 20 * NLIB_WANT; s++) if (pass(PROSEGUE, (uint64_t)(LIB0 + SSTR * s), LIB_LIVELY, LA[NLIB], LC[NLIB], NULL)) NLIB++;
+290a312,313
+>         else if (!strcmp(k, "c3")) C3 = atoi(v); else if (!strcmp(k, "c3p")) C3P = atof(v); else if (!strcmp(k, "c7")) C7 = atoi(v); else if (!strcmp(k, "c5b")) C5B = atoi(v); else if (!strcmp(k, "ch5")) CH5 = atoi(v);
+>         else if (!strcmp(k, "toglie")) TOGLIE = atoi(v); else if (!strcmp(k, "estr")) ESTR = atoi(v); else if (!strcmp(k, "nome")) NOME = v; else if (!strcmp(k, "passo")) SSTR = atol(v);
+292a316,332
+> static int spostati(const uint64_t *a, const uint64_t *b) { for (int d = -8; d <= 8; d++) { int n = 0; for (int i = 8; i < 56; i++) if (a[i] == b[i + d]) n++; if (n >= 16) return 1; } return 0; }
+> static uint64_t sm64(uint64_t *s) { uint64_t z = (*s += 0x9E3779B97F4A7C15ULL); z = (z ^ (z >> 30)) * 0xBF58476D1CE4E5B9ULL; z = (z ^ (z >> 27)) * 0x94D049BB133111EBULL; return z ^ (z >> 31); }
+> static void prova_semi(void) {
+>     int e_passo = 0, e_cont = 0, e_vecchio = 0, e_lib = 0; double sxy = 0, sxc = 0; long n = 0;
+>     for (int s = 0; s < 1000; s++) { uint64_t A[64], B[64], C[64], L[64], O1[64], O2[64]; Rng r;
+>         rseed(&r, (uint64_t)(SEED0 + SSTR * (long)s), 0, 'T'); for (int i = 0; i < 64; i++) A[i] = r64(&r);
+>         rseed(&r, (uint64_t)(SEED0 + SSTR * (long)(s + 1)), 0, 'T'); for (int i = 0; i < 64; i++) B[i] = r64(&r);
+>         rseed(&r, (uint64_t)(SEED0 + SSTR * (long)s + 1), 0, 'T'); for (int i = 0; i < 64; i++) C[i] = r64(&r);
+>         rseed(&r, (uint64_t)(LIB0 + SSTR * (long)s), 0, 'T'); for (int i = 0; i < 64; i++) L[i] = r64(&r);
+>         uint64_t s1 = (uint64_t)(12000 + s) * 0x9E3779B97F4A7C15ULL + 'T' * 0xD1B54A32D192ED03ULL + 0xABCDEF1234567ULL, s2 = s1 + 0x9E3779B97F4A7C15ULL;
+>         for (int i = 0; i < 64; i++) { O1[i] = sm64(&s1); O2[i] = sm64(&s2); }
+>         e_passo += spostati(A, B); e_cont += spostati(A, C); e_lib += spostati(A, L); e_vecchio += spostati(O1, O2);
+>         for (int i = 0; i < 64; i++) { double a = (double)(A[i] >> 11) / 9007199254740992.0 - 0.5, b = (double)(B[i] >> 11) / 9007199254740992.0 - 0.5, c = (double)(C[i] >> 11) / 9007199254740992.0 - 0.5; sxy += a * b; sxc += a * c; n++; } }
+>     printf("SEMI coppie=1000 lunghezza=64 spostamenti=-8..8 | flussi uguali a meno di uno spostamento: semi di prova a passo %ld: %d; semi contigui (+1) con il mescolatore nuovo: %d; prova contro libreria: %d; controllo positivo (seme di gen.h prima della riparazione, 12000+s contro 12001+s): %d\n", SSTR, e_passo, e_cont, e_lib, e_vecchio);
+>     printf("SEMI correlazione fra i flussi di due semi vicini (64000 coppie di uniformi; errore tipo 0,004): a passo %ld r=%.4f; contigui r=%.4f\n", SSTR, sxy / n * 12, sxc / n * 12);
+>     printf("SEMI semi di prova: da %ld a %ld (passo %ld); libreria: da %ld; f8 usava 1000-1199, 12000-12399, 100000+, 200000+, 300000+\n", SEED0, SEED0 + SSTR * 3999L, SSTR, LIB0);
+> }
+305c345
+<         for (int p = 0; p < np; p++) { int es = 0, g0 = GHOSTS; pass(ord[p], (uint64_t)(SEED0 + p), TEST_LIVELY, NULL, NULL, &es);
+---
+>         for (int p = 0; p < np; p++) { int es = 0, g0 = GHOSTS; pass(ord[p], (uint64_t)(SEED0 + SSTR * (long)p), TEST_LIVELY, NULL, NULL, &es);
+308a349
+>     if (!strcmp(argv[1], "semi")) { prova_semi(); return 0; }
+310c351
+<     for (int b = 0; b < NB; b++) { if (!strchr(BEHS, '0' + b)) continue; for (int s = 0; s < NSEED; s++) { GHOSTS = 0; pass(b, (uint64_t)(SEED0 + s), TEST_LIVELY, NULL, NULL, NULL); } }
+---
+>     for (int b = 0; b < NB; b++) { if (!strchr(BEHS, '0' + b)) continue; for (int s = 0; s < NSEED; s++) { GHOSTS = 0; pass(b, (uint64_t)(SEED0 + SSTR * (long)s), TEST_LIVELY, NULL, NULL, NULL); } }
+322a364,367
+>         printf("R nome=%s geo=%c pd=%.2f rb=%.3f e=%.2f c3=%d c3p=%.2f c7=%d c5b=%d ch5=%d toglie=%d rh=%.2f bordo=%d m1n=%d vmin=%.2f assorb=%d estr=%d beh=%s n=%d validi=%d nonconf=%d mai_nasc=%d gap_p=%d gap_c=%d scop_p=%d scop_c=%d scop3_p=%d nc_scop=%d nc_scop3=%d c7_p=%d c7_vis=%d cyc_c7=%d hid_all=%d f100c=%d fuori100_p=%d ricomp=%d riagg=%d f_dist=%d f_bordo=%d amb_m7=%d falsa_p=%d back_p=%d ch5w_p=%d ch5s_p=%d ch5_n=%d ch5_nasc=%d ch5_cyc=%d ch5_f100=%d es_n=%d es_id=%d es_ril=%d es_amb=%d es_na=%d es_mai=%d es_ampio=%d",
+>                NOME, GEO, PD, RB, E_MASK, C3, C3P, C7, C5B, CH5, TOGLIE, RH, BORDO, M1N, VMIN, ASSORB, ESTR, BN[b], NSEED, s->valid, s->nc_n, s->mai_nasc, s->gap_p, s->gapc, s->scoperti, s->cyc_scop, s->scop3_p, s->nc_scop, s->nc_scop3, s->c7_p, s->c7_vis, s->cyc_c7, s->hid_all, s->f100c, s->fuori100, s->ricomp, s->riagg, s->f_dist, s->f_bordo, s->amb_m7, s->falsa_p, s->back_p, s->ch5w_p, s->ch5s_p, s->ch5_n, s->ch5_nasc, s->ch5_cyc, s->ch5_f100, s->es_n, s->es_id, s->es_ril, s->es_amb, s->es_na, s->es_mai, s->es_ampio);
+>         for (int q = 0; q < 3; q++) printf(" nT%d=%d inT%d=%d shT%d=%d nD%d=%d inD%d=%d ar%d=%.3f", q + 1, s->nT[q], q + 1, s->inT[q], q + 1, s->shT[q], q + 1, s->nD[q], q + 1, s->inD[q], q + 1, s->n[q] ? s->ar[q] / s->n[q] : 0.0);
+>         printf("\n");

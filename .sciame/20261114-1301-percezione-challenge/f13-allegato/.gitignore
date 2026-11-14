@@ -1,0 +1,14 @@
+# Eseguibili compilati e materiale scaricato: si rigenerano con i «rifai.sh».
+05-costo/banco_*/bin/
+05-costo/banco_sicurezza/banco
+05-costo/banco_lettura/vq3c
+05-costo/banco_lettura/torneo
+05-costo/banco_previsione/att
+06-bibliografia/scaricati/
+*.pdf
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+__pycache__/

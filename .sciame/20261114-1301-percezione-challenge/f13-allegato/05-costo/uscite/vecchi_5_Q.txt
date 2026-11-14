@@ -1,0 +1,18 @@
+vecchi lato_cm=5 metodo=Q mappa=che integra | per fotogramma: voxel con il centro in una scatola; falsi liberi nelle letture L (log-odds<0), M3 (ultimi 3 fot.), M1 (solo fot. corrente)
+  f=58  dentro= 11628  L=  3583  M3=    14  M1=     0  M3c=     0
+  f=59  dentro= 11832  L=  3581  M3=     4  M1=     0  M3c=     0
+  f=60  dentro= 16908  L=  6108  M3=  1045  M1=     0  M3c=     0
+  f=61  dentro= 16914  L=  5906  M3=   934  M1=     0  M3c=     0
+  f=62  dentro= 17306  L=  6173  M3=    90  M1=     0  M3c=     0
+  f=63  dentro= 17022  L=  6003  M3=     1  M1=     0  M3c=     0
+  f=64  dentro= 17097  L=  5970  M3=     0  M1=     0  M3c=     0
+  f=74  dentro= 16851  L=  5553  M3=     0  M1=     0  M3c=     0
+vecchi lato_cm=5 metodo=Q mappa=FERMA dal fot. 60 | per fotogramma: voxel con il centro in una scatola; falsi liberi nelle letture L (log-odds<0), M3 (ultimi 3 fot.), M1 (solo fot. corrente)
+  f=58  dentro= 11628  L=  3583  M3=    14  M1=     0  M3c=     0
+  f=59  dentro= 11832  L=  3581  M3=     4  M1=     0  M3c=     0
+  f=60  dentro= 16908  L=  6960  M3=  1773  M1=     0  M3c=  1773
+  f=61  dentro= 16914  L=  7349  M3=  1474  M1=     0  M3c=  1474
+  f=62  dentro= 17306  L=  7819  M3=     0  M1=     0  M3c=     0
+  f=63  dentro= 17022  L=  8127  M3=     0  M1=     0  M3c=     0
+  f=64  dentro= 17097  L=  8403  M3=     0  M1=     0  M3c=     0
+  f=74  dentro= 16851  L=  8783  M3=     0  M1=     0  M3c=     0

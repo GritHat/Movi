@@ -1,0 +1,75 @@
+b_D prova geo=D n=4000 beh=01234568 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 bordo=0
+a_D_pd0.9_esteso_c71 prova geo=D pd=0.9 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 bordo=0 c7=1
+a_D_pd0.9_punto_c71 prova geo=D pd=0.9 rb=0 c6=0.22 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 bordo=0 c7=1
+a_D_pd0.9_esteso_c70 prova geo=D pd=0.9 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 bordo=0 c7=0
+a_D_pd0.9_punto_c70 prova geo=D pd=0.9 rb=0 c6=0.22 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 bordo=0 c7=0
+a_D_pd0.7_esteso_c71 prova geo=D pd=0.7 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 bordo=0 c7=1
+a_D_pd0.7_punto_c71 prova geo=D pd=0.7 rb=0 c6=0.22 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 bordo=0 c7=1
+a_D_pd0.7_esteso_c70 prova geo=D pd=0.7 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 bordo=0 c7=0
+a_D_pd0.7_punto_c70 prova geo=D pd=0.7 rb=0 c6=0.22 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 bordo=0 c7=0
+c_D_e-0.10_pd0.9_c3no prova geo=D e=-0.10 pd=0.9 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 bordo=0 c3=0
+c_D_e-0.10_pd0.9_c3si prova geo=D e=-0.10 pd=0.9 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 bordo=0
+c_D_e-0.10_pd0.9_c3p08 prova geo=D e=-0.10 pd=0.9 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 bordo=0 c3p=0.8
+c_D_e-0.20_pd0.9_c3no prova geo=D e=-0.20 pd=0.9 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 bordo=0 c3=0
+c_D_e-0.20_pd0.9_c3si prova geo=D e=-0.20 pd=0.9 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 bordo=0
+c_D_e-0.20_pd0.9_c3p08 prova geo=D e=-0.20 pd=0.9 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 bordo=0 c3p=0.8
+d_D_c1si prova geo=D n=2000 beh=26 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 bordo=0 estr=1
+d_D_c1no prova geo=D n=2000 beh=26 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 rh=0.40 bordo=1 estr=1
+e_D_ch5debole_lascia prova geo=D n=400 beh=56 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 bordo=0 ch5=2
+e_D_ch5debole_toglie prova geo=D n=400 beh=56 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 bordo=0 ch5=2 toglie=1
+e_D_ch5scritta prova geo=D n=400 beh=56 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 bordo=0 ch5=1
+f_D_fermo_c5no prova geo=D n=800 beh=8 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 bordo=0 vmin=0
+f_D_fermo_c5b prova geo=D n=800 beh=8 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 bordo=0 c5b=1
+s_D sessione geo=D rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 bordo=0
+b_T prova geo=T n=2400 beh=01234568 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1
+a_T_pd0.9_esteso_c71 prova geo=T pd=0.9 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 c7=1
+a_T_pd0.9_punto_c71 prova geo=T pd=0.9 rb=0 c6=0.22 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 c7=1
+a_T_pd0.9_esteso_c70 prova geo=T pd=0.9 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 c7=0
+a_T_pd0.9_punto_c70 prova geo=T pd=0.9 rb=0 c6=0.22 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 c7=0
+a_T_pd0.7_esteso_c71 prova geo=T pd=0.7 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 c7=1
+a_T_pd0.7_punto_c71 prova geo=T pd=0.7 rb=0 c6=0.22 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 c7=1
+a_T_pd0.7_esteso_c70 prova geo=T pd=0.7 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 c7=0
+a_T_pd0.7_punto_c70 prova geo=T pd=0.7 rb=0 c6=0.22 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 c7=0
+c_T_e-0.10_pd0.9_c3no prova geo=T e=-0.10 pd=0.9 n=800 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 c3=0
+c_T_e-0.10_pd0.9_c3si prova geo=T e=-0.10 pd=0.9 n=800 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1
+c_T_e-0.10_pd0.9_c3p08 prova geo=T e=-0.10 pd=0.9 n=800 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 c3p=0.8
+c_T_e-0.10_pd0.7_c3no prova geo=T e=-0.10 pd=0.7 n=800 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 c3=0
+c_T_e-0.10_pd0.7_c3si prova geo=T e=-0.10 pd=0.7 n=800 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1
+c_T_e-0.10_pd0.7_c3p08 prova geo=T e=-0.10 pd=0.7 n=800 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 c3p=0.8
+c_T_e-0.20_pd0.9_c3no prova geo=T e=-0.20 pd=0.9 n=800 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 c3=0
+c_T_e-0.20_pd0.9_c3si prova geo=T e=-0.20 pd=0.9 n=800 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1
+c_T_e-0.20_pd0.9_c3p08 prova geo=T e=-0.20 pd=0.9 n=800 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 c3p=0.8
+c_T_e-0.20_pd0.7_c3no prova geo=T e=-0.20 pd=0.7 n=800 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 c3=0
+c_T_e-0.20_pd0.7_c3si prova geo=T e=-0.20 pd=0.7 n=800 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1
+c_T_e-0.20_pd0.7_c3p08 prova geo=T e=-0.20 pd=0.7 n=800 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 c3p=0.8
+d_T_c1si prova geo=T n=2000 beh=26 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 estr=1
+d_T_c1no prova geo=T n=2000 beh=26 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 rh=0.40 bordo=1 estr=1
+e_T_ch5debole_lascia prova geo=T n=400 beh=56 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 ch5=2
+e_T_ch5debole_toglie prova geo=T n=400 beh=56 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 ch5=2 toglie=1
+e_T_ch5scritta prova geo=T n=400 beh=56 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 ch5=1
+f_T_fermo_c5no prova geo=T n=800 beh=8 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 vmin=0
+f_T_fermo_c5b prova geo=T n=800 beh=8 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 c5b=1
+s_T sessione geo=T rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1
+b_L prova geo=L n=2400 beh=01234568 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1
+a_L_pd0.9_esteso_c71 prova geo=L pd=0.9 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 c7=1
+a_L_pd0.9_punto_c71 prova geo=L pd=0.9 rb=0 c6=0.22 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 c7=1
+a_L_pd0.9_esteso_c70 prova geo=L pd=0.9 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 c7=0
+a_L_pd0.9_punto_c70 prova geo=L pd=0.9 rb=0 c6=0.22 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 c7=0
+a_L_pd0.7_esteso_c71 prova geo=L pd=0.7 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 c7=1
+a_L_pd0.7_punto_c71 prova geo=L pd=0.7 rb=0 c6=0.22 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 c7=1
+a_L_pd0.7_esteso_c70 prova geo=L pd=0.7 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 c7=0
+a_L_pd0.7_punto_c70 prova geo=L pd=0.7 rb=0 c6=0.22 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 c7=0
+c_L_e-0.10_pd0.9_c3no prova geo=L e=-0.10 pd=0.9 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 c3=0
+c_L_e-0.10_pd0.9_c3si prova geo=L e=-0.10 pd=0.9 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1
+c_L_e-0.10_pd0.9_c3p08 prova geo=L e=-0.10 pd=0.9 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 c3p=0.8
+c_L_e-0.20_pd0.9_c3no prova geo=L e=-0.20 pd=0.9 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 c3=0
+c_L_e-0.20_pd0.9_c3si prova geo=L e=-0.20 pd=0.9 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1
+c_L_e-0.20_pd0.9_c3p08 prova geo=L e=-0.20 pd=0.9 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 c3p=0.8
+d_L_c1si prova geo=L n=2000 beh=26 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 estr=1
+d_L_c1no prova geo=L n=2000 beh=26 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 rh=0.40 bordo=1 estr=1
+e_L_ch5debole_lascia prova geo=L n=400 beh=56 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 ch5=2
+e_L_ch5debole_toglie prova geo=L n=400 beh=56 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 ch5=2 toglie=1
+e_L_ch5scritta prova geo=L n=400 beh=56 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 ch5=1
+f_L_fermo_c5no prova geo=L n=800 beh=8 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 vmin=0
+f_L_fermo_c5b prova geo=L n=800 beh=8 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 c5b=1
+s_L sessione geo=L rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1

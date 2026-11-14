@@ -1,0 +1,19 @@
+# regola «mobile», N = 20000 per cella; soglia 5*sigma*sqrt(2/3); quota con la prima etichetta entro 1 s (k <= 15)
+ nom da 2 m: di traverso 100.00 % [99.98; 100.00] ; avvicinamento 100.00 % [99.98; 100.00] ; fermo 0.01 % [0.00; 0.03]
+ nom da 3 m: di traverso 100.00 % [99.98; 100.00] ; avvicinamento 100.00 % [99.98; 100.00] ; fermo 0.00 % [0.00; 0.02]
+ pes da 2 m: di traverso 100.00 % [99.98; 100.00] ; avvicinamento 100.00 % [99.98; 100.00] ; fermo 0.00 % [0.00; 0.02]
+ pes da 3 m: di traverso 100.00 % [99.98; 100.00] ; avvicinamento 86.21 % [85.73; 86.68] ; fermo 0.00 % [0.00; 0.02]
+ sev da 2 m: di traverso 100.00 % [99.98; 100.00] ; avvicinamento 100.00 % [99.98; 100.00] ; fermo 0.00 % [0.00; 0.02]
+ sev da 3 m: di traverso 100.00 % [99.98; 100.00] ; avvicinamento 26.88 % [26.27; 27.50] ; fermo 0.00 % [0.00; 0.02]
+# stessa regola con la soglia letterale 5*sigma*sqrt(2) (senza il fattore 1/sqrt(3) della media)
+ nom da 2 m, avvicinamento: 100.00 %
+ nom da 3 m, avvicinamento: 100.00 %
+ pes da 2 m, avvicinamento: 100.00 %
+ pes da 3 m, avvicinamento: 0.00 %
+ sev da 2 m, avvicinamento: 99.73 %
+ sev da 3 m, avvicinamento: 0.00 %
+# velocita' in avvicinamento da 2 m e da 3 m, curva pessimista: quota vista entro 1 s
+ da 2 m: 0.1 m/s 0.4 % ; 0.2 m/s 63.5 % ; 0.3 m/s 100.0 % ; 0.5 m/s 100.0 % ; 0.8 m/s 100.0 % ; 1.2 m/s 100.0 %
+ da 3 m: 0.1 m/s 0.0 % ; 0.2 m/s 0.1 % ; 0.3 m/s 2.3 % ; 0.5 m/s 85.9 % ; 0.8 m/s 100.0 % ; 1.2 m/s 100.0 %
+# rumore creduto la meta' del vero (soglia dimezzata), fermo a 2 m, curva pessimista: tracce con un'etichetta falsa nel primo secondo
+ 10.92 %

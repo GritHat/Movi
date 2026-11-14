@@ -1,0 +1,11 @@
+2026-11-14T17:51:01+01:00
+
+  P16: tempo per ciclo a 848×480, un filo, invarianti accesi: media 2.28 ms, p95 3.74 ms, massimo 3.90 ms (N = 48)
+
+  P18: linea a 2,7 m: 8 eventi «identità ambigua» (bordo della portata), identità 1 → 3, la traccia 1 resta «perso»
+
+  P21 (fumo): celle medie {'non_osservato': 3762, 'libero': 1252, 'occupato': 71, 'in_ombra': 315}; tracce nate 2, confermate 2; identità della sagoma conservata; eventi ['conferma', 'ingresso_in_ombra', 'nascita', 'perso', 'prima_misura_piena', 'riaggancio']; celle ambigue medie 2.1
+Ran 25 tests in 4.690s
+OK
+zsh: command not found: bc
+uscita R-1: 0; tempo  s

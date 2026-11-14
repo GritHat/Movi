@@ -1,0 +1,14 @@
+   ingresso al fotogramma 16: blocchi dei raggi 442, con la possibile presenza 477, tetto -1
+## A3 VH tetto 0 % dei blocchi dei raggi all'ingresso, pin 0, espulsione meno recente: voxel di possibile presenza scritti 22240, persi 0 ; blocchi espulsi 0 ; fotogrammi col soggetto nascosto 134, fuori regione 0 (primo -1) ; blocchi alla fine 477
+   ingresso al fotogramma 16: blocchi dei raggi 442, con la possibile presenza 442, tetto 442
+## A3 VH tetto 100 % dei blocchi dei raggi all'ingresso, pin 0, espulsione meno recente: voxel di possibile presenza scritti 22240, persi 14448 ; blocchi espulsi 79 ; fotogrammi col soggetto nascosto 134, fuori regione 132 (primo 18) ; blocchi alla fine 442
+   ingresso al fotogramma 16: blocchi dei raggi 442, con la possibile presenza 442, tetto 442
+## A3 VH tetto 100 % dei blocchi dei raggi all'ingresso, pin 0, espulsione piu' lontano: voxel di possibile presenza scritti 22240, persi 0 ; blocchi espulsi 473828 ; fotogrammi col soggetto nascosto 134, fuori regione 0 (primo -1) ; blocchi alla fine 442
+   ingresso al fotogramma 16: blocchi dei raggi 442, con la possibile presenza 442, tetto 442
+## A3 VH tetto 100 % dei blocchi dei raggi all'ingresso, pin 1, espulsione meno recente: voxel di possibile presenza scritti 22240, persi 0 ; blocchi espulsi 1018054 ; fotogrammi col soggetto nascosto 134, fuori regione 0 (primo -1) ; blocchi alla fine 442
+   ingresso al fotogramma 16: blocchi dei raggi 442, con la possibile presenza 477, tetto 477
+## A3 VH tetto 108 % dei blocchi dei raggi all'ingresso, pin 0, espulsione meno recente: voxel di possibile presenza scritti 22240, persi 0 ; blocchi espulsi 0 ; fotogrammi col soggetto nascosto 134, fuori regione 0 (primo -1) ; blocchi alla fine 477
+   ingresso al fotogramma 16: blocchi dei raggi 442, con la possibile presenza 477, tetto 486
+## A3 VH tetto 110 % dei blocchi dei raggi all'ingresso, pin 0, espulsione meno recente: voxel di possibile presenza scritti 22240, persi 0 ; blocchi espulsi 0 ; fotogrammi col soggetto nascosto 134, fuori regione 0 (primo -1) ; blocchi alla fine 477
+   ingresso al fotogramma 16: blocchi dei raggi 442, con la possibile presenza 477, tetto 499
+## A3 VH tetto 113 % dei blocchi dei raggi all'ingresso, pin 0, espulsione meno recente: voxel di possibile presenza scritti 22240, persi 0 ; blocchi espulsi 0 ; fotogrammi col soggetto nascosto 134, fuori regione 0 (primo -1) ; blocchi alla fine 477

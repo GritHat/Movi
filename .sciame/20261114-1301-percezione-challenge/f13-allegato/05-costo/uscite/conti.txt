@@ -1,0 +1,195 @@
+== A. Geometria e numerosita' ==
+lato 10 cm: 60 x 40 x 30 = 72000 voxel; 4 B: 288000 B = 0.288 MB; 8 B: 576000 B = 0.576 MB; somma n_i = 130 (tetto dei passi per raggio); blocchi 8^3: 160
+lato 5 cm: 120 x 80 x 60 = 576000 voxel; 4 B: 2304000 B = 2.304 MB; 8 B: 4608000 B = 4.608 MB; somma n_i = 260 (tetto dei passi per raggio); blocchi 8^3: 1200
+griglia polare: 87 colonne da 1 grado x 30 anelli da 0,1 m = 2610 celle (3 m); 5220 (6 m)
+due fotogrammi 640x480 a 4 B: 2457600 B; tre: 3686400 B
+focale a 640 px e 87 gradi: f = 337.2 px; passo ammesso k <= s f / Zmax: 5 cm, 6 m -> 2.81; 10 cm -> 5.62
+bordo alto del campo: y = 1.2 + 0.2493 z; quota 1,8 m a z = 2.41 m; quota 2,0 m a z = 3.21 m
+suolo visibile da z = h / tan(theta + FOV_v/2) = 1.243 m; quota 0,15 m fuori campo sotto z = 1.087 m
+piramide vista fino a 3 m: 18.94 m^3 = 26.3 % di 72 m^3; rapporto 72 / V = 3.80; voxel 10 cm 18937, 5 cm 151494
+periodo a 15 Hz: 66.67 ms; 10 % = 6.67 ms; spostamento a 1,4 m/s in un periodo: 9.3 cm
+errore d'assetto: 1 grado a 3 m = 5.2 cm; 0,5 gradi a 6 m = 5.2 cm
+mezza cella (0,05 m) su due intervalli (2/15 s): 0.375 m/s; regione 20x20x5 m a 5 cm: 16000000 voxel, 128 MB a 8 B
+log-odds: colpo +0.847, mancato -0.405, saturazione [-2.000; 3.511]; da saturo libero servono 3 colpi (0.20 s a 15 Hz); da saturo occupato servono 9 mancati (0.60 s)
+
+== B. Banco delle strutture: file d'origine (nucleo veloce, nucleo lento) e rilancio in questa cartella ==
+origine  hash/densa: N = 20 configurazioni; min 1.39, max 1.76
+rilancio hash/densa: N = 4; min 1.44, max 1.64
+origine  octree/densa: N = 20 configurazioni; min 2.16, max 3.77
+rilancio octree/densa: N = 4; min 2.49, max 3.59
+origine  octree potato/densa: N = 20 configurazioni; min 2.32, max 3.89
+rilancio octree potato/densa: N = 4; min 2.56, max 6.38
+origine  colonne di bit/densa: N = 20; min 0.46, max 0.89
+nucleo lento / nucleo veloce (medie): N = 44; mediana 1.49
+memoria (B), tutti i raggi: densa, hash vuota, hash densa, octree vuota, octree densa; risparmio massimo dell'hash
+  10 cm: 288000; 159744 (55 %); 241664 (84 %); 163264 (57 %); 377856 (131 %); densa - hash vuota = 0.13 MB; blocchi 76 e 116
+  5 cm: 2304000; 763904 (33 %); 1515520 (66 %); 1004672 (44 %); 2691008 (117 %); densa - hash vuota = 1.54 MB; blocchi 357 e 724
+polare 3 m: 10788.0 B; immagine: 2457600.0 B
+aggiornamento, scena densa, ms media / p95 / massimo  [origine veloce | origine lento | rilancio]
+  polare_3m    10 cm passo 4: 0.03 / 0.04 / 0.05 | 0.05 / 0.06 / 0.12 | 0.06 / 0.09 / 0.19
+  polare_3m    10 cm passo 1: 0.42 / 0.55 / 0.57 | 0.55 / 0.60 / 0.61 | 0.36 / 0.40 / 0.41
+  polare_3m     5 cm passo 4: 0.03 / 0.04 / 0.05 | 0.05 / 0.06 / 0.07 | 0.03 / 0.04 / 0.04
+  polare_3m     5 cm passo 1: 0.37 / 0.40 / 0.53 | 0.55 / 0.59 / 0.60 | 0.38 / 0.41 / 0.42
+  immagine     10 cm passo 4: 0.51 / 0.52 / 0.57 | 0.77 / 0.78 / 0.79 | 0.57 / 0.81 / 0.93
+  immagine     10 cm passo 1: 0.74 / 0.88 / 0.89 | 0.77 / 0.78 / 0.79 | 0.51 / 0.53 / 0.54
+  immagine      5 cm passo 4: 0.51 / 0.52 / 0.59 | 0.77 / 0.79 / 0.81 | 0.50 / 0.52 / 0.54
+  immagine      5 cm passo 1: 0.51 / 0.53 / 0.62 | 0.78 / 0.80 / 0.83 | 0.54 / 0.56 / 0.57
+  colonne_bit  10 cm passo 4: 1.30 / 1.34 / 1.44 | 1.96 / 2.01 / 2.06 | 1.32 / 1.37 / 1.39
+  colonne_bit  10 cm passo 1: 19.51 / 20.00 / 22.44 | 28.70 / 29.60 / 29.61 | 18.99 / 19.67 / 20.03
+  colonne_bit   5 cm passo 4: 2.46 / 2.55 / 2.66 | 3.68 / 3.78 / 3.80 | 2.57 / 2.66 / 2.70
+  colonne_bit   5 cm passo 1: 37.40 / 38.40 / 40.75 | 55.80 / 57.51 / 57.69 | 41.43 / 41.88 / 67.93
+  fasce3       10 cm passo 4: 3.29 / 3.37 / 4.91 | 4.87 / 5.01 / 5.10 | 3.39 / 4.00 / 5.42
+  fasce3       10 cm passo 1: 44.54 / 45.69 / 73.43 | 63.23 / 65.24 / 65.74 | 43.19 / 44.77 / 45.47
+  fasce3        5 cm passo 4: 6.23 / 6.41 / 6.51 | 9.28 / 9.54 / 9.60 | 6.16 / 6.36 / 6.73
+  fasce3        5 cm passo 1: 85.54 / 97.62 / 151.32 | 121.71 / 125.59 / 125.94 | 88.04 / 93.94 / 141.69
+  densa        10 cm passo 4: 2.03 / 2.08 / 2.25 | 3.03 / 3.12 / 3.17 | 2.04 / 2.10 / 2.12
+  densa        10 cm passo 1: 22.38 / 22.80 / 33.44 | 31.67 / 32.71 / 32.99 | 21.69 / 22.70 / 23.16
+  densa         5 cm passo 4: 4.21 / 4.35 / 5.38 | 6.41 / 6.62 / 6.73 | 4.21 / 4.33 / 4.61
+  densa         5 cm passo 1: 44.54 / 49.09 / 58.32 | 65.17 / 67.37 / 67.55 | 47.27 / 48.41 / 70.00
+  hash8        10 cm passo 4: 3.02 / 3.12 / 3.23 | 4.51 / 4.66 / 4.72 | 3.05 / 3.16 / 3.47
+  hash8        10 cm passo 1: 32.62 / 47.94 / 62.20 | 46.04 / 47.71 / 47.89 | 31.13 / 32.56 / 35.64
+  hash8         5 cm passo 4: 6.71 / 7.45 / 16.86 | 9.92 / 10.19 / 10.37 | 6.74 / 7.03 / 7.08
+  hash8         5 cm passo 1: 72.38 / 76.41 / 78.00 | 105.67 / 108.98 / 109.42 | 77.42 / 79.70 / 111.73
+  octree       10 cm passo 4: 5.02 / 5.39 / 6.88 | 7.38 / 7.57 / 7.61 | 5.09 / 5.40 / 6.49
+  octree       10 cm passo 1: 72.21 / 75.69 / 77.63 | 105.00 / 114.44 / 114.75 | 70.70 / 75.43 / 76.03
+  octree        5 cm passo 4: 11.23 / 12.09 / 12.34 | 16.98 / 17.82 / 18.37 | 11.70 / 12.36 / 14.12
+  octree        5 cm passo 1: 160.69 / 170.52 / 267.30 | 234.98 / 246.91 / 320.53 | 169.75 / 176.21 / 246.60
+polare 3 m, tutte le configurazioni d'origine: media min 0.006, p95 max 0.554 ms
+  densa 10 cm passo 4: raggi 16557, passi 774372, passi/raggio 46.8, ns/passo 2.62
+  densa 10 cm passo 1: raggi 264709, passi 12388429, passi/raggio 46.8, ns/passo 1.81
+  densa 5 cm passo 4: raggi 16557, passi 1557327, passi/raggio 94.1, ns/passo 2.70
+  densa 5 cm passo 1: raggi 264709, passi 24914570, passi/raggio 94.1, ns/passo 1.79
+interrogazione nell'immagine: 636 us per 108000 punti = 5.89 ns a punto; 1000 punti = 5.9 us
+Python puro (origine): python 3.14.10 pixel letti 19200 | polare_py 1x0,1m 3m: min=1.54 mediana=1.57 max=1.66 ms | voxel_denso_py 10cm: min=101.8 mediana=102.3 max=103.4 ms passi=1002931 ns_passo=102
+Python puro (rilancio): polare_py 1x0,1m 3m: min=1.74 mediana=2.03 max=2.55 ms | voxel_denso_py 10cm: min=105.7 mediana=106.0 max=106.4 ms passi=1002931 ns_passo=106
+
+== C. Sicurezza: conteggi dai file d'origine, con frequenze e intervalli ==
+lettura a due stati (non allocato = libero): 80505/146901 = 54.80 %  Wilson 95 % [54.55; 55.06] % (punti di una scena: non campioni indipendenti)
+decadimento verso il libero: 830/897 = 92.53 %  Wilson 95 % [90.62; 94.08] % (fotogrammi)
+blocchi a memoria limitata: voxel persi 14448/22240 = 64.96 %  Wilson 95 % [64.33; 65.59] % ; fotogrammi fuori regione 132/134 = 98.51 %  Wilson 95 % [94.72; 99.59] %
+sensore coperto, «attraversato = libero» (VO): 71006 punti liberi al fotogramma 29, e ai successivi: ['71006 (', '71006 (', '71006 (', '71006 (', '71006 (', '71006 (', '71006 (']
+tetto a 300 blocchi (ms): mediana, p95, massimo = 33.46 69.56 69.84
+  scena con ostacolo (147 fotogrammi) N1-suolo  fotogrammi con falso profondo  147; resa 73.8 %; ms mediana/max 1.05/1.59
+  scena con ostacolo (147 fotogrammi) Q1        fotogrammi con falso profondo    0; resa 97.1 %; ms mediana/max 0.29/0.31
+  scena con ostacolo (147 fotogrammi) Q3c       fotogrammi con falso profondo    0; resa 97.1 %; ms mediana/max 0.48/0.55
+  scena con ostacolo (147 fotogrammi) S10(B+M)  fotogrammi con falso profondo    0; resa 30.6 %; ms mediana/max 4.97/7.54
+  scena con ostacolo (147 fotogrammi) VO        fotogrammi con falso profondo  147; resa 97.6 %; ms mediana/max 4.87/7.09
+  scena con ostacolo (147 fotogrammi) VOa       fotogrammi con falso profondo    0; resa 83.0 %; ms mediana/max 6.24/9.03
+  soggetto senza ritorno (87 fotogrammi) N1-suolo  fot. con falso profondo  87; punti falsi 3967, profondi 2877
+  soggetto senza ritorno (87 fotogrammi) Q1        fot. con falso profondo   0; punti falsi 0, profondi 0
+  soggetto senza ritorno (87 fotogrammi) Q3        fot. con falso profondo  44; punti falsi 67355, profondi 47303
+  soggetto senza ritorno (87 fotogrammi) Q3c       fot. con falso profondo   0; punti falsi 495, profondi 0
+  soggetto senza ritorno (87 fotogrammi) VOa       fot. con falso profondo  45; punti falsi 101742, profondi 70056
+  resa con buchi sparsi 0 %, chiazze 0 %: lettura a un fotogramma 97.0 %, a tre con clausola 97.0 %, fasce 33.0 %
+  resa con buchi sparsi 5 %, chiazze 0 %: lettura a un fotogramma 61.1 %, a tre con clausola 87.7 %, fasce 0.0 %
+  resa con buchi sparsi 0 %, chiazze 5 %: lettura a un fotogramma 90.9 %, a tre con clausola 92.0 %, fasce 20.1 %
+  resa con buchi sparsi 20 %, chiazze 0 %: lettura a un fotogramma 13.0 %, a tre con clausola 28.9 %, fasce 0.0 %
+  resa con buchi sparsi 0 %, chiazze 20 %: lettura a un fotogramma 73.4 %, a tre con clausola 76.9 %, fasce 3.3 %
+tre fasce, scatola di 10 cm: celle libere con l'oggetto nella colonna: 32 (griglia polare: 0)
+tre fasce, stanza vuota: celle libere su 2610 con la fascia alta 0 ; senza 1040
+  somma dei log-odds senza priorita'  :   3706.8 falsi liberi per fotogramma su 6648 voxel con superficie sopra 0,10 m = 55.76 %
+  decimazione 4x4                     :   2095.9 falsi liberi per fotogramma su 6648 voxel con superficie sopra 0,10 m = 31.53 %
+  priorita' al colpo                  :    356.9 falsi liberi per fotogramma su 6648 voxel con superficie sopra 0,10 m = 5.37 %
+  colpi pieni + blocchi, 3 sigma      :      9.8 falsi liberi per fotogramma su 6648 voxel con superficie sopra 0,10 m = 0.15 %
+  proiezione                          :      0.0 falsi liberi per fotogramma su 6648 voxel con superficie sopra 0,10 m = 0.00 %
+log-odds letto come stato corrente, 14 fotogrammi dopo la comparsa: 5553/16851 = 32.95 %  Wilson 95 % [32.25; 33.67] % ; lettura del fotogramma corrente: 0
+  finestra di 3 fotogrammi al fotogramma della comparsa: 1045 ; con clausola di contraddizione: 0
+lettura del punto, secondo programma (origine): condizioni 10; fotogrammi con un punto profondo dato per libero: Q3c 0/900 = 0.00 %  Wilson 95 % [0.00; 0.43] %; Q1 0/900; Q3 205/900; bordo massimo Q3c 144
+    (a) senza buchi — fotogrammi contati 90, pixel validi medi 1 resa Q1  88.4 %  Q3c  88.4 %  falsi profondi Q3 0
+    (b) sparsi 5 % — fotogrammi contati 90, pixel validi medi 95 resa Q1  55.7 %  Q3c  79.4 %  falsi profondi Q3 0
+    (c) sparsi 30 % — fotogrammi contati 90, pixel validi medi 7 resa Q1   3.6 %  Q3c   8.0 %  falsi profondi Q3 1
+    (d) chiazze 30 % — fotogrammi contati 90, pixel validi medi  resa Q1  58.0 %  Q3c  60.5 %  falsi profondi Q3 1528
+    (e) soggetti muti — fotogrammi contati 90, pixel validi medi resa Q1  80.3 %  Q3c  81.0 %  falsi profondi Q3 8237
+    (f) muti + chiazze 30 % — fotogrammi contati 90, pixel valid resa Q1  52.8 %  Q3c  55.6 %  falsi profondi Q3 5408
+    (g) muti + sparsi 5 % — fotogrammi contati 90, pixel validi  resa Q1  50.7 %  Q3c  72.6 %  falsi profondi Q3 5392
+    (s0) scena ferma, 0 % — fotogrammi contati 90, pixel validi  resa Q1  91.8 %  Q3c  91.8 %  falsi profondi Q3 0
+    (s5) scena ferma, sparsi 5 % — fotogrammi contati 90, pixel  resa Q1  57.9 %  Q3c  83.1 %  falsi profondi Q3 0
+    (s10) scena ferma, sparsi 10 % — fotogrammi contati 90, pixe resa Q1  35.6 %  Q3c  64.8 %  falsi profondi Q3 0
+lettura del punto, secondo programma (rilancio): condizioni 10; fotogrammi con un punto profondo dato per libero: Q3c 0/900 = 0.00 %  Wilson 95 % [0.00; 0.43] %; Q1 0/900; Q3 205/900; bordo massimo Q3c 144
+    (a) senza buchi — fotogrammi contati 90, pixel validi medi 1 resa Q1  88.4 %  Q3c  88.4 %  falsi profondi Q3 0
+    (b) sparsi 5 % — fotogrammi contati 90, pixel validi medi 95 resa Q1  55.7 %  Q3c  79.4 %  falsi profondi Q3 0
+    (c) sparsi 30 % — fotogrammi contati 90, pixel validi medi 7 resa Q1   3.6 %  Q3c   8.0 %  falsi profondi Q3 1
+    (d) chiazze 30 % — fotogrammi contati 90, pixel validi medi  resa Q1  58.0 %  Q3c  60.5 %  falsi profondi Q3 1528
+    (e) soggetti muti — fotogrammi contati 90, pixel validi medi resa Q1  80.3 %  Q3c  81.0 %  falsi profondi Q3 8237
+    (f) muti + chiazze 30 % — fotogrammi contati 90, pixel valid resa Q1  52.8 %  Q3c  55.6 %  falsi profondi Q3 5408
+    (g) muti + sparsi 5 % — fotogrammi contati 90, pixel validi  resa Q1  50.7 %  Q3c  72.6 %  falsi profondi Q3 5392
+    (s0) scena ferma, 0 % — fotogrammi contati 90, pixel validi  resa Q1  91.8 %  Q3c  91.8 %  falsi profondi Q3 0
+    (s5) scena ferma, sparsi 5 % — fotogrammi contati 90, pixel  resa Q1  57.9 %  Q3c  83.1 %  falsi profondi Q3 0
+    (s10) scena ferma, sparsi 10 % — fotogrammi contati 90, pixe resa Q1  35.6 %  Q3c  64.8 %  falsi profondi Q3 0
+
+== D. Previsione durante l'occlusione: tempi per ciclo ==
+  f8-continuita/14-attacco/ris/tempo_C.txt
+    tracce   1: mediana 0.055 ms, p95 0.073 ms, massimo 0.091 ms; p95 per traccia 0.073 ms; p95 / periodo = 0.1 %
+    tracce  10: mediana 0.511 ms, p95 0.615 ms, massimo 0.649 ms; p95 per traccia 0.061 ms; p95 / periodo = 0.9 %
+    tracce  60: mediana 2.526 ms, p95 2.885 ms, massimo 3.499 ms; p95 per traccia 0.048 ms; p95 / periodo = 4.3 %
+    tracce 120: mediana 4.826 ms, p95 5.444 ms, massimo 8.163 ms; p95 per traccia 0.045 ms; p95 / periodo = 8.2 %
+  f8-continuita/14-attacco/ris/tempo_py.txt
+    tracce   1: mediana 0.6 ms, p95 0.7 ms, massimo 0.7 ms; p95 per traccia 0.700 ms; p95 / periodo = 1.0 %
+    tracce   3: mediana 1.8 ms, p95 2.0 ms, massimo 2.1 ms; p95 per traccia 0.667 ms; p95 / periodo = 3.0 %
+    tracce  10: mediana 5.3 ms, p95 6.2 ms, massimo 6.3 ms; p95 per traccia 0.620 ms; p95 / periodo = 9.3 %
+  f13-allegato/05-costo/uscite/previsione_C.txt
+    tracce   1: mediana 0.095 ms, p95 0.192 ms, massimo 0.362 ms; p95 per traccia 0.192 ms; p95 / periodo = 0.3 %
+    tracce  10: mediana 0.530 ms, p95 0.671 ms, massimo 1.804 ms; p95 per traccia 0.067 ms; p95 / periodo = 1.0 %
+    tracce  60: mediana 2.700 ms, p95 4.131 ms, massimo 8.522 ms; p95 per traccia 0.069 ms; p95 / periodo = 6.2 %
+    tracce 120: mediana 5.224 ms, p95 5.907 ms, massimo 7.537 ms; p95 per traccia 0.049 ms; p95 / periodo = 8.9 %
+  f13-allegato/05-costo/uscite/previsione_py.txt
+    tracce   1: mediana 1.4 ms, p95 2.1 ms, massimo 2.5 ms; p95 per traccia 2.100 ms; p95 / periodo = 3.1 %
+    tracce   3: mediana 4.4 ms, p95 6.2 ms, massimo 6.9 ms; p95 per traccia 2.067 ms; p95 / periodo = 9.3 %
+    tracce  10: mediana 6.4 ms, p95 15.9 ms, massimo 19.7 ms; p95 per traccia 1.590 ms; p95 / periodo = 23.8 %
+    seconda implementazione, 10 tracce: T | T | 10 | C-004 | mediana 0.5087 ms | p95 0.6262 ms | max 1.3848 ms
+    seconda implementazione, 10 tracce: T | T | 10 | sd-1+sd-0 (in piu' di C-004) | mediana 0.0453 ms | p95 0.0508 ms | max 0.1363 ms
+    seconda implementazione, 10 tracce: T | L | 10 | C-004 | mediana 0.8550 ms | p95 1.3382 ms | max 1.8028 ms
+    seconda implementazione, 10 tracce: T | L | 10 | sd-1+sd-0 (in piu' di C-004) | mediana 0.0639 ms | p95 0.0744 ms | max 0.2086 ms
+
+== E. Catena di riferimento (Python con numpy): tempi per ciclo dai record per fotogramma ==
+  [sim] simulata 424x240: sequenze 162, cicli N = 9152; media 6.35 ms, mediana 4.13, p95 18.56, p99 33.70, massimo 104.99
+  cicli oltre 66 ms: 4/9152 = 0.04 %  Wilson 95 % [0.02; 0.11] %; oltre 66,67 ms: 4
+  tracce presenti nel ciclo: min 0, mediana 17, max 144; correlazione di Pearson tempo-tracce 0.74; tempo-gruppi 0.49
+    tracce   0-    2: N =   369 cicli; media   0.94 ms; p95   1.31; massimo   1.56
+    tracce   3-    5: N =   416 cicli; media   1.50 ms; p95   5.73; massimo   6.33
+    tracce   6-   10: N =  1320 cicli; media   2.60 ms; p95   7.00; massimo  15.99
+    tracce  11-   20: N =  3694 cicli; media   5.32 ms; p95  12.90; massimo  35.86
+    tracce  21-   40: N =  2849 cicli; media   8.12 ms; p95  17.90; massimo  65.78
+    tracce  41-   80: N =   376 cicli; media  17.61 ms; p95  32.88; massimo 104.99
+    tracce  81-oltre: N =   128 cicli; media  34.03 ms; p95  50.56; massimo  67.21
+  minimi quadrati t = a + b n + c n^2: a = 0.33 ms, b = 0.302 ms/traccia, c = 0.00017 ms/traccia^2
+  sequenza con la media piu' alta: d435i_lim__pannello_b__s01 (27.68 ms su 89 cicli)
+  [sim_p40] simulata 424x240: sequenze 162, cicli N = 9152; media 0.95 ms, mediana 0.85, p95 1.28, p99 4.71, massimo 7.66
+  cicli oltre 66 ms: 0/9152 = 0.00 %  Wilson 95 % [0.00; 0.04] %; oltre 66,67 ms: 0
+  tracce presenti nel ciclo: min 0, mediana 2, max 10; correlazione di Pearson tempo-tracce 0.28; tempo-gruppi 0.06
+    tracce   0-    2: N =  8510 cicli; media   0.92 ms; p95   1.14; massimo   7.24
+    tracce   3-    5: N =   522 cicli; media   1.34 ms; p95   4.63; massimo   7.66
+    tracce   6-   10: N =   120 cicli; media   1.73 ms; p95   4.78; massimo   6.68
+  minimi quadrati t = a + b n + c n^2: a = 0.47 ms, b = 0.259 ms/traccia, c = -0.00993 ms/traccia^2
+  sequenza con la media piu' alta: d435i_lim__pannello_b__s00 (1.73 ms su 91 cicli)
+  pubblica tum_fr3_walking_static [posa_per_fotogramma], 307200 pixel, 120 cicli in 8.31 s: media 3.14 ms, p95 3.81, massimo 4.71; tracce confermate 12
+  pubblica realsense_stairs [nucleo], 921600 pixel, 73 cicli in 10.19 s: media 8.95 ms, p95 13.83, massimo 18.49; tracce confermate 27
+  pubblica realsense_structured [nucleo], 307200 pixel, 64 cicli in 4.21 s: media 2.78 ms, p95 4.14, massimo 8.71; tracce confermate 4
+  pubblica depthtrack_human02_indoor [nucleo], 230400 pixel, 320 cicli in 21.27 s: media 81.47 ms, p95 151.95, massimo 383.32; tracce confermate 254
+  pubblica depthtrack_human02_indoor [p91], 230400 pixel, 320 cicli in 21.27 s: media 23.77 ms, p95 48.62, massimo 167.6; tracce confermate 164
+  pubblica depthtrack_human02_indoor [p91_rollio_vincolato], 230400 pixel, 320 cicli in 21.27 s: media 20.39 ms, p95 39.43, massimo 133.47; tracce confermate 193
+  pubblica princeton_new_ex_occ4 [nucleo], 307200 pixel, 51 cicli in 2.54 s: media 2.18 ms, p95 2.35, massimo 6.3; tracce confermate 2
+  pubblica princeton_child_no1 [nucleo], 307200 pixel, 82 cicli in 8.01 s: media 2.53 ms, p95 3.73, massimo 7.68; tracce confermate 7
+  pubblica princeton_face_occ5 [nucleo], 307200 pixel, 170 cicli in 8.81 s: media 1.82 ms, p95 1.99, massimo 5.62; tracce confermate 4
+  registrazione affollata: tracce presenti insieme nel ciclo: mediana 152, massimo 259; gruppi per ciclo: mediana 45, massimo 68 (N = 320 cicli)
+
+== F. Controlli aggiunti ==
+primo programma, lettura del fotogramma corrente: fotogrammi con falso profondo 0/321 = 0.00 %  Wilson 95 % [0.00; 1.18] %
+vetro a 1.5 m: punti della lastra dati per liberi: un fotogramma 600/800, con conferma 600/800 = 75.0 %
+vetro a 2.0 m: punti della lastra dati per liberi: un fotogramma 654/800, con conferma 654/800 = 81.8 %
+errore d'imbardata di 1 grado non segnalato: falsi liberi prima 0, dopo 1225 (profondi 278)
+latenza, somma dei soli contributi noti: 33/2 + 95 + 22 + 21,3 = 154.8 ms (un quanto audio = 21.3 ms)
+rilancio / origine sulle medie (configurazioni con media >= 1 ms): N = 32; min 0.93, mediana 1.01, max 1.74
+p95 peggiore a un raggio su 16, origine: 12.8 ms; nucleo lento: 20.4 ms; rilancio: 13.6 ms
+rilancio del primo programma, prova statica: conteggi (tempi esclusi) identici all'origine: True
+rilancio del primo programma, prova scenB: conteggi (tempi esclusi) identici all'origine: True
+rilancio del primo programma, prova a5c: conteggi (tempi esclusi) identici all'origine: True
+rilancio del primo programma, prova s10: uscita identica all'origine: True
+rilancio del primo programma, prova a2: uscita identica all'origine: True
+rilancio del primo programma, prova a3: uscita identica all'origine: True
+rilancio del primo programma, prova a9: uscita identica all'origine: True
+rilancio del primo programma, prova k106: uscita identica all'origine: True
+rilancio del secondo programma: uscita identica all'origine: True
+rilancio sicurezza_tipica_5_4.txt: 11 righe di conteggio; tutte presenti nell'origine: True
+rilancio vecchi_5_Q.txt: 16 righe di conteggio; tutte presenti nell'origine: True
+rilancio, tempi della prova di carico: rip. 0: N1-suolo 1.12/1.18/1.67(1.49) Q1 0.34/0.50/0.66(1.95) Q3 0.71/1.19/1.63(2.29) Q3c 0.66/1.08/1.33(2.03) P 5.25/5.70/5.71(1.09) S10p(B+M) 40.81/49.26/49.74(1.22) VO 4.89/6.70/6.80(1.39) VOa 8.04/8.37/8.61(1.07) | VH (5 cm, raggi 1 su 4) tetto nessuno: mediana 11.06 ms, p95 14.62, massimo 15.63 (fotogramma 0: 13.98 ms con 525 allocazioni; fotogramma 30: 4.96 ms con 0) ; blocchi alla fine 525 ; espulsi 0 | VH (5 cm, raggi 1 su 4) tetto 300 blocchi: mediana 36.20 ms, p95 75.86, massimo 76.44 (fotogramma 0: 76.00 ms con 143526 allocazioni; fotogramma 30: 13.96 ms con 21622) ; blocchi alla fine 300 ; espulsi 7399036

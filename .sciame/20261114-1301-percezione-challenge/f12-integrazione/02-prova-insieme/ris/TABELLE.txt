@@ -1,0 +1,237 @@
+== (a) CONTINUITA' — per geometria, rilevamento, corpo; cinque comportamenti sul percorso, 400 semi l'uno ==
+file | passaggi confermati | con un vuoto | scoperti (>=1 ciclo) | scoperti >=3 cicli | non confermati prima dell'ombra | di cui scoperti (>=1; >=3 cicli) | cicli nascosti | cicli scoperti | cicli coperti solo da c7 | cicli c7 a soggetto in piena vista
+a_D_pd0.7_esteso_c70 | 1673 | 0 | 107 | 105 | 68 | 68; 68 | 91275 | 8306 | 0 | 0
+a_D_pd0.7_esteso_c71 | 1673 | 0 | 2 | 2 | 68 | 3; 3 | 91275 | 341 | 7965 | 1509
+a_D_pd0.7_punto_c70 | 1894 | 0 | 47 | 47 | 103 | 103; 103 | 112140 | 6486 | 0 | 0
+a_D_pd0.7_punto_c71 | 1894 | 0 | 0 | 0 | 103 | 2; 2 | 112140 | 86 | 6400 | 3639
+a_D_pd0.9_esteso_c70 | 1728 | 0 | 8 | 7 | 13 | 13; 13 | 91275 | 1111 | 0 | 0
+a_D_pd0.9_esteso_c71 | 1728 | 0 | 0 | 0 | 13 | 0; 0 | 91275 | 0 | 1111 | 62
+a_D_pd0.9_punto_c70 | 1968 | 0 | 2 | 2 | 29 | 29; 29 | 112140 | 1169 | 0 | 0
+a_D_pd0.9_punto_c71 | 1968 | 0 | 0 | 0 | 29 | 1; 1 | 112140 | 62 | 1107 | 548
+a_T_pd0.7_esteso_c70 | 1979 | 0 | 187 | 187 | 0 | 0; 0 | 110691 | 9945 | 0 | 0
+a_T_pd0.7_esteso_c71 | 1979 | 0 | 9 | 9 | 0 | 0; 0 | 110691 | 505 | 9440 | 1893
+a_T_pd0.7_punto_c70 | 2000 | 0 | 110 | 110 | 0 | 0; 0 | 139201 | 6357 | 0 | 0
+a_T_pd0.7_punto_c71 | 2000 | 0 | 2 | 2 | 0 | 0; 0 | 139201 | 225 | 6132 | 2206
+a_T_pd0.9_esteso_c70 | 1979 | 0 | 10 | 10 | 0 | 0; 0 | 110691 | 554 | 0 | 0
+a_T_pd0.9_esteso_c71 | 1979 | 0 | 1 | 1 | 0 | 0; 0 | 110691 | 15 | 539 | 74
+a_T_pd0.9_punto_c70 | 2000 | 0 | 3 | 3 | 0 | 0; 0 | 139201 | 186 | 0 | 0
+a_T_pd0.9_punto_c71 | 2000 | 0 | 0 | 0 | 0 | 0; 0 | 139201 | 0 | 186 | 62
+a_L_pd0.7_esteso_c70 | 1971 | 0 | 131 | 131 | 13 | 13; 13 | 178709 | 12994 | 0 | 0
+a_L_pd0.7_esteso_c71 | 1971 | 0 | 2 | 2 | 13 | 1; 1 | 178709 | 228 | 12766 | 1441
+a_L_pd0.7_punto_c70 | 1978 | 0 | 64 | 64 | 22 | 22; 22 | 197681 | 7998 | 0 | 0
+a_L_pd0.7_punto_c71 | 1978 | 0 | 1 | 1 | 22 | 0; 0 | 197681 | 91 | 7907 | 1690
+a_L_pd0.9_esteso_c70 | 1984 | 0 | 9 | 9 | 0 | 0; 0 | 178709 | 843 | 0 | 0
+a_L_pd0.9_esteso_c71 | 1984 | 0 | 0 | 0 | 0 | 0; 0 | 178709 | 0 | 843 | 83
+a_L_pd0.9_punto_c70 | 2000 | 0 | 2 | 2 | 0 | 0; 0 | 197681 | 165 | 0 | 0
+a_L_pd0.9_punto_c71 | 2000 | 0 | 0 | 0 | 0 | 0; 0 | 197681 | 0 | 165 | 85
+TOTALE (a) c7=1: passaggi 23402; con un vuoto 0 (limite superiore al 95 %: 0.00017); scoperti 24 = 0.0010; scoperti per almeno 3 cicli 24 = 0.0010; cicli scoperti 1553 su 1659394 nascosti
+   c7=1 rilevamento 0.9 corpo esteso: scoperti 1/5704=0.000; per almeno 3 cicli 1/5704=0.000; vuoti 0
+   c7=1 rilevamento 0.9 corpo puntiforme: scoperti 1/5997=0.000; per almeno 3 cicli 1/5997=0.000; vuoti 0
+   c7=1 rilevamento 0.7 corpo esteso: scoperti 17/5704=0.003; per almeno 3 cicli 17/5704=0.003; vuoti 0
+   c7=1 rilevamento 0.7 corpo puntiforme: scoperti 5/5997=0.001; per almeno 3 cicli 5/5997=0.001; vuoti 0
+TOTALE (a) c7=0: passaggi 23402; con un vuoto 0 (limite superiore al 95 %: 0.00017); scoperti 928 = 0.0397; scoperti per almeno 3 cicli 925 = 0.0395; cicli scoperti 56114 su 1659394 nascosti
+   c7=0 rilevamento 0.9 corpo esteso: scoperti 40/5704=0.007; per almeno 3 cicli 39/5704=0.007; vuoti 0
+   c7=0 rilevamento 0.9 corpo puntiforme: scoperti 36/5997=0.006; per almeno 3 cicli 36/5997=0.006; vuoti 0
+   c7=0 rilevamento 0.7 corpo esteso: scoperti 506/5704=0.089; per almeno 3 cicli 504/5704=0.088; vuoti 0
+   c7=0 rilevamento 0.7 corpo puntiforme: scoperti 346/5997=0.058; per almeno 3 cicli 346/5997=0.058; vuoti 0
+
+== (b) PRECISIONE — corpo esteso, rilevamento 0,9, maschera esatta; unita' = passaggio, un istante per passaggio e per orizzonte ==
+PRIMARIA = segno «previsto» (non «ampio»), corpo tutto nascosto: dentro R90. SECONDARIA = tutti gli istanti a corpo tutto nascosto, R90 grezza. MOSTRATA = regione a schermo (in «ampio» tutta l'ombra).
+geo beh | s | primaria k/n=quota [Wilson inf] | secondaria k/n=quota [Wilson inf] | mostrata | area R90/ombra | nota
+D svolta         | 1 | 1057/1187=0.890 [0.871] | 1994/2194=0.909 [0.896] | 2064/2194=0.941 | 0.70 | a parte
+D svolta         | 2 | 93/150=0.620 [0.540] | 1515/1761=0.860 [0.843] | 1703/1761=0.967 | 0.99 | primaria: n<400; a parte
+D svolta         | 3 | 5/33=0.152 [0.067] | 1123/1339=0.839 [0.818] | 1309/1339=0.978 | 1.07 | primaria: n<400; a parte
+D lontano        | 1 | 1158/1251=0.926 [0.910] | 2138/2343=0.913 [0.900] | 2248/2343=0.959 | 0.70 | a parte
+D lontano        | 2 | 87/123=0.707 [0.622] | 1059/1290=0.821 [0.799] | 1251/1290=0.970 | 0.98 | primaria: n<400; a parte
+D lontano        | 3 | 6/15=0.400 [0.198] | 434/574=0.756 [0.719] | 563/574=0.981 | 1.05 | primaria: n<400; a parte
+D fermo-in-vista | 1 | 81/357=0.227 [0.186] | 189/1294=0.146 [0.128] | 1018/1294=0.787 | 0.49 | primaria: n<400; a parte
+D fermo-in-vista | 2 | 26/53=0.491 [0.361] | 417/1011=0.412 [0.383] | 984/1011=0.973 | 0.81 | primaria: n<400; a parte
+D fermo-in-vista | 3 | 1/12=0.083 [0.015] | 404/680=0.594 [0.557] | 669/680=0.984 | 0.99 | primaria: n<400; a parte
+D prosegue       | 1 | 1032/1134=0.910 [0.892] | 1835/1963=0.935 [0.923] | 1861/1963=0.948 | 0.71 | PRIMARIA SOTTO 0.9
+D prosegue       | 2 | 88/133=0.662 [0.578] | 1257/1388=0.906 [0.889] | 1343/1388=0.968 | 1.03 | primaria: n<400; SECONDARIA SOTTO 0.9
+D prosegue       | 3 | 3/33=0.091 [0.031] | 845/984=0.859 [0.836] | 954/984=0.970 | 1.13 | primaria: n<400; SECONDARIA SOTTO 0.85
+D rallenta       | 1 | 1053/1138=0.925 [0.909] | 1990/2097=0.949 [0.939] | 2012/2097=0.959 | 0.71 | 
+D rallenta       | 2 | 95/142=0.669 [0.588] | 1509/1636=0.922 [0.908] | 1589/1636=0.971 | 1.02 | primaria: n<400
+D rallenta       | 3 | 2/28=0.071 [0.020] | 1088/1216=0.895 [0.876] | 1190/1216=0.979 | 1.13 | primaria: n<400
+D sosta          | 1 | 999/1098=0.910 [0.891] | 2000/2120=0.943 [0.933] | 2021/2120=0.953 | 0.71 | PRIMARIA SOTTO 0.9
+D sosta          | 2 | 118/182=0.648 [0.577] | 2047/2222=0.921 [0.909] | 2158/2222=0.971 | 1.00 | primaria: n<400
+D sosta          | 3 | 34/79=0.430 [0.327] | 1962/2148=0.913 [0.901] | 2103/2148=0.979 | 1.08 | primaria: n<400
+D torna          | 1 | 972/1076=0.903 [0.884] | 2001/2168=0.923 [0.911] | 2064/2168=0.952 | 0.70 | PRIMARIA SOTTO 0.9
+D torna          | 2 | 106/166=0.639 [0.563] | 2043/2194=0.931 [0.920] | 2134/2194=0.973 | 1.00 | primaria: n<400
+D torna          | 3 | 25/49=0.510 [0.375] | 1537/1618=0.950 [0.938] | 1594/1618=0.985 | 1.10 | primaria: n<400
+D sostalunga     | 1 | 942/1045=0.901 [0.882] | 2006/2131=0.941 [0.931] | 2028/2131=0.952 | 0.72 | PRIMARIA SOTTO 0.9
+D sostalunga     | 2 | 111/165=0.673 [0.598] | 2064/2241=0.921 [0.909] | 2187/2241=0.976 | 1.00 | primaria: n<400
+D sostalunga     | 3 | 31/69=0.449 [0.338] | 1987/2178=0.912 [0.900] | 2140/2178=0.983 | 1.08 | primaria: n<400
+T svolta         | 1 | 1711/1827=0.937 [0.924] | 1818/1940=0.937 [0.925] | 1824/1940=0.940 | 0.12 | a parte
+T svolta         | 2 | 973/1448=0.672 [0.647] | 1060/1572=0.674 [0.651] | 1097/1572=0.698 | 0.25 | a parte
+T svolta         | 3 | 507/890=0.570 [0.537] | 565/976=0.579 [0.548] | 593/976=0.608 | 0.33 | a parte
+T lontano        | 1 | 1645/1768=0.930 [0.918] | 1756/1888=0.930 [0.918] | 1765/1888=0.935 | 0.12 | a parte
+T lontano        | 2 | 989/1644=0.602 [0.578] | 1093/1795=0.609 [0.586] | 1140/1795=0.635 | 0.25 | a parte
+T lontano        | 3 | 552/979=0.564 [0.533] | 624/1090=0.572 [0.543] | 663/1090=0.608 | 0.32 | a parte
+T fermo-in-vista | 1 | 35/296=0.118 [0.086] | 50/1025=0.049 [0.037] | 764/1025=0.745 | 0.07 | primaria: n<400; a parte
+T fermo-in-vista | 2 | 21/137=0.153 [0.102] | 134/1033=0.130 [0.111] | 917/1033=0.888 | 0.17 | primaria: n<400; a parte
+T fermo-in-vista | 3 | 18/39=0.462 [0.316] | 98/478=0.205 [0.171] | 457/478=0.956 | 0.25 | primaria: n<400; a parte
+T prosegue       | 1 | 1751/1759=0.995 [0.991] | 1875/1886=0.994 [0.990] | 1878/1886=0.996 | 0.11 | 
+T prosegue       | 2 | 1104/1132=0.975 [0.964] | 1222/1265=0.966 [0.955] | 1237/1265=0.978 | 0.24 | 
+T prosegue       | 3 | 590/608=0.970 [0.954] | 666/698=0.954 [0.936] | 680/698=0.974 | 0.36 | 
+T rallenta       | 1 | 1792/1805=0.993 [0.988] | 1918/1933=0.992 [0.987] | 1920/1933=0.993 | 0.11 | 
+T rallenta       | 2 | 1417/1456=0.973 [0.964] | 1562/1604=0.974 [0.965] | 1565/1604=0.976 | 0.24 | 
+T rallenta       | 3 | 851/891=0.955 [0.939] | 955/1001=0.954 [0.939] | 961/1001=0.960 | 0.33 | 
+T sosta          | 1 | 1720/1729=0.995 [0.990] | 1840/1851=0.994 [0.989] | 1842/1851=0.995 | 0.12 | 
+T sosta          | 2 | 1679/1730=0.971 [0.961] | 1839/1899=0.968 [0.960] | 1848/1899=0.973 | 0.24 | 
+T sosta          | 3 | 1586/1643=0.965 [0.955] | 1741/1806=0.964 [0.954] | 1749/1806=0.968 | 0.30 | 
+T torna          | 1 | 1740/1771=0.982 [0.975] | 1840/1907=0.965 [0.956] | 1876/1907=0.984 | 0.11 | 
+T torna          | 2 | 1633/1678=0.973 [0.964] | 1766/1818=0.971 [0.963] | 1773/1818=0.975 | 0.24 | 
+T torna          | 3 | 1146/1183=0.969 [0.957] | 1243/1286=0.967 [0.955] | 1249/1286=0.971 | 0.30 | 
+T sostalunga     | 1 | 1713/1730=0.990 [0.984] | 1824/1843=0.990 [0.984] | 1826/1843=0.991 | 0.11 | 
+T sostalunga     | 2 | 1710/1750=0.977 [0.969] | 1851/1899=0.975 [0.967] | 1859/1899=0.979 | 0.24 | 
+T sostalunga     | 3 | 1575/1628=0.967 [0.958] | 1706/1769=0.964 [0.955] | 1716/1769=0.970 | 0.30 | 
+L svolta         | 1 | 1640/1715=0.956 [0.946] | 1742/1828=0.953 [0.942] | 1753/1828=0.959 | 0.06 | a parte
+L svolta         | 2 | 1703/2152=0.791 [0.774] | 1822/2320=0.785 [0.768] | 1871/2320=0.806 | 0.15 | a parte
+L svolta         | 3 | 1152/1718=0.671 [0.648] | 1237/1859=0.665 [0.644] | 1292/1859=0.695 | 0.27 | a parte
+L lontano        | 1 | 1675/1736=0.965 [0.955] | 1748/1818=0.961 [0.952] | 1757/1818=0.966 | 0.06 | a parte
+L lontano        | 2 | 1725/2185=0.789 [0.772] | 1823/2323=0.785 [0.768] | 1863/2323=0.802 | 0.16 | a parte
+L lontano        | 3 | 1210/1734=0.698 [0.676] | 1292/1853=0.697 [0.676] | 1329/1853=0.717 | 0.27 | a parte
+L fermo-in-vista | 1 | 24/230=0.104 [0.071] | 31/727=0.043 [0.030] | 521/727=0.717 | 0.04 | primaria: n<400; a parte
+L fermo-in-vista | 2 | 9/242=0.037 [0.020] | 74/1119=0.066 [0.053] | 886/1119=0.792 | 0.11 | primaria: n<400; a parte
+L fermo-in-vista | 3 | 10/169=0.059 [0.032] | 57/999=0.057 [0.044] | 840/999=0.841 | 0.20 | primaria: n<400; a parte
+L prosegue       | 1 | 1712/1737=0.986 [0.979] | 1793/1825=0.982 [0.975] | 1800/1825=0.986 | 0.06 | 
+L prosegue       | 2 | 2089/2209=0.946 [0.935] | 2225/2359=0.943 [0.933] | 2239/2359=0.949 | 0.15 | 
+L prosegue       | 3 | 1525/1629=0.936 [0.923] | 1637/1754=0.933 [0.921] | 1650/1754=0.941 | 0.26 | 
+L rallenta       | 1 | 1689/1719=0.983 [0.975] | 1783/1821=0.979 [0.971] | 1791/1821=0.984 | 0.06 | 
+L rallenta       | 2 | 2095/2184=0.959 [0.950] | 2230/2346=0.951 [0.941] | 2257/2346=0.962 | 0.15 | 
+L rallenta       | 3 | 1860/1989=0.935 [0.923] | 1989/2146=0.927 [0.915] | 2017/2146=0.940 | 0.26 | 
+L sosta          | 1 | 1626/1656=0.982 [0.974] | 1713/1751=0.978 [0.970] | 1721/1751=0.983 | 0.06 | 
+L sosta          | 2 | 2025/2103=0.963 [0.954] | 2163/2260=0.957 [0.948] | 2182/2260=0.965 | 0.15 | 
+L sosta          | 3 | 1940/2053=0.945 [0.934] | 2084/2215=0.941 [0.930] | 2102/2215=0.949 | 0.26 | 
+L torna          | 1 | 1676/1723=0.973 [0.964] | 1757/1828=0.961 [0.951] | 1781/1828=0.974 | 0.06 | 
+L torna          | 2 | 1995/2112=0.945 [0.934] | 2125/2279=0.932 [0.921] | 2162/2279=0.949 | 0.15 | 
+L torna          | 3 | 1637/1774=0.923 [0.909] | 1754/1922=0.913 [0.899] | 1785/1922=0.929 | 0.26 | 
+L sostalunga     | 1 | 1688/1709=0.988 [0.981] | 1776/1806=0.983 [0.976] | 1785/1806=0.988 | 0.06 | 
+L sostalunga     | 2 | 2043/2142=0.954 [0.944] | 2168/2286=0.948 [0.939] | 2187/2286=0.957 | 0.15 | 
+L sostalunga     | 3 | 1942/2064=0.941 [0.930] | 2074/2208=0.939 [0.929] | 2086/2208=0.945 | 0.27 | 
+CELLE SUL PERCORSO CON n>=400 SOTTO SOGLIA: [('D', 'prosegue', 1, 'primaria', 1032, 1134), ('D', 'prosegue', 2, 'secondaria', 1257, 1388), ('D', 'prosegue', 3, 'secondaria', 845, 984), ('D', 'sosta', 1, 'primaria', 999, 1098), ('D', 'torna', 1, 'primaria', 972, 1076), ('D', 'sostalunga', 1, 'primaria', 942, 1045)]
+   D sul percorso, cinque comportamenti insieme, 1 s: primaria 4998/5491=0.910 [0.902]; secondaria 9832/10479=0.938 [0.933]; quota di istanti in «ampio» 0.48
+   D sul percorso, cinque comportamenti insieme, 2 s: primaria 518/788=0.657 [0.624]; secondaria 8920/9681=0.921 [0.916]; quota di istanti in «ampio» 0.92
+   D sul percorso, cinque comportamenti insieme, 3 s: primaria 95/258=0.368 [0.312]; secondaria 7419/8144=0.911 [0.905]; quota di istanti in «ampio» 0.97
+   T sul percorso, cinque comportamenti insieme, 1 s: primaria 8716/8794=0.991 [0.989]; secondaria 9297/9420=0.987 [0.984]; quota di istanti in «ampio» 0.07
+   T sul percorso, cinque comportamenti insieme, 2 s: primaria 7543/7746=0.974 [0.970]; secondaria 8240/8485=0.971 [0.967]; quota di istanti in «ampio» 0.09
+   T sul percorso, cinque comportamenti insieme, 3 s: primaria 5748/5953=0.966 [0.961]; secondaria 6311/6560=0.962 [0.957]; quota di istanti in «ampio» 0.09
+   L sul percorso, cinque comportamenti insieme, 1 s: primaria 8391/8544=0.982 [0.979]; secondaria 8822/9031=0.977 [0.974]; quota di istanti in «ampio» 0.05
+   L sul percorso, cinque comportamenti insieme, 2 s: primaria 10247/10750=0.953 [0.949]; secondaria 10911/11530=0.946 [0.942]; quota di istanti in «ampio» 0.07
+   L sul percorso, cinque comportamenti insieme, 3 s: primaria 8904/9509=0.936 [0.931]; secondaria 9538/10245=0.931 [0.926]; quota di istanti in «ampio» 0.07
+
+== (c) K-215 — ombra stimata piu' stretta, corpo esteso; cinque comportamenti sul percorso insieme e «prosegue» da solo ==
+file | prosegue a 1 s, 2 s (secondaria) [Wilson inf] | sul percorso a 1 s, 2 s, 3 s (secondaria) [Wilson inf] | scoperti | vuoti | cicli fuori da R100
+c_D_e-0.10_pd0.9_c3no | 126/214=0.589 [0.522] 74/103=0.718 [0.625] | 915/1248=0.733 [0.708] 758/864=0.877 [0.854] 649/703=0.923 [0.901] | 69/1741 | 0 | 0
+c_D_e-0.10_pd0.9_c3p08 | 185/220=0.841 [0.787] 89/110=0.809 [0.726] | 1070/1270=0.843 [0.821] 756/865=0.874 [0.850] 638/682=0.935 [0.914] | 15/1741 | 0 | 0
+c_D_e-0.10_pd0.9_c3si | 190/204=0.931 [0.888] 113/128=0.883 [0.816] | 942/996=0.946 [0.930] 818/881=0.928 [0.910] 648/714=0.908 [0.884] | 1/1741 | 0 | 0
+c_D_e-0.20_pd0.9_c3no | 110/203=0.542 [0.473] 74/101=0.733 [0.639] | 892/1222=0.730 [0.704] 754/854=0.883 [0.860] 648/698=0.928 [0.907] | 85/1741 | 0 | 0
+c_D_e-0.20_pd0.9_c3p08 | 112/134=0.836 [0.764] 52/62=0.839 [0.728] | 765/896=0.854 [0.829] 515/581=0.886 [0.858] 442/462=0.957 [0.934] | 18/1741 | 0 | 0
+c_D_e-0.20_pd0.9_c3si | 110/119=0.924 [0.862] 30/40=0.750 [0.598] | 621/655=0.948 [0.928] 396/437=0.906 [0.875] 327/363=0.901 [0.866] | 18/1741 | 0 | 0
+c_L_e-0.10_pd0.9_c3no | 192/400=0.480 [0.431] 147/398=0.369 [0.323] | 1065/1995=0.534 [0.512] 1002/1967=0.509 [0.487] 960/1669=0.575 [0.551] | 25/1984 | 0 | 0
+c_L_e-0.10_pd0.9_c3p08 | 275/380=0.724 [0.677] 244/391=0.624 [0.575] | 1377/1885=0.731 [0.710] 1329/1911=0.695 [0.674] 1190/1633=0.729 [0.707] | 34/1984 | 0 | 0
+c_L_e-0.10_pd0.9_c3si | 298/303=0.983 [0.962] 359/382=0.940 [0.911] | 1454/1483=0.980 [0.972] 1758/1838=0.956 [0.946] 1526/1641=0.930 [0.917] | 1/1984 | 0 | 0
+c_L_e-0.20_pd0.9_c3no | 100/400=0.250 [0.210] 63/394=0.160 [0.127] | 701/2001=0.350 [0.330] 737/1964=0.375 [0.354] 792/1643=0.482 [0.458] | 130/1984 | 0 | 0
+c_L_e-0.20_pd0.9_c3p08 | 239/317=0.754 [0.704] 204/321=0.636 [0.582] | 1142/1522=0.750 [0.728] 1072/1515=0.708 [0.684] 927/1265=0.733 [0.708] | 34/1984 | 0 | 0
+c_L_e-0.20_pd0.9_c3si | 241/244=0.988 [0.964] 245/263=0.932 [0.894] | 1139/1155=0.986 [0.978] 1182/1231=0.960 [0.948] 964/1039=0.928 [0.910] | 6/1984 | 0 | 0
+c_T_e-0.10_pd0.7_c3no | 350/754=0.464 [0.429] 113/313=0.361 [0.310] | 2165/3836=0.564 [0.549] 1688/2500=0.675 [0.657] 1487/1940=0.766 [0.747] | 153/3956 | 0 | 0
+c_T_e-0.10_pd0.7_c3p08 | 490/644=0.761 [0.726] 197/303=0.650 [0.595] | 2641/3300=0.800 [0.786] 1877/2298=0.817 [0.800] 1498/1737=0.862 [0.845] | 63/3956 | 0 | 0
+c_T_e-0.10_pd0.7_c3si | 519/525=0.989 [0.975] 320/331=0.967 [0.941] | 2605/2647=0.984 [0.979] 2202/2275=0.968 [0.960] 1715/1777=0.965 [0.956] | 54/3956 | 0 | 0
+c_T_e-0.10_pd0.9_c3no | 317/766=0.414 [0.379] 101/308=0.328 [0.278] | 2108/3943=0.535 [0.519] 1679/2542=0.661 [0.642] 1519/1979=0.768 [0.748] | 188/3956 | 0 | 0
+c_T_e-0.10_pd0.9_c3p08 | 543/732=0.742 [0.709] 198/326=0.607 [0.553] | 2951/3782=0.780 [0.767] 2068/2574=0.803 [0.788] 1688/1959=0.862 [0.846] | 51/3956 | 0 | 0
+c_T_e-0.10_pd0.9_c3si | 603/604=0.998 [0.991] 365/374=0.976 [0.955] | 3042/3068=0.992 [0.988] 2562/2624=0.976 [0.970] 1977/2040=0.969 [0.961] | 6/3956 | 0 | 0
+c_T_e-0.20_pd0.7_c3no | 274/749=0.366 [0.332] 96/304=0.316 [0.266] | 1893/3845=0.492 [0.477] 1629/2476=0.658 [0.639] 1483/1921=0.772 [0.753] | 202/3956 | 0 | 0
+c_T_e-0.20_pd0.7_c3p08 | 359/470=0.764 [0.723] 102/159=0.642 [0.564] | 1948/2387=0.816 [0.800] 1260/1489=0.846 [0.827] 957/1087=0.880 [0.860] | 115/3956 | 0 | 0
+c_T_e-0.20_pd0.7_c3si | 381/383=0.995 [0.981] 130/136=0.956 [0.907] | 1887/1904=0.991 [0.986] 1196/1247=0.959 [0.947] 880/915=0.962 [0.947] | 175/3956 | 0 | 0
+c_T_e-0.20_pd0.9_c3no | 224/753=0.297 [0.266] 88/300=0.293 [0.245] | 1796/3917=0.459 [0.443] 1628/2507=0.649 [0.630] 1495/1953=0.765 [0.746] | 265/3956 | 0 | 0
+c_T_e-0.20_pd0.9_c3p08 | 437/577=0.757 [0.721] 108/192=0.562 [0.492] | 2396/2993=0.801 [0.786] 1564/1872=0.835 [0.818] 1216/1376=0.884 [0.866] | 62/3956 | 0 | 0
+c_T_e-0.20_pd0.9_c3si | 469/469=1.000 [0.992] 153/157=0.975 [0.936] | 2378/2387=0.996 [0.993] 1512/1552=0.974 [0.965] 1094/1130=0.968 [0.956] | 31/3956 | 0 | 0
+
+== (d) ESTRANEO mai visto che esce dall'ombra in cui il soggetto e' nascosto (sosta e sosta lunga insieme) ==
+file | casi decisi (prima misura dell'estraneo con la traccia del soggetto pendente) | identita' sbagliata = avviso rilasciato senza aver visto il soggetto [Wilson] | di cui col soggetto tutto nascosto | rifiutati (ambiguo: l'avviso resta, c2) | regione gia' «ampio» | non applicabili | estraneo mai uscito
+d_D_c1no | 3029 | 1457/3029=0.481 [0.463-0.499] | 1015 | 1572 | 2979 | 252 | 719
+d_D_c1si | 3041 | 3027/3041=0.995 [0.992-0.997] | 2124 | 14 | 2990 | 249 | 710
+d_L_c1no | 3540 | 2393/3540=0.676 [0.660-0.691] | 2200 | 1147 | 3186 | 135 | 325
+d_L_c1si | 3546 | 3239/3546=0.913 [0.904-0.922] | 2984 | 307 | 3192 | 135 | 319
+d_T_c1no | 3609 | 2567/3609=0.711 [0.696-0.726] | 1973 | 1042 | 2723 | 270 | 121
+d_T_c1si | 3616 | 3493/3616=0.966 [0.960-0.971] | 2713 | 123 | 2730 | 270 | 114
+
+== (e) SICUREZZA — tutti gli istanti a corpo tutto nascosto dentro l'area osservata, tutte le prove tranne il braccio «toglie» ==
+tutti i lanci: istanti nascosti 11946289; con il centro fuori da R100 (geometria): 0; limite superiore al 95 % 0.000000 (per istante; gli istanti di un passaggio non sono indipendenti)
+lanci con c7: istanti nascosti 10286895; scoperti (senza traccia pendente e senza avviso) 22724; passaggi 169903; passaggi con almeno uno scoperto 1832
+   di cui con la maschera esatta e senza chiusura 5: scoperti 1791 istanti su 5642995; passaggi 29 su 95399
+chiusura «fuori dall'area osservata»: file | passaggi | condizione debole vera | condizione scritta vera | chiusure eseguite | col soggetto tutto nascosto alla chiusura | cicli nascosti dopo la chiusura | di cui fuori da R100 | passaggi scoperti | cicli scoperti
+e_D_ch5debole_lascia | 741 | 747 | 0 | 748 | 228 | 18512 | 0 | 0 | 0
+e_D_ch5debole_toglie | 741 | 747 | 0 | 748 | 228 | 18512 | 0 | 271 | 18514
+e_D_ch5scritta | 741 | 747 | 1 | 1 | 0 | 0 | 0 | 0 | 0
+e_L_ch5debole_lascia | 800 | 636 | 0 | 636 | 333 | 17570 | 0 | 1 | 26
+e_L_ch5debole_toglie | 800 | 636 | 0 | 636 | 333 | 17570 | 0 | 340 | 17606
+e_L_ch5scritta | 800 | 636 | 0 | 0 | 0 | 0 | 0 | 1 | 26
+e_T_ch5debole_lascia | 800 | 644 | 0 | 644 | 258 | 16309 | 0 | 0 | 0
+e_T_ch5debole_toglie | 800 | 644 | 0 | 644 | 258 | 16309 | 0 | 268 | 16310
+e_T_ch5scritta | 800 | 644 | 0 | 0 | 0 | 0 | 0 | 0 | 0
+condizione scritta («tutti i membri fuori»), su tutti i lanci: vera in 25 passaggi su 194861; condizione debole: 101812
+
+== (f) REGRESSIONE — identita' al ritorno con C6 e c1 (lanci b_, corpo esteso) ==
+geo beh | ricomparsi dopo essere stati nascosti | riagganciati [Wilson inf] | falliti per distanza dall'ombra | per margine dal bordo | per la porta M7
+D svolta         | 601 | 587/601=0.977 [0.961] | 0 | 0 | 14
+D lontano        | 422 | 419/422=0.993 [0.979] | 0 | 0 | 3
+D fermo-in-vista | 2579 | 2422/2579=0.939 [0.929] | 0 | 0 | 157
+D prosegue       | 2673 | 2651/2673=0.992 [0.988] | 0 | 0 | 22
+D rallenta       | 2598 | 2579/2598=0.993 [0.989] | 0 | 0 | 19
+D sosta          | 2606 | 2606/2606=1.000 [0.999] | 0 | 0 | 0
+D torna          | 2077 | 2073/2077=0.998 [0.995] | 0 | 0 | 4
+D sostalunga     | 803 | 802/803=0.999 [0.993] | 0 | 0 | 1
+   D sul percorso: 10711/10757=0.996 [0.994]
+T svolta         | 1228 | 886/1228=0.721 [0.696] | 0 | 75 | 267
+T lontano        | 369 | 290/369=0.786 [0.741] | 0 | 53 | 26
+T fermo-in-vista | 2336 | 2081/2336=0.891 [0.878] | 0 | 0 | 255
+T prosegue       | 2388 | 2380/2388=0.997 [0.993] | 0 | 0 | 8
+T rallenta       | 2163 | 2160/2163=0.999 [0.996] | 0 | 0 | 3
+T sosta          | 2204 | 2204/2204=1.000 [0.998] | 0 | 0 | 0
+T torna          | 2175 | 2174/2175=1.000 [0.997] | 0 | 0 | 1
+T sostalunga     | 310 | 310/310=1.000 [0.988] | 0 | 0 | 0
+   T sul percorso: 9228/9240=0.999 [0.998]
+L svolta         | 681 | 544/681=0.799 [0.767] | 0 | 98 | 39
+L lontano        | 120 | 90/120=0.750 [0.666] | 0 | 26 | 4
+L fermo-in-vista | 2117 | 2052/2117=0.969 [0.961] | 0 | 47 | 18
+L prosegue       | 2048 | 1980/2048=0.967 [0.958] | 0 | 54 | 14
+L rallenta       | 1555 | 1509/1555=0.970 [0.961] | 0 | 40 | 6
+L sosta          | 1515 | 1473/1515=0.972 [0.963] | 0 | 41 | 1
+L torna          | 1808 | 1770/1808=0.979 [0.971] | 0 | 38 | 0
+L sostalunga     | 41 | 40/41=0.976 [0.874] | 0 | 0 | 1
+   L sul percorso: 6772/6967=0.972 [0.968]
+   c2, SESSIONE geo=D passaggi=120 ricomparse=79 riagganciate=79 prima_ambigua_al_passaggio=114 ricomparse_dopo=5 riagganciate_dopo=5 pendenti_alla_fine=1
+   c2, SESSIONE geo=L passaggi=120 ricomparse=84 riagganciate=83 prima_ambigua_al_passaggio=18 ricomparse_dopo=69 riagganciate_dopo=69 pendenti_alla_fine=2
+   c2, SESSIONE geo=T passaggi=120 ricomparse=111 riagganciate=111 prima_ambigua_al_passaggio=37 ricomparse_dopo=79 riagganciate_dopo=79 pendenti_alla_fine=1
+
+== c5 — chi parte da fermo accanto al pannello (a parte) ==
+file | a 1, 2, 3 s: secondaria (R90 grezza) | mostrata | primaria (solo con segno «previsto»)
+b_D_parte | 189/1294=0.146 417/1011=0.412 404/680=0.594 | 1018/1294=0.787 [0.764] 984/1011=0.973 [0.961] 669/680=0.984 [0.971] | 81/357=0.227 26/53=0.491 1/12=0.083
+b_L_parte | 31/727=0.043 74/1119=0.066 57/999=0.057 | 521/727=0.717 [0.683] 886/1119=0.792 [0.767] 840/999=0.841 [0.817] | 24/230=0.104 9/242=0.037 10/169=0.059
+b_T_parte | 50/1025=0.049 134/1033=0.130 98/478=0.205 | 764/1025=0.745 [0.718] 917/1033=0.888 [0.867] 457/478=0.956 [0.934] | 35/296=0.118 21/137=0.153 18/39=0.462
+f_D_fermo_c5b | 33/256=0.129 57/179=0.318 69/107=0.645 | 256/256=1.000 [0.985] 179/179=1.000 [0.979] 107/107=1.000 [0.965] | 0/0=nan 0/0=nan 0/0=nan
+f_D_fermo_c5no | 33/256=0.129 57/179=0.318 69/107=0.645 | 59/256=0.230 [0.183] 75/179=0.419 [0.349] 82/107=0.766 [0.678] | 30/227=0.132 42/146=0.288 8/33=0.242
+f_L_fermo_c5b | 10/249=0.040 25/383=0.065 21/353=0.059 | 249/249=1.000 [0.985] 383/383=1.000 [0.990] 353/353=1.000 [0.989] | 0/0=nan 0/0=nan 0/0=nan
+f_L_fermo_c5no | 10/249=0.040 25/383=0.065 21/353=0.059 | 37/249=0.149 [0.110] 59/383=0.154 [0.121] 50/353=0.142 [0.109] | 10/222=0.045 25/349=0.072 21/324=0.065
+f_T_fermo_c5b | 14/342=0.041 46/349=0.132 34/163=0.209 | 342/342=1.000 [0.989] 349/349=1.000 [0.989] 163/163=1.000 [0.977] | 0/0=nan 0/0=nan 0/0=nan
+f_T_fermo_c5no | 14/342=0.041 46/349=0.132 34/163=0.209 | 60/342=0.175 [0.139] 90/349=0.258 [0.215] 51/163=0.313 [0.247] | 13/295=0.044 46/305=0.151 34/146=0.233
+
+== (g) COSTO del predittore, dieci tracce, C, un filo ==
+TEMPO geo=D tracce=10 celle_A=232 cicli=1500 mediana=0.295 ms p95=0.316 ms max=0.395 ms
+TEMPO geo=D tracce=10 celle_A=232 cicli=1500 mediana=0.290 ms p95=0.316 ms max=0.511 ms
+TEMPO geo=D tracce=10 celle_A=232 cicli=1500 mediana=0.289 ms p95=0.310 ms max=0.362 ms
+TEMPO geo=T tracce=10 celle_A=1034 cicli=1500 mediana=0.547 ms p95=0.709 ms max=1.089 ms
+TEMPO geo=T tracce=10 celle_A=1034 cicli=1500 mediana=0.534 ms p95=0.618 ms max=1.109 ms
+TEMPO geo=T tracce=10 celle_A=1034 cicli=1500 mediana=0.640 ms p95=1.024 ms max=3.454 ms
+TEMPO geo=L tracce=10 celle_A=1740 cicli=1500 mediana=0.986 ms p95=1.778 ms max=2.035 ms
+TEMPO geo=L tracce=10 celle_A=1740 cicli=1500 mediana=1.050 ms p95=1.934 ms max=2.202 ms
+TEMPO geo=L tracce=10 celle_A=1740 cicli=1500 mediana=1.064 ms p95=1.962 ms max=2.347 ms
+
+== SEMI ==
+# semi
+# geo=T e=0.00 pd=0.90 rb=0.225 c6=0.10 imbardata fissa=0.0 tremolio=0.0 gradi; libreria 200 percorsi (vivaci=0); prova vivaci=0; curva=0.0 gradi/s; v=0.3-1.8
+SEMI coppie=1000 lunghezza=64 spostamenti=-8..8 | flussi uguali a meno di uno spostamento: semi di prova a passo 1000003: 0; semi contigui (+1) con il mescolatore nuovo: 0; prova contro libreria: 0; controllo positivo (seme di gen.h prima della riparazione, 12000+s contro 12001+s): 1000
+SEMI correlazione fra i flussi di due semi vicini (64000 coppie di uniformi; errore tipo 0,004): a passo 1000003 r=0.0029; contigui r=-0.0032
+SEMI semi di prova: da 7000000000 a 10999011997 (passo 1000003); libreria: da 9000000000; f8 usava 1000-1199, 12000-12399, 100000+, 200000+, 300000+

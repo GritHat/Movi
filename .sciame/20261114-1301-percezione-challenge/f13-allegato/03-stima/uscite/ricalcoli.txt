@@ -1,0 +1,175 @@
+
+== A. rumore di profondita' e trasversale (cm) a 2 / 3 / 4 m ==
+nom 1.51 / 3.40 / 6.04
+pes 4.00 / 9.00 / 16.00
+sev 5.00 / 11.25 / 20.00
+trasversale 1.01 / 1.51 / 2.02
+distanza con sigma_z = 5 cm: nom 3.64 m, pes 2.24 m, sev 2.00 m
+pixel su una sagoma 0,4 x 1,7 m a 2 m (424 px, 87 gradi): f = 223 px, n = 8484; sigma_z/sqrt(n) = 0.016 cm
+
+== B. regola «mobile»: soglia, falso allarme, rilevamento (prova singola) ==
+sigma della differenza di due medie di 3 fotogrammi: sigma*sqrt(2/3) = 0.8165 sigma
+soglia = 4.0825 sigma  (5*sqrt(2)/sqrt(3)); senza media sarebbe 7.0711 sigma
+falso allarme per prova e per asse: 2Q(5) = 5.733e-07
+limite d'unione nel primo secondo, 2 assi, 13 prove: 1.49e-05
+limite su 4000 tracce ferme: 0.060 tracce attese con almeno un falso
+sigma creduto la meta' del vero: soglia effettiva 2,5 sigma_delta -> per prova e asse 0.0124
+
+prova singola alla finestra massima (13 passi = 0.867 s), 0,5 m/s, spostamento 0.433 m
+  avvicinamento nom da 2 m: soglia 0.062 m, sigma_delta 0.0099 m, Pd(prova singola) = 1.0000
+  avvicinamento nom da 3 m: soglia 0.139 m, sigma_delta 0.0237 m, Pd(prova singola) = 1.0000
+  avvicinamento pes da 2 m: soglia 0.163 m, sigma_delta 0.0261 m, Pd(prova singola) = 1.0000
+  avvicinamento pes da 3 m: soglia 0.367 m, sigma_delta 0.0629 m, Pd(prova singola) = 0.8527
+  avvicinamento sev da 2 m: soglia 0.204 m, sigma_delta 0.0327 m, Pd(prova singola) = 1.0000
+  avvicinamento sev da 3 m: soglia 0.459 m, sigma_delta 0.0786 m, Pd(prova singola) = 0.3707
+velocita' minima (Pd 0,5 e 0,9 alla finestra massima, rumore uguale ai due capi):
+  nom 2 m radiale: 0.071 / 0.089 m/s
+  nom 3 m radiale: 0.160 / 0.201 m/s
+  pes 2 m radiale: 0.188 / 0.237 m/s
+  pes 3 m radiale: 0.424 / 0.533 m/s
+  sev 2 m radiale: 0.236 / 0.296 m/s
+  sev 3 m radiale: 0.530 / 0.666 m/s
+  trasversale 2 m: 0.047 / 0.060 m/s
+  trasversale 3 m: 0.071 / 0.089 m/s
+
+== C. velocita' quasi costante: Q in forma chiusa, crescita senza misure ==
+Q chiusa - Q numerica, massimo scarto relativo: 1.42e-04
+proprieta' di composizione, scarto: 2.71e-20
+chi quadrato a 2 gdl: 50 % 1.3863, 90 % 4.6052, 95 % 5.9915, 99 % 9.2103; -2 ln(0,01) = 9.2103
+rapporto dei raggi 90 % / 50 % di una gaussiana isotropa: 1.823
+
+solo termine di processo sqrt(q tau^3 / 3), m:
+  q = 0.20: 0.091 / 0.258 / 0.730 / 1.342
+  q = 0.10: 0.065 / 0.183 / 0.516 / 0.949
+  q = 0.05: 0.046 / 0.129 / 0.365 / 0.671
+
+sigma_p(tau_occ) per asse a regime (15 Hz, sigma misura 5.0 cm), m, a 0,5 / 1 / 2 / 3 s; poi raggi 90 % e 95 %:
+  q = 0.20: regime sigma_pos 0.0326 m, sigma_vel 0.2050 m/s, cov 0.00437
+     sigma_p: 0.156 / 0.344 / 0.848 / 1.485
+     r90:     0.33 / 0.74 / 1.82 / 3.19
+     r95:     0.38 / 0.84 / 2.08 / 3.64
+  q = 0.10: regime sigma_pos 0.0305 m, sigma_vel 0.1597 m/s, cov 0.00323
+     sigma_p: 0.121 / 0.257 / 0.618 / 1.072
+     r90:     0.26 / 0.55 / 1.33 / 2.30
+     r95:     0.30 / 0.63 / 1.51 / 2.62
+  q = 0.05: regime sigma_pos 0.0285 m, sigma_vel 0.1242 m/s, cov 0.00237
+     sigma_p: 0.096 / 0.194 / 0.453 / 0.777
+     r90:     0.20 / 0.42 / 0.97 / 1.67
+     r95:     0.23 / 0.47 / 1.11 / 1.90
+
+sigma_p(tau_occ) per asse a regime (15 Hz, sigma misura 1.5 cm), m, a 0,5 / 1 / 2 / 3 s; poi raggi 90 % e 95 %:
+  q = 0.20: regime sigma_pos 0.0120 m, sigma_vel 0.1442 m/s, cov 0.00104
+     sigma_p: 0.121 / 0.299 / 0.788 / 1.412
+     r90:     0.26 / 0.64 / 1.69 / 3.03
+     r95:     0.30 / 0.73 / 1.93 / 3.46
+  q = 0.10: regime sigma_pos 0.0114 m, sigma_vel 0.1131 m/s, cov 0.00080
+     sigma_p: 0.091 / 0.219 / 0.567 / 1.010
+     r90:     0.20 / 0.47 / 1.22 / 2.17
+     r95:     0.22 / 0.54 / 1.39 / 2.47
+  q = 0.05: regime sigma_pos 0.0107 m, sigma_vel 0.0885 m/s, cov 0.00061
+     sigma_p: 0.069 / 0.161 / 0.409 / 0.724
+     r90:     0.15 / 0.34 / 0.88 / 1.55
+     r95:     0.17 / 0.39 / 1.00 / 1.77
+
+raggio al 90 %% a 1 / 2 / 3 / 5 s (q 0,2, sigma 5 cm, regime): 0.74 / 1.82 / 3.19 / 6.59
+raggio al 95 %% a 0,5 / 1 / 2 / 3 s (stesso caso): 0.38 / 0.84 / 2.08 / 3.64
+raggio al 95 % > 1.0 m dopo 1.15 s
+raggio al 95 % > 1.5 m dopo 1.57 s
+raggio al 95 % > 2.0 m dopo 1.95 s
+
+raggio al 95 %% con rincorsa di 1 s (15 misure, sigma 2 cm, sigma_v iniziale 2,5 m/s), m a 0,5 / 1 / 2 / 3 s:
+  q = 0.20: 0.31 / 0.75 / 1.96 / 3.49   sigma_p a 1/2/3 s: 0.308 / 0.799 / 1.425
+  q = 0.10: 0.24 / 0.55 / 1.41 / 2.50   sigma_p a 1/2/3 s: 0.226 / 0.576 / 1.021
+  q = 0.05: 0.18 / 0.41 / 1.02 / 1.80   sigma_p a 1/2/3 s: 0.167 / 0.417 / 0.734
+  q = 0.01: 0.10 / 0.21 / 0.49 / 0.84   sigma_p a 1/2/3 s: 0.085 / 0.200 / 0.345
+
+== D. accelerazione: differenza seconda e limite dei minimi quadrati ==
+sigma_p 3.0 cm, 30 Hz: sigma_a = sqrt(6) sigma_p / Delta^2 = 66.1 m/s^2; sigma_v (differenza prima) = 1.27 m/s
+sigma_p 3.0 cm, 15 Hz: sigma_a = sqrt(6) sigma_p / Delta^2 = 16.5 m/s^2; sigma_v (differenza prima) = 0.64 m/s
+sigma_p 3.0 cm, 10 Hz: sigma_a = sqrt(6) sigma_p / Delta^2 = 7.3 m/s^2; sigma_v (differenza prima) = 0.42 m/s
+sigma_p 1.5 cm, 30 Hz: sigma_a = sqrt(6) sigma_p / Delta^2 = 33.1 m/s^2; sigma_v (differenza prima) = 0.64 m/s
+sigma_p 5.0 cm, 15 Hz: sigma_a = sqrt(6) sigma_p / Delta^2 = 27.6 m/s^2; sigma_v (differenza prima) = 1.06 m/s
+sigma_z = 2 % della distanza a 4 m = 8 cm; a 1,5 m = 3 cm
+limite dei minimi quadrati (polinomio di grado 2 su N campioni, sigma_p 3 cm, 30 Hz): sigma dell'accelerazione
+  finestra 0.1 s (N =  4): sigma_a =  27.00 m/s^2; sigma_v con accelerazione stimata 1.409, senza 0.402 m/s
+  finestra 0.2 s (N =  7): sigma_a =   5.89 m/s^2; sigma_v con accelerazione stimata 0.613, senza 0.170 m/s
+  finestra 0.5 s (N = 16): sigma_a =   0.71 m/s^2; sigma_v con accelerazione stimata 0.185, senza 0.049 m/s
+  finestra 1.0 s (N = 31): sigma_a =   0.14 m/s^2; sigma_v con accelerazione stimata 0.070, senza 0.018 m/s
+
+== E. rango della matrice di osservabilita' ==
+2D, stato [p, v], misura di posizione: rango 4 su 4
+3D, stato [p, v] a 6, misura (p_x, p_z) senza quota: rango 4 su 6
+3D, con la quota misurata: rango 6 su 6
+1D, stato [p, v, a], misura di posizione: rango 3 su 3 (osservabile in senso algebrico)
+
+== F. porta di validazione e conferma 3 su 5 ==
+gamma = 9.2103; probabilita' che la misura vera cada in porta: 0,99
+area della porta con S = 0.050^2 I: pi*gamma*sqrt|S| = 0.0723 m^2
+area della porta con S = 0.300^2 I: pi*gamma*sqrt|S| = 2.6042 m^2
+Pd 0,9, 3 fotogrammi visibili: confermata 0.7290, non confermata 0.2710
+Pd 0,9, 4 fotogrammi visibili: confermata 0.9477, non confermata 0.0523
+Pd 0,9, 5 fotogrammi visibili: confermata 0.9914, non confermata 0.0086
+ritardo di conferma dal primo rilevamento (Pd 0,9; servono altri 2 fra i 4 successivi):
+  al fotogramma +2 (0.133 s a 15 Hz): 0.8100 (cumulata 0.8100)
+  al fotogramma +3 (0.200 s a 15 Hz): 0.1620 (cumulata 0.9720)
+  al fotogramma +4 (0.267 s a 15 Hz): 0.0243 (cumulata 0.9963)
+  media condizionata 2.211 fotogrammi = 0.147 s
+traccia falsa: dato un primo falso, probabilita' di altri >= 2 falsi in porta nei 4 cicli seguenti (p per ciclo):
+  p = 0.001: 5.992e-06   (6 p^2 = 6.000e-06)
+  p = 0.010: 5.920e-04   (6 p^2 = 6.000e-04)
+  p = 0.050: 1.402e-02   (6 p^2 = 1.500e-02)
+  p = 0.100: 5.230e-02   (6 p^2 = 6.000e-02)
+  p = 0.300: 3.483e-01   (6 p^2 = 5.400e-01)
+p da una frequenza beta per cella e per ciclo e una porta di n_c celle: 1-(1-beta)^n_c
+  beta = 1e-04, n_c = 30: p = 0.0030, traccia falsa per innesco 5.36e-05
+  beta = 1e-03, n_c = 30: p = 0.0296, traccia falsa per innesco 5.04e-03
+  beta = 1e-02, n_c = 30: p = 0.2603, traccia falsa per innesco 2.79e-01
+
+== G. copertura attesa con il modello esatto, e confronto con i pedoni veri ==
+orizzonte 1 s: copertura 90 % = 0.8984 (Wilson 0.894-0.903), 50 % = 0.5021; errore mediano 0.361 m (teorico 0.362)
+orizzonte 2 s: copertura 90 % = 0.9031 (Wilson 0.899-0.907), 50 % = 0.5009; errore mediano 0.939 m (teorico 0.941)
+orizzonte 3 s: copertura 90 % = 0.9012 (Wilson 0.897-0.905), 50 % = 0.5022; errore mediano 1.674 m (teorico 1.678)
+
+se il modello fosse esatto, su N = 219 tratti indipendenti al livello 0,90:
+  attesi 197.1 dentro, scarto tipo 4.44; intervallo centrale al 95 %: 188-205 su 219 (0.858-0.936)
+  P(X >= 214 | p = 0,90) = 8.08e-06; quota 0.977, Wilson 0.948-0.990
+  P(X >= 215 | p = 0,90) = 1.61e-06; quota 0.982, Wilson 0.954-0.993
+  P(X >= 218 | p = 0,90) = 2.41e-09; quota 0.995, Wilson 0.975-0.999
+  P(X >= 219 | p = 0,90) = 9.53e-11; quota 1.000, Wilson 0.983-1.000
+  174 su 219 = 0.795 (file: 0,795), Wilson 0.736-0.843, P(X <= k | 0,90) = 2.51e-06
+  176 su 219 = 0.804 (file: 0,804), Wilson 0.746-0.851, P(X <= k | 0,90) = 1.36e-05
+  182 su 219 = 0.831 (file: 0,831), Wilson 0.776-0.875, P(X <= k | 0,90) = 1.11e-03
+  207 su 219 = 0.945 (file: 0,945), Wilson 0.907-0.968, P(X <= k | 0,90) = 9.94e-01
+
+q efficace dall'errore mediano (mediana di Rayleigh = sigma_p*sqrt(2 ln 2) = 1.1774 sigma_p):
+  tau 1 s: sigma_p 0.308 m, mediana attesa con q 0,2 = 0.362 m, osservata 0.21 m; q efficace 0.058; (rapporto)^2*0,2 = 0.067
+  tau 2 s: sigma_p 0.799 m, mediana attesa con q 0,2 = 0.941 m, osservata 0.49 m; q efficace 0.050; (rapporto)^2*0,2 = 0.054
+  tau 3 s: sigma_p 1.425 m, mediana attesa con q 0,2 = 1.678 m, osservata 0.81 m; q efficace 0.044; (rapporto)^2*0,2 = 0.047
+
+== H. cerchio del filtro e miscela di comportamenti (conto illustrativo) ==
+ipotesi: v0 = 1,2 m/s, manovra istantanea a un istante uniforme in [0, tau], errore di stima iniziale trascurato
+  tau 1 s, livello 0.90: raggio 0.74 m; prosegue 1,00; si ferma 0.62; torna 0.31; miscela 70/18/12: 0.85
+  tau 1 s, livello 0.50: raggio 0.41 m; prosegue 1,00; si ferma 0.34; torna 0.17; miscela 70/18/12: 0.78
+  tau 2 s, livello 0.90: raggio 1.82 m; prosegue 1,00; si ferma 0.76; torna 0.38; miscela 70/18/12: 0.88
+  tau 2 s, livello 0.50: raggio 1.00 m; prosegue 1,00; si ferma 0.42; torna 0.21; miscela 70/18/12: 0.80
+  tau 3 s, livello 0.90: raggio 3.19 m; prosegue 1,00; si ferma 0.89; torna 0.44; miscela 70/18/12: 0.91
+  tau 3 s, livello 0.50: raggio 1.75 m; prosegue 1,00; si ferma 0.49; torna 0.24; miscela 70/18/12: 0.82
+
+== I. intervalli di Wilson al 95 % delle frequenze citate ==
+    79 su   90 = 0.8778  [0.7943; 0.9304]  pannello fermo detto mobile
+     5 su   90 = 0.0556  [0.0240; 0.1235]  idem, soglia di punti rialzata
+     0 su   90 = 0.0000  [0.0000; 0.0409]  identita' con soglie assolute
+    41 su   45 = 0.9111  [0.7927; 0.9649]  identita' con soglia rialzata, passaggi di prova
+     0 su    6 = 0.0000  [0.0000; 0.3903]  identita' al livello limite
+  2400 su 2400 = 1.0000  [0.9984; 1.0000]  secondo soggetto dalla stessa ombra
+  2000 su 2000 = 1.0000  [0.9981; 1.0000]  mobile a 2 m
+  1717 su 2000 = 0.8585  [0.8425; 0.8731]  85,85 % di 2000
+   532 su 2000 = 0.2660  [0.2471; 0.2858]  26,6 % di 2000
+     0 su 4000 = 0.0000  [0.0000; 0.0010]  falsi su fermo
+   400 su  400 = 1.0000  [0.9905; 1.0000]  riaggancio, una traccia pendente
+    20 su   20 = 1.0000  [0.8389; 1.0000]  attraversamento visto entro 1 s
+     4 su   20 = 0.2000  [0.0807; 0.4160]  avvicinamento da 4,3 m
+     0 su   20 = 0.0000  [0.0000; 0.1611]  avvicinamento da 4,3 m, soglie assolute
+   193 su  193 = 1.0000  [0.9805; 1.0000]  entra uno, escono due
+    13 su   15 = 0.8667  [0.6212; 0.9626]  13 su 15
+    28 su   30 = 0.9333  [0.7868; 0.9815]  28 su 30

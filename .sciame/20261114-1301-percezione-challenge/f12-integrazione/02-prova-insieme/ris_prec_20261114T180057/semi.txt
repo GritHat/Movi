@@ -1,0 +1,5 @@
+# semi
+# geo=T e=0.00 pd=0.90 rb=0.225 c6=0.10 imbardata fissa=0.0 tremolio=0.0 gradi; libreria 200 percorsi (vivaci=0); prova vivaci=0; curva=0.0 gradi/s; v=0.3-1.8
+SEMI coppie=1000 lunghezza=64 spostamenti=-8..8 | flussi uguali a meno di uno spostamento: semi di prova a passo 1000003: 0; semi contigui (+1) con il mescolatore nuovo: 0; prova contro libreria: 0; controllo positivo (seme di gen.h prima della riparazione, 12000+s contro 12001+s): 1000
+SEMI correlazione fra i flussi di due semi vicini (64000 coppie di uniformi; errore tipo 0,004): a passo 1000003 r=0.0029; contigui r=-0.0032
+SEMI semi di prova: da 7000000000 a 10999011997 (passo 1000003); libreria: da 9000000000; f8 usava 1000-1199, 12000-12399, 100000+, 200000+, 300000+

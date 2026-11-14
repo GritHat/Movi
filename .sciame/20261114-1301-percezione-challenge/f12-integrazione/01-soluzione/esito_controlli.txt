@@ -1,0 +1,12 @@
+sigle controllate: 106; mancanti: 0
+--- paragrafi citati nella tabella che non esistono nel documento
+--- frasi da non dire: righe di SOLUZIONE_V3.md che le contengono (da leggere una per una)
+24:Convenzioni. «Fotogramma» = fotogramma elaborato; 3 fotogrammi = 0,2 s; le soglie valgono **in secondi** (cond. 2, AU 7). «Cuneo» = ombra dell'occlusore in cui una tra
+93:**Parametri.** 0,40 m (N, M1; scelto). 2 cicli (c4; scelto dopo una prova sugli stessi semi). 0,75 m (c7; scelto, non provato). 4 fotogrammi (N; tarato in simulazione:
+185:a schermo: «27 su 30: fra 0,74 e 0,97»; la parola «tarato» non si usa
+216:**Non si dice mai.** «Via libera»; «validato», «garantito», «certificato», «tarato»; «bassa latenza»; «perso»; «sosta», «si è fermato», «è uscito»; «prevede dove sarà
+241:| Sensori laterali come «preallarme» (S9); «360°» | 0,07 s di margine; coprono 180°; l'hardware manca (V9, VN §5.8) | dopo |
+242:| «Taglio garantito» (S12) | 0 estrazioni su 4000 (V9) | piano a tappe |
+--- parole (solo gettoni con una lettera o una cifra)
+6474
+3572

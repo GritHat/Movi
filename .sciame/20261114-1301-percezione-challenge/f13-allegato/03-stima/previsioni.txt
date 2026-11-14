@@ -1,0 +1,15 @@
+Previsioni dei ricalcoli, scritte prima di eseguire ricalcoli.py e mobile_mc.py: 2026-11-14T18:04:27+01:00
+P1  regola «mobile» (mio Monte Carlo, N = 20000, semi miei), 0,5 m/s in avvicinamento da 3 m, visto entro 1 s:
+    curva nominale 100 %; pessimista entro 83,5-88,0 %; curva piu' severa entro 24,0-29,5 %. Da 2 m: >= 99,9 % in ogni caso.
+    Fermo: 0 etichette false su 20000 tracce nel primo secondo. Smentita: un valore fuori (il file d'origine: 100 / 85,9 / 26,6).
+P2  raggio al 95 % replicando il banco sui pedoni veri (15 Hz, rincorsa 1 s, sigma 2 cm, sigma_v iniziale 2,5 m/s):
+    q = 0,2: 0,75 / 1,96 / 3,49 m a 1 / 2 / 3 s; q = 0,05: 0,41 / 1,02 / 1,80; q = 0,1: 0,55 / 1,41 / 2,50. Smentita: scarto > 0,01 m.
+P3  sigma_a = sqrt(6)*sigma_p/Delta^2 = 66,1 m/s^2 con sigma_p = 3 cm a 30 Hz; 7,3 a 10 Hz. Smentita: fuori da 66 +- 0,5.
+P4  rango della matrice di osservabilita': 4 su 4 in 2D; 4 su 6 in 3D senza misura di quota; 6 su 6 con la quota.
+P5  copertura dell'ellisse al 90 % se il modello e' esatto (Monte Carlo, N = 20000): 0,90 +- 0,01 a 1, 2, 3 s.
+P6  conferma 3 su 5 con Pd = 0,9: non confermata con 3 fotogrammi visibili 27,1 %, con 4: 5,2 %.
+P7  soglia di porta: 9,210 (chi quadrato, 2 gradi di liberta', 99 %).
+P8  rapporto fra i raggi al 90 % e al 50 % di una gaussiana isotropa in 2D: 1,82.
+P9  Wilson 95 %: 79/90 -> 79-93 %; 41/45 -> 79,3-96,5 %; 0/90 -> 0-4,1 %; 5/90 -> 2,4-12,4 %.
+P10 raggio al 90 % del cerchio a regime (15 Hz, sigma 5 cm, q = 0,2): 0,81 / 1,91 / 3,29 / 6,72 m a 1 / 2 / 3 / 5 s (+- 0,03).
+P11 q efficace dedotto dall'errore mediano sui pedoni veri (0,21 / 0,49 / 0,81 m): fra 0,04 e 0,10 m^2/s^3 a ogni orizzonte.

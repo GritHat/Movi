@@ -1,0 +1,10 @@
+# tempo per fotogramma 320 x 240, Python con numpy, un filo; mediana e p95 su 300 fotogrammi (ms)
+griglia        mediana 0.779 ms  p95 1.035 ms  massimo 1.805 ms
+3x3            mediana 0.202 ms  p95 0.299 ms  massimo 0.680 ms
+leggi_1_quota  mediana 0.043 ms  p95 0.070 ms  massimo 0.166 ms
+impronta       mediana 0.076 ms  p95 0.117 ms  massimo 0.208 ms
+SC o RP        mediana 0.245 ms  p95 0.366 ms  massimo 0.775 ms
+V17            mediana 1.169 ms  p95 1.777 ms  massimo 2.526 ms
+V18            mediana 0.854 ms  p95 1.152 ms  massimo 1.930 ms
+PR4            mediana 0.876 ms  p95 1.198 ms  massimo 1.985 ms
+tutte le 9     mediana 1.405 ms  p95 1.905 ms  massimo 3.174 ms

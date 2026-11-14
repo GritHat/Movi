@@ -1,0 +1,35 @@
+== elenco
+291 voci
+Counter({'verificata': 165, 'in parte': 58, 'aperta dal ruolo': 22, 'dato diverso': 21, 'non raggiungibile': 12, 'non verificata': 8, 'solo riassunto': 5})
+Counter({1: 115, 2: 46, 4: 46, 3: 38, 6: 31, 5: 15})
+== conteggi
+candidate: 108
+citabili: 86
+== bib
+90 voci scritte; 25 scritte a mano; 4 nuove: ['wilson1927', 'brown2001', 'barshalom2001', 'elfes1989']
+voci: 90 {'misc': 19, 'inproceedings': 24, 'article': 34, 'book': 1, 'manual': 12}
+graffe: 969 969
+citabili dell'elenco: 86 | voci nuove: ['barshalom2001', 'brown2001', 'elfes1989', 'wilson1927']
+errori: 0
+== bibtex
+bibtex: codice 0
+avvisi di bibtex: 0
+righe con «error» in bibtex.log: 0
+voci nel .bbl: 90
+errori LaTeX al terzo giro: 0
+citazioni indefinite o caratteri mancanti: 0
+Output written on prova.pdf (9 pages, 157361 bytes).
+== registri (copie in scaricati/)
+risposte Crossref leggibili: 23
+== conti
+Oss.1  f = 424.0 px; sigma_z a 2, 3, 4 m: 0.0151, 0.0340, 0.0604
+Oss.2  2% a 2 m scalato con d^2: 0.04, 0.09, 0.16 m; base 95 mm, 2% a 4 m: 0.08 m
+Oss.3  modello misurato a 2 m: 0.01831 m
+Oss.4  soglie: 9.2103  18.4207
+Oss.5  0.95^59 = 0.04849 (58: 0.05105); 0.99^299 = 0.04954 (298: 0.05004)
+Oss.6  logit: colpo 0.847, mancato -0.405, limiti -2.000 e 3.511; dopo 2 colpi -0.305, dopo 3 0.542
+LD19   360/450 = 0.80 gradi
+== parte I
+parte I: 1881 parole circa (quattro pagine sono circa 2000-2200); 83 citazioni, 76 chiavi distinte su 90 voci del bib
+voci del bib non citate nella parte I: 14
+errori: 0

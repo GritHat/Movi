@@ -1,0 +1,10 @@
+## A2 variante 0 (pannello fermo, il soggetto ci va dietro e si ferma 60 s): fotogrammi col soggetto del tutto nascosto: 944
+  VO senza decadimento             fotogrammi con un voxel del corpo «libero»: 0 (primo: -1) ; tutto «occupato ricordato»: 0 ; «sconosciuto»: 944
+  VO oblio verso il priore         fotogrammi con un voxel del corpo «libero»: 0 (primo: -1) ; tutto «occupato ricordato»: 0 ; «sconosciuto»: 944
+  VO decadimento verso il libero   fotogrammi con un voxel del corpo «libero»: 0 (primo: -1) ; tutto «occupato ricordato»: 0 ; «sconosciuto»: 944
+  punti del corpo dati «libero»: Q1 0 ; Q3 0 ; N1 (cella al suolo) 0
+## A2 variante 1 (pannello che scorre davanti a un soggetto fermo gia' visto): fotogrammi col soggetto del tutto nascosto: 897
+  VO senza decadimento             fotogrammi con un voxel del corpo «libero»: 0 (primo: -1) ; tutto «occupato ricordato»: 897 ; «sconosciuto»: 0
+  VO oblio verso il priore         fotogrammi con un voxel del corpo «libero»: 0 (primo: -1) ; tutto «occupato ricordato»: 897 ; «sconosciuto»: 0
+  VO decadimento verso il libero   fotogrammi con un voxel del corpo «libero»: 830 (primo: 130) ; tutto «occupato ricordato»: 67 ; «sconosciuto»: 0
+  punti del corpo dati «libero»: Q1 0 ; Q3 0 ; N1 (cella al suolo) 0

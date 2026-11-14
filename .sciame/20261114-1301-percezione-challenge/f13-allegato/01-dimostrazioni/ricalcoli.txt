@@ -1,0 +1,82 @@
+
+== A. Insieme di possibile presenza: controllo esaustivo su griglie 1D ==
+n=4 celle, fotogrammi 0..3, passo vero <= 1: successioni di osservazione 65536; con una posizione coerente fuori da PI: 0; con una cella di PI non raggiunta da nessuna traiettoria coerente: 0; violazioni della monotonia: 0; successioni con un «libero adesso» (orizzonte 1 passo) occupato: 0 (celle dichiarate 101440)
+n=5 celle, fotogrammi 0..2, passo vero <= 1: successioni di osservazione 32768; con una posizione coerente fuori da PI: 0; con una cella di PI non raggiunta da nessuna traiettoria coerente: 0; violazioni della monotonia: 0; successioni con un «libero adesso» (orizzonte 1 passo) occupato: 0 (celle dichiarate 45824)
+BRACCIO CHE DEVE FALLIRE n=4, fotogrammi 0..3, passo vero <= 2 (PI dilata di 1): successioni 65536; con una posizione coerente fuori da PI: 17696; «libero adesso» occupato: 17696
+controesempio minimo cercato su n=3, fotogrammi 0..1, passo vero <= 2: successioni 64; fuori da PI: 8
+  primo controesempio: F(0)=011 F(1)=000  PI(0)=100 PI(1)=110  posizioni coerenti a t=1: 111
+
+== B. «Libero» con memoria di 3 fotogrammi: controesempio minimo (1 cella, 2 fotogrammi) ==
+  corpo che rimanda segnale        storia=['suolo', 'corpo'] cella occupata=True: solo fotogramma corrente -> libero=False; memoria 3 -> True; memoria 3 con «occupato di ora vince» -> False
+  corpo che NON rimanda segnale    storia=['suolo', 'nullo'] cella occupata=True: solo fotogramma corrente -> libero=False; memoria 3 -> True; memoria 3 con «occupato di ora vince» -> True
+  buco isolato su suolo vuoto      storia=['suolo', 'nullo'] cella occupata=False: solo fotogramma corrente -> libero=False; memoria 3 -> True; memoria 3 con «occupato di ora vince» -> True
+
+== C. Livello dopo il ritaglio senza rinormalizzare: q >= 1 - (1-p)/G(S) ==
+  p = 0,95, G(S) = 0.23: limite = 0.7826
+  p = 0,95, G(S) = 0.08: limite = 0.3750
+  p = 0,90, G(S) = 0,23: limite = 0.5652;  il limite e' informativo (>0) solo se G(S) > 1-p
+  2000 casi casuali (gaussiana discreta, S = semipiano): violazioni 0; scarto minimo q - limite = 1.50e-12; casi con uguaglianza (S contiene il complemento di E) 4
+  uguaglianza: se S contiene tutto il complemento di E, G(S\E) = 1-p e q = 1-(1-p)/G(S) esattamente
+
+== D. Contenuto del cerchio di raggio k·sigma, gaussiana isotropa ==
+  2D: P(r <= sigma) = 1 - exp(-1/2) = 0.3935;  P(r <= 2 sigma) = 0.8647
+  2D: raggio al 95 % = sqrt(-2 ln 0,05) sigma = 2.4477 sigma (quadrato 5.991); al 99 %: quadrato 9.210
+  1D: P(|x| <= sigma) = erf(1/sqrt 2) = 0.6827
+  Monte Carlo 2D, N = 400000: 0.3916
+  Monte Carlo 2D, secondo lancio (aggiunto dopo aver visto il primo), N = 2000000: 0.3932; errore tipo 0.0003
+  ellisse a 1 sigma, sigma_x = 0.2, sigma_y = 0.9: 0.3933
+
+== E. Criterio a due stadi (>=28/30 regge; <=22 smentita; 23-27: altri 30 e >=52/60), composizione 21/5/4 ==
+  prosegue 1, sosta 1, torna 1/2               P(regge al primo) = 0.6875  P(regge in tutto) = 1.0000 (esattamente 1)  P(smentita al primo) = 0.0000
+  prosegue 1, sosta 1, torna 0 (mai coperto)   P(regge al primo) = 0.0000  P(regge in tutto) = 1.0000 (esattamente 1)  P(smentita al primo) = 0.0000
+  prosegue 1, sosta 0,93, torna 0              P(regge al primo) = 0.0000  P(regge in tutto) = 0.4840  P(smentita al primo) = 0.0001
+  tutti 0,90                                   P(regge al primo) = 0.4114  P(regge in tutto) = 0.8652  P(smentita al primo) = 0.0078
+  tutti 0,80                                   P(regge al primo) = 0.0442  P(regge in tutto) = 0.1423  P(smentita al primo) = 0.2392
+  con torna = 0: dentro = 26 su 30 con certezza -> secondo stadio; 26 + 26 = 52 >= 52 -> regge
+  stratificato, 30 per comportamento, copertura 0.50: P(>=28) = 0.000; P(<=23) = 0.9993
+  stratificato, 30 per comportamento, copertura 0.90: P(>=28) = 0.411; P(<=23) = 0.0258
+  stratificato, 30 per comportamento, copertura 0.95: P(>=28) = 0.812; P(<=23) = 0.0006
+
+== F. Informazione di Fisher di (F, m), punto materiale 1D con forza costante ignota, misure di posizione ==
+  F = 120 N, m = 75 kg, sigma = 3 cm, 30 misure a 15 Hz: det(I) = 0 (aritmetica razionale); traccia = 18.31; rango = 1
+  direzione nulla: (F, m) proporzionale a (F, m): I·(F,m)^T = (0, 0)
+  con F nota: informazione su m = 13.17 1/kg^2 -> scarto tipo minimo 0.276 kg (caduta libera: a = g, derivata rispetto a m nulla)
+
+== G. Margini ==
+  posa: eps_t = 0 cm, delta = 0.5 gradi, r = 3 m: m = eps_t + r·delta = 2.6 cm  (r·tan(delta) = 2.6 cm)
+  posa: eps_t = 3 cm, delta = 1.0 gradi, r = 3 m: m = eps_t + r·delta = 8.2 cm  (r·tan(delta) = 8.2 cm)
+  posa: eps_t = 5 cm, delta = 2.0 gradi, r = 3 m: m = eps_t + r·delta = 15.5 cm  (r·tan(delta) = 15.5 cm)
+  passo Delta = 1/15 s = 0.0667 s; 2 Delta = 0.133 s (eta' del «libero» ricordato per 3 fotogrammi)
+  v_max·2Delta: 2,5 m/s -> 0.333 m ; 1,4 m/s -> 0.187 m
+  tau = 0.15 s: h = tau + Delta = 0.2167 s; fascia 0,40 m / h = 1.846 m/s; v_max·h a 2,5 e 1,4 m/s = 0.542, 0.303 m
+  tau = 0.155 s: h = tau + Delta = 0.2217 s; fascia 0,40 m / h = 1.805 m/s; v_max·h a 2,5 e 1,4 m/s = 0.554, 0.310 m
+  eta' 2Delta + latenza 0,155 s = 0.288 s: a 2,5 m/s 0.72 m; a 1,4 m/s 0.404 m; velocita' coperta da 0,40 m: 1.39 m/s
+  con anche la tenuta dell'uscita per un passo: 0.355 s -> velocita' coperta 1.13 m/s; con errore del bordo 0,20 m: 0.69 m/s (senza tenuta), 0.56 m/s (con)
+  fascia 0,20 m, solo fotogramma corrente (eta' 0): 0.90 m/s
+  soggetto nascosto a 9 cm dal volume, 1,4 m/s: 64 ms; latenza 222 ms + un ciclo = 289 ms
+  eta' utile del «libero» a distanza rho = 0,980 m (sfera inscritta): rho/v_max - h: 2,5 m/s -> 0.175 s; 1,4 m/s -> 0.483 s
+
+== H. Intervalli di Wilson al 95 % (z = 1,959964) ==
+  identita' al ritorno 400/400                               400/400 = 1.0000  [0.9905; 1.0000]
+  regione al 90 %, 101/119                                   101/119 = 0.8487  [0.7735; 0.9021]
+  nascosti fuori dall'avviso 0/19200                         0/19200 = 0.0000  [0.0000; 0.0002]
+  idem 0/175802                                              0/175802 = 0.0000  [0.0000; 0.0000]
+  passaggi con un vuoto 0/8314                               0/8314 = 0.0000  [0.0000; 0.0005]
+  ingresso mancato 87/2800                                   87/2800 = 0.0311  [0.0253; 0.0382]
+  ingresso mancato dopo la riga nuova 9/2800                 9/2800 = 0.0032  [0.0017; 0.0061]
+  ombra -20 cm 499/600                                       499/600 = 0.8317  [0.7996; 0.8595]
+  ombra -20 cm dopo 16/600                                   16/600 = 0.0267  [0.0165; 0.0429]
+  secondo soggetto 193/193                                   193/193 = 1.0000  [0.9805; 1.0000]
+  secondo soggetto 347/357                                   347/357 = 0.9720  [0.9492; 0.9847]
+  memoria 3 fotogrammi, fotogrammi con falso libero 58/90    58/90 = 0.6444  [0.5415; 0.7356]
+  braccio velocita' doppia 23/24                             23/24 = 0.9583  [0.7976; 0.9926]
+  braccio velocita' doppia 21/24                             21/24 = 0.8750  [0.6900; 0.9566]
+  PI: corse con falsi liberi 0/368                           0/368 = 0.0000  [0.0000; 0.0103]
+  400/400: limite inferiore di Clopper-Pearson unilaterale al 95 % = 0,05^(1/400) = 0.9925; bilaterale = 0,025^(1/400) = 0.9908
+
+== I. Probabilita' d'intrusione con la distribuzione ritagliata sull'ombra ==
+  sigma = 0.20 m: P(intrusione) gaussiana non ritagliata = 0.307; ritagliata sull'ombra = 0.0 (supporto disgiunto dal volume)
+  sigma = 0.32 m: P(intrusione) gaussiana non ritagliata = 0.347; ritagliata sull'ombra = 0.0 (supporto disgiunto dal volume)
+  sigma = 0.85 m: P(intrusione) gaussiana non ritagliata = 0.213; ritagliata sull'ombra = 0.0 (supporto disgiunto dal volume)
+
+tempo totale: 5.2 s

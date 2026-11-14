@@ -1,0 +1,6 @@
+2026-11-14T17:51:07+01:00
+zsh: command not found: bc
+uscita R-3: 0; tempo  s
+== B5 costo. Righe dell'estrattore (non vuote, non commento): 99
+1 traccia, 3 zone, 31625 fotogrammi: mediana 1.0 us, p95 2.5 us, max 172.6 us
+20 tracce, 8 zone, 5 regioni, 3000 fotogrammi (10341 eventi): mediana 50.5 us, p95 56.8 us, max 276.9 us; ciclo a 15 Hz = 66667 us

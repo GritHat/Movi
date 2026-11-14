@@ -1,0 +1,14 @@
+   [N1] punti al suolo in celle «in ombra»: 41195, di cui in verita' visibili: 9674 (23.5 %)
+## Scenario B, non validi: sparsi 0 %, a chiazze 0 %  (reticolo 10 cm, 18640 punti)
+candidata     fot F_ogni F_prof  punti_FL occupati nascosti profondi S_nas S_ogni   resa%   t_med   t_max
+N0-suolo      147   147    147       441       31      410      371     0    20    74.1    1.10    1.77
+N1-suolo      147   147    147       308        2      306      306     0     2    73.8    1.10    1.77
+N1-colonna    147   147    147    125913        6   125907   113673     0     2    40.3    1.10    1.77
+Q1            147     0      0         0        0        0        0     0     0    97.1    0.36    0.75
+Q3            147     0      0         0        0        0        0     0     0    97.1    0.60    0.88
+Q3c           147     0      0         0        0        0        0     0     0    97.1    0.55    0.89
+P             147   147      2      2801     1704     1097        2     0    60    42.2    5.24    5.52
+S10(B+M)      147    61      0        62        0       62        0     0     0    30.6    5.24    5.52
+S10p(B+M)     147   147    147    113919      364   113555    75729    11    26    79.0   47.00   60.22
+VO            147   147    147    187729     9058   178671   103698     2   200    97.6    5.21    6.79
+VOa           147     0      0         0        0        0        0     0     0    83.0    6.82    8.72
