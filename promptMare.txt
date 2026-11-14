@@ -1,0 +1,473 @@
+# PROMPT PER LO SCIAME — Evoluzione v0.3: Sparse Probabilistic Voxel Mapping
+
+## Ruolo e obiettivo
+
+La nuova architettura deve preservare i seguenti principi:
+
+- Il percorso critico rimane geometrico.
+- Il riconoscimento semantico è opzionale e asincrono.
+- Una zona non osservata non può essere dichiarata libera.
+- Il sistema distingue osservazione, predizione e assenza di conoscenza.
+- La perdita di una traccia non elimina automaticamente la possibile presenza di un ostacolo.
+- La classificazione non deve decidere da sola le indicazioni di sicurezza.
+- Il sistema deve poter dichiarare esplicitamente la perdita di affidabilità.
+
+**Vincolo fondamentale:** nessuna ottimizzazione della memoria può violare queste proprietà.
+
+---
+
+# 2. Ipotesi architetturale da investigare
+
+Vogliamo sostituire o affiancare la griglia geometrica locale con una rappresentazione volumetrica probabilistica.
+
+Proponiamo di studiare:
+
+**Sparse Probabilistic Voxel Grid 3D + Dynamic Tracking Layer + Visibility/Uncertainty Layer.**
+
+La rappresentazione deve separare tre informazioni:
+
+1. La probabilità che una porzione tridimensionale dello spazio sia occupata.
+2. La possibilità di osservare effettivamente quella porzione di spazio nell'istante corrente.
+3. La presenza possibile di oggetti temporaneamente nascosti, derivata dal tracking o dalle informazioni precedenti.
+
+Non vogliamo che ogni voxel contenga una matrice di covarianza completa di Kalman.
+
+Le covarianze dinamiche devono rimanere associate agli oggetti tracciati, in una struttura separata, mentre la mappa conserva la geometria e gli attributi locali necessari.
+
+**Verificate esplicitamente se una matrice voxel sparsa sia preferibile alla griglia attuale. Non assumete a priori che una rappresentazione 3D sparsa sia più efficiente.**
+
+---
+
+# 3. Scelta della struttura dati
+
+Confrontate almeno quattro alternative:
+
+**A. Dense Rolling Voxel Grid**
+
+Array tridimensionale contiguo, eventualmente realizzato tramite Structure of Arrays e Ring Buffer.
+
+**B. Sparse Voxel Hash Map**
+
+Hash map spaziale che associa una chiave tridimensionale a un blocco contiguo di voxel, per esempio 8×8×8.
+
+**C. Octree probabilistico**
+
+Struttura gerarchica tridimensionale con rappresentazione efficiente di regioni omogenee.
+
+**D. Griglia 2D/2.5D attuale con voxel locali**
+
+Soluzione ibrida in cui la mappa originale viene mantenuta e la rappresentazione volumetrica è utilizzata soltanto nelle regioni che richiedono informazioni verticali.
+
+Considerate anche CSR/COO come possibili rappresentazioni sparse, ma valutate se siano effettivamente appropriate per aggiornamenti spaziali incrementali ad alta frequenza.
+
+Per ogni alternativa analizzate:
+
+- Complessità dell'accesso a una cella.
+- Complessità dell'inserimento e dell'aggiornamento.
+- Complessità delle interrogazioni spaziali.
+- Costo del ray casting.
+- Consumo di memoria.
+- Località dei dati nella cache CPU.
+- Frammentazione e overhead delle allocazioni.
+- Comportamento quando il drone si sposta.
+- Gestione delle celle sconosciute non allocate.
+- Possibilità di imporre limiti deterministici alla memoria.
+
+**Ipotesi iniziale da verificare:** una struttura a blocchi di voxel contigui, indicizzati tramite spatial hashing, potrebbe offrire un compromesso favorevole tra accesso rapido, località della memoria e allocazione sparsa.
+
+Studiate questa ipotesi, non consideratela una conclusione.
+
+---
+
+# 4. Formalizzazione probabilistica del voxel
+
+Definite matematicamente uno stato minimo per ogni voxel.
+
+Una possibile formulazione iniziale è:
+
+\[
+V_i(t)=
+\left(L_i(t),\tau_i,q_i,\nu_i\right)
+\]
+
+Dove:
+
+- \(L_i(t)\): log-odds della probabilità di occupazione.
+- \(\tau_i\): timestamp dell'ultima osservazione valida.
+- \(q_i\): indicatore della qualità della misurazione.
+- \(\nu_i\): stato di osservabilità.
+
+La probabilità di occupazione è:
+
+\[
+P(O_i=1\mid Z_{1:t})=\frac{1}{1+e^{-L_i(t)}}
+\]
+
+Studiate l'aggiornamento bayesiano ricorsivo:
+
+\[
+L_i(t)=L_i(t-1)+
+\log\frac{P(O_i=1\mid z_t)}{1-P(O_i=1\mid z_t)}
+-L_{0,i}
+\]
+
+L'aggiornamento deve avvenire soltanto quando esiste una misurazione valida e un modello inverso del sensore appropriato.
+
+Definite esplicitamente:
+
+- Le probabilità a priori.
+- I parametri del modello sensoriale.
+- Il trattamento degli outlier.
+- L'eventuale saturazione delle log-odds.
+- La gestione delle misurazioni mancanti.
+- La gestione degli ostacoli dinamici nella mappa.
+- La propagazione dell'incertezza dovuta alla posa del sensore.
+
+**Problema obbligatorio da risolvere:** la v0.2 stabilisce che una zona può essere dichiarata libera soltanto quando esiste un'osservazione valida corrente.
+
+Una Occupancy Grid bayesiana, invece, può conservare informazioni storiche.
+
+Proponete una formalizzazione che permetta di mantenere il valore informativo delle osservazioni precedenti senza trasformare una precedente osservazione di spazio libero in un'attuale garanzia di sicurezza.
+
+Valutate un'architettura con:
+
+- Layer probabilistico dell'occupazione.
+- Layer di visibilità/freschezza delle osservazioni.
+- Layer di possibile presenza degli oggetti nascosti.
+
+La mancata allocazione di un voxel nella struttura sparsa deve significare **sconosciuto**, mai libero.
+
+---
+
+# 5. Gestione tridimensionale delle occlusioni
+
+Trasformate il modello di occlusione già formalizzato nella v0.2 in una rappresentazione tridimensionale.
+
+Il sistema deve distinguere:
+
+1. Voxel osservati direttamente.
+2. Voxel occupati da ostacoli misurati.
+3. Voxel geometricamente nascosti da ostacoli o strutture.
+4. Voxel fuori dal campo visivo.
+5. Voxel appartenenti a regioni di possibile presenza.
+
+L'ombra geometrica deve essere ricavata dalla posizione del sensore, dal campo visivo, dalle misurazioni valide e dalle superfici occludenti.
+
+Verificate se convenga memorizzare esplicitamente tutti i voxel in ombra oppure ricavare le regioni di occlusione tramite interrogazioni geometriche e strutture compatte.
+
+Non allocate automaticamente un voxel per ogni punto sconosciuto dello spazio.
+
+Particolare attenzione deve essere riservata alla regola di sicurezza già stabilita nella v0.2:
+
+**La regione di possibile presenza associata a un oggetto nascosto non viene cancellata soltanto perché il filtro di Kalman perde affidabilità o perché scade un timer.**
+
+Il sistema deve distinguere:
+
+- La regione predittiva calcolata dal filtro.
+- La regione di possibile presenza che permane in assenza di osservazioni sufficienti.
+
+Valutate come rappresentare la seconda senza memorizzare grandi volumi voxelizzati, per esempio mediante maschere sparse, regioni geometriche o riferimenti ai blocchi interessati.
+
+Specificare le condizioni che permettono di aggiornare o liberare legittimamente queste regioni.
+
+---
+
+# 6. Integrazione con il filtro di Kalman
+
+Mantenete il filtro di Kalman già verificato come baseline.
+
+Per un caso di osservazione planare conservate lo stato:
+
+\[
+x_t=[x,y,v_x,v_y]^T
+\]
+
+Per una futura estensione a UAV in movimento, valutate:
+
+\[
+x_t=[x,y,z,v_x,v_y,v_z]^T
+\]
+
+con covarianza 6×6.
+
+Non considerate il modello tridimensionale automaticamente equivalente a quello bidimensionale: richiede osservabilità, localizzazione e validazione aggiuntive.
+
+Il sistema deve:
+
+1. Rilevare geometricamente gli oggetti.
+2. Associare le misurazioni ai tracciati esistenti.
+3. Aggiornare i filtri di Kalman.
+4. Propagare le covarianze quando le osservazioni mancano.
+5. Proiettare le regioni predittive nello spazio voxel.
+6. Mantenere separata la garanzia di possibile presenza.
+
+La mappa non deve duplicare l'intero stato dinamico di ciascun oggetto.
+
+Valutate inoltre come gestire l'associazione delle tracce quando più oggetti attraversano la stessa regione occlusa.
+
+L'IMM può essere studiato come estensione, ma non deve diventare un requisito dell'MVP se il Kalman lineare risulta sufficiente.
+
+---
+
+# 7. Estensione UAV senza aumentare il costo hardware
+
+La proposta deve mantenere come configurazione primaria:
+
+**Una sola camera di profondità frontale con IMU, reale oppure simulata.**
+
+Non introducete LiDAR 3D, radar, telecamere termiche o sistemi multisensore costosi come requisiti obbligatori.
+
+La prima dimostrazione deve poter essere eseguita con:
+
+- Sensore stazionario.
+- Drone in hovering simulato.
+- Oggetti dinamici all'interno del campo visivo.
+- Occlusioni controllate.
+- Perdita temporanea delle osservazioni.
+
+Per un UAV effettivamente in movimento, analizzate separatamente la necessità di compensare la posa del sensore mediante odometria e stima di stato del veicolo.
+
+Definite le trasformazioni tra coordinate del sensore, corpo del drone e riferimento locale della mappa.
+
+Se la posa non è sufficientemente affidabile, il sistema non deve continuare a integrare osservazioni come se il riferimento fosse certo.
+
+**L'estensione UAV in movimento deve rimanere un obiettivo condizionato alla disponibilità di una stima affidabile della posa.**
+
+Non dichiarate copertura a 360° con una sola camera frontale.
+
+---
+
+# 8. Nebbia, detriti e degradazione sensoriale
+
+Analizzate come la mappa voxel possa migliorare la rappresentazione di scenari dinamici e parzialmente osservabili.
+
+Studiate tre scenari simulativi:
+
+**Scenario A — Nebbia o degradazione della profondità**
+
+Riducete progressivamente la probabilità di rilevazione valida, introducendo rumore e osservazioni mancanti.
+
+Verificate che il sistema non trasformi i voxel privi di osservazioni in spazio libero.
+
+Un modello realistico della nebbia potrà essere una successiva estensione; non confondete un semplice dropout sintetico con la simulazione fisicamente completa del fenomeno.
+
+**Scenario B — Detriti isolati**
+
+Introducete un piccolo numero di oggetti tridimensionali mobili.
+
+Valutate se il filtro di Kalman e la mappa sparsa permettono di conservare l'informazione spaziale quando gli oggetti vengono temporaneamente nascosti.
+
+**Scenario C — Perturbazione improvvisa**
+
+Simulate la comparsa improvvisa di diversi oggetti e la simultanea perdita di alcune osservazioni.
+
+Il sistema deve gestire il cambiamento delle condizioni e riconoscere quando le informazioni non sono più sufficienti.
+
+Non è richiesto simulare o prevedere un'esplosione reale. Lo scenario rappresenta una perturbazione ambientale astratta.
+
+In tutti i casi valutate anche il comportamento di frammenti troppo piccoli, rapidi o lontani per essere osservati dal sensore.
+
+La risposta corretta può essere una dichiarazione di non osservabilità, non una previsione inventata.
+
+---
+
+# 9. Analisi computazionale obbligatoria
+
+L'integrazione voxel è accettabile soltanto se il costo rimane compatibile con una pipeline CPU a bassa latenza.
+
+Formalizzate la complessità temporale e spaziale di tutte le strutture considerate.
+
+In particolare, distinguete:
+
+- Numero totale di voxel teorici.
+- Numero di voxel effettivamente allocati.
+- Numero di blocchi attivi.
+- Numero di raggi elaborati per frame.
+- Numero di celle attraversate dai raggi.
+- Numero di oggetti tracciati.
+- Numero di voxel modificati per aggiornamento.
+
+Per una struttura hash a blocchi, studiate una stima del tipo:
+
+\[
+M=O(B\cdot b^3\cdot s)
+\]
+
+Dove:
+
+- \(B\) è il numero di blocchi allocati.
+- \(b^3\) è il numero di voxel per blocco.
+- \(s\) è la dimensione dei dati per voxel.
+
+Aggiungete l'overhead effettivo della hash map e degli eventuali indici.
+
+Considerate anche il costo del ray casting, che dipende dal numero di raggi e dai voxel attraversati.
+
+Effettuate benchmark su una configurazione locale compatibile con la portata del sensore della v0.2, ad esempio una ROI frontale dell'ordine di 6 × 4 × 3 metri, confrontando almeno due risoluzioni spaziali.
+
+Questi valori sono proposte per il benchmark, non dimensioni operative già validate.
+
+Confrontate:
+
+- Memoria della griglia originale.
+- Memoria di una griglia 3D densa.
+- Memoria di una griglia 3D sparsa.
+- Latenza di aggiornamento.
+- Latenza delle interrogazioni.
+- Utilizzo della CPU.
+- Prestazioni in ambienti densi e sparsi.
+- Picchi di memoria e tempi peggiori, non soltanto valori medi.
+
+Riferimento iniziale: almeno 15 cicli al secondo su CPU e latenza interna p95 non superiore a 150 ms, come obiettivi riportati nella v0.2.
+
+Non dichiarate il rispetto di questi valori senza misurazioni.
+
+Se una rappresentazione tridimensionale sparsa peggiora significativamente le prestazioni rispetto alla baseline senza offrire benefici verificabili, proponete una rappresentazione ibrida o mantenete la struttura originaria.
+
+---
+
+# 10. Valutazione della sicurezza
+
+Riutilizzate gli otto requisiti R1–R8 della proposta originale, senza modificarli arbitrariamente.
+
+Per ogni requisito indicate:
+
+- Comportamento della baseline v0.2.
+- Eventuale miglioramento della soluzione voxel.
+- Nuovi rischi introdotti.
+- Condizioni sperimentali necessarie.
+- Stato della verifica: provato, in prova, da implementare.
+
+Effettuate test di falsificazione specifici per la nuova struttura.
+
+In particolare:
+
+1. Un voxel non allocato viene interpretato erroneamente come libero?
+2. Un voxel in ombra può diventare libero per semplice decadimento temporale?
+3. La rimozione di un blocco sparso può cancellare una regione di possibile presenza?
+4. Un oggetto nascosto può risultare osservato?
+5. Un aggiornamento probabilistico con dati vecchi può prevalere su una nuova occlusione?
+6. Un errore di posa può produrre false aree libere?
+7. Un riaggancio ambiguo può provocare lo scambio silenzioso di identità?
+8. Le celle che rappresentano superfici trasparenti possono produrre falsi liberi?
+9. L'algoritmo mantiene un comportamento conservativo quando il sensore è coperto?
+10. L'elaborazione rimane bounded quando il numero di voxel o oggetti aumenta improvvisamente?
+
+**Non dichiarate risolto il problema delle superfici trasparenti senza una nuova soluzione verificata.**
+
+La condizione di sicurezza fondamentale deve rimanere:
+
+Una regione non sufficientemente osservata non può essere dichiarata percorribile sulla sola base dell'assenza di ostacoli rilevati.
+
+---
+
+# 11. Prototipo sperimentale richiesto
+
+Definite una Proof of Concept minimale che permetta di verificare l'utilità della mappa voxel.
+
+Il prototipo deve mostrare:
+
+1. Una scena tridimensionale sintetica.
+2. Una camera di profondità simulata con campo visivo limitato.
+3. Una mappa voxel con occupazione probabilistica.
+4. Le regioni non osservate e quelle in ombra.
+5. Un oggetto dinamico tracciato mediante Kalman.
+6. La regione predittiva durante un'occlusione.
+7. L'aumento dell'incertezza quando le osservazioni mancano.
+8. La conservazione delle regioni di possibile presenza.
+9. L'uscita per settori compatibile con la v0.2.
+10. Le metriche di memoria e latenza.
+
+La visualizzazione deve distinguere chiaramente osservazione reale, inferenza e assenza di conoscenza.
+
+Confrontate la stessa scena con la baseline originale.
+
+Se possibile, utilizzate replay deterministici e seed fissati per rendere riproducibili i risultati.
+
+---
+
+# 12. Organizzazione delle verifiche nello sciame
+
+Dividete il lavoro in gruppi indipendenti.
+
+**Gruppo A — Formalizzazione matematica**
+
+Occupancy Grid bayesiana, rappresentazione dell'osservabilità, integrazione con Kalman e invarianti di sicurezza.
+
+**Gruppo B — Strutture dati**
+
+Confronto tra griglia densa, hash di blocchi voxel, Octree e rappresentazione ibrida. Analisi asintotica e benchmark.
+
+**Gruppo C — Computer Vision**
+
+Proiezione delle mappe di profondità, ray casting, occlusioni, trasformazioni di coordinate e qualità delle misurazioni.
+
+**Gruppo D — Safety & Falsification**
+
+Ricerca sistematica di falsi spazi liberi, incoerenze temporali, perdita delle regioni di possibile presenza e ipotesi non verificate.
+
+**Gruppo E — UAV & Feasibility**
+
+Estensione a sentinella stazionaria e UAV in movimento, costo hardware, limiti del sensore, scenari degradati e applicabilità all'hackathon.
+
+Richiedete una revisione incrociata dei risultati.
+
+Almeno un agente deve svolgere esplicitamente il ruolo di revisore avversariale, con il compito di dimostrare che l'integrazione voxel non è necessaria, non è fattibile o introduce rischi nuovi.
+
+La decisione finale deve essere supportata da argomentazioni matematiche ed evidenze, non dal consenso degli agenti.
+
+---
+
+# 13. Output finale richiesto
+
+Produrre una proposta v0.3 strutturata nei seguenti capitoli:
+
+1. **Executive Summary:** contributo effettivo dell'integrazione voxel.
+2. **Analisi della v0.2:** decisioni preservate, limiti e assunzioni.
+3. **Architecture Decision Record:** motivazione della struttura dati scelta.
+4. **Formalizzazione matematica:** stato del voxel, aggiornamento bayesiano, visibilità, occlusioni e tracking.
+5. **Architettura software:** moduli, strutture dati, interfacce, timestamp e flussi.
+6. **Pseudocodice:** aggiornamento della mappa, ray casting, gestione delle ombre e integrazione con Kalman.
+7. **Analisi di complessità:** tempo, memoria, limiti e possibili colli di bottiglia.
+8. **Benchmark comparativi:** baseline v0.2, soluzione densa, soluzione sparsa ed eventuale soluzione ibrida.
+9. **Safety Analysis:** invarianti, failure mode e test di falsificazione.
+10. **Piano di implementazione:** MVP, funzionalità opzionali e prerequisiti hardware.
+11. **Valutazione UAV:** cosa funziona con sensore fermo e cosa richiede un sistema realmente in movimento.
+12. **Conclusione:** decisione GO / CONDITIONAL GO / NO-GO sull'introduzione della Sparse Voxel Grid.
+
+Fornite anche una tabella finale:
+
+| Componente | v0.2 | v0.3 proposta | Beneficio | Costo aggiuntivo | Evidenza |
+|---|---|---|---|---|---|
+
+Tutte le affermazioni di miglioramento devono indicare se sono supportate da prove, deduzioni teoriche oppure ipotesi da verificare.
+
+Non inventate benchmark o risultati sperimentali.
+
+Se non potete eseguire misurazioni reali, fornite un protocollo eseguibile, le previsioni teoriche e indicate chiaramente che il risultato è ancora sconosciuto.
+
+---
+
+# 14. Criterio finale di successo
+
+La nuova architettura è preferibile soltanto se dimostrate almeno uno dei seguenti benefici:
+
+- Migliore rappresentazione delle occlusioni tridimensionali.
+- Maggiore correttezza nel distinguere spazio libero e spazio non osservato.
+- Migliore rappresentazione di ostacoli a quote differenti.
+- Miglioramento della continuità percettiva senza aumentare i falsi spazi liberi.
+- Riduzione della memoria rispetto a una rappresentazione volumetrica densa equivalente.
+- Mantenimento di prestazioni compatibili con l'hackathon.
+- Maggiore trasferibilità a UAV, con limiti e prerequisiti esplicitati.
+
+Il miglioramento non deve essere valutato soltanto in termini di precisione geometrica, ma anche rispetto alla capacità del sistema di riconoscere i limiti delle proprie osservazioni.
+
+**Domanda conclusiva a cui lo sciame deve rispondere:**
+
+> Possiamo integrare una mappa voxel tridimensionale probabilistica e sparsa nel sistema v0.2, conservando le garanzie di gestione dell'incertezza e ottenendo un beneficio misurabile per applicazioni UAV, senza superare i vincoli di latenza, memoria e costo della challenge Mare Group?
+
+Se la risposta è positiva, definite l'architettura minima necessaria.
+
+Se è negativa, spiegate matematicamente perché e proponete la migliore alternativa compatibile con i vincoli.
+
+**Non ottimizzate per complessità tecnologica. Ottimizzate per rigore scientifico, verificabilità e fattibilità industriale.**

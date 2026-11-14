@@ -1,0 +1,5 @@
+Le tecnologie di Computer Vision e Intelligenza Artificiale permettono di interpretare ambienti dinamici e trasformare immagini in informazioni utili. Tuttavia, riconoscere un oggetto o un soggetto in movimento non basta: un ostacolo può nasconderlo temporaneamente, mentre la scena continua a cambiare. Questo problema accomuna sistemi per l’accessibilità e soluzioni di osservazione e ispezione nei settori Aerospace & Industry, dove tempestività e affidabilità sono essenziali.
+La Challenge
+La sfida è ideare e sviluppare un prototipo capace di rilevare elementi mobili e ostacoli, gestire interruzioni della visibilità e distinguere le informazioni osservate da quelle incerte. Il sistema dovrà fornire feedback spaziali chiari e tempestivi quando le condizioni lo consentono, segnalando invece la perdita di affidabilità quando necessario.
+
+I team potranno applicare la soluzione all’orientamento assistito di persone con disabilità visiva oppure al monitoraggio di attività e oggetti in ambienti aerospaziali e industriali. L’obiettivo è dimostrare continuità percettiva, bassa latenza ed efficienza elaborativa, senza rinunciare alla sicurezza delle indicazioni.
