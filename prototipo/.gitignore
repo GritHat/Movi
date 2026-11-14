@@ -1,0 +1,16 @@
+# dati e uscite pesanti: si rigenerano con prova_tutto.sh
+uscite/
+dati/
+scaricati/
+riuso/11-simulatore/sequenze/
+riuso/c/insieme
+riuso/c/comp
+__pycache__/
+*.pyc
+*.npy
+*.npz
+*.mp4
+*.avi
+*.png
+!documenti/*.png
+!riuso/03-infrastruttura/esempio_sequenza/**

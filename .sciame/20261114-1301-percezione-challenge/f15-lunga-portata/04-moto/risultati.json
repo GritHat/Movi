@@ -1,0 +1,598 @@
+{
+ "celle_scenario_aeroporto": {
+  "libero": 1572,
+  "occupato": 1,
+  "in_ombra": 200,
+  "non_osservato": 2547
+ },
+ "fusione_celle": {
+  "solo_a": "non_osservato",
+  "solo_b": "non_osservato",
+  "insieme": "libero"
+ },
+ "P4": {
+  "rmse_solo_radar_m": [
+   39.9,
+   69.9
+  ],
+  "rmse_fuso_m": [
+   4.4,
+   5.9
+  ],
+  "semi_fuso_migliore": 40,
+  "n_semi": 40,
+  "cambi_identita": 0,
+  "tracce_confermate_per_seme": [
+   1
+  ]
+ },
+ "P5": {
+  "scambi": 0,
+  "semi_con_scambio": 0,
+  "n": 40,
+  "wilson95": [
+   0.0,
+   0.088
+  ]
+ },
+ "crescita_insieme": {
+  "multirotore_piccolo": {
+   "da_fermo_m": [
+    69,
+    164,
+    544
+   ],
+   "da_v_max_m": [
+    95,
+    190,
+    570
+   ]
+  },
+  "drone_ala_fissa": {
+   "da_fermo_m": [
+    62,
+    240,
+    1040
+   ],
+   "da_v_max_m": [
+    200,
+    400,
+    1200
+   ]
+  },
+  "aereo_leggero": {
+   "da_fermo_m": [
+    38,
+    150,
+    1283
+   ],
+   "da_v_max_m": [
+    350,
+    700,
+    2100
+   ]
+  },
+  "elicottero": {
+   "da_fermo_m": [
+    62,
+    250,
+    1760
+   ],
+   "da_v_max_m": [
+    400,
+    800,
+    2400
+   ]
+  },
+  "aereo_linea_avvicinamento": {
+   "da_fermo_m": [
+    38,
+    150,
+    1350
+   ],
+   "da_v_max_m": [
+    450,
+    900,
+    2700
+   ]
+  },
+  "aereo_rullaggio": {
+   "da_fermo_m": [
+    12,
+    50,
+    343
+   ],
+   "da_v_max_m": [
+    77,
+    154,
+    462
+   ]
+  },
+  "treno_alta_velocita": {
+   "da_fermo_m": [
+    6,
+    25,
+    225
+   ],
+   "da_v_max_m": [
+    416,
+    833,
+    2499
+   ],
+   "binario_da_v_max_m": [
+    [
+     398,
+     416
+    ],
+    [
+     758,
+     833
+    ],
+    [
+     1824,
+     2499
+    ]
+   ]
+  },
+  "treno_banchina": {
+   "da_fermo_m": [
+    12,
+    50,
+    362
+   ],
+   "da_v_max_m": [
+    84,
+    167,
+    501
+   ],
+   "binario_da_v_max_m": [
+    [
+     65,
+     84
+    ],
+    [
+     92,
+     167
+    ],
+    [
+     -41,
+     501
+    ]
+   ]
+  },
+  "auto_autostrada": {
+   "da_fermo_m": [
+    38,
+    150,
+    866
+   ],
+   "da_v_max_m": [
+    180,
+    361,
+    1083
+   ]
+  },
+  "auto_strada_urbana": {
+   "da_fermo_m": [
+    37,
+    107,
+    385
+   ],
+   "da_v_max_m": [
+    70,
+    139,
+    417
+   ]
+  }
+ },
+ "regione_previsione": {
+  "orizzonti_s": [
+   1,
+   2,
+   5,
+   10,
+   30
+  ],
+  "livello": 0.9,
+  "n_taratura": 2000,
+  "n_prova": 2000,
+  "classi": {
+   "multirotore_piccolo": {
+    "raggio_m": [
+     2.8,
+     10.5,
+     51.1,
+     145.4,
+     568.7
+    ],
+    "copertura_prova": [
+     0.911,
+     0.907,
+     0.885,
+     0.893,
+     0.902
+    ],
+    "wilson_inf": [
+     0.8977,
+     0.8935,
+     0.8703,
+     0.8787,
+     0.8882
+    ],
+    "raggio_su_raggiungibile_da_v_tip": [
+     0.189,
+     0.311,
+     0.563,
+     0.783,
+     1.005
+    ]
+   },
+   "drone_ala_fissa": {
+    "raggio_m": [
+     2.0,
+     7.9,
+     43.7,
+     144.2,
+     760.3
+    ],
+    "copertura_prova": [
+     0.908,
+     0.908,
+     0.8985,
+     0.893,
+     0.8965
+    ],
+    "wilson_inf": [
+     0.8945,
+     0.8945,
+     0.8845,
+     0.8787,
+     0.8824
+    ],
+    "raggio_su_raggiungibile_da_v_tip": [
+     0.077,
+     0.135,
+     0.25,
+     0.385,
+     0.647
+    ]
+   },
+   "aereo_leggero": {
+    "raggio_m": [
+     1.2,
+     4.7,
+     26.9,
+     92.7,
+     550.3
+    ],
+    "copertura_prova": [
+     0.908,
+     0.9055,
+     0.9005,
+     0.8985,
+     0.899
+    ],
+    "wilson_inf": [
+     0.8945,
+     0.8919,
+     0.8866,
+     0.8845,
+     0.885
+    ],
+    "raggio_su_raggiungibile_da_v_tip": [
+     0.028,
+     0.052,
+     0.109,
+     0.163,
+     0.279
+    ]
+   },
+   "elicottero": {
+    "raggio_m": [
+     2.0,
+     7.9,
+     44.4,
+     153.0,
+     891.5
+    ],
+    "copertura_prova": [
+     0.908,
+     0.9055,
+     0.9,
+     0.8965,
+     0.8985
+    ],
+    "wilson_inf": [
+     0.8945,
+     0.8919,
+     0.8861,
+     0.8824,
+     0.8845
+    ],
+    "raggio_su_raggiungibile_da_v_tip": [
+     0.041,
+     0.074,
+     0.147,
+     0.219,
+     0.388
+    ]
+   },
+   "aereo_linea_avvicinamento": {
+    "raggio_m": [
+     1.2,
+     4.7,
+     26.9,
+     93.0,
+     556.8
+    ],
+    "copertura_prova": [
+     0.908,
+     0.9055,
+     0.9005,
+     0.8985,
+     0.9015
+    ],
+    "wilson_inf": [
+     0.8945,
+     0.8919,
+     0.8866,
+     0.8845,
+     0.8877
+    ],
+    "raggio_su_raggiungibile_da_v_tip": [
+     0.022,
+     0.041,
+     0.087,
+     0.135,
+     0.224
+    ]
+   },
+   "aereo_rullaggio": {
+    "raggio_m": [
+     0.4,
+     1.6,
+     8.9,
+     30.9,
+     177.6
+    ],
+    "copertura_prova": [
+     0.9075,
+     0.9055,
+     0.902,
+     0.9015,
+     0.905
+    ],
+    "wilson_inf": [
+     0.894,
+     0.8919,
+     0.8882,
+     0.8877,
+     0.8914
+    ],
+    "raggio_su_raggiungibile_da_v_tip": [
+     0.042,
+     0.077,
+     0.152,
+     0.229,
+     0.401
+    ]
+   },
+   "auto_autostrada": {
+    "raggio_m": [
+     1.2,
+     4.7,
+     26.6,
+     91.0,
+     506.5
+    ],
+    "copertura_prova": [
+     0.9075,
+     0.9055,
+     0.9025,
+     0.8985,
+     0.9
+    ],
+    "wilson_inf": [
+     0.894,
+     0.8919,
+     0.8887,
+     0.8845,
+     0.8861
+    ],
+    "raggio_su_raggiungibile_da_v_tip": [
+     0.053,
+     0.096,
+     0.182,
+     0.279,
+     0.483
+    ]
+   },
+   "auto_strada_urbana": {
+    "raggio_m": [
+     1.2,
+     4.6,
+     24.8,
+     76.7,
+     360.9
+    ],
+    "copertura_prova": [
+     0.9105,
+     0.9055,
+     0.9035,
+     0.8985,
+     0.905
+    ],
+    "wilson_inf": [
+     0.8972,
+     0.8919,
+     0.8898,
+     0.8845,
+     0.8914
+    ],
+    "raggio_su_raggiungibile_da_v_tip": [
+     0.125,
+     0.205,
+     0.386,
+     0.573,
+     0.876
+    ]
+   }
+  }
+ },
+ "uscite": {
+  "sequenza_parole": [
+   "-",
+   "vista",
+   "non vista da 1 s con zona",
+   "previsto ampio"
+  ],
+  "tracce_vive": 1,
+  "chiuse": 0,
+  "raggio_possibile_presenza_m": 3348,
+  "avviso_spegnibile": false,
+  "frazione_guardata_libera": 0.362
+ },
+ "chiusura": {
+  "vive_dopo_6_silenzi_cooperativi": 1,
+  "passate_radar_in_vista_per_chiudere": 1,
+  "evento": "non piu' rilevata"
+ },
+ "affidabilita": {
+  "dopo_la_perdita": "previsto ampio",
+  "rivista": "vista",
+  "persa_di_nuovo": "previsto ampio"
+ },
+ "avviso": {
+  "aeroporto_e_droni": {
+   "v_max_inviluppo": 90.0,
+   "classe_che_limita": "multirotore_piccolo",
+   "portata_libero_radar_segnaposto_m": 2360,
+   "d_avviso_m": {
+    "operatore_di_sito": 1490,
+    "pilota_in_rullaggio": 920,
+    "pilota_remoto_di_drone": 760,
+    "macchinista": 7968
+   },
+   "tempestivo": {
+    "operatore_di_sito": true,
+    "pilota_in_rullaggio": true,
+    "pilota_remoto_di_drone": true,
+    "macchinista": false
+   }
+  },
+  "ferrovia": {
+   "v_max_inviluppo": 83.3,
+   "classe_che_limita": "multirotore_piccolo",
+   "portata_libero_radar_segnaposto_m": 2360,
+   "d_avviso_m": {
+    "operatore_di_sito": 1383,
+    "pilota_in_rullaggio": 863,
+    "pilota_remoto_di_drone": 715,
+    "macchinista": 7572
+   },
+   "tempestivo": {
+    "operatore_di_sito": true,
+    "pilota_in_rullaggio": true,
+    "pilota_remoto_di_drone": true,
+    "macchinista": false
+   }
+  },
+  "strada": {
+   "v_max_inviluppo": 36.1,
+   "classe_che_limita": "auto_autostrada",
+   "portata_libero_radar_segnaposto_m": 10981,
+   "d_avviso_m": {
+    "operatore_di_sito": 628,
+    "pilota_in_rullaggio": 455,
+    "pilota_remoto_di_drone": 396,
+    "macchinista": 4786
+   },
+   "tempestivo": {
+    "operatore_di_sito": true,
+    "pilota_in_rullaggio": true,
+    "pilota_remoto_di_drone": true,
+    "macchinista": true
+   }
+  }
+ },
+ "portata_libero_radar_segnaposto_celle_100m": {
+  "multirotore_piccolo": {
+   "n_passate": 5,
+   "portata_libero_m": 2360
+  },
+  "drone_ala_fissa": {
+   "n_passate": 3,
+   "portata_libero_m": 2920
+  },
+  "aereo_leggero": {
+   "n_passate": 2,
+   "portata_libero_m": 5946
+  },
+  "elicottero": {
+   "n_passate": 2,
+   "portata_libero_m": 6580
+  },
+  "aereo_linea_avvicinamento": {
+   "n_passate": 2,
+   "portata_libero_m": 10574
+  },
+  "aereo_rullaggio": {
+   "n_passate": 5,
+   "portata_libero_m": 15783
+  },
+  "treno_alta_velocita": {
+   "n_passate": 2,
+   "portata_libero_m": 15811
+  },
+  "treno_banchina": {
+   "n_passate": 5,
+   "portata_libero_m": 20000
+  },
+  "auto_autostrada": {
+   "n_passate": 3,
+   "portata_libero_m": 10981
+  },
+  "auto_strada_urbana": {
+   "n_passate": 5,
+   "portata_libero_m": 13272
+  }
+ },
+ "esiti": {
+  "P1": {
+   "esito": "regge",
+   "nota": "cella a 4 km in vista dopo 5 passate: per 0,01 m2 'non_osservato', per 20 m2 'libero'"
+  },
+  "P2": {
+   "esito": "regge",
+   "nota": "portata del 'libero' per 0,01 m2: 5 passate 2360 m (a mano 2360), 1 passata 877 m (a mano 877); dalla griglia 2300 m"
+  },
+  "P3": {
+   "esito": "regge",
+   "nota": "celle 'libere' senza diritto: 0 su 12960 (mai illuminate, in ombra 200, scadute); ritorno -> 'occupato'; dietro l'hangar -> 'in_ombra'; passate prima della perdita non contano: True"
+  },
+  "P4": {
+   "esito": "regge",
+   "nota": "RMSE medio (max) su 40 semi: solo radar 39.9 (69.9) m, fuso 4.4 (5.9) m; fuso migliore in 40 semi su 40; cambi d'identita' con la cooperativa spenta a 30 s: 0; tracce confermate: [1]"
+  },
+  "P5": {
+   "esito": "regge",
+   "nota": "incrocio a 100 m di quota di separazione, radar + ottico, senza etichetta: 0 scambi, 0 semi su 40 con scambio (Wilson 95 %: 0.000-0.088)"
+  },
+  "P6": {
+   "esito": "regge",
+   "nota": "traiettorie simulate fuori dall'insieme raggiungibile a 5, 10, 30 s: 0 su 60000 (10 classi x 2000 x 3)"
+  },
+  "P7": {
+   "esito": "regge",
+   "nota": "copertura sulla prova (n=2000 per cella, 40 celle): limite inferiore di Wilson peggiore 0.8703 (soglia 0,87)"
+  },
+  "P8": {
+   "esito": "regge",
+   "nota": "casi in cui il raggio della classe supera quello dell'inviluppo: 0 su 27951"
+  },
+  "P9": {
+   "esito": "SMENTITA",
+   "nota": "durata delle prove 34.5 s"
+  }
+ }
+}

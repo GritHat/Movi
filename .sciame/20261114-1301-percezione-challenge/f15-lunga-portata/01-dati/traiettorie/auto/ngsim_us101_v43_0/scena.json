@@ -1,0 +1,36 @@
+{
+ "nome": "ngsim_us101_v43_0",
+ "formato": "f15-comune-0.1",
+ "oggetti": [
+  {
+   "id": "ngsim_us101_v43_0",
+   "classe": "auto",
+   "tipo": "auto",
+   "etichetta": "assegnata a mano dal convertitore (dalla fonte), nessun classificatore"
+  }
+ ],
+ "riferimento": {
+  "sistema": "locale in metri, x est, y nord, z quota",
+  "origine": "piano di stato California zona 5: x0=6451000 ft, y0=1873000 ft; piedi convertiti in metri (0,3048)"
+ },
+ "sensori": [
+  {
+   "id": "rif",
+   "posizione": [
+    0,
+    0,
+    0
+   ],
+   "nota": "SEGNAPOSTO: nessun sensore e' definito qui; vis_rif=1 ovunque. I ruoli degli scenari mettono sensori e ostacoli e ricalcolano la visibilita'."
+  }
+ ],
+ "ostacoli": [],
+ "finestra_velocita_s": 1.0,
+ "velocita": "derivate dalle posizioni (differenza centrata sulla finestra), non misurate",
+ "campioni": 458,
+ "durata_s": 45.700000047683716,
+ "passo_mediano_s": 0.09999990463256836,
+ "fonte": "NGSIM US-101 (FHWA, US DOT), data.transportation.gov risorsa 8ect-6jqj",
+ "licenza": "dati aperti del governo federale USA (vedi PROVENIENZA.md)",
+ "tempo_iniziale_ms": 1118846990200
+}

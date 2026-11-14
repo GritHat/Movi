@@ -1,0 +1,82 @@
+{
+ "commento": "Scene d'esempio da consegnare. Le scene lp_* sono lette da f15-lunga-portata/03-scenari/scenari.json alle 00:05 del 15-11-2026 (file ancora in lavorazione: rileggere).",
+ "scene": [
+  {
+   "nome": "pavimento_vuoto",
+   "modo": "corto",
+   "config": "scene/pavimento_vuoto.json",
+   "stato": "pronta la sequenza",
+   "mostra": "nessuna traccia, nessun avviso; il suolo è «visto libero fino a d» solo dove è stato visto"
+  },
+  {
+   "nome": "passa_dietro_e_ricompare",
+   "modo": "corto",
+   "config": "scene/passa_dietro_e_ricompare.json",
+   "stato": "pronta la sequenza",
+   "mostra": "vista -> non vista da X s con regione di previsione e avviso acceso -> ricomparsa, identità presunta"
+  },
+  {
+   "nome": "resta_dietro",
+   "modo": "corto",
+   "config": "scene/resta_dietro.json",
+   "stato": "pronta la sequenza",
+   "mostra": "la persona si ferma dietro il pannello: l'avviso di possibile presenza NON si spegne; la traccia passa a «previsto ampio»"
+  },
+  {
+   "nome": "mano_sul_sensore",
+   "modo": "corto",
+   "config": "scene/mano_sul_sensore.json",
+   "stato": "pronta la sequenza",
+   "mostra": "salute del sensore: affidabilità persa da 1,0 a 2,2 s; griglia tutta «non osservato»; settori «affidabilita_persa»"
+  },
+  {
+   "nome": "due_persone",
+   "modo": "corto",
+   "config": "scene/due_persone.json",
+   "stato": "da generare",
+   "mostra": "due persone, una nasconde l'altra: due tracce, identità «presunta» al ritorno, mai «certa»"
+  },
+  {
+   "nome": "lp_A1",
+   "modo": "lungo",
+   "config": "scene/lp_A1.json",
+   "stato": "da costruire",
+   "mostra": "Multirotore piccolo verso un sito, passa dietro un edificio [CASO CENTRALE]"
+  },
+  {
+   "nome": "lp_A2",
+   "modo": "lungo",
+   "config": "scene/lp_A2.json",
+   "stato": "da costruire",
+   "mostra": "Aereo in rullaggio dietro un hangar, mezzo di servizio e persona sul piazzale [CASO CENTRALE]"
+  },
+  {
+   "nome": "lp_A3",
+   "modo": "lungo",
+   "config": "scene/lp_A3.json",
+   "stato": "da costruire",
+   "mostra": "Aereo in avvicinamento finale e drone che scende sotto la copertura [CASO CENTRALE]"
+  },
+  {
+   "nome": "lp_A4",
+   "modo": "lungo",
+   "config": "scene/lp_A4.json",
+   "stato": "da costruire",
+   "mostra": "Mezzo senza pilota che porta il sensore (volo stazionario): SOLO ANALISI [CASO CENTRALE] [solo analisi]"
+  },
+  {
+   "nome": "lp_S1",
+   "modo": "lungo",
+   "config": "scene/lp_S1.json",
+   "stato": "da costruire",
+   "mostra": "Auto nascosta da un camion a un incrocio"
+  },
+  {
+   "nome": "lp_S2",
+   "modo": "lungo",
+   "config": "scene/lp_S2.json",
+   "stato": "da costruire",
+   "mostra": "Treno dietro un convoglio fermo in stazione (a) o in galleria (b)"
+  }
+ ]
+}

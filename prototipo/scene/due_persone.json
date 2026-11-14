@@ -1,0 +1,19 @@
+{
+  "commento": "scena d'esempio a corto raggio; dati simulati dalle schede (riuso/11-simulatore)",
+  "modo": "corto",
+  "scenario": "sole_persone_a_piedi",
+  "sorgente": {
+    "tipo": "simulata",
+    "nome": "d435i_nom__due_persone__s00",
+    "nota": "voce nuova del catalogo: due _pers nella stessa _spec (dato, non codice nuovo)"
+  },
+  "classi_ammesse": [
+    "persona_a_piedi"
+  ],
+  "profilo_portatore": "stazione_fissa",
+  "etichette": "../etichette/persone.json",
+  "interruttori": {},
+  "parametri": {},
+  "seme": 0,
+  "origine_dati": "simulati"
+}

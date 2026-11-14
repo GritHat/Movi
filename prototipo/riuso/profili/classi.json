@@ -1,0 +1,664 @@
+{
+ "versione": "f14-01-profili-0.1",
+ "data": "2026-11-14",
+ "avvertenza": "Valori a priori di classe: letti da fonti o ipotesi dichiarate. Niente e' misurato su un sensore. L'etichetta e' assegnata a mano nelle prove; il classificatore e' richiesto e qui non e' realizzato.",
+ "schema": {
+  "id": "stringa, identificativo della classe",
+  "nome": "stringa",
+  "contesto": "stringa: dove vale il profilo",
+  "v_tip": "m/s, velocita' tipica nel contesto",
+  "v_max": "m/s, velocita' massima plausibile nel contesto (limite di sicurezza della classe)",
+  "a_tip": "m/s^2, accelerazione tipica",
+  "a_max": "m/s^2, accelerazione massima",
+  "dec_tip": "m/s^2, decelerazione tipica (frenata di servizio)",
+  "dec_max": "m/s^2, decelerazione massima (emergenza)",
+  "T_r_classe": "s, tempo di reazione di chi guida la classe (null se non usato)",
+  "gdl": "intero, gradi di liberta' del moto del baricentro (imbardata a parte)",
+  "olonomo": "true | false | 'quasi'",
+  "modello_moto": "stringa: velocita_quasi_costante_2d | uniciclo | biciclo_cinematico | articolato | binario_1d | velocita_quasi_costante_3d | inviluppo",
+  "raggio_min": "m, raggio minimo di sterzata (0 se gira sul posto, null se non si applica)",
+  "ingombro": "[lunghezza, larghezza, altezza] in m",
+  "massa_kg": "[min, max] in kg, SOLO se ha una fonte, altrimenti null",
+  "fonti": "campo -> codice della fonte (vedi 'fonti'); I = ipotesi, M = a memoria non verificato"
+ },
+ "fonti": {
+  "F1": {
+   "cosa": "Wikipedia, Preferred walking speed: 1,10-1,65 m/s; 1,4 m/s nelle guide di progetto britanniche",
+   "link": "https://en.wikipedia.org/wiki/Preferred_walking_speed",
+   "stato": "pagina aperta oggi, dato letto"
+  },
+  "F2": {
+   "cosa": "Bohannon 1997, Age and Ageing 26:15-19, PMID 9143432, 230 soggetti: passo comodo 1,272-1,462 m/s, massimo 1,749-2,533 m/s (medie per sesso e decennio)",
+   "link": "https://europepmc.org/article/MED/9143432",
+   "stato": "riassunto letto oggi dall'API di Europe PMC"
+  },
+  "F3": {
+   "cosa": "Wikipedia, Braking distance: reazione 1,5 s (media NHTSA), 2,5 s (AASHTO, guidatore lento), attrito 0,7 di riferimento; D = v t + v^2/(2 mu g)",
+   "link": "https://en.wikipedia.org/wiki/Braking_distance",
+   "stato": "pagina aperta oggi, dato letto"
+  },
+  "F4": {
+   "cosa": "Wikipedia, Stopping sight distance: decelerazione 3,4 m/s^2 (NCHRP 400), 2,5 s",
+   "link": "https://en.wikipedia.org/wiki/Stopping_sight_distance",
+   "stato": "pagina aperta oggi, dato letto"
+  },
+  "F6": {
+   "cosa": "Wikipedia, Taxiing: rullaggio tipico 16-19 nodi (30-35 km/h)",
+   "link": "https://en.wikipedia.org/wiki/Taxiing",
+   "stato": "pagina aperta oggi, dato letto"
+  },
+  "F7": {
+   "cosa": "Wikipedia, Emergency brake (train): frenata d'emergenza circa 1,5 m/s^2 senza pattini; circa 250 m da 100 km/h",
+   "link": "https://en.wikipedia.org/wiki/Emergency_brake_(train)",
+   "stato": "pagina aperta oggi, dato letto"
+  },
+  "F8": {
+   "cosa": "Wikipedia, Airbus A320 family: A320 lungo 37,6 m; massa massima al decollo della famiglia 68-93,5 t",
+   "link": "https://en.wikipedia.org/wiki/Airbus_A320_family",
+   "stato": "pagina aperta oggi, letta in parte (tabella delle specifiche non raggiunta)"
+  },
+  "F10": {
+   "cosa": "Adaptalift (cita WorkSafe 2006): un carrello a 6 km/h chiede circa 3 m per fermarsi",
+   "link": "https://www.adaptalift.com.au/articles/2013-02-01-forklift-speed-limits-and-braking-in-the-warehouse",
+   "stato": "pagina aperta oggi, dato letto; fonte commerciale di seconda mano"
+  },
+  "F11": {
+   "cosa": "Wikipedia, Bicycle performance: media di Copenaghen 15,5 km/h; 5,5 m/s a 100 W",
+   "link": "https://en.wikipedia.org/wiki/Bicycle_performance",
+   "stato": "pagina aperta oggi, dato letto"
+  },
+  "F12": {
+   "cosa": "Wikipedia in italiano, Monopattino elettrico: limite 20 km/h, 0,5 kW; strade urbane con limite 50 km/h",
+   "link": "https://it.wikipedia.org/wiki/Monopattino_elettrico",
+   "stato": "pagina aperta oggi, dato letto; la legge non e' stata aperta"
+  },
+  "F13": {
+   "cosa": "Wikipedia, Pushback (aviation): trattore per grandi aerei fino a 54 t",
+   "link": "https://en.wikipedia.org/wiki/Pushback_(aviation)",
+   "stato": "pagina aperta oggi, dato letto"
+  },
+  "R1": {
+   "cosa": "Carrelli: 5 mph (8 km/h) in corsia 'largamente citato', 10 mph all'aperto; OSHA non fissa un limite; 6 m minimi teorici a 12 km/h",
+   "link": "https://www.bigrentz.com/blog/forklift-speed-limits-osha-rules-and-best-practices-for-safe-operation",
+   "stato": "letto nel risultato di una ricerca, pagina non aperta: non verificato"
+  },
+  "R2": {
+   "cosa": "Piazzali: 25 km/h (un manuale), 30 km/h e passo d'uomo 6 km/h presso gli aerei (Monaco), 10 km/h entro 15 m da un aereo (Australia), 15 km/h in traino (un aeroporto neozelandese)",
+   "link": "https://www.munich-airport.de/_b/0000000000000008368639bb5e302e6f/traffic-safety-rules-2016.pdf",
+   "stato": "letto nel risultato di una ricerca; il PDF di Monaco aperto ma non leggibile: non verificato"
+  },
+  "R3": {
+   "cosa": "MiR250: 2,0 m/s, 800 x 580 x 300 mm, 83 o 97 kg, accelerazione 0,3 o 1,0 m/s^2 (schede discordi)",
+   "link": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf",
+   "stato": "letto nel risultato di una ricerca, pagina non aperta: non verificato"
+  },
+  "R4": {
+   "cosa": "Droni: 19 m/s massimi per C0 e C1, modalita' lenta <= 3 m/s per C2 (guida di studio; il regolamento UE 2019/945 non si e' aperto); Mavic 3 Classic 21 m/s (19 nell'UE), salita 8 m/s, inclinazione 35 gradi, 895 g",
+   "link": "https://www.dji.com/mavic-3-classic/specs",
+   "stato": "letto nel risultato di una ricerca, pagina non aperta: non verificato"
+  },
+  "R5": {
+   "cosa": "Traino di un aereo: mai oltre il passo di chi cammina accanto; 5 nodi per un 737-800; circa 5 mph",
+   "link": "https://www.tronair.com/blogs/articles/aircraft-tug-safety",
+   "stato": "letto nel risultato di una ricerca, pagina non aperta: non verificato"
+  },
+  "R8": {
+   "cosa": "Tram: pattini elettromagnetici, frenata d'emergenza fino a 2,5 m/s^2 (articolo di settore su EN 16207)",
+   "link": "https://railwaynews.net/en-16207-railway-applications-braking-functional-and-performance-criteria-of-magnetic-track-brake-systems-for-use-in-railway-rolling-stock-standard.html",
+   "stato": "letto nel risultato di una ricerca, pagina non aperta: non verificato"
+  },
+  "I": {
+   "cosa": "ipotesi dell'esperto, senza fonte aperta",
+   "link": null,
+   "stato": "ipotesi"
+  },
+  "M": {
+   "cosa": "ricordato a memoria",
+   "link": null,
+   "stato": "non verificato"
+  },
+  "C": {
+   "cosa": "conto su altri campi (vedi conti.py)",
+   "link": null,
+   "stato": "conto"
+  },
+  "F16": {
+   "cosa": "Aeroporto di Monaco, regole del traffico 2016: limite 30 km/h; passo d'uomo (al piu' 6 km/h) nell'area di sicurezza degli aerei parcheggiati e negli edifici",
+   "link": "https://www.munich-airport.de/_b/0000000000000008368639bb5e302e6f/traffic-safety-rules-2016.pdf",
+   "stato": "PDF scaricato oggi, testo estratto e letto; regola di UN aeroporto"
+  },
+  "F17": {
+   "cosa": "MiR250, scheda: 2,0 m/s a pieno carico, accelerazione 0,3 m/s^2, 800 x 580 x 300 mm, 97 kg, 250 kg di carico",
+   "link": "https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf",
+   "stato": "PDF scaricato oggi, testo estratto e letto; copia di un rivenditore"
+  }
+ },
+ "classi": [
+  {
+   "id": "persona_a_piedi",
+   "nome": "persona a piedi (adulto)",
+   "contesto": "interno o marciapiede",
+   "v_tip": 1.4,
+   "v_max": 2.5,
+   "a_tip": 1.0,
+   "a_max": 3.0,
+   "dec_tip": 1.5,
+   "dec_max": 4.0,
+   "T_r_classe": null,
+   "gdl": 2,
+   "olonomo": "quasi",
+   "modello_moto": "velocita_quasi_costante_2d",
+   "raggio_min": 0,
+   "ingombro": [
+    0.5,
+    0.6,
+    1.75
+   ],
+   "massa_kg": null,
+   "fonti": {
+    "v_tip": "F1,F2",
+    "v_max": "F2",
+    "a_tip": "I",
+    "a_max": "I",
+    "dec_tip": "I",
+    "dec_max": "I",
+    "ingombro": "I",
+    "raggio_min": "I"
+   }
+  },
+  {
+   "id": "persona_di_corsa",
+   "nome": "persona di corsa",
+   "contesto": "interno o marciapiede",
+   "v_tip": 3.0,
+   "v_max": 8.0,
+   "a_tip": 2.0,
+   "a_max": 4.0,
+   "dec_tip": 2.0,
+   "dec_max": 4.0,
+   "T_r_classe": null,
+   "gdl": 2,
+   "olonomo": "quasi",
+   "modello_moto": "velocita_quasi_costante_2d",
+   "raggio_min": 0,
+   "ingombro": [
+    0.5,
+    0.6,
+    1.75
+   ],
+   "massa_kg": null,
+   "fonti": {
+    "v_tip": "I",
+    "v_max": "I",
+    "a_tip": "I",
+    "a_max": "I",
+    "dec_tip": "I",
+    "dec_max": "I",
+    "ingombro": "I"
+   }
+  },
+  {
+   "id": "bicicletta",
+   "nome": "persona in bicicletta",
+   "contesto": "pista o area mista",
+   "v_tip": 4.3,
+   "v_max": 8.3,
+   "a_tip": 1.0,
+   "a_max": 2.0,
+   "dec_tip": 2.0,
+   "dec_max": 5.0,
+   "T_r_classe": 1.5,
+   "gdl": 2,
+   "olonomo": false,
+   "modello_moto": "biciclo_cinematico",
+   "raggio_min": 2.0,
+   "ingombro": [
+    1.8,
+    0.6,
+    1.7
+   ],
+   "massa_kg": null,
+   "fonti": {
+    "v_tip": "F11",
+    "v_max": "I",
+    "a_tip": "I",
+    "a_max": "I",
+    "dec_tip": "I",
+    "dec_max": "I",
+    "T_r_classe": "F3",
+    "raggio_min": "I",
+    "ingombro": "I"
+   }
+  },
+  {
+   "id": "monopattino",
+   "nome": "persona su monopattino elettrico",
+   "contesto": "strada urbana (Italia)",
+   "v_tip": 4.2,
+   "v_max": 5.6,
+   "a_tip": 1.0,
+   "a_max": 2.0,
+   "dec_tip": 2.0,
+   "dec_max": 4.0,
+   "T_r_classe": 1.5,
+   "gdl": 2,
+   "olonomo": false,
+   "modello_moto": "biciclo_cinematico",
+   "raggio_min": 1.5,
+   "ingombro": [
+    1.1,
+    0.5,
+    1.8
+   ],
+   "massa_kg": null,
+   "fonti": {
+    "v_tip": "I",
+    "v_max": "F12",
+    "a_tip": "I",
+    "a_max": "I",
+    "dec_tip": "I",
+    "dec_max": "I",
+    "T_r_classe": "F3",
+    "raggio_min": "I",
+    "ingombro": "I"
+   }
+  },
+  {
+   "id": "carrello_elevatore",
+   "nome": "carrello elevatore",
+   "contesto": "magazzino, corsia",
+   "v_tip": 2.2,
+   "v_max": 4.5,
+   "a_tip": 0.5,
+   "a_max": 1.5,
+   "dec_tip": 0.9,
+   "dec_max": 2.5,
+   "T_r_classe": 1.5,
+   "gdl": 2,
+   "olonomo": false,
+   "modello_moto": "biciclo_cinematico",
+   "raggio_min": 2.0,
+   "ingombro": [
+    3.5,
+    1.2,
+    2.2
+   ],
+   "massa_kg": null,
+   "fonti": {
+    "v_tip": "R1",
+    "v_max": "R1",
+    "a_tip": "I",
+    "a_max": "I",
+    "dec_tip": "R1,C",
+    "dec_max": "I",
+    "T_r_classe": "F3",
+    "raggio_min": "I",
+    "ingombro": "I"
+   }
+  },
+  {
+   "id": "agv_magazzino",
+   "nome": "veicolo a guida automatica di magazzino",
+   "contesto": "magazzino",
+   "v_tip": 1.0,
+   "v_max": 2.0,
+   "a_tip": 0.3,
+   "a_max": 1.0,
+   "dec_tip": 1.0,
+   "dec_max": 2.0,
+   "T_r_classe": 0.3,
+   "gdl": 2,
+   "olonomo": false,
+   "modello_moto": "uniciclo",
+   "raggio_min": 0,
+   "ingombro": [
+    0.8,
+    0.58,
+    0.3
+   ],
+   "massa_kg": [
+    97,
+    347
+   ],
+   "fonti": {
+    "v_tip": "I",
+    "v_max": "F17",
+    "a_tip": "F17",
+    "a_max": "R3",
+    "dec_tip": "I",
+    "dec_max": "I",
+    "T_r_classe": "I",
+    "raggio_min": "I",
+    "ingombro": "F17",
+    "massa_kg": "F17 (a vuoto; a pieno carico)"
+   }
+  },
+  {
+   "id": "auto_area_lavoro",
+   "nome": "auto o furgone in un'area di lavoro",
+   "contesto": "piazzale, cantiere, limite interno",
+   "v_tip": 2.8,
+   "v_max": 8.3,
+   "a_tip": 1.5,
+   "a_max": 3.0,
+   "dec_tip": 3.4,
+   "dec_max": 6.9,
+   "T_r_classe": 1.5,
+   "gdl": 2,
+   "olonomo": false,
+   "modello_moto": "biciclo_cinematico",
+   "raggio_min": 5.5,
+   "ingombro": [
+    6.0,
+    2.0,
+    2.6
+   ],
+   "massa_kg": null,
+   "fonti": {
+    "v_tip": "I",
+    "v_max": "I",
+    "a_tip": "I",
+    "a_max": "I",
+    "dec_tip": "F4",
+    "dec_max": "F3,C",
+    "T_r_classe": "F3",
+    "raggio_min": "M",
+    "ingombro": "I"
+   }
+  },
+  {
+   "id": "auto_strada_urbana",
+   "nome": "auto o furgone su strada urbana",
+   "contesto": "strada urbana",
+   "v_tip": 8.3,
+   "v_max": 13.9,
+   "a_tip": 1.5,
+   "a_max": 3.0,
+   "dec_tip": 3.4,
+   "dec_max": 6.9,
+   "T_r_classe": 1.5,
+   "gdl": 2,
+   "olonomo": false,
+   "modello_moto": "biciclo_cinematico",
+   "raggio_min": 5.5,
+   "ingombro": [
+    4.5,
+    1.8,
+    1.5
+   ],
+   "massa_kg": null,
+   "fonti": {
+    "v_tip": "I",
+    "v_max": "F12",
+    "a_tip": "I",
+    "a_max": "I",
+    "dec_tip": "F4",
+    "dec_max": "F3,C",
+    "T_r_classe": "F3",
+    "raggio_min": "M",
+    "ingombro": "I"
+   }
+  },
+  {
+   "id": "mezzo_piazzale",
+   "nome": "trattore di piazzale con rimorchi dei bagagli",
+   "contesto": "piazzale aeroportuale",
+   "v_tip": 1.7,
+   "v_max": 8.3,
+   "a_tip": 0.5,
+   "a_max": 1.5,
+   "dec_tip": 1.5,
+   "dec_max": 4.0,
+   "T_r_classe": 1.5,
+   "gdl": 2,
+   "olonomo": false,
+   "modello_moto": "articolato",
+   "raggio_min": 4.0,
+   "ingombro": [
+    15.0,
+    1.6,
+    2.0
+   ],
+   "massa_kg": null,
+   "fonti": {
+    "v_tip": "F16 (passo d'uomo presso gli aerei)",
+    "v_max": "F16; R2 per altri aeroporti (25 km/h)",
+    "a_tip": "I",
+    "a_max": "I",
+    "dec_tip": "I",
+    "dec_max": "I",
+    "T_r_classe": "F3",
+    "raggio_min": "I",
+    "ingombro": "I"
+   }
+  },
+  {
+   "id": "aereo_rullaggio",
+   "nome": "aereo di linea in rullaggio",
+   "contesto": "via di rullaggio, piazzale",
+   "v_tip": 9.0,
+   "v_max": 15.4,
+   "a_tip": 0.5,
+   "a_max": 1.0,
+   "dec_tip": 1.0,
+   "dec_max": 3.0,
+   "T_r_classe": 1.5,
+   "gdl": 2,
+   "olonomo": false,
+   "modello_moto": "biciclo_cinematico",
+   "raggio_min": 20.0,
+   "ingombro": [
+    37.6,
+    35.8,
+    11.8
+   ],
+   "massa_kg": [
+    68000,
+    93500
+   ],
+   "fonti": {
+    "v_tip": "F6",
+    "v_max": "M",
+    "a_tip": "I",
+    "a_max": "I",
+    "dec_tip": "I",
+    "dec_max": "I",
+    "T_r_classe": "F3",
+    "raggio_min": "I",
+    "ingombro": "F8 (lunghezza); M (apertura e altezza)",
+    "massa_kg": "F8 (massa massima al decollo della famiglia)"
+   }
+  },
+  {
+   "id": "aereo_traino",
+   "nome": "aereo al traino o in spinta",
+   "contesto": "piazzola, piazzale",
+   "v_tip": 1.4,
+   "v_max": 4.2,
+   "a_tip": 0.2,
+   "a_max": 0.5,
+   "dec_tip": 0.5,
+   "dec_max": 1.5,
+   "T_r_classe": 1.5,
+   "gdl": 2,
+   "olonomo": false,
+   "modello_moto": "articolato",
+   "raggio_min": 20.0,
+   "ingombro": [
+    45.0,
+    35.8,
+    11.8
+   ],
+   "massa_kg": [
+    68000,
+    147500
+   ],
+   "fonti": {
+    "v_tip": "R5",
+    "v_max": "R2",
+    "a_tip": "I",
+    "a_max": "I",
+    "dec_tip": "I",
+    "dec_max": "I",
+    "T_r_classe": "F3",
+    "raggio_min": "I",
+    "ingombro": "F8, M, I",
+    "massa_kg": "F8 + F13 (aereo piu' trattore fino a 54 t)"
+   }
+  },
+  {
+   "id": "treno_banchina",
+   "nome": "treno in arrivo in banchina",
+   "contesto": "stazione",
+   "v_tip": 11.0,
+   "v_max": 16.7,
+   "a_tip": 0.5,
+   "a_max": 1.0,
+   "dec_tip": 0.8,
+   "dec_max": 1.5,
+   "T_r_classe": 1.5,
+   "gdl": 1,
+   "olonomo": false,
+   "modello_moto": "binario_1d",
+   "raggio_min": null,
+   "ingombro": [
+    200.0,
+    2.9,
+    4.3
+   ],
+   "massa_kg": null,
+   "fonti": {
+    "v_tip": "I",
+    "v_max": "I",
+    "a_tip": "I",
+    "a_max": "I",
+    "dec_tip": "I",
+    "dec_max": "F7",
+    "T_r_classe": "F3",
+    "ingombro": "I"
+   }
+  },
+  {
+   "id": "tram_fermata",
+   "nome": "tram in arrivo a una fermata",
+   "contesto": "sede tranviaria urbana",
+   "v_tip": 5.6,
+   "v_max": 13.9,
+   "a_tip": 1.0,
+   "a_max": 1.3,
+   "dec_tip": 1.2,
+   "dec_max": 2.5,
+   "T_r_classe": 1.5,
+   "gdl": 1,
+   "olonomo": false,
+   "modello_moto": "binario_1d",
+   "raggio_min": null,
+   "ingombro": [
+    32.0,
+    2.4,
+    3.6
+   ],
+   "massa_kg": null,
+   "fonti": {
+    "v_tip": "I",
+    "v_max": "I",
+    "a_tip": "I",
+    "a_max": "I",
+    "dec_tip": "I",
+    "dec_max": "R8",
+    "T_r_classe": "F3",
+    "ingombro": "I"
+   }
+  },
+  {
+   "id": "treno_manovra",
+   "nome": "treno o carri in manovra",
+   "contesto": "scalo, raccordo industriale",
+   "v_tip": 4.2,
+   "v_max": 8.3,
+   "a_tip": 0.3,
+   "a_max": 0.5,
+   "dec_tip": 0.5,
+   "dec_max": 1.5,
+   "T_r_classe": 1.5,
+   "gdl": 1,
+   "olonomo": false,
+   "modello_moto": "binario_1d",
+   "raggio_min": null,
+   "ingombro": [
+    100.0,
+    2.9,
+    4.3
+   ],
+   "massa_kg": null,
+   "fonti": {
+    "v_tip": "I",
+    "v_max": "M",
+    "a_tip": "I",
+    "a_max": "I",
+    "dec_tip": "I",
+    "dec_max": "F7",
+    "T_r_classe": "F3",
+    "ingombro": "I"
+   }
+  },
+  {
+   "id": "multirotore_lento",
+   "nome": "drone multirotore in volo lento",
+   "contesto": "interno o piazzale, quota bassa",
+   "v_tip": 3.0,
+   "v_max": 19.0,
+   "a_tip": 2.0,
+   "a_max": 6.9,
+   "dec_tip": 2.0,
+   "dec_max": 6.9,
+   "T_r_classe": 0.3,
+   "gdl": 3,
+   "olonomo": true,
+   "modello_moto": "velocita_quasi_costante_3d",
+   "raggio_min": 0,
+   "ingombro": [
+    0.35,
+    0.28,
+    0.11
+   ],
+   "massa_kg": [
+    0.9,
+    0.9
+   ],
+   "fonti": {
+    "v_tip": "R4",
+    "v_max": "R4",
+    "a_tip": "I",
+    "a_max": "R4,C (g per tan 35 gradi)",
+    "dec_tip": "I",
+    "dec_max": "R4,C",
+    "T_r_classe": "I",
+    "ingombro": "M",
+    "massa_kg": "R4"
+   }
+  },
+  {
+   "id": "non_classificato",
+   "nome": "oggetto mobile non classificato",
+   "contesto": "qualsiasi: etichetta assente, incerta o fuori tassonomia",
+   "v_tip": null,
+   "v_max": null,
+   "a_tip": null,
+   "a_max": null,
+   "dec_tip": null,
+   "dec_max": null,
+   "T_r_classe": null,
+   "gdl": 3,
+   "olonomo": true,
+   "modello_moto": "inviluppo",
+   "raggio_min": 0,
+   "ingombro": null,
+   "massa_kg": null,
+   "regola": "prende l'inviluppo delle classi ammesse nel sito (classi_ammesse in profili_portatore.json): v_max = massimo delle v_max, a_max = massimo, olonomo; mai un profilo piu' lento della regola di base",
+   "fonti": {
+    "tutto": "C"
+   }
+  }
+ ]
+}

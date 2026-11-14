@@ -1,0 +1,13 @@
+regge    P1: cella a 4 km in vista dopo 5 passate: per 0,01 m2 'non_osservato', per 20 m2 'libero'
+regge    P2: portata del 'libero' per 0,01 m2: 5 passate 2360 m (a mano 2360), 1 passata 877 m (a mano 877); dalla griglia 2400 m
+regge    P3: celle 'libere' senza diritto: 0 su 12960 (mai illuminate, in ombra 200, scadute); ritorno -> 'occupato'; dietro l'hangar -> 'in_ombra'; passate prima della perdita non contano: True
+SMENTITA P4: RMSE medio (max) su 20 semi: solo radar 38.3 (55.9) m, fuso 5.1 (10.6) m; fuso migliore in 20 semi su 20; cambi d'identita' con la cooperativa spenta a 30 s: 37; tracce confermate: [1, 2]
+SMENTITA P5: incrocio a 100 m di quota di separazione, radar + ottico, senza etichetta: 30 scambi, 7 semi su 20 con scambio (Wilson 95 %: 0.181-0.567)
+regge    P6: traiettorie simulate fuori dall'insieme raggiungibile a 5, 10, 30 s: 0 su 60000 (10 classi x 2000 x 3)
+regge    P7: copertura sulla prova (n=2000 per cella, 40 celle): limite inferiore di Wilson peggiore 0.8703 (soglia 0,87)
+regge    P8: casi in cui il raggio della classe supera quello dell'inviluppo: 0 su 27951
+Traceback (most recent call last):
+  File "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f15-lunga-portata/04-moto/prove_movi_lp.py", line 256, in <module>
+    assert seq[0] in ("-", "vista") and "previsto ampio" in seq and seq.index("previsto ampio") == len(seq) - 1, seq
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ['-', 'vista', 'non vista da 3 s con zona']

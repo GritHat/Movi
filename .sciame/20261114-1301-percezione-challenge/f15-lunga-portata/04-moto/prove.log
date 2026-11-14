@@ -1,0 +1,10 @@
+regge    P1: cella a 4 km in vista dopo 5 passate: per 0,01 m2 'non_osservato', per 20 m2 'libero'
+regge    P2: portata del 'libero' per 0,01 m2: 5 passate 2360 m (a mano 2360), 1 passata 877 m (a mano 877); dalla griglia 2300 m
+regge    P3: celle 'libere' senza diritto: 0 su 12960 (mai illuminate, in ombra 200, scadute); ritorno -> 'occupato'; dietro l'hangar -> 'in_ombra'; passate prima della perdita non contano: True
+regge    P4: RMSE medio (max) su 40 semi: solo radar 39.9 (69.9) m, fuso 4.4 (5.9) m; fuso migliore in 40 semi su 40; cambi d'identita' con la cooperativa spenta a 30 s: 0; tracce confermate: [1]
+regge    P5: incrocio a 100 m di quota di separazione, radar + ottico, senza etichetta: 0 scambi, 0 semi su 40 con scambio (Wilson 95 %: 0.000-0.088)
+regge    P6: traiettorie simulate fuori dall'insieme raggiungibile a 5, 10, 30 s: 0 su 60000 (10 classi x 2000 x 3)
+regge    P7: copertura sulla prova (n=2000 per cella, 40 celle): limite inferiore di Wilson peggiore 0.8703 (soglia 0,87)
+regge    P8: casi in cui il raggio della classe supera quello dell'inviluppo: 0 su 27951
+controlli sulle uscite: passati — {"sequenza_parole": ["-", "vista", "non vista da 1 s con zona", "previsto ampio"], "tracce_vive": 1, "chiuse": 0, "raggio_possibile_presenza_m": 3348, "avviso_spegnibile": false, "frazione_guardata_libera": 0.362}
+SMENTITA P9: durata delle prove 34.5 s

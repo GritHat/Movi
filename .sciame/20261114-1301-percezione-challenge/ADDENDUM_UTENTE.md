@@ -180,3 +180,19 @@ Indicazioni dell'utente (riassunte dai suoi tre messaggi, che restano nella conv
 - **Video:** poco meno di 3 minuti, 16:9 a 1080p, motion graphics; strumento a scelta dello specialista fra HyperFrames (installato), Remotion e Motion Canvas; prima versione con voce sintetica di qualità in inglese, con la possibilità di generare dopo un'alternativa in italiano; musica con licenza libera; logo del gruppo creato dallo sciame; niente slide. Linee guida nel file dell'utente `…/uploads/…/2f4fda74-Markdownlfes.md` (copiato in `f17-video/ISTRUZIONI_VIDEO_UTENTE.md`), da applicare dopo una passata convergente dello sciame con tre nuovi specialisti (pubblicità e marketing, videomaker, comunicazione), adattandole al nuovo caso centrale.
 - **Tempo:** tutto entro 10 ore d'orologio. Workflow con più agenti in parallelo autorizzati.
 - **Regolamento:** controllato dal coordinatore. Non ho trovato il testo dell'edizione 2026; quello dell'edizione speciale 2025 (stessi organizzatori) non ha regole sull'uso di strumenti automatici, chiede che il progetto sia originale e non violi diritti di terzi, e fissa per il video pitch un massimo di 4 minuti, pena l'esclusione.
+
+---
+
+# Addendum 12 (15-11-2026): eventi improvvisi e visibilità degradata
+
+Testo dell'utente: «No, il nuovo obbiettivo e scopo restano i veicoli veloci e il video deve mostrare queste situazioni, ad esempio in scenari con detriti, condizioni meteo sfavorevoli che limitano la visione o anche a seguito di danni dovuti a esplosioni di motori e danni in volo ad esempio nel caso di droni vicini che collidono lasciando detriti, situazioni improvvise altamente impulsive e fiammate che rendono la visibilità estremamente limitata.»
+
+Lettura del coordinatore: il file di istruzioni del video non è vincolante alla lettera; ne restano le regole di onestà. Le interruzioni della visibilità da mostrare e da provare comprendono eventi improvvisi (collisione fra droni con detriti, avaria di un motore con fiammata e fumo, detriti a terra) e il meteo (nebbia, pioggia). Entrano nella seconda fase come scenari E1–E5 (`f15-lunga-portata/40-eventi`), nel prototipo e nel video. Restano situazioni da osservare e segnalare: nessuna funzione d'ingaggio o di contrasto.
+
+---
+
+# Addendum 13 (15-11-2026, notte): autorizzazione a decidere in autonomia
+
+Testo dell'utente: «Per qualunque scelta da fare durante la notte ti do l'autorizzazione a prenderla autonomamente, e questo include tutto tranne l'eliminazione dei files che invece non deve essere fatta in nessun caso».
+
+Lettura del coordinatore: decido da solo e annoto ogni scelta. Nessun file si cancella: le versioni nuove vanno in file nuovi o accanto a una copia della precedente. Gli agenti ricevono il divieto nelle consegne.

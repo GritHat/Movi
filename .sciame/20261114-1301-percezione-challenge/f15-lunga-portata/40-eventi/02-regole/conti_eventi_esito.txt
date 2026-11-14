@@ -1,0 +1,38 @@
+== tempi dei tratti (s) ==
+E1 droneA [15.0, 19.1, 23.3, 27.6, 31.3]
+E1 droneB [15.0]
+E1 persona1 [10.0]
+E2 aereo1 [10.0, 15.7, 27.7, 40.2]
+E2 mezzo1 [51.7, 62.9]
+E3 leggero1 [143.1, 173.1]
+E3 drone3 [183.3]
+E4 drone4 [38.9]
+E5 droneA [15.0, 45.0]
+E5 droneB [15.0, 45.0]
+== E1/E5: separazione minima fra A e B (m) e istante ==
+E1 0.0 m a t = 15.0
+   sotto 10.0 m da t = 14.35 a t = 15.0
+   sotto 20.0 m da t = 13.65 a t = 15.0
+E5 5.0 m a t = 15.0
+   sotto 10.0 m da t = 14.4 a t = 15.6
+   sotto 20.0 m da t = 13.65 a t = 16.35
+== portata del radar per il 'libero' (Pd cumulata 0.99 in 5 passate, Swerling 1, Pfa 1e-6: modello di 02-sensori e movi_lp.Sensore.portata) ==
+Pd per passata 0.602 SNR richiesto 26.2 SNR rif (Pd 0.5) 18.9 fattore sulla portata di scheda 0.922
+  radar_sorveglianza_droni, sereno, frammento_minimo (1e-4 m2) 904 m
+  radar_sorveglianza_droni, sereno, multirotore_piccolo (0.01) 2858 m
+  radar_sorveglianza_droni, sereno, aereo_leggero (2) 5000 m
+  radar_sorveglianza_droni, sereno, aereo_linea (20) 5000 m
+  (ottici: 'portata_pratica' EO e 'geometrica' termica di 02-sensori; la termica e' un limite superiore)
+== EV-D: portata utile per condizione (m) = min(f*R, c*visibilita') ==
+d_avv operatore di sito: inviluppo aeroporto_e_droni (v_max 90.0 ) = 1490 m; solo multirotore = 354 m
+  sereno                 multirotore_piccolo (0.01)   radar   2858  EO   2000  termica   1200 | libero fino a   2858 (senza radar   2000) | tempestivo (inviluppo 1490 m): si; senza radar: si
+  sereno                 aereo_leggero (2)            radar   5000  EO  15000  termica  40000 | libero fino a  40000 (senza radar  40000) | tempestivo (inviluppo 1490 m): si; senza radar: si
+  pioggia_forte_25mm_h   multirotore_piccolo (0.01)   radar   1715  EO   1000  termica    600 | libero fino a   1715 (senza radar   1000) | tempestivo (inviluppo 1490 m): si; senza radar: NO
+  pioggia_forte_25mm_h   aereo_leggero (2)            radar   3000  EO   1500  termica   3000 | libero fino a   3000 (senza radar   3000) | tempestivo (inviluppo 1490 m): si; senza radar: si
+  nebbia_fitta           multirotore_piccolo (0.01)   radar   2715  EO    200  termica    400 | libero fino a   2715 (senza radar    400) | tempestivo (inviluppo 1490 m): si; senza radar: NO
+  nebbia_fitta           aereo_leggero (2)            radar   4750  EO    200  termica    400 | libero fino a   4750 (senza radar    400) | tempestivo (inviluppo 1490 m): si; senza radar: NO
+  fumo_locale            multirotore_piccolo (0.01)   radar   2858  EO      0  termica     40 | libero fino a   2858 (senza radar     40) | tempestivo (inviluppo 1490 m): si; senza radar: NO
+  fumo_locale            aereo_leggero (2)            radar   5000  EO      0  termica     40 | libero fino a   5000 (senza radar     40) | tempestivo (inviluppo 1490 m): si; senza radar: NO
+== E2: distanza d'avviso del mezzo1 verso un ostacolo fermo ==
+  12*(1+2.5) + 12^2/(2*1.5) + 50 = 140.0 m
+== E1: caduta libera da 80 m senza resistenza: 4.04 s; con v_t=15 m/s (da fermo): 6.39 s

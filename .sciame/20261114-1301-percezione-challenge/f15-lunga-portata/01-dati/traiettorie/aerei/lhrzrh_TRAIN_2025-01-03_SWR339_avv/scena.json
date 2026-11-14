@@ -1,0 +1,36 @@
+{
+ "nome": "lhrzrh_TRAIN_2025-01-03_SWR339_avv",
+ "formato": "f15-comune-0.1",
+ "oggetti": [
+  {
+   "id": "lhrzrh_TRAIN_2025-01-03_SWR339_avv",
+   "classe": "aerei",
+   "tipo": "aereo_avvicinamento",
+   "etichetta": "assegnata a mano dal convertitore (dalla fonte), nessun classificatore"
+  }
+ ],
+ "riferimento": {
+  "sistema": "locale in metri, x est, y nord, z quota",
+  "origine": "punto piu' basso del tratto: lat 47.45763, lon 8.55588, quota 432 m"
+ },
+ "sensori": [
+  {
+   "id": "rif",
+   "posizione": [
+    0,
+    0,
+    0
+   ],
+   "nota": "SEGNAPOSTO: nessun sensore e' definito qui; vis_rif=1 ovunque. I ruoli degli scenari mettono sensori e ostacoli e ricalcolano la visibilita'."
+  }
+ ],
+ "ostacoli": [],
+ "finestra_velocita_s": 5.0,
+ "velocita": "derivate dalle posizioni (differenza centrata sulla finestra), non misurate",
+ "campioni": 531,
+ "durata_s": 530.0,
+ "passo_mediano_s": 1.0,
+ "fonte": "El Ouanbi e Amellal, Cleaned ADS-B Trajectories (LHR-ZRH 2025), Zenodo 18916312; origine OpenSky Network",
+ "licenza": "CC BY 4.0",
+ "nota": "tratto sotto 3000 m; la fonte ha GIA' filtrato e interpolato a 1 Hz con spline cubiche: accelerazioni e virate sono lisciate dalla fonte"
+}

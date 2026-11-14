@@ -1,0 +1,16 @@
+{
+ "commento": "ETICHETTE ASSEGNATE A MANO. Il classificatore non è realizzato: è supposto esistente e lasciato ai lavori futuri.",
+ "regole": [
+  {
+   "classe": "persona_a_piedi",
+   "da_s": 0,
+   "a_s": 1000000000.0,
+   "zona": [
+    -10,
+    10,
+    0,
+    10
+   ]
+  }
+ ]
+}
