@@ -1,0 +1,16 @@
+# Scritto dal coordinatore: fuori dal deposito i dati di terzi (alcuni senza licenza dichiarata),
+# l'ambiente Python e le sequenze rigenerabili. Come rigenerarli: 03-infrastruttura/AMBIENTE.md,
+# 11-simulatore/SIMULATORE.md, 12-dati-veri/DATI_VERI.md.
+scaricati/
+ambiente/
+11-simulatore/sequenze/
+11-simulatore/scaricati/
+01-ricercatore/pagine/
+02-sensori/scaricati/
+12-dati-veri/pagine/
+__pycache__/
+*.pyc
+*.npy
+*.npz
+*.bag
+*.pdf

@@ -1,0 +1,68 @@
+== rilancio 1 2026-11-14T16:15:58+01:00
+curl: (7) Failed to connect to www2.informatik.uni-freiburg.de:443 after 43 ms: Could not connect to server
+ERRORE: scaricamento fallito (curl: 7; risposta: 000). Niente è stato tenuto.
+uscita 5 2026-11-14T16:15:58+01:00
+FATTO: /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f10-dati/scaricati/tum_fr3_walking_static/walking_static.tgz
+  dimensione: 474074105 byte   sha256: 8aca832bf01746aa95fcc0b15bf42d78ad3bb8edef672ba4cc94a404b194f6c1
+  tipo rilevato: application/gzip   annotato in: /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f10-dati/scaricati/tum_fr3_walking_static/PROVENIENZA.md
+== thor 60M 2026-11-14T16:16:54+01:00
+s: file o directory non esistente: bash 03-infrastruttura/scarica.sh
+uscita 127 2026-11-14T16:16:54+01:00
+== thor 60M 2026-11-14T16:16:54+01:00
+s: file o directory non esistente: bash 03-infrastruttura/scarica.sh
+uscita 127 2026-11-14T16:16:54+01:00
+== realsense_bag 120M 2026-11-14T16:16:54+01:00
+s: file o directory non esistente: bash 03-infrastruttura/scarica.sh
+uscita 127 2026-11-14T16:16:54+01:00
+== realsense_bag 420M 2026-11-14T16:16:54+01:00
+s: file o directory non esistente: bash 03-infrastruttura/scarica.sh
+uscita 127 2026-11-14T16:16:54+01:00
+== realsense_bag 150M 2026-11-14T16:16:54+01:00
+s: file o directory non esistente: bash 03-infrastruttura/scarica.sh
+uscita 127 2026-11-14T16:16:54+01:00
+== princeton_tracking 650M 2026-11-14T16:16:54+01:00
+s: file o directory non esistente: bash 03-infrastruttura/scarica.sh
+uscita 127 2026-11-14T16:16:54+01:00
+== depthtrack 600M 2026-11-14T16:16:54+01:00
+s: file o directory non esistente: bash 03-infrastruttura/scarica.sh
+uscita 127 2026-11-14T16:16:54+01:00
+== fine 2026-11-14T16:16:54+01:00
+== tum_fr3_walking_static https://cvg.cit.tum.de/rgbd/dataset/freiburg3/rgbd_dataset_freiburg3_walking_static.tgz 2026-11-14T16:17:17+01:00
+GIÀ PRESENTE: /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f10-dati/scaricati/tum_fr3_walking_static/walking_static.tgz (474074105 byte), impronta uguale a quella annotata: non riscarico.
+uscita 0 2026-11-14T16:17:17+01:00
+== thor https://zenodo.org/api/records/3382145/files/Exp_1_run_1_6D.tsv/content 2026-11-14T16:17:17+01:00
+FATTO: /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f10-dati/scaricati/thor/Exp_1_run_1_6D.tsv
+  dimensione: 50448813 byte   sha256: 75b3630ff04c91bd664fdd5147a0f5713bdd1d3ef98d2a6b298303be3d06ce13
+  tipo rilevato: text/plain   annotato in: /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f10-dati/scaricati/thor/PROVENIENZA.md
+uscita 0 2026-11-14T16:17:33+01:00
+== thor https://zenodo.org/api/records/3382145/files/Exp_3_run_1_6D.tsv/content 2026-11-14T16:17:33+01:00
+FATTO: /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f10-dati/scaricati/thor/Exp_3_run_1_6D.tsv
+  dimensione: 49068383 byte   sha256: 448e8f0c752900483bd86f2bcaa5aee0fb064e8b82eb0d983e8d7365e20473be
+  tipo rilevato: text/plain   annotato in: /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f10-dati/scaricati/thor/PROVENIENZA.md
+uscita 0 2026-11-14T16:17:38+01:00
+== realsense_bag https://librealsense.realsenseai.com/rs-tests/D435i_Depth_and_IMU_Stands_still.bag 2026-11-14T16:17:38+01:00
+FATTO: /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f10-dati/scaricati/realsense_bag/stands_still.bag
+  dimensione: 107375642 byte   sha256: a038e8758d15e1bb2c94180c1474c612b70b5327654f8f85185dfd4a1f0b5bfb
+  tipo rilevato: application/octet-stream   annotato in: /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f10-dati/scaricati/realsense_bag/PROVENIENZA.md
+uscita 0 2026-11-14T16:17:41+01:00
+== realsense_bag https://librealsense.realsenseai.com/rs-tests/TestData/stairs.bag 2026-11-14T16:17:41+01:00
+FATTO: /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f10-dati/scaricati/realsense_bag/stairs.bag
+  dimensione: 409209452 byte   sha256: bcfbe5558aed2a9dc2d883c5cf307045e844b706c10f4791ba1111e25fd27d05
+  tipo rilevato: application/octet-stream   annotato in: /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f10-dati/scaricati/realsense_bag/PROVENIENZA.md
+uscita 0 2026-11-14T16:17:49+01:00
+== realsense_bag https://librealsense.realsenseai.com/rs-tests/TestData/structured.bag 2026-11-14T16:17:49+01:00
+FATTO: /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f10-dati/scaricati/realsense_bag/structured.bag
+  dimensione: 140920932 byte   sha256: 34dc21b7ed53ff2aee3d7749128d3830660e0ab92bb961a1cb9a6512547494cd
+  tipo rilevato: application/octet-stream   annotato in: /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f10-dati/scaricati/realsense_bag/PROVENIENZA.md
+uscita 0 2026-11-14T16:17:52+01:00
+== princeton_tracking https://tracking.cs.princeton.edu/ValidationSet.zip 2026-11-14T16:17:52+01:00
+FATTO: /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f10-dati/scaricati/princeton_tracking/ValidationSet.zip
+  dimensione: 631649593 byte   sha256: e6ec1b0adf3903baf6a25db4e96674f835189bfe2e72728a96abc1087316cdd2
+  tipo rilevato: application/zip   annotato in: /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f10-dati/scaricati/princeton_tracking/PROVENIENZA.md
+uscita 0 2026-11-14T16:18:28+01:00
+== depthtrack https://zenodo.org/api/records/5792146/files/human02_indoor.zip/content 2026-11-14T16:18:28+01:00
+FATTO: /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f10-dati/scaricati/depthtrack/human02_indoor.zip
+  dimensione: 578368987 byte   sha256: 33f750bea919cebf69d5d52db1692a33fb35c63f9edc6b154ae3ebb5ead035fe
+  tipo rilevato: application/zip   annotato in: /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f10-dati/scaricati/depthtrack/PROVENIENZA.md
+uscita 0 2026-11-14T16:19:09+01:00
+== fine 2026-11-14T16:19:09+01:00

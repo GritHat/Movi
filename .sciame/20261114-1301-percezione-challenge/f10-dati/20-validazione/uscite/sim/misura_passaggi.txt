@@ -1,0 +1,108 @@
+== identità alla ricomparsa e stati a soggetto nascosto ==
+gruppo; N; stessa identità; diversa; nessuna traccia dopo; nessuna prima; non ricompare; riagganci; passaggi con «identità ambigua» [motivi]; passaggi con ≥1 fot. «osservato» a soggetto nascosto; fotogrammi nascosti: traccia previsto/perso/assente/osservato; cella del centro: possibile presenza / occupato / non osservato / in ombra senza avviso / LIBERO; tracce fantasma mediana [min–max]; pannello «si muove»; soggetto «si muove» prima dell'ombra; continuità pulita (stessa identità, nessun «osservato» né riaggancio a soggetto nascosto); fusione; riagganci falsi; mai tracciato
+d435i_lim__pannello_a12; 4; 0 su 2 (0.0 %; IC 95 % 0.0–65.8); 1; 1; 2; 0; 0; 2 {'a meno della fascia da un altro bordo del non osservato': 2, 'a meno della fascia dal bordo della portata': 2, 'più tracce pendenti': 2}; 0; 22/0/22/0(+0 altro); 44/0/0/0/0(+0 fuori griglia); 54 [52–58]; 0 su 4; 0 su 4; CONTINUITÀ PULITA 0 su 2 (0.0 %; IC 95 % 0.0–65.8); fusione col pannello a soggetto intero: 4 su 4 passaggi; riagganci a soggetto nascosto: 0 su 4 passaggi; mai tracciato prima: 2
+d435i_lim__pannello_a12_scuro; 1; —; 0; 0; 1; 0; 0; 0 {}; 0; 0/0/11/0(+0 altro); 11/0/0/0/0(+0 fuori griglia); 72 [72–72]; 0 su 1; 0 su 1; CONTINUITÀ PULITA —; fusione col pannello a soggetto intero: 1 su 1 passaggi; riagganci a soggetto nascosto: 0 su 1 passaggi; mai tracciato prima: 1
+d435i_lim__pannello_b; 2; —; 0; 0; 2; 0; 0; 0 {}; 0; 0/0/126/0(+0 altro); 126/0/0/0/0(+0 fuori griglia); 102 [100–103]; 0 su 2; 0 su 2; CONTINUITÀ PULITA —; fusione col pannello a soggetto intero: 2 su 2 passaggi; riagganci a soggetto nascosto: 0 su 2 passaggi; mai tracciato prima: 2
+d435i_nom__pannello_a05; 30; 0 su 30 (0.0 %; IC 95 % 0.0–11.4); 30; 0; 0; 0; 0; 10 {'a meno della fascia dal bordo della portata': 10, 'più tracce pendenti': 5, 'a meno della fascia da un altro bordo del non osservato': 1}; 0; 34/94/665/0(+0 altro); 762/0/0/31/0(+0 fuori griglia); 30 [10–52]; 30 su 30; 17 su 30; CONTINUITÀ PULITA 0 su 30 (0.0 %; IC 95 % 0.0–11.4); fusione col pannello a soggetto intero: 30 su 30 passaggi; riagganci a soggetto nascosto: 0 su 30 passaggi; mai tracciato prima: 0
+d435i_nom__pannello_a12; 30; 0 su 30 (0.0 %; IC 95 % 0.0–11.4); 30; 0; 0; 0; 0; 19 {'a meno della fascia da un altro bordo del non osservato': 6, 'a meno della fascia dal bordo della portata': 19, 'più tracce pendenti': 14}; 1; 105/74/143/5(+1 altro); 296/0/0/32/0(+0 fuori griglia); 15 [7–32]; 24 su 30; 30 su 30; CONTINUITÀ PULITA 0 su 30 (0.0 %; IC 95 % 0.0–11.4); fusione col pannello a soggetto intero: 30 su 30 passaggi; riagganci a soggetto nascosto: 0 su 30 passaggi; mai tracciato prima: 0
+d435i_nom__pannello_a12__filtri; 2; 0 su 2 (0.0 %; IC 95 % 0.0–65.8); 2; 0; 0; 0; 0; 2 {'a meno della fascia da un altro bordo del non osservato': 2, 'a meno della fascia dal bordo della portata': 2}; 1; 0/0/12/10(+1 altro); 23/0/0/0/0(+0 fuori griglia); 13 [12–14]; 2 su 2; 2 su 2; CONTINUITÀ PULITA 0 su 2 (0.0 %; IC 95 % 0.0–65.8); fusione col pannello a soggetto intero: 2 su 2 passaggi; riagganci a soggetto nascosto: 0 su 2 passaggi; mai tracciato prima: 0
+d435i_nom__pannello_a12_nero; 2; 0 su 2 (0.0 %; IC 95 % 0.0–65.8); 2; 0; 0; 0; 0; 1 {'a meno della fascia dal bordo della portata': 1, 'più tracce pendenti': 1}; 1; 0/0/11/12(+0 altro); 23/0/0/0/0(+0 fuori griglia); 16 [11–21]; 2 su 2; 2 su 2; CONTINUITÀ PULITA 0 su 2 (0.0 %; IC 95 % 0.0–65.8); fusione col pannello a soggetto intero: 2 su 2 passaggi; riagganci a soggetto nascosto: 0 su 2 passaggi; mai tracciato prima: 0
+d435i_nom__pannello_a12_scuro; 2; 0 su 2 (0.0 %; IC 95 % 0.0–65.8); 2; 0; 0; 0; 0; 1 {'a meno della fascia dal bordo della portata': 1, 'più tracce pendenti': 1}; 0; 5/7/11/0(+0 altro); 23/0/0/0/0(+0 fuori griglia); 16 [15–18]; 2 su 2; 2 su 2; CONTINUITÀ PULITA 0 su 2 (0.0 %; IC 95 % 0.0–65.8); fusione col pannello a soggetto intero: 2 su 2 passaggi; riagganci a soggetto nascosto: 0 su 2 passaggi; mai tracciato prima: 0
+d435i_nom__pannello_b; 30; 0 su 30 (0.0 %; IC 95 % 0.0–11.4); 30; 0; 0; 0; 2; 21 {'a meno della fascia dal bordo della portata': 21, 'più tracce pendenti': 16, 'a meno della fascia da un altro bordo del non osservato': 12}; 7; 254/678/910/51(+24 altro); 1881/0/0/36/0(+0 fuori griglia); 38 [16–66]; 25 su 30; 20 su 30; CONTINUITÀ PULITA 0 su 30 (0.0 %; IC 95 % 0.0–11.4); fusione col pannello a soggetto intero: 30 su 30 passaggi; riagganci a soggetto nascosto: 2 su 30 passaggi; mai tracciato prima: 0
+d435i_nom__pannello_b__filtri; 1; 0 su 1 (0.0 %; IC 95 % 0.0–79.3); 1; 0; 0; 0; 0; 1 {'a meno della fascia da un altro bordo del non osservato': 1}; 0; 0/0/63/0(+0 altro); 63/0/0/0/0(+0 fuori griglia); 54 [54–54]; 1 su 1; 1 su 1; CONTINUITÀ PULITA 0 su 1 (0.0 %; IC 95 % 0.0–79.3); fusione col pannello a soggetto intero: 1 su 1 passaggi; riagganci a soggetto nascosto: 0 su 1 passaggi; mai tracciato prima: 0
+d435i_nom__pannello_c; 4; 0 su 4 (0.0 %; IC 95 % 0.0–49.0); 4; 0; 0; 0; 0; 2 {'a meno della fascia da un altro bordo del non osservato': 2, 'a meno della fascia dal bordo della portata': 1}; 0; 10/0/118/0(+0 altro); 128/0/0/0/0(+0 fuori griglia); 22 [20–24]; 4 su 4; 3 su 4; CONTINUITÀ PULITA 0 su 4 (0.0 %; IC 95 % 0.0–49.0); fusione col pannello a soggetto intero: 4 su 4 passaggi; riagganci a soggetto nascosto: 0 su 4 passaggi; mai tracciato prima: 0
+d435i_nom__pannello_d; 4; —; 0; 0; 0; 4; 0; 3 {'più tracce pendenti': 2, 'a meno della fascia dal bordo della portata': 2, 'a meno della fascia da un altro bordo del non osservato': 1}; 1; 56/55/129/16(+0 altro); 109/0/0/11/0(+136 fuori griglia); 62 [48–73]; 1 su 4; 4 su 4; CONTINUITÀ PULITA —; fusione col pannello a soggetto intero: 4 su 4 passaggi; riagganci a soggetto nascosto: 0 su 4 passaggi; mai tracciato prima: 0
+d455_nom__pannello_a05; 1; 0 su 1 (0.0 %; IC 95 % 0.0–79.3); 1; 0; 0; 0; 1; 1 {'a meno della fascia dal bordo della portata': 1}; 1; 0/2/0/21(+1 altro); 2/0/0/22/0(+0 fuori griglia); 0 [0–0]; 1 su 1; 1 su 1; CONTINUITÀ PULITA 0 su 1 (0.0 %; IC 95 % 0.0–79.3); fusione col pannello a soggetto intero: 1 su 1 passaggi; riagganci a soggetto nascosto: 1 su 1 passaggi; mai tracciato prima: 0
+d455_nom__pannello_a12; 3; 1 su 3 (33.3 %; IC 95 % 6.1–79.2); 2; 0; 0; 0; 3; 3 {'a meno della fascia dal bordo della portata': 3}; 3; 18/2/0/15(+0 altro); 24/0/0/11/0(+0 fuori griglia); 0 [0–1]; 3 su 3; 3 su 3; CONTINUITÀ PULITA 0 su 3 (0.0 %; IC 95 % 0.0–56.2); fusione col pannello a soggetto intero: 3 su 3 passaggi; riagganci a soggetto nascosto: 3 su 3 passaggi; mai tracciato prima: 0
+d455_nom__pannello_b; 1; 0 su 1 (0.0 %; IC 95 % 0.0–79.3); 1; 0; 0; 0; 1; 1 {'a meno della fascia dal bordo della portata': 1}; 1; 3/0/0/45(+15 altro); 3/1/0/59/0(+0 fuori griglia); 0 [0–0]; 1 su 1; 1 su 1; CONTINUITÀ PULITA 0 su 1 (0.0 %; IC 95 % 0.0–79.3); fusione col pannello a soggetto intero: 1 su 1 passaggi; riagganci a soggetto nascosto: 1 su 1 passaggi; mai tracciato prima: 0
+g335_nom__pannello_a05; 1; 0 su 1 (0.0 %; IC 95 % 0.0–79.3); 1; 0; 0; 0; 0; 0 {}; 0; 0/0/24/0(+0 altro); 22/0/0/2/0(+0 fuori griglia); 19 [19–19]; 1 su 1; 1 su 1; CONTINUITÀ PULITA 0 su 1 (0.0 %; IC 95 % 0.0–79.3); fusione col pannello a soggetto intero: 1 su 1 passaggi; riagganci a soggetto nascosto: 1 su 1 passaggi; mai tracciato prima: 0
+g335_nom__pannello_a12; 3; 0 su 3 (0.0 %; IC 95 % 0.0–56.2); 3; 0; 0; 0; 0; 1 {'a meno della fascia da un altro bordo del non osservato': 1, 'a meno della fascia dal bordo della portata': 1, 'più tracce pendenti': 1}; 0; 5/7/23/0(+0 altro); 35/0/0/0/0(+0 fuori griglia); 23 [12–24]; 3 su 3; 3 su 3; CONTINUITÀ PULITA 0 su 3 (0.0 %; IC 95 % 0.0–56.2); fusione col pannello a soggetto intero: 3 su 3 passaggi; riagganci a soggetto nascosto: 0 su 3 passaggi; mai tracciato prima: 0
+g335_nom__pannello_b; 1; 0 su 1 (0.0 %; IC 95 % 0.0–79.3); 1; 0; 0; 0; 0; 1 {'a meno della fascia dal bordo della portata': 1, 'più tracce pendenti': 1}; 0; 5/58/0/0(+0 altro); 63/0/0/0/0(+0 fuori griglia); 78 [78–78]; 1 su 1; 0 su 1; CONTINUITÀ PULITA 0 su 1 (0.0 %; IC 95 % 0.0–79.3); fusione col pannello a soggetto intero: 1 su 1 passaggi; riagganci a soggetto nascosto: 0 su 1 passaggi; mai tracciato prima: 0
+
+== previsione durante l'occlusione: errore medio per fascia di tempo dal primo fotogramma nascosto (mediana fra i passaggi [N passaggi con dati]) ==
+gruppo; metodo; 0-0,25; 0,25-0,5; 0,5-0,75; 0,75-1; 1-2; 2-3; >3 (s)
+d435i_lim__pannello_a12; nucleo; 4.83 [2]; 6.21 [2]; 7.42 [2]; —; —; —; —
+d435i_lim__pannello_a12; fermo; 0.83 [2]; 0.97 [2]; 1.10 [2]; —; —; —; —
+d435i_lim__pannello_a12; retta; —; —; —; —; —; —; —
+d435i_lim__pannello_a12_scuro; nucleo; —; —; —; —; —; —; —
+d435i_lim__pannello_a12_scuro; fermo; —; —; —; —; —; —; —
+d435i_lim__pannello_a12_scuro; retta; —; —; —; —; —; —; —
+d435i_lim__pannello_b; nucleo; —; —; —; —; —; —; —
+d435i_lim__pannello_b; fermo; —; —; —; —; —; —; —
+d435i_lim__pannello_b; retta; —; —; —; —; —; —; —
+d435i_nom__pannello_a05; nucleo; 0.12 [8]; 0.13 [5]; 0.14 [5]; 0.15 [5]; 0.21 [5]; —; —
+d435i_nom__pannello_a05; fermo; 0.58 [30]; 0.71 [30]; 0.84 [30]; 0.95 [30]; 1.17 [30]; —; —
+d435i_nom__pannello_a05; retta; 0.10 [30]; 0.10 [30]; 0.11 [30]; 0.12 [30]; 0.17 [30]; —; —
+d435i_nom__pannello_a12; nucleo; 0.07 [17]; 0.10 [17]; 0.11 [17]; —; —; —; —
+d435i_nom__pannello_a12; fermo; 0.70 [30]; 1.00 [30]; 1.25 [30]; —; —; —; —
+d435i_nom__pannello_a12; retta; 0.06 [30]; 0.07 [30]; 0.09 [30]; —; —; —; —
+d435i_nom__pannello_a12__filtri; nucleo; —; —; —; —; —; —; —
+d435i_nom__pannello_a12__filtri; fermo; 0.67 [2]; 0.95 [2]; 1.22 [2]; —; —; —; —
+d435i_nom__pannello_a12__filtri; retta; 0.04 [2]; 0.06 [2]; 0.06 [2]; —; —; —; —
+d435i_nom__pannello_a12_nero; nucleo; —; —; —; —; —; —; —
+d435i_nom__pannello_a12_nero; fermo; 0.68 [2]; 0.95 [2]; 1.23 [2]; —; —; —; —
+d435i_nom__pannello_a12_nero; retta; 0.05 [2]; 0.07 [2]; 0.07 [2]; —; —; —; —
+d435i_nom__pannello_a12_scuro; nucleo; 0.10 [1]; 0.13 [1]; 0.14 [1]; —; —; —; —
+d435i_nom__pannello_a12_scuro; fermo; 0.67 [2]; 0.94 [2]; 1.21 [2]; —; —; —; —
+d435i_nom__pannello_a12_scuro; retta; 0.05 [2]; 0.08 [2]; 0.08 [2]; —; —; —; —
+d435i_nom__pannello_b; nucleo; 0.09 [17]; 0.20 [17]; 0.45 [16]; 0.73 [16]; 1.46 [18]; 2.64 [14]; 3.88 [14]
+d435i_nom__pannello_b; fermo; 0.68 [30]; 0.87 [30]; 0.91 [30]; 0.91 [30]; 0.91 [30]; 0.91 [30]; 1.01 [30]
+d435i_nom__pannello_b; retta; 0.09 [30]; 0.17 [30]; 0.41 [30]; 0.68 [30]; 1.36 [30]; 2.51 [30]; 3.73 [30]
+d435i_nom__pannello_b__filtri; nucleo; —; —; —; —; —; —; —
+d435i_nom__pannello_b__filtri; fermo; 0.64 [1]; 0.74 [1]; 0.75 [1]; 0.75 [1]; 0.75 [1]; 0.75 [1]; 0.87 [1]
+d435i_nom__pannello_b__filtri; retta; 0.10 [1]; 0.22 [1]; 0.47 [1]; 0.71 [1]; 1.33 [1]; 2.37 [1]; 3.39 [1]
+d435i_nom__pannello_c; nucleo; 0.08 [1]; 0.20 [1]; 0.39 [1]; —; —; —; —
+d435i_nom__pannello_c; fermo; 0.67 [4]; 0.83 [4]; 0.86 [4]; 0.86 [4]; 0.81 [4]; 0.58 [3]; —
+d435i_nom__pannello_c; retta; 0.08 [4]; 0.17 [4]; 0.42 [4]; 0.69 [4]; 1.37 [4]; 2.38 [3]; —
+d435i_nom__pannello_d; nucleo; 0.10 [1]; 0.25 [1]; 0.54 [1]; 0.83 [1]; 2.14 [2]; 4.05 [2]; 5.90 [2]
+d435i_nom__pannello_d; fermo; 0.65 [4]; 0.84 [4]; 0.90 [4]; 0.90 [4]; 0.97 [4]; 1.57 [4]; 2.10 [4]
+d435i_nom__pannello_d; retta; 0.05 [4]; 0.13 [4]; 0.35 [4]; 0.62 [4]; 1.33 [4]; 2.68 [4]; 4.07 [4]
+d455_nom__pannello_a05; nucleo; 0.11 [1]; —; —; —; —; —; —
+d455_nom__pannello_a05; fermo; 0.60 [1]; 0.73 [1]; 0.87 [1]; 0.99 [1]; 1.19 [1]; —; —
+d455_nom__pannello_a05; retta; 0.09 [1]; 0.10 [1]; 0.10 [1]; 0.11 [1]; 0.14 [1]; —; —
+d455_nom__pannello_a12; nucleo; 0.07 [3]; 0.10 [3]; 0.47 [1]; —; —; —; —
+d455_nom__pannello_a12; fermo; 0.67 [3]; 0.95 [3]; 1.22 [3]; —; —; —; —
+d455_nom__pannello_a12; retta; 0.03 [3]; 0.06 [3]; 0.05 [3]; —; —; —; —
+d455_nom__pannello_b; nucleo; —; —; —; —; 2.42 [1]; —; 6.07 [1]
+d455_nom__pannello_b; fermo; 0.64 [1]; 0.74 [1]; 0.75 [1]; 0.75 [1]; 0.75 [1]; 0.75 [1]; 0.87 [1]
+d455_nom__pannello_b; retta; 0.11 [1]; 0.25 [1]; 0.52 [1]; 0.77 [1]; 1.41 [1]; 2.49 [1]; 3.55 [1]
+g335_nom__pannello_a05; nucleo; —; —; —; —; —; —; —
+g335_nom__pannello_a05; fermo; 0.56 [1]; 0.69 [1]; 0.84 [1]; 0.95 [1]; 1.16 [1]; —; —
+g335_nom__pannello_a05; retta; 0.10 [1]; 0.11 [1]; 0.10 [1]; 0.11 [1]; 0.15 [1]; —; —
+g335_nom__pannello_a12; nucleo; 0.06 [1]; 0.10 [1]; 0.12 [1]; —; —; —; —
+g335_nom__pannello_a12; fermo; 0.67 [3]; 0.95 [3]; 1.23 [3]; —; —; —; —
+g335_nom__pannello_a12; retta; 0.04 [3]; 0.06 [3]; 0.06 [3]; —; —; —; —
+g335_nom__pannello_b; nucleo; 0.11 [1]; 0.23 [1]; 0.48 [1]; 0.72 [1]; 1.34 [1]; 2.39 [1]; 3.41 [1]
+g335_nom__pannello_b; fermo; 0.71 [1]; 0.82 [1]; 0.82 [1]; 0.82 [1]; 0.82 [1]; 0.82 [1]; 0.95 [1]
+g335_nom__pannello_b; retta; 0.11 [1]; 0.24 [1]; 0.49 [1]; 0.73 [1]; 1.36 [1]; 2.40 [1]; 3.44 [1]
+
+== regione dichiarata e ricomparsa ==
+gruppo; N con previsioni; copertura 90 % (ellisse) mediana fra i passaggi; passaggi con copertura ≥ 0,85; copertura cerchio 95 % mediana; durata del «previsto» mediana (s); buio prima dell'ingresso mediana (s); riagganci: errore mediano (m), in90, in95; errore alla prima misura dopo: nucleo / fermo / retta (mediana, m)
+d435i_lim__pannello_a12; 2; 0.00; 0 su 2; 0.00; — [0]; 0.17; — [0], 0, 0; 6.97 [1] / 2.39 [1] / — [0]
+d435i_nom__pannello_a05; 8; 1.00; 6 su 8; 1.00; 0.77 [6]; 0.07; — [0], 0, 0; 0.28 [17] / 1.81 [30] / 0.31 [30]
+d435i_nom__pannello_a12; 18; 1.00; 17 su 18; 1.00; 0.60 [13]; 0.20; — [0], 0, 0; 0.44 [21] / 1.80 [30] / 0.36 [30]
+d435i_nom__pannello_a12_scuro; 1; 1.00; 1 su 1; 1.00; 0.67 [1]; 0.07; — [0], 0, 0; 0.57 [1] / 1.68 [2] / 0.52 [2]
+d435i_nom__pannello_b; 20; 1.00; 13 su 20; 1.00; 0.57 [14]; 0.13; 0.53 [2], 1, 1; 4.40 [23] / 1.73 [30] / 4.25 [30]
+d435i_nom__pannello_c; 1; 1.00; 1 su 1; 1.00; — [0]; 0.07; — [0], 0, 0; 3.12 [3] / 0.26 [4] / 3.51 [4]
+d435i_nom__pannello_d; 2; 0.20; 0 su 2; 0.50; 0.60 [1]; 0.07; — [0], 0, 0; — [0] / — [0] / — [0]
+d455_nom__pannello_a05; 1; 1.00; 1 su 1; 1.00; 0.27 [1]; 0.20; 0.96 [1], 0, 1; 0.51 [1] / 1.83 [1] / 0.48 [1]
+d455_nom__pannello_a12; 3; 1.00; 2 su 3; 1.00; 0.70 [2]; 0.07; 0.83 [3], 0, 2; 0.57 [3] / 1.88 [3] / 0.55 [3]
+d455_nom__pannello_b; 1; 0.00; 0 su 1; 0.00; — [0]; 0.07; 2.36 [1], 0, 0; 6.62 [1] / 2.07 [1] / 3.77 [1]
+g335_nom__pannello_a12; 1; 1.00; 1 su 1; 1.00; 0.67 [1]; 0.13; — [0], 0, 0; 0.47 [3] / 1.81 [3] / 0.39 [3]
+g335_nom__pannello_b; 1; 1.00; 1 su 1; 1.00; 0.67 [1]; 0.07; — [0], 0, 0; 3.60 [1] / 2.07 [1] / 3.62 [1]
+
+== rumore del centro di una persona in moto (scarto tipo del centro misurato − verità sui fotogrammi interi prima dell'ombra, per passaggio; mediana) e scarto sistematico ==
+d435i_nom__pannello_a05; N 30; sigma radiale 0.2 cm (max 0.3); trasversale 0.1 cm (max 0.3); scarto radiale -15.7 cm; trasversale 0.0 cm
+d435i_nom__pannello_a12; N 30; sigma radiale 0.2 cm (max 0.4); trasversale 0.2 cm (max 0.2); scarto radiale -16.2 cm; trasversale 0.0 cm
+d435i_nom__pannello_a12__filtri; N 2; sigma radiale 0.4 cm (max 0.4); trasversale 0.3 cm (max 0.3); scarto radiale -15.9 cm; trasversale -0.1 cm
+d435i_nom__pannello_a12_nero; N 2; sigma radiale 0.7 cm (max 0.7); trasversale 0.6 cm (max 0.7); scarto radiale -16.3 cm; trasversale -0.1 cm
+d435i_nom__pannello_a12_scuro; N 2; sigma radiale 0.4 cm (max 0.5); trasversale 0.3 cm (max 0.4); scarto radiale -16.4 cm; trasversale 0.0 cm
+d435i_nom__pannello_b; N 30; sigma radiale 0.2 cm (max 0.4); trasversale 0.2 cm (max 0.2); scarto radiale -16.1 cm; trasversale 0.0 cm
+d435i_nom__pannello_b__filtri; N 1; sigma radiale 0.3 cm (max 0.3); trasversale 0.5 cm (max 0.5); scarto radiale -15.9 cm; trasversale -1.3 cm
+d435i_nom__pannello_c; N 3; sigma radiale 0.3 cm (max 0.3); trasversale 0.1 cm (max 0.2); scarto radiale -16.1 cm; trasversale 0.8 cm
+d435i_nom__pannello_d; N 4; sigma radiale 0.2 cm (max 0.2); trasversale 0.1 cm (max 0.2); scarto radiale -16.0 cm; trasversale 0.0 cm
+d455_nom__pannello_a05; N 1; sigma radiale 0.2 cm (max 0.2); trasversale 0.1 cm (max 0.1); scarto radiale -15.8 cm; trasversale -0.7 cm
+d455_nom__pannello_a12; N 3; sigma radiale 0.2 cm (max 0.2); trasversale 0.2 cm (max 0.2); scarto radiale -16.0 cm; trasversale -0.8 cm
+d455_nom__pannello_b; N 1; sigma radiale 0.1 cm (max 0.1); trasversale 0.1 cm (max 0.1); scarto radiale -16.0 cm; trasversale -0.7 cm
+g335_nom__pannello_a05; N 1; sigma radiale 0.1 cm (max 0.1); trasversale 0.1 cm (max 0.1); scarto radiale -15.8 cm; trasversale -0.7 cm
+g335_nom__pannello_a12; N 3; sigma radiale 0.4 cm (max 0.4); trasversale 0.2 cm (max 0.2); scarto radiale -16.1 cm; trasversale -0.7 cm

@@ -1,0 +1,33 @@
+== copertura dell'ellisse al 90 % per passaggio (D435i nominale, a12 / a05 / b) ==
+sim a12: con previsioni 18/30; verità SEMPRE dentro 17/30 (39.2–72.6 %); fuori (passaggio, copertura, errore massimo m): [('s06', 0.0, 0.57)]; errore all'ultimo fotogramma nascosto: mediana 0.11, p90 0.15 m (contro il centro vero: 0.21)
+sim a05: con previsioni 8/30; verità SEMPRE dentro 6/30 (9.5–37.3 %); fuori (passaggio, copertura, errore massimo m): [('s13', 0.0, 0.73), ('s24', 0.0, 1.94)]; errore all'ultimo fotogramma nascosto: mediana 0.23, p90 1.10 m (contro il centro vero: 0.13)
+sim b: con previsioni 20/30; verità SEMPRE dentro 13/30 (27.4–60.8 %); fuori (passaggio, copertura, errore massimo m): [('s02', 0.0, 1.93), ('s13', 0.19, 4.63), ('s17', 0.0, 1.9), ('s21', 0.0, 0.98), ('s22', 0.02, 14.6), ('s24', 0.42, 4.84), ('s25', 0.7, 2.32)]; errore all'ultimo fotogramma nascosto: mediana 4.18, p90 4.82 m (contro il centro vero: 4.16)
+sim: in tutto 36/90 (30.5–50.3 %)
+sim_p40 a12: con previsioni 30/30; verità SEMPRE dentro 30/30 (88.6–100.0 %); fuori (passaggio, copertura, errore massimo m): []; errore all'ultimo fotogramma nascosto: mediana 0.13, p90 0.15 m (contro il centro vero: 0.27)
+sim_p40 a05: con previsioni 30/30; verità SEMPRE dentro 26/30 (70.3–94.7 %); fuori (passaggio, copertura, errore massimo m): [('s04', 0.0, 2.68), ('s15', 0.0, 2.89), ('s18', 0.0, 2.59), ('s28', 0.0, 2.27)]; errore all'ultimo fotogramma nascosto: mediana 0.19, p90 2.30 m (contro il centro vero: 0.29)
+sim_p40 b: con previsioni 30/30; verità SEMPRE dentro 27/30 (74.4–96.5 %); fuori (passaggio, copertura, errore massimo m): [('s07', 0.84, 4.36), ('s24', 0.27, 4.96), ('s25', 0.57, 4.62)]; errore all'ultimo fotogramma nascosto: mediana 4.20, p90 4.60 m (contro il centro vero: 4.17)
+sim_p40: in tutto 83/90 (84.8–96.2 %)
+
+== persona ferma, replica: semi con sigma radiale sopra la curva nominale / sopra 1 cm ==
+soglia 3, 2.0 m: sopra la nominale (1.5 cm) 8/20 (21.9–61.3 %); sopra 1 cm 8/20; valori ordinati: [0.17, 0.19, 0.21, 0.21, 0.21, 0.21, 0.27, 0.27, 0.3, 0.33, 0.35, 0.39, 3.69, 3.8, 3.83, 3.94, 4.1, 4.21, 4.24, 4.44]
+soglia 3, 3.0 m: sopra la nominale (3.4 cm) 0/20 (0.0–16.1 %); sopra 1 cm 7/20; valori ordinati: [0.48, 0.51, 0.53, 0.64, 0.65, 0.66, 0.69, 0.74, 0.82, 0.83, 0.84, 0.88, 0.88, 1.01, 1.02, 1.07, 1.19, 1.37, 1.48, 1.56]
+soglia 3, 4.0 m: sopra la nominale (6.0 cm) 2/20 (2.8–30.1 %); sopra 1 cm 14/20; valori ordinati: [0.66, 0.73, 0.78, 0.79, 0.84, 0.95, 1.04, 1.04, 1.15, 1.16, 1.2, 1.27, 1.43, 1.86, 2.05, 3.98, 4.96, 5.74, 6.37, 9.42]
+soglia 40, 2.0 m: sopra la nominale (1.5 cm) 0/20 (0.0–16.1 %); sopra 1 cm 0/20; valori ordinati: [0.09, 0.11, 0.11, 0.11, 0.12, 0.12, 0.12, 0.13, 0.13, 0.13, 0.13, 0.13, 0.13, 0.14, 0.14, 0.14, 0.14, 0.15, 0.16, 0.16]
+soglia 40, 3.0 m: sopra la nominale (3.4 cm) 0/20 (0.0–16.1 %); sopra 1 cm 0/20; valori ordinati: [0.3, 0.31, 0.31, 0.31, 0.31, 0.32, 0.32, 0.32, 0.33, 0.34, 0.34, 0.34, 0.35, 0.36, 0.36, 0.36, 0.39, 0.4, 0.4, 0.44]
+soglia 40, 4.0 m: sopra la nominale (6.0 cm) 0/20 (0.0–16.1 %); sopra 1 cm 0/20; valori ordinati: [0.39, 0.54, 0.58, 0.61, 0.61, 0.63, 0.65, 0.66, 0.66, 0.69, 0.71, 0.72, 0.74, 0.75, 0.75, 0.76, 0.78, 0.79, 0.88, 0.91]
+
+== realsense_stands_still (D435i vero, 640x360, 120 fotogrammi): pixel sempre validi 0.562; distanza mediana 349 mm; scarto tipo nel tempo mediana 0.36 mm, 90° 0.50 mm
+   modello a 848 px: temporale atteso 0,6·k·z² = 0.28 mm; rapporto vero / modello 1.29
+   modello riportato a 640 px: temporale atteso 0,6·k·z² = 0.37 mm; rapporto vero / modello 0.97
+
+== rapporti vero / simulato (D435i nominale e limite, pannello_a12__s00) ==
+realsense_stairs: validi 61.0 % contro 96.9 (nom) e 85.5 (lim): -35.9 e -24.5 punti; buchi fra 0,5 e 3 m 34.4 % contro 1.7 e 7.8 (×20 e ×4.4); pixel della scena fra 0,5 e 3 m 86 %
+     rumore 1.0-2.0 m: vero 6.3 mm a 1.35 m; simulato riportato con z²: nominale 4.3, limite 14.9; rapporto vero / nominale 1.45, vero / limite 0.42
+     rumore 2.0-3.0 m: vero 21.0 mm a 2.29 m; simulato riportato con z²: nominale 25.3, limite 90.7; rapporto vero / nominale 0.83, vero / limite 0.23
+depthtrack_human02_indoor: validi 76.1 % contro 96.9 (nom) e 85.5 (lim): -20.8 e -9.4 punti; buchi fra 0,5 e 3 m 24.1 % contro 1.7 e 7.8 (×14 e ×3.1); pixel della scena fra 0,5 e 3 m 35 %
+     rumore 1.0-2.0 m: vero 23.1 mm a 1.50 m; simulato riportato con z²: nominale 5.3, limite 18.3; rapporto vero / nominale 4.34, vero / limite 1.26
+     rumore 2.0-3.0 m: vero 43.0 mm a 2.35 m; simulato riportato con z²: nominale 26.6, limite 95.5; rapporto vero / nominale 1.62, vero / limite 0.45
+realsense_stands_still: validi 57.9 % contro 96.9 (nom) e 85.5 (lim): -39.0 e -27.6 punti; buchi fra 0,5 e 3 m 83.8 % contro 1.7 e 7.8 (×49 e ×10.8); pixel della scena fra 0,5 e 3 m 1 %
+     rumore 2.0-3.0 m: vero 476.0 mm a 2.47 m; simulato riportato con z²: nominale 29.4, limite 105.4; rapporto vero / nominale 16.21, vero / limite 4.51
+tum_fr3_walking_static: validi 70.9 % contro 96.9 (nom) e 85.5 (lim): -26.1 e -14.7 punti; buchi fra 0,5 e 3 m 6.3 % contro 1.7 e 7.8 (×4 e ×0.8); pixel della scena fra 0,5 e 3 m 48 %
+     rumore 2.0-3.0 m: vero 12.6 mm a 2.45 m; simulato riportato con z²: nominale 28.8, limite 103.5; rapporto vero / nominale 0.44, vero / limite 0.12

@@ -1,0 +1,53 @@
+### depthtrack_human02_indoor: uscita 0; con --rigoroso: 1
+nota: meta: 640x360 px, 30.0 fps, campo orizzontale 69.4°, sensore «Intel RealSense D415 (stereo attivo a infrarossi)», posa None
+nota: tempi: 1740 fotogrammi, durata 57.967 s, passo mediano 33.3 ms, massimo 33.3 ms
+nota: profondità (tutti): senza dato 23.0%; valori validi: 1° percentile 799 mm, mediana 4092 mm, 99° 24502 mm, massimo 65521 mm
+nota: verità: 1740 fotogrammi annotati, 1 soggetti (bersaglio), 8 presenze nascoste, 3 passaggi da visibile a nascosto, 0 ostacoli
+AVVISO: profondita/: 99° percentile 24502: oltre 20 m; forse l'unità non è il millimetro (per esempio 1/5000 di metro, o 0,1 mm)
+ESITO: rispetta il formato (0 errori, 1 avvisi) — 12-dati-veri/sequenze/depthtrack_human02_indoor
+### princeton_child_no1: uscita 0; con --rigoroso: 0
+nota: meta: 640x480 px, 30.0 fps, campo orizzontale 58.1°, sensore «Microsoft Kinect v1 (luce strutturata) via OpenNI; profondità registrata sul colore (non verificato)», posa None
+nota: tempi: 164 fotogrammi, durata 8.042 s, passo mediano 33.4 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 26.0%; valori validi: 1° percentile 1259 mm, mediana 3341 mm, 99° 9489 mm, massimo 9757 mm
+nota: verità: 164 fotogrammi annotati, 1 soggetti (bersaglio), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 0 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — 12-dati-veri/sequenze/princeton_child_no1
+### princeton_face_occ5: uscita 0; con --rigoroso: 1
+nota: meta: 640x480 px, 15.0 fps, campo orizzontale 58.1°, sensore «Microsoft Kinect v1 (luce strutturata) via OpenNI; profondità registrata sul colore (non verificato)», posa None
+nota: tempi: 330 fotogrammi, durata 16.952 s, passo mediano 66.7 ms, massimo 200.2 ms
+nota: profondità (tutti): senza dato 35.7%; valori validi: 1° percentile 814 mm, mediana 3621 mm, 99° 8995 mm, massimo 9757 mm
+nota: verità: 330 fotogrammi annotati, 1 soggetti (bersaglio), 14 presenze nascoste, 1 passaggi da visibile a nascosto, 0 ostacoli
+AVVISO: tempi.csv: ci sono salti (passo massimo 200.2 ms, 1 oltre 2,5 volte il mediano)
+ESITO: rispetta il formato (0 errori, 1 avvisi) — 12-dati-veri/sequenze/princeton_face_occ5
+### princeton_new_ex_occ4: uscita 0; con --rigoroso: 0
+nota: meta: 640x480 px, 15.0 fps, campo orizzontale 58.1°, sensore «Microsoft Kinect v1 (luce strutturata) via OpenNI; profondità registrata sul colore (non verificato)», posa None
+nota: tempi: 51 fotogrammi, durata 2.536 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 39.1%; valori validi: 1° percentile 1795 mm, mediana 4243 mm, 99° 9489 mm, massimo 9757 mm
+nota: verità: 51 fotogrammi annotati, 1 soggetti (bersaglio), 3 presenze nascoste, 1 passaggi da visibile a nascosto, 0 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — 12-dati-veri/sequenze/princeton_new_ex_occ4
+### realsense_stairs: uscita 0; con --rigoroso: 1
+nota: meta: 1280x720 px, 30.0 fps, campo orizzontale 90.4°, sensore «Intel RealSense 435 (stereo attivo a infrarossi)», posa None
+nota: tempi: 146 fotogrammi, durata 10.223 s, passo mediano 45.6 ms, massimo 573.2 ms
+nota: profondità (tutti): senza dato 38.6%; valori validi: 1° percentile 456 mm, mediana 790 mm, 99° 3811 mm, massimo 63590 mm
+nota: verita.json: assente (ammesso: senza verità la misura è solo descrittiva)
+AVVISO: tempi.csv: il passo mediano (45.6 ms) non corrisponde a fps = 30.0 (attesi 33.3 ms)
+AVVISO: tempi.csv: ci sono salti (passo massimo 573.2 ms, 18 oltre 2,5 volte il mediano)
+ESITO: rispetta il formato (0 errori, 2 avvisi) — 12-dati-veri/sequenze/realsense_stairs
+### realsense_stands_still: uscita 0; con --rigoroso: 0
+nota: meta: 640x360 px, 30.0 fps, campo orizzontale 89.5°, sensore «Intel RealSense D435I (stereo attivo a infrarossi)», posa None
+nota: tempi: 229 fotogrammi, durata 7.601 s, passo mediano 33.4 ms, massimo 33.4 ms
+nota: profondità (tutti): senza dato 42.0%; valori validi: 1° percentile 329 mm, mediana 349 mm, 99° 368 mm, massimo 64437 mm
+nota: verita.json: assente (ammesso: senza verità la misura è solo descrittiva)
+ESITO: rispetta il formato (0 errori, 0 avvisi) — 12-dati-veri/sequenze/realsense_stands_still
+### realsense_structured: uscita 0; con --rigoroso: 0
+nota: meta: 640x480 px, 30.0 fps, campo orizzontale 67.9°, sensore «Intel RealSense SR300 (NON stereo attivo: «Coded-Light Depth Sensor» (luce codificata))», posa None
+nota: tempi: 127 fotogrammi, durata 4.212 s, passo mediano 33.4 ms, massimo 33.4 ms
+nota: profondità (tutti): senza dato 9.6%; valori validi: 1° percentile 347 mm, mediana 539 mm, 99° 805 mm, massimo 3718 mm
+nota: verita.json: assente (ammesso: senza verità la misura è solo descrittiva)
+ESITO: rispetta il formato (0 errori, 0 avvisi) — 12-dati-veri/sequenze/realsense_structured
+### tum_fr3_walking_static: uscita 0; con --rigoroso: 0
+nota: meta: 640x480 px, 30.0 fps, campo orizzontale 61.7°, sensore «Microsoft Kinect v1 (luce strutturata), profondità registrata sul colore dal driver OpenNI», posa {'altezza_m': 1.4195, 'inclinazione_gradi': 8.245}
+nota: tempi: 723 fotogrammi, durata 24.932 s, passo mediano 32.3 ms, massimo 68.2 ms
+nota: profondità (tutti): senza dato 39.2%; valori validi: 1° percentile 1025 mm, mediana 2933 mm, 99° 9331 mm, massimo 9870 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 6.3% dei pixel validi entro ±5%, 0.7% oltre il suolo di più del 10%
+nota: verita.json: assente (ammesso: senza verità la misura è solo descrittiva)
+ESITO: rispetta il formato (0 errori, 0 avvisi) — 12-dati-veri/sequenze/tum_fr3_walking_static

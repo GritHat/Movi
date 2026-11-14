@@ -1,0 +1,28 @@
+PASSAGGI.csv: 125 passaggi
+caso a12: 30 passaggi; fotogrammi nascosti (frazione = 0) da 6 a 12, mediana 11; (frazione < 2 %) da 10 a 12, mediana 11; passaggi in cui la testa spunta sopra il pannello (|x| < 0,4 m): 2, al più 7 pixel
+caso a05: 30 passaggi; fotogrammi nascosti (frazione = 0) da 17 a 29, mediana 25; (frazione < 2 %) da 24 a 30, mediana 26; passaggi in cui la testa spunta sopra il pannello (|x| < 0,4 m): 6, al più 6 pixel
+caso b: 30 passaggi; fotogrammi nascosti (frazione = 0) da 59 a 64, mediana 64; (frazione < 2 %) da 63 a 65, mediana 64; passaggi in cui la testa spunta sopra il pannello (|x| < 0,4 m): 2, al più 7 pixel
+caso c: 4 passaggi; fotogrammi nascosti (frazione = 0) da 29 a 36, mediana 32; (frazione < 2 %) da 29 a 36, mediana 32; passaggi in cui la testa spunta sopra il pannello (|x| < 0,4 m): 0, al più 0 pixel
+caso d: 4 passaggi; fotogrammi nascosti (frazione = 0) da 61 a 65, mediana 64; (frazione < 2 %) da 62 a 65, mediana 64; passaggi in cui la testa spunta sopra il pannello (|x| < 0,4 m): 0, al più 0 pixel
+d435i_nom__pannello_a12_alta185__s00: pixel visibili al massimo dietro il pannello 365; quota di pixel validi sul soggetto intero 102.3 %
+d435i_nom__pannello_a12_scuro__s00: pixel visibili al massimo dietro il pannello 0; quota di pixel validi sul soggetto intero 97.9 %
+d435i_lim__pannello_a12_scuro__s00: pixel visibili al massimo dietro il pannello 0; quota di pixel validi sul soggetto intero 61.6 %
+d435i_nom__pannello_a12_nero__s00: pixel visibili al massimo dietro il pannello 0; quota di pixel validi sul soggetto intero 72.0 %
+d435i_nom__pannello_a12__s00: pixel visibili al massimo dietro il pannello 0; quota di pixel validi sul soggetto intero 102.0 %
+d435i_lim__pannello_a12__s00: pixel visibili al massimo dietro il pannello 0; quota di pixel validi sul soggetto intero 89.1 %
+sospeso_2p0m: pixel ideali dell'ostacolo 0; con un dato nel primo fotogramma 0
+sospeso_2p8m: pixel ideali dell'ostacolo 1398; con un dato nel primo fotogramma 1356
+scatola15_0p8m: pixel ideali della scatola 0; con un dato nel primo fotogramma 0
+scatola15_2p0m: pixel ideali della scatola 266; con un dato nel primo fotogramma 265
+vetro_sfondo: pixel visti attraverso la lastra 29584; di questi con un dato 98.9 % (profondità mediana 5.47 m: lo sfondo, la lastra è a 1,5 m)
+vetro_buco: pixel visti attraverso la lastra 29584; di questi con un dato 0.0 % (profondità mediana nan m: lo sfondo, la lastra è a 1,5 m)
+d435i_nom__sensore_coperto: 45 fotogrammi; quota di pixel validi: primo 96.5 %, minimo 0.0 %, ultimo 97.0 %; fotogrammi tutti a zero 18; sotto il 50 % dal fotogramma 15
+d435i_nom__sensore_mezzo_coperto: 30 fotogrammi; quota di pixel validi: primo 97.0 %, minimo 49.1 %, ultimo 96.7 %; fotogrammi tutti a zero 0; sotto il 50 % dal fotogramma —
+d435i_nom__azzeramento_progressivo: 75 fotogrammi; quota di pixel validi: primo 96.7 %, minimo 0.0 %, ultimo 0.0 %; fotogrammi tutti a zero 7; sotto il 50 % dal fotogramma 42
+d435i_nom__pavimento_vuoto: suolo per distanza a terra — 1.25–2 m: validi 97.7 %, scarto tipo del residuo 21 mm, oltre il suolo di più del 10 % 0.0 %; 2–3 m: validi 96.7 %, scarto tipo del residuo 78 mm, oltre il suolo di più del 10 % 0.2 %; 3–4 m: validi 94.2 %, scarto tipo del residuo 179 mm, oltre il suolo di più del 10 % 2.1 %
+d435i_lim__pavimento_vuoto: suolo per distanza a terra — 1.25–2 m: validi 91.6 %, scarto tipo del residuo 117 mm, oltre il suolo di più del 10 % 5.1 %; 2–3 m: validi 73.8 %, scarto tipo del residuo 399 mm, oltre il suolo di più del 10 % 25.7 %; 3–4 m: validi 52.4 %, scarto tipo del residuo 801 mm, oltre il suolo di più del 10 % 31.8 %
+d435i_nom__pavimento_lucido: suolo per distanza a terra — 1.25–2 m: validi 90.5 %, scarto tipo del residuo 599 mm, oltre il suolo di più del 10 % 2.3 %; 2–3 m: validi 89.3 %, scarto tipo del residuo 617 mm, oltre il suolo di più del 10 % 7.1 %; 3–4 m: validi 88.6 %, scarto tipo del residuo 568 mm, oltre il suolo di più del 10 % 17.7 %
+d435i_lim__pavimento_lucido: suolo per distanza a terra — 1.25–2 m: validi 55.2 %, scarto tipo del residuo 1661 mm, oltre il suolo di più del 10 % 27.8 %; 2–3 m: validi 36.0 %, scarto tipo del residuo 1672 mm, oltre il suolo di più del 10 % 54.0 %; 3–4 m: validi 20.6 %, scarto tipo del residuo 1820 mm, oltre il suolo di più del 10 % 58.4 %
+d455_nom__pavimento_vuoto: suolo per distanza a terra — 1.25–2 m: validi 96.5 %, scarto tipo del residuo 11 mm, oltre il suolo di più del 10 % 0.0 %; 2–3 m: validi 95.5 %, scarto tipo del residuo 40 mm, oltre il suolo di più del 10 % 0.0 %; 3–4 m: validi 93.9 %, scarto tipo del residuo 93 mm, oltre il suolo di più del 10 % 0.1 %
+g335_nom__pavimento_vuoto: suolo per distanza a terra — 1.25–2 m: validi 97.8 %, scarto tipo del residuo 21 mm, oltre il suolo di più del 10 % 0.0 %; 2–3 m: validi 96.3 %, scarto tipo del residuo 77 mm, oltre il suolo di più del 10 % 0.2 %; 3–4 m: validi 94.9 %, scarto tipo del residuo 197 mm, oltre il suolo di più del 10 % 4.1 %
+d435i_nom__pavimento_vuoto__filtri: suolo per distanza a terra — 1.25–2 m: validi 99.3 %, scarto tipo del residuo 160 mm, oltre il suolo di più del 10 % 0.8 %; 2–3 m: validi 99.3 %, scarto tipo del residuo 105 mm, oltre il suolo di più del 10 % 0.7 %; 3–4 m: validi 99.4 %, scarto tipo del residuo 193 mm, oltre il suolo di più del 10 % 3.4 %

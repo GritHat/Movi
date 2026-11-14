@@ -1,0 +1,9 @@
+spigoli veri del pannello: ±15.52°; errore in cm a 2,4 m, + = ombra stimata più larga
+ingrossamento 2 px (come il simulatore: controllo); soglia 3: 10 sequenze, 100 fotogrammi; sinistra min/mediana/max +2.0/+6.2/+6.2; destra +2.0/+6.2/+6.2; lati-sequenza con minimo < 0: 0 su 20; fotogrammi-lato < 0: 0 su 200
+ingrossamento 2 px (come il simulatore: controllo); soglia 40: 10 sequenze, 100 fotogrammi; sinistra min/mediana/max +2.0/+2.0/+2.0; destra +2.0/+2.0/+2.0; lati-sequenza con minimo < 0: 0 su 20; fotogrammi-lato < 0: 0 su 200
+ingrossamento 0 px; soglia 3: 10 sequenze, 100 fotogrammi; sinistra min/mediana/max +2.0/+2.0/+6.2; destra +2.0/+2.0/+6.2; lati-sequenza con minimo < 0: 0 su 20; fotogrammi-lato < 0: 0 su 200
+ingrossamento 0 px; soglia 40: 10 sequenze, 100 fotogrammi; sinistra min/mediana/max +2.0/+2.0/+2.0; destra +2.0/+2.0/+2.0; lati-sequenza con minimo < 0: 0 su 20; fotogrammi-lato < 0: 0 su 200
+ingrossamento 0 e pixel misti 0; soglia 3: 10 sequenze, 100 fotogrammi; sinistra min/mediana/max +2.0/+2.0/+6.2; destra +2.0/+2.0/+6.2; lati-sequenza con minimo < 0: 0 su 20; fotogrammi-lato < 0: 0 su 200
+ingrossamento 0 e pixel misti 0; soglia 40: 10 sequenze, 100 fotogrammi; sinistra min/mediana/max +2.0/+2.0/+2.0; destra +2.0/+2.0/+2.0; lati-sequenza con minimo < 0: 0 su 20; fotogrammi-lato < 0: 0 su 200
+interruttore «bordi» spento (nessun modello dei bordi); soglia 3: 10 sequenze, 100 fotogrammi; sinistra min/mediana/max +2.0/+2.0/+2.0; destra +2.0/+2.0/+2.0; lati-sequenza con minimo < 0: 0 su 20; fotogrammi-lato < 0: 0 su 200
+interruttore «bordi» spento (nessun modello dei bordi); soglia 40: 10 sequenze, 100 fotogrammi; sinistra min/mediana/max +2.0/+2.0/+2.0; destra +2.0/+2.0/+2.0; lati-sequenza con minimo < 0: 0 su 20; fotogrammi-lato < 0: 0 su 200

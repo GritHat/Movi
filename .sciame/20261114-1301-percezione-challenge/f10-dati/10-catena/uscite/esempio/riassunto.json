@@ -1,0 +1,80 @@
+{
+  "fotogrammi": 31,
+  "sensore": "esempio ideale del formato (non è un modello di sensore)",
+  "posa": {
+    "altezza_m": 1.2,
+    "inclinazione_gradi": 15.0,
+    "rollio_gradi": 0.0,
+    "stimata": false,
+    "nota": "da meta.json"
+  },
+  "parametri": {
+    "passo_azimut_gradi": 1.0,
+    "passo_distanza_m": 0.1,
+    "azimut_max_gradi": 90.0,
+    "portata_m": 3.0,
+    "quota_min_ostacolo_m": 0.07,
+    "quota_max_ostacolo_m": 2.0,
+    "tolleranza_suolo_m": 0.05,
+    "min_punti_suolo": 3,
+    "min_punti_ostacolo": 3,
+    "memoria_fotogrammi": 3,
+    "libero_dietro_ostacolo": false,
+    "min_celle_gruppo": 1,
+    "q": 0.2,
+    "curva_rumore": "nominale",
+    "sigma_min_m": 0.0,
+    "v_iniziale_m_s": 2.5,
+    "conferma_m": 3,
+    "conferma_n": 5,
+    "finestra_moto_s": 1.0,
+    "media_moto_fotogrammi": 3,
+    "soglia_moto_sigma": 5.0,
+    "fattore_media_moto": 1.0,
+    "larghezza_min_m": 0.3,
+    "fascia_m": 0.4,
+    "non_confermato_fotogrammi": 3,
+    "rilascio_fotogrammi": 3,
+    "frazione_perso": 0.5,
+    "pendenti_ambito": "globale",
+    "min_celle_altro_bordo": 1,
+    "settore_gradi": 10.0,
+    "verifica_invarianti": true
+  },
+  "griglia": {
+    "azimut": 180,
+    "distanza": 30,
+    "celle": 5400
+  },
+  "celle_per_stato": {
+    "non_osservato": 120270,
+    "libero": 35110,
+    "occupato": 1080,
+    "in_ombra": 10940
+  },
+  "frazione_per_stato": {
+    "non_osservato": 0.7185,
+    "libero": 0.2097,
+    "occupato": 0.0065,
+    "in_ombra": 0.0654
+  },
+  "diagnostici": {
+    "suolo_visto_in_ombra": 64,
+    "celle_ambigue": 0
+  },
+  "tracce_confermate": 2,
+  "eventi": {
+    "nascita": 2,
+    "conferma": 2,
+    "ingresso_in_ombra": 1,
+    "perso": 1,
+    "riaggancio": 1,
+    "prima_misura_piena": 1
+  },
+  "tempo_ciclo_ms": {
+    "media": 0.999,
+    "p95": 1.019,
+    "massimo": 11.221,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+  }
+}

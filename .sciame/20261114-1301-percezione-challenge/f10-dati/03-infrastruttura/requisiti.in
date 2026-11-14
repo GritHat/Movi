@@ -1,0 +1,6 @@
+# Requisiti diretti dell'ambiente f10 (le versioni esatte, con le impronte, stanno in requisiti.txt).
+numpy
+scipy
+opencv-python-headless
+pillow
+rosbags

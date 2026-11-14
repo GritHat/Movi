@@ -1,0 +1,52 @@
+finestre di 4 s: exp1 227 (9 persone), exp3 219 (9 persone)
+
+== taratura di q su exp1 (σ = 2 cm): copertura dell'ellisse al 90 % a 1 / 2 / 3 s; scarto medio da 0,90 ==
+q = 0.01: 0.639 / 0.626 / 0.617; scarto 0.273
+q = 0.05: 0.855 / 0.881 / 0.877; scarto 0.029
+q = 0.1: 0.943 / 0.960 / 0.987; scarto 0.063
+q = 0.2: 0.996 / 1.000 / 1.000; scarto 0.099
+q = 0.5: 1.000 / 1.000 / 1.000; scarto 0.100
+q = 1.0: 1.000 / 1.000 / 1.000; scarto 0.100
+q = 2.0: 1.000 / 1.000 / 1.000; scarto 0.100
+q = 5.0: 1.000 / 1.000 / 1.000; scarto 0.100
+q scelto su exp1: 0.05
+
+== prova su exp3 (σ = 2 cm) ==
+q = 0.01, tutti: N = 219 tratti, 9 persone
+   0.5 s: copertura 90 % = 0.461 (IC per persona 0.359–0.568); cerchio 95 % = 0.511, raggio mediano 0.11 m; errore mediano 0.10 m (IC 0.08–0.13), 90° perc. 0.23; fermo 0.48 (90° 0.63); senza rumore di processo 0.10 (90° 0.27), sua copertura 90 % 0.142
+   1.0 s: copertura 90 % = 0.534 (IC per persona 0.435–0.659); cerchio 95 % = 0.584, raggio mediano 0.21 m; errore mediano 0.17 m (IC 0.14–0.21), 90° perc. 0.45; fermo 0.91 (90° 1.15); senza rumore di processo 0.18 (90° 0.51), sua copertura 90 % 0.155
+   2.0 s: copertura 90 % = 0.521 (IC per persona 0.412–0.655); cerchio 95 % = 0.566, raggio mediano 0.49 m; errore mediano 0.41 m (IC 0.30–0.52), 90° perc. 1.17; fermo 1.79 (90° 2.30); senza rumore di processo 0.45 (90° 1.21), sua copertura 90 % 0.096
+   3.0 s: copertura 90 % = 0.516 (IC per persona 0.399–0.638); cerchio 95 % = 0.562, raggio mediano 0.84 m; errore mediano 0.72 m (IC 0.52–0.99), 90° perc. 1.90; fermo 2.62 (90° 3.42); senza rumore di processo 0.76 (90° 2.05), sua copertura 90 % 0.087
+q = 0.01, in cammino: N = 162 tratti, 9 persone
+   0.5 s: copertura 90 % = 0.401 (IC per persona 0.290–0.527); cerchio 95 % = 0.457, raggio mediano 0.11 m; errore mediano 0.11 m (IC 0.09–0.14), 90° perc. 0.23; fermo 0.53 (90° 0.64); senza rumore di processo 0.11 (90° 0.26), sua copertura 90 % 0.068
+   1.0 s: copertura 90 % = 0.512 (IC per persona 0.380–0.647); cerchio 95 % = 0.549, raggio mediano 0.21 m; errore mediano 0.18 m (IC 0.14–0.24), 90° perc. 0.46; fermo 1.00 (90° 1.17); senza rumore di processo 0.20 (90° 0.52), sua copertura 90 % 0.099
+   2.0 s: copertura 90 % = 0.475 (IC per persona 0.325–0.624); cerchio 95 % = 0.537, raggio mediano 0.49 m; errore mediano 0.45 m (IC 0.34–0.57), 90° perc. 1.16; fermo 2.01 (90° 2.35); senza rumore di processo 0.47 (90° 1.22), sua copertura 90 % 0.037
+   3.0 s: copertura 90 % = 0.488 (IC per persona 0.344–0.623); cerchio 95 % = 0.537, raggio mediano 0.84 m; errore mediano 0.79 m (IC 0.55–1.05), 90° perc. 1.98; fermo 2.96 (90° 3.52); senza rumore di processo 0.82 (90° 2.08), sua copertura 90 % 0.031
+q = 0.05, tutti: N = 219 tratti, 9 persone
+   0.5 s: copertura 90 % = 0.776 (IC per persona 0.687–0.838); cerchio 95 % = 0.836, raggio mediano 0.19 m; errore mediano 0.10 m (IC 0.09–0.12), 90° perc. 0.22; fermo 0.48 (90° 0.63); senza rumore di processo 0.10 (90° 0.27), sua copertura 90 % 0.142
+   1.0 s: copertura 90 % = 0.795 (IC per persona 0.716–0.862); cerchio 95 % = 0.863, raggio mediano 0.41 m; errore mediano 0.19 m (IC 0.15–0.22), 90° perc. 0.46; fermo 0.91 (90° 1.15); senza rumore di processo 0.18 (90° 0.51), sua copertura 90 % 0.155
+   2.0 s: copertura 90 % = 0.804 (IC per persona 0.745–0.874); cerchio 95 % = 0.877, raggio mediano 1.02 m; errore mediano 0.44 m (IC 0.34–0.54), 90° perc. 1.09; fermo 1.79 (90° 2.30); senza rumore di processo 0.45 (90° 1.21), sua copertura 90 % 0.096
+   3.0 s: copertura 90 % = 0.831 (IC per persona 0.776–0.897); cerchio 95 % = 0.881, raggio mediano 1.80 m; errore mediano 0.72 m (IC 0.55–1.00), 90° perc. 1.86; fermo 2.62 (90° 3.42); senza rumore di processo 0.76 (90° 2.05), sua copertura 90 % 0.087
+q = 0.05, in cammino: N = 162 tratti, 9 persone
+   0.5 s: copertura 90 % = 0.759 (IC per persona 0.671–0.819); cerchio 95 % = 0.809, raggio mediano 0.19 m; errore mediano 0.11 m (IC 0.10–0.14), 90° perc. 0.22; fermo 0.53 (90° 0.64); senza rumore di processo 0.11 (90° 0.26), sua copertura 90 % 0.068
+   1.0 s: copertura 90 % = 0.790 (IC per persona 0.719–0.862); cerchio 95 % = 0.877, raggio mediano 0.41 m; errore mediano 0.20 m (IC 0.16–0.25), 90° perc. 0.45; fermo 1.00 (90° 1.17); senza rumore di processo 0.20 (90° 0.52), sua copertura 90 % 0.099
+   2.0 s: copertura 90 % = 0.809 (IC per persona 0.736–0.877); cerchio 95 % = 0.877, raggio mediano 1.02 m; errore mediano 0.47 m (IC 0.39–0.58), 90° perc. 1.09; fermo 2.01 (90° 2.35); senza rumore di processo 0.47 (90° 1.22), sua copertura 90 % 0.037
+   3.0 s: copertura 90 % = 0.846 (IC per persona 0.776–0.910); cerchio 95 % = 0.877, raggio mediano 1.80 m; errore mediano 0.76 m (IC 0.61–1.06), 90° perc. 1.91; fermo 2.96 (90° 3.52); senza rumore di processo 0.82 (90° 2.08), sua copertura 90 % 0.031
+q = 0.2, tutti: N = 219 tratti, 9 persone
+   0.5 s: copertura 90 % = 0.963 (IC per persona 0.930–0.989); cerchio 95 % = 0.982, raggio mediano 0.33 m; errore mediano 0.12 m (IC 0.11–0.14), 90° perc. 0.22; fermo 0.48 (90° 0.63); senza rumore di processo 0.10 (90° 0.27), sua copertura 90 % 0.142
+   1.0 s: copertura 90 % = 0.977 (IC per persona 0.942–1.000); cerchio 95 % = 0.991, raggio mediano 0.75 m; errore mediano 0.21 m (IC 0.20–0.24), 90° perc. 0.46; fermo 0.91 (90° 1.15); senza rumore di processo 0.18 (90° 0.51), sua copertura 90 % 0.155
+   2.0 s: copertura 90 % = 1.000 (IC per persona 1.000–1.000); cerchio 95 % = 1.000, raggio mediano 1.96 m; errore mediano 0.49 m (IC 0.41–0.54), 90° perc. 1.11; fermo 1.79 (90° 2.30); senza rumore di processo 0.45 (90° 1.21), sua copertura 90 % 0.096
+   3.0 s: copertura 90 % = 1.000 (IC per persona 1.000–1.000); cerchio 95 % = 1.000, raggio mediano 3.49 m; errore mediano 0.81 m (IC 0.68–0.94), 90° perc. 1.89; fermo 2.62 (90° 3.42); senza rumore di processo 0.76 (90° 2.05), sua copertura 90 % 0.087
+q = 0.2, in cammino: N = 162 tratti, 9 persone
+   0.5 s: copertura 90 % = 0.969 (IC per persona 0.942–0.993); cerchio 95 % = 0.994, raggio mediano 0.33 m; errore mediano 0.13 m (IC 0.12–0.14), 90° perc. 0.23; fermo 0.53 (90° 0.64); senza rumore di processo 0.11 (90° 0.26), sua copertura 90 % 0.068
+   1.0 s: copertura 90 % = 0.981 (IC per persona 0.952–1.000); cerchio 95 % = 0.994, raggio mediano 0.75 m; errore mediano 0.23 m (IC 0.20–0.25), 90° perc. 0.45; fermo 1.00 (90° 1.17); senza rumore di processo 0.20 (90° 0.52), sua copertura 90 % 0.099
+   2.0 s: copertura 90 % = 1.000 (IC per persona 1.000–1.000); cerchio 95 % = 1.000, raggio mediano 1.96 m; errore mediano 0.52 m (IC 0.45–0.57), 90° perc. 1.10; fermo 2.01 (90° 2.35); senza rumore di processo 0.47 (90° 1.22), sua copertura 90 % 0.037
+   3.0 s: copertura 90 % = 1.000 (IC per persona 1.000–1.000); cerchio 95 % = 1.000, raggio mediano 3.49 m; errore mediano 0.86 m (IC 0.74–0.97), 90° perc. 1.86; fermo 2.96 (90° 3.52); senza rumore di processo 0.82 (90° 2.08), sua copertura 90 % 0.031
+
+== sensibilità al rumore di misura (exp3, tutti, q = 0,2 e q scelto): copertura 90 % a 1 / 2 / 3 s; errore mediano ==
+σ = 0.5 cm, q = 0.05: 0.776 / 0.804 / 0.822; errore 0.17 / 0.43 / 0.72 m
+σ = 0.5 cm, q = 0.2: 0.986 / 1.000 / 0.995; errore 0.19 / 0.45 / 0.79 m
+σ = 2.0 cm, q = 0.05: 0.795 / 0.804 / 0.831; errore 0.19 / 0.44 / 0.72 m
+σ = 2.0 cm, q = 0.2: 0.977 / 1.000 / 1.000; errore 0.21 / 0.49 / 0.81 m
+σ = 5.0 cm, q = 0.05: 0.863 / 0.849 / 0.849; errore 0.21 / 0.45 / 0.77 m
+σ = 5.0 cm, q = 0.2: 0.982 / 1.000 / 1.000; errore 0.25 / 0.53 / 0.86 m

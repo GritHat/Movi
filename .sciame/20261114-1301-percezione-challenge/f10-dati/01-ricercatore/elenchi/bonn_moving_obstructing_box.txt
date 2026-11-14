@@ -1,0 +1,9 @@
+# https://www.ipb.uni-bonn.de/html/projects/rgbd_dynamic2019/rgbd_bonn_moving_obstructing_box.zip
+# dimensione archivio 320845314 byte; voci 1185; dimensione estratta 330413516 byte; byte letti 3000000
+# estensioni: {'(cartella o senza estensione)': 3, 'png': 1179, 'txt': 3}
+           0 rgbd_bonn_moving_obstructing_box/
+           0 rgbd_bonn_moving_obstructing_box/depth/
+      102831 rgbd_bonn_moving_obstructing_box/depth/1548339356.70298.png
+       26082 rgbd_bonn_moving_obstructing_box/depth.txt
+           0 rgbd_bonn_moving_obstructing_box/rgb/
+      444221 rgbd_bonn_moving_obstructing_box/rgb/1548339356.70215.png

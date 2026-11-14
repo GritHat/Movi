@@ -1,0 +1,9 @@
+# https://www.ipb.uni-bonn.de/html/projects/rgbd_dynamic2019/rgbd_bonn_person_tracking.zip
+# dimensione archivio 329482910 byte; voci 1166; dimensione estratta 338073729 byte; byte letti 3000000
+# estensioni: {'(cartella o senza estensione)': 3, 'png': 1160, 'txt': 3}
+           0 rgbd_bonn_person_tracking/
+           0 rgbd_bonn_person_tracking/depth/
+      132221 rgbd_bonn_person_tracking/depth/1548265890.51367.png
+       25642 rgbd_bonn_person_tracking/depth.txt
+           0 rgbd_bonn_person_tracking/rgb/
+      437132 rgbd_bonn_person_tracking/rgb/1548265890.50822.png

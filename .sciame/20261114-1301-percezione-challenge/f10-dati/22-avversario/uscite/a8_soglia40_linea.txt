@@ -1,0 +1,4 @@
+A8 z23: linea a 2.3 m, 424 px, soglia 40: continuità pulita 8 su 10 (IC 95 % 49–94 %); esiti d'identità {'diversa': 2, 'stessa': 8}; fusione a soggetto intero in 0; pannello «si muove» in 0; tracce fantasma (mediana) 0
+A8 z21: linea a 2.1 m, 424 px, soglia 40: continuità pulita 4 su 10 (IC 95 % 17–69 %); esiti d'identità {'diversa': 6, 'stessa': 4}; fusione a soggetto intero in 5; pannello «si muove» in 10; tracce fantasma (mediana) 0
+A8 z21: linea a 2.1 m, 424 px, soglia 3: continuità pulita 0 su 10 (IC 95 % 0–28 %); esiti d'identità {'diversa': 10}; fusione a soggetto intero in 10; pannello «si muove» in 9; tracce fantasma (mediana) 18
+A8 z20: linea a 2.0 m, 424 px, soglia 40: continuità pulita 1 su 10 (IC 95 % 2–40 %); esiti d'identità {'diversa': 1, 'mai nascosto': 8, 'stessa': 1}; fusione a soggetto intero in 1; pannello «si muove» in 10; tracce fantasma (mediana) 0

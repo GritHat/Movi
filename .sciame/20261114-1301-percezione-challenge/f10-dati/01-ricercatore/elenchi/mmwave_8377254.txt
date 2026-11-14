@@ -1,0 +1,17 @@
+# https://zenodo.org/api/records/8377254/files/PointCloudData.zip/content
+# dimensione archivio 508208132 byte; voci 200; dimensione estratta 1405445004 byte; byte letti 3000000
+# estensioni: {'(cartella o senza estensione)': 110, 'txt': 90}
+           0 CFARData/
+           0 CFARData/Person1/
+           0 CFARData/Person1/Box/
+     9347850 CFARData/Person1/Box/Person1.txt
+           0 CFARData/Person1/Plant/
+     5342196 CFARData/Person1/Plant/Person1.txt
+           0 CFARData/Person1/Sponge0/
+    14378022 CFARData/Person1/Sponge0/Person1.txt
+           0 CFARData/Person1/Sponge47/
+    12595666 CFARData/Person1/Sponge47/Person1.txt
+           0 CFARData/Person1/Sponge90/
+    12933974 CFARData/Person1/Sponge90/Person1.txt
+           0 CFARData/Person2/
+           0 CFARData/Person2/Box/

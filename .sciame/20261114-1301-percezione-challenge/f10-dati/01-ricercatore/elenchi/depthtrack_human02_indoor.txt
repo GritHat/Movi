@@ -1,0 +1,11 @@
+# https://zenodo.org/api/records/5792146/files/human02_indoor.zip/content
+# dimensione archivio 578368987 byte; voci 3500; dimensione estratta 580303561 byte; byte letti 3000000
+# estensioni: {'(cartella o senza estensione)': 4, 'tag': 15, 'txt': 1, 'jpg': 1740, 'png': 1740}
+           0 human02_indoor/
+        3479 human02_indoor/deformable.tag
+       25774 human02_indoor/groundtruth.txt
+         102 human02_indoor/sequence
+           0 human02_indoor/color/
+       87520 human02_indoor/color/00000934.jpg
+           0 human02_indoor/depth/
+      241323 human02_indoor/depth/00000482.png

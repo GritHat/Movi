@@ -1,0 +1,4 @@
+# https://librealsense.realsenseai.com/rs-tests/TestData/d435i_sample_data.zip
+# dimensione archivio 472413521 byte; voci 2; dimensione estratta 1564723700 byte; byte letti 3000000
+# estensioni: {'bag': 2}
+   841910563 d435i_walk_around.bag

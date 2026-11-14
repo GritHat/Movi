@@ -1,0 +1,28 @@
+profilo; N sequenze; fotogrammi; lato; min dei minimi; mediana dei 5°; mediana delle mediane; mediana dei 95°; max dei massimi (cm a 2,4 m; + = stimata più larga); sequenze con 5°–95° entro ±20 cm; entro ±10 cm; con almeno un fotogramma sotto −10 cm
+d435i_lim; 8; 182; sinistra; -65.0; -58.3; -42.0; -5.5; +73.2; 0 su 8 (0.0 %; IC 95 % 0.0–32.4); 0 su 8; 8
+d435i_lim; 8; 182; destra; -65.0; -57.5; -21.0; +16.7; +43.9; 0 su 8 (0.0 %; IC 95 % 0.0–32.4); 0 su 8; 8
+d435i_nom; 103; 3478; sinistra; +2.0; +2.0; +6.2; +6.2; +14.6; 103 su 103 (100.0 %; IC 95 % 96.4–100.0); 103 su 103; 0
+d435i_nom; 103; 3478; destra; +2.0; +2.0; +6.2; +6.2; +14.6; 103 su 103 (100.0 %; IC 95 % 96.4–100.0); 101 su 103; 0
+d435i_nom__filtri; 4; 96; sinistra; +2.0; +2.9; +6.2; +6.2; +6.2; 4 su 4 (100.0 %; IC 95 % 51.0–100.0); 4 su 4; 0
+d435i_nom__filtri; 4; 96; destra; +2.0; +3.1; +6.2; +6.2; +6.2; 4 su 4 (100.0 %; IC 95 % 51.0–100.0); 4 su 4; 0
+d455_nom; 6; 132; sinistra; +2.0; +2.0; +6.2; +6.2; +6.2; 6 su 6 (100.0 %; IC 95 % 61.0–100.0); 6 su 6; 0
+d455_nom; 6; 132; destra; +2.0; +2.5; +6.2; +6.2; +6.2; 6 su 6 (100.0 %; IC 95 % 61.0–100.0); 6 su 6; 0
+g335_nom; 6; 132; sinistra; +2.0; +3.1; +6.2; +6.2; +6.2; 6 su 6 (100.0 %; IC 95 % 61.0–100.0); 6 su 6; 0
+g335_nom; 6; 132; destra; +2.0; +2.0; +6.2; +6.2; +6.2; 6 su 6 (100.0 %; IC 95 % 61.0–100.0); 6 su 6; 0
+pannello non visto dalla catena (fotogrammi senza soggetto): 9
+
+«libero» su celle tutte di classe 2 (non osservabili per la verità): sequenza; celle·fotogramma; per fotogramma; distanza massima (in celle) dalla cella osservabile più vicina; anello minimo–massimo
+d455_nom__pavimento_vuoto; 34; 1.1; 1; (12, 14)
+d435i_nom__pavimento_vuoto; 73; 2.4; 1; (12, 17)
+g335_nom__pavimento_vuoto; 703; 23.4; 1; (11, 17)
+d435i_lim__pavimento_vuoto; 461; 23.1; 1; (11, 18)
+d435i_nom__pavimento_lucido; 143; 7.2; 1; (12, 18)
+d435i_nom__pannello_vuoto; 30; 3.0; 1; (12, 15)
+d435i_lim__pannello_vuoto; 176; 17.6; 1; (11, 18)
+
+coppie filtri accesi / spenti: sequenza; celle·fotogramma diverse; «libero» con i filtri dove senza è «non osservato»; il contrario; «occupato» solo con i filtri; solo senza
+d435i_nom__pannello_a12__s00__filtri; 533 su 253800; 52; 142; 76; 80
+d435i_nom__pannello_a12__s01__filtri; 415 su 243000; 45; 104; 79; 48
+d435i_nom__pannello_b__s00__filtri; 696 su 491400; 76; 169; 126; 98
+d435i_nom__pannello_vuoto__filtri; 46 su 54000; 6; 19; 8; 8
+d435i_nom__pavimento_vuoto__filtri; 153 su 162000; 34; 91; 13; 5

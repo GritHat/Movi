@@ -1,0 +1,254 @@
+[
+ {
+  "sequenza": "d435i_lim__pannello_vuoto",
+  "ostacolo": "pannello",
+  "quota_base_m": 0.0,
+  "altezza_m": 1.6,
+  "distanza_m": 1.87,
+  "fotogrammi": 10,
+  "fotogrammi_visto_entro_15cm": 10,
+  "impronta_celle_fot [non_oss, libero, occupato, ombra]": [
+   0,
+   0,
+   360,
+   0
+  ],
+  "dietro_celle_fot [non_oss, libero, occupato, ombra]": [
+   0,
+   0,
+   111,
+   1489
+  ]
+ },
+ {
+  "sequenza": "d435i_nom__cassa_persona__s00",
+  "ostacolo": "cassa",
+  "quota_base_m": 0.0,
+  "altezza_m": 1.0,
+  "distanza_m": 1.68,
+  "fotogrammi": 84,
+  "fotogrammi_visto_entro_15cm": 84,
+  "impronta_celle_fot [non_oss, libero, occupato, ombra]": [
+   45,
+   108,
+   7910,
+   6553
+  ],
+  "dietro_celle_fot [non_oss, libero, occupato, ombra]": [
+   0,
+   0,
+   1804,
+   12476
+  ]
+ },
+ {
+  "sequenza": "d435i_nom__pannello_vuoto",
+  "ostacolo": "pannello",
+  "quota_base_m": 0.0,
+  "altezza_m": 1.6,
+  "distanza_m": 1.87,
+  "fotogrammi": 10,
+  "fotogrammi_visto_entro_15cm": 10,
+  "impronta_celle_fot [non_oss, libero, occupato, ombra]": [
+   1,
+   0,
+   359,
+   0
+  ],
+  "dietro_celle_fot [non_oss, libero, occupato, ombra]": [
+   0,
+   0,
+   84,
+   1516
+  ]
+ },
+ {
+  "sequenza": "d435i_nom__pannello_vuoto__filtri",
+  "ostacolo": "pannello",
+  "quota_base_m": 0.0,
+  "altezza_m": 1.6,
+  "distanza_m": 1.87,
+  "fotogrammi": 10,
+  "fotogrammi_visto_entro_15cm": 10,
+  "impronta_celle_fot [non_oss, libero, occupato, ombra]": [
+   1,
+   0,
+   359,
+   0
+  ],
+  "dietro_celle_fot [non_oss, libero, occupato, ombra]": [
+   0,
+   0,
+   86,
+   1514
+  ]
+ },
+ {
+  "sequenza": "d435i_nom__scatola15_0p8m",
+  "ostacolo": "scatola15",
+  "quota_base_m": 0.0,
+  "altezza_m": 0.15,
+  "distanza_m": 0.8,
+  "fotogrammi": 10,
+  "fotogrammi_visto_entro_15cm": 0,
+  "impronta_celle_fot [non_oss, libero, occupato, ombra]": [
+   340,
+   0,
+   0,
+   0
+  ],
+  "dietro_celle_fot [non_oss, libero, occupato, ombra]": [
+   100,
+   400,
+   0,
+   0
+  ]
+ },
+ {
+  "sequenza": "d435i_nom__scatola15_2p0m",
+  "ostacolo": "scatola15",
+  "quota_base_m": 0.0,
+  "altezza_m": 0.15,
+  "distanza_m": 2.0,
+  "fotogrammi": 10,
+  "fotogrammi_visto_entro_15cm": 10,
+  "impronta_celle_fot [non_oss, libero, occupato, ombra]": [
+   3,
+   4,
+   104,
+   29
+  ],
+  "dietro_celle_fot [non_oss, libero, occupato, ombra]": [
+   0,
+   0,
+   0,
+   200
+  ]
+ },
+ {
+  "sequenza": "d435i_nom__sospeso_2p0m",
+  "ostacolo": "sospeso",
+  "quota_base_m": 1.8,
+  "altezza_m": 2.0,
+  "distanza_m": 2.06,
+  "fotogrammi": 10,
+  "fotogrammi_visto_entro_15cm": 7,
+  "impronta_celle_fot [non_oss, libero, occupato, ombra]": [
+   10,
+   1151,
+   17,
+   2
+  ],
+  "dietro_celle_fot [non_oss, libero, occupato, ombra]": [
+   30,
+   1201,
+   65,
+   104
+  ]
+ },
+ {
+  "sequenza": "d435i_nom__sospeso_2p8m",
+  "ostacolo": "sospeso",
+  "quota_base_m": 1.8,
+  "altezza_m": 2.0,
+  "distanza_m": 2.84,
+  "fotogrammi": 10,
+  "fotogrammi_visto_entro_15cm": 10,
+  "impronta_celle_fot [non_oss, libero, occupato, ombra]": [
+   1,
+   1,
+   366,
+   72
+  ],
+  "dietro_celle_fot [non_oss, libero, occupato, ombra]": [
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ {
+  "sequenza": "d435i_nom__vetro_buco",
+  "ostacolo": "vetro",
+  "quota_base_m": 0.0,
+  "altezza_m": 2.0,
+  "distanza_m": 1.58,
+  "fotogrammi": 10,
+  "fotogrammi_visto_entro_15cm": 0,
+  "impronta_celle_fot [non_oss, libero, occupato, ombra]": [
+   97,
+   323,
+   0,
+   0
+  ],
+  "dietro_celle_fot [non_oss, libero, occupato, ombra]": [
+   1800,
+   0,
+   0,
+   0
+  ]
+ },
+ {
+  "sequenza": "d435i_nom__vetro_sfondo",
+  "ostacolo": "vetro",
+  "quota_base_m": 0.0,
+  "altezza_m": 2.0,
+  "distanza_m": 1.58,
+  "fotogrammi": 10,
+  "fotogrammi_visto_entro_15cm": 0,
+  "impronta_celle_fot [non_oss, libero, occupato, ombra]": [
+   0,
+   420,
+   0,
+   0
+  ],
+  "dietro_celle_fot [non_oss, libero, occupato, ombra]": [
+   3,
+   1794,
+   3,
+   0
+  ]
+ },
+ {
+  "sequenza": "d455_nom__pannello_vuoto",
+  "ostacolo": "pannello",
+  "quota_base_m": 0.0,
+  "altezza_m": 1.6,
+  "distanza_m": 1.87,
+  "fotogrammi": 10,
+  "fotogrammi_visto_entro_15cm": 10,
+  "impronta_celle_fot [non_oss, libero, occupato, ombra]": [
+   2,
+   3,
+   355,
+   0
+  ],
+  "dietro_celle_fot [non_oss, libero, occupato, ombra]": [
+   0,
+   0,
+   82,
+   1518
+  ]
+ },
+ {
+  "sequenza": "g335_nom__pannello_vuoto",
+  "ostacolo": "pannello",
+  "quota_base_m": 0.0,
+  "altezza_m": 1.6,
+  "distanza_m": 1.87,
+  "fotogrammi": 10,
+  "fotogrammi_visto_entro_15cm": 10,
+  "impronta_celle_fot [non_oss, libero, occupato, ombra]": [
+   1,
+   4,
+   355,
+   0
+  ],
+  "dietro_celle_fot [non_oss, libero, occupato, ombra]": [
+   0,
+   0,
+   80,
+   1520
+  ]
+ }
+]

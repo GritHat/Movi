@@ -1,0 +1,91 @@
+[
+ {
+  "oggetto": "persona",
+  "distanza_m": 2.0,
+  "N": 20,
+  "visto_in_30_fotogrammi_su_45": 20,
+  "sigma_radiale_cm_mediana_max": [
+   0.13012622195673015,
+   0.16531567852737195
+  ],
+  "sigma_trasversale_cm_mediana_max": [
+   0.16040956483231694,
+   0.18691149840899568
+  ],
+  "celle_mediane": 19.0,
+  "sequenze_con_si_muove_falso": 0,
+  "sequenze_con_altre_tracce_si_muove": 0,
+  "soglia_radiale_cm": 10.673309904702604,
+  "soglia_trasversale_cm": 7.125276834232579
+ },
+ {
+  "oggetto": "persona",
+  "distanza_m": 3.0,
+  "N": 20,
+  "visto_in_30_fotogrammi_su_45": 20,
+  "sigma_radiale_cm_mediana_max": [
+   0.363377667459971,
+   0.4174546558411072
+  ],
+  "sigma_trasversale_cm_mediana_max": [
+   0.2863767330522687,
+   0.39500238201723603
+  ],
+  "celle_mediane": 16.0,
+  "sequenze_con_si_muove_falso": 0,
+  "sequenze_con_altre_tracce_si_muove": 0,
+  "soglia_radiale_cm": 24.014947285580856,
+  "soglia_trasversale_cm": 10.687915251348869
+ },
+ {
+  "oggetto": "persona",
+  "distanza_m": 4.0,
+  "N": 20,
+  "visto_in_30_fotogrammi_su_45": 20,
+  "sigma_radiale_cm_mediana_max": [
+   0.6932484507778878,
+   0.8356719508207443
+  ],
+  "sigma_trasversale_cm_mediana_max": [
+   0.43216662492605273,
+   0.5550646067723841
+  ],
+  "celle_mediane": 14.0,
+  "sequenze_con_si_muove_falso": 0,
+  "sequenze_con_altre_tracce_si_muove": 0,
+  "soglia_radiale_cm": 42.693239618810416,
+  "soglia_trasversale_cm": 14.250553668465159
+ },
+ {
+  "oggetto": "scatola15",
+  "distanza_m": 2.0,
+  "N": 20,
+  "visto_in_30_fotogrammi_su_45": 2,
+  "sigma_radiale_cm_mediana_max": [
+   0.6650825414240937,
+   0.6834688635921891
+  ],
+  "sigma_trasversale_cm_mediana_max": [
+   0.04908591820554178,
+   0.05213320528943141
+  ],
+  "celle_mediane": 1.0,
+  "sequenze_con_si_muove_falso": 0,
+  "sequenze_con_altre_tracce_si_muove": 0,
+  "soglia_radiale_cm": 10.673309904702604,
+  "soglia_trasversale_cm": 7.125276834232579
+ },
+ {
+  "oggetto": "scatola15",
+  "distanza_m": 3.0,
+  "N": 20,
+  "visto_in_30_fotogrammi_su_45": 0,
+  "sigma_radiale_cm_mediana_max": null,
+  "sigma_trasversale_cm_mediana_max": null,
+  "celle_mediane": null,
+  "sequenze_con_si_muove_falso": 0,
+  "sequenze_con_altre_tracce_si_muove": 0,
+  "soglia_radiale_cm": 24.014947285580856,
+  "soglia_trasversale_cm": 10.687915251348869
+ }
+]

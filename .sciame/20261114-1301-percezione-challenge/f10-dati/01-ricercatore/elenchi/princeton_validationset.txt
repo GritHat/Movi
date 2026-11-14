@@ -1,0 +1,43 @@
+# https://tracking.cs.princeton.edu/ValidationSet.zip
+# dimensione archivio 631649593 byte; voci 2478; dimensione estratta 631159944 byte; byte letti 3000000
+# estensioni: {'(cartella o senza estensione)': 23, 'ds_store': 12, 'txt': 12, 'png': 2421, 'json': 5, 'mat': 5}
+           0 ValidationSet/
+        6148 ValidationSet/.DS_Store
+           0 __MACOSX/
+           0 __MACOSX/ValidationSet/
+          82 __MACOSX/ValidationSet/._.DS_Store
+           0 ValidationSet/bear_front/
+        6148 ValidationSet/bear_front/.DS_Store
+           0 __MACOSX/ValidationSet/bear_front/
+          82 __MACOSX/ValidationSet/bear_front/._.DS_Store
+        5376 ValidationSet/bear_front/bear_front.txt
+           0 ValidationSet/bear_front/depth/
+       60447 ValidationSet/bear_front/depth/d-0-1.png
+        7316 ValidationSet/bear_front/frames.json
+        3385 ValidationSet/bear_front/frames.mat
+           0 ValidationSet/bear_front/rgb/
+      462972 ValidationSet/bear_front/rgb/r-0-1.png
+           0 ValidationSet/child_no1/
+        6148 ValidationSet/child_no1/.DS_Store
+           0 __MACOSX/ValidationSet/child_no1/
+          82 __MACOSX/ValidationSet/child_no1/._.DS_Store
+        3008 ValidationSet/child_no1/child_no1.txt
+           0 ValidationSet/child_no1/depth/
+       77251 ValidationSet/child_no1/depth/d-0-1.png
+        3965 ValidationSet/child_no1/frames.json
+        2096 ValidationSet/child_no1/frames.mat
+           0 ValidationSet/child_no1/rgb/
+      429147 ValidationSet/child_no1/rgb/r-0-1.png
+           0 ValidationSet/face_occ5/
+        6148 ValidationSet/face_occ5/.DS_Store
+           0 __MACOSX/ValidationSet/face_occ5/
+          82 __MACOSX/ValidationSet/face_occ5/._.DS_Store
+           0 ValidationSet/face_occ5/depth/
+       68663 ValidationSet/face_occ5/depth/d-0-1.png
+        6054 ValidationSet/face_occ5/face_occ5.txt
+        8223 ValidationSet/face_occ5/frames.json
+        3929 ValidationSet/face_occ5/frames.mat
+           0 ValidationSet/face_occ5/rgb/
+      529112 ValidationSet/face_occ5/rgb/r-0-1.png
+           0 ValidationSet/new_ex_occ4/
+        6148 ValidationSet/new_ex_occ4/.DS_Store

@@ -1,0 +1,52 @@
+== A2a: palo largo 3 cm, alto 1,5 m, a z = 2,05 m, pixel a 0 (nessun ritorno); 6 fotogrammi ==
+pixel a 0 del palo: 1332
+  fot. 0: celle del piede [(89, 20), (90, 20)] → ['LIBERO', 'LIBERO']; occupato 0, in ombra 0, tracce 0
+  fot. 1: celle del piede [(89, 20), (90, 20)] → ['LIBERO', 'LIBERO']; occupato 0, in ombra 0, tracce 0
+  fot. 2: celle del piede [(89, 20), (90, 20)] → ['LIBERO', 'LIBERO']; occupato 0, in ombra 0, tracce 0
+  fot. 3: celle del piede [(89, 20), (90, 20)] → ['LIBERO', 'LIBERO']; occupato 0, in ombra 0, tracce 0
+  fot. 4: celle del piede [(89, 20), (90, 20)] → ['LIBERO', 'LIBERO']; occupato 0, in ombra 0, tracce 0
+  fot. 5: celle del piede [(89, 20), (90, 20)] → ['LIBERO', 'LIBERO']; occupato 0, in ombra 0, tracce 0
+== A2b: lastra 0,4 × 1,7 m a z = 2,0 m senza ritorno che compare al fotogramma 3 ==
+  fot. 0: impronta 11 celle: LIBERO 11; dietro 62 celle: LIBERO 62, ombra 0, non_oss 0; tracce 0; possibile presenza 0
+  fot. 1: impronta 11 celle: LIBERO 11; dietro 62 celle: LIBERO 62, ombra 0, non_oss 0; tracce 0; possibile presenza 0
+  fot. 2: impronta 11 celle: LIBERO 11; dietro 62 celle: LIBERO 62, ombra 0, non_oss 0; tracce 0; possibile presenza 0
+  fot. 3: impronta 11 celle: LIBERO 11; dietro 62 celle: LIBERO 62, ombra 0, non_oss 0; tracce 0; possibile presenza 0
+  fot. 4: impronta 11 celle: LIBERO 11; dietro 62 celle: LIBERO 62, ombra 0, non_oss 0; tracce 0; possibile presenza 0
+  fot. 5: impronta 11 celle: LIBERO 6; dietro 62 celle: LIBERO 0, ombra 0, non_oss 62; tracce 0; possibile presenza 0
+  fot. 6: impronta 11 celle: LIBERO 6; dietro 62 celle: LIBERO 0, ombra 0, non_oss 62; tracce 0; possibile presenza 0
+  fot. 7: impronta 11 celle: LIBERO 6; dietro 62 celle: LIBERO 0, ombra 0, non_oss 62; tracce 0; possibile presenza 0
+== A3: due persone nella stessa ombra (pannello 1 × 1,8 m a 1,8 m; A entra, B esce) ==
+  fot. 2: {'tipo': 'conferma', 'id': 1}; {'tipo': 'conferma', 'id': 2}
+  fot. 16: {'tipo': 'ingresso_in_ombra', 'id': 1, 'celle_nucleo': 352, 'area_nucleo_m2': 1.5052}
+  fot. 20: {'tipo': 'perso', 'id': 1, 'previsto_s': 0.2667}
+  fot. 27: {'tipo': 'riaggancio', 'id': 1, 'stato_prima': 'perso', 'durata_s': 0.7333, 'buio_s': 0.8, 'errore_previsione_m': 0.1792, 'raggio95_m': 0.9707, 'd2': 0.165, 'in95': True, 'misura_tagliata': True}
+  fot. 33: {'tipo': 'prima_misura_piena', 'id': 1, 'd2': 0.001, 'in95': True, 'in99': True}
+  fot. 10: A x=-0.90 nascosta=False cella=occupato in_possibile_presenza=False | B x=+0.20 nascosta=True | celle pp=0 | tracce [(1, 'osservato', -0.9, 2.3, True), (2, 'osservato', 0.0, 1.8, False)]
+  fot. 20: A x=-0.25 nascosta=True cella=ombra in_possibile_presenza=True | B x=+0.20 nascosta=True | celle pp=722 | tracce [(1, 'perso', -0.67, 2.3, False), (2, 'osservato', 0.0, 1.8, False)]
+  fot. 23: A x=-0.25 nascosta=True cella=ombra in_possibile_presenza=True | B x=+0.20 nascosta=True | celle pp=722 | tracce [(1, 'perso', -0.67, 2.3, False), (2, 'osservato', 0.0, 1.8, False)]
+  fot. 27: A x=-0.25 nascosta=True cella=ombra in_possibile_presenza=False | B x=+0.44 nascosta=False | celle pp=0 | tracce [(1, 'osservato', 0.64, 2.3, True), (2, 'osservato', 0.0, 1.8, False)]
+  fot. 28: A x=-0.25 nascosta=True cella=ombra in_possibile_presenza=False | B x=+0.52 nascosta=False | celle pp=0 | tracce [(1, 'osservato', 0.68, 2.3, True), (2, 'osservato', 0.0, 1.8, False)]
+  fot. 29: A x=-0.25 nascosta=True cella=ombra in_possibile_presenza=False | B x=+0.60 nascosta=False | celle pp=0 | tracce [(1, 'osservato', 0.72, 2.3, True), (2, 'osservato', 0.0, 1.8, False)]
+  fot. 30: A x=-0.25 nascosta=True cella=ombra in_possibile_presenza=False | B x=+0.68 nascosta=False | celle pp=0 | tracce [(1, 'osservato', 0.76, 2.3, True), (2, 'osservato', 0.0, 1.8, False)]
+  fot. 31: A x=-0.25 nascosta=True cella=ombra in_possibile_presenza=False | B x=+0.76 nascosta=False | celle pp=0 | tracce [(1, 'osservato', 0.8, 2.3, True), (2, 'osservato', 0.0, 1.8, False)]
+  fot. 32: A x=-0.25 nascosta=True cella=ombra in_possibile_presenza=False | B x=+0.84 nascosta=False | celle pp=0 | tracce [(1, 'osservato', 0.84, 2.3, True), (2, 'osservato', 0.0, 1.8, False)]
+  fot. 36: A x=-0.25 nascosta=True cella=ombra in_possibile_presenza=False | B x=+1.16 nascosta=False | celle pp=0 | tracce [(1, 'osservato', 1.16, 2.3, False), (2, 'osservato', 0.0, 1.8, False)]
+  fot. 40: A x=-0.25 nascosta=True cella=ombra in_possibile_presenza=False | B x=+1.48 nascosta=False | celle pp=0 | tracce [(1, 'osservato', 1.48, 2.3, False), (2, 'osservato', 0.0, 1.8, False)]
+  fot. 45: A x=-0.25 nascosta=True cella=ombra in_possibile_presenza=False | B x=+1.88 nascosta=False | celle pp=0 | tracce [(1, 'osservato', 1.8, 2.3, False), (2, 'osservato', 0.0, 1.8, False)]
+  fot. 51: A x=-0.25 nascosta=True cella=ombra in_possibile_presenza=False | B x=+2.36 nascosta=False | celle pp=0 | tracce [(1, 'non_confermato', 1.92, 2.3, False), (2, 'osservato', 0.0, 1.8, False)]
+  dopo il fotogramma 24: fotogrammi con A nascosta e fuori dalla possibile presenza: 25; fotogrammi con la traccia 2 «osservato» mentre A è nascosta: 28 (l'identità di A va letta dagli eventi sopra)
+== A4: occlusore che si muove (pannello e A scorrono insieme a 0,5 m/s dal fotogramma 28) ==
+  fot. 2: {'tipo': 'conferma', 'id': 1}; {'tipo': 'conferma', 'id': 2}
+  fot. 16: {'tipo': 'ingresso_in_ombra', 'id': 1, 'celle_nucleo': 352, 'area_nucleo_m2': 1.5052}
+  fot. 20: {'tipo': 'perso', 'id': 1, 'previsto_s': 0.2667}
+  fot. 61: {'tipo': 'strato_finito', 'id': 1, 'motivo': 'celle_libere', 'eta_s': 3.0}; {'tipo': 'chiusura', 'id': 1, 'motivo': 'non_piu_rilevato'}
+  fot. 20: A x=-0.10 nascosta=True cella=ombra in_possibile_presenza=True | celle pp=722 | tracce [(1, 'perso', -0.67, 2.3, False), (2, 'osservato', 0.0, 1.8, False)]
+  fot. 27: A x=+0.00 nascosta=True cella=ombra in_possibile_presenza=True | celle pp=722 | tracce [(1, 'perso', -0.67, 2.3, False), (2, 'osservato', 0.0, 1.8, False)]
+  fot. 35: A x=+0.23 nascosta=True cella=ombra in_possibile_presenza=True | celle pp=649 | tracce [(1, 'perso', -0.67, 2.3, False), (2, 'osservato', 0.23, 1.8, False)]
+  fot. 45: A x=+0.57 nascosta=True cella=ombra in_possibile_presenza=True | celle pp=489 | tracce [(1, 'perso', -0.67, 2.3, False), (2, 'osservato', 0.57, 1.8, False)]
+  fot. 55: A x=+0.90 nascosta=True cella=ombra in_possibile_presenza=True | celle pp=344 | tracce [(1, 'perso', -0.67, 2.3, False), (2, 'osservato', 0.9, 1.8, False)]
+  fot. 65: A x=+1.23 nascosta=True cella=ombra in_possibile_presenza=False | celle pp=0 | tracce [(2, 'osservato', 1.22, 1.8, False)]
+  fot. 75: A x=+1.50 nascosta=True cella=ombra in_possibile_presenza=False | celle pp=0 | tracce [(2, 'osservato', 1.41, 1.8, False)]
+  fot. 79: A x=+1.50 nascosta=True cella=ombra in_possibile_presenza=False | celle pp=0 | tracce [(2, 'osservato', 1.41, 1.8, False)]
+  A nascosta in 64 fotogrammi (16–79); nascosta E fuori dalla possibile presenza in 21 (dal fot. 59)
+  A nascosta su cella «libero»: 0 fotogrammi

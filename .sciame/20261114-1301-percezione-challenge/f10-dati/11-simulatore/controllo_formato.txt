@@ -1,0 +1,1469 @@
+### sequenze/d435i_lim__pannello_a12__s00/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello limite, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 47 fotogrammi, durata 3.067 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 14.5%; valori validi: 1° percentile 1501 mm, mediana 2147 mm, 99° 6586 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 24.6% dei pixel validi entro ±5%, 5.0% oltre il suolo di più del 10%
+nota: verità: 47 fotogrammi annotati, 1 soggetti (s1), 11 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+AVVISO: profondita/: 5.0% dei pixel validi vede più lontano del suolo previsto dalla posa: posa sbagliata, suolo non piano, o profondità lungo il raggio
+ESITO: rispetta il formato (0 errori, 1 avvisi) — sequenze/d435i_lim__pannello_a12__s00/
+uscita=0
+### sequenze/d435i_lim__pannello_a12__s01/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello limite, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 45 fotogrammi, durata 2.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 14.4%; valori validi: 1° percentile 1491 mm, mediana 2133 mm, 99° 6523 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 24.5% dei pixel validi entro ±5%, 4.5% oltre il suolo di più del 10%
+nota: verità: 45 fotogrammi annotati, 1 soggetti (s1), 11 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_lim__pannello_a12__s01/
+uscita=0
+### sequenze/d435i_lim__pannello_a12__s02/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello limite, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 45 fotogrammi, durata 2.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 14.6%; valori validi: 1° percentile 1504 mm, mediana 2133 mm, 99° 6586 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 24.4% dei pixel validi entro ±5%, 4.6% oltre il suolo di più del 10%
+nota: verità: 45 fotogrammi annotati, 1 soggetti (s1), 10 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_lim__pannello_a12__s02/
+uscita=0
+### sequenze/d435i_lim__pannello_a12__s03/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello limite, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 44 fotogrammi, durata 2.867 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 14.6%; valori validi: 1° percentile 1511 mm, mediana 2147 mm, 99° 6523 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 24.5% dei pixel validi entro ±5%, 5.0% oltre il suolo di più del 10%
+nota: verità: 44 fotogrammi annotati, 1 soggetti (s1), 11 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_lim__pannello_a12__s03/
+uscita=0
+### sequenze/d435i_lim__pannello_a12_scuro__s00/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello limite, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 47 fotogrammi, durata 3.067 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 15.7%; valori validi: 1° percentile 1501 mm, mediana 2147 mm, 99° 6586 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 24.9% dei pixel validi entro ±5%, 4.9% oltre il suolo di più del 10%
+nota: verità: 47 fotogrammi annotati, 1 soggetti (s1), 11 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_lim__pannello_a12_scuro__s00/
+uscita=0
+### sequenze/d435i_lim__pannello_b__s00/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello limite, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 91 fotogrammi, durata 6.000 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 14.6%; valori validi: 1° percentile 1501 mm, mediana 2203 mm, 99° 6586 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 24.8% dei pixel validi entro ±5%, 4.9% oltre il suolo di più del 10%
+nota: verità: 91 fotogrammi annotati, 1 soggetti (s1), 58 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_lim__pannello_b__s00/
+uscita=0
+### sequenze/d435i_lim__pannello_b__s01/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello limite, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 89 fotogrammi, durata 5.867 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 14.5%; valori validi: 1° percentile 1501 mm, mediana 2210 mm, 99° 6651 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 24.6% dei pixel validi entro ±5%, 4.6% oltre il suolo di più del 10%
+nota: verità: 89 fotogrammi annotati, 1 soggetti (s1), 63 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_lim__pannello_b__s01/
+uscita=0
+### sequenze/d435i_lim__pannello_vuoto/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello limite, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 10 fotogrammi, durata 0.600 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 14.5%; valori validi: 1° percentile 1494 mm, mediana 2254 mm, 99° 6717 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 25.0% dei pixel validi entro ±5%, 4.5% oltre il suolo di più del 10%
+nota: verità: 10 fotogrammi annotati, 0 soggetti (), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_lim__pannello_vuoto/
+uscita=0
+### sequenze/d435i_lim__parete_1m/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello limite, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 0.0}
+nota: tempi: 20 fotogrammi, durata 1.267 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 7.5%; valori validi: 1° percentile 973 mm, mediana 1001 mm, 99° 1028 mm, massimo 1060 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 0.0% dei pixel validi entro ±5%, 0.0% oltre il suolo di più del 10%
+nota: verità: 20 fotogrammi annotati, 0 soggetti (), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 4 ostacoli
+AVVISO: profondita/: meno del 2% dei pixel validi è compatibile con il suolo previsto dalla posa: controlla altezza, segno dell'inclinazione, unità, e che la profondità sia lungo l'asse ottico (non lungo il raggio)
+ESITO: rispetta il formato (0 errori, 1 avvisi) — sequenze/d435i_lim__parete_1m/
+uscita=0
+### sequenze/d435i_lim__parete_2m/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello limite, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 0.0}
+nota: tempi: 20 fotogrammi, durata 1.267 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 6.1%; valori validi: 1° percentile 1895 mm, mediana 2001 mm, 99° 2120 mm, massimo 2246 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 0.3% dei pixel validi entro ±5%, 0.0% oltre il suolo di più del 10%
+nota: verità: 20 fotogrammi annotati, 0 soggetti (), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 4 ostacoli
+AVVISO: profondita/: meno del 2% dei pixel validi è compatibile con il suolo previsto dalla posa: controlla altezza, segno dell'inclinazione, unità, e che la profondità sia lungo l'asse ottico (non lungo il raggio)
+ESITO: rispetta il formato (0 errori, 1 avvisi) — sequenze/d435i_lim__parete_2m/
+uscita=0
+### sequenze/d435i_lim__parete_3m/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello limite, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 0.0}
+nota: tempi: 20 fotogrammi, durata 1.267 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 9.1%; valori validi: 1° percentile 2025 mm, mediana 2989 mm, 99° 3325 mm, massimo 6340 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 5.3% dei pixel validi entro ±5%, 2.8% oltre il suolo di più del 10%
+nota: verità: 20 fotogrammi annotati, 0 soggetti (), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 4 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_lim__parete_3m/
+uscita=0
+### sequenze/d435i_lim__parete_4m/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello limite, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 0.0}
+nota: tempi: 20 fotogrammi, durata 1.267 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 14.3%; valori validi: 1° percentile 2037 mm, mediana 3921 mm, 99° 4744 mm, massimo 9832 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 6.8% dei pixel validi entro ±5%, 4.4% oltre il suolo di più del 10%
+nota: verità: 20 fotogrammi annotati, 0 soggetti (), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 4 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_lim__parete_4m/
+uscita=0
+### sequenze/d435i_lim__pavimento_lucido/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello limite, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 20 fotogrammi, durata 1.267 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 35.0%; valori validi: 1° percentile 1481 mm, mediana 5342 mm, 99° 7981 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 11.5% dei pixel validi entro ±5%, 12.3% oltre il suolo di più del 10%
+nota: verità: 20 fotogrammi annotati, 0 soggetti (), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 4 ostacoli
+AVVISO: profondita/: 12.3% dei pixel validi vede più lontano del suolo previsto dalla posa: posa sbagliata, suolo non piano, o profondità lungo il raggio
+ESITO: rispetta il formato (0 errori, 1 avvisi) — sequenze/d435i_lim__pavimento_lucido/
+uscita=0
+### sequenze/d435i_lim__pavimento_vuoto/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello limite, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 20 fotogrammi, durata 1.267 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 16.4%; valori validi: 1° percentile 1498 mm, mediana 4463 mm, 99° 6853 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 27.7% dei pixel validi entro ±5%, 7.3% oltre il suolo di più del 10%
+nota: verità: 20 fotogrammi annotati, 0 soggetti (), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 4 ostacoli
+AVVISO: profondita/: 7.3% dei pixel validi vede più lontano del suolo previsto dalla posa: posa sbagliata, suolo non piano, o profondità lungo il raggio
+ESITO: rispetta il formato (0 errori, 1 avvisi) — sequenze/d435i_lim__pavimento_vuoto/
+uscita=0
+### sequenze/d435i_nom__azzeramento_progressivo/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 75 fotogrammi, durata 4.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 45.8%; valori validi: 1° percentile 1521 mm, mediana 2284 mm, 99° 6112 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 40.5% dei pixel validi entro ±5%, 0.6% oltre il suolo di più del 10%
+nota: verità: 75 fotogrammi annotati, 1 soggetti (s1), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__azzeramento_progressivo/
+uscita=0
+### sequenze/d435i_nom__cassa_persona__s00/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 84 fotogrammi, durata 5.533 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.9%; valori validi: 1° percentile 1511 mm, mediana 3155 mm, 99° 6167 mm, massimo 9832 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 37.5% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 84 fotogrammi annotati, 1 soggetti (s1), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__cassa_persona__s00/
+uscita=0
+### sequenze/d435i_nom__pannello_a05__s00/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 66 fotogrammi, durata 4.333 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.9%; valori validi: 1° percentile 1514 mm, mediana 2364 mm, 99° 6167 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.6% dei pixel validi entro ±5%, 0.7% oltre il suolo di più del 10%
+nota: verità: 66 fotogrammi annotati, 1 soggetti (s1), 24 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a05__s00/
+uscita=0
+### sequenze/d435i_nom__pannello_a05__s01/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 67 fotogrammi, durata 4.400 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2380 mm, 99° 6167 mm, massimo 9422 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.7% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 67 fotogrammi annotati, 1 soggetti (s1), 24 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a05__s01/
+uscita=0
+### sequenze/d435i_nom__pannello_a05__s02/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 79 fotogrammi, durata 5.200 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2364 mm, 99° 6167 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.7% dei pixel validi entro ±5%, 0.7% oltre il suolo di più del 10%
+nota: verità: 79 fotogrammi annotati, 1 soggetti (s1), 28 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a05__s02/
+uscita=0
+### sequenze/d435i_nom__pannello_a05__s03/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 73 fotogrammi, durata 4.800 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2364 mm, 99° 6167 mm, massimo 9832 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.7% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 73 fotogrammi annotati, 1 soggetti (s1), 26 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a05__s03/
+uscita=0
+### sequenze/d435i_nom__pannello_a05__s04/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 76 fotogrammi, durata 5.000 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2356 mm, 99° 6167 mm, massimo 9832 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.9% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 76 fotogrammi annotati, 1 soggetti (s1), 26 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a05__s04/
+uscita=0
+### sequenze/d435i_nom__pannello_a05__s05/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 75 fotogrammi, durata 4.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1514 mm, mediana 2364 mm, 99° 6112 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.5% dei pixel validi entro ±5%, 0.7% oltre il suolo di più del 10%
+nota: verità: 75 fotogrammi annotati, 1 soggetti (s1), 27 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a05__s05/
+uscita=0
+### sequenze/d435i_nom__pannello_a05__s06/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 76 fotogrammi, durata 5.000 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2356 mm, 99° 6167 mm, massimo 9832 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.6% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 76 fotogrammi annotati, 1 soggetti (s1), 27 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a05__s06/
+uscita=0
+### sequenze/d435i_nom__pannello_a05__s07/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 73 fotogrammi, durata 4.800 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2356 mm, 99° 6167 mm, massimo 9555 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.8% dei pixel validi entro ±5%, 0.7% oltre il suolo di più del 10%
+nota: verità: 73 fotogrammi annotati, 1 soggetti (s1), 25 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a05__s07/
+uscita=0
+### sequenze/d435i_nom__pannello_a05__s08/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 74 fotogrammi, durata 4.867 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2372 mm, 99° 6112 mm, massimo 9293 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.5% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 74 fotogrammi annotati, 1 soggetti (s1), 27 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a05__s08/
+uscita=0
+### sequenze/d435i_nom__pannello_a05__s09/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 68 fotogrammi, durata 4.467 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2356 mm, 99° 6167 mm, massimo 9555 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.5% dei pixel validi entro ±5%, 0.9% oltre il suolo di più del 10%
+nota: verità: 68 fotogrammi annotati, 1 soggetti (s1), 17 presenze nascoste, 2 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a05__s09/
+uscita=0
+### sequenze/d435i_nom__pannello_a05__s10/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 70 fotogrammi, durata 4.600 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.9%; valori validi: 1° percentile 1511 mm, mediana 2380 mm, 99° 6167 mm, massimo 9832 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.3% dei pixel validi entro ±5%, 0.9% oltre il suolo di più del 10%
+nota: verità: 70 fotogrammi annotati, 1 soggetti (s1), 24 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a05__s10/
+uscita=0
+### sequenze/d435i_nom__pannello_a05__s11/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 69 fotogrammi, durata 4.533 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2372 mm, 99° 6112 mm, massimo 9691 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.5% dei pixel validi entro ±5%, 1.0% oltre il suolo di più del 10%
+nota: verità: 69 fotogrammi annotati, 1 soggetti (s1), 25 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a05__s11/
+uscita=0
+### sequenze/d435i_nom__pannello_a05__s12/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 67 fotogrammi, durata 4.400 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.1%; valori validi: 1° percentile 1514 mm, mediana 2364 mm, 99° 6167 mm, massimo 9832 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.5% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 67 fotogrammi annotati, 1 soggetti (s1), 19 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a05__s12/
+uscita=0
+### sequenze/d435i_nom__pannello_a05__s13/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 74 fotogrammi, durata 4.867 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.9%; valori validi: 1° percentile 1514 mm, mediana 2364 mm, 99° 6167 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.7% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 74 fotogrammi annotati, 1 soggetti (s1), 23 presenze nascoste, 2 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a05__s13/
+uscita=0
+### sequenze/d435i_nom__pannello_a05__s14/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 79 fotogrammi, durata 5.200 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2356 mm, 99° 6167 mm, massimo 9832 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.6% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 79 fotogrammi annotati, 1 soggetti (s1), 27 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a05__s14/
+uscita=0
+### sequenze/d435i_nom__pannello_a05__s15/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 80 fotogrammi, durata 5.267 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.9%; valori validi: 1° percentile 1514 mm, mediana 2356 mm, 99° 6112 mm, massimo 9422 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.6% dei pixel validi entro ±5%, 0.7% oltre il suolo di più del 10%
+nota: verità: 80 fotogrammi annotati, 1 soggetti (s1), 20 presenze nascoste, 2 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a05__s15/
+uscita=0
+### sequenze/d435i_nom__pannello_a05__s16/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 68 fotogrammi, durata 4.467 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2356 mm, 99° 6112 mm, massimo 9168 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.8% dei pixel validi entro ±5%, 0.7% oltre il suolo di più del 10%
+nota: verità: 68 fotogrammi annotati, 1 soggetti (s1), 24 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a05__s16/
+uscita=0
+### sequenze/d435i_nom__pannello_a05__s17/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 76 fotogrammi, durata 5.000 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2364 mm, 99° 6112 mm, massimo 9168 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.7% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 76 fotogrammi annotati, 1 soggetti (s1), 27 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a05__s17/
+uscita=0
+### sequenze/d435i_nom__pannello_a05__s18/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 74 fotogrammi, durata 4.867 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2356 mm, 99° 6167 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.4% dei pixel validi entro ±5%, 1.0% oltre il suolo di più del 10%
+nota: verità: 74 fotogrammi annotati, 1 soggetti (s1), 19 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a05__s18/
+uscita=0
+### sequenze/d435i_nom__pannello_a05__s19/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 68 fotogrammi, durata 4.467 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.9%; valori validi: 1° percentile 1511 mm, mediana 2364 mm, 99° 6167 mm, massimo 9832 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.5% dei pixel validi entro ±5%, 0.9% oltre il suolo di più del 10%
+nota: verità: 68 fotogrammi annotati, 1 soggetti (s1), 23 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a05__s19/
+uscita=0
+### sequenze/d435i_nom__pannello_a05__s20/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 79 fotogrammi, durata 5.200 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2364 mm, 99° 6167 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.4% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 79 fotogrammi annotati, 1 soggetti (s1), 29 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a05__s20/
+uscita=0
+### sequenze/d435i_nom__pannello_a05__s21/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 70 fotogrammi, durata 4.600 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.9%; valori validi: 1° percentile 1514 mm, mediana 2380 mm, 99° 6167 mm, massimo 8697 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.6% dei pixel validi entro ±5%, 0.9% oltre il suolo di più del 10%
+nota: verità: 70 fotogrammi annotati, 1 soggetti (s1), 25 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a05__s21/
+uscita=0
+### sequenze/d435i_nom__pannello_a05__s22/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 69 fotogrammi, durata 4.533 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2356 mm, 99° 6167 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.6% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 69 fotogrammi annotati, 1 soggetti (s1), 24 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a05__s22/
+uscita=0
+### sequenze/d435i_nom__pannello_a05__s23/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 72 fotogrammi, durata 4.733 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2356 mm, 99° 6167 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.8% dei pixel validi entro ±5%, 0.6% oltre il suolo di più del 10%
+nota: verità: 72 fotogrammi annotati, 1 soggetti (s1), 26 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a05__s23/
+uscita=0
+### sequenze/d435i_nom__pannello_a05__s24/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 68 fotogrammi, durata 4.467 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1514 mm, mediana 2380 mm, 99° 6167 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.8% dei pixel validi entro ±5%, 0.9% oltre il suolo di più del 10%
+nota: verità: 68 fotogrammi annotati, 1 soggetti (s1), 24 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a05__s24/
+uscita=0
+### sequenze/d435i_nom__pannello_a05__s25/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 76 fotogrammi, durata 5.000 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1514 mm, mediana 2364 mm, 99° 6167 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.4% dei pixel validi entro ±5%, 1.0% oltre il suolo di più del 10%
+nota: verità: 76 fotogrammi annotati, 1 soggetti (s1), 28 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a05__s25/
+uscita=0
+### sequenze/d435i_nom__pannello_a05__s26/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 77 fotogrammi, durata 5.067 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2372 mm, 99° 6112 mm, massimo 9832 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.6% dei pixel validi entro ±5%, 0.6% oltre il suolo di più del 10%
+nota: verità: 77 fotogrammi annotati, 1 soggetti (s1), 28 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a05__s26/
+uscita=0
+### sequenze/d435i_nom__pannello_a05__s27/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 77 fotogrammi, durata 5.067 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2364 mm, 99° 6167 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.8% dei pixel validi entro ±5%, 0.6% oltre il suolo di più del 10%
+nota: verità: 77 fotogrammi annotati, 1 soggetti (s1), 28 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a05__s27/
+uscita=0
+### sequenze/d435i_nom__pannello_a05__s28/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 76 fotogrammi, durata 5.000 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2364 mm, 99° 6167 mm, massimo 9832 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.5% dei pixel validi entro ±5%, 0.9% oltre il suolo di più del 10%
+nota: verità: 76 fotogrammi annotati, 1 soggetti (s1), 27 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a05__s28/
+uscita=0
+### sequenze/d435i_nom__pannello_a05__s29/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 70 fotogrammi, durata 4.600 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1514 mm, mediana 2364 mm, 99° 6112 mm, massimo 9691 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.5% dei pixel validi entro ±5%, 0.7% oltre il suolo di più del 10%
+nota: verità: 70 fotogrammi annotati, 1 soggetti (s1), 17 presenze nascoste, 2 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a05__s29/
+uscita=0
+### sequenze/d435i_nom__pannello_a12_alta185__s00/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 47 fotogrammi, durata 3.067 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.1%; valori validi: 1° percentile 1511 mm, mediana 2292 mm, 99° 6112 mm, massimo 9555 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.4% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 47 fotogrammi annotati, 1 soggetti (s1), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a12_alta185__s00/
+uscita=0
+### sequenze/d435i_nom__pannello_a12_alta185__s01/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 45 fotogrammi, durata 2.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.1%; valori validi: 1° percentile 1511 mm, mediana 2300 mm, 99° 6112 mm, massimo 9293 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.1% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 45 fotogrammi annotati, 1 soggetti (s1), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a12_alta185__s01/
+uscita=0
+### sequenze/d435i_nom__pannello_a12_nero__s00/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 47 fotogrammi, durata 3.067 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 4.4%; valori validi: 1° percentile 1511 mm, mediana 2323 mm, 99° 6112 mm, massimo 9691 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.6% dei pixel validi entro ±5%, 0.9% oltre il suolo di più del 10%
+nota: verità: 47 fotogrammi annotati, 1 soggetti (s1), 11 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a12_nero__s00/
+uscita=0
+### sequenze/d435i_nom__pannello_a12_nero__s01/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 45 fotogrammi, durata 2.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 4.3%; valori validi: 1° percentile 1511 mm, mediana 2339 mm, 99° 6112 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.9% dei pixel validi entro ±5%, 0.7% oltre il suolo di più del 10%
+nota: verità: 45 fotogrammi annotati, 1 soggetti (s1), 11 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a12_nero__s01/
+uscita=0
+### sequenze/d435i_nom__pannello_a12__s00/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 47 fotogrammi, durata 3.067 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.1%; valori validi: 1° percentile 1511 mm, mediana 2315 mm, 99° 6167 mm, massimo 9832 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.4% dei pixel validi entro ±5%, 0.7% oltre il suolo di più del 10%
+nota: verità: 47 fotogrammi annotati, 1 soggetti (s1), 11 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a12__s00/
+uscita=0
+### sequenze/d435i_nom__pannello_a12__s00__filtri/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240 + filtri SDK RealSense (temporale con persistenza 3, riempimento modo 1)», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 47 fotogrammi, durata 3.067 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 0.7%; valori validi: 1° percentile 1512 mm, mediana 2347 mm, 99° 6167 mm, massimo 9422 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.1% dei pixel validi entro ±5%, 1.2% oltre il suolo di più del 10%
+nota: verità: 47 fotogrammi annotati, 1 soggetti (s1), 11 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a12__s00__filtri/
+uscita=0
+### sequenze/d435i_nom__pannello_a12__s01/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 45 fotogrammi, durata 2.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.1%; valori validi: 1° percentile 1514 mm, mediana 2323 mm, 99° 6167 mm, massimo 9168 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.4% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 45 fotogrammi annotati, 1 soggetti (s1), 11 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a12__s01/
+uscita=0
+### sequenze/d435i_nom__pannello_a12__s01__filtri/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240 + filtri SDK RealSense (temporale con persistenza 3, riempimento modo 1)», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 45 fotogrammi, durata 2.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 0.7%; valori validi: 1° percentile 1513 mm, mediana 2356 mm, 99° 6167 mm, massimo 9422 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.1% dei pixel validi entro ±5%, 1.3% oltre il suolo di più del 10%
+nota: verità: 45 fotogrammi annotati, 1 soggetti (s1), 11 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a12__s01__filtri/
+uscita=0
+### sequenze/d435i_nom__pannello_a12__s02/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 45 fotogrammi, durata 2.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1514 mm, mediana 2315 mm, 99° 6112 mm, massimo 9832 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.3% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 45 fotogrammi annotati, 1 soggetti (s1), 12 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a12__s02/
+uscita=0
+### sequenze/d435i_nom__pannello_a12__s03/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 44 fotogrammi, durata 2.867 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.1%; valori validi: 1° percentile 1511 mm, mediana 2323 mm, 99° 6112 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.2% dei pixel validi entro ±5%, 0.9% oltre il suolo di più del 10%
+nota: verità: 44 fotogrammi annotati, 1 soggetti (s1), 11 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a12__s03/
+uscita=0
+### sequenze/d435i_nom__pannello_a12__s04/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 41 fotogrammi, durata 2.667 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.1%; valori validi: 1° percentile 1511 mm, mediana 2307 mm, 99° 6112 mm, massimo 9832 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.3% dei pixel validi entro ±5%, 0.7% oltre il suolo di più del 10%
+nota: verità: 41 fotogrammi annotati, 1 soggetti (s1), 10 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a12__s04/
+uscita=0
+### sequenze/d435i_nom__pannello_a12__s05/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 45 fotogrammi, durata 2.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2315 mm, 99° 6112 mm, massimo 9045 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.4% dei pixel validi entro ±5%, 0.7% oltre il suolo di più del 10%
+nota: verità: 45 fotogrammi annotati, 1 soggetti (s1), 11 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a12__s05/
+uscita=0
+### sequenze/d435i_nom__pannello_a12__s06/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 44 fotogrammi, durata 2.867 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2315 mm, 99° 6167 mm, massimo 9555 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.2% dei pixel validi entro ±5%, 0.9% oltre il suolo di più del 10%
+nota: verità: 44 fotogrammi annotati, 1 soggetti (s1), 11 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a12__s06/
+uscita=0
+### sequenze/d435i_nom__pannello_a12__s07/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 40 fotogrammi, durata 2.600 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2307 mm, 99° 6167 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.3% dei pixel validi entro ±5%, 0.7% oltre il suolo di più del 10%
+nota: verità: 40 fotogrammi annotati, 1 soggetti (s1), 10 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a12__s07/
+uscita=0
+### sequenze/d435i_nom__pannello_a12__s08/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 45 fotogrammi, durata 2.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.1%; valori validi: 1° percentile 1511 mm, mediana 2307 mm, 99° 6167 mm, massimo 9045 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.5% dei pixel validi entro ±5%, 0.7% oltre il suolo di più del 10%
+nota: verità: 45 fotogrammi annotati, 1 soggetti (s1), 11 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a12__s08/
+uscita=0
+### sequenze/d435i_nom__pannello_a12__s09/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 43 fotogrammi, durata 2.800 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2300 mm, 99° 6167 mm, massimo 9422 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.4% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 43 fotogrammi annotati, 1 soggetti (s1), 11 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a12__s09/
+uscita=0
+### sequenze/d435i_nom__pannello_a12__s10/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 40 fotogrammi, durata 2.600 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.1%; valori validi: 1° percentile 1511 mm, mediana 2315 mm, 99° 6112 mm, massimo 9168 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.5% dei pixel validi entro ±5%, 0.7% oltre il suolo di più del 10%
+nota: verità: 40 fotogrammi annotati, 1 soggetti (s1), 10 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a12__s10/
+uscita=0
+### sequenze/d435i_nom__pannello_a12__s11/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 42 fotogrammi, durata 2.733 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1514 mm, mediana 2323 mm, 99° 6112 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.4% dei pixel validi entro ±5%, 0.7% oltre il suolo di più del 10%
+nota: verità: 42 fotogrammi annotati, 1 soggetti (s1), 10 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a12__s11/
+uscita=0
+### sequenze/d435i_nom__pannello_a12__s12/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 46 fotogrammi, durata 3.000 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.1%; valori validi: 1° percentile 1514 mm, mediana 2307 mm, 99° 6167 mm, massimo 9691 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.2% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 46 fotogrammi annotati, 1 soggetti (s1), 11 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a12__s12/
+uscita=0
+### sequenze/d435i_nom__pannello_a12__s13/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 41 fotogrammi, durata 2.667 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1514 mm, mediana 2315 mm, 99° 6112 mm, massimo 9555 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.3% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 41 fotogrammi annotati, 1 soggetti (s1), 10 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a12__s13/
+uscita=0
+### sequenze/d435i_nom__pannello_a12__s14/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 40 fotogrammi, durata 2.600 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2307 mm, 99° 6112 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.5% dei pixel validi entro ±5%, 0.6% oltre il suolo di più del 10%
+nota: verità: 40 fotogrammi annotati, 1 soggetti (s1), 10 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a12__s14/
+uscita=0
+### sequenze/d435i_nom__pannello_a12__s15/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 42 fotogrammi, durata 2.733 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2307 mm, 99° 6167 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.2% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 42 fotogrammi annotati, 1 soggetti (s1), 10 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a12__s15/
+uscita=0
+### sequenze/d435i_nom__pannello_a12__s16/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 45 fotogrammi, durata 2.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.1%; valori validi: 1° percentile 1511 mm, mediana 2307 mm, 99° 6112 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.4% dei pixel validi entro ±5%, 0.6% oltre il suolo di più del 10%
+nota: verità: 45 fotogrammi annotati, 1 soggetti (s1), 12 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a12__s16/
+uscita=0
+### sequenze/d435i_nom__pannello_a12__s17/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 43 fotogrammi, durata 2.800 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1514 mm, mediana 2323 mm, 99° 6167 mm, massimo 9832 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.5% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 43 fotogrammi annotati, 1 soggetti (s1), 11 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a12__s17/
+uscita=0
+### sequenze/d435i_nom__pannello_a12__s18/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 44 fotogrammi, durata 2.867 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2307 mm, 99° 6167 mm, massimo 9422 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.2% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 44 fotogrammi annotati, 1 soggetti (s1), 11 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a12__s18/
+uscita=0
+### sequenze/d435i_nom__pannello_a12__s19/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 39 fotogrammi, durata 2.533 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2315 mm, 99° 6112 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.5% dei pixel validi entro ±5%, 0.5% oltre il suolo di più del 10%
+nota: verità: 39 fotogrammi annotati, 1 soggetti (s1), 10 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a12__s19/
+uscita=0
+### sequenze/d435i_nom__pannello_a12__s20/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 44 fotogrammi, durata 2.867 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2323 mm, 99° 6167 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.4% dei pixel validi entro ±5%, 0.9% oltre il suolo di più del 10%
+nota: verità: 44 fotogrammi annotati, 1 soggetti (s1), 11 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a12__s20/
+uscita=0
+### sequenze/d435i_nom__pannello_a12__s21/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 43 fotogrammi, durata 2.800 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1514 mm, mediana 2323 mm, 99° 6167 mm, massimo 9422 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.3% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 43 fotogrammi annotati, 1 soggetti (s1), 11 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a12__s21/
+uscita=0
+### sequenze/d435i_nom__pannello_a12__s22/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 44 fotogrammi, durata 2.867 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.1%; valori validi: 1° percentile 1511 mm, mediana 2323 mm, 99° 6112 mm, massimo 9555 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.5% dei pixel validi entro ±5%, 0.6% oltre il suolo di più del 10%
+nota: verità: 44 fotogrammi annotati, 1 soggetti (s1), 11 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a12__s22/
+uscita=0
+### sequenze/d435i_nom__pannello_a12__s23/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 44 fotogrammi, durata 2.867 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2300 mm, 99° 6167 mm, massimo 9555 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.1% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 44 fotogrammi annotati, 1 soggetti (s1), 7 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a12__s23/
+uscita=0
+### sequenze/d435i_nom__pannello_a12__s24/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 40 fotogrammi, durata 2.600 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.1%; valori validi: 1° percentile 1511 mm, mediana 2307 mm, 99° 6167 mm, massimo 9832 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.4% dei pixel validi entro ±5%, 0.5% oltre il suolo di più del 10%
+nota: verità: 40 fotogrammi annotati, 1 soggetti (s1), 10 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a12__s24/
+uscita=0
+### sequenze/d435i_nom__pannello_a12__s25/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 40 fotogrammi, durata 2.600 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2307 mm, 99° 6112 mm, massimo 9691 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.3% dei pixel validi entro ±5%, 0.5% oltre il suolo di più del 10%
+nota: verità: 40 fotogrammi annotati, 1 soggetti (s1), 10 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a12__s25/
+uscita=0
+### sequenze/d435i_nom__pannello_a12__s26/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 42 fotogrammi, durata 2.733 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.1%; valori validi: 1° percentile 1511 mm, mediana 2300 mm, 99° 6112 mm, massimo 9045 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.5% dei pixel validi entro ±5%, 0.6% oltre il suolo di più del 10%
+nota: verità: 42 fotogrammi annotati, 1 soggetti (s1), 11 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a12__s26/
+uscita=0
+### sequenze/d435i_nom__pannello_a12__s27/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 42 fotogrammi, durata 2.733 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2315 mm, 99° 6167 mm, massimo 9832 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.5% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 42 fotogrammi annotati, 1 soggetti (s1), 10 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a12__s27/
+uscita=0
+### sequenze/d435i_nom__pannello_a12__s28/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 45 fotogrammi, durata 2.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.1%; valori validi: 1° percentile 1514 mm, mediana 2292 mm, 99° 6167 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.0% dei pixel validi entro ±5%, 0.9% oltre il suolo di più del 10%
+nota: verità: 45 fotogrammi annotati, 1 soggetti (s1), 6 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a12__s28/
+uscita=0
+### sequenze/d435i_nom__pannello_a12__s29/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 44 fotogrammi, durata 2.867 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2300 mm, 99° 6112 mm, massimo 8810 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.1% dei pixel validi entro ±5%, 0.7% oltre il suolo di più del 10%
+nota: verità: 44 fotogrammi annotati, 1 soggetti (s1), 11 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a12__s29/
+uscita=0
+### sequenze/d435i_nom__pannello_a12_scuro__s00/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 47 fotogrammi, durata 3.067 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.2%; valori validi: 1° percentile 1511 mm, mediana 2307 mm, 99° 6167 mm, massimo 9832 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.7% dei pixel validi entro ±5%, 0.6% oltre il suolo di più del 10%
+nota: verità: 47 fotogrammi annotati, 1 soggetti (s1), 11 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a12_scuro__s00/
+uscita=0
+### sequenze/d435i_nom__pannello_a12_scuro__s01/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 45 fotogrammi, durata 2.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.3%; valori validi: 1° percentile 1511 mm, mediana 2307 mm, 99° 6167 mm, massimo 9555 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.5% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 45 fotogrammi annotati, 1 soggetti (s1), 11 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_a12_scuro__s01/
+uscita=0
+### sequenze/d435i_nom__pannello_b__s00/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 91 fotogrammi, durata 6.000 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.9%; valori validi: 1° percentile 1511 mm, mediana 2458 mm, 99° 6112 mm, massimo 9422 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 40.0% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 91 fotogrammi annotati, 1 soggetti (s1), 59 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_b__s00/
+uscita=0
+### sequenze/d435i_nom__pannello_b__s00__filtri/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240 + filtri SDK RealSense (temporale con persistenza 3, riempimento modo 1)», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 91 fotogrammi, durata 6.000 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 0.7%; valori validi: 1° percentile 1511 mm, mediana 2513 mm, 99° 6167 mm, massimo 9293 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.8% dei pixel validi entro ±5%, 1.3% oltre il suolo di più del 10%
+nota: verità: 91 fotogrammi annotati, 1 soggetti (s1), 59 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_b__s00__filtri/
+uscita=0
+### sequenze/d435i_nom__pannello_b__s01/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 89 fotogrammi, durata 5.867 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.9%; valori validi: 1° percentile 1514 mm, mediana 2458 mm, 99° 6167 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 40.2% dei pixel validi entro ±5%, 0.9% oltre il suolo di più del 10%
+nota: verità: 89 fotogrammi annotati, 1 soggetti (s1), 64 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_b__s01/
+uscita=0
+### sequenze/d435i_nom__pannello_b__s02/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 91 fotogrammi, durata 6.000 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.9%; valori validi: 1° percentile 1511 mm, mediana 2476 mm, 99° 6112 mm, massimo 9832 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 40.1% dei pixel validi entro ±5%, 0.7% oltre il suolo di più del 10%
+nota: verità: 91 fotogrammi annotati, 1 soggetti (s1), 64 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_b__s02/
+uscita=0
+### sequenze/d435i_nom__pannello_b__s03/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 88 fotogrammi, durata 5.800 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.9%; valori validi: 1° percentile 1511 mm, mediana 2467 mm, 99° 6167 mm, massimo 9691 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 40.2% dei pixel validi entro ±5%, 0.7% oltre il suolo di più del 10%
+nota: verità: 88 fotogrammi annotati, 1 soggetti (s1), 63 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_b__s03/
+uscita=0
+### sequenze/d435i_nom__pannello_b__s04/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 91 fotogrammi, durata 6.000 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.9%; valori validi: 1° percentile 1514 mm, mediana 2458 mm, 99° 6167 mm, massimo 9832 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 40.0% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 91 fotogrammi annotati, 1 soggetti (s1), 64 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_b__s04/
+uscita=0
+### sequenze/d435i_nom__pannello_b__s05/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 90 fotogrammi, durata 5.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.9%; valori validi: 1° percentile 1511 mm, mediana 2458 mm, 99° 6167 mm, massimo 8697 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 40.3% dei pixel validi entro ±5%, 0.7% oltre il suolo di più del 10%
+nota: verità: 90 fotogrammi annotati, 1 soggetti (s1), 64 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_b__s05/
+uscita=0
+### sequenze/d435i_nom__pannello_b__s06/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 92 fotogrammi, durata 6.067 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1514 mm, mediana 2458 mm, 99° 6167 mm, massimo 9555 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 40.0% dei pixel validi entro ±5%, 0.7% oltre il suolo di più del 10%
+nota: verità: 92 fotogrammi annotati, 1 soggetti (s1), 64 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_b__s06/
+uscita=0
+### sequenze/d435i_nom__pannello_b__s07/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 90 fotogrammi, durata 5.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2476 mm, 99° 6167 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 40.0% dei pixel validi entro ±5%, 0.9% oltre il suolo di più del 10%
+nota: verità: 90 fotogrammi annotati, 1 soggetti (s1), 63 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_b__s07/
+uscita=0
+### sequenze/d435i_nom__pannello_b__s08/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 93 fotogrammi, durata 6.133 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.9%; valori validi: 1° percentile 1511 mm, mediana 2458 mm, 99° 6167 mm, massimo 9832 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 40.0% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 93 fotogrammi annotati, 1 soggetti (s1), 64 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_b__s08/
+uscita=0
+### sequenze/d435i_nom__pannello_b__s09/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 90 fotogrammi, durata 5.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.9%; valori validi: 1° percentile 1511 mm, mediana 2476 mm, 99° 6167 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 40.0% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 90 fotogrammi annotati, 1 soggetti (s1), 64 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_b__s09/
+uscita=0
+### sequenze/d435i_nom__pannello_b__s10/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 91 fotogrammi, durata 6.000 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.9%; valori validi: 1° percentile 1511 mm, mediana 2467 mm, 99° 6167 mm, massimo 9422 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 40.2% dei pixel validi entro ±5%, 0.7% oltre il suolo di più del 10%
+nota: verità: 91 fotogrammi annotati, 1 soggetti (s1), 64 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_b__s10/
+uscita=0
+### sequenze/d435i_nom__pannello_b__s11/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 92 fotogrammi, durata 6.067 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.9%; valori validi: 1° percentile 1511 mm, mediana 2449 mm, 99° 6167 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 40.1% dei pixel validi entro ±5%, 1.2% oltre il suolo di più del 10%
+nota: verità: 92 fotogrammi annotati, 1 soggetti (s1), 64 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_b__s11/
+uscita=0
+### sequenze/d435i_nom__pannello_b__s12/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 90 fotogrammi, durata 5.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2458 mm, 99° 6167 mm, massimo 9168 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 40.1% dei pixel validi entro ±5%, 0.7% oltre il suolo di più del 10%
+nota: verità: 90 fotogrammi annotati, 1 soggetti (s1), 64 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_b__s12/
+uscita=0
+### sequenze/d435i_nom__pannello_b__s13/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 92 fotogrammi, durata 6.067 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.9%; valori validi: 1° percentile 1511 mm, mediana 2458 mm, 99° 6112 mm, massimo 9045 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 40.1% dei pixel validi entro ±5%, 0.7% oltre il suolo di più del 10%
+nota: verità: 92 fotogrammi annotati, 1 soggetti (s1), 63 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_b__s13/
+uscita=0
+### sequenze/d435i_nom__pannello_b__s14/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 89 fotogrammi, durata 5.867 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.9%; valori validi: 1° percentile 1511 mm, mediana 2467 mm, 99° 6167 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 40.1% dei pixel validi entro ±5%, 0.9% oltre il suolo di più del 10%
+nota: verità: 89 fotogrammi annotati, 1 soggetti (s1), 64 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_b__s14/
+uscita=0
+### sequenze/d435i_nom__pannello_b__s15/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 88 fotogrammi, durata 5.800 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2476 mm, 99° 6167 mm, massimo 9691 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 40.5% dei pixel validi entro ±5%, 0.6% oltre il suolo di più del 10%
+nota: verità: 88 fotogrammi annotati, 1 soggetti (s1), 64 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_b__s15/
+uscita=0
+### sequenze/d435i_nom__pannello_b__s16/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 88 fotogrammi, durata 5.800 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.9%; valori validi: 1° percentile 1514 mm, mediana 2458 mm, 99° 6167 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.9% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 88 fotogrammi annotati, 1 soggetti (s1), 64 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_b__s16/
+uscita=0
+### sequenze/d435i_nom__pannello_b__s17/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 89 fotogrammi, durata 5.867 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2476 mm, 99° 6112 mm, massimo 9045 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 40.4% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 89 fotogrammi annotati, 1 soggetti (s1), 63 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_b__s17/
+uscita=0
+### sequenze/d435i_nom__pannello_b__s18/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 88 fotogrammi, durata 5.800 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.9%; valori validi: 1° percentile 1511 mm, mediana 2458 mm, 99° 6167 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 40.2% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 88 fotogrammi annotati, 1 soggetti (s1), 64 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_b__s18/
+uscita=0
+### sequenze/d435i_nom__pannello_b__s19/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 90 fotogrammi, durata 5.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.9%; valori validi: 1° percentile 1514 mm, mediana 2458 mm, 99° 6167 mm, massimo 9832 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 40.2% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 90 fotogrammi annotati, 1 soggetti (s1), 61 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_b__s19/
+uscita=0
+### sequenze/d435i_nom__pannello_b__s20/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 89 fotogrammi, durata 5.867 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.9%; valori validi: 1° percentile 1514 mm, mediana 2476 mm, 99° 6167 mm, massimo 9293 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 40.2% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 89 fotogrammi annotati, 1 soggetti (s1), 63 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_b__s20/
+uscita=0
+### sequenze/d435i_nom__pannello_b__s21/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 90 fotogrammi, durata 5.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.9%; valori validi: 1° percentile 1514 mm, mediana 2467 mm, 99° 6112 mm, massimo 9293 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 40.2% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 90 fotogrammi annotati, 1 soggetti (s1), 64 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_b__s21/
+uscita=0
+### sequenze/d435i_nom__pannello_b__s22/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 90 fotogrammi, durata 5.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.9%; valori validi: 1° percentile 1514 mm, mediana 2467 mm, 99° 6167 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 40.2% dei pixel validi entro ±5%, 0.7% oltre il suolo di più del 10%
+nota: verità: 90 fotogrammi annotati, 1 soggetti (s1), 64 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_b__s22/
+uscita=0
+### sequenze/d435i_nom__pannello_b__s23/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 91 fotogrammi, durata 6.000 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2458 mm, 99° 6167 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 40.2% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 91 fotogrammi annotati, 1 soggetti (s1), 64 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_b__s23/
+uscita=0
+### sequenze/d435i_nom__pannello_b__s24/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 87 fotogrammi, durata 5.733 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.9%; valori validi: 1° percentile 1511 mm, mediana 2458 mm, 99° 6167 mm, massimo 9691 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.9% dei pixel validi entro ±5%, 0.7% oltre il suolo di più del 10%
+nota: verità: 87 fotogrammi annotati, 1 soggetti (s1), 63 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_b__s24/
+uscita=0
+### sequenze/d435i_nom__pannello_b__s25/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 88 fotogrammi, durata 5.800 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.9%; valori validi: 1° percentile 1514 mm, mediana 2467 mm, 99° 6167 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 40.3% dei pixel validi entro ±5%, 0.7% oltre il suolo di più del 10%
+nota: verità: 88 fotogrammi annotati, 1 soggetti (s1), 63 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_b__s25/
+uscita=0
+### sequenze/d435i_nom__pannello_b__s26/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 89 fotogrammi, durata 5.867 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2467 mm, 99° 6167 mm, massimo 9293 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 40.2% dei pixel validi entro ±5%, 0.6% oltre il suolo di più del 10%
+nota: verità: 89 fotogrammi annotati, 1 soggetti (s1), 63 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_b__s26/
+uscita=0
+### sequenze/d435i_nom__pannello_b__s27/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 90 fotogrammi, durata 5.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1514 mm, mediana 2476 mm, 99° 6167 mm, massimo 9293 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 40.1% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 90 fotogrammi annotati, 1 soggetti (s1), 64 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_b__s27/
+uscita=0
+### sequenze/d435i_nom__pannello_b__s28/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 91 fotogrammi, durata 6.000 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2449 mm, 99° 6112 mm, massimo 9045 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 40.1% dei pixel validi entro ±5%, 0.6% oltre il suolo di più del 10%
+nota: verità: 91 fotogrammi annotati, 1 soggetti (s1), 64 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_b__s28/
+uscita=0
+### sequenze/d435i_nom__pannello_b__s29/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 88 fotogrammi, durata 5.800 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1514 mm, mediana 2458 mm, 99° 6167 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 40.1% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 88 fotogrammi annotati, 1 soggetti (s1), 64 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_b__s29/
+uscita=0
+### sequenze/d435i_nom__pannello_c__s00/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 60 fotogrammi, durata 3.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.9%; valori validi: 1° percentile 1511 mm, mediana 2380 mm, 99° 6112 mm, massimo 9691 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.9% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 60 fotogrammi annotati, 1 soggetti (s1), 31 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_c__s00/
+uscita=0
+### sequenze/d435i_nom__pannello_c__s01/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 63 fotogrammi, durata 4.133 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2389 mm, 99° 6167 mm, massimo 9293 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.7% dei pixel validi entro ±5%, 0.7% oltre il suolo di più del 10%
+nota: verità: 63 fotogrammi annotati, 1 soggetti (s1), 32 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_c__s01/
+uscita=0
+### sequenze/d435i_nom__pannello_c__s02/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 59 fotogrammi, durata 3.867 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1514 mm, mediana 2364 mm, 99° 6167 mm, massimo 9168 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.8% dei pixel validi entro ±5%, 0.6% oltre il suolo di più del 10%
+nota: verità: 59 fotogrammi annotati, 1 soggetti (s1), 29 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_c__s02/
+uscita=0
+### sequenze/d435i_nom__pannello_c__s03/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 64 fotogrammi, durata 4.200 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2414 mm, 99° 6112 mm, massimo 9422 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.6% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 64 fotogrammi annotati, 1 soggetti (s1), 36 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_c__s03/
+uscita=0
+### sequenze/d435i_nom__pannello_d__s00/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 80 fotogrammi, durata 5.267 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2485 mm, 99° 6167 mm, massimo 9832 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 40.3% dei pixel validi entro ±5%, 0.9% oltre il suolo di più del 10%
+nota: verità: 80 fotogrammi annotati, 1 soggetti (s1), 65 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_d__s00/
+uscita=0
+### sequenze/d435i_nom__pannello_d__s01/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 76 fotogrammi, durata 5.000 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.9%; valori validi: 1° percentile 1514 mm, mediana 2485 mm, 99° 6167 mm, massimo 9555 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 40.2% dei pixel validi entro ±5%, 0.9% oltre il suolo di più del 10%
+nota: verità: 76 fotogrammi annotati, 1 soggetti (s1), 61 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_d__s01/
+uscita=0
+### sequenze/d435i_nom__pannello_d__s02/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 80 fotogrammi, durata 5.267 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2485 mm, 99° 6167 mm, massimo 9691 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 40.4% dei pixel validi entro ±5%, 0.7% oltre il suolo di più del 10%
+nota: verità: 80 fotogrammi annotati, 1 soggetti (s1), 64 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_d__s02/
+uscita=0
+### sequenze/d435i_nom__pannello_d__s03/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 81 fotogrammi, durata 5.333 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.9%; valori validi: 1° percentile 1511 mm, mediana 2485 mm, 99° 6167 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 40.3% dei pixel validi entro ±5%, 0.7% oltre il suolo di più del 10%
+nota: verità: 81 fotogrammi annotati, 1 soggetti (s1), 64 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_d__s03/
+uscita=0
+### sequenze/d435i_nom__pannello_vuoto/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 10 fotogrammi, durata 0.600 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1511 mm, mediana 2579 mm, 99° 6167 mm, massimo 9045 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 40.5% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 10 fotogrammi annotati, 0 soggetti (), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_vuoto/
+uscita=0
+### sequenze/d435i_nom__pannello_vuoto__filtri/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240 + filtri SDK RealSense (temporale con persistenza 3, riempimento modo 1)», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 10 fotogrammi, durata 0.600 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 0.7%; valori validi: 1° percentile 1511 mm, mediana 2640 mm, 99° 6167 mm, massimo 8810 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 40.2% dei pixel validi entro ±5%, 1.4% oltre il suolo di più del 10%
+nota: verità: 10 fotogrammi annotati, 0 soggetti (), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pannello_vuoto__filtri/
+uscita=0
+### sequenze/d435i_nom__parete_1m/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 0.0}
+nota: tempi: 30 fotogrammi, durata 1.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.1%; valori validi: 1° percentile 992 mm, mediana 1001 mm, 99° 1010 mm, massimo 1017 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 0.0% dei pixel validi entro ±5%, 0.0% oltre il suolo di più del 10%
+nota: verità: 30 fotogrammi annotati, 0 soggetti (), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 4 ostacoli
+AVVISO: profondita/: meno del 2% dei pixel validi è compatibile con il suolo previsto dalla posa: controlla altezza, segno dell'inclinazione, unità, e che la profondità sia lungo l'asse ottico (non lungo il raggio)
+ESITO: rispetta il formato (0 errori, 1 avvisi) — sequenze/d435i_nom__parete_1m/
+uscita=0
+### sequenze/d435i_nom__parete_2m/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 0.0}
+nota: tempi: 30 fotogrammi, durata 1.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 1.9%; valori validi: 1° percentile 1966 mm, mediana 2001 mm, 99° 2037 mm, massimo 2081 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 0.0% dei pixel validi entro ±5%, 0.0% oltre il suolo di più del 10%
+nota: verità: 30 fotogrammi annotati, 0 soggetti (), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 4 ostacoli
+AVVISO: profondita/: meno del 2% dei pixel validi è compatibile con il suolo previsto dalla posa: controlla altezza, segno dell'inclinazione, unità, e che la profondità sia lungo l'asse ottico (non lungo il raggio)
+ESITO: rispetta il formato (0 errori, 1 avvisi) — sequenze/d435i_nom__parete_2m/
+uscita=0
+### sequenze/d435i_nom__parete_3m/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 0.0}
+nota: tempi: 30 fotogrammi, durata 1.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 1.7%; valori validi: 1° percentile 2161 mm, mediana 2989 mm, 99° 3084 mm, massimo 3409 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 15.3% dei pixel validi entro ±5%, 0.0% oltre il suolo di più del 10%
+nota: verità: 30 fotogrammi annotati, 0 soggetti (), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 4 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__parete_3m/
+uscita=0
+### sequenze/d435i_nom__parete_4m/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 0.0}
+nota: tempi: 30 fotogrammi, durata 1.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.1%; valori validi: 1° percentile 2174 mm, mediana 3967 mm, 99° 4137 mm, massimo 5063 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 21.5% dei pixel validi entro ±5%, 0.2% oltre il suolo di più del 10%
+nota: verità: 30 fotogrammi annotati, 0 soggetti (), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 4 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__parete_4m/
+uscita=0
+### sequenze/d435i_nom__pavimento_lucido/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 20 fotogrammi, durata 1.267 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 6.3%; valori validi: 1° percentile 1514 mm, mediana 4377 mm, 99° 6400 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 37.2% dei pixel validi entro ±5%, 4.5% oltre il suolo di più del 10%
+nota: verità: 20 fotogrammi annotati, 0 soggetti (), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 4 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pavimento_lucido/
+uscita=0
+### sequenze/d435i_nom__pavimento_vuoto/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 30 fotogrammi, durata 1.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.5%; valori validi: 1° percentile 1514 mm, mediana 4214 mm, 99° 6224 mm, massimo 9422 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 47.4% dei pixel validi entro ±5%, 1.0% oltre il suolo di più del 10%
+nota: verità: 30 fotogrammi annotati, 0 soggetti (), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 4 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pavimento_vuoto/
+uscita=0
+### sequenze/d435i_nom__pavimento_vuoto__filtri/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240 + filtri SDK RealSense (temporale con persistenza 3, riempimento modo 1)», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 30 fotogrammi, durata 1.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 0.7%; valori validi: 1° percentile 1512 mm, mediana 4214 mm, 99° 6224 mm, massimo 9422 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 47.3% dei pixel validi entro ±5%, 1.6% oltre il suolo di più del 10%
+nota: verità: 30 fotogrammi annotati, 0 soggetti (), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 4 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__pavimento_vuoto__filtri/
+uscita=0
+### sequenze/d435i_nom__scatola15_0p8m/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 10 fotogrammi, durata 0.600 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.4%; valori validi: 1° percentile 1514 mm, mediana 4240 mm, 99° 6281 mm, massimo 9168 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 47.3% dei pixel validi entro ±5%, 1.3% oltre il suolo di più del 10%
+nota: verità: 10 fotogrammi annotati, 0 soggetti (), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__scatola15_0p8m/
+uscita=0
+### sequenze/d435i_nom__scatola15_2p0m/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 10 fotogrammi, durata 0.600 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.6%; valori validi: 1° percentile 1511 mm, mediana 4240 mm, 99° 6224 mm, massimo 9976 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 47.2% dei pixel validi entro ±5%, 1.4% oltre il suolo di più del 10%
+nota: verità: 10 fotogrammi annotati, 0 soggetti (), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__scatola15_2p0m/
+uscita=0
+### sequenze/d435i_nom__sensore_coperto/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 45 fotogrammi, durata 2.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 41.9%; valori validi: 1° percentile 1511 mm, mediana 2239 mm, 99° 6112 mm, massimo 8810 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 38.6% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 45 fotogrammi annotati, 1 soggetti (s1), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__sensore_coperto/
+uscita=0
+### sequenze/d435i_nom__sensore_mezzo_coperto/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 30 fotogrammi, durata 1.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 26.9%; valori validi: 1° percentile 1514 mm, mediana 2356 mm, 99° 6112 mm, massimo 9691 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.6% dei pixel validi entro ±5%, 0.5% oltre il suolo di più del 10%
+nota: verità: 30 fotogrammi annotati, 1 soggetti (s1), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__sensore_mezzo_coperto/
+uscita=0
+### sequenze/d435i_nom__sospeso_2p0m/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 10 fotogrammi, durata 0.600 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.5%; valori validi: 1° percentile 1511 mm, mediana 4240 mm, 99° 6224 mm, massimo 9555 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 47.8% dei pixel validi entro ±5%, 1.2% oltre il suolo di più del 10%
+nota: verità: 10 fotogrammi annotati, 0 soggetti (), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__sospeso_2p0m/
+uscita=0
+### sequenze/d435i_nom__sospeso_2p8m/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 10 fotogrammi, durata 0.600 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.4%; valori validi: 1° percentile 1514 mm, mediana 4137 mm, 99° 6281 mm, massimo 8926 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 47.6% dei pixel validi entro ±5%, 1.4% oltre il suolo di più del 10%
+nota: verità: 10 fotogrammi annotati, 0 soggetti (), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__sospeso_2p8m/
+uscita=0
+### sequenze/d435i_nom__vetro_buco/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 10 fotogrammi, durata 0.600 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 31.4%; valori validi: 1° percentile 1504 mm, mediana 4014 mm, 99° 6167 mm, massimo 9168 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 50.4% dei pixel validi entro ±5%, 1.4% oltre il suolo di più del 10%
+nota: verità: 10 fotogrammi annotati, 0 soggetti (), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__vetro_buco/
+uscita=0
+### sequenze/d435i_nom__vetro_sfondo/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 10 fotogrammi, durata 0.600 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.2%; valori validi: 1° percentile 1514 mm, mediana 4240 mm, 99° 6224 mm, massimo 9555 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 48.0% dei pixel validi entro ±5%, 1.3% oltre il suolo di più del 10%
+nota: verità: 10 fotogrammi annotati, 0 soggetti (), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d435i_nom__vetro_sfondo/
+uscita=0
+### sequenze/d455_nom__pannello_a05__s00/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d455, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 66 fotogrammi, durata 4.333 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 4.3%; valori validi: 1° percentile 1511 mm, mediana 2356 mm, 99° 6080 mm, massimo 7538 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 42.9% dei pixel validi entro ±5%, 0.1% oltre il suolo di più del 10%
+nota: verità: 66 fotogrammi annotati, 1 soggetti (s1), 24 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d455_nom__pannello_a05__s00/
+uscita=0
+### sequenze/d455_nom__pannello_a12__s00/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d455, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 47 fotogrammi, durata 3.067 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 4.5%; valori validi: 1° percentile 1513 mm, mediana 2298 mm, 99° 6080 mm, massimo 7582 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 42.4% dei pixel validi entro ±5%, 0.1% oltre il suolo di più del 10%
+nota: verità: 47 fotogrammi annotati, 1 soggetti (s1), 11 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d455_nom__pannello_a12__s00/
+uscita=0
+### sequenze/d455_nom__pannello_a12__s01/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d455, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 45 fotogrammi, durata 2.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 4.4%; valori validi: 1° percentile 1511 mm, mediana 2298 mm, 99° 6051 mm, massimo 7324 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 42.4% dei pixel validi entro ±5%, 0.1% oltre il suolo di più del 10%
+nota: verità: 45 fotogrammi annotati, 1 soggetti (s1), 11 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d455_nom__pannello_a12__s01/
+uscita=0
+### sequenze/d455_nom__pannello_a12__s02/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d455, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 45 fotogrammi, durata 2.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 4.4%; valori validi: 1° percentile 1511 mm, mediana 2306 mm, 99° 6080 mm, massimo 7627 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 42.5% dei pixel validi entro ±5%, 0.1% oltre il suolo di più del 10%
+nota: verità: 45 fotogrammi annotati, 1 soggetti (s1), 12 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d455_nom__pannello_a12__s02/
+uscita=0
+### sequenze/d455_nom__pannello_b__s00/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d455, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 91 fotogrammi, durata 6.000 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 4.3%; valori validi: 1° percentile 1513 mm, mediana 2432 mm, 99° 6080 mm, massimo 8425 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 43.3% dei pixel validi entro ±5%, 0.1% oltre il suolo di più del 10%
+nota: verità: 91 fotogrammi annotati, 1 soggetti (s1), 59 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d455_nom__pannello_b__s00/
+uscita=0
+### sequenze/d455_nom__pannello_vuoto/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d455, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 10 fotogrammi, durata 0.600 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 4.1%; valori validi: 1° percentile 1511 mm, mediana 2563 mm, 99° 6080 mm, massimo 7082 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 43.9% dei pixel validi entro ±5%, 0.1% oltre il suolo di più del 10%
+nota: verità: 10 fotogrammi annotati, 0 soggetti (), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d455_nom__pannello_vuoto/
+uscita=0
+### sequenze/d455_nom__parete_1m/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d455, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 0.0}
+nota: tempi: 30 fotogrammi, durata 1.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 5.5%; valori validi: 1° percentile 995 mm, mediana 1000 mm, 99° 1005 mm, massimo 1008 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 0.0% dei pixel validi entro ±5%, 0.0% oltre il suolo di più del 10%
+nota: verità: 30 fotogrammi annotati, 0 soggetti (), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 4 ostacoli
+AVVISO: profondita/: meno del 2% dei pixel validi è compatibile con il suolo previsto dalla posa: controlla altezza, segno dell'inclinazione, unità, e che la profondità sia lungo l'asse ottico (non lungo il raggio)
+ESITO: rispetta il formato (0 errori, 1 avvisi) — sequenze/d455_nom__parete_1m/
+uscita=0
+### sequenze/d455_nom__parete_2m/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d455, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 0.0}
+nota: tempi: 30 fotogrammi, durata 1.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.1%; valori validi: 1° percentile 1980 mm, mediana 1998 mm, 99° 2017 mm, massimo 2036 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 0.0% dei pixel validi entro ±5%, 0.0% oltre il suolo di più del 10%
+nota: verità: 30 fotogrammi annotati, 0 soggetti (), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 4 ostacoli
+AVVISO: profondita/: meno del 2% dei pixel validi è compatibile con il suolo previsto dalla posa: controlla altezza, segno dell'inclinazione, unità, e che la profondità sia lungo l'asse ottico (non lungo il raggio)
+ESITO: rispetta il formato (0 errori, 1 avvisi) — sequenze/d455_nom__parete_2m/
+uscita=0
+### sequenze/d455_nom__parete_3m/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d455, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 0.0}
+nota: tempi: 30 fotogrammi, durata 1.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.5%; valori validi: 1° percentile 2170 mm, mediana 2998 mm, 99° 3040 mm, massimo 3151 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 16.0% dei pixel validi entro ±5%, 0.0% oltre il suolo di più del 10%
+nota: verità: 30 fotogrammi annotati, 0 soggetti (), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 4 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d455_nom__parete_3m/
+uscita=0
+### sequenze/d455_nom__parete_4m/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d455, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 0.0}
+nota: tempi: 30 fotogrammi, durata 1.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.9%; valori validi: 1° percentile 2170 mm, mediana 3978 mm, 99° 4066 mm, massimo 4460 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 23.8% dei pixel validi entro ±5%, 0.0% oltre il suolo di più del 10%
+nota: verità: 30 fotogrammi annotati, 0 soggetti (), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 4 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d455_nom__parete_4m/
+uscita=0
+### sequenze/d455_nom__pavimento_vuoto/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 90.0°, sensore «simulato: realsense_d455, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 30 fotogrammi, durata 1.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.2%; valori validi: 1° percentile 1513 mm, mediana 4254 mm, 99° 6138 mm, massimo 7201 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 52.1% dei pixel validi entro ±5%, 0.2% oltre il suolo di più del 10%
+nota: verità: 30 fotogrammi annotati, 0 soggetti (), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 4 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/d455_nom__pavimento_vuoto/
+uscita=0
+### sequenze/g335_nom__pannello_a05__s00/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 91.8°, sensore «simulato: orbbec_gemini_335, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 66 fotogrammi, durata 4.333 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1480 mm, mediana 2416 mm, 99° 6141 mm, massimo 9808 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.9% dei pixel validi entro ±5%, 0.7% oltre il suolo di più del 10%
+nota: verità: 66 fotogrammi annotati, 1 soggetti (s1), 24 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/g335_nom__pannello_a05__s00/
+uscita=0
+### sequenze/g335_nom__pannello_a12__s00/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 91.8°, sensore «simulato: orbbec_gemini_335, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 47 fotogrammi, durata 3.067 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1480 mm, mediana 2355 mm, 99° 6141 mm, massimo 9956 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.4% dei pixel validi entro ±5%, 0.9% oltre il suolo di più del 10%
+nota: verità: 47 fotogrammi annotati, 1 soggetti (s1), 11 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/g335_nom__pannello_a12__s00/
+uscita=0
+### sequenze/g335_nom__pannello_a12__s01/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 91.8°, sensore «simulato: orbbec_gemini_335, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 45 fotogrammi, durata 2.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.1%; valori validi: 1° percentile 1483 mm, mediana 2347 mm, 99° 6141 mm, massimo 9956 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.4% dei pixel validi entro ±5%, 0.9% oltre il suolo di più del 10%
+nota: verità: 45 fotogrammi annotati, 1 soggetti (s1), 11 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/g335_nom__pannello_a12__s01/
+uscita=0
+### sequenze/g335_nom__pannello_a12__s02/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 91.8°, sensore «simulato: orbbec_gemini_335, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 45 fotogrammi, durata 2.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.0%; valori validi: 1° percentile 1477 mm, mediana 2347 mm, 99° 6141 mm, massimo 9664 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.7% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 45 fotogrammi annotati, 1 soggetti (s1), 12 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/g335_nom__pannello_a12__s02/
+uscita=0
+### sequenze/g335_nom__pannello_b__s00/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 91.8°, sensore «simulato: orbbec_gemini_335, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 91 fotogrammi, durata 6.000 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.9%; valori validi: 1° percentile 1477 mm, mediana 2489 mm, 99° 6141 mm, massimo 9387 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.9% dei pixel validi entro ±5%, 0.8% oltre il suolo di più del 10%
+nota: verità: 91 fotogrammi annotati, 1 soggetti (s1), 63 presenze nascoste, 1 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/g335_nom__pannello_b__s00/
+uscita=0
+### sequenze/g335_nom__pannello_vuoto/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 91.8°, sensore «simulato: orbbec_gemini_335, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 10 fotogrammi, durata 0.600 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.9%; valori validi: 1° percentile 1480 mm, mediana 2628 mm, 99° 6199 mm, massimo 9808 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 39.9% dei pixel validi entro ±5%, 1.0% oltre il suolo di più del 10%
+nota: verità: 10 fotogrammi annotati, 0 soggetti (), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 5 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/g335_nom__pannello_vuoto/
+uscita=0
+### sequenze/g335_nom__parete_1m/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 91.8°, sensore «simulato: orbbec_gemini_335, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 0.0}
+nota: tempi: 30 fotogrammi, durata 1.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 3.2%; valori validi: 1° percentile 991 mm, mediana 1000 mm, 99° 1009 mm, massimo 1020 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 0.0% dei pixel validi entro ±5%, 0.0% oltre il suolo di più del 10%
+nota: verità: 30 fotogrammi annotati, 0 soggetti (), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 4 ostacoli
+AVVISO: profondita/: meno del 2% dei pixel validi è compatibile con il suolo previsto dalla posa: controlla altezza, segno dell'inclinazione, unità, e che la profondità sia lungo l'asse ottico (non lungo il raggio)
+ESITO: rispetta il formato (0 errori, 1 avvisi) — sequenze/g335_nom__parete_1m/
+uscita=0
+### sequenze/g335_nom__parete_2m/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 91.8°, sensore «simulato: orbbec_gemini_335, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 0.0}
+nota: tempi: 30 fotogrammi, durata 1.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 1.9%; valori validi: 1° percentile 1962 mm, mediana 1997 mm, 99° 2034 mm, massimo 2079 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 1.1% dei pixel validi entro ±5%, 0.0% oltre il suolo di più del 10%
+nota: verità: 30 fotogrammi annotati, 0 soggetti (), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 4 ostacoli
+AVVISO: profondita/: meno del 2% dei pixel validi è compatibile con il suolo previsto dalla posa: controlla altezza, segno dell'inclinazione, unità, e che la profondità sia lungo l'asse ottico (non lungo il raggio)
+ESITO: rispetta il formato (0 errori, 1 avvisi) — sequenze/g335_nom__parete_2m/
+uscita=0
+### sequenze/g335_nom__parete_3m/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 91.8°, sensore «simulato: orbbec_gemini_335, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 0.0}
+nota: tempi: 30 fotogrammi, durata 1.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 1.7%; valori validi: 1° percentile 2093 mm, mediana 2987 mm, 99° 3085 mm, massimo 3440 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 16.2% dei pixel validi entro ±5%, 0.0% oltre il suolo di più del 10%
+nota: verità: 30 fotogrammi annotati, 0 soggetti (), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 4 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/g335_nom__parete_3m/
+uscita=0
+### sequenze/g335_nom__parete_4m/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 91.8°, sensore «simulato: orbbec_gemini_335, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 0.0}
+nota: tempi: 30 fotogrammi, durata 1.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.1%; valori validi: 1° percentile 2093 mm, mediana 3959 mm, 99° 4159 mm, massimo 5094 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 21.8% dei pixel validi entro ±5%, 0.3% oltre il suolo di più del 10%
+nota: verità: 30 fotogrammi annotati, 0 soggetti (), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 4 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/g335_nom__parete_4m/
+uscita=0
+### sequenze/g335_nom__pavimento_vuoto/
+nota: meta.json: chiave in più «simulazione» (ammessa, ignorata dal controllo)
+nota: meta: 424x240 px, 15.0 fps, campo orizzontale 91.8°, sensore «simulato: orbbec_gemini_335, livello nominale, 848x480 campionato a 424x240», posa {'altezza_m': 1.2, 'inclinazione_gradi': 15.0}
+nota: tempi: 30 fotogrammi, durata 1.933 s, passo mediano 66.7 ms, massimo 66.7 ms
+nota: profondità (tutti): senza dato 2.5%; valori validi: 1° percentile 1480 mm, mediana 4159 mm, 99° 6258 mm, massimo 9956 mm
+nota: confronto con il suolo piano previsto dalla posa (solo descrittivo): 47.2% dei pixel validi entro ±5%, 1.2% oltre il suolo di più del 10%
+nota: verità: 30 fotogrammi annotati, 0 soggetti (), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 4 ostacoli
+ESITO: rispetta il formato (0 errori, 0 avvisi) — sequenze/g335_nom__pavimento_vuoto/
+uscita=0

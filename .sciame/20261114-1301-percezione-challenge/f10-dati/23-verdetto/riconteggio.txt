@@ -1,0 +1,77 @@
+== C1. Sequenze simulate (11-simulatore/sequenze/INDICE.csv e cartelle) ==
+righe dell'indice: 162 ; fotogrammi (somma della colonna): 9152
+cartelle: 162 ; file .npy di profondita': 9152
+con filtri: 5 ; per livello: {'limite': 14, 'nominale': 148}
+
+== C2. Sequenze vere (12-dati-veri/manifesto.json e cartelle) ==
+sequenze nel manifesto: 8 ; fotogrammi: 3510 ; tracce: 2
+cartelle: 8 ; file di profondita': 3510
+
+== C3. K-014: celle «libero» (stato 1) il cui centro e' in ombra vera (classe 1 della maschera polare) ==
+   (definizione MIA, sulla maschera polare del simulatore; la validazione usa la cartesiana, «tutta in ombra»)
+sim: «libero» in ombra vera 0 su 3149352 celle·fotogramma, 134 sequenze con ombra; senza le __filtri: 0 su 3077556, 130 sequenze; geometrie d'ombra distinte (celle: sequenze) {372: 132, 344: 1, 12: 1}; colpite []
+sim_p40: «libero» in ombra vera 47 su 3149352 celle·fotogramma, 134 sequenze con ombra; senza le __filtri: 47 su 3077556, 130 sequenze; geometrie d'ombra distinte (celle: sequenze) {372: 132, 344: 1, 12: 1}; colpite [('d435i_nom__azzeramento_progressivo', 9), ('d435i_nom__scatola15_2p0m', 38)]
+
+== C3bis. Le stesse somme dai record della validazione (misura_libero.json) ==
+sim: record 162; con ombra 135 (di cui __filtri 4); libero_tutta_ombra 0 su 2907032; libero_bordo 0 su 356736; sequenze colpite []
+sim_p40: record 162; con ombra 135 (di cui __filtri 4); libero_tutta_ombra 2 su 2907032; libero_bordo 45 su 356736; sequenze colpite [('d435i_nom__azzeramento_progressivo', 0, 9), ('d435i_nom__scatola15_2p0m', 2, 36)]
+
+== C4. Bordo d'ombra (misura_ombra.json: per sequenza i percentili 0, 5, 50, 95, 100 di ciascun lato) ==
+sim _nom__: sequenze senza filtri 115 {'d435i': 103, 'd455': 6, 'g335': 6}; fotogrammi (somma del campo) 3742; mediana delle mediane per sequenza +6.2, minimo assoluto +2.0, massimo assoluto +14.6 cm; tutte entro ±20 cm: 115 su 115 (96.8-100.0 %); D435i: 103 su 103 (96.4-100.0 %); sequenze con minimo sotto 0: 0; sotto -10: 0
+sim _lim__: sequenze senza filtri 8 {'d435i': 8}; fotogrammi (somma del campo) 182; mediana delle mediane per sequenza -33.6, minimo assoluto -65.0, massimo assoluto +73.2 cm; tutte entro ±20 cm: 0 su 8 (0.0-32.4 %); D435i: 0 su 8 (0.0-32.4 %); sequenze con minimo sotto 0: 8; sotto -10: 8
+sim_p40 _nom__: sequenze senza filtri 115 {'d435i': 103, 'd455': 6, 'g335': 6}; fotogrammi (somma del campo) 3742; mediana delle mediane per sequenza +2.0, minimo assoluto +2.0, massimo assoluto +2.0 cm; tutte entro ±20 cm: 115 su 115 (96.8-100.0 %); D435i: 103 su 103 (96.4-100.0 %); sequenze con minimo sotto 0: 0; sotto -10: 0
+sim_p40 _lim__: sequenze senza filtri 8 {'d435i': 8}; fotogrammi (somma del campo) 191; mediana delle mediane per sequenza +6.2, minimo assoluto +2.0, massimo assoluto +14.6 cm; tutte entro ±20 cm: 8 su 8 (67.6-100.0 %); D435i: 8 su 8 (67.6-100.0 %); sequenze con minimo sotto 0: 0; sotto -10: 0
+
+== C5-C7, C11. Passaggi D435i nominale a12 / a05 / b (misura_passaggi.json) ==
+sim a12: N 30; continuita' pulita 0 su 30 (0.0-11.4 %); dispari 0 su 15; pannello «si muove» 24; cella del centro nascosto {'possibile_presenza': 296, 'occupato': 0, 'non_osservato': 0, 'in_ombra_senza_avviso': 32, 'libero': 0, 'fuori_griglia': 0}; verita' sempre nella regione al 90 %: 17 su 18 con previsione; fantasmi per passaggio min-max 7-32; osservato a soggetto nascosto in 1 passaggi
+sim a05: N 30; continuita' pulita 0 su 30 (0.0-11.4 %); dispari 0 su 15; pannello «si muove» 30; cella del centro nascosto {'possibile_presenza': 762, 'occupato': 0, 'non_osservato': 0, 'in_ombra_senza_avviso': 31, 'libero': 0, 'fuori_griglia': 0}; verita' sempre nella regione al 90 %: 6 su 8 con previsione; fantasmi per passaggio min-max 10-52; osservato a soggetto nascosto in 0 passaggi
+sim b: N 30; continuita' pulita 0 su 30 (0.0-11.4 %); dispari 0 su 15; pannello «si muove» 25; cella del centro nascosto {'possibile_presenza': 1881, 'occupato': 0, 'non_osservato': 0, 'in_ombra_senza_avviso': 36, 'libero': 0, 'fuori_griglia': 0}; verita' sempre nella regione al 90 %: 13 su 20 con previsione; fantasmi per passaggio min-max 16-66; osservato a soggetto nascosto in 7 passaggi
+sim INSIEME: N 90; continuita' 0 su 90 (0.0-4.1 %); dispari 0 su 45 (0.0-7.9 %); pari 0 su 45; pannello «si muove» 79 su 90 (79.4-93.0 %); centro nascosto {'possibile_presenza': 2939, 'occupato': 0, 'non_osservato': 0, 'in_ombra_senza_avviso': 99, 'libero': 0, 'fuori_griglia': 0} (totale 3038); regione: 36 su 46 (64.4-87.7 %)
+sim LIMITE: 0 su 1
+sim D455+Gemini: N 10; continuita' 0; con fusione 10
+sim: passaggi con almeno un fotogramma di fusione persona-pannello: 90 su 90
+sim_p40 a12: N 30; continuita' pulita 28 su 30 (78.7-98.2 %); dispari 13 su 15; pannello «si muove» 0; cella del centro nascosto {'possibile_presenza': 328, 'occupato': 0, 'non_osservato': 0, 'in_ombra_senza_avviso': 0, 'libero': 0, 'fuori_griglia': 0}; verita' sempre nella regione al 90 %: 30 su 30 con previsione; fantasmi per passaggio min-max 0-0; osservato a soggetto nascosto in 0 passaggi
+sim_p40 a05: N 30; continuita' pulita 24 su 30 (62.7-90.5 %); dispari 13 su 15; pannello «si muove» 4; cella del centro nascosto {'possibile_presenza': 793, 'occupato': 0, 'non_osservato': 0, 'in_ombra_senza_avviso': 0, 'libero': 0, 'fuori_griglia': 0}; verita' sempre nella regione al 90 %: 26 su 30 con previsione; fantasmi per passaggio min-max 0-0; osservato a soggetto nascosto in 0 passaggi
+sim_p40 b: N 30; continuita' pulita 28 su 30 (78.7-98.2 %); dispari 15 su 15; pannello «si muove» 1; cella del centro nascosto {'possibile_presenza': 1917, 'occupato': 0, 'non_osservato': 0, 'in_ombra_senza_avviso': 0, 'libero': 0, 'fuori_griglia': 0}; verita' sempre nella regione al 90 %: 27 su 30 con previsione; fantasmi per passaggio min-max 0-0; osservato a soggetto nascosto in 0 passaggi
+sim_p40 INSIEME: N 90; continuita' 80 su 90 (80.7-93.9 %); dispari 41 su 45 (79.3-96.5 %); pari 39 su 45; pannello «si muove» 5 su 90 (2.4-12.4 %); centro nascosto {'possibile_presenza': 3038, 'occupato': 0, 'non_osservato': 0, 'in_ombra_senza_avviso': 0, 'libero': 0, 'fuori_griglia': 0} (totale 3038); regione: 83 su 90 (84.8-96.2 %)
+sim_p40 LIMITE: 0 su 7
+sim_p40 D455+Gemini: N 10; continuita' 9; con fusione 1
+
+== C8. THOR (banco_thor.json) ==
+finestre {'exp1': 227, 'exp3': 219} persone {'exp1': 9, 'exp3': 9} q scelto su exp1 0.05
+q0.2_tutti N 219 persone 9 ; copertura90 a 1/2/3 s: 0.977 / 1.000 / 1.000 ; errore mediano: 0.21 / 0.49 / 0.81 ; p90: 0.46 / 1.11 / 1.89 ; raggio95: 0.75 / 1.96 / 3.49 ; fermo: 0.91 / 1.79 / 2.62
+q0.05_tutti N 219 persone 9 ; copertura90 a 1/2/3 s: 0.795 / 0.804 / 0.831 ; errore mediano: 0.19 / 0.44 / 0.72 ; p90: 0.46 / 1.09 / 1.86 ; raggio95: 0.41 / 1.02 / 1.80 ; fermo: 0.91 / 1.79 / 2.62
+q0.01_tutti N 219 persone 9 ; copertura90 a 1/2/3 s: 0.534 / 0.521 / 0.516 ; errore mediano: 0.17 / 0.41 / 0.72 ; p90: 0.45 / 1.17 / 1.90 ; raggio95: 0.21 / 0.49 / 0.84 ; fermo: 0.91 / 1.79 / 2.62
+taratura exp1: {'0.05': [0.855, 0.881, 0.877], '0.1': [0.943, 0.96, 0.987], '0.2': [0.996, 1.0, 1.0]}
+
+== C9. Costo per ciclo, dai fotogrammi.jsonl (campo tempo_ciclo_ms) ==
+sim: cicli 9152; media 6.35 ms; 95° 18.6; massimo 105.0; oltre 66 ms: 4
+sim_p40: cicli 9152; media 0.95 ms; 95° 1.3; massimo 7.7; oltre 66 ms: 0
+(il tempo per ciclo delle sequenze vere sta solo in vere/RIEPILOGO.jsonl: letto in C12, non ricontabile)
+
+== C10, C15. Pavimento vuoto: celle per stato (media per fotogramma, griglie.npz) e tracce confermate (riassunto.json) ==
+d455_nom: fotogrammi 30; libero/occupato/in ombra per fotogramma 1604 / 0 / 0; tracce confermate 0 (soglia 40: 0)
+d435i_nom: fotogrammi 30; libero/occupato/in ombra per fotogramma 1568 / 19 / 15; tracce confermate 28 (soglia 40: 0)
+g335_nom: fotogrammi 30; libero/occupato/in ombra per fotogramma 1628 / 17 / 25; tracce confermate 26 (soglia 40: 0)
+d435i_lim: fotogrammi 20; libero/occupato/in ombra per fotogramma 502 / 585 / 471; tracce confermate 43 (soglia 40: 1)
+
+== C12. Vero: TUM e DepthTrack (vere/RIEPILOGO.jsonl; e griglie se ci sono) ==
+tum_fr3_walking_static posa_mediana fotogrammi 120 libero min/mediana/max [0, 0.0, 15] celle {'non_osservato': 4759.1, 'libero': 2.2, 'occupato': 512.9, 'in_ombra': 125.7} tempo {'media': 2.64, 'p95': 3.24, 'massimo': 6.24} tracce 6
+tum_fr3_walking_static posa_per_fotogramma fotogrammi 120 libero min/mediana/max [0, 58.0, 128] celle {'non_osservato': 4708.9, 'libero': 52.1, 'occupato': 427.1, 'in_ombra': 211.9} tempo {'media': 3.14, 'p95': 3.81, 'massimo': 4.71} tracce 12
+tum_fr3_walking_static posa_per_fotogramma_p121 fotogrammi 120 libero min/mediana/max [2, 62.5, 147] celle {'non_osservato': 4797.1, 'libero': 60.2, 'occupato': 164.3, 'in_ombra': 378.4} tempo {'media': 5.76, 'p95': 12.1, 'massimo': 14.09} tracce 28
+tum_fr3_walking_static posa_per_fotogramma_5m fotogrammi 120 libero min/mediana/max [0, 58.5, 150] celle {'non_osservato': 7058.1, 'libero': 70.6, 'occupato': 617.3, 'in_ombra': 1254.0} tempo {'media': 5.07, 'p95': 20.02, 'massimo': 39.17} tracce 11
+depthtrack_human02_indoor nucleo fotogrammi 320 libero min/mediana/max [0, 2.0, 7] celle {'non_osservato': 4401.5, 'libero': 1.7, 'occupato': 977.6, 'in_ombra': 1819.1} tempo {'media': 81.47, 'p95': 151.95, 'massimo': 383.32} tracce 254
+depthtrack_human02_indoor p91 fotogrammi 320 libero min/mediana/max [9, 74.0, 117] celle {'non_osservato': 6388.5, 'libero': 72.2, 'occupato': 62.6, 'in_ombra': 676.7} tempo {'media': 23.77, 'p95': 48.62, 'massimo': 167.6} tracce 164
+depthtrack_human02_indoor p91_rollio_vincolato fotogrammi 320 libero min/mediana/max [9, 41.0, 66] celle {'non_osservato': 6367.3, 'libero': 39.8, 'occupato': 92.6, 'in_ombra': 700.3} tempo {'media': 20.39, 'p95': 39.43, 'massimo': 133.47} tracce 193
+TUM posa per fotogramma, dal jsonl: N 120 libero mediana 58.0 media 52.1 min 0 max 128
+
+== C16. «Libero» su celle il cui centro sta sotto l'impronta di un ostacolo fisso (classe 3 della maschera polare) ==
+   (definizione MIA; aggiunta dopo aver letto misura_ostacoli.txt, quindi a posteriori)
+sim: «libero» con il centro sotto un'impronta: 0 su 61192 celle·fotogramma; per gruppo [sequenze colpite, libero, celle·fot] {}
+sim_p40: «libero» con il centro sotto un'impronta: 0 su 61192 celle·fotogramma; per gruppo [sequenze colpite, libero, celle·fot] {}
+
+== C17. Chi torna indietro (pannello_c) e chi si allontana nell'ombra (pannello_d): continuita' (misura_passaggi.json) ==
+sim pannello_c: N 4; continuita' pulita 0; esiti ['diversa', 'diversa', 'diversa', 'diversa']
+sim pannello_d: N 4; continuita' pulita 0; esiti ['non ricompare', 'non ricompare', 'non ricompare', 'non ricompare']
+sim_p40 pannello_c: N 4; continuita' pulita 2; esiti ['diversa', 'stessa', 'stessa', 'diversa']
+sim_p40 pannello_d: N 4; continuita' pulita 0; esiti ['non ricompare', 'non ricompare', 'non ricompare', 'non ricompare']

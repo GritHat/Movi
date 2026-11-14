@@ -1,0 +1,135 @@
+ora: 2026-11-14T16:11:32+01:00
+interprete: /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f10-dati/ambiente/venv/bin/python
+python: 3.14.10 | numpy: 2.5.4 | processori: 24
+[OK] numpy, sistema lineare 500x500: residuo relativo 7.26e-16
+[OK] numpy, prodotto 1000x1000: migliore di 3: 6.1 ms
+[OK] numpy, .npy uint16 andata e ritorno: (480, 640) uint16
+[OK] scipy.ndimage.label: scipy 1.18.1, componenti trovate: 2 (attese 2)
+[OK] opencv, PNG a 16 bit andata e ritorno: opencv 5.0.0, 547958 byte
+[OK] pillow, legge il PNG a 16 bit scritto da opencv: pillow 13.0.0, modo letto come uint16
+[OK] rosbags, .bag ROS1 con immagine 16UC1 andata e ritorno: rosbags 0.11.9, argomento /camera/depth/image_raw, 6x4
+ESITO: 7/7 prove passate
+== [OK] ambiente (numpy, scipy, opencv, pillow, rosbags) (uscita 0)
+[controllo negativo] estrattore ingenuo sull'ostile 1: sentinella fuori dalla destinazione creata = True
+[OK] ostile 1 tar, percorso con «..»: uscita 3 (attesa 3); resti 0; sentinelle fuori 0
+        RIFIUTATO: percorso che risale con «..»: '../sentinella_fuori.txt'. Niente è stato estratto.
+[OK] ostile 2 tar, percorso assoluto: uscita 3 (attesa 3); resti 0; sentinelle fuori 0
+        RIFIUTATO: percorso assoluto: '/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-c
+[OK] ostile 3 tar, collegamento simbolico e file che lo attraversa: uscita 3 (attesa 3); resti 0; sentinelle fuori 0
+        RIFIUTATO: collegamento (simbolico o fisico): 'uscita'. Niente è stato estratto.
+[OK] ostile 4 tar, collegamento fisico: uscita 3 (attesa 3); resti 0; sentinelle fuori 0
+        RIFIUTATO: collegamento (simbolico o fisico): 'b.txt'. Niente è stato estratto.
+[OK] ostile 5 tar, file speciale (coda): uscita 3 (attesa 3); resti 0; sentinelle fuori 0
+        RIFIUTATO: file speciale (dispositivo, coda o altro): 'coda'. Niente è stato estratto.
+[OK] ostile 6 zip, contenuto oltre il tetto (20 MiB contro 1M): uscita 4 (attesa 4); resti 0; sentinelle fuori 0
+        TETTO SUPERATO: dimensione dichiarata oltre il tetto di 1048576 byte. Niente è stato tenuto.
+[OK] ostile 7 zip, percorso con «..»: uscita 3 (attesa 3); resti 0; sentinelle fuori 0
+        RIFIUTATO: percorso che risale con «..»: '../sentinella_fuori.txt'. Niente è stato estratto.
+[OK] ostile 8 zip, collegamento simbolico: uscita 3 (attesa 3); resti 0; sentinelle fuori 0
+        RIFIUTATO: collegamento (simbolico o fisico): 'uscita'. Niente è stato estratto.
+[OK] ostile 9 tar.gz, 20 MiB oltre il tetto di 1M: uscita 4 (attesa 4); resti 0; sentinelle fuori 0
+        TETTO SUPERATO: dimensione dichiarata oltre il tetto di 1048576 byte. Niente è stato tenuto.
+[OK] ostile 10 tar, nome ripetuto (sovrascrittura): uscita 3 (attesa 3); resti 0; sentinelle fuori 0
+        RIFIUTATO: nome ripetuto: 'a.txt'. Niente è stato estratto.
+[OK] ostile 11 tar, barra rovesciata e «..»: uscita 3 (attesa 3); resti 0; sentinelle fuori 0
+        RIFIUTATO: barra rovesciata nel nome: '..\\..\\x.txt'. Niente è stato estratto.
+[OK] ostile 12 tar, troppi elementi (tetto 3): uscita 4 (attesa 4); resti 0; sentinelle fuori 0
+        TETTO SUPERATO: più di 3 elementi. Niente è stato tenuto.
+[OK] ostile 13 file che non è un archivio: uscita 5 (attesa 5); resti 0; sentinelle fuori 0
+        ILLEGGIBILE: OSError: formato non riconosciuto (né zip né tar). Niente è stato tenuto.
+[OK] ostile 14 zip che dichiara 100 byte e ne contiene 20 MiB (tetto 1M): uscita 5 (attesa 5); resti 0; sentinelle fuori 0
+        ILLEGGIBILE: BadZipFile: Bad CRC-32 for file 'zeri.bin'. Niente è stato tenuto.
+[OK] B1 tar.gz buono (con un file dichiarato 04755): uscita 0; contenuto uguale: True; nessun bit d'esecuzione o setuid: True
+[OK] B2 zip buono: uscita 0; contenuto uguale: True; nessun bit d'esecuzione o setuid: True
+[OK] destinazione già esistente: uscita 2 (attesa 2)
+[OK] destinazione fuori da f10-dati: uscita 2 (attesa 2); creata: False
+ESITO: 18/18 prove passate (14 archivi ostili, 2 buoni, 2 destinazioni non ammesse)
+== [OK] apritore di archivi (ostili e buoni) (uscita 0)
+[OK] valida V1 base (con verità), anche in modo rigoroso: uscita 0 (attesa 0)
+[OK] valida V2 senza verita.json: uscita 0 (attesa 0)
+[OK] valida V3 posa null: uscita 0 (attesa 0)
+[OK] valida V4 chiave in più in meta.json: uscita 0 (attesa 0)
+[OK] difettosa D1 profondità float32 in metri: uscita 1 (attesa 1)
+        ERRORE: profondita/000000.npy: il tipo deve essere uint16 (millimetri), trovato float32
+[OK] difettosa D2 profondità int16: uscita 1 (attesa 1)
+        ERRORE: profondita/000000.npy: il tipo deve essere uint16 (millimetri), trovato int16
+[OK] difettosa D3 profondità uint16 a byte invertiti (>u2): uscita 1 (attesa 1)
+        ERRORE: profondita/000000.npy: il tipo deve essere uint16 (millimetri), trovato >u2
+[OK] difettosa D4 forma trasposta (larghezza, altezza): uscita 1 (attesa 1)
+        ERRORE: profondita/000000.npy: forma (160, 120), attesa (altezza, larghezza) = (120, 160)
+[OK] difettosa D5 un fotogramma mancante: uscita 1 (attesa 1)
+        ERRORE: profondita/: mancano 1 file su 31 (primo: 000003.npy)
+[OK] difettosa D6 un file in più in profondita/: uscita 1 (attesa 1)
+        ERRORE: profondita/: 1 file in più rispetto a tempi.csv (primo: 000999.npy)
+[OK] difettosa D7 tempi che non crescono: uscita 1 (attesa 1)
+        ERRORE: tempi.csv: gli indici devono essere 0, 1, 2, …: alla riga 5 dei dati c'è 5
+[OK] difettosa D8 tempi uguali fra due fotogrammi: uscita 1 (attesa 1)
+        ERRORE: tempi.csv: i tempi devono crescere: fra gli indici 2 e 3 il passo è 0.000000 s
+[OK] difettosa D9 una riga in meno in tempi.csv: uscita 1 (attesa 1)
+        ERRORE: profondita/: 1 file in più rispetto a tempi.csv (primo: 000030.npy)
+[OK] difettosa D10 indici che partono da 1: uscita 1 (attesa 1)
+        ERRORE: tempi.csv: gli indici devono essere 0, 1, 2, …: alla riga 1 dei dati c'è 1
+[OK] difettosa D11 manca fx in meta.json: uscita 1 (attesa 1)
+        ERRORE: meta.json: manca la chiave «fx»
+[OK] difettosa D12 «width» al posto di «larghezza»: uscita 1 (attesa 1)
+        ERRORE: meta.json: manca la chiave «larghezza»
+[OK] difettosa D13 fps = 0: uscita 1 (attesa 1)
+        ERRORE: meta.json: «fps» deve essere un numero positivo, trovato 0
+[OK] difettosa D14 posa con chiavi sbagliate: uscita 1 (attesa 1)
+        ERRORE: meta.json: «posa» deve essere null oppure un oggetto con esattamente le chiavi «altezza_m» e «inclinazione_gradi», trovato {'altezza': 1.2, 'i
+[OK] difettosa D15 manca licenza: uscita 1 (attesa 1)
+        ERRORE: meta.json: manca la chiave «licenza»
+[OK] difettosa D16 .npy con oggetti serializzati (pickle): uscita 1 (attesa 1)
+        ERRORE: profondita/000004.npy illeggibile senza pickle: ValueError: Array can't be memory-mapped: Python objects in dtype.
+[OK] difettosa D17 .npy troncato a metà: uscita 1 (attesa 1)
+        ERRORE: profondita/000007.npy illeggibile senza pickle: ValueError: mmap length is greater than file size
+[OK] difettosa D18 verità: indice che non esiste: uscita 1 (attesa 1)
+        ERRORE: verita.json: fotogrammi[30] ha indice 999, che non esiste in tempi.csv (0…30)
+[OK] difettosa D19 verità: «visibile» come testo: uscita 1 (attesa 1)
+        ERRORE: verita.json: fotogrammi[3].soggetti[0]: «visibile» deve essere true o false, trovato 'sì'
+[OK] difettosa D20 verità: manca z: uscita 1 (attesa 1)
+        ERRORE: verita.json: fotogrammi[3].soggetti[0]: «z» deve essere un numero finito (metri), trovato None
+[OK] difettosa D21 verità: id numerico: uscita 1 (attesa 1)
+        ERRORE: verita.json: fotogrammi[0].soggetti[0]: «id» deve essere un testo non vuoto, trovato 1
+[OK] difettosa D22 verità: poligono con 2 vertici: uscita 1 (attesa 1)
+        ERRORE: verita.json: ostacoli[0]: un poligono vuole «vertici»: almeno 3 coppie [x, z] in metri
+[OK] difettosa D23 manca tempi.csv: uscita 1 (attesa 1)
+        ERRORE: manca tempi.csv
+[OK] difettosa D24 manca profondita/: uscita 1 (attesa 1)
+        ERRORE: manca la cartella profondita/
+[OK] sospetta S1 tempi.csv senza intestazione: uscita 0 (attesa 0)
+        AVVISO: tempi.csv: manca l'intestazione «indice,tempo_s» (tollerata dal lettore di riferimento)
+[OK] sospetta S1b la stessa, in modo rigoroso: uscita 1 (attesa 1)
+        AVVISO: tempi.csv: manca l'intestazione «indice,tempo_s» (tollerata dal lettore di riferimento)
+[OK] sospetta S2 unità 1/5000 di metro invece dei millimetri: uscita 0 (attesa 0)
+        AVVISO: profondita/: 99° percentile 43320: oltre 20 m; forse l'unità non è il millimetro (per esempio 1/5000 di metro, o 0,1 mm)
+[OK] sospetta S3 profondità in centimetri: uscita 0 (attesa 0)
+        AVVISO: profondita/: meno del 2% dei pixel validi è compatibile con il suolo previsto dalla posa: controlla altezza, segno dell'inclinazione, unità, e
+[OK] sospetta S4 inclinazione col segno sbagliato (-15°): uscita 0 (attesa 0)
+        AVVISO: profondita/: meno del 2% dei pixel validi è compatibile con il suolo previsto dalla posa: controlla altezza, segno dell'inclinazione, unità, e
+[OK] sospetta S5 altezza della camera sbagliata (2,0 m): uscita 0 (attesa 0)
+        AVVISO: profondita/: meno del 2% dei pixel validi è compatibile con il suolo previsto dalla posa: controlla altezza, segno dell'inclinazione, unità, e
+[OK] sospetta S6 fps dichiarati 30 con tempi a 15: uscita 0 (attesa 0)
+        AVVISO: tempi.csv: il passo mediano (66.7 ms) non corrisponde a fps = 30 (attesi 33.3 ms)
+[OK] sospetta S7 65535 al posto di 0 per «nessun dato»: uscita 0 (attesa 0)
+        AVVISO: profondita/: 99° percentile 65535: oltre 20 m; forse l'unità non è il millimetro (per esempio 1/5000 di metro, o 0,1 mm)
+ESITO: 36/36 prove passate (4 valide, 24 difettose, 8 sospette)
+== [OK] programma di controllo (valide, difettose, sospette) (uscita 0)
+ESITO: rispetta il formato (0 errori, 0 avvisi) — /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f10-dati/03-infrastruttura/esempio_sequenza
+== [OK] la sequenza d'esempio rispetta il formato, in modo rigoroso (uscita 0)
+GIÀ PRESENTE: /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f10-dati/scaricati/prova-infrastruttura/vl53l7cx.pdf (2707367 byte), impronta uguale a quella annotata: non riscarico.
+== [OK] scarica.sh: scheda pubblica entro il tetto (o già presente e integra) (uscita 0)
+GIÀ PRESENTE: /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f10-dati/scaricati/prova-infrastruttura/vl53l7cx.pdf (2707367 byte), impronta uguale a quella annotata: non riscarico.
+== [OK] scarica.sh: rilancio senza riscaricare (uscita 0)
+curl: (63) Maximum file size exceeded
+ERRORE: tetto superato: il file è più grande di 1048576 byte (curl: 63). Niente è stato tenuto.
+== [OK] scarica.sh: tetto di 1M superato (dimensione dichiarata) (uscita 4)
+curl: (23) Failure writing output to destination, passed 16384 returned 7000
+ERRORE: tetto superato: il file è più grande di 1048576 byte (curl: 23). Niente è stato tenuto.
+== [OK] scarica.sh: tetto di 1M superato (solo ulimit) (uscita 4)
+== [OK] scarica.sh: nessun file rimasto dopo il rifiuto (0) (uscita 0)
+ERRORE: indirizzo non valido (serve https://, senza spazi né credenziali): «http://example.com/a.pdf»
+== [OK] scarica.sh: indirizzo non https rifiutato (uscita 2)
+ERRORE: nome non valido: «../fuori»
+== [OK] scarica.sh: nome con «..» rifiutato (uscita 2)
+ESITO COMPLESSIVO: 0 prove fallite — 2026-11-14T16:11:40+01:00

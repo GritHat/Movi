@@ -1,0 +1,405 @@
+{
+  "meta": {
+    "titolo": "Parametri dell'hardware simulato (f10, 02-sensori, sciame-sensori)",
+    "data": "2026-11-14",
+    "unita": "metri, secondi, gradi, pixel; probabilita' in [0,1]",
+    "come_si_legge": "Ogni profilo ha i valori piatti e un dizionario 'provenienza' con la stessa chiave: 'TIPO:FONTE nota'. TIPO: D = dichiarato dal costruttore; M = misurato da terzi; C = calcolato da valori D o M (la formula e' nella nota); I = ipotesi di sciame-sensori, da tarare sui dati veri. Per ogni grandezza incerta ci sono due valori: *_nominale e *_limite. Nessun valore I e' una misura.",
+    "non_verificato": "Nessun parametro e' stato misurato sull'esemplare della squadra. I valori I sono ipotesi. Dettagli e stati in MODELLO_SENSORE.md.",
+    "fonti": {
+      "S1": "RealSense D400 Series Datasheet, rev. 023, marzo 2026, doc. 337029-017 (copia locale ../f9-preproposta/07-lidar/scaricati/rs.txt; non riscaricata oggi)",
+      "S2": "RealSense, BKMs Tuning RealSense D4xx Cam: https://realsenseai.com/wp-content/uploads/2019/11/BKMs_Tuning_RealSense_D4xx_Cam.pdf (scaricato oggi) e https://dev.realsenseai.com/docs/tuning-depth-cameras-for-best-performance",
+      "S3": "Ahn, Chae, Noh, Nam, Hong, Analysis and Noise Modeling of the Intel RealSense D435 for Mobile Robots, UR 2019, pp. 707-711: https://ucla.box.com/shared/static/gqxwr2vvqsf22oi9dqtn50hr0xkruzie.pdf (scaricato oggi)",
+      "S4": "librealsense, doc/post-processing-filters.md: https://github.com/IntelRealSense/librealsense/blob/master/doc/post-processing-filters.md (scaricato oggi)",
+      "S5": "librealsense, include/librealsense2/h/rs_frame.h e doc/frame_metadata.md: https://github.com/IntelRealSense/librealsense/blob/master/doc/frame_metadata.md (scaricati oggi)",
+      "S6": "Orbbec Gemini 330 Series Datasheet for USB Devices, v1.6 (copia locale ../f9-preproposta/07-lidar/scaricati/g330.txt e PDF, pp. 50-52 lette come immagine)",
+      "S7": "ST DS13865 Rev 6 (VL53L7CX), copia locale vl53l7cx_ds.txt; https://www.pololu.com/file/0J1992/vl53l7cx.pdf",
+      "S8": "ST UM3038 Rev 2 (guida VL53L7CX), copia locale um3038.txt",
+      "S9": "ST DS14161 Rev 7 (VL53L8CX), copia locale vl53l8cx_ds.txt; https://www.pololu.com/file/0J2029/vl53l8cx.pdf",
+      "S10": "Slamtec, RPLIDAR C1, specifiche: https://www.slamtec.com/en/C1/Spec (scaricata oggi)",
+      "S11": "LDROBOT LD19 Datasheet V2.5, copia del rivenditore: https://botland.com.pl/img/art/inne/21991_Karta%20katalogowa.pdf (scaricata oggi)",
+      "S12": "DXOMARK, rapporto campione su camere stereo (D435 a 0,67 m, 0-7770 lux): https://corp.dxomark.com/wp-content/uploads/2025/02/DXOMARK_Report_Sample_3Dcamera_stereos.pdf (scaricato oggi; i numeri sono solo nei grafici)",
+      "S13": "RealSense, confronto delle camere: https://www.realsenseai.com/compare-depth-cameras/ (via ../f3/fonti/FONTI_VERIFICATE.md, non riaperta oggi)"
+    }
+  },
+
+  "modello_camera_stereo_attiva": {
+    "descrizione": "Vale per i tre profili. Ingresso: profondita' ideale z(u,v) vista dall'imager sinistro, piu' (se c'e') classe di materiale e angolo d'incidenza per pixel. Uscita: profondita' in unita' da 1 mm, 0 = nessun dato.",
+    "passi": [
+      "1. disparita' d = fx*base_m/z [px]",
+      "2. buchi geometrici: fuori da [z_min_m, z_max_modello_m]; banda sul bordo sinistro dell'immagine larga fx*base_m/z_scena + banda_bordo_margine_px; occlusione stereo: un pixel sinistro e' senza dato se il suo punto non e' visibile dall'imager destro (per riga: x_d = u - d(u); il pixel u e' occluso se un pixel u' > u con d(u') > d(u) ha x_d(u') <= x_d(u)); la banda cade a SINISTRA dei bordi verticali degli oggetti vicini ed e' larga fx*base_m*(1/z_ostacolo - 1/z_sfondo) px",
+      "3. bordi: sposta ogni bordo di profondita' di N(0, bordo_jitter_px) lungo la riga e allarga l'oggetto vicino di bordo_ingrossamento_px; nei bordo_misti_px pixel a cavallo del salto la disparita' e' interpolata fra i due lati con probabilita' p_pixel_misto, altrimenti buco con probabilita' p_buco_bordo",
+      "4. rumore in disparita': d' = d + n_fisso(u,v) + n_tempo(u,v,t); n_fisso ha scarto s*quota_fissa, e' correlato nello spazio (filtro gaussiano di sigma = correlazione_px) e resta attaccato alla superficie; n_tempo ha scarto s*quota_temporale, correlato nello spazio allo stesso modo e indipendente fra fotogrammi; s = sottopixel_*_px moltiplicato per fattore_incidenza(angolo) e per fattore_materiale",
+      "5. quantizza d' al passo passo_disparita_px; z' = fx*base_m/d'; quantizza a unita_profondita_m",
+      "6. buchi casuali: p_buco[materiale], piu' p_buco_incidenza(angolo); i buchi sono a macchie (stessa correlazione spaziale) e persistono fra fotogrammi con probabilita' persistenza_buco",
+      "7. nessun filtro del costruttore: i buchi restano 0. Per provare i filtri si emulano a valle (vedi filtri_costruttore)"
+    ],
+    "sigma_z": "sigma_z(z) = z^2 * s / (fx*base_m) = k * z^2",
+    "comuni": {
+      "quota_temporale": 0.6,
+      "quota_fissa": 0.8,
+      "correlazione_px": 5.0,
+      "passo_disparita_px": 0.03125,
+      "unita_profondita_m": 0.001,
+      "bordo_jitter_px_nominale": 1.5,
+      "bordo_jitter_m_limite": 0.043,
+      "bordo_ingrossamento_px": 2.0,
+      "bordo_misti_px": 3,
+      "p_pixel_misto": 0.5,
+      "p_buco_bordo": 0.3,
+      "banda_bordo_margine_px_nominale": 0.0,
+      "banda_bordo_margine_px_limite": 25.0,
+      "incidenza_soglia_gradi": 60.0,
+      "fattore_incidenza": "1/cos(angolo) fino a 60 gradi (nominale: 1 fino a 60 gradi, come misurato in S3); oltre 60 gradi: nominale 1/cos(angolo), limite x5 e p_buco_incidenza = 0.5 a 75 gradi",
+      "p_buco_incidenza_75_gradi_nominale": 0.05,
+      "p_buco_incidenza_75_gradi_limite": 0.5,
+      "persistenza_buco": 0.7,
+      "p_buco_materiale_nominale": {"diffuso_chiaro": 0.005, "diffuso_scuro": 0.05, "nero_assorbente": 0.3, "lucido_radente": 0.1, "vetro_specchio": 1.0},
+      "p_buco_materiale_limite": {"diffuso_chiaro": 0.02, "diffuso_scuro": 0.3, "nero_assorbente": 0.8, "lucido_radente": 0.5, "vetro_specchio": 1.0},
+      "fattore_materiale_sottopixel": {"diffuso_chiaro": 1.0, "diffuso_scuro": 1.5, "nero_assorbente": 2.5, "lucido_radente": 2.0},
+      "vetro_specchio_nota": "vetro: il raggio passa, si misura lo sfondo o niente; specchio e pavimento lucido: puo' comparire una profondita' FALSA (immagine riflessa, piu' lontana del vero). Nel simulatore: p_falso_riflesso 0.2 sul lucido radente (ipotesi)",
+      "p_falso_riflesso_lucido": 0.2,
+      "luce_ambiente": "al chiuso sotto 1000 lux: nessun effetto modellato. Oltre 4000 lux il riempimento cala su tutte le superfici (S12, D435 a 0,67 m: sotto l'80 % a 7770 lux su tutte le tessere, a 4350 lux sulla piu' scura)",
+      "esposizione_s_nominale": 0.008,
+      "esposizione_s_limite": 0.030,
+      "sfocatura_moto": "il bordo di un oggetto con velocita' laterale v si allarga di v*esposizione (a 1,5 m/s: 12 mm con 8 ms, 45 mm con 30 ms)",
+      "provenienza": {
+        "quota_temporale": "C:S1,S6 limiti dichiarati rumore temporale/spaziale = 1%/2% (S1); tipici a 2 m 0,41-0,47% contro circa 0,65% (S6, grafici): rapporto 0,5-0,7, scelto 0,6",
+        "quota_fissa": "C: sqrt(1 - 0,6^2)",
+        "correlazione_px": "I: S2 descrive il rumore come 'bumps on a plane ... like an egg carton', quindi correlato; la lunghezza non e' in nessuna fonte",
+        "passo_disparita_px": "I: 1/32 px, a memoria per il processore D4; non trovato nelle schede S1 e S6",
+        "unita_profondita_m": "D:S6 (Depth Unit predefinita 1 mm); per RealSense valore predefinito noto dell'SDK, non riletto oggi",
+        "bordo_jitter_px_nominale": "I",
+        "bordo_jitter_m_limite": "M:S3 rumore laterale, 90-esimo percentile, bordo sinistro 0,0432 m e destro 0,0407 m (D435, 848x480, 0,4-2,1 m, bersaglio bianco)",
+        "bordo_ingrossamento_px": "I",
+        "bordo_misti_px": "I",
+        "p_pixel_misto": "I",
+        "p_buco_bordo": "I",
+        "banda_bordo_margine_px_nominale": "D:S1 par. 4.5, formula B*F/Z senza margine",
+        "banda_bordo_margine_px_limite": "I: S1 avverte che la configurazione predefinita puo' cambiare la larghezza; in S3 fig. 5 (0,9 m) la banda appare larga 40-50 px contro 24 della formula (lettura a occhio)",
+        "incidenza_soglia_gradi": "M:S3 fig. 9: rumore assiale piatto da 0 a 60 gradi e oltre 0,1 m a 75 gradi, per rotazione attorno all'asse VERTICALE; per il suolo (inclinato attorno all'asse orizzontale) non c'e' misura",
+        "fattore_incidenza": "I oltre i 60 gradi e per il suolo; M:S3 fino a 60 gradi",
+        "p_buco_incidenza_75_gradi_nominale": "I",
+        "p_buco_incidenza_75_gradi_limite": "I",
+        "persistenza_buco": "I",
+        "p_buco_materiale_nominale": "D per diffuso_chiaro (riempimento >= 99 % su bersaglio bianco, S1 tab. 4-15; >= 99,5 % S6); I per tutti gli altri",
+        "p_buco_materiale_limite": "I",
+        "fattore_materiale_sottopixel": "I (S12 dice solo che il rumore dipende dalla riflettanza)",
+        "p_falso_riflesso_lucido": "I",
+        "esposizione_s_nominale": "I (l'esempio di S5 riporta ACTUAL_EXPOSURE 6951 us)",
+        "esposizione_s_limite": "D:S6 esposizione automatica massima 30458 us a 30 fps",
+        "luce_ambiente": "M:S12"
+      }
+    },
+    "filtri_costruttore": {
+      "realsense": {
+        "nel_sensore": "nessuno: il processore D4 non fa post-elaborazione",
+        "nell_sdk": "blocchi sul calcolatore, attivi solo se il programma li crea",
+        "valori_predefiniti_se_creati": {
+          "decimazione_fattore": 2,
+          "spaziale": {"iterazioni": 2, "alfa": 0.5, "delta": 20, "riempimento_buchi": 0},
+          "temporale": {"alfa": 0.4, "delta": 20, "persistenza": 3, "persistenza_significato": "riempie il buco con l'ultimo valore valido se il pixel era valido in 2 degli ultimi 4 fotogrammi"},
+          "riempimento_buchi_modo": 1,
+          "riempimento_buchi_significato": "1 = prende dal vicino piu' LONTANO dal sensore"
+        },
+        "per_il_nucleo": "non creare i blocchi temporale e riempimento dei buchi (nel nodo ROS: temporal_filter.enable e hole_filling_filter.enable a false): un buco riempito con lo sfondo diventa 'libero'",
+        "provenienza": "D:S2 ('By default we do not do any post-processing'), D:S4 (valori). Stato predefinito nel visualizzatore e nel nodo ROS: non verificato"
+      },
+      "gemini_335": {
+        "nel_sensore": "post-elaborazione ATTIVA di norma (controllo 'Post Processing', predefinito Enable)",
+        "nell_sdk": "lista letta dal dispositivo con getRecommendedFilters(); lo stato di ciascuno con isEnabled()",
+        "per_il_nucleo": "leggere e registrare lo stato di ogni filtro all'avvio; spegnere riempimento dei buchi e temporale; provare con 'Post Processing' spento",
+        "provenienza": "D:S6 tab. 4-13-1. Quali filtri contiene e il nome della proprieta' nell'SDK: non verificato"
+      }
+    },
+    "tempo": {
+      "marca_temporale": "RealSense: SENSOR_TIMESTAMP = meta' dell'esposizione, orologio del dispositivo, in us; FRAME_TIMESTAMP = inizio della lettura e della trasmissione; BACKEND_TIMESTAMP = arrivo al driver; TIME_OF_ARRIVAL = orologio del calcolatore. Gemini 335: marca hardware in us, stessa sorgente per IMU, IR, colore e profondita'",
+      "latenza_s_nominale": 0.070,
+      "latenza_s_limite": 0.120,
+      "jitter_s": 0.005,
+      "p_fotogramma_perso": 0.01,
+      "provenienza": {
+        "marca_temporale": "D:S5 (rs_frame.h), D:S6 tab. 3-4-9",
+        "latenza_s_nominale": "C:S5 un solo esempio nella documentazione (2018): FRAME-SENSOR = 36,8 ms e ARRIVAL-BACKEND = 34 ms; somma 71 ms. Non e' una specifica",
+        "latenza_s_limite": "I",
+        "jitter_s": "I",
+        "p_fotogramma_perso": "I"
+      }
+    }
+  },
+
+  "camere_profondita": {
+    "realsense_d455": {
+      "risoluzione_px": [848, 480],
+      "fps": 30,
+      "fps_disponibili": [5, 15, 30, 60, 90],
+      "campo_profondita_gradi": [87, 58],
+      "campo_tolleranza_gradi": 3,
+      "fx": 424.0, "fy": 424.0, "cx": 424.0, "cy": 240.0,
+      "base_m": 0.095,
+      "z_min_m": 0.35,
+      "z_ideale_m": [0.6, 6.0],
+      "z_max_modello_m": 10.0,
+      "ricerca_disparita_px": 115,
+      "otturatore": "globale (imager di profondita' e colore)",
+      "sottopixel_nominale_px": 0.08,
+      "sottopixel_limite_px": 0.2014,
+      "k_nominale": 0.001986,
+      "k_limite": 0.005,
+      "rumore_temporale_limite_frazione_di_z": 0.01,
+      "riempimento_dichiarato": 0.99,
+      "imu": {"accelerometro_hz": [100, 200], "giroscopio_hz": [200, 400], "portata_g": 4, "portata_gradi_s": 1000, "marca_temporale_s": 5e-05},
+      "provenienza": {
+        "risoluzione_px": "D:S1 tab. 4-3; 848x480 scelta come per la D435 in S2 (per la D455 S2 non dice la risoluzione ottimale)",
+        "fps": "D:S1 tab. 4-3",
+        "fps_disponibili": "D:S1 tab. 4-3 (a 848x480)",
+        "campo_profondita_gradi": "D:S1 tab. 3-49 (a 2 m, formato 16:9)",
+        "campo_tolleranza_gradi": "D:S1 nota 3",
+        "fx": "C: 0,5*848/tan(45 gradi), dal campo dell'imager sinistro 90 +-1 gradi (S1) come nella curva di S2; il valore vero si legge dagli intrinseci dell'esemplare",
+        "fy": "C: pixel quadrati",
+        "cx": "I: centro dell'immagine",
+        "cy": "I: centro dell'immagine",
+        "base_m": "D:S1 tab. 3-11",
+        "z_min_m": "D:S1 tab. 4-12 (848x480)",
+        "z_ideale_m": "D:S13",
+        "z_max_modello_m": "I: tetto del simulatore, non una portata dichiarata",
+        "ricerca_disparita_px": "C: fx*base/z_min",
+        "otturatore": "D:S1",
+        "sottopixel_nominale_px": "I: valore che S2 usa per la D435; applicato alla D455 per analogia",
+        "sottopixel_limite_px": "C: da RMS <= 2 % a 4 m (S1 tab. 4-15, risoluzione HD, 80 % del campo, bersaglio bianco): k = 0,08/16",
+        "k_nominale": "C: sottopixel_nominale/(fx*base)",
+        "k_limite": "C: 0,02*4/16",
+        "rumore_temporale_limite_frazione_di_z": "D:S1 tab. 4-15 (<= 1 % a 4 m)",
+        "riempimento_dichiarato": "D:S1 tab. 4-15 (bersaglio bianco, 80 % del campo)",
+        "imu": "D:S1 tab. 4-26 (BMI085)"
+      }
+    },
+    "realsense_d435i": {
+      "risoluzione_px": [848, 480],
+      "fps": 30,
+      "fps_disponibili": [6, 15, 30, 60, 90],
+      "campo_profondita_gradi": [87, 58],
+      "campo_tolleranza_gradi": 3,
+      "fx": 424.0, "fy": 424.0, "cx": 424.0, "cy": 240.0,
+      "base_m": 0.05,
+      "z_min_m": 0.195,
+      "z_ideale_m": [0.3, 3.0],
+      "z_max_modello_m": 10.0,
+      "ricerca_disparita_px": 109,
+      "otturatore": "globale (imager di profondita'); colore a otturatore progressivo",
+      "sottopixel_nominale_px": 0.08,
+      "sottopixel_terzi_px": 0.097,
+      "sottopixel_limite_px": 0.212,
+      "k_nominale": 0.003774,
+      "k_limite": 0.01,
+      "sigma_z_terzi": "0.001063 + 0.0007278*z + 0.003949*z^2 [m], incidenza 0-60 gradi, z in 0,4-2,1 m",
+      "rumore_temporale_limite_frazione_di_z": 0.01,
+      "riempimento_dichiarato": 0.99,
+      "imu": {"accelerometro_hz": [100, 200], "giroscopio_hz": [200, 400], "portata_g": 4, "portata_gradi_s": 1000, "marca_temporale_s": 5e-05},
+      "provenienza": {
+        "risoluzione_px": "D:S2 (risoluzione ottimale della D435: 848x480)",
+        "fps": "D:S1 tab. 4-2",
+        "fps_disponibili": "D:S1 tab. 4-2 (848x480)",
+        "campo_profondita_gradi": "D:S1 tab. 3-49",
+        "campo_tolleranza_gradi": "D:S1 nota 3",
+        "fx": "D:S2 ('D435 with HFOV=90deg, Xres=848'): 424 px",
+        "fy": "C: pixel quadrati",
+        "cx": "I", "cy": "I",
+        "base_m": "D:S1 tab. 3-11",
+        "z_min_m": "D:S1 tab. 4-12 (848x480)",
+        "z_ideale_m": "D:S13",
+        "z_max_modello_m": "I",
+        "ricerca_disparita_px": "C: fx*base/z_min",
+        "otturatore": "D:S1, S13",
+        "sottopixel_nominale_px": "D:S2 (curva del costruttore: 'subpixel=0.08'; 'a well-calibrated camera should produce a Subpixel RMS error of less than 0.1')",
+        "sottopixel_terzi_px": "M:S3 a 2 m: 0,0183 m -> 0,0183*21,2/4; parete bianca, laser a 150 mW, 100 fotogrammi per posa",
+        "sottopixel_limite_px": "C: da RMS <= 2 % a 2 m (S1 tab. 4-15): k = 0,04/4",
+        "k_nominale": "C",
+        "k_limite": "C",
+        "sigma_z_terzi": "M:S3 eq. 2 senza il termine angolare (euristico: a 2 m e 75 gradi darebbe 1,2 m)",
+        "rumore_temporale_limite_frazione_di_z": "D:S1 tab. 4-15 (<= 1 % a 2 m)",
+        "riempimento_dichiarato": "D:S1 tab. 4-15",
+        "imu": "D:S1 tab. 4-26 (BMI085; gli esemplari piu' vecchi hanno il BMI055: accelerometro a 62,5 o 250 Hz)"
+      }
+    },
+    "orbbec_gemini_335": {
+      "risoluzione_px": [848, 480],
+      "fps": 30,
+      "fps_disponibili": [6, 10, 15, 30, 60],
+      "campo_profondita_gradi": [90, 60],
+      "campo_tolleranza_gradi": 3,
+      "fx": 410.7, "fy": 410.7, "cx": 424.0, "cy": 240.0,
+      "base_m": 0.05,
+      "z_min_m": 0.18,
+      "z_ideale_m": [0.3, 3.0],
+      "z_max_modello_m": 10.0,
+      "ricerca_disparita_px": 128,
+      "otturatore": "globale (IR); colore a otturatore progressivo",
+      "sottopixel_nominale_px": 0.082,
+      "sottopixel_limite_px": 0.154,
+      "k_nominale": 0.004,
+      "k_limite": 0.0075,
+      "rumore_temporale_tipico_frazione_di_z_a_2m": 0.0045,
+      "rumore_temporale_limite_frazione_di_z": 0.009,
+      "riempimento_dichiarato": 0.995,
+      "imu": {"frequenza_hz": [50, 1000]},
+      "provenienza": {
+        "risoluzione_px": "D:S6 tab. 4-5-2 (848x480 scelta per confronto con le RealSense; le prestazioni dichiarate sono a 1280x800)",
+        "fps": "D:S6",
+        "fps_disponibili": "D:S6 tab. 4-4-1 (USB 3.0, 848x480)",
+        "campo_profondita_gradi": "D:S6 tab. 4-6-1 (90/60 gradi a 848x480; 90x65 a 1280x800)",
+        "campo_tolleranza_gradi": "D:S6",
+        "fx": "D:S6 tab. 4-5-2 (intrinseci tipici)",
+        "fy": "D:S6 tab. 4-5-2",
+        "cx": "D:S6 tab. 4-5-2", "cy": "D:S6 tab. 4-5-2",
+        "base_m": "D:S6",
+        "z_min_m": "D:S6 tab. 4-6-1 (848x480, ricerca 128)",
+        "z_ideale_m": "D:S6 ('Ideal Range 0.3 - 3m')",
+        "z_max_modello_m": "I",
+        "ricerca_disparita_px": "D:S6 tab. 4-6-1",
+        "otturatore": "D:S6",
+        "sottopixel_nominale_px": "C: k_nominale*fx*base, nell'ipotesi (I) che a 848x480 il rumore in metri sia lo stesso che a 1280x800",
+        "sottopixel_limite_px": "C: k_limite*fx*base, stessa ipotesi",
+        "k_nominale": "C:S6 fig. 5-1-3, letta a occhio: circa 0,65 % a 2 m, 1,2 % a 3 m, 1,7 % a 4 m (1280x800, piano con riflettanza > 80 %)",
+        "k_limite": "C: da precisione spaziale <= 1,5 % a 2 m (S6 tab. 5-1-1): 0,03/4",
+        "rumore_temporale_tipico_frazione_di_z_a_2m": "D:S6 fig. 5-1-5 (0,41-0,47 %)",
+        "rumore_temporale_limite_frazione_di_z": "D:S6 tab. 5-1-1 (<= 0,9 % a 2 m)",
+        "riempimento_dichiarato": "D:S6 tab. 5-1-1",
+        "imu": "D:S6"
+      }
+    }
+  },
+
+  "tof_multizona": {
+    "modello": {
+      "passi": [
+        "1. ogni zona e' un cono quadrato largo campo/zone; lancia una griglia di raggi nel cono",
+        "2. la zona riporta la distanza del bersaglio piu' vicino che copre almeno quota_minima_zona del cono (ipotesi); due bersagli a distanze diverse nella stessa zona: stato 9 (impulso largo) o 13",
+        "3. portata massima per modo, riflettanza e luce: tabella; a quella distanza la probabilita' di una misura valida e' 0,9; oltre: stato 255 (nessun bersaglio) o 1/8 (segnale basso)",
+        "4. rumore gaussiano con scarto = accuratezza/2,7 (le schede danno l'accuratezza a 2,7 sigma)",
+        "5. l'immagine delle zone esce capovolta in orizzontale e in verticale"
+      ],
+      "stati_bersaglio": {"0": "dato non aggiornato", "1": "segnale troppo basso", "2": "fase del bersaglio", "3": "sigma troppo alto", "4": "coerenza del bersaglio fallita", "5": "distanza valida", "6": "wrap-around non eseguito (di solito la prima misura)", "7": "coerenza del segnale fallita", "8": "segnale troppo basso per questo bersaglio", "9": "valida con impulso largo (forse bersagli fusi)", "10": "valida, ma nessun bersaglio alla misura precedente", "11": "coerenza della misura fallita", "12": "bersaglio sfocato da un altro (sharpener)", "13": "bersaglio rilevato ma dati incoerenti", "255": "nessun bersaglio"},
+      "stati_validi": [5, 9],
+      "fiducia": "5 = 100 %; 6 e 9 = 50 %; gli altri sotto il 50 %",
+      "quota_minima_zona": 0.2,
+      "p_valida_alla_portata_massima": 0.9,
+      "provenienza": {
+        "stati_bersaglio": "D:S8 tab. 4",
+        "stati_validi": "D: vl53l8cx_api.h ('5 & 9 means ranging OK') e S8",
+        "fiducia": "D:S8",
+        "quota_minima_zona": "I",
+        "p_valida_alla_portata_massima": "D:S7, S9 (portata definita al 90 % di rilevamenti)",
+        "rumore": "C: accuratezza/2,7 (S7 par. 5.2.1: 'Range accuracy figures are based on 2.7 sigma')",
+        "capovolgimento": "D:S7, S9"
+      }
+    },
+    "vl53l7cx": {
+      "campo_gradi": [60, 60],
+      "campo_diagonale_gradi": 90,
+      "distanza_minima_m": 0.02,
+      "modi": {
+        "4x4": {"zone": [4, 4], "passo_zona_gradi": 15.0, "frequenza_massima_hz": 60, "frequenza_di_prova_hz": 30},
+        "8x8": {"zone": [8, 8], "passo_zona_gradi": 7.5, "frequenza_massima_hz": 15, "frequenza_di_prova_hz": 15}
+      },
+      "portata_tipica_m": {
+        "4x4": {"buio": {"bianco_88": 3.5, "grigio_54": 2.8, "grigio_17": 1.4}, "luce_5klx": {"bianco_88": 0.65, "grigio_54": 0.6, "grigio_17": 0.55}},
+        "8x8": {"buio": {"bianco_88": 2.0, "grigio_54": 1.6, "grigio_17": 0.8}, "luce_5klx": {"bianco_88": 0.5, "grigio_54": 0.4, "grigio_17": 0.35}}
+      },
+      "accuratezza_2_7_sigma_frazione_oltre_0_2m": {
+        "4x4": {"buio": {"bianco_88": 0.03, "grigio_54": 0.04, "grigio_17": 0.04}, "luce_5klx": {"bianco_88": 0.07, "grigio_54": 0.09, "grigio_17": 0.10}},
+        "8x8": {"buio": {"bianco_88": 0.05, "grigio_54": 0.06, "grigio_17": 0.06}, "luce_5klx": {"bianco_88": 0.09, "grigio_54": 0.12, "grigio_17": 0.14}}
+      },
+      "accuratezza_2_7_sigma_m_sotto_0_2m": {"4x4": 0.010, "8x8": 0.012},
+      "predefiniti_all_accensione": {"frequenza_hz": 1, "modo": "autonomo", "sharpener_percento": 14},
+      "provenienza": {
+        "campo_gradi": "D:S7 tab. 2", "campo_diagonale_gradi": "D:S7", "distanza_minima_m": "D:S7 ('2 to 350 cm per zone')",
+        "modi": "D:S8 tab. 2 (frequenze); C per il passo (campo/zone)",
+        "portata_tipica_m": "D:S7 tab. 17 e 18, zone interne, valore tipico (i minimi sono piu' bassi: 8x8 angolo, bianco, buio 1,1 m)",
+        "accuratezza_2_7_sigma_frazione_oltre_0_2m": "D:S7 tab. 19",
+        "accuratezza_2_7_sigma_m_sotto_0_2m": "D:S7 tab. 19 (bianco, buio: 9 e 11 mm; valori fino a 20 mm sul grigio in luce)",
+        "predefiniti_all_accensione": "D:S8 (1 Hz, modo autonomo), D:S7 (sharpener 14 %)"
+      }
+    },
+    "vl53l8cx": {
+      "campo_gradi": [45, 45],
+      "campo_diagonale_gradi": 65,
+      "distanza_minima_m": 0.02,
+      "modi": {
+        "4x4": {"zone": [4, 4], "passo_zona_gradi": 11.25, "frequenza_di_prova_hz": 30},
+        "8x8": {"zone": [8, 8], "passo_zona_gradi": 5.625, "frequenza_di_prova_hz": 15}
+      },
+      "portata_tipica_m": {
+        "4x4": {"buio": {"bianco_88": 4.0, "grigio_54": 4.0, "grigio_17": 4.0}, "luce_5klx": {"bianco_88": 2.85, "grigio_54": 2.6, "grigio_17": 1.65}},
+        "8x8": {"buio": {"bianco_88": 4.0, "grigio_54": 3.3, "grigio_17": 2.45}, "luce_5klx": {"bianco_88": 1.55, "grigio_54": 1.4, "grigio_17": 1.15}}
+      },
+      "accuratezza_2_7_sigma_frazione_oltre_0_2m": {
+        "4x4": {"buio": {"bianco_88": 0.03, "grigio_54": 0.04, "grigio_17": 0.04}, "luce_5klx": {"bianco_88": 0.04, "grigio_54": 0.06, "grigio_17": 0.07}},
+        "8x8": {"buio": {"bianco_88": 0.05, "grigio_54": 0.05, "grigio_17": 0.05}, "luce_5klx": {"bianco_88": 0.05, "grigio_54": 0.06, "grigio_17": 0.08}}
+      },
+      "accuratezza_2_7_sigma_m_sotto_0_2m": {"4x4": 0.010, "8x8": 0.011},
+      "peggioramento_zone_d_angolo_frazione": 0.04,
+      "tolleranza_di_montaggio_frazione": 0.02,
+      "provenienza": {
+        "campo_gradi": "D:S9 tab. 2", "campo_diagonale_gradi": "D:S9", "distanza_minima_m": "D:S9 ('2 to 400 cm per zone')",
+        "modi": "C per il passo; frequenze massime non rilette (il manuale del VL53L8CX non e' fra i file): frequenza_massima non verificata",
+        "portata_tipica_m": "D:S9 tab. 16 e 17, zone interne, valore tipico",
+        "accuratezza_2_7_sigma_frazione_oltre_0_2m": "D:S9 tab. 18",
+        "accuratezza_2_7_sigma_m_sotto_0_2m": "D:S9 tab. 18 (bianco, buio)",
+        "peggioramento_zone_d_angolo_frazione": "D:S9 nota alla tab. 18",
+        "tolleranza_di_montaggio_frazione": "D:S9 nota ('Typically an additional 1~2%')"
+      }
+    }
+  },
+
+  "lidar_2d": {
+    "modello": {
+      "passi": [
+        "1. un raggio ogni risoluzione_angolare_gradi in un solo piano, all'altezza di montaggio; ogni punto ha il suo istante: t0 + indice/frequenza_campioni_hz (un giro dura circa 100 ms)",
+        "2. distanza = vera + errore_sistematico (uniforme in +-accuratezza_m, costante per bersaglio) + N(0, sigma_m), quantizzata a risoluzione_distanza_m",
+        "3. nessun ritorno oltre la portata per la riflettanza del bersaglio, sul vetro (ipotesi) e sotto la distanza minima"
+      ],
+      "p_ritorno_perso": 0.02,
+      "provenienza": {"p_ritorno_perso": "I", "errore_sistematico": "I: lettura di '+-accuratezza' come errore medio (LD19: 'average of 100 measurements')"}
+    },
+    "rplidar_c1": {
+      "risoluzione_angolare_gradi": 0.72,
+      "frequenza_campioni_hz": 5000,
+      "frequenza_giri_hz": 10,
+      "frequenza_giri_intervallo_hz": [8, 12],
+      "distanza_minima_m": 0.05,
+      "portata_bianco_70_m": 12.0,
+      "portata_nero_10_m": 6.0,
+      "accuratezza_m": 0.03,
+      "sigma_m": 0.01,
+      "risoluzione_distanza_m": 0.015,
+      "luce_ambiente_massima_lux": 40000,
+      "inclinazione_del_piano_gradi": [0, 1.5],
+      "provenienza": {
+        "risoluzione_angolare_gradi": "D:S10", "frequenza_campioni_hz": "D:S10", "frequenza_giri_hz": "D:S10 (tipica)", "frequenza_giri_intervallo_hz": "D:S10",
+        "distanza_minima_m": "D:S10", "portata_bianco_70_m": "D:S10", "portata_nero_10_m": "D:S10", "accuratezza_m": "D:S10",
+        "sigma_m": "I: la scheda non lo dichiara; preso uguale all'LD19", "risoluzione_distanza_m": "D:S10", "luce_ambiente_massima_lux": "D:S10", "inclinazione_del_piano_gradi": "D:S10 ('Pitch Angle 0-1.5')"
+      }
+    },
+    "ld19": {
+      "risoluzione_angolare_gradi": 0.8,
+      "frequenza_campioni_hz": 4500,
+      "frequenza_giri_hz": 10,
+      "frequenza_giri_intervallo_hz": [5, 13],
+      "distanza_minima_m": 0.02,
+      "distanza_minima_affidabile_m": 0.3,
+      "portata_bianco_70_m": 12.0,
+      "portata_nero_10_m": 6.0,
+      "accuratezza_m": 0.045,
+      "sigma_m": 0.01,
+      "risoluzione_distanza_m": 0.015,
+      "errore_angolare_massimo_gradi": 2.0,
+      "luce_ambiente_massima_lux": 30000,
+      "provenienza": {
+        "risoluzione_angolare_gradi": "D:S11 (a 10 Hz)", "frequenza_campioni_hz": "D:S11", "frequenza_giri_hz": "D:S11 (tipica)", "frequenza_giri_intervallo_hz": "D:S11",
+        "distanza_minima_m": "D:S11", "distanza_minima_affidabile_m": "D:S11 (accuratezza dichiarata solo da 0,3 m)", "portata_bianco_70_m": "D:S11",
+        "portata_nero_10_m": "I: la scheda non la dichiara; presa uguale al C1", "accuratezza_m": "D:S11 (media di 100 misure, 0,3-12 m)", "sigma_m": "D:S11 (tipico, 0,3-12 m)",
+        "risoluzione_distanza_m": "D:S11", "errore_angolare_massimo_gradi": "D:S11", "luce_ambiente_massima_lux": "D:S11"
+      }
+    }
+  }
+}

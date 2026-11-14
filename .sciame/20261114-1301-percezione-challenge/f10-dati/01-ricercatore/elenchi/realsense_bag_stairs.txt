@@ -1,0 +1,12 @@
+# https://librealsense.realsenseai.com/rs-tests/TestData/stairs.bag
+# dimensione 409209452; index_pos 409156291; connessioni 16; blocchi 222; byte d'indice 53161
+# durata 167474.67 s
+      1 sensor_msgs/CameraInfo             /device_0/sensor_0/Depth_0/info/camera_info
+      7 diagnostic_msgs/KeyValue           /device_0/info
+     12 diagnostic_msgs/KeyValue           /device_0/sensor_0/property
+     14 diagnostic_msgs/KeyValue           /device_0/sensor_1/property
+    146 sensor_msgs/Image                  /device_0/sensor_0/Depth_0/image/data
+    438 diagnostic_msgs/KeyValue           /device_0/sensor_0/Depth_0/image/metadata
+      1 sensor_msgs/CameraInfo             /device_0/sensor_1/Color_0/info/camera_info
+     75 sensor_msgs/Image                  /device_0/sensor_1/Color_0/image/data
+    225 diagnostic_msgs/KeyValue           /device_0/sensor_1/Color_0/image/metadata

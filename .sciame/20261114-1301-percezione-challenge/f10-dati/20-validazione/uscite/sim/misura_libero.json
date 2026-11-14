@@ -1,0 +1,6158 @@
+[
+ {
+  "nome": "d435i_lim__pannello_a12__s00",
+  "fotogrammi": 47,
+  "celle_medie": {
+   "non_osservato": 3820.446808510638,
+   "libero": 414.06382978723406,
+   "occupato": 544.531914893617,
+   "in_ombra": 620.9574468085107
+  },
+  "libero_min_max": [
+   371,
+   462
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 29,
+  "celle_classe4": 32,
+  "libero_classe2_centro": 2791,
+  "falsi_occupati_celle_fotogramma": 19246,
+  "celle_ambigue_medie": 30.74468085106383,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 496,
+    "quota_libero": 0.6236273164035689,
+    "quota_occupato": 0.269646533973919
+   },
+   "2-3 m": {
+    "celle_visibili": 635,
+    "quota_libero": 0.03732618529066845,
+    "quota_occupato": 0.5352990450661752
+   }
+  },
+  "tracce_confermate": 84,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_lim__pannello_a12__s01",
+  "fotogrammi": 45,
+  "celle_medie": {
+   "non_osservato": 3816.711111111111,
+   "libero": 362.35555555555555,
+   "occupato": 592.6,
+   "in_ombra": 628.3333333333334
+  },
+  "libero_min_max": [
+   317,
+   405
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 77,
+  "celle_classe4": 32,
+  "libero_classe2_centro": 2289,
+  "falsi_occupati_celle_fotogramma": 20183,
+  "celle_ambigue_medie": 25.644444444444446,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 496,
+    "quota_libero": 0.5542562724014337,
+    "quota_occupato": 0.3135304659498208
+   },
+   "2-3 m": {
+    "celle_visibili": 635,
+    "quota_libero": 0.02162729658792651,
+    "quota_occupato": 0.5664741907261592
+   }
+  },
+  "tracce_confermate": 73,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_lim__pannello_a12__s02",
+  "fotogrammi": 45,
+  "celle_medie": {
+   "non_osservato": 3823.777777777778,
+   "libero": 400.06666666666666,
+   "occupato": 560.1555555555556,
+   "in_ombra": 616.0
+  },
+  "libero_min_max": [
+   363,
+   442
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 97,
+  "celle_classe4": 32,
+  "libero_classe2_centro": 2468,
+  "falsi_occupati_celle_fotogramma": 18967,
+  "celle_ambigue_medie": 28.155555555555555,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 496,
+    "quota_libero": 0.6046594982078853,
+    "quota_occupato": 0.28279569892473116
+   },
+   "2-3 m": {
+    "celle_visibili": 635,
+    "quota_libero": 0.03412073490813648,
+    "quota_occupato": 0.5450218722659668
+   }
+  },
+  "tracce_confermate": 73,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_lim__pannello_a12__s03",
+  "fotogrammi": 44,
+  "celle_medie": {
+   "non_osservato": 3828.3863636363635,
+   "libero": 392.6363636363636,
+   "occupato": 544.5,
+   "in_ombra": 634.4772727272727
+  },
+  "libero_min_max": [
+   350,
+   433
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 119,
+  "celle_classe4": 32,
+  "libero_classe2_centro": 2240,
+  "falsi_occupati_celle_fotogramma": 17772,
+  "celle_ambigue_medie": 26.84090909090909,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 496,
+    "quota_libero": 0.6032807917888563,
+    "quota_occupato": 0.2961876832844575
+   },
+   "2-3 m": {
+    "celle_visibili": 635,
+    "quota_libero": 0.028919112383679314,
+    "quota_occupato": 0.5119541875447388
+   }
+  },
+  "tracce_confermate": 74,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_lim__pannello_a12_scuro__s00",
+  "fotogrammi": 47,
+  "celle_medie": {
+   "non_osservato": 3823.0425531914893,
+   "libero": 406.59574468085106,
+   "occupato": 537.8085106382979,
+   "in_ombra": 632.5531914893617
+  },
+  "libero_min_max": [
+   360,
+   451
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 83,
+  "celle_classe4": 32,
+  "libero_classe2_centro": 2580,
+  "falsi_occupati_celle_fotogramma": 18668,
+  "celle_ambigue_medie": 30.72340425531915,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 496,
+    "quota_libero": 0.6185655456417296,
+    "quota_occupato": 0.24699725463280714
+   },
+   "2-3 m": {
+    "celle_visibili": 635,
+    "quota_libero": 0.03508125314122969,
+    "quota_occupato": 0.5367063159658234
+   }
+  },
+  "tracce_confermate": 88,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_lim__pannello_b__s00",
+  "fotogrammi": 91,
+  "celle_medie": {
+   "non_osservato": 3825.1428571428573,
+   "libero": 407.16483516483515,
+   "occupato": 542.3406593406594,
+   "in_ombra": 625.3516483516484
+  },
+  "libero_min_max": [
+   356,
+   446
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 243,
+  "celle_classe4": 32,
+  "libero_classe2_centro": 5195,
+  "falsi_occupati_celle_fotogramma": 39143,
+  "celle_ambigue_medie": 27.208791208791208,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 496,
+    "quota_libero": 0.6067440623892236,
+    "quota_occupato": 0.2858915278270117
+   },
+   "2-3 m": {
+    "celle_visibili": 635,
+    "quota_libero": 0.03892013498312711,
+    "quota_occupato": 0.518785151856018
+   }
+  },
+  "tracce_confermate": 132,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_lim__pannello_b__s01",
+  "fotogrammi": 89,
+  "celle_medie": {
+   "non_osservato": 3819.224719101124,
+   "libero": 402.8988764044944,
+   "occupato": 563.7191011235955,
+   "in_ombra": 614.1573033707865
+  },
+  "libero_min_max": [
+   346,
+   461
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 235,
+  "celle_classe4": 32,
+  "libero_classe2_centro": 4965,
+  "falsi_occupati_celle_fotogramma": 40169,
+  "celle_ambigue_medie": 26.730337078651687,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 496,
+    "quota_libero": 0.6169354838709677,
+    "quota_occupato": 0.26710311707140266
+   },
+   "2-3 m": {
+    "celle_visibili": 635,
+    "quota_libero": 0.027426346987525437,
+    "quota_occupato": 0.5674599663806069
+   }
+  },
+  "tracce_confermate": 138,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_lim__pannello_vuoto",
+  "fotogrammi": 10,
+  "celle_medie": {
+   "non_osservato": 3826.8,
+   "libero": 383.4,
+   "occupato": 561.8,
+   "in_ombra": 628.0
+  },
+  "libero_min_max": [
+   359,
+   411
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 19,
+  "celle_classe4": 32,
+  "libero_classe2_centro": 531,
+  "falsi_occupati_celle_fotogramma": 4638,
+  "celle_ambigue_medie": 31.4,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 496,
+    "quota_libero": 0.5830645161290322,
+    "quota_occupato": 0.28608870967741934
+   },
+   "2-3 m": {
+    "celle_visibili": 635,
+    "quota_libero": 0.027716535433070868,
+    "quota_occupato": 0.5437795275590551
+   }
+  },
+  "tracce_confermate": 18,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_lim__parete_1m",
+  "fotogrammi": 20,
+  "celle_medie": {
+   "non_osservato": 3681.0,
+   "libero": 0.0,
+   "occupato": 154.2,
+   "in_ombra": 1564.8
+  },
+  "libero_min_max": [
+   0,
+   0
+  ],
+  "celle_tutte_in_ombra": 0,
+  "celle_di_bordo": 0,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 0,
+  "celle_classe4": 0,
+  "libero_classe2_centro": 0,
+  "falsi_occupati_celle_fotogramma": 3084,
+  "celle_ambigue_medie": 0.0,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 0,
+    "quota_libero": null,
+    "quota_occupato": null
+   },
+   "2-3 m": {
+    "celle_visibili": 0,
+    "quota_libero": null,
+    "quota_occupato": null
+   }
+  },
+  "tracce_confermate": 1,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_lim__parete_2m",
+  "fotogrammi": 20,
+  "celle_medie": {
+   "non_osservato": 4573.1,
+   "libero": 0.0,
+   "occupato": 315.75,
+   "in_ombra": 511.15
+  },
+  "libero_min_max": [
+   0,
+   0
+  ],
+  "celle_tutte_in_ombra": 0,
+  "celle_di_bordo": 0,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 0,
+  "celle_classe4": 0,
+  "libero_classe2_centro": 0,
+  "falsi_occupati_celle_fotogramma": 6315,
+  "celle_ambigue_medie": 0.0,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 0,
+    "quota_libero": null,
+    "quota_occupato": null
+   },
+   "2-3 m": {
+    "celle_visibili": 0,
+    "quota_libero": null,
+    "quota_occupato": null
+   }
+  },
+  "tracce_confermate": 1,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_lim__parete_3m",
+  "fotogrammi": 20,
+  "celle_medie": {
+   "non_osservato": 4687.95,
+   "libero": 24.6,
+   "occupato": 454.05,
+   "in_ombra": 233.4
+  },
+  "libero_min_max": [
+   11,
+   53
+  ],
+  "celle_tutte_in_ombra": 0,
+  "celle_di_bordo": 0,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 2,
+  "celle_classe4": 2,
+  "libero_classe2_centro": 65,
+  "falsi_occupati_celle_fotogramma": 9081,
+  "celle_ambigue_medie": 6.05,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 0,
+    "quota_libero": null,
+    "quota_occupato": null
+   },
+   "2-3 m": {
+    "celle_visibili": 556,
+    "quota_libero": 0.03821942446043165,
+    "quota_occupato": 0.520773381294964
+   }
+  },
+  "tracce_confermate": 27,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_lim__parete_4m",
+  "fotogrammi": 20,
+  "celle_medie": {
+   "non_osservato": 4712.55,
+   "libero": 31.95,
+   "occupato": 420.85,
+   "in_ombra": 234.65
+  },
+  "libero_min_max": [
+   17,
+   52
+  ],
+  "celle_tutte_in_ombra": 0,
+  "celle_di_bordo": 0,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 2,
+  "celle_classe4": 2,
+  "libero_classe2_centro": 75,
+  "falsi_occupati_celle_fotogramma": 8417,
+  "celle_ambigue_medie": 7.75,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 0,
+    "quota_libero": null,
+    "quota_occupato": null
+   },
+   "2-3 m": {
+    "celle_visibili": 556,
+    "quota_libero": 0.05053956834532374,
+    "quota_occupato": 0.48839928057553955
+   }
+  },
+  "tracce_confermate": 36,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_lim__pavimento_lucido",
+  "fotogrammi": 20,
+  "celle_medie": {
+   "non_osservato": 3887.55,
+   "libero": 122.0,
+   "occupato": 491.6,
+   "in_ombra": 898.85
+  },
+  "libero_min_max": [
+   87,
+   169
+  ],
+  "celle_tutte_in_ombra": 0,
+  "celle_di_bordo": 0,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 6,
+  "celle_classe4": 32,
+  "libero_classe2_centro": 471,
+  "falsi_occupati_celle_fotogramma": 9832,
+  "celle_ambigue_medie": 28.3,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 560,
+    "quota_libero": 0.14508928571428573,
+    "quota_occupato": 0.44919642857142855
+   },
+   "2-3 m": {
+    "celle_visibili": 955,
+    "quota_libero": 0.006178010471204189,
+    "quota_occupato": 0.2124607329842932
+   }
+  },
+  "tracce_confermate": 54,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_lim__pavimento_vuoto",
+  "fotogrammi": 20,
+  "celle_medie": {
+   "non_osservato": 3842.4,
+   "libero": 501.55,
+   "occupato": 584.7,
+   "in_ombra": 471.35
+  },
+  "libero_min_max": [
+   448,
+   546
+  ],
+  "celle_tutte_in_ombra": 0,
+  "celle_di_bordo": 0,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 39,
+  "celle_classe4": 32,
+  "libero_classe2_centro": 1216,
+  "falsi_occupati_celle_fotogramma": 11694,
+  "celle_ambigue_medie": 37.3,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 560,
+    "quota_libero": 0.6654464285714285,
+    "quota_occupato": 0.21544642857142857
+   },
+   "2-3 m": {
+    "celle_visibili": 955,
+    "quota_libero": 0.047172774869109944,
+    "quota_occupato": 0.48219895287958114
+   }
+  },
+  "tracce_confermate": 43,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__azzeramento_progressivo",
+  "fotogrammi": 75,
+  "celle_medie": {
+   "non_osservato": 4307.8133333333335,
+   "libero": 677.7333333333333,
+   "occupato": 90.58666666666667,
+   "in_ombra": 323.8666666666667
+  },
+  "libero_min_max": [
+   0,
+   1109
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 213,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 1755,
+  "falsi_occupati_celle_fotogramma": 965,
+  "celle_ambigue_medie": 7.693333333333333,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.5821776887107548,
+    "quota_occupato": 0.036152304609218436
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.536793893129771,
+    "quota_occupato": 0.05701781170483461
+   }
+  },
+  "tracce_confermate": 24,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__cassa_persona__s00",
+  "fotogrammi": 84,
+  "celle_medie": {
+   "non_osservato": 3799.8333333333335,
+   "libero": 1039.9285714285713,
+   "occupato": 168.23809523809524,
+   "in_ombra": 392.0
+  },
+  "libero_min_max": [
+   989,
+   1078
+  ],
+  "celle_tutte_in_ombra": 454,
+  "celle_di_bordo": 50,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 339,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4025,
+  "falsi_occupati_celle_fotogramma": 1352,
+  "celle_ambigue_medie": 12.5,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 419,
+    "quota_libero": 0.9340834185702921,
+    "quota_occupato": 0.04997727014433458
+   },
+   "2-3 m": {
+    "celle_visibili": 615,
+    "quota_libero": 0.9343012001548587,
+    "quota_occupato": 0.03368176538908246
+   }
+  },
+  "tracce_confermate": 52,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a05__s00",
+  "fotogrammi": 66,
+  "celle_medie": {
+   "non_osservato": 3793.969696969697,
+   "libero": 1134.3030303030303,
+   "occupato": 97.15151515151516,
+   "in_ombra": 374.57575757575756
+  },
+  "libero_min_max": [
+   1068,
+   1185
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 264,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 3329,
+  "falsi_occupati_celle_fotogramma": 1354,
+  "celle_ambigue_medie": 7.878787878787879,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.947288516426793,
+    "quota_occupato": 0.04679055079856683
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8933842239185751,
+    "quota_occupato": 0.04131390238260467
+   }
+  },
+  "tracce_confermate": 29,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a05__s01",
+  "fotogrammi": 67,
+  "celle_medie": {
+   "non_osservato": 3794.4776119402986,
+   "libero": 1121.3880597014925,
+   "occupato": 103.95522388059702,
+   "in_ombra": 380.17910447761193
+  },
+  "libero_min_max": [
+   1056,
+   1183
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 268,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 3494,
+  "falsi_occupati_celle_fotogramma": 1773,
+  "celle_ambigue_medie": 10.014925373134329,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9463105315107827,
+    "quota_occupato": 0.047468070469296804
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8718012988492652,
+    "quota_occupato": 0.05120200524097072
+   }
+  },
+  "tracce_confermate": 61,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a05__s02",
+  "fotogrammi": 79,
+  "celle_medie": {
+   "non_osservato": 3795.5443037974683,
+   "libero": 1130.9620253164558,
+   "occupato": 98.0,
+   "in_ombra": 375.49367088607596
+  },
+  "libero_min_max": [
+   1070,
+   1187
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 316,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 3968,
+  "falsi_occupati_celle_fotogramma": 1652,
+  "celle_ambigue_medie": 9.189873417721518,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.94515613505492,
+    "quota_occupato": 0.04746201263286066
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8902309401874577,
+    "quota_occupato": 0.041028118658807615
+   }
+  },
+  "tracce_confermate": 44,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a05__s03",
+  "fotogrammi": 73,
+  "celle_medie": {
+   "non_osservato": 3795.27397260274,
+   "libero": 1128.7397260273972,
+   "occupato": 97.45205479452055,
+   "in_ombra": 378.5342465753425
+  },
+  "libero_min_max": [
+   1051,
+   1180
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 250,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 3620,
+  "falsi_occupati_celle_fotogramma": 1565,
+  "celle_ambigue_medie": 7.876712328767123,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9483624783814204,
+    "quota_occupato": 0.045296071595245284
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8862490850151626,
+    "quota_occupato": 0.04220432918540207
+   }
+  },
+  "tracce_confermate": 40,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a05__s04",
+  "fotogrammi": 76,
+  "celle_medie": {
+   "non_osservato": 3792.8552631578946,
+   "libero": 1128.2105263157894,
+   "occupato": 98.17105263157895,
+   "in_ombra": 380.7631578947368
+  },
+  "libero_min_max": [
+   1049,
+   1189
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 303,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 3977,
+  "falsi_occupati_celle_fotogramma": 1582,
+  "celle_ambigue_medie": 8.657894736842104,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9454698871427064,
+    "quota_occupato": 0.04770066448686847
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8826034552028927,
+    "quota_occupato": 0.042426677380474086
+   }
+  },
+  "tracce_confermate": 43,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a05__s05",
+  "fotogrammi": 75,
+  "celle_medie": {
+   "non_osservato": 3794.133333333333,
+   "libero": 1131.0133333333333,
+   "occupato": 97.57333333333334,
+   "in_ombra": 377.28
+  },
+  "libero_min_max": [
+   1060,
+   1184
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 292,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 3817,
+  "falsi_occupati_celle_fotogramma": 1532,
+  "celle_ambigue_medie": 8.28,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9468269873079492,
+    "quota_occupato": 0.04702738810955244
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8881832061068702,
+    "quota_occupato": 0.041567430025445294
+   }
+  },
+  "tracce_confermate": 47,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a05__s06",
+  "fotogrammi": 76,
+  "celle_medie": {
+   "non_osservato": 3794.8289473684213,
+   "libero": 1124.907894736842,
+   "occupato": 99.38157894736842,
+   "in_ombra": 380.88157894736844
+  },
+  "libero_min_max": [
+   1064,
+   1189
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 306,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 3809,
+  "falsi_occupati_celle_fotogramma": 1709,
+  "celle_ambigue_medie": 8.381578947368421,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9460763632528214,
+    "quota_occupato": 0.04717329395633372
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8804138208115709,
+    "quota_occupato": 0.04453595821615106
+   }
+  },
+  "tracce_confermate": 42,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a05__s07",
+  "fotogrammi": 73,
+  "celle_medie": {
+   "non_osservato": 3795.109589041096,
+   "libero": 1129.5479452054794,
+   "occupato": 97.42465753424658,
+   "in_ombra": 377.9178082191781
+  },
+  "libero_min_max": [
+   1058,
+   1188
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 303,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 3675,
+  "falsi_occupati_celle_fotogramma": 1558,
+  "celle_ambigue_medie": 9.013698630136986,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9488291651796744,
+    "quota_occupato": 0.045103906443023034
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8848687650318937,
+    "quota_occupato": 0.042601694029070374
+   }
+  },
+  "tracce_confermate": 52,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a05__s08",
+  "fotogrammi": 74,
+  "celle_medie": {
+   "non_osservato": 3795.364864864865,
+   "libero": 1121.554054054054,
+   "occupato": 99.58108108108108,
+   "in_ombra": 383.5
+  },
+  "libero_min_max": [
+   1050,
+   1179
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 297,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 3723,
+  "falsi_occupati_celle_fotogramma": 1656,
+  "celle_ambigue_medie": 8.743243243243244,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9470291935221795,
+    "quota_occupato": 0.04652548339923089
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8742933773468125,
+    "quota_occupato": 0.04526511244068496
+   }
+  },
+  "tracce_confermate": 49,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a05__s09",
+  "fotogrammi": 68,
+  "celle_medie": {
+   "non_osservato": 3797.1617647058824,
+   "libero": 1121.3970588235295,
+   "occupato": 101.70588235294117,
+   "in_ombra": 379.7352941176471
+  },
+  "libero_min_max": [
+   1043,
+   1183
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 272,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 3302,
+  "falsi_occupati_celle_fotogramma": 1549,
+  "celle_ambigue_medie": 9.25,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9431510078981492,
+    "quota_occupato": 0.05004125898856537
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8797036371800628,
+    "quota_occupato": 0.04539739559946116
+   }
+  },
+  "tracce_confermate": 43,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a05__s10",
+  "fotogrammi": 70,
+  "celle_medie": {
+   "non_osservato": 3796.457142857143,
+   "libero": 1113.6714285714286,
+   "occupato": 106.17142857142858,
+   "in_ombra": 383.7
+  },
+  "libero_min_max": [
+   1052,
+   1181
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 289,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 3568,
+  "falsi_occupati_celle_fotogramma": 1976,
+  "celle_ambigue_medie": 9.3,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9456627540795878,
+    "quota_occupato": 0.04823933581448611
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8621155943293348,
+    "quota_occupato": 0.05422028353326063
+   }
+  },
+  "tracce_confermate": 52,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a05__s11",
+  "fotogrammi": 69,
+  "celle_medie": {
+   "non_osservato": 3795.536231884058,
+   "libero": 1125.8840579710145,
+   "occupato": 101.79710144927536,
+   "in_ombra": 376.7826086956522
+  },
+  "libero_min_max": [
+   1055,
+   1177
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 288,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 3477,
+  "falsi_occupati_celle_fotogramma": 1702,
+  "celle_ambigue_medie": 9.173913043478262,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9460370015393105,
+    "quota_occupato": 0.04780575644041707
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8812921783383117,
+    "quota_occupato": 0.0479477818342737
+   }
+  },
+  "tracce_confermate": 41,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a05__s12",
+  "fotogrammi": 67,
+  "celle_medie": {
+   "non_osservato": 3795.5522388059703,
+   "libero": 1132.3880597014925,
+   "occupato": 97.2089552238806,
+   "in_ombra": 374.85074626865674
+  },
+  "libero_min_max": [
+   1067,
+   1188
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 255,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 3257,
+  "falsi_occupati_celle_fotogramma": 1343,
+  "celle_ambigue_medie": 7.447761194029851,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9479556127179732,
+    "quota_occupato": 0.045733257559895914
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8930386236755156,
+    "quota_occupato": 0.04160875014241768
+   }
+  },
+  "tracce_confermate": 30,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a05__s13",
+  "fotogrammi": 74,
+  "celle_medie": {
+   "non_osservato": 3793.4189189189187,
+   "libero": 1123.8918918918919,
+   "occupato": 104.44594594594595,
+   "in_ombra": 378.2432432432432
+  },
+  "libero_min_max": [
+   1064,
+   1180
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 287,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 3786,
+  "falsi_occupati_celle_fotogramma": 2038,
+  "celle_ambigue_medie": 7.9324324324324325,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.946947949953962,
+    "quota_occupato": 0.046552564588636734
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8768310295027852,
+    "quota_occupato": 0.05221786672168351
+   }
+  },
+  "tracce_confermate": 44,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a05__s14",
+  "fotogrammi": 79,
+  "celle_medie": {
+   "non_osservato": 3792.6202531645567,
+   "libero": 1126.0,
+   "occupato": 99.24050632911393,
+   "in_ombra": 382.1392405063291
+  },
+  "libero_min_max": [
+   1059,
+   1183
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 319,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4200,
+  "falsi_occupati_celle_fotogramma": 1749,
+  "celle_ambigue_medie": 9.405063291139241,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9460186195175161,
+    "quota_occupato": 0.0474366454427843
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8774567591071601,
+    "quota_occupato": 0.04406222823461204
+   }
+  },
+  "tracce_confermate": 50,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a05__s15",
+  "fotogrammi": 80,
+  "celle_medie": {
+   "non_osservato": 3795.15,
+   "libero": 1129.9875,
+   "occupato": 95.35,
+   "in_ombra": 379.5125
+  },
+  "libero_min_max": [
+   1073,
+   1189
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 319,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 3818,
+  "falsi_occupati_celle_fotogramma": 1411,
+  "celle_ambigue_medie": 5.8875,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9460420841683367,
+    "quota_occupato": 0.04827154308617235
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8919083969465649,
+    "quota_occupato": 0.03790076335877863
+   }
+  },
+  "tracce_confermate": 24,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a05__s16",
+  "fotogrammi": 68,
+  "celle_medie": {
+   "non_osservato": 3792.8676470588234,
+   "libero": 1122.735294117647,
+   "occupato": 100.17647058823529,
+   "in_ombra": 384.22058823529414
+  },
+  "libero_min_max": [
+   1054,
+   1186
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 300,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 3594,
+  "falsi_occupati_celle_fotogramma": 1580,
+  "celle_ambigue_medie": 9.632352941176471,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9476010845219851,
+    "quota_occupato": 0.04582694801367441
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8711719802424787,
+    "quota_occupato": 0.04604849573417153
+   }
+  },
+  "tracce_confermate": 50,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a05__s17",
+  "fotogrammi": 76,
+  "celle_medie": {
+   "non_osservato": 3792.8947368421054,
+   "libero": 1128.171052631579,
+   "occupato": 98.69736842105263,
+   "in_ombra": 380.2368421052632
+  },
+  "libero_min_max": [
+   1063,
+   1188
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 312,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 3930,
+  "falsi_occupati_celle_fotogramma": 1623,
+  "celle_ambigue_medie": 7.5,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9457072038814471,
+    "quota_occupato": 0.04748971627465457
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8831257533145842,
+    "quota_occupato": 0.042748091603053436
+   }
+  },
+  "tracce_confermate": 32,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a05__s18",
+  "fotogrammi": 74,
+  "celle_medie": {
+   "non_osservato": 3791.7162162162163,
+   "libero": 1127.8243243243244,
+   "occupato": 100.32432432432432,
+   "in_ombra": 380.13513513513516
+  },
+  "libero_min_max": [
+   1044,
+   1191
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 354,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 3872,
+  "falsi_occupati_celle_fotogramma": 1638,
+  "celle_ambigue_medie": 7.851351351351352,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.947110437090397,
+    "quota_occupato": 0.047148350755565185
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8795543635238292,
+    "quota_occupato": 0.045182587167319994
+   }
+  },
+  "tracce_confermate": 43,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a05__s19",
+  "fotogrammi": 68,
+  "celle_medie": {
+   "non_osservato": 3794.4411764705883,
+   "libero": 1133.3676470588234,
+   "occupato": 97.20588235294117,
+   "in_ombra": 374.9852941176471
+  },
+  "libero_min_max": [
+   1062,
+   1191
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 284,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 3386,
+  "falsi_occupati_celle_fotogramma": 1312,
+  "celle_ambigue_medie": 7.823529411764706,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9451255452080631,
+    "quota_occupato": 0.04921607921725805
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8943197126178716,
+    "quota_occupato": 0.039649753030983385
+   }
+  },
+  "tracce_confermate": 36,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a05__s20",
+  "fotogrammi": 79,
+  "celle_medie": {
+   "non_osservato": 3794.9493670886077,
+   "libero": 1117.9493670886077,
+   "occupato": 103.84810126582279,
+   "in_ombra": 383.253164556962
+  },
+  "libero_min_max": [
+   1063,
+   1174
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 321,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4057,
+  "falsi_occupati_celle_fotogramma": 2142,
+  "celle_ambigue_medie": 9.455696202531646,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9487836432358387,
+    "quota_occupato": 0.04533116866644682
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8657841337327278,
+    "quota_occupato": 0.052700744033239925
+   }
+  },
+  "tracce_confermate": 67,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a05__s21",
+  "fotogrammi": 70,
+  "celle_medie": {
+   "non_osservato": 3794.6,
+   "libero": 1135.3857142857144,
+   "occupato": 95.84285714285714,
+   "in_ombra": 374.1714285714286
+  },
+  "libero_min_max": [
+   1071,
+   1183
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 256,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 3495,
+  "falsi_occupati_celle_fotogramma": 1377,
+  "celle_ambigue_medie": 7.914285714285715,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9478671628972231,
+    "quota_occupato": 0.04603492699685084
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8958996728462377,
+    "quota_occupato": 0.03904034896401309
+   }
+  },
+  "tracce_confermate": 23,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a05__s22",
+  "fotogrammi": 69,
+  "celle_medie": {
+   "non_osservato": 3796.463768115942,
+   "libero": 1120.391304347826,
+   "occupato": 101.91304347826087,
+   "in_ombra": 381.231884057971
+  },
+  "libero_min_max": [
+   1049,
+   1175
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 304,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 3459,
+  "falsi_occupati_celle_fotogramma": 1699,
+  "celle_ambigue_medie": 10.115942028985508,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9463855246725335,
+    "quota_occupato": 0.046614969068571925
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8726850315300365,
+    "quota_occupato": 0.04812479256554929
+   }
+  },
+  "tracce_confermate": 62,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a05__s23",
+  "fotogrammi": 72,
+  "celle_medie": {
+   "non_osservato": 3794.25,
+   "libero": 1130.0,
+   "occupato": 98.38888888888889,
+   "in_ombra": 377.3611111111111
+  },
+  "libero_min_max": [
+   1058,
+   1184
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 283,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 3690,
+  "falsi_occupati_celle_fotogramma": 1547,
+  "celle_ambigue_medie": 8.333333333333334,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9487307949231797,
+    "quota_occupato": 0.045006680026720106
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8845843935538592,
+    "quota_occupato": 0.04440203562340967
+   }
+  },
+  "tracce_confermate": 49,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a05__s24",
+  "fotogrammi": 68,
+  "celle_medie": {
+   "non_osservato": 3795.5588235294117,
+   "libero": 1127.3382352941176,
+   "occupato": 100.29411764705883,
+   "in_ombra": 376.80882352941177
+  },
+  "libero_min_max": [
+   1065,
+   1186
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 301,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 3360,
+  "falsi_occupati_celle_fotogramma": 1545,
+  "celle_ambigue_medie": 8.735294117647058,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9472769067546858,
+    "quota_occupato": 0.046327950017682425
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8836775931746744,
+    "quota_occupato": 0.04629546475078581
+   }
+  },
+  "tracce_confermate": 50,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a05__s25",
+  "fotogrammi": 76,
+  "celle_medie": {
+   "non_osservato": 3797.1052631578946,
+   "libero": 1115.2236842105262,
+   "occupato": 103.82894736842105,
+   "in_ombra": 383.8421052631579
+  },
+  "libero_min_max": [
+   1034,
+   1180
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 374,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 3772,
+  "falsi_occupati_celle_fotogramma": 2014,
+  "celle_ambigue_medie": 9.552631578947368,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9462609429385086,
+    "quota_occupato": 0.04661955489927223
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8648654077942949,
+    "quota_occupato": 0.051566894335074324
+   }
+  },
+  "tracce_confermate": 53,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a05__s26",
+  "fotogrammi": 77,
+  "celle_medie": {
+   "non_osservato": 3799.3636363636365,
+   "libero": 1122.922077922078,
+   "occupato": 100.32467532467533,
+   "in_ombra": 377.38961038961037
+  },
+  "libero_min_max": [
+   1048,
+   1182
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 266,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 3663,
+  "falsi_occupati_celle_fotogramma": 1880,
+  "celle_ambigue_medie": 9.376623376623376,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9499258256773286,
+    "quota_occupato": 0.04453061968092028
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8792108654704075,
+    "quota_occupato": 0.0469713492614256
+   }
+  },
+  "tracce_confermate": 58,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a05__s27",
+  "fotogrammi": 77,
+  "celle_medie": {
+   "non_osservato": 3792.5584415584417,
+   "libero": 1127.6883116883116,
+   "occupato": 99.46753246753246,
+   "in_ombra": 380.2857142857143
+  },
+  "libero_min_max": [
+   1064,
+   1180
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 366,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4057,
+  "falsi_occupati_celle_fotogramma": 1773,
+  "celle_ambigue_medie": 9.441558441558442,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9479738698175572,
+    "quota_occupato": 0.04572781927491346
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8781798354317438,
+    "quota_occupato": 0.04528601169822544
+   }
+  },
+  "tracce_confermate": 64,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a05__s28",
+  "fotogrammi": 76,
+  "celle_medie": {
+   "non_osservato": 3792.1184210526317,
+   "libero": 1133.3552631578948,
+   "occupato": 96.82894736842105,
+   "in_ombra": 377.69736842105266
+  },
+  "libero_min_max": [
+   1057,
+   1189
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 329,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 3945,
+  "falsi_occupati_celle_fotogramma": 1505,
+  "celle_ambigue_medie": 7.868421052631579,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9480540027423268,
+    "quota_occupato": 0.045723024997363144
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8886098834873443,
+    "quota_occupato": 0.04200482121333869
+   }
+  },
+  "tracce_confermate": 40,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a05__s29",
+  "fotogrammi": 70,
+  "celle_medie": {
+   "non_osservato": 3796.7571428571428,
+   "libero": 1112.5142857142857,
+   "occupato": 105.37142857142857,
+   "in_ombra": 385.35714285714283
+  },
+  "libero_min_max": [
+   1045,
+   1166
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 304,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 3414,
+  "falsi_occupati_celle_fotogramma": 1921,
+  "celle_ambigue_medie": 9.257142857142858,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9451760664185513,
+    "quota_occupato": 0.047838534211279704
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8637513631406761,
+    "quota_occupato": 0.05345692475463468
+   }
+  },
+  "tracce_confermate": 44,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a12__s00",
+  "fotogrammi": 47,
+  "celle_medie": {
+   "non_osservato": 3793.574468085106,
+   "libero": 1125.0,
+   "occupato": 101.65957446808511,
+   "in_ombra": 379.7659574468085
+  },
+  "libero_min_max": [
+   1064,
+   1186
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 211,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 2424,
+  "falsi_occupati_celle_fotogramma": 937,
+  "celle_ambigue_medie": 9.48936170212766,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9467019144672323,
+    "quota_occupato": 0.046220099774016116
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8771479616696443,
+    "quota_occupato": 0.047783011206756536
+   }
+  },
+  "tracce_confermate": 24,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a12__s00__filtri",
+  "fotogrammi": 47,
+  "celle_medie": {
+   "non_osservato": 3795.6382978723404,
+   "libero": 1120.5744680851064,
+   "occupato": 101.57446808510639,
+   "in_ombra": 382.21276595744683
+  },
+  "libero_min_max": [
+   1055,
+   1187
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 212,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 2320,
+  "falsi_occupati_celle_fotogramma": 958,
+  "celle_ambigue_medie": 9.446808510638299,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9490896686991003,
+    "quota_occupato": 0.04383234554214813
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8719181419522495,
+    "quota_occupato": 0.04937469546857236
+   }
+  },
+  "tracce_confermate": 22,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a12__s01",
+  "fotogrammi": 45,
+  "celle_medie": {
+   "non_osservato": 3796.488888888889,
+   "libero": 1119.4,
+   "occupato": 107.33333333333333,
+   "in_ombra": 376.77777777777777
+  },
+  "libero_min_max": [
+   1063,
+   1182
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 182,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 2281,
+  "falsi_occupati_celle_fotogramma": 1090,
+  "celle_ambigue_medie": 10.244444444444444,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9455800489868627,
+    "quota_occupato": 0.047873524827432644
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8714843087362172,
+    "quota_occupato": 0.055504664970313825
+   }
+  },
+  "tracce_confermate": 25,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a12__s01__filtri",
+  "fotogrammi": 45,
+  "celle_medie": {
+   "non_osservato": 3797.9333333333334,
+   "libero": 1114.7777777777778,
+   "occupato": 108.02222222222223,
+   "in_ombra": 379.26666666666665
+  },
+  "libero_min_max": [
+   1048,
+   1184
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 178,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 2246,
+  "falsi_occupati_celle_fotogramma": 1119,
+  "celle_ambigue_medie": 10.88888888888889,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9468269873079492,
+    "quota_occupato": 0.04635938543754175
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8648006785411365,
+    "quota_occupato": 0.05709923664122137
+   }
+  },
+  "tracce_confermate": 23,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a12__s02",
+  "fotogrammi": 45,
+  "celle_medie": {
+   "non_osservato": 3798.7555555555555,
+   "libero": 1123.5777777777778,
+   "occupato": 101.55555555555556,
+   "in_ombra": 376.1111111111111
+  },
+  "libero_min_max": [
+   1065,
+   1181
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 173,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 2141,
+  "falsi_occupati_celle_fotogramma": 925,
+  "celle_ambigue_medie": 9.266666666666667,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9491872634157204,
+    "quota_occupato": 0.04466711200178134
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.880169635284139,
+    "quota_occupato": 0.04848176420695505
+   }
+  },
+  "tracce_confermate": 21,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a12__s03",
+  "fotogrammi": 44,
+  "celle_medie": {
+   "non_osservato": 3793.681818181818,
+   "libero": 1127.6136363636363,
+   "occupato": 104.04545454545455,
+   "in_ombra": 374.65909090909093
+  },
+  "libero_min_max": [
+   1062,
+   1190
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 174,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 2257,
+  "falsi_occupati_celle_fotogramma": 905,
+  "celle_ambigue_medie": 8.295454545454545,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9437966842776462,
+    "quota_occupato": 0.050100200400801605
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8845940319222761,
+    "quota_occupato": 0.04823039555863983
+   }
+  },
+  "tracce_confermate": 21,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a12__s04",
+  "fotogrammi": 41,
+  "celle_medie": {
+   "non_osservato": 3793.3658536585367,
+   "libero": 1119.4878048780488,
+   "occupato": 102.92682926829268,
+   "in_ombra": 384.219512195122
+  },
+  "libero_min_max": [
+   1077,
+   1175
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 167,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 2160,
+  "falsi_occupati_celle_fotogramma": 866,
+  "celle_ambigue_medie": 9.439024390243903,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9457940270785473,
+    "quota_occupato": 0.04672760154455252
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8683671569540123,
+    "quota_occupato": 0.050121020294172404
+   }
+  },
+  "tracce_confermate": 23,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a12__s05",
+  "fotogrammi": 45,
+  "celle_medie": {
+   "non_osservato": 3795.9777777777776,
+   "libero": 1122.4666666666667,
+   "occupato": 103.5111111111111,
+   "in_ombra": 378.0444444444444
+  },
+  "libero_min_max": [
+   1071,
+   1189
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 206,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 2257,
+  "falsi_occupati_celle_fotogramma": 959,
+  "celle_ambigue_medie": 10.2,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9470051213538188,
+    "quota_occupato": 0.047428189712758854
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8750805767599661,
+    "quota_occupato": 0.049940627650551316
+   }
+  },
+  "tracce_confermate": 32,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a12__s06",
+  "fotogrammi": 44,
+  "celle_medie": {
+   "non_osservato": 3797.0,
+   "libero": 1121.2045454545455,
+   "occupato": 105.25,
+   "in_ombra": 376.54545454545456
+  },
+  "libero_min_max": [
+   1075,
+   1178
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 198,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 2237,
+  "falsi_occupati_celle_fotogramma": 1013,
+  "celle_ambigue_medie": 11.363636363636363,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9483512479504463,
+    "quota_occupato": 0.04458917835671343
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8712005551700208,
+    "quota_occupato": 0.05315752949340736
+   }
+  },
+  "tracce_confermate": 31,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a12__s07",
+  "fotogrammi": 40,
+  "celle_medie": {
+   "non_osservato": 3797.75,
+   "libero": 1127.15,
+   "occupato": 99.875,
+   "in_ombra": 375.225
+  },
+  "libero_min_max": [
+   1065,
+   1189
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 163,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 1982,
+  "falsi_occupati_celle_fotogramma": 791,
+  "celle_ambigue_medie": 10.125,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9490981963927856,
+    "quota_occupato": 0.04393787575150301
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8823282442748092,
+    "quota_occupato": 0.04740458015267176
+   }
+  },
+  "tracce_confermate": 23,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a12__s08",
+  "fotogrammi": 45,
+  "celle_medie": {
+   "non_osservato": 3794.9333333333334,
+   "libero": 1123.3333333333333,
+   "occupato": 106.04444444444445,
+   "in_ombra": 375.68888888888887
+  },
+  "libero_min_max": [
+   1065,
+   1188
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 183,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 2341,
+  "falsi_occupati_celle_fotogramma": 1107,
+  "celle_ambigue_medie": 10.511111111111111,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9494099309730573,
+    "quota_occupato": 0.04382097528390114
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8725021204410517,
+    "quota_occupato": 0.05469041560644614
+   }
+  },
+  "tracce_confermate": 27,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a12__s09",
+  "fotogrammi": 43,
+  "celle_medie": {
+   "non_osservato": 3797.186046511628,
+   "libero": 1114.0232558139535,
+   "occupato": 106.44186046511628,
+   "in_ombra": 382.3488372093023
+  },
+  "libero_min_max": [
+   1070,
+   1170
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 178,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 2110,
+  "falsi_occupati_celle_fotogramma": 1021,
+  "celle_ambigue_medie": 9.790697674418604,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9472433238570164,
+    "quota_occupato": 0.04716409563312672
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.864335167761406,
+    "quota_occupato": 0.055210367477365525
+   }
+  },
+  "tracce_confermate": 42,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a12__s10",
+  "fotogrammi": 40,
+  "celle_medie": {
+   "non_osservato": 3792.725,
+   "libero": 1115.775,
+   "occupato": 107.8,
+   "in_ombra": 383.7
+  },
+  "libero_min_max": [
+   1068,
+   1177
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 198,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 2142,
+  "falsi_occupati_celle_fotogramma": 1072,
+  "celle_ambigue_medie": 9.95,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9488476953907815,
+    "quota_occupato": 0.04529058116232465
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8577099236641221,
+    "quota_occupato": 0.05885496183206107
+   }
+  },
+  "tracce_confermate": 32,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a12__s11",
+  "fotogrammi": 42,
+  "celle_medie": {
+   "non_osservato": 3793.8571428571427,
+   "libero": 1122.2857142857142,
+   "occupato": 105.35714285714286,
+   "in_ombra": 378.5
+  },
+  "libero_min_max": [
+   1067,
+   1181
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 206,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 2138,
+  "falsi_occupati_celle_fotogramma": 888,
+  "celle_ambigue_medie": 9.142857142857142,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9457486401374177,
+    "quota_occupato": 0.0471419028533257
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8741185023627772,
+    "quota_occupato": 0.05212649945474373
+   }
+  },
+  "tracce_confermate": 27,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a12__s12",
+  "fotogrammi": 46,
+  "celle_medie": {
+   "non_osservato": 3797.1521739130435,
+   "libero": 1111.2608695652175,
+   "occupato": 108.06521739130434,
+   "in_ombra": 383.5217391304348
+  },
+  "libero_min_max": [
+   1047,
+   1180
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 170,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 2270,
+  "falsi_occupati_celle_fotogramma": 1079,
+  "celle_ambigue_medie": 9.173913043478262,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9441927332926723,
+    "quota_occupato": 0.04957741570096715
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8626949883836708,
+    "quota_occupato": 0.054829074012612014
+   }
+  },
+  "tracce_confermate": 32,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a12__s13",
+  "fotogrammi": 41,
+  "celle_medie": {
+   "non_osservato": 3799.682926829268,
+   "libero": 1112.2439024390244,
+   "occupato": 109.53658536585365,
+   "in_ombra": 378.5365853658537
+  },
+  "libero_min_max": [
+   1059,
+   1175
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 155,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 1993,
+  "falsi_occupati_celle_fotogramma": 1085,
+  "celle_ambigue_medie": 11.634146341463415,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9452563663913193,
+    "quota_occupato": 0.048291705361943396
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8643827964997207,
+    "quota_occupato": 0.05790355613479799
+   }
+  },
+  "tracce_confermate": 41,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a12__s14",
+  "fotogrammi": 40,
+  "celle_medie": {
+   "non_osservato": 3796.05,
+   "libero": 1123.2,
+   "occupato": 104.4,
+   "in_ombra": 376.35
+  },
+  "libero_min_max": [
+   1074,
+   1181
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 159,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 1989,
+  "falsi_occupati_celle_fotogramma": 932,
+  "celle_ambigue_medie": 9.4,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9479458917835671,
+    "quota_occupato": 0.04579158316633267
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8770610687022901,
+    "quota_occupato": 0.05236641221374046
+   }
+  },
+  "tracce_confermate": 19,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a12__s15",
+  "fotogrammi": 42,
+  "celle_medie": {
+   "non_osservato": 3796.8333333333335,
+   "libero": 1115.7380952380952,
+   "occupato": 105.69047619047619,
+   "in_ombra": 381.73809523809524
+  },
+  "libero_min_max": [
+   1059,
+   1182
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 168,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 2137,
+  "falsi_occupati_celle_fotogramma": 1024,
+  "celle_ambigue_medie": 11.047619047619047,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9477049336768776,
+    "quota_occupato": 0.044947036931004866
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8640494365685205,
+    "quota_occupato": 0.0559432933478735
+   }
+  },
+  "tracce_confermate": 31,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a12__s16",
+  "fotogrammi": 45,
+  "celle_medie": {
+   "non_osservato": 3796.4222222222224,
+   "libero": 1123.2222222222222,
+   "occupato": 103.6,
+   "in_ombra": 376.75555555555553
+  },
+  "libero_min_max": [
+   1066,
+   1183
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 216,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 2230,
+  "falsi_occupati_celle_fotogramma": 1008,
+  "celle_ambigue_medie": 9.755555555555556,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.948563794255177,
+    "quota_occupato": 0.04413270986417279
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8756234096692112,
+    "quota_occupato": 0.05248515691263783
+   }
+  },
+  "tracce_confermate": 23,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a12__s17",
+  "fotogrammi": 43,
+  "celle_medie": {
+   "non_osservato": 3795.7441860465115,
+   "libero": 1116.093023255814,
+   "occupato": 104.16279069767442,
+   "in_ombra": 384.0
+  },
+  "libero_min_max": [
+   1055,
+   1174
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 186,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 2158,
+  "falsi_occupati_celle_fotogramma": 984,
+  "celle_ambigue_medie": 9.790697674418604,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9488278883348091,
+    "quota_occupato": 0.04599897469357319
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.864299662701935,
+    "quota_occupato": 0.052476477898100476
+   }
+  },
+  "tracce_confermate": 30,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a12__s18",
+  "fotogrammi": 44,
+  "celle_medie": {
+   "non_osservato": 3792.568181818182,
+   "libero": 1120.090909090909,
+   "occupato": 108.02272727272727,
+   "in_ombra": 379.3181818181818
+  },
+  "libero_min_max": [
+   1064,
+   1179
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 179,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 2345,
+  "falsi_occupati_celle_fotogramma": 1100,
+  "celle_ambigue_medie": 8.818181818181818,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9473492439424304,
+    "quota_occupato": 0.047094188376753505
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.867175572519084,
+    "quota_occupato": 0.05690492713393477
+   }
+  },
+  "tracce_confermate": 30,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a12__s19",
+  "fotogrammi": 39,
+  "celle_medie": {
+   "non_osservato": 3792.4358974358975,
+   "libero": 1128.0,
+   "occupato": 104.23076923076923,
+   "in_ombra": 375.3333333333333
+  },
+  "libero_min_max": [
+   1073,
+   1185
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 175,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 2044,
+  "falsi_occupati_celle_fotogramma": 893,
+  "celle_ambigue_medie": 8.538461538461538,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9471764040902317,
+    "quota_occupato": 0.047017111145367656
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8800939518496771,
+    "quota_occupato": 0.051360344490115485
+   }
+  },
+  "tracce_confermate": 13,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a12__s20",
+  "fotogrammi": 44,
+  "celle_medie": {
+   "non_osservato": 3797.6136363636365,
+   "libero": 1114.659090909091,
+   "occupato": 111.47727272727273,
+   "in_ombra": 376.25
+  },
+  "libero_min_max": [
+   1059,
+   1177
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 219,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 2191,
+  "falsi_occupati_celle_fotogramma": 1259,
+  "celle_ambigue_medie": 11.659090909090908,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9452996902896702,
+    "quota_occupato": 0.04832392056840955
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8643997224149896,
+    "quota_occupato": 0.06072172102706454
+   }
+  },
+  "tracce_confermate": 37,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a12__s21",
+  "fotogrammi": 43,
+  "celle_medie": {
+   "non_osservato": 3796.4883720930234,
+   "libero": 1127.4186046511627,
+   "occupato": 99.83720930232558,
+   "in_ombra": 376.25581395348837
+  },
+  "libero_min_max": [
+   1068,
+   1186
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 172,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 2125,
+  "falsi_occupati_celle_fotogramma": 775,
+  "celle_ambigue_medie": 9.348837209302326,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9477093722328378,
+    "quota_occupato": 0.04679125693246959
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8841114858867388,
+    "quota_occupato": 0.0455884963607314
+   }
+  },
+  "tracce_confermate": 17,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a12__s22",
+  "fotogrammi": 44,
+  "celle_medie": {
+   "non_osservato": 3794.7045454545455,
+   "libero": 1128.7272727272727,
+   "occupato": 102.38636363636364,
+   "in_ombra": 374.1818181818182
+  },
+  "libero_min_max": [
+   1083,
+   1189
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 172,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 2217,
+  "falsi_occupati_celle_fotogramma": 926,
+  "celle_ambigue_medie": 8.363636363636363,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9482146110402624,
+    "quota_occupato": 0.045682273638185465
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8843858431644691,
+    "quota_occupato": 0.04892435808466343
+   }
+  },
+  "tracce_confermate": 19,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a12__s23",
+  "fotogrammi": 44,
+  "celle_medie": {
+   "non_osservato": 3795.7727272727275,
+   "libero": 1116.0454545454545,
+   "occupato": 104.93181818181819,
+   "in_ombra": 383.25
+  },
+  "libero_min_max": [
+   1034,
+   1171
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 148,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 2232,
+  "falsi_occupati_celle_fotogramma": 1037,
+  "celle_ambigue_medie": 9.045454545454545,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9501730734195664,
+    "quota_occupato": 0.04345053743851339
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8638445523941707,
+    "quota_occupato": 0.05492713393476752
+   }
+  },
+  "tracce_confermate": 35,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a12__s24",
+  "fotogrammi": 40,
+  "celle_medie": {
+   "non_osservato": 3799.6,
+   "libero": 1107.8,
+   "occupato": 109.8,
+   "in_ombra": 382.8
+  },
+  "libero_min_max": [
+   1052,
+   1169
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 157,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 2027,
+  "falsi_occupati_celle_fotogramma": 1105,
+  "celle_ambigue_medie": 11.675,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9468937875751503,
+    "quota_occupato": 0.04739478957915832
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8529770992366412,
+    "quota_occupato": 0.059694656488549616
+   }
+  },
+  "tracce_confermate": 37,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a12__s25",
+  "fotogrammi": 40,
+  "celle_medie": {
+   "non_osservato": 3793.7,
+   "libero": 1122.425,
+   "occupato": 107.25,
+   "in_ombra": 376.625
+  },
+  "libero_min_max": [
+   1064,
+   1184
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 196,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 2069,
+  "falsi_occupati_celle_fotogramma": 959,
+  "celle_ambigue_medie": 9.425,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9437875751503007,
+    "quota_occupato": 0.04959919839679359
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8745801526717557,
+    "quota_occupato": 0.054007633587786257
+   }
+  },
+  "tracce_confermate": 29,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a12__s26",
+  "fotogrammi": 42,
+  "celle_medie": {
+   "non_osservato": 3795.0238095238096,
+   "libero": 1123.547619047619,
+   "occupato": 102.78571428571429,
+   "in_ombra": 378.64285714285717
+  },
+  "libero_min_max": [
+   1068,
+   1194
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 177,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 2084,
+  "falsi_occupati_celle_fotogramma": 874,
+  "celle_ambigue_medie": 8.928571428571429,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.948325221872316,
+    "quota_occupato": 0.04609218436873747
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8770992366412214,
+    "quota_occupato": 0.04947291893856779
+   }
+  },
+  "tracce_confermate": 24,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a12__s27",
+  "fotogrammi": 42,
+  "celle_medie": {
+   "non_osservato": 3796.0,
+   "libero": 1124.8809523809523,
+   "occupato": 104.80952380952381,
+   "in_ombra": 374.3095238095238
+  },
+  "libero_min_max": [
+   1076,
+   1185
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 156,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 2145,
+  "falsi_occupati_celle_fotogramma": 985,
+  "celle_ambigue_medie": 9.928571428571429,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9484683653020326,
+    "quota_occupato": 0.045853611985876515
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8775717920756089,
+    "quota_occupato": 0.052599054889131226
+   }
+  },
+  "tracce_confermate": 26,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a12__s28",
+  "fotogrammi": 45,
+  "celle_medie": {
+   "non_osservato": 3796.222222222222,
+   "libero": 1116.4222222222222,
+   "occupato": 106.17777777777778,
+   "in_ombra": 381.1777777777778
+  },
+  "libero_min_max": [
+   1062,
+   1182
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 206,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 2244,
+  "falsi_occupati_celle_fotogramma": 1074,
+  "celle_ambigue_medie": 9.955555555555556,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9478957915831663,
+    "quota_occupato": 0.04511244711645513
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8656149279050043,
+    "quota_occupato": 0.05567430025445293
+   }
+  },
+  "tracce_confermate": 24,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a12__s29",
+  "fotogrammi": 44,
+  "celle_medie": {
+   "non_osservato": 3796.9772727272725,
+   "libero": 1112.9545454545455,
+   "occupato": 107.68181818181819,
+   "in_ombra": 382.3863636363636
+  },
+  "libero_min_max": [
+   1051,
+   1173
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 193,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 2116,
+  "falsi_occupati_celle_fotogramma": 1090,
+  "celle_ambigue_medie": 10.590909090909092,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9469393332118783,
+    "quota_occupato": 0.04645654946256149
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8640527411519778,
+    "quota_occupato": 0.05537820957668286
+   }
+  },
+  "tracce_confermate": 28,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a12_alta185__s00",
+  "fotogrammi": 47,
+  "celle_medie": {
+   "non_osservato": 3797.276595744681,
+   "libero": 1124.2340425531916,
+   "occupato": 108.68085106382979,
+   "in_ombra": 369.8085106382979
+  },
+  "libero_min_max": [
+   1073,
+   1183
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 188,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 2248,
+  "falsi_occupati_celle_fotogramma": 995,
+  "celle_ambigue_medie": 8.659574468085106,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9436319447405449,
+    "quota_occupato": 0.05052658508506375
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8847815494559038,
+    "quota_occupato": 0.04593146012668507
+   }
+  },
+  "tracce_confermate": 18,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a12_alta185__s01",
+  "fotogrammi": 45,
+  "celle_medie": {
+   "non_osservato": 3794.7555555555555,
+   "libero": 1125.088888888889,
+   "occupato": 109.0,
+   "in_ombra": 371.15555555555557
+  },
+  "libero_min_max": [
+   1076,
+   1186
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 180,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 2345,
+  "falsi_occupati_celle_fotogramma": 1005,
+  "celle_ambigue_medie": 9.133333333333333,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9456691160097974,
+    "quota_occupato": 0.048675128033845466
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8779983036471586,
+    "quota_occupato": 0.04871925360474979
+   }
+  },
+  "tracce_confermate": 29,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a12_nero__s00",
+  "fotogrammi": 47,
+  "celle_medie": {
+   "non_osservato": 3799.1063829787236,
+   "libero": 1102.0212765957447,
+   "occupato": 116.46808510638297,
+   "in_ombra": 382.40425531914894
+  },
+  "libero_min_max": [
+   1021,
+   1174
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 188,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 2420,
+  "falsi_occupati_celle_fotogramma": 1411,
+  "celle_ambigue_medie": 13.914893617021276,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9426938984351682,
+    "quota_occupato": 0.04639065364772097
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.845996426831249,
+    "quota_occupato": 0.07016404092902387
+   }
+  },
+  "tracce_confermate": 44,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a12_nero__s01",
+  "fotogrammi": 45,
+  "celle_medie": {
+   "non_osservato": 3798.5333333333333,
+   "libero": 1113.1555555555556,
+   "occupato": 109.57777777777778,
+   "in_ombra": 378.73333333333335
+  },
+  "libero_min_max": [
+   1050,
+   1184
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 186,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 2254,
+  "falsi_occupati_celle_fotogramma": 1081,
+  "celle_ambigue_medie": 11.8,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9425963037185482,
+    "quota_occupato": 0.046314851926074374
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8650042408821035,
+    "quota_occupato": 0.05991518235793045
+   }
+  },
+  "tracce_confermate": 20,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a12_scuro__s00",
+  "fotogrammi": 47,
+  "celle_medie": {
+   "non_osservato": 3798.1063829787236,
+   "libero": 1112.5744680851064,
+   "occupato": 109.06382978723404,
+   "in_ombra": 380.25531914893617
+  },
+  "libero_min_max": [
+   1047,
+   1178
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 191,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 2370,
+  "falsi_occupati_celle_fotogramma": 1192,
+  "celle_ambigue_medie": 11.829787234042554,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.945422760414446,
+    "quota_occupato": 0.04532469193706562
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8615559525743056,
+    "quota_occupato": 0.05989930160792594
+   }
+  },
+  "tracce_confermate": 30,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_a12_scuro__s01",
+  "fotogrammi": 45,
+  "celle_medie": {
+   "non_osservato": 3797.0222222222224,
+   "libero": 1112.4,
+   "occupato": 110.35555555555555,
+   "in_ombra": 380.22222222222223
+  },
+  "libero_min_max": [
+   1046,
+   1187
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 188,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 2347,
+  "falsi_occupati_celle_fotogramma": 1185,
+  "celle_ambigue_medie": 12.311111111111112,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9451792473836562,
+    "quota_occupato": 0.04649298597194389
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8586598812553011,
+    "quota_occupato": 0.06178117048346056
+   }
+  },
+  "tracce_confermate": 31,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_b__s00",
+  "fotogrammi": 91,
+  "celle_medie": {
+   "non_osservato": 3793.6263736263736,
+   "libero": 1147.901098901099,
+   "occupato": 89.28571428571429,
+   "in_ombra": 369.1868131868132
+  },
+  "libero_min_max": [
+   1060,
+   1188
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 382,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4578,
+  "falsi_occupati_celle_fotogramma": 1986,
+  "celle_ambigue_medie": 7.1208791208791204,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9479398357153869,
+    "quota_occupato": 0.04730339800480081
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.9135475211811089,
+    "quota_occupato": 0.02773257277074071
+   }
+  },
+  "tracce_confermate": 60,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_b__s00__filtri",
+  "fotogrammi": 91,
+  "celle_medie": {
+   "non_osservato": 3794.5164835164837,
+   "libero": 1145.4725274725274,
+   "occupato": 89.5934065934066,
+   "in_ombra": 370.4175824175824
+  },
+  "libero_min_max": [
+   1053,
+   1189
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 376,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4494,
+  "falsi_occupati_celle_fotogramma": 2035,
+  "celle_ambigue_medie": 7.0,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9489748728225682,
+    "quota_occupato": 0.04633442709595014
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.9105611945306602,
+    "quota_occupato": 0.028537874339401057
+   }
+  },
+  "tracce_confermate": 65,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_b__s01",
+  "fotogrammi": 89,
+  "celle_medie": {
+   "non_osservato": 3794.8426966292136,
+   "libero": 1142.1797752808989,
+   "occupato": 91.65168539325843,
+   "in_ombra": 371.3258426966292
+  },
+  "libero_min_max": [
+   1053,
+   1187
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 392,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4490,
+  "falsi_occupati_celle_fotogramma": 2156,
+  "celle_ambigue_medie": 8.696629213483146,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9458242327351332,
+    "quota_occupato": 0.0482312940487717
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.9058924436057981,
+    "quota_occupato": 0.03142636589758985
+   }
+  },
+  "tracce_confermate": 72,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_b__s02",
+  "fotogrammi": 91,
+  "celle_medie": {
+   "non_osservato": 3793.197802197802,
+   "libero": 1154.065934065934,
+   "occupato": 86.9010989010989,
+   "in_ombra": 365.83516483516485
+  },
+  "libero_min_max": [
+   1071,
+   1192
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 368,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4515,
+  "falsi_occupati_celle_fotogramma": 1834,
+  "celle_ambigue_medie": 6.406593406593407,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.94822612257482,
+    "quota_occupato": 0.04626836089761942
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.9240332186897072,
+    "quota_occupato": 0.024863685932388222
+   }
+  },
+  "tracce_confermate": 43,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_b__s03",
+  "fotogrammi": 88,
+  "celle_medie": {
+   "non_osservato": 3793.681818181818,
+   "libero": 1151.159090909091,
+   "occupato": 89.76136363636364,
+   "in_ombra": 365.39772727272725
+  },
+  "libero_min_max": [
+   1066,
+   1181
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 344,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4326,
+  "falsi_occupati_celle_fotogramma": 2050,
+  "celle_ambigue_medie": 6.204545454545454,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9483512479504463,
+    "quota_occupato": 0.046729823282929496
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.9204024982650937,
+    "quota_occupato": 0.028539208882720334
+   }
+  },
+  "tracce_confermate": 42,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_b__s04",
+  "fotogrammi": 91,
+  "celle_medie": {
+   "non_osservato": 3792.8241758241757,
+   "libero": 1142.065934065934,
+   "occupato": 90.1978021978022,
+   "in_ombra": 374.9120879120879
+  },
+  "libero_min_max": [
+   1053,
+   1185
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 338,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4646,
+  "falsi_occupati_celle_fotogramma": 2170,
+  "celle_ambigue_medie": 7.175824175824176,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9492611596820014,
+    "quota_occupato": 0.045585676848201896
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.9032295948326483,
+    "quota_occupato": 0.030836339233285798
+   }
+  },
+  "tracce_confermate": 61,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_b__s05",
+  "fotogrammi": 90,
+  "celle_medie": {
+   "non_osservato": 3794.222222222222,
+   "libero": 1144.8666666666666,
+   "occupato": 88.45555555555555,
+   "in_ombra": 372.4555555555556
+  },
+  "libero_min_max": [
+   1054,
+   1191
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 360,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4558,
+  "falsi_occupati_celle_fotogramma": 2037,
+  "celle_ambigue_medie": 8.0,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9491872634157204,
+    "quota_occupato": 0.04511244711645513
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.907752332485157,
+    "quota_occupato": 0.028091603053435114
+   }
+  },
+  "tracce_confermate": 78,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_b__s06",
+  "fotogrammi": 92,
+  "celle_medie": {
+   "non_osservato": 3793.336956521739,
+   "libero": 1137.054347826087,
+   "occupato": 92.33695652173913,
+   "in_ombra": 377.2717391304348
+  },
+  "libero_min_max": [
+   1047,
+   1186
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 371,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4671,
+  "falsi_occupati_celle_fotogramma": 2345,
+  "celle_ambigue_medie": 7.239130434782608,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9485492724579594,
+    "quota_occupato": 0.04580900932299382
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8960670428144706,
+    "quota_occupato": 0.033040159309658146
+   }
+  },
+  "tracce_confermate": 51,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_b__s07",
+  "fotogrammi": 90,
+  "celle_medie": {
+   "non_osservato": 3793.177777777778,
+   "libero": 1149.1666666666667,
+   "occupato": 89.18888888888888,
+   "in_ombra": 368.46666666666664
+  },
+  "libero_min_max": [
+   1061,
+   1189
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 374,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4599,
+  "falsi_occupati_celle_fotogramma": 2006,
+  "celle_ambigue_medie": 7.733333333333333,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9481184591405032,
+    "quota_occupato": 0.046136717880204854
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.9141984732824427,
+    "quota_occupato": 0.028532654792196778
+   }
+  },
+  "tracce_confermate": 66,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_b__s08",
+  "fotogrammi": 93,
+  "celle_medie": {
+   "non_osservato": 3794.559139784946,
+   "libero": 1144.763440860215,
+   "occupato": 92.3225806451613,
+   "in_ombra": 368.35483870967744
+  },
+  "libero_min_max": [
+   1062,
+   1191
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 460,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4498,
+  "falsi_occupati_celle_fotogramma": 2181,
+  "celle_ambigue_medie": 7.053763440860215,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9459133320404249,
+    "quota_occupato": 0.04874264658348956
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.9121234507100058,
+    "quota_occupato": 0.031338750718213904
+   }
+  },
+  "tracce_confermate": 60,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_b__s09",
+  "fotogrammi": 90,
+  "celle_medie": {
+   "non_osservato": 3795.3888888888887,
+   "libero": 1139.2777777777778,
+   "occupato": 93.31111111111112,
+   "in_ombra": 372.02222222222224
+  },
+  "libero_min_max": [
+   1067,
+   1188
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 382,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4531,
+  "falsi_occupati_celle_fotogramma": 2448,
+  "celle_ambigue_medie": 9.411111111111111,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9484969939879759,
+    "quota_occupato": 0.04513471387218882
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8998303647158609,
+    "quota_occupato": 0.03446988973706531
+   }
+  },
+  "tracce_confermate": 62,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_b__s10",
+  "fotogrammi": 91,
+  "celle_medie": {
+   "non_osservato": 3790.846153846154,
+   "libero": 1147.076923076923,
+   "occupato": 91.65934065934066,
+   "in_ombra": 370.4175824175824
+  },
+  "libero_min_max": [
+   1062,
+   1182
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 389,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4847,
+  "falsi_occupati_celle_fotogramma": 2299,
+  "celle_ambigue_medie": 7.923076923076923,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9484243211698121,
+    "quota_occupato": 0.04569578717875311
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.9072896569079775,
+    "quota_occupato": 0.032497273718647766
+   }
+  },
+  "tracce_confermate": 52,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_b__s11",
+  "fotogrammi": 92,
+  "celle_medie": {
+   "non_osservato": 3795.4565217391305,
+   "libero": 1143.7391304347825,
+   "occupato": 91.58695652173913,
+   "in_ombra": 369.2173913043478
+  },
+  "libero_min_max": [
+   1069,
+   1183
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 334,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4574,
+  "falsi_occupati_celle_fotogramma": 2216,
+  "celle_ambigue_medie": 7.923913043478261,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9479611396706457,
+    "quota_occupato": 0.04713775376840638
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.9089445735147693,
+    "quota_occupato": 0.031364088947892464
+   }
+  },
+  "tracce_confermate": 83,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_b__s12",
+  "fotogrammi": 90,
+  "celle_medie": {
+   "non_osservato": 3795.4555555555557,
+   "libero": 1134.3,
+   "occupato": 97.41111111111111,
+   "in_ombra": 372.8333333333333
+  },
+  "libero_min_max": [
+   1046,
+   1172
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 352,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4515,
+  "falsi_occupati_celle_fotogramma": 2657,
+  "celle_ambigue_medie": 8.377777777777778,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9459363170786016,
+    "quota_occupato": 0.04847472723224226
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8949618320610687,
+    "quota_occupato": 0.039151823579304496
+   }
+  },
+  "tracce_confermate": 63,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_b__s13",
+  "fotogrammi": 92,
+  "celle_medie": {
+   "non_osservato": 3794.2391304347825,
+   "libero": 1149.5760869565217,
+   "occupato": 88.1195652173913,
+   "in_ombra": 368.0652173913044
+  },
+  "libero_min_max": [
+   1072,
+   1191
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 448,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4390,
+  "falsi_occupati_celle_fotogramma": 2016,
+  "celle_ambigue_medie": 6.380434782608695,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9502483227324213,
+    "quota_occupato": 0.044567395660886994
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.9172751410554265,
+    "quota_occupato": 0.028526385662130768
+   }
+  },
+  "tracce_confermate": 43,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_b__s14",
+  "fotogrammi": 89,
+  "celle_medie": {
+   "non_osservato": 3792.9775280898875,
+   "libero": 1150.6179775280898,
+   "occupato": 88.61797752808988,
+   "in_ombra": 367.7865168539326
+  },
+  "libero_min_max": [
+   1065,
+   1196
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 356,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4538,
+  "falsi_occupati_celle_fotogramma": 1926,
+  "celle_ambigue_medie": 6.898876404494382,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.94625205467114,
+    "quota_occupato": 0.047848506000765574
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.9182434171026674,
+    "quota_occupato": 0.026091431512136547
+   }
+  },
+  "tracce_confermate": 58,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_b__s15",
+  "fotogrammi": 88,
+  "celle_medie": {
+   "non_osservato": 3791.443181818182,
+   "libero": 1143.715909090909,
+   "occupato": 89.4090909090909,
+   "in_ombra": 375.4318181818182
+  },
+  "libero_min_max": [
+   1071,
+   1190
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 424,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4612,
+  "falsi_occupati_celle_fotogramma": 2097,
+  "celle_ambigue_medie": 7.704545454545454,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9493760247768264,
+    "quota_occupato": 0.045454545454545456
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.9019083969465649,
+    "quota_occupato": 0.029614850798056903
+   }
+  },
+  "tracce_confermate": 65,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_b__s16",
+  "fotogrammi": 88,
+  "celle_medie": {
+   "non_osservato": 3795.818181818182,
+   "libero": 1137.590909090909,
+   "occupato": 93.47727272727273,
+   "in_ombra": 373.1136363636364
+  },
+  "libero_min_max": [
+   1050,
+   1177
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 450,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4242,
+  "falsi_occupati_celle_fotogramma": 2394,
+  "celle_ambigue_medie": 8.261363636363637,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9493532519584624,
+    "quota_occupato": 0.04531790854436145
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8985426786953504,
+    "quota_occupato": 0.03580846634281749
+   }
+  },
+  "tracce_confermate": 68,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_b__s17",
+  "fotogrammi": 89,
+  "celle_medie": {
+   "non_osservato": 3792.9438202247193,
+   "libero": 1152.752808988764,
+   "occupato": 88.7752808988764,
+   "in_ombra": 365.5280898876405
+  },
+  "libero_min_max": [
+   1074,
+   1192
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 361,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4550,
+  "falsi_occupati_celle_fotogramma": 2024,
+  "celle_ambigue_medie": 7.651685393258427,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9494269437751909,
+    "quota_occupato": 0.04525905744072414
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.9187923492580838,
+    "quota_occupato": 0.02900763358778626
+   }
+  },
+  "tracce_confermate": 54,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_b__s18",
+  "fotogrammi": 88,
+  "celle_medie": {
+   "non_osservato": 3791.3636363636365,
+   "libero": 1154.75,
+   "occupato": 88.88636363636364,
+   "in_ombra": 365.0
+  },
+  "libero_min_max": [
+   1061,
+   1192
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 357,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4724,
+  "falsi_occupati_celle_fotogramma": 2133,
+  "celle_ambigue_medie": 7.784090909090909,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9515622153397705,
+    "quota_occupato": 0.043154490799781384
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.9163081193615544,
+    "quota_occupato": 0.029788341429562805
+   }
+  },
+  "tracce_confermate": 68,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_b__s19",
+  "fotogrammi": 90,
+  "celle_medie": {
+   "non_osservato": 3796.1222222222223,
+   "libero": 1144.4333333333334,
+   "occupato": 91.63333333333334,
+   "in_ombra": 367.81111111111113
+  },
+  "libero_min_max": [
+   1059,
+   1183
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 347,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4407,
+  "falsi_occupati_celle_fotogramma": 2249,
+  "celle_ambigue_medie": 7.477777777777778,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9488087285682476,
+    "quota_occupato": 0.04622578490313961
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.9101611535199321,
+    "quota_occupato": 0.03185750636132315
+   }
+  },
+  "tracce_confermate": 54,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_b__s20",
+  "fotogrammi": 89,
+  "celle_medie": {
+   "non_osservato": 3794.438202247191,
+   "libero": 1142.1011235955057,
+   "occupato": 90.35955056179775,
+   "in_ombra": 373.1011235955056
+  },
+  "libero_min_max": [
+   1060,
+   1183
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 352,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4403,
+  "falsi_occupati_celle_fotogramma": 2086,
+  "celle_ambigue_medie": 7.202247191011236,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9476706221431628,
+    "quota_occupato": 0.04674517574474792
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.9065443005403551,
+    "quota_occupato": 0.029676644652200018
+   }
+  },
+  "tracce_confermate": 63,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_b__s21",
+  "fotogrammi": 90,
+  "celle_medie": {
+   "non_osservato": 3796.0777777777776,
+   "libero": 1146.4777777777779,
+   "occupato": 89.02222222222223,
+   "in_ombra": 368.4222222222222
+  },
+  "libero_min_max": [
+   1057,
+   1186
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 355,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4347,
+  "falsi_occupati_celle_fotogramma": 2092,
+  "celle_ambigue_medie": 7.788888888888889,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.949855266087731,
+    "quota_occupato": 0.04466711200178134
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.9133672603901611,
+    "quota_occupato": 0.029533502968617474
+   }
+  },
+  "tracce_confermate": 47,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_b__s22",
+  "fotogrammi": 90,
+  "celle_medie": {
+   "non_osservato": 3794.177777777778,
+   "libero": 1154.3666666666666,
+   "occupato": 86.33333333333333,
+   "in_ombra": 365.1222222222222
+  },
+  "libero_min_max": [
+   1071,
+   1196
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 366,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4374,
+  "falsi_occupati_celle_fotogramma": 1730,
+  "celle_ambigue_medie": 5.888888888888889,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9475172567356936,
+    "quota_occupato": 0.0473168559340904
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.9265479219677693,
+    "quota_occupato": 0.023172179813401188
+   }
+  },
+  "tracce_confermate": 26,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_b__s23",
+  "fotogrammi": 91,
+  "celle_medie": {
+   "non_osservato": 3793.065934065934,
+   "libero": 1150.3736263736264,
+   "occupato": 88.86813186813187,
+   "in_ombra": 367.6923076923077
+  },
+  "libero_min_max": [
+   1077,
+   1185
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 354,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4555,
+  "falsi_occupati_celle_fotogramma": 1980,
+  "celle_ambigue_medie": 6.285714285714286,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9482701667070405,
+    "quota_occupato": 0.046774868418154994
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.9179263484606996,
+    "quota_occupato": 0.027816458350809495
+   }
+  },
+  "tracce_confermate": 49,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_b__s24",
+  "fotogrammi": 87,
+  "celle_medie": {
+   "non_osservato": 3794.137931034483,
+   "libero": 1137.344827586207,
+   "occupato": 96.75862068965517,
+   "in_ombra": 371.7586206896552
+  },
+  "libero_min_max": [
+   1056,
+   1179
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 354,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4526,
+  "falsi_occupati_celle_fotogramma": 2746,
+  "celle_ambigue_medie": 9.310344827586206,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9498306958745076,
+    "quota_occupato": 0.04413424550249925
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8935684829341055,
+    "quota_occupato": 0.04099324383609722
+   }
+  },
+  "tracce_confermate": 68,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_b__s25",
+  "fotogrammi": 88,
+  "celle_medie": {
+   "non_osservato": 3792.284090909091,
+   "libero": 1156.7954545454545,
+   "occupato": 86.23863636363636,
+   "in_ombra": 364.6818181818182
+  },
+  "libero_min_max": [
+   1071,
+   1194
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 361,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4484,
+  "falsi_occupati_celle_fotogramma": 1792,
+  "celle_ambigue_medie": 6.7727272727272725,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9485789761340864,
+    "quota_occupato": 0.04540899981781745
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.9257980569049271,
+    "quota_occupato": 0.024271339347675225
+   }
+  },
+  "tracce_confermate": 46,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_b__s26",
+  "fotogrammi": 89,
+  "celle_medie": {
+   "non_osservato": 3790.044943820225,
+   "libero": 1154.0674157303372,
+   "occupato": 86.52808988764045,
+   "in_ombra": 369.35955056179773
+  },
+  "libero_min_max": [
+   1083,
+   1196
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 386,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4688,
+  "falsi_occupati_celle_fotogramma": 1789,
+  "celle_ambigue_medie": 5.865168539325842,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9490216387831844,
+    "quota_occupato": 0.046249802976739994
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.9183120336220946,
+    "quota_occupato": 0.0245818680847414
+   }
+  },
+  "tracce_confermate": 51,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_b__s27",
+  "fotogrammi": 90,
+  "celle_medie": {
+   "non_osservato": 3792.177777777778,
+   "libero": 1154.4222222222222,
+   "occupato": 88.72222222222223,
+   "in_ombra": 364.6777777777778
+  },
+  "libero_min_max": [
+   1081,
+   1191
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 364,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4623,
+  "falsi_occupati_celle_fotogramma": 2008,
+  "celle_ambigue_medie": 7.055555555555555,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9488309953239813,
+    "quota_occupato": 0.04558004898686262
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.9214418999151823,
+    "quota_occupato": 0.028091603053435114
+   }
+  },
+  "tracce_confermate": 55,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_b__s28",
+  "fotogrammi": 91,
+  "celle_medie": {
+   "non_osservato": 3795.285714285714,
+   "libero": 1145.5164835164835,
+   "occupato": 88.86813186813187,
+   "in_ombra": 370.3296703296703
+  },
+  "libero_min_max": [
+   1058,
+   1189
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 324,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4449,
+  "falsi_occupati_celle_fotogramma": 2040,
+  "celle_ambigue_medie": 6.978021978021978,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9478297253848356,
+    "quota_occupato": 0.04611420643484772
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.913128093280765,
+    "quota_occupato": 0.027900343930878282
+   }
+  },
+  "tracce_confermate": 62,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_b__s29",
+  "fotogrammi": 88,
+  "celle_medie": {
+   "non_osservato": 3797.1022727272725,
+   "libero": 1148.5113636363637,
+   "occupato": 87.77272727272727,
+   "in_ombra": 366.6136363636364
+  },
+  "libero_min_max": [
+   1069,
+   1180
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 323,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4249,
+  "falsi_occupati_celle_fotogramma": 1980,
+  "celle_ambigue_medie": 7.545454545454546,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9493760247768264,
+    "quota_occupato": 0.04468026963016943
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.9172796668979875,
+    "quota_occupato": 0.02755031228313671
+   }
+  },
+  "tracce_confermate": 53,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_c__s00",
+  "fotogrammi": 60,
+  "celle_medie": {
+   "non_osservato": 3794.75,
+   "libero": 1131.9833333333333,
+   "occupato": 97.21666666666667,
+   "in_ombra": 376.05
+  },
+  "libero_min_max": [
+   1059,
+   1185
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 252,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 3006,
+  "falsi_occupati_celle_fotogramma": 1322,
+  "celle_ambigue_medie": 8.0,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9471609886439546,
+    "quota_occupato": 0.047895791583166335
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8901526717557252,
+    "quota_occupato": 0.03796437659033079
+   }
+  },
+  "tracce_confermate": 41,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_c__s01",
+  "fotogrammi": 63,
+  "celle_medie": {
+   "non_osservato": 3791.1428571428573,
+   "libero": 1141.6507936507937,
+   "occupato": 93.93650793650794,
+   "in_ombra": 373.26984126984127
+  },
+  "libero_min_max": [
+   1074,
+   1193
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 255,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 3419,
+  "falsi_occupati_celle_fotogramma": 1356,
+  "celle_ambigue_medie": 8.88888888888889,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9483411266978401,
+    "quota_occupato": 0.04574227820720807
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.8978795589482612,
+    "quota_occupato": 0.03661698776202593
+   }
+  },
+  "tracce_confermate": 32,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_c__s02",
+  "fotogrammi": 59,
+  "celle_medie": {
+   "non_osservato": 3795.237288135593,
+   "libero": 1131.6101694915253,
+   "occupato": 100.35593220338983,
+   "in_ombra": 372.79661016949154
+  },
+  "libero_min_max": [
+   1063,
+   1182
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 259,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 2895,
+  "falsi_occupati_celle_fotogramma": 1505,
+  "celle_ambigue_medie": 8.203389830508474,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9471825005944091,
+    "quota_occupato": 0.04762066505893142
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.890852632940872,
+    "quota_occupato": 0.0441971794540044
+   }
+  },
+  "tracce_confermate": 38,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_c__s03",
+  "fotogrammi": 64,
+  "celle_medie": {
+   "non_osservato": 3791.796875,
+   "libero": 1143.671875,
+   "occupato": 93.484375,
+   "in_ombra": 371.046875
+  },
+  "libero_min_max": [
+   1076,
+   1191
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 287,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 3279,
+  "falsi_occupati_celle_fotogramma": 1384,
+  "celle_ambigue_medie": 7.21875,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9493674849699398,
+    "quota_occupato": 0.045215430861723444
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.9041507633587786,
+    "quota_occupato": 0.03676049618320611
+   }
+  },
+  "tracce_confermate": 33,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_d__s00",
+  "fotogrammi": 80,
+  "celle_medie": {
+   "non_osservato": 3794.8125,
+   "libero": 1153.025,
+   "occupato": 87.8625,
+   "in_ombra": 364.3
+  },
+  "libero_min_max": [
+   1072,
+   1187
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 336,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4063,
+  "falsi_occupati_celle_fotogramma": 2005,
+  "celle_ambigue_medie": 8.6625,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9497745490981964,
+    "quota_occupato": 0.04443887775551102
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.919236641221374,
+    "quota_occupato": 0.027251908396946564
+   }
+  },
+  "tracce_confermate": 79,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_d__s01",
+  "fotogrammi": 76,
+  "celle_medie": {
+   "non_osservato": 3793.4473684210525,
+   "libero": 1152.8815789473683,
+   "occupato": 87.05263157894737,
+   "in_ombra": 366.61842105263156
+  },
+  "libero_min_max": [
+   1054,
+   1188
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 285,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 3872,
+  "falsi_occupati_celle_fotogramma": 1831,
+  "celle_ambigue_medie": 7.368421052631579,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9498470625461449,
+    "quota_occupato": 0.04503744330766797
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.9194053836882282,
+    "quota_occupato": 0.025873844917637605
+   }
+  },
+  "tracce_confermate": 68,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_d__s02",
+  "fotogrammi": 80,
+  "celle_medie": {
+   "non_osservato": 3793.4125,
+   "libero": 1153.9875,
+   "occupato": 87.45,
+   "in_ombra": 365.15
+  },
+  "libero_min_max": [
+   1064,
+   1188
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 313,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4083,
+  "falsi_occupati_celle_fotogramma": 1948,
+  "celle_ambigue_medie": 7.75,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9500501002004008,
+    "quota_occupato": 0.04491482965931864
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.9205534351145038,
+    "quota_occupato": 0.02637404580152672
+   }
+  },
+  "tracce_confermate": 68,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_d__s03",
+  "fotogrammi": 81,
+  "celle_medie": {
+   "non_osservato": 3791.814814814815,
+   "libero": 1153.2345679012346,
+   "occupato": 86.29629629629629,
+   "in_ombra": 368.65432098765433
+  },
+  "libero_min_max": [
+   1061,
+   1192
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 384,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4119,
+  "falsi_occupati_celle_fotogramma": 1862,
+  "celle_ambigue_medie": 6.716049382716049,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9489101660110344,
+    "quota_occupato": 0.04512729162027759
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.9192913014795966,
+    "quota_occupato": 0.02486099330883046
+   }
+  },
+  "tracce_confermate": 52,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_vuoto",
+  "fotogrammi": 10,
+  "celle_medie": {
+   "non_osservato": 3791.1,
+   "libero": 1155.6,
+   "occupato": 81.5,
+   "in_ombra": 371.8
+  },
+  "libero_min_max": [
+   1143,
+   1169
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 49,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 500,
+  "falsi_occupati_celle_fotogramma": 254,
+  "celle_ambigue_medie": 5.3,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9513026052104209,
+    "quota_occupato": 0.0438877755511022
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.9221374045801527,
+    "quota_occupato": 0.01816793893129771
+   }
+  },
+  "tracce_confermate": 8,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pannello_vuoto__filtri",
+  "fotogrammi": 10,
+  "celle_medie": {
+   "non_osservato": 3792.7,
+   "libero": 1155.1,
+   "occupato": 81.5,
+   "in_ombra": 370.7
+  },
+  "libero_min_max": [
+   1141,
+   1169
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 49,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 489,
+  "falsi_occupati_celle_fotogramma": 259,
+  "celle_ambigue_medie": 5.5,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.9527054108216433,
+    "quota_occupato": 0.04288577154308617
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.9219847328244275,
+    "quota_occupato": 0.01816793893129771
+   }
+  },
+  "tracce_confermate": 8,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__parete_1m",
+  "fotogrammi": 30,
+  "celle_medie": {
+   "non_osservato": 3667.7,
+   "libero": 0.0,
+   "occupato": 121.73333333333333,
+   "in_ombra": 1610.5666666666666
+  },
+  "libero_min_max": [
+   0,
+   0
+  ],
+  "celle_tutte_in_ombra": 0,
+  "celle_di_bordo": 0,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 0,
+  "celle_classe4": 0,
+  "libero_classe2_centro": 0,
+  "falsi_occupati_celle_fotogramma": 3652,
+  "celle_ambigue_medie": 0.0,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 0,
+    "quota_libero": null,
+    "quota_occupato": null
+   },
+   "2-3 m": {
+    "celle_visibili": 0,
+    "quota_libero": null,
+    "quota_occupato": null
+   }
+  },
+  "tracce_confermate": 1,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__parete_2m",
+  "fotogrammi": 30,
+  "celle_medie": {
+   "non_osservato": 4631.966666666666,
+   "libero": 0.0,
+   "occupato": 175.0,
+   "in_ombra": 593.0333333333333
+  },
+  "libero_min_max": [
+   0,
+   0
+  ],
+  "celle_tutte_in_ombra": 0,
+  "celle_di_bordo": 0,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 0,
+  "celle_classe4": 0,
+  "libero_classe2_centro": 0,
+  "falsi_occupati_celle_fotogramma": 5250,
+  "celle_ambigue_medie": 0.0,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 0,
+    "quota_libero": null,
+    "quota_occupato": null
+   },
+   "2-3 m": {
+    "celle_visibili": 0,
+    "quota_libero": null,
+    "quota_occupato": null
+   }
+  },
+  "tracce_confermate": 1,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__parete_3m",
+  "fotogrammi": 30,
+  "celle_medie": {
+   "non_osservato": 4798.2,
+   "libero": 553.4666666666667,
+   "occupato": 36.3,
+   "in_ombra": 12.033333333333333
+  },
+  "libero_min_max": [
+   530,
+   574
+  ],
+  "celle_tutte_in_ombra": 0,
+  "celle_di_bordo": 0,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 0,
+  "celle_classe4": 0,
+  "libero_classe2_centro": 1497,
+  "falsi_occupati_celle_fotogramma": 1089,
+  "celle_ambigue_medie": 5.133333333333334,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 0,
+    "quota_libero": null,
+    "quota_occupato": null
+   },
+   "2-3 m": {
+    "celle_visibili": 558,
+    "quota_libero": 0.9024492234169653,
+    "quota_occupato": 0.06385902031063322
+   }
+  },
+  "tracce_confermate": 21,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__parete_4m",
+  "fotogrammi": 30,
+  "celle_medie": {
+   "non_osservato": 4804.133333333333,
+   "libero": 573.5666666666667,
+   "occupato": 9.1,
+   "in_ombra": 13.2
+  },
+  "libero_min_max": [
+   541,
+   599
+  ],
+  "celle_tutte_in_ombra": 0,
+  "celle_di_bordo": 0,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 0,
+  "celle_classe4": 0,
+  "libero_classe2_centro": 1360,
+  "falsi_occupati_celle_fotogramma": 273,
+  "celle_ambigue_medie": 4.633333333333334,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 0,
+    "quota_libero": null,
+    "quota_occupato": null
+   },
+   "2-3 m": {
+    "celle_visibili": 558,
+    "quota_libero": 0.9466547192353644,
+    "quota_occupato": 0.016248506571087215
+   }
+  },
+  "tracce_confermate": 13,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pavimento_lucido",
+  "fotogrammi": 20,
+  "celle_medie": {
+   "non_osservato": 3844.65,
+   "libero": 1142.75,
+   "occupato": 176.55,
+   "in_ombra": 236.05
+  },
+  "libero_min_max": [
+   1084,
+   1224
+  ],
+  "celle_tutte_in_ombra": 0,
+  "celle_di_bordo": 0,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 52,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 1024,
+  "falsi_occupati_celle_fotogramma": 3531,
+  "celle_ambigue_medie": 31.15,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 563,
+    "quota_libero": 0.9882770870337477,
+    "quota_occupato": 0.00586145648312611
+   },
+   "2-3 m": {
+    "celle_visibili": 975,
+    "quota_libero": 0.5236410256410257,
+    "quota_occupato": 0.17733333333333334
+   }
+  },
+  "tracce_confermate": 106,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pavimento_vuoto",
+  "fotogrammi": 30,
+  "celle_medie": {
+   "non_osservato": 3798.0,
+   "libero": 1568.3333333333333,
+   "occupato": 19.133333333333333,
+   "in_ombra": 14.533333333333333
+  },
+  "libero_min_max": [
+   1552,
+   1585
+  ],
+  "celle_tutte_in_ombra": 0,
+  "celle_di_bordo": 0,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 120,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 1474,
+  "falsi_occupati_celle_fotogramma": 574,
+  "celle_ambigue_medie": 8.133333333333333,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 563,
+    "quota_libero": 1.0,
+    "quota_occupato": 0.0
+   },
+   "2-3 m": {
+    "celle_visibili": 975,
+    "quota_libero": 0.9540512820512821,
+    "quota_occupato": 0.019623931623931622
+   }
+  },
+  "tracce_confermate": 28,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__pavimento_vuoto__filtri",
+  "fotogrammi": 30,
+  "celle_medie": {
+   "non_osservato": 3799.4333333333334,
+   "libero": 1566.4,
+   "occupato": 19.4,
+   "in_ombra": 14.766666666666667
+  },
+  "libero_min_max": [
+   1552,
+   1584
+  ],
+  "celle_tutte_in_ombra": 0,
+  "celle_di_bordo": 0,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 120,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 1427,
+  "falsi_occupati_celle_fotogramma": 582,
+  "celle_ambigue_medie": 8.8,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 563,
+    "quota_libero": 1.0,
+    "quota_occupato": 0.0
+   },
+   "2-3 m": {
+    "celle_visibili": 975,
+    "quota_libero": 0.9536752136752137,
+    "quota_occupato": 0.019897435897435898
+   }
+  },
+  "tracce_confermate": 29,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__scatola15_0p8m",
+  "fotogrammi": 10,
+  "celle_medie": {
+   "non_osservato": 3797.9,
+   "libero": 1575.1,
+   "occupato": 14.8,
+   "in_ombra": 12.2
+  },
+  "libero_min_max": [
+   1554,
+   1594
+  ],
+  "celle_tutte_in_ombra": 8,
+  "celle_di_bordo": 14,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 40,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 491,
+  "falsi_occupati_celle_fotogramma": 148,
+  "celle_ambigue_medie": 8.0,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 563,
+    "quota_libero": 1.0,
+    "quota_occupato": 0.0
+   },
+   "2-3 m": {
+    "celle_visibili": 975,
+    "quota_libero": 0.961025641025641,
+    "quota_occupato": 0.015179487179487179
+   }
+  },
+  "tracce_confermate": 8,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__scatola15_2p0m",
+  "fotogrammi": 10,
+  "celle_medie": {
+   "non_osservato": 3796.8,
+   "libero": 1514.2,
+   "occupato": 27.9,
+   "in_ombra": 61.1
+  },
+  "libero_min_max": [
+   1494,
+   1533
+  ],
+  "celle_tutte_in_ombra": 12,
+  "celle_di_bordo": 10,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 37,
+  "celle_classe4": 10,
+  "libero_classe2_centro": 486,
+  "falsi_occupati_celle_fotogramma": 145,
+  "celle_ambigue_medie": 6.0,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 563,
+    "quota_libero": 0.9907637655417407,
+    "quota_occupato": 0.007282415630550622
+   },
+   "2-3 m": {
+    "celle_visibili": 952,
+    "quota_libero": 0.9265756302521009,
+    "quota_occupato": 0.015861344537815125
+   }
+  },
+  "tracce_confermate": 11,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__sensore_coperto",
+  "fotogrammi": 45,
+  "celle_medie": {
+   "non_osservato": 4390.688888888889,
+   "libero": 697.4222222222222,
+   "occupato": 75.13333333333334,
+   "in_ombra": 236.75555555555556
+  },
+  "libero_min_max": [
+   0,
+   1111
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 123,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 1431,
+  "falsi_occupati_celle_fotogramma": 714,
+  "celle_ambigue_medie": 6.7555555555555555,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.6123803161879314,
+    "quota_occupato": 0.02618570474281897
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.5238676844783715,
+    "quota_occupato": 0.050585241730279895
+   }
+  },
+  "tracce_confermate": 15,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__sensore_mezzo_coperto",
+  "fotogrammi": 30,
+  "celle_medie": {
+   "non_osservato": 4163.066666666667,
+   "libero": 867.8,
+   "occupato": 85.13333333333334,
+   "in_ombra": 284.0
+  },
+  "libero_min_max": [
+   581,
+   1097
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 66,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 1206,
+  "falsi_occupati_celle_fotogramma": 612,
+  "celle_ambigue_medie": 8.366666666666667,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 499,
+    "quota_libero": 0.7411489645958583,
+    "quota_occupato": 0.035604542418169675
+   },
+   "2-3 m": {
+    "celle_visibili": 655,
+    "quota_libero": 0.6692111959287532,
+    "quota_occupato": 0.04712468193384224
+   }
+  },
+  "tracce_confermate": 16,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__sospeso_2p0m",
+  "fotogrammi": 10,
+  "celle_medie": {
+   "non_osservato": 3797.8,
+   "libero": 1557.7,
+   "occupato": 21.6,
+   "in_ombra": 22.9
+  },
+  "libero_min_max": [
+   1530,
+   1580
+  ],
+  "celle_tutte_in_ombra": 0,
+  "celle_di_bordo": 0,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 39,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 502,
+  "falsi_occupati_celle_fotogramma": 195,
+  "celle_ambigue_medie": 9.1,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 563,
+    "quota_libero": 1.0,
+    "quota_occupato": 0.0
+   },
+   "2-3 m": {
+    "celle_visibili": 975,
+    "quota_libero": 0.9421538461538461,
+    "quota_occupato": 0.022153846153846152
+   }
+  },
+  "tracce_confermate": 10,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__sospeso_2p8m",
+  "fotogrammi": 10,
+  "celle_medie": {
+   "non_osservato": 3799.9,
+   "libero": 1513.0,
+   "occupato": 64.8,
+   "in_ombra": 22.3
+  },
+  "libero_min_max": [
+   1492,
+   1529
+  ],
+  "celle_tutte_in_ombra": 0,
+  "celle_di_bordo": 0,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 43,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 488,
+  "falsi_occupati_celle_fotogramma": 122,
+  "celle_ambigue_medie": 10.5,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 563,
+    "quota_libero": 1.0,
+    "quota_occupato": 0.0
+   },
+   "2-3 m": {
+    "celle_visibili": 975,
+    "quota_libero": 0.8973333333333333,
+    "quota_occupato": 0.06646153846153846
+   }
+  },
+  "tracce_confermate": 7,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__vetro_buco",
+  "fotogrammi": 10,
+  "celle_medie": {
+   "non_osservato": 4302.3,
+   "libero": 1083.7,
+   "occupato": 10.3,
+   "in_ombra": 3.7
+  },
+  "libero_min_max": [
+   1073,
+   1092
+  ],
+  "celle_tutte_in_ombra": 0,
+  "celle_di_bordo": 0,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 40,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 529,
+  "falsi_occupati_celle_fotogramma": 103,
+  "celle_ambigue_medie": 3.8,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 563,
+    "quota_libero": 0.7269982238010657,
+    "quota_occupato": 0.0
+   },
+   "2-3 m": {
+    "celle_visibili": 975,
+    "quota_libero": 0.6107692307692307,
+    "quota_occupato": 0.010564102564102564
+   }
+  },
+  "tracce_confermate": 3,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d435i_nom__vetro_sfondo",
+  "fotogrammi": 10,
+  "celle_medie": {
+   "non_osservato": 3794.5,
+   "libero": 1563.4,
+   "occupato": 19.3,
+   "in_ombra": 22.8
+  },
+  "libero_min_max": [
+   1535,
+   1576
+  ],
+  "celle_tutte_in_ombra": 0,
+  "celle_di_bordo": 0,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 47,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 508,
+  "falsi_occupati_celle_fotogramma": 193,
+  "celle_ambigue_medie": 6.9,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 563,
+    "quota_libero": 0.9996447602131439,
+    "quota_occupato": 0.0
+   },
+   "2-3 m": {
+    "celle_visibili": 975,
+    "quota_libero": 0.9467692307692308,
+    "quota_occupato": 0.019794871794871795
+   }
+  },
+  "tracce_confermate": 6,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d455_nom__pannello_a05__s00",
+  "fotogrammi": 66,
+  "celle_medie": {
+   "non_osservato": 3800.3333333333335,
+   "libero": 1145.4242424242425,
+   "occupato": 81.33333333333333,
+   "in_ombra": 372.90909090909093
+  },
+  "libero_min_max": [
+   1092,
+   1192
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 402,
+  "celle_classe4": 20,
+  "libero_classe2_centro": 3163,
+  "falsi_occupati_celle_fotogramma": 861,
+  "celle_ambigue_medie": 3.757575757575758,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 498,
+    "quota_libero": 0.95944383594986,
+    "quota_occupato": 0.035596933187294635
+   },
+   "2-3 m": {
+    "celle_visibili": 645,
+    "quota_libero": 0.9172186986140475,
+    "quota_occupato": 0.027131782945736434
+   }
+  },
+  "tracce_confermate": 4,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d455_nom__pannello_a12__s00",
+  "fotogrammi": 47,
+  "celle_medie": {
+   "non_osservato": 3801.2340425531916,
+   "libero": 1138.6382978723404,
+   "occupato": 86.02127659574468,
+   "in_ombra": 374.1063829787234
+  },
+  "libero_min_max": [
+   1089,
+   1193
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 287,
+  "celle_classe4": 20,
+  "libero_classe2_centro": 2210,
+  "falsi_occupati_celle_fotogramma": 635,
+  "celle_ambigue_medie": 3.978723404255319,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 498,
+    "quota_libero": 0.9610783559770999,
+    "quota_occupato": 0.034862855678031275
+   },
+   "2-3 m": {
+    "celle_visibili": 645,
+    "quota_libero": 0.9068118093353126,
+    "quota_occupato": 0.03503216229589312
+   }
+  },
+  "tracce_confermate": 3,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d455_nom__pannello_a12__s01",
+  "fotogrammi": 45,
+  "celle_medie": {
+   "non_osservato": 3801.5333333333333,
+   "libero": 1138.5111111111112,
+   "occupato": 87.15555555555555,
+   "in_ombra": 372.8
+  },
+  "libero_min_max": [
+   1090,
+   1189
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 280,
+  "celle_classe4": 20,
+  "libero_classe2_centro": 2150,
+  "falsi_occupati_celle_fotogramma": 627,
+  "celle_ambigue_medie": 4.777777777777778,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 498,
+    "quota_libero": 0.9608210620258814,
+    "quota_occupato": 0.03462739848282017
+   },
+   "2-3 m": {
+    "celle_visibili": 645,
+    "quota_libero": 0.9054608096468562,
+    "quota_occupato": 0.035968992248062014
+   }
+  },
+  "tracce_confermate": 5,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d455_nom__pannello_a12__s02",
+  "fotogrammi": 45,
+  "celle_medie": {
+   "non_osservato": 3800.6222222222223,
+   "libero": 1138.1333333333334,
+   "occupato": 87.4888888888889,
+   "in_ombra": 373.75555555555553
+  },
+  "libero_min_max": [
+   1089,
+   1189
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 280,
+  "celle_classe4": 20,
+  "libero_classe2_centro": 2142,
+  "falsi_occupati_celle_fotogramma": 647,
+  "celle_ambigue_medie": 4.0,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 498,
+    "quota_libero": 0.9603748326639893,
+    "quota_occupato": 0.03547523427041499
+   },
+   "2-3 m": {
+    "celle_visibili": 645,
+    "quota_libero": 0.905495262704565,
+    "quota_occupato": 0.03541774332472007
+   }
+  },
+  "tracce_confermate": 4,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d455_nom__pannello_b__s00",
+  "fotogrammi": 91,
+  "celle_medie": {
+   "non_osservato": 3798.5494505494507,
+   "libero": 1163.2527472527472,
+   "occupato": 74.36263736263736,
+   "in_ombra": 363.83516483516485
+  },
+  "libero_min_max": [
+   1088,
+   1197
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 560,
+  "celle_classe4": 20,
+  "libero_classe2_centro": 4332,
+  "falsi_occupati_celle_fotogramma": 1316,
+  "celle_ambigue_medie": 2.010989010989011,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 498,
+    "quota_libero": 0.961516395251335,
+    "quota_occupato": 0.03440134163025729
+   },
+   "2-3 m": {
+    "celle_visibili": 645,
+    "quota_libero": 0.9436578924951018,
+    "quota_occupato": 0.015486838742652696
+   }
+  },
+  "tracce_confermate": 4,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d455_nom__pannello_vuoto",
+  "fotogrammi": 10,
+  "celle_medie": {
+   "non_osservato": 3800.3,
+   "libero": 1183.3,
+   "occupato": 64.8,
+   "in_ombra": 351.6
+  },
+  "libero_min_max": [
+   1177,
+   1192
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 65,
+  "celle_classe4": 20,
+  "libero_classe2_centro": 461,
+  "falsi_occupati_celle_fotogramma": 146,
+  "celle_ambigue_medie": 1.0,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 498,
+    "quota_libero": 0.963855421686747,
+    "quota_occupato": 0.03253012048192771
+   },
+   "2-3 m": {
+    "celle_visibili": 645,
+    "quota_libero": 0.9747286821705426,
+    "quota_occupato": 0.00248062015503876
+   }
+  },
+  "tracce_confermate": 1,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d455_nom__parete_1m",
+  "fotogrammi": 30,
+  "celle_medie": {
+   "non_osservato": 3708.733333333333,
+   "libero": 0.0,
+   "occupato": 108.36666666666666,
+   "in_ombra": 1582.9
+  },
+  "libero_min_max": [
+   0,
+   0
+  ],
+  "celle_tutte_in_ombra": 0,
+  "celle_di_bordo": 0,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 0,
+  "celle_classe4": 0,
+  "libero_classe2_centro": 0,
+  "falsi_occupati_celle_fotogramma": 3251,
+  "celle_ambigue_medie": 0.0,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 0,
+    "quota_libero": null,
+    "quota_occupato": null
+   },
+   "2-3 m": {
+    "celle_visibili": 0,
+    "quota_libero": null,
+    "quota_occupato": null
+   }
+  },
+  "tracce_confermate": 1,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d455_nom__parete_2m",
+  "fotogrammi": 30,
+  "celle_medie": {
+   "non_osservato": 4651.066666666667,
+   "libero": 0.0,
+   "occupato": 141.5,
+   "in_ombra": 607.4333333333333
+  },
+  "libero_min_max": [
+   0,
+   0
+  ],
+  "celle_tutte_in_ombra": 0,
+  "celle_di_bordo": 0,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 0,
+  "celle_classe4": 0,
+  "libero_classe2_centro": 0,
+  "falsi_occupati_celle_fotogramma": 4245,
+  "celle_ambigue_medie": 0.0,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 0,
+    "quota_libero": null,
+    "quota_occupato": null
+   },
+   "2-3 m": {
+    "celle_visibili": 0,
+    "quota_libero": null,
+    "quota_occupato": null
+   }
+  },
+  "tracce_confermate": 1,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d455_nom__parete_3m",
+  "fotogrammi": 30,
+  "celle_medie": {
+   "non_osservato": 4801.933333333333,
+   "libero": 579.0666666666667,
+   "occupato": 19.0,
+   "in_ombra": 0.0
+  },
+  "libero_min_max": [
+   567,
+   583
+  ],
+  "celle_tutte_in_ombra": 0,
+  "celle_di_bordo": 0,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 0,
+  "celle_classe4": 0,
+  "libero_classe2_centro": 1221,
+  "falsi_occupati_celle_fotogramma": 570,
+  "celle_ambigue_medie": 0.4,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 0,
+    "quota_libero": null,
+    "quota_occupato": null
+   },
+   "2-3 m": {
+    "celle_visibili": 558,
+    "quota_libero": 0.9648148148148148,
+    "quota_occupato": 0.034050179211469536
+   }
+  },
+  "tracce_confermate": 1,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d455_nom__parete_4m",
+  "fotogrammi": 30,
+  "celle_medie": {
+   "non_osservato": 4803.533333333334,
+   "libero": 596.4333333333333,
+   "occupato": 0.03333333333333333,
+   "in_ombra": 0.0
+  },
+  "libero_min_max": [
+   586,
+   600
+  ],
+  "celle_tutte_in_ombra": 0,
+  "celle_di_bordo": 0,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 0,
+  "celle_classe4": 0,
+  "libero_classe2_centro": 1170,
+  "falsi_occupati_celle_fotogramma": 1,
+  "celle_ambigue_medie": 0.03333333333333333,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 0,
+    "quota_libero": null,
+    "quota_occupato": null
+   },
+   "2-3 m": {
+    "celle_visibili": 558,
+    "quota_libero": 0.9989844683393071,
+    "quota_occupato": 5.973715651135006e-05
+   }
+  },
+  "tracce_confermate": 0,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "d455_nom__pavimento_vuoto",
+  "fotogrammi": 30,
+  "celle_medie": {
+   "non_osservato": 3795.9666666666667,
+   "libero": 1604.0333333333333,
+   "occupato": 0.0,
+   "in_ombra": 0.0
+  },
+  "libero_min_max": [
+   1601,
+   1605
+  ],
+  "celle_tutte_in_ombra": 0,
+  "celle_di_bordo": 0,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 180,
+  "celle_classe4": 19,
+  "libero_classe2_centro": 1452,
+  "falsi_occupati_celle_fotogramma": 0,
+  "celle_ambigue_medie": 0.03333333333333333,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 562,
+    "quota_libero": 1.0,
+    "quota_occupato": 0.0
+   },
+   "2-3 m": {
+    "celle_visibili": 966,
+    "quota_libero": 0.9996204278812975,
+    "quota_occupato": 0.0
+   }
+  },
+  "tracce_confermate": 0,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "g335_nom__pannello_a05__s00",
+  "fotogrammi": 66,
+  "celle_medie": {
+   "non_osservato": 3732.151515151515,
+   "libero": 1195.5757575757575,
+   "occupato": 95.53030303030303,
+   "in_ombra": 376.74242424242425
+  },
+  "libero_min_max": [
+   1136,
+   1246
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 264,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 4168,
+  "falsi_occupati_celle_fotogramma": 1221,
+  "celle_ambigue_medie": 7.742424242424242,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 517,
+    "quota_libero": 0.9482445343180352,
+    "quota_occupato": 0.04498563976320263
+   },
+   "2-3 m": {
+    "celle_visibili": 676,
+    "quota_libero": 0.8967186659494352,
+    "quota_occupato": 0.03790120136273983
+   }
+  },
+  "tracce_confermate": 31,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "g335_nom__pannello_a12__s00",
+  "fotogrammi": 47,
+  "celle_medie": {
+   "non_osservato": 3732.340425531915,
+   "libero": 1175.5531914893618,
+   "occupato": 108.61702127659575,
+   "in_ombra": 383.48936170212767
+  },
+  "libero_min_max": [
+   1117,
+   1247
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 191,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 3110,
+  "falsi_occupati_celle_fotogramma": 1188,
+  "celle_ambigue_medie": 10.702127659574469,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 517,
+    "quota_libero": 0.9469113955306803,
+    "quota_occupato": 0.04695666488332853
+   },
+   "2-3 m": {
+    "celle_visibili": 676,
+    "quota_libero": 0.863559108649125,
+    "quota_occupato": 0.055583532670275715
+   }
+  },
+  "tracce_confermate": 39,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "g335_nom__pannello_a12__s01",
+  "fotogrammi": 45,
+  "celle_medie": {
+   "non_osservato": 3737.4666666666667,
+   "libero": 1182.0666666666666,
+   "occupato": 101.22222222222223,
+   "in_ombra": 379.24444444444447
+  },
+  "libero_min_max": [
+   1127,
+   1246
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 176,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 2686,
+  "falsi_occupati_celle_fotogramma": 868,
+  "celle_ambigue_medie": 9.555555555555555,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 517,
+    "quota_libero": 0.947431764453041,
+    "quota_occupato": 0.04577691811734365
+   },
+   "2-3 m": {
+    "celle_visibili": 676,
+    "quota_libero": 0.8826101249178172,
+    "quota_occupato": 0.045463510848126235
+   }
+  },
+  "tracce_confermate": 21,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "g335_nom__pannello_a12__s02",
+  "fotogrammi": 45,
+  "celle_medie": {
+   "non_osservato": 3732.3777777777777,
+   "libero": 1168.5333333333333,
+   "occupato": 110.42222222222222,
+   "in_ombra": 388.6666666666667
+  },
+  "libero_min_max": [
+   1084,
+   1225
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 189,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 2959,
+  "falsi_occupati_celle_fotogramma": 1175,
+  "celle_ambigue_medie": 10.688888888888888,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 517,
+    "quota_libero": 0.9455405114979583,
+    "quota_occupato": 0.04887169568020632
+   },
+   "2-3 m": {
+    "celle_visibili": 676,
+    "quota_libero": 0.8546351084812623,
+    "quota_occupato": 0.05578566732412886
+   }
+  },
+  "tracce_confermate": 33,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "g335_nom__pannello_b__s00",
+  "fotogrammi": 91,
+  "celle_medie": {
+   "non_osservato": 3729.087912087912,
+   "libero": 1196.9120879120878,
+   "occupato": 98.72527472527473,
+   "in_ombra": 375.27472527472526
+  },
+  "libero_min_max": [
+   1119,
+   1249
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 414,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 6233,
+  "falsi_occupati_celle_fotogramma": 2817,
+  "celle_ambigue_medie": 9.76923076923077,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 517,
+    "quota_libero": 0.9499011626671201,
+    "quota_occupato": 0.04446617212574659
+   },
+   "2-3 m": {
+    "celle_visibili": 676,
+    "quota_libero": 0.8887118798361402,
+    "quota_occupato": 0.04213537941348592
+   }
+  },
+  "tracce_confermate": 103,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "g335_nom__pannello_vuoto",
+  "fotogrammi": 10,
+  "celle_medie": {
+   "non_osservato": 3731.3,
+   "libero": 1211.9,
+   "occupato": 87.2,
+   "in_ombra": 369.6
+  },
+  "libero_min_max": [
+   1183,
+   1237
+  ],
+  "celle_tutte_in_ombra": 342,
+  "celle_di_bordo": 42,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 40,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 658,
+  "falsi_occupati_celle_fotogramma": 287,
+  "celle_ambigue_medie": 7.7,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 517,
+    "quota_libero": 0.951063829787234,
+    "quota_occupato": 0.0448742746615087
+   },
+   "2-3 m": {
+    "celle_visibili": 676,
+    "quota_libero": 0.914792899408284,
+    "quota_occupato": 0.023668639053254437
+   }
+  },
+  "tracce_confermate": 13,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "g335_nom__parete_1m",
+  "fotogrammi": 30,
+  "celle_medie": {
+   "non_osservato": 3633.766666666667,
+   "libero": 0.0,
+   "occupato": 127.2,
+   "in_ombra": 1639.0333333333333
+  },
+  "libero_min_max": [
+   0,
+   0
+  ],
+  "celle_tutte_in_ombra": 0,
+  "celle_di_bordo": 0,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 0,
+  "celle_classe4": 0,
+  "libero_classe2_centro": 0,
+  "falsi_occupati_celle_fotogramma": 3816,
+  "celle_ambigue_medie": 0.0,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 0,
+    "quota_libero": null,
+    "quota_occupato": null
+   },
+   "2-3 m": {
+    "celle_visibili": 0,
+    "quota_libero": null,
+    "quota_occupato": null
+   }
+  },
+  "tracce_confermate": 1,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "g335_nom__parete_2m",
+  "fotogrammi": 30,
+  "celle_medie": {
+   "non_osservato": 4625.333333333333,
+   "libero": 0.0,
+   "occupato": 180.53333333333333,
+   "in_ombra": 594.1333333333333
+  },
+  "libero_min_max": [
+   0,
+   0
+  ],
+  "celle_tutte_in_ombra": 0,
+  "celle_di_bordo": 0,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 0,
+  "celle_classe4": 0,
+  "libero_classe2_centro": 0,
+  "falsi_occupati_celle_fotogramma": 5416,
+  "celle_ambigue_medie": 0.0,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 0,
+    "quota_libero": null,
+    "quota_occupato": null
+   },
+   "2-3 m": {
+    "celle_visibili": 0,
+    "quota_libero": null,
+    "quota_occupato": null
+   }
+  },
+  "tracce_confermate": 1,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "g335_nom__parete_3m",
+  "fotogrammi": 30,
+  "celle_medie": {
+   "non_osservato": 4724.266666666666,
+   "libero": 610.9333333333333,
+   "occupato": 47.3,
+   "in_ombra": 17.5
+  },
+  "libero_min_max": [
+   577,
+   636
+  ],
+  "celle_tutte_in_ombra": 0,
+  "celle_di_bordo": 0,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 0,
+  "celle_classe4": 1,
+  "libero_classe2_centro": 1911,
+  "falsi_occupati_celle_fotogramma": 1419,
+  "celle_ambigue_medie": 9.466666666666667,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 0,
+    "quota_libero": null,
+    "quota_occupato": null
+   },
+   "2-3 m": {
+    "celle_visibili": 621,
+    "quota_libero": 0.8812130971551262,
+    "quota_occupato": 0.07461084272678475
+   }
+  },
+  "tracce_confermate": 30,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "g335_nom__parete_4m",
+  "fotogrammi": 30,
+  "celle_medie": {
+   "non_osservato": 4726.566666666667,
+   "libero": 643.0666666666667,
+   "occupato": 13.733333333333333,
+   "in_ombra": 16.633333333333333
+  },
+  "libero_min_max": [
+   609,
+   665
+  ],
+  "celle_tutte_in_ombra": 0,
+  "celle_di_bordo": 0,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 25,
+  "celle_classe4": 1,
+  "libero_classe2_centro": 1765,
+  "falsi_occupati_celle_fotogramma": 412,
+  "celle_ambigue_medie": 6.466666666666667,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 0,
+    "quota_libero": null,
+    "quota_occupato": null
+   },
+   "2-3 m": {
+    "celle_visibili": 621,
+    "quota_libero": 0.9394524959742351,
+    "quota_occupato": 0.02147074610842727
+   }
+  },
+  "tracce_confermate": 18,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ },
+ {
+  "nome": "g335_nom__pavimento_vuoto",
+  "fotogrammi": 30,
+  "celle_medie": {
+   "non_osservato": 3729.7,
+   "libero": 1628.2666666666667,
+   "occupato": 17.3,
+   "in_ombra": 24.733333333333334
+  },
+  "libero_min_max": [
+   1582,
+   1657
+  ],
+  "celle_tutte_in_ombra": 0,
+  "celle_di_bordo": 0,
+  "libero_tutta_ombra": 0,
+  "libero_bordo": 0,
+  "libero_classe4_centro": 120,
+  "celle_classe4": 9,
+  "libero_classe2_centro": 1992,
+  "falsi_occupati_celle_fotogramma": 519,
+  "celle_ambigue_medie": 7.666666666666667,
+  "copertura": {
+   "1,3-2 m": {
+    "celle_visibili": 581,
+    "quota_libero": 0.9998852553069421,
+    "quota_occupato": 5.7372346528973036e-05
+   },
+   "2-3 m": {
+    "celle_visibili": 996,
+    "quota_libero": 0.9487282463186077,
+    "quota_occupato": 0.017336010709504687
+   }
+  },
+  "tracce_confermate": 26,
+  "libero_su_persona_visibile": 0,
+  "libero_su_persona_nascosta": 0
+ }
+]

@@ -1,0 +1,2 @@
+ESITO visione-P2ter regge : limite, 20 % centrale, 20 semi × 6 fotogrammi: σ/k·z² da 0.990 a 1.031 (media 1.009); dispersione fra i semi di una cella: 4.7 %; 80 % centrale: da 1.121 a 1.145
+timeout 290 $PY -I -B controlli.py semi  19,16s user 0,20s system 142% cpu 13,569 total

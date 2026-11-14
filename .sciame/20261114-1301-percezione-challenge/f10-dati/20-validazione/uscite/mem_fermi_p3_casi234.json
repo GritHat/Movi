@@ -1,0 +1,59 @@
+[
+ {
+  "oggetto": "persona",
+  "distanza_m": 4.0,
+  "N": 20,
+  "visto_in_30_fotogrammi_su_45": 20,
+  "sigma_radiale_cm_mediana_max": [
+   1.2517320329136834,
+   10.371133420979547
+  ],
+  "sigma_trasversale_cm_mediana_max": [
+   0.8214755030254248,
+   2.3669134716030884
+  ],
+  "celle_mediane": 45.5,
+  "sequenze_con_si_muove_falso": 0,
+  "sequenze_con_altre_tracce_si_muove": 5,
+  "soglia_radiale_cm": 42.693239618810416,
+  "soglia_trasversale_cm": 14.250553668465159
+ },
+ {
+  "oggetto": "scatola15",
+  "distanza_m": 2.0,
+  "N": 20,
+  "visto_in_30_fotogrammi_su_45": 20,
+  "sigma_radiale_cm_mediana_max": [
+   0.9053569146087361,
+   1.5199102312673323
+  ],
+  "sigma_trasversale_cm_mediana_max": [
+   0.5991820318194024,
+   0.8225369968038588
+  ],
+  "celle_mediane": 14.5,
+  "sequenze_con_si_muove_falso": 0,
+  "sequenze_con_altre_tracce_si_muove": 1,
+  "soglia_radiale_cm": 10.673309904702604,
+  "soglia_trasversale_cm": 7.125276834232579
+ },
+ {
+  "oggetto": "scatola15",
+  "distanza_m": 3.0,
+  "N": 20,
+  "visto_in_30_fotogrammi_su_45": 20,
+  "sigma_radiale_cm_mediana_max": [
+   3.154547497423966,
+   8.90054045799717
+  ],
+  "sigma_trasversale_cm_mediana_max": [
+   1.797227132112774,
+   4.667367799181838
+  ],
+  "celle_mediane": 10.0,
+  "sequenze_con_si_muove_falso": 1,
+  "sequenze_con_altre_tracce_si_muove": 4,
+  "soglia_radiale_cm": 24.014947285580856,
+  "soglia_trasversale_cm": 10.687915251348869
+ }
+]

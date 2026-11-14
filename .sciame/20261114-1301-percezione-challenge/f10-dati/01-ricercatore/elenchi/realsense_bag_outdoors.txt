@@ -1,0 +1,13 @@
+# https://librealsense.realsenseai.com/rs-tests/TestData/outdoors.bag
+# dimensione 422868878; index_pos 422747051; connessioni 71; blocchi 599; byte d'indice 121827
+# durata 8.10 s
+      1 sensor_msgs/CameraInfo             /device_0/sensor_1/Color_0/info/camera_info
+      7 diagnostic_msgs/KeyValue           /device_0/info
+    236 sensor_msgs/Image                  /device_0/sensor_1/Color_0/image/data
+    708 diagnostic_msgs/KeyValue           /device_0/sensor_1/Color_0/image/metadata
+      1 sensor_msgs/CameraInfo             /device_0/sensor_0/Depth_0/info/camera_info
+      1 sensor_msgs/CameraInfo             /device_0/sensor_0/Infrared_1/info/camera_info
+    181 sensor_msgs/Image                  /device_0/sensor_0/Infrared_1/image/data
+    543 diagnostic_msgs/KeyValue           /device_0/sensor_0/Infrared_1/image/metadata
+    181 sensor_msgs/Image                  /device_0/sensor_0/Depth_0/image/data
+    543 diagnostic_msgs/KeyValue           /device_0/sensor_0/Depth_0/image/metadata

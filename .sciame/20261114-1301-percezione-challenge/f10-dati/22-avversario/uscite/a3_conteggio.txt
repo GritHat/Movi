@@ -1,0 +1,2 @@
+fotogrammi con identita 1 (A) «osservato» mentre A è nascosta: 22 27 48 scarto massimo dalla x di B: 0.20000000000000007
+nascite: [{'tipo': 'nascita', 'id': 1}, {'tipo': 'nascita', 'id': 2}]

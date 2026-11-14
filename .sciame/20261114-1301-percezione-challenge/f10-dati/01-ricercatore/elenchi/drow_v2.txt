@@ -1,0 +1,17 @@
+# https://github.com/VisualComputingInstitute/DROW/releases/download/v2/DROWv2-data.zip
+# dimensione archivio 197970996 byte; voci 571; dimensione estratta 1106043864 byte; byte letti 3000000
+# estensioni: {'(cartella o senza estensione)': 4, 'odom2': 113, 'csv': 113, 'wp': 113, 'wa': 114, 'wc': 114}
+           0 DROWv2-data/
+           0 DROWv2-data/test/
+      465563 DROWv2-data/test/run_t_2015-11-26-13-47-42.bag.odom2
+    11061937 DROWv2-data/test/run_t_2015-11-26-11-55-45.bag.csv
+       32144 DROWv2-data/test/run_t_2015-11-26-11-22-03.bag.wp
+        2232 DROWv2-data/test/run_t_2015-11-26-11-55-45.bag.wa
+       26884 DROWv2-data/test/run_2015-11-25-11-01-30.bag.wc
+           0 DROWv2-data/train/
+        1624 DROWv2-data/train/run_2015-11-26-16-54-37-c.bag.wc
+      222499 DROWv2-data/train/lunch_2015-11-26-12-04-23.bag.wp
+         760 DROWv2-data/train/r-2w2p_2015-11-24-16-42-10.bag.wa
+     4088785 DROWv2-data/train/r-1w_2015-11-24-17-17-49.bag.csv
+       93247 DROWv2-data/train/r-1w1r_2015-11-24-18-29-45.bag.odom2
+           0 DROWv2-data/val/

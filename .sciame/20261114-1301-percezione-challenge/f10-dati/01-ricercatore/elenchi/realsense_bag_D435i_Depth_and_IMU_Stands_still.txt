@@ -1,0 +1,12 @@
+# https://librealsense.realsenseai.com/rs-tests/D435i_Depth_and_IMU_Stands_still.bag
+# dimensione 107375642; index_pos 107319617; connessioni 92; blocchi 115; byte d'indice 56025
+# durata 7.64 s
+      1 sensor_msgs/CameraInfo             /device_0/sensor_0/Depth_0/info/camera_info
+      9 diagnostic_msgs/KeyValue           /device_0/info
+      7 std_msgs/String                    /device_0/sensor_0/post_processing
+   1532 sensor_msgs/Imu                    /device_0/sensor_2/Gyro_0/imu/data
+   4596 diagnostic_msgs/KeyValue           /device_0/sensor_2/Gyro_0/imu/metadata
+    476 sensor_msgs/Imu                    /device_0/sensor_2/Accel_0/imu/data
+   1428 diagnostic_msgs/KeyValue           /device_0/sensor_2/Accel_0/imu/metadata
+    229 sensor_msgs/Image                  /device_0/sensor_0/Depth_0/image/data
+   4122 diagnostic_msgs/KeyValue           /device_0/sensor_0/Depth_0/image/metadata

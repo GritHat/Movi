@@ -1,0 +1,32 @@
+min_punti_ostacolo=3 min_celle_gruppo=1
+   tracce fantasma sulle scene vuote: {'d435i_lim/pan': 17, 'd435i_lim/pav': 43, 'd435i_nom/pan': 7, 'd435i_nom/pav': 28, 'd455_nom/pan': 0, 'd455_nom/pav': 0, 'g335_nom/pan': 12, 'g335_nom/pav': 26}
+   ostacoli visti: {'cassa': '84/84', 'scatola15': '10/10', 'sospeso': '10/10'}
+   passaggi pari: {"a12": "pulita 0/15, stessa 0, fusione 15, riagg. falsi 0, «si muove» prima 15, pannello «si muove» 12", "a05": "pulita 0/15, stessa 0, fusione 15, riagg. falsi 0, «si muove» prima 8, pannello «si muove» 15", "b": "pulita 0/15, stessa 0, fusione 15, riagg. falsi 1, «si muove» prima 9, pannello «si muove» 12"}
+min_punti_ostacolo=3 min_celle_gruppo=3
+   tracce fantasma sulle scene vuote: {'d435i_lim/pan': 10, 'd435i_lim/pav': 29, 'd435i_nom/pan': 2, 'd435i_nom/pav': 9, 'd455_nom/pan': 0, 'd455_nom/pav': 0, 'g335_nom/pan': 2, 'g335_nom/pav': 6}
+   ostacoli visti: {'cassa': '84/84', 'scatola15': '10/10', 'sospeso': '10/10'}
+   passaggi pari: {"a12": "pulita 0/15, stessa 0, fusione 15, riagg. falsi 2, «si muove» prima 15, pannello «si muove» 15", "a05": "pulita 0/15, stessa 0, fusione 15, riagg. falsi 6, «si muove» prima 11, pannello «si muove» 15", "b": "pulita 0/15, stessa 0, fusione 15, riagg. falsi 2, «si muove» prima 12, pannello «si muove» 15"}
+min_punti_ostacolo=8 min_celle_gruppo=1
+   tracce fantasma sulle scene vuote: {'d435i_lim/pan': 26, 'd435i_lim/pav': 101, 'd435i_nom/pan': 4, 'd435i_nom/pav': 13, 'd455_nom/pan': 0, 'd455_nom/pav': 0, 'g335_nom/pan': 3, 'g335_nom/pav': 5}
+   ostacoli visti: {'cassa': '84/84', 'scatola15': '10/10', 'sospeso': '10/10'}
+   passaggi pari: {"a12": "pulita 0/15, stessa 0, fusione 10, riagg. falsi 4, «si muove» prima 15, pannello «si muove» 15", "a05": "pulita 0/15, stessa 0, fusione 15, riagg. falsi 4, «si muove» prima 15, pannello «si muove» 15", "b": "pulita 0/15, stessa 0, fusione 9, riagg. falsi 5, «si muove» prima 15, pannello «si muove» 15"}
+min_punti_ostacolo=8 min_celle_gruppo=3
+   tracce fantasma sulle scene vuote: {'d435i_lim/pan': 11, 'd435i_lim/pav': 49, 'd435i_nom/pan': 0, 'd435i_nom/pav': 0, 'd455_nom/pan': 0, 'd455_nom/pav': 0, 'g335_nom/pan': 0, 'g335_nom/pav': 1}
+   ostacoli visti: {'cassa': '84/84', 'scatola15': '10/10', 'sospeso': '10/10'}
+   passaggi pari: {"a12": "pulita 0/15, stessa 0, fusione 10, riagg. falsi 2, «si muove» prima 15, pannello «si muove» 15", "a05": "pulita 0/15, stessa 0, fusione 15, riagg. falsi 2, «si muove» prima 15, pannello «si muove» 15", "b": "pulita 0/15, stessa 0, fusione 9, riagg. falsi 5, «si muove» prima 15, pannello «si muove» 15"}
+min_punti_ostacolo=20 min_celle_gruppo=1
+   tracce fantasma sulle scene vuote: {'d435i_lim/pan': 29, 'd435i_lim/pav': 49, 'd435i_nom/pan': 0, 'd435i_nom/pav': 0, 'd455_nom/pan': 0, 'd455_nom/pav': 0, 'g335_nom/pan': 0, 'g335_nom/pav': 0}
+   ostacoli visti: {'cassa': '84/84', 'scatola15': '10/10', 'sospeso': '10/10'}
+   passaggi pari: {"a12": "pulita 0/15, stessa 0, fusione 4, riagg. falsi 1, «si muove» prima 15, pannello «si muove» 11", "a05": "pulita 0/15, stessa 0, fusione 5, riagg. falsi 0, «si muove» prima 15, pannello «si muove» 15", "b": "pulita 0/15, stessa 0, fusione 1, riagg. falsi 2, «si muove» prima 15, pannello «si muove» 11"}
+min_punti_ostacolo=20 min_celle_gruppo=3
+   tracce fantasma sulle scene vuote: {'d435i_lim/pan': 5, 'd435i_lim/pav': 3, 'd435i_nom/pan': 0, 'd435i_nom/pav': 0, 'd455_nom/pan': 0, 'd455_nom/pav': 0, 'g335_nom/pan': 0, 'g335_nom/pav': 0}
+   ostacoli visti: {'cassa': '84/84', 'scatola15': '10/10', 'sospeso': '10/10'}
+   passaggi pari: {"a12": "pulita 0/15, stessa 0, fusione 4, riagg. falsi 0, «si muove» prima 15, pannello «si muove» 11", "a05": "pulita 0/15, stessa 0, fusione 5, riagg. falsi 0, «si muove» prima 15, pannello «si muove» 15", "b": "pulita 0/15, stessa 0, fusione 1, riagg. falsi 1, «si muove» prima 15, pannello «si muove» 11"}
+min_punti_ostacolo=40 min_celle_gruppo=1
+   tracce fantasma sulle scene vuote: {'d435i_lim/pan': 0, 'd435i_lim/pav': 1, 'd435i_nom/pan': 0, 'd435i_nom/pav': 0, 'd455_nom/pan': 0, 'd455_nom/pav': 0, 'g335_nom/pan': 0, 'g335_nom/pav': 0}
+   ostacoli visti: {'cassa': '84/84', 'scatola15': '3/10', 'sospeso': '10/10'}
+   passaggi pari: {"a12": "pulita 15/15, stessa 15, fusione 0, riagg. falsi 0, «si muove» prima 15, pannello «si muove» 0", "a05": "pulita 11/15, stessa 11, fusione 0, riagg. falsi 0, «si muove» prima 15, pannello «si muove» 3", "b": "pulita 13/15, stessa 13, fusione 0, riagg. falsi 0, «si muove» prima 15, pannello «si muove» 0"}
+min_punti_ostacolo=40 min_celle_gruppo=3
+   tracce fantasma sulle scene vuote: {'d435i_lim/pan': 0, 'd435i_lim/pav': 0, 'd435i_nom/pan': 0, 'd435i_nom/pav': 0, 'd455_nom/pan': 0, 'd455_nom/pav': 0, 'g335_nom/pan': 0, 'g335_nom/pav': 0}
+   ostacoli visti: {'cassa': '84/84', 'scatola15': '3/10', 'sospeso': '10/10'}
+   passaggi pari: {"a12": "pulita 15/15, stessa 15, fusione 0, riagg. falsi 0, «si muove» prima 15, pannello «si muove» 0", "a05": "pulita 11/15, stessa 11, fusione 0, riagg. falsi 0, «si muove» prima 15, pannello «si muove» 3", "b": "pulita 13/15, stessa 13, fusione 0, riagg. falsi 0, «si muove» prima 15, pannello «si muove» 0"}

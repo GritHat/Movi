@@ -1,0 +1,4529 @@
+{
+ "parametri": {
+  "passo_azimut_gradi": 1.0,
+  "passo_distanza_m": 0.1,
+  "azimut_max_gradi": 90.0,
+  "portata_m": 3.0,
+  "quota_min_ostacolo_m": 0.07,
+  "quota_max_ostacolo_m": 2.0,
+  "tolleranza_suolo_m": 0.05,
+  "min_punti_suolo": 3,
+  "min_punti_ostacolo": 3,
+  "memoria_fotogrammi": 3,
+  "libero_dietro_ostacolo": false,
+  "min_celle_gruppo": 1,
+  "q": 0.2,
+  "curva_rumore": "nominale",
+  "sigma_min_m": 0.0,
+  "v_iniziale_m_s": 2.5,
+  "conferma_m": 3,
+  "conferma_n": 5,
+  "finestra_moto_s": 1.0,
+  "media_moto_fotogrammi": 3,
+  "soglia_moto_sigma": 5.0,
+  "fattore_media_moto": 1.0,
+  "larghezza_min_m": 0.3,
+  "fascia_m": 0.4,
+  "non_confermato_fotogrammi": 3,
+  "rilascio_fotogrammi": 3,
+  "frazione_perso": 0.5,
+  "pendenti_ambito": "globale",
+  "min_celle_altro_bordo": 1,
+  "settore_gradi": 10.0,
+  "verifica_invarianti": true
+ },
+ "sequenze": [
+  {
+   "nome": "d435i_lim__pannello_a12__s00",
+   "errore": null,
+   "ingressi": 78,
+   "fotogrammi": 47,
+   "tempo_ciclo_ms": {
+    "media": 18.835,
+    "p95": 33.006,
+    "massimo": 47.707,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 84,
+   "eventi": {
+    "nascita": 165,
+    "conferma": 84,
+    "ingresso_in_ombra": 78,
+    "identita_ambigua": 3849,
+    "perso": 13
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7075,
+    "libero": 0.0767,
+    "occupato": 0.1008,
+    "in_ombra": 0.115
+   }
+  },
+  {
+   "nome": "d435i_lim__pannello_a12__s01",
+   "errore": null,
+   "ingressi": 67,
+   "fotogrammi": 45,
+   "tempo_ciclo_ms": {
+    "media": 15.491,
+    "p95": 28.917,
+    "massimo": 33.696,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 73,
+   "eventi": {
+    "nascita": 147,
+    "conferma": 73,
+    "ingresso_in_ombra": 67,
+    "identita_ambigua": 2657,
+    "perso": 12,
+    "chiusura": 1
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7068,
+    "libero": 0.0671,
+    "occupato": 0.1097,
+    "in_ombra": 0.1164
+   }
+  },
+  {
+   "nome": "d435i_lim__pannello_a12__s02",
+   "errore": null,
+   "ingressi": 68,
+   "fotogrammi": 45,
+   "tempo_ciclo_ms": {
+    "media": 18.155,
+    "p95": 30.636,
+    "massimo": 37.594,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 73,
+   "eventi": {
+    "nascita": 140,
+    "conferma": 73,
+    "ingresso_in_ombra": 68,
+    "identita_ambigua": 4133,
+    "perso": 14
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7081,
+    "libero": 0.0741,
+    "occupato": 0.1037,
+    "in_ombra": 0.1141
+   }
+  },
+  {
+   "nome": "d435i_lim__pannello_a12__s03",
+   "errore": null,
+   "ingressi": 65,
+   "fotogrammi": 44,
+   "tempo_ciclo_ms": {
+    "media": 19.357,
+    "p95": 32.651,
+    "massimo": 39.054,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 74,
+   "eventi": {
+    "nascita": 125,
+    "conferma": 74,
+    "ingresso_in_ombra": 65,
+    "identita_ambigua": 3460,
+    "perso": 14,
+    "strato_finito": 1,
+    "chiusura": 2
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.709,
+    "libero": 0.0727,
+    "occupato": 0.1008,
+    "in_ombra": 0.1175
+   }
+  },
+  {
+   "nome": "d435i_lim__pannello_a12_scuro__s00",
+   "errore": null,
+   "ingressi": 83,
+   "fotogrammi": 47,
+   "tempo_ciclo_ms": {
+    "media": 20.609,
+    "p95": 37.399,
+    "massimo": 41.4,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 88,
+   "eventi": {
+    "nascita": 185,
+    "conferma": 88,
+    "ingresso_in_ombra": 83,
+    "identita_ambigua": 4667,
+    "perso": 16
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.708,
+    "libero": 0.0753,
+    "occupato": 0.0996,
+    "in_ombra": 0.1171
+   }
+  },
+  {
+   "nome": "d435i_lim__pannello_b__s00",
+   "errore": null,
+   "ingressi": 121,
+   "fotogrammi": 91,
+   "tempo_ciclo_ms": {
+    "media": 25.512,
+    "p95": 46.073,
+    "massimo": 66.725,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 132,
+   "eventi": {
+    "nascita": 271,
+    "conferma": 132,
+    "ingresso_in_ombra": 121,
+    "identita_ambigua": 12964,
+    "chiusura": 8,
+    "perso": 39,
+    "strato_finito": 1
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7084,
+    "libero": 0.0754,
+    "occupato": 0.1004,
+    "in_ombra": 0.1158
+   }
+  },
+  {
+   "nome": "d435i_lim__pannello_b__s01",
+   "errore": null,
+   "ingressi": 131,
+   "fotogrammi": 89,
+   "tempo_ciclo_ms": {
+    "media": 27.676,
+    "p95": 49.348,
+    "massimo": 67.209,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 138,
+   "eventi": {
+    "nascita": 277,
+    "conferma": 138,
+    "ingresso_in_ombra": 131,
+    "identita_ambigua": 13345,
+    "perso": 40,
+    "chiusura": 2,
+    "strato_finito": 1
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7073,
+    "libero": 0.0746,
+    "occupato": 0.1044,
+    "in_ombra": 0.1137
+   }
+  },
+  {
+   "nome": "d435i_lim__pannello_vuoto",
+   "errore": null,
+   "ingressi": 11,
+   "fotogrammi": 10,
+   "tempo_ciclo_ms": {
+    "media": 7.699,
+    "p95": 15.931,
+    "massimo": 15.931,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 18,
+   "eventi": {
+    "nascita": 37,
+    "conferma": 18,
+    "ingresso_in_ombra": 11,
+    "identita_ambigua": 116
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7087,
+    "libero": 0.071,
+    "occupato": 0.104,
+    "in_ombra": 0.1163
+   }
+  },
+  {
+   "nome": "d435i_lim__parete_1m",
+   "errore": null,
+   "ingressi": 0,
+   "fotogrammi": 20,
+   "tempo_ciclo_ms": {
+    "media": 1.2,
+    "p95": 1.293,
+    "massimo": 1.364,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 1,
+   "eventi": {
+    "nascita": 1,
+    "conferma": 1
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.6817,
+    "libero": 0.0,
+    "occupato": 0.0286,
+    "in_ombra": 0.2898
+   }
+  },
+  {
+   "nome": "d435i_lim__parete_2m",
+   "errore": null,
+   "ingressi": 0,
+   "fotogrammi": 20,
+   "tempo_ciclo_ms": {
+    "media": 1.345,
+    "p95": 1.426,
+    "massimo": 1.564,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 1,
+   "eventi": {
+    "nascita": 1,
+    "conferma": 1
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.8469,
+    "libero": 0.0,
+    "occupato": 0.0585,
+    "in_ombra": 0.0947
+   }
+  },
+  {
+   "nome": "d435i_lim__parete_3m",
+   "errore": null,
+   "ingressi": 18,
+   "fotogrammi": 20,
+   "tempo_ciclo_ms": {
+    "media": 5.047,
+    "p95": 8.374,
+    "massimo": 8.525,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 27,
+   "eventi": {
+    "nascita": 48,
+    "conferma": 27,
+    "ingresso_in_ombra": 18,
+    "identita_ambigua": 159,
+    "perso": 1
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.8681,
+    "libero": 0.0046,
+    "occupato": 0.0841,
+    "in_ombra": 0.0432
+   }
+  },
+  {
+   "nome": "d435i_lim__parete_4m",
+   "errore": null,
+   "ingressi": 27,
+   "fotogrammi": 20,
+   "tempo_ciclo_ms": {
+    "media": 6.618,
+    "p95": 9.432,
+    "massimo": 12.962,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 36,
+   "eventi": {
+    "nascita": 60,
+    "conferma": 36,
+    "ingresso_in_ombra": 27,
+    "identita_ambigua": 196,
+    "chiusura": 1,
+    "perso": 1
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.8727,
+    "libero": 0.0059,
+    "occupato": 0.0779,
+    "in_ombra": 0.0435
+   }
+  },
+  {
+   "nome": "d435i_lim__pavimento_lucido",
+   "errore": null,
+   "ingressi": 38,
+   "fotogrammi": 20,
+   "tempo_ciclo_ms": {
+    "media": 24.39,
+    "p95": 41.254,
+    "massimo": 43.015,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 54,
+   "eventi": {
+    "nascita": 88,
+    "conferma": 54,
+    "ingresso_in_ombra": 38,
+    "identita_ambigua": 2044,
+    "riaggancio": 2,
+    "prima_misura_piena": 1
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7199,
+    "libero": 0.0226,
+    "occupato": 0.091,
+    "in_ombra": 0.1665
+   }
+  },
+  {
+   "nome": "d435i_lim__pavimento_vuoto",
+   "errore": null,
+   "ingressi": 33,
+   "fotogrammi": 20,
+   "tempo_ciclo_ms": {
+    "media": 12.877,
+    "p95": 17.742,
+    "massimo": 20.584,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 43,
+   "eventi": {
+    "nascita": 86,
+    "conferma": 43,
+    "ingresso_in_ombra": 33,
+    "identita_ambigua": 716,
+    "riaggancio": 1,
+    "perso": 1
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7116,
+    "libero": 0.0929,
+    "occupato": 0.1083,
+    "in_ombra": 0.0873
+   }
+  },
+  {
+   "nome": "d435i_nom__azzeramento_progressivo",
+   "errore": null,
+   "ingressi": 18,
+   "fotogrammi": 75,
+   "tempo_ciclo_ms": {
+    "media": 3.599,
+    "p95": 8.083,
+    "massimo": 29.353,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 24,
+   "eventi": {
+    "nascita": 40,
+    "conferma": 24,
+    "ingresso_in_ombra": 18,
+    "riaggancio": 1,
+    "identita_ambigua": 377,
+    "chiusura": 5,
+    "perso": 9,
+    "strato_finito": 2
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7977,
+    "libero": 0.1255,
+    "occupato": 0.0168,
+    "in_ombra": 0.06
+   }
+  },
+  {
+   "nome": "d435i_nom__cassa_persona__s00",
+   "errore": null,
+   "ingressi": 42,
+   "fotogrammi": 84,
+   "tempo_ciclo_ms": {
+    "media": 10.269,
+    "p95": 22.172,
+    "massimo": 37.469,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 52,
+   "eventi": {
+    "nascita": 101,
+    "conferma": 52,
+    "ingresso_in_ombra": 42,
+    "riaggancio": 1,
+    "identita_ambigua": 2758,
+    "strato_finito": 5,
+    "chiusura": 10,
+    "perso": 19
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7037,
+    "libero": 0.1926,
+    "occupato": 0.0312,
+    "in_ombra": 0.0726
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a05__s00",
+   "errore": null,
+   "ingressi": 18,
+   "fotogrammi": 66,
+   "tempo_ciclo_ms": {
+    "media": 2.929,
+    "p95": 7.307,
+    "massimo": 11.014,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 29,
+   "eventi": {
+    "nascita": 66,
+    "conferma": 29,
+    "ingresso_in_ombra": 18,
+    "perso": 5,
+    "strato_finito": 11,
+    "chiusura": 17,
+    "identita_ambigua": 184
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7026,
+    "libero": 0.2101,
+    "occupato": 0.018,
+    "in_ombra": 0.0694
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a05__s01",
+   "errore": null,
+   "ingressi": 48,
+   "fotogrammi": 67,
+   "tempo_ciclo_ms": {
+    "media": 8.926,
+    "p95": 24.269,
+    "massimo": 46.939,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 61,
+   "eventi": {
+    "nascita": 125,
+    "conferma": 61,
+    "ingresso_in_ombra": 48,
+    "identita_ambigua": 774,
+    "chiusura": 26,
+    "strato_finito": 21,
+    "perso": 14
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7027,
+    "libero": 0.2077,
+    "occupato": 0.0193,
+    "in_ombra": 0.0704
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a05__s02",
+   "errore": null,
+   "ingressi": 39,
+   "fotogrammi": 79,
+   "tempo_ciclo_ms": {
+    "media": 4.583,
+    "p95": 12.044,
+    "massimo": 13.557,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 44,
+   "eventi": {
+    "nascita": 109,
+    "conferma": 44,
+    "ingresso_in_ombra": 39,
+    "identita_ambigua": 561,
+    "riaggancio": 1,
+    "prima_misura_piena": 1,
+    "perso": 12,
+    "strato_finito": 20,
+    "chiusura": 22
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7029,
+    "libero": 0.2094,
+    "occupato": 0.0181,
+    "in_ombra": 0.0695
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a05__s03",
+   "errore": null,
+   "ingressi": 26,
+   "fotogrammi": 73,
+   "tempo_ciclo_ms": {
+    "media": 5.205,
+    "p95": 18.862,
+    "massimo": 20.745,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 40,
+   "eventi": {
+    "nascita": 76,
+    "conferma": 40,
+    "ingresso_in_ombra": 26,
+    "identita_ambigua": 639,
+    "perso": 10,
+    "strato_finito": 8,
+    "chiusura": 17
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7028,
+    "libero": 0.209,
+    "occupato": 0.018,
+    "in_ombra": 0.0701
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a05__s04",
+   "errore": null,
+   "ingressi": 35,
+   "fotogrammi": 76,
+   "tempo_ciclo_ms": {
+    "media": 8.348,
+    "p95": 23.79,
+    "massimo": 27.803,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 43,
+   "eventi": {
+    "nascita": 100,
+    "conferma": 43,
+    "ingresso_in_ombra": 35,
+    "identita_ambigua": 716,
+    "riaggancio": 1,
+    "prima_misura_piena": 1,
+    "chiusura": 17,
+    "strato_finito": 13,
+    "perso": 9
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7024,
+    "libero": 0.2089,
+    "occupato": 0.0182,
+    "in_ombra": 0.0705
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a05__s05",
+   "errore": null,
+   "ingressi": 29,
+   "fotogrammi": 75,
+   "tempo_ciclo_ms": {
+    "media": 8.669,
+    "p95": 19.281,
+    "massimo": 23.344,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 47,
+   "eventi": {
+    "nascita": 96,
+    "conferma": 47,
+    "ingresso_in_ombra": 29,
+    "chiusura": 21,
+    "identita_ambigua": 717,
+    "perso": 13,
+    "strato_finito": 11
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7026,
+    "libero": 0.2094,
+    "occupato": 0.0181,
+    "in_ombra": 0.0699
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a05__s06",
+   "errore": null,
+   "ingressi": 29,
+   "fotogrammi": 76,
+   "tempo_ciclo_ms": {
+    "media": 4.88,
+    "p95": 11.944,
+    "massimo": 18.662,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 42,
+   "eventi": {
+    "nascita": 81,
+    "conferma": 42,
+    "ingresso_in_ombra": 29,
+    "identita_ambigua": 469,
+    "chiusura": 22,
+    "strato_finito": 11,
+    "riaggancio": 2,
+    "prima_misura_piena": 1,
+    "perso": 7
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7027,
+    "libero": 0.2083,
+    "occupato": 0.0184,
+    "in_ombra": 0.0705
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a05__s07",
+   "errore": null,
+   "ingressi": 40,
+   "fotogrammi": 73,
+   "tempo_ciclo_ms": {
+    "media": 4.237,
+    "p95": 11.135,
+    "massimo": 11.247,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 52,
+   "eventi": {
+    "nascita": 92,
+    "conferma": 52,
+    "ingresso_in_ombra": 40,
+    "identita_ambigua": 321,
+    "strato_finito": 33,
+    "chiusura": 40,
+    "perso": 6
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7028,
+    "libero": 0.2092,
+    "occupato": 0.018,
+    "in_ombra": 0.07
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a05__s08",
+   "errore": null,
+   "ingressi": 39,
+   "fotogrammi": 74,
+   "tempo_ciclo_ms": {
+    "media": 8.137,
+    "p95": 23.413,
+    "massimo": 25.735,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 49,
+   "eventi": {
+    "nascita": 88,
+    "conferma": 49,
+    "ingresso_in_ombra": 39,
+    "identita_ambigua": 729,
+    "chiusura": 27,
+    "strato_finito": 22,
+    "perso": 15
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7028,
+    "libero": 0.2077,
+    "occupato": 0.0184,
+    "in_ombra": 0.071
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a05__s09",
+   "errore": null,
+   "ingressi": 32,
+   "fotogrammi": 68,
+   "tempo_ciclo_ms": {
+    "media": 4.754,
+    "p95": 11.396,
+    "massimo": 35.861,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 43,
+   "eventi": {
+    "nascita": 88,
+    "conferma": 43,
+    "ingresso_in_ombra": 32,
+    "identita_ambigua": 406,
+    "strato_finito": 21,
+    "chiusura": 25,
+    "perso": 9
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7032,
+    "libero": 0.2077,
+    "occupato": 0.0188,
+    "in_ombra": 0.0703
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a05__s10",
+   "errore": null,
+   "ingressi": 38,
+   "fotogrammi": 70,
+   "tempo_ciclo_ms": {
+    "media": 5.69,
+    "p95": 10.817,
+    "massimo": 14.223,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 52,
+   "eventi": {
+    "nascita": 99,
+    "conferma": 52,
+    "ingresso_in_ombra": 38,
+    "identita_ambigua": 624,
+    "strato_finito": 17,
+    "chiusura": 22,
+    "perso": 10
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.703,
+    "libero": 0.2062,
+    "occupato": 0.0197,
+    "in_ombra": 0.0711
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a05__s11",
+   "errore": null,
+   "ingressi": 29,
+   "fotogrammi": 69,
+   "tempo_ciclo_ms": {
+    "media": 6.931,
+    "p95": 15.29,
+    "massimo": 22.409,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 41,
+   "eventi": {
+    "nascita": 94,
+    "conferma": 41,
+    "ingresso_in_ombra": 29,
+    "identita_ambigua": 565,
+    "chiusura": 18,
+    "perso": 16,
+    "strato_finito": 11
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7029,
+    "libero": 0.2085,
+    "occupato": 0.0189,
+    "in_ombra": 0.0698
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a05__s12",
+   "errore": null,
+   "ingressi": 18,
+   "fotogrammi": 67,
+   "tempo_ciclo_ms": {
+    "media": 4.908,
+    "p95": 12.197,
+    "massimo": 18.856,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 30,
+   "eventi": {
+    "nascita": 77,
+    "conferma": 30,
+    "ingresso_in_ombra": 18,
+    "chiusura": 16,
+    "riaggancio": 1,
+    "prima_misura_piena": 1,
+    "identita_ambigua": 208,
+    "perso": 4,
+    "strato_finito": 9
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7029,
+    "libero": 0.2097,
+    "occupato": 0.018,
+    "in_ombra": 0.0694
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a05__s13",
+   "errore": null,
+   "ingressi": 35,
+   "fotogrammi": 74,
+   "tempo_ciclo_ms": {
+    "media": 6.159,
+    "p95": 13.518,
+    "massimo": 19.876,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 44,
+   "eventi": {
+    "nascita": 76,
+    "conferma": 44,
+    "ingresso_in_ombra": 35,
+    "identita_ambigua": 681,
+    "perso": 13,
+    "chiusura": 13,
+    "strato_finito": 8
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7025,
+    "libero": 0.2081,
+    "occupato": 0.0193,
+    "in_ombra": 0.07
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a05__s14",
+   "errore": null,
+   "ingressi": 43,
+   "fotogrammi": 79,
+   "tempo_ciclo_ms": {
+    "media": 5.799,
+    "p95": 16.863,
+    "massimo": 27.894,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 50,
+   "eventi": {
+    "nascita": 105,
+    "conferma": 50,
+    "ingresso_in_ombra": 43,
+    "identita_ambigua": 551,
+    "perso": 14,
+    "strato_finito": 23,
+    "chiusura": 25
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7023,
+    "libero": 0.2085,
+    "occupato": 0.0184,
+    "in_ombra": 0.0708
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a05__s15",
+   "errore": null,
+   "ingressi": 21,
+   "fotogrammi": 80,
+   "tempo_ciclo_ms": {
+    "media": 3.064,
+    "p95": 7.473,
+    "massimo": 11.86,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 24,
+   "eventi": {
+    "nascita": 52,
+    "conferma": 24,
+    "ingresso_in_ombra": 21,
+    "identita_ambigua": 188,
+    "riaggancio": 3,
+    "prima_misura_piena": 2,
+    "strato_finito": 8,
+    "chiusura": 10,
+    "perso": 4
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7028,
+    "libero": 0.2093,
+    "occupato": 0.0177,
+    "in_ombra": 0.0703
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a05__s16",
+   "errore": null,
+   "ingressi": 40,
+   "fotogrammi": 68,
+   "tempo_ciclo_ms": {
+    "media": 7.708,
+    "p95": 21.428,
+    "massimo": 28.556,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 50,
+   "eventi": {
+    "nascita": 108,
+    "conferma": 50,
+    "ingresso_in_ombra": 40,
+    "riaggancio": 1,
+    "prima_misura_piena": 1,
+    "identita_ambigua": 620,
+    "chiusura": 30,
+    "strato_finito": 24,
+    "perso": 13
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7024,
+    "libero": 0.2079,
+    "occupato": 0.0186,
+    "in_ombra": 0.0712
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a05__s17",
+   "errore": null,
+   "ingressi": 21,
+   "fotogrammi": 76,
+   "tempo_ciclo_ms": {
+    "media": 3.17,
+    "p95": 8.437,
+    "massimo": 15.373,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 32,
+   "eventi": {
+    "nascita": 65,
+    "conferma": 32,
+    "chiusura": 10,
+    "ingresso_in_ombra": 21,
+    "strato_finito": 5,
+    "riaggancio": 1,
+    "prima_misura_piena": 1,
+    "identita_ambigua": 187,
+    "perso": 4
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7024,
+    "libero": 0.2089,
+    "occupato": 0.0183,
+    "in_ombra": 0.0704
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a05__s18",
+   "errore": null,
+   "ingressi": 30,
+   "fotogrammi": 74,
+   "tempo_ciclo_ms": {
+    "media": 3.498,
+    "p95": 8.218,
+    "massimo": 18.948,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 43,
+   "eventi": {
+    "nascita": 91,
+    "conferma": 43,
+    "ingresso_in_ombra": 30,
+    "identita_ambigua": 269,
+    "chiusura": 30,
+    "perso": 5,
+    "strato_finito": 22
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7022,
+    "libero": 0.2089,
+    "occupato": 0.0186,
+    "in_ombra": 0.0704
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a05__s19",
+   "errore": null,
+   "ingressi": 24,
+   "fotogrammi": 68,
+   "tempo_ciclo_ms": {
+    "media": 3.949,
+    "p95": 11.574,
+    "massimo": 21.645,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 36,
+   "eventi": {
+    "nascita": 72,
+    "conferma": 36,
+    "ingresso_in_ombra": 24,
+    "identita_ambigua": 171,
+    "riaggancio": 1,
+    "prima_misura_piena": 1,
+    "chiusura": 18,
+    "strato_finito": 10,
+    "perso": 6
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7027,
+    "libero": 0.2099,
+    "occupato": 0.018,
+    "in_ombra": 0.0694
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a05__s20",
+   "errore": null,
+   "ingressi": 58,
+   "fotogrammi": 79,
+   "tempo_ciclo_ms": {
+    "media": 7.67,
+    "p95": 17.724,
+    "massimo": 32.889,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 67,
+   "eventi": {
+    "nascita": 132,
+    "conferma": 67,
+    "ingresso_in_ombra": 58,
+    "identita_ambigua": 858,
+    "strato_finito": 20,
+    "chiusura": 25,
+    "perso": 19
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7028,
+    "libero": 0.207,
+    "occupato": 0.0192,
+    "in_ombra": 0.071
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a05__s21",
+   "errore": null,
+   "ingressi": 17,
+   "fotogrammi": 70,
+   "tempo_ciclo_ms": {
+    "media": 2.863,
+    "p95": 7.492,
+    "massimo": 12.461,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 23,
+   "eventi": {
+    "nascita": 76,
+    "conferma": 23,
+    "ingresso_in_ombra": 17,
+    "riaggancio": 1,
+    "prima_misura_piena": 1,
+    "chiusura": 8,
+    "strato_finito": 5,
+    "identita_ambigua": 162,
+    "perso": 1
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7027,
+    "libero": 0.2103,
+    "occupato": 0.0177,
+    "in_ombra": 0.0693
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a05__s22",
+   "errore": null,
+   "ingressi": 50,
+   "fotogrammi": 69,
+   "tempo_ciclo_ms": {
+    "media": 5.629,
+    "p95": 14.751,
+    "massimo": 19.549,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 62,
+   "eventi": {
+    "nascita": 118,
+    "conferma": 62,
+    "ingresso_in_ombra": 50,
+    "identita_ambigua": 494,
+    "strato_finito": 25,
+    "chiusura": 30,
+    "perso": 15
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.703,
+    "libero": 0.2075,
+    "occupato": 0.0189,
+    "in_ombra": 0.0706
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a05__s23",
+   "errore": null,
+   "ingressi": 38,
+   "fotogrammi": 72,
+   "tempo_ciclo_ms": {
+    "media": 5.366,
+    "p95": 17.343,
+    "massimo": 21.382,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 49,
+   "eventi": {
+    "nascita": 83,
+    "conferma": 49,
+    "ingresso_in_ombra": 38,
+    "identita_ambigua": 466,
+    "riaggancio": 1,
+    "strato_finito": 17,
+    "chiusura": 23,
+    "perso": 5
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7026,
+    "libero": 0.2093,
+    "occupato": 0.0182,
+    "in_ombra": 0.0699
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a05__s24",
+   "errore": null,
+   "ingressi": 35,
+   "fotogrammi": 68,
+   "tempo_ciclo_ms": {
+    "media": 5.655,
+    "p95": 14.817,
+    "massimo": 16.349,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 50,
+   "eventi": {
+    "nascita": 91,
+    "conferma": 50,
+    "ingresso_in_ombra": 35,
+    "identita_ambigua": 444,
+    "strato_finito": 20,
+    "chiusura": 29,
+    "perso": 9
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7029,
+    "libero": 0.2088,
+    "occupato": 0.0186,
+    "in_ombra": 0.0698
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a05__s25",
+   "errore": null,
+   "ingressi": 44,
+   "fotogrammi": 76,
+   "tempo_ciclo_ms": {
+    "media": 8.608,
+    "p95": 21.029,
+    "massimo": 28.365,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 53,
+   "eventi": {
+    "nascita": 91,
+    "conferma": 53,
+    "ingresso_in_ombra": 44,
+    "riaggancio": 1,
+    "prima_misura_piena": 1,
+    "identita_ambigua": 929,
+    "chiusura": 16,
+    "strato_finito": 13,
+    "perso": 12
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7032,
+    "libero": 0.2065,
+    "occupato": 0.0192,
+    "in_ombra": 0.0711
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a05__s26",
+   "errore": null,
+   "ingressi": 49,
+   "fotogrammi": 77,
+   "tempo_ciclo_ms": {
+    "media": 11.09,
+    "p95": 24.515,
+    "massimo": 63.134,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 58,
+   "eventi": {
+    "nascita": 117,
+    "conferma": 58,
+    "ingresso_in_ombra": 49,
+    "identita_ambigua": 1017,
+    "chiusura": 26,
+    "perso": 16,
+    "strato_finito": 23
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7036,
+    "libero": 0.2079,
+    "occupato": 0.0186,
+    "in_ombra": 0.0699
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a05__s27",
+   "errore": null,
+   "ingressi": 56,
+   "fotogrammi": 77,
+   "tempo_ciclo_ms": {
+    "media": 10.059,
+    "p95": 30.236,
+    "massimo": 38.859,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 64,
+   "eventi": {
+    "nascita": 110,
+    "conferma": 64,
+    "ingresso_in_ombra": 56,
+    "riaggancio": 1,
+    "prima_misura_piena": 1,
+    "chiusura": 25,
+    "strato_finito": 21,
+    "identita_ambigua": 1032,
+    "perso": 16
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7023,
+    "libero": 0.2088,
+    "occupato": 0.0184,
+    "in_ombra": 0.0704
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a05__s28",
+   "errore": null,
+   "ingressi": 28,
+   "fotogrammi": 76,
+   "tempo_ciclo_ms": {
+    "media": 4.434,
+    "p95": 10.537,
+    "massimo": 19.079,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 40,
+   "eventi": {
+    "nascita": 78,
+    "conferma": 40,
+    "ingresso_in_ombra": 28,
+    "riaggancio": 1,
+    "identita_ambigua": 516,
+    "chiusura": 20,
+    "strato_finito": 13,
+    "perso": 7
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7022,
+    "libero": 0.2099,
+    "occupato": 0.0179,
+    "in_ombra": 0.0699
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a05__s29",
+   "errore": null,
+   "ingressi": 38,
+   "fotogrammi": 70,
+   "tempo_ciclo_ms": {
+    "media": 9.643,
+    "p95": 24.823,
+    "massimo": 46.238,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 44,
+   "eventi": {
+    "nascita": 87,
+    "conferma": 44,
+    "ingresso_in_ombra": 38,
+    "identita_ambigua": 851,
+    "strato_finito": 16,
+    "chiusura": 17,
+    "perso": 13
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7031,
+    "libero": 0.206,
+    "occupato": 0.0195,
+    "in_ombra": 0.0714
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a12__s00",
+   "errore": null,
+   "ingressi": 16,
+   "fotogrammi": 47,
+   "tempo_ciclo_ms": {
+    "media": 5.545,
+    "p95": 15.061,
+    "massimo": 18.525,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 24,
+   "eventi": {
+    "nascita": 54,
+    "conferma": 24,
+    "chiusura": 11,
+    "ingresso_in_ombra": 16,
+    "identita_ambigua": 181,
+    "strato_finito": 7,
+    "perso": 6
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7025,
+    "libero": 0.2083,
+    "occupato": 0.0188,
+    "in_ombra": 0.0703
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a12__s00__filtri",
+   "errore": null,
+   "ingressi": 15,
+   "fotogrammi": 47,
+   "tempo_ciclo_ms": {
+    "media": 5.614,
+    "p95": 15.111,
+    "massimo": 15.99,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 22,
+   "eventi": {
+    "nascita": 49,
+    "conferma": 22,
+    "chiusura": 11,
+    "ingresso_in_ombra": 15,
+    "identita_ambigua": 192,
+    "strato_finito": 8,
+    "perso": 4
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7029,
+    "libero": 0.2075,
+    "occupato": 0.0188,
+    "in_ombra": 0.0708
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a12__s01",
+   "errore": null,
+   "ingressi": 16,
+   "fotogrammi": 45,
+   "tempo_ciclo_ms": {
+    "media": 5.582,
+    "p95": 12.62,
+    "massimo": 15.256,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 25,
+   "eventi": {
+    "nascita": 44,
+    "conferma": 25,
+    "ingresso_in_ombra": 16,
+    "identita_ambigua": 160,
+    "chiusura": 10,
+    "strato_finito": 8,
+    "perso": 3
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7031,
+    "libero": 0.2073,
+    "occupato": 0.0199,
+    "in_ombra": 0.0698
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a12__s01__filtri",
+   "errore": null,
+   "ingressi": 14,
+   "fotogrammi": 45,
+   "tempo_ciclo_ms": {
+    "media": 3.544,
+    "p95": 7.844,
+    "massimo": 10.57,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 23,
+   "eventi": {
+    "nascita": 45,
+    "conferma": 23,
+    "ingresso_in_ombra": 14,
+    "identita_ambigua": 86,
+    "strato_finito": 6,
+    "chiusura": 8,
+    "perso": 1
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7033,
+    "libero": 0.2064,
+    "occupato": 0.02,
+    "in_ombra": 0.0702
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a12__s02",
+   "errore": null,
+   "ingressi": 14,
+   "fotogrammi": 45,
+   "tempo_ciclo_ms": {
+    "media": 3.857,
+    "p95": 8.175,
+    "massimo": 11.333,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 21,
+   "eventi": {
+    "nascita": 56,
+    "conferma": 21,
+    "ingresso_in_ombra": 14,
+    "identita_ambigua": 88,
+    "chiusura": 10,
+    "strato_finito": 6,
+    "perso": 5
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7035,
+    "libero": 0.2081,
+    "occupato": 0.0188,
+    "in_ombra": 0.0697
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a12__s03",
+   "errore": null,
+   "ingressi": 14,
+   "fotogrammi": 44,
+   "tempo_ciclo_ms": {
+    "media": 6.282,
+    "p95": 12.097,
+    "massimo": 19.934,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 21,
+   "eventi": {
+    "nascita": 53,
+    "conferma": 21,
+    "ingresso_in_ombra": 14,
+    "identita_ambigua": 144,
+    "chiusura": 8,
+    "strato_finito": 4,
+    "perso": 4
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7025,
+    "libero": 0.2088,
+    "occupato": 0.0193,
+    "in_ombra": 0.0694
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a12__s04",
+   "errore": null,
+   "ingressi": 16,
+   "fotogrammi": 41,
+   "tempo_ciclo_ms": {
+    "media": 4.896,
+    "p95": 12.731,
+    "massimo": 20.784,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 23,
+   "eventi": {
+    "nascita": 48,
+    "conferma": 23,
+    "ingresso_in_ombra": 16,
+    "identita_ambigua": 170,
+    "riaggancio": 1,
+    "prima_misura_piena": 1,
+    "chiusura": 5,
+    "strato_finito": 3,
+    "perso": 5
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7025,
+    "libero": 0.2073,
+    "occupato": 0.0191,
+    "in_ombra": 0.0712
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a12__s05",
+   "errore": null,
+   "ingressi": 23,
+   "fotogrammi": 45,
+   "tempo_ciclo_ms": {
+    "media": 7.166,
+    "p95": 15.455,
+    "massimo": 28.218,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 32,
+   "eventi": {
+    "nascita": 58,
+    "conferma": 32,
+    "ingresso_in_ombra": 23,
+    "identita_ambigua": 279,
+    "chiusura": 9,
+    "strato_finito": 7,
+    "perso": 7
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.703,
+    "libero": 0.2079,
+    "occupato": 0.0192,
+    "in_ombra": 0.07
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a12__s06",
+   "errore": null,
+   "ingressi": 23,
+   "fotogrammi": 44,
+   "tempo_ciclo_ms": {
+    "media": 6.919,
+    "p95": 15.73,
+    "massimo": 15.764,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 31,
+   "eventi": {
+    "nascita": 61,
+    "conferma": 31,
+    "ingresso_in_ombra": 23,
+    "identita_ambigua": 157,
+    "strato_finito": 11,
+    "chiusura": 12,
+    "perso": 4
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7031,
+    "libero": 0.2076,
+    "occupato": 0.0195,
+    "in_ombra": 0.0697
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a12__s07",
+   "errore": null,
+   "ingressi": 14,
+   "fotogrammi": 40,
+   "tempo_ciclo_ms": {
+    "media": 6.038,
+    "p95": 15.921,
+    "massimo": 26.81,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 23,
+   "eventi": {
+    "nascita": 48,
+    "conferma": 23,
+    "chiusura": 9,
+    "ingresso_in_ombra": 14,
+    "perso": 8,
+    "identita_ambigua": 134,
+    "strato_finito": 6
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7033,
+    "libero": 0.2087,
+    "occupato": 0.0185,
+    "in_ombra": 0.0695
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a12__s08",
+   "errore": null,
+   "ingressi": 17,
+   "fotogrammi": 45,
+   "tempo_ciclo_ms": {
+    "media": 5.304,
+    "p95": 10.759,
+    "massimo": 15.057,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 27,
+   "eventi": {
+    "nascita": 68,
+    "conferma": 27,
+    "ingresso_in_ombra": 17,
+    "identita_ambigua": 191,
+    "perso": 4,
+    "strato_finito": 10,
+    "chiusura": 14
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7028,
+    "libero": 0.208,
+    "occupato": 0.0196,
+    "in_ombra": 0.0696
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a12__s09",
+   "errore": null,
+   "ingressi": 33,
+   "fotogrammi": 43,
+   "tempo_ciclo_ms": {
+    "media": 5.555,
+    "p95": 12.352,
+    "massimo": 13.173,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 42,
+   "eventi": {
+    "nascita": 76,
+    "conferma": 42,
+    "ingresso_in_ombra": 33,
+    "identita_ambigua": 217,
+    "strato_finito": 16,
+    "chiusura": 19,
+    "perso": 9
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7032,
+    "libero": 0.2063,
+    "occupato": 0.0197,
+    "in_ombra": 0.0708
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a12__s10",
+   "errore": null,
+   "ingressi": 23,
+   "fotogrammi": 40,
+   "tempo_ciclo_ms": {
+    "media": 8.021,
+    "p95": 20.777,
+    "massimo": 24.623,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 32,
+   "eventi": {
+    "nascita": 61,
+    "conferma": 32,
+    "ingresso_in_ombra": 23,
+    "identita_ambigua": 203,
+    "strato_finito": 1,
+    "chiusura": 3,
+    "perso": 11
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7024,
+    "libero": 0.2066,
+    "occupato": 0.02,
+    "in_ombra": 0.0711
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a12__s11",
+   "errore": null,
+   "ingressi": 19,
+   "fotogrammi": 42,
+   "tempo_ciclo_ms": {
+    "media": 6.494,
+    "p95": 15.681,
+    "massimo": 19.956,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 27,
+   "eventi": {
+    "nascita": 57,
+    "conferma": 27,
+    "chiusura": 7,
+    "ingresso_in_ombra": 19,
+    "riaggancio": 1,
+    "prima_misura_piena": 1,
+    "identita_ambigua": 243,
+    "strato_finito": 4,
+    "perso": 4
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7026,
+    "libero": 0.2078,
+    "occupato": 0.0195,
+    "in_ombra": 0.0701
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a12__s12",
+   "errore": null,
+   "ingressi": 24,
+   "fotogrammi": 46,
+   "tempo_ciclo_ms": {
+    "media": 6.672,
+    "p95": 17.663,
+    "massimo": 21.723,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 32,
+   "eventi": {
+    "nascita": 65,
+    "conferma": 32,
+    "ingresso_in_ombra": 24,
+    "identita_ambigua": 311,
+    "riaggancio": 1,
+    "prima_misura_piena": 1,
+    "perso": 6,
+    "chiusura": 9,
+    "strato_finito": 4
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7032,
+    "libero": 0.2058,
+    "occupato": 0.02,
+    "in_ombra": 0.071
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a12__s13",
+   "errore": null,
+   "ingressi": 33,
+   "fotogrammi": 41,
+   "tempo_ciclo_ms": {
+    "media": 5.609,
+    "p95": 11.818,
+    "massimo": 22.703,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 41,
+   "eventi": {
+    "nascita": 76,
+    "conferma": 41,
+    "ingresso_in_ombra": 33,
+    "identita_ambigua": 319,
+    "perso": 11,
+    "chiusura": 14,
+    "strato_finito": 13
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7036,
+    "libero": 0.206,
+    "occupato": 0.0203,
+    "in_ombra": 0.0701
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a12__s14",
+   "errore": null,
+   "ingressi": 9,
+   "fotogrammi": 40,
+   "tempo_ciclo_ms": {
+    "media": 4.732,
+    "p95": 10.706,
+    "massimo": 14.412,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 19,
+   "eventi": {
+    "nascita": 44,
+    "conferma": 19,
+    "ingresso_in_ombra": 9,
+    "identita_ambigua": 111,
+    "chiusura": 7,
+    "riaggancio": 1,
+    "prima_misura_piena": 1,
+    "perso": 2,
+    "strato_finito": 2
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.703,
+    "libero": 0.208,
+    "occupato": 0.0193,
+    "in_ombra": 0.0697
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a12__s15",
+   "errore": null,
+   "ingressi": 21,
+   "fotogrammi": 42,
+   "tempo_ciclo_ms": {
+    "media": 4.973,
+    "p95": 13.835,
+    "massimo": 16.187,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 31,
+   "eventi": {
+    "nascita": 64,
+    "conferma": 31,
+    "ingresso_in_ombra": 21,
+    "riaggancio": 1,
+    "identita_ambigua": 200,
+    "chiusura": 13,
+    "strato_finito": 8,
+    "perso": 1
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7031,
+    "libero": 0.2066,
+    "occupato": 0.0196,
+    "in_ombra": 0.0707
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a12__s16",
+   "errore": null,
+   "ingressi": 17,
+   "fotogrammi": 45,
+   "tempo_ciclo_ms": {
+    "media": 4.001,
+    "p95": 8.106,
+    "massimo": 11.728,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 23,
+   "eventi": {
+    "nascita": 45,
+    "conferma": 23,
+    "ingresso_in_ombra": 17,
+    "identita_ambigua": 121,
+    "riaggancio": 1,
+    "prima_misura_piena": 1,
+    "strato_finito": 7,
+    "chiusura": 9,
+    "perso": 1
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.703,
+    "libero": 0.208,
+    "occupato": 0.0192,
+    "in_ombra": 0.0698
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a12__s17",
+   "errore": null,
+   "ingressi": 22,
+   "fotogrammi": 43,
+   "tempo_ciclo_ms": {
+    "media": 7.552,
+    "p95": 16.983,
+    "massimo": 21.167,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 30,
+   "eventi": {
+    "nascita": 56,
+    "conferma": 30,
+    "ingresso_in_ombra": 22,
+    "identita_ambigua": 265,
+    "strato_finito": 5,
+    "chiusura": 8,
+    "perso": 7
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7029,
+    "libero": 0.2067,
+    "occupato": 0.0193,
+    "in_ombra": 0.0711
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a12__s18",
+   "errore": null,
+   "ingressi": 20,
+   "fotogrammi": 44,
+   "tempo_ciclo_ms": {
+    "media": 6.962,
+    "p95": 16.999,
+    "massimo": 21.102,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 30,
+   "eventi": {
+    "nascita": 53,
+    "conferma": 30,
+    "ingresso_in_ombra": 20,
+    "identita_ambigua": 213,
+    "strato_finito": 4,
+    "chiusura": 7,
+    "perso": 4
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7023,
+    "libero": 0.2074,
+    "occupato": 0.02,
+    "in_ombra": 0.0702
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a12__s19",
+   "errore": null,
+   "ingressi": 6,
+   "fotogrammi": 39,
+   "tempo_ciclo_ms": {
+    "media": 3.649,
+    "p95": 11.789,
+    "massimo": 12.171,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 13,
+   "eventi": {
+    "nascita": 33,
+    "conferma": 13,
+    "ingresso_in_ombra": 6,
+    "identita_ambigua": 53,
+    "chiusura": 1,
+    "perso": 5
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7023,
+    "libero": 0.2089,
+    "occupato": 0.0193,
+    "in_ombra": 0.0695
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a12__s20",
+   "errore": null,
+   "ingressi": 29,
+   "fotogrammi": 44,
+   "tempo_ciclo_ms": {
+    "media": 3.953,
+    "p95": 8.261,
+    "massimo": 8.544,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 37,
+   "eventi": {
+    "nascita": 74,
+    "conferma": 37,
+    "ingresso_in_ombra": 29,
+    "identita_ambigua": 202,
+    "perso": 9,
+    "chiusura": 19,
+    "strato_finito": 15
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7033,
+    "libero": 0.2064,
+    "occupato": 0.0206,
+    "in_ombra": 0.0697
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a12__s21",
+   "errore": null,
+   "ingressi": 10,
+   "fotogrammi": 43,
+   "tempo_ciclo_ms": {
+    "media": 4.252,
+    "p95": 11.927,
+    "massimo": 15.661,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 17,
+   "eventi": {
+    "nascita": 39,
+    "conferma": 17,
+    "ingresso_in_ombra": 10,
+    "identita_ambigua": 110,
+    "strato_finito": 2,
+    "chiusura": 4,
+    "perso": 3
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7031,
+    "libero": 0.2088,
+    "occupato": 0.0185,
+    "in_ombra": 0.0697
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a12__s22",
+   "errore": null,
+   "ingressi": 12,
+   "fotogrammi": 44,
+   "tempo_ciclo_ms": {
+    "media": 4.363,
+    "p95": 7.978,
+    "massimo": 9.08,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 19,
+   "eventi": {
+    "nascita": 38,
+    "conferma": 19,
+    "ingresso_in_ombra": 12,
+    "identita_ambigua": 149,
+    "perso": 4,
+    "strato_finito": 3,
+    "chiusura": 5
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7027,
+    "libero": 0.209,
+    "occupato": 0.019,
+    "in_ombra": 0.0693
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a12__s23",
+   "errore": null,
+   "ingressi": 31,
+   "fotogrammi": 44,
+   "tempo_ciclo_ms": {
+    "media": 8.375,
+    "p95": 21.521,
+    "massimo": 24.568,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 35,
+   "eventi": {
+    "nascita": 56,
+    "conferma": 35,
+    "ingresso_in_ombra": 31,
+    "riaggancio": 2,
+    "prima_misura_piena": 1,
+    "identita_ambigua": 227,
+    "strato_finito": 12,
+    "chiusura": 13,
+    "perso": 7
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7029,
+    "libero": 0.2067,
+    "occupato": 0.0194,
+    "in_ombra": 0.071
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a12__s24",
+   "errore": null,
+   "ingressi": 27,
+   "fotogrammi": 40,
+   "tempo_ciclo_ms": {
+    "media": 7.315,
+    "p95": 15.025,
+    "massimo": 23.383,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 37,
+   "eventi": {
+    "nascita": 72,
+    "conferma": 37,
+    "ingresso_in_ombra": 27,
+    "identita_ambigua": 215,
+    "chiusura": 15,
+    "perso": 6,
+    "strato_finito": 13
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7036,
+    "libero": 0.2051,
+    "occupato": 0.0203,
+    "in_ombra": 0.0709
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a12__s25",
+   "errore": null,
+   "ingressi": 20,
+   "fotogrammi": 40,
+   "tempo_ciclo_ms": {
+    "media": 4.194,
+    "p95": 8.25,
+    "massimo": 9.361,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 29,
+   "eventi": {
+    "nascita": 49,
+    "conferma": 29,
+    "ingresso_in_ombra": 20,
+    "identita_ambigua": 122,
+    "strato_finito": 4,
+    "chiusura": 6,
+    "perso": 6
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7025,
+    "libero": 0.2079,
+    "occupato": 0.0199,
+    "in_ombra": 0.0697
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a12__s26",
+   "errore": null,
+   "ingressi": 17,
+   "fotogrammi": 42,
+   "tempo_ciclo_ms": {
+    "media": 4.371,
+    "p95": 12.802,
+    "massimo": 16.423,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 24,
+   "eventi": {
+    "nascita": 55,
+    "conferma": 24,
+    "ingresso_in_ombra": 17,
+    "riaggancio": 1,
+    "perso": 4,
+    "strato_finito": 4,
+    "chiusura": 7,
+    "identita_ambigua": 77
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7028,
+    "libero": 0.2081,
+    "occupato": 0.019,
+    "in_ombra": 0.0701
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a12__s27",
+   "errore": null,
+   "ingressi": 12,
+   "fotogrammi": 42,
+   "tempo_ciclo_ms": {
+    "media": 2.304,
+    "p95": 3.381,
+    "massimo": 8.555,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 26,
+   "eventi": {
+    "nascita": 51,
+    "conferma": 26,
+    "ingresso_in_ombra": 12,
+    "identita_ambigua": 33,
+    "chiusura": 13,
+    "perso": 5,
+    "strato_finito": 7
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.703,
+    "libero": 0.2083,
+    "occupato": 0.0194,
+    "in_ombra": 0.0693
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a12__s28",
+   "errore": null,
+   "ingressi": 18,
+   "fotogrammi": 45,
+   "tempo_ciclo_ms": {
+    "media": 3.799,
+    "p95": 8.497,
+    "massimo": 12.476,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 24,
+   "eventi": {
+    "nascita": 59,
+    "conferma": 24,
+    "ingresso_in_ombra": 18,
+    "identita_ambigua": 137,
+    "strato_finito": 6,
+    "chiusura": 9,
+    "riaggancio": 1,
+    "prima_misura_piena": 1,
+    "perso": 4
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.703,
+    "libero": 0.2067,
+    "occupato": 0.0197,
+    "in_ombra": 0.0706
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a12__s29",
+   "errore": null,
+   "ingressi": 17,
+   "fotogrammi": 44,
+   "tempo_ciclo_ms": {
+    "media": 5.683,
+    "p95": 12.433,
+    "massimo": 13.821,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 28,
+   "eventi": {
+    "nascita": 54,
+    "conferma": 28,
+    "ingresso_in_ombra": 17,
+    "strato_finito": 2,
+    "chiusura": 9,
+    "riaggancio": 2,
+    "prima_misura_piena": 1,
+    "identita_ambigua": 203,
+    "perso": 6
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7031,
+    "libero": 0.2061,
+    "occupato": 0.0199,
+    "in_ombra": 0.0708
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a12_alta185__s00",
+   "errore": null,
+   "ingressi": 10,
+   "fotogrammi": 47,
+   "tempo_ciclo_ms": {
+    "media": 4.42,
+    "p95": 10.636,
+    "massimo": 15.043,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 18,
+   "eventi": {
+    "nascita": 41,
+    "conferma": 18,
+    "ingresso_in_ombra": 10,
+    "identita_ambigua": 156,
+    "strato_finito": 4,
+    "chiusura": 7,
+    "perso": 2
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7032,
+    "libero": 0.2082,
+    "occupato": 0.0201,
+    "in_ombra": 0.0685
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a12_alta185__s01",
+   "errore": null,
+   "ingressi": 19,
+   "fotogrammi": 45,
+   "tempo_ciclo_ms": {
+    "media": 4.073,
+    "p95": 9.095,
+    "massimo": 10.939,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 29,
+   "eventi": {
+    "nascita": 52,
+    "conferma": 29,
+    "ingresso_in_ombra": 19,
+    "identita_ambigua": 159,
+    "chiusura": 11,
+    "perso": 9,
+    "strato_finito": 6
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7027,
+    "libero": 0.2083,
+    "occupato": 0.0202,
+    "in_ombra": 0.0687
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a12_nero__s00",
+   "errore": null,
+   "ingressi": 33,
+   "fotogrammi": 47,
+   "tempo_ciclo_ms": {
+    "media": 7.606,
+    "p95": 20.479,
+    "massimo": 25.882,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 44,
+   "eventi": {
+    "nascita": 80,
+    "conferma": 44,
+    "ingresso_in_ombra": 33,
+    "strato_finito": 10,
+    "chiusura": 14,
+    "identita_ambigua": 522,
+    "perso": 11
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7035,
+    "libero": 0.2041,
+    "occupato": 0.0216,
+    "in_ombra": 0.0708
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a12_nero__s01",
+   "errore": null,
+   "ingressi": 13,
+   "fotogrammi": 45,
+   "tempo_ciclo_ms": {
+    "media": 6.67,
+    "p95": 15.835,
+    "massimo": 19.814,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 20,
+   "eventi": {
+    "nascita": 48,
+    "conferma": 20,
+    "ingresso_in_ombra": 13,
+    "identita_ambigua": 147,
+    "riaggancio": 1,
+    "chiusura": 4,
+    "strato_finito": 2,
+    "perso": 3
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7034,
+    "libero": 0.2061,
+    "occupato": 0.0203,
+    "in_ombra": 0.0701
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a12_scuro__s00",
+   "errore": null,
+   "ingressi": 24,
+   "fotogrammi": 47,
+   "tempo_ciclo_ms": {
+    "media": 5.145,
+    "p95": 15.737,
+    "massimo": 24.266,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 30,
+   "eventi": {
+    "nascita": 59,
+    "conferma": 30,
+    "ingresso_in_ombra": 24,
+    "identita_ambigua": 232,
+    "strato_finito": 10,
+    "chiusura": 12,
+    "perso": 7
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7034,
+    "libero": 0.206,
+    "occupato": 0.0202,
+    "in_ombra": 0.0704
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_a12_scuro__s01",
+   "errore": null,
+   "ingressi": 23,
+   "fotogrammi": 45,
+   "tempo_ciclo_ms": {
+    "media": 4.351,
+    "p95": 11.247,
+    "massimo": 11.762,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 31,
+   "eventi": {
+    "nascita": 65,
+    "conferma": 31,
+    "ingresso_in_ombra": 23,
+    "perso": 2,
+    "identita_ambigua": 148,
+    "chiusura": 18,
+    "strato_finito": 16
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7032,
+    "libero": 0.206,
+    "occupato": 0.0204,
+    "in_ombra": 0.0704
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_b__s00",
+   "errore": null,
+   "ingressi": 48,
+   "fotogrammi": 91,
+   "tempo_ciclo_ms": {
+    "media": 5.548,
+    "p95": 14.759,
+    "massimo": 33.05,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 60,
+   "eventi": {
+    "nascita": 109,
+    "conferma": 60,
+    "ingresso_in_ombra": 48,
+    "identita_ambigua": 795,
+    "strato_finito": 29,
+    "chiusura": 36,
+    "perso": 13
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7025,
+    "libero": 0.2126,
+    "occupato": 0.0165,
+    "in_ombra": 0.0684
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_b__s00__filtri",
+   "errore": null,
+   "ingressi": 49,
+   "fotogrammi": 91,
+   "tempo_ciclo_ms": {
+    "media": 4.602,
+    "p95": 10.281,
+    "massimo": 12.202,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 65,
+   "eventi": {
+    "nascita": 108,
+    "conferma": 65,
+    "ingresso_in_ombra": 49,
+    "identita_ambigua": 742,
+    "strato_finito": 32,
+    "chiusura": 43,
+    "perso": 14
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7027,
+    "libero": 0.2121,
+    "occupato": 0.0166,
+    "in_ombra": 0.0686
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_b__s01",
+   "errore": null,
+   "ingressi": 60,
+   "fotogrammi": 89,
+   "tempo_ciclo_ms": {
+    "media": 8.274,
+    "p95": 17.54,
+    "massimo": 29.202,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 72,
+   "eventi": {
+    "nascita": 151,
+    "conferma": 72,
+    "ingresso_in_ombra": 60,
+    "identita_ambigua": 1509,
+    "strato_finito": 27,
+    "chiusura": 34,
+    "perso": 19
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7027,
+    "libero": 0.2115,
+    "occupato": 0.017,
+    "in_ombra": 0.0688
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_b__s02",
+   "errore": null,
+   "ingressi": 28,
+   "fotogrammi": 91,
+   "tempo_ciclo_ms": {
+    "media": 5.36,
+    "p95": 10.284,
+    "massimo": 11.113,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 43,
+   "eventi": {
+    "nascita": 104,
+    "conferma": 43,
+    "ingresso_in_ombra": 28,
+    "identita_ambigua": 1001,
+    "chiusura": 17,
+    "perso": 8,
+    "strato_finito": 8
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7024,
+    "libero": 0.2137,
+    "occupato": 0.0161,
+    "in_ombra": 0.0677
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_b__s03",
+   "errore": null,
+   "ingressi": 31,
+   "fotogrammi": 88,
+   "tempo_ciclo_ms": {
+    "media": 5.385,
+    "p95": 12.693,
+    "massimo": 26.75,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 42,
+   "eventi": {
+    "nascita": 90,
+    "conferma": 42,
+    "ingresso_in_ombra": 31,
+    "perso": 11,
+    "identita_ambigua": 601,
+    "strato_finito": 14,
+    "chiusura": 21
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7025,
+    "libero": 0.2132,
+    "occupato": 0.0166,
+    "in_ombra": 0.0677
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_b__s04",
+   "errore": null,
+   "ingressi": 53,
+   "fotogrammi": 91,
+   "tempo_ciclo_ms": {
+    "media": 6.835,
+    "p95": 11.579,
+    "massimo": 65.78,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 61,
+   "eventi": {
+    "nascita": 110,
+    "conferma": 61,
+    "ingresso_in_ombra": 53,
+    "identita_ambigua": 1463,
+    "perso": 24,
+    "strato_finito": 28,
+    "chiusura": 30
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7024,
+    "libero": 0.2115,
+    "occupato": 0.0167,
+    "in_ombra": 0.0694
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_b__s05",
+   "errore": null,
+   "ingressi": 69,
+   "fotogrammi": 90,
+   "tempo_ciclo_ms": {
+    "media": 6.73,
+    "p95": 16.289,
+    "massimo": 26.753,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 78,
+   "eventi": {
+    "nascita": 133,
+    "conferma": 78,
+    "ingresso_in_ombra": 69,
+    "identita_ambigua": 1482,
+    "strato_finito": 33,
+    "chiusura": 38,
+    "perso": 24
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7026,
+    "libero": 0.212,
+    "occupato": 0.0164,
+    "in_ombra": 0.069
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_b__s06",
+   "errore": null,
+   "ingressi": 46,
+   "fotogrammi": 92,
+   "tempo_ciclo_ms": {
+    "media": 7.587,
+    "p95": 16.386,
+    "massimo": 23.197,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 51,
+   "eventi": {
+    "nascita": 112,
+    "conferma": 51,
+    "ingresso_in_ombra": 46,
+    "identita_ambigua": 1085,
+    "perso": 14,
+    "strato_finito": 16,
+    "chiusura": 17
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7025,
+    "libero": 0.2106,
+    "occupato": 0.0171,
+    "in_ombra": 0.0699
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_b__s07",
+   "errore": null,
+   "ingressi": 55,
+   "fotogrammi": 90,
+   "tempo_ciclo_ms": {
+    "media": 9.447,
+    "p95": 15.175,
+    "massimo": 104.993,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 66,
+   "eventi": {
+    "nascita": 116,
+    "conferma": 66,
+    "ingresso_in_ombra": 55,
+    "identita_ambigua": 1393,
+    "strato_finito": 13,
+    "chiusura": 19,
+    "perso": 16
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7024,
+    "libero": 0.2128,
+    "occupato": 0.0165,
+    "in_ombra": 0.0682
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_b__s08",
+   "errore": null,
+   "ingressi": 50,
+   "fotogrammi": 93,
+   "tempo_ciclo_ms": {
+    "media": 5.124,
+    "p95": 10.799,
+    "massimo": 15.104,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 60,
+   "eventi": {
+    "nascita": 122,
+    "conferma": 60,
+    "ingresso_in_ombra": 50,
+    "perso": 12,
+    "strato_finito": 28,
+    "chiusura": 32,
+    "identita_ambigua": 722
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7027,
+    "libero": 0.212,
+    "occupato": 0.0171,
+    "in_ombra": 0.0682
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_b__s09",
+   "errore": null,
+   "ingressi": 51,
+   "fotogrammi": 90,
+   "tempo_ciclo_ms": {
+    "media": 6.705,
+    "p95": 14.725,
+    "massimo": 41.813,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 62,
+   "eventi": {
+    "nascita": 125,
+    "conferma": 62,
+    "ingresso_in_ombra": 51,
+    "identita_ambigua": 1105,
+    "chiusura": 26,
+    "perso": 21,
+    "strato_finito": 22
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7028,
+    "libero": 0.211,
+    "occupato": 0.0173,
+    "in_ombra": 0.0689
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_b__s10",
+   "errore": null,
+   "ingressi": 43,
+   "fotogrammi": 91,
+   "tempo_ciclo_ms": {
+    "media": 4.254,
+    "p95": 9.589,
+    "massimo": 18.355,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 52,
+   "eventi": {
+    "nascita": 99,
+    "conferma": 52,
+    "ingresso_in_ombra": 43,
+    "identita_ambigua": 655,
+    "chiusura": 27,
+    "strato_finito": 23,
+    "perso": 9
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.702,
+    "libero": 0.2124,
+    "occupato": 0.017,
+    "in_ombra": 0.0686
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_b__s11",
+   "errore": null,
+   "ingressi": 72,
+   "fotogrammi": 92,
+   "tempo_ciclo_ms": {
+    "media": 6.627,
+    "p95": 19.586,
+    "massimo": 23.507,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 83,
+   "eventi": {
+    "nascita": 156,
+    "conferma": 83,
+    "ingresso_in_ombra": 72,
+    "identita_ambigua": 1017,
+    "strato_finito": 46,
+    "chiusura": 51,
+    "perso": 24
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7029,
+    "libero": 0.2118,
+    "occupato": 0.017,
+    "in_ombra": 0.0684
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_b__s12",
+   "errore": null,
+   "ingressi": 52,
+   "fotogrammi": 90,
+   "tempo_ciclo_ms": {
+    "media": 7.908,
+    "p95": 16.994,
+    "massimo": 21.253,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 63,
+   "eventi": {
+    "nascita": 130,
+    "conferma": 63,
+    "ingresso_in_ombra": 52,
+    "riaggancio": 1,
+    "prima_misura_piena": 1,
+    "identita_ambigua": 1118,
+    "chiusura": 16,
+    "strato_finito": 12,
+    "perso": 21
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7029,
+    "libero": 0.2101,
+    "occupato": 0.018,
+    "in_ombra": 0.069
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_b__s13",
+   "errore": null,
+   "ingressi": 37,
+   "fotogrammi": 92,
+   "tempo_ciclo_ms": {
+    "media": 7.226,
+    "p95": 15.158,
+    "massimo": 46.328,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 43,
+   "eventi": {
+    "nascita": 99,
+    "conferma": 43,
+    "ingresso_in_ombra": 37,
+    "identita_ambigua": 1383,
+    "perso": 15,
+    "strato_finito": 8,
+    "chiusura": 9
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7026,
+    "libero": 0.2129,
+    "occupato": 0.0163,
+    "in_ombra": 0.0682
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_b__s14",
+   "errore": null,
+   "ingressi": 49,
+   "fotogrammi": 89,
+   "tempo_ciclo_ms": {
+    "media": 7.212,
+    "p95": 14.172,
+    "massimo": 22.826,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 58,
+   "eventi": {
+    "nascita": 103,
+    "conferma": 58,
+    "ingresso_in_ombra": 49,
+    "perso": 15,
+    "identita_ambigua": 1340,
+    "chiusura": 20,
+    "strato_finito": 16
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7024,
+    "libero": 0.2131,
+    "occupato": 0.0164,
+    "in_ombra": 0.0681
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_b__s15",
+   "errore": null,
+   "ingressi": 57,
+   "fotogrammi": 88,
+   "tempo_ciclo_ms": {
+    "media": 7.692,
+    "p95": 15.261,
+    "massimo": 28.991,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 65,
+   "eventi": {
+    "nascita": 113,
+    "conferma": 65,
+    "ingresso_in_ombra": 57,
+    "riaggancio": 2,
+    "prima_misura_piena": 2,
+    "identita_ambigua": 1196,
+    "perso": 27,
+    "strato_finito": 20,
+    "chiusura": 25
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7021,
+    "libero": 0.2118,
+    "occupato": 0.0166,
+    "in_ombra": 0.0695
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_b__s16",
+   "errore": null,
+   "ingressi": 57,
+   "fotogrammi": 88,
+   "tempo_ciclo_ms": {
+    "media": 7.494,
+    "p95": 15.307,
+    "massimo": 18.106,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 68,
+   "eventi": {
+    "nascita": 143,
+    "conferma": 68,
+    "ingresso_in_ombra": 57,
+    "identita_ambigua": 1218,
+    "strato_finito": 27,
+    "chiusura": 32,
+    "perso": 19
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7029,
+    "libero": 0.2107,
+    "occupato": 0.0173,
+    "in_ombra": 0.0691
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_b__s17",
+   "errore": null,
+   "ingressi": 39,
+   "fotogrammi": 89,
+   "tempo_ciclo_ms": {
+    "media": 5.692,
+    "p95": 11.891,
+    "massimo": 14.653,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 54,
+   "eventi": {
+    "nascita": 119,
+    "conferma": 54,
+    "ingresso_in_ombra": 39,
+    "identita_ambigua": 696,
+    "chiusura": 27,
+    "strato_finito": 18,
+    "perso": 7
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7024,
+    "libero": 0.2135,
+    "occupato": 0.0164,
+    "in_ombra": 0.0677
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_b__s18",
+   "errore": null,
+   "ingressi": 53,
+   "fotogrammi": 88,
+   "tempo_ciclo_ms": {
+    "media": 5.58,
+    "p95": 11.64,
+    "massimo": 17.309,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 68,
+   "eventi": {
+    "nascita": 118,
+    "conferma": 68,
+    "ingresso_in_ombra": 53,
+    "identita_ambigua": 720,
+    "chiusura": 44,
+    "strato_finito": 38,
+    "perso": 28
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7021,
+    "libero": 0.2138,
+    "occupato": 0.0165,
+    "in_ombra": 0.0676
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_b__s19",
+   "errore": null,
+   "ingressi": 36,
+   "fotogrammi": 90,
+   "tempo_ciclo_ms": {
+    "media": 3.503,
+    "p95": 8.062,
+    "massimo": 10.345,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 54,
+   "eventi": {
+    "nascita": 101,
+    "conferma": 54,
+    "chiusura": 36,
+    "ingresso_in_ombra": 36,
+    "identita_ambigua": 575,
+    "perso": 12,
+    "strato_finito": 24
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.703,
+    "libero": 0.2119,
+    "occupato": 0.017,
+    "in_ombra": 0.0681
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_b__s20",
+   "errore": null,
+   "ingressi": 50,
+   "fotogrammi": 89,
+   "tempo_ciclo_ms": {
+    "media": 5.434,
+    "p95": 10.649,
+    "massimo": 16.029,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 63,
+   "eventi": {
+    "nascita": 125,
+    "conferma": 63,
+    "ingresso_in_ombra": 50,
+    "identita_ambigua": 874,
+    "strato_finito": 25,
+    "chiusura": 31,
+    "perso": 23
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7027,
+    "libero": 0.2115,
+    "occupato": 0.0167,
+    "in_ombra": 0.0691
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_b__s21",
+   "errore": null,
+   "ingressi": 34,
+   "fotogrammi": 90,
+   "tempo_ciclo_ms": {
+    "media": 4.679,
+    "p95": 15.953,
+    "massimo": 18.339,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 47,
+   "eventi": {
+    "nascita": 88,
+    "conferma": 47,
+    "ingresso_in_ombra": 34,
+    "identita_ambigua": 494,
+    "perso": 11,
+    "strato_finito": 16,
+    "chiusura": 24
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.703,
+    "libero": 0.2123,
+    "occupato": 0.0165,
+    "in_ombra": 0.0682
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_b__s22",
+   "errore": null,
+   "ingressi": 17,
+   "fotogrammi": 90,
+   "tempo_ciclo_ms": {
+    "media": 3.561,
+    "p95": 8.664,
+    "massimo": 26.739,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 26,
+   "eventi": {
+    "nascita": 62,
+    "conferma": 26,
+    "ingresso_in_ombra": 17,
+    "chiusura": 11,
+    "riaggancio": 3,
+    "prima_misura_piena": 3,
+    "identita_ambigua": 156,
+    "perso": 7,
+    "strato_finito": 4
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7026,
+    "libero": 0.2138,
+    "occupato": 0.016,
+    "in_ombra": 0.0676
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_b__s23",
+   "errore": null,
+   "ingressi": 36,
+   "fotogrammi": 91,
+   "tempo_ciclo_ms": {
+    "media": 5.308,
+    "p95": 12.277,
+    "massimo": 37.762,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 49,
+   "eventi": {
+    "nascita": 100,
+    "conferma": 49,
+    "ingresso_in_ombra": 36,
+    "strato_finito": 17,
+    "chiusura": 23,
+    "identita_ambigua": 881,
+    "perso": 11
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7024,
+    "libero": 0.213,
+    "occupato": 0.0165,
+    "in_ombra": 0.0681
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_b__s24",
+   "errore": null,
+   "ingressi": 53,
+   "fotogrammi": 87,
+   "tempo_ciclo_ms": {
+    "media": 6.413,
+    "p95": 11.325,
+    "massimo": 29.815,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 68,
+   "eventi": {
+    "nascita": 129,
+    "conferma": 68,
+    "ingresso_in_ombra": 53,
+    "identita_ambigua": 808,
+    "perso": 20,
+    "strato_finito": 23,
+    "chiusura": 32
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7026,
+    "libero": 0.2106,
+    "occupato": 0.0179,
+    "in_ombra": 0.0688
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_b__s25",
+   "errore": null,
+   "ingressi": 32,
+   "fotogrammi": 88,
+   "tempo_ciclo_ms": {
+    "media": 4.056,
+    "p95": 9.238,
+    "massimo": 38.712,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 46,
+   "eventi": {
+    "nascita": 90,
+    "conferma": 46,
+    "ingresso_in_ombra": 32,
+    "identita_ambigua": 389,
+    "strato_finito": 14,
+    "chiusura": 25,
+    "perso": 4,
+    "riaggancio": 2,
+    "prima_misura_piena": 2
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7023,
+    "libero": 0.2142,
+    "occupato": 0.016,
+    "in_ombra": 0.0675
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_b__s26",
+   "errore": null,
+   "ingressi": 41,
+   "fotogrammi": 89,
+   "tempo_ciclo_ms": {
+    "media": 5.788,
+    "p95": 11.831,
+    "massimo": 22.657,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 51,
+   "eventi": {
+    "nascita": 101,
+    "conferma": 51,
+    "ingresso_in_ombra": 41,
+    "identita_ambigua": 1033,
+    "perso": 12,
+    "strato_finito": 22,
+    "chiusura": 27
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7019,
+    "libero": 0.2137,
+    "occupato": 0.016,
+    "in_ombra": 0.0684
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_b__s27",
+   "errore": null,
+   "ingressi": 43,
+   "fotogrammi": 90,
+   "tempo_ciclo_ms": {
+    "media": 6.783,
+    "p95": 15.502,
+    "massimo": 23.776,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 55,
+   "eventi": {
+    "nascita": 98,
+    "conferma": 55,
+    "ingresso_in_ombra": 43,
+    "identita_ambigua": 1176,
+    "perso": 16,
+    "strato_finito": 18,
+    "chiusura": 25
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7023,
+    "libero": 0.2138,
+    "occupato": 0.0164,
+    "in_ombra": 0.0675
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_b__s28",
+   "errore": null,
+   "ingressi": 52,
+   "fotogrammi": 91,
+   "tempo_ciclo_ms": {
+    "media": 6.702,
+    "p95": 12.852,
+    "massimo": 15.425,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 62,
+   "eventi": {
+    "nascita": 113,
+    "conferma": 62,
+    "ingresso_in_ombra": 52,
+    "identita_ambigua": 1326,
+    "chiusura": 33,
+    "perso": 22,
+    "strato_finito": 27
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7028,
+    "libero": 0.2121,
+    "occupato": 0.0165,
+    "in_ombra": 0.0686
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_b__s29",
+   "errore": null,
+   "ingressi": 44,
+   "fotogrammi": 88,
+   "tempo_ciclo_ms": {
+    "media": 6.855,
+    "p95": 16.61,
+    "massimo": 24.032,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 53,
+   "eventi": {
+    "nascita": 109,
+    "conferma": 53,
+    "ingresso_in_ombra": 44,
+    "riaggancio": 2,
+    "prima_misura_piena": 2,
+    "identita_ambigua": 1141,
+    "chiusura": 24,
+    "perso": 15,
+    "strato_finito": 17
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7032,
+    "libero": 0.2127,
+    "occupato": 0.0163,
+    "in_ombra": 0.0679
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_c__s00",
+   "errore": null,
+   "ingressi": 32,
+   "fotogrammi": 60,
+   "tempo_ciclo_ms": {
+    "media": 6.044,
+    "p95": 12.571,
+    "massimo": 13.735,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 41,
+   "eventi": {
+    "nascita": 83,
+    "conferma": 41,
+    "ingresso_in_ombra": 32,
+    "identita_ambigua": 379,
+    "perso": 7,
+    "chiusura": 23,
+    "strato_finito": 19
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7027,
+    "libero": 0.2096,
+    "occupato": 0.018,
+    "in_ombra": 0.0696
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_c__s01",
+   "errore": null,
+   "ingressi": 22,
+   "fotogrammi": 63,
+   "tempo_ciclo_ms": {
+    "media": 3.873,
+    "p95": 7.505,
+    "massimo": 11.22,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 32,
+   "eventi": {
+    "nascita": 74,
+    "conferma": 32,
+    "ingresso_in_ombra": 22,
+    "identita_ambigua": 381,
+    "chiusura": 13,
+    "strato_finito": 8,
+    "perso": 2
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7021,
+    "libero": 0.2114,
+    "occupato": 0.0174,
+    "in_ombra": 0.0691
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_c__s02",
+   "errore": null,
+   "ingressi": 25,
+   "fotogrammi": 59,
+   "tempo_ciclo_ms": {
+    "media": 7.361,
+    "p95": 18.546,
+    "massimo": 26.452,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 38,
+   "eventi": {
+    "nascita": 75,
+    "conferma": 38,
+    "ingresso_in_ombra": 25,
+    "identita_ambigua": 520,
+    "riaggancio": 2,
+    "chiusura": 13,
+    "prima_misura_piena": 1,
+    "strato_finito": 6,
+    "perso": 4
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7028,
+    "libero": 0.2096,
+    "occupato": 0.0186,
+    "in_ombra": 0.069
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_c__s03",
+   "errore": null,
+   "ingressi": 24,
+   "fotogrammi": 64,
+   "tempo_ciclo_ms": {
+    "media": 5.786,
+    "p95": 12.416,
+    "massimo": 14.563,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 33,
+   "eventi": {
+    "nascita": 67,
+    "conferma": 33,
+    "ingresso_in_ombra": 24,
+    "identita_ambigua": 493,
+    "riaggancio": 1,
+    "prima_misura_piena": 1,
+    "strato_finito": 6,
+    "chiusura": 9,
+    "perso": 6
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7022,
+    "libero": 0.2118,
+    "occupato": 0.0173,
+    "in_ombra": 0.0687
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_d__s00",
+   "errore": null,
+   "ingressi": 69,
+   "fotogrammi": 80,
+   "tempo_ciclo_ms": {
+    "media": 7.557,
+    "p95": 12.777,
+    "massimo": 26.943,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 79,
+   "eventi": {
+    "nascita": 137,
+    "conferma": 79,
+    "ingresso_in_ombra": 69,
+    "identita_ambigua": 1079,
+    "perso": 24,
+    "strato_finito": 42,
+    "chiusura": 44
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7027,
+    "libero": 0.2135,
+    "occupato": 0.0163,
+    "in_ombra": 0.0675
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_d__s01",
+   "errore": null,
+   "ingressi": 56,
+   "fotogrammi": 76,
+   "tempo_ciclo_ms": {
+    "media": 6.247,
+    "p95": 13.217,
+    "massimo": 25.104,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 68,
+   "eventi": {
+    "nascita": 121,
+    "conferma": 68,
+    "ingresso_in_ombra": 56,
+    "identita_ambigua": 735,
+    "perso": 23,
+    "strato_finito": 33,
+    "chiusura": 38
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7025,
+    "libero": 0.2135,
+    "occupato": 0.0161,
+    "in_ombra": 0.0679
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_d__s02",
+   "errore": null,
+   "ingressi": 57,
+   "fotogrammi": 80,
+   "tempo_ciclo_ms": {
+    "media": 6.767,
+    "p95": 12.67,
+    "massimo": 18.47,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 68,
+   "eventi": {
+    "nascita": 119,
+    "conferma": 68,
+    "ingresso_in_ombra": 57,
+    "identita_ambigua": 1217,
+    "chiusura": 36,
+    "strato_finito": 31,
+    "perso": 15
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7025,
+    "libero": 0.2137,
+    "occupato": 0.0162,
+    "in_ombra": 0.0676
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_d__s03",
+   "errore": null,
+   "ingressi": 45,
+   "fotogrammi": 81,
+   "tempo_ciclo_ms": {
+    "media": 4.914,
+    "p95": 10.944,
+    "massimo": 16.95,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 52,
+   "eventi": {
+    "nascita": 102,
+    "conferma": 52,
+    "ingresso_in_ombra": 45,
+    "identita_ambigua": 626,
+    "perso": 7,
+    "strato_finito": 21,
+    "chiusura": 24
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7022,
+    "libero": 0.2136,
+    "occupato": 0.016,
+    "in_ombra": 0.0683
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_vuoto",
+   "errore": null,
+   "ingressi": 3,
+   "fotogrammi": 10,
+   "tempo_ciclo_ms": {
+    "media": 2.867,
+    "p95": 6.633,
+    "massimo": 6.633,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 8,
+   "eventi": {
+    "nascita": 17,
+    "conferma": 8,
+    "ingresso_in_ombra": 3,
+    "identita_ambigua": 18
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7021,
+    "libero": 0.214,
+    "occupato": 0.0151,
+    "in_ombra": 0.0689
+   }
+  },
+  {
+   "nome": "d435i_nom__pannello_vuoto__filtri",
+   "errore": null,
+   "ingressi": 5,
+   "fotogrammi": 10,
+   "tempo_ciclo_ms": {
+    "media": 3.833,
+    "p95": 7.716,
+    "massimo": 7.716,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 8,
+   "eventi": {
+    "nascita": 18,
+    "conferma": 8,
+    "ingresso_in_ombra": 5,
+    "riaggancio": 3,
+    "identita_ambigua": 2
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7024,
+    "libero": 0.2139,
+    "occupato": 0.0151,
+    "in_ombra": 0.0686
+   }
+  },
+  {
+   "nome": "d435i_nom__parete_1m",
+   "errore": null,
+   "ingressi": 0,
+   "fotogrammi": 30,
+   "tempo_ciclo_ms": {
+    "media": 1.124,
+    "p95": 1.211,
+    "massimo": 1.432,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 1,
+   "eventi": {
+    "nascita": 1,
+    "conferma": 1
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.6792,
+    "libero": 0.0,
+    "occupato": 0.0225,
+    "in_ombra": 0.2983
+   }
+  },
+  {
+   "nome": "d435i_nom__parete_2m",
+   "errore": null,
+   "ingressi": 0,
+   "fotogrammi": 30,
+   "tempo_ciclo_ms": {
+    "media": 1.116,
+    "p95": 1.267,
+    "massimo": 1.267,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 1,
+   "eventi": {
+    "nascita": 1,
+    "conferma": 1
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.8578,
+    "libero": 0.0,
+    "occupato": 0.0324,
+    "in_ombra": 0.1098
+   }
+  },
+  {
+   "nome": "d435i_nom__parete_3m",
+   "errore": null,
+   "ingressi": 14,
+   "fotogrammi": 30,
+   "tempo_ciclo_ms": {
+    "media": 1.975,
+    "p95": 3.044,
+    "massimo": 3.19,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 21,
+   "eventi": {
+    "nascita": 60,
+    "conferma": 21,
+    "ingresso_in_ombra": 14,
+    "identita_ambigua": 43,
+    "perso": 6,
+    "chiusura": 13,
+    "strato_finito": 9
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.8886,
+    "libero": 0.1025,
+    "occupato": 0.0067,
+    "in_ombra": 0.0022
+   }
+  },
+  {
+   "nome": "d435i_nom__parete_4m",
+   "errore": null,
+   "ingressi": 10,
+   "fotogrammi": 30,
+   "tempo_ciclo_ms": {
+    "media": 1.387,
+    "p95": 2.218,
+    "massimo": 2.446,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 13,
+   "eventi": {
+    "nascita": 49,
+    "conferma": 13,
+    "ingresso_in_ombra": 10,
+    "chiusura": 7,
+    "identita_ambigua": 22,
+    "strato_finito": 5,
+    "perso": 3
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.8897,
+    "libero": 0.1062,
+    "occupato": 0.0017,
+    "in_ombra": 0.0024
+   }
+  },
+  {
+   "nome": "d435i_nom__pavimento_lucido",
+   "errore": null,
+   "ingressi": 81,
+   "fotogrammi": 20,
+   "tempo_ciclo_ms": {
+    "media": 25.851,
+    "p95": 36.849,
+    "massimo": 46.158,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 106,
+   "eventi": {
+    "nascita": 165,
+    "conferma": 106,
+    "ingresso_in_ombra": 81,
+    "identita_ambigua": 1237,
+    "perso": 7
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.712,
+    "libero": 0.2116,
+    "occupato": 0.0327,
+    "in_ombra": 0.0437
+   }
+  },
+  {
+   "nome": "d435i_nom__pavimento_vuoto",
+   "errore": null,
+   "ingressi": 23,
+   "fotogrammi": 30,
+   "tempo_ciclo_ms": {
+    "media": 2.626,
+    "p95": 4.073,
+    "massimo": 4.597,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 28,
+   "eventi": {
+    "nascita": 66,
+    "conferma": 28,
+    "ingresso_in_ombra": 23,
+    "perso": 16,
+    "identita_ambigua": 92,
+    "strato_finito": 11,
+    "chiusura": 11
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7033,
+    "libero": 0.2904,
+    "occupato": 0.0035,
+    "in_ombra": 0.0027
+   }
+  },
+  {
+   "nome": "d435i_nom__pavimento_vuoto__filtri",
+   "errore": null,
+   "ingressi": 23,
+   "fotogrammi": 30,
+   "tempo_ciclo_ms": {
+    "media": 2.619,
+    "p95": 4.042,
+    "massimo": 4.961,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 29,
+   "eventi": {
+    "nascita": 67,
+    "conferma": 29,
+    "ingresso_in_ombra": 23,
+    "perso": 14,
+    "identita_ambigua": 76,
+    "strato_finito": 11,
+    "chiusura": 12
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7036,
+    "libero": 0.2901,
+    "occupato": 0.0036,
+    "in_ombra": 0.0027
+   }
+  },
+  {
+   "nome": "d435i_nom__scatola15_0p8m",
+   "errore": null,
+   "ingressi": 5,
+   "fotogrammi": 10,
+   "tempo_ciclo_ms": {
+    "media": 1.824,
+    "p95": 2.914,
+    "massimo": 2.914,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 8,
+   "eventi": {
+    "nascita": 27,
+    "conferma": 8,
+    "ingresso_in_ombra": 5,
+    "identita_ambigua": 9,
+    "perso": 1
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7033,
+    "libero": 0.2917,
+    "occupato": 0.0027,
+    "in_ombra": 0.0023
+   }
+  },
+  {
+   "nome": "d435i_nom__scatola15_2p0m",
+   "errore": null,
+   "ingressi": 7,
+   "fotogrammi": 10,
+   "tempo_ciclo_ms": {
+    "media": 1.935,
+    "p95": 2.98,
+    "massimo": 2.98,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 11,
+   "eventi": {
+    "nascita": 21,
+    "conferma": 11,
+    "ingresso_in_ombra": 7,
+    "identita_ambigua": 11,
+    "perso": 1
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7031,
+    "libero": 0.2804,
+    "occupato": 0.0052,
+    "in_ombra": 0.0113
+   }
+  },
+  {
+   "nome": "d435i_nom__sensore_coperto",
+   "errore": null,
+   "ingressi": 7,
+   "fotogrammi": 45,
+   "tempo_ciclo_ms": {
+    "media": 1.763,
+    "p95": 6.342,
+    "massimo": 7.12,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 15,
+   "eventi": {
+    "nascita": 31,
+    "conferma": 15,
+    "ingresso_in_ombra": 7,
+    "identita_ambigua": 54,
+    "perso": 2,
+    "strato_finito": 2,
+    "chiusura": 4
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.8131,
+    "libero": 0.1292,
+    "occupato": 0.0139,
+    "in_ombra": 0.0438
+   }
+  },
+  {
+   "nome": "d435i_nom__sensore_mezzo_coperto",
+   "errore": null,
+   "ingressi": 10,
+   "fotogrammi": 30,
+   "tempo_ciclo_ms": {
+    "media": 2.75,
+    "p95": 6.558,
+    "massimo": 7.627,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 16,
+   "eventi": {
+    "nascita": 38,
+    "conferma": 16,
+    "ingresso_in_ombra": 10,
+    "identita_ambigua": 85,
+    "perso": 4,
+    "strato_finito": 4,
+    "chiusura": 5
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7709,
+    "libero": 0.1607,
+    "occupato": 0.0158,
+    "in_ombra": 0.0526
+   }
+  },
+  {
+   "nome": "d435i_nom__sospeso_2p0m",
+   "errore": null,
+   "ingressi": 6,
+   "fotogrammi": 10,
+   "tempo_ciclo_ms": {
+    "media": 1.931,
+    "p95": 3.174,
+    "massimo": 3.174,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 10,
+   "eventi": {
+    "nascita": 26,
+    "conferma": 10,
+    "ingresso_in_ombra": 6,
+    "identita_ambigua": 1
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7033,
+    "libero": 0.2885,
+    "occupato": 0.004,
+    "in_ombra": 0.0042
+   }
+  },
+  {
+   "nome": "d435i_nom__sospeso_2p8m",
+   "errore": null,
+   "ingressi": 1,
+   "fotogrammi": 10,
+   "tempo_ciclo_ms": {
+    "media": 1.385,
+    "p95": 1.871,
+    "massimo": 1.871,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 7,
+   "eventi": {
+    "nascita": 20,
+    "conferma": 7,
+    "chiusura": 1,
+    "ingresso_in_ombra": 1
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7037,
+    "libero": 0.2802,
+    "occupato": 0.012,
+    "in_ombra": 0.0041
+   }
+  },
+  {
+   "nome": "d435i_nom__vetro_buco",
+   "errore": null,
+   "ingressi": 0,
+   "fotogrammi": 10,
+   "tempo_ciclo_ms": {
+    "media": 0.872,
+    "p95": 1.143,
+    "massimo": 1.143,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 3,
+   "eventi": {
+    "nascita": 11,
+    "conferma": 3
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7967,
+    "libero": 0.2007,
+    "occupato": 0.0019,
+    "in_ombra": 0.0007
+   }
+  },
+  {
+   "nome": "d435i_nom__vetro_sfondo",
+   "errore": null,
+   "ingressi": 1,
+   "fotogrammi": 10,
+   "tempo_ciclo_ms": {
+    "media": 1.4,
+    "p95": 1.929,
+    "massimo": 1.929,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 6,
+   "eventi": {
+    "nascita": 27,
+    "conferma": 6,
+    "ingresso_in_ombra": 1,
+    "identita_ambigua": 3
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7027,
+    "libero": 0.2895,
+    "occupato": 0.0036,
+    "in_ombra": 0.0042
+   }
+  },
+  {
+   "nome": "d455_nom__pannello_a05__s00",
+   "errore": null,
+   "ingressi": 2,
+   "fotogrammi": 66,
+   "tempo_ciclo_ms": {
+    "media": 1.353,
+    "p95": 5.518,
+    "massimo": 6.108,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 4,
+   "eventi": {
+    "nascita": 5,
+    "conferma": 4,
+    "ingresso_in_ombra": 2,
+    "identita_ambigua": 9,
+    "perso": 2,
+    "riaggancio": 2,
+    "prima_misura_piena": 1
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7038,
+    "libero": 0.2121,
+    "occupato": 0.0151,
+    "in_ombra": 0.0691
+   }
+  },
+  {
+   "nome": "d455_nom__pannello_a12__s00",
+   "errore": null,
+   "ingressi": 1,
+   "fotogrammi": 47,
+   "tempo_ciclo_ms": {
+    "media": 1.68,
+    "p95": 5.977,
+    "massimo": 6.22,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 3,
+   "eventi": {
+    "nascita": 6,
+    "conferma": 3,
+    "ingresso_in_ombra": 1,
+    "identita_ambigua": 12,
+    "perso": 1,
+    "riaggancio": 1,
+    "prima_misura_piena": 1
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7039,
+    "libero": 0.2109,
+    "occupato": 0.0159,
+    "in_ombra": 0.0693
+   }
+  },
+  {
+   "nome": "d455_nom__pannello_a12__s01",
+   "errore": null,
+   "ingressi": 3,
+   "fotogrammi": 45,
+   "tempo_ciclo_ms": {
+    "media": 2.159,
+    "p95": 6.079,
+    "massimo": 6.306,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 5,
+   "eventi": {
+    "nascita": 6,
+    "conferma": 5,
+    "ingresso_in_ombra": 3,
+    "identita_ambigua": 12,
+    "perso": 1,
+    "riaggancio": 2,
+    "prima_misura_piena": 2
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.704,
+    "libero": 0.2108,
+    "occupato": 0.0161,
+    "in_ombra": 0.069
+   }
+  },
+  {
+   "nome": "d455_nom__pannello_a12__s02",
+   "errore": null,
+   "ingressi": 2,
+   "fotogrammi": 45,
+   "tempo_ciclo_ms": {
+    "media": 1.711,
+    "p95": 5.744,
+    "massimo": 5.946,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 4,
+   "eventi": {
+    "nascita": 6,
+    "conferma": 4,
+    "ingresso_in_ombra": 2,
+    "identita_ambigua": 11,
+    "riaggancio": 2,
+    "prima_misura_piena": 2,
+    "chiusura": 1
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7038,
+    "libero": 0.2108,
+    "occupato": 0.0162,
+    "in_ombra": 0.0692
+   }
+  },
+  {
+   "nome": "d455_nom__pannello_b__s00",
+   "errore": null,
+   "ingressi": 3,
+   "fotogrammi": 91,
+   "tempo_ciclo_ms": {
+    "media": 1.131,
+    "p95": 1.373,
+    "massimo": 5.951,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 4,
+   "eventi": {
+    "nascita": 4,
+    "conferma": 4,
+    "ingresso_in_ombra": 3,
+    "riaggancio": 3,
+    "identita_ambigua": 1,
+    "prima_misura_piena": 1
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7034,
+    "libero": 0.2154,
+    "occupato": 0.0138,
+    "in_ombra": 0.0674
+   }
+  },
+  {
+   "nome": "d455_nom__pannello_vuoto",
+   "errore": null,
+   "ingressi": 0,
+   "fotogrammi": 10,
+   "tempo_ciclo_ms": {
+    "media": 0.853,
+    "p95": 1.046,
+    "massimo": 1.046,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 1,
+   "eventi": {
+    "nascita": 1,
+    "conferma": 1
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.7038,
+    "libero": 0.2191,
+    "occupato": 0.012,
+    "in_ombra": 0.0651
+   }
+  },
+  {
+   "nome": "d455_nom__parete_1m",
+   "errore": null,
+   "ingressi": 0,
+   "fotogrammi": 30,
+   "tempo_ciclo_ms": {
+    "media": 1.074,
+    "p95": 1.176,
+    "massimo": 1.21,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 1,
+   "eventi": {
+    "nascita": 1,
+    "conferma": 1
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.6868,
+    "libero": 0.0,
+    "occupato": 0.0201,
+    "in_ombra": 0.2931
+   }
+  },
+  {
+   "nome": "d455_nom__parete_2m",
+   "errore": null,
+   "ingressi": 0,
+   "fotogrammi": 30,
+   "tempo_ciclo_ms": {
+    "media": 1.066,
+    "p95": 1.211,
+    "massimo": 1.345,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 1,
+   "eventi": {
+    "nascita": 1,
+    "conferma": 1
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.8613,
+    "libero": 0.0,
+    "occupato": 0.0262,
+    "in_ombra": 0.1125
+   }
+  },
+  {
+   "nome": "d455_nom__parete_3m",
+   "errore": null,
+   "ingressi": 0,
+   "fotogrammi": 30,
+   "tempo_ciclo_ms": {
+    "media": 0.537,
+    "p95": 0.632,
+    "massimo": 0.692,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 1,
+   "eventi": {
+    "nascita": 2,
+    "conferma": 1
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.8892,
+    "libero": 0.1072,
+    "occupato": 0.0035,
+    "in_ombra": 0.0
+   }
+  },
+  {
+   "nome": "d455_nom__parete_4m",
+   "errore": null,
+   "ingressi": 0,
+   "fotogrammi": 30,
+   "tempo_ciclo_ms": {
+    "media": 0.337,
+    "p95": 0.478,
+    "massimo": 0.483,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 0,
+   "eventi": {
+    "nascita": 1
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.8895,
+    "libero": 0.1105,
+    "occupato": 0.0,
+    "in_ombra": 0.0
+   }
+  },
+  {
+   "nome": "d455_nom__pavimento_vuoto",
+   "errore": null,
+   "ingressi": 0,
+   "fotogrammi": 30,
+   "tempo_ciclo_ms": {
+    "media": 0.36,
+    "p95": 0.411,
+    "massimo": 0.535,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 0,
+   "eventi": {},
+   "frazione_per_stato": {
+    "non_osservato": 0.703,
+    "libero": 0.297,
+    "occupato": 0.0,
+    "in_ombra": 0.0
+   }
+  },
+  {
+   "nome": "g335_nom__pannello_a05__s00",
+   "errore": null,
+   "ingressi": 21,
+   "fotogrammi": 66,
+   "tempo_ciclo_ms": {
+    "media": 2.631,
+    "p95": 6.778,
+    "massimo": 7.416,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 31,
+   "eventi": {
+    "nascita": 77,
+    "conferma": 31,
+    "ingresso_in_ombra": 21,
+    "chiusura": 18,
+    "strato_finito": 12,
+    "identita_ambigua": 179,
+    "riaggancio": 2,
+    "prima_misura_piena": 2,
+    "perso": 3
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.6911,
+    "libero": 0.2214,
+    "occupato": 0.0177,
+    "in_ombra": 0.0698
+   }
+  },
+  {
+   "nome": "g335_nom__pannello_a12__s00",
+   "errore": null,
+   "ingressi": 26,
+   "fotogrammi": 47,
+   "tempo_ciclo_ms": {
+    "media": 6.912,
+    "p95": 13.812,
+    "massimo": 18.35,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 39,
+   "eventi": {
+    "nascita": 65,
+    "conferma": 39,
+    "ingresso_in_ombra": 26,
+    "chiusura": 16,
+    "identita_ambigua": 294,
+    "perso": 9,
+    "strato_finito": 10
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.6912,
+    "libero": 0.2177,
+    "occupato": 0.0201,
+    "in_ombra": 0.071
+   }
+  },
+  {
+   "nome": "g335_nom__pannello_a12__s01",
+   "errore": null,
+   "ingressi": 16,
+   "fotogrammi": 45,
+   "tempo_ciclo_ms": {
+    "media": 4.053,
+    "p95": 8.969,
+    "massimo": 13.402,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 21,
+   "eventi": {
+    "nascita": 49,
+    "conferma": 21,
+    "ingresso_in_ombra": 16,
+    "identita_ambigua": 147,
+    "strato_finito": 5,
+    "chiusura": 5,
+    "perso": 1
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.6921,
+    "libero": 0.2189,
+    "occupato": 0.0187,
+    "in_ombra": 0.0702
+   }
+  },
+  {
+   "nome": "g335_nom__pannello_a12__s02",
+   "errore": null,
+   "ingressi": 23,
+   "fotogrammi": 45,
+   "tempo_ciclo_ms": {
+    "media": 6.231,
+    "p95": 16.423,
+    "massimo": 20.497,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 33,
+   "eventi": {
+    "nascita": 82,
+    "conferma": 33,
+    "ingresso_in_ombra": 23,
+    "riaggancio": 1,
+    "prima_misura_piena": 1,
+    "identita_ambigua": 285,
+    "strato_finito": 9,
+    "chiusura": 14,
+    "perso": 7
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.6912,
+    "libero": 0.2164,
+    "occupato": 0.0204,
+    "in_ombra": 0.072
+   }
+  },
+  {
+   "nome": "g335_nom__pannello_b__s00",
+   "errore": null,
+   "ingressi": 91,
+   "fotogrammi": 91,
+   "tempo_ciclo_ms": {
+    "media": 11.42,
+    "p95": 23.331,
+    "massimo": 67.559,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 103,
+   "eventi": {
+    "nascita": 193,
+    "conferma": 103,
+    "ingresso_in_ombra": 91,
+    "identita_ambigua": 1897,
+    "perso": 34,
+    "strato_finito": 49,
+    "chiusura": 53
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.6906,
+    "libero": 0.2217,
+    "occupato": 0.0183,
+    "in_ombra": 0.0695
+   }
+  },
+  {
+   "nome": "g335_nom__pannello_vuoto",
+   "errore": null,
+   "ingressi": 7,
+   "fotogrammi": 10,
+   "tempo_ciclo_ms": {
+    "media": 4.207,
+    "p95": 12.683,
+    "massimo": 12.683,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 13,
+   "eventi": {
+    "nascita": 28,
+    "conferma": 13,
+    "ingresso_in_ombra": 7,
+    "identita_ambigua": 17,
+    "chiusura": 3,
+    "strato_finito": 2
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.691,
+    "libero": 0.2244,
+    "occupato": 0.0161,
+    "in_ombra": 0.0684
+   }
+  },
+  {
+   "nome": "g335_nom__parete_1m",
+   "errore": null,
+   "ingressi": 0,
+   "fotogrammi": 30,
+   "tempo_ciclo_ms": {
+    "media": 1.106,
+    "p95": 1.217,
+    "massimo": 1.284,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 1,
+   "eventi": {
+    "nascita": 1,
+    "conferma": 1
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.6729,
+    "libero": 0.0,
+    "occupato": 0.0236,
+    "in_ombra": 0.3035
+   }
+  },
+  {
+   "nome": "g335_nom__parete_2m",
+   "errore": null,
+   "ingressi": 0,
+   "fotogrammi": 30,
+   "tempo_ciclo_ms": {
+    "media": 1.105,
+    "p95": 1.224,
+    "massimo": 1.33,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 1,
+   "eventi": {
+    "nascita": 1,
+    "conferma": 1
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.8565,
+    "libero": 0.0,
+    "occupato": 0.0334,
+    "in_ombra": 0.11
+   }
+  },
+  {
+   "nome": "g335_nom__parete_3m",
+   "errore": null,
+   "ingressi": 25,
+   "fotogrammi": 30,
+   "tempo_ciclo_ms": {
+    "media": 3.402,
+    "p95": 4.668,
+    "massimo": 4.706,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 30,
+   "eventi": {
+    "nascita": 85,
+    "conferma": 30,
+    "ingresso_in_ombra": 25,
+    "identita_ambigua": 130,
+    "strato_finito": 9,
+    "chiusura": 11,
+    "perso": 9
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.8749,
+    "libero": 0.1131,
+    "occupato": 0.0088,
+    "in_ombra": 0.0032
+   }
+  },
+  {
+   "nome": "g335_nom__parete_4m",
+   "errore": null,
+   "ingressi": 13,
+   "fotogrammi": 30,
+   "tempo_ciclo_ms": {
+    "media": 1.788,
+    "p95": 2.641,
+    "massimo": 3.136,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 18,
+   "eventi": {
+    "nascita": 58,
+    "conferma": 18,
+    "ingresso_in_ombra": 13,
+    "identita_ambigua": 26,
+    "perso": 4,
+    "strato_finito": 7,
+    "chiusura": 9
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.8753,
+    "libero": 0.1191,
+    "occupato": 0.0025,
+    "in_ombra": 0.0031
+   }
+  },
+  {
+   "nome": "g335_nom__pavimento_vuoto",
+   "errore": null,
+   "ingressi": 18,
+   "fotogrammi": 30,
+   "tempo_ciclo_ms": {
+    "media": 2.631,
+    "p95": 5.005,
+    "massimo": 5.33,
+    "nota": "solo elaborazione (lettura e scrittura escluse), invarianti accesi"
+   },
+   "tracce_confermate": 26,
+   "eventi": {
+    "nascita": 80,
+    "conferma": 26,
+    "chiusura": 17,
+    "ingresso_in_ombra": 18,
+    "identita_ambigua": 59,
+    "strato_finito": 14,
+    "perso": 4
+   },
+   "frazione_per_stato": {
+    "non_osservato": 0.6907,
+    "libero": 0.3015,
+    "occupato": 0.0032,
+    "in_ombra": 0.0046
+   }
+  }
+ ]
+}

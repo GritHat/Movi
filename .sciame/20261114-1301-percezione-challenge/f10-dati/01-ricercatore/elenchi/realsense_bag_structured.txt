@@ -1,0 +1,10 @@
+# https://librealsense.realsenseai.com/rs-tests/TestData/structured.bag
+# dimensione 140920932; index_pos 140871147; connessioni 56; blocchi 119; byte d'indice 49785
+# durata 4.21 s
+      1 sensor_msgs/CameraInfo             /device_0/sensor_0/Depth_0/info/camera_info
+      6 diagnostic_msgs/KeyValue           /device_0/info
+    127 sensor_msgs/Image                  /device_0/sensor_0/Depth_0/image/data
+    762 diagnostic_msgs/KeyValue           /device_0/sensor_0/Depth_0/image/metadata
+      1 sensor_msgs/CameraInfo             /device_0/sensor_1/Color_0/info/camera_info
+    105 sensor_msgs/Image                  /device_0/sensor_1/Color_0/image/data
+   1050 diagnostic_msgs/KeyValue           /device_0/sensor_1/Color_0/image/metadata

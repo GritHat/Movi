@@ -1,0 +1,181 @@
+{
+ "pareti_semi": [
+  {
+   "profilo": "d455",
+   "d_m": 1,
+   "rapporto_20": 1.0121131496649307,
+   "rapporto_80": 1.1337340231879824,
+   "dispersione_fra_semi_20": 0.05396441995544604
+  },
+  {
+   "profilo": "d455",
+   "d_m": 2,
+   "rapporto_20": 0.9930549604608254,
+   "rapporto_80": 1.1323265932180988,
+   "dispersione_fra_semi_20": 0.03710538601274425
+  },
+  {
+   "profilo": "d455",
+   "d_m": 3,
+   "rapporto_20": 1.0141486036185814,
+   "rapporto_80": 1.1327664461149825,
+   "dispersione_fra_semi_20": 0.037367793806204204
+  },
+  {
+   "profilo": "d455",
+   "d_m": 4,
+   "rapporto_20": 1.0058580549700047,
+   "rapporto_80": 1.1209023798539786,
+   "dispersione_fra_semi_20": 0.047879358819228175
+  },
+  {
+   "profilo": "d435i",
+   "d_m": 1,
+   "rapporto_20": 1.031378248705791,
+   "rapporto_80": 1.1347966631338662,
+   "dispersione_fra_semi_20": 0.044742488069761284
+  },
+  {
+   "profilo": "d435i",
+   "d_m": 2,
+   "rapporto_20": 1.0092979808845177,
+   "rapporto_80": 1.1372242162215482,
+   "dispersione_fra_semi_20": 0.0381812952200272
+  },
+  {
+   "profilo": "d435i",
+   "d_m": 3,
+   "rapporto_20": 1.017941626972348,
+   "rapporto_80": 1.1387533179012308,
+   "dispersione_fra_semi_20": 0.05067206576787543
+  },
+  {
+   "profilo": "d435i",
+   "d_m": 4,
+   "rapporto_20": 1.0063299854708074,
+   "rapporto_80": 1.1319367031809437,
+   "dispersione_fra_semi_20": 0.05616051631358854
+  },
+  {
+   "profilo": "g335",
+   "d_m": 1,
+   "rapporto_20": 0.9895606118257054,
+   "rapporto_80": 1.1357361558908317,
+   "dispersione_fra_semi_20": 0.04059960357928457
+  },
+  {
+   "profilo": "g335",
+   "d_m": 2,
+   "rapporto_20": 1.016644614160885,
+   "rapporto_80": 1.1450190064631354,
+   "dispersione_fra_semi_20": 0.045953186166697434
+  },
+  {
+   "profilo": "g335",
+   "d_m": 3,
+   "rapporto_20": 0.9917800493215149,
+   "rapporto_80": 1.1409838301544375,
+   "dispersione_fra_semi_20": 0.0598150718747495
+  },
+  {
+   "profilo": "g335",
+   "d_m": 4,
+   "rapporto_20": 1.0175536831838259,
+   "rapporto_80": 1.1394702738381652,
+   "dispersione_fra_semi_20": 0.04617747679601859
+  }
+ ],
+ "esiti": [
+  {
+   "previsione": "visione-P2ter",
+   "esito": "regge",
+   "testo": "limite, 20 % centrale, 20 semi × 6 fotogrammi: σ/k·z² da 0.990 a 1.031 (media 1.009); dispersione fra i semi di una cella: 4.7 %; 80 % centrale: da 1.121 a 1.145",
+   "cifre": [
+    {
+     "profilo": "d455",
+     "d_m": 1,
+     "rapporto_20": 1.0121131496649307,
+     "rapporto_80": 1.1337340231879824,
+     "dispersione_fra_semi_20": 0.05396441995544604
+    },
+    {
+     "profilo": "d455",
+     "d_m": 2,
+     "rapporto_20": 0.9930549604608254,
+     "rapporto_80": 1.1323265932180988,
+     "dispersione_fra_semi_20": 0.03710538601274425
+    },
+    {
+     "profilo": "d455",
+     "d_m": 3,
+     "rapporto_20": 1.0141486036185814,
+     "rapporto_80": 1.1327664461149825,
+     "dispersione_fra_semi_20": 0.037367793806204204
+    },
+    {
+     "profilo": "d455",
+     "d_m": 4,
+     "rapporto_20": 1.0058580549700047,
+     "rapporto_80": 1.1209023798539786,
+     "dispersione_fra_semi_20": 0.047879358819228175
+    },
+    {
+     "profilo": "d435i",
+     "d_m": 1,
+     "rapporto_20": 1.031378248705791,
+     "rapporto_80": 1.1347966631338662,
+     "dispersione_fra_semi_20": 0.044742488069761284
+    },
+    {
+     "profilo": "d435i",
+     "d_m": 2,
+     "rapporto_20": 1.0092979808845177,
+     "rapporto_80": 1.1372242162215482,
+     "dispersione_fra_semi_20": 0.0381812952200272
+    },
+    {
+     "profilo": "d435i",
+     "d_m": 3,
+     "rapporto_20": 1.017941626972348,
+     "rapporto_80": 1.1387533179012308,
+     "dispersione_fra_semi_20": 0.05067206576787543
+    },
+    {
+     "profilo": "d435i",
+     "d_m": 4,
+     "rapporto_20": 1.0063299854708074,
+     "rapporto_80": 1.1319367031809437,
+     "dispersione_fra_semi_20": 0.05616051631358854
+    },
+    {
+     "profilo": "g335",
+     "d_m": 1,
+     "rapporto_20": 0.9895606118257054,
+     "rapporto_80": 1.1357361558908317,
+     "dispersione_fra_semi_20": 0.04059960357928457
+    },
+    {
+     "profilo": "g335",
+     "d_m": 2,
+     "rapporto_20": 1.016644614160885,
+     "rapporto_80": 1.1450190064631354,
+     "dispersione_fra_semi_20": 0.045953186166697434
+    },
+    {
+     "profilo": "g335",
+     "d_m": 3,
+     "rapporto_20": 0.9917800493215149,
+     "rapporto_80": 1.1409838301544375,
+     "dispersione_fra_semi_20": 0.0598150718747495
+    },
+    {
+     "profilo": "g335",
+     "d_m": 4,
+     "rapporto_20": 1.0175536831838259,
+     "rapporto_80": 1.1394702738381652,
+     "dispersione_fra_semi_20": 0.04617747679601859
+    }
+   ]
+  }
+ ]
+}

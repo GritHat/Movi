@@ -1,0 +1,71 @@
+[
+ {
+  "caso": "tr20",
+  "N": 20,
+  "si_muove_entro_1_s_dal_primo_gruppo": 20,
+  "mai": 0,
+  "mai_visto": 0,
+  "IC95": [
+   0.839,
+   1.0
+  ],
+  "ritardo_s_mediana_max": [
+   0.333333,
+   0.333333
+  ],
+  "quota_misure_tagliate_mediana": 0.0
+ },
+ {
+  "caso": "tr30",
+  "N": 20,
+  "si_muove_entro_1_s_dal_primo_gruppo": 20,
+  "mai": 0,
+  "mai_visto": 0,
+  "IC95": [
+   0.839,
+   1.0
+  ],
+  "ritardo_s_mediana_max": [
+   0.4,
+   0.466667
+  ],
+  "quota_misure_tagliate_mediana": 0.0
+ },
+ {
+  "caso": "tr40",
+  "N": 20,
+  "si_muove_entro_1_s_dal_primo_gruppo": 20,
+  "mai": 0,
+  "mai_visto": 0,
+  "IC95": [
+   0.839,
+   1.0
+  ],
+  "ritardo_s_mediana_max": [
+   0.466667,
+   0.533333
+  ],
+  "quota_misure_tagliate_mediana": 0.0
+ },
+ {
+  "caso": "avv",
+  "N": 20,
+  "si_muove_entro_1_s_dal_primo_gruppo": 4,
+  "mai": 0,
+  "mai_visto": 0,
+  "IC95": [
+   0.081,
+   0.416
+  ],
+  "ritardo_s_mediana_max": [
+   1.066667,
+   1.333333
+  ],
+  "quota_misure_tagliate_mediana": 0.0,
+  "quota_fotogrammi_si_muove_per_distanza": {
+   "3,5-4,3": 0.36923076923076925,
+   "2,5-3,5": 1.0,
+   "1,8-2,5": 1.0
+  }
+ }
+]

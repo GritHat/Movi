@@ -1,0 +1,16 @@
+{
+  "larghezza": 160,
+  "altezza": 120,
+  "fx": 84.30241002247699,
+  "fy": 84.30241002247699,
+  "cx": 79.5,
+  "cy": 59.5,
+  "fps": 15.0,
+  "sensore": "esempio ideale del formato (non è un modello di sensore)",
+  "posa": {
+    "altezza_m": 1.2,
+    "inclinazione_gradi": 15.0
+  },
+  "origine": "f10-dati/03-infrastruttura/crea_esempio_sequenza.py",
+  "licenza": "nessun vincolo (dati generati)"
+}

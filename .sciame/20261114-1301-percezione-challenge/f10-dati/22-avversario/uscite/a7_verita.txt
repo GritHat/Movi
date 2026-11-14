@@ -1,0 +1,9 @@
+d435i_nom__pannello_a12__s00: fotogramma; x, z veri; frazione_visibile della verità; la mia (marcia sul raggio); scarto; pixel sagoma verità/miei; nell'immagine: pixel validi a ±0,15 m dalla capsula dentro la mia parte visibile / dentro la parte che dico nascosta
+  5; -1.337, 2.322; 1.0000; 1.0000; +0.0000; 6760/6621; 6465 su 6621 / 0 su 0
+  14; -0.669, 2.299; 0.5915; 0.5923; +0.0008; 6259/6113; 3381 su 3621 / 10 su 2492
+  16; -0.511, 2.312; 0.1909; 0.1841; -0.0068; 6086/5942; 864 su 1094 / 6 su 4848
+  17; -0.437, 2.319; 0.0117; 0.0019; -0.0098; 6008/5875; 1 su 11 / 4 su 5864
+  23; -0.000, 2.318; 0.0000; 0.0000; +0.0000; 5919/5778; 0 su 0 / 0 su 5778
+  29; +0.436, 2.290; 0.0271; 0.0168; -0.0103; 6160/6018; 18 su 101 / 9 su 5917
+  31; +0.589, 2.296; 0.3937; 0.3914; -0.0023; 6210/6073; 2059 su 2377 / 7 su 3696
+ombra del pannello sull'anello a 2.45 m (codici {'0': 'suolo visibile da entrambi gli imager (misurabile)', '1': "in ombra: coperto da un ostacolo fisso per l'imager di riferimento (sinistro)", '2': "non osservabile: fuori dall'immagine o fuori portata", '3': "sotto l'impronta di un ostacolo che tocca il suolo", '4': 'banda stereo: visibile dal sinistro, ma coperto o fuori campo per il destro (nessun dato atteso)'}): celle in ombra per la verità 32 (azimut -15.5…+15.5), per il mio conto 32 (azimut -15.5…+15.5); celle discordi 0; riga: 0000111111111111111111111111111111110000

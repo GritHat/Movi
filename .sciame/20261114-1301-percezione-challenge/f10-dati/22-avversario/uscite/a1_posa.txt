@@ -1,0 +1,44 @@
+== A1a/b: d435i_nom__pavimento_vuoto, inclinazione creduta = 15° + e ==
+e (gradi); dh (cm); libero medio; occupato medio; tracce confermate
++0.0; +0; 1568 (100 % di e=0); 19; 28  (N=30 fot.)
++0.5; +0; 1603 (102 % di e=0); 3; 3  (N=30 fot.)
+-0.5; +0; 1459 (93 % di e=0); 64; 81  (N=30 fot.)
++1.0; +0; 1564 (100 % di e=0); 0; 0  (N=30 fot.)
+-1.0; +0; 1203 (77 % di e=0); 175; 121  (N=30 fot.)
++2.0; +0; 992 (63 % di e=0); 0; 0  (N=30 fot.)
+-2.0; +0; 495 (32 % di e=0); 761; 42  (N=30 fot.)
++3.0; +0; 95 (6 % di e=0); 0; 0  (N=30 fot.)
+-3.0; +0; 2 (0 % di e=0); 1438; 1  (N=30 fot.)
++0.0; +3; 1327 (85 % di e=0); 113; 126  (N=30 fot.)
++0.0; -3; 1578 (101 % di e=0); 1; 0  (N=30 fot.)
+
+== A1c: d435i_nom__scatola15_2p0m (scatola 15 cm, x ±0,075, z 2,00–2,15) ==
+e; fotogrammi con almeno una cella dell'impronta «libero»; stati dell'impronta all'ultimo fotogramma; libero medio; occupato medio
++0.0; 0 su 10; celle [(87, 20), (87, 21), (88, 20), (88, 21), (89, 20), (89, 21), (90, 20), (90, 21), (91, 20), (91, 21), (92, 20), (92, 21)] → ['occupato', 'ombra', 'occupato', 'occupato', 'occupato', 'occupato', 'occupato', 'occupato', 'occupato', 'ombra', 'occupato', 'occupato']; 1514; 28
++1.0; 1 su 10; celle [(87, 20), (87, 21), (88, 20), (88, 21), (89, 20), (89, 21), (90, 20), (90, 21), (91, 20), (91, 21), (92, 20), (92, 21)] → ['occupato', 'ombra', 'occupato', 'occupato', 'occupato', 'occupato', 'occupato', 'ombra', 'occupato', 'ombra', 'occupato', 'ombra']; 1502; 13
++2.0; 2 su 10; celle [(87, 20), (87, 21), (88, 20), (88, 21), (89, 20), (89, 21), (90, 20), (90, 21), (91, 20), (91, 21), (92, 20), (92, 21)] → ['non_oss', 'non_oss', 'occupato', 'ombra', 'occupato', 'ombra', 'occupato', 'ombra', 'occupato', 'ombra', 'ombra', 'ombra']; 960; 10
++2.5; 9 su 10; celle [(87, 20), (87, 21), (88, 20), (88, 21), (89, 20), (89, 21), (90, 20), (90, 21), (91, 20), (91, 21), (92, 20), (92, 21)] → ['non_oss', 'non_oss', 'ombra', 'ombra', 'ombra', 'ombra', 'occupato', 'ombra', 'occupato', 'ombra', 'LIBERO', 'LIBERO']; 434; 6
++3.0; 10 su 10; celle [(87, 20), (87, 21), (88, 20), (88, 21), (89, 20), (89, 21), (90, 20), (90, 21), (91, 20), (91, 21), (92, 20), (92, 21)] → ['LIBERO', 'LIBERO', 'LIBERO', 'LIBERO', 'ombra', 'ombra', 'ombra', 'ombra', 'non_oss', 'non_oss', 'LIBERO', 'LIBERO']; 107; 2
++3.5; 10 su 10; celle [(87, 20), (87, 21), (88, 20), (88, 21), (89, 20), (89, 21), (90, 20), (90, 21), (91, 20), (91, 21), (92, 20), (92, 21)] → ['LIBERO', 'LIBERO', 'LIBERO', 'LIBERO', 'LIBERO', 'LIBERO', 'LIBERO', 'non_oss', 'LIBERO', 'non_oss', 'LIBERO', 'non_oss']; 26; 0
++4.0; 10 su 10; celle [(87, 20), (87, 21), (88, 20), (88, 21), (89, 20), (89, 21), (90, 20), (90, 21), (91, 20), (91, 21), (92, 20), (92, 21)] → ['LIBERO', 'non_oss', 'LIBERO', 'non_oss', 'LIBERO', 'LIBERO', 'LIBERO', 'non_oss', 'LIBERO', 'non_oss', 'LIBERO', 'non_oss']; 14; 0
+
+== A1d: scena a mano 848×480 senza rumore, gradino/scatola alta H a z = 2,55 m, largo 0,30 m ==
+H (cm); e; stati delle celle del fronte (x ±0,14, z 2,55); celle libere totali; stato del suolo accanto (x=0,6 z=2,55)
+10; +0.0; {'occupato': 7}; 1590; LIBERO
+10; +0.5; {'non_oss': 2, 'occupato': 5}; 1612; LIBERO
+10; +1.0; {'LIBERO': 7}; 1630; LIBERO
+10; +1.5; {'LIBERO': 7}; 926; non_oss
+10; +2.0; {'LIBERO': 7}; 404; non_oss
+10; +2.5; {'LIBERO': 7}; 12; non_oss
+12; +0.0; {'occupato': 7}; 1590; LIBERO
+12; +0.5; {'occupato': 7}; 1604; LIBERO
+12; +1.0; {'non_oss': 2, 'occupato': 5}; 1610; LIBERO
+12; +1.5; {'LIBERO': 7}; 926; non_oss
+12; +2.0; {'LIBERO': 7}; 404; non_oss
+12; +2.5; {'LIBERO': 7}; 12; non_oss
+15; +0.0; {'occupato': 7}; 1590; LIBERO
+15; +0.5; {'occupato': 7}; 1604; LIBERO
+15; +1.0; {'occupato': 7}; 1604; LIBERO
+15; +1.5; {'occupato': 7}; 918; non_oss
+15; +2.0; {'LIBERO': 7}; 404; non_oss
+15; +2.5; {'LIBERO': 7}; 12; non_oss

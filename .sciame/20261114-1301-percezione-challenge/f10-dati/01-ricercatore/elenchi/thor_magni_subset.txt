@@ -1,0 +1,15 @@
+# https://zenodo.org/api/records/7974709/files/THOR-Magni_ICRA_Subset.zip/content
+# dimensione archivio 505946382 byte; voci 33; dimensione estratta 1128289858 byte; byte letti 3000000
+# estensioni: {'(cartella o senza estensione)': 4, 'md': 1, 'csv': 22, 'mp4': 1, 'pcd': 1, 'json': 1, 'txt': 1, 'png': 1, 'py': 1}
+           0 THOR-Magni_ICRA_Subset/
+        1424 THOR-Magni_ICRA_Subset/README.md
+           0 THOR-Magni_ICRA_Subset/human_motion/
+    54276913 THOR-Magni_ICRA_Subset/human_motion/THOR-Magni_130522_SC2_R2.csv
+           0 THOR-Magni_ICRA_Subset/lidar_data/
+   160431745 THOR-Magni_ICRA_Subset/lidar_data/pcd-visualize-demo.mp4
+           0 THOR-Magni_ICRA_Subset/lidar_data/sample/
+    10192905 THOR-Magni_ICRA_Subset/lidar_data/sample/159040.649.pcd
+         619 THOR-Magni_ICRA_Subset/lidar_data/sample/manual_viewpoint.json
+          28 THOR-Magni_ICRA_Subset/lidar_data/sample/requirements.txt
+     1199545 THOR-Magni_ICRA_Subset/lidar_data/sample/lidar-pcd.png
+        3371 THOR-Magni_ICRA_Subset/lidar_data/sample/visualize_pcd.py

@@ -1,0 +1,690 @@
+{
+ "sequenze": {
+  "depthtrack_human02_indoor": {
+   "fotogrammi": 1740,
+   "durata_s": 57.967,
+   "frequenza_mediana_hz": 30.0,
+   "intervallo_max_s": 0.0333,
+   "quota_intervalli_oltre_1_5_volte_la_mediana": 0.0,
+   "pixel_validi_per_fotogramma": {
+    "min": 0.7263,
+    "mediana": 0.7712,
+    "max": 0.8069
+   },
+   "profondita_mm": {
+    "min": 110,
+    "mediana_delle_mediane": 4162,
+    "max": 65521
+   },
+   "istogramma_distanze": {
+    "bordi_mm": [
+     1,
+     500,
+     1000,
+     1500,
+     2000,
+     2500,
+     3000,
+     4000,
+     5000,
+     7000,
+     10000,
+     "oltre"
+    ],
+    "quota": [
+     0.0034,
+     0.0153,
+     0.0543,
+     0.1425,
+     0.142,
+     0.0404,
+     0.0969,
+     0.0543,
+     0.111,
+     0.1513,
+     0.1886
+    ]
+   },
+   "quota_validi_entro_3_m": 0.3978,
+   "verita": {
+    "fotogrammi_annotati": 1740,
+    "identita": 1,
+    "presenze_nascoste": 8,
+    "tratti_nascosti": 3,
+    "tratti_nascosti_con_ricomparsa": 3,
+    "durata_tratti_con_ricomparsa_s": {
+     "min": 0.03,
+     "mediana": 0.1,
+     "max": 0.13
+    }
+   },
+   "byte_su_disco": 802693841,
+   "controllo_infrastruttura": {
+    "errori": [],
+    "avvisi": [
+     "profondita/: 99° percentile 24502: oltre 20 m; forse l'unità non è il millimetro (per esempio 1/5000 di metro, o 0,1 mm)"
+    ],
+    "note": [
+     "meta: 640x360 px, 30.0 fps, campo orizzontale 69.4°, sensore «Intel RealSense D415 (stereo attivo a infrarossi)», posa None",
+     "tempi: 1740 fotogrammi, durata 57.967 s, passo mediano 33.3 ms, massimo 33.3 ms",
+     "profondità (tutti): senza dato 23.0%; valori validi: 1° percentile 799 mm, mediana 4092 mm, 99° 24502 mm, massimo 65521 mm",
+     "verità: 1740 fotogrammi annotati, 1 soggetti (bersaglio), 8 presenze nascoste, 3 passaggi da visibile a nascosto, 0 ostacoli"
+    ]
+   },
+   "primi_fotogrammi_griglia_8px": {
+    "fotogrammi": 120,
+    "pixel_sempre_validi": 0.1617,
+    "pixel_mai_validi": 0.0872,
+    "pixel_intermittenti": 0.7511,
+    "scarto_tipo_nel_tempo_mm_mediana": 275.42,
+    "scarto_tipo_nel_tempo_mm_90pct": 1800.84
+   }
+  },
+  "princeton_child_no1": {
+   "fotogrammi": 164,
+   "durata_s": 8.042,
+   "frequenza_mediana_hz": 29.97,
+   "intervallo_max_s": 0.0667,
+   "quota_intervalli_oltre_1_5_volte_la_mediana": 0.4785,
+   "pixel_validi_per_fotogramma": {
+    "min": 0.7308,
+    "mediana": 0.7397,
+    "max": 0.7531
+   },
+   "profondita_mm": {
+    "min": 1223,
+    "mediana_delle_mediane": 3341,
+    "max": 9757
+   },
+   "istogramma_distanze": {
+    "bordi_mm": [
+     1,
+     500,
+     1000,
+     1500,
+     2000,
+     2500,
+     3000,
+     4000,
+     5000,
+     7000,
+     10000,
+     "oltre"
+    ],
+    "quota": [
+     0.0,
+     0.0,
+     0.1046,
+     0.1405,
+     0.1423,
+     0.0858,
+     0.0633,
+     0.0026,
+     0.426,
+     0.0349,
+     0.0
+    ]
+   },
+   "quota_validi_entro_3_m": 0.4732,
+   "verita": {
+    "fotogrammi_annotati": 164,
+    "identita": 1,
+    "presenze_nascoste": 0,
+    "tratti_nascosti": 0,
+    "tratti_nascosti_con_ricomparsa": 0,
+    "durata_tratti_con_ricomparsa_s": null
+   },
+   "byte_su_disco": 100836328,
+   "controllo_infrastruttura": {
+    "errori": [],
+    "avvisi": [],
+    "note": [
+     "meta: 640x480 px, 30.0 fps, campo orizzontale 58.1°, sensore «Microsoft Kinect v1 (luce strutturata) via OpenNI; profondità registrata sul colore (non verificato)», posa None",
+     "tempi: 164 fotogrammi, durata 8.042 s, passo mediano 33.4 ms, massimo 66.7 ms",
+     "profondità (tutti): senza dato 26.0%; valori validi: 1° percentile 1259 mm, mediana 3341 mm, 99° 9489 mm, massimo 9757 mm",
+     "verità: 164 fotogrammi annotati, 1 soggetti (bersaglio), 0 presenze nascoste, 0 passaggi da visibile a nascosto, 0 ostacoli"
+    ]
+   },
+   "primi_fotogrammi_griglia_8px": {
+    "fotogrammi": 120,
+    "pixel_sempre_validi": 0.556,
+    "pixel_mai_validi": 0.1517,
+    "pixel_intermittenti": 0.2923,
+    "scarto_tipo_nel_tempo_mm_mediana": 23.44,
+    "scarto_tipo_nel_tempo_mm_90pct": 71.24
+   }
+  },
+  "princeton_face_occ5": {
+   "fotogrammi": 330,
+   "durata_s": 16.952,
+   "frequenza_mediana_hz": 14.98,
+   "intervallo_max_s": 0.2002,
+   "quota_intervalli_oltre_1_5_volte_la_mediana": 0.0091,
+   "pixel_validi_per_fotogramma": {
+    "min": 0.6193,
+    "mediana": 0.6365,
+    "max": 0.6967
+   },
+   "profondita_mm": {
+    "min": 510,
+    "mediana_delle_mediane": 3621,
+    "max": 9757
+   },
+   "istogramma_distanze": {
+    "bordi_mm": [
+     1,
+     500,
+     1000,
+     1500,
+     2000,
+     2500,
+     3000,
+     4000,
+     5000,
+     7000,
+     10000,
+     "oltre"
+    ],
+    "quota": [
+     0.0,
+     0.1839,
+     0.1371,
+     0.0,
+     0.0001,
+     0.0162,
+     0.2587,
+     0.1659,
+     0.1707,
+     0.0674,
+     0.0
+    ]
+   },
+   "quota_validi_entro_3_m": 0.3374,
+   "verita": {
+    "fotogrammi_annotati": 330,
+    "identita": 1,
+    "presenze_nascoste": 14,
+    "tratti_nascosti": 1,
+    "tratti_nascosti_con_ricomparsa": 1,
+    "durata_tratti_con_ricomparsa_s": {
+     "min": 0.7,
+     "mediana": 0.7,
+     "max": 0.7
+    }
+   },
+   "byte_su_disco": 202899663,
+   "controllo_infrastruttura": {
+    "errori": [],
+    "avvisi": [
+     "tempi.csv: ci sono salti (passo massimo 200.2 ms, 1 oltre 2,5 volte il mediano)"
+    ],
+    "note": [
+     "meta: 640x480 px, 15.0 fps, campo orizzontale 58.1°, sensore «Microsoft Kinect v1 (luce strutturata) via OpenNI; profondità registrata sul colore (non verificato)», posa None",
+     "tempi: 330 fotogrammi, durata 16.952 s, passo mediano 66.7 ms, massimo 200.2 ms",
+     "profondità (tutti): senza dato 35.7%; valori validi: 1° percentile 814 mm, mediana 3621 mm, 99° 8995 mm, massimo 9757 mm",
+     "verità: 330 fotogrammi annotati, 1 soggetti (bersaglio), 14 presenze nascoste, 1 passaggi da visibile a nascosto, 0 ostacoli"
+    ]
+   },
+   "primi_fotogrammi_griglia_8px": {
+    "fotogrammi": 120,
+    "pixel_sempre_validi": 0.48,
+    "pixel_mai_validi": 0.234,
+    "pixel_intermittenti": 0.286,
+    "scarto_tipo_nel_tempo_mm_mediana": 26.12,
+    "scarto_tipo_nel_tempo_mm_90pct": 94.29
+   }
+  },
+  "princeton_new_ex_occ4": {
+   "fotogrammi": 51,
+   "durata_s": 2.536,
+   "frequenza_mediana_hz": 14.98,
+   "intervallo_max_s": 0.0667,
+   "quota_intervalli_oltre_1_5_volte_la_mediana": 0.0,
+   "pixel_validi_per_fotogramma": {
+    "min": 0.5407,
+    "mediana": 0.6159,
+    "max": 0.6479
+   },
+   "profondita_mm": {
+    "min": 1626,
+    "mediana_delle_mediane": 4296,
+    "max": 9757
+   },
+   "istogramma_distanze": {
+    "bordi_mm": [
+     1,
+     500,
+     1000,
+     1500,
+     2000,
+     2500,
+     3000,
+     4000,
+     5000,
+     7000,
+     10000,
+     "oltre"
+    ],
+    "quota": [
+     0.0,
+     0.0,
+     0.0,
+     0.0521,
+     0.0699,
+     0.0406,
+     0.2859,
+     0.311,
+     0.1568,
+     0.0838,
+     0.0
+    ]
+   },
+   "quota_validi_entro_3_m": 0.1625,
+   "verita": {
+    "fotogrammi_annotati": 51,
+    "identita": 1,
+    "presenze_nascoste": 3,
+    "tratti_nascosti": 1,
+    "tratti_nascosti_con_ricomparsa": 1,
+    "durata_tratti_con_ricomparsa_s": {
+     "min": 0.17,
+     "mediana": 0.17,
+     "max": 0.17
+    }
+   },
+   "byte_su_disco": 31358193,
+   "controllo_infrastruttura": {
+    "errori": [],
+    "avvisi": [],
+    "note": [
+     "meta: 640x480 px, 15.0 fps, campo orizzontale 58.1°, sensore «Microsoft Kinect v1 (luce strutturata) via OpenNI; profondità registrata sul colore (non verificato)», posa None",
+     "tempi: 51 fotogrammi, durata 2.536 s, passo mediano 66.7 ms, massimo 66.7 ms",
+     "profondità (tutti): senza dato 39.1%; valori validi: 1° percentile 1795 mm, mediana 4243 mm, 99° 9489 mm, massimo 9757 mm",
+     "verità: 51 fotogrammi annotati, 1 soggetti (bersaglio), 3 presenze nascoste, 1 passaggi da visibile a nascosto, 0 ostacoli"
+    ]
+   },
+   "primi_fotogrammi_griglia_8px": {
+    "fotogrammi": 51,
+    "pixel_sempre_validi": 0.4152,
+    "pixel_mai_validi": 0.1681,
+    "pixel_intermittenti": 0.4167,
+    "scarto_tipo_nel_tempo_mm_mediana": 35.68,
+    "scarto_tipo_nel_tempo_mm_90pct": 1348.63
+   }
+  },
+  "realsense_stairs": {
+   "fotogrammi": 146,
+   "durata_s": 10.223,
+   "frequenza_mediana_hz": 21.93,
+   "intervallo_max_s": 0.5732,
+   "quota_intervalli_oltre_1_5_volte_la_mediana": 0.2621,
+   "pixel_validi_per_fotogramma": {
+    "min": 0.6005,
+    "mediana": 0.6141,
+    "max": 0.6232
+   },
+   "profondita_mm": {
+    "min": 259,
+    "mediana_delle_mediane": 791,
+    "max": 63590
+   },
+   "istogramma_distanze": {
+    "bordi_mm": [
+     1,
+     500,
+     1000,
+     1500,
+     2000,
+     2500,
+     3000,
+     4000,
+     5000,
+     7000,
+     10000,
+     "oltre"
+    ],
+    "quota": [
+     0.045,
+     0.6431,
+     0.1708,
+     0.0662,
+     0.0315,
+     0.0092,
+     0.032,
+     0.0017,
+     0.0,
+     0.0002,
+     0.0004
+    ]
+   },
+   "quota_validi_entro_3_m": 0.9658,
+   "verita": null,
+   "byte_su_disco": 269128785,
+   "controllo_infrastruttura": {
+    "errori": [],
+    "avvisi": [
+     "tempi.csv: il passo mediano (45.6 ms) non corrisponde a fps = 30.0 (attesi 33.3 ms)",
+     "tempi.csv: ci sono salti (passo massimo 573.2 ms, 18 oltre 2,5 volte il mediano)"
+    ],
+    "note": [
+     "meta: 1280x720 px, 30.0 fps, campo orizzontale 90.4°, sensore «Intel RealSense 435 (stereo attivo a infrarossi)», posa None",
+     "tempi: 146 fotogrammi, durata 10.223 s, passo mediano 45.6 ms, massimo 573.2 ms",
+     "profondità (tutti): senza dato 38.6%; valori validi: 1° percentile 456 mm, mediana 790 mm, 99° 3811 mm, massimo 63590 mm",
+     "verita.json: assente (ammesso: senza verità la misura è solo descrittiva)"
+    ]
+   },
+   "primi_fotogrammi_griglia_8px": {
+    "fotogrammi": 120,
+    "pixel_sempre_validi": 0.1728,
+    "pixel_mai_validi": 0.0594,
+    "pixel_intermittenti": 0.7678,
+    "scarto_tipo_nel_tempo_mm_mediana": 4.96,
+    "scarto_tipo_nel_tempo_mm_90pct": 8.63
+   }
+  },
+  "realsense_stands_still": {
+   "fotogrammi": 229,
+   "durata_s": 7.601,
+   "frequenza_mediana_hz": 29.95,
+   "intervallo_max_s": 0.0334,
+   "quota_intervalli_oltre_1_5_volte_la_mediana": 0.0,
+   "pixel_validi_per_fotogramma": {
+    "min": 0.5748,
+    "mediana": 0.5796,
+    "max": 0.5884
+   },
+   "profondita_mm": {
+    "min": 129,
+    "mediana_delle_mediane": 349,
+    "max": 64437
+   },
+   "istogramma_distanze": {
+    "bordi_mm": [
+     1,
+     500,
+     1000,
+     1500,
+     2000,
+     2500,
+     3000,
+     4000,
+     5000,
+     7000,
+     10000,
+     "oltre"
+    ],
+    "quota": [
+     0.9955,
+     0.0007,
+     0.0003,
+     0.0001,
+     0.0003,
+     0.0004,
+     0.0008,
+     0.0001,
+     0.0001,
+     0.0002,
+     0.0015
+    ]
+   },
+   "quota_validi_entro_3_m": 0.9973,
+   "verita": null,
+   "byte_su_disco": 105556502,
+   "controllo_infrastruttura": {
+    "errori": [],
+    "avvisi": [],
+    "note": [
+     "meta: 640x360 px, 30.0 fps, campo orizzontale 89.5°, sensore «Intel RealSense D435I (stereo attivo a infrarossi)», posa None",
+     "tempi: 229 fotogrammi, durata 7.601 s, passo mediano 33.4 ms, massimo 33.4 ms",
+     "profondità (tutti): senza dato 42.0%; valori validi: 1° percentile 329 mm, mediana 349 mm, 99° 368 mm, massimo 64437 mm",
+     "verita.json: assente (ammesso: senza verità la misura è solo descrittiva)"
+    ]
+   },
+   "primi_fotogrammi_griglia_8px": {
+    "fotogrammi": 120,
+    "pixel_sempre_validi": 0.565,
+    "pixel_mai_validi": 0.3694,
+    "pixel_intermittenti": 0.0656,
+    "scarto_tipo_nel_tempo_mm_mediana": 0.36,
+    "scarto_tipo_nel_tempo_mm_90pct": 0.5
+   }
+  },
+  "realsense_structured": {
+   "fotogrammi": 127,
+   "durata_s": 4.212,
+   "frequenza_mediana_hz": 29.92,
+   "intervallo_max_s": 0.0334,
+   "quota_intervalli_oltre_1_5_volte_la_mediana": 0.0,
+   "pixel_validi_per_fotogramma": {
+    "min": 0.8958,
+    "mediana": 0.9046,
+    "max": 0.9117
+   },
+   "profondita_mm": {
+    "min": 174,
+    "mediana_delle_mediane": 541,
+    "max": 3884
+   },
+   "istogramma_distanze": {
+    "bordi_mm": [
+     1,
+     500,
+     1000,
+     1500,
+     2000,
+     2500,
+     3000,
+     4000,
+     5000,
+     7000,
+     10000,
+     "oltre"
+    ],
+    "quota": [
+     0.2915,
+     0.7085,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "quota_validi_entro_3_m": 1.0,
+   "verita": null,
+   "byte_su_disco": 78047847,
+   "controllo_infrastruttura": {
+    "errori": [],
+    "avvisi": [],
+    "note": [
+     "meta: 640x480 px, 30.0 fps, campo orizzontale 67.9°, sensore «Intel RealSense SR300 (NON stereo attivo: «Coded-Light Depth Sensor» (luce codificata))», posa None",
+     "tempi: 127 fotogrammi, durata 4.212 s, passo mediano 33.4 ms, massimo 33.4 ms",
+     "profondità (tutti): senza dato 9.6%; valori validi: 1° percentile 347 mm, mediana 539 mm, 99° 805 mm, massimo 3718 mm",
+     "verita.json: assente (ammesso: senza verità la misura è solo descrittiva)"
+    ]
+   },
+   "primi_fotogrammi_griglia_8px": {
+    "fotogrammi": 120,
+    "pixel_sempre_validi": 0.5887,
+    "pixel_mai_validi": 0.0606,
+    "pixel_intermittenti": 0.3506,
+    "scarto_tipo_nel_tempo_mm_mediana": 2.44,
+    "scarto_tipo_nel_tempo_mm_90pct": 4.62
+   }
+  },
+  "tum_fr3_walking_static": {
+   "fotogrammi": 723,
+   "durata_s": 24.932,
+   "frequenza_mediana_hz": 31.0,
+   "intervallo_max_s": 0.0682,
+   "quota_intervalli_oltre_1_5_volte_la_mediana": 0.0388,
+   "pixel_validi_per_fotogramma": {
+    "min": 0.4936,
+    "mediana": 0.5877,
+    "max": 0.7274
+   },
+   "profondita_mm": {
+    "min": 482,
+    "mediana_delle_mediane": 2958,
+    "max": 9870
+   },
+   "istogramma_distanze": {
+    "bordi_mm": [
+     1,
+     500,
+     1000,
+     1500,
+     2000,
+     2500,
+     3000,
+     4000,
+     5000,
+     7000,
+     10000,
+     "oltre"
+    ],
+    "quota": [
+     0.0,
+     0.0087,
+     0.0455,
+     0.1451,
+     0.1529,
+     0.1933,
+     0.3499,
+     0.0028,
+     0.0,
+     0.1018,
+     0.0
+    ]
+   },
+   "quota_validi_entro_3_m": 0.5455,
+   "verita": null,
+   "byte_su_disco": 444362107,
+   "controllo_infrastruttura": {
+    "errori": [],
+    "avvisi": [],
+    "note": [
+     "meta: 640x480 px, 30.0 fps, campo orizzontale 61.7°, sensore «Microsoft Kinect v1 (luce strutturata), profondità registrata sul colore dal driver OpenNI», posa {'altezza_m': 1.4195, 'inclinazione_gradi': 8.245}",
+     "tempi: 723 fotogrammi, durata 24.932 s, passo mediano 32.3 ms, massimo 68.2 ms",
+     "profondità (tutti): senza dato 39.2%; valori validi: 1° percentile 1025 mm, mediana 2933 mm, 99° 9331 mm, massimo 9870 mm",
+     "confronto con il suolo piano previsto dalla posa (solo descrittivo): 6.3% dei pixel validi entro ±5%, 0.7% oltre il suolo di più del 10%",
+     "verita.json: assente (ammesso: senza verità la misura è solo descrittiva)"
+    ]
+   },
+   "primi_fotogrammi_griglia_8px": {
+    "fotogrammi": 120,
+    "pixel_sempre_validi": 0.3996,
+    "pixel_mai_validi": 0.1654,
+    "pixel_intermittenti": 0.435,
+    "scarto_tipo_nel_tempo_mm_mediana": 130.3,
+    "scarto_tipo_nel_tempo_mm_90pct": 484.77
+   }
+  }
+ },
+ "tracce": {
+  "thor_exp1_run1": {
+   "istanti": 33897,
+   "frequenza_hz": 100.0,
+   "durata_s": 338.96,
+   "persone": [
+    "Helmet_2",
+    "Helmet_3",
+    "Helmet_4",
+    "Helmet_5",
+    "Helmet_6",
+    "Helmet_7",
+    "Helmet_8",
+    "Helmet_9",
+    "Helmet_10"
+   ],
+   "quota_tracciata_per_persona": [
+    0.407,
+    0.155,
+    0.295,
+    0.271,
+    0.348,
+    0.346,
+    0.366,
+    0.755,
+    0.428
+   ],
+   "tratti_continui": {
+    "numero": 655,
+    "almeno_3_s": 84,
+    "almeno_6_s": 64,
+    "almeno_10_s": 42,
+    "mediana_s": 0.07,
+    "max_s": 89.5
+   },
+   "velocita_m_s": {
+    "mediana_sopra_0_2": 0.976,
+    "p95": 1.283,
+    "p99_9": 1.609
+   },
+   "area_m": {
+    "x": [
+     -5.73,
+     6.51
+    ],
+    "y": [
+     -6.02,
+     8.37
+    ]
+   }
+  },
+  "thor_exp3_run1": {
+   "istanti": 31507,
+   "frequenza_hz": 100.0,
+   "durata_s": 315.06,
+   "persone": [
+    "Helmet_2",
+    "Helmet_3",
+    "Helmet_4",
+    "Helmet_5",
+    "Helmet_6",
+    "Helmet_7",
+    "Helmet_8",
+    "Helmet_9",
+    "Helmet_10"
+   ],
+   "quota_tracciata_per_persona": [
+    0.413,
+    0.415,
+    0.656,
+    0.131,
+    0.374,
+    0.349,
+    0.483,
+    0.385,
+    0.644
+   ],
+   "tratti_continui": {
+    "numero": 668,
+    "almeno_3_s": 95,
+    "almeno_6_s": 67,
+    "almeno_10_s": 36,
+    "mediana_s": 0.14,
+    "max_s": 45.8
+   },
+   "velocita_m_s": {
+    "mediana_sopra_0_2": 0.99,
+    "p95": 1.287,
+    "p99_9": 1.676
+   },
+   "area_m": {
+    "x": [
+     -5.57,
+     6.76
+    ],
+    "y": [
+     -6.15,
+     9.58
+    ]
+   }
+  }
+ }
+}

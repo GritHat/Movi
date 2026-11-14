@@ -1,0 +1,13 @@
+ESITO visione-P1 [riletto dal disco] regge : σ misurato / k_nominale·z², 80 % centrale, 12 celle: da 0.991 a 1.027; d455 1 m: 2.0 mm (atteso 2.0); d455 2 m: 8.1 mm (atteso 7.9); d455 3 m: 17.7 mm (atteso 17.9); d455 4 m: 32.1 mm (atteso 31.8); d435i 1 m: 3.8 mm (atteso 3.8); d435i 2 m: 15.0 mm (atteso 15.1); d435i 3 m: 34.5 mm (atteso 34.0); d435i 4 m: 60.8 mm (atteso 60.4); g335 1 m: 4.0 mm (atteso 4.0); g335 2 m: 15.9 mm (atteso 16.0); g335 3 m: 36.6 mm (atteso 36.0); g335 4 m: 64.8 mm (atteso 64.0)
+ESITO visione-P2 [riletto dal disco] SMENTITA : σ misurato / k_limite·z², 80 % centrale, 4 celle: da 1.125 a 1.144
+ESITO visione-P2bis [riletto dal disco] SMENTITA : limite: 20 % centrale / k·z² da 0.992 a 1.137; 80 % centrale / (1,13·k·z²) da 0.996 a 1.013; d435i 1 m: 11.2 mm (atteso 10.0); d435i 2 m: 39.7 mm (atteso 40.0); d435i 3 m: 102.3 mm (atteso 90.0); d435i 4 m: 161.4 mm (atteso 160.0)
+ESITO visione-P3 [riletto dal disco] regge : rumore temporale / totale, 16 celle: da 0.596 a 0.624
+ESITO visione-P4 [riletto dal disco] regge : buchi nominale da 0.46 a 0.58 %; limite da 1.84 a 1.98 %; persistenza da 0.685 a 0.737
+ESITO visione-P5 [riletto dal disco] regge : banda al bordo sinistro, misurata − formula: da +0.20 a +0.97 px; d455 nom 1 m: 21 px (formula 20.1); d455 nom 3 m: 7 px (formula 6.7); d435i nom 1 m: 11 px (formula 10.6); d435i nom 3 m: 4 px (formula 3.5); d435i lim 1 m: 24 px (formula 23.1); d435i lim 3 m: 17 px (formula 16.0); g335 nom 1 m: 11 px (formula 10.3); g335 nom 3 m: 4 px (formula 3.4)
+ESITO visione-P11 SMENTITA : a12: 30 passaggi, fotogrammi del tutto nascosti da 6 a 12 (mediana 11), tratto nascosto contiguo in 30 su 30
+ESITO descrittivo-a05 nota : 30 passaggi, fotogrammi del tutto nascosti da 17 a 29 (mediana 25), contigui in 26; fotogrammi prima dell'ombra piena da 21 a 28
+ESITO descrittivo-b nota : 30 passaggi, fotogrammi del tutto nascosti da 59 a 64 (mediana 64), contigui in 30; fotogrammi prima dell'ombra piena da 12 a 16
+ESITO descrittivo-c nota : 4 passaggi, fotogrammi del tutto nascosti da 29 a 36 (mediana 32), contigui in 4; fotogrammi prima dell'ombra piena da 14 a 16
+ESITO descrittivo-d nota : 4 passaggi, fotogrammi del tutto nascosti da 61 a 65 (mediana 64), contigui in 4; fotogrammi prima dell'ombra piena da 15 a 17
+ESITO visione-P13 regge : visibilità di verita.json contro il conto angolare in pianta: 1 fotogrammi discordi su 6170 (0.02 %), il più lontano dal confine a 0.05 cm
+ESITO visione-P14 regge : rigenerate d435i_nom__pavimento_vuoto, d435i_nom__pannello_b__s07, d435i_nom__pannello_a12__s01__filtri: 0 pixel diversi su 16790400
