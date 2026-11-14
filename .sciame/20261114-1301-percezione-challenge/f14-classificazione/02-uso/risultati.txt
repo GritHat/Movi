@@ -1,0 +1,105 @@
+
+== Regioni, stato d'ingresso 1.5 m/s; libreria 6000, prova 6000 (semi distinti), inviluppo 60000 controlli ==
+t = 1 s | disco prudente v_scen*t: 2,5 m/s -> 19.6 m2; 5 m/s -> 78.5 m2
+  etichetta pedone   area R90   0.41 m2, inviluppo   6.74 m2 | copertura del VERO -> pedo: R90 0.904 inv 1.000 | carr: R90 0.963 inv 1.000 | tren: R90 0.997 inv 1.000 |
+  etichetta carrello area R90   0.16 m2, inviluppo   3.53 m2 | copertura del VERO -> pedo: R90 0.704 inv 0.998 | carr: R90 0.899 inv 1.000 | tren: R90 0.982 inv 1.000 |
+  etichetta treno    area R90   0.03 m2, inviluppo   0.29 m2 | copertura del VERO -> pedo: R90 0.239 inv 0.646 | carr: R90 0.321 inv 0.833 | tren: R90 0.923 inv 1.000 |
+     vero pedone  : entro disco 2,5*t 1.000; entro 5*t 1.000; fermo o quasi (<0,3 m dall'ultimo secondo) 0.000
+     vero carrello: entro disco 2,5*t 1.000; entro 5*t 1.000; fermo o quasi (<0,3 m dall'ultimo secondo) 0.000
+     vero treno   : entro disco 2,5*t 1.000; entro 5*t 1.000; fermo o quasi (<0,3 m dall'ultimo secondo) 0.000
+t = 2 s | disco prudente v_scen*t: 2,5 m/s -> 78.5 m2; 5 m/s -> 314.2 m2
+  etichetta pedone   area R90   2.76 m2, inviluppo  46.11 m2 | copertura del VERO -> pedo: R90 0.897 inv 1.000 | carr: R90 0.928 inv 0.998 | tren: R90 0.979 inv 1.000 |
+  etichetta carrello area R90   1.47 m2, inviluppo  30.30 m2 | copertura del VERO -> pedo: R90 0.719 inv 0.989 | carr: R90 0.892 inv 1.000 | tren: R90 0.995 inv 1.000 |
+  etichetta treno    area R90   0.16 m2, inviluppo   0.80 m2 | copertura del VERO -> pedo: R90 0.233 inv 0.360 | carr: R90 0.345 inv 0.473 | tren: R90 0.915 inv 1.000 |
+     vero pedone  : entro disco 2,5*t 1.000; entro 5*t 1.000; fermo o quasi (<0,3 m dall'ultimo secondo) 0.078
+     vero carrello: entro disco 2,5*t 0.999; entro 5*t 1.000; fermo o quasi (<0,3 m dall'ultimo secondo) 0.046
+     vero treno   : entro disco 2,5*t 1.000; entro 5*t 1.000; fermo o quasi (<0,3 m dall'ultimo secondo) 0.000
+t = 3 s | disco prudente v_scen*t: 2,5 m/s -> 176.7 m2; 5 m/s -> 706.9 m2
+  etichetta pedone   area R90   8.36 m2, inviluppo 124.31 m2 | copertura del VERO -> pedo: R90 0.884 inv 1.000 | carr: R90 0.876 inv 0.980 | tren: R90 0.954 inv 1.000 |
+  etichetta carrello area R90   5.94 m2, inviluppo 130.78 m2 | copertura del VERO -> pedo: R90 0.739 inv 0.970 | carr: R90 0.879 inv 0.999 | tren: R90 0.986 inv 1.000 |
+  etichetta treno    area R90   0.39 m2, inviluppo   1.49 m2 | copertura del VERO -> pedo: R90 0.108 inv 0.239 | carr: R90 0.201 inv 0.290 | tren: R90 0.903 inv 1.000 |
+     vero pedone  : entro disco 2,5*t 1.000; entro 5*t 1.000; fermo o quasi (<0,3 m dall'ultimo secondo) 0.160
+     vero carrello: entro disco 2,5*t 0.981; entro 5*t 1.000; fermo o quasi (<0,3 m dall'ultimo secondo) 0.110
+     vero treno   : entro disco 2,5*t 1.000; entro 5*t 1.000; fermo o quasi (<0,3 m dall'ultimo secondo) 0.013
+
+== Regioni, stato d'ingresso 3.0 m/s; libreria 6000, prova 6000 (semi distinti), inviluppo 60000 controlli ==
+t = 1 s | disco prudente v_scen*t: 2,5 m/s -> 19.6 m2; 5 m/s -> 78.5 m2
+  etichetta pedone   area R90   0.40 m2, inviluppo   4.18 m2 | copertura del VERO -> pedo: R90 0.899 inv 1.000 | carr: R90 0.022 inv 0.037 | tren: R90 0.000 inv 0.000 |
+  etichetta carrello area R90   0.41 m2, inviluppo  10.97 m2 | copertura del VERO -> pedo: R90 0.000 inv 1.000 | carr: R90 0.904 inv 1.000 | tren: R90 0.994 inv 1.000 |
+  etichetta treno    area R90   0.03 m2, inviluppo   0.32 m2 | copertura del VERO -> pedo: R90 0.000 inv 0.165 | carr: R90 0.152 inv 0.483 | tren: R90 0.922 inv 1.000 |
+     vero pedone  : entro disco 2,5*t 1.000; entro 5*t 1.000; fermo o quasi (<0,3 m dall'ultimo secondo) 0.000
+     vero carrello: entro disco 2,5*t 0.035; entro 5*t 1.000; fermo o quasi (<0,3 m dall'ultimo secondo) 0.000
+     vero treno   : entro disco 2,5*t 0.000; entro 5*t 1.000; fermo o quasi (<0,3 m dall'ultimo secondo) 0.000
+t = 2 s | disco prudente v_scen*t: 2,5 m/s -> 78.5 m2; 5 m/s -> 314.2 m2
+  etichetta pedone   area R90   2.74 m2, inviluppo  34.56 m2 | copertura del VERO -> pedo: R90 0.896 inv 1.000 | carr: R90 0.050 inv 0.099 | tren: R90 0.016 inv 0.016 |
+  etichetta carrello area R90   5.53 m2, inviluppo  97.34 m2 | copertura del VERO -> pedo: R90 0.430 inv 1.000 | carr: R90 0.885 inv 1.000 | tren: R90 1.000 inv 1.000 |
+  etichetta treno    area R90   0.16 m2, inviluppo   0.83 m2 | copertura del VERO -> pedo: R90 0.000 inv 0.192 | carr: R90 0.120 inv 0.166 | tren: R90 0.902 inv 1.000 |
+     vero pedone  : entro disco 2,5*t 1.000; entro 5*t 1.000; fermo o quasi (<0,3 m dall'ultimo secondo) 0.009
+     vero carrello: entro disco 2,5*t 0.097; entro 5*t 1.000; fermo o quasi (<0,3 m dall'ultimo secondo) 0.000
+     vero treno   : entro disco 2,5*t 0.016; entro 5*t 1.000; fermo o quasi (<0,3 m dall'ultimo secondo) 0.000
+t = 3 s | disco prudente v_scen*t: 2,5 m/s -> 176.7 m2; 5 m/s -> 706.9 m2
+  etichetta pedone   area R90   8.95 m2, inviluppo 105.53 m2 | copertura del VERO -> pedo: R90 0.881 inv 1.000 | carr: R90 0.097 inv 0.185 | tren: R90 0.061 inv 0.061 |
+  etichetta carrello area R90  24.73 m2, inviluppo 305.51 m2 | copertura del VERO -> pedo: R90 0.563 inv 0.990 | carr: R90 0.840 inv 0.995 | tren: R90 0.999 inv 1.000 |
+  etichetta treno    area R90   0.40 m2, inviluppo   1.52 m2 | copertura del VERO -> pedo: R90 0.000 inv 0.093 | carr: R90 0.064 inv 0.086 | tren: R90 0.898 inv 1.000 |
+     vero pedone  : entro disco 2,5*t 1.000; entro 5*t 1.000; fermo o quasi (<0,3 m dall'ultimo secondo) 0.112
+     vero carrello: entro disco 2,5*t 0.185; entro 5*t 1.000; fermo o quasi (<0,3 m dall'ultimo secondo) 0.043
+     vero treno   : entro disco 2,5*t 0.061; entro 5*t 1.000; fermo o quasi (<0,3 m dall'ultimo secondo) 0.000
+
+== Coerenza cinematica: quota di tracce smentite, ritardo mediano e 95o percentile dalla prima misura (s) ==
+  pedone vero (0,8-1,8 m/s), etichetta pedone, 3 s               n= 4000  smentite 0.0000  mediana nan  p95 nan
+  carrello vero (1-4 m/s), etichetta carrello, 3 s               n= 4000  smentite 0.0003  mediana 1.73  p95 1.73
+  treno vero (0,5-4 m/s), etichetta treno, 3 s                   n= 4000  smentite 0.0000  mediana nan  p95 nan
+  'persona' a 6 m/s costanti in linea retta (1 s visibile)       n= 4000  smentite 1.0000  mediana 0.47  p95 0.47
+  'persona' a 3,5 m/s costanti in linea retta (1 s visibile)     n= 4000  smentite 1.0000  mediana 0.47  p95 0.47
+  'persona' a 2,8 m/s costanti (1 s visibile)                    n= 4000  smentite 0.1055  mediana 0.67  p95 0.93
+  carrello LENTO vero (1-2,2 m/s), etichetta pedone, 3 s         n= 3999  smentite 0.0408  mediana 2.33  p95 2.93
+  pedone vero (0,8-1,8), etichetta carrello, 3 s                 n= 4000  smentite 0.0515  mediana 1.80  p95 2.87
+  pedone vero, etichetta treno, rotta a 20 gradi dal binario, 3 s n= 4000  smentite 0.8658  mediana 1.20  p95 2.13
+  pedone vero, etichetta treno, LUNGO il binario, 3 s            n= 4000  smentite 0.3947  mediana 1.93  p95 2.80
+  'treno' che esce dal binario a 10 gradi, 2 m/s, 3 s            n= 4000  smentite 1.0000  mediana 1.40  p95 1.53
+
+== Fascia: w(v) = eps + v*(a+tau+Delta), tempo totale 0.355 s, eps = 0.0 ==
+  base v3      w = 0.40 m
+  pedone 2,5   w = 0.89 m   (v coperta dalla base 0,40 m: 1.13 m/s)
+  corsa 6      w = 2.13 m   (v coperta dalla base 0,40 m: 1.13 m/s)
+  carrello 5   w = 1.77 m   (v coperta dalla base 0,40 m: 1.13 m/s)
+  auto 8       w = 2.84 m   (v coperta dalla base 0,40 m: 1.13 m/s)
+  treno 5      w = 1.77 m   (v coperta dalla base 0,40 m: 1.13 m/s)
+  aereo 15     w = 5.32 m   (v coperta dalla base 0,40 m: 1.13 m/s)
+  quota di uscite dall'ombra con almeno un istante FUORI dall'avviso (vero x regola); uscita con angolo U(-60,60) gradi dalla normale al bordo,
+  eta' del dato U(0, 0,133) s; scenario dichiarato = {pedone, corsa, carrello} -> v_scen = 6 m/s
+   vero pedone   | base 0,40: 0.130 | C (w dell'etichetta 'pedone'): 0.000 | C (w dell'etichetta 'carrello'): 0.000 | A (w dello scenario, 6 m/s): 0.000 | B (max(scenario, etichetta 'pedone')): 0.000 | scarto massimo oltre w('pedone'): 0.00 m
+   vero corsa    | base 0,40: 0.999 | C (w dell'etichetta 'pedone'): 0.681 | C (w dell'etichetta 'carrello'): 0.024 | A (w dello scenario, 6 m/s): 0.000 | B (max(scenario, etichetta 'pedone')): 0.000 | scarto massimo oltre w('pedone'): 1.23 m
+   vero carrello | base 0,40: 0.800 | C (w dell'etichetta 'pedone'): 0.291 | C (w dell'etichetta 'carrello'): 0.000 | A (w dello scenario, 6 m/s): 0.000 | B (max(scenario, etichetta 'pedone')): 0.000 | scarto massimo oltre w('pedone'): 0.86 m
+   vero auto     | base 0,40: 0.983 | C (w dell'etichetta 'pedone'): 0.681 | C (w dell'etichetta 'carrello'): 0.143 | A (w dello scenario, 6 m/s): 0.048 | B (max(scenario, etichetta 'pedone')): 0.048 | scarto massimo oltre w('pedone'): 1.91 m
+
+== Portatore: d_serve = (v_obj+v_ego)*(tconf+tau+T_r) + v_ego^2/(2b) + v_obj*v_ego/b + C ;  tau=0.155, tconf=0.267, D=3.0 m ==
+  C = 0.0 m
+   stazione fissa, operatore      v_ego 0.0 T_r 1.0 b None | anticipo 1.42 s | d_serve (m) per v_obj -> 1.4:  1.99 2.5:  3.56 5.0:  7.11 8.0: 11.38 15.0: 21.33 | v_obj coperta a 3 m:  2.11 m/s | w(2,5+v_ego) 0.89 m
+   UGV lento, arresto automatico  v_ego 0.5 T_r 0.3 b 1.0 | anticipo 1.22 s | d_serve (m) per v_obj -> 1.4:  2.20 2.5:  3.54 5.0:  6.60 8.0: 10.26 15.0: 18.82 | v_obj coperta a 3 m:  2.06 m/s | w(2,5+v_ego) 1.06 m
+   UGV lento, operatore remoto    v_ego 0.5 T_r 1.5 b 1.0 | anticipo 2.42 s | d_serve (m) per v_obj -> 1.4:  4.48 2.5:  7.14 5.0: 13.20 8.0: 20.46 15.0: 37.42 | v_obj coperta a 3 m:  0.79 m/s | w(2,5+v_ego) 1.06 m
+   non vedente ferma              v_ego 0.0 T_r 1.5 b None | anticipo 1.92 s | d_serve (m) per v_obj -> 1.4:  2.69 2.5:  4.81 5.0:  9.61 8.0: 15.38 15.0: 28.83 | v_obj coperta a 3 m:  1.56 m/s | w(2,5+v_ego) 0.89 m
+   non vedente in cammino         v_ego 1.0 T_r 1.5 b 2.0 | anticipo 2.42 s | d_serve (m) per v_obj -> 1.4:  5.56 2.5:  8.23 5.0: 14.28 8.0: 21.55 15.0: 38.50 | v_obj coperta a 3 m:  0.34 m/s | w(2,5+v_ego) 1.24 m
+  C = 0.5 m
+   stazione fissa, operatore      v_ego 0.0 T_r 1.0 b None | anticipo 1.42 s | d_serve (m) per v_obj -> 1.4:  2.49 2.5:  4.06 5.0:  7.61 8.0: 11.88 15.0: 21.83 | v_obj coperta a 3 m:  1.76 m/s | w(2,5+v_ego) 0.89 m
+   UGV lento, arresto automatico  v_ego 0.5 T_r 0.3 b 1.0 | anticipo 1.22 s | d_serve (m) per v_obj -> 1.4:  2.70 2.5:  4.04 5.0:  7.10 8.0: 10.76 15.0: 19.32 | v_obj coperta a 3 m:  1.65 m/s | w(2,5+v_ego) 1.06 m
+   UGV lento, operatore remoto    v_ego 0.5 T_r 1.5 b 1.0 | anticipo 2.42 s | d_serve (m) per v_obj -> 1.4:  4.98 2.5:  7.64 5.0: 13.70 8.0: 20.96 15.0: 37.92 | v_obj coperta a 3 m:  0.58 m/s | w(2,5+v_ego) 1.06 m
+   non vedente ferma              v_ego 0.0 T_r 1.5 b None | anticipo 1.92 s | d_serve (m) per v_obj -> 1.4:  3.19 2.5:  5.31 5.0: 10.11 8.0: 15.88 15.0: 29.33 | v_obj coperta a 3 m:  1.30 m/s | w(2,5+v_ego) 0.89 m
+   non vedente in cammino         v_ego 1.0 T_r 1.5 b 2.0 | anticipo 2.42 s | d_serve (m) per v_obj -> 1.4:  6.06 2.5:  8.73 5.0: 14.78 8.0: 22.05 15.0: 39.00 | v_obj coperta a 3 m:  0.14 m/s | w(2,5+v_ego) 1.24 m
+
+== [aggiunta dopo] Estensione di R90 (m): lungo la rotta (x min..max) e di lato (larghezza in y); quota di membri fermi nell'ultimo 0,5 s ==
+  v0 1.5 pedone   t=1s  x da   1.0 a   1.7  largh. y  1.0  area   0.41  fermi 0.000  fermi dentro R90 nan
+  v0 1.5 pedone   t=2s  x da   0.3 a   3.4  largh. y  2.6  area   2.71  fermi 0.082  fermi dentro R90 0.994
+  v0 1.5 pedone   t=3s  x da  -1.3 a   5.2  largh. y  5.3  area   8.37  fermi 0.167  fermi dentro R90 0.992
+  v0 1.5 carrello t=1s  x da   1.3 a   1.7  largh. y  0.5  area   0.17  fermi 0.000  fermi dentro R90 nan
+  v0 1.5 carrello t=2s  x da   0.6 a   3.6  largh. y  1.6  area   1.49  fermi 0.057  fermi dentro R90 0.825
+  v0 1.5 carrello t=3s  x da   0.5 a   7.3  largh. y  5.4  area   6.01  fermi 0.125  fermi dentro R90 0.967
+  v0 1.5 treno    t=1s  x da   1.3 a   1.6  largh. y  0.1  area   0.03  fermi 0.000  fermi dentro R90 nan
+  v0 1.5 treno    t=2s  x da   2.6 a   3.4  largh. y  0.3  area   0.16  fermi 0.000  fermi dentro R90 nan
+  v0 1.5 treno    t=3s  x da   3.1 a   5.4  largh. y  0.3  area   0.43  fermi 0.007  fermi dentro R90 0.000
+  v0 3.0 carrello t=1s  x da   2.7 a   3.3  largh. y  1.0  area   0.41  fermi 0.000  fermi dentro R90 nan
+  v0 3.0 carrello t=2s  x da   2.7 a   8.0  largh. y  4.5  area   5.89  fermi 0.000  fermi dentro R90 nan
+  v0 3.0 carrello t=3s  x da   0.4 a  13.0  largh. y 11.9  area  26.46  fermi 0.058  fermi dentro R90 0.939
+  v0 3.0 treno    t=1s  x da   2.8 a   3.1  largh. y  0.1  area   0.03  fermi 0.000  fermi dentro R90 nan
+  v0 3.0 treno    t=2s  x da   5.6 a   6.4  largh. y  0.3  area   0.16  fermi 0.000  fermi dentro R90 nan
+  v0 3.0 treno    t=3s  x da   7.4 a   9.8  largh. y  0.3  area   0.43  fermi 0.000  fermi dentro R90 nan

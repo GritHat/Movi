@@ -1,0 +1,32 @@
+seme 20261114, N = 10000 tracce per braccio, EPS = 0.02; conteggi su 10000
+matrice | v_base | ritardo s | ING <base | ING <vera | ALL <base | ALL <vera | CRED <base | CRED <vera | fiducia<0,6
+identita' (livello a) | 1.4 | 0.0 | 0 | 0 | 0 | 0 | 0 | 0 | 0
+uniforme 10 % | 1.4 | 0.0 | 0 | 262 | 0 | 262 | 0 | 215 | 358
+strutturata | 1.4 | 0.0 | 0 | 596 | 0 | 596 | 0 | 245 | 0
+avversa veloce->persona 20 % | 1.4 | 0.0 | 0 | 998 | 0 | 998 | 0 | 0 | 0
+identita' (livello a) | 1.4 | 0.5 | 0 | 0 | 0 | 0 | 0 | 0 | 0
+uniforme 10 % | 1.4 | 0.5 | 0 | 236 | 0 | 236 | 0 | 188 | 340
+strutturata | 1.4 | 0.5 | 0 | 626 | 0 | 626 | 0 | 234 | 0
+avversa veloce->persona 20 % | 1.4 | 0.5 | 0 | 972 | 0 | 972 | 0 | 0 | 0
+identita' (livello a) | 1.4 | 2.0 | 0 | 0 | 0 | 0 | 0 | 0 | 0
+uniforme 10 % | 1.4 | 2.0 | 0 | 238 | 0 | 238 | 0 | 186 | 353
+strutturata | 1.4 | 2.0 | 0 | 610 | 0 | 610 | 0 | 259 | 0
+avversa veloce->persona 20 % | 1.4 | 2.0 | 0 | 1004 | 0 | 1004 | 0 | 0 | 0
+identita' (livello a) | 4.0 | 0.0 | 5928 | 0 | 0 | 0 | 0 | 0 | 0
+uniforme 10 % | 4.0 | 0.0 | 5561 | 253 | 0 | 194 | 0 | 165 | 365
+strutturata | 4.0 | 0.0 | 6136 | 585 | 0 | 321 | 0 | 118 | 0
+avversa veloce->persona 20 % | 4.0 | 0.0 | 6776 | 968 | 0 | 475 | 0 | 0 | 0
+identita' (livello a) | 4.0 | 0.5 | 5953 | 0 | 0 | 0 | 0 | 0 | 0
+uniforme 10 % | 4.0 | 0.5 | 5634 | 234 | 0 | 172 | 0 | 155 | 351
+strutturata | 4.0 | 0.5 | 6075 | 591 | 0 | 302 | 0 | 109 | 0
+avversa veloce->persona 20 % | 4.0 | 0.5 | 6795 | 997 | 0 | 510 | 0 | 0 | 0
+identita' (livello a) | 4.0 | 2.0 | 5984 | 0 | 0 | 0 | 0 | 0 | 0
+uniforme 10 % | 4.0 | 2.0 | 5621 | 228 | 0 | 160 | 0 | 148 | 336
+strutturata | 4.0 | 2.0 | 6142 | 534 | 0 | 272 | 0 | 88 | 0
+avversa veloce->persona 20 % | 4.0 | 2.0 | 6916 | 1035 | 0 | 554 | 0 | 0 | 0
+somma dei casi «solo allarga» (secca e credibile) sotto la linea di base, su tutti i bracci: 0
+analitico, ingenua, quota attesa <vera con «identita' (livello a)»: 0.0000
+analitico, ingenua, quota attesa <vera con «uniforme 10 %»: 0.0240
+analitico, ingenua, quota attesa <vera con «strutturata»: 0.0583
+analitico, ingenua, quota attesa <vera con «avversa veloce->persona 20 %»: 0.1000
+quota a priori di tracce con v vera > v_base: {1.4: 1.0, 4.0: 0.25}

@@ -1,20 +1,21 @@
-# Stati che la versione 3 produce (V3 §1.2, §1.5-§1.9; tabella di COMPLETEZZA §2), una sigla per riga della tabella dei segni
+# Stati che la versione 3 FINALE produce (20-finale/SOLUZIONE_V3.md §1.2, tabella di §1.5, §1.7-§1.9), una sigla per riga della tabella dei segni
 C1 libero
 C2 occupato
 C3 in ombra
 C4 non osservato
-A1 possibile presenza
-A2 avviso senza traccia (c7)
-A3 ramo C2
+A1 possibile presenza fresca
+AR possibile presenza residua (dopo un riaggancio, §1.7)
+A2 avviso senza traccia (interruttore c7)
+A3 ramo C2: avviso sul non osservato al bordo del campo o al vuoto vicino
 T0 tentativa
 T1 osservato
 T2 visto in parte
 T3 non confermato
 T4 previsto
 T5 previsto ampio
-N non ricomparso
-X1 riagganciata
-X2 identità ambigua
-X3 ombra vista libera
-X4 affidabilità persa
-X5 fuori dall'area osservata
+N non ricomparso da n s (evento del registro)
+X1 riagganciata (chiusura 1)
+X2 identità ambigua (evento 2, non chiude)
+X3 cuneo visto libero (chiusura 3)
+X4 affidabilità persa (stato del sistema; evento 4, non chiude)
+X5 fuori dall'area osservata (chiusura 5)

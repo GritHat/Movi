@@ -1,0 +1,33 @@
+== F1: sigle delle critiche nella tabella (0 = manca)
+  difetti: 0
+== F2: sigle nel documento (0 = manca)
+  mancanti: 0
+== F3: frasi da non dire, righe in cui compaiono
+  [essun ostacolo]
+    244:**Stato.** Regole di progetto; il messaggio per settori **non è mai stato generato** (AS §3). «Mobile per primo» è l'ordine del nucleo (N-C3: 100 
+    303:**Non si dice mai.** «Via libera»; «nessun ostacolo osservato»; «validato», «validato su dati veri», «garantito», «continuità garantita», «certifi
+    324:| «Nessun ostacolo osservato fino a d» | oggetto basso vicino, barra di 1 cm, ostacolo sospeso (AT P3, P4; F-410) | «suolo visto libero da 1,3 m a
+    354:| `sd-K2` | V9: «nessun ostacolo osservato fino a d» ↔ V7: «suolo visto libero» | **V7**, nella forma «da 1,3 m a d m» | D: lettura con tre person
+    491:9. **Il livello più basso è «suolo visto libero da 1,3 m a d m»**, d al più 2,6 m, altrimenti «sconosciuto». Mai «via libera», mai «nessun ostacol
+  [100 % degli istanti]
+    282:Cadono: «0,33 m, meno della fascia» (smentita: 0,72 m con la latenza); «perso assorbente»; «la previsione non tocca l'avviso» (falsa alla lettera:
+    303:**Non si dice mai.** «Via libera»; «nessun ostacolo osservato»; «validato», «validato su dati veri», «garantito», «continuità garantita», «certifi
+  [olo guardando]
+    273:| I7 | **L'avviso finisce solo guardando**, cella per cella, oltre w dall'ombra corrente. Con l'occlusore fermo non finisce | per costruzione con 
+    286:**Comune, non cambia mai.** Di ogni cosa seguita il sistema dice se **la vede**, se **non la vede ma prevede dove può essere** (con il livello, qu
+    356:| `sd-K8` | F-409 «l'avviso finisce solo guardando» ↔ CI: tolto il pannello resta acceso (10 su 10), con 95 celle che la mappa dà libere | **la re
+  [ia libera]
+    303:**Non si dice mai.** «Via libera»; «nessun ostacolo osservato»; «validato», «validato su dati veri», «garantito», «continuità garantita», «certifi
+    491:9. **Il livello più basso è «suolo visto libero da 1,3 m a d m»**, d al più 2,6 m, altrimenti «sconosciuto». Mai «via libera», mai «nessun ostacol
+  [alidato]
+    13:**Stato.** Tutto è simulazione, conto o lettura di schede tecniche, **a sensore fermo**. Nessun fotogramma di una camera della squadra è passato da
+    303:**Non si dice mai.** «Via libera»; «nessun ostacolo osservato»; «validato», «validato su dati veri», «garantito», «continuità garantita», «certifi
+== F4: rimandi alla prima stesura
+== F5: lunghezza
+ 13248  77453 SOLUZIONE_V3.md
+  6998  38286 TABELLA_CORREZIONI.md
+ 20246 115739 totale
+== F6: controprova
+attacco.py catena CONTROPROVA_IDENTITA.md diag.py DIFFERENZE.md PREVISIONI.md prova_autore.py riassumi.py riconta.py rifai.sh risultati 
+../07-controprova-identita/CONTROPROVA_IDENTITA.md
+2026-11-14T18:38:57+01:00

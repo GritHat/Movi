@@ -41,7 +41,7 @@ R = [
  ('F-409','', '§1.7: **adottata**: l\'avviso resta al riaggancio (priorità 2; costo: non si spegne dietro un occlusore fermo); §1.4 (regola su q)'),
  ('F-412','', '§1.3: rapporto col picco al posto della soglia assoluta, sui soli gruppi (interruttore); `sd-K4`'),
  ('V10, condizioni 1–9','', '§1.1 (1, 4: posa entro 0,5°); §7 (3: pannello 1,8 m; 7: limiti; 9: dicitura); §1.3 (5); §1.8 e `logico-K1` (6)'),
- ('V10 §6','', 'prova senza sensore: **eseguita** (ID): il criterio con le correzioni dei ruoli cade; passa una variante scelta dopo i dati, senza controprova: §1.3, §1.8. Tre misure col sensore: §7'),
+ ('V10 §6','', 'prova senza sensore: **eseguita** (ID): il criterio con le correzioni dei ruoli cade; una variante scelta dopo i dati tiene come tasso (176 e 174 su 180) in un dominio stretto, non come criterio (controprova CI): §1.3, §1.8. Tre misure col sensore: §7'),
 ]
 for k, s, c in R: setcol(k, s, c)
 t = '\n'.join(L)
@@ -50,9 +50,20 @@ for a, b in [('non parte oltre 1°', 'posa entro 0,5° e prova d\'ingresso'), ('
 i = t.index('\n## 1.')
 testa = '''# Tabella delle correzioni obbligate → dove stanno nella versione 3 FINALE — f12, `20-finale` (`sciame-scene-dinamiche`)
 
-14 novembre 2026. «§» rimanda a `SOLUZIONE_V3.md` **di questa cartella** (versione finale); «I#» agli invarianti del suo §2. La numerazione dei blocchi (§1.1–§1.12) e dei paragrafi §2–§7 è la stessa della prima stesura: le righe dei §1–§8 qui sotto sono quelle della prima stesura, con la terza colonna riscritta dove la regola è cambiata (31 righe, elenco in `fai_tabella.py`); le altre le ho lasciate com'erano e **non le ho ricontrollate una per una**. I §9–§14 sono nuovi: una riga per ogni correzione delle quattro critiche di f12 e per gli esiti delle prove nuove, con **applicata** o **non applicata** e il motivo. **Esclusa** = non entra nel prototipo, con il motivo. **Altro ruolo** = è del piano o dello schermo finali. **[prel.]** = f10 col verdetto VD; **[f12]** = prova di questo passo, non vagliata dall'arbitro. Nessuna riga è «validata».
+14 novembre 2026. «§» rimanda a `SOLUZIONE_V3.md` **di questa cartella** (versione finale); «I#» agli invarianti del suo §2. La numerazione dei blocchi (§1.1–§1.12) e dei paragrafi §2–§7 è la stessa della prima stesura: le righe dei §1–§8 qui sotto sono quelle della prima stesura, con la terza colonna riscritta dove la regola è cambiata (31 righe, elenco in `fai_tabella.py`); le altre le ho lasciate com'erano e **non le ho ricontrollate una per una**. I §9–§15 sono nuovi: una riga per ogni correzione delle quattro critiche di f12 e per gli esiti delle prove nuove, con **applicata** o **non applicata** e il motivo. **Esclusa** = non entra nel prototipo, con il motivo. **Altro ruolo** = è del piano o dello schermo finali. **[prel.]** = f10 col verdetto VD; **[f12]** = prova di questo passo, non vagliata dall'arbitro. Nessuna riga è «validata».
 '''
 t = testa + t[i:]
 coda = open(sys.argv[3], encoding='utf-8').read()
 open(new, 'w', encoding='utf-8').write(t.rstrip('\n') + '\n\n' + coda)
 print('righe:', t.count('\n') + coda.count('\n'))
+# ritocchi finali su quattro righe rimaste con valori vecchi (aggiunti dopo un grep sulla tabella prodotta)
+t = open(new, encoding='utf-8').read()
+for a, b in [
+ ('§7 (geometria: 1,7 m; «dietro', '§7 (geometria: 1,8 m; «dietro'),
+ ('| coerente con 1,7 m: §7 |', '| coerente con 1,8 m (VD): §7 |'),
+ ('| §1.1, §1.9; la seconda parte decade:', '| §1.1, §1.9, con **0,5°** al posto di 1° (AT P2, CO B13); la seconda parte decade:'),
+ ('| §1.7; §1.10; I12; §7 |\n| C5', '| §1.7 (w come simbolo; coperti 1,13 m/s col conto a tre termini, non 1,4); §1.10; I12; §7 |\n| C5'),
+ ('(31 righe, elenco', '(35 righe, elenco'),
+]:
+    assert t.count(a) == 1, (a, t.count(a)); t = t.replace(a, b)
+open(new, 'w', encoding='utf-8').write(t)

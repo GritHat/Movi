@@ -1,6 +1,6 @@
 # Tabella delle correzioni obbligate → dove stanno nella versione 3 FINALE — f12, `20-finale` (`sciame-scene-dinamiche`)
 
-14 novembre 2026. «§» rimanda a `SOLUZIONE_V3.md` **di questa cartella** (versione finale); «I#» agli invarianti del suo §2. La numerazione dei blocchi (§1.1–§1.12) e dei paragrafi §2–§7 è la stessa della prima stesura: le righe dei §1–§8 qui sotto sono quelle della prima stesura, con la terza colonna riscritta dove la regola è cambiata (31 righe, elenco in `fai_tabella.py`); le altre le ho lasciate com'erano e **non le ho ricontrollate una per una**. I §9–§14 sono nuovi: una riga per ogni correzione delle quattro critiche di f12 e per gli esiti delle prove nuove, con **applicata** o **non applicata** e il motivo. **Esclusa** = non entra nel prototipo, con il motivo. **Altro ruolo** = è del piano o dello schermo finali. **[prel.]** = f10 col verdetto VD; **[f12]** = prova di questo passo, non vagliata dall'arbitro. Nessuna riga è «validata».
+14 novembre 2026. «§» rimanda a `SOLUZIONE_V3.md` **di questa cartella** (versione finale); «I#» agli invarianti del suo §2. La numerazione dei blocchi (§1.1–§1.12) e dei paragrafi §2–§7 è la stessa della prima stesura: le righe dei §1–§8 qui sotto sono quelle della prima stesura, con la terza colonna riscritta dove la regola è cambiata (35 righe, elenco in `fai_tabella.py`); le altre le ho lasciate com'erano e **non le ho ricontrollate una per una**. I §9–§15 sono nuovi: una riga per ogni correzione delle quattro critiche di f12 e per gli esiti delle prove nuove, con **applicata** o **non applicata** e il motivo. **Esclusa** = non entra nel prototipo, con il motivo. **Altro ruolo** = è del piano o dello schermo finali. **[prel.]** = f10 col verdetto VD; **[f12]** = prova di questo passo, non vagliata dall'arbitro. Nessuna riga è «validata».
 
 ## 1. Verdetto del nucleo (VN): le nove condizioni, più la decima di V8
 
@@ -29,7 +29,7 @@
 | AU-2 | «libero» mai calcolato da una profondità; i quattro stati non coprono tutti i ritorni | §1.2 («non osservato» = tutto il resto); controllo di I1; [prel.] la catena f10 lo calcola (25 prove a mano) |
 | AU-3 | l'età del «libero» ignora la latenza | §2 coda; I1 senza memoria; fascia a formula in §1.7 |
 | AU-4 | ogni traccia sta a meno di 0,40 m dalla propria ombra | §1.5 (ombra di un occlusore diverso dal gruppo della traccia); una persona che ne nasconde un'altra = occlusore mobile: limite nel §7 |
-| AU-5 | l'ombra vale solo se il pannello è più alto del campo; l'occlusore basso è il caso comune | §7 (geometria: 1,7 m; «dietro un ostacolo più basso di 1,65 m perde chi è in vista»); K-110 |
+| AU-5 | l'ombra vale solo se il pannello è più alto del campo; l'occlusore basso è il caso comune | §7 (geometria: 1,8 m; «dietro un ostacolo più basso di 1,65 m perde chi è in vista»); K-110 |
 | AU-6 | buchi del suolo non indipendenti: celle sempre non valide | §1.10 (il buco ferma d e dà «zona non verificata», non scavalca «attenzione»); K-106, K-307 |
 | AU-7 | soglie in fotogrammi e tempi perfetti; falsi «affidabilità persa» all'1 % di salti | §1 convenzioni (secondi); §1.9 (soglia da rifissare dopo 60 s di conteggio) |
 | AU-8 | la catena dei blocchi è seriale; ordine che protegge la demo; ripieghi | **altro ruolo** (piano); i ripieghi sono citati in §1.3 e §1.4 |
@@ -161,10 +161,10 @@
 | C1 | la frase «una prova» con una persona sola, rilevamento senza errori, e dove cede | §3 (coda), aggiornata con V7 e V8; §7 |
 | C2 | il soggetto nel vuoto vicino: niente «nessun ostacolo» sui settori finché non è rivisto; limite scritto | §1.5; §1.10; §7 |
 | C3 | pannello a non meno di 1,7 m | §7 (geometria della demo) |
-| C4 | fascia a formula; d non oltre la portata meno v_max·(età + latenza); «fino a 1,4 m/s, di corsa no», classe «persona» | §1.7; §1.10; I12; §7 |
+| C4 | fascia a formula; d non oltre la portata meno v_max·(età + latenza); «fino a 1,4 m/s, di corsa no», classe «persona» | §1.7 (w come simbolo; coperti 1,13 m/s col conto a tre termini, non 1,4); §1.10; I12; §7 |
 | C5 | «adattabile»: identici il contratto e quattro regole su nove; i profili differiscono in canale e reazione | §3 |
 | C6 | profilo assistivo = «avviso di presenza per una persona non vedente ferma», non «orientamento» | §3 |
-| C7 | piano del suolo: porta riferita alla taratura da fermo, 1° a 3 m, altrimenti affidabilità persa; velocità propria ≤ 0,37 m/s per la memoria del «libero» | §1.1, §1.9; la seconda parte decade: non c'è più memoria (I1) e niente è dichiarato in moto |
+| C7 | piano del suolo: porta riferita alla taratura da fermo, 1° a 3 m, altrimenti affidabilità persa; velocità propria ≤ 0,37 m/s per la memoria del «libero» | §1.1, §1.9, con **0,5°** al posto di 1° (AT P2, CO B13); la seconda parte decade: non c'è più memoria (I1) e niente è dichiarato in moto |
 | C8 | il limite per tutti i giurati: al chiuso o all'ombra, 3 m, camera a 1,2 m; messaggio per l'autopilota non simulato | §3 (tabella); §7 |
 | AS §3 | ciò che resta «non provato», comprese le correzioni C1–C8 stesse | §3, §7; stati nelle righe del §1 |
 
@@ -182,7 +182,7 @@
 | Avviso | centro nascosto nell'avviso in 2939 fotogrammi su 3038 (nucleo); due persone e occlusore mobile: 25 e 21 fotogrammi fuori | §1.7 |
 | Riaggancio | prende un fantasma dello spigolo a soggetto nascosto; proposta `validazione-7` | §1.8 |
 | Errore del bordo d'ombra | da +2 a +15 cm verso il largo, al nominale, un solo spigolo | K-215 nel §5 |
-| Altezza del pannello | servono 1,61 m (conto della catena) | coerente con 1,7 m: §7 |
+| Altezza del pannello | servono 1,61 m (conto della catena) | coerente con 1,8 m (VD): §7 |
 | Zona valutata | il vuoto vicino è una striscia, non un anello (a ±44° il suolo si vede da 1,69 m) | §1.1 (celle con suolo contate all'avvio) |
 | Criterio «28 su 30» | limite inferiore 78,7 %: non mostra il 90 % | §1.12 |
 | Costo | 1–6 ms a 424×240 su scene pulite; 81 ms su una scena vera con 254 tracce | §7 |
@@ -211,7 +211,7 @@ VD chiama i difetti «ingressi obbligati per la soluzione integrata» e le loro 
 | VD, condizioni 1–9 | 1 confermata necessaria; 3 corretta (1,5 m non basta; proposta 1,8 m); 4 stretta (posa entro 1°); 5 non basta; 6 «una traccia pendente» falsa su profondità realistica; 7 più F-404, F-405, F-410; 9 dicitura nuova | §1.1 (1, 4: posa entro 0,5°); §7 (3: pannello 1,8 m; 7: limiti; 9: dicitura); §1.3 (5); §1.8 e `logico-K1` (6) |
 | VD K-401…K-407 | K-401 copertura per passaggio (83 su 90); K-402 dominio stretto; K-403 soglia = rapporto coi pixel; K-404 bordo d'ombra; K-405 rumore a due gruppi; K-406 fantasmi = margine fra 5 e 7 cm; K-407 simulatore ottimistico sui buchi | K-401: §1.12 (si conta per passaggio); K-402: §1.2, §7; K-403: `sd-K4`; K-404: K-215 nel §5; K-405: §1.3; K-406: §1.1 (posa); K-407: §6, §7 |
 | VD §5 | sei affermazioni per la giuria; «da non dire» | §7; §3 («non si dice mai») |
-| VD §6 | prova senza sensore (F-401, F-402 a 424 e 848 pixel); tre prime misure col sensore | prova senza sensore: **eseguita** (ID): il criterio con le correzioni dei ruoli cade; passa una variante scelta dopo i dati, senza controprova: §1.3, §1.8. Tre misure col sensore: §7 |
+| VD §6 | prova senza sensore (F-401, F-402 a 424 e 848 pixel); tre prime misure col sensore | prova senza sensore: **eseguita** (ID): il criterio con le correzioni dei ruoli cade; una variante scelta dopo i dati tiene come tasso (176 e 174 su 180) in un dominio stretto, non come criterio (controprova CI): §1.3, §1.8. Tre misure col sensore: §7 |
 | VD, decisioni dell'utente | telefono e inventario; dati con occlusioni lunghe; che cosa promettere sull'identità e su q | **altro ruolo** (piano e documento); q: §1.4 |
 
 ## 9. Attacco alla versione 3 (AT): le dodici correzioni obbligate
@@ -257,7 +257,7 @@ VD chiama i difetti «ingressi obbligati per la soluzione integrata» e le loro 
 | Sigla | Che cosa chiede | Esito | Dove |
 |---|---|---|---|
 | PR-1 | scala con gelo all'ora 12; ordine d'ingresso; interruttori nominati sullo schermo | **applicata** per l'ordine e gli interruttori; il calendario è del piano | §1, §1.10, §4 |
-| PR-2 | F-401/402/408/409 nella forma sui gruppi, mai la soglia per cella, con due cancelli a ogni fusione | **applicata**, dietro interruttore, in attesa della controprova | §1.3, §1.8, §6, §11 riga 10 |
+| PR-2 | F-401/402/408/409 nella forma sui gruppi, mai la soglia per cella, con due cancelli a ogni fusione | **applicata**, dietro interruttore spento di norma; la controprova (CI) dà un tasso in un dominio stretto e un difetto del rilascio (`sd-K8`) da correggere prima di accenderlo | §1.3, §1.8, §6, §11 riga 10 |
 | PR-3 | B3b riscritto: l'avviso resta finché le celle non sono viste libere | **applicata** | §1.7, I7 |
 | PR-4 | B3a diviso fra due persone | **non applicata** qui: è del piano finale | §9 |
 | PR-5 | tabellone sul tronco dall'ora 7–8; riga THÖR del predittore mostrato | **non applicata** qui: è del piano; qui la regola del tabellone | §1.12, §9 |
@@ -293,7 +293,7 @@ VD chiama i difetti «ingressi obbligati per la soluzione integrata» e le loro 
 | PI f, g | identità sul percorso 0,968–0,998; costo in C | §1.8, §7 |
 | LC | `nuvole-1`; V-017 e «un pixel» cadute; 0,5°; 2,2 m al limite | §1.2, §4, §5 |
 | ID | criterio di VD §6 caduto con le proposte; gruppi per picco in dominio stretto; F-409 a 0 fotogrammi fuori; K-014 a 848 px | §1.3, §1.7, §1.8, §5 |
-| Controprova di ID | **non consegnata** alle 18:26 e alla chiusura (`ls`) | §0 |
+| Controprova di ID | consegnata alle 18:33:47, a stesura finita; letta per intero e applicata con ritocchi: vedi §15 | §0, §15 |
 
 ## 14. Discordanze dei fascicoli (DF)
 
@@ -315,3 +315,17 @@ VD chiama i difetti «ingressi obbligati per la soluzione integrata» e le loro 
 | geometria 8 | latenza 155 ms o circa 131 ms | **applicata** | §1.10 |
 | valutazione 1 | denominatore della copertura di V8 | **non applicata**: la cifra di V8 non è più usata | §9 |
 | altre (geometria 4–7, 10; stima D3–D5, D7; valutazione 4–7; costo 1, 3, 4, 7, 8; bibliografia D1–D8) | cifre che questo documento non usa | non toccate | — |
+
+## 15. Controprova sull'identità (CI), arrivata alle 18:33:47
+
+| Sigla | Che cosa chiede (controesempio) | Esito | Dove |
+|---|---|---|---|
+| CI-1 | dichiarare la taglia minima inseguibile: 15 cm entro 2 m (cubo di 10 cm: 0 gruppi su 60) | **applicata** | §1.3, §7 |
+| CI-2 | dominio del riaggancio «entro portata − fascia = 2,6 m» (persona a 2,8 m: 0 su 10) | **applicata** | §1.8, §7, §11 |
+| CI-3 | chi ricompare sul bordo del campo prende un'identità nuova (10 su 10) | **applicata** (dichiarato) | §1.8, §11 |
+| CI-4 | dietro un pannello fermo l'identità non diventa mai «confermata» | **applicata**: resta «presunta» per sempre | §1.8, §4 (dopo l'hackathon) |
+| CI-5 | rilascio dell'avviso che funzioni fra 2,3 e 3,0 m; avviso residuo distinto dal fresco (pannello tolto: acceso 10 su 10) | **applicata** la distinzione a schermo; **non applicata** una regola nuova di rilascio: causa non diagnosticata; `sd-K8` | §1.7, I7, §5, §9 |
+| CI-6 | prova d'ingresso: aggiungere il controllo della posa (a +0,5°: 6 su 10, tracce sul pavimento vuoto) | **applicata**: posa sotto 0,5°, prova del rumore dopo quella della posa | §1.1 |
+| CI-7 | al posto di «almeno 28 su 30» un tasso con l'intervallo su almeno 90 passaggi per cella | **applicata**: 176 e 174 su 180; `sd-K4` | §1.8, §5 |
+| CI, avversario-1 | avviso con età che scade dopo T secondi (proposta nuova) | **non applicata**: è un timer che toglie un avviso (priorità 2); decisione dell'utente | §1.7, §5 (`sd-K3`), §9 |
+| CI §4 | sicurezza: 0 fotogrammi fuori dall'avviso su 2 360; «libero» in ombra 5 celle·fotogramma su 3 992 186, le stesse della catena f10 | registrata | §1.7, §1.2 (K-014) |

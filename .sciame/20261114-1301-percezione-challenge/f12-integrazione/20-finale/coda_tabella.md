@@ -41,7 +41,7 @@
 | Sigla | Che cosa chiede | Esito | Dove |
 |---|---|---|---|
 | PR-1 | scala con gelo all'ora 12; ordine d'ingresso; interruttori nominati sullo schermo | **applicata** per l'ordine e gli interruttori; il calendario è del piano | §1, §1.10, §4 |
-| PR-2 | F-401/402/408/409 nella forma sui gruppi, mai la soglia per cella, con due cancelli a ogni fusione | **applicata**, dietro interruttore, in attesa della controprova | §1.3, §1.8, §6, §11 riga 10 |
+| PR-2 | F-401/402/408/409 nella forma sui gruppi, mai la soglia per cella, con due cancelli a ogni fusione | **applicata**, dietro interruttore spento di norma; la controprova (CI) dà un tasso in un dominio stretto e un difetto del rilascio (`sd-K8`) da correggere prima di accenderlo | §1.3, §1.8, §6, §11 riga 10 |
 | PR-3 | B3b riscritto: l'avviso resta finché le celle non sono viste libere | **applicata** | §1.7, I7 |
 | PR-4 | B3a diviso fra due persone | **non applicata** qui: è del piano finale | §9 |
 | PR-5 | tabellone sul tronco dall'ora 7–8; riga THÖR del predittore mostrato | **non applicata** qui: è del piano; qui la regola del tabellone | §1.12, §9 |
@@ -77,7 +77,7 @@
 | PI f, g | identità sul percorso 0,968–0,998; costo in C | §1.8, §7 |
 | LC | `nuvole-1`; V-017 e «un pixel» cadute; 0,5°; 2,2 m al limite | §1.2, §4, §5 |
 | ID | criterio di VD §6 caduto con le proposte; gruppi per picco in dominio stretto; F-409 a 0 fotogrammi fuori; K-014 a 848 px | §1.3, §1.7, §1.8, §5 |
-| Controprova di ID | **non consegnata** alle 18:26 e alla chiusura (`ls`) | §0 |
+| Controprova di ID | consegnata alle 18:33:47, a stesura finita; letta per intero e applicata con ritocchi: vedi §15 | §0, §15 |
 
 ## 14. Discordanze dei fascicoli (DF)
 
@@ -99,3 +99,17 @@
 | geometria 8 | latenza 155 ms o circa 131 ms | **applicata** | §1.10 |
 | valutazione 1 | denominatore della copertura di V8 | **non applicata**: la cifra di V8 non è più usata | §9 |
 | altre (geometria 4–7, 10; stima D3–D5, D7; valutazione 4–7; costo 1, 3, 4, 7, 8; bibliografia D1–D8) | cifre che questo documento non usa | non toccate | — |
+
+## 15. Controprova sull'identità (CI), arrivata alle 18:33:47
+
+| Sigla | Che cosa chiede (controesempio) | Esito | Dove |
+|---|---|---|---|
+| CI-1 | dichiarare la taglia minima inseguibile: 15 cm entro 2 m (cubo di 10 cm: 0 gruppi su 60) | **applicata** | §1.3, §7 |
+| CI-2 | dominio del riaggancio «entro portata − fascia = 2,6 m» (persona a 2,8 m: 0 su 10) | **applicata** | §1.8, §7, §11 |
+| CI-3 | chi ricompare sul bordo del campo prende un'identità nuova (10 su 10) | **applicata** (dichiarato) | §1.8, §11 |
+| CI-4 | dietro un pannello fermo l'identità non diventa mai «confermata» | **applicata**: resta «presunta» per sempre | §1.8, §4 (dopo l'hackathon) |
+| CI-5 | rilascio dell'avviso che funzioni fra 2,3 e 3,0 m; avviso residuo distinto dal fresco (pannello tolto: acceso 10 su 10) | **applicata** la distinzione a schermo; **non applicata** una regola nuova di rilascio: causa non diagnosticata; `sd-K8` | §1.7, I7, §5, §9 |
+| CI-6 | prova d'ingresso: aggiungere il controllo della posa (a +0,5°: 6 su 10, tracce sul pavimento vuoto) | **applicata**: posa sotto 0,5°, prova del rumore dopo quella della posa | §1.1 |
+| CI-7 | al posto di «almeno 28 su 30» un tasso con l'intervallo su almeno 90 passaggi per cella | **applicata**: 176 e 174 su 180; `sd-K4` | §1.8, §5 |
+| CI, avversario-1 | avviso con età che scade dopo T secondi (proposta nuova) | **non applicata**: è un timer che toglie un avviso (priorità 2); decisione dell'utente | §1.7, §5 (`sd-K3`), §9 |
+| CI §4 | sicurezza: 0 fotogrammi fuori dall'avviso su 2 360; «libero» in ombra 5 celle·fotogramma su 3 992 186, le stesse della catena f10 | registrata | §1.7, §1.2 (K-014) |
