@@ -1,0 +1,125 @@
+R1 percorsi con cartella: v3 1428 citazioni; mancanti v3 28, già mancanti in v2 28, NUOVI mancanti 0
+   ereditato: 01-ricercatore/DATI_PUBBLICI.md
+   ereditato: 02-sensori/PREVISIONI.md
+   ereditato: 02-tempo-reale/CONSEGNA.md
+   ereditato: 03-infrastruttura/PREVISIONI.md
+   ereditato: 03-kalman/PREVISIONI.md
+   ereditato: 04-embedded/PREVISIONI.md
+   ereditato: 04-validazione/PREVISIONI.md
+   ereditato: 05-tracciamento/stato.md
+   ereditato: 10-triage/TRIAGE.md
+   ereditato: 11-misure/PREVISIONI.md
+   ereditato: 11-pianificatore/CONSEGNA.md
+   ereditato: 12-prestazioni/PREVISIONI.md
+   ereditato: 12-torneo/PREVISIONI.md
+   ereditato: doc/frame_metadata.md
+   ereditato: doc/post-processing-filters.md
+   ereditato: prove/risultati_p7.txt
+   ereditato: prove/risultati_p8_p9_p10.txt
+   ereditato: rif-4/RIFERIMENTI_rif-4.md
+   ereditato: scaricati/PROVENIENZA.md
+   ereditato: sez-a/SEZIONE.md
+   ereditato: sez-b/SEZIONE.md
+   ereditato: sez-c/SEZIONE.md
+   ereditato: sez-d/SEZIONE.md
+   ereditato: sez-e/PREVISIONI.md
+   ereditato: sez-e/SEZIONE.md
+   ereditato: sez-f/SEZIONE.md
+   ereditato: verifica-2/VERIFICA.md
+   ereditato: verifica-3/VERIFICA.md
+   nomi senza cartella non risolti: v3 28, v2 28; nuovi: []
+R2 tabelle: 76; rotte: 0
+R3 righe non vuote della v2 assenti nella v3 (tolte o riscritte): 79
+   di cui ESTESE (il testo della v2 c'è ancora, con un'aggiunta in coda): 25; TOLTE O RISCRITTE: 54
+   - [tolta/riscritta] **Versione 2 (finale di f11) — 2026-11-14T17:40:55+01:00** (`date -Is`) · convocazione dello sciame 
+   - [tolta/riscritta] > **Niente di ciò che segue è provato sull'hardware.** Ogni cifra viene da una simulazione, da un co
+   - [tolta/riscritta] 1. si correggono i capitoli toccati (il §5.7 dice che cosa cambia alla chiusura di ogni estensione);
+   - [tolta/riscritta] 5. si aggiunge **una riga al registro delle modifiche** in fondo: data, valutazione, che cosa è camb
+   - [tolta/riscritta] **Che cosa fotografa questa versione.** Lo stato dopo le fasi f1–f6 (chiuse; f6 non è passata dall'a
+   - [tolta/riscritta] > **Dopo la fotografia (controlli del redattore con `ls` alle 16:35 e alle 17:24; dei file nuovi son
+   - [tolta/riscritta] > - **f8 [prel.]:** `f8-continuita/12-torneo/TORNEO.md` (16:33) propone in testa «C-EST com'è scritt
+   - [tolta/riscritta] > - **f7 [prel.]:** `f7-estensione/11-torneo/TORNEO.md` (16:44, non letto); `f7-estensione/12-presta
+   - [tolta/riscritta] > - **f10 [prel.]:** dati scaricati (`f10-dati/scaricati/`: 3,9 GB, `du` alle 16:35); `f10-dati/12-d
+   - [tolta/riscritta] > - **Verdetti:** alle 17:24 le cartelle `f7-estensione/16-verdetto`, `f8-continuita/16-verdetto` e 
+   - [tolta/riscritta] > Il prossimo aggiornamento di questo documento (riga 3 del registro) deve partire dai file di f7, f
+   - [tolta/riscritta] > **Aggiornamento del 14 novembre 2026, 18:35 — requisito nuovo dell'utente (decimo addendum, `ADDEN
+   - [tolta/riscritta] > - **Che cosa chiede.** (1) La classificazione diventa una componente fondamentale del sistema: un 
+   - [tolta/riscritta] > - **Che cosa supera.** La riga «una rete leggera mette solo l'etichetta persona / non persona, a l
+   - [tolta/riscritta] > - **Stato.** Requisito accolto; lo sciame ne sta facendo una valutazione breve (estensione f14: `f
+   - [tolta/riscritta] > - **Nello stesso intervallo** (da integrare nella prossima versione di questo documento): verdetti
+   - [tolta/riscritta] **Che cos'è il sistema.** Un prototipo di percezione per la challenge (rilevare elementi mobili e os
+   - [tolta/riscritta] 1. **Hardware:** niente è provato su un sensore vero; la squadra oggi non ha sensori e il modello de
+   - [tolta/riscritta] 2. **Sicurezza (R8):** «mai libero ciò che non è osservato» è una dimostrazione condizionata, per co
+   - [tolta/riscritta] 3. **Identità dopo un'occlusione (R3):** 100 % in 27 celle da 400 passaggi (limite inferiore al 95 %
+   - [tolta/riscritta] 4. **Continuità visiva (obiettivo principale dal quarto addendum):** il nucleo non la rispetta nel m
+   - [estesa] 5. **Elementi mobili (R1):** persona a 0,5 m/s vista entro 1 s nel 100 % dei casi a 2 m (N = 2000, t
+   - [tolta/riscritta] 6. **Latenza (R7):** le sole voci note sommano circa 155 ms in media contro la soglia di 150: non ri
+   - [tolta/riscritta] 7. **Limiti geometrici (conto, camera ideale):** suolo visto solo da 1,24 m; un ostacolo di 15 cm è 
+   - [tolta/riscritta] 8. **Sensori:** tre sensori a tempo di volo multizona coprono al più 180°, non 360° (verificato sull
+   - [tolta/riscritta] 9. **Lavoro:** il nucleo è stimato in 54 ore-persona, 38 in fila (26,8 con corsie parallele, **[prel
+   - [tolta/riscritta] 10. **Estensioni:** f7 (mappa voxel), f8 (continuità visiva), f9 (preproposta esterna), f10 (dati pu
+   - [tolta/riscritta] **Che cosa è stabilito** (ciascuno nel suo modello: §4.3). La massa non è osservabile (dimostrato ne
+   - [tolta/riscritta] **Che cosa è aperto.** Le contraddizioni K-004, K-007, K-010, K-011 (R7), K-014, K-015, K-016, K-017
+   - [tolta/riscritta] **Che cosa è in valutazione.** f7: nessuna mappa memorizzata nelle 14 ore; tre aggiunte alla mappa (
+   - [tolta/riscritta] **Le decisioni che spettano all'utente** (cap. 7). (1) L'inventario dei sensori e che cosa vuol dire
+   - [tolta/riscritta] | preliminare | **[prel.]** | viene dalle estensioni in corso (f7–f10): **non ancora vagliato dall'a
+   - [estesa] - **1. Scopo, traccia della challenge, requisiti e vincoli** — 1.1 lo scopo · 1.2 la traccia della c
+   - [tolta/riscritta] - **2. Architettura del nucleo, componente per componente** — 2.1 schema a blocchi · 2.2 i component
+   - [estesa] - **3. Sensori e hardware** — 3.1 in breve · 3.2 i sensori considerati · 3.3 perché tre sensori a te
+   - [tolta/riscritta] - **4. Prove eseguite e risultati numerici** — 4.0 come leggere · 4.1 inventario delle prove (f1–f6,
+   - [tolta/riscritta] - **5. Valutazioni in corso: le estensioni f7–f10** — 5.1 a che punto sono · 5.2 f7 · 5.3 f8 · 5.4 f
+   - [tolta/riscritta] - **6. Piano e rischi** — 6.1 il piano · 6.2 registro dei rischi
+   - [estesa] - **8. Ambiti d'uso, profili e dominio** — 8.1 l'ambito · 8.2 i profili · 8.3 che cosa dà credito al
+   - [estesa] - **10. Punti da sciogliere** — 10.1 dove le sezioni non concordano · 10.2 discordanze fra file che 
+   - [estesa] - **Glossario** · **Registro delle modifiche** · **Appendice A** (file dello sciame che fanno da fon
+   - [estesa] | 3 | 14:54–15:00 | Valutare `promptMare.txt` (mappa voxel 3D) e conciliare tutto con la traccia del
+   - [tolta/riscritta] | 4 | 15:00–15:11 | «La continuità visiva» come «obbiettivo imperativo e principale»: R3 passa da re
+   - [tolta/riscritta] | 5 | 15:29–15:36 | Valutare le dodici strategie di `prepropostaEsterna.md` (S1–S12), da integrare s
+   - [estesa] | 7 | 15:48–15:54 | Commit locali; squadra di 5; nessun sensore ora, forse fra 5–6 ore «da remoto»; 
+   - [estesa] | (b) mappa del terreno e dei gradi di libertà di utente e ostacoli | **corretta**: mappa locale a c
+   - [estesa] | (c) classificazione degli ostacoli | **corretta**: solo persona / non persona, a parte, senza pote
+   - [estesa] | (e) previsione della posizione fuori vista | **corretta e ridotta**: un'area per 0,40–0,53 s, poi 
+   - [tolta/riscritta] ## 2. Architettura del nucleo, componente per componente
+   - [tolta/riscritta] #### B6. Ramo asincrono di riconoscimento
+   - [tolta/riscritta] ### 2.3 I nove invarianti e il loro stato
+   - [tolta/riscritta] ## 5. Valutazioni in corso: le estensioni f7–f10
+   - [tolta/riscritta] ### 5.1 Le quattro estensioni: a che punto sono
+   - [tolta/riscritta] ### 5.2 f7 — mappa voxel e conciliazione con la traccia della challenge [prel.]
+   - [tolta/riscritta] ### 5.3 f8 — la continuità visiva [prel.]
+   - [tolta/riscritta] ### 5.5 f10 — dati pubblici e sensori simulati [prel.]
+   - [estesa] ### 5.6 Il passo d'integrazione
+   - [tolta/riscritta] Il quarto e il quinto addendum prevedono un passo finale che fonde il nucleo e le estensioni, rifà l
+   - [tolta/riscritta] ### 5.7 Che cosa cambia qui alla chiusura di ogni estensione
+   - [tolta/riscritta] - **f7:** §5.2 passa da «preliminare» allo stato del verdetto; si fissano V-002, V-003, V-012 dentro
+   - [tolta/riscritta] - **f8:** §5.3 riceve il predittore scelto con copertura, area e tempo misurati dal banco; si chiude
+   - [tolta/riscritta] - **f9:** fatto in questa versione: la tabella di §5.4 ha la colonna «verdetto dell'arbitro» e il §6
+   - [tolta/riscritta] - **f10:** §5.5 riceve un esito per ciascuna delle sei ipotesi; le righe 1, 7 e 9 del registro dei r
+   - [tolta/riscritta] - **Integrazione, inventario dei sensori, prima misura di k:** si rifà la tabella delle tappe per 14
+   - [tolta/riscritta] ### 6.1 Il piano
+   - [estesa] | **anello cieco** | il suolo vicino che la camera non vede: a 1,2 m di quota e 15° d'inclinazione i
+   - [estesa] | **area prevista** | lo strato 2. Nei file anche «regione», «cerchio», «ellisse» |
+   - [estesa] | **cuneo** | l'ombra stimata dell'ostacolo dietro cui una traccia è entrata; allargato della fascia
+   - [estesa] | **fascia** | i 0,40 m di cui l'ombra stimata viene allargata: 0,20 m d'errore d'ombra più mezzo co
+   - [estesa] | **identità ambigua** | uscita di B5 quando il riaggancio non è sicuro (più tracce pendenti, o rile
+   - [estesa] | **libero** | stato di una cella: suolo visto alla quota attesa, e nessun ostacolo, in almeno uno d
+   - [estesa] | **non confermato** | uscita di B5 per una traccia in campo aperto senza misure: al più 3 fotogramm
+   - [estesa] | **nucleo** | la soluzione versione 2 (ramo H-012), approvata come progetto di prototipo |
+   - [estesa] | **osservato, previsto, perso** | i tre stati di una traccia (B5). Osservato: c'è una misura nel ci
+   - [estesa] | **portatore del sensore** | ciò che regge il sensore: un supporto fisso o una piattaforma uncrewed
+   - [estesa] | **possibile presenza** | il messaggio dato sull'ombra in cui una traccia è entrata: «qui può esser
+   - [estesa] | **strato 1** | il cuneo d'ombra dell'ostacolo in cui la traccia è entrata, allargato della fascia:
+   - [estesa] | **strato 2** | l'area prevista: il cerchio al 95 % del filtro ritagliato sul cuneo; dice «probabil
+   - [tolta/riscritta] | 3 | *(da scrivere)* | *attese, nell'ordine in cui arrivano: verdetti di f8, di f7, di f10 (i loro 
+R4 righe con «validat», «via libera», «garantit» fuori da virgolette: 10
+   r.37: …ersone (f10) ha il verdetto VD: nessuna delle sei ipotesi è validata sul sensore (§5.5).…
+   r.560: … la fascia è ottenuta con un peso: 0 casi **misurati**, non garantiti dalla sola regola (DF, dimost…
+   r.1316: …dati/23-verdetto/VERDETTO_DATI.md`, 17:52 | nessuna ipotesi validata sul sensore; due cifre del nu…
+   r.1317: …e 3 adottabile come progetto di prototipo, non come sistema validato; esito della convocazione: ch…
+   r.1415: …-verdetto/VERDETTO_DATI.md`). **Nessuna delle sei ipotesi è validata sul sensore della squadra, ch…
+   r.1449: …3 è adottabile come progetto di prototipo, non come sistema validato; in simulazione rispetta la c…
+   r.1505: …***: nel codice è ottenuta con un peso; lo  è misurato, non garantito dalla sola regola.…
+   r.1760: … vedente in Italia (semafori acustici: 60 impulsi al minuto via libera, 120 sgombero; [codice-strada…
+   r.1823: …026: accordo per acquisire CTMAVIO (9 milioni); 15-09-2026: via libera Golden Power | *sostenuto*; c…
+   r.1942: …non per f5, f6 e le estensioni. Il cancello di f3 è stato invalidato dal completamento del dossier…
+R5 ingressi della consegna: 38; non citati: []
+parole: 78066 righe: 2388

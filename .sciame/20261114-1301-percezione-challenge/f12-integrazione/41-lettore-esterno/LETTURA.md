@@ -1,0 +1,48 @@
+# Lettura del testo di due pagine come giurato esterno (`sciame-lettore`, f12, 41-lettore-esterno, 14 novembre 2026)
+
+**In testa.** Nessuno stato dei verdetti cambia; nessuna prova nuova, solo lettura, ricerche testuali e `wc -w`. **C-G: propongo «regge in parte»** (decide l'arbitro): l'idea arriva; lo stato della continuità no, in tre minuti; 0 parole vietate alla lettera, 2 frasi vietate nella sostanza. **Regole violate.** (1) Ho letto il testo PRIMA del contratto: la consegna chiede le due cose, ho scelto la lettura a freddo. (2) Ingressi obbligati non letti per intero: VD, il decimo addendum, DF, V3 e BL (solo ricerche e gli elenchi «da non dire»); non aperti VN, V7, V8, V9, f6, f10; la prova sull'identità e la controprova esistono (`ls`), ne uso le cifre tramite il verdetto d'integrazione (VI). (3) Lunghezza: circa 1 700 parole, due pagine solo a corpo piccolo. Un file temporaneo nella cartella della sessione; niente git, sudo, rete. *Indipendenza:* condivido con l'autore il modello e la lingua, non il contesto; CIFRE.md ha lo stesso autore del testo. Lettura a freddo e previsioni scritte alle 19:21:31, prima di VI e CIFRE (`PREVISIONI.md`).
+
+## A. Prima lettura, a freddo (solo il testo)
+
+1. **Che cosa fa.** Una camera di profondità ferma guarda il suolo fino a 3 m e dice, zona per zona, se è libero, occupato, nascosto o non visto. Se una persona seguita passa dietro un ostacolo, lo schermo continua a mostrare un segno e una zona dove può essere, più un avviso che non si spegne da solo. Non esiste ancora come insieme e nessuna camera vera è stata usata.
+2. **Provato / no.** Provato al calcolatore: nessun «libero» sopra un ostacolo con camera ideale; nessun nascosto senza avviso; zona senza interruzioni, ma solo su «sensore ideale». Non provato: una camera vera, l'insieme, il classificatore, il sensore in moto, i suoni. Non ho capito se la continuità, che è l'obiettivo principale, regge nella prova più realistica: il §1 dice [S], la fine del §3 dice che là manca in 2 983 fotogrammi su 4 552.
+3. **Dove mi sono fermato.**
+   - «6–8 casi su 10» e «3–5 su 10» sotto «Dove cede»: riesce o fallisce così spesso?
+   - «la regola non è ancora innestata», «stato "previsto"»: quale regola, quale stato.
+   - Tre banchi mai distinti: «sensore ideale», «camera ideale», «profondità simulata»; più «registrazione vera» dopo «nessun fotogramma di una nostra camera».
+   - [C] «per costruzione o per conto»: l'ho letto come «certo», più forte di [S].
+   - «il ripiego, che entra per primo… senza cifra»: riletto tre volte.
+   - L'avviso che resta acceso è detto tre volte: pregio (§8, atto 3), costo (§4.2), difetto (riquadro).
+   - 1,44 m/s e 1,13 m/s nella stessa riga, senza paragone: un passo normale nascosto è coperto?
+   - «meno di 6,4 su 10 000» dopo «0 su 23 402»: il conto non torna a occhio.
+   - Parole: «l'altra focale», «dominio» (4 volte), «gradi di libertà», «fascia», «catena intera», «settore», «d m», «k volte su n», «quattro regole su nove».
+   - «Chi porta il sensore» ha una frenata, ma il sensore è fermo. Il §5 scarta idee che non ho mai visto proporre. Lo schema è un elenco di frecce: non si legge.
+   - «Il filtro copre 98–100 %» (§4.4) sembra contraddire «85 su 100» della zona (§3).
+4. **Promesse lette: 18** (elenco in `PREVISIONI.md`). Le più forti: il titolo; «non è mai dichiarato libero»; «non si toglie se non guardando»; «a ogni fotogramma un segno e una zona»; «zona prevista, sempre»; «il segno non sparisce»; «i 3 m bastano fino a 1,44 m/s».
+5. **Che cosa manca.** Per credere: un termine di paragone (che cosa fa un inseguitore comune nello stesso caso), e sapere che cosa vedrò alla demo, la zona con la cifra o un disco senza cifra. Per ricordare: una sola cifra in alto. Le cifre distinte sono 68 (`esito_controlli.txt`); la fine del §1 è a 429 parole, la fine del §2 a 822 (`wc -w` sul corpo): in tre minuti, a 200–250 parole al minuto (ipotesi mia), mi fermo nello schema e non arrivo alla cifra del §3.
+6. **La domanda.** «Alla demo, nelle prime 14 ore, la zona sullo schermo è quella da "9 su 10" o il disco senza cifra? E su una camera il bordo dell'ombra è noto o stimato?»
+
+## B. Dopo: controllo su VI e CIFRE.md
+
+- **Pv1 regge** (previsto almeno 2): 5 promesse non sono sostenute nella forma letta. (a) Il titolo: vetro, ostacolo sospeso e oggetto basso vicino sono controesempi certificati (VI §2, riga I1). (b) «Mai dichiarato libero» nel §1 senza le due premesse (VI §7, aff. 3). (c) «A ogni fotogramma… con una precisione dichiarata»: manca «vista almeno 4 fotogrammi» (VI §5.9, 0 occorrenze nel testo), e la cifra è del predittore `sd-1`, mentre entra per primo `sd-0` «senza cifra» (VI §5.11; CIFRE, riga «400»; PIA non verificato da me). (d) «Zona prevista, sempre» nello schema, senza marca (VI, cambio 9). (e) «24 su 23 402» senza «928 senza la regola, che parte spenta» (VI aff. 10; CIFRE lo annota «non scritto nel testo»).
+- **Pv2 regge nella sostanza, non alla lettera.** Ricerca mia su 15 parole vietate: 0 occorrenze. Ma SCH §6 vieta «mai dato per libero» senza condizioni e «l'avviso finisce solo guardando» senza il costo: il §1 e l'ultima riga della tabella 1 dicono il secondo senza costo, il §1 il primo senza condizioni. In più V3 §3 (riga 303) vieta «una cifra per chi svolta» e VI aff. 8 la dà: il testo segue VI; lo riporto, non scelgo.
+- **Pv3 smentita** (previsto al più 3; trovate 4). Su 37 cifre di riquadro, §3 e §4: valori diversi 0, righe mancanti 0; condizioni perse 4: «24» (sopra); «6–8 su 10» senza «a 2–3 s» (VI §3 dà 0,57–0,86); «3–5 su 10», arrotondamento del redattore di 0,30–0,46; «6,4 su 10 000», che viene dai 6 000 camminatori distinti e non dai 23 402 passaggi (VI §3).
+- **Fuorviante, non vietato.** «176 su 180» e «0 su 140 con la correzione»: la correzione sta dietro un interruttore spento di norma (VI §5.13; CIFRE, dubbio 6). Il lettore crede che il prototipo si comporti così. «0,13 s» ha un rumore del sensore di moto ipotizzato (CIFRE). La dicitura del riquadro («su profondità simulata») non copre le cifre della continuità, che sono su sensore ideale.
+- **Sostenute come scritte** (VI §7): §4.1, §4.2, §4.4, le due velocità, la riga sulle etichette, le probabilità del piano. «Se non arriva, il piano non cambia»: non verificato.
+
+## C. Correzioni, in ordine d'importanza (com'è → come la vorrei; che cosa togliere)
+
+1. **§2.** «(il ripiego, che entra per primo, è un disco a velocità costante, senza cifra)» → «Nelle 14 ore lo schermo mostra prima una zona più semplice, un disco, senza nessuna cifra; la zona con la cifra viene dopo». *Togliere:* «(1,22 m e 1,69 m con l'altra focale usata nei conti)».
+2. **§1, obiettivo.** «…un segno e una zona, con una precisione dichiarata insieme al suo dominio [S, su sensore ideale]» → «Finché l'ostacolo nasconde una persona già vista, lo schermo mostra a ogni fotogramma un segno e una zona [S su sensore ideale: 0 interruzioni su 23 402 passaggi; P nella prova più vicina a una camera, dove la regola non è ancora montata]». *Togliere:* dal §3 «0 interruzioni… 6,4 su 10 000» e le due righe di frecce dello schema (le disegna chi impagina).
+3. **§3.** «Sulla profondità simulata la regola non è ancora innestata: lì… la traccia non è nello stato "previsto" in 2 983 fotogrammi su 4 552» → «Nella prova più vicina a una camera questa regola non è ancora nel programma: a persona nascosta il segno "previsto" manca in 2 983 fotogrammi su 4 552, due su tre». Stessa lunghezza.
+4. **§3.** «Chi svolta o esce dal lato lontano: 6–8 casi su 10. Bordo dell'ombra stimato, non noto: 3–5 su 10 a 1 s» → «Dentro la zona, al posto di 9 su 10: chi svolta o esce dal lato lontano, circa 6–8 su 10 a 2–3 s; col bordo dell'ombra stimato e non dato, 3–5 su 10 a 1 s». L'autore dica quale dei due bordi vale su una camera. *Togliere:* «quattro regole su nove» (§7).
+5. **§1, sicurezza.** «L'avviso di "possibile presenza" non si toglie se non guardando» → «…non si toglie per il tempo, per il nome o per mano di chi guarda: dietro un ostacolo fermo resta acceso». E nel riquadro: «tolto l'ostacolo, l'avviso resta acceso» → «tolto l'ostacolo e rivisto il suolo, l'avviso dovrebbe spegnersi e non si spegne». *Togliere:* «Il costo: dietro un ostacolo fermo l'avviso resta acceso» (§4.2).
+6. **§3 e §4.3, tabella 1.** «(24 passaggi su 23 402)» → «(24 su 23 402 con la regola che lo cura, che parte spenta; 928 senza)»; «con la correzione» → «con una correzione che parte spenta» (due volte). *Togliere:* «; 0 su 3 608 in una replica» → «, e 0 in una replica».
+7. **Legenda.** «[C] per costruzione o per conto» → «[C] vale per come è scritta la regola, o per calcolo: non prova che il programma lo faccia». *Togliere:* dal §5 le cifre «80 505 falsi su 146 901» → «in più di metà dei casi».
+8. **§3.** «su sensore ideale» → «su sensore ideale (la persona è un punto, con 5 cm di rumore)» (VI §3). *Togliere:* «due lanci» e «in una replica» dove restano.
+9. **§4.5.** Dopo «1,44 m/s» e «1,13 m/s» aggiungere «(5,2 km/h)» e «(4,1 km/h)» (conto mio: × 3,6) e «per chi è nascosto il limite è più basso». *Togliere:* «(scheda del costruttore)» (§5).
+10. **Titolo.** «Un sistema che sa che cosa non vede» → «Un prototipo progettato per dire che cosa non vede». Minuti: «d m» → «fino a d metri»; «registrazione vera» → «registrazione pubblica, non nostra»; «Chi porta il sensore» → aggiungere «oggi: fermo».
+
+## D. Stati e seguito
+
+Stati proposti: nessuno nuovo; C-G «regge in parte» fino alle correzioni 1–6. Proposte nuove: nessuna (il passo le vieta). Dopo: applicare 1–6, poi una seconda lettura a freddo di un'istanza che non ha visto né il testo né questo file, con il cronometro a tre minuti.

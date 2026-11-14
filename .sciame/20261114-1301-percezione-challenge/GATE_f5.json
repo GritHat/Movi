@@ -1,0 +1,13 @@
+{
+ "fase": "f5",
+ "ora": "2026-11-14T19:41:01+01:00",
+ "note": "Chiusura dell'arbitro dopo il passo d'integrazione f12 e l'inclusione f14: esito chiuso, nel senso dichiarato (domanda di progetto chiusa; H-012 riformulata e H-501 provate solo in simulazione, a sensore fermo; sei conclusioni riformulate nel loro dominio). Mancano, dichiarate dall'arbitro: rilettura indipendente della versione 3 finale e del blocco di classificazione; audit non rifatto sulla versione 3; la versione 3 non è mai stata eseguita come insieme. Nessuna domanda sul sensore è chiusa.",
+ "non_consegnati": [],
+ "impronte": {
+  "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f5/01-arbitro/CHIUSURA.md": "3536907e595899f1c896a32c2800ba7aafb5e670469992368b899193938313d2",
+  "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f5/01-arbitro/TASK.md": "b206dcbe8a6fa8587ab80a4f9c3b6be3d17241a48563d98b5c5a8e0c6a0c1ea4",
+  "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f5/02-audit/AUDIT.md": "b8ee67fa8e8d380ba4807c62a2721f6c829fc744600f4ddf29814ff6141e1f56",
+  "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f5/02-audit/stato.md": "7ffcbe4c0db7ca5b1781184f8215f67593b58fa4b6bda4d47da62282937979f2",
+  "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f5/CHIUSURA.md": "3536907e595899f1c896a32c2800ba7aafb5e670469992368b899193938313d2"
+ }
+}

@@ -1,8 +1,44 @@
-# Riferimenti del progetto — elenco unico, versione finale (percezione-challenge)
+# Riferimenti del progetto — elenco unico, aggiornamento f12 (percezione-challenge)
 
-Curatore delle fonti (`sciame-fonti`), fase f11 (documentazione), **versione finale**: è l'elenco dell'unione dei quattro elenchi parziali (`f11-documentazione/unione/RIFERIMENTI.md`, chiuso alle 16:50) con le correzioni della verifica (`f11-documentazione/verifica-rif/VERIFICA_RIFERIMENTI.md`, chiusa alle 17:20) applicate. 14 novembre 2026; versione chiusa alle 17:36. I percorsi dei file dello sciame sono relativi a `.sciame/20261114-1301-percezione-challenge`. Il file BibTeX con le stesse chiavi è `f11-documentazione/finale/riferimenti.bib` (166 voci).
+**Aggiornamento f12** (curatore delle fonti, `sciame-fonti`, passo `f12-integrazione/51-riferimenti`, 14 novembre 2026): 332 voci, cioè le 291 della versione delle 17:36 più 41 nuove, con gli usi, gli stati e i conteggi aggiornati; il riquadro in testa al §0 dice che cosa è cambiato. Il file BibTeX con le stesse chiavi è `riferimenti.bib`, accanto a questo file (189 voci). Il resto di questo capoverso è della versione delle 17:36. — Curatore delle fonti (`sciame-fonti`), fase f11 (documentazione), **versione finale**: è l'elenco dell'unione dei quattro elenchi parziali (`f11-documentazione/unione/RIFERIMENTI.md`, chiuso alle 16:50) con le correzioni della verifica (`f11-documentazione/verifica-rif/VERIFICA_RIFERIMENTI.md`, chiusa alle 17:20) applicate. 14 novembre 2026; versione chiusa alle 17:36. I percorsi dei file dello sciame sono relativi a `.sciame/20261114-1301-percezione-challenge`. Il file BibTeX con le stesse chiavi è `f11-documentazione/finale/riferimenti.bib` (166 voci).
 
 ## 0. In testa
+
+> **CHE COSA È CAMBIATO IN QUESTA VERSIONE** (aggiornamento f12, passo `f12-integrazione/51-riferimenti`, 14 novembre 2026, chiuso alle 19:36; parte dalla versione delle 17:36, che resta in `documentazione/RIFERIMENTI.md` e non è stata toccata)
+>
+> 1. **Voci: da 291 a 332.** 41 fonti nuove, numerate da [292] a [332] in coda al loro gruppo: 20 articoli e libri (gruppo 1), 3 schede (gruppo 2), 1 regolamento di un gestore (gruppo 3), 2 insiemi di dati (gruppo 5), 15 altre fonti, di cui 10 pagine di Wikipedia (gruppo 6). Le 291 voci di prima tengono chiave e numero (controllo per programma: 0 cambiati).
+> 2. **Da dove vengono.** 6 dal fascicolo di bibliografia dell'allegato tecnico (`f13-allegato/06-bibliografia`: `wilson1927`, `brown2001`, `barshalom2001`, `elfes1989`, più le due proposte non adottate `vovk2005` e `bernardin2008`); 35 dalla valutazione breve sulla classificazione e sul profilo di chi porta il sensore (`f14-classificazione`: 14 articoli, 3 schede, 1 regolamento, 2 insiemi di dati, 15 altre). **Nei verdetti f7 e f8, in tutto `f10-dati` (verdetto VD compreso) e in tutto `f12-integrazione` (soluzione versione 3, prova sull'identità e sua controprova, piano, verdetto d'integrazione, testo delle due pagine) non c'è nessun indirizzo, identificativo arXiv o DOI che non fosse già nell'elenco** (ricerca per programma, vedi punto 9). Quelle fasi citano fonti già note o nessuna.
+> 3. **Stato delle 41 voci nuove:** 30 verificate (pagina o registro aperti da me oggi fra le 19:24 e le 19:28, dato citato trovato), 9 verificate in parte (esistono con questi dati bibliografici; il contenuto citato non è stato letto), 1 con un dato diverso, 1 vista solo nel riassunto di una ricerca. **Nessuna fonte inesistente.** Per le fonti di f14 «verificata» vuol dire quasi sempre «la cifra è nel riassunto del registro o nella pagina»: 10 sono pagine di Wikipedia, cioè fonti di terza mano, e 5 sono pagine di aziende o di settore.
+> 4. **Che cosa ho trovato di diverso da ciò che i file scrivono** (dettaglio nelle voci):
+>    - `green2000` [310]: il DOI scritto in `profili_portatore.json` (R6) è di **un altro articolo** (Summala, pp. 217–226); quello di Green è 10.1207/STHF0203_1. Le cifre 0,70–0,75 / 1,25 / 1,5 s non le ha lette nessuno: **non verificate**.
+>    - `tronair-traino-aerei` [330]: «5 nodi per un 737-800» e «circa 5 mph» **non sono nella pagina**; c'è solo «mai oltre il passo di chi cammina accanto».
+>    - `dji-mavic-3-classic` [314]: la pagina rinvia altrove, nessuna cifra letta: 21 m/s, 8 m/s, 35°, 895 g restano **non verificati**.
+>    - `monaco-aeroporto-regole` [315]: 30 km/h e 6 km/h ci sono; il testo porta «Revision 03, 20.02.2026», non «2016»: edizione **non risolta**.
+>    - `pilz-iso-13855` [332]: K = 1600 mm/s c'è; nell'edizione 2024 la formula è S = (K × T) + D_DS, non «S = K·T + C»; «850» non compare. La norma resta non letta: **C = 0,85 m non è citabile**.
+>    - `bohannon1997` [306]: 2,5 m/s è la **media** del passo massimo del gruppo più veloce, non una velocità massima (già detto dall'attacco f14; confermato dal riassunto).
+>    - A favore dei ruoli: `ohm2016` [311] e `cao1998` [307] erano marcate «non verificato» o «percentuali non lette», e il dato è nel riassunto; `telegraph2024` [302] (camion confusi col fondo 35 %, 10 %, 12 %, 30 %) torna sul testo.
+>    - Il riassunto di `ohm2016` porta un dato che i profili non usano: dopo il segnale il corpo si ferma davvero solo dopo 0,96–1,41 s di stabilizzazione. **Il tempo di reazione di una persona non vedente a un avviso mentre cammina resta senza fonte** (`sd-K12`, non risolto: lo decide un articolo che lo misuri o una prova con persone).
+> 5. **Stati cambiati in 10 voci esistenti**, tutti dal fascicolo di bibliografia di f13 (riaperture fatte da quel curatore alle 18:00–18:04, **non rifatte da me**): `barber2019` [6] da «in parte» a «verificata»; `gibbs2021` [24] da «in parte» a «verificata»; `guibas1997` [27] da «in parte» a «verificata»; `kalman1960` [37] da «in parte» a «verificata»; `kuhn1955` [48] da «in parte» a «verificata»; `luiten2021` [56] da «in parte» a «verificata»; `zhang2022` [110] da «in parte» a «verificata»; `realsense-file-di-esempio` [255] da «aperta dal ruolo» a «dato diverso»; `thor` [256] da «in parte» a «verificata»; `tum-rgbd` [257] da «in parte» a «verificata». Nove salgono «per il dato indicato nella mappa del fascicolo» (di solito il riassunto del registro, non il testo); `realsense-file-di-esempio` passa a «dato diverso» perché l'elenco le attribuiva file che la pagina non contiene (il fascicolo proponeva «in parte»: la scelta più severa è mia, per la regola del §0). Riguardano le fonti, non gli enunciati dello sciame; l'arbitro può rovesciarli.
+> 6. **Note aggiunte a 14 voci** per ciò che il verdetto sui dati (VD) e le discordanze dei fascicoli impongono alle frasi sostenute da una fonte: `ahn2019` [3], `clopper1934` [16], `marvel2017` [63], `scholler2020` [85], `orbbec-gemini-335` [137], `realsense-alta-velocita-d435` [140], `realsense-confronto-camere` [142], `realsense-taratura-profondita` [146], `iso-13855` [181], `iso-3691-4` [182], `ue-2019-945` [190], `octomap` [220], `friburgo-rgbd-people` [249], `princeton-tracking-benchmark` [254]. In breve: la curva nominale del rumore (1,5 / 3,4 / 6,0 cm) è la formula del costruttore, ma come rumore del prototipo è **non decidibile** e ottimistica; su THÖR il q del filtro è **corretto** verso 0,05–0,1 e la copertura è sostenuta dai dati su tracce di cattura del moto, non di una camera; su TUM il «libero» è non decidibile; «99,25 %» è un limite esatto unilaterale e con Wilson è 99,05 % (ricalcolato da me); campo 87° × 58° e focale 424 px non sono coerenti (1,69 m contro 1,71–1,73 m); 95 ms contro 70 e 120 ms sono fonti diverse; le norme sulla distanza di separazione non le ha lette nessuno.
+> 7. **Usi aggiornati in 174 voci esistenti**: una riga «Usata per: (aggiornamento f12)» con i file scritti dopo le 17:36 (o non coperti prima) che citano la voce per chiave, per indirizzo o, per 12 voci, per nome; per le voci citate nell'allegato tecnico c'è la frase che la fonte sostiene, presa dalla mappa del fascicolo. **È una ricerca automatica: l'affermazione non è stata riletta riga per riga**, e una citazione scritta con altre parole può mancare.
+> 8. **Conteggi rifatti** (tabella più sotto): 204 / 58 / 23 / 21 / 6 / 8 / 12 = 332; alla versione delle 17:36 erano 165 / 58 / 21 / 22 / 5 / 8 / 12 = 291.
+> 9. **Completezza** (programma mio, sui file di testo della convocazione fuori da f11 e dalle cartelle di materiale scaricato; 2969 file): 464 indirizzi distinti, 8 assenti da questo file; 75 identificativi arXiv, 0 assenti; 122 DOI, 1 assenti. Gli assenti non sono fonti: `http://example.com/a.pdf`, `http://www.w3.org/2000/svg`, `https://[A-Za-z0-9.-`, `https://api.crossref.org/works/$doi`, `https://export.arxiv.org/api/query?id_list=2106.00170`, `https://raw.githubusercontent.com/IntelRealSense/librealsense/master/doc/sample-data.md`, `https://www.slamtec.com/en/c1/spec.…`, `https://www.slamtec.com/…` (indirizzi d'esempio, spazi dei nomi tecnici, modelli d'indirizzo dei programmi di scaricamento, copie dirette di pagine che hanno già la voce, e due indirizzi di `slamtec-rplidar-c1` [152] scritti troncati con i puntini in un file dell'allegato); DOI assenti: `10.1007/3-540-63307-3\_45` (è il DOI di `guibas1997` [27], che c'è, scritto con la barra rovesciata di LaTeX). Conteggio delle 19:36: altri ruoli stanno ancora scrivendo in f13, quindi il numero dei file cresce. Prima dell'aggiornamento gli assenti erano 42 indirizzi, 7 identificativi arXiv e 11 DOI.
+> 10. **File BibTeX** `riferimenti.bib` (accanto a questo file): 189 voci (57 article, 3 book, 43 inproceedings, 16 manual, 1 mastersthesis, 67 misc, 1 phdthesis, 1 techreport); graffe 1945 aperte e 1945 chiuse; 0 chiavi doppie; 0 errori di struttura; 0 campi obbligatori mancanti; 0 chiavi assenti da RIFERIMENTI.md; 0 voci con numero [n] diverso dall'elenco; senza titolo: koschi-mediatum-1575368; 18 senza autore; 29 senza anno. Controllo con un programma mio che legge il file carattere per carattere (sul file delle 17:36 ridà 166 voci e 1716 graffe). Sono 166 voci di prima più 23 nuove (le 20 del gruppo 1, due schede, il regolamento); nel campo note di 7 voci è cambiato lo stato. `bibtex` con lo stile plain su una copia nella cartella temporanea: 0 errori, 1 avviso atteso (`vovk2005` senza autore, perché gli autori non sono nel registro), 189 voci. **Al primo passaggio il controllo aveva trovato un errore mio** (una sostituzione dello stato che mangiava cinque voci: 184 invece di 189): corretto e rilanciato. Stato: **verificato** per la forma del file; non dice nulla sul contenuto delle fonti.
+> 11. **La marca «[f7–f10: non vagliato dall'arbitro]»** sulle righe d'uso è quella delle 17:36 e **non l'ho tolta**: da allora l'arbitro ha chiuso i verdetti su f7, f8, f9, f10 (VD) e sull'integrazione f12, ma un verdetto vaglia enunciati e cifre, non ogni riga d'uso di una fonte. Leggerla così: «uso scritto in un'estensione; vale lo stato che il verdetto di quell'estensione dà all'enunciato». Le cifre di f10 che VD ha ricontato non sono più «preliminari»; f13 e f14 non hanno un verdetto loro letto da me.
+> 12. **Prova sull'identità** (`f12-integrazione/06-identita/IDENTITA_SU_PROFONDITA.md`) e **controprova** (`07-controprova-identita/CONTROPROVA_IDENTITA.md`): consegnate (controllato con `ls`); non citano fonti esterne nuove. Le loro cifre non entrano in questo elenco.
+>
+> **Regole violate e scostamenti di questo aggiornamento (miei).**
+> - **Lettura parziale, contro la consegna.** Letti per intero: il contratto f12 e la parte II del fascicolo di bibliografia (righe lunghe troncate); il §0 dell'elenco, con le ultime 35 righe troncate a 900 caratteri. `DISCORDANZE_DEI_FASCICOLI.md`: letto, con le righe oltre 1500 caratteri troncate. Il verdetto VD: lette le righe che parlano di fonti, dati, schede e condizioni (ricerca per parola), non tutto. **Non letti per intero:** i verdetti VN, V7, V8, V9 e d'integrazione, la soluzione versione 3, il blocco della classificazione, il decimo addendum, la prova sull'identità e la controprova: su questi ho fatto solo la ricerca per programma di indirizzi, identificativi e chiavi. Una fonte nominata solo a parole in quei file (senza indirizzo, sigla o chiave) può mancare.
+> - **Non ho riaperto le voci esistenti.** I 10 cambi di stato vengono dal fascicolo f13; ho solo controllato che le sue richieste risultino nel suo registro (`f13-allegato/06-bibliografia/scaricati/esito_richieste.tsv`: 23 DOI con codice 200).
+> - **Previsioni** scritte alle 19:20:33, prima dell'estrazione e della rete, in `PREVISIONI.md` (con gli esiti): P1 (fra 5 e 40 fonti nuove) **smentita** di una, sono 41; P2 (almeno l'80 % risponde, nessuna inesistente) **regge**; P3 (BibTeX senza errori al primo passaggio) e P4 (0 chiavi o numeri cambiati): vedi il punto 10 e `PREVISIONI.md`; P5 (fra 2 e 15 voci esistenti toccate dai verdetti) **smentita**, sono 24; P6 (0 fonti assenti dopo l'aggiornamento) **regge**.
+> - **Un comando sbagliato:** il primo comando di shell è rimasto fermo 120 s per un mio errore (un `cat` senza ingresso) ed è stato interrotto; aveva già scritto solo `PREVISIONI.md`, niente altro.
+> - **Rete:** 45 richieste fra le 19:24 e le 19:28 (Crossref, arXiv, Europe PMC, GitHub, Wikipedia, sei siti di aziende e costruttori, un aeroporto), con soli DOI, identificativi e indirizzi pubblici già scritti nei file; due risposte 429 riprovate con successo, due 403 (un aggregatore e la pagina di un editore), un rinvio senza contenuto. Il materiale scaricato è nella cartella temporanea della sessione, separato dai programmi, mai eseguito; due PDF sono stati convertiti in testo con `pdftotext`.
+> - **Scritture:** solo in `f12-integrazione/51-riferimenti` (`RIFERIMENTI.md`, `riferimenti.bib`, `PREVISIONI.md`). Niente git, niente sudo.
+> - **Indipendenza:** condivido con i ruoli e con i curatori precedenti il modello linguistico e il ruolo; non i programmi (riscritti) né le conversazioni. La parte indipendente sono le risposte grezze dei registri e delle pagine. I conteggi li ha rifatti un programma mio, che sul file delle 17:36 ridà 165 / 58 / 21 / 22 / 5 / 8 / 12 = 291.
+> - **Niente è «validato».** «Verificata» riguarda la fonte, non il sistema. Il classificatore è richiesto dal decimo addendum e in questo progetto **non è realizzato né valutato**: le fonti di f14 dicono che metodi e dati esistono, non che funzionino su queste classi a 3 m.
+> - Lunghezza oltre le due pagine: la consegna chiede l'elenco intero.
+
+Il testo che segue, fino alla tabella dei conteggi esclusa, è quello della versione delle 17:36 (dove dice «questa versione finale» intende quella).
 
 **A che cosa serve.** È l'elenco di tutti gli articoli scientifici e delle altre fonti esterne che lo sciame ha citato nelle fasi f1–f6 (chiuse) e nelle estensioni f7–f10 (in corso), con i dati bibliografici, il link, lo stato di verifica e, per ogni fonte, le affermazioni che le sono state appoggiate e il file che la cita. Serve a tre cose: (1) citare nel documento di stato e nei testi per la giuria solo ciò che una fonte dice davvero; (2) sapere, per ogni cifra presa da fuori, chi l'ha letta e come; (3) tenere in un posto solo le correzioni (attribuzioni sbagliate, cifre diverse dalla fonte). Va aggiornato a ogni nuova valutazione: una fonte nuova entra con una voce nel formato qui sotto, una fonte riletta cambia il campo «Verifica».
 
@@ -46,21 +82,22 @@ Curatore delle fonti (`sciame-fonti`), fase f11 (documentazione), **versione fin
 
 **Sigle dentro il dettaglio.** [g] dato trovato con una ricerca testuale nel testo grezzo scaricato (pagina, PDF, registro); [T] lo stesso, nel gruppo rif-4; [r] letto attraverso lo strumento di lettura che riassume (più debole); [m] metadati da Crossref o dall'interfaccia di GitHub (rif-3); [API] dati bibliografici, e a volte il riassunto, letti nel registro di arXiv, Crossref, PubMed o Zenodo (rif-4); [200] la pagina risponde, contenuto non riletto. A, A-g, R sono le marche dei ruoli (aperta con lo strumento che riassume; frase trovata nel testo; solo riassunto di ricerca). F1–F30 e S1–S38 sono i numeri delle fonti nei file dei ruoli. «f3» è la verifica del curatore in `f3/fonti/FONTI_VERIFICATE.md`, fatta oggi. «(verifica-rif)» è la verifica dell'elenco fatta oggi fra le 17:06 e le 17:20 (`f11-documentazione/verifica-rif/VERIFICA_RIFERIMENTI.md`): dentro, [testo] vuol dire ricerca testuale nel PDF o nella pagina scaricati. «(finale)» è il riscontro fatto alla stesura di questa versione (17:23–17:24), sulle risposte grezze dei registri, sui metadati delle pagine o, dove è scritto, su una copia salvata da un ruolo nella convocazione. I registri bibliografici valgono per autori, sede, pagine e DOI, non per il contenuto.
 
-**Conteggi** (ricontati sulle voci di questo file da un programma del curatore di questa versione; sul file dell'unione lo stesso programma ridà la tabella dell'unione, 161 / 58 / 21 / 22 / 7 / 8 / 13 = 290).
+**Conteggi** (aggiornamento f12: ricontati sulle 332 voci di questo file da un programma del curatore di questo aggiornamento; sul file delle 17:36 lo stesso programma ridà 165 / 58 / 21 / 22 / 5 / 8 / 12 = 291).
 
 | Tipo | verificata | verificata in parte | dato diverso | aperta dal ruolo | solo riassunto di ricerca | non verificata | non raggiungibile | Totale |
 |---|---|---|---|---|---|---|---|---|
-| 1. Articoli scientifici e prestampe (con tesi, libri e rapporti) | 66 | 38 | 9 | 0 | 0 | 1 | 1 | 115 |
-| 2. Schede tecniche e documenti dei costruttori (con le pagine dei rivenditori) | 24 | 1 | 3 | 5 | 3 | 4 | 6 | 46 |
-| 3. Norme e documenti regolatori | 16 | 10 | 4 | 1 | 2 | 3 | 2 | 38 |
+| 1. Articoli scientifici e prestampe (con tesi, libri e rapporti) | 85 | 38 | 10 | 0 | 0 | 1 | 1 | 135 |
+| 2. Schede tecniche e documenti dei costruttori (con le pagine dei rivenditori) | 26 | 1 | 3 | 5 | 4 | 4 | 6 | 49 |
+| 3. Norme e documenti regolatori | 17 | 10 | 4 | 1 | 2 | 3 | 2 | 39 |
 | 4. Documentazione di software e depositi di codice | 32 | 4 | 1 | 9 | 0 | 0 | 0 | 46 |
-| 5. Insiemi di dati | 9 | 3 | 1 | 1 | 0 | 0 | 1 | 15 |
-| 6. Comunicati e altre fonti (stampa, blog, forum, enciclopedie) | 18 | 2 | 3 | 6 | 0 | 0 | 2 | 31 |
-| **Totale** | **165** | **58** | **21** | **22** | **5** | **8** | **12** | **291** |
+| 5. Insiemi di dati | 13 | 1 | 2 | 0 | 0 | 0 | 1 | 17 |
+| 6. Comunicati e altre fonti (stampa, blog, forum, enciclopedie) | 31 | 4 | 3 | 6 | 0 | 0 | 2 | 46 |
+| **Totale** | **204** | **58** | **23** | **21** | **6** | **8** | **12** | **332** |
 
-- Per stato: 165 verificate, 58 verificate in parte, 21 con un dato diverso, 22 aperte solo dal ruolo, 5 viste solo in un riassunto di ricerca, 8 non verificate, 12 non raggiungibili.
-- Rispetto all'unione: verificate da 161 a 165 (quattro promosse, una abbassata, una voce nuova), in parte 58 (tre entrate da stati più deboli, una dall'alto, quattro uscite verso l'alto), solo riassunto da 7 a 5, non raggiungibili da 13 a 12. Senza la voce nuova il totale è 164 / 58 / 21 / 22 / 5 / 8 / 12 = 290, come previsto dalla verifica (R22).
-- 130 voci sono citate solo nelle estensioni f7–f10 o nei file esterni (non vagliate dall'arbitro); altre 13 hanno usi sia nelle fasi chiuse sia nelle estensioni.
+- Per stato (aggiornamento f12): 204 verificate, 58 verificate in parte, 23 con un dato diverso, 21 aperte solo dal ruolo, 6 viste solo in un riassunto di ricerca, 8 non verificate, 12 non raggiungibili.
+- Rispetto alla versione delle 17:36: verificate da 165 a 204 (30 voci nuove, nove promosse dal fascicolo f13); in parte 58 (9 voci nuove entrate, nove uscite verso l'alto); dato diverso da 21 a 23 (`green2000` nuova, `realsense-file-di-esempio` dall'aperta dal ruolo); aperte dal ruolo da 22 a 21; solo riassunto da 5 a 6 (`dji-mavic-3-classic`).
+- (Testo della versione delle 17:36, sulle 291 voci di allora.) Rispetto all'unione: verificate da 161 a 165 (quattro promosse, una abbassata, una voce nuova), in parte 58 (tre entrate da stati più deboli, una dall'alto, quattro uscite verso l'alto), solo riassunto da 7 a 5, non raggiungibili da 13 a 12. Senza la voce nuova il totale è 164 / 58 / 21 / 22 / 5 / 8 / 12 = 290, come previsto dalla verifica (R22).
+- (Testo della versione delle 17:36, sulle 291 voci di allora.) 130 voci sono citate solo nelle estensioni f7–f10 o nei file esterni (non vagliate dall'arbitro); altre 13 hanno usi sia nelle fasi chiuse sia nelle estensioni.
 - Attenzione al grado: «verificata» copre letture del testo intero, letture del solo riassunto e letture attraverso lo strumento che riassume. Il grado è scritto nel dettaglio di ogni voce e non va appiattito. La verifica l'ha contato sulle 161 «verificate» dell'unione (`verifica-rif/VERIFICA_RIFERIMENTI.md`, §1.5): 69 hanno nel dettaglio almeno una riserva («non ricontrollato», «non è nel riassunto»); 10 sono state lette solo attraverso lo strumento che riassume; 15 portano la sola marca [API]; 6 norme sono verificate su una riproduzione di terzi o su una fonte secondaria. Il criterio non è uniforme fra i gruppi: un dato trovato nel solo riassunto del registro è «verificata» per rif-4 e «verificata in parte» per rif-3 (per esempio `dang2024`). Non l'ho uniformato: cambierebbe la legenda (proposta `fonti-verifica-1`, §9).
 
 **Cambi di stato proposti dai gruppi e dalla verifica** (li decide l'arbitro; riguardano le fonti e le etichette, non gli enunciati tecnici, che restano con lo stato che hanno: al più dimostrati in un modello dichiarato o sostenuti dai dati in simulazione, mai provati sull'hardware).
@@ -145,7 +182,7 @@ Curatore delle fonti (`sciame-fonti`), fase f11 (documentazione), **versione fin
 
 ## 1. Articoli scientifici e prestampe (con tesi, libri e rapporti)
 
-115 voci, da [1] a [115].
+135 voci: da [1] a [115]; in coda, aggiunte nell'aggiornamento f12, da [292] a [311].
 
 ### adamides2025 [1]
 Tipo: articolo scientifico (rassegna)
@@ -156,6 +193,7 @@ Identificativo: DOI 10.3390/robotics14040041
 Link: https://mdpi.com/2218-6581/14/4/41
 Verifica: verificata dal curatore il 14-11-2026 in parte — (rif-1) solo nei dati bibliografici [g] (Crossref e Semantic Scholar): esiste con questi autori e questo titolo. L'affermazione citata non è nel riassunto; il testo intero non è raggiungibile (403): affermazione non verificata.
 Usata per: F26: nella sorveglianza di velocità e separazione (ISO/TS 15066) la distanza protettiva si calcola con l'incertezza di misura e la latenza — `f1/3fff79e9c3ea/FONTI.md`, `f1/3fff79e9c3ea/CONSEGNA.md` (§1.8)
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: il riassunto parla di architetture di percezione per la sorveglianza di velocità e separazione, non della formula. Che la formula della norma contenga termini di incertezza di posizione e di tempo di reazione lo ricordo a memoria: non verificato oggi.
 
 ### aharon2022 [2]
@@ -168,6 +206,7 @@ Link: https://arxiv.org/abs/2206.14651
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-2) per i soli dati bibliografici (pagina arXiv). Testo non letto. ‖ (rif-3) [r] — nel riassunto: «camera-motion compensation, and a more accurate Kalman filter state vector». Il ruolo che la cita l'aveva aperta.
 Usata per: tracciatore «BoT-SORT o ByteTrack» — `f2/01-traduzione/SCHEDE.md` (`visione-1`).
 Usata per: compensazione del moto della camera nel filtro di tracciamento — `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §3, S35
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, `f13-allegato/DISCORDANZE_DEI_FASCICOLI.md`, 4 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «compensazione del moto della camera e stato del filtro più accurato (riassunto)» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: (rif-2) solo nominato nei file. (rif-3) la compensazione è nel piano dell'immagine e si misura sull'identità dei pedoni; non dà garanzie su «mai libero dove non è osservato».
 
 ### ahn2019 [3]
@@ -177,9 +216,10 @@ Titolo: Analysis and Noise Modeling of the Intel RealSense D435 for Mobile Robot
 Sede e anno: 16th International Conference on Ubiquitous Robots (UR), 2019, pp. 707–711
 Identificativo: DOI 10.1109/URAI.2019.8768489
 Link: https://ucla.box.com/shared/static/gqxwr2vvqsf22oi9dqtn50hr0xkruzie.pdf
-Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [API] e [T]: nel PDF σz(z, θ) = 0,001063 + 0,0007278·z + 0,003949·z² + 0,022·z^(3/2)·θ/(π/2 − θ)²; «the left edge of the planar target noticeably worsens»; la soglia dei 60° e 75° non ricontrollata ‖ (finale) nel testo dell'articolo scaricato dal ruolo (`f10-dati/02-sensori/scaricati/ahn.txt`, righe 227–235) [ricerca testuale]: «a conservative 90th percentile», «σL = 0.0432 m», «σR = 0.0407 m»
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [API] e [T]: nel PDF σz(z, θ) = 0,001063 + 0,0007278·z + 0,003949·z² + 0,022·z^(3/2)·θ/(π/2 − θ)²; «the left edge of the planar target noticeably worsens»; la soglia dei 60° e 75° non ricontrollata ‖ (finale) nel testo dell'articolo scaricato dal ruolo (`f10-dati/02-sensori/scaricati/ahn.txt`, righe 227–235) [ricerca testuale]: «a conservative 90th percentile», «σL = 0.0432 m», «σR = 0.0407 m» ‖ (f13-bibliografia, 18:00–18:04, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md` §II.0; non riaperta da me in f12) nomi per esteso dei cinque autori confermati su Crossref; l'intervallo «0.4 m to 2.1 m» (bersaglio piano bianco, angoli da 0° a 75°) riscontrato nella copia dell'articolo salvata nel progetto
 Usata per: rumore assiale misurato della D435 (σz = 0,0011 + 0,0007·z + 0,0039·z², 1,83 cm a 2 m), ombra sul bordo sinistro, rumore piatto fino a 60° d'incidenza — `f10-dati/02-sensori/MODELLO_SENSORE.md` righe 18 e 90 (S3), `PREVISIONI.md` righe 31 e 35 **[f7–f10: non vagliato dall'arbitro]**
 Usata per: rumore laterale ai bordi nel modello del simulatore: 4,3 cm al bordo sinistro (il resto della riga «Bordi» è dichiarato ipotesi) — `f10-dati/11-simulatore/SIMULATORE.md` riga 25; `f10-dati/02-sensori/MODELLO_SENSORE.md` riga 23 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f10-dati/02-sensori/parametri_sensori.json`, `f12-integrazione/50-stato/STATO_V2_copia.md`, `f13-allegato/02-geometria/FASCICOLO_GEOMETRIA.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/DISCORDANZE_DEI_FASCICOLI.md`, 7 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «σ_z = 0,001063 + 0,0007278·z + 0,003949·z² (+ termine angolare); parete bianca 0,4–2,1 m; rumore laterale 4,3 cm al bordo sinistro» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: parete bianca, 0,4–2,1 m: a 3 m è un'estrapolazione (lo dice il ruolo). Copia messa in rete dagli autori; diritti IEEE. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### angelopoulos2021 [4]
@@ -191,6 +231,7 @@ Identificativo: arXiv:2107.07511; DOI 10.1561/2200000101 (versione a stampa)
 Link: https://arxiv.org/abs/2107.07511
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [API] per autori e titolo; la condizione di scambiabilità non è nel riassunto: non riletta (lo dichiara anche il ruolo) ‖ (verifica-rif) [testo] nel PDF v6: «this property marginal coverage, since the probability is marginal (averaged)…»; la condizione di scambiabilità è nel testo. Versione a stampa trovata su Crossref. ‖ (finale) Crossref riaperto alle 17:23 per il DOI della versione a stampa: titolo, autori, volume, fascicolo e pagine coincidono
 Usata per: la copertura marginale promessa dalla teoria, a fronte di 0,893–0,905 misurato nel complesso (`risultati` del ruolo) — `f8-continuita/03-kalman/CONSEGNA.md` riga 30; `f8-continuita/04-statistico/CONSEGNA.md` riga 88 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/03-stima/FASCICOLO_STIMA.md`, `f13-allegato/04-statistica/FASCICOLO_VALUTAZIONE.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/uscita_cerca.txt`, 8 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «copertura marginale; condizione di scambiabilità» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: garantisce la copertura in media, non per comportamento. Lo 0,893–0,905 è una misura dello sciame (in simulazione, non vagliata dall'arbitro), non un dato della fonte. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### balch2019 [5]
@@ -202,6 +243,7 @@ Identificativo: DOI 10.1098/rspa.2018.0565; arXiv:1706.08565
 Link: https://arxiv.org/abs/1706.08565
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [API]: «lower quality data paradoxically appear to reduce the risk of collision» presente nel riassunto; «gli ellissoidi d'incertezza ne sono immuni» non ricontrollato
 Usata per: la diluizione della probabilità: un dato più rumoroso abbassa la probabilità d'intrusione (conto del ruolo: da 0,75 a 0,45 a 1 s) — `f9-preproposta/06-esperto-dominio/CONSEGNA.md` riga 31 (F4) **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, 2 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «dati di qualità peggiore sembrano ridurre il rischio di collisione (principio; satelliti)» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: congiunzioni fra satelliti: passa il principio, non i numeri. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### barber2019 [6]
@@ -211,9 +253,10 @@ Titolo: The limits of distribution-free conditional predictive inference
 Sede e anno: arXiv, v2 15-4-2020; versione a stampa: non verificata
 Identificativo: arXiv:1903.04684
 Link: https://arxiv.org/abs/1903.04684
-Verifica: verificata dal curatore il 14-11-2026 in parte — (rif-4) [API] per autori e titolo; il ruolo ha letto solo il riassunto
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [API] per autori e titolo; il ruolo ha letto solo il riassunto ‖ (f13-bibliografia, 18:00–18:04, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md` §II.0; non riaperta da me in f12) riassunto e sede a stampa nella risposta grezza di Crossref: Information and Inference: A Journal of the IMA, vol. 10, n. 2, pp. 455–482, 2021, DOI 10.1093/imaiai/iaaa017. Da «in parte» a verificata per il dato indicato nella mappa del fascicolo
 Usata per: la copertura condizionata esatta è impossibile senza ipotesi («Barber e altri») — `f8-continuita/04-statistico/CONSEGNA.md` righe 43 e 88 **[f7–f10: non vagliato dall'arbitro]**
-Note: l'enunciato preciso del teorema non è stato riletto da nessuno. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/DISCORDANZE_DEI_FASCICOLI.md`, 5 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «la copertura condizionata esatta è impossibile senza ipotesi sulla distribuzione (riassunto; enunciato del teorema non letto)» (marca V* nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
+Note: l'enunciato preciso del teorema non è stato riletto da nessuno. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro. ‖ (aggiornamento f12) la sede a stampa ora è nota (2021); la chiave resta `barber2019`.
 
 ### becker2018 [7]
 Tipo: articolo scientifico
@@ -237,6 +280,7 @@ Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente �
 Usata per: ordine «rilevatore → Kalman e ungherese» e 260 Hz (SORT) — `f1/21d3813ca7e1/CONSEGNA.md` (§1.1)
 Usata per: «calcolo trascurabile (SORT, stessa famiglia: 260 Hz)» — `f3/H-012/01-scene-dinamiche/SOLUZIONE.md` (B4).
 Usata per: associazione «alla SORT» come schema — `f3/H-012/01-scene-dinamiche/SOLUZIONE.md` §8; `f4/H-012/05-correzioni/SOLUZIONE_V2.md` §8.
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`, `f13-allegato/01-dimostrazioni/FASCICOLO_DIMOSTRAZIONI.md`, `f13-allegato/03-stima/FASCICOLO_STIMA.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, 4 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «Kalman più algoritmo ungherese; 260 Hz per il solo tracciatore, dati i rilevamenti» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: (rif-1) i 260 Hz sono del solo tracciatore, date le rilevazioni, sull'hardware del 2016. (rif-2) i 260 Hz sono del solo tracciatore (Kalman più ungherese) su riquadri 2D già rilevati, sull'hardware degli autori: non sono una misura del blocco B4 dello sciame.
 
 ### bogoslavskyi2016 [9]
@@ -274,6 +318,7 @@ Usata per: «senza misure gli errori del Kalman si accumulano» — `f1/21d3813c
 Usata per: l'articolo descrive il rumore che il Kalman accumula in occlusione; associazione «alla SORT / OC-SORT» come schema — `f3/H-012/01-scene-dinamiche/SOLUZIONE.md` §8; `f4/H-012/05-correzioni/SOLUZIONE_V2.md` §8.
 Usata per: associazione «tipo ByteTrack/OC-SORT» — `f2/01-traduzione/SCHEDE.md` (`ricercatore-1`).
 Usata per: riassociazione «alla OC-SORT» alla ricomparsa; braccio `cor3` (recupero sull'ultima osservazione) — `f9-preproposta/05-tracciamento/CONSEGNA.md` riga 3, `PREVISIONI.md` riga 64; nominata in `prepropostaEsterna.md` riga 91 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`, `f13-allegato/03-stima/FASCICOLO_STIMA.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, 10 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «senza misure l'errore del filtro si accumula durante l'occlusione; oltre 700 FPS su CPU dati i rilevamenti» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: (rif-1) il file LICENSE porta «Copyright (c) 2021 Yifu Zhang» (ereditato da ByteTrack): è MIT in ogni caso. (rif-2) il deposito `noahcao/OC_SORT` è sotto licenza MIT (file LICENSE aperto oggi). L'articolo misura la velocità con rilevamenti già dati: i 700 fps non comprendono il rilevatore. Non garantisce niente sui pedoni dietro un pannello con un sensore di profondità. (rif-4) nel piano immagine; il ruolo la porta sul piano del suolo. Alcuni usi vengono dalle estensioni f7–f10: NON ancora vagliati dall'arbitro (marcati riga per riga).
 
 ### carion2025 [12]
@@ -309,6 +354,7 @@ Identificativo: arXiv:2603.10407
 Link: https://arxiv.org/abs/2603.10407
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [API]: frase «…Negative Log-Likelihood loss, which is prone to predict over- or under-confident distributions» presente nel riassunto
 Usata per: la perdita NLL dà distribuzioni troppo o troppo poco sicure — `f8-continuita/07-ricercatore/FONTI.md` (S2), `CONSEGNA.md` riga 41 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, 2 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «la verosimiglianza negativa tende a distribuzioni troppo o troppo poco sicure» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: correzione C4 (cognome del primo autore). Nessun numero citato. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### cleaveland2024 [15]
@@ -320,6 +366,7 @@ Identificativo: DOI 10.1609/aaai.v38i19.30089; arXiv:2304.01075
 Link: https://arxiv.org/abs/2304.01075
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [API]: «prediction regions that are not conservative» e i predittori di pedoni presenti nel riassunto; sede AAAI 2024 confermata (era R)
 Usata per: regioni conformi su più passi non prudenti — `f8-continuita/07-ricercatore/FONTI.md` (S5), `CONSEGNA.md` riga 80 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, 2 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «regioni conformi su più passi non prudenti» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: nessun numero citato. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### clopper1934 [16]
@@ -331,7 +378,8 @@ Identificativo: DOI 10.1093/biomet/26.4.404
 Link: https://doi.org/10.1093/biomet/26.4.404
 Verifica: verificata dal curatore il 14-11-2026 in parte — (rif-2) per i soli dati bibliografici (registro Crossref). Testo non letto.
 Usata per: «Limiti di Clopper-Pearson unilaterali al 95 %» come regola di decisione delle prove (300 passaggi per la soglia del 99 %, 2000 per l'85 %) — `f3/H-012/03-metrologo/PIANO_MISURE.md` (parte 1); «binomiale esatta» — `f3/H-012/02-validazione/VERIFICA.md` (§3b); «limite inferiore 99,25 %» con N = 400 — `f4/H-012/05-correzioni/SOLUZIONE_V2.md` (§1).
-Note: il metodo è nominato nei file senza riferimento: la voce è aggiunta da me. Due conti ricontrollati oggi: 0,95^59 = 0,0485 e 0,99^299 = 0,0495 (tornano con «59» e «299» del piano).
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/05-schermo/PREVISIONI.md`, `f12-integrazione/20-finale/SOLUZIONE_V3.md`, `f12-integrazione/50-stato/frammenti_1.md`, `f12-integrazione/50-stato/frammenti_2.md`, `f13-allegato/01-dimostrazioni/FASCICOLO_DIMOSTRAZIONI.md`, `f13-allegato/01-dimostrazioni/PREVISIONI.md`, `f13-allegato/01-dimostrazioni/ricalcoli.txt`, `f13-allegato/04-statistica/FASCICOLO_VALUTAZIONE.md`, `f13-allegato/04-statistica/PREVISIONI_E_STATO.txt`, `f13-allegato/04-statistica/conti.txt`, e altri 6 file, 4 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «limiti di confidenza esatti per la binomiale (titolo; testo non letto)» (marca N nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
+Note: il metodo è nominato nei file senza riferimento: la voce è aggiunta da me. Due conti ricontrollati oggi: 0,95^59 = 0,0485 e 0,99^299 = 0,0495 (tornano con «59» e «299» del piano). ‖ (aggiornamento f12) f13 (`DISCORDANZE_DEI_FASCICOLI.md`, dimostrazioni D1 e stima D2): il «99,25 %» per 400 su 400 dei verdetti è il limite esatto UNILATERALE al 95 % (0,05^(1/400)); con Wilson bilaterale al 95 % è 99,05 % (`wilson1927` [292]). Per 2000 su 2000: 99,85 % contro 99,81 %. Chi scrive la cifra deve dire quale intervallo è. Ricalcolato da me: vedi `PREVISIONI.md`.
 
 ### dang2024 [17]
 Tipo: articolo scientifico
@@ -377,6 +425,7 @@ Identificativo: arXiv:2212.00278
 Link: https://arxiv.org/abs/2212.00278 ; https://proceedings.mlr.press/v211/dixit23a.html
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [API]: «distribution-free», osservazioni ritardate («delayed agent observations»), drone e frisbee presenti nel riassunto; sede non verificata da rif-4 ‖ (verifica-rif) pagina degli atti aperta: PMLR 211:300–314, 2023; nel riassunto «delayed agent observations» e «simulation case studies where a drone avoids a flying frisbee». ‖ (finale) metadati della pagina degli atti riletti alle 17:23: sei autori, pp. 300–314, data 6-6-2023
 Usata per: la variante adattiva usa le osservazioni ritardate degli agenti — `f8-continuita/07-ricercatore/FONTI.md` (S6), `CONSEGNA.md` riga 46 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, 2 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «variante adattiva con osservazioni ritardate, in simulazione» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: «in simulazione» è nel riassunto (verifica-rif). Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### doersch2022 [21]
@@ -400,6 +449,7 @@ Link: https://pubmed.ncbi.nlm.nih.gov/40100749/
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-1) [g]: registro PubMed aperto (servizio E-utilities); nel riassunto «The system is based on an RGB-D camera and haptic feedback, integrated into a backpack»; «Ten blindfolded participants». ‖ (rif-4) [API PubMed] per i dati bibliografici; contenuto non letto
 Usata per: F13: NavWear 2025 (RGB-D + aptico, zaino), citato dalla bozza — `f1/3fff79e9c3ea/FONTI.md`
 Usata per: esempio di ausilio indossabile con RGB-D e riscontro aptico, per impostare la valutazione con gli utenti — `bozza_iniziale/Proposta MLE Matrice Bayesiana (1).md` riga 2934 **[file esterno alla convocazione]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, 2 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «RGB-D e aptico in uno zaino; dieci partecipanti bendati» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: (rif-1) i nomi propri per esteso degli autori non sono nel registro letto (solo iniziali): manca. La prova è con dieci partecipanti bendati, non con persone con disabilità visiva. (rif-4) la bozza non ne trae cifre. Alcuni usi vengono dalle estensioni f7–f10: NON ancora vagliati dall'arbitro (marcati riga per riga).
 
 ### duberg2020 [23]
@@ -411,6 +461,7 @@ Identificativo: DOI 10.1109/LRA.2020.3013861; arXiv:2003.04749
 Link: https://arxiv.org/abs/2003.04749
 Verifica: dato diverso — (rif-4) [API]: «explicit representation of all three states in the map, i.e., occupied, free, and unknown» presente nel riassunto; «real-time (2 Hz) at 2 mm» NON è nell'articolo ma nel README del deposito (correzione C2)
 Usata per: UFOMap dichiara lo sconosciuto in modo esplicito; «real-time (2 Hz) at 2 mm» — `f7-estensione/05-esperto-dominio/CONSEGNA.md` righe 26 e 80 (S3) **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/05-costo/FASCICOLO_RAPPRESENTAZIONI_E_COSTO.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, 2 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «rappresentazione esplicita dei tre stati (riassunto). I «2 Hz a 2 mm» NON sono nell'articolo» (marca C nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: vedi `ufomap-deposito`. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### gibbs2021 [24]
@@ -420,9 +471,10 @@ Titolo: Adaptive Conformal Inference Under Distribution Shift
 Sede e anno: arXiv, v3 28-10-2021; versione a stampa: non verificata
 Identificativo: arXiv:2106.00170
 Link: https://arxiv.org/abs/2106.00170
-Verifica: verificata dal curatore il 14-11-2026 in parte — (rif-4) [API] per autori e titolo; il ruolo ha letto solo il riassunto
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [API] per autori e titolo; il ruolo ha letto solo il riassunto ‖ (f13-bibliografia, 18:00–18:04, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md` §II.0; non riaperta da me in f12) pagina degli atti NeurIPS 2021 (Advances in Neural Information Processing Systems 34), testo grezzo: https://proceedings.neurips.cc/paper/2021/hash/0d441de75945e5acbc865406fc9a2559-Abstract.html . Da «in parte» a verificata per il dato indicato nella mappa del fascicolo; i numeri di pagina mancano
 Usata per: conforme adattiva sotto cambio di distribuzione — `f8-continuita/04-statistico/CONSEGNA.md` riga 88 **[f7–f10: non vagliato dall'arbitro]**
-Note: Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/DISCORDANZE_DEI_FASCICOLI.md`, 2 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «copertura sul lungo periodo senza scambiabilità, a prescindere dal processo che genera i dati» (marca V* nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
+Note: Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro. ‖ (aggiornamento f12) la sede a stampa ora è nota (NeurIPS 2021); pagine non lette.
 
 ### giudice2008 [25]
 Tipo: articolo scientifico (atti di conferenza)
@@ -433,6 +485,7 @@ Identificativo: manca
 Link: https://umaine.edu/vemi/publication/environmental-learning-without-vision-effects-cognitive-load-interface-design
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-1) [r]: pagina aperta; nel riassunto «the secondary task had no effect on cognitive map performance for guidance by spatialized audio» ma «led to significantly worse homing errors for guidance by spatial language»; «Blindfolded participants».
 Usata per: F11: la guida con suono spazializzato regge un compito secondario meglio del linguaggio spaziale (vedenti bendati) — `f1/3fff79e9c3ea/FONTI.md`
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/uscita_cerca.txt`, `f13-allegato/DISCORDANZE_DEI_FASCICOLI.md`, 2 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «suono spazializzato contro linguaggio spaziale con compito secondario (partecipanti bendati)» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: il riassunto dice «blindfolded», non dice che fossero vedenti: «vedenti bendati» è non verificato su questa fonte. Pagina dell'istituto dell'autore, non degli atti.
 
 ### gneiting2007 [26]
@@ -444,6 +497,7 @@ Identificativo: DOI 10.1198/016214506000001437
 Link: https://sites.stat.washington.edu/raftery/Research/PDF/Gneiting2007jasa.pdf
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [API] e [T]: PDF aperto, «energy score» e «interval score» presenti; i numeri delle equazioni (21, 22, 43) non ricontrollati: letti dal ruolo
 Usata per: punteggi propri (CRPS, punteggio d'energia, punteggio dell'intervallo) per valutare le previsioni — `f8-continuita/04-statistico/CONSEGNA.md` riga 88 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/04-statistica/FASCICOLO_VALUTAZIONE.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/25-verifica-sovraffermazioni/uscita_cerca.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, 2 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «punteggi propri (punteggio d'energia, punteggio dell'intervallo)» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### guibas1997 [27]
@@ -453,9 +507,10 @@ Titolo: Visibility-Based Pursuit-Evasion in a Polygonal Environment
 Sede e anno: Lecture Notes in Computer Science (Springer), 1997, pp. 17–30 (convegno e volume: non letti); versione estesa, con altro titolo («A Visibility-Based Pursuit-Evasion Problem»), su International Journal of Computational Geometry & Applications 9(4–5):471–493, 1999
 Identificativo: DOI 10.1007/3-540-63307-3_45 (1997); DOI 10.1142/S0218195999000273 (1999)
 Link: https://cw.fel.cvut.cz/b191/_media/courses/b4m36uir/lectures/guibas1997.pdf
-Verifica: verificata dal curatore il 14-11-2026 in parte — (rif-4) [API] e [T]: PDF aperto, titolo e autori presenti; il passo usato non riletto ‖ (verifica-rif e finale) Crossref, riaperto alle 17:23: il secondo DOI porta al titolo «A Visibility-Based Pursuit-Evasion Problem», stessi cinque autori, vol. 9(4–5), pp. 471–493, agosto 1999
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [API] e [T]: PDF aperto, titolo e autori presenti; il passo usato non riletto ‖ (verifica-rif e finale) Crossref, riaperto alle 17:23: il secondo DOI porta al titolo «A Visibility-Based Pursuit-Evasion Problem», stessi cinque autori, vol. 9(4–5), pp. 471–493, agosto 1999 ‖ (f13-bibliografia, 18:00–18:04, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md` §II.0; non riaperta da me in f12) riassunto della versione di rivista (International Journal of Computational Geometry & Applications, vol. 9, n. 4–5, pp. 471–493, 1999, DOI 10.1142/S0218195999000273) nella risposta grezza di Crossref: da «in parte» a verificata per il dato indicato nella mappa del fascicolo. Il contributo del 1997 resta non letto
 Usata per: la regione di «possibile presenza» come nell'inseguimento con visibilità — `f7-estensione/08-creativo/CONSEGNA.md` riga 53 **[f7–f10: non vagliato dall'arbitro]**
-Note: il link è una copia su un sito didattico, non l'editore. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/DISCORDANZE_DEI_FASCICOLI.md`, 3 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «evasore imprevedibile, di posizione ignota, arbitrariamente veloce (riassunto della versione di rivista del 1999, che è la voce nel `.bib`)» (marca V* nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
+Note: il link è una copia su un sito didattico, non l'editore. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro. ‖ (aggiornamento f12) in `f13-allegato/06-bibliografia/allegato.bib` la stessa chiave indica la versione di rivista del 1999 (discordanza D3 del fascicolo): qui la voce resta il contributo del 1997, con il rimando.
 
 ### gupta2018 [28]
 Tipo: articolo scientifico
@@ -466,6 +521,7 @@ Identificativo: DOI 10.1109/CVPR.2018.00240; arXiv:1803.10892
 Link: https://arxiv.org/abs/1803.10892
 Verifica: verificata dal curatore il 14-11-2026 in parte — (rif-2) per i soli dati bibliografici (pagina arXiv, registro Crossref, voce [3] di `scholler2020`). Il testo non l'ho letto.
 Usata per: «il generativo S-GAN sta a 0,32 / 0,60» — `f2/01-traduzione/SCHEDE.md` (`ricercatore-2`); `f2/05-selezione/SELEZIONE.md` (riga H-011); `f3/H-012/01-scene-dinamiche/SOLUZIONE.md` §8.
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, 1 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «nome del metodo S-GAN (le cifre vengono da `scholler2020`)» (marca N nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: solo nominato nei file. Lo 0,32 / 0,60 viene da un modello preaddestrato rieseguito da Schöller e altri («an improved version compared to what the authors report in their paper»), migliore di 20 campioni.
 
 ### haghighi2024 [29]
@@ -488,6 +544,7 @@ Identificativo: arXiv:2410.06905; DOI 10.1007/978-3-031-91585-7_9
 Link: https://arxiv.org/html/2410.06905v2
 Verifica: verificata dal curatore il 14-11-2026 in parte — (rif-4) [API] per autori, titolo, date e sede; le cifre e la frase citata NON sono nel riassunto: aperte dal ruolo che la cita (A, versione HTML), non rilette da me
 Usata per: affidabilità per livello e orizzonte e nitidezza come misura; soglia R_avg ≥ 0,95 e R_min ≥ 0,90; su ETH/UCY Trajectron++ 64,9 / 30,9, Social-Implicit 82,7 / 62,5, MID 84,6 / 65,9, FlowChain 86,5 / 62,2, proposta 91,1 / 72,5; «None of the tested models can achieve suitable Reliability scores» — `f8-continuita/07-ricercatore/FONTI.md` (S1), `CONSEGNA.md` righe 27, 41, 67, `PREVISIONI.md` riga 65 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/DISCORDANZE_DEI_FASCICOLI.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: cifre da rileggere nel testo prima di metterle in un documento. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### hornung2013 [31]
@@ -499,6 +556,7 @@ Identificativo: DOI 10.1007/s10514-012-9321-0
 Link: https://doi.org/10.1007/s10514-012-9321-0 ; https://www.hrl.uni-bonn.de/papers/hornung13auro-preprint.pdf (dà una pagina, non il PDF)
 Verifica: verificata dal curatore il 14-11-2026 in parte — (rif-1) già verificata dal curatore in f3 solo nei dati bibliografici. Ricontrollati oggi su Crossref [g] (numero del fascicolo aggiunto). Testo NON letto: Springer reindirizza a un accesso, la copia degli autori ha restituito una pagina HTML e non il PDF. ‖ (verifica-rif) riassunto letto sulla pagina Springer: «It explicitly represents not only occupied space, but also free and unknown areas»; «mondo statico» non è nel riassunto: non verificato. ‖ (finale) pagina Springer riaperta alle 17:24: la frase c'è; nel riassunto «static» ha 0 occorrenze.
 Usata per: voxel e octree «distinguono libero, occupato e ignoto, ma con raggi in 3D e ipotesi di mondo statico» — `f1/dfac83300259/CONSEGNA.md` (§1.6)
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/01-dimostrazioni/FASCICOLO_DIMOSTRAZIONI.md`, `f13-allegato/05-costo/FASCICOLO_RAPPRESENTAZIONI_E_COSTO.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, `f13-allegato/DISCORDANZE_DEI_FASCICOLI.md`, 5 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: ««explicitly represents not only occupied space, but also free and unknown areas». NON citare per «mondo statico»» (marca P nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: l'affermazione sul contenuto non è verificata sul testo (il ruolo l'aveva dal riassunto di ricerca). Rilevante per l'estensione f7 (mappa voxel 3D): va letta prima di citarla lì. Il sito e il sorgente del programma sono la voce `octomap` [220].
 
 ### hsieh2023 [32]
@@ -511,6 +569,7 @@ Link: https://arxiv.org/abs/2312.12433
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-1) già verificata dal curatore in f3 [g]: la frase «…struggle to detect and track objects under heavy occlusion» e i guadagni +2,1 % e +3,3 %. Ricontrollati oggi su arXiv [g] titolo, autori e date. ‖ (rif-4) [API]: «struggle to detect and track objects under heavy occlusion» presente nel riassunto; già verificata dal curatore in f3 (F20)
 Usata per: F20: la percezione amodale è acerba; guadagni di 2–3 punti con la messa a punto — `f1/3fff79e9c3ea/FONTI.md`, `f1/3fff79e9c3ea/CONSEGNA.md` (§1.5)
 Usata per: riquadri amodali come verità in occlusione; i metodi faticano in occlusione pesante — `f8-continuita/07-ricercatore/FONTI.md` (S12), `CONSEGNA.md` riga 65 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, 3 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «i metodi faticano sotto occlusione pesante (prestampa)» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: (rif-1) solo riassunto; il titolo citato in FONTI.md («TAO-Amodal») è abbreviato. Alcuni usi vengono dalle estensioni f7–f10: NON ancora vagliati dall'arbitro (marcati riga per riga).
 
 ### hulgard2016 [33]
@@ -565,8 +624,9 @@ Titolo: A New Approach to Linear Filtering and Prediction Problems
 Sede e anno: Journal of Basic Engineering (Transactions of the ASME), vol. 82, n. 1, pp. 35–45, 1960
 Identificativo: DOI 10.1115/1.3662552
 Link: https://doi.org/10.1115/1.3662552
-Verifica: verificata dal curatore il 14-11-2026 in parte — (rif-2) per i soli dati bibliografici (registro Crossref). Testo non letto.
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-2) per i soli dati bibliografici (registro Crossref). Testo non letto. ‖ (f13-bibliografia, 18:00–18:04, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md` §II.0; non riaperta da me in f12) riassunto letto nella risposta grezza di Crossref: da «in parte» a verificata PER IL DATO INDICATO NELLA MAPPA del fascicolo (§II.3); il testo dell'articolo resta non letto
 Usata per: il filtro di Kalman lineare a velocità quasi costante [x, y, vx, vy], q = 0,2 m²/s³ — `f2/01-traduzione/SCHEDE.md` (`kalman-1`, `kalman-2`); `f3/H-012/01-scene-dinamiche/SOLUZIONE.md` (B4); `f4/H-012/05-correzioni/SOLUZIONE_V2.md` (B4) e tutti i file del torneo.
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/01-dimostrazioni/FASCICOLO_DIMOSTRAZIONI.md`, `f13-allegato/03-stima/FASCICOLO_STIMA.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, `f13-allegato/DISCORDANZE_DEI_FASCICOLI.md`, 7 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «equazione ricorsiva per la covarianza dell'errore di stima ottima; filtro lineare ottimo» (marca V* nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: metodo nominato senza riferimento: voce aggiunta da me. Le soglie χ² usate nei file sono algebra, ricontrollata oggi: 9,21 = −2·ln(0,01) e 18,42 = −2·ln(0,0001), due gradi di libertà.
 
 ### kayukawa2019 [38]
@@ -578,6 +638,7 @@ Identificativo: DOI 10.1145/3290605.3300282
 Link: https://wotipati.github.io/projects/BBeep/paper/CHI'19_BBeep_preprint.pdf
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [API] e [T]: nel PDF «…linear extrapolation is used to predict their future path», soglie a 5,0 s e 2,5 s, prova in un aeroporto internazionale con «six blind users»; la stringa «6 blind participants» come citata non c'è (correzione C8)
 Usata per: previsione per estrapolazione lineare, avviso a 5 s e a 2,5 s, sei partecipanti non vedenti, nessuna incertezza in uscita — `f8-continuita/07-ricercatore/FONTI.md` (S20), `CONSEGNA.md` riga 74 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/25-verifica-sovraffermazioni/uscita_cerca.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, 2 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «estrapolazione lineare, soglie 5,0 s e 2,5 s, «six blind users», in un aeroporto. «Nessuna incertezza in uscita» è una lettura del progetto: non scritta» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: Crossref registra il titolo come «BBeep»; titolo completo e nomi degli autori letti nel PDF [T]. È la prestampa degli autori, non la versione dell'editore. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### khurana2021 [39]
@@ -589,6 +650,7 @@ Identificativo: DOI 10.1109/ICCV48922.2021.00316; arXiv:2012.08419
 Link: https://arxiv.org/abs/2012.08419
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [API]: «a short-term forecasting challenge», 11,4 % e 5,0 % di F1 presenti nel riassunto
 Usata per: l'occlusione trattata come previsione a breve termine; +11,4 % e +5,0 % di F1 — `f8-continuita/07-ricercatore/FONTI.md` (§3) **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, 5 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «occlusione come previsione a breve termine; +11,4 % e +5,0 % di F1» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: `FONTI.md` non dava la sede. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### kim2026 [40]
@@ -611,6 +673,7 @@ Identificativo: DOI 10.1037/1076-898X.12.4.223
 Link: https://doi.org/10.1037/1076-898X.12.4.223
 Verifica: verificata dal curatore il 14-11-2026 in parte — (rif-1) solo nei dati bibliografici [g] (Crossref): esiste con questi autori, titolo e sede. Il contenuto non è stato letto.
 Usata per: F11 («Giudice et al. 2008 / Klatzky et al. 2006»): stessa affermazione di `giudice2008` — `f1/3fff79e9c3ea/FONTI.md`
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: in FONTI.md è citato solo per nome e anno; titolo e sede li ho trovati oggi cercando per titolo. L'affermazione è verificata su `giudice2008`, non qui.
 
 ### koch2007 [42]
@@ -622,6 +685,7 @@ Identificativo: DOI 10.1016/j.inffus.2005.09.002
 Link: https://dblp.org/rec/journals/inffus/Koch07 (oggi protetto da un controllo anti-automi); https://doi.org/10.1016/j.inffus.2005.09.002
 Verifica: verificata dal curatore il 14-11-2026 in parte — (rif-4) [API Crossref] solo per i dati bibliografici; la formula con la probabilità di rilevamento: non verificata (lo dice anche il ruolo)
 Usata per: fonte sull'evidenza negativa — `f9-preproposta/10-rovesciatore/CONSEGNA.md` riga 64 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/uscita_cerca.txt`, `f13-allegato/DISCORDANZE_DEI_FASCICOLI.md`, 6 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «uso dell'informazione negativa nel seguimento (titolo)» (marca N nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### koschi-mediatum-1575368 [43]
@@ -633,6 +697,7 @@ Identificativo: mediaTUM, documento 1575368
 Link: https://mediatum.ub.tum.de/doc/1575368/1575368.pdf
 Verifica: non raggiungibile — (rif-3) il sito risponde con una pagina di protezione contro i programmi automatici (Anubis), sia sul PDF sia sulla scheda. Vista solo nel riassunto di un motore di ricerca, come già dal ruolo che la cita.
 Usata per: oggetti fantasma fuori dall'area osservata, come precedente dello strato 1 — `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §3, S33
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: l'articolo di rivista collegato esiste e l'ho verificato sul registro Crossref [m]: Markus Koschi, Matthias Althoff, «Set-Based Prediction of Traffic Participants Considering Occlusions and Traffic Rules», IEEE Transactions on Intelligent Vehicles 6(2), pp. 249–265, giugno 2021, DOI 10.1109/TIV.2020.3017385. Se serve una citazione sicura conviene usare questa, dopo averne letto il testo (non letto oggi). All'unione: tenuta separata da `koschi2021` (l'articolo di rivista, mediaTUM 1575358), perché l'identità del documento 1575368 non è accertata; nel gruppo rif-3 la chiave era `koschi2021`.
 
 ### koschi2021 [44]
@@ -644,6 +709,7 @@ Identificativo: DOI 10.1109/TIV.2020.3017385
 Link: https://mediatum.ub.tum.de/1575358 (respinge i lettori automatici)
 Verifica: dato diverso — (rif-1) già verificata dal curatore in f3, con correzione dell'anno (testo non letto). Ricontrollati oggi: volume, pagine e data su Crossref [g]; riassunto su Semantic Scholar [g]: «a formal set-based prediction that contains all acceptable future behaviors of both detected and potentially hidden traffic participants», con analisi di raggiungibilità per veicoli, pedoni e ciclisti.
 Usata per: fonte di rovesciatore-2 (insieme raggiungibile v_max·τ per chi è nascosto), dichiarata «testi non riletti» — `f1/8f275a60e807/CONSEGNA.md`
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/uscita_cerca.txt`, 5 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «previsione insiemistica dei partecipanti rilevati e potenzialmente nascosti; IEEE T-IV 6(2):249–265, **2021**» (marca C nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: dato diverso: «IEEE T-IV 2020» va scritto 2021. Il trasferimento da veicoli a pedoni e ausili è del ruolo («non verificato»); il riassunto nomina però anche i pedoni. All'unione: il quadro di dominio (S33) cita un altro documento di mediaTUM, non identificato: vedi `koschi-mediatum-1575368`. Nella sezione E la chiave [koschi2021] indica questo articolo.
 
 ### kozlov2026 [45]
@@ -655,6 +721,7 @@ Identificativo: arXiv 2601.13813
 Link: https://arxiv.org/abs/2601.13813 ; https://arxiv.org/html/2601.13813
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-1) già verificata dal curatore in f3 sul riassunto. Completata oggi: autori e sede (arXiv [g]); testo HTML aperto [r]: «we interviewed 28 visually impaired participants (17 male, 11 female, aged 16–60)»; sostituire il bastone «which our user study indicates is highly undesirable»; 92,9 % per i motivi primari su 22 partecipanti senza disabilità visiva; 93,75 % con 14 utenti con disabilità visiva (§ 3.4: 93,7 %).
 Usata per: F6: due ToF in verticale, quattro attuatori; 92,9 % (22 partecipanti), 93,75 % (14 utenti con disabilità visiva); 28 intervistati; sostituire il bastone è «highly undesirable» — `f1/3fff79e9c3ea/FONTI.md`, `f1/3fff79e9c3ea/CONSEGNA.md` (§1.7, §3)
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, 2 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «93,75 % con 14 utenti con disabilità visiva; 92,9 % con 22 senza (non confondere)» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: lavoro preliminare, campioni piccoli (14 e 22). Non confondere i due gruppi.
 
 ### krejci2026 [46]
@@ -666,6 +733,7 @@ Identificativo: DOI 10.1109/TAES.2026.3676431; arXiv:2511.20239
 Link: https://arxiv.org/abs/2511.20239
 Verifica: verificata dal curatore il 14-11-2026 in parte — (rif-4) [API] per i dati bibliografici; le frasi citate sono nel corpo: trovate dal ruolo nel testo estratto (A-g), non rilette da me
 Usata per: probabilità di rilevamento legata alla visibilità; prove su tre video di MOT17 con «The visibility ratio is available for each GT BB»; «computational complexities are hardly predictable»; più stime di oggetti occlusi danno più falsi positivi — `f8-continuita/07-ricercatore/FONTI.md` (S13), `CONSEGNA.md` righe 66, 68, 79 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, `f13-allegato/DISCORDANZE_DEI_FASCICOLI.md`, 3 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «seguimento consapevole dell'occlusione con probabilità di rilevamento attesa (titolo)» (marca N nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### kress2021 [47]
@@ -677,6 +745,7 @@ Identificativo: DOI 10.1109/TIV.2022.3149624; arXiv:2106.02598
 Link: https://arxiv.org/abs/2106.02598
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [API]: «reliability, sharpness, and positional accuracy» e orizzonte 2,52 s presenti nel riassunto; la frase sulle curve «troppo sicure» non è nel riassunto: non verificata
 Usata per: previsioni valutate per affidabilità, nitidezza e accuratezza, orizzonte 2,52 s — `f8-continuita/07-ricercatore/FONTI.md` (S3) **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, 2 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «valutazione per affidabilità, nitidezza, accuratezza; orizzonte 2,52 s» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: correzione C5. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### kuhn1955 [48]
@@ -686,8 +755,9 @@ Titolo: The Hungarian method for the assignment problem
 Sede e anno: Naval Research Logistics Quarterly, vol. 2, n. 1–2, pp. 83–97, 1955
 Identificativo: DOI 10.1002/nav.3800020109
 Link: https://doi.org/10.1002/nav.3800020109
-Verifica: verificata dal curatore il 14-11-2026 in parte — (rif-2) per i soli dati bibliografici (registro Crossref). Testo non letto.
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-2) per i soli dati bibliografici (registro Crossref). Testo non letto. ‖ (f13-bibliografia, 18:00–18:04, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md` §II.0; non riaperta da me in f12) riassunto letto nella risposta grezza di Crossref: da «in parte» a verificata per il dato indicato nella mappa del fascicolo; il testo resta non letto
 Usata per: assegnazione «ungherese» dopo la porta di Mahalanobis — `f2/01-traduzione/SCHEDE.md` (`tracciamento-1`); `f2/04-torneo/TORNEO.md` (parte 2, H-013); `f3/H-012/01-scene-dinamiche/SOLUZIONE.md` (B4); `f4/H-012/05-correzioni/SOLUZIONE_V2.md` (B4).
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/01-dimostrazioni/FASCICOLO_DIMOSTRAZIONI.md`, `f13-allegato/03-stima/FASCICOLO_STIMA.md`, `f13-allegato/05-costo/FASCICOLO_RAPPRESENTAZIONI_E_COSTO.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/25-verifica-sovraffermazioni/uscita_cerca.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, `f13-allegato/DISCORDANZE_DEI_FASCICOLI.md`, 4 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «metodo «ungherese» per il problema di assegnazione» (marca V* nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: metodo nominato senza riferimento: voce aggiunta da me.
 
 ### kuzucu2024 [49]
@@ -699,6 +769,7 @@ Identificativo: DOI 10.1007/978-3-031-72664-4_11; arXiv 2405.20459
 Link: https://arxiv.org/abs/2405.20459
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-1) già verificata dal curatore in f3 [g]: «much more powerful and effective than the recent train-time calibration methods»; «more than 7 D-ECE». Ricontrollati oggi autori (arXiv [g]), pagine e DOI (Crossref [g]).
 Usata per: F22: Platt e regressione isotonica battono i metodi d'addestramento recenti (oltre 7 punti di D-ECE su COCO, D-DETR contro Cal-DETR) — `f1/3fff79e9c3ea/FONTI.md`, `f1/3fff79e9c3ea/CONSEGNA.md` (§1.6)
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f14-classificazione/03-classificatore/CLASSIFICATORE.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: vale per rilevatori su COCO; che «si può fare in poche ore» è un giudizio del ruolo.
 
 ### lee2026 [50]
@@ -711,6 +782,7 @@ Link: https://arxiv.org/abs/2601.20303 ; https://arxiv.org/html/2601.20303v1
 Verifica: dato diverso — (rif-1) già verificata dal curatore in f3 [r]: APE su image2mass 0,665 (loro) e 1,066 (image2mass); su ABO-500 0,980 contro 0,976. Dato diverso: «fattore medio 1,68» non è nell'articolo, è exp(0,519) dell'ALDE di Tabella 1, calcolato dal ricercatore. Ricontrollati oggi su arXiv [g]: autori e «Accepted to IJCAI 2026 (Main Track)». ‖ (rif-2) per dati bibliografici e riassunto («mass prediction from pixels is ill-posed»; prove su image2mass e ABO-500). Le cifre (ALDE 0,519; 0,665 e 1,066) oggi non le ho rilette: valgono con la verifica di f3, letta attraverso un riassunto.
 Usata per: F29: errore percentuale medio 0,665 e fattore medio 1,68; riferimento del 2017 a 1,066; su un secondo insieme entrambi a 0,98; «la massa non è osservabile» — `f1/3fff79e9c3ea/FONTI.md`, `f1/3fff79e9c3ea/CONSEGNA.md` (§1.3, §3), `f1/3fff79e9c3ea/PREVISIONI.md` (P3: ALDE 0,655 e 0,519)
 Usata per: F-002, «la massa non è osservabile… sostenuto dalla letteratura (ricercatore)» — `f2/03-triage/TRIAGE.md` (§2); «F-002: fonte confermata; il "fattore 1,68" è derivato» — `f2/05-selezione/SELEZIONE.md` (§3).
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: (rif-1) oggetti da catalogo; il ruolo ha letto la v1, oggi esiste la v2 (non confrontate). 1,68 va dichiarato come derivato. (rif-2) i file del gruppo non nominano l'articolo; l'identificazione viene da `f3/fonti/FONTI_VERIFICATE.md` (F29). «Fattore 1,68» = exp(0,519), calcolato dal ricercatore, non scritto nell'articolo. L'articolo stima la massa da un'immagine con un errore grande: sostiene «non affidabile», non «impossibile»; la non osservabilità in senso stretto è dimostrata dallo sciame solo nel modello del punto materiale con forza ignota.
 
 ### lerner2007 [51]
@@ -722,6 +794,7 @@ Identificativo: DOI 10.1111/j.1467-8659.2007.01089.x
 Link: https://doi.org/10.1111/j.1467-8659.2007.01089.x
 Verifica: verificata dal curatore il 14-11-2026 in parte — (rif-2) per i soli dati bibliografici (registro Crossref; voce [31] di `scholler2020`). Testo non letto.
 Usata per: come `pellegrini2009` — `f2/01-traduzione/SCHEDE.md` (`ricercatore-2`, rischi).
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, 3 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «fonti dei dati ETH e UCY secondo l'elenco dei riferimenti di `scholler2020`» (marca N nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: nei file è solo la sigla «UCY».
 
 ### lin2014 [52]
@@ -733,6 +806,7 @@ Identificativo: DOI 10.1007/978-3-319-10602-1_48; arXiv:1405.0312
 Link: https://arxiv.org/abs/1405.0312
 Verifica: verificata dal curatore il 14-11-2026 in parte — (rif-2) per i soli dati bibliografici (pagina arXiv, registro Crossref). L'elenco delle 80 classi è verificato sulla voce `ultralytics-coco-yaml`, non sull'articolo.
 Usata per: «0 su 7 categorie d'ostacolo fra le 80 classi COCO» — `f2/01-traduzione/SCHEDE.md` (`visione-1`, P1); `f2/03-triage/TRIAGE.md` (H-006); `f2/04-torneo/TORNEO.md` (parte 1, H-006); `f2/05-selezione/SELEZIONE.md` (H-006); `f3/H-012/01-scene-dinamiche/SOLUZIONE.md` (B6, §7).
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: i file citano «COCO» senza riferimento. L'articolo descrive 91 categorie; le 80 sono quelle usate per il rilevamento.
 
 ### lin2025 [53]
@@ -756,6 +830,7 @@ Identificativo: DOI 10.1109/LRA.2023.3292071; arXiv:2210.10254
 Link: https://arxiv.org/abs/2210.10254
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [API] per i dati bibliografici (la sede RA-L 2023 era solo R: confermata); le frasi e il 498 su 500 non sono nel riassunto: trovate dal ruolo nel testo estratto (A-g), non rilette da me ‖ (verifica-rif) [testo] nel PDF arXiv v2 (non nella versione della rivista): «is independently drawn from D»; «In general only exchangeability is needed»; «δ := 0.05 and T := 20»; «498 of the 500 test trajectories»; la disuguaglianza di Boole
 Usata per: ipotesi 2 (traiettorie di taratura «independently drawn from D»), nota 3 («In general only exchangeability is needed»), 498 su 500 dentro la regione al 95 % (δ = 0,05, T = 20), prudenza per l'unione dei limiti — `f8-continuita/07-ricercatore/FONTI.md` (S4), `CONSEGNA.md` righe 43–44, 108 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, 2 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «taratura indipendente (basta la scambiabilità); 498 su 500 al 95 %, δ = 0,05, T = 20 (frasi nella prestampa arXiv v2). Il tipo di prova non è nel campo «Verifica»: non scritto» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: la garanzia vale solo se taratura e prova vengono dalla stessa distribuzione. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### liu2022 [55]
@@ -777,8 +852,9 @@ Titolo: HOTA: A Higher Order Metric for Evaluating Multi-Object Tracking
 Sede e anno: International Journal of Computer Vision, vol. 129, n. 2, pp. 548–578, febbraio 2021 (in linea 8-10-2020)
 Identificativo: DOI 10.1007/s11263-020-01375-2; arXiv 2009.07736
 Link: https://arxiv.org/abs/2009.07736
-Verifica: verificata dal curatore il 14-11-2026 in parte — (rif-1) già verificata dal curatore in f3 (esiste, con questi autori; volume e pagine). Ricontrollati oggi su arXiv [g]: autori, DOI, rivista. Volume e pagine: da f3, non riletti oggi (Crossref ha risposto 429). ‖ (verifica-rif) Crossref: IJCV 129(2):548–578. Che HOTA chieda sequenze annotate non è nel riassunto: resta un giudizio del ruolo. ‖ (finale) Crossref riaperto alle 17:23: volume, fascicolo e pagine coincidono.
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-1) già verificata dal curatore in f3 (esiste, con questi autori; volume e pagine). Ricontrollati oggi su arXiv [g]: autori, DOI, rivista. Volume e pagine: da f3, non riletti oggi (Crossref ha risposto 429). ‖ (verifica-rif) Crossref: IJCV 129(2):548–578. Che HOTA chieda sequenze annotate non è nel riassunto: resta un giudizio del ruolo. ‖ (finale) Crossref riaperto alle 17:23: volume, fascicolo e pagine coincidono. ‖ (f13-bibliografia, 18:00–18:04, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md` §II.0; non riaperta da me in f12) riassunto letto nella risposta grezza di Crossref: da «in parte» a verificata per il dato indicato nella mappa del fascicolo
 Usata per: «HOTA e IDF1 chiedono sequenze annotate: non sono la misura giusta per la demo» — `f1/992c41c8860e/CONSEGNA.md` (§1.7)
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/DISCORDANZE_DEI_FASCICOLI.md`. Nell'allegato sostiene: «HOTA bilancia rilevamento, associazione e localizzazione in una sola metrica» (marca V* nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: che HOTA chieda annotazioni è implicito nella definizione; la frase non è stata letta nel testo.
 
 ### lupu2020 [57]
@@ -791,6 +867,7 @@ Link: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7602506/ ; anche (rif-2): htt
 Verifica: dato diverso — (rif-1) già verificata dal curatore in f3 [r]. Rafforzata oggi [g] sul riassunto registrato in Crossref: «eight visually impaired subjects»; «the haptic stimuli were less intuitive than the audio ones»; la navigazione col dispositivo «increased cognitive load and working memory». ‖ (rif-2) con una precisazione. La pagina MDPI dà 403; dati bibliografici dal registro Crossref e riassunto dal registro Europe PMC: «eight visually impaired subjects»; «the haptic stimuli were less intuitive than the audio ones and that the navigation with the Sound of Vision device increased cognitive load and working memory». Dato diverso: il carico cognitivo maggiore è del dispositivo rispetto al bastone, non dell'aptico rispetto all'audio. Già in f3/fonti (letta là attraverso un riassunto). ‖ (verifica-rif) Crossref riaperto (Sensors 20(20), 5821, 15-10-2020): le tre frasi del riassunto presenti; «dato diverso» confermato.
 Usata per: F8: 8 partecipanti ciechi; stimoli aptici meno intuitivi di quelli sonori; il dispositivo aumenta il carico cognitivo — `f1/3fff79e9c3ea/FONTI.md`, `f1/3fff79e9c3ea/CONSEGNA.md` (§1.7, §3)
 Usata per: la stessa frase di `martinez2014` — `f2/05-selezione/SELEZIONE.md` (riga K-010); `f3/H-012/01-scene-dinamiche/SOLUZIONE.md` (§5).
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, 2 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «otto partecipanti; stimoli aptici meno intuitivi di quelli sonori» (marca C nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: (rif-1) il riassunto dice «visually impaired», non «ciechi»; otto soggetti. (rif-2) otto persone, un solo dispositivo (Sound of Vision). Sostiene «aptico meno intuitivo del sonoro», non «aptico più costoso». Differenza fra i gruppi: rif-2 ha letto nel registro Europe PMC solo cognomi e iniziali; i nomi per esteso sono quelli di rif-1 (da f3 e Crossref).
 
 ### lv2024 [58]
@@ -837,6 +914,7 @@ Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente �
 Usata per: radar a 77 GHz su quadrirotore; tracciatore su Raspberry Pi 4B; 75 ms fino al comando; avvicinamenti fino a 14,6 m/s; errori fino a 0,9 m — `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §2(b), S16
 Usata per: una catena radar con tracciatore gira su un Raspberry Pi 4B — stesso file, §2(f)
 Usata per: tracciamento da piattaforma in moto con radar a bordo — stesso file, §3
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: correzione 5: gli 0,93 m e 0,87 m sono errori *medi* di posizione sugli assi y e z, non «errori laterali fino a». È una prestampa non ancora passata da una revisione; 300 lanci di palle e 90 prove nel fumo, quindi non garantisce niente su persone o veicoli.
 
 ### martinez2014 [62]
@@ -849,6 +927,7 @@ Link: https://doi.org/10.1007/978-3-319-08599-9_20 (il PDF https://cvhci.iar.kit
 Verifica: dato diverso — (rif-1) già verificata dal curatore in f3 [g, sul riassunto Springer]: «22 times higher cognitive load»; «not found on blindfolded users». Ricontrollati oggi su Crossref [g]: titolo, autori, pagine, anno. ‖ (rif-2) l'articolo dice il contrario di ciò che gli si attribuisce. Pagina Springer aperta oggi (metadati e riassunto; il testo intero è a pagamento): «for white cane users, auditory feedback results in a 22 times higher cognitive load than haptic feedback. This discrepancy in cognitive load was not found on blindfolded users, thus we argue against evaluating navigation systems solely with blindfolded users». Già in f3/fonti, dove la frase è riportata senza il verso. ‖ (verifica-rif) Crossref e pagina Springer riaperti: frase del riassunto presente, protocollo NASA-TLX; «dato diverso» confermato. Il numero dei partecipanti non è nel riassunto.
 Usata per: F7: per chi usa il bastone il feedback sonoro dà un carico NASA-TLX 22 volte maggiore dell'aptico; l'effetto non c'è nei vedenti bendati — `f1/3fff79e9c3ea/FONTI.md`, `f1/3fff79e9c3ea/CONSEGNA.md` (§1.7, §3)
 Usata per: «Fonti: in due studi l'aptico costa più dell'audio; non decide fra battito e messaggi» — `f2/05-selezione/SELEZIONE.md` (riga K-010); `f3/H-012/01-scene-dinamiche/SOLUZIONE.md` (§5, riga «Feedback (K-010)»).
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/25-verifica-sovraffermazioni/uscita_cerca.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, 2 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «per chi usa il bastone il **sonoro** dà un carico 22 volte maggiore dell'aptico; non nei bendati» (marca C nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: (rif-1) letto il solo riassunto, non il testo; la numerosità del campione non è stata letta: manca. (rif-2) correzione 1 in testa. Per chi usa il bastone è il sonoro a costare 22 volte di più (protocollo NASA-TLX). L'articolo avverte anche che i vedenti bendati non valgono come sostituti: tocca la prova «tre persone bendate» prevista per K-010. Numero dei partecipanti non letto.
 
 ### marvel2017 [63]
@@ -860,7 +939,8 @@ Identificativo: DOI 10.1016/j.rcim.2016.08.001; PMC5117641
 Link: https://pmc.ncbi.nlm.nih.gov/articles/PMC5117641
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [API] e [T]: nella pagina PMC «the time for the robot system to respond…», «operator position», 1,6 m/s presenti; la formula per intero non ricontrollata simbolo per simbolo
 Usata per: forma lineare della distanza di protezione S = v_H·T_R + v_H·T_S + v_R·T_R + B + C + Z_S + Z_R, con v_H = 1,6 m/s — `f9-preproposta/06-esperto-dominio/CONSEGNA.md` riga 69 (F7); la distanza della ISO/TS 15066 somma percorsi nel caso peggiore e incertezze di posizione — `f7-estensione/05-esperto-dominio/CONSEGNA.md` riga 21 (S9) **[f7–f10: non vagliato dall'arbitro]**
-Note: è una fonte secondaria sul testo della norma (vedi `iso-ts-15066`); i 2,80 m e 1,68 m sono conti del ruolo. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`, `f13-allegato/02-geometria/FASCICOLO_GEOMETRIA.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, `f13-allegato/DISCORDANZE_DEI_FASCICOLI.md`, 5 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «forma lineare della distanza di protezione, v_H = 1,6 m/s (fonte secondaria sulla norma)» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
+Note: è una fonte secondaria sul testo della norma (vedi `iso-ts-15066`); i 2,80 m e 1,68 m sono conti del ruolo. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro. ‖ (aggiornamento f12) f13 (bibliografia D7): la somma dei termini della distanza di protezione poggia sul campo «Note» e non su una rilettura simbolo per simbolo; le norme (ISO 13855, ISO/TS 15066) non sono state lette: C = 0,85 m non è citabile.
 
 ### mercat2019 [64]
 Tipo: articolo scientifico (prestampa)
@@ -871,6 +951,7 @@ Identificativo: arXiv:1908.11472
 Link: https://ar5iv.labs.arxiv.org/html/1908.11472
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [API] per autori, titolo e date; la tabella degli RMSE non è nel riassunto: aperta dal ruolo che la cita (A, copia ar5iv), non riletta da me ‖ (verifica-rif) [testo] nel PDF arXiv v4: velocità costante «ours 0.75 1.81 3.16 4.80 6.70»; Tabella III, «V-LSTM [4]* 0.67 1.62 2.86 4.40 6.26» e «ours 0.68 1.54 2.72 4.20 5.95». La ricerca della sede a stampa su Crossref ha risposto 429: sede non verificata
 Usata per: veicoli (NGSIM): RMSE a 1–5 s del Kalman a velocità costante 0,75 / 1,81 / 3,16 / 4,80 / 6,70 m, V-LSTM 0,67 / 1,62 / 2,86 / 4,40 / 6,26, Kalman-LSTM (la riga «ours» della Tabella III) 0,68 / 1,54 / 2,72 / 4,20 / 5,95; NLL — `f8-continuita/07-ricercatore/FONTI.md` (S9), `CONSEGNA.md` riga 58 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`. Nell'allegato sostiene: «veicoli (non pedoni): RMSE a 1–5 s del Kalman a velocità costante 0,75/1,81/3,16/4,80/6,70 m» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: veicoli in autostrada, non pedoni; ar5iv è una copia di terzi del testo arXiv. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### millane2024 [65]
@@ -882,6 +963,7 @@ Identificativo: arXiv:2311.00626; DOI 10.1109/ICRA57147.2024.10611532
 Link: https://arxiv.org/abs/2311.00626
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [API]: «177x» presente nel riassunto ‖ (verifica-rif) Crossref: DOI e pagine; nel riassunto «up to a 177x speed-up in surface reconstruction». ‖ (finale) Crossref riaperto alle 17:23: titolo, sette autori e pagine coincidono
 Usata per: nvblox «up to a 177x speed-up», su GPU — `f7-estensione/05-esperto-dominio/CONSEGNA.md` righe 29 e 80 (S6) **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/05-costo/FASCICOLO_RAPPRESENTAZIONI_E_COSTO.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, 2 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «fino a 177× nella ricostruzione della superficie, su GPU» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: il 177 vale per la ricostruzione della superficie, non per tutta la mappatura; richiede la GPU; la licenza è «NV» (non verificata) nel file. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### moras2011 [66]
@@ -893,6 +975,7 @@ Identificativo: DOI 10.1109/ICRA.2011.5980298; HAL hal-00615303
 Link: https://hal.archives-ouvertes.fr/hal-00615303
 Verifica: verificata dal curatore il 14-11-2026 in parte — (rif-1) già verificata dal curatore in f3 solo nei dati bibliografici. Completata oggi [g]: pagine e DOI (Crossref); riassunto dal registro HAL: «uncertainty arises from ignorance and errors… A credibilist approach is used to model the sensor information and to do a global fusion with the world-fixed map».
 Usata per: griglie evidenziali: «l'idea giusta (l'ignoranza ha una sua massa)» — `f1/dfac83300259/CONSEGNA.md` (§1.6)
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, `f13-allegato/DISCORDANZE_DEI_FASCICOLI.md`, 2 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «approccio «credibilist»: l'incertezza nasce da ignoranza ed errori (riassunto HAL)» (marca P nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: il riassunto conferma che l'ignoranza è trattata come sorgente d'incertezza a sé; la formulazione «ha una sua massa» (funzioni di credenza) è coerente ma non letta nel testo.
 
 ### munir2023 [67]
@@ -915,6 +998,7 @@ Identificativo: DOI 10.1109/3DIMPVT.2012.84
 Link: https://doi.org/10.1109/3DIMPVT.2012.84
 Verifica: verificata dal curatore il 14-11-2026 in parte — (rif-4) [API] solo per esistenza e dati bibliografici; il ruolo la cita a memoria
 Usata per: esistono modelli di rumore assiale e laterale per il Kinect, non per lo stereo attivo — `f10-dati/02-sensori/PREVISIONI.md` riga 15 (sensori-P7) **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/DISCORDANZE_DEI_FASCICOLI.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: Kinect v1 (luce strutturata). Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### niessner2013 [69]
@@ -926,6 +1010,7 @@ Identificativo: DOI 10.1145/2508363.2508374
 Link: https://niessnerlab.org/projects/niessner2013hashing.html
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [API] e [T]: pagina aperta; «performed at real-time rates on commodity graphics hardware» presente
 Usata per: lo schema proiettivo della fusione volumetrica da camere di profondità (lì su GPU), a fronte di 307 ms per il lancio dei raggi e 2,2 ms per il confronto proiettivo misurati dal ruolo — `f7-estensione/03-nuvole-punti/CONSEGNA.md` riga 36 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/05-costo/FASCICOLO_RAPPRESENTAZIONI_E_COSTO.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/25-verifica-sovraffermazioni/uscita_cerca.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, 5 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «fusione volumetrica a frequenze di tempo reale su hardware grafico comune» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: i tempi sono misure del ruolo, non della fonte. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### nuss2018 [70]
@@ -938,6 +1023,7 @@ Link: https://arxiv.org/abs/1605.02406
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-1) già verificata dal curatore in f3 [g]: «highly efficient parallel particle filter». Ricontrollati oggi autori (arXiv [g]), volume, pagine e riassunto (Crossref [g]). ‖ (rif-3) [r per arXiv; m per rivista, volume, pagine, riassunto]. Già verificata dal curatore in `f3/fonti/FONTI_VERIFICATE.md`.
 Usata per: griglia dinamica con velocità per cella: filtro a particelle in parallelo, «troppo per un hackathon» — `f1/dfac83300259/CONSEGNA.md` (§1.6)
 Usata per: griglie dinamiche d'occupazione come riferimento di ricerca — `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §3, S34
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/25-verifica-sovraffermazioni/uscita_cerca.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, 2 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «griglia dinamica con filtro a particelle in parallelo (dati laser e radar da veicolo)» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: (rif-1) «troppo per un hackathon» è un giudizio del ruolo. (rif-3) dati laser e radar da veicolo stradale; non riguarda camere di profondità.
 
 ### oleynikova2017 [71]
@@ -949,6 +1035,7 @@ Identificativo: DOI 10.1109/IROS.2017.8202315; arXiv:1611.03631
 Link: https://arxiv.org/abs/1611.03631
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [API]: «single CPU core» e «real-time» presenti nel riassunto ‖ (verifica-rif) Crossref: pp. 1366–1373; nel riassunto «runs in real-time on a single CPU core». ‖ (finale) Crossref e registro arXiv riaperti alle 17:23: pagine confermate; l'ordine degli ultimi due autori differisce fra i due registri
 Usata per: Voxblox «runs in real-time on a single CPU core» — `f7-estensione/05-esperto-dominio/CONSEGNA.md` righe 25 e 80 (S2) **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/05-costo/FASCICOLO_RAPPRESENTAZIONI_E_COSTO.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/25-verifica-sovraffermazioni/uscita_cerca.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, 2 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: ««runs in real-time on a single CPU core»» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: vedi anche `ethz-voxblox`. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### orzechowski2018 [72]
@@ -962,6 +1049,7 @@ Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente �
 Usata per: fonte di rovesciatore-2 (verifica di sicurezza insiemistica sotto occlusione) — `f1/8f275a60e807/CONSEGNA.md`
 Usata per: lo strato 1 viene dalla guida automatica: ostacoli nascosti ai bordi del campo visivo, con stati sovrastimati per intervalli — `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §3, S32
 Usata per: stati nascosti sovrastimati con insiemi raggiungibili — `f7-estensione/01-matematico/CONSEGNA.md` riga 78 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`, `f13-allegato/01-dimostrazioni/FASCICOLO_DIMOSTRAZIONI.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/25-verifica-sovraffermazioni/uscita_cerca.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, 8 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «lo stato degli ostacoli nascosti è sovrastimato con intervalli» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: (rif-1) ambito: guida automatica. (rif-3) garantisce che l'idea ha un precedente in letteratura; non garantisce niente sul nucleo, che è un'altra realizzazione. (rif-4) guida automatica, non una mappa voxel. Nello stesso punto il ruolo dichiara «non verificato» che l'aggiornamento in log-odds presupponga una mappa ferma: resta senza fonte. Alcuni usi vengono dalle estensioni f7–f10: NON ancora vagliati dall'arbitro (marcati riga per riga).
 
 ### padilla2017 [73]
@@ -984,6 +1072,7 @@ Identificativo: DOI 10.1007/978-3-031-25056-9_43; arXiv 2111.09621
 Link: https://arxiv.org/abs/2111.09621
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-1) già verificata dal curatore in f3 [g] («life cycle management» come parte a sé; sede non controllata). Completata oggi: sede, pagine e DOI su Crossref [g]; nel riassunto arXiv le quattro parti «pre-processing of detection, association, motion model, and life cycle management» [g].
 Usata per: «SimpleTrack isola la gestione della vita delle tracce come modulo a sé» — `f1/992c41c8860e/CONSEGNA.md` (§1.4)
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, 2 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «quattro parti, fra cui la gestione del ciclo di vita» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: la chiave tiene l'anno della prestampa; l'anno di stampa è 2023.
 
 ### pellegrini2009 [75]
@@ -995,6 +1084,7 @@ Identificativo: DOI 10.1109/ICCV.2009.5459260
 Link: https://doi.org/10.1109/ICCV.2009.5459260
 Verifica: verificata dal curatore il 14-11-2026 in parte — (rif-2) per i soli dati bibliografici (registro Crossref; voce [6] di `scholler2020`, che lo indica come fonte dei dati ETH). Testo non letto.
 Usata per: «Prova da camere fisse dall'alto (ETH/UCY, 2020)» — `f2/01-traduzione/SCHEDE.md` (`ricercatore-2`, rischi).
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, 3 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «fonti dei dati ETH e UCY secondo l'elenco dei riferimenti di `scholler2020`» (marca N nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: nei file è solo la sigla «ETH». Il «2020» della scheda è l'anno dell'articolo di Schöller, non dei dati (2009).
 
 ### plastropoulos2026 [76]
@@ -1029,6 +1119,7 @@ Link: https://isprs-annals.copernicus.org/articles/X-1-W1-2023/17/2023/
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-1) già verificata dal curatore in f3 [g]. Ricontrollata oggi su Crossref [g]: autori, pagine, e nel riassunto «their outdoor applications remain limited, mainly due to challenges like sunlight interference»; prove su Azure Kinect e Pmd Monstar.
 Usata per: F5: l'uso esterno del ToF resta limitato dall'interferenza solare — `f1/3fff79e9c3ea/FONTI.md`, `f1/3fff79e9c3ea/CONSEGNA.md` (§1.2, §3)
 Usata per: «al sole l'iToF è limitato» — `f1/c85dbcc51ea6/CONSEGNA.md` (rif. [9])
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, 2 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «l'uso all'aperto delle camere a tempo di volo resta limitato dall'interferenza solare (due camere)» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: è una prova su due camere e tre casi ad alta riflettività, non una rassegna (FONTI.md la chiama «rassegna» nella consegna: impreciso).
 
 ### rahaman2026 [79]
@@ -1074,6 +1165,7 @@ Identificativo: DOI 10.11591/eei.v10i3.3055
 Link: https://beei.org/index.php/EEI/article/view/3055
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-1) già verificata dal curatore in f3 [r] (anno non letto). Completata oggi [g] su Crossref: anno, pagine, e nel riassunto «From 70 selected research articles, 51.4% accounts for simulation evaluation, 24.3% involve blindfolded-sighted humans, 22.9% involve visually impaired people and only 1.4% makes it into production and commercialization».
 Usata per: F9: rassegna di 70 articoli; valutazioni con persone con disabilità visiva solo nel 22,9 %; l'1,4 % arriva alla produzione — `f1/3fff79e9c3ea/FONTI.md`, `f1/3fff79e9c3ea/CONSEGNA.md` (§1.7)
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, 6 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «70 articoli: 51,4 % simulazione, 24,3 % bendati, 22,9 % con disabilità visiva, 1,4 % in produzione» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: nessuna
 
 ### rossi2025 [83]
@@ -1085,6 +1177,7 @@ Identificativo: DOI 10.20944/preprints202511.0498.v1 (prestampa); DOI 10.3390/s2
 Link: https://www.preprints.org/manuscript/202511.0498
 Verifica: dato diverso — (rif-3) la pagina non è raggiungibile (403); autori, titolo, date e riassunto letti nel registro Crossref [m], che dichiara la prestampa «is-preprint-of» dell'articolo su Sensors. Nel riassunto «prestazioni imprevedibili» non c'è: c'è che le prestazioni all'aperto a media e lunga distanza restano «weakly quantified», con prove fra 4 e 16 m su una D455 e un modello che predice l'errore di profondità con RMSE 0,46–0,64 m e MAE 0,40–0,51 m. Il ruolo che la cita l'aveva vista solo in un risultato di ricerca.
 Usata per: stereo attiva (D455) all'aperto con luce forte: «un preprint del 2025 trova prestazioni imprevedibili» — `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §2(b), S14
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: correzione 6. Da citare come articolo su Sensors. La parola «imprevedibili» resta non verificata finché qualcuno non legge il testo intero; il riassunto sostiene un'affermazione più debole e più utile: errori dell'ordine del mezzo metro fra 4 e 16 m, cioè oltre la zona del nucleo (fino a 3 m).
 
 ### scholl1999 [84]
@@ -1096,6 +1189,7 @@ Identificativo: DOI 10.1006/cogp.1998.0698; PMID 10090804
 Link: https://doi.org/10.1006/cogp.1998.0698 ; https://pubmed.ncbi.nlm.nih.gov/10090804/ (il link scritto dal ruolo, https://ruccs.rutgers.edu/images/tech_rpt/tr-40/scholl.pdf, dà 404)
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [API] solo per i dati bibliografici; il link citato non è raggiungibile (404) e l'affermazione non è verificata nel testo (il ruolo: solo riassunto) ‖ (verifica-rif) riassunto letto su PubMed: «Unimpaired performance required the presence of accretion and deletion cues along fixed contours at the occluding boundaries»; «imploding and exploding into and out of existence». ‖ (finale) registri PubMed e Crossref riaperti alle 17:23: le due frasi sono nel riassunto; volume, fascicolo e pagine coincidono. Letto il riassunto, non il testo
 Usata per: un oggetto resta «lo stesso» dietro un ostacolo solo se scompare e ricompare lungo un bordo fisso — `f8-continuita/06-visualizzatore/CONSEGNA.md` riga 46 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, 3 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «servono indizi di scomparsa e comparsa lungo contorni fissi ai bordi dell'occlusore» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: link sostituito con il DOI e con la scheda PubMed (versione finale). Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### scholler2020 [85]
@@ -1111,7 +1205,8 @@ Usata per: a 4,8 s, 0,39 / 0,83 m contro 0,44 / 0,91 del miglior appreso determi
 Usata per: «fonti: 0,39/0,83 contro RED 0,44/0,91 confermati; S-GAN 0,32/0,60 sta sotto» — `f2/05-selezione/SELEZIONE.md` (riga H-011).
 Usata per: la velocità costante regge contro RED e SR-LSTM; S-GAN «migliore di 20 campioni, non confrontabile (non riletto)» — `f3/H-012/01-scene-dinamiche/SOLUZIONE.md` §8.
 Usata per: a 4,8 s velocità costante 0,39 / 0,83 m, miglior appreso deterministico 0,44 / 0,91, generativo a 20 campioni 0,32 / 0,60 — `f8-continuita/07-ricercatore/FONTI.md` (S7), `CONSEGNA.md` righe 56 e 93 **[f7–f10: non vagliato dall'arbitro]**
-Note: (rif-1) camere fisse dall'alto, insiemi ETH/UCY (citati solo per nome: nessun riferimento nei file), lavoro del 2020: non dice niente della camera indossata. I valori LSTM, SoPhie e «con campionamento» non sono nell'elenco verificato da f3: aperti dal ruolo, non riletti dal curatore. (rif-2) completamento: OUR-S (0,28 / 0,56) sta sotto S-GAN a parità di valutazione; il «non riletto» si può togliere. Limiti: dati ETH e UCY, camere fisse dall'alto, pedoni in spazi aperti; orizzonte 4,8 s con 3,2 s di storia; errore medio di spostamento, non una regione di confidenza. Non dice niente sull'occlusione dietro un pannello né su un sensore indossato. (rif-4) pedoni in campo aperto, senza occlusione. All'unione: nel gruppo rif-1 la chiave era `schoeller2020`. Alcuni usi vengono dalle estensioni f7–f10: NON ancora vagliati dall'arbitro (marcati riga per riga).
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`, `f13-allegato/03-stima/FASCICOLO_STIMA.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, `f13-allegato/DISCORDANZE_DEI_FASCICOLI.md`, 5 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «a 4,8 s, media di cinque scenari: velocità costante 0,39/0,83 m; RED 0,44/0,91; SR-LSTM 0,45/0,94; S-GAN 0,32/0,60 (migliore di 20)» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
+Note: (rif-1) camere fisse dall'alto, insiemi ETH/UCY (citati solo per nome: nessun riferimento nei file), lavoro del 2020: non dice niente della camera indossata. I valori LSTM, SoPhie e «con campionamento» non sono nell'elenco verificato da f3: aperti dal ruolo, non riletti dal curatore. (rif-2) completamento: OUR-S (0,28 / 0,56) sta sotto S-GAN a parità di valutazione; il «non riletto» si può togliere. Limiti: dati ETH e UCY, camere fisse dall'alto, pedoni in spazi aperti; orizzonte 4,8 s con 3,2 s di storia; errore medio di spostamento, non una regione di confidenza. Non dice niente sull'occlusione dietro un pannello né su un sensore indossato. (rif-4) pedoni in campo aperto, senza occlusione. All'unione: nel gruppo rif-1 la chiave era `schoeller2020`. Alcuni usi vengono dalle estensioni f7–f10: NON ancora vagliati dall'arbitro (marcati riga per riga). ‖ (aggiornamento f12) f13 (bibliografia D7): «camere fisse dall'alto» per i dati ETH e UCY poggia sul campo «Note» di questa voce, non su una frase riletta.
 
 ### sciencedirect-s0926580524005867 [86]
 Tipo: articolo scientifico
@@ -1189,6 +1284,7 @@ Identificativo: manca
 Link: manca
 Verifica: non verificata — (rif-1) (non aperto né in f3 né oggi; f3 lo nomina come la fonte primaria a cui rimanda Wikipedia).
 Usata per: fonte primaria della ricerca bayesiana, citata indirettamente — `f3/fonti/FONTI_VERIFICATE.md` (riga «Ricerca bayesiana»)
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/03-stima/FASCICOLO_STIMA.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: nessun ruolo di f1 lo cita direttamente.
 
 ### sun2022 [93]
@@ -1211,6 +1307,7 @@ Identificativo: NTRS 20160010603; numero di rapporto ARC-E-DAA-TN35178
 Link: https://ntrs.nasa.gov/api/citations/20160010603/downloads/20160010603.pdf ; registro: https://ntrs.nasa.gov/api/citations/20160010603
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (unione, 16:45) scheda del registro NTRS e PDF scaricati; titolo, autori, data e numero di rapporto dalla scheda; nel testo del PDF [g]: «A buffer of about 0.09 NM was added to the well clear DMOD and HMD* thresholds of 4000 ft to model what a DAA system might use to guard against the effects of uncertainty» e, per l'avviso «DAA Warning», «τ*mod = 35 sec, DMOD = 0.75 NM, HMD = 0.75 NM, and h = 450 ft». Aperta anche dal ruolo che la cita (pagine 1–4). Non era in nessuno dei quattro elenchi parziali: trovata dal controllo di completezza sui link.
 Usata per: in uno studio NASA per lo standard «rilevare ed evitare», τ_mod < 35 s e distanza orizzontale minima < 0,75 miglia, con 0,09 miglia aggiunte «per l'incertezza»: la pratica vera è una soglia su tempo e distanza con un margine — `f9-preproposta/03-kalman/CONSEGNA.md` riga 40 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: Le soglie sono quelle dell'avviso «DAA Warning» usate in questo studio (simulazione senza manovre), non il testo di una norma; le miglia sono nautiche (0,75 NM ≈ 1,39 km; 4000 ft ≈ 1,22 km). È una fonte aperta per l'ordine di grandezza «35 s e oltre un chilometro» che il quadro di dominio (S20) appoggia a `rtca-do-365` senza una fonte letta: il collegamento è una proposta del curatore, il quadro non la cita. Citata solo nelle estensioni f7–f10: NON ancora vagliata dall'arbitro.
 
 ### timans2024 [95]
@@ -1233,6 +1330,7 @@ Identificativo: DOI 10.1109/ICCV48922.2021.01068; arXiv:2103.14258
 Link: https://arxiv.org/abs/2103.14258
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [API]: sede ICCV 2021 confermata (nel file era «a memoria»); «ground truth annotations for invisible objects» presente nel riassunto
 Usata per: la verità in occlusione esiste in dati sintetici — `f8-continuita/07-ricercatore/FONTI.md` (S11), `CONSEGNA.md` riga 65, `PREVISIONI.md` riga 68 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, 3 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: ««ground truth annotations for invisible objects» (che i dati siano sintetici non è nella frase verificata: non scritto)» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### uhlemann2024 [97]
@@ -1244,6 +1342,7 @@ Identificativo: DOI 10.1109/TITS.2024.3386195; arXiv:2308.05194
 Link: https://arxiv.org/abs/2308.05194
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [API]: frase «a constant velocity model (CVM) provides a good approximation of the overall dynamics in the majority of cases» presente nel riassunto ‖ (verifica-rif) volume e pagine da Crossref. ‖ (finale) Crossref riaperto alle 17:23: coincide
 Usata per: la velocità costante è una buona approssimazione nella maggior parte dei casi — `f8-continuita/07-ricercatore/FONTI.md` (S8), `CONSEGNA.md` riga 56 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, 3 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «la velocità costante approssima bene la dinamica nella maggior parte dei casi» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: nessun numero citato. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### usenko2017 [98]
@@ -1255,6 +1354,7 @@ Identificativo: DOI 10.1109/IROS.2017.8202160; arXiv:1703.01416
 Link: https://arxiv.org/abs/1703.01416
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [API]: «an occupancy grid stored in a three-dimensional circular buffer, which moves together with a drone» presente nel riassunto ‖ (verifica-rif) Crossref (IROS 2017, pp. 215–222) riaperto: la frase citata è nel riassunto
 Usata per: nel volo la mappa locale tipica è una griglia densa che scorre con il veicolo — `f7-estensione/05-esperto-dominio/CONSEGNA.md` righe 17 e 80 (S7) **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, 4 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «griglia di occupazione in un buffer circolare 3D che si muove con il drone» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### vanhoorick2023 [99]
@@ -1266,6 +1366,7 @@ Identificativo: DOI 10.1109/CVPR52729.2023.01326; arXiv:2305.03052
 Link: https://arxiv.org/abs/2305.03052
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [API]: «a considerable performance gap» presente nel riassunto
 Usata per: resta un divario notevole prima di una vera permanenza dell'oggetto — `f8-continuita/07-ricercatore/FONTI.md` (S14), `CONSEGNA.md` riga 62 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, 3 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: ««a considerable performance gap»» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### vriend2025 [100]
@@ -1299,6 +1400,7 @@ Identificativo: DOI 10.1109/IROS45743.2020.9341164; arXiv 2008.08063 (riassunto 
 Link: https://arxiv.org/abs/2008.08063
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-1) già verificata dal curatore in f3 [g], con correzione di attribuzione. Ricontrollati oggi: riassunto arXiv «a straightforward combination of a 3D Kalman filter and the Hungarian algorithm» [g]; pagine e DOI su Crossref [g].
 Usata per: «lo schema da copiare è AB3DMOT, Kalman 3D più ungherese» — `f1/992c41c8860e/CONSEGNA.md` (§1.4)
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, 2 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «combinazione di filtro di Kalman 3D e algoritmo ungherese (citare IROS 2020)» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: citare l'articolo IROS, non il riassunto esteso.
 
 ### williams1978 [103]
@@ -1310,6 +1412,7 @@ Identificativo: DOI 10.1145/965139.807402
 Link: https://history.siggraph.org/?p=120268
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [API] e [T]: pagina dell'archivio aperta, titolo e autore presenti
 Usata per: la mappa d'ombra della grafica come analogia («il sensore è la lampada») — `f7-estensione/08-creativo/CONSEGNA.md` riga 51 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`. Nell'allegato sostiene: «origine della mappa d'ombra in grafica (solo titolo; analogia)» (marca N nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: analogia, nessuna cifra. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### wyffels2015 [104]
@@ -1321,6 +1424,7 @@ Identificativo: DOI 10.1109/TRO.2015.2409413
 Link: https://doi.org/10.1109/TRO.2015.2409413
 Verifica: verificata dal curatore il 14-11-2026 in parte — (rif-4) [API] solo per esistenza e dati bibliografici (in `FONTI.md` mancavano titolo e DOI); testo non letto
 Usata per: evidenza negativa nei filtri — `f8-continuita/07-ricercatore/FONTI.md` (S22, marca R) **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/25-verifica-sovraffermazioni/uscita_cerca.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, `f13-allegato/DISCORDANZE_DEI_FASCICOLI.md`, 6 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «uso dell'informazione negativa nel seguimento (titolo)» (marca N nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: il titolo è pertinente; nessuna cifra citata. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### xu2023 [105]
@@ -1332,6 +1436,7 @@ Identificativo: DOI 10.1109/ACCESS.2023.3285396
 Link: https://doaj.org/article/69f50f5aa56e4c9fb3f54d8d3d05cf83 (403 allo strumento di lettura; letto il registro DOAJ)
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-1) [g]: Crossref e registro DOAJ aperti; nel riassunto «The PRISMA 2020 and APISSER guidelines were followed», «Eighty-nine studies were included for analysis», «According to user experience, the efficacy and safety of the device was usually their primary concern».
 Usata per: F10: rassegna PRISMA di 89 studi; efficacia e sicurezza sono la prima preoccupazione degli utenti — `f1/3fff79e9c3ea/FONTI.md`
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/uscita_cerca.txt`, 2 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «89 studi; efficacia e sicurezza prima preoccupazione» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: in f3 non controllata. Letto il riassunto, non il testo.
 
 ### yang2024 [106]
@@ -1387,8 +1492,9 @@ Titolo: ByteTrack: Multi-Object Tracking by Associating Every Detection Box
 Sede e anno: Computer Vision – ECCV 2022, Lecture Notes in Computer Science, Springer, pp. 1–21, 2022
 Identificativo: DOI 10.1007/978-3-031-20047-2_1; arXiv:2110.06864
 Link: https://arxiv.org/abs/2110.06864
-Verifica: verificata dal curatore il 14-11-2026 in parte — (rif-2) per i soli dati bibliografici (pagina arXiv, registro Crossref). Il deposito (licenza MIT, «30 FPS… on a single V100 GPU») l'ha verificato il curatore in f3; oggi non l'ho riaperto.
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-2) per i soli dati bibliografici (pagina arXiv, registro Crossref). Il deposito (licenza MIT, «30 FPS… on a single V100 GPU») l'ha verificato il curatore in f3; oggi non l'ho riaperto. ‖ (f13-bibliografia, 18:00–18:04, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md` §II.0; non riaperta da me in f12) pagina arXiv letta con lo strumento che riassume: grado [r], il più debole. Da «in parte» a verificata per il dato indicato nella mappa del fascicolo
 Usata per: tracciatore «BoT-SORT o ByteTrack» nel percorso asincrono — `f2/01-traduzione/SCHEDE.md` (`visione-1`); associazione «tipo ByteTrack/OC-SORT» — `f2/01-traduzione/SCHEDE.md` (`ricercatore-1`).
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, `f13-allegato/DISCORDANZE_DEI_FASCICOLI.md`, 2 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: solo nominato nei file. Tracciatore su riquadri 2D nell'immagine, non sul piano del suolo.
 
 ### zhang2023 [111]
@@ -1400,6 +1506,7 @@ Identificativo: arXiv:2201.11924
 Link: https://arxiv.org/abs/2201.11924
 Verifica: verificata dal curatore il 14-11-2026 in parte — (rif-4) [API] per autori, titolo e sede dichiarata
 Usata per: SimSense e SAPIEN simulano lo stereo attivo ma chiedono CUDA o una GPU — `f10-dati/02-sensori/MODELLO_SENSORE.md` riga 68 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: la chiave porta l'anno presunto di stampa; da correggere quando si legge il DOI. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### zhang2026a [112]
@@ -1450,11 +1557,233 @@ Usata per: «EdgeTAM (16 fps su iPhone 15 Pro Max, Apache 2.0) è il solo candid
 Note: (rif-1) nessuna misura su Jetson o CPU: non verificato (lo dichiarano i ruoli). (rif-2) i 16 fps sono su un telefono con acceleratore neurale, non su una CPU di portatile. Differenza fra i gruppi: rif-2 dava «CVPR 2025» come non confermato (non compare nella pagina arXiv né nel README); rif-1 l'aveva letto su Crossref; tenuto il dato di rif-1, riconfermato all'unione.
 
 
+### wilson1927 [292]
+Tipo: articolo scientifico
+Autori: Edwin B. Wilson
+Titolo: Probable Inference, the Law of Succession, and Statistical Inference
+Sede e anno: Journal of the American Statistical Association, vol. 22, n. 158, pp. 209–212, giugno 1927
+Identificativo: DOI 10.1080/01621459.1927.10502953
+Link: https://doi.org/10.1080/01621459.1927.10502953
+Verifica: verificata dal curatore il 14-11-2026 in parte — (f13-bibliografia, 18:00) e (f12, 19:24) [API Crossref, risposta grezza]: autore, titolo, rivista, volume, fascicolo, pagine e data coincidono. Nessun riassunto nel registro; il testo non è stato letto da nessuno
+Usata per: fonte dell'intervallo di Wilson, che il contratto f12 (C-C) e i fascicoli usano per i limiti inferiori al 95 % — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib` (citazione nominale, marca N) **[f13, allegato tecnico: scritto dopo le 17:36]**
+Usata per: il metodo è nominato, senza citazione, in `f12-integrazione/CONTRATTO_INTEGRAZIONE.md` (C-C) e in `f13-allegato/DISCORDANZE_DEI_FASCICOLI.md` (dimostrazioni D1, stima D2: 400 su 400 dà 99,05 % con Wilson, 99,25 % con il limite esatto unilaterale)
+Note: voce aggiunta nell'aggiornamento f12. citarla solo come attribuzione del metodo, mai per una cifra. Ricalcolo del curatore (f12): n/(n + z²) con n = 400 e z = 1,959964 dà 0,99049; 0,05^(1/400) dà 0,99254 (comando in `PREVISIONI.md`, esiti).
+
+### brown2001 [293]
+Tipo: articolo scientifico
+Autori: Lawrence D. Brown, T. Tony Cai, Anirban DasGupta
+Titolo: Interval Estimation for a Binomial Proportion
+Sede e anno: Statistical Science, vol. 16, n. 2, pp. 101–133, maggio 2001
+Identificativo: DOI 10.1214/ss/1009213286
+Link: https://doi.org/10.1214/ss/1009213286
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (f13-bibliografia, 18:00) e (f12, 19:24) [API Crossref, risposta grezza]: dati bibliografici e riassunto; nel riassunto «we recommend the Wilson interval or the equal-tailed Jeffreys prior interval for small n and the interval suggested in Agresti and Coull for larger n». Il corpo dell'articolo non è stato letto
+Usata per: motivo della scelta dell'intervallo di Wilson al posto di quello di Wald — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib` **[f13, allegato tecnico: scritto dopo le 17:36]**
+Note: voce aggiunta nell'aggiornamento f12. la frase regge sul riassunto. Non dice quale intervallo usare per «0 su N»: per quel caso i file usano il limite esatto unilaterale (`clopper1934`).
+
+### barshalom2001 [294]
+Tipo: libro
+Autori: Yaakov Bar-Shalom, X.-Rong Li, Thiagalingam Kirubarajan
+Titolo: Estimation with Applications to Tracking and Navigation: Theory, Algorithms and Software
+Sede e anno: Wiley; anno dell'edizione a stampa 2001 secondo il fascicolo f13 (a memoria: non verificato); il registro dà la data in rete 4-1-2002
+Identificativo: DOI 10.1002/0471221279; ISBN 9780471416555 (a stampa), 9780471221272 (in rete)
+Link: https://doi.org/10.1002/0471221279
+Verifica: verificata dal curatore il 14-11-2026 in parte — (f13-bibliografia, 18:01) e (f12, 19:24) [API Crossref, risposta grezza]: tipo «monograph», tre autori, titolo (senza sottotitolo nel registro), editore, due ISBN, data 4-1-2002. Contenuto non letto; l'anno 2001 e il sottotitolo non sono nel registro
+Usata per: teoria della stima per il seguimento: modello a velocità quasi costante e porte di associazione — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib` (citazione nominale, marca N; discordanza D4 sull'anno) **[f13, allegato tecnico: scritto dopo le 17:36]**
+Note: voce aggiunta nell'aggiornamento f12. non usarla per una cifra né per una formula precisa finché nessuno ha letto il capitolo: l'anno va ricontrollato sul frontespizio.
+
+### elfes1989 [295]
+Tipo: articolo scientifico
+Autori: A. Elfes (nome di battesimo non nel registro)
+Titolo: Using occupancy grids for mobile robot perception and navigation
+Sede e anno: Computer (IEEE), vol. 22, n. 6, pp. 46–57, giugno 1989
+Identificativo: DOI 10.1109/2.30720
+Link: https://doi.org/10.1109/2.30720
+Verifica: verificata dal curatore il 14-11-2026 in parte — (f13-bibliografia, 18:01) e (f12, 19:25, al secondo tentativo: il primo ha dato 429) [API Crossref, risposta grezza]: autore, titolo, rivista, volume, fascicolo, pagine, data. Nessun riassunto nel registro; testo non letto
+Usata per: le griglie di occupazione come rappresentazione classica per la percezione dei robot mobili — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib` (citazione nominale, marca N) **[f13, allegato tecnico: scritto dopo le 17:36]**
+Note: voce aggiunta nell'aggiornamento f12. citazione di attribuzione: regge sul titolo.
+
+### vovk2005 [296]
+Tipo: libro
+Autori: Vladimir Vovk, Alexander Gammerman, Glenn Shafer secondo il fascicolo f13 (a memoria: gli autori NON sono nel registro, non verificati)
+Titolo: Algorithmic Learning in a Random World
+Sede e anno: Springer, 2005
+Identificativo: DOI 10.1007/b106715; ISBN 0387001522
+Link: https://doi.org/10.1007/b106715
+Verifica: verificata dal curatore il 14-11-2026 in parte — (f13-bibliografia, 18:01) e (f12, 19:24) [API Crossref, risposta grezza]: tipo «book», titolo, editore Springer-Verlag, anno 2005, ISBN; il campo degli autori è vuoto. La pagina Springer non si è aperta a f13 (rinvio a una pagina di autorizzazione); io non l'ho riprovata. Contenuto non letto
+Usata per: proposta dal fascicolo f13 come fonte della previsione conforme e NON messa in `allegato.bib` — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md` (§II.4) **[f13, allegato tecnico: scritto dopo le 17:36]**. Nessuna affermazione dei file le è appoggiata
+Note: voce aggiunta nell'aggiornamento f12. voce di tracciamento: non è citata in nessun testo. Autori da confermare sul frontespizio prima di citarla.
+
+### bernardin2008 [297]
+Tipo: articolo scientifico
+Autori: Keni Bernardin, Rainer Stiefelhagen
+Titolo: Evaluating Multiple Object Tracking Performance: The CLEAR MOT Metrics
+Sede e anno: EURASIP Journal on Image and Video Processing, vol. 2008, pp. 1–10, 2008
+Identificativo: DOI 10.1155/2008/246309
+Link: https://doi.org/10.1155/2008/246309
+Verifica: verificata dal curatore il 14-11-2026 in parte — (f13-bibliografia, 18:01) e (f12, 19:24) [API Crossref, risposta grezza]: autori, titolo, rivista, volume, pagine. Nessun riassunto nel registro; testo non letto
+Usata per: proposta dal fascicolo f13 per le metriche MOTA e MOTP, «serve solo se l'allegato usa MOTA», e NON messa in `allegato.bib` — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md` (§II.4) **[f13, allegato tecnico: scritto dopo le 17:36]**
+Note: voce aggiunta nell'aggiornamento f12. voce di tracciamento: nessuna cifra dello sciame ne dipende.
+
+### gupta2014 [298]
+Tipo: articolo scientifico (prestampa; atti di convegno secondo il commento degli autori)
+Autori: Saurabh Gupta, Ross Girshick, Pablo Arbeláez, Jitendra Malik
+Titolo: Learning Rich Features from RGB-D Images for Object Detection and Segmentation
+Sede e anno: prestampa arXiv, v1 del 22 luglio 2014; «To appear in the European Conference on Computer Vision (ECCV), 2014» (commento su arXiv: volume e pagine non letti)
+Identificativo: arXiv:1407.5736
+Link: https://arxiv.org/abs/1407.5736
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (f12, 19:24) [API arXiv, risposta grezza]: autori, titolo, data; nel riassunto «a new geocentric embedding for depth images that encodes height above ground and angle with gravity for each pixel in addition to the horizontal disparity». Il corpo non è stato letto
+Usata per: la sola profondità come ingresso di un classificatore: disparità, altezza dal suolo e angolo con la gravità — `f14-classificazione/03-classificatore/CLASSIFICATORE.md` (§ fonti, riga «Sola profondità») **[f14, valutazione breve sulla classificazione: scritto dopo le 17:36; valori di «profilo di partenza»]**
+Note: voce aggiunta nell'aggiornamento f12. dice che il metodo esiste, su immagini RGB-D d'interni. Sulle classi del requisito (veicoli, treni, aerei) a 3 m: non verificato, come scrive il ruolo. Il classificatore nel progetto è simulato e non valutato.
+
+### qi2016 [299]
+Tipo: articolo scientifico (prestampa; atti di convegno secondo il commento degli autori)
+Autori: Charles R. Qi, Hao Su, Kaichun Mo, Leonidas J. Guibas
+Titolo: PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation
+Sede e anno: prestampa arXiv, v1 del 2 dicembre 2016, v2; «CVPR 2017» nel commento su arXiv (pagine non lette)
+Identificativo: arXiv:1612.00593
+Link: https://arxiv.org/abs/1612.00593
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (f12, 19:24) [API arXiv, risposta grezza]: autori, titolo, data; nel riassunto «a novel type of neural network that directly consumes point clouds». Il corpo non è stato letto
+Usata per: una rete che legge direttamente la nuvola di punti, come via per classificare dalla sola profondità — `f14-classificazione/03-classificatore/CLASSIFICATORE.md` (riga «Sola profondità») **[f14, valutazione breve sulla classificazione: scritto dopo le 17:36; valori di «profilo di partenza»]**
+Note: voce aggiunta nell'aggiornamento f12. esistenza del metodo; nessuna cifra citata. Sulle classi del requisito: non verificato.
+
+### ristic2004 [300]
+Tipo: articolo scientifico
+Autori: Branko Ristic, Neil Gordon, Amanda Bessell
+Titolo: On target classification using kinematic data
+Sede e anno: Information Fusion, vol. 5, n. 1, pp. 15–21, marzo 2004
+Identificativo: DOI 10.1016/j.inffus.2003.08.002
+Link: https://doi.org/10.1016/j.inffus.2003.08.002
+Verifica: verificata dal curatore il 14-11-2026 in parte — (f12, 19:24) [API Crossref, risposta grezza]: autori, titolo, rivista, volume, fascicolo, pagine, data coincidono con ciò che scrive il ruolo. Nessun riassunto nel registro; testo non letto (lo dice anche il ruolo: «solo il registro Crossref»)
+Usata per: esiste un filone che classifica i bersagli dalla sola cinematica — `f14-classificazione/03-classificatore/CLASSIFICATORE.md` (riga «Cinematica») **[f14, valutazione breve sulla classificazione: scritto dopo le 17:36; valori di «profilo di partenza»]**
+Note: voce aggiunta nell'aggiornamento f12. regge solo «il filone esiste» (dal titolo). Nell'uso (`f14-classificazione/02-uso/USO_DELLA_CLASSE.md`) la tesi «la coerenza cinematica può convalidare un'etichetta» è smentita in simulazione: questa fonte non la sostiene né la smentisce, perché non è stata letta.
+
+### chiu2020 [301]
+Tipo: articolo scientifico (prestampa)
+Autori: Hsu-kuang Chiu, Antonio Prioletti, Jie Li, Jeannette Bohg
+Titolo: Probabilistic 3D Multi-Object Tracking for Autonomous Driving
+Sede e anno: prestampa arXiv, v1 del 16 gennaio 2020; il registro non indica una sede pubblicata
+Identificativo: arXiv:2001.05673
+Link: https://arxiv.org/abs/2001.05673
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (f12, 19:24) [API arXiv, risposta grezza]: autori, titolo, data; nel riassunto «We initialize the state covariance as well as the process and observation noise covariance with statistics from the training set» e «measuring the Mahalanobis distance». I parametri per classe stanno nel corpo: non letti
+Usata per: filtro di Kalman con covarianze prese dalle statistiche dei dati e associazione con la distanza di Mahalanobis, come esempio di profilo cinematico per classe — `f14-classificazione/03-classificatore/CLASSIFICATORE.md` (riga «Cinematica») **[f14, valutazione breve sulla classificazione: scritto dopo le 17:36; valori di «profilo di partenza»]**
+Note: voce aggiunta nell'aggiornamento f12. guida autonoma, lidar su strada: altro dominio e altre distanze. «Parametri per classe» non è nel riassunto: non verificato.
+
+### telegraph2024 [302]
+Tipo: articolo scientifico
+Autori: Kristina Telegraph, Christos Kyrkou
+Titolo: Spatiotemporal Object Detection for Improved Aerial Vehicle Detection in Traffic Monitoring
+Sede e anno: IEEE Transactions on Artificial Intelligence, 2024 (dal campo «journal reference» di arXiv: volume e pagine non letti); prestampa arXiv v1 del 17 ottobre 2024
+Identificativo: arXiv:2410.13616; DOI 10.1109/TAI.2024.3454566 (dal registro arXiv, non riaperto su Crossref)
+Link: https://arxiv.org/abs/2410.13616 ; testo letto: https://arxiv.org/html/2410.13616
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (f12, 19:24 e 19:27) [API arXiv] per autori, titolo, rivista e DOI; [g] sul testo HTML di arXiv: «confusion with the background for 35% of truck instances as shown in Fig. 9(a). There was also 10% and 12% confusion with buses and cars respectively» e «the confusion with buses is significantly increased to 30%». Le quattro cifre citate ci sono. Il ruolo scriveva «Kyrkou e un coautore»: il primo autore è Telegraph
+Usata per: unica riga con un appiglio pubblicato della matrice di confusione «strutturata» (camion confusi col fondo 35 %, con autobus 10 %, con auto 12 %; 30 % con la differenza fra fotogrammi) — `f14-classificazione/03-classificatore/CLASSIFICATORE.md` (riga «Cinematica» e paragrafo «Matrici»), `f13-allegato/17-capitolo/NOTE.md` **[f14, valutazione breve sulla classificazione: scritto dopo le 17:36; valori di «profilo di partenza»]**
+Note: voce aggiunta nell'aggiornamento f12. riprese aeree da drone, classi di veicoli stradali: altro dominio (lo dice il ruolo). Le altre righe delle matrici di confusione sono ipotesi dichiarate, senza fonte.
+
+### guo2017 [303]
+Tipo: articolo scientifico (prestampa; atti di convegno secondo il commento degli autori)
+Autori: Chuan Guo, Geoff Pleiss, Yu Sun, Kilian Q. Weinberger
+Titolo: On Calibration of Modern Neural Networks
+Sede e anno: prestampa arXiv, v1 del 14 giugno 2017, v2; «ICML 2017» nel commento su arXiv (volume e pagine non letti)
+Identificativo: arXiv:1706.04599
+Link: https://arxiv.org/abs/1706.04599
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (f12, 19:24) [API arXiv, risposta grezza]: autori, titolo, data; nel riassunto «modern neural networks, unlike those from a decade ago, are poorly calibrated» e «temperature scaling». Corpo non letto
+Usata per: le reti moderne sono tarate male e la scala di temperatura le corregge: motivo per non fidarsi della probabilità dell'etichetta — `f14-classificazione/03-classificatore/CLASSIFICATORE.md` (riga «Taratura e fuori distribuzione»), `f14-classificazione/03-classificatore/PREVISIONI.md`, `f13-allegato/17-capitolo/NOTE.md` **[f14, valutazione breve sulla classificazione: scritto dopo le 17:36; valori di «profilo di partenza»]**
+Note: voce aggiunta nell'aggiornamento f12. classificazione d'immagini e documenti; non dice nulla sui rilevatori né sulla profondità. Vedi anche `kuzucu2024` [49].
+
+### hendrycks2016 [304]
+Tipo: articolo scientifico (prestampa; atti di convegno secondo il registro)
+Autori: Dan Hendrycks, Kevin Gimpel
+Titolo: A Baseline for Detecting Misclassified and Out-of-Distribution Examples in Neural Networks
+Sede e anno: International Conference on Learning Representations (ICLR) 2017, dal campo «journal reference» di arXiv; prestampa v1 del 7 ottobre 2016, v3
+Identificativo: arXiv:1610.02136
+Link: https://arxiv.org/abs/1610.02136
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (f12, 19:24) [API arXiv, risposta grezza]: autori, titolo, sede; nel riassunto «Correctly classified examples tend to have greater maximum softmax probabilities than erroneously classified and out-of-distribution examples». Corpo non letto
+Usata per: la probabilità massima come linea di base per riconoscere gli esempi sbagliati o fuori distribuzione: sostegno al ripiego «non classificato» — `f14-classificazione/03-classificatore/CLASSIFICATORE.md` (riga «Taratura e fuori distribuzione»), `f14-classificazione/03-classificatore/PREVISIONI.md`, `f13-allegato/17-capitolo/NOTE.md` **[f14, valutazione breve sulla classificazione: scritto dopo le 17:36; valori di «profilo di partenza»]**
+Note: voce aggiunta nell'aggiornamento f12. il riassunto dice anche che la linea di base «can sometimes be surpassed»: è un termine di confronto, non una garanzia.
+
+### bolya2020 [305]
+Tipo: articolo scientifico (prestampa)
+Autori: Daniel Bolya, Sean Foley, James Hays, Judy Hoffman
+Titolo: TIDE: A General Toolbox for Identifying Object Detection Errors
+Sede e anno: prestampa arXiv, v1 del 18 agosto 2020, v2; la sede a stampa non è nel registro: non verificata
+Identificativo: arXiv:2008.08115
+Link: https://arxiv.org/abs/2008.08115
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (f12, 19:24) [API arXiv, risposta grezza]: autori, titolo, data; nel riassunto «We segment errors into six types». I nomi dei sei tipi (pp. 3–6 del PDF) li ha letti solo il ruolo; i valori per rilevatore non li ha letti nessuno
+Usata per: i sei tipi di errore di un rilevatore (classificazione, localizzazione, entrambi, doppione, fondo, mancato), usati per costruire le matrici d'errore del classificatore simulato — `f14-classificazione/03-classificatore/CLASSIFICATORE.md` (riga «Errori dei rilevatori»), `f14-classificazione/03-classificatore/PREVISIONI.md` **[f14, valutazione breve sulla classificazione: scritto dopo le 17:36; valori di «profilo di partenza»]**
+Note: voce aggiunta nell'aggiornamento f12. dà la tassonomia, non le frequenze: le percentuali delle matrici simulate sono ipotesi del ruolo.
+
+### bohannon1997 [306]
+Tipo: articolo scientifico
+Autori: Richard W. Bohannon (nel registro: Bohannon RW)
+Titolo: Comfortable and maximum walking speed of adults aged 20–79 years: reference values and determinants
+Sede e anno: Age and Ageing, vol. 26, n. 1, pp. 15–19, 1997
+Identificativo: PMID 9143432; DOI 10.1093/ageing/26.1.15
+Link: https://europepmc.org/article/MED/9143432 ; https://doi.org/10.1093/ageing/26.1.15
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (f12, 19:24) [API Europe PMC, risposta grezza]: dati bibliografici e riassunto: «230 healthy volunteers»; «mean comfortable gait speed ranged from 127.2 cm/s for women in their seventies to 146.2 cm/s for men in their forties»; «Mean maximum gait speed ranged from 174.9 cm/s … to 253.3 cm/s for men in their twenties». ‖ (attacco f14, 18:42–18:50) riaperta, le cifre tornano. Corpo non letto
+Usata per: velocità tipica e massima della classe «persona» (v_tip 1,27–1,46 m/s; v_max 2,5 m/s) — `f14-classificazione/01-profili/PROFILI.md`, `f14-classificazione/01-profili/classi.json` (F2), `f14-classificazione/20-inclusione/BLOCCO_CLASSIFICAZIONE.md`, `f14-classificazione/10-attacco/ATTACCO_CLASSIFICAZIONE.md`, `f13-allegato/14-capitolo/NOTE.md` **[f14, valutazione breve sulla classificazione: scritto dopo le 17:36; valori di «profilo di partenza»]**
+Usata per: velocità massima del profilo «persona non vedente in cammino» — `f14-classificazione/01-profili/PROFILI.md`, `f14-classificazione/01-profili/profili_portatore.json` (F2) **[f14, valutazione breve sulla classificazione: scritto dopo le 17:36; valori di «profilo di partenza»]**
+Note: voce aggiunta nell'aggiornamento f12. ATTENZIONE (attacco f14, critica 6a, confermata dal riassunto): 253,3 cm/s è la MEDIA del passo massimo del gruppo più veloce, non un massimo: circa metà di quel gruppo la supera, e la corsa non c'entra. Scrivere «media del passo massimo», non «velocità massima». Sono adulti sani vedenti, su 7,62 m di pavimento.
+
+### cao1998 [307]
+Tipo: articolo scientifico
+Autori: C. Cao, J. A. Ashton-Miller, A. B. Schultz, N. B. Alexander (iniziali dal registro)
+Titolo: Effects of age, available response time and gender on ability to stop suddenly when walking
+Sede e anno: Gait & Posture, vol. 8, n. 2, pp. 103–109, 1998
+Identificativo: PMID 10200400; DOI 10.1016/s0966-6362(98)00029-0
+Link: https://europepmc.org/article/MED/10200400
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (f12, 19:24) [API Europe PMC, risposta grezza]: dati bibliografici e riassunto: venti giovani e venti anziani, «walking straight ahead at approximately 1.3 m/s», segnale luminoso, tempi disponibili «ranging from 375 to 825 ms in 75-ms increments»; «At an ART of 525 ms, for example, RS was 58% for YA and 51% for OM, but only 23% for OF». Il ruolo dichiarava le percentuali «non lette»: sono nel riassunto
+Usata per: arresto del cammino su segnale: ordine di grandezza del tempo di reazione di chi porta il sensore a piedi (0,375–0,825 s a 1,3 m/s) — `f14-classificazione/01-profili/PROFILI.md`, `f14-classificazione/01-profili/profili_portatore.json` (F14) **[f14, valutazione breve sulla classificazione: scritto dopo le 17:36; valori di «profilo di partenza»]**
+Note: voce aggiunta nell'aggiornamento f12. soggetti vedenti, sani, segnale LUMINOSO atteso: non misura il tempo di reazione di una persona non vedente a un avviso sonoro o tattile (resta `sd-K12`, non risolto). Con 525 ms riesce a fermarsi poco più di metà dei giovani: usare «0,5 s» come tempo sufficiente sarebbe ottimistico.
+
+### nakamura1997 [308]
+Tipo: articolo scientifico
+Autori: T. Nakamura
+Titolo: Quantitative analysis of gait in the visually impaired
+Sede e anno: Disability and Rehabilitation, vol. 19, n. 5, pp. 194–197, 1997
+Identificativo: PMID 9184784; DOI 10.3109/09638289709166526
+Link: https://europepmc.org/article/MED/9184784
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (f12, 19:24) [API Europe PMC, risposta grezza]: dati bibliografici e riassunto: 15 persone con cecità acquisita, 15 con cecità congenita, 15 vedenti, tutti uomini, corsia di 10 m; «late blind and congenitally blind persons had a significantly slower walking speed, shorter stride length and longer time in the stance phase». Nessuna cifra di velocità nel riassunto
+Usata per: le persone non vedenti camminano più piano dei vedenti, con passo più corto — `f14-classificazione/01-profili/PROFILI.md`, `f14-classificazione/01-profili/profili_portatore.json` (F15) **[f14, valutazione breve sulla classificazione: scritto dopo le 17:36; valori di «profilo di partenza»]**
+Note: voce aggiunta nell'aggiornamento f12. il ruolo scriveva «15 + 15 non vedenti»: giusto (i vedenti sono altri 15). Sostiene il verso, non un valore: la v_ego del profilo resta un'ipotesi.
+
+### clarkcarter1986 [309]
+Tipo: articolo scientifico
+Autori: D. D. Clark-Carter, A. D. Heyes, C. I. Howarth (iniziali dal registro)
+Titolo: The efficiency and walking speed of visually impaired people
+Sede e anno: Ergonomics, vol. 29, n. 6, pp. 779–789, 1986
+Identificativo: PMID 3743536; DOI 10.1080/00140138608968314
+Link: https://europepmc.org/article/MED/3743536
+Verifica: verificata dal curatore il 14-11-2026 in parte — (f12, 19:24) [API Europe PMC, risposta grezza]: autori, titolo, rivista, volume, fascicolo, pagine, anno. Il registro non ha il riassunto: la tesi citata non è stata letta da nessuno
+Usata per: «i non vedenti camminano sotto la loro velocità preferita» — `f14-classificazione/01-profili/profili_portatore.json` (R10; il ruolo la segna «non verificato») **[f14, valutazione breve sulla classificazione: scritto dopo le 17:36; valori di «profilo di partenza»]**
+Note: voce aggiunta nell'aggiornamento f12. esiste, con questi dati. La frase che le è appoggiata è NON VERIFICATA: va tolta o marcata finché nessuno legge l'articolo.
+
+### green2000 [310]
+Tipo: articolo scientifico
+Autori: Marc Green
+Titolo: «How Long Does It Take to Stop?» Methodological Analysis of Driver Perception-Brake Times
+Sede e anno: Transportation Human Factors, vol. 2, n. 3, pp. 195–216, settembre 2000
+Identificativo: DOI 10.1207/STHF0203_1 (quello giusto; il link del ruolo porta il DOI 10.1207/STHF0203_2, che è di un altro articolo)
+Link: https://doi.org/10.1207/STHF0203_1 ; link scritto dal ruolo: https://www.informahealthcare.com/doi/abs/10.1207/STHF0203_2
+Verifica: dato diverso — (f12, 19:24–19:25) [API Crossref, risposte grezze]: il DOI citato dal ruolo, 10.1207/STHF0203_2, è di Heikki Summala, «Brake Reaction Times and Driver Behavior Analysis», stessa rivista e fascicolo, pp. 217–226 (un commento all'articolo di Green); l'articolo di Green (autore, titolo, pp. 195–216, che coincidono con ciò che il ruolo scrive) ha il DOI 10.1207/STHF0203_1. La pagina dell'editore indicata dal ruolo ha risposto 403. Nessun riassunto nel registro: le cifre 0,70–0,75 s, 1,25 s e 1,5 s NON sono state lette da nessuno (il ruolo le ha viste nel risultato di una ricerca)
+Usata per: tempo di reazione alla frenata: 0,70–0,75 s se attesa, 1,25 s inattesa, 1,5 s a sorpresa; da qui il T_r del profilo «teleoperatore» (1,5 s più 0,3 s di collegamento, ipotesi) — `f14-classificazione/01-profili/PROFILI.md`, `f14-classificazione/01-profili/profili_portatore.json` (R6; il ruolo la segna «non verificato») **[f14, valutazione breve sulla classificazione: scritto dopo le 17:36; valori di «profilo di partenza»]**
+Note: voce aggiunta nell'aggiornamento f12. dato diverso: l'identificativo nel file punta a un altro articolo. Le tre cifre restano NON VERIFICATE: non scriverle come fatti. Riguardano chi guida un'auto, non chi cammina né chi pilota da remoto.
+
+### ohm2016 [311]
+Tipo: articolo scientifico
+Autori: Kelly Ohm, Michael E. Hahn
+Titolo: The Effect of Stimulus Timing on Unplanned Gait Termination
+Sede e anno: Journal of Applied Biomechanics, vol. 32, n. 4, pp. 388–393, agosto 2016
+Identificativo: DOI 10.1123/jab.2015-0188
+Link: https://doi.org/10.1123/jab.2015-0188 ; link scritto dal ruolo (un aggregatore, 403 alla mia richiesta): https://www.sciencegate.app/document/10.1123/jab.2015-0188
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (f12, 19:25, al secondo tentativo: il primo ha dato 429) [API Crossref, risposta grezza]: autori, titolo, rivista, volume, pagine e riassunto: «Fourteen able-bodied subjects walked over ground and terminated gait in response to a randomly-timed auditory stimulus»; «Subjects were able to terminate gait in 1 step if the stimulus occurred at or before 19.8% of gait cycle. Later stimulus resulted in a 2-step stop pattern». Il ruolo la citava senza autori né titolo e la segnava «non verificato»: il dato c'è
+Usata per: arresto del cammino su segnale sonoro in uno o due passi (soglia al 19,8 % del ciclo): sostegno alla frenata del profilo «persona non vedente in cammino» — `f14-classificazione/01-profili/profili_portatore.json` (R9) **[f14, valutazione breve sulla classificazione: scritto dopo le 17:36; valori di «profilo di partenza»]**
+Note: voce aggiunta nell'aggiornamento f12. 14 persone senza disabilità, vedenti. Il riassunto aggiunge un dato che il ruolo non usa e che pesa sul requisito: il moto del centro di massa si ferma solo al 162 ± 38 % del ciclo, e la fase di stabilizzazione dura 1,41 ± 0,42 s per gli arresti in un passo e 0,96 ± 0,33 s per quelli in due. Non è il tempo di reazione di una persona non vedente a un avviso (`sd-K12` resta non risolto), ma dice che «fermo in uno o due passi» non vuol dire fermo in mezzo secondo.
+
 ---
 
 ## 2. Schede tecniche e documenti dei costruttori (con le pagine dei rivenditori)
 
-46 voci, da [116] a [161].
+49 voci: da [116] a [161]; in coda, aggiunte nell'aggiornamento f12, da [312] a [314].
 
 ### adorama-d455 [116]
 Tipo: pagina di costruttore o comunicato (rivenditore)
@@ -1477,6 +1806,7 @@ Link: https://www.arducam.com/product/time-of-flight-camera-for-raspberry-pi/ ; 
 Verifica: non raggiungibile — (rif-1) (403 oggi); i ruoli l'hanno vista solo nel riassunto di un motore di ricerca.
 Usata per: tre camere ToF 240×180 coprono circa 174° (campo dichiarato non verificato) — `f1/dfac83300259/CONSEGNA.md` (§1.1)
 Usata per: «Arducam ToF sotto 70° (modello T2: 64°)» fra i 7 sensori di P1 — `f1/b8262bfed263/CONSEGNA.md` (requisiti-1)
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: campo e risoluzione non verificati: i due usi poggiano su un riassunto di ricerca.
 
 ### botland-oak-d-lite [118]
@@ -1510,6 +1840,7 @@ Identificativo: v1.02
 Link: https://www.sudo.is/docs/esphome/components/ld2410/HLK-LD2410_Serial_Communication_Protocol_v1.02.pdf
 Verifica: aperta dal ruolo che la cita — (rif-4) ([g], `pdftotext`); dal curatore solo [200]
 Usata per: 256 000 baud predefiniti; nessun angolo in uscita; porte di distanza da 0,75 m — `f10-dati/04-embedded/PREVISIONI.md` (E9), `INVENTARIO_E_DECISIONE.md` riga 75 ([17]) **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f10-dati/04-embedded/INVENTARIO_E_DECISIONE.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: copia non ufficiale. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### hilink-ld2450 [121]
@@ -1521,6 +1852,7 @@ Identificativo: v1.00
 Link: https://www.elemon.com.ar/images/productos/hojas-de-datos/radar-modulos/hlk-ld2450.pdf
 Verifica: aperta dal ruolo che la cita — (rif-4) ([g]); dal curatore solo [200]
 Usata per: fino a tre bersagli con x, y in mm e velocità, ±60° in azimut, 6 m — `f10-dati/04-embedded/PREVISIONI.md` (E9), `INVENTARIO_E_DECISIONE.md` riga 75 ([18]) **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f10-dati/04-embedded/INVENTARIO_E_DECISIONE.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: copia non ufficiale. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### intel-000030012 [122]
@@ -1568,6 +1900,7 @@ Usata per: «LD19: 0,8°, 5–13 Hz, 12 m» (ricerca), 8,9 fasci su un pedone a 
 Usata per: «60 klx (LD19, r)», 12 m, 69–70 $ — `f1/985ccd9bca46/CONSEGNA.md` (tabella, rif. [9]), `f1/985ccd9bca46/PREVISIONI.md` (P7)
 Usata per: «LD19: 0,8°, 5–13 Hz, 12 m»; 8,9 fasci su un pedone a 4 m — `f2/01-traduzione/SCHEDE.md` (`nuvole-punti-2`); «RPLIDAR C1 o LD19, 70–80 $» — `f2/01-traduzione/SCHEDE.md` (`lidar-2`).
 Usata per: «Fonti: LD19 tiene 30 klx, non 60» — `f2/05-selezione/SELEZIONE.md` (H-003).
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, 5 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «12 m, 4500 Hz, 10 Hz, risoluzione «≤ 1°», tenuta alla luce **30 klx** (non 60); lo 0,8° è derivato (360°/450)» (marca C nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: (rif-1) LD19 e STL-19P (kit D500) sono due prodotti: non scambiare le cifre. Prezzo non verificato. (rif-2) correzione 4 in testa. 0,8° = 360° / 450 punti per giro a 10 Hz: derivato, da dichiarare così. È la pagina di un rivenditore, non la scheda del costruttore (non cercata). Prezzo non verificato. All'unione: la scheda LD19 V2.5 letta in f10 ha una voce sua, `ldrobot-ld19-scheda`. Differenza fra le pagine: «5–13 Hz» letto da f3 sulla pagina prodotto Waveshare [r], non trovato da rif-2 nel wiki Waveshare («Sweep frequency 10 Hz»).
 
 ### ldrobot-ld19-scheda [126]
@@ -1579,6 +1912,7 @@ Identificativo: V2.5
 Link: https://botland.com.pl/img/art/inne/21991_Karta%20katalogowa.pdf
 Verifica: aperta dal ruolo che la cita — (rif-4) dal curatore solo [200]
 Usata per: accuratezza ±45 mm (media di 100 misure), scarto tipo 10 mm; nessuna portata sul nero — `f10-dati/02-sensori/PREVISIONI.md` riga 32, `MODELLO_SENSORE.md` (S11) **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f10-dati/02-sensori/parametri_sensori.json`, `f12-integrazione/50-stato/STATO_V2_copia.md`, `f13-allegato/02-geometria/FASCICOLO_GEOMETRIA.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: copia non ufficiale. All'unione: separata da `ldrobot-ld19` (pagine di rivenditori), perché è un altro documento; nel gruppo rif-4 la chiave era `ldrobot-ld19`. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### livox-mid-360 [127]
@@ -1593,6 +1927,7 @@ Usata per: Mid-360: 360°×59°, 40 m (r), 899–1092 $ (r) — `f1/985ccd9bca46
 Usata per: «Livox Mid-360: 360°, 40 m al 10 % a 100 klx, 905 nm»: i 360° si hanno con un LiDAR a scansione, non con tre ToF — `f2/04-torneo/TORNEO.md` (parte 1, H-007 e «Fonti»); `f2/05-selezione/SELEZIONE.md` (§3, F-001: «prezzo non verificato»).
 Usata per: LiDAR a stato solido: portata, campo, 10 Hz, 265 g, 6,5 W, zona cieca 0,1 m — `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §2(b), S15
 Usata per: alla scala reale un LiDAR da 10–40 m, da provare — `f6-specializzazione/01-esperto-dominio/SPECIALIZZAZIONE.md` §1
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: (rif-1) pagina di rivenditore, non la scheda Livox. La pagina DroneXL (979 $ di listino) non è stata aperta. (rif-2) principio di misura e prezzo non sono nella pagina: restano non verificati, come scrive il torneo. (rif-3) la stessa pagina dà la precisione radiale: ≤ 2 cm a 10 m e ≤ 3 cm a 0,2 m (1σ). `MOTO_PROPRIO.md` usa «3 cm radiali» come ipotesi senza citare la fonte: è coerente con la scheda, per eccesso. Vetro e pioggia: la scheda non li tratta. Differenza fra i gruppi: rif-1 aveva letto la pagina di un rivenditore (nessun prezzo: «Contact for pricing»); rif-2 e rif-3 la pagina delle specifiche del costruttore, tenuta come fonte. Il prezzo (899–1092 $ in f1; 979 $ di listino su una pagina DroneXL mai aperta) resta NON verificato.
 
 ### lucid-helios2-wide [128]
@@ -1615,6 +1950,7 @@ Identificativo: manca
 Link: https://www.arducam.com/oak-d-pro-w.html
 Verifica: non raggiungibile — (rif-1) (403 oggi, con lo strumento di lettura e con una richiesta diretta); il ruolo l'ha vista solo nel riassunto di un motore di ricerca.
 Usata per: tre OAK-D Pro W, stereo attivo, 127° orizzontali, 499–529 $ l'una — `f1/985ccd9bca46/CONSEGNA.md` (§2, rif. [12])
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: campo e prezzo non verificati. È l'unico «tre sensori per 360°» geometricamente valido secondo `lidar`: prima di ripeterlo va letta la scheda Luxonis.
 
 ### luxonis-tof [130]
@@ -1627,6 +1963,7 @@ Link: https://docs.luxonis.com/hardware/platform/depth/ToF-depth
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-1) già verificata dal curatore in f3 [g]: 640×480, 20 cm–5 m, «<1% indoors, <2% outdoors», «Issues when using multiple ToFs (interference)». Non riaperta oggi. ‖ (rif-2) «20cm - 5m»; «ToF sensors have a depth error of <1% indoors, <2% outdoors»; «Issues when using multiple ToFs (interference)»; «Limited resolution: 640x480». Già in f3/fonti.
 Usata per: F3: ToF Luxonis 5 m, «<2% outdoors»; interferenza fra più ToF — `f1/3fff79e9c3ea/FONTI.md`, `f1/3fff79e9c3ea/CONSEGNA.md` (§1.1, §1.2), `f1/3fff79e9c3ea/PREVISIONI.md` (P1)
 Usata per: K-009, sole non risolto: Luxonis «<2% outdoors» contro Orbbec «Indoor» — `f2/01-traduzione/SCHEDE.md` (`ricercatore-1`); `f2/03-triage/TRIAGE.md` (K-009); `f2/05-selezione/SELEZIONE.md` (K-009).
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: (rif-1) fonte del costruttore; non dice a quale illuminamento vale «outdoors». La discordanza con Orbbec («Indoor») è vera fra costruttori (K-009 di f3): la decide una prova al sole sul sensore posseduto. (rif-2) fonte del costruttore; «outdoors» senza illuminamento dichiarato. Non decide K-009: decide la prova al sole sul sensore posseduto.
 
 ### microsoft-azure-kinect-specifiche [131]
@@ -1660,6 +1997,7 @@ Identificativo: manca
 Link: https://www.orbbec.com/products/structured-light-camera/astra-series/
 Verifica: aperta dal ruolo che la cita — (rif-4) dal curatore solo [200]
 Usata per: campo 58,4° × 45,5°, 0,6–8 m, USB 2.0 — `f10-dati/04-embedded/PREVISIONI.md` (note in fondo), `INVENTARIO_E_DECISIONE.md` ([11]) **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f10-dati/04-embedded/INVENTARIO_E_DECISIONE.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### orbbec-femto-bolt [134]
@@ -1678,6 +2016,7 @@ Usata per: 75° e 120°, portata al più 2,88 m — `f1/b8262bfed263/CONSEGNA.md
 Usata per: caso limite «Femto Bolt, 120° esatti»: nessun ToF con campo orizzontale ≥ 130° — `f2/01-traduzione/SCHEDE.md` (`requisiti-1`, P1); `f2/04-torneo/TORNEO.md` (parte 1, H-007: «massimo 120° (Femto…)»); `f2/05-selezione/SELEZIONE.md` (H-007).
 Usata per: K-012, 0,25–2,88 m contro 0,25–2,21 m: due modi — `f2/01-traduzione/SCHEDE.md` (coda, (b) 12); `f2/03-triage/TRIAGE.md` (K-012); `f2/05-selezione/SELEZIONE.md` (K-012).
 Usata per: K-009, Orbbec «Indoor» o «Indoor/Semi-Outdoor» contro Luxonis «<2% outdoors» — `f2/01-traduzione/SCHEDE.md` (`ricercatore-1`); `f2/03-triage/TRIAGE.md` (K-009); `f2/05-selezione/SELEZIONE.md` (K-009).
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`. Nell'allegato sostiene: «tempo di volo: 120° × 120°, 0,25–2,88 m nel modo largo raggruppato (ambiente: pagina «Indoor», scheda «Indoor/Semi-Outdoor»)» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: (rif-1) 2,88 e 2,21 m sono due modi, entrambi giusti (f3, punto 1). Il prezzo di 559 $ citato da `nuvole-punti` non è verificato. Classe laser: non verificata. (rif-2) correzione 5 in testa. Prezzo non verificato oggi. La pagina può cambiare: conviene conservarne una copia con la data. Differenza fra i gruppi: per rif-2 il tipo era «pagina di costruttore» (solo la pagina prodotto); rif-1 e f3 hanno letto anche la scheda PDF v01.
 
 ### orbbec-femto-bolt-sincronia [135]
@@ -1689,6 +2028,7 @@ Identificativo: manca
 Link: https://doc.orbbec.com/documentation/Orbbec%20Femto%20Bolt%20Documentation/Synchronize%20Multiple%20Femto%20Bolt%20Devices
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-1) già verificata dal curatore in f3 [g]: «offset from each other by 160us or more»; impulso di 125 µs. Aperta anche dal ruolo che la cita. Non riaperta oggi.
 Usata per: catture sfalsate di almeno 160 µs col cavo di sincronizzazione — `f1/985ccd9bca46/CONSEGNA.md` (§2.3, rif. [4]), `f1/985ccd9bca46/PREVISIONI.md` (P5)
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: vale per la Femto Bolt; per i multizona ST nessun enunciato sull'interferenza è stato trovato (non verificato).
 
 ### orbbec-gemini-330-scheda [136]
@@ -1700,6 +2040,7 @@ Identificativo: V1.6
 Link: https://download.kamami.pl/p1203693-Gemini-330-series-Datasheet-V1.6.pdf
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [T]: PDF aperto; «V1.6», 850, «All-Pass» presenti
 Usata per: Gemini 335: 850 ± 6 nm, imager «All-Pass»; filtri di post-elaborazione attivi come impostazione predefinita (tab. 4-13-1) — `f9-preproposta/07-lidar/CONSEGNA.md` ([5]); `f10-dati/02-sensori/PREVISIONI.md` riga 33, `MODELLO_SENSORE.md` (S6) **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`, `f13-allegato/02-geometria/FASCICOLO_GEOMETRIA.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, 1 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «proiettore a 850 nm, imager «All-Pass»» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: copia di un rivenditore. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### orbbec-gemini-335 [137]
@@ -1713,7 +2054,8 @@ Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente �
 Usata per: 90°×65°, 0,26–3 m, 1280×800 a 30 fps, IMU — `f1/985ccd9bca46/CONSEGNA.md` (tabella, rif. [7]); prezzo 330–369 $ da rivenditori — `f1/985ccd9bca46/PREVISIONI.md` (P6)
 Usata per: errore al limite dichiarato a 4 m: 12 cm; tocca 15 cm a 4,5 m; base 50 mm; «90°×65°, non 87°×58°» — `f2/04-torneo/TORNEO.md` (parte 1, H-001 e «Fonti»); `f2/05-selezione/SELEZIONE.md` (H-001); `f3/H-012/03-metrologo/PIANO_MISURE.md` (critica 9: «Gemini 335 12»).
 Usata per: una delle camere candidate, 90°×65° — `f2/01-traduzione/SCHEDE.md` (`lidar-1`); `f3/H-012/01-scene-dinamiche/SOLUZIONE.md` (B1); `f4/H-012/05-correzioni/SOLUZIONE_V2.md` (B1).
-Note: (rif-1) il prezzo 330–369 $ non è verificato (nessun link del rivenditore nei file). (rif-2) l'1,5 % è «Spatial Precision» (RMSE), cioè rumore spaziale a 2 m; i 12 cm a 4 m sono una estrapolazione con z² fatta dall'avversario, non un dato di scheda. Tipo di otturatore non indicato (f3).
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`, `f13-allegato/02-geometria/FASCICOLO_GEOMETRIA.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/25-verifica-sovraffermazioni/uscita_cerca.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, 7 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «campo 90° × 65°, base 50 mm, intervallo ottimale 0,26–3 m, precisione spaziale ≤ 1,5 % a 2 m» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
+Note: (rif-1) il prezzo 330–369 $ non è verificato (nessun link del rivenditore nei file). (rif-2) l'1,5 % è «Spatial Precision» (RMSE), cioè rumore spaziale a 2 m; i 12 cm a 4 m sono una estrapolazione con z² fatta dall'avversario, non un dato di scheda. Tipo di otturatore non indicato (f3). ‖ (aggiornamento f12) f13 (geometria, discordanza 10): 90° × 65° è il campo della pagina del prodotto (1280 × 800); a 848 × 480 la scheda dà 90° × 60° (`parametri_sensori.json`). VD (condizione 1): sulla Gemini l'elaborazione del costruttore è accesa di norma, quindi «filtri spenti» va verificato all'avvio.
 
 ### orbbec-negozio-femto-bolt [138]
 Tipo: pagina di costruttore o comunicato
@@ -1748,7 +2090,8 @@ Verifica: dato diverso — (rif-2) le cifre ci sono, ma misurano il sistema di p
 Usata per: «esposizione → fotogramma nell'applicazione: media 95 ms a 30 fps; 127 a 15; 47 a 60; 39 a 90… che cosa includa la misura: non verificato» — `f3/H-012/02-validazione/VERIFICA.md` (§3c).
 Usata per: «le sole voci note sommano circa 155 ms in media» contro la soglia di 150 ms — `f3/H-012/02-validazione/VERIFICA.md` (§3c); `f4/H-012/05-correzioni/SOLUZIONE_V2.md` (§7, R7); `f5/02-audit/AUDIT.md` (ipotesi 3: 0,288 s, 0,72 m); `f4/H-012/09-arbitro/VERDETTO.md` (costo; K-015).
 Usata per: «flusso a 60 o 90 fps usando l'ultimo fotogramma» — `f4/H-012/05-correzioni/SOLUZIONE_V2.md` (B8); «i 47 e 39 ms vengono dai modi 848×100» — `f5/02-audit/AUDIT.md` (ipotesi 7).
-Note: correzione 2 in testa: scioglie il «non verificato» di `VERIFICA.md`. Una camera (D435), un calcolatore, medie senza percentili, modi 848×100 (il documento dice che questi modi scambiano campo verticale con frequenza; i «circa 12°» dell'audit sono un suo conto, coerente con 58° × 100/480, non una cifra letta). I conti che ne discendono (0,72 m a 2,5 m/s; velocità massima coperta circa 1,4 m/s) usano un limite superiore: sono prudenti, non misurati. Decide la prova H12.
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`, `f13-allegato/02-geometria/FASCICOLO_GEOMETRIA.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, 3 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «95 ms a 30 fps (127 a 15, 47 a 60, 39 a 90): latenza dell'**intero sistema di prova**, limite superiore, non del sensore» (marca C nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
+Note: correzione 2 in testa: scioglie il «non verificato» di `VERIFICA.md`. Una camera (D435), un calcolatore, medie senza percentili, modi 848×100 (il documento dice che questi modi scambiano campo verticale con frequenza; i «circa 12°» dell'audit sono un suo conto, coerente con 58° × 100/480, non una cifra letta). I conti che ne discendono (0,72 m a 2,5 m/s; velocità massima coperta circa 1,4 m/s) usano un limite superiore: sono prudenti, non misurati. Decide la prova H12. ‖ (aggiornamento f12) f13 (geometria, discordanza 8): 95 ms (questa fonte: banco di prova, modo 848 × 100) contro 70 ms nominale e 120 ms limite del modello del sensore di f10: fonti diverse. Il bilancio va scritto «155 ms con 95, circa 131 ms con 71», dicendo che cosa è ciascuno.
 
 ### realsense-bkm-taratura [141]
 Tipo: scheda tecnica (documento del costruttore)
@@ -1760,6 +2103,7 @@ Link: https://realsenseai.com/wp-content/uploads/2019/11/BKMs_Tuning_RealSense_D
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-3, sul link dei forum Intel) non raggiungibile — oggi il link risponde 404, e la pagina di Intel che ospita lo stesso documento risponde 403. Vista solo nel riassunto di un motore di ricerca, come già dal ruolo che la cita. ‖ (rif-4, sulla copia di realsenseai.com) [T]: «a well-calibrated camera should produce a Subpixel RMS error of less than 0.1», «subpixel=0.08», «By default we do not do any post-processing of the depth» presenti
 Usata per: stereo attiva: errore crescente con z² — `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §2(b), S14
 Usata per: errore di disparità s < 0,1 px (0,08 per la curva della D435), da cui σz = z²·s/(fx·B); nessun filtro predefinito nell'SDK — `f10-dati/02-sensori/MODELLO_SENSORE.md` righe 18 e 90 (S2), `PREVISIONI.md` riga 33 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f10-dati/02-sensori/parametri_sensori.json`, `f12-integrazione/50-stato/STATO_V2_copia.md`, `f13-allegato/02-geometria/FASCICOLO_GEOMETRIA.md`, `f13-allegato/03-stima/FASCICOLO_STIMA.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/uscita_cerca.txt`, 5 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «camera ben tarata: errore RMS di sottopixel < 0,1; nessuna post-elaborazione predefinita nell'SDK» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: (rif-3) l'affermazione sul quadrato della distanza l'ho trovata oggi [g] nella versione in rete della stessa guida, sul sito attuale del marchio (https://dev.realsenseai.com/docs/tuning-depth-cameras-for-best-performance): «The depth error scales as the square of the distance away». Conviene sostituire il link. All'unione: fusa con la voce `intel-bkm-d400` di rif-3 (stesso file PDF, citato nel quadro di dominio da un indirizzo dei forum Intel che oggi dà 404: https://forums.intel.com/cipcp26785/attachments/cipcp26785/feeditem_no_topic/6364/1/BKMs_Tuning_RealSense_D4xx_Cam.pdf). La versione in rete della stessa guida è `realsense-taratura-profondita`. Alcuni usi vengono dalle estensioni f7–f10: NON ancora vagliati dall'arbitro (marcati riga per riga).
 
 ### realsense-confronto-camere [142]
@@ -1775,7 +2119,8 @@ Usata per: RealSense D435 e D455 a 87° in P1 — `f1/b8262bfed263/CONSEGNA.md`
 Usata per: D435i fra le camere candidate, 87°×58° — `f2/01-traduzione/SCHEDE.md` (`lidar-1`; «classe D435» in `nuvole-punti-2`); `f3/H-012/01-scene-dinamiche/SOLUZIONE.md` (B1); `f4/H-012/05-correzioni/SOLUZIONE_V2.md` (B1).
 Usata per: «allineando la profondità all'RGB, sulla D435i il campo scende a circa 69°×42° (non verificato in rete)» — `f5/02-audit/AUDIT.md` (ipotesi 11).
 Usata per: D455: campo ideale 0,6–6 m; errore < 2 % a 4 m — `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §2(b) (lì attribuita a S14)
-Note: (rif-1) il dominio intelrealsense.com non risolve più: usare realsenseai.com. (rif-2) il valore 69°×42° c'è; resta da leggere sulla pagina a occhio che sia la riga del campo RGB della D435i. Le conseguenze dell'audit (suolo visto da 1,65 m, ostacolo invisibile sotto 1,45 m) sono conti suoi, non della fonte. (rif-3) voce aggiunta da me: i quattro file non citano questo link, ma è qui che stanno le due cifre che il quadro attribuisce a S14. Sono valori di catalogo, non misure nelle condizioni del progetto.
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f10-dati/02-sensori/parametri_sensori.json`, `f12-integrazione/50-stato/STATO_V2_copia.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, 8 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «D435i: 87° × 58°, 0,3–3 m (riserva: attribuzione delle colonne letta su testo estratto)» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
+Note: (rif-1) il dominio intelrealsense.com non risolve più: usare realsenseai.com. (rif-2) il valore 69°×42° c'è; resta da leggere sulla pagina a occhio che sia la riga del campo RGB della D435i. Le conseguenze dell'audit (suolo visto da 1,65 m, ostacolo invisibile sotto 1,45 m) sono conti suoi, non della fonte. (rif-3) voce aggiunta da me: i quattro file non citano questo link, ma è qui che stanno le due cifre che il quadro attribuisce a S14. Sono valori di catalogo, non misure nelle condizioni del progetto. ‖ (aggiornamento f12) f13 (geometria, discordanze 1 e 2): il campo 87° × 58° della scheda e la focale f = 424 px usata dal simulatore non sono coerenti (424 px equivale a 90° × 59°; 87° × 58° dà 446,8 e 433,0 px). Ne dipendono due cifre: il suolo a ±44° si vede da 1,71–1,73 m col campo di 58°, mentre «1,69 m» viene dall'altra focale; z_min è 1,24 m o 1,22 m. Vanno riportate entrambe con la loro condizione.
 
 ### realsense-d400-accuratezza [143]
 Tipo: pagina di costruttore o comunicato (articolo dell'assistenza)
@@ -1787,6 +2132,7 @@ Link: https://support.realsenseai.com/hc/en-us/articles/360059129453-Depth-accur
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-2) Nel torneo era «non aperta (errore 403), solo riassunto»; oggi risponde. Tabella: D420/D430/D435/D435i «up to 2 Meters and 80% ROI, HD Resolution», D455 «up to 4 Meters»: Z-accuracy ≤ 2 %, RMS Error ≤ 2 %, Fill rate ≥ 99 %, Temporal Noise ≤ 1 %. Rimanda alla Tabella 4-9 della scheda della famiglia D400 (non aperta).
 Usata per: D435i «≤ 2 % fino a 2 m»; al limite dichiarato 16 cm a 4 m, tocca 15 cm a 3,9 m — `f2/04-torneo/TORNEO.md` (parte 1, H-001 e «Fonti»); `f3/H-012/03-metrologo/PIANO_MISURE.md` (critica 9: «D435i 16»).
 Usata per: curva «pessimista» del rumore, «2 % a 2 m» scalato con z² (4 / 9 / 16 cm a 2 / 3 / 4 m) — `f3/H-012/02-validazione/VERIFICA.md` (§4); `f4/H-012/05-correzioni/SOLUZIONE_V2.md` (B1).
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/02-geometria/FASCICOLO_GEOMETRIA.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, 4 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «D435/D435i: accuratezza ed errore RMS ≤ 2 % fino a 2 m, sull'80 % della regione, risoluzione HD; D455 fino a 4 m» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: la specifica vale fino a 2 m per la D435i: i 16 cm a 4 m sono fuori dall'intervallo dichiarato (estrapolazione dello sciame). Vale per moduli integrati e tarati, sull'80 % della regione.
 
 ### realsense-d400-scheda [144]
@@ -1798,6 +2144,7 @@ Identificativo: manca (numero del documento non letto)
 Link: https://www.realsenseai.com/wp-content/uploads/2026/03/RealSense-D400-Series-Datasheet-Mar-2026.pdf
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [T]: PDF aperto (5,4 MB); 850 (nm), 360 (mW), «All pass», «Filter Type» presenti; base stereo e RMS non ricontrollati
 Usata per: proiettore 850 ± 10 nm, 360 mW massimi, campo 90° × 63°; imager senza filtro («Filter Type: None», «Depth Filter: All pass») — `f9-preproposta/07-lidar/CONSEGNA.md` ([4]); base 50 mm (D430) e 95 mm (D450), RMS ≤ 2 % entro 2 m (D43x) ed entro 4 m (D455) — `f10-dati/02-sensori/PREVISIONI.md` righe 9 e 24, `MODELLO_SENSORE.md` (S1) **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`, `f13-allegato/02-geometria/FASCICOLO_GEOMETRIA.md`, `f13-allegato/03-stima/FASCICOLO_STIMA.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, 1 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «proiettore a 850 nm, 360 mW massimi; imager senza filtro («All pass»). Base stereo e RMS: non ricontrollati, non citarli da qui» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: che «rev. 023» e «Mar 2026» siano lo stesso documento non è verificato. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### realsense-d455 [145]
@@ -1811,6 +2158,7 @@ Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente �
 Usata per: D455: 87°×58°, otturatore globale, IMU, 0,6–6 m — `f2/01-traduzione/SCHEDE.md` (`visione-1`, `lidar-1`); `f3/H-012/01-scene-dinamiche/SOLUZIONE.md` (B1); `f4/H-012/05-correzioni/SOLUZIONE_V2.md` (B1).
 Usata per: errore al limite dichiarato a 4 m: 8 cm; tocca 15 cm a 5,5 m (da «<2% at 4 m», base 95 mm) — `f2/04-torneo/TORNEO.md` (parte 1, H-001); `f3/H-012/03-metrologo/PIANO_MISURE.md` (critica 9).
 Usata per: banda senza dato accanto all'ombra, 9,5 cm con base 95 mm — `f5/02-audit/AUDIT.md` (ipotesi 10).
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/02-geometria/FASCICOLO_GEOMETRIA.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/uscita_cerca.txt`, 8 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «campo 87° × 58°, intervallo ideale 0,6–6 m, otturatore globale, base 95 mm, errore «less than 2% at 4 m»» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: «<2% at 4 m» è una dichiarazione del costruttore, in condizioni di prova sue (vedi `realsense-d400-accuratezza`: 80 % della regione, risoluzione HD). La presenza dell'IMU oggi non l'ho cercata nella pagina (confermata in f3).
 
 ### realsense-taratura-profondita [146]
@@ -1824,7 +2172,8 @@ Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente �
 Usata per: curva «nominale» del rumore radiale R(z) nelle prove A e B — `f3/H-012/02-validazione/VERIFICA.md` (§4); `f4/H-012/05-correzioni/SOLUZIONE_V2.md` (B1: «1,5 / 3,4 / 6,0 cm (nominale, documento del costruttore)»); `f4/H-012/03-validazione/MISURE.md` (prova B: usa la curva nominale 1,5 / 3,4 / 6,0 cm, senza citare la fonte).
 Usata per: base 50 mm della D435i (banda senza dato di 5 cm) — `f5/02-audit/AUDIT.md` (ipotesi 10).
 Usata per: «false depth, aka. Hallucinations, are much worse than no depth»; preset «High Accuracy» — `f9-preproposta/07-lidar/CONSEGNA.md` critica 6 ([10]) **[f7–f10: non vagliato dall'arbitro]**
-Note: (rif-2) 0,08 pixel è il valore con cui il costruttore traccia una curva teorica su un bersaglio ben tessuto, non una garanzia: è il rumore di un piano interpolato localmente, non quello del centro di una persona che cammina (che è la grandezza R del filtro e va misurata, prova H1). Il documento parla della D435; per la D435i la base è la stessa secondo f3, non riletto oggi. (rif-4) non dice che cosa succede sul tessuto nero: resta non verificato. All'unione: fusa con la voce `realsense-taratura-web` di rif-4 (stesso indirizzo). Il PDF della stessa guida è `realsense-bkm-taratura`. Alcuni usi vengono dalle estensioni f7–f10: NON ancora vagliati dall'arbitro (marcati riga per riga).
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f10-dati/02-sensori/parametri_sensori.json`, `f12-integrazione/50-stato/STATO_V2_copia.md`, `f13-allegato/02-geometria/FASCICOLO_GEOMETRIA.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/uscita_cerca.txt`, 10 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: ««depth error scales as the square of the distance»; curva teorica con 0,08 px, campo 90°, 848 px, base 50 mm» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
+Note: (rif-2) 0,08 pixel è il valore con cui il costruttore traccia una curva teorica su un bersaglio ben tessuto, non una garanzia: è il rumore di un piano interpolato localmente, non quello del centro di una persona che cammina (che è la grandezza R del filtro e va misurata, prova H1). Il documento parla della D435; per la D435i la base è la stessa secondo f3, non riletto oggi. (rif-4) non dice che cosa succede sul tessuto nero: resta non verificato. All'unione: fusa con la voce `realsense-taratura-web` di rif-4 (stesso indirizzo). Il PDF della stessa guida è `realsense-bkm-taratura`. Alcuni usi vengono dalle estensioni f7–f10: NON ancora vagliati dall'arbitro (marcati riga per riga). ‖ (aggiornamento f12) VD (H-403, K-405, K-407): la curva nominale 1,5 / 3,4 / 6,0 cm è ciò che la formula del costruttore dà; come rumore del centro dell'oggetto nel prototipo è NON DECIDIBILE (simulato: mediana 0,3 / 0,8 / 1,2 cm ma a 2 m 8 semi su 20 stanno a 3,7–4,4 cm; vero: una sola sequenza D415, 5,8–6,8 cm, senza verità). Le cifre al nominale sono ottimistiche: nei buchi il vero sta 3–4 volte oltre il livello «limite». Il ricalcolo di f13 (0,0151 / 0,0340 / 0,0604 m) conferma solo il conto.
 
 ### record3d-funzioni [147]
 Tipo: pagina di costruttore o comunicato
@@ -1835,6 +2184,7 @@ Identificativo: manca
 Link: https://record3d.app/features
 Verifica: vista solo nel riassunto di un motore di ricerca — (rif-4) (marca [r] del ruolo); dal curatore [T] parziale: «USB», «Wi-Fi» e «purchase» compaiono nella pagina, le condizioni precise non rilette
 Usata per: flusso via USB solo dopo l'acquisto; flusso Wi-Fi a pagamento, in rete locale, con compressione con perdita — `f10-dati/04-embedded/PREVISIONI.md` (E8), `INVENTARIO_E_DECISIONE.md` ([12]) **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f10-dati/04-embedded/INVENTARIO_E_DECISIONE.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: la risoluzione non è stata trovata (lo dice il ruolo). Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### rivenditori-d435i-prezzi [148]
@@ -1891,6 +2241,7 @@ Link: https://www.slamtec.com/en/c1/spec ; anche (rif-4): https://www.slamtec.co
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-2) «White: 0.05~12m (70% Reflectivity)»; «Black: 0.05~6m (10% Reflectivity)»; «5KHz»; «8~12Hz, 10Hz (Typical)»; «0.72°»; «40,000lux». Già in f3/fonti (letta là attraverso un riassunto). ‖ (rif-4) aperta dal ruolo che la cita; dal curatore solo [200]
 Usata per: LiDAR 2D rotante: «360° a 10 Hz, 5000 punti/s, 12 m, 6 m sul nero»; 8 punti su una persona a 5 m, 2 su una gamba — `f2/01-traduzione/SCHEDE.md` (`lidar-2`); smentita della variante al petto (1,7–1,9 punti su una gamba a 5 m, dal passo angolare) — `f2/04-torneo/TORNEO.md` (parte 1, H-003); `f2/05-selezione/SELEZIONE.md` (H-003).
 Usata per: accuratezza ±30 mm — `f10-dati/02-sensori/PREVISIONI.md` riga 32, `MODELLO_SENSORE.md` (S10); SDK: `INVENTARIO_E_DECISIONE.md` ([15], https://github.com/Slamtec/rplidar_sdk, [200]) **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f10-dati/02-sensori/MODELLO_SENSORE.md`, `f10-dati/02-sensori/parametri_sensori.json`, `f12-integrazione/50-stato/STATO_V2_copia.md`, `f13-allegato/02-geometria/FASCICOLO_GEOMETRIA.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/25-verifica-sovraffermazioni/uscita_cerca.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, `f13-allegato/DISCORDANZE_DEI_FASCICOLI.md`, 9 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «12 m sul bianco, 6 m sul nero, 5 kHz, 10 Hz tipici, 0,72°, 40 klx» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: (rif-2) prezzo «70–80 $»: non verificato. I conti dei punti sono dello sciame. All'unione: la pagina del rivenditore Waveshare (prezzo, «±30 mm», «FDA Class 1») ha una voce sua, `waveshare-rplidar-c1`. Alcuni usi vengono dalle estensioni f7–f10: NON ancora vagliati dall'arbitro (marcati riga per riga).
 
 ### st-um2884 [153]
@@ -1903,6 +2254,7 @@ Link: https://core-electronics.com.au/attachments/localcontent/um2884-a-guide_75
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-1, su st.com) non raggiungibile (st.com: connessione interrotta, oggi e in f3); il ruolo la dichiara «non verificata sul testo». ‖ (rif-2, sulla copia di un rivenditore) Tabella 2, «Minimum and maximum ranging frequencies»: 4x4 da 1 a 60 Hz; 8x8 da 1 a 15 Hz. In f3 era fra i «non controllati».
 Usata per: «il passaggio 8×8 a 15 Hz → 4×4 a 60 Hz del VL53L5CX» (creativo-4) — `f1/e30f9e2dd4d7/CONSEGNA.md`
 Usata per: scioglie «modo 4×4 a 60 Hz del VL53L5CX non verificato sul testo» — `f2/01-traduzione/SCHEDE.md` (`creativo-4`, rischi).
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/uscita_cerca.txt`, 2 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «VL53L5CX: 4 × 4 da 1 a 60 Hz, 8 × 8 da 1 a 15 Hz (Tabella 2)» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: (rif-1) conferma parziale da `st-vl53l5cx` (60 Hz di capacità massima [g]); il legame 60 Hz ↔ solo 4×4 resta non verificato. (rif-2) l'idea che lo usava (H-020) è esclusa dal ramo. Revisione del 2021, forse non l'ultima. Differenza fra i gruppi: per rif-1 il manuale era «non raggiungibile» (st.com) e il legame «60 Hz solo in 4×4» non verificato; rif-2 l'ha letto su una copia di un rivenditore (Tabella 2): il dubbio è sciolto. Per rif-1 il tipo era «documentazione di software».
 
 ### st-um3038 [154]
@@ -1914,6 +2266,7 @@ Identificativo: UM3038 Rev 2
 Link: https://www.pololu.com/file/0J1993/um3038-a-guide-to-using-the-vl53l7cx-timeofflight-multizone-ranging-sensor-with-90-fov-stmicroelectronics.pdf
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [T]: stato 10 = «Range valid, but no target detected at previous range»; «status 5 is considered as 100 % valid. A status of 6 or 9 … confidence value of 50 %. All other statuses are below 50 %»; `set_i2c_address` e LPn presenti
 Usata per: il primo campione dopo «nessun bersaglio» ha stato 10, fiducia sotto il 50 % (§5.5); procedura per cambiare l'indirizzo I2C con LPn (§2.3) — `f9-preproposta/07-lidar/CONSEGNA.md` ([3]); `f10-dati/02-sensori/MODELLO_SENSORE.md` (S8), `PREVISIONI.md` riga 14 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`, `f13-allegato/02-geometria/FASCICOLO_GEOMETRIA.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, 5 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «il primo campione dopo «nessun bersaglio» ha stato 10, fiducia sotto il 50 %» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: numeri di paragrafo non ricontrollati. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### st-vl53l5cx [155]
@@ -1930,6 +2283,7 @@ Usata per: «L5CX e L8CX: 45°×45° (r)» — `f1/985ccd9bca46/CONSEGNA.md` (§
 Usata per: «45°×45° (63–65° in diagonale): tre coprono 135°», dichiarato non verificato sul testo — `f1/e30f9e2dd4d7/CONSEGNA.md` (critica 4)
 Usata per: F-001, «multizona 8×8 (45°–60°)» — `f2/03-triage/TRIAGE.md` (F-001).
 Usata per: «modo 4×4 a 60 Hz del VL53L5CX non verificato sul testo» — `f2/01-traduzione/SCHEDE.md` (`creativo-4`, rischi): vedi `st-um2884`.
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`. Nell'allegato sostiene: «campo 45° × 45° (63° in diagonale), fino a 400 cm, fino a 60 Hz» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: (rif-1) i numeri sono dichiarazioni del costruttore; 5 klx è la condizione di prova della scheda, non il sole pieno (f3, punto 3). (rif-2) esiste almeno una revisione più recente (un motore di ricerca indica una Rev 13 presso un distributore: non aperta).
 
 ### st-vl53l7cx [156]
@@ -1948,6 +2302,7 @@ Usata per: F-001, tre ToF multizona non coprono 360° (135°–180°); «three s
 Usata per: K-012, «VL53L7CX 2,0 m contro 3,5 m: due modi» — `f2/01-traduzione/SCHEDE.md` (coda, (b) 12); `f2/03-triage/TRIAGE.md` (K-012); `f2/05-selezione/SELEZIONE.md` (K-012).
 Usata per: «a 5 klx il VL53L7CX tiene 0,5–0,65 m» — `f3/H-012/01-scene-dinamiche/SOLUZIONE.md` (§7); `f4/H-012/05-correzioni/SOLUZIONE_V2.md` (§8).
 Usata per: emissione a 940 nm; portata in 8×8 su grigio 17 % a 5 klx 0,35 m tipici (0,25 m minimi, tab. 18); nessun ingresso di trigger (B1 è AVDD); «crosstalk» è il riflesso del vetro di copertura; interfaccia I2C a 0x52 — `f9-preproposta/07-lidar/CONSEGNA.md` ([1]); `f10-dati/04-embedded/PREVISIONI.md` (E10); `f10-dati/02-sensori/MODELLO_SENSORE.md` (S7); `f10-dati/03-infrastruttura/PREVISIONI.md` (infra-P4), `AMBIENTE.md` riga 78; `f9-preproposta/01-architetto/CONSEGNA.md` riga 14 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f10-dati/02-sensori/parametri_sensori.json`, `f10-dati/03-infrastruttura/AMBIENTE.md`, `f12-integrazione/50-stato/STATO_V2_copia.md`, `f13-allegato/02-geometria/FASCICOLO_GEOMETRIA.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/25-verifica-sovraffermazioni/uscita_cerca.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, 8 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «campo 60° × 60°, fino a 350 cm; 4 × 4 a 30 Hz: 3,5 m al buio, 0,65 m a 5 klx; 8 × 8 a 15 Hz: 2,0 m e 0,5 m» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: (rif-1) titolo esatto della scheda non riletto oggi (formulazione mia sul modello ST): controllarlo sul PDF prima di citarlo alla lettera. «350 cm» e «2,0 m» sono due modi diversi (f3, punto 2), non una discordanza. Classe laser 1 dichiarata da ST secondo `lidar`: non ricontrollata. (rif-2) che la Tabella 17 sia il modo 4×4 e la 18 il modo 8×8 lo dice f3; oggi ho letto le intestazioni «30 Hz» e «15 Hz», non la risoluzione. La revisione può non essere l'ultima. 5 klx è la condizione di prova della scheda, non il sole pieno. Valori tipici su bersaglio bianco: sul grigio e ai bordi del campo sono più bassi. (rif-4) copia di un rivenditore, non st.com; forse non è l'ultima revisione (lo dice il ruolo). Le estrapolazioni sul nero al 5 % (0,38 m, 0,30 m) sono conti del ruolo. Alcuni usi vengono dalle estensioni f7–f10: NON ancora vagliati dall'arbitro (marcati riga per riga).
 
 ### st-vl53l8cx [157]
@@ -1961,6 +2316,7 @@ Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente �
 Usata per: «VL53L8CX 45°×45°, 4 m» — `f1/c85dbcc51ea6/CONSEGNA.md` (§1.3, rif. [7])
 Usata per: campo orizzontale 45° in P1 — `f1/b8262bfed263/CONSEGNA.md`; «L8CX: 45°×45° (r)» — `f1/985ccd9bca46/CONSEGNA.md`
 Usata per: 940 nm; campo 45°; a 5 klx in 8×8 1,55 m (bianco), in 4×4 grigio 17 % 1,65 m tipici; piedino SYNC; alimentazione del nucleo a 1,8 V — `f9-preproposta/07-lidar/CONSEGNA.md` ([2]); `f10-dati/04-embedded/PREVISIONI.md` (E10); `f10-dati/02-sensori/MODELLO_SENSORE.md` (S9) **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f10-dati/02-sensori/parametri_sensori.json`, `f12-integrazione/50-stato/STATO_V2_copia.md`, `f13-allegato/02-geometria/FASCICOLO_GEOMETRIA.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/25-verifica-sovraffermazioni/uscita_cerca.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, 5 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «campo 45° × 45°, 400 cm; a 5 klx 2,85 m (4 × 4) e 1,55 m (8 × 8)» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: (rif-1) titolo esatto della scheda non riletto oggi (formulazione mia sul modello ST): controllare sul PDF prima di citarlo alla lettera. (rif-4) copia di un rivenditore. Alcuni usi vengono dalle estensioni f7–f10: NON ancora vagliati dall'arbitro (marcati riga per riga).
 
 ### st-volantino-vl53l7cx-vl53l8cx [158]
@@ -2006,14 +2362,48 @@ Identificativo: Waveshare SKU 26535
 Link: https://www.waveshare.com/rplidar-c1.htm
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-1) già verificata dal curatore in f3 [r] sulla pagina Slamtec (12 m al 70 %, 6 m al 10 %, 5 kHz, 10 Hz tipici, 0,72°, 40 klx). Ricontrollata oggi [r] sulla pagina Waveshare: 0,05–12 m (70 %), 0,05–6 m (10 %), 5000 Hz, 8–12 Hz (tipico 10), 0,72°, ±30 mm, «FDA Class 1», 79,99 $; la tenuta alla luce non è sulla pagina Waveshare.
 Usata per: 12 m al 70 %, 6 m al 10 %; ±30 mm (da cui rumore di velocità 0,4 m/s e di accelerazione 7 m/s², calcolo del ruolo); classe 1 FDA; 5000 punti/s, 10 Hz, 0,72°; 70–80 $ — `f1/985ccd9bca46/CONSEGNA.md` (§2.5, §2.6, tabella, lidar-2, rif. [8])
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: «±30 mm» usato come scarto tipo è un'ipotesi dichiarata del ruolo. La classe FDA è una dichiarazione del costruttore. All'unione: separata da `slamtec-rplidar-c1` (pagina delle specifiche del costruttore); nel gruppo rif-1 la chiave era `slamtec-rplidar-c1`.
 
+
+### bostondynamics-spot [312]
+Tipo: documentazione del costruttore (pagina per sviluppatori)
+Autori: Boston Dynamics
+Titolo: About Spot
+Sede e anno: documentazione dell'SDK di Spot, pagina letta il 14-11-2026; data e versione non indicate
+Identificativo: —
+Link: https://dev.bostondynamics.com/docs/concepts/about_spot
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (f12, 19:24) [g] sul testo grezzo della pagina (62 847 byte): «1.6 m/s», «1100 mm (43.3 in)», «32.5» (kg), «12 DOFs, 3 per leg». Larghezza e altezza (500 e 840 mm) non cercate con una ricerca univoca: non ricontrollate
+Usata per: esempio di robot d'ispezione per il profilo di chi porta il sensore: velocità massima 1,6 m/s, 1,1 × 0,5 × 0,84 m, 32,5 kg, 12 gradi di libertà articolari — `f14-classificazione/01-profili/PROFILI.md`, `f14-classificazione/01-profili/profili_portatore.json` (F9) **[f14, valutazione breve sulla classificazione: scritto dopo le 17:36; valori di «profilo di partenza»]**
+Note: voce aggiunta nell'aggiornamento f12. scheda del costruttore: dice che cosa dichiara. La frenata e il tempo di reazione del profilo «robot» sono ipotesi del ruolo, non vengono da qui. A sensore in moto niente è provato.
+
+### mir250-scheda [313]
+Tipo: scheda tecnica (copia di un rivenditore)
+Autori: Mobile Industrial Robots (copia distribuita da Hartfiel Automation)
+Titolo: MiR250 — specifiche tecniche
+Sede e anno: PDF di 2 pagine, copia sul sito di un rivenditore, caricata nel 2024 secondo l'indirizzo; revisione non letta
+Identificativo: —
+Link: https://www.hartfiel.com/wp-content/uploads/2024/04/MiR250-Specs.pdf
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (f12, 19:24) PDF scaricato (111 652 byte) e convertito in testo: «Length 800 mm», «Weight 97 kg», «Load surface 800 x 580 mm», «Maximum payload 250 kg», «2.0 m/s (7.2 km/h)», «Acceleration limits with maximum payload 0.3 m/s2». Il ruolo l'aveva scaricato e letto
+Usata per: classe «veicolo a guida automatica»: v_max 2,0 m/s, accelerazione 0,3 m/s² a pieno carico, ingombro, massa 97 kg a vuoto e 347 kg a pieno carico — `f14-classificazione/01-profili/PROFILI.md`, `f14-classificazione/01-profili/classi.json` (F17; R3 per le schede discordi), `f14-classificazione/20-inclusione/BLOCCO_CLASSIFICAZIONE.md` **[f14, valutazione breve sulla classificazione: scritto dopo le 17:36; valori di «profilo di partenza»]**
+Note: voce aggiunta nell'aggiornamento f12. il ruolo segnala schede discordi (83 o 97 kg; 0,3 o 1,0 m/s²): in questa copia ci sono 97 kg e 0,3 m/s² «with maximum payload». La frenata non è nella ricerca fatta: nel profilo è un'ipotesi. Copia di un rivenditore, non la pagina del costruttore.
+
+### dji-mavic-3-classic [314]
+Tipo: pagina del costruttore (specifiche)
+Autori: DJI
+Titolo: Mavic 3 Classic — Specs
+Sede e anno: pagina del prodotto; non letta
+Identificativo: —
+Link: https://www.dji.com/mavic-3-classic/specs
+Verifica: vista solo nel riassunto di un motore di ricerca — (f12, 19:24) l'indirizzo risponde 200 con una pagina di 204 byte che rinvia a una pagina di assistenza in un'altra lingua: nessuna cifra nel testo ricevuto. Il ruolo l'ha vista solo nel risultato di una ricerca. Le cifre 21 m/s (19 nell'UE), salita 8 m/s, inclinazione 35°, 895 g NON sono verificate
+Usata per: classe «multirotore» e profilo «multirotore» di chi porta il sensore: velocità, accelerazione massima g·tan 35°, massa — `f14-classificazione/01-profili/classi.json` e `profili_portatore.json` (R4; il ruolo la segna «non verificato») **[f14, valutazione breve sulla classificazione: scritto dopo le 17:36; valori di «profilo di partenza»]**
+Note: voce aggiunta nell'aggiornamento f12. da riaprire con un navigatore. Per i limiti delle classi di droni (19 m/s; modo lento 3 m/s) la fonte primaria è già nell'elenco, verificata: `ue-2019-945` [190].
 
 ---
 
 ## 3. Norme e documenti regolatori
 
-38 voci, da [162] a [199].
+39 voci: da [162] a [199]; in coda, aggiunta nell'aggiornamento f12, [315].
 
 ### astm-f3442-25 [162]
 Tipo: norma o documento regolatorio
@@ -2024,6 +2414,7 @@ Identificativo: ASTM F3442-25
 Link: https://store.astm.org/f3442-25.html
 Verifica: dato diverso — (rif-3) pagina aperta [g]; c'è «does not address avoidance of birds or natural hazards (for example, weather, clouds, terrain/obstacles)» e l'ambito «smaller unmanned aircraft (UA) encountering crewed aircraft»; ma al punto 1.6.1 la norma «defines a metric to assess the mitigation of a UA-to-UA mid-air collision, with specific safety performance thresholds to be addressed in future efforts». Il ruolo che la cita l'aveva vista solo in un risultato di ricerca.
 Usata per: norma per velivoli piccoli, «che esclude uccelli e incontri fra droni» — `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §3, S27
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: correzione 3. Letto solo l'ambito pubblicato nella pagina del negozio; il testo della norma è a pagamento.
 
 ### chs-carta1-abbreviazioni [163]
@@ -2046,6 +2437,7 @@ Identificativo: art. 162 del regolamento
 Link: https://leggeinchiaro.it/articolo-162-regolamento-codice-strada/
 Verifica: aperta dal ruolo che la cita — (rif-4) dal curatore solo [200] e presenza di «162» nella pagina; il contenuto usato non ricontrollato
 Usata per: precedente per i segnali — `f9-preproposta/09-interfacce/CONSEGNA.md` riga 80 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: sito non ufficiale; preferire Normattiva. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### colreg-regola7 [165]
@@ -2057,6 +2449,7 @@ Identificativo: COLREG, regola 7(d)(i)–(ii)
 Link: https://ialacolreg.com/en/colreg/rule-7
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [T]: «does not appreciably change» e «even when an appreciable bearing change is evident» presenti nella pagina
 Usata per: rilevamento costante come segno di rischio di collisione, e avvertenza che il rischio può esistere anche con rilevamento che cambia a breve distanza — `f9-preproposta/06-esperto-dominio/CONSEGNA.md` riga 33 (F5) **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: riproduzione non ufficiale del testo. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### dnv-imo-codice-mass [166]
@@ -2068,6 +2461,7 @@ Identificativo: manca
 Link: https://www.dnv.com/news/2026/imo-mcs-111-new-mass-code-adopted/
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-3) [g] — «The new MASS Code was adopted as a non-mandatory instrument, with an entry into effect date of 1 July 2026»; «Applies to cargo ships only». Il ruolo che la cita l'aveva vista solo in un risultato di ricerca.
 Usata per: in mare, codice MASS dell'IMO, non obbligatorio, dal 1° luglio 2026, solo navi da carico — `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §3, S30
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: fonte secondaria autorevole; il testo dell'IMO non è stato aperto.
 
 ### easa-amc-gm-2019-947 [167]
@@ -2081,6 +2475,7 @@ Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente �
 Usata per: l'EASA chiede di individuare i modi di deterioramento dei sistemi esterni e i mezzi per rilevarli — `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §2(e), S24
 Usata per: definizione di «detect and avoid» e le sue cinque funzioni; rinvio a RTCA SC-228 ed EUROCAE WG-105; SORA 2.5 — stesso file, §3
 Usata per: «detect and avoid» nelle norme è il traffico con equipaggio: da non dire per il prototipo — `f6-specializzazione/01-esperto-dominio/SPECIALIZZAZIONE.md` §6
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: la definizione è alla voce I.53 del glossario e coincide parola per parola con la citazione del quadro, compresa la chiusa «to comply with the acceptable rules of flight». Il documento riguarda la categoria «specifica» dei droni: il prototipo non è un'operazione di volo, quindi vale come vocabolario, non come requisito applicabile.
 
 ### easa-drones-regole [168]
@@ -2093,6 +2488,7 @@ Link: https://www.easa.europa.eu/domains/drones-air-mobility/rules-standards
 Verifica: verificata dal curatore il 14-11-2026 in parte — (rif-3) in parte: pagina aperta [g]; nomina i regolamenti 2019/947 e 2019/945. Non nomina il 2021/664 né la decisione 2025/018/R. Il ruolo che la cita l'aveva vista solo in un risultato di ricerca.
 Usata per: quadro europeo: regolamenti 2019/947 e 2019/945, U-space 2021/664, SORA 2.5 nella decisione 2025/018/R — `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §3, S28
 Usata per: le regole europee valgono per chi vola davvero — stesso file, §6
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: correzione 9.
 
 ### easa-faq-open-category [169]
@@ -2105,6 +2501,7 @@ Link: https://www.easa.europa.eu/en/the-agency/faqs/open-category
 Verifica: dato diverso — (rif-3) pagina aperta [g]; ci sono «MTOM … less than 250 g and the maximum speed is less than 19 m/s» e «drones with a speed higher than 19 m/s are only allowed to operate in open subcategory A3»; per la C2 c'è la «low-speed function» senza cifra. I «3 m/s» nella pagina non ci sono: stanno in `ue-2019-945`. Il ruolo che la cita aveva letto le cifre «in guide secondarie».
 Usata per: 19 m/s tetto delle classi C0 e C1 della categoria aperta; 3 m/s modo lento della C2 — `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §2(c), S19
 Usata per: v_max del piccolo drone fino a 19 m/s — stesso file, §2(c); e `f6-specializzazione/01-esperto-dominio/SPECIALIZZAZIONE.md` §1 e §3.3 (fascia di 2,5 m e 3,8 m)
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: correzione 4. Le cifre sono giuste, la fonte primaria è il regolamento.
 
 ### eurocae-ed-275 [170]
@@ -2117,6 +2514,7 @@ Link: https://standards.globalspec.com/std/14356966/eurocae-ed-275
 Verifica: dato diverso — (rif-3) scheda aperta [g]; ED-275 è la norma del sistema anticollisione ACAS Xu, non una norma generale sul «detect and avoid». Le cifre «35 s» e «oltre un chilometro» non ci sono. Il ruolo che la cita l'aveva vista solo in un risultato di ricerca.
 Usata per: norme tecniche sul «detect and avoid», insieme a DO-365 — `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §3, S20
 Usata per: le cifre del «restare ben distanti» — stesso file, §2(c)
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: correzione 2. Scrivere «ED-275 (anticollisione ACAS Xu)».
 
 ### eurocontrol-acas-guide [171]
@@ -2128,6 +2526,7 @@ Identificativo: versione 5.0 (dal nome del file)
 Link: https://www.eurocontrol.int/sites/default/files/2025-09/eurocontrol-safety-acas-guide-5-0.pdf
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [T]: nel PDF «No manoeuvres are permitted in response to a TA», «pilots shall respond immediately», «does not detect non-transponder equipped aircraft», «does not support operations on the ground», «assumes the worst-case», «14 NM» presenti; numeri di paragrafo e Tabella 16 (20–48 s, 15–35 s, 0,20–1,10 NM, 600–800 ft) non ricontrollati
 Usata per: TA e RA sono due atti diversi; ACAS è di bordo e non aeroportuale; scale del TCAS II; il TCAS non usa probabilità — `f9-preproposta/06-esperto-dominio/CONSEGNA.md` righe 23–31 (F3) **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: frontespizio letto [T]: «ACAS Guide — Airborne Collision Avoidance Systems, April 2025». Aviazione civile: passa il principio, non le soglie. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### eurocontrol-asterix-cat062 [172]
@@ -2142,6 +2541,7 @@ Usata per: nei dati di sorveglianza lo stato di traccia ha il bit di «coasting�
 Usata per: scambio di stato ed età della traccia fra più veicoli — `f6-specializzazione/01-esperto-dominio/SPECIALIZZAZIONE.md` §5
 Usata per: primo dei due agganci sull'uscita per il giurato della società — `f6-specializzazione/01-esperto-dominio/SPECIALIZZAZIONE.md` §6; ripreso in `f6-specializzazione/03-avversario/ATTACCO_SPECIALIZZAZIONE.md` S5
 Usata per: una traccia estrapolata resta in uscita con l'età (I062/290, passo 0,25 s, tetto 63,75 s), l'accuratezza stimata (I062/500) e il bit di coasting (I062/080 CST) — `f8-continuita/07-ricercatore/FONTI.md` (S16), `CONSEGNA.md` righe 26, 30, 78, 117 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: (rif-3) è una trascrizione di terzi: per un uso formale va confrontata con il documento di EUROCONTROL (non aperto). Garantisce che il vocabolario esiste; non dice che il nucleo lo rispetti: «ispirato a», mai «conforme a». (rif-4) correzione C3. Sorveglianza aerea: passa il principio, non le soglie. Differenza fra i gruppi: rif-3 descrive la trascrizione non ufficiale dell'edizione 1.18 (13 agosto 2018; trascrizione di Zoran Bosnjak, asterix-specs), rif-4 la pagina ufficiale, dove l'ultima edizione è la 1.21: tenuti titolo e link ufficiali, con la copia letta accanto. Alcuni usi vengono dalle estensioni f7–f10: NON ancora vagliati dall'arbitro (marcati riga per riga).
 
 ### faa-ac-150-5220-24 [173]
@@ -2153,6 +2553,7 @@ Identificativo: AC 150/5220-24
 Link: https://flightsafety.org/asw-article/clean-sweep/
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [T]: nell'articolo compaiono «150/5220-24», una sfera, un cilindro, «1.7 in» e «4.3»; le misure esatte del cilindro (3 × 3,8 cm) non ricontrollate
 Usata per: oggetti estranei di riferimento sulle piste (sfera di 4,3 cm, cilindro di 3 × 3,8 cm), sotto i 7 cm di quota minima del nucleo — `f7-estensione/05-esperto-dominio/CONSEGNA.md` righe 37 e 80 (S13) **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: fonte secondaria; la circolare non è stata aperta. Nella sezione E la chiave provvisoria è [flightsafety-fod]: la pagina letta è l'articolo della Flight Safety Foundation, non la circolare. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### faa-ac-150-5220-25 [174]
@@ -2175,6 +2576,7 @@ Identificativo: AIM 2-1-6
 Link: https://www.angleofattack.com/aim/chapter-2/2-1-6/
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [T]: «Two aircraft, or a surface vehicle and an aircraft, are required», «this is not clearance», «does not substitute for or convey» presenti nella riproduzione
 Usata per: le luci di stato della pista si accendono per traffico osservato e non danno un'autorizzazione — `f9-preproposta/06-esperto-dominio/CONSEGNA.md` riga 37 (F6), `PREVISIONI.md` riga 27 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: non verificata sul sito FAA; l'edizione dell'AIM riprodotta non è nota. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### faa-ordine-7110-65 [176]
@@ -2208,6 +2610,7 @@ Identificativo: IEC 60825-1:2014
 Link: manca (nei file è citata solo attraverso la pagina `unitree-l2`)
 Verifica: non verificata — (rif-1) (testo della norma a pagamento, non aperto; che la pagina Unitree la citi è verificato oggi [r]).
 Usata per: «tutti i sensori citati sono dichiarati classe 1 (ST, C1 FDA, L2 IEC 60825-1:2014; Femto Bolt e RealSense: non verificato)» — `f1/985ccd9bca46/CONSEGNA.md` («Sicurezza ottica»)
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: citazione indiretta: prova che il costruttore dichiara la classe, non che il prodotto la rispetti. La «classe 1 FDA» rimanda al regolamento statunitense sui laser, che nessun file cita con un identificativo: manca.
 
 ### imo-msc192-79 [179]
@@ -2219,6 +2622,7 @@ Identificativo: MSC.192(79)
 Link: https://law.resource.org/pub/us/cfr/ibr/inc/imo/imo.msc.192.2004.pdf
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [T]: nel PDF «Tracked Target Accuracy» e «…last position should be clearly indicated on the display» presenti; i valori della Tabella 3 (11°, 1,0 NM; 3°, 0,3 NM) non ricontrollati: trovati dal ruolo (A-g)
 Usata per: accuratezza dichiarata di una traccia al 95 % e avviso di perdita con l'ultima posizione — `f8-continuita/07-ricercatore/FONTI.md` (S17), `CONSEGNA.md` righe 78 e 117 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: copia su un archivio di terzi, non il sito IMO. Nel PDF il titolo è «ADOPTION OF THE REVISED PERFORMANCE STANDARDS…» [T]; il seguito («for radar equipment») è a memoria. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### iso-10218-2 [180]
@@ -2230,6 +2634,7 @@ Identificativo: ISO 10218-2:2025
 Link: manca (testo a pagamento)
 Verifica: vista solo nel riassunto di un motore di ricerca — (rif-4) iso.org ha risposto 403 al curatore; dal ruolo: vista solo nel riassunto di un motore di ricerca
 Usata per: «ISO/TS 15066 è confluita in ISO 10218-2:2025» — `f9-preproposta/06-esperto-dominio/CONSEGNA.md` righe 69 e 87 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: All'unione: voce separata da `iso-ts-15066`, dove rif-4 la teneva. La confluenza non è verificata su una fonte primaria. Nella sezione E la chiave provvisoria è [iso-10218-2], «non letta». Citata solo nelle estensioni f7–f10: NON ancora vagliata dall'arbitro.
 
 ### iso-13855 [181]
@@ -2239,9 +2644,10 @@ Titolo: ISO 13855 — Safety of machinery — Positioning of safeguards with res
 Sede e anno: ISO; edizione 2024 secondo il ruolo
 Identificativo: ISO 13855:2024
 Link: manca (testo a pagamento)
-Verifica: vista solo nel riassunto di un motore di ricerca — (rif-4) (dal ruolo); non cercata da me
+Verifica: vista solo nel riassunto di un motore di ricerca — (rif-4) (dal ruolo); non cercata da me ‖ (f13-bibliografia) iso.org ha risposto 403 anche alle 18:00. (f12, 19:24) letta solo una pagina di un costruttore che la riassume (`pilz-iso-13855` [332]): K = 1600 mm/s per chi cammina; nell'edizione 2024 la formula è S = (K × T) + D_DS; «850» non compare
 Usata per: v_H = 1,6 m/s; C = 0,85 m e il termine d'incertezza — `f9-preproposta/06-esperto-dominio/CONSEGNA.md` righe 69 e 87 **[f7–f10: non vagliato dall'arbitro]**
-Note: 1,6 m/s è confermato in `marvel2017` [T]; C = 0,85 m resta non verificato, e con esso i 2,80 m e 1,68 m calcolati dal ruolo. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`, `f12-integrazione/50-stato/frammenti_2.md`, `f13-allegato/02-geometria/FASCICOLO_GEOMETRIA.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/DISCORDANZE_DEI_FASCICOLI.md`, `f14-classificazione/01-profili/PROFILI.md`, `f14-classificazione/01-profili/profili_portatore.json`, `f14-classificazione/20-inclusione/BLOCCO_CLASSIFICAZIONE.md`, 2 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
+Note: 1,6 m/s è confermato in `marvel2017` [T]; C = 0,85 m resta non verificato, e con esso i 2,80 m e 1,68 m calcolati dal ruolo. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro. ‖ (aggiornamento f12) f13: la norma non è stata letta da nessuno, quindi C = 0,85 m e la «confluenza» nella ISO 10218-2 NON sono citabili; l'allegato rinvia a `marvel2017`. In f14 il ruolo la cita come R7, «non verificato».
 
 ### iso-3691-4 [182]
 Tipo: norma o documento regolatorio (scheda di un catalogo di norme)
@@ -2252,7 +2658,8 @@ Identificativo: ISO 3691-4:2023
 Link: https://genorma.com/en/standards/en-iso-3691-4-2023
 Verifica: verificata dal curatore il 14-11-2026 in parte — (rif-3) [g], per il solo titolo. Il ruolo che la cita l'aveva vista solo in un risultato di ricerca.
 Usata per: norma di riferimento per i veicoli terrestri senza conducente — `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §3, S29
-Note: catalogo di terzi; il contenuto della norma non è stato letto. Riguarda i carrelli industriali senza conducente, non i rover in generale.
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`, `f12-integrazione/50-stato/frammenti_2.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f14-classificazione/01-profili/PROFILI.md`, `f14-classificazione/20-inclusione/BLOCCO_CLASSIFICAZIONE.md`, 2 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
+Note: catalogo di terzi; il contenuto della norma non è stato letto. Riguarda i carrelli industriali senza conducente, non i rover in generale. ‖ (aggiornamento f12) f14: nominata in `f14-classificazione/01-profili/PROFILI.md` fra le «norme non lette». Nessuna cifra della tabella delle classi viene da qui.
 
 ### iso-9241-303 [183]
 Tipo: norma o documento regolatorio
@@ -2275,6 +2682,7 @@ Link: manca nei file (testo a pagamento); la pagina di `therobotreport-veo` rima
 Verifica: non raggiungibile — (rif-1) non verificata (testo a pagamento, non aperto; citata nei file solo attraverso F26). ‖ (rif-4) (iso.org ha risposto 403 oggi); dal ruolo: vista solo nel riassunto di un motore di ricerca, contenuto letto tramite `marvel2017`
 Usata per: F26: distanza protettiva con incertezza di misura e latenza — `f1/3fff79e9c3ea/FONTI.md`, `f1/3fff79e9c3ea/CONSEGNA.md` (§1.8)
 Usata per: sorveglianza di velocità e separazione come concetto consolidato per aree condivise; «confluita in ISO 10218-2:2025» — `f9-preproposta/06-esperto-dominio/CONSEGNA.md` righe 69 e 87, `PREVISIONI.md` riga 12; `f7-estensione/05-esperto-dominio/PREVISIONI.md` riga 15 e `CONSEGNA.md` riga 21 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`, `f13-allegato/02-geometria/FASCICOLO_GEOMETRIA.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: (rif-1) citazione indiretta. Se l'affermazione entra nel documento finale va letta la norma, non la rassegna. (rif-4) la confluenza nella 10218-2:2025 non è verificata su una fonte primaria. All'unione: ISO 10218-2:2025, che rif-4 teneva in questa voce, ha una voce sua (`iso-10218-2`). Anno 2016: a memoria di un ruolo, non verificato. Alcuni usi vengono dalle estensioni f7–f10: NON ancora vagliati dall'arbitro (marcati riga per riga).
 
 ### it-legge-185-1990 [185]
@@ -2286,6 +2694,7 @@ Identificativo: legge 185/1990
 Link: manca nei file (citata tramite S37: https://www.esteri.it/it/ministero/struttura/uama/)
 Verifica: verificata dal curatore il 14-11-2026 in parte — (rif-3) per la sola esistenza e l'oggetto [g, dalla pagina del Ministero]. Il testo della legge non è stato aperto.
 Usata per: esportazione di materiali d'armamento — `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §6, S37
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: il titolo fra parentesi è una descrizione, non il titolo ufficiale.
 
 ### maeci-uama [186]
@@ -2297,6 +2706,7 @@ Identificativo: manca
 Link: https://www.esteri.it/it/ministero/struttura/uama/
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-3) [g] — titolo dell'autorità; «Il controllo dell'esportazione e importazione di materiali d'armamento è disciplinato dalla Legge 9 luglio 1990, n.185»; sezione sul duplice uso. Il regolamento 2021/821 non è nominato in questa pagina. Il ruolo che la cita l'aveva vista solo in un risultato di ricerca.
 Usata per: esportazione e duplice uso: l'autorità italiana è l'UAMA — `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §6, S37
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: dice chi vigila; non dice se un prototipo di componenti commerciali rientri nelle voci controllate (nel quadro: non verificato, lo valuta la società).
 
 ### noaa-nhc-cono [187]
@@ -2321,6 +2731,7 @@ Verifica: verificata dal curatore il 14-11-2026 in parte — (rif-3, scheda di c
 Usata per: il «restare ben distanti» dal traffico con equipaggio ragiona su 35 s e oltre un chilometro: un'altra scala — `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §2(c), S20
 Usata per: norme tecniche sul «detect and avoid» — stesso file, §3
 Usata per: tempi degli avvisi per i velivoli senza equipaggio — `f9-preproposta/06-esperto-dominio/CONSEGNA.md` riga 87 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: (rif-3) correzione 2. La norma è a pagamento: la scheda garantisce che esiste e di che cosa tratta, non il contenuto. Le due cifre non vanno scritte in un documento per la giuria finché non hanno una fonte aperta. (rif-4) nessuna cifra citata. Differenza fra i gruppi: rif-4 l'aveva solo come sigla «DO-365» vista in un riassunto di ricerca; rif-3 ha aperto la scheda di catalogo dell'edizione DO-365C: tenuti i dati di rif-3. Alcuni usi vengono dalle estensioni f7–f10: NON ancora vagliati dall'arbitro (marcati riga per riga).
 
 ### ue-2017-745 [189]
@@ -2332,6 +2743,7 @@ Identificativo: regolamento (UE) 2017/745
 Link: https://www.legislation.gov.uk/eur/2017/745/article/2/2020-01-31
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-3) [g] — «'medical device' means any instrument, apparatus, appliance, software … intended by the manufacturer to be used … for … diagnosis, monitoring, treatment, alleviation of, or compensation for, an injury or disability». Aperta anche dal ruolo che la cita.
 Usata per: cautela sul profilo assistivo: dispositivo medico è ciò che il fabbricante destina, fra l'altro, a «compensation for, an injury or disability»; se un ausilio all'orientamento vi rientri è non verificato — `f6-specializzazione/01-esperto-dominio/SPECIALIZZAZIONE.md` §1
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: copia non ufficiale e ferma al 2020 (lo dice anche il ruolo). La citazione prova la definizione, non la classificazione del prototipo: quella resta non risolta e la decide un esperto regolatorio.
 
 ### ue-2019-945 [190]
@@ -2344,7 +2756,8 @@ Link: https://www.legislation.gov.uk/eur/2019/945/annex (copia britannica, non u
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-3) [g, sulla copia britannica] — parte 1 e parte 2: «have a maximum speed in level flight of 19 m/s»; parte 3, punto 9: «be equipped with a low-speed mode selectable by the remote pilot and limiting the ground speed to no more than 3 m/s». Non citata con un link dai ruoli: è la fonte primaria delle cifre di S19.
 Usata per: 19 m/s (classi C0 e C1) e 3 m/s (modo lento della C2) — `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §2(c) (lì attribuite a S19)
 Usata per: fra i regolamenti del quadro europeo sui droni — stesso file, §3
-Note: la copia britannica è il testo «conservato» dopo l'uscita dall'Unione ed è stata emendata nel Regno Unito (la pagina cita un atto del 2025): le tre frasi vanno riconfermate sul testo consolidato dell'Unione prima di un uso formale. Il titolo italiano qui sopra è una mia resa, non trascritto dalla Gazzetta.
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`, `f12-integrazione/50-stato/frammenti_2.md`, `f14-classificazione/01-profili/PROFILI.md`, `f14-classificazione/01-profili/classi.json`, `f14-classificazione/20-inclusione/BLOCCO_CLASSIFICAZIONE.md`, 2 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
+Note: la copia britannica è il testo «conservato» dopo l'uscita dall'Unione ed è stata emendata nel Regno Unito (la pagina cita un atto del 2025): le tre frasi vanno riconfermate sul testo consolidato dell'Unione prima di un uso formale. Il titolo italiano qui sopra è una mia resa, non trascritto dalla Gazzetta. ‖ (aggiornamento f12) f14: il ruolo dei profili non è riuscito ad aprire il regolamento e ha preso 19 m/s e 3 m/s da una guida di studio (R4, «non verificato»): le due cifre sono già verificate QUI, sul testo del regolamento; può citare questa voce.
 
 ### ue-2019-947 [191]
 Tipo: norma o documento regolatorio
@@ -2366,6 +2779,7 @@ Identificativo: regolamento di esecuzione (UE) 2021/664
 Link: https://eur-lex.europa.eu/eli/reg_impl/2021/664/2026-02-22/eng/pdf
 Verifica: non raggiungibile — (rif-3) EUR-Lex oggi risponde senza contenuto alle richieste automatiche (codice 202), sia in lettura diretta sia con lo strumento di lettura. Vista solo nel riassunto di un motore di ricerca, come già dal ruolo che la cita.
 Usata per: quadro europeo: U-space — `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §3, S28
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: nessuna cifra del progetto ne dipende. Il titolo fra parentesi è una mia descrizione, non il titolo ufficiale.
 
 ### ue-2021-821 [193]
@@ -2377,6 +2791,7 @@ Identificativo: regolamento (UE) 2021/821
 Link: https://eur-lex.europa.eu/EN/legal-content/summary/dual-use-export-controls.html
 Verifica: verificata dal curatore il 14-11-2026 in parte — (rif-3) in parte: la sintesi di EUR-Lex non è raggiungibile; il numero e l'oggetto sono confermati [g] da una pagina della Commissione europea (https://policy.trade.ec.europa.eu/help-exporters-and-importers/exporting-dual-use-items_en): «Regulation (EU) 2021/821 governs the EU's export control regime». Il ruolo che la cita l'aveva vista solo in un risultato di ricerca.
 Usata per: esportazione e duplice uso — `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §6, S37
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: le voci per droni e camere termiche restano non verificate, come nel quadro. Il titolo fra parentesi è una descrizione.
 
 ### ue-2023-1230 [194]
@@ -2388,6 +2803,7 @@ Identificativo: regolamento (UE) 2023/1230
 Link: https://eur-lex.europa.eu/eli/reg/2023/1230/corrigendum/2023-07-04/oj/eng
 Verifica: verificata dal curatore il 14-11-2026 in parte — (rif-3) in parte: EUR-Lex non è raggiungibile; la data è confermata [g] da una pagina della Commissione europea (https://single-market-economy.ec.europa.eu/sectors/mechanical-engineering/machinery_en): «All machinery placed on the EU market before 20 January 2027 must comply with the current Machinery Directive 2006/42/EC». «Il primo a nominare le macchine mobili autonome»: non verificato. Il ruolo che la cita l'aveva vista solo in un risultato di ricerca.
 Usata per: a terra nessuna norma dedicata; regolamento macchine dal 20 gennaio 2027, il primo a nominare le macchine mobili autonome — `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §3, S29
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: correzione 10. Il link citato porta a una rettifica, non al testo: per citare il regolamento conviene il suo indirizzo proprio.
 
 ### ue-2024-1689 [195]
@@ -2399,6 +2815,7 @@ Identificativo: regolamento (UE) 2024/1689 — numero non letto oggi su una pagi
 Link: manca nei file (citato tramite S38); testo dell'articolo letto su una copia non ufficiale: https://artificialintelligenceact.eu/article/2/
 Verifica: verificata dal curatore il 14-11-2026 in parte — (rif-3) in parte: copia non ufficiale aperta [g] — «This Regulation does not apply to AI systems where and in so far they are placed on the market, put into service, or used with or without modification exclusively for military, defence or national security purposes, regardless of the type of entity carrying out those activities». Il testo ufficiale (EUR-Lex) non è raggiungibile; il numero del regolamento non l'ho letto oggi.
 Usata per: il regolamento esclude i sistemi a uso esclusivamente militare, di difesa o di sicurezza nazionale — `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §6 (lì attribuito a S38)
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: voce aggiunta da me come fonte primaria di ciò che il quadro prende da un blog. «Il duplice uso resta dentro» è la lettura corrente di «exclusively», non una frase del testo.
 
 ### us-49cfr-236-205 [196]
@@ -2410,6 +2827,7 @@ Identificativo: 49 CFR 236.205
 Link: citato come https://www.customsmobile.com/regulations/49/236.205 (non aperto); letto su https://www.law.cornell.edu/cfr/text/49/236.205 (ecfr.gov reindirizza a un controllo anti-automa)
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-1) [r]: pagina del Legal Information Institute aperta; il segnale che governa l'ingresso in un blocco deve mostrare l'aspetto più restrittivo quando, fra l'altro, il relè di binario è diseccitato o il circuito di comando del segnale è senza energia.
 Usata per: analogia di creativo-1: il relè di binario diseccitato dà l'aspetto più restrittivo; il «via libera» esiste solo finché arriva energia — `f1/e30f9e2dd4d7/CONSEGNA.md`
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, `f13-allegato/DISCORDANZE_DEI_FASCICOLI.md`, 6 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «aspetto più restrittivo a relè diseccitato (copia non ufficiale; analogia)» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: il testo regolatorio sostiene l'analogia; «il via libera esiste solo finché arriva energia» è la lettura del ruolo. Copia non ufficiale del testo (l'edizione ufficiale non è stata raggiunta).
 
 ### us-brevetto-11846916 [197]
@@ -2421,6 +2839,7 @@ Identificativo: US 11846916 B2
 Link: https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/11846916 ; letto su https://patents.google.com/patent/US11846916B2/en
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-1) [r]: pagina di Google Patents aperta (primi 100 000 caratteri); nel sommario e nelle rivendicazioni 6 e 22: «marking as occupied the volumes corresponding to a terminus of the ray path, and marking as unknown any volumes beyond the occlusion along the ray path»; volumi occupati, non occupati o sconosciuti.
 Usata per: F27: voxel occupati, non occupati o sconosciuti oltre un'occlusione («tre stati per i voxel») — `f1/3fff79e9c3ea/FONTI.md`, `f1/3fff79e9c3ea/CONSEGNA.md` (§1.8)
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/DISCORDANZE_DEI_FASCICOLI.md`, 5 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «voxel occupati, non occupati, sconosciuti oltre un'occlusione (rivendicazione di brevetto)» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: è una rivendicazione di brevetto, non un metodo validato (lo dice già FONTI.md). Possibili vincoli di proprietà intellettuale sull'idea dei tre stati in ambito industriale: da portare all'analista normativo. Il PDF dell'ufficio brevetti non è stato aperto.
 
 ### w3c-wcag22-contrasto-non-testuale [198]
@@ -2445,6 +2864,17 @@ Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente �
 Usata per: il colore non deve essere l'unico mezzo per distinguere gli stati — `f9-preproposta/09-interfacce/CONSEGNA.md` riga 80 **[f7–f10: non vagliato dall'arbitro]**
 Note: scritta per il web; qui usata per analogia. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
+
+### monaco-aeroporto-regole [315]
+Tipo: regolamento di un gestore aeroportuale
+Autori: Flughafen München GmbH
+Titolo: Traffic & Safety Rules (regole del traffico e della sicurezza nell'area di movimento)
+Sede e anno: PDF pubblicato dal gestore; il nome del file porta «2016», la prima pagina del testo ricevuto porta «Revision 03, 20.02.2026» (foglio delle correzioni): quale edizione sia quella letta dal ruolo non è risolto
+Identificativo: —
+Link: https://www.munich-airport.de/_b/0000000000000008368639bb5e302e6f/traffic-safety-rules-2016.pdf
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (f12, 19:24) PDF scaricato (5 813 999 byte) e convertito in testo (140 494 caratteri): «The speed limit is 30 km/h» e «Walking speed (maximum 6 km/h) must be…» presenti; «Exceeding walking speed at an aircraft parked in the safety zone» nella tabella delle infrazioni. La stringa «2016» non è nel testo
+Usata per: classe «mezzo di piazzale»: v_tip al passo d'uomo (al più 6 km/h) presso gli aerei parcheggiati, v_max 30 km/h — `f14-classificazione/01-profili/PROFILI.md`, `f14-classificazione/01-profili/classi.json` (F16; R2 per altri aeroporti), `f14-classificazione/20-inclusione/BLOCCO_CLASSIFICAZIONE.md` **[f14, valutazione breve sulla classificazione: scritto dopo le 17:36; valori di «profilo di partenza»]**
+Note: voce aggiunta nell'aggiornamento f12. è la regola di UN aeroporto (lo dice il ruolo): non una norma generale. Le cifre degli altri aeroporti (25 km/h, 10 km/h entro 15 m, 15 km/h in traino) sono lette solo nel risultato di una ricerca e non hanno una fonte aperta: non verificate.
 
 ---
 
@@ -2483,6 +2913,7 @@ Identificativo: manca
 Link: https://github.com/facontidavide/Bonxai
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [T]: nel README «Bonxai_Create 1165 us», «Octomap_Create 25522 us», «Benchmark (preliminary)», «Sparse», «Unbounded»; «MPL» presente nella pagina del deposito
 Usata per: creazione 1165 µs contro 25 522 di OctoMap («preliminary»); struttura «Sparse» e «Unbounded»; licenza MPL-2.0 — `f7-estensione/05-esperto-dominio/CONSEGNA.md` righe 17, 28 e 80 (S4) **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: l'autore stesso avverte: «Take these numbers with a grain of salt». Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### espressif-vl53l7cx-libreria [203]
@@ -2560,6 +2991,7 @@ Identificativo: v2.59.1
 Link: https://github.com/IntelRealSense/librealsense/blob/master/include/librealsense2/h/rs_frame.h ; https://github.com/IntelRealSense/librealsense/blob/master/doc/frame_metadata.md ; https://github.com/IntelRealSense/librealsense/blob/master/doc/post-processing-filters.md ; https://github.com/IntelRealSense/librealsense/tree/master/doc ; https://github.com/realsenseai/librealsense/releases/tag/v2.59.1
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [T]: in `rs_frame.h` «Timestamp of the middle of sensor's exposure calculated by device» e `RS2_TIMESTAMP_DOMAIN_GLOBAL_TIME` («…converted to OS system clock…»); nelle note della v2.59.1 «Ubuntu 26.04/24.04/22.04/20.04», «Kernel versions: 6.[2, 5, 8, 11, 14]», «L515 … v2.50.0 validated, v2.54.2 supports but not validated»; in `frame_metadata.md` «kernel» e «patch» presenti ‖ (finale) il file `doc/post-processing-filters.md` l'ha scaricato il ruolo (`f10-dati/02-sensori/scaricati/pp_filters.md`): dal curatore non riletto
 Usata per: marca di metà esposizione e dominio dell'orologio — `f9-preproposta/02-tempo-reale/CONSEGNA.md` riga 64; supporto dell'L515 e dei kernel (il 7.3 della macchina non è in elenco) — `f10-dati/04-embedded/PREVISIONI.md` (E4), `INVENTARIO_E_DECISIONE.md` ([2]); filtri di post-elaborazione e metadati dei fotogrammi — `f10-dati/02-sensori/MODELLO_SENSORE.md` (S4, S5), `f10-dati/02-sensori/parametri_sensori.json` (riga 12) **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`. Nell'allegato sostiene: «marca temporale a metà esposizione calcolata dal dispositivo» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: il deposito è passato da `IntelRealSense` a `realsenseai` (rinvio). Lo stato odierno dei metadati su Linux è «non verificato» per il ruolo. Licenza Apache-2.0 non riletta. Il file `doc/sample-data.md` (file di esempio) è la voce `realsense-file-di-esempio` [255]: tolto da questa voce nella versione finale, dove compariva due volte. Voce di gruppo: nella sezione D le chiavi provvisorie [librealsense-filtri] e [librealsense-metadati] indicano due file di questo deposito; nella sezione F [realsense-librealsense] indica le note della versione 2.59.1. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### linux-gspca-kinect [210]
@@ -2582,6 +3014,7 @@ Identificativo: manca
 Link: https://github.com/JonathonLuiten/TrackEval
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-1) [r]: pagina aperta; licenza MIT; metriche HOTA, CLEAR MOT, Identity (IDF1, IDP, IDR) e altre; la valutazione confronta l'uscita del tracciatore con dati di riferimento in `data/gt/`.
 Usata per: strumento di calcolo di HOTA e IDF1, che chiede sequenze annotate — `f1/992c41c8860e/CONSEGNA.md` (§1.7)
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: la necessità delle annotazioni è dedotta dalla struttura dei dati, non da una frase esplicita.
 
 ### luxonis-depthai [212]
@@ -2593,6 +3026,7 @@ Identificativo: 3.12.1
 Link: https://pypi.org/pypi/depthai/json ; https://docs.luxonis.com/hardware/platform/deploy/usb-deployment-guide/
 Verifica: aperta dal ruolo che la cita — (rif-4) ([g]); dal curatore [T] parziale: «03e7» e «USB3» presenti nella guida; versione non ricontrollata
 Usata per: regola udev per il produttore 03e7, cavo USB 3, alimentazione — `f10-dati/04-embedded/PREVISIONI.md` (E7), `INVENTARIO_E_DECISIONE.md` ([4], [5]) **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f10-dati/04-embedded/INVENTARIO_E_DECISIONE.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### megvii-yolox [213]
@@ -2681,7 +3115,8 @@ Identificativo: manca
 Link: https://octomap.github.io/ ; https://github.com/OctoMap/octomap/blob/devel/octomap/src/AbstractOccupancyOcTree.cpp ; https://github.com/OctoMap/octomap/blob/devel/octomap/include/octomap/OccupancyOcTreeBase.h
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [T]: sul sito «Unknown areas of the environment are implicitly encoded in the map», licenza «New BSD», visualizzatore `octovis` GPL v2; nel sorgente `setProbHit(0.7)`, `setProbMiss(0.4)`, 0,1192 e 0,971
 Usata per: lo sconosciuto è implicito; parametri predefiniti 0,7 / 0,4 / 0,1192 / 0,971 (3 colpi per passare da libero a occupato: conto del ruolo); regola «libero esplicito, sconosciuto implicito» — `f7-estensione/01-matematico/CONSEGNA.md` riga 78; `f7-estensione/03-nuvole-punti/CONSEGNA.md` riga 38; `f7-estensione/05-esperto-dominio/CONSEGNA.md` righe 24 e 80 (S1); `bozza_iniziale/Proposta MLE Matrice Bayesiana (1).md` righe 1696 e 2932 **[f7–f10: non vagliato dall'arbitro]**
-Note: l'articolo di riferimento (Hornung, Wurm, Bennewitz, Stachniss, Burgard, Autonomous Robots 34(3):189–206, 2013, DOI 10.1007/s10514-012-9321-0) è già verificato per i soli dati bibliografici in f3; confermato oggi [API]; è la voce `hornung2013` [31]. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/01-dimostrazioni/FASCICOLO_DIMOSTRAZIONI.md`, `f13-allegato/05-costo/FASCICOLO_RAPPRESENTAZIONI_E_COSTO.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, 6 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «sconosciuto codificato in modo implicito; parametri 0,7 / 0,4 / 0,1192 / 0,971 nel sorgente» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
+Note: l'articolo di riferimento (Hornung, Wurm, Bennewitz, Stachniss, Burgard, Autonomous Robots 34(3):189–206, 2013, DOI 10.1007/s10514-012-9321-0) è già verificato per i soli dati bibliografici in f3; confermato oggi [API]; è la voce `hornung2013` [31]. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro. ‖ (aggiornamento f12) f13 (bibliografia D5): il sito dice che lo sconosciuto è «implicitly encoded», l'articolo (`hornung2013` [31]) che è rappresentato «explicitly»: non è una contraddizione (lo sconosciuto è l'assenza di un nodo), ma vanno tenute distinte.
 
 ### open-vins [221]
 Tipo: deposito di codice
@@ -2703,6 +3138,7 @@ Identificativo: v0.6.4; v0.2.1
 Link: https://github.com/OpenKinect/libfreenect ; https://github.com/OpenKinect/libfreenect2/releases/tag/v0.2.1
 Verifica: aperta dal ruolo che la cita — (rif-4) ([g]); dal curatore [T] parziale: «v0.2.1» presente nella pagina della versione; date non ricontrollate
 Usata per: stato dei driver liberi per Kinect v1 e v2; USB 3 obbligatorio per il v2 — `f10-dati/04-embedded/PREVISIONI.md` (E1, E2), `INVENTARIO_E_DECISIONE.md` ([7], [10]) **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f10-dati/04-embedded/INVENTARIO_E_DECISIONE.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: licenza Apache 2.0 / GPL 2 secondo il ruolo. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### openvdb [223]
@@ -2714,6 +3150,7 @@ Identificativo: manca
 Link: https://github.com/AcademySoftwareFoundation/openvdb
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [T] per la licenza: «Apache» e «MPL» presenti nella pagina del deposito
 Usata per: albero gerarchico sparso; licenza Apache 2.0 (era MPL 2.0) — `f7-estensione/05-esperto-dominio/CONSEGNA.md` righe 27 e 80 (S5) **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### orb-slam3 [224]
@@ -2736,6 +3173,7 @@ Identificativo: v2.10.6; 2.1.3
 Link: https://github.com/orbbec/OrbbecSDK_v2 ; https://pypi.org/pypi/pyorbbecsdk2/json
 Verifica: aperta dal ruolo che la cita — (rif-4) ([g]); dal curatore [T] parziale: «Astra» e «not supported» presenti nel README; versioni non ricontrollate
 Usata per: quali modelli Astra sono supportati dalla v2 e a quali condizioni (aggiornamento del firmware) — `f10-dati/04-embedded/PREVISIONI.md` (E6), `INVENTARIO_E_DECISIONE.md` ([3]) **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f10-dati/04-embedded/INVENTARIO_E_DECISIONE.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: l'aggiornamento del firmware è una scrittura sul dispositivo (avviso del ruolo). Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### pipewire-conf [226]
@@ -2747,6 +3185,7 @@ Identificativo: pagina di manuale `pipewire.conf(5)`
 Link: https://docs.pipewire.org/page_man_pipewire_conf_5.html
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-2) «default.clock.rate = 48000»; «default.clock.quantum = 1024 — Default quantum used when no client specifies one»; «default.clock.quantum-limit = 8192». Aperta anche dal ruolo che la cita.
 Usata per: «campioni → scheda audio: ≥ 21,3 ms, un quanto 1024 / 48000, default di PipeWire» — `f3/H-012/02-validazione/VERIFICA.md` (§3c); entra nei «circa 155 ms» di `SOLUZIONE_V2.md` (§7), `AUDIT.md` (ipotesi 3), `VERDETTO.md`.
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`, `f13-allegato/02-geometria/FASCICOLO_GEOMETRIA.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: 1024/48000 = 21,3 ms è un valore predefinito, non una misura; vale solo se il calcolatore della demo usa PipeWire con la configurazione di fabbrica. Un cliente può chiedere un quanto più piccolo. La latenza dell'uscita (cavo, Bluetooth) resta senza fonte, come scrive la verifica.
 
 ### px4-collision-prevention [227]
@@ -2762,6 +3201,7 @@ Usata per: prevenzione delle collisioni provata a 4 m/s, messaggi a 10 Hz, ritar
 Usata per: senza dati in una direzione la velocità è 0; oltre 0,5 s senza dati azzera i comandi orizzontali, dopo 5 s attesa; la regione di un sensore guasto è «treated as uncovered»: «sconosciuto non è libero» — stesso file, §2(e)
 Usata per: gli 0,5 s della causa «collegamento», presi per analogia (per un collegamento: non verificato) — `f6-specializzazione/01-esperto-dominio/SPECIALIZZAZIONE.md` §3.2
 Usata per: secondo aggancio per il giurato: gli autopiloti aperti azzerano la velocità verso i settori senza dati — `f6-specializzazione/01-esperto-dominio/SPECIALIZZAZIONE.md` §6; ripreso in `f6-specializzazione/03-avversario/ATTACCO_SPECIALIZZAZIONE.md` S5 («S18 con la frase citata»)
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: lo «0,1–0,5 s» è il ritardo d'inseguimento della velocità del veicolo, non un ritardo di collegamento. La stessa pagina avverte che con il parametro `CP_GO_NO_DATA=1` il veicolo può muoversi anche dove non ha dati: il comportamento prudente è quello predefinito, non una garanzia. I «4 m/s» sono una prova iniziale del costruttore, non un limite.
 
 ### px4-ekf2 [228]
@@ -2787,6 +3227,7 @@ Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente �
 Usata per: l'interfaccia per settori: `UINT16_MAX` sconosciuto, `max_distance + 1` nessun ostacolo — `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §2(e), S23
 Usata per: il messaggio per settori a tre valori verso l'autopilota — `f6-specializzazione/01-esperto-dominio/SPECIALIZZAZIONE.md` §3.1
 Usata per: «S23 solo da risultato di ricerca» nel giudizio sul secondo aggancio — `f6-specializzazione/03-avversario/ATTACCO_SPECIALIZZAZIONE.md` S5
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: con la verifica di oggi cade la riserva dell'avversario su S23 («non riverificabile in rete»): i tre valori ci sono, alla lettera. Resta vero che il prototipo non ha mai generato questo messaggio. La pagina descrive il messaggio interno di PX4; il messaggio MAVLink con lo stesso nome non è stato aperto.
 
 ### px4-safety [230]
@@ -2821,6 +3262,7 @@ Identificativo: 2.59.1.11053
 Link: https://pypi.org/pypi/pyrealsense2/json
 Verifica: aperta dal ruolo che la cita — (rif-4) ([g]); dal curatore solo [200]
 Usata per: ruote cp39–cp314 per Linux x86_64 e aarch64 e Windows; la 2.54.2.5684 solo cp37–cp311 — `f10-dati/04-embedded/PREVISIONI.md` (E5), `INVENTARIO_E_DECISIONE.md` ([1]); `f10-dati/02-sensori/MODELLO_SENSORE.md` riga 63 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f10-dati/04-embedded/INVENTARIO_E_DECISIONE.md`, `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### realsense-filtri-post [233]
@@ -2832,6 +3274,7 @@ Identificativo: manca
 Link: https://dev.realsenseai.com/docs/post-processing-filters/
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-2) Nell'audit era letta solo nel riassunto della ricerca. Filtro temporale: «In cases where the pixel data is missing or invalid the filter uses a user-defined persistency mode to decide whether the missing value should be rectified with stored data»; «Persistency index… when missing pixels will be replace with the last valid value»; predefinito «3 (Valid in 2/last 4)». Riempimento dei buchi: «obtains the four immediate pixel "neighbors"… and selects one of them»; predefinito «1 (Farthest from around)». Anche il filtro spaziale ha un riempimento dei buchi.
 Usata per: ipotesi 1, «i filtri dell'SDK cambiano un pixel senza dato in un dato» (persistenza predefinita «valido in 2 degli ultimi 4»; il riempimento copia un vicino) — `f5/02-audit/AUDIT.md` (ipotesi 1); condizione ripresa in `f4/H-012/09-arbitro/VERDETTO.md`; «filtri dell'SDK che riempiono i buchi» — `f3/H-012/02-validazione/VERIFICA.md` (§2, invariante 2).
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`, `f13-allegato/02-geometria/FASCICOLO_GEOMETRIA.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, 5 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «filtro temporale con persistenza (predefinito «valido in 2 degli ultimi 4»); riempimento dei buchi che copia un vicino» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: la pagina dà i valori predefiniti dei filtri quando sono usati; non dice quali filtri siano accesi in un dato programma (il flusso grezzo dell'SDK non li applica da solo; il visualizzatore del costruttore ne accende alcuni: non verificato oggi). La documentazione non è legata a una versione: va controllata su quella installata. Per la Gemini 335 (altro SDK): non verificato, come dice l'audit.
 
 ### rlabbe-filterpy [234]
@@ -2843,6 +3286,7 @@ Identificativo: manca
 Link: https://raw.githubusercontent.com/rlabbe/filterpy/master/LICENSE
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-1) [g]: «The MIT License (MIT) Copyright (c) 2015 Roger R. Labbe Jr».
 Usata per: «licenza MIT (anche filterpy)» in F16 — `f1/3fff79e9c3ea/FONTI.md`
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: nessuna
 
 ### roboflow-rf-detr [235]
@@ -2855,6 +3299,7 @@ Link: https://github.com/roboflow/rf-detr
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-1) già verificata dal curatore in f3 [g], con correzione: Apache 2.0 per il codice e per i modelli N, S, M, L, per la segmentazione e per i punti chiave; i modelli di rilevamento Atto, Femto, Pico, XL e 2XL sono sotto PML 1.0. RF-DETR-N: 2,3 ms su T4 (TensorRT, FP16, lotto 1), AP 48,4. Non riaperta oggi. ‖ (rif-2) Tabella: RF-DETR-N, COCO AP50:95 48,4, latenza 2,3 ms, 30,5 milioni di parametri, 384×384, Apache 2.0. Testo: Nano, Small, Medium, Large, tutta la segmentazione e i punti chiave sotto Apache 2.0; Atto, Femto, Pico, XL, 2XL sotto PML 1.0; «YOLOv8, YOLO11 and YOLO26 are released under AGPL-3.0». Già in f3/fonti.
 Usata per: «RF-DETR-N 2,3 ms su T4, Apache 2.0»; alternativa ad AGPL — `f1/c85dbcc51ea6/CONSEGNA.md` (§1.2, visione-1, rif. [3])
 Usata per: «RF-DETR-N: 2,3 ms su T4, AP 48,4, Apache 2.0 (le varianti Atto, Femto, Pico, XL, 2XL sono sotto PML 1.0)» — `f3/H-012/01-scene-dinamiche/SOLUZIONE.md` (B6, §8); `f4/H-012/05-correzioni/SOLUZIONE_V2.md` (B6, §8); `f2/05-selezione/SELEZIONE.md` (H-006); alternativa all'AGPL — `f2/01-traduzione/SCHEDE.md` (`visione-1`).
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`, `f14-classificazione/03-classificatore/CLASSIFICATORE.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: (rif-1) la licenza dipende dalla taglia del modello. Latenza su CPU: non verificata. (rif-2) che i 2,3 ms siano su T4 con TensorRT a mezza precisione lo dice f3; oggi ho letto la tabella, non le condizioni di misura. Nessun tempo su CPU nel README letto: il costo del ramo asincrono su un portatile resta da misurare.
 
 ### rosbags [236]
@@ -2866,6 +3311,7 @@ Identificativo: 0.11.9; sha256 `2d0df7de565dc13abd444a3c2681911fc6ef88095da3face
 Link: https://files.pythonhosted.org/packages/eb/f8/84529aea85bec7395bb5aa7f4401ea2d7e6135cb367e36493851b859917b/rosbags-0.11.9.tar.gz
 Verifica: aperta dal ruolo che la cita — (rif-4) (impronta confrontata con quella di PyPI); non ricontrollata da me
 Usata per: lettura dei file `.bag` in Python puro; prova dell'infrastruttura di scaricamento — `f10-dati/03-infrastruttura/PREVISIONI.md` (infra-P1, P8), `AMBIENTE.md` righe 33 e 83; `f10-dati/01-ricercatore/DATI_PUBBLICI.md` §4 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f10-dati/02-sensori/MODELLO_SENSORE.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: licenza Apache-2.0 dai metadati di PyPI. Le altre librerie dell'ambiente (numpy 2.5.4, scipy 1.18.1, opencv, pillow) sono strumenti, non fonti: stanno in `AMBIENTE.md`. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### rtabmap [237]
@@ -2910,6 +3356,7 @@ Identificativo: manca
 Link: https://github.com/strayrobots/scanner/blob/main/docs/format.md
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [T]: 256, 192 e «millimeters» presenti
 Usata per: profondità PNG a 16 bit in millimetri, 256 × 192 — `f10-dati/04-embedded/PREVISIONI.md` (E8), `INVENTARIO_E_DECISIONE.md` ([13]) **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f10-dati/04-embedded/INVENTARIO_E_DECISIONE.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: il convertitore del ruolo è provato solo su una cartella finta. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### ufomap-deposito [241]
@@ -2921,6 +3368,7 @@ Identificativo: manca
 Link: https://github.com/UnknownFreeOccupied/ufomap
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [T]: nel README «Colored UFOMap constructed in real-time (2 Hz) at 2 mm voxel size»; la licenza BSD-2 non è nel README: non ricontrollata
 Usata per: «real-time (2 Hz) at 2 mm»; licenza BSD-2 — `f7-estensione/05-esperto-dominio/CONSEGNA.md` righe 26 e 80 (S3) **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`. Nell'allegato sostiene: ««real-time (2 Hz) at 2 mm voxel size» (README)» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: correzione C2. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### ultralytics-coco-yaml [242]
@@ -2933,6 +3381,7 @@ Link: https://raw.githubusercontent.com/ultralytics/ultralytics/main/ultralytics
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-1) [g]: file aperto; 80 nomi di classe; nessuno corrisponde a muro, porta, gradino, palo, scatola, carrello, cono (controllo mio sull'elenco: 0 su 7). ‖ (rif-2) 80 classi numerate (contate con `grep`). Ci sono: bicycle, car, fire hydrant, bench, chair, potted plant, dining table. Non ci sono: wall, door, stair, pole. Intestazione AGPL-3.0. Aperta anche dal ruolo che la cita.
 Usata per: «muro, porta, gradino, palo, scatola, carrello, cono non sono fra le 80 classi COCO» (P1 di visione: 0 su 7) — `f1/c85dbcc51ea6/CONSEGNA.md` (§1.4, rif. [10])
 Usata per: «0 su 7 categorie d'ostacolo fra le 80 classi COCO»; COCO contiene sedia, panca, tavolo, bicicletta, auto, idrante, pianta in vaso; non muro, porta, gradino, palo — `f2/04-torneo/TORNEO.md` (parte 1, H-006 e «Fonti»); `f2/01-traduzione/SCHEDE.md` (`visione-1`); `f2/05-selezione/SELEZIONE.md` (H-006); `f3/H-012/01-scene-dinamiche/SOLUZIONE.md` (B6, §7).
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`, `f14-classificazione/03-classificatore/CLASSIFICATORE.md`, 2 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: (rif-1) controllo esaustivo sulle 80 classi e sulle 7 categorie dichiarate; non dice niente su altri insiemi (LVIS, Objects365). (rif-2) la lista delle sette categorie è scelta dall'autore dell'idea (lo scrive il torneo). Il file è del ramo principale: può cambiare; per la provenienza va fissato a un commit. Differenza fra i gruppi: per rif-1 il tipo era «insieme di dati»; qui è un file di configurazione in un deposito. L'articolo che descrive COCO è `lin2014`.
 
 ### ultralytics-tracciatori [243]
@@ -2958,6 +3407,7 @@ Link: https://docs.ultralytics.com/models/yolo26/ ; https://github.com/ultralyti
 Verifica: dato diverso — (rif-1) già verificata dal curatore in f3 [g]: YOLO26n a 640 px 38,9 ± 0,7 ms su CPU in ONNX, 1,7 ms su T4, mAP 40,9; AGPL-3.0. Dato diverso: YOLOE-26 40,6 AP su LVIS è della variante x [r]. Non riaperta oggi. ‖ (rif-2) Riga YOLO26n, 640: mAP 40,9 (40,1 senza soppressione dei non massimi), CPU ONNX 38,9 ± 0,7 ms, T4 TensorRT 1,7 ± 0,0 ms, 2,4 milioni di parametri. File LICENSE: «GNU AFFERO GENERAL PUBLIC LICENSE Version 3». Già in f3/fonti.
 Usata per: «YOLO26n 38,9 ms a 640 px in ONNX (1,7 ms su T4), AGPL-3.0»; «YOLOE-26 40,6 AP su LVIS con testo»; «circa 25 Hz il solo rilevatore» — `f1/c85dbcc51ea6/CONSEGNA.md` (§1.2, visione-1, rif. [2])
 Usata per: «YOLO26n 38,9 ms su CPU, AGPL-3.0» come alternativa nel ramo asincrono — `f2/05-selezione/SELEZIONE.md` (H-006); `f3/H-012/01-scene-dinamiche/SOLUZIONE.md` (B6, §8: «38,9 ± 0,7 ms»); `f4/H-012/05-correzioni/SOLUZIONE_V2.md` (B6, §8). Rischio «AGPL-3.0 (alternativa RF-DETR)» — `f2/01-traduzione/SCHEDE.md` (`visione-1`).
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`, `f14-classificazione/03-classificatore/CLASSIFICATORE.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: (rif-1) la latenza su CPU è quella della macchina di prova di Ultralytics, non del portatile della squadra (P5 non risolta). AGPL-3.0: obblighi da portare all'analista normativo. (rif-2) i 38,9 ms sono su una CPU da server (la pagina nomina un Intel Xeon a 2,00 GHz), in ONNX: non sono il tempo su un portatile. Il README di RF-DETR dà per YOLO26-N un AP di 40,3: differenza di protocollo, non controllata. L'AGPL-3.0 impone obblighi sul codice distribuito o offerto in rete: per un prototipo da hackathon conta se il codice viene pubblicato.
 
 ### vins-fusion [245]
@@ -2976,7 +3426,7 @@ Note: fermo dal 2024.
 
 ## 5. Insiemi di dati
 
-15 voci: da [246] a [259] e, in coda, [291] (aggiunta nella versione finale).
+17 voci: da [246] a [259] e, in coda, [291] (aggiunta nella versione finale); in coda, aggiunte nell'aggiornamento f12, da [316] a [317].
 
 ### bonn-rgbd-dynamic [246]
 Tipo: insieme di dati
@@ -2987,6 +3437,7 @@ Identificativo: DOI 10.1109/IROS40897.2019.8967590
 Link: https://www.ipb.uni-bonn.de/data/rgbd-dynamic-dataset/ ; scaricamenti citati in f10: https://www.ipb.uni-bonn.de/html/projects/rgbd_dynamic2019/rgbd_bonn_moving_obstructing_box.zip ; https://www.ipb.uni-bonn.de/html/projects/rgbd_dynamic2019/rgbd_bonn_person_tracking.zip
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [T] e [API]: pagina aperta, `moving_obstructing_box` presente, articolo indicato nella pagina; nessuna licenza nel testo della pagina (coerente con «non dichiarata»)
 Usata per: ripiego se il primo insieme non risponde (320 845 314 byte) — `f10-dati/01-ricercatore/DATI_PUBBLICI.md` §1, §5 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f10-dati/01-ricercatore/elenchi/bonn_moving_obstructing_box.txt`, `f10-dati/01-ricercatore/elenchi/bonn_person_tracking.txt`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: camera in moto; senza licenza dichiarata l'uso va chiesto. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### depthtrack [247]
@@ -2999,6 +3450,7 @@ Link: https://zenodo.org/records/5792146 ; articolo, copia letta dal ruolo: http
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [API Zenodo e Crossref]: 50 sequenze RGB-D, licenza CC BY 4.0 ‖ (verifica-rif) registro arXiv aperto per 2108.13962: stessi sei autori, «Accepted to ICCV2021». ‖ (finale) registro arXiv riaperto alle 17:23: coincide. Nella copia ar5iv dell'articolo salvata dal ruolo (`f10-dati/12-dati-veri/pagine/depthtrack_ar5iv_2108.13962.html`) [ricerca testuale]: «Intel Realsense 415», «640 × 360», «30 fps», «depth frames as 16-bit PNG»
 Usata per: ripiego: `human02_indoor.zip` (578 368 987 byte, 1740 fotogrammi) — `f10-dati/01-ricercatore/DATI_PUBBLICI.md` §1, §5 **[f7–f10: non vagliato dall'arbitro]**
 Usata per: sensore e formato dei file per il convertitore (RealSense D415, 640×360, 30 fps, PNG a 16 bit; unità della profondità e parametri della camera non documentati: assunti) — `f10-dati/12-dati-veri/convertitori/converti_depthtrack.py` (riga 5); sequenza `depthtrack_human02_indoor` convertita nel formato comune (1740 fotogrammi, 58,0 s, 77,1 % di pixel validi, 3 tratti nascosti di 0,03–0,13 s) — `f10-dati/12-dati-veri/DATI_VERI.md` §1; corse sulle sequenze vere — `f10-dati/20-validazione/PREVISIONI.md` (V20, V21) **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f10-dati/01-ricercatore/PREVISIONI.md`, `f10-dati/01-ricercatore/elenchi/depthtrack_human02_indoor.txt`, `f10-dati/12-dati-veri/PREVISIONI.md`, `f10-dati/12-dati-veri/manifesto.json`, `f10-dati/12-dati-veri/registro_scaricamenti.txt`, `f10-dati/12-dati-veri/sequenze/depthtrack_human02_indoor/meta.json`, `f10-dati/12-dati-veri/stato.md`, `f10-dati/20-validazione/VALIDAZIONE_DATI.md`, `f10-dati/20-validazione/stato.md`, `f10-dati/21-statistica/ANALISI_DATI.md`, e altri 13 file, 6 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «RealSense 415, 640 × 360, 30 fps, PNG a 16 bit; CC BY 4.0» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: il sensore (RealSense D415) per il ricercatore era «a memoria»; ora è letto nell'articolo, su una copia di terzi (ar5iv). Unità della profondità e parametri della camera restano non documentati (lo dichiara il ruolo): chi usa le distanze laterali di questa sequenza eredita un errore di scala fino a circa il 9 % (testa di `converti_depthtrack.py`). Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### drow [248]
@@ -3010,6 +3462,7 @@ Identificativo: arXiv:1603.02636; DOI 10.1109/LRA.2018.2835510
 Link: https://github.com/VisualComputingInstitute/DROW ; https://github.com/VisualComputingInstitute/DROW/releases/download/v2/DROWv2-data.zip ; indirizzo scritto dal ruolo: https://github.com/RWTHVision/DROW (rinvia al primo)
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [API] e [T]: nella pagina del deposito «MIT», «S300», «450» presenti; il 5 % delle scansioni annotate non ricontrollato
 Usata per: LiDAR 2D SICK S300 a 37 cm, 225° in 450 punti, persone annotate sul 5 % delle scansioni; 197 970 996 byte — `f10-dati/01-ricercatore/DATI_PUBBLICI.md` §3; copia del README in `f10-dati/01-ricercatore/pagine/drow_readme.md` **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f10-dati/01-ricercatore/elenchi/drow_v2.txt`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: il ruolo scrive il link come `RWTHVision/DROW` (rinvia a `VisualComputingInstitute`). Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### friburgo-rgbd-people [249]
@@ -3022,7 +3475,8 @@ Link: http://www2.informatik.uni-freiburg.de/~spinello/RGBD-dataset.html ; http:
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [T] e [API]: nella pagina «3000+ RGB-D frames», tre Kinect montati in verticale, licenza «Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported», «visibility»; articoli confermati su Crossref ‖ (finale) Crossref riaperto alle 17:23 per i due DOI: pagine confermate; gli autori registrati sono Spinello e Arras per il primo articolo, Luber, Spinello e Arras per il secondo
 Usata per: archivio di 2 805 714 553 byte; visibilità annotata (0, 1, 2); scelta n. 3 per le ipotesi 4, 5 e 3 — `f10-dati/01-ricercatore/DATI_PUBBLICI.md` §1, §5 **[f7–f10: non vagliato dall'arbitro]**
 Usata per: NON scaricato: il server risponde solo in `http://` e il programma di scaricamento ammette solo `https://`; ripiego su Princeton e DepthTrack, e per questo mancano i tratti nascosti lunghi di persone con profondità vera — `f10-dati/12-dati-veri/DATI_VERI.md` §0 **[f7–f10: non vagliato dall'arbitro]**
-Note: uso non commerciale; profondità grezza a 11 bit, non metrica. Il link di scaricamento scritto nella pagina (`www.informatik…`) è rotto secondo il ruolo. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f10-dati/01-ricercatore/PREVISIONI.md`, `f10-dati/12-dati-veri/PREVISIONI.md`, `f10-dati/12-dati-veri/manifesto.json`, `f10-dati/12-dati-veri/stato.md`, `f10-dati/23-verdetto/VERDETTO_DATI.md`, `f12-integrazione/50-stato/STATO_V2_copia.md`, `f12-integrazione/50-stato/frammenti_2.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
+Note: uso non commerciale; profondità grezza a 11 bit, non metrica. Il link di scaricamento scritto nella pagina (`www.informatik…`) è rotto secondo il ruolo. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro. ‖ (aggiornamento f12) VD (§ prossime prove): propone di ammettere `http://` per il solo archivio di Friburgo (2,81 GB), che lo scaricamento a regola ha rifiutato; è la sola fonte raggiungibile con tratti nascosti lunghi di persone e profondità vera (quanti: non verificato). Resta NON scaricato.
 
 ### frog [250]
 Tipo: insieme di dati
@@ -3033,6 +3487,7 @@ Identificativo: DOI 10.3389/frobt.2025.1671673
 Link: https://robotics.upo.es/datasets/frog/laser2d_people/
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [T] e [API]: pagina aperta, articolo indicato; nessuna licenza nel testo (coerente con «non dichiarata»); il nome del file `.h5` non ricontrollato
 Usata per: scansioni da 720 punti con persone annotate su tutte, robot in moto; 148 746 736 byte — `f10-dati/01-ricercatore/DATI_PUBBLICI.md` §3 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### insiemi-non-raggiungibili [251]
@@ -3066,6 +3521,7 @@ Identificativo: arXiv:2604.12765
 Link: https://parkyeeun23.github.io/HUM4D/ ; https://github.com/ParkYeeun23/hum4d-processing ; https://arxiv.org/abs/2604.12765
 Verifica: dato diverso — (rif-4) è un articolo di workshop, non della conferenza principale (correzione C1) [T]; confermati [T]: 44 sequenze, 6 camere RGB-D sincronizzate, RealSense D455, altezza 1,45 m, raggio 3 m, Vicon, CC BY 4.0, 83 768 fotogrammi ‖ All'unione (16:33): registro arXiv aperto: 2604.12765v1 del 14-04-2026, autori Yeeun Park, Miqdad Naduthodi, Suryansh Kumar, commento «Accepted for publication at CVPR 2026 4D World Models Workshop».
 Usata per: «il più vicino al sensore della squadra»; proposta ricercatore-1 (scaricare una cartella dal browser) — `f10-dati/01-ricercatore/DATI_PUBBLICI.md` §1, §6 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: nessun archivio scaricabile con `curl` (cartelle di Google Drive). Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### princeton-tracking-benchmark [254]
@@ -3078,7 +3534,8 @@ Link: https://tracking.cs.princeton.edu/dataset.html ; scaricamento usato in f10
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [T] e [API]: nella pagina profondità PNG a 16 bit «with the first 3 bit swap to the last», `frames.json` con K; licenza non dichiarata
 Usata per: ripiego: `ValidationSet.zip` (631 649 593 byte, 5 sequenze) — `f10-dati/01-ricercatore/DATI_PUBBLICI.md` §1, §5 **[f7–f10: non vagliato dall'arbitro]**
 Usata per: tre sequenze convertite nel formato comune: `princeton_child_no1` (164 fotogrammi, nessun tratto nascosto), `princeton_new_ex_occ4` (51 fotogrammi, un tratto nascosto di 0,17 s), `princeton_face_occ5` (330 fotogrammi, un tratto di 0,70 s) — `f10-dati/12-dati-veri/DATI_VERI.md` §1; corse sulle sequenze vere — `f10-dati/20-validazione/PREVISIONI.md` (V20, V21) **[f7–f10: non vagliato dall'arbitro]**
-Note: scene ravvicinate, un bersaglio. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f10-dati/01-ricercatore/PREVISIONI.md`, `f10-dati/01-ricercatore/elenchi/princeton_validationset.txt`, `f10-dati/01-ricercatore/stato.md`, `f10-dati/12-dati-veri/PREVISIONI.md`, `f10-dati/12-dati-veri/manifesto.json`, `f10-dati/12-dati-veri/registro_scaricamenti.txt`, `f10-dati/12-dati-veri/sequenze/princeton_child_no1/meta.json`, `f10-dati/12-dati-veri/sequenze/princeton_face_occ5/meta.json`, `f10-dati/12-dati-veri/sequenze/princeton_new_ex_occ4/meta.json`, `f10-dati/12-dati-veri/stato.md`, e altri 5 file. Nell'allegato sostiene: «profondità PNG a 16 bit; licenza non dichiarata» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
+Note: scene ravvicinate, un bersaglio. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro. ‖ (aggiornamento f12) VD (nota per il coordinatore): l'insieme non dichiara una licenza, quindi i file non vanno nel deposito.
 
 ### realsense-file-di-esempio [255]
 Tipo: insieme di dati (file di esempio del costruttore)
@@ -3087,10 +3544,11 @@ Titolo: Sample Data (`doc/sample-data.md`): `D435i_Depth_and_IMU_Stands_still.ba
 Sede e anno: librealsense; date: non lette
 Identificativo: manca
 Link: https://github.com/realsenseai/librealsense/blob/master/doc/sample-data.md ; https://librealsense.realsenseai.com/rs-tests/ ; scaricamenti citati in f10: https://librealsense.realsenseai.com/rs-tests/D435i_Depth_and_IMU_Stands_still.bag ; https://librealsense.realsenseai.com/rs-tests/TestData/stairs.bag ; https://librealsense.realsenseai.com/rs-tests/TestData/structured.bag ; https://librealsense.realsenseai.com/rs-tests/TestData/outdoors.bag ; https://librealsense.realsenseai.com/rs-tests/TestData/d435i_sample_data.zip
-Verifica: aperta dal ruolo che la cita — (rif-4) (dimensioni e indici letti dai file); dal curatore solo [200] sulla pagina
+Verifica: dato diverso — (rif-4) (dimensioni e indici letti dai file); dal curatore solo [200] sulla pagina ‖ (f13-bibliografia, 18:00–18:04, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md` §II.0; non riaperta da me in f12) pagina `doc/sample-data.md` letta grezza (2751 caratteri): elenca `outdoors.bag` (D415), `stairs.bag` (D435), `depth_under_water.bag`, `d435i_sample_data.zip`; NON contiene `D435i_Depth_and_IMU_Stands_still.bag` né `structured.bag`, che questo elenco le attribuiva (stanno sotto un altro indirizzo dello stesso servizio). Il fascicolo propone «verificata in parte»; qui lo stato è «dato diverso» per la regola del §0 (un'attribuzione scritta non coincide con la fonte)
 Usata per: registrazioni grezze di stereo attivo (107–423 MB, 4–8 s) per le ipotesi 1, 2 e 6, senza verità di riferimento — `f10-dati/01-ricercatore/DATI_PUBBLICI.md` §2, §5; `f10-dati/02-sensori/MODELLO_SENSORE.md` riga 63 **[f7–f10: non vagliato dall'arbitro]**
 Usata per: tre registrazioni convertite nel formato comune: `realsense_stands_still` (D435i, 229 fotogrammi), `realsense_stairs` (D435, 146 fotogrammi), `realsense_structured` (SR300 a luce codificata, 127 fotogrammi: non è stereo attivo) — `f10-dati/12-dati-veri/DATI_VERI.md` §0 (previsione D12 smentita), §1 **[f7–f10: non vagliato dall'arbitro]**
-Note: licenza dei file non dichiarata; i file non sono tutti in millimetri né tutti di stereo attivo (`f10-dati/12-dati-veri/DATI_VERI.md`, §0); se contengano persone non è verificato. Fino all'unione `doc/sample-data.md` compariva anche nella voce `librealsense` [209]: ora sta solo qui. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f10-dati/01-ricercatore/elenchi/realsense_bag_D435i_Depth_and_IMU_Stands_still.txt`, `f10-dati/01-ricercatore/elenchi/realsense_bag_outdoors.txt`, `f10-dati/01-ricercatore/elenchi/realsense_bag_stairs.txt`, `f10-dati/01-ricercatore/elenchi/realsense_bag_structured.txt`, `f10-dati/01-ricercatore/elenchi/realsense_d435i_sample_data.txt`, `f10-dati/12-dati-veri/manifesto.json`, `f10-dati/12-dati-veri/registro_scaricamenti.txt`, `f10-dati/12-dati-veri/sequenze/realsense_stairs/meta.json`, `f10-dati/12-dati-veri/sequenze/realsense_stands_still/meta.json`, `f10-dati/12-dati-veri/sequenze/realsense_structured/meta.json`, e altri 4 file, 1 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
+Note: licenza dei file non dichiarata; i file non sono tutti in millimetri né tutti di stereo attivo (`f10-dati/12-dati-veri/DATI_VERI.md`, §0); se contengano persone non è verificato. Fino all'unione `doc/sample-data.md` compariva anche nella voce `librealsense` [209]: ora sta solo qui. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro. ‖ (aggiornamento f12) la pagina avverte che i file sono fatti con hardware di PRE-PRODUZIONE e «are not official marketing material»: va detto dove si usano come dati di stereo attivo. VD: i file di esempio non dichiarano una licenza, non vanno nel deposito. VD (H-406): su una di queste registrazioni (D415, affollata) il costo per ciclo è 81 ms di media con 254 tracce confermate: «costo confermato» vale solo sul simulato.
 
 ### thor [256]
 Tipo: insieme di dati
@@ -3099,10 +3557,11 @@ Titolo: THÖR — people tracks; articolo associato: «THÖR: Human-Robot Naviga
 Sede e anno: IEEE Robotics and Automation Letters 5(2):676–682, 2020; Zenodo, 10-9-2019
 Identificativo: DOI 10.5281/zenodo.3382145; DOI 10.1109/LRA.2020.2965416; arXiv:1909.04403
 Link: https://zenodo.org/records/3382145 ; scaricamenti usati in f10: https://zenodo.org/api/records/3382145/files/Exp_1_run_1_6D.tsv/content ; https://zenodo.org/api/records/3382145/files/Exp_3_run_1_6D.tsv/content
-Verifica: verificata dal curatore il 14-11-2026 in parte — (rif-4) [API Zenodo, arXiv, Crossref]: autori, licenza CC BY 4.0, legame con l'articolo; i 100 Hz e i 339 s non ricontrollati
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [API Zenodo, arXiv, Crossref]: autori, licenza CC BY 4.0, legame con l'articolo; i 100 Hz e i 339 s non ricontrollati ‖ (f13-bibliografia, 18:00–18:04, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md` §II.0; non riaperta da me in f12) scheda Zenodo grezza: titolo, sei autori, licenza, descrizione, 48 file. I 100 Hz NON sono nella descrizione: restano letti solo dal file. Da «in parte» a verificata per i dati della scheda
 Usata per: traiettorie vere di persone al chiuso a 100 Hz; scelta n. 2 per l'ipotesi 4 (errore della previsione contro il tempo d'occlusione), 99 517 196 byte — `f10-dati/01-ricercatore/DATI_PUBBLICI.md` §3, §5 **[f7–f10: non vagliato dall'arbitro]**
 Usata per: due tracce nel formato comune, `thor_exp1_run1` per tarare e `thor_exp3_run1` per provare — `f10-dati/12-dati-veri/DATI_VERI.md` §1; banco di prova della previsione su pedoni veri — `f10-dati/20-validazione/PREVISIONI.md` (V15, V16), `f10-dati/20-validazione/banco_thor.py` **[f7–f10: non vagliato dall'arbitro]**
-Note: nessuna camera di profondità: parte da posizioni perfette. È un insieme diverso da `thor-magni` [291]. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f10-dati/12-dati-veri/PREVISIONI.md`, `f10-dati/12-dati-veri/manifesto.json`, `f10-dati/12-dati-veri/registro_scaricamenti.txt`, `f10-dati/12-dati-veri/stato.md`, `f10-dati/12-dati-veri/tracce/thor_exp1_run1/meta.json`, `f10-dati/12-dati-veri/tracce/thor_exp3_run1/meta.json`, `f10-dati/20-validazione/VALIDAZIONE_DATI.md`, `f10-dati/20-validazione/stato.md`, `f10-dati/20-validazione/uscite/misure_brevi.txt`, `f10-dati/21-statistica/ANALISI_DATI.md`, e altri 24 file, 10 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «traiettorie di persone al chiuso con verità di riferimento; CC BY 4.0; file `Exp_1_run_1`, `Exp_3_run_1` presenti. 100 Hz: non nella scheda» (marca V* nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
+Note: nessuna camera di profondità: parte da posizioni perfette. È un insieme diverso da `thor-magni` [291]. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro. ‖ (aggiornamento f12) VD (`f10-dati/23-verdetto/VERDETTO_DATI.md`, H-404 b): su queste tracce (219 tratti, 9 persone) il q del filtro è CORRETTO (0,2 copre troppo; il valore calibrato sta fra 0,05 e 0,1); copertura 0,977 / 1,000 / 1,000 con q = 0,2, errore mediano 0,21 / 0,49 / 0,81 m a 1 / 2 / 3 s. Stato: sostenuto dai dati su tracce pubbliche di CATTURA DEL MOTO, non di una camera di profondità. Un secondo codice dà 0,982 / 0,995 / 1,000 (`f13-allegato/DISCORDANZE_DEI_FASCICOLI.md`, stima D6): si riportano entrambe. La frequenza di 100 Hz non ha una fonte scritta.
 
 ### tum-rgbd [257]
 Tipo: insieme di dati
@@ -3111,10 +3570,11 @@ Titolo: TUM RGB-D Benchmark, sequenza `freiburg3_walking_static`; articolo assoc
 Sede e anno: IEEE/RSJ IROS 2012, pp. 573–580
 Identificativo: DOI 10.1109/IROS.2012.6385773
 Link: https://cvg.cit.tum.de/data/datasets/rgbd-dataset/download ; https://cvg.cit.tum.de/rgbd/dataset/freiburg3/rgbd_dataset_freiburg3_walking_static.tgz ; formato dei file: https://cvg.cit.tum.de/data/datasets/rgbd-dataset/file_formats
-Verifica: verificata dal curatore il 14-11-2026 in parte — (rif-4) [API] per l'articolo (aggiunto da me: il ruolo cita solo la pagina) e [T] per la presenza della sequenza nella pagina; la licenza «CC BY 4.0» NON l'ho trovata nella pagina dei file: non verificata ‖ (finale) la pagina «file_formats» l'ha aperta il ruolo (copia dichiarata in `f10-dati/01-ricercatore/pagine/`): dal curatore non riletta
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [API] per l'articolo (aggiunto da me: il ruolo cita solo la pagina) e [T] per la presenza della sequenza nella pagina; la licenza «CC BY 4.0» NON l'ho trovata nella pagina dei file: non verificata ‖ (finale) la pagina «file_formats» l'ha aperta il ruolo (copia dichiarata in `f10-dati/01-ricercatore/pagine/`): dal curatore non riletta ‖ (f13-bibliografia, 18:00–18:04, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md` §II.0; non riaperta da me in f12) pagine grezze dell'insieme: Kinect, 30 Hz, 640×480, cattura del moto a 100 Hz; LICENZA CC BY 4.0 TROVATA (in questo elenco era «non trovata»); `fr3/walking_static` di 24,83 s nella pagina di scaricamento. Il fattore di scala 5000 non è in queste due pagine. Da «in parte» a verificata
 Usata per: sequenza minima di 474 074 105 byte, Kinect v1, 640×480, 30 Hz; scelta n. 1 per le ipotesi 1, 2, 5, 6 del contratto dei dati — `f10-dati/01-ricercatore/DATI_PUBBLICI.md` §1, §4, §5 **[f7–f10: non vagliato dall'arbitro]**
 Usata per: convenzioni dei file (PNG a 16 bit, 5000 = 1 m, profondità lungo l'asse ottico) — `f10-dati/12-dati-veri/convertitori/converti_tum.py` (riga 6); sequenza `tum_fr3_walking_static` convertita nel formato comune (723 fotogrammi, 24,9 s, 58,8 % di pixel validi: sotto il 60 % previsto, previsione D3 smentita) — `f10-dati/12-dati-veri/DATI_VERI.md` §0, §1; corse sulle sequenze vere — `f10-dati/20-validazione/PREVISIONI.md` (V20) **[f7–f10: non vagliato dall'arbitro]**
-Note: luce strutturata, non stereo attivo; solo la posa della camera come verità. La licenza va riletta nella pagina principale dell'insieme. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f10-dati/01-ricercatore/PREVISIONI.md`, `f10-dati/12-dati-veri/PREVISIONI.md`, `f10-dati/12-dati-veri/manifesto.json`, `f10-dati/12-dati-veri/registro_scaricamenti.txt`, `f10-dati/12-dati-veri/sequenze/tum_fr3_walking_static/meta.json`, `f10-dati/12-dati-veri/stato.md`, `f10-dati/20-validazione/VALIDAZIONE_DATI.md`, `f10-dati/21-statistica/ANALISI_DATI.md`, `f10-dati/21-statistica/stato.md`, `f10-dati/22-avversario/ATTACCO_DATI.md`, e altri 16 file, 6 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «Kinect, 30 Hz, 640 × 480, verità da cattura del moto a 100 Hz, CC BY 4.0; `fr3/walking_static` 24,83 s» (marca V* nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
+Note: luce strutturata, non stereo attivo; solo la posa della camera come verità. La licenza va riletta nella pagina principale dell'insieme. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro. ‖ (aggiornamento f12) VD (H-401): su queste registrazioni il «libero» è NON DECIDIBILE (Kinect v1 a mano, nessuna verità d'ombra, N = 0); la stima della posa dai primi 5 fotogrammi sbaglia di 5° (F-404). Servono a provare il lettore e il costo, non il «libero» né l'identità.
 
 ### zenodo-radar-mmwave-occlusione [258]
 Tipo: insieme di dati
@@ -3125,6 +3585,7 @@ Identificativo: DOI 10.5281/zenodo.8377254
 Link: https://zenodo.org/records/8377254 ; scaricamento citato in f10: https://zenodo.org/api/records/8377254/files/PointCloudData.zip/content
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [API Zenodo]: 9 persone che camminano dietro l'ostacolo, radar FMCW più camera RGB-D, CC BY 4.0
 Usata per: radar a onde millimetriche con persone dietro un ostacolo; 508 208 132 byte — `f10-dati/01-ricercatore/DATI_PUBBLICI.md` §3 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f10-dati/01-ricercatore/elenchi/mmwave_8377254.txt`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: nessuna posizione vera dichiarata. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### zenodo-tof-vl53l5cx [259]
@@ -3136,6 +3597,7 @@ Identificativo: DOI 10.5281/zenodo.17190312; arXiv:2503.03449
 Link: https://zenodo.org/records/17190312
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [API Zenodo e arXiv]: tre VL53L5CX su un braccio robotico davanti a una lavagna in posizione nota, CC BY 4.0
 Usata per: unico insieme pubblico trovato per il tempo di volo multizona, senza persone (lacuna dichiarata) — `f10-dati/01-ricercatore/DATI_PUBBLICI.md` §3 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: VL53L5CX, non L7CX né L8CX. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 
@@ -3148,14 +3610,37 @@ Identificativo: DOI 10.5281/zenodo.7974709 (tutte le versioni: DOI 10.5281/zenod
 Link: https://zenodo.org/records/7974709 ; scaricamento citato in f10: https://zenodo.org/api/records/7974709/files/THOR-Magni_ICRA_Subset.zip/content
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (finale) [registro Zenodo, risposta grezza, 17:23]: titolo, i due autori della scheda, data, licenza CC BY 4.0, un solo file `THOR-Magni_ICRA_Subset.zip` di 505 946 382 byte (uguale alla dimensione scritta nel file dello sciame). Il contenuto dell'archivio (33 voci secondo il ruolo) non è stato riletto; l'articolo su rivista e l'insieme completo non sono stati aperti: non verificati
 Usata per: insieme esaminato dal ricercatore di f10 e non scelto: letto solo l'indice dell'archivio (505 946 382 byte, 33 voci, 1 128 289 858 byte una volta aperto; letti i primi 3 000 000 byte) — `f10-dati/01-ricercatore/elenchi/thor_magni_subset.txt`; scheda salvata in `f10-dati/01-ricercatore/pagine/zenodo_7974709.json`. Nessun file `.md` della convocazione lo nomina e nessuna misura ne dipende **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: voce aggiunta nella versione finale: mancava in tutti gli elenchi; l'avevano trovata i controlli di completezza dell'unione e di verifica-rif, che non la ritenevano necessaria finché nessuno la usa. È un insieme diverso da `thor` [256]. Nessun dato ne dipende. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
+
+### loco [316]
+Tipo: insieme di dati (con articolo)
+Autori: Christopher Mayershofer, Dimitrij-Marian Holm, Benjamin Molter, Johannes Fottner (nel deposito: «Mayershofer, C., Holm, D.-M., Molter, B., Fottner, J.»; il nome per esteso dell'ultimo non è nel deposito)
+Titolo: LOCO: Logistics Objects in Context
+Sede e anno: IEEE International Conference on Machine Learning and Applications (ICMLA) 2020 (dal deposito: pagine e DOI non letti)
+Identificativo: deposito GitHub tum-fml/loco, creato il 5-10-2020
+Link: https://github.com/tum-fml/loco
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (f12, 19:24) [m] interfaccia di GitHub (licenza CC0-1.0) e [g] sul README grezzo: «37,988 images captured in 5 logistics environments, of which 5593 images are manually annotated, resulting in 152,421 annotations. Annotated classes include forklifts, pallet trucks, pallets, small load carriers and stillages»; citazione dell'articolo a ICMLA 2020. L'articolo non è stato aperto
+Usata per: esiste un insieme pubblico con la classe «carrello elevatore», che COCO non ha — `f14-classificazione/03-classificatore/CLASSIFICATORE.md` (riga «Carrello elevatore»), `f13-allegato/17-capitolo/NOTE.md` **[f14, valutazione breve sulla classificazione: scritto dopo le 17:36; valori di «profilo di partenza»]**
+Note: voce aggiunta nell'aggiornamento f12. immagini a colori, non profondità (lo dice il ruolo). Nessun dato scaricato, nessun modello addestrato: il classificatore nel progetto è simulato e le etichette sono messe a mano.
+
+### apron-dataset [317]
+Tipo: insieme di dati (con articolo)
+Autori: Daniel Steininger, Andreas Kriegler, Wolfgang Pointner, Verena Widhalm, Julia Simon, Oliver Zendel
+Titolo: Towards Scene Understanding for Autonomous Operations on Airport Aprons (Apron Dataset)
+Sede e anno: Proceedings of the Asian Conference on Computer Vision (ACCV) Workshops, dicembre 2022, pp. 147–163 (dalla citazione nel deposito)
+Identificativo: deposito GitHub apronai/apron-dataset, creato il 4-10-2022
+Link: https://github.com/apronai/apron-dataset ; dati a richiesta: https://wilddash.cc/aprondataset
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (f12, 19:24) [m] interfaccia di GitHub (licenza non riconosciuta dal servizio) e [g] sul README grezzo: «fine-grained annotations for 43 categories (ApronFine)»; «The image data and annotations are available on request»; uso «non-commercial»; citazione con autori e pagine 147–163. L'articolo non è stato aperto; il numero d'immagini non è stato letto
+Usata per: esiste un insieme con i mezzi di piazzale aeroportuale (43 categorie fini), a richiesta e per uso non commerciale — `f14-classificazione/03-classificatore/CLASSIFICATORE.md` (riga «Mezzi di piazzale»), `f13-allegato/17-capitolo/NOTE.md` **[f14, valutazione breve sulla classificazione: scritto dopo le 17:36; valori di «profilo di partenza»]**
+Note: voce aggiunta nell'aggiornamento f12. dati non scaricati né chiesti. L'uso non commerciale va controllato prima di qualunque impiego in un prodotto.
 
 ---
 
 ## 6. Comunicati e altre fonti (stampa, blog, forum, enciclopedie)
 
-31 voci, da [260] a [290].
+46 voci: da [260] a [290]; in coda, aggiunte nell'aggiornamento f12, da [318] a [332].
 
 ### aviationweek-ispezioni-droni [260]
 Tipo: pagina di costruttore o comunicato (articolo di rivista)
@@ -3166,6 +3651,7 @@ Identificativo: manca
 Link: https://aviationweek.com/mro/emerging-technologies/aircraft-inspections-drones-accelerate-toward-next-evolution
 Verifica: aperta dal ruolo che la cita — (rif-4) dal curatore [T] parziale: nella pagina compaiono FAA, Boeing, Airbus e Delta; la frase sull'accettazione non riletta (l'articolo può essere tagliato per i non abbonati)
 Usata per: ispezione visiva con drone in hangar accettata dall'autorità statunitense per un vettore e approvata dai due maggiori costruttori — `f7-estensione/05-esperto-dominio/CONSEGNA.md` righe 56 e 80 (S16) **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### detect-merlin-abar [261]
@@ -3188,6 +3674,7 @@ Identificativo: manca
 Link: https://corp.dxomark.com/wp-content/uploads/2025/02/DXOMARK_Report_Sample_3Dcamera_stereos.pdf
 Verifica: aperta dal ruolo che la cita — (rif-4) dal curatore solo [200]
 Usata per: fonte S12 del modello del sensore (uso preciso non riletto) — `f10-dati/02-sensori/MODELLO_SENSORE.md` riga 90 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f10-dati/02-sensori/parametri_sensori.json`, `f12-integrazione/50-stato/STATO_V2_copia.md`, `f13-allegato/02-geometria/FASCICOLO_GEOMETRIA.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: porta la dicitura «Confidential» pur essendo sul sito pubblico (annotazione del ruolo): solo consultazione. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### gerdsenai-da3-ros2 [263]
@@ -3222,6 +3709,7 @@ Identificativo: 2022-12-06-04
 Link: https://www.iata.org/en/pressroom/2022-releases/2022-12-06-04/
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [T]: «could double to nearly $10 billion by 2035», «cause 40% of total incidents», «by 42% (IATA estimate)», «anti-collision and inching technology» presenti
 Usata per: danno a terra fino a quasi 10 miliardi di dollari l'anno entro il 2035; nastri, caricatori, scale e pontili causano il 40 % degli incidenti; riduzione del 42 % — `f7-estensione/05-esperto-dominio/CONSEGNA.md` righe 54 e 80 (S14) **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: correzione C10. Stima dell'associazione. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### journal-aviation-donecle [266]
@@ -3257,6 +3745,7 @@ Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente �
 Usata per: via libera Golden Power del 15-09-2026 — `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §1, S10
 Usata per: «non trovate» linee terrestri o navali, prodotti di percezione, notizie pubbliche sull'hackathon — stesso file, §1
 Usata per: il Golden Power su CTMAVIO dice che il settore è vigilato — stesso file, §6
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: un'assenza in un elenco di titoli è una prova debole: vale per i titoli di oggi, non per il contenuto delle notizie.
 
 ### maregroup-ordine-uncrewed-2026 [269]
@@ -3268,6 +3757,7 @@ Identificativo: manca
 Link: https://www.maregroup.it/news/primo-ordine-estero-sistemi-uncrewed
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-3) [g] — titolo, data, «del valore di circa 1,7 milioni di euro». Questa pagina non nomina CTMAVIO né il 2026 come anno d'esecuzione: stanno nelle tre voci seguenti. Aperta anche dal ruolo che la cita.
 Usata per: ordine del 21-10-2026 da 1,7 milioni per «sistemi uncrewed»; cliente, piattaforma e uso non verificati — `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` in testa e §1, S2
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: correzione 12. La pagina rimanda a un comunicato integrale che non ho aperto: è il documento che deciderebbe il tipo di piattaforma (non risolto nel quadro).
 
 ### maregroup-sito [270]
@@ -3335,6 +3825,7 @@ Identificativo: manca
 Link: https://www.soldionline.it/notizie/azioni-italia/mare-group-primo-ordine-estero-sistemi-uncrewed
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-3) [g] — «circa 1,7 milioni di euro e sarà eseguito prevalentemente nel 2026», «componenti e strutture di precisione per applicazioni aeronautiche, motoristiche e UAV». Aperta anche dal ruolo che la cita.
 Usata per: la stampa lega l'ordine a componenti e strutture per usi aeronautici, motoristici e UAV — `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §1, S4
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: deriva dal comunicato della società.
 
 ### st-community-940nm [276]
@@ -3379,6 +3870,7 @@ Identificativo: manca
 Link: https://www.teleborsa.it/News/2026/06/05/mare-group-prima-commessa-per-velivoli-a-pilotaggio-remoto-valore-superiore-a-1-milione-di-euro-53.html
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-3) [g] — «circa 1,05 milioni di euro», «velivoli a pilotaggio remoto (RPAS) di dimensioni medio-grandi», «ingegneria di sistema e lo sviluppo di sottosistemi di bordo critici per la sicurezza». Aperta anche dal ruolo che la cita.
 Usata per: prime commesse del 05-06-2026 (circa 1,05 milioni) su un velivolo a pilotaggio remoto medio-grande — `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §1, S6
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: deriva dal comunicato della società.
 
 ### teleborsa-ctmavio-2026 [280]
@@ -3390,6 +3882,7 @@ Identificativo: manca
 Link: https://www.teleborsa.it/News/2026/07/24/mare-group-acquisisce-ctmavio-e-rafforza-la-filiera-dei-droni-per-aerospazio-e-difesa-17.html
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-3) [g] — «Il corrispettivo per il 100% del capitale sociale di CTMAVIO è pari a 9 milioni», menzione del Golden Power. Aperta anche dal ruolo che la cita.
 Usata per: accordo del 24-07-2026 per comprare CTMAVIO (9 milioni) — `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §1, S9
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: la chiusura dell'operazione resta non verificata, come nel quadro.
 
 ### teleborsa-nido-2026 [281]
@@ -3402,6 +3895,7 @@ Link: https://www.teleborsa.it/News/2026/06/09/mare-group-entra-nel-capitale-di-
 Verifica: dato diverso — (rif-3) pagina aperta [g]; ci sono il 20 %, «il drone H815», ricarica, voli oltre la linea di vista, supervisione, «ispezione di strade e infrastrutture, monitoraggio strutturale di pipeline e reti energetiche… sorveglianza perimetrale», «architettura dual-use». Il «51 %» nella pagina non c'è: c'è «opzione per il controllo entro 24 mesi». Aperta anche dal ruolo che la cita.
 Usata per: ingresso al 20 % in NIDO «con opzione per il 51 %»; descrizione della piattaforma NIDO e dei suoi usi — `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §1, S7
 Usata per: il profilo pubblico della società è un drone da ispezione con stazione di ricovero e supervisione remota — `f6-specializzazione/01-esperto-dominio/SPECIALIZZAZIONE.md` §2
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: correzione 7: scrivere «opzione per il controllo», non «per il 51 %», salvo un'altra fonte.
 
 ### teleborsa-ordine-uncrewed-2026 [282]
@@ -3424,6 +3918,7 @@ Identificativo: manca
 Link: https://www.teleborsa.it/News/2026/07/28/mare-group-contratto-da-8-3-milioni-di-euro-per-unita-di-propulsione-uav-13.html
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-3) [g] — «8,3 milioni», «fornitura di oltre 6.000 … kit per velivoli senza pilota, con ricavi distribuiti in modo uniforme sui tre esercizi». Il ruolo che la cita l'aveva vista solo in un risultato di ricerca.
 Usata per: accordo quadro del 28-07-2026 da 8,3 milioni, oltre 6.000 kit motore — `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §1, S11
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: deriva dal comunicato della società.
 
 ### therobotreport-veo [284]
@@ -3435,6 +3930,7 @@ Identificativo: manca
 Link: https://www.therobotreport.com/advanced-vision-future-robot-safety-manufacturing/
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [T]: «something can be seen behind it» e «treated as occupied» presenti ‖ All'unione (16:33): pagina scaricata; nei metadati «author»: «Clara Vu» e «datePublished»: 2020-07-01; il titolo è quello dell'intestazione della pagina (il titolo per i motori di ricerca è «Safety for robots in manufacturing comes from advanced vision»). Nel gruppo rif-4 autrice e data erano «manca».
 Usata per: un sistema 3D di sorveglianza di velocità e separazione classifica i volumi in vuoto, occupato o sconosciuto, e ciò che nessun sensore vede è trattato come occupato — `f7-estensione/05-esperto-dominio/CONSEGNA.md` righe 21 e 80 (S8) **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`, `f13-allegato/06-bibliografia/FASCICOLO_BIBLIOGRAFIA.md`, `f13-allegato/06-bibliografia/allegato.bib`, `f13-allegato/25-verifica-sovraffermazioni/VERIFICA.md`, `f13-allegato/25-verifica-sovraffermazioni/allegato_testo.txt`, `f13-allegato/26-lettura-commissario/allegato.txt`, 8 file dei capitoli dell'allegato (`f13-allegato/11-capitolo` … `20-unione`). Nell'allegato sostiene: «volumi vuoti, occupati, sconosciuti; ciò che non è visto è trattato come occupato (fonte di parte)» (marca V nella mappa del fascicolo, §II.3). **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: fonte di parte. Nella sezione E la chiave provvisoria è [vu2020]. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### vogiatzoglou2024 [285]
@@ -3446,6 +3942,7 @@ Identificativo: manca (DOI non cercato)
 Link: https://verfassungsblog.de/the-ai-act-national-security-exception/
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-3) [g] — la citazione «exclusively for military, defence or national security purposes» c'è; c'è anche «if the same AI system is also used for law enforcement and public security purposes, then it must abide by» il regolamento. Il ruolo che la cita l'aveva vista solo in un risultato di ricerca.
 Usata per: il regolamento sull'intelligenza artificiale esclude i sistemi a uso esclusivamente militare, di difesa o di sicurezza nazionale; il duplice uso resta dentro — `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §6, S38
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: correzione 11. Per i limiti della scheda del curatore un blog non è fonte primaria: la primaria è `ue-2024-1689`. L'espressione «duplice uso» è una lettura del ruolo, non una parola del testo. Nella sezione E la chiave provvisoria è [verfassungsblog-aiact].
 
 ### websim-ordine-uncrewed-2026 [286]
@@ -3469,6 +3966,7 @@ Link: https://www.websim.it/azioni/small-mid-cap/notizie/mare-group-scelta-dalla
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-3) [g] — «Task Force X – Central Mediterranean, un'iniziativa NATO a guida italiana in corso presso il Poligono di Torre Veneri», «sorveglianza continua e la protezione delle infrastrutture critiche», NIDO, GMSPAZIO, CTM Avio. Aperta anche dal ruolo che la cita.
 Usata per: partecipazione del 10-07-2026 alla Task Force X — `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §1, S8
 Usata per: sorveglianza di perimetri e infrastrutture come profilo pubblico — `f6-specializzazione/01-esperto-dominio/SPECIALIZZAZIONE.md` §2
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: deriva dal comunicato della società; il titolo «scelta dalla NATO» è della testata.
 
 ### wikipedia-kinect [288]
@@ -3480,6 +3978,7 @@ Identificativo: manca
 Link: https://en.wikipedia.org/wiki/Kinect
 Verifica: aperta dal ruolo che la cita — (rif-4) ([g], testo grezzo); dal curatore solo [200]
 Usata per: campo e distanza minima del Kinect v1 (57° × 43°, circa 0,8 m) — `f10-dati/04-embedded/PREVISIONI.md` (note in fondo), `INVENTARIO_E_DECISIONE.md` ([6]) **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f10-dati/04-embedded/INVENTARIO_E_DECISIONE.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
 Note: fonte secondaria (lo dice il ruolo). Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### wikipedia-ricerca-bayesiana [289]
@@ -3504,6 +4003,171 @@ Link: https://en.wikipedia.org/wiki/Traffic_collision_avoidance_system
 Verifica: aperta dal ruolo che la cita — (rif-4) dal curatore solo [200]
 Usata per: a un TA non si manovra, a un RA si risponde subito — `f9-preproposta/09-interfacce/CONSEGNA.md` righe 31 e 80; `f9-preproposta/06-esperto-dominio/PREVISIONI.md` riga 27 **[f7–f10: non vagliato dall'arbitro]**
 Note: fonte secondaria; la primaria è `eurocontrol-acas-guide`. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
+
+### wikipedia-preferred-walking-speed [318]
+Tipo: enciclopedia
+Autori: Wikipedia (collaboratori)
+Titolo: Preferred walking speed
+Sede e anno: Wikipedia in inglese, testo del 14-11-2026 (versione non fissata)
+Identificativo: —
+Link: https://en.wikipedia.org/wiki/Preferred_walking_speed
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (f12, 19:24) [g] sul testo sorgente della pagina: «typically falling between 1.10 m/s and 1.65 m/s»; «1.4 m/s is recommended by design guides including the Design Manual for Roads and Bridges». ‖ (attacco f14) riaperta, le cifre tornano
+Usata per: velocità tipica della classe «persona» (1,10–1,65 m/s; 1,4 m/s nelle guide britanniche) — `f14-classificazione/01-profili/PROFILI.md`, `f14-classificazione/01-profili/classi.json` (F1), `f14-classificazione/20-inclusione/BLOCCO_CLASSIFICAZIONE.md`, `f14-classificazione/10-attacco/ATTACCO_CLASSIFICAZIONE.md` **[f14, valutazione breve sulla classificazione: scritto dopo le 17:36; valori di «profilo di partenza»]**
+Note: voce aggiunta nell'aggiornamento f12. fonte di terza mano: per un testo per la commissione serve la primaria (vedi `bohannon1997` [306], che è letta).
+
+### wikipedia-braking-distance [319]
+Tipo: enciclopedia
+Autori: Wikipedia (collaboratori)
+Titolo: Braking distance
+Sede e anno: Wikipedia in inglese, testo del 14-11-2026 (versione non fissata)
+Identificativo: —
+Link: https://en.wikipedia.org/wiki/Braking_distance
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (f12, 19:24) [g] sul testo sorgente: «A perception-reaction time of 1.5 seconds»; «(NHTSA) uses 1.5 seconds for the average reaction time»; «a slow responding driver (2.5 seconds)»; «coefficient of kinetic friction of 0.7 are standard»
+Usata per: tempo di reazione di chi guida (1,5 s medi, 2,5 s per il guidatore lento) e attrito 0,7, da cui 6,9 m/s² di frenata massima: usati per T_r e dec_max di quasi tutte le classi con un guidatore — `f14-classificazione/01-profili/PROFILI.md`, `f14-classificazione/01-profili/classi.json` (F3), `f14-classificazione/20-inclusione/BLOCCO_CLASSIFICAZIONE.md` **[f14, valutazione breve sulla classificazione: scritto dopo le 17:36; valori di «profilo di partenza»]**
+Note: voce aggiunta nell'aggiornamento f12. fonte di terza mano; le primarie (NHTSA, AASHTO) non sono state aperte. Il valore 6,9 m/s² è un conto del ruolo (0,7 × g), non una cifra della pagina. È il dato esterno da cui dipendono più righe della tabella delle classi.
+
+### wikipedia-stopping-sight-distance [320]
+Tipo: enciclopedia
+Autori: Wikipedia (collaboratori)
+Titolo: Stopping sight distance
+Sede e anno: Wikipedia in inglese, testo del 14-11-2026 (versione non fissata)
+Identificativo: —
+Link: https://en.wikipedia.org/wiki/Stopping_sight_distance
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (f12, 19:24) [g] sul testo sorgente: «2.5 s perception-reaction time and 3.4 m/s² (11.2 ft/s²) deceleration»; rimando a «NCHRP Report 400: Determination of Stopping Sight Distances». ‖ (attacco f14) riaperta, la cifra torna
+Usata per: frenata tipica dei veicoli stradali, 3,4 m/s² — `f14-classificazione/01-profili/PROFILI.md`, `f14-classificazione/01-profili/classi.json` (F4), `f14-classificazione/20-inclusione/BLOCCO_CLASSIFICAZIONE.md`, `f14-classificazione/10-attacco/ATTACCO_CLASSIFICAZIONE.md` **[f14, valutazione breve sulla classificazione: scritto dopo le 17:36; valori di «profilo di partenza»]**
+Note: voce aggiunta nell'aggiornamento f12. fonte di terza mano; il rapporto NCHRP 400 non è stato aperto e non ha una voce.
+
+### wikipedia-taxiing [321]
+Tipo: enciclopedia
+Autori: Wikipedia (collaboratori)
+Titolo: Taxiing
+Sede e anno: Wikipedia in inglese, testo del 14-11-2026 (versione non fissata)
+Identificativo: —
+Link: https://en.wikipedia.org/wiki/Taxiing
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (f12, 19:24) [g] sul testo sorgente: «Taxi speeds are typically 16 to 19 kn». ‖ (attacco f14) riaperta, la cifra torna
+Usata per: velocità tipica della classe «aereo in rullaggio», 16–19 nodi (30–35 km/h) — `f14-classificazione/01-profili/PROFILI.md`, `f14-classificazione/01-profili/classi.json` (F6), `f14-classificazione/20-inclusione/BLOCCO_CLASSIFICAZIONE.md`, `f14-classificazione/10-attacco/ATTACCO_CLASSIFICAZIONE.md` **[f14, valutazione breve sulla classificazione: scritto dopo le 17:36; valori di «profilo di partenza»]**
+Note: voce aggiunta nell'aggiornamento f12. fonte di terza mano. A queste velocità l'avviso esce dopo il contatto (attacco f14, critica 5c): la classe è fuori dal dominio provato.
+
+### wikipedia-emergency-brake-train [322]
+Tipo: enciclopedia
+Autori: Wikipedia (collaboratori)
+Titolo: Emergency brake (train)
+Sede e anno: Wikipedia in inglese, testo del 14-11-2026 (versione non fissata)
+Identificativo: —
+Link: https://en.wikipedia.org/wiki/Emergency_brake_(train)
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (f12, 19:24) [g] sul testo sorgente: «Emergency-braking a train (without track brakes) will give about 1.5 m/s2 deceleration. The braking distance will be approximately 250 m at 100 km/h». ‖ (attacco f14) riaperta, la cifra torna
+Usata per: frenata d'emergenza delle classi «treno» e simili, circa 1,5 m/s² — `f14-classificazione/01-profili/PROFILI.md`, `f14-classificazione/01-profili/classi.json` (F7), `f14-classificazione/20-inclusione/BLOCCO_CLASSIFICAZIONE.md`, `f14-classificazione/10-attacco/ATTACCO_CLASSIFICAZIONE.md` **[f14, valutazione breve sulla classificazione: scritto dopo le 17:36; valori di «profilo di partenza»]**
+Note: voce aggiunta nell'aggiornamento f12. fonte di terza mano. Treno e tram sono fuori dal dominio provato (portata 3 m).
+
+### wikipedia-airbus-a320 [323]
+Tipo: enciclopedia
+Autori: Wikipedia (collaboratori)
+Titolo: Airbus A320 family
+Sede e anno: Wikipedia in inglese, testo del 14-11-2026 (versione non fissata)
+Identificativo: —
+Link: https://en.wikipedia.org/wiki/Airbus_A320_family
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (f12, 19:24) [g] sul testo sorgente: «37.6 m long»; «maximum take-off weights from 68 to 93.5 t». La tabella delle specifiche non è stata letta (nemmeno dal ruolo): apertura alare e altezza restano a memoria
+Usata per: ingombro (lunghezza 37,6 m) e intervallo a priori della massa (68–93,5 t) delle classi «aereo in rullaggio» e «aereo al traino» — `f14-classificazione/01-profili/PROFILI.md`, `f14-classificazione/01-profili/classi.json` (F8), `f14-classificazione/20-inclusione/BLOCCO_CLASSIFICAZIONE.md` **[f14, valutazione breve sulla classificazione: scritto dopo le 17:36; valori di «profilo di partenza»]**
+Note: voce aggiunta nell'aggiornamento f12. fonte di terza mano; la massa è un intervallo a priori della classe, mai stimata dalle misure.
+
+### wikipedia-bicycle-performance [324]
+Tipo: enciclopedia
+Autori: Wikipedia (collaboratori)
+Titolo: Bicycle performance
+Sede e anno: Wikipedia in inglese, testo del 14-11-2026 (versione non fissata)
+Identificativo: —
+Link: https://en.wikipedia.org/wiki/Bicycle_performance
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (f12, 19:24) [g] sul testo sorgente: «cyclists in Copenhagen, the average cycling speed is 15.5 km/h»; «A person pedalling with 100 W power can achieve 5.5 m/s». ‖ (attacco f14) riaperta, la cifra torna
+Usata per: velocità tipica della classe «bicicletta», 15,5 km/h — `f14-classificazione/01-profili/PROFILI.md`, `f14-classificazione/01-profili/classi.json` (F11), `f14-classificazione/20-inclusione/BLOCCO_CLASSIFICAZIONE.md`, `f14-classificazione/10-attacco/ATTACCO_CLASSIFICAZIONE.md` **[f14, valutazione breve sulla classificazione: scritto dopo le 17:36; valori di «profilo di partenza»]**
+Note: voce aggiunta nell'aggiornamento f12. fonte di terza mano; una sola città.
+
+### wikipedia-monopattino-elettrico [325]
+Tipo: enciclopedia
+Autori: Wikipedia (collaboratori)
+Titolo: Monopattino elettrico
+Sede e anno: Wikipedia in italiano, testo del 14-11-2026 (versione non fissata)
+Identificativo: —
+Link: https://it.wikipedia.org/wiki/Monopattino_elettrico
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (f12, 19:24) [g] sul testo sorgente: «motore elettrico con potenza entro 0,5 kW e velocità entro 20 km/h»; «nelle strade asfaltate urbane dove già vige un limite massimo di velocità di 50 km/h»
+Usata per: velocità massima della classe «monopattino» (20 km/h) e limite urbano di 50 km/h usato come v_max dell'auto in città — `f14-classificazione/01-profili/PROFILI.md`, `f14-classificazione/01-profili/classi.json` (F12), `f14-classificazione/20-inclusione/BLOCCO_CLASSIFICAZIONE.md` **[f14, valutazione breve sulla classificazione: scritto dopo le 17:36; valori di «profilo di partenza»]**
+Note: voce aggiunta nell'aggiornamento f12. fonte di terza mano: la legge italiana non è stata aperta (lo dice il ruolo) e non ha una voce.
+
+### wikipedia-pushback [326]
+Tipo: enciclopedia
+Autori: Wikipedia (collaboratori)
+Titolo: Pushback (aviation)
+Sede e anno: Wikipedia in inglese, testo del 14-11-2026 (versione non fissata)
+Identificativo: —
+Link: https://en.wikipedia.org/wiki/Pushback_(aviation)
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (f12, 19:24) [g] sul testo sorgente: «A typical tractor for large aircraft weighs up to 54 t»
+Usata per: intervallo a priori della massa del trattore per aerei (fino a 54 t), nella classe «aereo al traino» — `f14-classificazione/01-profili/PROFILI.md`, `f14-classificazione/01-profili/classi.json` (F13) **[f14, valutazione breve sulla classificazione: scritto dopo le 17:36; valori di «profilo di partenza»]**
+Note: voce aggiunta nell'aggiornamento f12. fonte di terza mano.
+
+### wikipedia-mental-chronometry [327]
+Tipo: enciclopedia
+Autori: Wikipedia (collaboratori)
+Titolo: Mental chronometry
+Sede e anno: Wikipedia in inglese, testo del 14-11-2026 (versione non fissata)
+Identificativo: —
+Link: https://en.wikipedia.org/wiki/Mental_chronometry
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (f12, 19:24) [g] sul testo sorgente: «Mean RT for college-age individuals is about 160 milliseconds to detect an auditory stimulus, and approximately 190…» (stimolo visivo). ‖ (attacco f14) riaperta, le cifre tornano
+Usata per: tempo di reazione SEMPLICE a un suono (0,16 s) e a una luce (0,19 s), come estremo inferiore del campo di T_r — `f14-classificazione/01-profili/PROFILI.md`, `f14-classificazione/01-profili/profili_portatore.json` (F5), `f14-classificazione/10-attacco/ATTACCO_CLASSIFICAZIONE.md` **[f14, valutazione breve sulla classificazione: scritto dopo le 17:36; valori di «profilo di partenza»]**
+Note: voce aggiunta nell'aggiornamento f12. fonte di terza mano. È la reazione semplice di studenti fermi: NON è il tempo di reazione di una persona non vedente a un avviso mentre cammina (`sd-K12`, non risolto: nessuna fonte, T_r = 1,0 o 1,5 s è un'ipotesi di progetto).
+
+### adaptalift-carrelli [328]
+Tipo: articolo di un'azienda (noleggio di carrelli)
+Autori: Adaptalift Group
+Titolo: Forklift speed limits and braking in the warehouse
+Sede e anno: sito dell'azienda, 1-2-2013 secondo l'indirizzo
+Identificativo: —
+Link: https://www.adaptalift.com.au/articles/2013-02-01-forklift-speed-limits-and-braking-in-the-warehouse
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (f12, 19:24) [g] sul testo grezzo della pagina: «A forklift travelling at 6km/per hour usually requires around 3 meters to come to a safe stop. This is more than double with a forklift travelling at 12km/per hour… displayed in the Work safe (2006) table below»
+Usata per: spazio d'arresto di un carrello elevatore (circa 3 m a 6 km/h), da cui la frenata tipica della classe — `f14-classificazione/01-profili/PROFILI.md`, `f14-classificazione/01-profili/classi.json` (F10) **[f14, valutazione breve sulla classificazione: scritto dopo le 17:36; valori di «profilo di partenza»]**
+Note: voce aggiunta nell'aggiornamento f12. fonte commerciale di seconda mano (lo dice il ruolo); la tabella WorkSafe del 2006 non è stata aperta.
+
+### bigrentz-carrelli [329]
+Tipo: articolo di un'azienda (noleggio di macchine)
+Autori: BigRentz
+Titolo: Forklift Speed Limits: OSHA Rules and Best Practices for Safe Operation
+Sede e anno: blog dell'azienda; data non letta
+Identificativo: —
+Link: https://www.bigrentz.com/blog/forklift-speed-limits-osha-rules-and-best-practices-for-safe-operation
+Verifica: verificata dal curatore il 14-11-2026 in parte — (f12, 19:24) [g] sul testo grezzo della pagina (82 900 byte): «5 mph is the widely cited standard for the speed limit for forklifts in war[ehouses]» e «10 mph is a common upper limit for open outdoor surfaces» presenti. «OSHA non fissa un limite» e «6 m minimi teorici a 12 km/h» non cercati o non trovati con le mie ricerche: non verificati. Il ruolo l'aveva vista solo nel risultato di una ricerca
+Usata per: velocità tipica e massima della classe «carrello elevatore» (5 mph in corsia, 10 mph all'aperto) — `f14-classificazione/01-profili/classi.json` (R1; il ruolo la segna «non verificato») **[f14, valutazione breve sulla classificazione: scritto dopo le 17:36; valori di «profilo di partenza»]**
+Note: voce aggiunta nell'aggiornamento f12. fonte commerciale; nessuna norma primaria aperta (`iso-3691-4` [182] non letta). Il grassetto «carrello dentro i 3 m» di PROFILI poggia su questo valore (attacco f14, critica 6b).
+
+### tronair-traino-aerei [330]
+Tipo: articolo di un'azienda (attrezzature di terra)
+Autori: Tronair
+Titolo: Aircraft tug safety
+Sede e anno: blog dell'azienda; data non letta
+Identificativo: —
+Link: https://www.tronair.com/blogs/articles/aircraft-tug-safety
+Verifica: verificata dal curatore il 14-11-2026 in parte — (f12, 19:24) [g] sul testo grezzo della pagina: «The towing speed should never exceed that of walking team members» presente. «5 nodi per un 737-800» e «circa 5 mph» NON sono nel testo ricevuto (0 occorrenze di «knot» e di «mph»): vengono dal risultato della ricerca del ruolo, da un'altra pagina o da nessuna
+Usata per: velocità tipica della classe «aereo al traino»: al passo di chi cammina accanto — `f14-classificazione/01-profili/classi.json` (R5; il ruolo la segna «non verificato») **[f14, valutazione breve sulla classificazione: scritto dopo le 17:36; valori di «profilo di partenza»]**
+Note: voce aggiunta nell'aggiornamento f12. regge solo «al passo d'uomo»; le due cifre vanno tolte o marcate «non verificato».
+
+### railwaynews-en-16207 [331]
+Tipo: articolo di settore su una norma
+Autori: Railway News (redazione; autore non letto)
+Titolo: EN 16207: Criteria for Magnetic Track Brakes in Railway Rolling Stock
+Sede e anno: railwaynews.net; data non letta
+Identificativo: la norma descritta è la EN 16207 (non letta)
+Link: https://railwaynews.net/en-16207-railway-applications-braking-functional-and-performance-criteria-of-magnetic-track-brake-systems-for-use-in-railway-rolling-stock-standard.html
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (f12, 19:24) [g] sul testo grezzo della pagina: «required to achieve emergency deceleration rates up to 2.5 m/s²». Il ruolo l'aveva vista solo nel risultato di una ricerca
+Usata per: frenata d'emergenza della classe «tram» con pattini elettromagnetici, fino a 2,5 m/s² — `f14-classificazione/01-profili/classi.json` (R8) **[f14, valutazione breve sulla classificazione: scritto dopo le 17:36; valori di «profilo di partenza»]**
+Note: voce aggiunta nell'aggiornamento f12. articolo su una norma, non la norma: EN 16207 e EN 13452 (nominata in PROFILI come «non letta») restano mai aperte e senza voce. Che la cifra valga per un tram e non per un altro rotabile non è stato controllato.
+
+### pilz-iso-13855 [332]
+Tipo: pagina di un costruttore che riassume una norma
+Autori: Pilz
+Titolo: EN ISO 13855 — Safety of machinery: positioning of safeguards (pagina di assistenza sulle norme)
+Sede e anno: sito del costruttore; data non letta; descrive l'edizione 2024
+Identificativo: la norma riassunta è `iso-13855` [181] (non letta)
+Link: https://www.pilz.com/en-NL/support/law-standards-norms/iso-standards/efficiency-guards/en-iso-13855
+Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (f12, 19:24) [g] sul testo grezzo della pagina (135 434 byte): «K is either 2000 mm/s for the speed of the upper limbs or 1600 mm/s for walking speed»; per l'edizione 2024 la formula è scritta «S = (K x T) + D_DS». La cifra 850 (C = 0,85 m) NON è nella pagina (0 occorrenze). Il ruolo l'aveva vista solo nel risultato di una ricerca
+Usata per: K = 1600 mm/s per chi cammina nella formula della distanza di separazione, come termine di confronto per la velocità d'avvicinamento — `f14-classificazione/01-profili/profili_portatore.json` (R7) **[f14, valutazione breve sulla classificazione: scritto dopo le 17:36; valori di «profilo di partenza»]**
+Note: voce aggiunta nell'aggiornamento f12. fonte secondaria e di parte. Il ruolo scrive la formula «S = K·T + C»: nell'edizione 2024 riassunta qui il secondo termine ha un altro nome. La norma resta non letta: C = 0,85 m NON è citabile (fascicolo f13, §II.4; `DISCORDANZE_DEI_FASCICOLI.md`).
 
 ---
 
@@ -3567,7 +4231,7 @@ Le chiavi fra parentesi quadre sono state estratte con una ricerca testuale dall
 | [realsense-altavelocita] | A, D | `realsense-alta-velocita-d435` | [140] | dato diverso |  |
 | [realsense-confronto] | B, D | `realsense-confronto-camere` | [142] | verificata |  |
 | [realsense-d400-scheda] | D | `realsense-d400-scheda` (uguale) | [144] | verificata |  |
-| [realsense-esempi] | F | `realsense-file-di-esempio` | [255] | aperta dal ruolo |  |
+| [realsense-esempi] | F | `realsense-file-di-esempio` | [255] | dato diverso | stato cambiato nell'aggiornamento f12 (era «aperta dal ruolo») |
 | [realsense-filtri] | C, F | `realsense-filtri-post` | [233] | verificata |  |
 | [realsense-highspeed] | B, C | `realsense-alta-velocita-d435` | [140] | dato diverso |  |
 | [realsense-librealsense] | F | `librealsense` | [209] | verificata | voce di gruppo: note della versione 2.59.1 |
@@ -3576,7 +4240,7 @@ Le chiavi fra parentesi quadre sono state estratte con una ricerca testuale dall
 | [realsense-tuning] | B, C | `realsense-taratura-profondita` | [146] | verificata | la versione in rete; il PDF è `realsense-bkm-taratura` |
 | [roboflow-rfdetr] | A, B | `roboflow-rf-detr` | [235] | verificata |  |
 | [rtca-do365] | E | `rtca-do-365` | [188] | verificata in parte | le cifre «35 s e oltre un chilometro» non sono in questa fonte; per l'ordine di grandezza vedi `thipphavong2016` |
-| [rudenko2019] | F | `thor` | [256] | verificata in parte | voce dell'insieme di dati THÖR (articolo associato dentro la voce) |
+| [rudenko2019] | F | `thor` | [256] | verificata (aggiornamento f12; era «in parte») | voce dell'insieme di dati THÖR (articolo associato dentro la voce) |
 | [scholler2020] | B, C | `scholler2020` (uguale) | [85] | verificata |  |
 | [slamtec-c1] | D | `slamtec-rplidar-c1` | [152] | verificata | pagina delle specifiche del costruttore |
 | [soldionline-ordine2026] | E | `soldionline-ordine-uncrewed-2026` | [275] | verificata |  |
@@ -3589,7 +4253,7 @@ Le chiavi fra parentesi quadre sono state estratte con una ricerca testuale dall
 | [teleborsa-ctmavio2026] | E | `teleborsa-ctmavio-2026` | [280] | verificata |  |
 | [teleborsa-kitmotore2026] | E | `teleborsa-propulsione-uav-2026` | [283] | verificata |  |
 | [teleborsa-nido2026] | E | `teleborsa-nido-2026` | [281] | dato diverso |  |
-| [tum-rgbd] | F | `tum-rgbd` (uguale) | [257] | verificata in parte |  |
+| [tum-rgbd] | F | `tum-rgbd` (uguale) | [257] | verificata | stato cambiato nell'aggiornamento f12 (era «in parte») |
 | [ue-2017-745] | E | `ue-2017-745` (uguale) | [189] | verificata |  |
 | [ue-2019-945] | E | `ue-2019-945` (uguale) | [190] | verificata |  |
 | [ue-2019-947] | E | `ue-2019-947` (uguale) | [191] | verificata in parte |  |
@@ -3664,6 +4328,8 @@ Le chiavi fra parentesi quadre sono state estratte con una ricerca testuale dall
 
 **8.7 Non risolto dopo la verifica.** (a) Se il ruolo di f8 intendesse gli scritti identificati per `weitz2013` e `hunt2013`: lo decide il ruolo. (b) La frase «heavily distorted» in `sciencedirect-s0926580524005867`: la decide una lettura del testo, che è a pagamento. (c) «Ipotesi di mondo statico» in `hornung2013`: non è nel riassunto; la decide la lettura dell'articolo. (d) La sede a stampa di `mercat2019`. (e) Il contenuto delle 270 voci fuori dal campione della verifica non è stato riletto: zero errori bibliografici su venti voci non sono una prova per le altre 95 del gruppo 1.
 
+**8.8 Aperti dopo l'aggiornamento f12.** (a) **Tempo di reazione di una persona non vedente a un avviso sonoro o tattile mentre cammina: nessuna fonte** (`sd-K12`); le voci [307], [311] e [327] danno ordini di grandezza per persone vedenti, non questo dato. (b) Norme nominate in f13 e f14 e **mai lette, senza voce**: EN 13452, EN 16207 (nota solo da `railwaynews-en-16207`), IEC 61496, il rapporto NCHRP 400, la legge italiana sui monopattini; con voce ma non lette: `iso-13855`, `iso-ts-15066`, `iso-10218-2`, `iso-3691-4`. (c) Cifre di f14 **senza fonte aperta**: le tre di `green2000`, le due di `tronair-traino-aerei`, tutte quelle di `dji-mavic-3-classic`, i limiti di piazzale di altri aeroporti (25, 10, 15 km/h), «OSHA non fissa un limite»; in più, per dichiarazione del ruolo, 15 velocità su 30 e quasi tutte le accelerazioni e frenate della tabella delle classi sono ipotesi o memoria. (d) L'edizione del regolamento dell'aeroporto di Monaco. (e) L'anno a stampa di `barshalom2001` e gli autori di `vovk2005`. (f) La frequenza di 100 Hz di THÖR e il fattore 5000 di TUM da una fonte scritta. (g) Le voci di Wikipedia [318]–[327] valgono come indizio: per l'allegato servono le primarie.
+
 ## 9. Che cosa propongo dopo
 
 1. Nel documento di stato sostituire le chiavi provvisorie con quelle definitive della tabella del §7, e portare nelle frasi le correzioni 1–7 e 10 del primo elenco e le cifre 1–6 del secondo: sono quelle che cambiano una frase già scritta.
@@ -3678,3 +4344,8 @@ Le chiavi fra parentesi quadre sono state estratte con una ricerca testuale dall
 10. Ripetere il controllo di completezza (indirizzi, identificativi arXiv, DOI) a ogni chiusura di un'estensione f7–f10: alle 17:35 i ruoli stavano ancora scrivendo. Alle voci degli insiemi di dati vanno aggiunti gli usi di `f10-dati/20-validazione/VALIDAZIONE_DATI.md`, scritto alle 17:23 e non letto da me (non contiene indirizzi, identificativi né citazioni «cognome e anno»: ricerca testuale delle 17:35).
 11. Allargare il campione della verifica alle altre 95 voci del gruppo 1 prima di usare l'elenco in un testo per la giuria, a partire dalle voci citate nel documento di stato.
 12. Previsione nuova (`fonti-finale-1`): fra le 95 voci del gruppo 1 fuori dal campione, quelle a cui manca almeno un dato bibliografico che Crossref possiede (pagine, fascicolo o DOI della versione a stampa) sono almeno 10. Meccanismo: nel campione di venti i completamenti sono stati cinque. La smentisce un'interrogazione di Crossref su tutte e 95 che ne trova meno di 10.
+13. (Aggiornamento f12.) Correggere in `f14-classificazione/01-profili/profili_portatore.json` il link di R6 (DOI 10.1207/STHF0203_1) e marcare «non verificato» le cifre di `tronair-traino-aerei` e `dji-mavic-3-classic`; nei testi scrivere «media del passo massimo» per i 2,5 m/s di `bohannon1997`. Lo fa il ruolo dei profili o l'arbitro: io non tocco i loro file.
+14. (Aggiornamento f12.) Sostituire le dieci voci di Wikipedia con le primarie prima di consegnare l'allegato: per la persona c'è già `bohannon1997`; per frenata e reazione di chi guida servono AASHTO o NHTSA e il rapporto NCHRP 400; per i droni c'è `ue-2019-945` [190].
+15. (Aggiornamento f12.) Previsione `fonti-12-1`: cercando in PubMed «blind» con «reaction time» e «auditory cue» o «obstacle» mentre si cammina, si trova almeno un articolo che misura il tempo fra un avviso e l'inizio dell'arresto in persone non vedenti; meccanismo: gli studi sugli ausili elettronici di mobilità riportano spesso tempi di risposta. La smentisce una ricerca di un'ora senza un solo articolo con quella misura: allora T_r resta un parametro da misurare con persone. Dopo l'hackathon.
+16. (Aggiornamento f12.) Quando questo file sostituisce `documentazione/RIFERIMENTI.md`, portare con sé `riferimenti.bib` e controllare che `f13-allegato/06-bibliografia/allegato.bib` usi per `guibas1997` la stessa voce (lì è la versione di rivista del 1999, qui il contributo del 1997 con il rimando).
+

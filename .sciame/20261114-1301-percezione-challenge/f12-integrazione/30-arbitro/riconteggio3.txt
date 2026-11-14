@@ -1,0 +1,19 @@
+nuovi424.jsonl | righe con il campo: 150
+   pannello «mobile» per (profilo, livello, tipo): {}
+   riagganci a soggetto nascosto, eventi (passaggi): {"('d435i', 'nominale', 'a05')": '1 (1/30)'}
+   solo nominale: pannello mobile 0/140; passaggi con riaggancio a nascosto 1/140
+nuovi848.jsonl | righe con il campo: 150
+   pannello «mobile» per (profilo, livello, tipo): {}
+   riagganci a soggetto nascosto, eventi (passaggi): {"('d435i', 'limite', 'a12')": '2 (2/10)', "('d435i', 'nominale', 'a05')": '1 (1/30)'}
+   solo nominale: pannello mobile 0/140; passaggi con riaggancio a nascosto 1/140
+ultimi424_replica.jsonl | righe con il campo: 120
+   pannello «mobile» per (profilo, livello, tipo): {"('d435i', 'nominale', 'a12z')": '7/10'}
+   riagganci a soggetto nascosto, eventi (passaggi): {}
+   solo nominale: pannello mobile 7/120; passaggi con riaggancio a nascosto 0/120
+ultimi848_replica.jsonl | righe con il campo: 120
+   pannello «mobile» per (profilo, livello, tipo): {"('d435i', 'nominale', 'a12z')": '7/10'}
+   riagganci a soggetto nascosto, eventi (passaggi): {"('d435i', 'nominale', 'a12')": '1 (1/30)'}
+   solo nominale: pannello mobile 7/120; passaggi con riaggancio a nascosto 1/120
+rimozione, riga di esempio: {'conf': 'prima', 'nome': 'd435i_nom__B4_rimozione__s301', 'fotogrammi': 76, 'tracce_confermate': 51, 'rimozione': {'acceso_alla_rimozione': True, 'fotogrammi_acceso_dopo': 30, 'ultimo_acceso': 29, 'acceso_alla_fine': True}} | eventi {'nascita': 138, 'conferma': 51, 'ingresso_in_ombra': 42, 'identita_ambigua': 521, 'strato_finito': 25, 'chiusura': 31, 'perso': 13}
+rimozione, riga di esempio: {'conf': 'tutte_p', 'nome': 'd435i_nom__B4_rimozione__s301', 'fotogrammi': 76, 'tracce_confermate': 2, 'rimozione': {'acceso_alla_rimozione': True, 'fotogrammi_acceso_dopo': 30, 'ultimo_acceso': 29, 'acceso_alla_fine': True}} | eventi {'nascita': 2, 'conferma': 2, 'ingresso_in_ombra': 1, 'riaggancio': 1, 'prima_misura_piena': 1, 'chiusura': 2}
+rimozione: configurazioni presenti Counter({'prima': 10, 'tutte_p': 10})

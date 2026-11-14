@@ -1,0 +1,11 @@
+riaggancio D a_ (c7 0 e 1)                   : 10454/10508
+riaggancio D a_ + b_percorso                 : 21165/21265
+riaggancio D tutti senza estraneo, toglie=0  : 27414/27834
+riaggancio T a_ (c7 0 e 1)                   : 11944/11972
+riaggancio T a_ + b_percorso                 : 21172/21212
+riaggancio T tutti senza estraneo, toglie=0  : 50730/54523
+riaggancio L a_ (c7 0 e 1)                   : 8818/9064
+riaggancio L a_ + b_percorso                 : 15590/16031
+riaggancio L tutti senza estraneo, toglie=0  : 21988/22916
+scoperti, c7=1, senza estraneo, toglie=0: 1832 su 169903 (validi 169373 )
+idem con tutti i c7: 2760 su 193305 | validi senza estraneo: 194861

@@ -1,0 +1,99 @@
+1. PROVA D'INSIEME: file con righe R: 75 righe R: 300
+   comportamenti visti: ['fermo-in-vista', 'lontano', 'prosegue', 'rallenta', 'sosta', 'sostalunga', 'svolta', 'torna']
+   a) c7=1: lanciati 24000, nascosti 23402, vuoti 0, scoperti conf 17 + non conf 7
+   a) c7=0: lanciati 24000, nascosti 23402, vuoti 0, scoperti conf 680 + non conf 248
+      limite sup. Wilson 95 % di 0 su 6000 camminatori distinti: 6.40 su 10 000; di 0 su 23 402: 1.64
+   tutti i lanci: validi 217861  vuoti 0  fuori R100 (passaggi) 0
+   b) D: comportamenti ['prosegue', 'rallenta', 'sosta', 'torna', 'sostalunga'] | celle peggiori (n>=400): {('prim', 'fino a 2 s'): '942/1045=0.882 (sostalunga, 1 s)', ('sec', '3 s'): '845/984=0.836 (prosegue, 3 s)', ('sec', 'fino a 2 s'): '1257/1388=0.889 (prosegue, 2 s)'}
+      D: celle secondarie sopra soglia: 13 su 15
+   b) T: comportamenti ['prosegue', 'rallenta', 'sosta', 'torna', 'sostalunga'] | celle peggiori (n>=400): {('prim', '3 s'): '851/891=0.939 (rallenta, 3 s)', ('prim', 'fino a 2 s'): '1679/1730=0.961 (sosta, 2 s)', ('sec', '3 s'): '666/698=0.936 (prosegue, 3 s)', ('sec', 'fino a 2 s'): '1222/1265=0.955 (prosegue, 2 s)'}
+      T: celle secondarie sopra soglia: 15 su 15
+   b) L: comportamenti ['prosegue', 'rallenta', 'sosta', 'torna', 'sostalunga'] | celle peggiori (n>=400): {('prim', '3 s'): '1637/1774=0.909 (torna, 3 s)', ('prim', 'fino a 2 s'): '1995/2112=0.934 (torna, 2 s)', ('sec', '3 s'): '1754/1922=0.899 (torna, 3 s)', ('sec', 'fino a 2 s'): '2125/2279=0.921 (torna, 2 s)'}
+      L: celle secondarie sopra soglia: 15 su 15
+   d) estraneo D c1=si: identita' sbagliata 3027/3041 = 0.995
+   d) estraneo D c1=no: identita' sbagliata 1457/3029 = 0.481
+   d) estraneo T c1=si: identita' sbagliata 3493/3616 = 0.966
+   d) estraneo T c1=no: identita' sbagliata 2567/3609 = 0.711
+   d) estraneo L c1=si: identita' sbagliata 3239/3546 = 0.913
+   d) estraneo L c1=no: identita' sbagliata 2393/3540 = 0.676
+   f) riaggancio D (a_, c7=1): 5227/5254 = 0.9949, Wilson inf 0.993
+   f) riaggancio T (a_, c7=1): 5972/5986 = 0.9977, Wilson inf 0.996
+   f) riaggancio L (a_, c7=1): 4409/4532 = 0.9729, Wilson inf 0.968
+2. LIBERO DELLA CELLA
+    banco.json NF 30 righe 4500 regole {'SC': 500, 'RP': 500, 'V17': 500, 'V18-1': 500, 'V18-m': 500, 'PR1': 500, 'PR2': 500, 'PR3': 500, 'PR4': 500}
+      PR1      |err|<=0,5: condizioni 300, fotogrammi 9000, fot. con violazione 53, celle 93 | |err|=1: cond 200, fot. viol 394
+      PR2      |err|<=0,5: condizioni 300, fotogrammi 9000, fot. con violazione 277, celle 455 | |err|=1: cond 200, fot. viol 716
+      PR3      |err|<=0,5: condizioni 300, fotogrammi 9000, fot. con violazione 48, celle 89 | |err|=1: cond 200, fot. viol 290
+      PR4      |err|<=0,5: condizioni 300, fotogrammi 9000, fot. con violazione 0, celle 0 | |err|=1: cond 200, fot. viol 150
+      RP       |err|<=0,5: condizioni 300, fotogrammi 9000, fot. con violazione 2565, celle 72775 | |err|=1: cond 200, fot. viol 1664
+      SC       |err|<=0,5: condizioni 300, fotogrammi 9000, fot. con violazione 1185, celle 12342 | |err|=1: cond 200, fot. viol 835
+      V17      |err|<=0,5: condizioni 300, fotogrammi 9000, fot. con violazione 301, celle 2622 | |err|=1: cond 200, fot. viol 548
+      V18-1    |err|<=0,5: condizioni 300, fotogrammi 9000, fot. con violazione 1130, celle 11671 | |err|=1: cond 200, fot. viol 1152
+      V18-m    |err|<=0,5: condizioni 300, fotogrammi 9000, fot. con violazione 368, celle 716 | |err|=1: cond 200, fot. viol 768
+      PR4 stanza vuota k=0.004 err=0.0 buchi=sparsi 5 %: mediana 3.0 m, resa 100.0 %, sconosciuto 0.7407407407407407
+      PR4 stanza vuota k=0.004 err=0.0 buchi=chiazze 5 %: mediana 3.0 m, resa 89.4 %, sconosciuto 10.0
+      PR4 stanza vuota k=0.004 err=0.5 buchi=sparsi 5 %: mediana 3.0 m, resa 100.0 %, sconosciuto 0.0
+      PR4 stanza vuota k=0.004 err=0.5 buchi=chiazze 5 %: mediana 3.0 m, resa 90.4 %, sconosciuto 9.25925925925926
+      PR4 stanza vuota k=0.01 err=0.0 buchi=sparsi 5 %: mediana 3.0 m, resa 99.2 %, sconosciuto 0.37037037037037035
+      PR4 stanza vuota k=0.01 err=0.0 buchi=chiazze 5 %: mediana 3.0 m, resa 89.6 %, sconosciuto 11.851851851851851
+      PR4 stanza vuota k=0.01 err=0.5 buchi=sparsi 5 %: mediana 2.4 m, resa 81.0 %, sconosciuto 0.0
+      PR4 stanza vuota k=0.01 err=0.5 buchi=chiazze 5 %: mediana 2.2 m, resa 74.0 %, sconosciuto 10.0
+    banco_semi2.json NF 30 righe 4500 regole {'SC': 500, 'RP': 500, 'V17': 500, 'V18-1': 500, 'V18-m': 500, 'PR1': 500, 'PR2': 500, 'PR3': 500, 'PR4': 500}
+      PR1      |err|<=0,5: condizioni 300, fotogrammi 9000, fot. con violazione 43, celle 89 | |err|=1: cond 200, fot. viol 406
+      PR2      |err|<=0,5: condizioni 300, fotogrammi 9000, fot. con violazione 280, celle 480 | |err|=1: cond 200, fot. viol 717
+      PR3      |err|<=0,5: condizioni 300, fotogrammi 9000, fot. con violazione 45, celle 93 | |err|=1: cond 200, fot. viol 294
+      PR4      |err|<=0,5: condizioni 300, fotogrammi 9000, fot. con violazione 0, celle 0 | |err|=1: cond 200, fot. viol 145
+      RP       |err|<=0,5: condizioni 300, fotogrammi 9000, fot. con violazione 2578, celle 73235 | |err|=1: cond 200, fot. viol 1667
+      SC       |err|<=0,5: condizioni 300, fotogrammi 9000, fot. con violazione 1156, celle 12566 | |err|=1: cond 200, fot. viol 810
+      V17      |err|<=0,5: condizioni 300, fotogrammi 9000, fot. con violazione 295, celle 2813 | |err|=1: cond 200, fot. viol 595
+      V18-1    |err|<=0,5: condizioni 300, fotogrammi 9000, fot. con violazione 1149, celle 11903 | |err|=1: cond 200, fot. viol 1150
+      V18-m    |err|<=0,5: condizioni 300, fotogrammi 9000, fot. con violazione 371, celle 768 | |err|=1: cond 200, fot. viol 776
+      PR4 stanza vuota k=0.004 err=0.0 buchi=sparsi 5 %: mediana 3.0 m, resa 100.0 %, sconosciuto 0.37037037037037035
+      PR4 stanza vuota k=0.004 err=0.0 buchi=chiazze 5 %: mediana 3.0 m, resa 91.4 %, sconosciuto 4.814814814814815
+      PR4 stanza vuota k=0.004 err=0.5 buchi=sparsi 5 %: mediana 3.0 m, resa 99.9 %, sconosciuto 0.37037037037037035
+      PR4 stanza vuota k=0.004 err=0.5 buchi=chiazze 5 %: mediana 3.0 m, resa 91.6 %, sconosciuto 7.037037037037037
+      PR4 stanza vuota k=0.01 err=0.0 buchi=sparsi 5 %: mediana 3.0 m, resa 99.3 %, sconosciuto 0.37037037037037035
+      PR4 stanza vuota k=0.01 err=0.0 buchi=chiazze 5 %: mediana 3.0 m, resa 89.2 %, sconosciuto 6.666666666666667
+      PR4 stanza vuota k=0.01 err=0.5 buchi=sparsi 5 %: mediana 2.4 m, resa 82.4 %, sconosciuto 0.37037037037037035
+      PR4 stanza vuota k=0.01 err=0.5 buchi=chiazze 5 %: mediana 2.2 m, resa 73.0 %, sconosciuto 11.851851851851851
+3. IDENTITA' (06) E CONTROPROVA (07), configurazione tutte_p, D435i nominale
+   nuovi424.jsonl               424 px: {'a12': (29, 30), 'a05': (29, 30), 'b': (30, 30)} somma 88/90; nascosti 4334, non in avviso ne' occupato 334, su libero 0; libero in ombra 0; acceso alla fine 120/120
+   nuovi848.jsonl               848 px: {'a12': (30, 30), 'a05': (29, 30), 'b': (29, 30)} somma 88/90; nascosti 4335, non in avviso ne' occupato 334, su libero 0; libero in ombra 0; acceso alla fine 120/120
+   ultimi424_replica.jsonl      424 px: {'a12': (30, 30), 'a05': (30, 30), 'b': (28, 30)} somma 88/90; nascosti 3502, non in avviso ne' occupato 0, su libero 0; libero in ombra 0; acceso alla fine 110/110
+   ultimi848_replica.jsonl      848 px: {'a12': (29, 30), 'a05': (30, 30), 'b': (27, 30)} somma 86/90; nascosti 3502, non in avviso ne' occupato 0, su libero 0; libero in ombra 0; acceso alla fine 110/110
+   somma autore + replica a 424 px: 176/180 = 0.978  Wilson 95 % [0.944; 0.991]
+   somma autore + replica a 848 px: 174/180 = 0.967  Wilson 95 % [0.929; 0.985]
+   att_rotto: B1_scatola15_2p0m_424: n=3, gruppo sul bersaglio 29/30
+   att_rotto: B1_scatola15_2p0m_848: n=3, gruppo sul bersaglio 30/30
+   att_rotto: B1_scatola15_2p8m_424: n=3, gruppo sul bersaglio 22/30
+   att_rotto: B1_scatola15_2p8m_848: n=3, gruppo sul bersaglio 23/30
+   att_rotto: B2_adulto_al_pannello: n=20, gruppo sul bersaglio 0/200
+   att_rotto: B2_bambino_al_pannello: n=20, gruppo sul bersaglio 70/200
+   att_rotto: B2_bambino_aperto: n=20, gruppo sul bersaglio 200/200
+   att_rotto: B2_cubo10_2p0m_424: n=3, gruppo sul bersaglio 0/30
+   att_rotto: B2_cubo10_2p0m_848: n=3, gruppo sul bersaglio 0/30
+   att_rotto: B4_rimozione: n=10; rimozione: {'{"acceso_alla_rimozione": true, "fotogra': 10}
+   att_estraneo: E_estraneo_424: n=10; estraneo: {'{"A_nascosta": 39, "idA": 1, "idB": 1, "': 4, '{"A_nascosta": 41, "idA": 2, "idB": 2, "': 3, '{"A_nascosta": 39, "idA": 2, "idB": 2, "': 2}
+   att_estraneo: E_estraneo_848: n=10; estraneo: {'{"A_nascosta": 39, "idA": 1, "idB": 1, "': 4, '{"A_nascosta": 41, "idA": 2, "idB": 2, "': 3, '{"A_nascosta": 39, "idA": 2, "idB": 2, "': 2}
+   att_geometria: A1_pann21_pers28: n=10, continuita' 0; esito_identita: {'"diversa"': 10}
+   att_geometria: A1b_pann15_pers20: n=10, continuita' 9; esito_identita: {'"stessa"': 9, '"diversa"': 1}
+   att_geometria: A2_640px: n=10, continuita' 10; esito_identita: {'"stessa"': 10}
+   att_geometria: A2_d455_a05: n=10, continuita' 10; esito_identita: {'"stessa"': 10}
+   att_geometria: A2_g335_a05: n=10, continuita' 9; esito_identita: {'"stessa"': 9, '"diversa"': 1}
+   att_geometria: A5_a05: n=10, continuita' 10; esito_identita: {'"stessa"': 10}
+   att_geometria: A5_v16: n=10, continuita' 10; esito_identita: {'"stessa"': 10}
+   att_geometria: B3_bordo_campo: n=10, continuita' 9; esito_identita: {'"stessa"': 9, '"diversa"': 1}
+   att_persona: A4_alta120: n=10, continuita' 9; esito_identita: {'"stessa"': 9, '"diversa"': 1}
+   att_persona: A4_bambino100: n=10, continuita' 2; esito_identita: {'"diversa"': 8, '"stessa"': 2}
+   att_persona: A4_nera: n=10, continuita' 7; esito_identita: {'"stessa"': 7, '"diversa"': 3}
+   att_persona: A4_scura: n=10, continuita' 10; esito_identita: {'"stessa"': 10}
+   att_rumore: A3_limite: n=10, continuita' 0; esito_identita: {'"diversa"': 10}
+   att_rumore: A3_limite_buchi35: n=10, continuita' 0; esito_identita: {'"diversa"': 10}
+   att_rumore: A3_nominale_buchi35: n=10, continuita' 10; esito_identita: {'"stessa"': 10}
+   att_rumore: A3_pavimento_limite_buchi35: n=30
+   att_rumore: A3_scatola20_limite_buchi35: n=3, gruppo sul bersaglio 16/30
+   att_rumore: A6_pavimento_meno05: n=30
+   att_rumore: A6_pavimento_piu05: n=30
+   att_rumore: A6_posa_meno05: n=10, continuita' 10; esito_identita: {'"stessa"': 10}
+   att_rumore: A6_posa_piu05: n=10, continuita' 6; esito_identita: {'"stessa"': 6, '"diversa"': 4}
+   att_bordo2: B3b_bordo_campo_stretto: n=10, continuita' 0; esito_identita: {'"nessuna traccia dopo"': 10}

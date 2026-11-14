@@ -1,0 +1,99 @@
+A. Identita': dove sta il centro nascosto (tutte_p, tutti i profili e livelli)
+   nuovi424.jsonl               prima    passaggi 150: {'possibile_presenza': 4144, 'occupato': 0, 'non_osservato': 0, 'in_ombra_senza_avviso': 180, 'libero': 0, 'fuori_griglia': 334}; riagganci a nascosto 12; pannello mobile 130
+   nuovi424.jsonl               tutte_p  passaggi 150: {'possibile_presenza': 4324, 'occupato': 0, 'non_osservato': 0, 'in_ombra_senza_avviso': 0, 'libero': 0, 'fuori_griglia': 334}; riagganci a nascosto 1; pannello mobile 0
+   nuovi848.jsonl               prima    passaggi 150: {'possibile_presenza': 4049, 'occupato': 5, 'non_osservato': 0, 'in_ombra_senza_avviso': 271, 'libero': 0, 'fuori_griglia': 334}; riagganci a nascosto 7; pannello mobile 94
+   nuovi848.jsonl               tutte_p  passaggi 150: {'possibile_presenza': 4325, 'occupato': 0, 'non_osservato': 0, 'in_ombra_senza_avviso': 0, 'libero': 0, 'fuori_griglia': 334}; riagganci a nascosto 3; pannello mobile 0
+   ultimi424_replica.jsonl      prima    passaggi 0: {}; riagganci a nascosto 0; pannello mobile 0
+   ultimi424_replica.jsonl      tutte_p  passaggi 120: {'possibile_presenza': 3608, 'occupato': 0, 'non_osservato': 0, 'in_ombra_senza_avviso': 0, 'libero': 0, 'fuori_griglia': 0}; riagganci a nascosto 0; pannello mobile 7
+   ultimi848_replica.jsonl      prima    passaggi 0: {}; riagganci a nascosto 0; pannello mobile 0
+   ultimi848_replica.jsonl      tutte_p  passaggi 120: {'possibile_presenza': 3608, 'occupato': 0, 'non_osservato': 0, 'in_ombra_senza_avviso': 0, 'libero': 0, 'fuori_griglia': 0}; riagganci a nascosto 1; pannello mobile 7
+B. rimozione del pannello, prima n = 10 | chiavi: ['acceso_alla_fine', 'acceso_alla_rimozione', 'fotogrammi_acceso_dopo', 'ultimo_acceso']
+      acceso_alla_fine [('true', 10)]
+      acceso_alla_rimozione [('true', 10)]
+      fotogrammi_acceso_dopo [('30', 10)]
+      ultimo_acceso [('29', 10)]
+B. rimozione del pannello, tutte_p n = 10 | chiavi: ['acceso_alla_fine', 'acceso_alla_rimozione', 'fotogrammi_acceso_dopo', 'ultimo_acceso']
+      acceso_alla_fine [('true', 10)]
+      acceso_alla_rimozione [('true', 10)]
+      fotogrammi_acceso_dopo [('30', 10)]
+      ultimo_acceso [('29', 10)]
+   estraneo 424 prima: identita' di A data a B 0/10; A nascosta 397 fotogrammi; fuori avviso 0
+C. estraneo, chiavi: ['A_cella_libero', 'A_fuori_avviso', 'A_fuori_avviso_dopo_B', 'A_fuori_avviso_dopo_riaggancio', 'A_nascosta', 'A_nascosta_dopo_B', 'A_nascosta_dopo_riaggancio', 'B_visibile', 'idA', 'idB', 'identita_passata_a_B', 'riagganci', 'riaggancio_presunto']
+   estraneo 424 tutte_p: identita' di A data a B 9/10; A nascosta 397 fotogrammi; fuori avviso 0
+   estraneo 848 prima: identita' di A data a B 0/10; A nascosta 397 fotogrammi; fuori avviso 0
+   estraneo 848 tutte_p: identita' di A data a B 10/10; A nascosta 397 fotogrammi; fuori avviso 0
+D. Completezza per ricerca testuale (occorrenze in V3 finale | tabella finale | blocco f14 | piano finale | schermo finale)
+   F-401              V3   4 | TAB   4 | BLO   0 | PIA   1 | SCH   0
+   F-402              V3   2 | TAB   2 | BLO   0 | PIA   1 | SCH   0
+   F-403              V3   2 | TAB   1 | BLO   0 | PIA   0 | SCH   0
+   F-404              V3   2 | TAB   2 | BLO   0 | PIA   0 | SCH   0
+   F-405              V3   2 | TAB   2 | BLO   0 | PIA   0 | SCH   0
+   F-406              V3   1 | TAB   1 | BLO   0 | PIA   0 | SCH   0
+   F-407              V3   1 | TAB   1 | BLO   0 | PIA   0 | SCH   0
+   F-408              V3   3 | TAB   1 | BLO   0 | PIA   1 | SCH   0
+   F-409              V3  15 | TAB   6 | BLO   0 | PIA   2 | SCH   1
+   F-410              V3   2 | TAB   3 | BLO   0 | PIA   0 | SCH   0
+   F-411              V3   1 | TAB   1 | BLO   0 | PIA   0 | SCH   0
+   F-412              V3   2 | TAB   1 | BLO   0 | PIA   0 | SCH   0
+   F-413              V3   2 | TAB   2 | BLO   0 | PIA   0 | SCH   0
+   K-401              V3   1 | TAB   3 | BLO   0 | PIA   0 | SCH   0
+   K-402              V3   0 | TAB   2 | BLO   0 | PIA   0 | SCH   0
+   K-403              V3   1 | TAB   2 | BLO   0 | PIA   0 | SCH   0
+   K-404              V3   2 | TAB   3 | BLO   0 | PIA   0 | SCH   0
+   K-405              V3   0 | TAB   2 | BLO   0 | PIA   0 | SCH   0
+   K-406              V3   3 | TAB   3 | BLO   0 | PIA   0 | SCH   0
+   K-407              V3   3 | TAB   3 | BLO   0 | PIA   0 | SCH   0
+   K-014              V3   3 | TAB   6 | BLO   0 | PIA   0 | SCH   0
+   K-015              V3   1 | TAB   1 | BLO   0 | PIA   0 | SCH   0
+   K-016              V3   5 | TAB   4 | BLO   0 | PIA   0 | SCH   0
+   K-017              V3   0 | TAB   0 | BLO   0 | PIA   0 | SCH   0
+   K-018              V3   1 | TAB   1 | BLO   0 | PIA   0 | SCH   0
+   K-003              V3   3 | TAB   1 | BLO   0 | PIA   0 | SCH   0
+   K-007              V3   2 | TAB   0 | BLO   0 | PIA   0 | SCH   0
+   K-216              V3   2 | TAB   1 | BLO   0 | PIA   0 | SCH   0
+   K-305              V3   2 | TAB   3 | BLO   0 | PIA   0 | SCH   0
+   K-404              V3   2 | TAB   3 | BLO   0 | PIA   0 | SCH   0
+   K-406              V3   3 | TAB   3 | BLO   0 | PIA   0 | SCH   0
+   K-107              V3   1 | TAB   5 | BLO   0 | PIA   0 | SCH   0
+   K-108              V3   2 | TAB   3 | BLO   0 | PIA   1 | SCH   0
+   K-109              V3   2 | TAB   2 | BLO   0 | PIA   0 | SCH   0
+   K-110              V3   1 | TAB   3 | BLO   0 | PIA   0 | SCH   0
+   K-111              V3   1 | TAB   4 | BLO   0 | PIA   0 | SCH   0
+   K-202              V3   2 | TAB   1 | BLO   0 | PIA   0 | SCH   0
+   K-214              V3   2 | TAB   2 | BLO   0 | PIA   0 | SCH   0
+   K-215              V3   2 | TAB   7 | BLO   0 | PIA   0 | SCH   0
+   K-218              V3   1 | TAB   3 | BLO   0 | PIA   0 | SCH   0
+   K-219              V3   2 | TAB   3 | BLO   0 | PIA   0 | SCH   0
+   K-220              V3   1 | TAB   2 | BLO   0 | PIA   0 | SCH   0
+   K-221              V3   2 | TAB   2 | BLO   0 | PIA   0 | SCH   0
+   K-301              V3   0 | TAB   2 | BLO   0 | PIA   0 | SCH   0
+   K-302              V3   0 | TAB   1 | BLO   0 | PIA   0 | SCH   0
+   K-303              V3   0 | TAB   1 | BLO   0 | PIA   0 | SCH   0
+   K-304              V3   0 | TAB   1 | BLO   0 | PIA   0 | SCH   0
+   K-306              V3   2 | TAB   2 | BLO   0 | PIA   0 | SCH   1
+   K-307              V3   0 | TAB   1 | BLO   0 | PIA   0 | SCH   0
+   K-308              V3   2 | TAB   3 | BLO   0 | PIA   0 | SCH   0
+   ingaggio           V3   3 | TAB   1 | BLO   0 | PIA   1 | SCH   1
+   puntamento         V3   3 | TAB   1 | BLO   0 | PIA   1 | SCH   1
+   R1                 V3   7 | TAB   2 | BLO   0 | PIA   0 | SCH   0
+   R8                 V3   5 | TAB   2 | BLO   0 | PIA   0 | SCH   0
+   M1                 V3   5 | TAB   1 | BLO   0 | PIA   1 | SCH   0
+   M8                 V3   2 | TAB   1 | BLO   0 | PIA   0 | SCH   0
+   c1                 V3   8 | TAB   7 | BLO   1 | PIA   3 | SCH   0
+   c8                 V3   2 | TAB   3 | BLO   0 | PIA   0 | SCH   0
+   C1                 V3   1 | TAB   4 | BLO   0 | PIA   9 | SCH   2
+   C8                 V3   1 | TAB   4 | BLO   0 | PIA   0 | SCH   0
+   1,8 m              V3   5 | TAB   9 | BLO   0 | PIA   1 | SCH   5
+   0,5°               V3  26 | TAB  10 | BLO   0 | PIA   3 | SCH   2
+   classific          V3   0 | TAB   0 | BLO  30 | PIA   0 | SCH   0
+   etichett           V3   8 | TAB   6 | BLO  63 | PIA   1 | SCH   1
+   non è realizzato   V3   0 | TAB   0 | BLO   2 | PIA   0 | SCH   0
+   a mano             V3   3 | TAB   1 | BLO  16 | PIA   0 | SCH   0
+   CL1                V3   0 | TAB   0 | BLO   4 | PIA   0 | SCH   0
+   SCENARIO           V3   0 | TAB   0 | BLO   8 | PIA   0 | SCH   0
+   facoltativa        V3   1 | TAB   0 | BLO   1 | PIA   0 | SCH   0
+   F-401..F-413 e K-401..K-407 assenti sia da V3 sia dalla tabella: []
+E. Frasi da non dire fuori dagli elenchi di divieto (schermo finale, copione §7; piano finale)
+   copione: «perso» 3 volta/e: ['sto che il segno non sparisce mentre la persona è nascosta, che la zona dice quanto è', ' camera nostra, una camera in moto, due persone dietro lo stesso ostacolo, il vetro, ']
+   copione: «9 su 10» 1 volta/e: ['azione, con un ostacolo largo, arriva a 9 su 10 fino a 2 secondi; con questo pannello a']
+   parole del copione: 426

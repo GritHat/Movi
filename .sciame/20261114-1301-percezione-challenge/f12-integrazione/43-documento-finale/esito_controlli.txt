@@ -1,0 +1,28 @@
+== 1. Parole (wc -w)
+file intero:        2276
+intestazione:       247
+schema:             173
+tabelle:            348
+riquadro limiti:    249
+corpo:              1255
+== 2. Righe delle tabelle (senza intestazione)
+tabella 1: 6 righe
+tabella 2: 4 righe
+== 3. Frasi da non dire (V3 §3, SCH §6, BL §9, verdetto d'integrazione §7): occorrenze nel testo, senza l'intestazione
+TROVATA «voxel»: 1 riga/righe
+     … - **Mappa di volume a cubetti (voxel).** A sensore fermo non dà più del fotogramm
+TROVATA «360°»: 1 riga/righe
+     … - **Tre sensori a tempo di volo per 360°.** Coprono 180° [C].
+TROVATA «massa e accelerazione»: 1 riga/righe
+     … - **Stimare massa e accelerazione.** Da queste misure non si ricavano [C]. Con
+TROVATA «100 %»: 1 riga/righe
+     … o per ferma una persona che transita, nel 38–100 % dei transiti [S].
+TROVATA «chiuso»: 1 riga/righe
+     … - Dominio: camera ferma a 1,2 m da terra, al chiuso, fino a 3 m; posa della camera nota (inclina
+TROVATA «sempre»: 1 riga/righe
+     …  traccia al ritorno (a schermo «identità») è sempre «presunto»: coi parametri di partenza reggev
+(fine elenco: ciò che non compare ha 0 occorrenze)
+== 4. «9 su 10»: ogni occorrenza col suo contesto
+o, con 5 cm di rumore), con un ostacolo largo 2 m, il bordo dell'ombra noto e la persona sul proprio percorso, finché resta nascosta è dentro la zona in almeno 9 casi su 10 fino a 2 s e in almeno 85 su 100 fino a 3 s [S]. Con il pan
+== 5. Cifre del testo che mancano in CIFRE.md
+cifre distinte nel testo: 62 · mancanti in CIFRE.md: 0 []
