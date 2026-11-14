@@ -1,0 +1,20 @@
+--- ET minimo 2,5 h, mie/leggero
+senza ET                                       leggero  P(MD<=14)=0.428 [0.421;0.435] <=16: 0.71 mediana 14.47 p80 16.89 | protetti nel tronco h12/14/16: 0.959 0.992 0.998
+ET su P3 dopo C2a, fuori dal tronco (solo prima della prova generale) leggero  P(MD<=14)=0.195 [0.190;0.201] <=16: 0.44 mediana 16.43 p80 19.45 | protetti nel tronco h12/14/16: 0.959 0.992 0.998
+ET su P3 dopo C2a, nel tronco (PI la aspetta)  leggero  P(MD<=14)=0.195 [0.190;0.201] <=16: 0.44 mediana 16.43 p80 19.45 | protetti nel tronco h12/14/16: 0.959 0.992 0.998
+ET su P4 dopo D2a, nel tronco                  leggero  P(MD<=14)=0.262 [0.256;0.268] <=16: 0.52 mediana 15.83 p80 18.68 | protetti nel tronco h12/14/16: 0.959 0.991 0.998
+--- ET minimo 2,5 h, ruolo2/medio
+senza ET                                       medio    P(MD<=14)=0.039 [0.036;0.042] <=16: 0.15 mediana 19.56 p80 23.08 | protetti nel tronco h12/14/16: 0.594 0.818 0.930
+ET su P3 dopo C2a, fuori dal tronco (solo prima della prova generale) medio    P(MD<=14)=0.019 [0.017;0.021] <=16: 0.09 mediana 20.81 p80 24.69 | protetti nel tronco h12/14/16: 0.594 0.818 0.930
+ET su P3 dopo C2a, nel tronco (PI la aspetta)  medio    P(MD<=14)=0.019 [0.017;0.021] <=16: 0.09 mediana 20.81 p80 24.69 | protetti nel tronco h12/14/16: 0.594 0.818 0.930
+ET su P4 dopo D2a, nel tronco                  medio    P(MD<=14)=0.020 [0.018;0.022] <=16: 0.10 mediana 20.70 p80 24.59 | protetti nel tronco h12/14/16: 0.594 0.815 0.931
+--- ET tutto 5,5 h, mie/leggero
+senza ET                                       leggero  P(MD<=14)=0.428 [0.421;0.435] <=16: 0.71 mediana 14.47 p80 16.89 | protetti nel tronco h12/14/16: 0.959 0.992 0.998
+ET su P3 dopo C2a, fuori dal tronco (solo prima della prova generale) leggero  P(MD<=14)=0.053 [0.050;0.056] <=16: 0.17 mediana 19.44 p80 23.31 | protetti nel tronco h12/14/16: 0.959 0.992 0.998
+ET su P3 dopo C2a, nel tronco (PI la aspetta)  leggero  P(MD<=14)=0.053 [0.050;0.056] <=16: 0.17 mediana 19.44 p80 23.31 | protetti nel tronco h12/14/16: 0.959 0.992 0.998
+ET su P4 dopo D2a, nel tronco                  leggero  P(MD<=14)=0.097 [0.093;0.101] <=16: 0.26 mediana 18.40 p80 22.20 | protetti nel tronco h12/14/16: 0.959 0.991 0.998
+--- ET tutto 5,5 h, ruolo2/medio
+senza ET                                       medio    P(MD<=14)=0.039 [0.036;0.042] <=16: 0.15 mediana 19.56 p80 23.08 | protetti nel tronco h12/14/16: 0.594 0.818 0.930
+ET su P3 dopo C2a, fuori dal tronco (solo prima della prova generale) medio    P(MD<=14)=0.005 [0.005;0.007] <=16: 0.03 mediana 23.30 p80 28.21 | protetti nel tronco h12/14/16: 0.594 0.818 0.930
+ET su P3 dopo C2a, nel tronco (PI la aspetta)  medio    P(MD<=14)=0.005 [0.005;0.007] <=16: 0.03 mediana 23.30 p80 28.21 | protetti nel tronco h12/14/16: 0.594 0.818 0.930
+ET su P4 dopo D2a, nel tronco                  medio    P(MD<=14)=0.008 [0.006;0.009] <=16: 0.04 mediana 23.07 p80 27.96 | protetti nel tronco h12/14/16: 0.594 0.815 0.931

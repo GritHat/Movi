@@ -1,0 +1,41 @@
+== A1. Sequenze di etichette a caso (N=20000): quota con almeno un ciclo w_con < w_senza
+   P_C2 (max con la base; senza etichetta = inviluppo)         15814  (0.791)
+   U (massimo che non torna, pavimento w_scen)                     0  (0.000)
+   quota con fascia che CALA nel tempo per un cambio d'etichetta: P_C2 0.802 ; U 0.000
+   caso peggiore P_C2: perde 2.24 m di fascia; sito=[np.str_('treno_man'), np.str_('corsa'), np.str_('auto_lav')]; etichette=['auto_lav', 'agv', 'auto_lav', None, 'traino']
+   caso a mano: sito {persona, carrello}; senza etichetta w=1.60 m; con «persona» sicura (regola P_C2) w=0.89 m; carrello vero a 4,0 m/s chiede 1.42 m -> scoperto di 0.53 m
+== A2. USO §5: v_obj <- min(v_max(classe), v + a_max*T_ant), d_serve = v_obj*(t_conf+tau+T_r), T_r=1,0, stazione fissa
+   vero carrello a 4.0 m/s, etichetta «pedone»: v_obj senza classe 4.20 | con l'etichetta 2.50 | con la classe vera 5.00  -> d_serve 5.97 | 3.56 | 7.11 m ; etichetta - osservato = -2.42 m
+   vero auto     a 6.0 m/s, etichetta «pedone»: v_obj senza classe 6.20 | con l'etichetta 2.50 | con la classe vera 8.00  -> d_serve 8.82 | 3.56 | 11.38 m ; etichetta - osservato = -5.26 m
+   vero auto     a 0.0 m/s, etichetta «pedone»: v_obj senza classe 0.20 | con l'etichetta 2.50 | con la classe vera 3.56  -> d_serve 0.28 | 3.56 | 5.06 m ; etichetta - osservato = +3.27 m
+   vero auto     a 0.0 m/s, etichetta «carrello»: v_obj senza classe 0.20 | con l'etichetta 1.42 | con la classe vera 3.56  -> d_serve 0.28 | 2.02 | 5.06 m ; etichetta - osservato = +1.74 m
+== A3. Conti di portata rifatti (stazione fissa, T_r=1,0 s, margine 0,40 m, portata 3 m)
+   persona_a_piedi              v_tip  1.40 v_max  2.50 | d_avv PROFILI  2.02 | con t_conf  2.39 | 3 m in 2.14 s (v_tip) 1.20 s (v_max) | avviso emesso a 2.41 m dal contatto (v_tip)
+   persona_di_corsa             v_tip  3.00 v_max  8.00 | d_avv PROFILI  3.86 | con t_conf  4.67 | 3 m in 1.00 s (v_tip) 0.38 s (v_max) | avviso emesso a 1.73 m dal contatto (v_tip)
+   bicicletta                   v_tip  4.30 v_max  8.30 | d_avv PROFILI  5.37 | con t_conf  6.51 | 3 m in 0.70 s (v_tip) 0.36 s (v_max) | avviso emesso a 1.19 m dal contatto (v_tip)
+   monopattino                  v_tip  4.20 v_max  5.60 | d_avv PROFILI  5.25 | con t_conf  6.37 | 3 m in 0.71 s (v_tip) 0.54 s (v_max) | avviso emesso a 1.23 m dal contatto (v_tip)
+   carrello_elevatore           v_tip  2.20 v_max  4.50 | d_avv PROFILI  2.94 | con t_conf  3.53 | 3 m in 1.36 s (v_tip) 0.67 s (v_max) | avviso emesso a 2.07 m dal contatto (v_tip)
+   agv_magazzino                v_tip  1.00 v_max  2.00 | d_avv PROFILI  1.56 | con t_conf  1.82 | 3 m in 3.00 s (v_tip) 1.50 s (v_max) | avviso emesso a 2.58 m dal contatto (v_tip)
+   auto_area_lavoro             v_tip  2.80 v_max  8.30 | d_avv PROFILI  3.63 | con t_conf  4.38 | 3 m in 1.07 s (v_tip) 0.36 s (v_max) | avviso emesso a 1.82 m dal contatto (v_tip)
+   auto_strada_urbana           v_tip  8.30 v_max 13.90 | d_avv PROFILI  9.99 | con t_conf 12.20 | 3 m in 0.36 s (v_tip) 0.22 s (v_max) | avviso emesso a 0.00 m dal contatto (v_tip)
+   mezzo_piazzale               v_tip  1.70 v_max  8.30 | d_avv PROFILI  2.36 | con t_conf  2.82 | 3 m in 1.76 s (v_tip) 0.36 s (v_max) | avviso emesso a 2.28 m dal contatto (v_tip)
+   aereo_rullaggio              v_tip  9.00 v_max 15.40 | d_avv PROFILI 10.79 | con t_conf 13.20 | 3 m in 0.33 s (v_tip) 0.19 s (v_max) | avviso emesso a 0.00 m dal contatto (v_tip)
+   aereo_traino                 v_tip  1.40 v_max  4.20 | d_avv PROFILI  2.02 | con t_conf  2.39 | 3 m in 2.14 s (v_tip) 0.71 s (v_max) | avviso emesso a 2.41 m dal contatto (v_tip)
+   treno_banchina               v_tip 11.00 v_max 16.70 | d_avv PROFILI 13.11 | con t_conf 16.04 | 3 m in 0.27 s (v_tip) 0.18 s (v_max) | avviso emesso a 0.00 m dal contatto (v_tip)
+   tram_fermata                 v_tip  5.60 v_max 13.90 | d_avv PROFILI  6.87 | con t_conf  8.36 | 3 m in 0.54 s (v_tip) 0.22 s (v_max) | avviso emesso a 0.64 m dal contatto (v_tip)
+   treno_manovra                v_tip  4.20 v_max  8.30 | d_avv PROFILI  5.25 | con t_conf  6.37 | 3 m in 0.71 s (v_tip) 0.36 s (v_max) | avviso emesso a 1.23 m dal contatto (v_tip)
+   multirotore_lento            v_tip  3.00 v_max 19.00 | d_avv PROFILI  3.86 | con t_conf  4.67 | 3 m in 1.00 s (v_tip) 0.16 s (v_max) | avviso emesso a 1.73 m dal contatto (v_tip)
+   fuori dai 3 m a v_tip: formula di PROFILI 10 su 15 ; con t_conf 11 su 15
+   avviso EMESSO dopo il contatto a v_tip (3/v < 0,422 s, cioe' v > 7.11 m/s): ['auto_strada_urbana', 'aereo_rullaggio', 'treno_banchina']
+   a v_max: ['persona_di_corsa', 'bicicletta', 'auto_area_lavoro', 'auto_strada_urbana', 'mezzo_piazzale', 'aereo_rullaggio', 'treno_banchina', 'tram_fermata', 'treno_manovra', 'multirotore_lento']
+   la reazione (T_r=1,0 s) finisce dopo il contatto sopra 2.11 m/s (senza margine); con margine 0,40: 1.83 m/s; PROFILI dichiara 2,25
+   non vedente in cammino (1,0 m/s; a_fr 1,0), classe a 0.00 m/s: PROFILI 2.06 m | + v_c*v_ego/a 2.06 m | + t_conf 2.32 m
+   non vedente in cammino (1,0 m/s; a_fr 1,0), classe a 0.82 m/s: PROFILI 3.00 m | + v_c*v_ego/a 3.82 m | + t_conf 4.31 m
+   non vedente in cammino (1,0 m/s; a_fr 1,0), classe a 1.40 m/s: PROFILI 3.67 m | + v_c*v_ego/a 5.07 m | + t_conf 5.71 m
+   stessa persona, valori di USO (T_r 1,5; b 2,0): limite dichiarato 0,34 m/s; valori di PROFILI: 0,82 m/s. Due tabelle, due risposte.
+== A4. Veicolo FERMO etichettato «persona» (fermo 3 s a 2.5 m, poi parte con 3.0 m/s^2; contatto dopo 1.29 s; N=2000)
+   scatti di c1 mentre e' fermo: 0 su 2000
+   scatto prima del contatto: 2 su 2000 (0.001); ritardo mediano dello scatto dalla partenza: 1.40 s; v al contatto 3.87 m/s (v_max «persona» 2.5)
+== A4. Veicolo FERMO etichettato «persona» (fermo 3 s a 2.5 m, poi parte con 1.5 m/s^2; contatto dopo 1.83 s; N=2000)
+   scatti di c1 mentre e' fermo: 0 su 2000
+   scatto prima del contatto: 0 su 2000 (0.000); ritardo mediano dello scatto dalla partenza: 2.40 s; v al contatto 2.74 m/s (v_max «persona» 2.5)

@@ -1,0 +1,32 @@
+== 1. Dominio per classe, stazione fissa, T_r 1,0 s, C 0,95 m
+classe | v_tip v_max | w(v_max) | d_serve tip / max | dentro 3 m tip/max | 3 m in s (tip/max) | dopo il contatto tip/max
+persona_a_piedi        |   1.4   2.5 |  0.89 |   2.94 /   4.51 | si/no | 2.14/1.20 | no/no
+persona_di_corsa       |   3.0   8.0 |  2.84 |   5.22 /  12.33 | no/no | 1.00/0.38 | no/si
+bicicletta             |   4.3   8.3 |  2.95 |   7.06 /  12.75 | no/no | 0.70/0.36 | no/si
+monopattino            |   4.2   5.6 |  1.99 |   6.92 /   8.91 | no/no | 0.71/0.54 | no/no
+carrello_elevatore     |   2.2   4.5 |  1.60 |   4.08 /   7.35 | no/no | 1.36/0.67 | no/no
+agv_magazzino          |   1.0   2.0 |  0.71 |   2.37 /   3.79 | si/no | 3.00/1.50 | no/no
+auto_area_lavoro       |   2.8   8.3 |  2.95 |   4.93 /  12.75 | no/no | 1.07/0.36 | no/si
+auto_strada_urbana     |   8.3  13.9 |  4.93 |  12.75 /  20.72 | no/no | 0.36/0.22 | si/si
+mezzo_piazzale         |   1.7   8.3 |  2.95 |   3.37 /  12.75 | no/no | 1.76/0.36 | no/si
+aereo_rullaggio        |   9.0  15.4 |  5.47 |  13.75 /  22.85 | no/no | 0.33/0.19 | si/si
+aereo_traino           |   1.4   4.2 |  1.49 |   2.94 /   6.92 | si/no | 2.14/0.71 | no/no
+treno_banchina         |  11.0  16.7 |  5.93 |  16.59 /  24.70 | no/no | 0.27/0.18 | si/si
+tram_fermata           |   5.6  13.9 |  4.93 |   8.91 /  20.72 | no/no | 0.54/0.22 | no/si
+treno_manovra          |   4.2   8.3 |  2.95 |   6.92 /  12.75 | no/no | 0.71/0.36 | no/si
+multirotore_lento      |   3.0  19.0 |  6.75 |   5.22 /  27.97 | no/no | 1.00/0.16 | no/si
+dentro a v_tip 3/15, a v_max 0/15; dopo il contatto a v_tip 3/15, a v_max 10/15; w(v_max)>=1,7 m: 11/15; soglia dopo il contatto 7.11 m/s
+== 2. Velocita' coperta, stazione fissa: C=0.95: 1.442 C=0.4: 1.828 C=0.0: 2.110 | col prodotto del fascicolo (1,425 s): 1.439
+== 3. Profili di chi porta il sensore (C 0,95): v coperta m/s ; d_serve per ostacolo fermo / 1,4 / 2,5 m/s
+   veicolo terrestre, fermo, arresto autom.                T_ant 0.72 s | v coperta   2.84 | 0.95 / 1.96 / 2.75
+   veicolo terrestre, fermo, operatore remoto              T_ant 2.22 s | v coperta   0.92 | 0.95 / 4.06 / 6.50
+   veicolo terrestre a 1,0 m/s, arresto autom. [non provato] T_ant 1.39 s | v coperta   0.72 | 2.01 / 3.95 / 5.48
+   velivolo in volo stazionario                            T_ant 0.72 s | v coperta   2.84 | 0.95 / 1.96 / 2.75
+   velivolo a 3,0 m/s [non provato]                        T_ant 1.72 s | v coperta  -0.94 | 4.62 / 7.03 / 8.92
+   persona non vedente ferma                               T_ant 1.92 s | v coperta   1.07 | 0.95 / 3.64 / 5.76
+   persona non vedente in cammino 1,0 m/s [non provato]    T_ant 2.92 s | v coperta  -0.13 | 3.37 / 7.46 / 10.68
+   stazione fissa, persona vicina                          T_ant 1.42 s | v coperta   1.44 | 0.95 / 2.94 / 4.51
+== 4. Regola composta con etichette iniettate (N=20000 sequenze, 45 cicli = 3 s, seme 20261114)
+   regola composta, sequenze con almeno una violazione: {'w_stretta': np.int64(0), 'w_cala': np.int64(0), 'v_bassa': np.int64(0), 'ril_in_piu': 0, 'd_sett': np.int64(0)}
+   controllo negativo (regola «max con la base»): 7068 su 20000 (0.353); sequenze con una classe fuori scenario entrata: 5748
+   limite superiore al 95 % con 0 su 20000: 0.00015 (regola del tre)
