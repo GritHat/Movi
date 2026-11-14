@@ -15,24 +15,24 @@
    "ostacoli": [],
    "aree": [{"id": "piazzale", "poligono": [[60, 180], [260, 180], [260, 340], [60, 340]]}],
    "oggetti": [
-    {"id": "droneA", "classe": "multirotore", "tipo": "multirotore piccolo", "etichetta": "a mano", "t0": 0, "punti": [[0, 260, 80], [120, 260, 80], [150, 272, 62], [162, 250, 47], [188, 266, 30], [200, 258, 0]], "v": [8.0, 9.0, 7.0, 8.0, 9.0], "v_max": 19.0, "a_max": 6.9, "ingombro": [0.35, 0.28, 0.11], "nota": "dopo t=15: danneggiato, moto irregolare, atterraggio duro a t=27,2 (C)"},
-    {"id": "droneB", "classe": "multirotore", "tipo": "multirotore piccolo", "etichetta": "a mano", "t0": 0, "punti": [[210, 215, 80], [120, 260, 80]], "v": [6.708], "v_max": 19.0, "a_max": 6.9, "ingombro": [0.35, 0.28, 0.11], "nota": "dopo t=15: caduta balistica (frammento con v_t = 15 m/s, I), a terra a t = 20,7 circa (C)", "dopo_evento": {"moto": "balistico", "v_t_m_s": 15.0}},
+    {"id": "droneA", "classe": "multirotore", "tipo": "multirotore piccolo", "etichetta": "a mano", "t0": 0, "punti": [[0, 260, 80], [120, 260, 80], [150, 272, 62], [162, 250, 47], [188, 266, 30], [200, 258, 0]], "v": [8.0, 9.0, 7.0, 8.0, 9.0], "v_max": 19.0, "a_max": 6.9, "ingombro": [0.35, 0.28, 0.11], "nota": "dopo t=15: danneggiato, moto irregolare, atterraggio duro a t=31,3 (C)"},
+    {"id": "droneB", "classe": "multirotore", "tipo": "multirotore piccolo", "etichetta": "a mano", "t0": 0, "punti": [[210, 215, 80], [120, 260, 80]], "v": [6.708], "v_max": 19.0, "a_max": 6.9, "ingombro": [0.35, 0.28, 0.11], "nota": "dopo t=15: caduta balistica (frammento con v_t = 15 m/s, I), a terra a t = 21,4 circa (C: 6,4 s di caduta)", "dopo_evento": {"moto": "balistico", "v_t_m_s": 15.0}},
     {"id": "persona1", "classe": "persona_a_piedi", "tipo": "operatore sul piazzale", "etichetta": "a mano", "t0": 0, "punti": [[150, 230, 0.9], [150, 231, 0.9]], "v": [0.1], "v_max": 2.5, "a_max": 3.0, "ingombro": [0.5, 0.5, 1.8]}
    ],
    "eventi": [
-    {"t": 15.0, "tipo": "collisione", "parametri": {"oggetti": ["droneA", "droneB"], "p": [120, 260, 80], "n_frammenti": 30, "v_t_m_s": [3, 40], "dv_max_m_s": 40, "vento": [4, 2, 0], "fonte": "I"}}
+    {"t": 15.0, "tipo": "collisione", "parametri": {"oggetti": ["droneA", "droneB"], "p": [120, 260, 80], "n_frammenti": 60, "v_t_m_s": [3, 40], "dv_max_m_s": 40, "vento": [4, 2, 0], "fonte": "I"}}
    ],
    "avviso": {"a_chi": "operatore di sito e persona sul piazzale", "bersaglio": "impronta dei detriti", "nota": "il primo frammento senza resistenza arriva a terra in sqrt(2*80/9.81) = 4,0 s (C): l'avviso utile alla persona deve partire entro 2 s"},
    "sceneggiatura_attesa": [
-    {"t": [0, 13.5], "uscita": "droneA: vista; droneB: vista; persona1: vista. Nessun evento. Celle: 'libero' solo dove la Pd cumulata lo consente per il multirotore piccolo"},
-    {"t": [13.5, 15.0], "uscita": "distanza fra A e B sotto la risoluzione del radar: 'tracce non risolte' (A, B), identita' presunta. NON e' un evento"},
+    {"t": [0, 13.65], "uscita": "droneA: vista; droneB: vista; persona1: vista. Nessun evento. Celle: 'libero' solo dove la Pd cumulata lo consente per il multirotore piccolo"},
+    {"t": [13.65, 15.0], "uscita": "distanza fra A e B sotto 20 m (risoluzione del radar: I): 'tracce non risolte' (A, B), identita' presunta. NON e' un evento"},
     {"t": 15.0, "verita": "collisione"},
-    {"t": [15.0, 17.0], "entro": "2,0 s (finestra) = al piu' 2 giri del radar", "uscita": "'evento: contatto (dedotto)' con t_a = 13,5 circa; si apre V(tau), tau = t - t_a; 'possibile presenza di detriti' su volume e impronta; avviso alla persona1 (e' dentro l'impronta); A e B: 'previsto', identita' presunta, classe sospesa"},
+    {"t": [15.0, 17.0], "entro": "2,0 s (finestra) = al piu' 2 giri del radar", "uscita": "'evento: contatto (dedotto)' con t_a = 13,65 circa; si apre V(tau), tau = t - t_a; 'possibile presenza di detriti' su volume e impronta; avviso alla persona1 (e' dentro l'impronta); A e B: 'previsto', identita' presunta, classe sospesa"},
     {"t": [17.0, 19.0], "uscita": "se s_eo e' in salute e risolve >= 3 ritorni per 2 quadri: 'evento: contatto (osservato)'; altrimenti resta 'dedotto' (va bene lo stesso: l'avviso e' identico)"},
-    {"t": [15.0, 27.2], "uscita": "droneA: 'vista, identita' presunta', moto fuori dal modello -> 'previsto ampio'; il suo insieme di presenza usa l'inviluppo dello scenario piu' la caduta"},
+    {"t": [15.0, 31.3], "uscita": "droneA: 'vista, identita' presunta', moto fuori dal modello -> 'previsto ampio'; il suo insieme di presenza usa l'inviluppo dello scenario piu' la caduta"},
     {"t": [20.0, 22.0], "uscita": "droneB a terra: il radar non lo distingue dal fondo -> 'non vista da X s' con zona (un disco a terra dentro l'impronta); MAI 'non piu' rilevata'"},
     {"t": [15.0, "T_c"], "uscita": "V(tau) e impronta crescono a ogni ciclo, mai si restringono; nessuna cella dentro e' 'libero'"},
-    {"t": ["T_c", 90], "uscita": "impronta ferma. In volo: le celle tornano 'libero' solo dove la Pd cumulata per il frammento minimo (rcs 1e-4 m2) lo consente. A terra: 'zona non verificata: possibili detriti; la scioglie: ispezione a vista del piazzale'. Resta accesa a fine scenario"}
+    {"t": ["T_c", 90], "uscita": "impronta ferma. In volo: le celle tornano 'libero' solo dove la Pd cumulata per il frammento minimo (5 cm, rcs 2e-4 m2) lo consente. A terra: 'zona non verificata: possibili detriti; la scioglie: ispezione a vista del piazzale'. Resta accesa a fine scenario"}
    ],
    "misure": {"ritardo_evento_s": "<= 2,0 dal vero", "quota_frammenti_dentro_V": ">= 0,999 dei campioni (frammento, istante), per frammenti con v_t >= v_t_min e |u| <= dv", "celle_libere_dentro_impronta": "0, in ogni ciclo, fino all'ispezione", "tracce_perse_senza_avviso": "0 (A e B)", "avviso_alla_persona_s": "<= 2,0 dal vero (prima dei 4,0 s del primo impatto possibile)"}
   },
@@ -46,11 +46,11 @@
     {"id": "mezzo1", "classe": "mezzo_piazzale", "tipo": "veicolo di servizio", "etichetta": "a mano", "t0": 10.0, "punti": [[1400, -120, 1], [900, -120, 1], [900, -30, 1]], "v": [12.0, 8.0], "v_max": 13.9, "a_max": 1.5, "ingombro": [5, 2, 2], "nota": "va verso il raccordo che porta in pista a x=900; arriva alla svolta a t=51,7 (C)"}
    ],
    "eventi": [
-    {"t": 15.7, "tipo": "avaria_motore", "parametri": {"oggetto": "aereo1", "p": [600, 0, 2.5], "n_frammenti": 200, "v_t_m_s": [5, 80], "dv_max_m_s": 60, "vento": [0, 5, 0], "fonte": "I"}},
-    {"t": 15.7, "tipo": "fiammata", "parametri": {"durata_s": 4.0, "satura": ["camera_eo_ottica_lunga", "camera_termica_ottica_lunga"], "durata_termica_s": 6.0, "fonte": "I"}},
+    {"t": 15.7, "tipo": "avaria_motore", "parametri": {"oggetto": "aereo1", "p": [600, 0, 2.5], "n_frammenti": 100, "v_t_m_s": [5, 80], "dv_max_m_s": 60, "vento": [0, 5, 0], "fonte": "I"}},
+    {"t": 15.7, "tipo": "fiammata", "parametri": {"durata_sorgente_s": 3.0, "satura": ["camera_eo_ottica_lunga", "camera_termica_ottica_lunga"], "cieca_eo_fino_a_t": 20.7, "cieca_termica_fino_a_t": 28.7, "fonte": "../01-effetti fiammata_lampo, valori prudenti: sorgente 3 s, cecita' EO +2 s, termica +10 s (li': ipotesi)"}},
     {"t": 16.0, "tipo": "nube", "parametri": {"nube": "fumo1", "fonte": "I"}}
    ],
-   "nubi": [{"id": "fumo1", "tipo": "fumo", "centro_segue": "aereo1 fino a t=40,2 (scia da x=600 a x=1000)", "raggio_m": 15, "crescita_m_s": 1.0, "altezza_m": 40, "t_ini": 16.0, "t_fine": 120.0, "deriva": [0, 5, 0], "opaca_per": ["camera_eo_ottica_lunga", "lidar_tele", "lidar_auto_campo_largo"], "parziale_per": ["camera_termica_ottica_lunga"]}],
+   "nubi": [{"id": "fumo1", "tipo": "fumo", "centro_segue": "aereo1 fino a t=40,2 (scia da x=600 a x=1000)", "raggio_m": 20, "crescita_m_s": 1.0, "raggio_max_m": 50, "altezza_m": 40, "t_ini": 16.0, "t_fine": 120.0, "fonte": "raggio 20|50 m e durata 60|300 s da ../01-effetti fumo_nube (li': ipotesi); altezza: I", "deriva": [0, 5, 0], "opaca_per": ["camera_eo_ottica_lunga", "lidar_tele", "lidar_auto_campo_largo", "camera_termica_ottica_lunga"], "nota": "prudente di 01-effetti: la termica NON vede dietro"}],
    "avviso": {"a_chi": "conducente del mezzo1 (diretto) e torre", "bersaglio": "impronta dei detriti e pista a valle", "profilo": "f15-04 formula_in_moto con v_ego = 12, T_r = 2,5, a_fr = 1,5 e bersaglio fermo: d = 12*(1+2,5) + 12^2/(2*1,5) + 50 = 140 m (C)"},
    "sceneggiatura_attesa": [
     {"t": [0, 15.7], "uscita": "aereo1: vista (radar, EO, termica, ADS-B concordi); mezzo1: vista da t=10"},
@@ -58,7 +58,7 @@
     {"t": [15.7, 16.0], "entro": "3 cicli (0,3 s)", "uscita": "'affidabilita' persa: s_eo, abbagliamento' e 'affidabilita' persa: s_ir, abbagliamento'; le loro passate non contano piu'; aereo1 resta 'vista' dal solo radar (e dichiarata da ADS-B, che non e' osservazione)"},
     {"t": [15.7, 17.7], "entro": "2,0 s", "uscita": "'evento: separazione (dedotto)' attorno ad aereo1 (ritorni nuovi dal radar dietro l'aereo); V(tau) e impronta; pista da x=600 a valle: 'zona non verificata: possibili detriti'"},
     {"t": [16.0, 40.2], "uscita": "aereo1: 'vista' (radar), classe sospesa, 'previsto' con decelerazione; fumo: celle dentro e dietro la nube 'non_osservato (nube)' per EO e lidar"},
-    {"t": [19.7, 22.7], "uscita": "fine fiammata: s_eo torna 'affidabile' solo dopo 3 s senza indizi e riferimento fisso rivisto; s_ir dopo t = 24,7; le celle ripartono da 'non_osservato'; l'evento puo' passare a 'osservato' se la termica vede i frammenti caldi"},
+    {"t": [20.7, 29.7], "uscita": "fine cecita': s_eo torna 'affidabile' non prima di t = 21,7 (10 quadri buoni e riferimento fisso rivisto); s_ir non prima di t = 29,7; le celle ripartono da 'non_osservato'; l'evento puo' passare a 'osservato' se la termica vede i frammenti caldi"},
     {"t": ["quando l'insieme di presenza di mezzo1 a 140 m interseca l'impronta", 120], "uscita": "avviso a mezzo1: 'zona non verificata sul percorso'. Con l'impronta prudente l'avviso parte subito (t <= 17,7): mezzo1 e' gia' dentro"},
     {"t": [40.2, 120], "uscita": "aereo1 fermo: 'vista' (radar: bersaglio grande, fermo ma noto); impronta e pista a valle fino a x=1000 + margine: 'zona non verificata; la scioglie: ispezione di pista'. Nessun 'libero' sulla pista fra x=580 e x=1020 a fine scenario"}
    ],
@@ -74,7 +74,7 @@
     {"id": "drone3", "classe": "multirotore", "tipo": "multirotore piccolo, nessuna identificazione remota", "etichetta": "a mano", "t0": 0, "punti": [[2500, 1500, 60], [300, -150, 30]], "v": [15.0], "v_max": 19.0, "a_max": 6.9, "ingombro": [0.35, 0.28, 0.11], "variante": "b"}
    ],
    "eventi": [
-    {"t": 0.0, "tipo": "meteo", "parametri": {"variante_a": "nebbia_fitta", "variante_b": "pioggia_forte_25mm_h", "fonte": "I (segnaposto di EV-D)"}},
+    {"t": 0.0, "tipo": "meteo", "parametri": {"variante_a": "meteo_nebbia_fitta", "variante_b": "meteo_pioggia_forte", "fonte": "../01-effetti/effetti_eventi.json, valori prudenti"}},
     {"t": 100.0, "tipo": "sensore_non_affidabile", "parametri": {"sensore": "s_radar", "causa": "guasto simulato", "durata_s": 20.0, "variante": "c (controllo): con la nebbia"}}
    ],
    "avviso": {"a_chi": "operatore di sito", "profilo": "operatore_di_sito di f15-04: d_avv = v_max_inviluppo*(1+5+10)+50; con inviluppo aeroporto_e_droni (v_max 90) = 1490 m; col solo multirotore 354 m (C)"},
@@ -93,11 +93,11 @@
    "ostacoli": [],
    "oggetti": [{"id": "drone4", "classe": "multirotore", "tipo": "multirotore piccolo", "etichetta": "a mano", "t0": 0, "punti": [[400, 420, 50], [0, 180, 50]], "v": [12.0], "v_max": 19.0, "a_max": 6.9, "ingombro": [0.35, 0.28, 0.11]}],
    "eventi": [{"t": 0.0, "tipo": "nube", "parametri": {"nube": "fumo4", "fonte": "I"}}],
-   "nubi": [{"id": "fumo4", "tipo": "fumo", "centro": [200, 300], "raggio_m": 25, "crescita_m_s": 0.0, "altezza_m": 120, "t_ini": 0.0, "t_fine": 120.0, "deriva": [0, 0, 0], "opaca_per": ["camera_eo_ottica_lunga", "lidar_tele"], "parziale_per": ["camera_termica_ottica_lunga"]}],
+   "nubi": [{"id": "fumo4", "tipo": "fumo", "centro": [200, 300], "raggio_m": 25, "crescita_m_s": 0.0, "altezza_m": 120, "t_ini": 0.0, "t_fine": 120.0, "deriva": [0, 0, 0], "opaca_per": ["camera_eo_ottica_lunga", "lidar_tele", "camera_termica_ottica_lunga"], "nota": "prudente di 01-effetti: la termica NON vede dietro (nominale: si')"}],
    "avviso": {"a_chi": "operatore di sito", "bersaglio": "drone4"},
    "sceneggiatura_attesa": [
     {"t": [0, 17.3], "uscita": "drone4: vista; celle dentro e DIETRO il fumo (lungo i raggi da s_eo): 'non_osservato (nube)' per EO; nube stimata dallo sfondo perso"},
-    {"t": [17.3, 21.6], "uscita": "E4a (con radar): drone4 resta 'vista (radar)'; per EO 'non osservato, causa nube'. E4b (senza radar; la termica 'parziale' non basta per la classe piu' piccola): 'non vista da X s' con zona che cresce (raggio 105 m a 5 s, da 03-scenari) e avviso acceso"},
+    {"t": [17.3, 21.6], "uscita": "E4a (con radar): drone4 resta 'vista (radar)'; per EO 'non osservato, causa nube'. E4b (senza radar; la termica col valore prudente non vede dietro il fumo): 'non vista da X s' con zona che cresce (raggio 105 m a 5 s, da 03-scenari) e avviso acceso"},
     {"t": [21.6, 24.0], "entro": "2 quadri dopo l'uscita", "uscita": "E4b: ritorno compatibile con la porta -> 'vista, identita' presunta'; l'avviso si spegne solo quando il resto della zona e' stato riguardato; l'interno della nube resta 'non_osservato'"}
    ],
    "misure": {"tracce_perse_senza_avviso_durante_nube": "0", "celle_libere_dentro_o_dietro_la_nube_per_EO": "0", "eventi_dichiarati": "0 (una nube non e' una frammentazione)", "errore_stima_nube": "la nube stimata contiene la vera (quota di celle vere coperte >= 0,95)"}
@@ -114,9 +114,9 @@
    "eventi": [],
    "avviso": {"a_chi": "operatore di sito", "bersaglio": "nessuno"},
    "sceneggiatura_attesa": [
-    {"t": [0, 13.5], "uscita": "droneA: vista; droneB: vista"},
-    {"t": [13.5, 16.5], "uscita": "'tracce non risolte' (A, B); NESSUN evento: mancano i ritorni nuovi, il residuo fuori porta e la traccia mancante"},
-    {"t": [16.5, 40], "uscita": "due tracce di nuovo risolte: 'vista', identita' PRESUNTA (lo scambio fra A e B non e' escluso dal solo radar); nessun volume, nessuna impronta"}
+    {"t": [0, 13.65], "uscita": "droneA: vista; droneB: vista"},
+    {"t": [13.65, 16.35], "uscita": "'tracce non risolte' (A, B); NESSUN evento: mancano i ritorni nuovi, il residuo fuori porta e la traccia mancante"},
+    {"t": [16.35, 40], "uscita": "due tracce di nuovo risolte: 'vista', identita' PRESUNTA (lo scambio fra A e B non e' escluso dal solo radar); nessun volume, nessuna impronta"}
    ],
    "misure": {"falsi_eventi": "0 su 1000 ripetizioni con rumore di misura e falsi allarmi della scheda (limite superiore al 95 %: 0,3 %); da ripetere con separazione 5, 2, 1 e 0,5 m per trovare dove l'innesco comincia a scattare", "identita": "mai 'certa' dopo il tratto non risolto"}
   }

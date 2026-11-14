@@ -3,16 +3,72 @@
  "data": "2026-11-15",
  "estende": "../../04-moto/regole_lunga_portata.json (f15-04-moto-0.1): stessi stati di cella, stesse parole d'uscita, stessa soglia del 'libero'",
  "avvertenza": "Regole per gli EVENTI IMPROVVISI. Tutto e' conto o simulazione: NIENTE e' provato su un sensore fisico, niente e' 'validato'. Solo osservazione, monitoraggio e avviso di situazioni d'incidente: nessuna funzione d'ingaggio, puntamento o contrasto.",
- "legenda_fonti": {"I": "ipotesi dichiarata, senza fonte aperta oggi", "M": "a memoria, non verificato oggi", "C": "conto, rifacibile con frammenti.py", "f15-04": "ripreso da regole_lunga_portata.json", "f15-02": "ripreso da 02-sensori/parametri_lunga_portata.json", "P": "prova scritta in REGOLE_E_SCENARI_EVENTI.md, nel modello li' dichiarato"},
- "principi": ["cio' che non e' osservato non e' mai 'libero'", "l'avviso di possibile presenza non si toglie se non guardando", "nessuna etichetta di classe riduce un avviso"],
- "stati_cella": ["libero", "occupato", "in_ombra", "non_osservato"],
- "causa_non_osservato": ["fuori_portata", "ostacolo", "nube", "abbagliamento", "meteo", "sensore_non_affidabile", "mai_guardato"],
- "parole_uscita_nuove": ["evento: separazione (dedotto|osservato)", "evento: contatto (dedotto|osservato)", "tracce non risolte", "possibile presenza di detriti (volume, impronta)", "zona non verificata: <causa>; la scioglie: <ispezione>", "affidabilita' persa: <sensore>, <causa>", "portata utile ridotta: <sensore>, <classe>, <metri>", "avviso non tempestivo per <classe>"],
- "ciclo_s": {"valore": 0.1, "fonte": "I (il sensore piu' rapido di 02-sensori lavora a 10 Hz)"},
-
+ "legenda_fonti": {
+  "I": "ipotesi dichiarata, senza fonte aperta oggi",
+  "M": "a memoria, non verificato oggi",
+  "C": "conto, rifacibile con frammenti.py",
+  "f15-04": "ripreso da regole_lunga_portata.json",
+  "f15-02": "ripreso da 02-sensori/parametri_lunga_portata.json",
+  "P": "prova scritta in REGOLE_E_SCENARI_EVENTI.md, nel modello li' dichiarato",
+  "f15-40-01": "ripreso da ../01-effetti/effetti_eventi.json (consegnato alle 00:16 del 15-11-2026; li' ogni valore ha la sua fonte: A aperta, S secondaria, ipotesi)"
+ },
+ "principi": [
+  "cio' che non e' osservato non e' mai 'libero'",
+  "l'avviso di possibile presenza non si toglie se non guardando",
+  "nessuna etichetta di classe riduce un avviso"
+ ],
+ "stati_cella": [
+  "libero",
+  "occupato",
+  "in_ombra",
+  "non_osservato"
+ ],
+ "causa_non_osservato": [
+  "fuori_portata",
+  "ostacolo",
+  "nube",
+  "abbagliamento",
+  "meteo",
+  "sensore_non_affidabile",
+  "mai_guardato"
+ ],
+ "parole_uscita_nuove": [
+  "evento: separazione (dedotto|osservato)",
+  "evento: contatto (dedotto|osservato)",
+  "tracce non risolte",
+  "possibile presenza di detriti (volume, impronta)",
+  "zona non verificata: <causa>; la scioglie: <ispezione>",
+  "affidabilita' persa: <sensore>, <causa>",
+  "portata utile ridotta: <sensore>, <classe>, <metri>",
+  "avviso non tempestivo per <classe>"
+ ],
+ "ciclo_s": {
+  "valore": 0.1,
+  "fonte": "I (il sensore piu' rapido di 02-sensori lavora a 10 Hz)"
+ },
  "EV-A_frammentazione": {
-  "innesco_separazione": {"n_ritorni_nuovi_min": 3, "finestra_s": 2.0, "raggio_porta": "insieme raggiungibile dei frammenti V(tau) attorno alla traccia", "conferma": "ogni ritorno nuovo visto in >= 2 passate oppure da 2 sensori", "fonti": {"tutti": "I"}},
-  "innesco_contatto": {"distanza_contatto": "d <= (ingombro_1 + ingombro_2)/2 + k_sigma * (sigma_p1 + sigma_p2), k_sigma = 3 (f15-04)", "piu_almeno_uno_fra": ["n_ritorni_nuovi_min ritorni nuovi nella finestra", "residuo di una delle due tracce fuori porta (chi2 3 gdl > 16.27, f15-04) per 2 passate di fila = accelerazione oltre a_max dell'inviluppo", "una delle due tracce non piu' rilevata in vista"], "da_solo_non_basta": "la fusione di due tracce in un ritorno: da' 'tracce non risolte', non 'contatto'", "finestra_s": 2.0, "fonti": {"tutti": "I"}},
+  "innesco_separazione": {
+   "n_ritorni_nuovi_min": 3,
+   "finestra_s": 2.0,
+   "raggio_porta": "insieme raggiungibile dei frammenti V(tau) attorno alla traccia",
+   "conferma": "ogni ritorno nuovo visto in >= 2 passate oppure da 2 sensori",
+   "fonti": {
+    "tutti": "I"
+   }
+  },
+  "innesco_contatto": {
+   "distanza_contatto": "d <= (ingombro_1 + ingombro_2)/2 + k_sigma * (sigma_p1 + sigma_p2), k_sigma = 3 (f15-04)",
+   "piu_almeno_uno_fra": [
+    "n_ritorni_nuovi_min ritorni nuovi nella finestra",
+    "residuo di una delle due tracce fuori porta (chi2 3 gdl > 16.27, f15-04) per 2 passate di fila = accelerazione oltre a_max dell'inviluppo",
+    "una delle due tracce non piu' rilevata in vista"
+   ],
+   "da_solo_non_basta": "la fusione di due tracce in un ritorno: da' 'tracce non risolte', non 'contatto'",
+   "finestra_s": 2.0,
+   "fonti": {
+    "tutti": "I"
+   }
+  },
   "dedotto_osservato": "l'evento nasce 'dedotto' (viene dalla topologia delle tracce). Diventa 'osservato' quando un sensore IN SALUTE, con risoluzione migliore della distanza fra i ritorni, vede >= n_ritorni_nuovi_min ritorni distinti dentro V per >= 2 passate. Non torna mai indietro a 'nessun evento' da solo: lo chiude solo l'ispezione.",
   "istante_evento": "ignoto fra t_a (ultimo stato comune osservato) e t_b (primo indizio): tau si conta da t_a (V cresce con tau: e' il lato prudente)",
   "formula_volume": {
@@ -20,78 +76,221 @@
    "tau_stella": "min(tau, (vup + sqrt(vup^2 + 2 g (z0 + r0))) / g), vup = max(max_i v_cz_i + dv + Wz, 0)",
    "pianta": "S(tau) = unione sulle tracce d'origine i del segmento [p0_h, p0_h + v_c,h_i * tau_stella] ingrossato di r(tau) = W*tau + (dv + W)*tau_stella + r0",
    "quota": "z in [max(0, z0 - r0 + min(min_i v_cz_i - dv, -Wz)*tau - g tau^2/2), z0 + r0 + Wz*tau + vup*s - g s^2/2], s = min(tau, vup/g)",
-   "r0": "k_sigma * sigma_p + meta' ingombro maggiore delle tracce d'origine (+ k_sigma*sigma_v entra in dv)",
+   "r0": "k_sigma * sigma_p + meta' ingombro maggiore delle tracce d'origine + a_max_inviluppo * (t_b - t_a)^2 / 2 (manovra possibile fra l'ultimo stato comune e il primo indizio); k_sigma * sigma_v si somma a dv",
    "T_volo(v_t)": "k_tc * [ (v_t/g) atan(vup/v_t) + (ve/g) acosh(exp(g h / ve^2)) ], h = z0 + r0 + (v_t^2/2g) ln(1 + vup^2/v_t^2), ve = v_t - Wz",
    "T_c": "T_volo(v_t_min): oltre, volume e impronta non crescono piu'",
    "impronta": "disco attorno a p0_h di raggio R_imp = max su v_t >= v_t_min di [ W*T_volo + min(vrel*min(T_volo, tau_stella), (v_t^2/g) ln(1 + g vrel T_volo / v_t^2)) ] + r0 + r_rimbalzo, vrel = dv + W + max_i |v_c,h_i|; durante l'evento l'impronta dichiarata e' (S(tau) ingrossata di r_rimbalzo) intersecata col disco",
-   "stato_prova": {"pianta e quota per tau <= tau_stella": "P (dimostrato nel modello)", "pianta per tau > tau_stella (la resistenza non allunga la gittata)": "C: sostenuto dal calcolo, non dimostrato", "T_volo, T_c e R_imp": "C: sostenuti dal calcolo, non dimostrati"}
+   "stato_prova": {
+    "pianta e quota per tau <= tau_stella": "P (dimostrato nel modello)",
+    "pianta per tau > tau_stella (la resistenza non allunga la gittata)": "C: sostenuto dal calcolo, non dimostrato",
+    "T_volo, T_c e R_imp": "C: sostenuti dal calcolo, non dimostrati"
+   }
   },
   "k_tc": 1.5,
   "r_rimbalzo_m": 20.0,
-  "fonti_k": {"k_tc": "I", "r_rimbalzo_m": "I (rimbalzo e rotolamento su piazzale; su pista vedi EV-E: si estende alla pista a valle)"},
+  "fonti_k": {
+   "k_tc": "I",
+   "r_rimbalzo_m": "I (rimbalzo e rotolamento su piazzale; su pista vedi EV-E: si estende alla pista a valle)"
+  },
   "inviluppo": {
    "collisione_multirotori": {
-    "nominale": {"dv": 40.0, "W": 10.0, "Wz": 1.0, "v_t_min": 3.0},
-    "prudente": {"dv": 120.0, "W": 15.0, "Wz": 2.0, "v_t_min": 3.0},
-    "fonti": {"dv nominale": "C+I: 2 * v_max del multirotore piccolo (19 m/s, f15-04) = 38, arrotondato", "dv prudente": "C+I: velocita' di punta di un'elica da 0,24 m a 8000 giri/min = pi*0,24*8000/60 = 100,5 m/s (diametro e giri: I) + 19", "W, Wz": "I", "v_t_min": "I: velocita' limite del frammento piu' leggero AMMESSO (scheggia di plastica); sotto, il frammento e' fuori dall'inviluppo e lo si dichiara"}
+    "nominale": {
+     "dv": 40.0,
+     "W": 10.0,
+     "Wz": 1.0,
+     "v_t_min": 3.0
+    },
+    "prudente": {
+     "dv": 120.0,
+     "W": 15.0,
+     "Wz": 2.0,
+     "v_t_min": 3.0
+    },
+    "fonti": {
+     "dv nominale": "C+I: 2 * v_max del multirotore piccolo (19 m/s, f15-04) = 38, arrotondato",
+     "dv prudente": "C+I: velocita' di punta di un'elica da 0,24 m a 8000 giri/min = pi*0,24*8000/60 = 100,5 m/s (diametro e giri: I) + 19",
+     "W, Wz": "I",
+     "v_t_min": "I: velocita' limite del frammento piu' leggero AMMESSO (scheggia di plastica); sotto, il frammento e' fuori dall'inviluppo e lo si dichiara"
+    }
    },
    "avaria_motore_a_terra": {
-    "nominale": {"dv": 60.0, "W": 10.0, "Wz": 1.0, "v_t_min": 5.0},
-    "prudente": {"dv": 100.0, "W": 15.0, "Wz": 2.0, "v_t_min": 5.0},
-    "fonti": {"tutti": "I. I frammenti di disco ad alta energia (centinaia di m/s, M: non verificato oggi) sono FUORI da questo inviluppo: controesempio dichiarato"}
+    "nominale": {
+     "dv": 60.0,
+     "W": 10.0,
+     "Wz": 1.0,
+     "v_t_min": 5.0
+    },
+    "prudente": {
+     "dv": 100.0,
+     "W": 15.0,
+     "Wz": 2.0,
+     "v_t_min": 5.0
+    },
+    "fonti": {
+     "tutti": "I. I frammenti di disco ad alta energia (centinaia di m/s, M: non verificato oggi) sono FUORI da questo inviluppo: controesempio dichiarato"
+    }
    }
   },
-  "frammento_minimo_ammesso": {"dimensione_m": 0.03, "rcs_m2": 1e-4, "fonti": {"dimensione_m": "I (ordine di un bullone o di una scheggia d'elica)", "rcs_m2": "I"}},
-  "libero_nel_volume": "come f15-04: Pd cumulata >= 0.99 entro n_passate_max = 5 per rcs = frammento_minimo_ammesso, calcolata per sensore e combinata; se nessun sensore la raggiunge a quella distanza: 'zona non verificata: detriti sotto la soglia dei sensori; la scioglie: ispezione a vista o con mezzo dedicato'",
+  "frammento_minimo_ammesso": {
+   "dimensione_m": 0.05,
+   "rcs_m2": 0.000196,
+   "fonti": {
+    "dimensione_m": "f15-40-01 (classe '5 cm'; sotto 5 cm 01-effetti li da' 'sotto la soglia di ogni sensore oltre ~100 m')",
+    "rcs_m2": "f15-40-01, valore prudente (plastica o carbonio, -10 dB)"
+   }
+  },
+  "libero_nel_volume": "come f15-04: Pd cumulata >= 0.99 entro n_passate_max = 5 per rcs = frammento_minimo_ammesso, calcolata per sensore e combinata; se nessun sensore la raggiunge a quella distanza: 'zona non verificata: detriti sotto la soglia dei sensori; la scioglie: ispezione a vista o con mezzo dedicato'. A TERRA nessun sensore di 02-sensori basta (f15-40-01: il radar del movimento a terra NON vede i detriti; lidar_tele 115 m per 5 cm e incidenza radente)",
   "tracce_originarie": "proseguono come 'previsto' con identita' PRESUNTA; classe sospesa: insieme di presenza = inviluppo dello scenario + caduta (z_min della formula del volume)",
   "frammenti": "nessuna classe; nessuna traccia con identita'; valgono l'inviluppo dello scenario e V(tau)",
   "casi_di_verifica": {
-   "E1_collisione_80m": {"profilo": "collisione_multirotori", "evento": {"p0": [120.0, 260.0, 80.0], "vc": [[8.0, 0.0, 0.0], [-6.0, 3.0, 0.0]], "r0": 3.0}, "v_t_max_m_s": 40.0},
-   "E2_avaria_in_corsa": {"profilo": "avaria_motore_a_terra", "evento": {"p0": [600.0, 0.0, 2.5], "vc": [[40.0, 0.0, 0.0]], "r0": 20.0}, "v_t_max_m_s": 80.0}
+   "E1_collisione_80m": {
+    "profilo": "collisione_multirotori",
+    "evento": {
+     "p0": [
+      120.0,
+      260.0,
+      80.0
+     ],
+     "vc": [
+      [
+       8.0,
+       0.0,
+       0.0
+      ],
+      [
+       -6.0,
+       3.0,
+       0.0
+      ]
+     ],
+     "r0": 3.0
+    },
+    "v_t_max_m_s": 40.0
+   },
+   "E2_avaria_in_corsa": {
+    "profilo": "avaria_motore_a_terra",
+    "evento": {
+     "p0": [
+      600.0,
+      0.0,
+      2.5
+     ],
+     "vc": [
+      [
+       40.0,
+       0.0,
+       0.0
+      ]
+     ],
+     "r0": 20.0
+    },
+    "v_t_max_m_s": 80.0
+   }
   },
-  "ipotesi_frammenti_simulati": "velocita' limite v_t log-uniforme fra v_t_min e v_t_max; |u| uniforme nella sfera di raggio dv ('uniforme') oppure sul bordo ('bordo'); direzione isotropa; vento sul bordo o dentro il limite; 10000 frammenti per caso, 2000 nel caso P6 (I)"
+  "ipotesi_frammenti_simulati": "velocita' limite v_t log-uniforme fra v_t_min e v_t_max; |u| uniforme nella sfera di raggio dv ('uniforme') oppure sul bordo ('bordo'); direzione isotropa; vento sul bordo o dentro il limite; 10000 frammenti per caso, 2000 nel caso P6 (I)",
+  "confronto_con_01-effetti": "01-effetti da' velocita' relativa 10|40 m/s e velocita' limite da 5,8 (scheggia d'elica da 5 g) a 25,8 m/s (batteria): il mio nominale dv = 40 coincide col loro prudente; v_t_min = 3 e' piu' basso (piu' prudente)",
+  "esito_verifica": "vedi risultati_frammenti.json e REGOLE_E_SCENARI_EVENTI.md par. 3: 0 campioni fuori dal volume su 12 casi conformi da 10000 frammenti; impronta e T_c: 100 % nei casi conformi; i frammenti piu' leggeri di v_t_min escono (caso P6)"
  },
-
  "EV-B_nube": {
   "stima_nube": "per ogni sensore s e raggio: (lidar) ritorno piu' corto dello sfondo atteso dalla mappa, o nessun ritorno dove lo sfondo e' in portata; (camere) contrasto locale sotto soglia o saturazione; (radar) di norma nessuna perdita. Cella della nube per s = dal primo ritorno anomalo fino allo sfondo atteso, lungo il raggio. Nube(s) = unione delle celle su n_cicli_conferma cicli, ingrossata di margine_m",
-  "n_cicli_conferma": 3, "margine_m": 10.0, "frazione_sfondo_perso_min": 0.3, "t_persistenza_s": 5.0,
+  "n_cicli_conferma": 3,
+  "margine_m": 10.0,
+  "frazione_sfondo_perso_min": 0.3,
+  "t_persistenza_s": 5.0,
   "stato_cella": "per s: dentro e DIETRO Nube(s) lungo il raggio -> non_osservato (causa 'nube'); combinazione: stato_fuso di f15-04 sui soli sensori affidabili e con Pd per la classe piu' piccola ammessa",
   "oggetti": "una traccia la cui posizione prevista entra in celle non osservate da tutti -> 'non vista da X s' con insieme di presenza e avviso, come dietro un ostacolo (insieme_presenza di movi_lp.py)",
   "ritorno": "la nube si toglie per s solo quando lo sfondo atteso torna visibile per t_persistenza_s; le celle tornano 'libero' solo con la Pd cumulata (non per il solo ritorno dello sfondo)",
-  "fonti": {"tutti": "I"}
+  "fonti": {
+   "tutti": "I"
+  },
+  "trasparenza": "per sensore dal campo 'osservato_dietro' PRUDENTE di ../01-effetti (fumo_nube): prudente = solo i radar vedono dietro; EO, lidar e termica no",
+  "dimensioni_di_riferimento": {
+   "raggio_m": {
+    "due_multirotori_piccoli": [
+     3,
+     10
+    ],
+    "avaria_motore_aereo": [
+     20,
+     50
+    ]
+   },
+   "durata_s": {
+    "due_multirotori_piccoli": [
+     20,
+     120
+    ],
+    "avaria_motore_aereo": [
+     60,
+     300
+    ]
+   },
+   "fonte": "f15-40-01 (li': ipotesi)"
+  }
  },
-
  "EV-C_abbagliamento": {
-  "indizi": {"camere": "frazione di pixel saturi > 0.2 oppure salto della luminanza media > 3 sigma del proprio storico", "lidar": "numero di punti per quadro < 0.5 dell'atteso oppure falsi punti > 10 volte la scheda", "radar": "rumore di fondo > +6 dB oppure tracce false > 5 per giro", "cooperativi": "nessun messaggio da un mezzo prima ricevuto per > 3 periodi: NON e' abbagliamento, e' 'silenzio': non chiude tracce (f15-04)"},
+  "indizi": {
+   "camera_eo": "pixel saturi > 0.05 del quadro oppure salto del livello medio > 0.5 fra due quadri (f15-40-01, salute_sensore)",
+   "camera_termica": "pixel saturi > 0.02 (f15-40-01)",
+   "lidar": "caduta dei ritorni oltre 50 m > 0.3 oppure ritorni sotto 20 m > 0.02 dei raggi (f15-40-01)",
+   "radar": "fondo > +6 dB (f15-40-01); nella fiammata l'effetto sul radar e' NON VERIFICATO (01-effetti non ha fonte): il radar non perde affidabilita' per regola, ma l'uscita lo dice",
+   "cooperativi": "silenzio di un mezzo prima ricevuto: NON e' abbagliamento, e' 'silenzio': non chiude e non libera niente (f15-04)"
+  },
   "n_cicli_dichiarazione_max": 3,
   "azione": "sensore.affidabile = False con causa; le sue passate non contano per la Pd cumulata dall'inizio dell'indizio (retrodatato di n_cicli); ricalcolo di stato_fuso sugli altri; se nessuno resta: tutto 'zona non verificata'",
-  "ripristino": "affidabile di nuovo dopo t_ripristino_s senza indizi E verifica su un riferimento fisso noto (sfondo della mappa); le celle ripartono da 'non_osservato'",
-  "t_ripristino_s": 3.0,
-  "fonti": {"tutti": "I"}
- },
-
- "EV-D_meteo": {
-  "sorgente": "SEGNAPOSTO: ../01-effetti non era consegnato alle 00:10 del 15-11-2026. Tutti i fattori sotto sono IPOTESI da sostituire con quel modello",
-  "formula": "R_utile(s, cond, classe) = min(f[s][cond] * R_s(rcs_classe, pd_cum 0.99, n 5), c[s] * visibilita_m(cond))   (c = null: nessun limite da visibilita')",
-  "condizioni": {"sereno": {"visibilita_m": 20000}, "pioggia_forte_25mm_h": {"visibilita_m": 1500}, "nebbia_fitta": {"visibilita_m": 200}, "fumo_locale": {"visibilita_m": 20}},
-  "f": {
-   "radar_sorveglianza_droni": {"sereno": 1.0, "pioggia_forte_25mm_h": 0.6, "nebbia_fitta": 0.95, "fumo_locale": 1.0},
-   "radar_movimento_a_terra": {"sereno": 1.0, "pioggia_forte_25mm_h": 0.7, "nebbia_fitta": 0.95, "fumo_locale": 1.0},
-   "lidar_tele": {"sereno": 1.0, "pioggia_forte_25mm_h": 0.6, "nebbia_fitta": 0.5, "fumo_locale": 0.0},
-   "camera_eo_ottica_lunga": {"sereno": 1.0, "pioggia_forte_25mm_h": 0.5, "nebbia_fitta": 1.0, "fumo_locale": 0.0},
-   "camera_termica_ottica_lunga": {"sereno": 1.0, "pioggia_forte_25mm_h": 0.5, "nebbia_fitta": 1.0, "fumo_locale": 0.5},
-   "ads_b": {"sereno": 1.0, "pioggia_forte_25mm_h": 1.0, "nebbia_fitta": 1.0, "fumo_locale": 1.0}
+  "ripristino": "affidabile di nuovo dopo 10 quadri buoni di fila (f15-40-01) E verifica su un riferimento fisso noto (sfondo della mappa); le celle ripartono da 'non_osservato'",
+  "t_ripristino_s": 1.0,
+  "fonti": {
+   "soglie e durate": "f15-40-01 (li' ipotesi)",
+   "n_cicli_dichiarazione_max, retrodatazione, riferimento fisso": "I"
   },
-  "c": {"radar_sorveglianza_droni": null, "radar_movimento_a_terra": null, "lidar_tele": 1.0, "camera_eo_ottica_lunga": 1.0, "camera_termica_ottica_lunga": 2.0, "ads_b": null},
-  "fonti": {"f e c": "I (lidar in nebbia 0,5: stessa ipotesi di f15-02; pioggia in banda X: attenuazione e clutter di pioggia, M)", "visibilita_m": "I"},
-  "uscita": "a ogni cambio di condizione: 'portata utile ridotta' per sensore e classe; la distanza del 'libero' per classe = max su s affidabili di R_utile; se < d_avv (f15-04, avviso.formula_*) -> 'avviso non tempestivo per <classe>' e oltre R_utile tutto resta 'zona non verificata: meteo'",
-  "condizione_da": "dichiarata dall'esterno (bollettino) OPPURE dedotta dalla perdita di sfondo su tutti i raggi di un sensore (EV-B su tutto il campo): si prende la peggiore delle due"
+  "durate_di_riferimento_s": {
+   "fiammata di motore, sorgente": [
+    0.5,
+    3.0
+   ],
+   "cecita' EO oltre la sorgente": [
+    0.5,
+    2.0
+   ],
+   "cecita' termica oltre la sorgente": [
+    1.0,
+    10.0
+   ],
+   "fonte": "f15-40-01 (li': ipotesi)"
+  }
  },
-
+ "EV-D_meteo": {
+  "sorgente": "../01-effetti/effetti_eventi.json: effetti/<condizione>/per_sensore/<sensore>/fattore_portata e portata_m, coppie [nominale, prudente]. Le regole usano SEMPRE il valore PRUDENTE",
+  "condizioni": [
+   "meteo_sereno",
+   "meteo_foschia",
+   "meteo_nebbia",
+   "meteo_nebbia_fitta",
+   "meteo_pioggia_forte",
+   "meteo_neve"
+  ],
+  "formula": {
+   "radar e lidar": "R_utile(s, cond, classe) = fattore_portata_prudente[s][cond] * R_s(rcs_classe, Pd cumulata 0.99, 5 passate)",
+   "camere": "se fattore < 1 la portata e' limitata dal contrasto e non dalla dimensione: R_utile = min(R_s(classe) in aria limpida, portata_m prudente[s][cond]) (semplificazione mia: I)",
+   "cooperativi": "non toccati dal meteo, ma non sono osservazione: non entrano nel 'libero'"
+  },
+  "uscita": "a ogni cambio di condizione: 'portata utile ridotta' per sensore e classe; la distanza del 'libero' per classe = max su s affidabili di R_utile; se < d_avv (f15-04, avviso.formula_*) -> 'avviso non tempestivo per <classe>' e oltre R_utile tutto resta 'zona non verificata: meteo'; se il 'libero' poggia su un solo sensore -> 'ridondanza assente'",
+  "condizione_da": "dichiarata dall'esterno (bollettino) OPPURE dedotta dalla salute dei sensori (01-effetti, salute_sensore: contrasto perso, caduta dei ritorni, fondo radar +6 dB): si prende la PEGGIORE; la portata dichiarata si accorcia, non si allunga mai da sola",
+  "fonti": {
+   "fattori": "f15-40-01",
+   "regola del peggiore e 'ridondanza assente'": "I"
+  }
+ },
  "EV-E_detriti_a_terra": {
   "regola": "l'impronta I(T_c) dell'evento, unita su pista alla striscia a valle fino al punto d'arresto del mezzo, resta 'zona non verificata: possibili detriti' finche' non e' ISPEZIONATA",
-  "ispezione": {"a_sensore": "Pd cumulata >= 0.99 per frammento_minimo_ammesso su ogni cella dell'impronta, con sensore in salute e condizione meteo corrente", "a_vista": "conferma registrata dell'operatore, con nome del giro d'ispezione e ora; il sistema la riporta come 'ispezionata da operatore', non come 'osservato libero'"},
+  "ispezione": {
+   "a_sensore": "Pd cumulata >= 0.99 per frammento_minimo_ammesso su ogni cella dell'impronta, con sensore in salute e condizione meteo corrente",
+   "a_vista": "conferma registrata dell'operatore, con nome del giro d'ispezione e ora; il sistema la riporta come 'ispezionata da operatore', non come 'osservato libero'"
+  },
   "mezzi_in_avvicinamento": "ogni traccia il cui insieme di presenza a t + d_avv/v interseca l'impronta riceve l'avviso 'zona non verificata sul percorso'",
-  "fonti": {"tutti": "I"}
+  "fonti": {
+   "tutti": "I"
+  }
  }
 }

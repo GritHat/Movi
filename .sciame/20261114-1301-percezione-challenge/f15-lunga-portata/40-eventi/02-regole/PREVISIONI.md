@@ -34,3 +34,13 @@ di quanto credevo (la resistenza frena subito i frammenti leggeri). Previsione s
 Il secondo giro (frammenti_esito_secondo_giro_instabile.txt, un caso) dava 4 campioni fuori con eccedenza 1e207 m:
 non e' una smentita di P1, e' l'integratore esplicito che diverge a passo 0,04 s per i frammenti leggeri e veloci
 (k |v| dt > 1). Corretto con sottopassi h <= 0,2/(k |v_rel|). Previsioni e soglie invariate.
+
+## Esiti (2026-11-15T00:20:40+01:00; terzo giro, risultati_frammenti.json, 88 s di calcolo)
+
+- P1: REGGE. 0 campioni fuori su 8 casi conformi (uniforme e bordo, E1 ed E2, nominale e prudente), 10 000 frammenti l'uno.
+- P2: REGGE (100 % delle cadute dentro l'impronta, larga e stretta), ma la formula e' stata cambiata dopo il primo giro.
+- P3: REGGE (100 % a terra entro T_c), stessa riserva.
+- P4: SMENTITA IN PARTE. La quota scende sotto il 100 % (99,83-99,997 %) ma in 3 casi su 4 resta sopra il 99,9 %
+  che avevo dato come tetto: l'inviluppo ha piu' margine di quanto credevo.
+- P5: REGGE (0 fuori su 4 casi con raffiche). Non e' una prova.
+- P6: REGGE. Ancora in volo a T_c: 36 % e 26 % (E1), 3 % e 6 % (E2); cadute fuori dall'impronta fino al 19 %.

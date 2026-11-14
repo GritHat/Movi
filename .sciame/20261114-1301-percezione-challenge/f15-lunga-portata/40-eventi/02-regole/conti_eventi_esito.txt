@@ -18,21 +18,31 @@ E5 5.0 m a t = 15.0
    sotto 20.0 m da t = 13.65 a t = 16.35
 == portata del radar per il 'libero' (Pd cumulata 0.99 in 5 passate, Swerling 1, Pfa 1e-6: modello di 02-sensori e movi_lp.Sensore.portata) ==
 Pd per passata 0.602 SNR richiesto 26.2 SNR rif (Pd 0.5) 18.9 fattore sulla portata di scheda 0.922
-  radar_sorveglianza_droni, sereno, frammento_minimo (1e-4 m2) 904 m
+  radar_sorveglianza_droni, sereno, frammento_minimo (5 cm, 2e-4 m2) 1069 m
   radar_sorveglianza_droni, sereno, multirotore_piccolo (0.01) 2858 m
   radar_sorveglianza_droni, sereno, aereo_leggero (2) 5000 m
   radar_sorveglianza_droni, sereno, aereo_linea (20) 5000 m
   (ottici: 'portata_pratica' EO e 'geometrica' termica di 02-sensori; la termica e' un limite superiore)
-== EV-D: portata utile per condizione (m) = min(f*R, c*visibilita') ==
+== EV-D: portata utile per condizione (m), fattori PRUDENTI di 01-effetti ==
 d_avv operatore di sito: inviluppo aeroporto_e_droni (v_max 90.0 ) = 1490 m; solo multirotore = 354 m
-  sereno                 multirotore_piccolo (0.01)   radar   2858  EO   2000  termica   1200 | libero fino a   2858 (senza radar   2000) | tempestivo (inviluppo 1490 m): si; senza radar: si
-  sereno                 aereo_leggero (2)            radar   5000  EO  15000  termica  40000 | libero fino a  40000 (senza radar  40000) | tempestivo (inviluppo 1490 m): si; senza radar: si
-  pioggia_forte_25mm_h   multirotore_piccolo (0.01)   radar   1715  EO   1000  termica    600 | libero fino a   1715 (senza radar   1000) | tempestivo (inviluppo 1490 m): si; senza radar: NO
-  pioggia_forte_25mm_h   aereo_leggero (2)            radar   3000  EO   1500  termica   3000 | libero fino a   3000 (senza radar   3000) | tempestivo (inviluppo 1490 m): si; senza radar: si
-  nebbia_fitta           multirotore_piccolo (0.01)   radar   2715  EO    200  termica    400 | libero fino a   2715 (senza radar    400) | tempestivo (inviluppo 1490 m): si; senza radar: NO
-  nebbia_fitta           aereo_leggero (2)            radar   4750  EO    200  termica    400 | libero fino a   4750 (senza radar    400) | tempestivo (inviluppo 1490 m): si; senza radar: NO
-  fumo_locale            multirotore_piccolo (0.01)   radar   2858  EO      0  termica     40 | libero fino a   2858 (senza radar     40) | tempestivo (inviluppo 1490 m): si; senza radar: NO
-  fumo_locale            aereo_leggero (2)            radar   5000  EO      0  termica     40 | libero fino a   5000 (senza radar     40) | tempestivo (inviluppo 1490 m): si; senza radar: NO
+  meteo_sereno         frammento_minimo (5 cm, 2e-4 m2) radar   1069 (solo in volo; a terra: nessun sensore)
+  meteo_sereno         multirotore_piccolo (0.01)       radar   2858  EO   2000  termica   1200 | libero fino a   2858 (senza radar   2000) | tempestivo per l'inviluppo (1490 m): si, senza radar: si | per il solo multirotore (354 m) senza radar: si
+  meteo_sereno         aereo_leggero (2)                radar   5000  EO  15000  termica  41700 | libero fino a  41700 (senza radar  41700) | tempestivo per l'inviluppo (1490 m): si, senza radar: si | per il solo multirotore (354 m) senza radar: si
+  meteo_foschia        frammento_minimo (5 cm, 2e-4 m2) radar   1069 (solo in volo; a terra: nessun sensore)
+  meteo_foschia        multirotore_piccolo (0.01)       radar   2858  EO    916  termica    616 | libero fino a   2858 (senza radar    916) | tempestivo per l'inviluppo (1490 m): si, senza radar: NO | per il solo multirotore (354 m) senza radar: si
+  meteo_foschia        aereo_leggero (2)                radar   5000  EO    916  termica    616 | libero fino a   5000 (senza radar    916) | tempestivo per l'inviluppo (1490 m): si, senza radar: NO | per il solo multirotore (354 m) senza radar: si
+  meteo_nebbia         frammento_minimo (5 cm, 2e-4 m2) radar   1069 (solo in volo; a terra: nessun sensore)
+  meteo_nebbia         multirotore_piccolo (0.01)       radar   2858  EO     92  termica     62 | libero fino a   2858 (senza radar     92) | tempestivo per l'inviluppo (1490 m): si, senza radar: NO | per il solo multirotore (354 m) senza radar: NO
+  meteo_nebbia         aereo_leggero (2)                radar   5000  EO     92  termica     62 | libero fino a   5000 (senza radar     92) | tempestivo per l'inviluppo (1490 m): si, senza radar: NO | per il solo multirotore (354 m) senza radar: NO
+  meteo_nebbia_fitta   frammento_minimo (5 cm, 2e-4 m2) radar   1048 (solo in volo; a terra: nessun sensore)
+  meteo_nebbia_fitta   multirotore_piccolo (0.01)       radar   2801  EO     23  termica     15 | libero fino a   2801 (senza radar     23) | tempestivo per l'inviluppo (1490 m): si, senza radar: NO | per il solo multirotore (354 m) senza radar: NO
+  meteo_nebbia_fitta   aereo_leggero (2)                radar   4900  EO     23  termica     15 | libero fino a   4900 (senza radar     23) | tempestivo per l'inviluppo (1490 m): si, senza radar: NO | per il solo multirotore (354 m) senza radar: NO
+  meteo_pioggia_forte  frammento_minimo (5 cm, 2e-4 m2) radar    748 (solo in volo; a terra: nessun sensore)
+  meteo_pioggia_forte  multirotore_piccolo (0.01)       radar   2000  EO    526  termica    353 | libero fino a   2000 (senza radar    526) | tempestivo per l'inviluppo (1490 m): si, senza radar: NO | per il solo multirotore (354 m) senza radar: si
+  meteo_pioggia_forte  aereo_leggero (2)                radar   3500  EO    526  termica    353 | libero fino a   3500 (senza radar    526) | tempestivo per l'inviluppo (1490 m): si, senza radar: NO | per il solo multirotore (354 m) senza radar: si
+  meteo_neve           frammento_minimo (5 cm, 2e-4 m2) radar   1037 (solo in volo; a terra: nessun sensore)
+  meteo_neve           multirotore_piccolo (0.01)       radar   2772  EO     46  termica     31 | libero fino a   2772 (senza radar     46) | tempestivo per l'inviluppo (1490 m): si, senza radar: NO | per il solo multirotore (354 m) senza radar: NO
+  meteo_neve           aereo_leggero (2)                radar   4850  EO     46  termica     31 | libero fino a   4850 (senza radar     46) | tempestivo per l'inviluppo (1490 m): si, senza radar: NO | per il solo multirotore (354 m) senza radar: NO
 == E2: distanza d'avviso del mezzo1 verso un ostacolo fermo ==
   12*(1+2.5) + 12^2/(2*1.5) + 50 = 140.0 m
 == E1: caduta libera da 80 m senza resistenza: 4.04 s; con v_t=15 m/s (da fermo): 6.39 s
