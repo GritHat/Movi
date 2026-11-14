@@ -1,0 +1,31 @@
+## S10 scena 4 ([dopo] barra 1,7-1,9 m a 2,0 m): celle «libero» su 2610: S10(B+M+A) 0 ; S10(B+M) 1040 (fra 1,24 e 1,61 m: 0) ; S10p alla lettera 2026 ; N1 918 ; P (libero fino a una quota>0) 1386
+   celle «libero» con un oggetto nella colonna 0-2 m: S10(B+M) 75 ; S10p 75 ; S10i (bit a zero = libero) 75 ; N1 21 ; P 75 (quota massima dichiarata 1.70 m)
+   (pixel validi sulla barra: 3170)
+## S10 scena 5 ([dopo] barra 1,7-1,9 m a 2,5 m): celle «libero» su 2610: S10(B+M+A) 0 ; S10(B+M) 1040 (fra 1,24 e 1,61 m: 0) ; S10p alla lettera 2026 ; N1 1147 ; P (libero fino a una quota>0) 1386
+   celle «libero» con un oggetto nella colonna 0-2 m: S10(B+M) 67 ; S10p 67 ; S10i (bit a zero = libero) 67 ; N1 0 ; P 67 (quota massima dichiarata 1.70 m)
+## A5a scatola che compare al fotogramma 60 su zona vista libera: falsi liberi profondi per fotogramma
+candidata    f59    f60    f61    f62    f63    f70    f90    f99   
+N0-suolo         13    438    437     12     13     11     12     10
+N1-suolo         13     14     13     12     13     11     12     10
+N1-colonna    12008  10017  10006   9974   9992   9989   9997   9964
+Q1                0      0      0      0      0      0      0      0
+Q3                0      0      0      0      0      0      0      0
+Q3c               0      0      0      0      0      0      0      0
+P                 0      0      0      0      0      0      0      0
+S10(B+M)          0      0      0      0      0      0      0      0
+S10p(B+M)      3092   3092   3092   3092   3092   3092   3092   3092
+VO             3735  16183  16183  15805  15805  15805  15809  15805
+VOa               0      0      0      0      0      0      0      0
+Q3 no claus.      0  12755  12660      0      0      0      0      0
+## A5c soggetto nero (nessun ritorno dal corpo) a 1,4 m/s  (reticolo 5 cm, 149200 punti)
+candidata     fot F_ogni F_prof  punti_FL occupati nascosti profondi S_nas S_ogni   resa%   t_med   t_max
+N0-suolo       87    87     87      3967     1186     2781     2877    47    47    99.7    0.98    1.49
+N1-suolo       87    87     87      3967     1186     2781     2877    47    47    99.7    0.98    1.49
+N1-colonna     87    87     87   1254299    40324  1213975  1102143    47    47    86.6    0.98    1.49
+Q1             87     0      0         0        0        0        0     0     0    95.8    2.08    3.79
+Q3             87    45     44     67355    17914    49441    47303    45    45    96.9    2.77    3.21
+Q3c            87    36      0       495        5      490        0     1     1    95.9    2.74    3.61
+P              87     0      0         0        0        0        0     0     0    79.5    5.01    7.42
+S10(B+M)       87     0      0         0        0        0        0     0     0    60.4    5.01    7.42
+VO             87    87     87    743983    65054   678929   470369    48    48   100.0    5.85    8.32
+VOa            87    46     45    101742    30726    71016    70056    46    46    89.6    6.08    8.79

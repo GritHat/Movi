@@ -1,0 +1,6 @@
+freq core0 durante: 4845896 kHz; core9: 605264
+%CPU PSR COMMAND
+99.0   0 banco_FASCE
+ 5.0  21 claude
+ 4.2  13 plasmashell
+ 2.4   3 lm-studio

@@ -1,0 +1,50 @@
+## A5a scatola che compare al fotogramma 60 su zona vista libera: falsi liberi profondi per fotogramma
+candidata    f59    f60    f61    f62    f63    f70    f90    f99   
+N0-suolo         13    438    437     12     13     11     12     10
+N1-suolo         13     14     13     12     13     11     12     10
+N1-colonna    12008  10017  10006   9974   9992   9989   9997   9964
+Q1                0      0      0      0      0      0      0      0
+Q3                0      0      0      0      0      0      0      0
+Q3c               0      0      0      0      0      0      0      0
+P                 0      0      0      0      0      0      0      0
+S10(B+M)          0      0      0      0      0      0      0      0
+S10p(B+M)      3092   3092   3092   3092   3092   3092   3092   3092
+VO             3735  16183  16183  15805  15805  15805  15809  15805
+VOa               0      0      0      0      0      0      0      0
+Q3 no claus.      0  12755  12660      0      0      0      0      0
+## A5b mobile a 1,4 m/s, non validi: sparsi 30 %, a chiazze 0 %  (reticolo 5 cm, 149200 punti)
+candidata     fot F_ogni F_prof  punti_FL occupati nascosti profondi S_nas S_ogni   resa%   t_med   t_max
+N0-suolo       87    87     87      2868      573     2295     2301     0    43    99.2    0.89    1.33
+N1-suolo       87    87     87       933        0      933      933     0     0    99.1    0.89    1.33
+N1-colonna     87    87     87   1128295        0  1128295  1016452     0     0    86.0    0.89    1.33
+Q1             87     0      0         0        0        0        0     0     0     4.0    2.72    4.05
+Q3             87     0      0         0        0        0        0     0     0    11.4    7.76   11.33
+Q3c            87     0      0         0        0        0        0     0     0     9.1    7.75    8.69
+P              87     0      0         0        0        0        0     0     0     0.0    6.32    9.67
+S10(B+M)       87     0      0         0        0        0        0     0     0     0.0    6.32    9.67
+VO             87    87     87    733273    55372   677901   468208     0    48    99.4    4.30    6.33
+VOa            87     9      0        42        2       40        0     0     1    89.3    4.49    6.50
+## A5b mobile a 1,4 m/s, non validi: sparsi 0 %, a chiazze 30 %  (reticolo 5 cm, 149200 punti)
+candidata     fot F_ogni F_prof  punti_FL occupati nascosti profondi S_nas S_ogni   resa%   t_med   t_max
+N0-suolo       87    87     87      2572      496     2076     2056     0    43    98.1    0.73    1.19
+N1-suolo       87    87     87       898        0      898      898     0     0    98.0    0.73    1.19
+N1-colonna     87    87     87   1116254        0  1116254  1005626     0     0    85.0    0.73    1.19
+Q1             87     0      0         0        0        0        0     0     0    63.3    1.91    4.76
+Q3             87    45     43     14288     3986    10302     9846     0    45    93.8    3.74   11.96
+Q3c            87     1      0         4        0        4        0     0     0    67.6    3.73    9.94
+P              87    33      0        78       72        6        0     0    31     9.2    4.48    6.49
+S10(B+M)       87     0      0         0        0        0        0     0     0     1.2    4.48    6.49
+VO             87    87     87    735106    56904   678202   468665     0    48    99.5    4.29    6.04
+VOa            87    42     40     13869     4038     9831    10024     0    42    89.2    4.52    7.86
+## A5b mobile a 1,4 m/s, non validi: sparsi 0 %, a chiazze 0 %  (reticolo 5 cm, 149200 punti)
+candidata     fot F_ogni F_prof  punti_FL occupati nascosti profondi S_nas S_ogni   resa%   t_med   t_max
+N0-suolo       87    87     87      2880      570     2310     2314     0    43    99.2    1.02    1.80
+N1-suolo       87    87     87       954        0      954      954     0     0    99.1    1.02    1.80
+N1-colonna     87    87     87   1128922        0  1128922  1017041     0     0    86.0    1.02    1.80
+Q1             87     0      0         0        0        0        0     0     0    98.6    2.15    3.09
+Q3             87     0      0         0        0        0        0     0     0    98.6    2.86    4.02
+Q3c            87     0      0         0        0        0        0     0     0    98.6    2.87    3.99
+P              87    45      0       138      131        7        0     0    45    81.6    5.08    6.88
+S10(B+M)       87     0      0         0        0        0        0     0     0    61.7    5.08    6.88
+VO             87    87     87    732746    55038   677708   467906     0    48    99.4    5.97    7.97
+VOa            87     2      0        10        0       10        0     0     0    89.3    6.25    8.25

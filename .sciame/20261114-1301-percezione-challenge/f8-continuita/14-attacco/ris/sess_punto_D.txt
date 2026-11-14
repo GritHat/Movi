@@ -1,0 +1,3 @@
+# sessione geo=D rb=0 c6=0.22
+# geo=D e=0.00 pd=0.90 rb=0.000 c6=0.22 imbardata fissa=0.0 tremolio=0.0 gradi; libreria 200 percorsi (vivaci=0); prova vivaci=0; curva=0.0 gradi/s; v=0.3-1.8
+SESSIONE geo=D passaggi=120 ricomparse=95 riagganciate=6 prima_ambigua_al_passaggio=8 ricomparse_dopo=88 riagganciate_dopo=0 pendenti_alla_fine=127

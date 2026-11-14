@@ -1,0 +1,6 @@
+# lotto 6 sul nucleo 1, 2026-11-14T15:20:26+01:00
+# carico prima: %CPU PSR COMMAND
+# carico prima: 99.6   4 banco
+# carico prima:  4.8  14 plasmashell
+# carico prima:  4.2  22 claude
+octree   ris= 5cm scena=rada  raggi=307200 fot=200 ombra=0 arena=0 | agg_ms media=230.671 p95=235.258 max=237.152 primo=228.042 regime(media=230.684 p95=235.364 max=237.152) | interr_ms media=2.2903 p95=3.0964 max=3.2719 | passi/fot media=30395849 max=31103273 | mem usata=4456448 riservata=4456448 B | voxel teorici=576000 allocati=337488 toccati_ultimo=256178 occ=4785 liberi_ora=271072 | blocchi=0 nodi=6352 mattoni=42186 scartati=0 | settori ultimo: liberi=95 ignoti=341 occupati=31 | scorr_ms media=0.0000 max=0.0000 | rss_max=17068 kB | somma=2877f42612656d1f sink=22884.1

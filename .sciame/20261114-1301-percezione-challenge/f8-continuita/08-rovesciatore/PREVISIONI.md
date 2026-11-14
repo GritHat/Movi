@@ -1,0 +1,37 @@
+# Previsioni — `sciame-rovesciatore`, f8 (continuità visiva), corsia B
+
+Scritte alle **2026-11-14T15:17:19+01:00** (`date -Is`), PRIMA di scrivere ed eseguire `rov_f8.py`. Lette prima: la traccia, il contratto f8, il quarto addendum, `SOLUZIONE_V2.md`, `VERDETTO.md`, `TORNEO_parte3.md`, `scena_parte3.py` (il codice dell'avversario), le righe P4 di `MISURE_V2.md`, e per `grep` la specializzazione, la proposta e la consegna del creativo di f1.
+
+**Scena di tutte le prove.** Quella dell'avversario del torneo (`f2/04-torneo/scena_parte3.py`, importata in sola lettura: generatore `truth`, visibilità `vis`, filtro `KF`): sensore in (0,0), campo ±43,5°, portata 6 m, pannello a 2 m largo 1 m (o 2 m), pedone puntiforme a 4 m, 1,0–1,5 m/s, 15 Hz, rumore 5 cm, Pd 0,9, q = 0,2. Quattro comportamenti: prosegue, sosta (2–4 s), torna, lontano (esce dal lato lontano). Il generatore NON è mio; il predittore sì (il Kalman è quello dell'avversario). «Rallenta» e «svolta» mancano nel generatore: non coperti. Taratura su semi diversi da quelli della prova (pannello 1 m); prova su 1 m e su 2 m.
+
+## rovesciatore-1 — «perso non esiste: una sola regione annidata»
+
+- **P-rov-1a (Q3).** Misura: quota dei cicli a soggetto in ombra in cui la regola del nucleo (cerchio al 95 % ritagliato sull'ombra, mostrato finché copre meno di metà dell'ombra; poi «perso» assorbente) emette ancora una stima. Attesa: prosegue, pannello 1 m: 40–80 %; sosta: ≤ 35 %; tutti i comportamenti insieme: < 50 %. **Smentita:** ≥ 90 % in ogni comportamento (allora il nucleo, in questa scena, rispetta già il controllo 1).
+- **P-rov-1b.** Misura: copertura per comportamento e per tempo senza osservazione del cerchio nominale del Kalman (q = 0,2) al 90 %, tenuto semplicemente acceso («modifica minima»). Attesa: sotto l'80 % in almeno un comportamento a un tempo ≥ 1 s con n ≥ 30 (attesi: torna, lontano). **Smentita:** ≥ 85 % in ogni cella con n ≥ 30.
+- **P-rov-1c.** Misura: quota dell'ombra coperta dalla regione al 90 % tarata sul comportamento peggiore (quantile empirico per tempo, massimo sui comportamenti), con due centri: il punto a velocità costante (A) e l'ultima osservazione (B). Attesa, pannello 1 m: ≥ 80 % dell'ombra a t ≥ 3 s con tutti e due i centri; < 50 % a t ≤ 1 s con almeno un centro; orizzonte informativo (la regione al 90 % passa metà dell'ombra) fra 1 e 2 s. **Smentita:** una regione al 90 % con copertura ≥ 85 % in ogni comportamento che a 3 s copre meno di metà dell'ombra (allora esiste una previsione informativa lunga, e «la regione onesta è l'ombra» è falso).
+- **P-rov-1d.** Misura: come 1c, confronto fra i due centri a 2 e 3 s. Attesa: il centro «ultima osservazione» (B) copre una quota d'ombra minore o uguale a quella del centro a velocità costante (A). **Smentita:** A più stretta di oltre 5 punti a 2 s e a 3 s.
+- **P-rov-1e.** Misura: la taratura fatta sul pannello da 1 m, applicata al pannello da 2 m. Attesa: non si trasferisce: almeno una cella (comportamento, tempo, n ≥ 30) sotto il 75 % al livello 90 %; per il centro B, «prosegue» a 3 s sotto il 50 %. **Smentita:** ogni cella con n ≥ 30 ≥ 85 % su tutti e due i centri.
+- Controllo per costruzione (non è un dato): la regione al 100 % = disco di v_max dall'ultima osservazione ∩ non osservato contiene il soggetto nel 100 % dei cicli (v ≤ 1,5 < 2,5 m/s).
+
+## rovesciatore-2 — «si tara all'indietro, dalla ricomparsa»
+
+- **P-rov-2a.** Misura: numero di ricomparse per comportamento. Attesa: «lontano» ne produce 0 (o meno del 5 % delle prove): la statistica in linea è cieca sul comportamento peggiore. **Smentita:** «lontano» ricompare in oltre il 20 % delle prove.
+- **P-rov-2b.** Misura: fattore di scala del raggio ricavato dal salto normalizzato alla ricomparsa (quantile 90 % sui semi di taratura, comportamenti mescolati come li vedrebbe il sistema), applicato ai cicli nascosti dei semi di prova. Attesa: copertura sotto l'80 % (obiettivo 90 %) in almeno una cella (comportamento, tempo) con n ≥ 30. **Smentita:** tutte le celle con n ≥ 30 fra 85 e 95 %.
+- **P-rov-2c.** Misura: copertura durante il nascosto stimata «all'indietro» con il ponte rettilineo a velocità costante fra l'ultima osservazione e la prima misura alla ricomparsa (pseudo-verità), confrontata con la copertura vera, ai livelli 50 e 90 %, cerchio nominale. Attesa: «prosegue» entro ±5 punti; «sosta» o «torna» oltre 10 punti di scarto ad almeno un livello. **Smentita:** scarto ≤ 5 punti per tutti i comportamenti che ricompaiono, ai due livelli (allora il ponte è una pseudo-verità buona e la taratura all'indietro si può adottare come misura sul vero senza riserve per chi ricompare).
+
+## Che cosa condividono queste prove con ciò che controllano
+
+Condividono: la scena, il generatore e il Kalman dell'avversario del torneo (non il nucleo V2 né i simulatori della validazione); il modello linguistico; la specifica. NON condividono: il codice del nucleo. Limiti noti prima: pedone puntiforme, tratti a velocità costante, sensore fermo, nessun falso allarme, ombra esatta; la regola del nucleo è riprodotta alla lettera del testo (§B5), non dal suo codice.
+
+---
+
+## Aggiunte DOPO la prima esecuzione (scritte alle 2026-11-14T15:20:35+01:00, prima della seconda esecuzione)
+
+Ho già visto `esito_rov_f8_primo.txt` (T1a–T2c). Le due previsioni qui sotto nascono da quei numeri: la prima è quasi un conto, la seconda è una misura che non ho ancora visto.
+
+- **P-rov-2d [dopo].** Misura: la scala ricavata dai salti alla ricomparsa quando la miscela vista dal sistema è realistica (90 % prosegue, 5 % sosta, 5 % torna, quantile pesato) invece che in parti uguali. Attesa: k90 sotto il nominale 2,15 (i salti di chi prosegue stanno tutti sotto 1,18) e copertura vera al livello 90 % sotto il 70 % in almeno una cella (sosta, torna o lontano, fra 1 e 2 s, n ≥ 30). **Smentita:** ogni cella con n ≥ 30 ≥ 85 %.
+- **P-rov-3 (il danno dell'imperativo alla lettera).** Misura: quota dei cicli a soggetto in ombra in cui il punto «fluido» a velocità costante (la media del Kalman) sta su una cella vista libera, e distanza mediana fra quel punto e il soggetto, per «sosta», pannello 1 m. Attesa: punto su suolo visto libero in ≥ 70 % dei casi a 2 s e in ≥ 95 % a 3 s; distanza mediana ≥ 1,0 m a 2 s e ≥ 2,0 m a 3 s. **Smentita:** meno del 30 % a 2 s (allora un punto che prosegue liscio non è, in questa scena, una bugia visibile).
+
+## Terza aggiunta (scritta alle 2026-11-14T15:21:48+01:00, dopo aver visto T2d e T3, prima di eseguire T2e)
+
+- **P-rov-2e [dopo].** Idea nata dai numeri di T2c e T2d: all'indietro non si tara la scala né si ricostruisce il percorso, si **etichetta il comportamento** (lato e ritardo della ricomparsa) e con le etichette si stimano i pesi dei modi del predittore. Misura: quota di etichette giuste con la regola «lato d'ingresso → torna; lato opposto con τ ≤ 1,5 · (larghezza dell'ombra lungo il percorso / velocità stimata all'ingresso) → prosegue; lato opposto più tardi → sosta; nessuna ricomparsa entro 5,4 s → non ricomparso», pannello 1 m e 2 m, semi di prova. Attesa: ≥ 95 % per prosegue, sosta, torna; «lontano» sempre «non ricomparso»; con il pannello da 2 m una parte delle soste (attesa: oltre metà) finisce in «non ricomparso» perché la finestra di 5,4 s è corta. **Smentita:** meno del 90 % di etichette giuste per prosegue o per torna. Limite noto prima: il generatore ha comportamenti puliti (velocità costante a tratti), quindi la prova è facile; «rallenta» non c'è.

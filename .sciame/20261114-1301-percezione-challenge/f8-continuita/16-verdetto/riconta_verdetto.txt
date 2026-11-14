@@ -1,0 +1,141 @@
+====================================================================================================
+A. BANCO (11-misure/risultati/prova_*_pd09.tsv)
+D comportamenti: ['prosegue', 'rallenta', 'sosta', 'torna', 'svolta', 'lontano', 'sostalunga']
+T comportamenti: ['prosegue', 'rallenta', 'sosta', 'torna', 'svolta', 'lontano', 'sostalunga']
+L comportamenti: ['prosegue', 'rallenta', 'sosta', 'torna', 'svolta', 'lontano', 'sostalunga']
+  L0 passaggi con un vuoto, sul percorso (5): 1958/1958  1991/2000  1999/2000
+  L0 passaggi con un vuoto, tutti (7): 2736/2737  2790/2800  2797/2800
+[TORNA] 1. Nucleo (L0): passaggi con un vuoto, D/T/L
+      scritto: 1958 / 1991 / 1999 (su circa 2000)
+      dal file: 7 comportamenti: [2736, 2790, 2797]; 5 sul percorso: [1958, 1991, 1999]
+[TORNA] 2. Nucleo (L0): cicli senza osservazione con una regione, %
+      scritto: 19 / 38 / 33
+      dal file: (7 comportamenti, 5 sul percorso) per D,T,L: [(18.3, 19.0), (36.7, 38.1), (32.9, 33.3)]
+[TORNA] 3. C-004 (banco): cella peggiore sul percorso fino a 3 s, denominatore «dentro l'area osservata»
+      scritto: D 86/92, T 370/386, L 357/380 (0,935 / 0,959 / 0,939)
+      dal file: D: 86/92=0.935 (prosegue, 3.0 s); T: 370/386=0.959 (sostalunga, 3.0 s); L: 357/380=0.939 (rallenta, 3.0 s)
+      con il denominatore «tutti i nascosti»: D: 86/98=0.878 (prosegue, 3.0 s); T: 370/386=0.959 (sostalunga, 3.0 s); L: 357/380=0.939 (rallenta, 3.0 s)
+[TORNA] 4. O1, banco, «prosegue» a 3 s in D: 86/92 (area osservata) e 86/98 (tutti)
+      scritto: 86/92 e 86/98
+      dal file: in90=86 n=98 fuori_griglia=6 -> 86/92 e 86/98
+[TORNA] 5. R100 (strato 1) contiene il nascosto nel 100 % (banco, tutte le righe H)
+      scritto: 100 %, 0 fuori
+      dal file: righe H 1680, campioni 572480, fuori da R100: 0
+      C-004: cicli R90 su visto libero oltre la fascia 0; cicli R90 fuori da R100 0
+      C-005: cicli R90 su visto libero oltre la fascia 0; cicli R90 fuori da R100 0
+      C-001+C-008: cicli R90 su visto libero oltre la fascia 0; cicli R90 fuori da R100 0
+      C-EST-A: cicli R90 su visto libero oltre la fascia 0; cicli R90 fuori da R100 0
+      C-EST-B: cicli R90 su visto libero oltre la fascia 0; cicli R90 fuori da R100 0
+      L2r-filtro-ritagliato: cicli R90 su visto libero oltre la fascia 0; cicli R90 fuori da R100 0
+[TORNA] 6. C-004: 0 cicli di R90 su visto libero oltre la fascia, 0 fuori da R100 (banco)
+      scritto: 0 e 0
+      dal file: somma 0
+[TORNA] 7. C-EST su «sosta» a 3 s (K-206): D 0,95 e 1,00; T 0,72 e 0,53; L 0,14 e 0,00
+      scritto: vedi a sinistra
+      dal file: {('D', 'C-EST-A'): (337, 356, 0.947), ('D', 'C-EST-B'): (356, 356, 1.0), ('T', 'C-EST-A'): (282, 393, 0.718), ('T', 'C-EST-B'): (209, 393, 0.532), ('L', 'C-EST-A'): (54, 399, 0.135), ('L', 'C-EST-B'): (0, 399, 0.0)}
+[TORNA] 8. Attacco 5 su C-EST (banco, «prosegue»): A 0,28 / 0,30 / 0,00; B 0,997 / 0,71 / 0,00
+      scritto: vedi a sinistra
+      dal file: {('D', 'C-EST-A'): (100, 355, 0.282), ('D', 'C-EST-B'): (354, 355, 0.997), ('T', 'C-EST-A'): (104, 343, 0.303), ('T', 'C-EST-B'): (245, 343, 0.714), ('L', 'C-EST-A'): (0, 240, 0.0), ('L', 'C-EST-B'): (0, 240, 0.0)}
+[TORNA] 9. C-EST: passaggi con cicli «perso» (K-201): T 374 e 1312, L 1976 e 1987, D 2 e 2 su circa 2000
+      scritto: vedi a sinistra
+      dal file: (5 sul percorso, 7 comportamenti) {('D', 'C-EST-A'): (0, 0), ('D', 'C-EST-B'): (0, 0), ('T', 'C-EST-A'): (374, 551), ('T', 'C-EST-B'): (1312, 1978), ('L', 'C-EST-A'): (1976, 2767), ('L', 'C-EST-B'): (1987, 2785)}
+[TORNA] 10. Nucleo in demo: «metà» scatta prima della ricomparsa in 332 transiti su 355; «previsto» 0,67 s
+      scritto: 332/355; 0,667 s (0,60-0,73)
+      dal file: L0_perso_prima=332 ricomparsi=355 durata=0.667 q25=0.600 q75=0.733
+====================================================================================================
+B. SOLUZIONE (13-soluzione/ris/prova_*.tsv)
+[TORNA] 11. sd-1: passaggi con un ciclo senza regione 0 / 0 / 0 su 2716 / 2800 / 2798 (anche sd-0: 0)
+      scritto: 0/2716, 0/2800, 0/2798
+      dal file: [(0, 2716, 0), (0, 2800, 0), (0, 2798, 0)]
+[TORNA] 12. O1, soluzione, «prosegue» a 3 s in D: 101/119 (tutti) e 101/105 (area osservata)
+      scritto: 101/119 e 101/105
+      dal file: in90=101 n=119 fuori_griglia=14
+[TORNA] 13. sd-1: minimo sul percorso fino a 3 s, denominatore «tutti»: 0,849 / 0,962 / 0,920
+      scritto: 0,849 / 0,962 / 0,920
+      dal file: D: 101/119=0.849 (prosegue, 3.0 s); T: 252/262=0.962 (rallenta, 3.0 s); L: 357/388=0.920 (rallenta, 3.0 s)
+      con il denominatore «dentro l'area osservata»: D: 167/180=0.928 (prosegue, 2.0 s); T: 252/262=0.962 (rallenta, 3.0 s); L: 357/388=0.920 (rallenta, 3.0 s)
+[TORNA] 14. Riaggancio dei «prosegue» nei dati stessi della soluzione (regola del nucleo): 212/331, 336/345, 207/232
+      scritto: 212/331, 336/345, 207/232
+      dal file: ['212/331', '336/345', '207/232']
+[TORNA] 15. sd-1: cicli «ampio» (area > 80 % dell'ombra): 50,4 % in D, 0,0 % in T e L
+      scritto: 50,4 / 0,0 / 0,0
+      dal file: [50.4, 0.0, 0.0]
+[TORNA] 16. R100 contiene il nascosto (soluzione, righe H di sd-0 e sd-1)
+      scritto: 100 %
+      dal file: campioni 71782, fuori 0
+      punto ibrido (sd-1), «prosegue»: passaggi con un passo indietro / passaggi; punto su libero dopo il quinto ciclo (somma 7 comportamenti)
+        D: 70/385 = 18.2 %; dopo5 = 13; re40 = 324/331
+        T: 16/400 = 4.0 %; dopo5 = 0; re40 = 345/345
+        L: 14/400 = 3.5 %; dopo5 = 23; re40 = 230/232
+====================================================================================================
+C. CONTROPROVE (14-attacco/ris/*.txt)
+[TORNA] 17. «Tutto insieme» (T, corpo esteso, ombra −20 cm, rilevamento 0,7): «prosegue» 136/364 a 1 s e 43/152 a 2 s
+      scritto: 136/364, 43/152
+      dal file: 136/364, 43/152
+[TORNA] 18. Sessione con la regola 2: prima «ambigua» al passaggio 1 (D) e 4 (T); riagganci dopo 0/66 e 0/100; pendenti 87 / 117 / 95
+      scritto: D (1, 66, 0, 87); T (4, 100, 0, 117); L pendenti 95
+      dal file: [(1, 66, 0, 87), (4, 100, 0, 117), (1, 82, 0, 95)]
+[TORNA] 19. Riaggancio composto, corpo esteso, «prosegue»: 102/273, 306/397, 250/332
+      scritto: 102/273, 306/397, 250/332
+      dal file: ['102/273', '306/397', '250/332']
+[TORNA] 20. Parte da fermo accanto al pannello (T), R90 a corpo tutto nascosto: 15/141, 21/134, 14/54
+      scritto: 15/141, 21/134, 14/54
+      dal file: 15/141, 21/134, 14/54
+[TORNA] 21. Demo: «ampio» prima della ricomparsa in 269/273 «prosegue»; tempo mediano 1,00 s
+      scritto: 269/273; 1,00 s
+      dal file: 269/273; 1.00 s
+[TORNA] 22. Controprove: 0 passaggi con il centro nascosto fuori da R100 in 156 celle (63 file); 0 cicli senza regione
+      scritto: 0 fuori in 156 celle; 0 vuoti
+      dal file: file con il campo 52, celle 156, fuori_R100 totale 0, vuoti totale 0
+[TORNA] 23. Costo in Python puro: 0,6 ms (1 traccia), 1,8 ms (3), 5,3 ms mediana e 6,2 al 95º (10)
+      scritto: 0,6; 1,8; 5,3 / 6,2
+      dal file: [('1', '0.6', '0.7'), ('3', '1.8', '2.0'), ('10', '5.3', '6.2')]
+[TORNA] 24. Rilevamento 0,7 e maschera esatta: scoperti 130 passaggi su 1581
+      scritto: 130/1581
+      dal file: 130/1581
+====================================================================================================
+D. TORNEO (12-torneo/ris)
+[TORNA] 25. Estraneo dalla stessa ombra (torneo): la regola del nucleo lo riaggancia in 347 casi su 357
+      scritto: 347/357
+      dal file: 347/357
+      a17_s2.txt (S2), righe con 'median' o 'ombra':
+        (a) moto regolare v=0.5: non compensato mediana 0.078 p90 0.117 | compensato mediana 0.030 p90 0.072
+        (a) moto regolare v=1.2: non compensato mediana 0.186 p90 0.224 | compensato mediana 0.030 p90 0.072
+        (a) moto regolare v=1.8: non compensato mediana 0.279 p90 0.317 | compensato mediana 0.030 p90 0.072
+        (b) sosta improvvisa (0,13 s) v=0.5, 3 cicli dopo l inizio della frenata: non compensato mediana nan p90 nan | compensato mediana nan p90 nan | sorpasso massimo del compensato oltre il vero: mediana 0.100 p90 0.129
+        (b) sosta improvvisa (0,13 s) v=1.2, 3 cicli dopo l inizio della frenata: non compensato mediana 0.040 p90 0.080 | compensato mediana 0.178 p90 0.242 | sorpasso massimo del compensato oltre il vero: mediana 0.216 p90 0.266
+        (b) sosta improvvisa (0,13 s) v=1.8, 3 cicli dopo l inizio della frenata: non compensato mediana 0.058 p90 0.111 | compensato mediana 0.271 p90 0.341 | sorpasso massimo del compensato oltre il vero: mediana 0.316 p90 0.363
+        (c) ingresso nell ombra, C6=0.00 v=0.5: passaggi con il segno pieno compensato dentro l ombra 371/400; dentro la fascia di 0,20 m 400/400
+        (c) ingresso nell ombra, C6=0.00 v=1.2: passaggi con il segno pieno compensato dentro l ombra 393/400; dentro la fascia di 0,20 m 400/400
+        (c) ingresso nell ombra, C6=0.00 v=1.8: passaggi con il segno pieno compensato dentro l ombra 396/400; dentro la fascia di 0,20 m 400/400
+        (c) ingresso nell ombra, C6=0.22 v=0.5: passaggi con il segno pieno compensato dentro l ombra 0/400; dentro la fascia di 0,20 m 339/400
+        (c) ingresso nell ombra, C6=0.22 v=1.2: passaggi con il segno pieno compensato dentro l ombra 31/400; dentro la fascia di 0,20 m 394/400
+        (c) ingresso nell ombra, C6=0.22 v=1.8: passaggi con il segno pieno compensato dentro l ombra 188/400; dentro la fascia di 0,20 m 391/400
+====================================================================================================
+E. STATISTICA (15-statistica/ris): semi riparati, sd-1, «prosegue» in D con il denominatore «tutti»
+       {1.0: ((1834, 1872, 1862), 0.98, 0.985), 2.0: ((826, 879, 847), 0.94, 0.975), 3.0: ((461, 513, 480), 0.899, 0.96), 5.0: ((174, 221, 188), 0.787, 0.926)}
+[TORNA] 26. Semi riparati, D, «prosegue»: 0,899 a 3 s e 174/221 = 0,787 a 5 s (denominatore «tutti»); 513 nascosti a 3 s
+      scritto: 0,899; 174/221; 513
+      dal file: 3 s: 461/513 = 0.899; 5 s: 174/221
+      semi_spostato_L_90000x400.tsv: minimo sul percorso fino a 1/2/3 s: {1.0: (0.944, 323, 342, 'prosegue', 1.0), 2.0: (0.835, 283, 339, 'prosegue', 2.0), 3.0: (0.801, 226, 282, 'prosegue', 3.0)}
+      spostato_L_30000x400.tsv: minimo sul percorso fino a 1/2/3 s: {1.0: (0.96, 340, 354, 'sosta', 1.0), 2.0: (0.911, 297, 326, 'prosegue', 2.0), 3.0: (0.88, 243, 276, 'prosegue', 3.0)}
+[TORNA] 27. Camminatori meno regolari della libreria (spostamento dello statistico), L: 0,835 fino a 2 s e 0,801 fino a 3 s
+      scritto: 0,835; 0,801
+      dal file: {2.0: 0.835, 3.0: 0.801}
+====================================================================================================
+F. CONTROLLO MIO, indipendente dal codice altrui: i semi contigui di gen.h danno lo stesso flusso spostato di uno
+[TORNA] 28. rng_seed di gen.h (riscritto in Python dalle righe 25-40): flusso del seme 9001 = flusso del seme 9000 avanzato di 1
+      scritto: 1000 uguali su 1000 (15-statistica/ris/prova_semi.txt)
+      dal file: 1000 su 1000
+====================================================================================================
+G. ORE (conti sulle cifre scritte nei documenti; le ore sono stime degli autori, non verificate)
+      correzioni c1-c8 (fascia 14 ore): 4.25-5.25 ore-persona
+      M1-M8 (somma delle righe della tabella 2.11): 15.5-19.5 ore-persona; senza M4: 12.5-14.5
+      nucleo tagliato: 54-4-4-2-1-6 = 37; + 15,5 + 4 = 56.5; con sd-0 soltanto: 52.5
+      con c1-c8 e le righe dello statistico (0,25 + 0,5; le camminate fino a 2): 61.5-64.5; senza M4 (-4): 57.5-60.5
+      disponibili in 14 ore: 3 persone 42, 4 persone 56, 5 persone 70
+[TORNA] 29. Bilancio di M: 37 + 15,5 + 4 = 56,5; «circa 5 ore» per c1-c8
+      scritto: 56,5; circa 5
+      dal file: 56.5; 4.25-5.25
+====================================================================================================
+TOTALE: 29 cifre (o gruppi di cifre) tornano su 29

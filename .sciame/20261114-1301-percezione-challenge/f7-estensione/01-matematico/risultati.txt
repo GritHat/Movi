@@ -1,0 +1,104 @@
+verifica_strati.py tutto mondi 24 | Python 3.14.10
+== A. Strati: falsi liberi, costo, valore della storia ==
+celle nel campo (interamente): 603 su 1536
+
+v_max = 2.5 m/s, buchi = 0 %, corse = 24, fotogrammi = 7200; celle viste libere per fotogramma = 284.4; celle occupate fuori da PI = 0
+  regola    dich/fot  dich/F   falsi_fin  corse_fin  falsi_0   corse_0
+  PI            0.3    0.1%          0      0/24         0      0/24
+  PI_eta        0.3    0.1%          0      0/24         0      0/24
+  cono1         0.3    0.1%          0      0/24         0      0/24
+  nucleo      284.4  100.0%      45829     24/24         0      0/24
+  bayes       364.6  128.2%     138230     24/24     95928     24/24
+  bayes2      362.5  127.5%     129761     24/24     82620     24/24
+
+v_max = 2.5 m/s, buchi = 5 %, corse = 24, fotogrammi = 7200; celle viste libere per fotogramma = 167.1; celle occupate fuori da PI = 0
+  regola    dich/fot  dich/F   falsi_fin  corse_fin  falsi_0   corse_0
+  PI            0.0    0.0%          0      0/24         0      0/24
+  PI_eta        0.0    0.0%          0      0/24         0      0/24
+  cono1         0.0    0.0%          0      0/24         0      0/24
+  nucleo      253.2  151.5%      40557     24/24        18     12/24
+  bayes       353.0  211.2%     133303     24/24     92832     24/24
+  bayes2      351.0  210.0%     125620     24/24     80588     24/24
+
+v_max = 1.4 m/s, buchi = 0 %, corse = 24, fotogrammi = 7200; celle viste libere per fotogramma = 285.2; celle occupate fuori da PI = 0
+  regola    dich/fot  dich/F   falsi_fin  corse_fin  falsi_0   corse_0
+  PI            9.2    3.2%          0      0/24         0      0/24
+  PI_eta        9.2    3.2%          0      0/24         0      0/24
+  cono1         9.1    3.2%          0      0/24         0      0/24
+  nucleo      285.2  100.0%      26640     24/24         0      0/24
+  bayes       358.7  125.8%     116529     24/24     81466     24/24
+  bayes2      357.1  125.2%     108472     24/24     72248     24/24
+
+v_max = 1.4 m/s, buchi = 5 %, corse = 24, fotogrammi = 7200; celle viste libere per fotogramma = 167.1; celle occupate fuori da PI = 0
+  regola    dich/fot  dich/F   falsi_fin  corse_fin  falsi_0   corse_0
+  PI            1.3    0.8%          0      0/24         0      0/24
+  PI_eta        1.2    0.7%          0      0/24         0      0/24
+  cono1         0.2    0.1%          0      0/24         0      0/24
+  nucleo      255.1  152.6%      23716     24/24        29     17/24
+  bayes       346.9  207.5%     113137     24/24     79346     24/24
+  bayes2      345.4  206.7%     105611     24/24     70675     24/24
+
+valore della storia, v_max = 2.5: PI con buchi / senza = 0.7 %; cono1 con buchi / senza = 0.6 %
+
+valore della storia, v_max = 1.4: PI con buchi / senza = 13.7 %; cono1 con buchi / senza = 2.7 %
+
+-- sensore coperto: fotogrammi 150-179 (2 s) tutti non validi, v_max 2.5 e 1.4, buchi 0 %, 12 corse ciascuno
+  v_max 2.5  PI       ultimo fotogramma coperto con celle dichiarate:  0 (0.00 s); minimo dichiarate nella copertura: 0; falsi_fin nelle corse: 0
+  v_max 2.5  PI_eta   ultimo fotogramma coperto con celle dichiarate:  0 (0.00 s); minimo dichiarate nella copertura: 0; falsi_fin nelle corse: 0
+  v_max 2.5  cono1    ultimo fotogramma coperto con celle dichiarate:  0 (0.00 s); minimo dichiarate nella copertura: 0; falsi_fin nelle corse: 0
+  v_max 2.5  nucleo   ultimo fotogramma coperto con celle dichiarate:  2 (0.13 s); minimo dichiarate nella copertura: 0; falsi_fin nelle corse: 22965
+  v_max 2.5  bayes    ultimo fotogramma coperto con celle dichiarate: 30 (2.00 s); minimo dichiarate nella copertura: 235; falsi_fin nelle corse: 78114
+  v_max 2.5  bayes2   ultimo fotogramma coperto con celle dichiarate: 30 (2.00 s); minimo dichiarate nella copertura: 235; falsi_fin nelle corse: 73823
+  v_max 1.4  PI       ultimo fotogramma coperto con celle dichiarate:  2 (0.13 s); minimo dichiarate nella copertura: 0; falsi_fin nelle corse: 0
+  v_max 1.4  PI_eta   ultimo fotogramma coperto con celle dichiarate:  2 (0.13 s); minimo dichiarate nella copertura: 0; falsi_fin nelle corse: 0
+  v_max 1.4  cono1    ultimo fotogramma coperto con celle dichiarate:  0 (0.00 s); minimo dichiarate nella copertura: 0; falsi_fin nelle corse: 0
+  v_max 1.4  nucleo   ultimo fotogramma coperto con celle dichiarate:  2 (0.13 s); minimo dichiarate nella copertura: 0; falsi_fin nelle corse: 13870
+  v_max 1.4  bayes    ultimo fotogramma coperto con celle dichiarate: 30 (2.00 s); minimo dichiarate nella copertura: 238; falsi_fin nelle corse: 68811
+  v_max 1.4  bayes2   ultimo fotogramma coperto con celle dichiarate: 30 (2.00 s); minimo dichiarate nella copertura: 238; falsi_fin nelle corse: 64458
+
+== B. Errore di posa e margine ==
+  eps_t = 3 cm, delta = 1 gradi, margine teorico m = 8.2 cm; erosione 0 celle (0 cm): scene con falsi liberi 114/200, celle false 284, celle dichiarate/scena 249.4
+  eps_t = 3 cm, delta = 1 gradi, margine teorico m = 8.2 cm; erosione 1 celle (10 cm): scene con falsi liberi 0/200, celle false 0, celle dichiarate/scena 120.7
+  eps_t = 5 cm, delta = 2 gradi, margine teorico m = 15.5 cm; erosione 0 celle (0 cm): scene con falsi liberi 162/200, celle false 812, celle dichiarate/scena 251.0
+  eps_t = 5 cm, delta = 2 gradi, margine teorico m = 15.5 cm; erosione 1 celle (10 cm): scene con falsi liberi 1/200, celle false 1, celle dichiarate/scena 122.7
+  eps_t = 5 cm, delta = 2 gradi, margine teorico m = 15.5 cm; erosione 2 celle (20 cm): scene con falsi liberi 0/200, celle false 0, celle dichiarate/scena 51.3
+
+== C. Vetro: aggiornamento log-odds statico con ritorni intermittenti ==
+  soglia teorica f* = 0.323 (deriva media nulla); da saturato libero a p>0.5: 3 colpi; da saturato occupato a p<0.5: 9 passaggi
+  f = 0.05: quota di fotogrammi con p < 0.5 = 99.9 %
+  f = 0.20: quota di fotogrammi con p < 0.5 = 90.5 %
+  f = 0.30: quota di fotogrammi con p < 0.5 = 52.5 %
+  f = 0.35: quota di fotogrammi con p < 0.5 = 25.9 %
+  f = 0.50: quota di fotogrammi con p < 0.5 = 0.9 %
+
+== D. Filtro a velocita' quasi costante in 2D e in 3D ==
+  rango di osservabilita': piano [x,y,vx,vy], misura (x,y): 4 su 4
+  rango di osservabilita': 3D [x,y,z,vx,vy,vz], misura (x,y,z): 6 su 6
+  rango di osservabilita': 3D, misura (x,y) soltanto (quota non misurata): 4 su 6
+  quantili chi-quadro: 2 gradi 95%=5.991 99%=9.210; 3 gradi 95%=7.815 99%=11.345
+  regime per asse (q=0.2, R=(3 cm)^2, 15 Hz): sigma_pos = 2.1 cm, sigma_vel = 0.18 m/s
+  senza misure:   tau    sigma   raggio95 piano   semiasse95 3D   area95 (m2)   volume95 (m3)
+                0.20   0.057    0.139           0.159            0.061         0.017
+                0.50   0.138    0.338           0.386            0.359         0.241
+                1.00   0.321    0.787           0.899            1.945         3.039
+                2.00   0.818    2.002           2.286           12.591        50.062
+  caduta libera: (1/2) g t^2 supera il semiasse al 95% (3 gradi) a t* = 0.169 s
+  q necessario perche' il solo termine q t^3/3 copra la caduta a t = 0.3 s: 2.77 m2/s3 (14 volte 0.2)
+  q necessario perche' il solo termine q t^3/3 copra la caduta a t = 0.5 s: 4.62 m2/s3 (23 volte 0.2)
+  q necessario perche' il solo termine q t^3/3 copra la caduta a t = 1.0 s: 9.24 m2/s3 (46 volte 0.2)
+
+== E. Conti geometrici (3D) ==
+  volume della piramide vista (87 x 58 gradi, profondita' 3 m): 18.9 m3; scatola 6x4x3: 72 m3 (26 %)
+  lato 0.10 m: voxel nella piramide 18937; voxel della scatola densa 72000
+  lato 0.05 m: voxel nella piramide 151494; voxel della scatola densa 576000
+  raggio della sfera inscritta (piani verticali a 29 gradi, fondo sferico a 3 m): 0.980 m
+  v_max = 2.5 m/s, orizzonte h = 0.217 s: margine v_max*h = 0.542 m; eta' utile massima = rho/v_max - h = 0.175 s (2.6 fotogrammi)
+  v_max = 2.5 m/s, orizzonte h = 0.222 s: margine v_max*h = 0.554 m; eta' utile massima = rho/v_max - h = 0.170 s (2.6 fotogrammi)
+  v_max = 1.4 m/s, orizzonte h = 0.217 s: margine v_max*h = 0.303 m; eta' utile massima = rho/v_max - h = 0.483 s (7.2 fotogrammi)
+  v_max = 1.4 m/s, orizzonte h = 0.222 s: margine v_max*h = 0.310 m; eta' utile massima = rho/v_max - h = 0.478 s (7.2 fotogrammi)
+  fascia 0.40 m con h = 0.217 s: v_max coperta = 1.85 m/s
+  margine di posa m = eps_t + r*delta a 3 m: eps_t = 0 cm, delta = 0.5 gradi -> 2.6 cm
+  margine di posa m = eps_t + r*delta a 3 m: eps_t = 3 cm, delta = 1.0 gradi -> 8.2 cm
+  margine di posa m = eps_t + r*delta a 3 m: eps_t = 5 cm, delta = 2.0 gradi -> 15.5 cm
+
+tempo totale: 17.8 s

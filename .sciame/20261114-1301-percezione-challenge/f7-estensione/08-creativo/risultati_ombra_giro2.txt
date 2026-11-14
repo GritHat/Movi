@@ -1,0 +1,144 @@
+$ ./prova_ombra 0 0 1 1 1 0
+== rumore=0 montaggio=orizzontale pannello=1 stanza=1 fotogrammi fusi per B=1 B ingenuo=0  immagine 320x240 campo 87x58 gradi ==
+pixel validi 76800 su 76800 (100.0 %)
+-- voxel 0.05 m: 120x80x60 = 576000 centri; verita': occupato 3146, visibile vuoto 162781, nascosto 45631, fuori campo 364442
+   B: libero 155358; FALSI LIBERI: su occupato 0, su nascosto 0, su fuori campo 0; visibili non detti liberi 7423 (4.6 %) [bordo 5643, ombra 0, buco 1780]
+   B: nascosti detti ombra 44081, bordo 1246, buco 304; fuori campo detti fuori 364442, buco 0, ombra 0, bordo 0
+   A: libero 163592; FALSI LIBERI: su occupato 0, su nascosto 1819, su fuori campo 6079 (4.83 % dei liberi di A); visibili non detti liberi 7087 (4.4 %)
+   A: voxel toccati 171214 (29.7 %); blocchi 8^3 toccati 469 su 1200 (39.1 %); passi di raggio 7312528
+   memoria: A densa 576000 B a 1 byte, 6912000 B a 12 byte per voxel; A a blocchi (senza indice) 240128 B a 1 byte, 2881536 B a 12; B: profondita' uint16 153600 B, con min/max float 614400 B
+   tempo (21 lanci): A aggiornamento mediana 52.81 ms, massimo 63.82 ms; B interrogazione di tutti i centri mediana 3.19 ms, massimo 3.25 ms
+-- voxel 0.10 m: 60x40x30 = 72000 centri; verita': occupato 277, visibile vuoto 20311, nascosto 5810, fuori campo 45602
+   B: libero 19943; FALSI LIBERI: su occupato 0, su nascosto 0, su fuori campo 0; visibili non detti liberi 368 (1.8 %) [bordo 152, ombra 0, buco 216]
+   B: nascosti detti ombra 5602, bordo 156, buco 52; fuori campo detti fuori 45602, buco 0, ombra 0, bordo 0
+   A: libero 20256; FALSI LIBERI: su occupato 0, su nascosto 479, su fuori campo 1573 (10.13 % dei liberi di A); visibili non detti liberi 2107 (10.4 %)
+   A: voxel toccati 22606 (31.4 %); blocchi 8^3 toccati 81 su 160 (50.6 %); passi di raggio 3579635
+   memoria: A densa 72000 B a 1 byte, 864000 B a 12 byte per voxel; A a blocchi (senza indice) 41472 B a 1 byte, 497664 B a 12; B: profondita' uint16 153600 B, con min/max float 614400 B
+   tempo (21 lanci): A aggiornamento mediana 26.84 ms, massimo 27.44 ms; B interrogazione di tutti i centri mediana 0.42 ms, massimo 0.47 ms
+-- ombra al suolo dietro la scatola bassa (celle polari 1 grado x 0,1 m fino a 3 m): cuneo del nucleo 283 celle; B in ombra 143 (50.5 % del cuneo); verita' nascosto 164; nascosti che B non chiama libero 164
+-- sagoma 0,1-1,9 m, celle da 10 cm nella zona 1,24-3 m: zona 570 celle, colonne con un oggetto 71
+   regola piana del nucleo: libero 393 celle, di cui con un oggetto nella colonna 19 (sotto la barra 16)
+   sagoma: verificata libera per intero 7 celle (1.2 % della zona), di cui con un oggetto nella colonna 0; quota verificata media sulle celle 'libero' del nucleo 1.40 m
+   tempo B per fotogramma (min/max 3x3 + sagoma su tutta la zona; 20 lanci): mediana 0.588 ms, massimo 0.601 ms
+-- persona nascosta, 1782 punti (quota >= 0,125 m): libero 0, bordo 0, ombra 1782 (100.0 %), buco 0, fuori campo 0
+
+$ ./prova_ombra 1 0 1 1 3 0
+== rumore=1 montaggio=orizzontale pannello=1 stanza=1 fotogrammi fusi per B=3 B ingenuo=0  immagine 320x240 campo 87x58 gradi ==
+pixel validi 72891 su 76800 (94.9 %)
+-- voxel 0.05 m: 120x80x60 = 576000 centri; verita': occupato 3146, visibile vuoto 162781, nascosto 45631, fuori campo 364442
+   B: libero 128019; FALSI LIBERI: su occupato 0, su nascosto 0, su fuori campo 0; visibili non detti liberi 34762 (21.4 %) [bordo 32901, ombra 0, buco 1861]
+   B: nascosti detti ombra 43358, bordo 1969, buco 304; fuori campo detti fuori 364442, buco 0, ombra 0, bordo 0
+   A: libero 153963; FALSI LIBERI: su occupato 0, su nascosto 1651, su fuori campo 5812 (4.85 % dei liberi di A); visibili non detti liberi 16281 (10.0 %)
+   A: voxel toccati 166980 (29.0 %); blocchi 8^3 toccati 469 su 1200 (39.1 %); passi di raggio 6712352
+   memoria: A densa 576000 B a 1 byte, 6912000 B a 12 byte per voxel; A a blocchi (senza indice) 240128 B a 1 byte, 2881536 B a 12; B: profondita' uint16 153600 B, con min/max float 614400 B
+   tempo (21 lanci): A aggiornamento mediana 48.85 ms, massimo 49.80 ms; B interrogazione di tutti i centri mediana 3.46 ms, massimo 3.61 ms
+-- voxel 0.10 m: 60x40x30 = 72000 centri; verita': occupato 277, visibile vuoto 20311, nascosto 5810, fuori campo 45602
+   B: libero 15821; FALSI LIBERI: su occupato 0, su nascosto 0, su fuori campo 0; visibili non detti liberi 4490 (22.1 %) [bordo 4267, ombra 0, buco 223]
+   B: nascosti detti ombra 5429, bordo 329, buco 52; fuori campo detti fuori 45602, buco 0, ombra 0, bordo 0
+   A: libero 19298; FALSI LIBERI: su occupato 0, su nascosto 440, su fuori campo 1537 (10.24 % dei liberi di A); visibili non detti liberi 2990 (14.7 %)
+   A: voxel toccati 22569 (31.3 %); blocchi 8^3 toccati 81 su 160 (50.6 %); passi di raggio 3300443
+   memoria: A densa 72000 B a 1 byte, 864000 B a 12 byte per voxel; A a blocchi (senza indice) 41472 B a 1 byte, 497664 B a 12; B: profondita' uint16 153600 B, con min/max float 614400 B
+   tempo (21 lanci): A aggiornamento mediana 25.71 ms, massimo 26.37 ms; B interrogazione di tutti i centri mediana 0.44 ms, massimo 0.50 ms
+-- ombra al suolo dietro la scatola bassa (celle polari 1 grado x 0,1 m fino a 3 m): cuneo del nucleo 286 celle; B in ombra 133 (46.5 % del cuneo); verita' nascosto 164; nascosti che B non chiama libero 164
+-- sagoma 0,1-1,9 m, celle da 10 cm nella zona 1,24-3 m: zona 570 celle, colonne con un oggetto 71
+   regola piana del nucleo: libero 387 celle, di cui con un oggetto nella colonna 17 (sotto la barra 16)
+   sagoma: verificata libera per intero 6 celle (1.1 % della zona), di cui con un oggetto nella colonna 0; quota verificata media sulle celle 'libero' del nucleo 1.29 m
+   tempo B per fotogramma (min/max 3x3 + sagoma su tutta la zona; 20 lanci): mediana 0.616 ms, massimo 0.619 ms
+-- persona nascosta, 1782 punti (quota >= 0,125 m): libero 0, bordo 0, ombra 1782 (100.0 %), buco 0, fuori campo 0
+
+$ ./prova_ombra 0 1 1 1 1 0
+== rumore=0 montaggio=verticale pannello=1 stanza=1 fotogrammi fusi per B=1 B ingenuo=0  immagine 240x320 campo 58x87 gradi ==
+pixel validi 76800 su 76800 (100.0 %)
+-- voxel 0.05 m: 120x80x60 = 576000 centri; verita': occupato 3146, visibile vuoto 115369, nascosto 57194, fuori campo 400291
+   B: libero 108673; FALSI LIBERI: su occupato 0, su nascosto 0, su fuori campo 0; visibili non detti liberi 6696 (5.8 %) [bordo 5381, ombra 0, buco 1315]
+   B: nascosti detti ombra 55211, bordo 1466, buco 517; fuori campo detti fuori 400291, buco 0, ombra 0, bordo 0
+   A: libero 117905; FALSI LIBERI: su occupato 0, su nascosto 2748, su fuori campo 5062 (6.62 % dei liberi di A); visibili non detti liberi 5274 (4.6 %)
+   A: voxel toccati 123901 (21.5 %); blocchi 8^3 toccati 399 su 1200 (33.2 %); passi di raggio 5879343
+   memoria: A densa 576000 B a 1 byte, 6912000 B a 12 byte per voxel; A a blocchi (senza indice) 204288 B a 1 byte, 2451456 B a 12; B: profondita' uint16 153600 B, con min/max float 614400 B
+   tempo (21 lanci): A aggiornamento mediana 43.08 ms, massimo 50.04 ms; B interrogazione di tutti i centri mediana 3.13 ms, massimo 3.19 ms
+-- voxel 0.10 m: 60x40x30 = 72000 centri; verita': occupato 277, visibile vuoto 14423, nascosto 7279, fuori campo 50021
+   B: libero 14079; FALSI LIBERI: su occupato 0, su nascosto 0, su fuori campo 0; visibili non detti liberi 344 (2.4 %) [bordo 174, ombra 0, buco 170]
+   B: nascosti detti ombra 7012, bordo 197, buco 70; fuori campo detti fuori 50021, buco 0, ombra 0, bordo 0
+   A: libero 14870; FALSI LIBERI: su occupato 0, su nascosto 731, su fuori campo 1327 (13.84 % dei liberi di A); visibili non detti liberi 1611 (11.2 %)
+   A: voxel toccati 16798 (23.3 %); blocchi 8^3 toccati 71 su 160 (44.4 %); passi di raggio 2863820
+   memoria: A densa 72000 B a 1 byte, 864000 B a 12 byte per voxel; A a blocchi (senza indice) 36352 B a 1 byte, 436224 B a 12; B: profondita' uint16 153600 B, con min/max float 614400 B
+   tempo (21 lanci): A aggiornamento mediana 21.86 ms, massimo 21.91 ms; B interrogazione di tutti i centri mediana 0.42 ms, massimo 0.48 ms
+-- ombra al suolo dietro la scatola bassa (celle polari 1 grado x 0,1 m fino a 3 m): cuneo del nucleo 244 celle; B in ombra 125 (51.2 % del cuneo); verita' nascosto 141; nascosti che B non chiama libero 141
+-- sagoma 0,1-1,9 m, celle da 10 cm nella zona 1,24-3 m: zona 376 celle, colonne con un oggetto 59
+   regola piana del nucleo: libero 225 celle, di cui con un oggetto nella colonna 0 (sotto la barra 0)
+   sagoma: verificata libera per intero 112 celle (29.8 % della zona), di cui con un oggetto nella colonna 0; quota verificata media sulle celle 'libero' del nucleo 1.58 m
+   tempo B per fotogramma (min/max 3x3 + sagoma su tutta la zona; 20 lanci): mediana 0.503 ms, massimo 0.513 ms
+-- persona nascosta, 1782 punti (quota >= 0,125 m): libero 0, bordo 0, ombra 1782 (100.0 %), buco 0, fuori campo 0
+
+$ ./prova_ombra 1 1 1 1 3 0
+== rumore=1 montaggio=verticale pannello=1 stanza=1 fotogrammi fusi per B=3 B ingenuo=0  immagine 240x320 campo 58x87 gradi ==
+pixel validi 72891 su 76800 (94.9 %)
+-- voxel 0.05 m: 120x80x60 = 576000 centri; verita': occupato 3146, visibile vuoto 115369, nascosto 57194, fuori campo 400291
+   B: libero 90864; FALSI LIBERI: su occupato 0, su nascosto 0, su fuori campo 0; visibili non detti liberi 24505 (21.2 %) [bordo 23176, ombra 0, buco 1329]
+   B: nascosti detti ombra 54447, bordo 2204, buco 543; fuori campo detti fuori 400291, buco 0, ombra 0, bordo 0
+   A: libero 111222; FALSI LIBERI: su occupato 0, su nascosto 2618, su fuori campo 4872 (6.73 % dei liberi di A); visibili non detti liberi 11637 (10.1 %)
+   A: voxel toccati 120990 (21.0 %); blocchi 8^3 toccati 399 su 1200 (33.2 %); passi di raggio 5419402
+   memoria: A densa 576000 B a 1 byte, 6912000 B a 12 byte per voxel; A a blocchi (senza indice) 204288 B a 1 byte, 2451456 B a 12; B: profondita' uint16 153600 B, con min/max float 614400 B
+   tempo (21 lanci): A aggiornamento mediana 40.64 ms, massimo 42.27 ms; B interrogazione di tutti i centri mediana 3.40 ms, massimo 3.49 ms
+-- voxel 0.10 m: 60x40x30 = 72000 centri; verita': occupato 277, visibile vuoto 14423, nascosto 7279, fuori campo 50021
+   B: libero 11233; FALSI LIBERI: su occupato 0, su nascosto 0, su fuori campo 0; visibili non detti liberi 3190 (22.1 %) [bordo 3017, ombra 0, buco 173]
+   B: nascosti detti ombra 6830, bordo 379, buco 70; fuori campo detti fuori 50021, buco 0, ombra 0, bordo 0
+   A: libero 14256; FALSI LIBERI: su occupato 0, su nascosto 707, su fuori campo 1295 (14.04 % dei liberi di A); visibili non detti liberi 2169 (15.0 %)
+   A: voxel toccati 16759 (23.3 %); blocchi 8^3 toccati 71 su 160 (44.4 %); passi di raggio 2652621
+   memoria: A densa 72000 B a 1 byte, 864000 B a 12 byte per voxel; A a blocchi (senza indice) 36352 B a 1 byte, 436224 B a 12; B: profondita' uint16 153600 B, con min/max float 614400 B
+   tempo (21 lanci): A aggiornamento mediana 21.22 ms, massimo 22.66 ms; B interrogazione di tutti i centri mediana 0.44 ms, massimo 0.50 ms
+-- ombra al suolo dietro la scatola bassa (celle polari 1 grado x 0,1 m fino a 3 m): cuneo del nucleo 246 celle; B in ombra 115 (46.7 % del cuneo); verita' nascosto 141; nascosti che B non chiama libero 141
+-- sagoma 0,1-1,9 m, celle da 10 cm nella zona 1,24-3 m: zona 376 celle, colonne con un oggetto 59
+   regola piana del nucleo: libero 220 celle, di cui con un oggetto nella colonna 0 (sotto la barra 0)
+   sagoma: verificata libera per intero 70 celle (18.6 % della zona), di cui con un oggetto nella colonna 0; quota verificata media sulle celle 'libero' del nucleo 1.21 m
+   tempo B per fotogramma (min/max 3x3 + sagoma su tutta la zona; 20 lanci): mediana 0.511 ms, massimo 0.519 ms
+-- persona nascosta, 1782 punti (quota >= 0,125 m): libero 0, bordo 0, ombra 1780 (99.9 %), buco 2, fuori campo 0
+
+$ ./prova_ombra 1 0 1 1 1 1
+== rumore=1 montaggio=orizzontale pannello=1 stanza=1 fotogrammi fusi per B=1 B ingenuo=1  immagine 320x240 campo 87x58 gradi ==
+pixel validi 72795 su 76800 (94.8 %)
+-- voxel 0.05 m: 120x80x60 = 576000 centri; verita': occupato 3146, visibile vuoto 162781, nascosto 45631, fuori campo 364442
+   B: libero 163139; FALSI LIBERI: su occupato 190, su nascosto 2371, su fuori campo 0; visibili non detti liberi 2203 (1.4 %) [bordo 0, ombra 2203, buco 0]
+   B: nascosti detti ombra 43260, bordo 0, buco 0; fuori campo detti fuori 364442, buco 0, ombra 0, bordo 0
+   A: libero 153880; FALSI LIBERI: su occupato 0, su nascosto 1659, su fuori campo 5805 (4.85 % dei liberi di A); visibili non detti liberi 16365 (10.1 %)
+   A: voxel toccati 166968 (29.0 %); blocchi 8^3 toccati 469 su 1200 (39.1 %); passi di raggio 6701445
+   memoria: A densa 576000 B a 1 byte, 6912000 B a 12 byte per voxel; A a blocchi (senza indice) 240128 B a 1 byte, 2881536 B a 12; B: profondita' uint16 153600 B, con min/max float 614400 B
+   tempo (21 lanci): A aggiornamento mediana 49.01 ms, massimo 61.61 ms; B interrogazione di tutti i centri mediana 3.24 ms, massimo 3.29 ms
+-- voxel 0.10 m: 60x40x30 = 72000 centri; verita': occupato 277, visibile vuoto 20311, nascosto 5810, fuori campo 45602
+   B: libero 20440; FALSI LIBERI: su occupato 11, su nascosto 322, su fuori campo 0; visibili non detti liberi 204 (1.0 %) [bordo 0, ombra 204, buco 0]
+   B: nascosti detti ombra 5488, bordo 0, buco 0; fuori campo detti fuori 45602, buco 0, ombra 0, bordo 0
+   A: libero 19286; FALSI LIBERI: su occupato 0, su nascosto 448, su fuori campo 1536 (10.29 % dei liberi di A); visibili non detti liberi 3009 (14.8 %)
+   A: voxel toccati 22573 (31.4 %); blocchi 8^3 toccati 81 su 160 (50.6 %); passi di raggio 3295079
+   memoria: A densa 72000 B a 1 byte, 864000 B a 12 byte per voxel; A a blocchi (senza indice) 41472 B a 1 byte, 497664 B a 12; B: profondita' uint16 153600 B, con min/max float 614400 B
+   tempo (21 lanci): A aggiornamento mediana 26.00 ms, massimo 26.13 ms; B interrogazione di tutti i centri mediana 0.41 ms, massimo 0.44 ms
+-- ombra al suolo dietro la scatola bassa (celle polari 1 grado x 0,1 m fino a 3 m): cuneo del nucleo 286 celle; B in ombra 155 (54.2 % del cuneo); verita' nascosto 164; nascosti che B non chiama libero 150
+-- sagoma 0,1-1,9 m, celle da 10 cm nella zona 1,24-3 m: zona 570 celle, colonne con un oggetto 71
+   regola piana del nucleo: libero 385 celle, di cui con un oggetto nella colonna 17 (sotto la barra 16)
+   sagoma: verificata libera per intero 7 celle (1.2 % della zona), di cui con un oggetto nella colonna 0; quota verificata media sulle celle 'libero' del nucleo 1.44 m
+   tempo B per fotogramma (min/max 3x3 + sagoma su tutta la zona; 20 lanci): mediana 0.706 ms, massimo 0.738 ms
+-- persona nascosta, 1782 punti (quota >= 0,125 m): libero 107, bordo 0, ombra 1675 (94.0 %), buco 0, fuori campo 0
+
+$ ./prova_ombra 0 0 0 1 1 0
+== rumore=0 montaggio=orizzontale pannello=0 stanza=1 fotogrammi fusi per B=1 B ingenuo=0  immagine 320x240 campo 87x58 gradi ==
+pixel validi 76800 su 76800 (100.0 %)
+-- voxel 0.05 m: 120x80x60 = 576000 centri; verita': occupato 2346, visibile vuoto 193757, nascosto 15335, fuori campo 364562
+   B: libero 185345; FALSI LIBERI: su occupato 0, su nascosto 0, su fuori campo 0; visibili non detti liberi 8412 (4.3 %) [bordo 6328, ombra 0, buco 2084]
+   B: nascosti detti ombra 14202, bordo 1133, buco 0; fuori campo detti fuori 364562, buco 0, ombra 0, bordo 0
+   A: libero 193818; FALSI LIBERI: su occupato 0, su nascosto 1534, su fuori campo 6656 (4.23 % dei liberi di A); visibili non detti liberi 8129 (4.2 %)
+   A: voxel toccati 202108 (35.1 %); blocchi 8^3 toccati 516 su 1200 (43.0 %); passi di raggio 7863816
+   memoria: A densa 576000 B a 1 byte, 6912000 B a 12 byte per voxel; A a blocchi (senza indice) 264192 B a 1 byte, 3170304 B a 12; B: profondita' uint16 153600 B, con min/max float 614400 B
+   tempo (21 lanci): A aggiornamento mediana 55.87 ms, massimo 58.54 ms; B interrogazione di tutti i centri mediana 3.14 ms, massimo 3.19 ms
+-- voxel 0.10 m: 60x40x30 = 72000 centri; verita': occupato 277, visibile vuoto 24182, nascosto 1939, fuori campo 45602
+   B: libero 23780; FALSI LIBERI: su occupato 0, su nascosto 0, su fuori campo 0; visibili non detti liberi 402 (1.7 %) [bordo 134, ombra 0, buco 268]
+   B: nascosti detti ombra 1802, bordo 137, buco 0; fuori campo detti fuori 45602, buco 0, ombra 0, bordo 0
+   A: libero 23811; FALSI LIBERI: su occupato 3, su nascosto 366, su fuori campo 1708 (8.72 % dei liberi di A); visibili non detti liberi 2448 (10.1 %)
+   A: voxel toccati 26481 (36.8 %); blocchi 8^3 toccati 84 su 160 (52.5 %); passi di raggio 3855392
+   memoria: A densa 72000 B a 1 byte, 864000 B a 12 byte per voxel; A a blocchi (senza indice) 43008 B a 1 byte, 516096 B a 12; B: profondita' uint16 153600 B, con min/max float 614400 B
+   tempo (21 lanci): A aggiornamento mediana 28.67 ms, massimo 28.80 ms; B interrogazione di tutti i centri mediana 0.41 ms, massimo 0.46 ms
+-- ombra al suolo dietro la scatola bassa (celle polari 1 grado x 0,1 m fino a 3 m): cuneo del nucleo 283 celle; B in ombra 143 (50.5 % del cuneo); verita' nascosto 164; nascosti che B non chiama libero 164
+-- sagoma 0,1-1,9 m, celle da 10 cm nella zona 1,24-3 m: zona 570 celle, colonne con un oggetto 60
+   regola piana del nucleo: libero 465 celle, di cui con un oggetto nella colonna 20 (sotto la barra 16)
+   sagoma: verificata libera per intero 10 celle (1.8 % della zona), di cui con un oggetto nella colonna 0; quota verificata media sulle celle 'libero' del nucleo 1.48 m
+   tempo B per fotogramma (min/max 3x3 + sagoma su tutta la zona; 20 lanci): mediana 0.618 ms, massimo 0.620 ms
+-- persona nascosta, 1782 punti (quota >= 0,125 m): libero 0, bordo 28, ombra 1754 (98.4 %), buco 0, fuori campo 0
+

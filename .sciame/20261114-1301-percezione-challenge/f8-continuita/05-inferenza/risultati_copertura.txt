@@ -1,0 +1,52 @@
+# inf.py copertura — avviato 2026-11-14T15:29:58
+== MG (miscela troncata): copertura 50% | 90% (n) per comportamento, a soggetto ancora non rilevato; area90/ombra; quota di cicli con regione emessa
+  prosegue  t=0.5:  84 | 100 (74) ; t=1.0:  92 | 100 (74) ; t=1.5: 100 | 100 (41) ; t=2.0: 100 | 100 (6) ; t=3.0: - (0) ; t=4.0: - (0) ; t=5.0: - (0) ; emessa 100%
+  rallenta  t=0.5:  79 | 100 (73) ; t=1.0:  95 | 100 (73) ; t=1.5:  96 | 100 (73) ; t=2.0: 100 | 100 (72) ; t=3.0: 100 | 100 (39) ; t=4.0: 100 | 100 (5) ; t=5.0: - (0) ; emessa 100%
+  ferma     t=0.5:  83 | 100 (75) ; t=1.0:  77 | 100 (75) ; t=1.5:  84 | 100 (75) ; t=2.0:  87 | 100 (75) ; t=3.0:  95 | 100 (75) ; t=4.0: 100 | 100 (65) ; t=5.0: 100 | 100 (27) ; emessa 100%
+  torna     t=0.5:  76 | 100 (72) ; t=1.0:  70 | 100 (60) ; t=1.5:  56 | 100 (41) ; t=2.0:  46 | 100 (13) ; t=3.0:   0 | 100 (1) ; t=4.0: - (0) ; t=5.0: - (0) ; emessa 100%
+  svolta    t=0.5:  79 |  99 (72) ; t=1.0:  51 |  83 (72) ; t=1.5:  12 |  53 (72) ; t=2.0:   2 |  40 (52) ; t=3.0:   0 |   6 (31) ; t=4.0:   0 |   0 (30) ; t=5.0:   0 |   0 (30) ; emessa 100%
+  lontano   t=0.5:  69 |  93 (74) ; t=1.0:  41 |  62 (74) ; t=1.5:  12 |  26 (74) ; t=2.0:   1 |  18 (74) ; t=3.0:   0 |   1 (74) ; t=4.0:   0 |   0 (74) ; t=5.0:   0 |   0 (74) ; emessa 100%
+  TUTTI     t=0.5:  78 |  99 (440) ; t=1.0:  71 |  91 (428) ; t=1.5:  57 |  76 (376) ; t=2.0:  52 |  68 (292) ; t=3.0:  50 |  54 (220) ; t=4.0:  40 |  40 (174) ; t=5.0:  21 |  21 (131)
+  area90/ombra (mediana, quando emessa): t=0.5: 0.06 ; t=1.0: 0.25 ; t=1.5: 0.45 ; t=2.0: 0.62 ; t=3.0: 0.93 ; t=4.0: 1.11 ; t=5.0: 1.21
+  alla ricomparsa: distanza fra prima misura (vero) e punto mostrato al ciclo prima: mediana 0.87 m, 95o pct 1.79 m; distanza dalla regione 90% del ciclo prima: mediana 0.04 m, 95o pct 0.30 m (n=311)
+== PF N=1000 sistematico, lisciata: copertura 50% | 90% (n) per comportamento, a soggetto ancora non rilevato; area90/ombra; quota di cicli con regione emessa
+  prosegue  t=0.5:  92 | 100 (74) ; t=1.0:  92 | 100 (74) ; t=1.5:  71 | 100 (41) ; t=2.0:  50 | 100 (6) ; t=3.0: - (0) ; t=4.0: - (0) ; t=5.0: - (0) ; emessa 100%
+  rallenta  t=0.5:  90 | 100 (73) ; t=1.0:  84 | 100 (73) ; t=1.5:  75 | 100 (73) ; t=2.0:  75 | 100 (72) ; t=3.0:  51 | 100 (39) ; t=4.0:  40 | 100 (5) ; t=5.0: - (0) ; emessa 100%
+  ferma     t=0.5:  91 | 100 (75) ; t=1.0:  71 | 100 (75) ; t=1.5:  80 | 100 (75) ; t=2.0:  92 | 100 (75) ; t=3.0:  96 | 100 (75) ; t=4.0:  86 | 100 (65) ; t=5.0:  89 | 100 (27) ; emessa 100%
+  torna     t=0.5:  86 | 100 (72) ; t=1.0:  77 | 100 (60) ; t=1.5:  88 | 100 (41) ; t=2.0: 100 | 100 (13) ; t=3.0: 100 | 100 (1) ; t=4.0: - (0) ; t=5.0: - (0) ; emessa 100%
+  svolta    t=0.5:  90 |  99 (72) ; t=1.0:  50 |  86 (72) ; t=1.5:   8 |  49 (72) ; t=2.0:   2 |  31 (52) ; t=3.0:   0 |   6 (31) ; t=4.0:   0 |   0 (30) ; t=5.0:   0 |   0 (30) ; emessa 100%
+  lontano   t=0.5:  80 |  95 (74) ; t=1.0:  39 |  65 (74) ; t=1.5:   9 |  26 (74) ; t=2.0:   0 |  14 (74) ; t=3.0:   0 |   1 (74) ; t=4.0:   0 |   0 (74) ; t=5.0:   0 |   0 (74) ; emessa 100%
+  TUTTI     t=0.5:  88 |  99 (440) ; t=1.0:  68 |  92 (428) ; t=1.5:  51 |  76 (376) ; t=2.0:  48 |  66 (292) ; t=3.0:  42 |  54 (220) ; t=4.0:  33 |  40 (174) ; t=5.0:  18 |  21 (131)
+  area90/ombra (mediana, quando emessa): t=0.5: 0.08 ; t=1.0: 0.24 ; t=1.5: 0.40 ; t=2.0: 0.50 ; t=3.0: 0.56 ; t=4.0: 0.60 ; t=5.0: 0.65
+  alla ricomparsa: distanza fra prima misura (vero) e punto mostrato al ciclo prima: mediana 0.95 m, 95o pct 1.80 m; distanza dalla regione 90% del ciclo prima: mediana 0.04 m, 95o pct 0.38 m (n=311)
+== NUCLEO (cerchio 95% ritagliato, finche' < meta' del cuneo; colonna 50% = stessa regione): copertura 50% | 90% (n) per comportamento, a soggetto ancora non rilevato; area90/ombra; quota di cicli con regione emessa
+  prosegue  t=0.5: 100 | 100 (74) ; t=1.0: 100 | 100 (74) ; t=1.5:  59 |  59 (41) ; t=2.0:   0 |   0 (6) ; t=3.0: - (0) ; t=4.0: - (0) ; t=5.0: - (0) ; emessa 91%
+  rallenta  t=0.5:  97 |  97 (73) ; t=1.0:  96 |  96 (73) ; t=1.5:  71 |  71 (73) ; t=2.0:  44 |  44 (72) ; t=3.0:  13 |  13 (39) ; t=4.0:   0 |   0 (5) ; t=5.0: - (0) ; emessa 65%
+  ferma     t=0.5:  96 |  96 (75) ; t=1.0:  87 |  87 (75) ; t=1.5:  47 |  47 (75) ; t=2.0:  19 |  19 (75) ; t=3.0:   1 |   1 (75) ; t=4.0:   2 |   2 (65) ; t=5.0:   0 |   0 (27) ; emessa 45%
+  torna     t=0.5:  96 |  96 (72) ; t=1.0:  82 |  82 (60) ; t=1.5:  22 |  22 (41) ; t=2.0:   0 |   0 (13) ; t=3.0:   0 |   0 (1) ; t=4.0: - (0) ; t=5.0: - (0) ; emessa 88%
+  svolta    t=0.5:  99 |  99 (72) ; t=1.0:  90 |  90 (72) ; t=1.5:  61 |  61 (72) ; t=2.0:  27 |  27 (52) ; t=3.0:   3 |   3 (31) ; t=4.0:   0 |   0 (30) ; t=5.0:   0 |   0 (30) ; emessa 58%
+  lontano   t=0.5:  93 |  93 (74) ; t=1.0:  73 |  73 (74) ; t=1.5:  30 |  30 (74) ; t=2.0:   8 |   8 (74) ; t=3.0:   1 |   1 (74) ; t=4.0:   0 |   0 (74) ; t=5.0:   0 |   0 (74) ; emessa 42%
+  TUTTI     t=0.5:  97 |  97 (440) ; t=1.0:  88 |  88 (428) ; t=1.5:  49 |  49 (376) ; t=2.0:  23 |  23 (292) ; t=3.0:   4 |   4 (220) ; t=4.0:   1 |   1 (174) ; t=5.0:   0 |   0 (131)
+  area90/ombra (mediana, quando emessa): t=0.5: 0.07 ; t=1.0: 0.29 ; t=1.5: 0.48 ; t=2.0: 0.50 ; t=3.0: 0.53 ; t=4.0: 0.48 ; t=5.0: nan
+  alla ricomparsa: distanza fra prima misura (vero) e punto mostrato al ciclo prima: mediana 1.72 m, 95o pct 4.03 m; distanza dalla regione 90% del ciclo prima: mediana 0.05 m, 95o pct 0.76 m (n=311)
+== BASE: cerchio 95% non ritagliato (colonna 50% = stessa regione): copertura 50% | 90% (n) per comportamento, a soggetto ancora non rilevato; area90/ombra; quota di cicli con regione emessa
+  prosegue  t=0.5: 100 | 100 (74) ; t=1.0: 100 | 100 (74) ; t=1.5: 100 | 100 (41) ; t=2.0: 100 | 100 (6) ; t=3.0: - (0) ; t=4.0: - (0) ; t=5.0: - (0) ; emessa 100%
+  rallenta  t=0.5:  97 |  97 (73) ; t=1.0:  96 |  96 (73) ; t=1.5:  97 |  97 (73) ; t=2.0: 100 | 100 (72) ; t=3.0: 100 | 100 (39) ; t=4.0: 100 | 100 (5) ; t=5.0: - (0) ; emessa 100%
+  ferma     t=0.5:  96 |  96 (75) ; t=1.0:  87 |  87 (75) ; t=1.5:  75 |  75 (75) ; t=2.0:  73 |  73 (75) ; t=3.0:  83 |  83 (75) ; t=4.0:  97 |  97 (65) ; t=5.0: 100 | 100 (27) ; emessa 100%
+  torna     t=0.5:  96 |  96 (72) ; t=1.0:  82 |  82 (60) ; t=1.5:  51 |  51 (41) ; t=2.0:  54 |  54 (13) ; t=3.0: 100 | 100 (1) ; t=4.0: - (0) ; t=5.0: - (0) ; emessa 100%
+  svolta    t=0.5:  99 |  99 (72) ; t=1.0:  90 |  90 (72) ; t=1.5:  85 |  85 (72) ; t=2.0:  87 |  87 (52) ; t=3.0:  35 |  35 (31) ; t=4.0:   0 |   0 (30) ; t=5.0:   0 |   0 (30) ; emessa 100%
+  lontano   t=0.5:  93 |  93 (74) ; t=1.0:  73 |  73 (74) ; t=1.5:  47 |  47 (74) ; t=2.0:  35 |  35 (74) ; t=3.0:  15 |  15 (74) ; t=4.0:   0 |   0 (74) ; t=5.0:   0 |   0 (74) ; emessa 100%
+  TUTTI     t=0.5:  97 |  97 (440) ; t=1.0:  88 |  88 (428) ; t=1.5:  76 |  76 (376) ; t=2.0:  72 |  72 (292) ; t=3.0:  56 |  56 (220) ; t=4.0:  39 |  39 (174) ; t=5.0:  21 |  21 (131)
+  area90/ombra (mediana, quando emessa): t=0.5: 0.07 ; t=1.0: 0.29 ; t=1.5: 0.85 ; t=2.0: 1.34 ; t=3.0: 1.76 ; t=4.0: 2.13 ; t=5.0: 2.61
+  alla ricomparsa: distanza fra prima misura (vero) e punto mostrato al ciclo prima: mediana 1.72 m, 95o pct 4.03 m; distanza dalla regione 90% del ciclo prima: mediana 0.05 m, 95o pct 0.76 m (n=311)
+Punto mostrato su MG, 30 sequenze: passo massimo fra cicli, media a posteriori: max 0.105 m, mediana 0.081; massimo a posteriori: max 0.32 m, mediana 0.14, sequenze con passo > 0,30 m: 4 su 30
+  velocita' massima di arretramento della media (m/s): max 0.18, mediana 0.03 ; cicli con la media su cella vista libera o fuori griglia: 0 su 2250
+Punto mostrato su PF N=1000 lisciata, 30 sequenze: passo massimo, media: max 0.104 m, mediana 0.080; massimo a posteriori: max 1.87 m, mediana 1.02, sequenze con passo > 0,30 m: 29 su 30
+Errore del punto (mediana, m) a soggetto non rilevato: fermo | velocita' costante | media MG
+  prosegue  t=1: 1.26 | 0.14 | 0.18 (74) ; t=2: 2.07 | 0.33 | 0.76 (6) ; t=3: nan | nan | nan (0) ; t=5: nan | nan | nan (0)
+  rallenta  t=1: 1.00 | 0.29 | 0.20 (73) ; t=2: 1.49 | 1.07 | 0.30 (72) ; t=3: 1.87 | 1.80 | 0.60 (39) ; t=5: nan | nan | nan (0)
+  ferma     t=1: 0.82 | 0.46 | 0.30 (75) ; t=2: 0.82 | 1.63 | 0.50 (75) ; t=3: 0.94 | 2.89 | 0.47 (75) ; t=5: 1.61 | 4.63 | 0.56 (27)
+  torna     t=1: 0.94 | 0.43 | 0.29 (60) ; t=2: 0.40 | 1.94 | 0.98 (13) ; t=3: 0.06 | 3.23 | 1.28 (1) ; t=5: nan | nan | nan (0)
+  svolta    t=1: 1.16 | 0.41 | 0.34 (72) ; t=2: 2.11 | 1.65 | 1.36 (52) ; t=3: 3.42 | 2.91 | 2.55 (31) ; t=5: 5.86 | 5.28 | 5.06 (30)
+  lontano   t=1: 0.99 | 0.61 | 0.43 (74) ; t=2: 1.84 | 2.35 | 1.61 (74) ; t=3: 2.96 | 4.04 | 2.70 (74) ; t=5: 5.40 | 7.38 | 5.03 (74)
+# durata 7.6 s

@@ -1,0 +1,6 @@
+== S7. Taratura su g1 (avversario), prova su g2 (tracciamento): unione col massimo sulle 4 classi (50 per classe) e disco conforme sulla miscela 60/15/10/15 (n=100) ==
+  D=0.5 s (con manovra nel buio n=508): cerchio del filtro 90 %: tutti 0.902, con manovra 0.616 | unione: tutti 0.927 (5o perc. 0.902), con manovra 0.738 (5o perc. 0.677) | disco conforme sulla miscela: tutti 0.852, con manovra 0.470
+  D=1.0 s (con manovra nel buio n=846): cerchio del filtro 90 %: tutti 0.886, con manovra 0.662 | unione: tutti 0.948 (5o perc. 0.935), con manovra 0.848 (5o perc. 0.809) | disco conforme sulla miscela: tutti 0.879, con manovra 0.644
+  D=2.0 s (con manovra nel buio n=1384): cerchio del filtro 90 %: tutti 0.890, con manovra 0.788 | unione: tutti 0.960 (5o perc. 0.941), con manovra 0.922 (5o perc. 0.889) | disco conforme sulla miscela: tutti 0.888, con manovra 0.780
+  D=3.0 s (con manovra nel buio n=1826): cerchio del filtro 90 %: tutti 0.891, con manovra 0.832 | unione: tutti 0.955 (5o perc. 0.935), con manovra 0.931 (5o perc. 0.899) | disco conforme sulla miscela: tutti 0.864, con manovra 0.787
+  D=5.0 s (con manovra nel buio n=2363): cerchio del filtro 90 %: tutti 0.931, con manovra 0.914 | unione: tutti 0.963 (5o perc. 0.943), con manovra 0.954 (5o perc. 0.930) | disco conforme sulla miscela: tutti 0.810, con manovra 0.762

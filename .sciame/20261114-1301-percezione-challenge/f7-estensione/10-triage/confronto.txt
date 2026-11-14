@@ -1,0 +1,75 @@
+== (3) voxel e memoria densa, regione 6 x 4 x 3 m
+  10 cm: 72000 voxel; 1 B/voxel = 72000 B = 0.072 MB = 0.069 MiB; 2 B/voxel = 144000 B = 0.144 MB = 0.137 MiB; 4 B/voxel = 288000 B = 0.288 MB = 0.275 MiB; 8 B/voxel = 576000 B = 0.576 MB = 0.549 MiB; 12 B/voxel = 864000 B = 0.864 MB = 0.824 MiB
+  5 cm: 576000 voxel; 1 B/voxel = 576000 B = 0.576 MB = 0.549 MiB; 2 B/voxel = 1152000 B = 1.152 MB = 1.099 MiB; 4 B/voxel = 2304000 B = 2.304 MB = 2.197 MiB; 8 B/voxel = 4608000 B = 4.608 MB = 4.395 MiB; 12 B/voxel = 6912000 B = 6.912 MB = 6.592 MiB
+== (1a) ottimizzazione: densa (anello), densafix, hash; scena rada
+  densa     5 cm raggi= 19200: media   5.230 p95   5.329 max   5.650 ms; passi 1897816; 2.76 ns/passo; blocchi 0 [risultati_1.txt, 300 fot]
+  densa     5 cm raggi= 76800: media  19.679 p95  20.005 max  20.720 ms; passi 7594432; 2.59 ns/passo; blocchi 0 [risultati_3.txt, 300 fot]
+  densa     5 cm raggi=307200: media  76.164 p95  77.936 max  79.632 ms; passi 30395849; 2.51 ns/passo; blocchi 0 [risultati_5.txt, 200 fot]
+  densa    10 cm raggi= 19200: media   2.787 p95   2.858 max   2.914 ms; passi 952187; 2.93 ns/passo; blocchi 0 [risultati_1.txt, 300 fot]
+  densa    10 cm raggi= 19200: media   2.840 p95   2.977 max   3.126 ms; passi 952679; 2.98 ns/passo; blocchi 0 [risultati_9.txt, 200 fot]
+  densa    10 cm raggi= 76800: media  10.289 p95  10.462 max  10.790 ms; passi 3809718; 2.70 ns/passo; blocchi 0 [risultati_2.txt, 300 fot]
+  densa    10 cm raggi=307200: media  38.652 p95  39.761 max  40.770 ms; passi 15248416; 2.53 ns/passo; blocchi 0 [risultati_4.txt, 200 fot]
+  densafix  5 cm raggi= 19200: media   4.104 p95   4.170 max   4.200 ms; passi 1897816; 2.16 ns/passo; blocchi 0 [risultati_1.txt, 300 fot]
+  densafix  5 cm raggi= 76800: media  15.376 p95  15.611 max  15.729 ms; passi 7594432; 2.02 ns/passo; blocchi 0 [risultati_3.txt, 300 fot]
+  densafix 10 cm raggi= 19200: media   2.280 p95   2.318 max   2.344 ms; passi 952187; 2.39 ns/passo; blocchi 0 [risultati_1.txt, 300 fot]
+  densafix 10 cm raggi= 76800: media   8.217 p95   8.351 max   8.516 ms; passi 3809718; 2.16 ns/passo; blocchi 0 [risultati_2.txt, 300 fot]
+  hash      5 cm raggi= 19200: media   7.031 p95   7.187 max   7.541 ms; passi 1897816; 3.70 ns/passo; blocchi 736 [risultati_1.txt, 300 fot]
+  hash      5 cm raggi= 76800: media  25.557 p95  26.125 max  27.750 ms; passi 7594432; 3.37 ns/passo; blocchi 736 [risultati_3.txt, 300 fot]
+  hash      5 cm raggi=307200: media  91.923 p95  93.703 max  94.550 ms; passi 30395849; 3.02 ns/passo; blocchi 736 [risultati_5.txt, 200 fot]
+  hash     10 cm raggi= 19200: media   3.366 p95   3.437 max   3.504 ms; passi 952187; 3.54 ns/passo; blocchi 116 [risultati_1.txt, 300 fot]
+  hash     10 cm raggi= 19200: media   3.427 p95   3.492 max   3.549 ms; passi 952679; 3.60 ns/passo; blocchi 116 [risultati_9.txt, 200 fot]
+  hash     10 cm raggi= 76800: media  11.743 p95  11.993 max  15.171 ms; passi 3809718; 3.08 ns/passo; blocchi 116 [risultati_2.txt, 300 fot]
+  hash     10 cm raggi=307200: media  41.030 p95  42.108 max  42.405 ms; passi 15248416; 2.69 ns/passo; blocchi 116 [risultati_4.txt, 200 fot]
+== (1b) tempo-reale: D (densa), H (hash); scena vuota; file risultati_tempo_binario_finale.txt
+  D  5 cm k=1: media  88.529 p95  89.369 max  89.820 ms; raggi 307200; passi 33310236; colpi 68722; lordo 2.66 ns/passo; blocchi -
+  D  5 cm k=2: media  24.979 p95  25.745 max  26.002 ms; raggi 76800; passi 8311496; colpi 68722; lordo 3.01 ns/passo; blocchi -
+  D  5 cm k=4: media   7.999 p95   8.217 max   8.861 ms; raggi 19200; passi 2072123; colpi 68722; lordo 3.86 ns/passo; blocchi -
+  D  5 cm k=8: media   3.692 p95   3.757 max   4.489 ms; raggi 4800; passi 515870; colpi 68722; lordo 7.16 ns/passo; blocchi -
+  D 10 cm k=1: media  49.097 p95  49.394 max  49.811 ms; raggi 307200; passi 16501892; colpi 68722; lordo 2.98 ns/passo; blocchi -
+  D 10 cm k=2: media  14.829 p95  14.960 max  15.128 ms; raggi 76800; passi 4117673; colpi 68722; lordo 3.60 ns/passo; blocchi -
+  D 10 cm k=4: media   5.427 p95   5.470 max   5.600 ms; raggi 19200; passi 1026725; colpi 68722; lordo 5.29 ns/passo; blocchi -
+  D 10 cm k=8: media   3.003 p95   3.031 max   3.170 ms; raggi 4800; passi 255754; colpi 68722; lordo 11.74 ns/passo; blocchi -
+  H  5 cm k=1: media 132.612 p95 132.974 max 133.714 ms; raggi 307200; passi 33310236; colpi 68722; lordo 3.98 ns/passo; blocchi 736/1200
+  H  5 cm k=4: media  11.931 p95  12.433 max  12.894 ms; raggi 19200; passi 2072123; colpi 68722; lordo 5.76 ns/passo; blocchi 736/1200
+  H 10 cm k=1: media  64.548 p95  64.661 max  65.027 ms; raggi 307200; passi 16501892; colpi 68722; lordo 3.91 ns/passo; blocchi 116/160
+  H 10 cm k=4: media   6.929 p95   6.961 max   7.002 ms; raggi 19200; passi 1026725; colpi 68722; lordo 6.75 ns/passo; blocchi 116/160
+== (1c) tempo-reale, costo fisso (colpi a piena risoluzione) e costo marginale per passo, da due punti (k=8, k=4) e (k=4, k=1)
+  5 cm: marginale k8->k4 2.77 ns/passo, k4->k1 2.58 ns/passo; costo fisso stimato 2.26 ms
+  10 cm: marginale k8->k4 3.14 ns/passo, k4->k1 2.82 ns/passo; costo fisso stimato 2.20 ms
+== (1d) coppie fra i due ruoli
+  densa, 5 cm, 307 200 raggi (tutti)            [confrontabile]: ott 76.16 / p95 77.94 ms (30395849 passi) — tr 88.53 / p95 89.37 ms (33310236 passi) — rapporto medie 1.16, p95 1.15; passi 1.10
+  hash 8^3, 5 cm, 307 200 raggi                 [confrontabile]: ott 91.92 / p95 93.70 ms (30395849 passi) — tr 132.61 / p95 132.97 ms (33310236 passi) — rapporto medie 1.44, p95 1.42; passi 1.10
+  densa, 10 cm, 307 200 raggi                   [confrontabile]: ott 38.65 / p95 39.76 ms (15248416 passi) — tr 49.10 / p95 49.39 ms (16501892 passi) — rapporto medie 1.27, p95 1.24; passi 1.08
+  hash 8^3, 10 cm, 307 200 raggi                [confrontabile]: ott 41.03 / p95 42.11 ms (15248416 passi) — tr 64.55 / p95 64.66 ms (16501892 passi) — rapporto medie 1.57, p95 1.54; passi 1.08
+  densa, 5 cm, 76 800 raggi liberi              [NON confr.: TR tratta i colpi a piena risoluzione]: ott 19.68 / p95 20.00 ms (7594432 passi) — tr 24.98 / p95 25.75 ms (8311496 passi) — rapporto medie 1.27, p95 1.29; passi 1.09
+  densa, 10 cm, 76 800 raggi liberi             [NON confr.]: ott 10.29 / p95 10.46 ms (3809718 passi) — tr 14.83 / p95 14.96 ms (4117673 passi) — rapporto medie 1.44, p95 1.43; passi 1.08
+  densa, 5 cm, 19 200 raggi liberi              [NON confr.]: ott 5.23 / p95 5.33 ms (1897816 passi) — tr 8.00 / p95 8.22 ms (2072123 passi) — rapporto medie 1.53, p95 1.54; passi 1.09
+  densa, 10 cm, 19 200 raggi liberi             [NON confr.]: ott 2.79 / p95 2.86 ms (952187 passi) — tr 5.43 / p95 5.47 ms (1026725 passi) — rapporto medie 1.95, p95 1.91; passi 1.08
+  costo per passo a 5 cm: ott 2.76 ns (19 200 raggi) contro tr marginale 2.77 ns -> rapporto 1.00
+  costo per passo a 10 cm: ott 2.93 ns (19 200 raggi) contro tr marginale 3.14 ns -> rapporto 1.07
+  rapporto hash/densa: ott 5 cm 1.21, 10 cm 1.06; tr 5 cm 1.50, 10 cm 1.31
+  sovraccosto assoluto dell'hash per passo: ott 5 cm 0.52 ns, tr 5 cm 1.32 ns
+== (2) fasce di S10 con il montaggio del nucleo: sensore a 1,2 m, asse 15 gradi in basso, campo verticale 58 gradi
+  bordo alto: quota = 1,2 + 0.2493 r ; bordo basso: quota = 1,2 - 0.9657 r
+  quota 1.60 m vista da r >= 1.60 m
+  quota 1.80 m vista da r >= 2.41 m
+  quota 1.90 m vista da r >= 2.81 m
+  quota 2.00 m vista da r >= 3.21 m
+  quota 0.00 m vista da r >= 1.24 m
+  quota 0.07 m vista da r >= 1.17 m
+  quota 0.15 m vista da r >= 1.09 m
+  quota 0.60 m vista da r >= 0.62 m
+  a r = 1.24 m il campo copre le quote da 0.00 a 1.51 m
+  a r = 2.00 m il campo copre le quote da 0.00 a 1.70 m
+  a r = 2.41 m il campo copre le quote da 0.00 a 1.80 m
+  a r = 3.00 m il campo copre le quote da 0.00 a 1.95 m
+  ombra al suolo di un ostacolo alto h a distanza d: fine a d*1,2/(1,2-h)
+    h=0.3 m, d=1.3 m -> 1.73 m
+    h=0.3 m, d=1.7 m -> 2.27 m
+    h=0.5 m, d=1.5 m -> 2.57 m
+    h=0.5 m, d=2.0 m -> 3.43 m
+    h=0.4 m, d=1.7 m -> 2.55 m
+    h=1.0 m, d=1.9 m -> 11.40 m
+    h=0.2 m, d=2.0 m -> 2.40 m
+  piramide vista (87 x 58 gradi, profondita' 3 m): 18.94 m3 = 26.3 % di 72 m3
+  1 grado a 3 m = 5.2 cm; 0,5 gradi a 3 m = 2.6 cm; 0,5 gradi a 6 m = 5.2 cm

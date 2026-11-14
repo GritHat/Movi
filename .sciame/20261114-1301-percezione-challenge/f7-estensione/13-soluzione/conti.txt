@@ -1,0 +1,27 @@
+bordo alto +14.0 gradi, bordo basso -44.0 gradi
+PA1 suolo visto da r = 1.243 m
+PA1 ostacolo 0,15 m fuori campo sotto r = 1.087 m
+PA1 quota 1,8 m vista da r = 2.406 m
+PA1 quota 2,0 m vista da r = 3.209 m
+PA1 tetto del campo: 1,2 + 0.2493 r ; a 1,24 m 1.51, a 2 m 1.70, a 3 m 1.95
+PA2 occlusore alto 1.00 m a 1.50 m: ombra al suolo fino a 9.00 m
+PA2 occlusore alto 0.50 m a 1.50 m: ombra al suolo fino a 2.57 m
+PA2 occlusore alto 0.30 m a 1.70 m: ombra al suolo fino a 2.27 m
+PA2 occlusore alto 0.40 m a 1.70 m: ombra al suolo fino a 2.55 m
+PA2 occlusore alto 0.50 m a 2.00 m: ombra al suolo fino a 3.43 m
+PA2 occlusore alto 1.00 m a 1.83 m: ombra al suolo fino a 10.98 m
+pannello a 1.15 m: per nascondere 1,8 m a 2,3 m serve altezza >= 1.50 m; tetto campo li' 1.49 m
+pannello a 1.70 m: per nascondere 1,8 m a 2,3 m serve altezza >= 1.64 m; tetto campo li' 1.62 m
+pannello a 1.90 m: per nascondere 1,8 m a 2,3 m serve altezza >= 1.70 m; tetto campo li' 1.67 m
+S10 fascia alta fino a 2,0 m vista intera solo oltre 3.21 m (griglia fino a 3 m)
+persone 3: 14 h = 42 ore-persona; +4 h = 12
+persone 4: 14 h = 56 ore-persona; +4 h = 16
+persone 5: 14 h = 70 ore-persona; +4 h = 20
+pannello alto 1.50 m a 1.70 m: a 2,3 m si vede sopra 1.606 m di quota (tetto del campo a 2,3 m: 1.773 m)
+pannello alto 1.50 m a 1.90 m: a 2,3 m si vede sopra 1.563 m di quota (tetto del campo a 2,3 m: 1.773 m)
+pannello alto 1.60 m a 1.70 m: a 2,3 m si vede sopra 1.741 m di quota (tetto del campo a 2,3 m: 1.773 m)
+pannello alto 1.60 m a 1.90 m: a 2,3 m si vede sopra 1.684 m di quota (tetto del campo a 2,3 m: 1.773 m)
+pannello alto 1.70 m a 1.70 m: a 2,3 m si vede sopra 1.876 m di quota (tetto del campo a 2,3 m: 1.773 m)
+pannello alto 1.70 m a 1.90 m: a 2,3 m si vede sopra 1.805 m di quota (tetto del campo a 2,3 m: 1.773 m)
+altezza minima del pannello a 1.70 m perche' niente resti in vista a 2,3 m: 1.62 m
+altezza minima del pannello a 1.90 m perche' niente resti in vista a 2,3 m: 1.67 m

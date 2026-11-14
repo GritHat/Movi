@@ -1,0 +1,4 @@
+## K-105 (N1, scenario B, 150 fotogrammi; finestra d'uso 3 fotogrammi = 0,20 s)
+   celle-fotogramma «libero» poi occupate entro la finestra: da un soggetto qualsiasi 537 ; da un soggetto che al momento della dichiarazione non aveva alcun pixel valido 31
+   con il margine attorno a ombra, non osservato e bordo: 0,33 m (1,4 m/s) 0 ; 0,55 m (2,5 m/s) 0
+   libero conservato col margine: 0.4 % (0,33 m) ; 0.0 % (0,55 m)   [celle-fotogramma libere 88418]

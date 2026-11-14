@@ -1,0 +1,20 @@
+   (PP1) 5 fotogrammi dopo la rimozione del pannello: il soggetto ha 2967 pixel validi (riaggancio disattivato per vedere il solo rilascio)
+## PP1 sosta 60 s dietro il pannello alto, poi pannello tolto
+   fotogrammi col soggetto del tutto nascosto e regione viva: 900 ; fuori regione: cuneo 0, V12 0, rec 0 ; bracci: timer 10 s 750, sagoma ristretta 20 cm 900
+   aree in celle da 10 cm (entro la griglia): ombra vera a 10 cm di quota 154 ; cuneo 161 ; V12 164 ; rec 168 ; ombra vera chiusa entro 2,9 m: 0 ; V12 la dice chiusa: 0
+   celle di regione rimaste su suolo tornato visibile, a piu' di 0,5 m dal soggetto, 5 fotogrammi dopo la rimozione: cuneo 0, V12 0, rec 0
+## PP2 carrello da 0,25 m dietro la pedana da 0,5 m
+   fotogrammi col soggetto del tutto nascosto e regione viva: 105 ; fuori regione: cuneo 0, V12 0, rec 0 ; bracci: timer 10 s 0, sagoma ristretta 20 cm 0
+   aree in celle da 10 cm (entro la griglia): ombra vera a 10 cm di quota 90 ; cuneo 170 ; V12 90 ; rec 94 ; ombra vera chiusa entro 2,9 m: 1 ; V12 la dice chiusa: 1
+## PP3 sensore coperto 2 s: il carrello passa dalla pedana al pannello
+   fotogrammi col soggetto del tutto nascosto e regione viva: 135 ; fuori regione: cuneo 67, V12 67, rec 0 ; bracci: timer 10 s 67, sagoma ristretta 20 cm 85
+   dopo la copertura: fotogrammi nascosto 60 ; fuori regione: cuneo 60, V12 60, rec 0 ; V12 dice ancora «ombra chiusa»: 1
+## PP4 occlusore mobile a 0,5 m/s col soggetto dietro
+   fotogrammi col soggetto del tutto nascosto e regione viva: 192 ; fuori regione: cuneo 146, V12 146, rec 0 ; bracci: timer 10 s 146, sagoma ristretta 20 cm 164
+   aree in celle da 10 cm (entro la griglia): ombra vera a 10 cm di quota 152 ; cuneo 19 ; V12 14 ; rec 164 ; ombra vera chiusa entro 2,9 m: 0 ; V12 la dice chiusa: 0
+## PP5 braccio per rec: carrello a 3 m/s, sensore coperto 8 fotogrammi
+   fotogrammi col soggetto del tutto nascosto e regione viva: 135 ; fuori regione: cuneo 84, V12 84, rec 0 ; bracci: timer 10 s 84, sagoma ristretta 20 cm 88
+   dopo la copertura: fotogrammi nascosto 82 ; fuori regione: cuneo 82, V12 82, rec 0 ; V12 dice ancora «ombra chiusa»: 1
+## PP6 braccio per rec: salto del carrello in un solo fotogramma coperto
+   fotogrammi col soggetto del tutto nascosto e regione viva: 135 ; fuori regione: cuneo 90, V12 90, rec 7 ; bracci: timer 10 s 90, sagoma ristretta 20 cm 90
+   dopo la copertura: fotogrammi nascosto 89 ; fuori regione: cuneo 89, V12 89, rec 6 ; V12 dice ancora «ombra chiusa»: 1

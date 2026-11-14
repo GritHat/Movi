@@ -1,0 +1,66 @@
+==========================================================================================
+sd-1
+  denominatore «tutti»: fino a 2 s, celle con il limite inferiore di Wilson > 0,90: 45 su 45; peggior limite inferiore ('D', 'prosegue', 2.0, 826, 879, 0.94, 0.922)
+     fino a 3 s, celle con il limite inferiore > 0,85: 60 su 60; a 3 s, celle con il limite inferiore > 0,90: 12 su 15; le altre: [('D', 'prosegue', 461, 513, 0.899, 0.869, 0.922), ('T', 'rallenta', 437, 472, 0.926, 0.899, 0.946), ('L', 'rallenta', 711, 774, 0.919, 0.897, 0.936)]
+  denominatore «griglia»: fino a 2 s, celle con il limite inferiore di Wilson > 0,90: 45 su 45; peggior limite inferiore ('L', 'torna', 2.0, 740, 774, 0.956, 0.939)
+     fino a 3 s, celle con il limite inferiore > 0,85: 60 su 60; a 3 s, celle con il limite inferiore > 0,90: 13 su 15; le altre: [('T', 'rallenta', 437, 472, 0.926, 0.899, 0.946), ('L', 'rallenta', 711, 774, 0.919, 0.897, 0.936)]
+  D: file 5; passaggi con un vuoto 0 su 13638; campioni H 54400, fuori da R100 0
+     prosegue    1s 1834/1872=0.980  2s 826/879=0.940  3s 461/513=0.899  5s 174/221=0.787
+     rallenta    1s 1897/1920=0.988  2s 1222/1274=0.959  3s 803/859=0.935  5s 399/461=0.866
+     sosta       1s 1906/1935=0.985  2s 1780/1844=0.965  3s 1738/1818=0.956  5s 939/1026=0.915
+     torna       1s 1903/1931=0.985  2s 1672/1720=0.972  3s 1043/1068=0.977  5s 358/371=0.965
+     sostalunga  1s 1910/1927=0.991  2s 1775/1829=0.970  3s 1733/1804=0.961  5s 1711/1800=0.951
+     svolta      1s 1651/1911=0.864  2s 894/1578=0.567  3s 679/1504=0.451  5s 515/1461=0.352
+     lontano     1s 1490/1933=0.771  2s 574/1791=0.320  3s 231/1762=0.131  5s 33/1759=0.019
+     area R90/ombra (media pesata, «prosegue»): 1s 0.72  2s 1.00  3s 1.09  5s 0.96
+  T: file 2; passaggi con un vuoto 0 su 5600; campioni H 23409, fuori da R100 0
+     prosegue    1s 796/800=0.995  2s 510/529=0.964  3s 275/284=0.968  5s 104/112=0.929
+     rallenta    1s 793/800=0.991  2s 673/702=0.959  3s 437/472=0.926  5s 220/247=0.891
+     sosta       1s 793/800=0.991  2s 763/781=0.977  3s 745/770=0.968  5s 532/580=0.917
+     torna       1s 794/800=0.993  2s 725/748=0.969  3s 568/582=0.976  5s 224/243=0.922
+     sostalunga  1s 793/800=0.991  2s 762/783=0.973  3s 741/767=0.966  5s 729/763=0.955
+     svolta      1s 697/800=0.871  2s 361/667=0.541  3s 206/538=0.383  5s 87/441=0.197
+     lontano     1s 671/800=0.839  2s 341/761=0.448  3s 190/725=0.262  5s 95/714=0.133
+     area R90/ombra (media pesata, «prosegue»): 1s 0.12  2s 0.25  3s 0.36  5s 0.54
+  L: file 2; passaggi con un vuoto 0 su 5597; campioni H 26322, fuori da R100 0
+     prosegue    1s 792/800=0.990  2s 768/800=0.960  3s 618/669=0.924  5s 293/325=0.902
+     rallenta    1s 797/800=0.996  2s 767/800=0.959  3s 711/774=0.919  5s 495/578=0.856
+     sosta       1s 790/799=0.989  2s 766/799=0.959  3s 743/791=0.939  5s 671/763=0.879
+     torna       1s 789/799=0.987  2s 740/774=0.956  3s 648/693=0.935  5s 441/487=0.906
+     sostalunga  1s 794/800=0.993  2s 777/800=0.971  3s 746/787=0.948  5s 702/771=0.911
+     svolta      1s 751/798=0.941  2s 553/792=0.698  3s 380/735=0.517  5s 180/632=0.285
+     lontano     1s 736/800=0.920  2s 532/800=0.665  3s 367/788=0.466  5s 179/771=0.232
+     area R90/ombra (media pesata, «prosegue»): 1s 0.06  2s 0.16  3s 0.27  5s 0.44
+==========================================================================================
+sd-0
+  denominatore «tutti»: fino a 2 s, celle con il limite inferiore di Wilson > 0,90: 37 su 45; peggior limite inferiore ('T', 'torna', 1.0, 715, 800, 0.894, 0.87)
+     fino a 3 s, celle con il limite inferiore > 0,85: 60 su 60; a 3 s, celle con il limite inferiore > 0,90: 14 su 15; le altre: [('D', 'prosegue', 456, 513, 0.889, 0.859, 0.913)]
+  denominatore «griglia»: fino a 2 s, celle con il limite inferiore di Wilson > 0,90: 37 su 45; peggior limite inferiore ('T', 'torna', 1.0, 715, 800, 0.894, 0.87)
+     fino a 3 s, celle con il limite inferiore > 0,85: 60 su 60; a 3 s, celle con il limite inferiore > 0,90: 15 su 15; le altre: []
+  D: file 5; passaggi con un vuoto 0 su 13638; campioni H 54400, fuori da R100 0
+     prosegue    1s 1826/1872=0.975  2s 835/879=0.950  3s 456/513=0.889  5s 176/221=0.796
+     rallenta    1s 1864/1920=0.971  2s 1232/1274=0.967  3s 798/859=0.929  5s 414/461=0.898
+     sosta       1s 1762/1935=0.911  2s 1779/1844=0.965  3s 1684/1818=0.926  5s 994/1026=0.969
+     torna       1s 1777/1931=0.920  2s 1641/1720=0.954  3s 981/1068=0.919  5s 355/371=0.957
+     sostalunga  1s 1759/1927=0.913  2s 1762/1829=0.963  3s 1650/1804=0.915  5s 1712/1800=0.951
+     svolta      1s 1764/1911=0.923  2s 1064/1578=0.674  3s 814/1504=0.541  5s 666/1461=0.456
+     lontano     1s 1642/1933=0.849  2s 679/1791=0.379  3s 265/1762=0.150  5s 42/1759=0.024
+     area R90/ombra (media pesata, «prosegue»): 1s 1.13  2s 1.66  3s 1.58  5s 1.57
+  T: file 2; passaggi con un vuoto 0 su 5600; campioni H 23409, fuori da R100 0
+     prosegue    1s 799/800=0.999  2s 529/529=1.000  3s 284/284=1.000  5s 112/112=1.000
+     rallenta    1s 793/800=0.991  2s 701/702=0.999  3s 472/472=1.000  5s 247/247=1.000
+     sosta       1s 731/800=0.914  2s 726/781=0.930  3s 732/770=0.951  5s 569/580=0.981
+     torna       1s 715/800=0.894  2s 673/748=0.900  3s 538/582=0.924  5s 242/243=0.996
+     sostalunga  1s 732/800=0.915  2s 729/783=0.931  3s 732/767=0.954  5s 691/763=0.906
+     svolta      1s 732/800=0.915  2s 596/667=0.894  3s 393/538=0.730  5s 218/441=0.494
+     lontano     1s 704/800=0.880  2s 608/761=0.799  3s 403/725=0.556  5s 181/714=0.254
+     area R90/ombra (media pesata, «prosegue»): 1s 0.14  2s 1.11  3s 1.32  5s 1.32
+  L: file 2; passaggi con un vuoto 0 su 5597; campioni H 26322, fuori da R100 0
+     prosegue    1s 799/800=0.999  2s 800/800=1.000  3s 669/669=1.000  5s 324/325=0.997
+     rallenta    1s 799/800=0.999  2s 800/800=1.000  3s 774/774=1.000  5s 578/578=1.000
+     sosta       1s 759/799=0.950  2s 769/799=0.962  3s 771/791=0.975  5s 754/763=0.988
+     torna       1s 753/799=0.942  2s 740/774=0.956  3s 671/693=0.968  5s 448/487=0.920
+     sostalunga  1s 769/800=0.961  2s 780/800=0.975  3s 772/787=0.981  5s 739/771=0.958
+     svolta      1s 772/798=0.967  2s 759/792=0.958  3s 644/735=0.876  5s 398/632=0.630
+     lontano     1s 746/800=0.932  2s 706/800=0.882  3s 570/788=0.723  5s 271/771=0.351
+     area R90/ombra (media pesata, «prosegue»): 1s 0.07  2s 0.79  3s 1.15  5s 1.18

@@ -1,0 +1,19 @@
+# inf.py oracolo — avviato 2026-11-14T15:27:26
+oracolo ic 101 seme 1 fatto a 9.5 s
+oracolo ic 101 seme 2 fatto a 18.8 s
+oracolo ic 102 seme 1 fatto a 26.9 s
+oracolo ic 102 seme 2 fatto a 35.7 s
+oracolo ic 103 seme 1 fatto a 46.0 s
+oracolo ic 103 seme 2 fatto a 53.5 s
+oracolo ic 104 seme 1 fatto a 61.1 s
+oracolo ic 104 seme 2 fatto a 68.7 s
+oracolo ic 105 seme 1 fatto a 76.2 s
+oracolo ic 105 seme 2 fatto a 83.6 s
+tetto del rumore dell'oracolo, t=0.53 s: IoU fra i due semi 0.996; massa del seme 2 nella regione 90% del seme 1 0.903
+tetto del rumore dell'oracolo, t=1.00 s: IoU fra i due semi 0.967; massa del seme 2 nella regione 90% del seme 1 0.901
+tetto del rumore dell'oracolo, t=1.53 s: IoU fra i due semi 0.941; massa del seme 2 nella regione 90% del seme 1 0.899
+tetto del rumore dell'oracolo, t=2.00 s: IoU fra i due semi 0.928; massa del seme 2 nella regione 90% del seme 1 0.898
+tetto del rumore dell'oracolo, t=3.00 s: IoU fra i due semi 0.891; massa del seme 2 nella regione 90% del seme 1 0.898
+tetto del rumore dell'oracolo, t=4.00 s: IoU fra i due semi 0.882; massa del seme 2 nella regione 90% del seme 1 0.897
+tetto del rumore dell'oracolo, t=5.00 s: IoU fra i due semi 0.868; massa del seme 2 nella regione 90% del seme 1 0.896
+# durata 83.7 s

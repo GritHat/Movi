@@ -1,0 +1,19 @@
+model name	: AMD Ryzen AI 9 HX 370 w/ Radeon 890M
+sizeof(Vox) = 4 byte; fotogrammi per riga: 200 (decimato) o 30 (pieno); tempi del solo aggiornamento della mappa
+-- 200 fotogrammi
+vuota          res=  10 cm raggi= 25440 (validi  55.8%) voxel=  72000 mem= 0.27 MB toccati= 20.2% visite/fot=  655462  ms: mediana=   5.03 p95=   5.14 max=   7.21
+parete a 2 m   res=  10 cm raggi= 25440 (validi 100.0%) voxel=  72000 mem= 0.27 MB toccati=  9.5% visite/fot=  885698  ms: mediana=   6.89 p95=   7.23 max=   7.30
+ingombra       res=  10 cm raggi= 25440 (validi  68.4%) voxel=  72000 mem= 0.27 MB toccati= 14.1% visite/fot=  669487  ms: mediana=   5.23 p95=   5.26 max=   5.29
+-- 30 fotogrammi
+vuota          res=  10 cm raggi=407040 (validi  55.8%) voxel=  72000 mem= 0.27 MB toccati= 20.9% visite/fot=10490033  ms: mediana=  76.24 p95=  76.44 max=  76.52
+parete a 2 m   res=  10 cm raggi=407040 (validi 100.0%) voxel=  72000 mem= 0.27 MB toccati=  9.5% visite/fot=14171454  ms: mediana= 103.36 p95= 106.96 max= 107.15
+ingombra       res=  10 cm raggi=407040 (validi  68.4%) voxel=  72000 mem= 0.27 MB toccati= 14.5% visite/fot=10711116  ms: mediana=  76.52 p95=  76.65 max=  76.73
+-- 200 fotogrammi
+vuota          res=   5 cm raggi= 25440 (validi  55.8%) voxel= 576000 mem= 2.20 MB toccati= 18.2% visite/fot= 1317302  ms: mediana=   9.62 p95=   9.67 max=   9.78
+parete a 2 m   res=   5 cm raggi= 25440 (validi 100.0%) voxel= 576000 mem= 2.20 MB toccati=  8.5% visite/fot= 1767740  ms: mediana=  13.22 p95=  13.29 max=  15.52
+ingombra       res=   5 cm raggi= 25440 (validi  68.4%) voxel= 576000 mem= 2.20 MB toccati= 12.1% visite/fot= 1342951  ms: mediana=   9.90 p95=   9.93 max=   9.98
+-- 30 fotogrammi
+vuota          res=   5 cm raggi=407040 (validi  55.8%) voxel= 576000 mem= 2.20 MB toccati= 19.0% visite/fot=21082443  ms: mediana= 147.93 p95= 148.28 max= 149.17
+parete a 2 m   res=   5 cm raggi=407040 (validi 100.0%) voxel= 576000 mem= 2.20 MB toccati=  8.5% visite/fot=28288066  ms: mediana= 196.08 p95= 198.38 max= 199.84
+ingombra       res=   5 cm raggi=407040 (validi  68.4%) voxel= 576000 mem= 2.20 MB toccati= 12.7% visite/fot=21485899  ms: mediana= 148.65 p95= 153.46 max= 153.60
+exit=0

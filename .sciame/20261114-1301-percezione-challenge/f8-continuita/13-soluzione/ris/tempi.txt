@@ -1,0 +1,32 @@
+# tempo per ciclo, 1 tracce nascoste insieme, geometria T (celle di A: 1034), 3040 cicli; C, -O2, un filo
+T	T	1	basi(L0,L1,L2,L2r,L2q,L3,C-005)	mediana 0.0156 ms	p95 0.0219 ms	max 0.0719 ms
+T	T	1	C-004	mediana 0.0667 ms	p95 0.0779 ms	max 0.2458 ms
+T	T	1	C-001(2000 particelle)	mediana 0.1263 ms	p95 0.1428 ms	max 0.4584 ms
+T	T	1	C-EST(4 varianti)	mediana 0.0203 ms	p95 0.0271 ms	max 0.0686 ms
+T	T	1	tutti	mediana 0.2355 ms	p95 0.2597 ms	max 0.7324 ms
+T	T	1	sd-1+sd-0 (in piu' di C-004)	mediana 0.0042 ms	p95 0.0051 ms	max 0.0209 ms
+T	T	1	inizializzazione (all'ingresso)	mediana 0.1228 ms	max 0.2104 ms
+# tempo per ciclo, 10 tracce nascoste insieme, geometria T (celle di A: 1034), 3040 cicli; C, -O2, un filo
+T	T	10	basi(L0,L1,L2,L2r,L2q,L3,C-005)	mediana 0.1567 ms	p95 0.2141 ms	max 0.5341 ms
+T	T	10	C-004	mediana 0.5087 ms	p95 0.6262 ms	max 1.3848 ms
+T	T	10	C-001(2000 particelle)	mediana 1.2653 ms	p95 1.3356 ms	max 2.1036 ms
+T	T	10	C-EST(4 varianti)	mediana 0.2079 ms	p95 0.2658 ms	max 0.7350 ms
+T	T	10	tutti	mediana 2.2221 ms	p95 2.3229 ms	max 3.8227 ms
+T	T	10	sd-1+sd-0 (in piu' di C-004)	mediana 0.0453 ms	p95 0.0508 ms	max 0.1363 ms
+T	T	10	inizializzazione (all'ingresso)	mediana 1.1582 ms	max 1.8626 ms
+# tempo per ciclo, 1 tracce nascoste insieme, geometria L (celle di A: 1740), 3040 cicli; C, -O2, un filo
+T	L	1	basi(L0,L1,L2,L2r,L2q,L3,C-005)	mediana 0.0194 ms	p95 0.0256 ms	max 0.0711 ms
+T	L	1	C-004	mediana 0.0803 ms	p95 0.1519 ms	max 0.3168 ms
+T	L	1	C-001(2000 particelle)	mediana 0.1635 ms	p95 0.1874 ms	max 0.4778 ms
+T	L	1	C-EST(4 varianti)	mediana 0.0290 ms	p95 0.0378 ms	max 0.0921 ms
+T	L	1	tutti	mediana 0.2919 ms	p95 0.3945 ms	max 0.9578 ms
+T	L	1	sd-1+sd-0 (in piu' di C-004)	mediana 0.0061 ms	p95 0.0075 ms	max 0.0251 ms
+T	L	1	inizializzazione (all'ingresso)	mediana 0.1278 ms	max 0.2252 ms
+# tempo per ciclo, 10 tracce nascoste insieme, geometria L (celle di A: 1740), 3040 cicli; C, -O2, un filo
+T	L	10	basi(L0,L1,L2,L2r,L2q,L3,C-005)	mediana 0.1890 ms	p95 0.2552 ms	max 0.3134 ms
+T	L	10	C-004	mediana 0.8550 ms	p95 1.3382 ms	max 1.8028 ms
+T	L	10	C-001(2000 particelle)	mediana 1.6773 ms	p95 1.8590 ms	max 1.9599 ms
+T	L	10	C-EST(4 varianti)	mediana 0.2778 ms	p95 0.3755 ms	max 0.8552 ms
+T	L	10	tutti	mediana 2.9903 ms	p95 3.7333 ms	max 4.1793 ms
+T	L	10	sd-1+sd-0 (in piu' di C-004)	mediana 0.0639 ms	p95 0.0744 ms	max 0.2086 ms
+T	L	10	inizializzazione (all'ingresso)	mediana 1.2688 ms	max 2.0611 ms

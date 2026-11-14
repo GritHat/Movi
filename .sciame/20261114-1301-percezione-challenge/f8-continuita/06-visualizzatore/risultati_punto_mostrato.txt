@@ -1,0 +1,42 @@
+====================================================================================================
+Geometria T (torneo: pannello a 2 m, persona a 4 m, portata 6 m) | area del cuneo 7.83 m2 | larghezza dell'ombra alla persona 2.00 m
+
+-- Scena «si ferma dietro» (sosta di 3 s) --
+v     f    cicli | (a) su libero % | (b) sul bordo % | (c) su libero | (c) passo max cm (2vdt) | (c) indietro max cm | nucleo: cicli con regione % (previsto fino a s) | errore a 3 s: a / b / c / fermo (m) ; r95
+1.00  0.25   75   |  54.7           |  64.0           |   0           |   6.7 (13.3) ok           |   0.7               |  29.3 (1.47)                              | 2.50 / 1.61 / 0.87 / 0.50 ; 3.47
+1.00  0.50   75   |  54.7           |  64.0           |   0           |   6.7 (13.3) ok           |   0.7               |  29.3 (1.47)                              | 2.00 / 1.12 / 0.42 / 1.00 ; 3.47
+1.00  0.75   75   |  54.7           |  64.0           |   0           |   6.7 (13.3) ok           |   0.7               |  29.3 (1.47)                              | 1.50 / 0.66 / 0.31 / 1.50 ; 3.47
+1.25  0.25   69   |  47.8           |  69.6           |   0           |   8.3 (16.7) ok           |   1.0               |  42.0 (1.93)                              | 3.25 / 1.61 / 0.99 / 0.50 ; 3.47
+1.25  0.50   69   |  47.8           |  69.6           |   0           |   8.3 (16.7) ok           |   1.0               |  42.0 (1.93)                              | 2.75 / 1.12 / 0.54 / 1.00 ; 3.47
+1.25  0.75   69   |  47.8           |  69.6           |   0           |   8.3 (16.7) ok           |   1.0               |  42.0 (1.93)                              | 2.25 / 0.66 / 0.31 / 1.50 ; 3.47
+1.50  0.25   65   |  41.5           |  72.3           |   0           |  10.0 (20.0) ok           |   1.1               |  84.6 (3.67)                              | 4.00 / 1.71 / 1.10 / 0.50 ; 3.47
+1.50  0.50   65   |  41.5           |  72.3           |   0           |  10.0 (20.0) ok           |   1.1               |  84.6 (3.67)                              | 3.50 / 1.24 / 0.65 / 1.00 ; 3.47
+1.50  0.75   65   |  41.5           |  72.3           |   0           |  10.0 (20.0) ok           |   1.1               |  84.6 (3.67)                              | 3.00 / 0.82 / 0.36 / 1.50 ; 3.47
+MEDIE dei 9 casi: (a) su libero 48.0 % | (b) sul bordo 68.6 % | nucleo: cicli con regione 52.0 % | errore a 3 s a/b/c/fermo: 2.75 / 1.17 / 0.62 / 1.00 m | casi che violano PV-1c: 0 su 9
+
+-- Scena «prosegue» (nessuna sosta) --
+v     buio s | nucleo: previsto fino a s, cicli con regione % | salto alla ricomparsa: nucleo m | (c) m | sigma per asse alla ricomparsa m | r95 m
+1.00  2.00   | 1.47,  73.3                                 | 0.53                           | 0.61  | 0.79                             | 1.94
+1.25  1.60   | 1.60, 100.0                                 | 0.00                           | 0.46  | 0.58                             | 1.41
+1.50  1.33   | 1.33, 100.0                                 | 0.00                           | 0.36  | 0.45                             | 1.10
+====================================================================================================
+Geometria D (demo: pannello a 1,9 m, persona a 2,3 m, griglia a 3 m) | area del cuneo 1.37 m2 | larghezza dell'ombra alla persona 1.21 m
+
+-- Scena «si ferma dietro» (sosta di 3 s) --
+v     f    cicli | (a) su libero % | (b) sul bordo % | (c) su libero | (c) passo max cm (2vdt) | (c) indietro max cm | nucleo: cicli con regione % (previsto fino a s) | errore a 3 s: a / b / c / fermo (m) ; r95
+1.00  0.25   63   |  30.2           |  76.2           |   0           |   6.7 (13.3) ok           |   0.8               |  15.9 (0.67)                              | 2.70 / 1.13 / 0.49 / 0.30 ; 3.47
+1.00  0.50   63   |  30.2           |  76.2           |   0           |   6.7 (13.3) ok           |   0.8               |  15.9 (0.67)                              | 2.39 / 0.87 / 0.23 / 0.61 ; 3.47
+1.00  0.75   63   |  30.2           |  76.2           |   0           |   6.7 (13.3) ok           |   0.8               |  15.9 (0.67)                              | 2.09 / 0.64 / 0.23 / 0.91 ; 3.47
+1.25  0.25   60   |  26.7           |  80.0           |   0           |   8.3 (16.7) ok           |   0.9               |  21.7 (0.87)                              | 3.45 / 1.13 / 0.53 / 0.30 ; 3.47
+1.25  0.50   60   |  26.7           |  80.0           |   0           |   8.3 (16.7) ok           |   0.9               |  21.7 (0.87)                              | 3.14 / 0.87 / 0.26 / 0.61 ; 3.47
+1.25  0.75   60   |  26.7           |  80.0           |   0           |   8.3 (16.7) ok           |   0.9               |  21.7 (0.87)                              | 2.84 / 0.64 / 0.20 / 0.91 ; 3.47
+1.50  0.25   57   |  22.8           |  82.5           |   0           |  10.0 (20.0) ok           |   1.0               | 100.0 (3.80)                              | 4.20 / 1.13 / 0.57 / 0.30 ; 3.47
+1.50  0.50   57   |  22.8           |  82.5           |   0           |  10.0 (20.0) ok           |   1.0               | 100.0 (3.80)                              | 3.89 / 0.87 / 0.30 / 0.61 ; 3.47
+1.50  0.75   57   |  22.8           |  82.5           |   0           |  10.0 (20.0) ok           |   1.0               | 100.0 (3.80)                              | 3.59 / 0.64 / 0.19 / 0.91 ; 3.47
+MEDIE dei 9 casi: (a) su libero 26.5 % | (b) sul bordo 79.5 % | nucleo: cicli con regione 45.8 % | errore a 3 s a/b/c/fermo: 3.14 / 0.88 / 0.33 / 0.61 m | casi che violano PV-1c: 0 su 9
+
+-- Scena «prosegue» (nessuna sosta) --
+v     buio s | nucleo: previsto fino a s, cicli con regione % | salto alla ricomparsa: nucleo m | (c) m | sigma per asse alla ricomparsa m | r95 m
+1.00  1.21   | 0.67,  55.6                                 | 0.54                           | 0.32  | 0.39                             | 0.95
+1.25  0.97   | 0.87,  86.7                                 | 0.13                           | 0.23  | 0.30                             | 0.74
+1.50  0.81   | 0.80, 100.0                                 | 0.01                           | 0.18  | 0.23                             | 0.55

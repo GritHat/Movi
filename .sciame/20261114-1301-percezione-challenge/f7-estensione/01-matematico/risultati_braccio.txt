@@ -1,0 +1,8 @@
+verifica_strati.py G mondi 24 | Python 3.14.10
+== G. Braccio che deve fallire: oggetti piu' veloci della v_max dichiarata ==
+  v_max dichiarata 0.9, velocita' vera fino a 0.9 m/s: celle-fotogramma dichiarate 635314; falsi liberi 0; corse con falsi liberi 0/24
+  v_max dichiarata 0.9, velocita' vera fino a 1.8 m/s: celle-fotogramma dichiarate 633004; falsi liberi 1172; corse con falsi liberi 23/24
+  v_max dichiarata 0.4, velocita' vera fino a 0.4 m/s: celle-fotogramma dichiarate 1268965; falsi liberi 0; corse con falsi liberi 0/24
+  v_max dichiarata 0.4, velocita' vera fino a 0.8 m/s: celle-fotogramma dichiarate 1258349; falsi liberi 301; corse con falsi liberi 21/24
+
+tempo totale: 10.9 s

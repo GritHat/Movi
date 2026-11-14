@@ -1,0 +1,5 @@
+torneo.c: lo stato del seme s+1 = stato del seme s + 1000003 = stato avanzato di k chiamate con k = 7310652586083476215 (oppure indietro di 11136091487626075401)
+   -> i flussi di due semi contigui si sovrappongono solo dopo 7310652586083476215 chiamate: nessuna sovrapposizione pratica
+   controllo diretto, 20000 numeri per seme (9000, 9001): numeri in comune = 0
+att.c: semi 200000 e 200001, 20000 numeri per seme, 12 combinazioni (comportamento, geometria): numeri in comune = 0
+   (il valore di GEO usato da att.c non l'ho letto: provo sei valori plausibili; se e' 0 per tutti: il difetto non c'e')

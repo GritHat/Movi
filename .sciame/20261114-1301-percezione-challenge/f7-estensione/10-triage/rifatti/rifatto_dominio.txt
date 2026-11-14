@@ -1,0 +1,17 @@
+sizeof(Vox) = 4 byte; fotogrammi per riga: 200 (decimato) o 30 (pieno); tempi del solo aggiornamento della mappa
+-- 200 fotogrammi
+vuota          res=  10 cm raggi= 25440 (validi  55.8%) voxel=  72000 mem= 0.27 MB toccati= 20.2% visite/fot=  655462  ms: mediana=   5.13 p95=   5.15 max=   6.80
+parete a 2 m   res=  10 cm raggi= 25440 (validi 100.0%) voxel=  72000 mem= 0.27 MB toccati=  9.5% visite/fot=  885698  ms: mediana=   7.13 p95=   7.16 max=   7.20
+ingombra       res=  10 cm raggi= 25440 (validi  68.4%) voxel=  72000 mem= 0.27 MB toccati= 14.1% visite/fot=  669487  ms: mediana=   5.28 p95=   5.30 max=   5.32
+-- 30 fotogrammi
+vuota          res=  10 cm raggi=407040 (validi  55.8%) voxel=  72000 mem= 0.27 MB toccati= 20.9% visite/fot=10490033  ms: mediana=  77.43 p95=  77.66 max=  77.68
+parete a 2 m   res=  10 cm raggi=407040 (validi 100.0%) voxel=  72000 mem= 0.27 MB toccati=  9.5% visite/fot=14171454  ms: mediana= 100.65 p95= 106.14 max= 107.23
+ingombra       res=  10 cm raggi=407040 (validi  68.4%) voxel=  72000 mem= 0.27 MB toccati= 14.5% visite/fot=10711116  ms: mediana=  74.32 p95=  77.19 max=  80.56
+-- 200 fotogrammi
+vuota          res=   5 cm raggi= 25440 (validi  55.8%) voxel= 576000 mem= 2.20 MB toccati= 18.2% visite/fot= 1317302  ms: mediana=   9.45 p95=   9.49 max=   9.53
+parete a 2 m   res=   5 cm raggi= 25440 (validi 100.0%) voxel= 576000 mem= 2.20 MB toccati=  8.5% visite/fot= 1767740  ms: mediana=  12.94 p95=  13.00 max=  13.04
+ingombra       res=   5 cm raggi= 25440 (validi  68.4%) voxel= 576000 mem= 2.20 MB toccati= 12.1% visite/fot= 1342951  ms: mediana=   9.74 p95=  10.30 max=  11.50
+-- 30 fotogrammi
+vuota          res=   5 cm raggi=407040 (validi  55.8%) voxel= 576000 mem= 2.20 MB toccati= 19.0% visite/fot=21082443  ms: mediana= 155.15 p95= 158.55 max= 158.67
+parete a 2 m   res=   5 cm raggi=407040 (validi 100.0%) voxel= 576000 mem= 2.20 MB toccati=  8.5% visite/fot=28288066  ms: mediana= 216.68 p95= 218.97 max= 219.35
+ingombra       res=   5 cm raggi=407040 (validi  68.4%) voxel= 576000 mem= 2.20 MB toccati= 12.7% visite/fot=21485899  ms: mediana= 163.29 p95= 164.80 max= 165.18

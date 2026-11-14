@@ -1,0 +1,19 @@
+sizeof(Vox)=12 byte; raggi 640 x 480; ritorno valido 0.4-6.0 m; EPS 0.03 m
+T scena=demo     h=0.10 raggi=307200 denso: media   75.89 ms | mediana   74.88 | p95   83.58 | max   83.76 | primo fotogramma   83.54 | visite voxel/fotogramma 9693664 | blocchi 0 | memoria 864 kB
+T scena=demo     h=0.10 raggi=307200 hash : media   73.90 ms | mediana   73.08 | p95   75.68 | max   76.02 | primo fotogramma   74.69 | visite voxel/fotogramma 9693664 | blocchi 74 | memoria 479 kB
+T scena=demo     h=0.10 raggi= 76800 denso: media   19.14 ms | mediana   19.14 | p95   19.22 | max   19.23 | primo fotogramma   19.10 | visite voxel/fotogramma 2422847 | blocchi 0 | memoria 864 kB
+T scena=demo     h=0.10 raggi= 76800 hash : media   19.57 ms | mediana   19.55 | p95   19.68 | max   19.76 | primo fotogramma   19.56 | visite voxel/fotogramma 2422847 | blocchi 74 | memoria 479 kB
+T scena=demo     h=0.05 raggi=307200 denso: media  146.16 ms | mediana  146.59 | p95  148.64 | max  148.81 | primo fotogramma  143.07 | visite voxel/fotogramma 19215146 | blocchi 0 | memoria 6912 kB
+T scena=demo     h=0.05 raggi=307200 hash : media  151.18 ms | mediana  150.74 | p95  153.48 | max  155.69 | primo fotogramma  152.70 | visite voxel/fotogramma 19215146 | blocchi 392 | memoria 2433 kB
+T scena=demo     h=0.05 raggi= 76800 denso: media   36.05 ms | mediana   36.05 | p95   36.17 | max   36.46 | primo fotogramma   36.46 | visite voxel/fotogramma 4802614 | blocchi 0 | memoria 6912 kB
+T scena=demo     h=0.05 raggi= 76800 hash : media   39.56 ms | mediana   39.56 | p95   39.67 | max   39.76 | primo fotogramma   39.47 | visite voxel/fotogramma 4802614 | blocchi 392 | memoria 2433 kB
+T scena=peggiore h=0.10 raggi=307200 denso: media   88.36 ms | mediana   88.34 | p95   88.55 | max   88.58 | primo fotogramma   88.24 | visite voxel/fotogramma 12112023 | blocchi 0 | memoria 864 kB
+T scena=peggiore h=0.10 raggi=307200 hash : media   90.25 ms | mediana   90.08 | p95   91.51 | max   92.44 | primo fotogramma   89.32 | visite voxel/fotogramma 12112023 | blocchi 102 | memoria 651 kB
+T scena=peggiore h=0.10 raggi= 76800 denso: media   23.13 ms | mediana   23.13 | p95   23.18 | max   23.21 | primo fotogramma   23.16 | visite voxel/fotogramma 3028190 | blocchi 0 | memoria 864 kB
+T scena=peggiore h=0.10 raggi= 76800 hash : media   23.98 ms | mediana   23.97 | p95   24.09 | max   24.15 | primo fotogramma   23.90 | visite voxel/fotogramma 3028190 | blocchi 102 | memoria 651 kB
+T scena=peggiore h=0.05 raggi=307200 denso: media  174.10 ms | mediana  173.21 | p95  176.51 | max  178.79 | primo fotogramma  173.48 | visite voxel/fotogramma 24090758 | blocchi 0 | memoria 6912 kB
+T scena=peggiore h=0.05 raggi=307200 hash : media  187.28 ms | mediana  186.55 | p95  190.58 | max  192.83 | primo fotogramma  185.00 | visite voxel/fotogramma 24090758 | blocchi 628 | memoria 3883 kB
+T scena=peggiore h=0.05 raggi= 76800 denso: media   45.33 ms | mediana   45.26 | p95   45.65 | max   45.78 | primo fotogramma   45.78 | visite voxel/fotogramma 6022598 | blocchi 0 | memoria 6912 kB
+T scena=peggiore h=0.05 raggi= 76800 hash : media   50.67 ms | mediana   50.67 | p95   51.70 | max   52.28 | primo fotogramma   48.83 | visite voxel/fotogramma 6022598 | blocchi 628 | memoria 3883 kB
+P6 lettura polare a fasce (87 x 18 x 39 = 61074 letture): 0.330 ms a fotogramma; classi: libero 25316, superficie 841, ombra 11417, senza ritorno 11914, fuori campo 11586; memoria: immagine 640 x 480 x 4 B = 1229 kB
+   (per confronto: generare la scena sintetica costa 5.78 ms a fotogramma: non entra nei tempi sopra) 1

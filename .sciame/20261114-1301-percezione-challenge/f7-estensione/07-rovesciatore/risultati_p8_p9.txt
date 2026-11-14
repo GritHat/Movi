@@ -1,0 +1,5 @@
+P8 [parete a 4 m] celle 'libero' del nucleo 948: colonna osservata-libera senza interruzioni fino a 1,5 m: 788 (83.1 %); fino a 1,0 m: 827 (87.2 %); fino al tetto del campo: 788 (83.1 %); quota media raggiunta 1.48 m
+P8 [parete a 5,5 m] celle 'libero' del nucleo 948: colonna osservata-libera senza interruzioni fino a 1,5 m: 382 (40.3 %); fino a 1,0 m: 383 (40.4 %); fino al tetto del campo: 368 (38.8 %); quota media raggiunta 1.08 m
+P9 [demo] voxel occupati 5950: 'visti attraverso' col solo centro 189; con tutti i 64 sottopunti 15
+P8 [senza parete] celle 'libero' del nucleo 948: colonna osservata-libera senza interruzioni fino a 1,5 m: 157 (16.6 %); fino a 1,0 m: 157 (16.6 %); fino al tetto del campo: 157 (16.6 %); quota media raggiunta 0.86 m
+P9 [peggiore] voxel occupati 10756: 'visti attraverso' col solo centro 244; con tutti i 64 sottopunti 0

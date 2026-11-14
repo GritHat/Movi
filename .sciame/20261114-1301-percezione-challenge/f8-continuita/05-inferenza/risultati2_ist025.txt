@@ -1,0 +1,4 @@
+# inf2.py ist025 — avviato 2026-11-14T15:34:27
+IST passo 0,25 m/s, 170 modi: 94.2 ms per ciclo
+IST passo 0,25 contro oracolo: t=0.5: IoU 0.40, massa 0.545 (min 0.401), area 0.22 ; t=1.0: IoU 0.50, massa 0.548 (min 0.471), area 0.87 ; t=1.5: IoU 0.79, massa 0.824 (min 0.777), area 2.20 ; t=2.0: IoU 0.83, massa 0.855 (min 0.838), area 2.87 ; t=3.0: IoU 0.85, massa 0.865 (min 0.858), area 3.50 ; t=4.0: IoU 0.82, massa 0.857 (min 0.846), area 3.63 ; t=5.0: IoU 0.77, massa 0.842 (min 0.830), area 3.72 ; tremolio 0.0897
+# durata 45.5 s

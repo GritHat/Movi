@@ -1,0 +1,7 @@
+copertura prosegue / sosta / torna -> P(regge al primo stadio), P(regge in tutto), P(smentita al primo stadio)
+  nucleo con C6 (v2_C6.txt, demo): 1,00 / 1,00 / 0,50      0.688  1.000  0.000
+  torneo G1 a 2 s: 1,00 / 0,955 / 0,561                    0.692  0.998  0.000
+  chi torna MAI coperto: 1,00 / 1,00 / 0,00                0.000  1.000  0.000
+  chi torna mai coperto, sosta 0,93: 1,00 / 0,93 / 0,00    0.000  0.484  0.000
+  tutti a 0,90 (taratura giusta al 90 %)                   0.411  0.865  0.008
+  tutti a 0,80                                             0.044  0.142  0.239

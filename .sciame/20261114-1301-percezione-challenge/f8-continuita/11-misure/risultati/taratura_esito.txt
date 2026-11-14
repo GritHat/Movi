@@ -1,0 +1,2 @@
+taratura D: percorsi di libreria 194; R90 a 0,5/1/2/3/5 s = 0.29 0.92 2.47 4.10 7.28 m; R50 = 0.12 0.20 0.44 0.88 2.44 m
+taratura T: percorsi di libreria 200; R90 a 0,5/1/2/3/5 s = 0.27 0.68 2.27 4.01 6.77 m; R50 = 0.12 0.20 0.44 0.75 1.59 m

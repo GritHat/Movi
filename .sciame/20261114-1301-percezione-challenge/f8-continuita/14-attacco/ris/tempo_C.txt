@@ -1,0 +1,4 @@
+TEMPO geo=T tracce=1 celle_A=1034 cicli=1500 mediana=0.055 ms p95=0.073 ms max=0.091 ms
+TEMPO geo=T tracce=10 celle_A=1034 cicli=1500 mediana=0.511 ms p95=0.615 ms max=0.649 ms
+TEMPO geo=T tracce=60 celle_A=1034 cicli=1500 mediana=2.526 ms p95=2.885 ms max=3.499 ms
+TEMPO geo=T tracce=120 celle_A=1034 cicli=1500 mediana=4.826 ms p95=5.444 ms max=8.163 ms

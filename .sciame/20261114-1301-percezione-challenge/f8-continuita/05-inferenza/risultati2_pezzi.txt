@@ -1,0 +1,8 @@
+# inf2.py pezzi — avviato 2026-11-14T15:35:26
+MG di base, t=3 s, ic 101: celle della regione fuori dal cuneo (ombra+fascia): 37 su 703; di cui non connesse all'ombra: 26; massa relativa 0.020
+cicli con due o piu' pezzi da almeno il 20% della massa: MG                   0 su 375
+cicli con due o piu' pezzi da almeno il 20% della massa: MG connesso+minimo   0 su 375
+cicli con due o piu' pezzi da almeno il 20% della massa: PF4000 lisciata      0 su 375
+cicli con due o piu' pezzi da almeno il 20% della massa: PF250 grezza         16 su 375
+cicli con due o piu' pezzi da almeno il 20% della massa: PF1000 grezza        17 su 375
+# durata 2.9 s

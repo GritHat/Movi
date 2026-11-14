@@ -1,0 +1,145 @@
+== MEMORIA (byte usati dalla struttura; fra parentesi la memoria residente in piu' del processo, kB) ==
+-- 10 cm, passo 4
+polare_3m        vuota:    --    rada:    --    densa:    10788 (1780 kB) u=2610 carico:    --   
+polare_6m        vuota:    --    rada:    --    densa:    21228 (1792 kB) u=5220 carico:    --   
+immagine         vuota:    --    rada:    --    densa:  2457600 (2616 kB) u=307200 carico:    --   
+fasce3           vuota:    --    rada:    --    densa:    48000 (320 kB) u=7200 carico:    --   
+fasce8           vuota:    --    rada:    --    densa:   120000 (388 kB) u=19200 carico:    --   
+fasce30          vuota:    --    rada:    --    densa:   436800 (700 kB) u=72000 carico:    --   
+colonne_bit      vuota:    --    rada:    --    densa:    28800 (300 kB) u=2400 carico:    --   
+densa            vuota:    --    rada:    --    densa:   288000 (528 kB) u=72000 carico:    --   
+hash8            vuota:    --    rada:    --    densa:   241664 (508 kB) u=116 carico:    --   
+hash8_solo_occ   vuota:    --    rada:    --    densa:   215040 (484 kB) u=103 carico:    --   
+octree           vuota:    --    rada:    --    densa:   373376 (644 kB) u=46665 picco=46665 fine=46331 carico:    --   
+octree_pot       vuota:    --    rada:    --    densa:   396712 (652 kB) u=27793 picco=46665 fine=27176 carico:    --   
+-- 10 cm, passo 1
+polare_3m        vuota:    --    rada:    --    densa:    10788 (1780 kB) u=2610 carico:    --   
+polare_6m        vuota:    --    rada:    --    densa:    21228 (1792 kB) u=5220 carico:    --   
+immagine         vuota:    --    rada:    --    densa:  2457600 (2616 kB) u=307200 carico:    --   
+fasce3           vuota:    --    rada:    --    densa:    48000 (320 kB) u=7200 carico:    --   
+fasce8           vuota:    --    rada:    --    densa:   120000 (388 kB) u=19200 carico:    --   
+fasce30          vuota:    --    rada:    --    densa:   436800 (700 kB) u=72000 carico:    --   
+colonne_bit      vuota:    --    rada:    --    densa:    28800 (300 kB) u=2400 carico:    --   
+densa            vuota:    --    rada:    --    densa:   288000 (528 kB) u=72000 carico:    --   
+hash8            vuota:    --    rada:    --    densa:   241664 (508 kB) u=116 carico:    --   
+hash8_solo_occ   vuota:    --    rada:    --    densa:   186368 (456 kB) u=89 carico:    --   
+octree           vuota:    --    rada:    --    densa:   375168 (644 kB) u=46889 picco=46889 fine=46498 carico:    --   
+octree_pot       vuota:    --    rada:    --    densa:   398616 (652 kB) u=26457 picco=46889 fine=25944 carico:    --   
+-- 5 cm, passo 4
+polare_3m        vuota:    --    rada:    --    densa:    10788 (1780 kB) u=2610 carico:    --   
+polare_6m        vuota:    --    rada:    --    densa:    21228 (1792 kB) u=5220 carico:    --   
+immagine         vuota:    --    rada:    --    densa:  2457600 (2616 kB) u=307200 carico:    --   
+fasce3           vuota:    --    rada:    --    densa:   192000 (492 kB) u=28800 carico:    --   
+fasce8           vuota:    --    rada:    --    densa:   480000 (772 kB) u=76800 carico:    --   
+fasce30          vuota:    --    rada:    --    densa:  1747200 (1976 kB) u=288000 carico:    --   
+colonne_bit      vuota:    --    rada:    --    densa:   115200 (412 kB) u=9600 carico:    --   
+densa            vuota:    --    rada:    --    densa:  2304000 (2328 kB) u=576000 carico:    --   
+hash8            vuota:    --    rada:    --    densa:  1513472 (1780 kB) u=723 carico:    --   
+hash8_solo_occ   vuota:    --    rada:    --    densa:  1214464 (1488 kB) u=577 carico:    --   
+octree           vuota:    --    rada:    --    densa:  2622400 (2868 kB) u=327793 picco=327793 fine=323127 carico:    --   
+octree_pot       vuota:    --    rada:    --    densa:  2784532 (2952 kB) u=163953 picco=327585 fine=157459 carico:    --   
+-- 5 cm, passo 1
+polare_3m        vuota:    --    rada:    --    densa:    10788 (1780 kB) u=2610 carico:    --   
+polare_6m        vuota:    --    rada:    --    densa:    21228 (1792 kB) u=5220 carico:    --   
+immagine         vuota:    --    rada:    --    densa:  2457600 (2552 kB) u=307200 carico:    --   
+fasce3           vuota:    --    rada:    --    densa:   192000 (492 kB) u=28800 carico:    --   
+fasce8           vuota:    --    rada:    --    densa:   480000 (772 kB) u=76800 carico:    --   
+fasce30          vuota:    --    rada:    --    densa:  1747200 (1980 kB) u=288000 carico:    --   
+colonne_bit      vuota:    --    rada:    --    densa:   115200 (412 kB) u=9600 carico:    --   
+densa            vuota:    --    rada:    --    densa:  2304000 (2328 kB) u=576000 carico:    --   
+hash8            vuota:    --    rada:    --    densa:  1511424 (1776 kB) u=722 carico:    --   
+hash8_solo_occ   vuota:    --    rada:    --    densa:   983040 (1260 kB) u=464 carico:    --   
+octree           vuota:    --    rada:    --    densa:  2655040 (2900 kB) u=331873 picco=331873 fine=327575 carico:    --   
+octree_pot       vuota:    --    rada:    --    densa:  2816900 (2992 kB) u=147081 picco=331393 fine=142546 carico:    --   
+
+== AGGIORNAMENTO ms: media / p95 / p99 / max | primo | ns per passo | raggi | passi ==
+-- densa 10 cm passo 1
+polare_3m           0.555 /    0.602 /    0.608 /    0.608 |   0.581 |  0.00 |  248876 |         0 | max/p50=1.10 | f=100
+polare_6m           0.689 /    0.710 /    0.715 /    0.715 |   0.704 |  0.00 |  248876 |         0 | max/p50=1.04 | f=100
+immagine            0.774 /    0.779 /    0.791 /    0.791 |   1.263 |  0.00 |  307200 |         0 | max/p50=1.02 | f=100
+fasce3             63.231 /   65.237 /   65.735 /   65.735 |  61.677 |  6.28 |  265464 |  10064375 | max/p50=1.04 | f=100
+fasce8             82.145 /   84.768 /   85.181 /   85.181 |  81.073 |  8.16 |  265464 |  10064375 | max/p50=1.04 | f=100
+fasce30            86.567 /   89.121 /   89.269 /   89.269 |  84.980 |  8.60 |  265464 |  10064375 | max/p50=1.03 | f=100
+colonne_bit        28.699 /   29.595 /   29.613 /   29.613 |  28.159 |  2.85 |  265464 |  10064375 | max/p50=1.03 | f=100
+densa              31.670 /   32.708 /   32.992 /   32.992 |  30.401 |  2.58 |  265464 |  12280387 | max/p50=1.04 | f=100
+hash8              46.039 /   47.711 /   47.892 /   47.892 |  43.455 |  3.75 |  265464 |  12280387 | max/p50=1.04 | f=100
+hash8_solo_occ      1.081 /    1.143 /    1.238 /    1.238 |   1.168 |  0.00 |  265464 |         0 | max/p50=1.15 | f=100
+octree            105.000 /  114.443 /  114.749 /  114.749 | 102.612 |  8.55 |  265464 |  12280387 | max/p50=1.10 | f=100
+octree_pot        105.067 /  109.511 /  111.993 /  111.993 | 102.789 |  8.56 |  265464 |  12280387 | max/p50=1.06 | f=100
+-- densa 10 cm passo 4
+polare_3m           0.053 /    0.063 /    0.099 /    0.124 |   0.069 |  0.00 |   15516 |         0 | max/p50=2.39 | f=300
+polare_6m           0.067 /    0.072 /    0.075 /    0.082 |   0.084 |  0.00 |   15516 |         0 | max/p50=1.22 | f=300
+immagine            0.773 /    0.776 /    0.788 /    0.789 |   1.279 |  0.00 |  307200 |         0 | max/p50=1.02 | f=300
+fasce3              4.869 /    5.006 /    5.042 /    5.095 |   4.770 |  7.67 |   16557 |    634610 | max/p50=1.04 | f=300
+fasce8              6.273 /    6.460 /    6.488 /    6.502 |   6.106 |  9.88 |   16557 |    634610 | max/p50=1.03 | f=300
+fasce30             7.604 /    7.830 /    7.860 /    7.873 |   7.557 | 11.98 |   16557 |    634610 | max/p50=1.03 | f=300
+colonne_bit         1.957 /    2.014 /    2.024 /    2.062 |   1.905 |  3.08 |   16557 |    634610 | max/p50=1.04 | f=300
+densa               3.032 /    3.122 /    3.157 /    3.173 |   2.987 |  3.92 |   16557 |    774372 | max/p50=1.04 | f=300
+hash8               4.509 /    4.661 /    4.710 /    4.725 |   4.316 |  5.82 |   16557 |    774372 | max/p50=1.04 | f=300
+hash8_solo_occ      0.117 /    0.125 /    0.132 /    0.146 |   0.163 |  0.00 |   16557 |         0 | max/p50=1.25 | f=300
+octree              7.381 /    7.567 /    7.598 /    7.612 |   7.359 |  9.53 |   16557 |    774372 | max/p50=1.02 | f=300
+octree_pot          7.569 /    7.752 /    7.811 /    8.154 |   7.449 |  9.78 |   16557 |    774372 | max/p50=1.07 | f=300
+-- densa 5 cm passo 1
+polare_3m           0.553 /    0.593 /    0.604 /    0.604 |   0.587 |  0.00 |  248876 |         0 | max/p50=1.09 | f=100
+polare_6m           0.703 /    0.728 /    0.749 /    0.749 |   0.702 |  0.00 |  248876 |         0 | max/p50=1.06 | f=100
+immagine            0.780 /    0.799 /    0.831 /    0.831 |   1.303 |  0.00 |  307200 |         0 | max/p50=1.07 | f=100
+fasce3            121.714 /  125.591 /  125.944 /  125.944 | 118.735 |  6.00 |  265464 |  20286545 | max/p50=1.04 | f=100
+fasce8            153.039 /  157.442 /  157.547 /  157.547 | 149.999 |  7.54 |  265464 |  20286545 | max/p50=1.03 | f=100
+fasce30           168.669 /  172.286 /  233.265 /  233.265 | 164.947 |  8.31 |  265464 |  20286545 | max/p50=1.39 | f=100
+colonne_bit        55.803 /   57.506 /   57.685 /   57.685 |  54.761 |  2.75 |  265464 |  20286545 | max/p50=1.03 | f=100
+densa              65.172 /   67.368 /   67.550 /   67.550 |  63.560 |  2.64 |  265464 |  24694859 | max/p50=1.04 | f=100
+hash8             105.675 /  108.985 /  109.417 /  109.417 |  99.438 |  4.28 |  265464 |  24694859 | max/p50=1.04 | f=100
+hash8_solo_occ      1.508 /    1.572 /    1.610 /    1.610 |   1.828 |  0.00 |  265464 |         0 | max/p50=1.07 | f=100
+octree            234.977 /  246.906 /  320.534 /  320.534 | 227.844 |  9.52 |  265464 |  24694859 | max/p50=1.37 | f=100
+octree_pot        242.663 /  253.548 /  265.449 /  265.449 | 228.731 |  9.83 |  265464 |  24694859 | max/p50=1.10 | f=100
+-- densa 5 cm passo 4
+polare_3m           0.052 /    0.057 /    0.058 /    0.068 |   0.070 |  0.00 |   15516 |         0 | max/p50=1.31 | f=300
+polare_6m           0.068 /    0.072 /    0.075 /    0.079 |   0.089 |  0.00 |   15516 |         0 | max/p50=1.17 | f=300
+immagine            0.775 /    0.790 /    0.802 /    0.808 |   1.269 |  0.00 |  307200 |         0 | max/p50=1.05 | f=300
+fasce3              9.283 /    9.537 /    9.584 /    9.601 |   9.104 |  7.26 |   16557 |   1279089 | max/p50=1.03 | f=300
+fasce8             12.264 /   12.633 /   12.706 /   12.711 |  12.091 |  9.59 |   16557 |   1279089 | max/p50=1.03 | f=300
+fasce30            14.489 /   14.890 /   14.926 /   15.006 |  14.946 | 11.33 |   16557 |   1279089 | max/p50=1.03 | f=300
+colonne_bit         3.675 /    3.778 /    3.792 /    3.797 |   3.610 |  2.87 |   16557 |   1279089 | max/p50=1.03 | f=300
+densa               6.409 /    6.615 /    6.706 /    6.734 |   7.041 |  4.12 |   16557 |   1557327 | max/p50=1.04 | f=300
+hash8               9.921 /   10.195 /   10.281 /   10.367 |   9.630 |  6.37 |   16557 |   1557327 | max/p50=1.04 | f=300
+hash8_solo_occ      0.128 /    0.145 /    0.158 /    0.172 |   0.313 |  0.00 |   16557 |         0 | max/p50=1.35 | f=300
+octree             16.982 /   17.825 /   18.329 /   18.373 |  17.288 | 10.90 |   16557 |   1557327 | max/p50=1.08 | f=300
+octree_pot         19.409 /   20.444 /   20.847 /   21.340 |  18.175 | 12.46 |   16557 |   1557327 | max/p50=1.10 | f=300
+
+== INTERROGAZIONE 18 settori, microsecondi: media / p95 / max ==
+-- densa, passo 4, 10 cm
+polare_3m             5.40 /      5.68 /      9.55
+polare_6m             9.13 /      9.31 /     14.59
+immagine            956.26 /    979.19 /    994.53
+fasce3               23.87 /     25.40 /     45.72
+fasce8               50.19 /     53.29 /     58.46
+fasce30             136.55 /    142.53 /    151.83
+colonne_bit           7.31 /      8.03 /     12.87
+densa                57.33 /     60.19 /     72.06
+hash8                94.13 /     97.76 /    107.90
+hash8_solo_occ       74.59 /     77.72 /     81.34
+octree              322.38 /    327.81 /    344.31
+octree_pot          319.60 /    328.32 /    341.39
+-- densa, passo 4, 5 cm
+polare_3m             5.35 /      5.65 /      8.78
+polare_6m             9.07 /      9.30 /     13.83
+immagine            959.49 /    983.66 /   1071.46
+fasce3               86.58 /     92.50 /     97.51
+fasce8              191.86 /    202.09 /    219.11
+fasce30             580.22 /    607.88 /    633.03
+colonne_bit          21.96 /     23.77 /     37.26
+densa               411.26 /    438.57 /    478.62
+hash8               669.59 /    717.70 /    769.52
+hash8_solo_occ      488.06 /    520.66 /    588.95
+octree             3357.42 /   3868.78 /   4214.41
+octree_pot         2771.48 /   2903.59 /   3104.07
+
+== CARICO IMPROVVISO (3 -> 200 oggetti al fotogramma 150), passo 4: p50 prima | max prima | fotogramma 150 | p50 dopo | max dopo | unita' 149 -> 150 -> fine | raggi e passi del f.150 ==
+-- 10 cm
+-- 5 cm
+
+== SOMME DI CONTROLLO (uguali fra densa, hash8, octree, octree_pot = stessa uscita) ==
+densa 10 4 81945.7 81945.7 81945.7 81945.7 UGUALI
+densa 10 1 27131.8 27131.8 27131.8 27131.8 UGUALI
+densa 5 4 81877.4 81877.4 81877.4 81877.4 UGUALI
+densa 5 1 27113.4 27113.4 27113.4 27113.4 UGUALI

@@ -1,0 +1,44 @@
+== S5. Previsione conforme a insieme separato (livello 0,90). Vasche: 1500 passaggi per classe per la taratura e 1500 per la prova, semi diversi ==
+-- (a) scambiabile: taratura e prova dalla stessa miscela 60/15/10/15, D=2 s, punteggio = distanza dal punto a velocita' costante; 400 ripetizioni
+   n= 20: copertura realizzata media 0.910, 5o perc. 0.794, 95o perc. 0.982 | teoria Beta(19,2): media 0.905, 5o perc. 0.784, 95o 0.982 | raggio mediano 2.10 m
+   n= 30: copertura realizzata media 0.909, 5o perc. 0.803, 95o perc. 0.975 | teoria Beta(28,3): media 0.903, 5o perc. 0.805, 95o 0.972 | raggio mediano 2.01 m
+   n= 60: copertura realizzata media 0.903, 5o perc. 0.827, 95o perc. 0.959 | teoria Beta(55,6): media 0.902, 5o perc. 0.833, 95o 0.956 | raggio mediano 1.93 m
+   n=100: copertura realizzata media 0.905, 5o perc. 0.851, 95o perc. 0.947 | teoria Beta(91,10): media 0.901, 5o perc. 0.848, 95o 0.945 | raggio mediano 1.93 m
+   n=200: copertura realizzata media 0.906, 5o perc. 0.866, 95o perc. 0.933 | teoria Beta(181,20): media 0.900, 5o perc. 0.864, 95o 0.933 | raggio mediano 1.94 m
+   n=500: copertura realizzata media 0.907, 5o perc. 0.883, 95o perc. 0.927 | teoria Beta(451,50): media 0.900, 5o perc. 0.877, 95o 0.921 | raggio mediano 1.91 m
+   n minimo perche' la copertura realizzata stia >= soglia con probabilita' 0,95 (teoria Beta, livello nominale 0,90):
+     soglia 0.80: n >= 14
+     soglia 0.85: n >= 68
+     soglia 0.87: n >= 228
+-- (b) spostamento: taratura sulla «squadra» 90/10/0/0 (n=100), prova su «squadra» e su «giurato» 50/20/20/10
+   D=1 s: raggio mediano 0.40 m; copertura su «squadra» 0.911; su «giurato» media 0.720 (5o-95o perc. 0.672-0.768); per classe: prosegue 0.95, sosta 0.56, torna 0.40, svolta 0.52
+   D=2 s: raggio mediano 0.78 m; copertura su «squadra» 0.894; su «giurato» media 0.658 (5o-95o perc. 0.607-0.713); per classe: prosegue 0.95, sosta 0.42, torna 0.28, svolta 0.43
+   D=3 s: raggio mediano 1.22 m; copertura su «squadra» 0.899; su «giurato» media 0.640 (5o-95o perc. 0.594-0.690); per classe: prosegue 0.96, sosta 0.39, torna 0.23, svolta 0.34
+-- (c) massimo sulle classi (taratura per comportamento prescritto, 50 passaggi per classe): copertura per classe e prezzo in area
+   D=0.5 s | cerchio del filtro al 90 %: raggio 0.42 m, area 0.6 m2, copertura per classe pros 1.00 sost 0.97 torn 0.77 svol 0.96, «giurato» 0.943
+        disco su vel. costante, 4 classi   soglia mediana 0.57 m area 1.0 m2 (1.8 volte il cerchio) | copertura media per classe pros 1.00 sost 0.99 torn 0.90 svol 0.99 | «giurato» 0.978 (5o perc. 0.960)
+        disco su «fermo», 4 classi         soglia mediana 1.03 m area 3.4 m2 (6.1 volte il cerchio) | copertura media per classe pros 0.92 sost 0.96 torn 0.98 svol 0.95 | «giurato» 0.942 (5o perc. 0.908)
+        capsula, 3 classi sull'asse        soglia mediana 0.86 area 1.0 m2 (1.8 volte il cerchio) | copertura media per classe pros 0.91 sost 0.96 torn 0.96 svol 0.86 | «giurato» 0.924 (5o perc. 0.871)
+        capsula, 4 classi                  soglia mediana 0.93 area 1.2 m2 (2.1 volte il cerchio) | copertura media per classe pros 0.96 sost 0.98 torn 0.99 svol 0.91 | «giurato» 0.966 (5o perc. 0.920)
+   D=1.0 s | cerchio del filtro al 90 %: raggio 0.81 m, area 2.0 m2, copertura per classe pros 1.00 sost 0.88 torn 0.60 svol 0.83, «giurato» 0.879
+        disco su vel. costante, 4 classi   soglia mediana 1.69 m area 9.0 m2 (4.4 volte il cerchio) | copertura media per classe pros 1.00 sost 1.00 torn 0.91 svol 1.00 | «giurato» 0.981 (5o perc. 0.963)
+        disco su «fermo», 4 classi         soglia mediana 1.81 m area 10.3 m2 (5.0 volte il cerchio) | copertura media per classe pros 0.91 sost 0.97 torn 0.97 svol 0.96 | «giurato» 0.937 (5o perc. 0.889)
+        capsula, 3 classi sull'asse        soglia mediana 0.96 area 2.8 m2 (1.4 volte il cerchio) | copertura media per classe pros 0.91 sost 0.97 torn 0.96 svol 0.62 | «giurato» 0.903 (5o perc. 0.854)
+        capsula, 4 classi                  soglia mediana 1.74 area 9.1 m2 (4.4 volte il cerchio) | copertura media per classe pros 1.00 sost 1.00 torn 1.00 svol 0.89 | «giurato» 0.989 (5o perc. 0.983)
+   D=2.0 s | cerchio del filtro al 90 %: raggio 1.91 m, area 11.4 m2, copertura per classe pros 1.00 sost 0.88 torn 0.51 svol 0.83, «giurato» 0.861
+        disco su vel. costante, 4 classi   soglia mediana 4.19 m area 55.3 m2 (4.8 volte il cerchio) | copertura media per classe pros 1.00 sost 1.00 torn 0.90 svol 1.00 | «giurato» 0.979 (5o perc. 0.962)
+        disco su «fermo», 4 classi         soglia mediana 3.57 m area 40.1 m2 (3.5 volte il cerchio) | copertura media per classe pros 0.91 sost 0.98 torn 0.99 svol 0.96 | «giurato» 0.947 (5o perc. 0.902)
+        capsula, 3 classi sull'asse        soglia mediana 1.08 area 10.2 m2 (0.9 volte il cerchio) | copertura media per classe pros 0.92 sost 0.98 torn 0.95 svol 0.47 | «giurato» 0.895 (5o perc. 0.840)
+        capsula, 4 classi                  soglia mediana 2.74 area 65.0 m2 (5.7 volte il cerchio) | copertura media per classe pros 1.00 sost 1.00 torn 1.00 svol 0.92 | «giurato» 0.992 (5o perc. 0.986)
+   D=3.0 s | cerchio del filtro al 90 %: raggio 3.29 m, area 34.0 m2, copertura per classe pros 1.00 sost 0.94 torn 0.53 svol 0.84, «giurato» 0.876
+        disco su vel. costante, 4 classi   soglia mediana 6.74 m area 142.5 m2 (4.2 volte il cerchio) | copertura media per classe pros 1.00 sost 1.00 torn 0.90 svol 1.00 | «giurato» 0.980 (5o perc. 0.965)
+        disco su «fermo», 4 classi         soglia mediana 5.20 m area 85.0 m2 (2.5 volte il cerchio) | copertura media per classe pros 0.90 sost 0.98 torn 0.98 svol 0.97 | «giurato» 0.939 (5o perc. 0.896)
+        capsula, 3 classi sull'asse        soglia mediana 1.15 area 22.4 m2 (0.7 volte il cerchio) | copertura media per classe pros 0.91 sost 0.98 torn 0.93 svol 0.38 | «giurato» 0.878 (5o perc. 0.827)
+        capsula, 4 classi                  soglia mediana 3.18 area 173.4 m2 (5.1 volte il cerchio) | copertura media per classe pros 1.00 sost 1.00 torn 1.00 svol 0.90 | «giurato» 0.990 (5o perc. 0.981)
+   D=5.0 s | cerchio del filtro al 90 %: raggio 6.72 m, area 141.7 m2, copertura per classe pros 1.00 sost 1.00 torn 0.59 svol 0.90, «giurato» 0.908
+        disco su vel. costante, 4 classi   soglia mediana 11.63 m area 424.7 m2 (3.0 volte il cerchio) | copertura media per classe pros 1.00 sost 1.00 torn 0.91 svol 1.00 | «giurato» 0.981 (5o perc. 0.963)
+        disco su «fermo», 4 classi         soglia mediana 8.79 m area 243.0 m2 (1.7 volte il cerchio) | copertura media per classe pros 0.91 sost 0.99 torn 0.99 svol 0.97 | «giurato» 0.948 (5o perc. 0.887)
+        capsula, 3 classi sull'asse        soglia mediana 1.28 area 70.4 m2 (0.5 volte il cerchio) | copertura media per classe pros 0.93 sost 0.98 torn 0.91 svol 0.39 | «giurato» 0.882 (5o perc. 0.828)
+        capsula, 4 classi                  soglia mediana 3.57 area 545.3 m2 (3.8 volte il cerchio) | copertura media per classe pros 1.00 sost 1.00 torn 1.00 svol 0.89 | «giurato» 0.989 (5o perc. 0.979)
+-- (d) una sola soglia per tutti gli orizzonti (punteggio normalizzato d = distanza/sigma del filtro, miscela 60/15/10/15, n=100 in tutto) contro una soglia per orizzonte (n=100 ciascuno)
+   D=0.5: unica 0.935, per orizzonte 0.904 | D=1.0: unica 0.890, per orizzonte 0.905 | D=2.0: unica 0.873, per orizzonte 0.906 | D=3.0: unica 0.884, per orizzonte 0.901 | D=5.0: unica 0.920, per orizzonte 0.894

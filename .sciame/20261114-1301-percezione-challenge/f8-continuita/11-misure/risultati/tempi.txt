@@ -1,0 +1,28 @@
+# tempo per ciclo, 1 tracce nascoste insieme, geometria T (celle di A: 1034), 3040 cicli; C, -O2, un filo
+T	T	1	basi(L0,L1,L2,L2r,L2q,L3,C-005)	mediana 0.0173 ms	p95 0.0239 ms	max 0.0359 ms
+T	T	1	C-004	mediana 0.0706 ms	p95 0.0829 ms	max 0.1071 ms
+T	T	1	C-001(2000 particelle)	mediana 0.1334 ms	p95 0.1505 ms	max 0.4035 ms
+T	T	1	C-EST(4 varianti)	mediana 0.0214 ms	p95 0.0285 ms	max 0.0381 ms
+T	T	1	tutti	mediana 0.2493 ms	p95 0.2754 ms	max 0.5253 ms
+T	T	1	inizializzazione (all'ingresso)	mediana 0.1304 ms	max 0.1478 ms
+# tempo per ciclo, 10 tracce nascoste insieme, geometria T (celle di A: 1034), 3040 cicli; C, -O2, un filo
+T	T	10	basi(L0,L1,L2,L2r,L2q,L3,C-005)	mediana 0.1701 ms	p95 0.2335 ms	max 0.3503 ms
+T	T	10	C-004	mediana 0.5354 ms	p95 0.6574 ms	max 1.2184 ms
+T	T	10	C-001(2000 particelle)	mediana 1.3320 ms	p95 1.4130 ms	max 2.1526 ms
+T	T	10	C-EST(4 varianti)	mediana 0.2192 ms	p95 0.2811 ms	max 0.3885 ms
+T	T	10	tutti	mediana 2.3468 ms	p95 2.4598 ms	max 3.5829 ms
+T	T	10	inizializzazione (all'ingresso)	mediana 1.2226 ms	max 1.2973 ms
+# tempo per ciclo, 1 tracce nascoste insieme, geometria L (celle di A: 1740), 3040 cicli; C, -O2, un filo
+T	L	1	basi(L0,L1,L2,L2r,L2q,L3,C-005)	mediana 0.0206 ms	p95 0.0273 ms	max 0.0749 ms
+T	L	1	C-004	mediana 0.0853 ms	p95 0.1611 ms	max 0.3442 ms
+T	L	1	C-001(2000 particelle)	mediana 0.1720 ms	p95 0.1979 ms	max 0.4179 ms
+T	L	1	C-EST(4 varianti)	mediana 0.0304 ms	p95 0.0402 ms	max 0.1091 ms
+T	L	1	tutti	mediana 0.3072 ms	p95 0.4169 ms	max 0.7995 ms
+T	L	1	inizializzazione (all'ingresso)	mediana 0.1347 ms	max 0.1640 ms
+# tempo per ciclo, 10 tracce nascoste insieme, geometria L (celle di A: 1740), 3040 cicli; C, -O2, un filo
+T	L	10	basi(L0,L1,L2,L2r,L2q,L3,C-005)	mediana 0.2041 ms	p95 0.2809 ms	max 0.5014 ms
+T	L	10	C-004	mediana 0.8891 ms	p95 1.4241 ms	max 2.0570 ms
+T	L	10	C-001(2000 particelle)	mediana 1.7612 ms	p95 1.9821 ms	max 3.2892 ms
+T	L	10	C-EST(4 varianti)	mediana 0.2980 ms	p95 0.4067 ms	max 0.9049 ms
+T	L	10	tutti	mediana 3.1500 ms	p95 3.9832 ms	max 5.7188 ms
+T	L	10	inizializzazione (all'ingresso)	mediana 1.3467 ms	max 1.4632 ms

@@ -1,0 +1,43 @@
+# inf.py det — avviato 2026-11-14T15:28:53
+Deterministici contro oracolo (5 condizioni iniziali). Per istante: IoU con l'oracolo | massa dell'oracolo nella regione 90% | area m2 | n. pezzi
+MG
+  t=0.53 s: IoU 0.96 | massa oracolo mediana 0.897 (min 0.893) | area 0.53 | pezzi 1.0
+  t=1.00 s: IoU 0.92 | massa oracolo mediana 0.912 (min 0.901) | area 1.91 | pezzi 1.0
+  t=1.53 s: IoU 0.84 | massa oracolo mediana 0.926 (min 0.906) | area 3.30 | pezzi 1.0
+  t=2.00 s: IoU 0.73 | massa oracolo mediana 0.947 (min 0.917) | area 4.65 | pezzi 2.0
+  t=3.00 s: IoU 0.56 | massa oracolo mediana 0.972 (min 0.945) | area 7.27 | pezzi 2.2
+  t=4.00 s: IoU 0.51 | massa oracolo mediana 0.980 (min 0.965) | area 8.72 | pezzi 2.4
+  t=5.00 s: IoU 0.51 | massa oracolo mediana 0.986 (min 0.974) | area 9.46 | pezzi 2.0
+IST
+  t=0.53 s: IoU 0.40 | massa oracolo mediana 0.501 (min 0.398) | area 0.24 | pezzi 1.0
+  t=1.00 s: IoU 0.52 | massa oracolo mediana 0.547 (min 0.512) | area 0.99 | pezzi 1.0
+  t=1.53 s: IoU 0.81 | massa oracolo mediana 0.845 (min 0.758) | area 2.27 | pezzi 1.0
+  t=2.00 s: IoU 0.82 | massa oracolo mediana 0.852 (min 0.841) | area 2.95 | pezzi 1.2
+  t=3.00 s: IoU 0.85 | massa oracolo mediana 0.861 (min 0.848) | area 3.41 | pezzi 1.2
+  t=4.00 s: IoU 0.82 | massa oracolo mediana 0.853 (min 0.833) | area 3.48 | pezzi 1.0
+  t=5.00 s: IoU 0.76 | massa oracolo mediana 0.841 (min 0.817) | area 3.54 | pezzi 1.0
+NUCLEO95
+  t=0.53 s: IoU 0.77 | massa oracolo mediana 0.855 (min 0.847) | area 0.52 | pezzi 1.0
+  t=1.00 s: IoU 0.69 | massa oracolo mediana 0.836 (min 0.801) | area 2.20 | pezzi 1.0
+  t=1.53 s: IoU 0.62 | massa oracolo mediana 0.755 (min 0.586) | area 3.31 | pezzi 1.0
+  t=2.00 s: IoU 0.61 | massa oracolo mediana 0.675 (min 0.437) | area 4.00 | pezzi 1.0
+  t=3.00 s: IoU 0.57 | massa oracolo mediana 0.652 (min 0.379) | area 4.80 | pezzi 1.0
+  t=4.00 s: IoU 0.54 | massa oracolo mediana 0.802 (min 0.478) | area 6.55 | pezzi 1.0
+  t=5.00 s: IoU 0.50 | massa oracolo mediana 0.965 (min 0.663) | area 8.95 | pezzi 1.0
+ORACOLO
+  t=0.53 s: IoU 1.00 | massa oracolo mediana 0.902 (min 0.900) | area 0.54 | pezzi 1.0
+  t=1.00 s: IoU 1.00 | massa oracolo mediana 0.901 (min 0.901) | area 1.80 | pezzi 1.0
+  t=1.53 s: IoU 1.00 | massa oracolo mediana 0.901 (min 0.900) | area 2.81 | pezzi 1.0
+  t=2.00 s: IoU 1.00 | massa oracolo mediana 0.900 (min 0.900) | area 3.41 | pezzi 1.2
+  t=3.00 s: IoU 1.00 | massa oracolo mediana 0.900 (min 0.900) | area 4.07 | pezzi 2.0
+  t=4.00 s: IoU 1.00 | massa oracolo mediana 0.900 (min 0.900) | area 4.49 | pezzi 5.8
+  t=5.00 s: IoU 1.00 | massa oracolo mediana 0.900 (min 0.900) | area 4.89 | pezzi 5.4
+tremolio medio fra cicli: MG 0.0759, IST 0.1226
+punto mostrato, passo massimo per sequenza (m): MG media ['0.09', '0.07', '0.11', '0.10', '0.09'] ; massimo a posteriori ['0.14', '0.14', '0.22', '0.10', '0.22']
+punto mostrato, passo massimo per sequenza (m): IST media ['0.10', '0.09', '0.09', '0.10', '0.09'] ; massimo a posteriori ['1.50', '1.80', '2.00', '1.90', '1.60']
+Ritaglio senza rinormalizzare (gaussiana del Kalman G, S = celle ammesse, cerchio al 95%):
+  t=1.0 s: G(S) mediana 0.982; livello nella gaussiana troncata G(E∩S)/G(S) mediana 0.963 (min 0.952); limite 1-0,05/G(S) mediana 0.949; violazioni del limite 0; regione emessa dal nucleo in 5 casi su 5
+  t=2.0 s: G(S) mediana 0.230; livello nella gaussiana troncata G(E∩S)/G(S) mediana 0.847 (min 0.651); limite 1-0,05/G(S) mediana 0.783; violazioni del limite 0; regione emessa dal nucleo in 4 casi su 5
+  t=3.0 s: G(S) mediana 0.080; livello nella gaussiana troncata G(E∩S)/G(S) mediana 0.646 (min 0.420); limite 1-0,05/G(S) mediana 0.375; violazioni del limite 0; regione emessa dal nucleo in 3 casi su 5
+area del cuneo (ombra + fascia) 9.62 m2; ombra vera 7.82 m2
+# durata 7.3 s

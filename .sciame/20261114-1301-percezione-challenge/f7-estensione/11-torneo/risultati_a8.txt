@@ -1,0 +1,26 @@
+## A8 lastra di vetro 1 x 2 m a 1.5 m (invisibile alla profondita'): punti della lastra dati «libero»
+  N0-suolo    20 su 800
+  N1-suolo    20 su 800
+  N1-colonna  800 su 800
+  Q1          600 su 800
+  Q3          600 su 800
+  Q3c         600 su 800
+  P           620 su 800
+  S10(B+M)    0 su 800
+  S10p(B+M)   580 su 800
+  VO          600 su 800
+  VOa         560 su 800
+  celle N1 «libero» sotto la lastra: 28
+## A8 lastra di vetro 1 x 2 m a 2.0 m (invisibile alla profondita'): punti della lastra dati «libero»
+  N0-suolo    20 su 800
+  N1-suolo    20 su 800
+  N1-colonna  800 su 800
+  Q1          654 su 800
+  Q3          654 su 800
+  Q3c         654 su 800
+  P           680 su 800
+  S10(B+M)    580 su 800
+  S10p(B+M)   580 su 800
+  VO          680 su 800
+  VOa         600 su 800
+  celle N1 «libero» sotto la lastra: 24

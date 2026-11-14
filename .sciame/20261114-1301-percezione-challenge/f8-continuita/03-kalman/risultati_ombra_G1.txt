@@ -1,0 +1,84 @@
+Generatore di prova: G1
+== OMBRA schematica: striscia lunga 2 m, larga 3 m (area 6.0 m2); prova N=6000; (0.5, 1.0, 2.0, 3.0, 5.0) ==
+  h=0.5 s: ancora nascosti 6000 (1.000): prosegue 3651 sosta 889 svolta 861 torna 599
+     50%: cerchio A0 ritagliato: cop 0.894, area 0.12 m2 (2% della striscia)
+          gaussiana A0 troncata e rinormalizzata: cop 0.887, area 0.11 m2 (2%); regione vuota in 0 casi; massa prevista in ombra 0.999
+          miscela troncata e rinormalizzata: cop 0.812, area 0.08 m2 (1%); regione vuota in 0 casi; massa prevista in ombra 0.997
+     90%: cerchio A0 ritagliato: cop 0.998, area 0.33 m2 (5% della striscia)
+          gaussiana A0 troncata e rinormalizzata: cop 0.997, area 0.35 m2 (6%); regione vuota in 0 casi; massa prevista in ombra 0.999
+          miscela troncata e rinormalizzata: cop 0.995, area 0.28 m2 (5%); regione vuota in 0 casi; massa prevista in ombra 0.997
+  h=1.0 s: ancora nascosti 5944 (0.991): prosegue 3622 sosta 882 svolta 857 torna 583
+     50%: cerchio A0 ritagliato: cop 0.946, area 0.51 m2 (8% della striscia)
+          gaussiana A0 troncata e rinormalizzata: cop 0.936, area 0.47 m2 (8%); regione vuota in 0 casi; massa prevista in ombra 0.934
+          miscela troncata e rinormalizzata: cop 0.840, area 0.29 m2 (5%); regione vuota in 0 casi; massa prevista in ombra 0.961
+     90%: cerchio A0 ritagliato: cop 0.990, area 1.60 m2 (27% della striscia)
+          gaussiana A0 troncata e rinormalizzata: cop 0.989, area 1.48 m2 (25%); regione vuota in 0 casi; massa prevista in ombra 0.934
+          miscela troncata e rinormalizzata: cop 0.989, area 1.04 m2 (17%); regione vuota in 0 casi; massa prevista in ombra 0.961
+  h=2.0 s: ancora nascosti 1275 (0.212): prosegue 576 sosta 333 svolta 199 torna 167
+     50%: cerchio A0 ritagliato: cop 0.770, area 1.52 m2 (25% della striscia)
+          gaussiana A0 troncata e rinormalizzata: cop 0.795, area 1.27 m2 (21%); regione vuota in 2 casi; massa prevista in ombra 0.411
+          miscela troncata e rinormalizzata: cop 0.735, area 0.78 m2 (13%); regione vuota in 0 casi; massa prevista in ombra 0.534
+     90%: cerchio A0 ritagliato: cop 0.913, area 4.04 m2 (67% della striscia)
+          gaussiana A0 troncata e rinormalizzata: cop 0.929, area 3.48 m2 (58%); regione vuota in 2 casi; massa prevista in ombra 0.411
+          miscela troncata e rinormalizzata: cop 0.953, area 2.41 m2 (40%); regione vuota in 0 casi; massa prevista in ombra 0.534
+  h=3.0 s: ancora nascosti 413 (0.069): prosegue 59 sosta 220 svolta 37 torna 97
+     50%: cerchio A0 ritagliato: cop 0.419, area 1.41 m2 (23% della striscia)
+          gaussiana A0 troncata e rinormalizzata: cop 0.620, area 1.76 m2 (29%); regione vuota in 10 casi; massa prevista in ombra 0.139
+          miscela troncata e rinormalizzata: cop 0.620, area 0.87 m2 (15%); regione vuota in 0 casi; massa prevista in ombra 0.245
+     90%: cerchio A0 ritagliato: cop 0.843, area 4.33 m2 (72% della striscia)
+          gaussiana A0 troncata e rinormalizzata: cop 0.918, area 4.51 m2 (75%); regione vuota in 10 casi; massa prevista in ombra 0.139
+          miscela troncata e rinormalizzata: cop 0.935, area 3.00 m2 (50%); regione vuota in 0 casi; massa prevista in ombra 0.245
+  h=5.0 s: ancora nascosti 130 (0.022): prosegue 5 sosta 37 svolta 5 torna 83
+     50%: cerchio A0 ritagliato: cop 0.431, area 1.89 m2 (31% della striscia)
+          gaussiana A0 troncata e rinormalizzata: cop 0.554, area 2.27 m2 (38%); regione vuota in 15 casi; massa prevista in ombra 0.041
+          miscela troncata e rinormalizzata: cop 0.308, area 0.82 m2 (14%); regione vuota in 0 casi; massa prevista in ombra 0.138
+     90%: cerchio A0 ritagliato: cop 0.877, area 5.20 m2 (87% della striscia)
+          gaussiana A0 troncata e rinormalizzata: cop 0.800, area 4.86 m2 (81%); regione vuota in 15 casi; massa prevista in ombra 0.041
+          miscela troncata e rinormalizzata: cop 0.785, area 3.14 m2 (52%); regione vuota in 0 casi; massa prevista in ombra 0.138
+  h=0.5 s: quota vera ancora nascosta 1.000; massa in ombra prevista: miscela 0.997, gaussiana A0 0.999
+  h=1.0 s: quota vera ancora nascosta 0.991; massa in ombra prevista: miscela 0.958, gaussiana A0 0.932
+  h=2.0 s: quota vera ancora nascosta 0.212; massa in ombra prevista: miscela 0.295, gaussiana A0 0.239
+  h=3.0 s: quota vera ancora nascosta 0.069; massa in ombra prevista: miscela 0.146, gaussiana A0 0.084
+  h=5.0 s: quota vera ancora nascosta 0.022; massa in ombra prevista: miscela 0.092, gaussiana A0 0.025
+== OMBRA schematica: striscia lunga 1 m, larga 3 m (area 3.0 m2); prova N=6000; (0.5, 1.0, 2.0, 3.0, 5.0) ==
+  h=0.5 s: ancora nascosti 5951 (0.992): prosegue 3618 sosta 879 svolta 857 torna 597
+     50%: cerchio A0 ritagliato: cop 0.894, area 0.12 m2 (4% della striscia)
+          gaussiana A0 troncata e rinormalizzata: cop 0.878, area 0.10 m2 (3%); regione vuota in 0 casi; massa prevista in ombra 0.948
+          miscela troncata e rinormalizzata: cop 0.801, area 0.08 m2 (3%); regione vuota in 0 casi; massa prevista in ombra 0.960
+     90%: cerchio A0 ritagliato: cop 0.998, area 0.31 m2 (10% della striscia)
+          gaussiana A0 troncata e rinormalizzata: cop 0.997, area 0.32 m2 (11%); regione vuota in 0 casi; massa prevista in ombra 0.948
+          miscela troncata e rinormalizzata: cop 0.994, area 0.26 m2 (9%); regione vuota in 0 casi; massa prevista in ombra 0.960
+  h=1.0 s: ancora nascosti 1072 (0.179): prosegue 576 sosta 193 svolta 172 torna 131
+     50%: cerchio A0 ritagliato: cop 0.852, area 0.29 m2 (10% della striscia)
+          gaussiana A0 troncata e rinormalizzata: cop 0.890, area 0.28 m2 (9%); regione vuota in 1 casi; massa prevista in ombra 0.522
+          miscela troncata e rinormalizzata: cop 0.804, area 0.18 m2 (6%); regione vuota in 0 casi; massa prevista in ombra 0.581
+     90%: cerchio A0 ritagliato: cop 0.948, area 0.89 m2 (30% della striscia)
+          gaussiana A0 troncata e rinormalizzata: cop 0.965, area 0.86 m2 (29%); regione vuota in 1 casi; massa prevista in ombra 0.522
+          miscela troncata e rinormalizzata: cop 0.981, area 0.67 m2 (22%); regione vuota in 0 casi; massa prevista in ombra 0.581
+  h=2.0 s: ancora nascosti 157 (0.026): prosegue 12 sosta 77 svolta 13 torna 55
+     50%: cerchio A0 ritagliato: cop 0.159, area 0.21 m2 (7% della striscia)
+          gaussiana A0 troncata e rinormalizzata: cop 0.478, area 0.52 m2 (17%); regione vuota in 35 casi; massa prevista in ombra 0.085
+          miscela troncata e rinormalizzata: cop 0.548, area 0.24 m2 (8%); regione vuota in 0 casi; massa prevista in ombra 0.123
+     90%: cerchio A0 ritagliato: cop 0.516, area 0.99 m2 (33% della striscia)
+          gaussiana A0 troncata e rinormalizzata: cop 0.752, area 1.53 m2 (51%); regione vuota in 35 casi; massa prevista in ombra 0.085
+          miscela troncata e rinormalizzata: cop 0.949, area 1.26 m2 (42%); regione vuota in 0 casi; massa prevista in ombra 0.123
+  h=3.0 s: ancora nascosti 98 (0.016): prosegue 1 sosta 49 svolta 7 torna 41
+     50%: cerchio A0 ritagliato: cop 0.092, area 0.16 m2 (5% della striscia)
+          gaussiana A0 troncata e rinormalizzata: cop 0.592, area 0.88 m2 (29%); regione vuota in 21 casi; massa prevista in ombra 0.033
+          miscela troncata e rinormalizzata: cop 0.531, area 0.25 m2 (8%); regione vuota in 0 casi; massa prevista in ombra 0.070
+     90%: cerchio A0 ritagliato: cop 0.531, area 1.38 m2 (46% della striscia)
+          gaussiana A0 troncata e rinormalizzata: cop 0.786, area 2.13 m2 (71%); regione vuota in 21 casi; massa prevista in ombra 0.033
+          miscela troncata e rinormalizzata: cop 0.939, area 1.52 m2 (51%); regione vuota in 0 casi; massa prevista in ombra 0.070
+  h=5.0 s: ancora nascosti 44 (0.007): sosta 1 svolta 2 torna 41
+     50%: cerchio A0 ritagliato: cop 0.205, area 0.57 m2 (19% della striscia)
+          gaussiana A0 troncata e rinormalizzata: cop 0.295, area 0.88 m2 (29%); regione vuota in 19 casi; massa prevista in ombra 0.015
+          miscela troncata e rinormalizzata: cop 0.227, area 0.29 m2 (10%); regione vuota in 0 casi; massa prevista in ombra 0.053
+     90%: cerchio A0 ritagliato: cop 0.818, area 2.45 m2 (82% della striscia)
+          gaussiana A0 troncata e rinormalizzata: cop 0.477, area 1.69 m2 (56%); regione vuota in 19 casi; massa prevista in ombra 0.015
+          miscela troncata e rinormalizzata: cop 0.636, area 1.48 m2 (49%); regione vuota in 0 casi; massa prevista in ombra 0.053
+  h=0.5 s: quota vera ancora nascosta 0.992; massa in ombra prevista: miscela 0.957, gaussiana A0 0.945
+  h=1.0 s: quota vera ancora nascosta 0.179; massa in ombra prevista: miscela 0.268, gaussiana A0 0.243
+  h=2.0 s: quota vera ancora nascosta 0.026; massa in ombra prevista: miscela 0.072, gaussiana A0 0.047
+  h=3.0 s: quota vera ancora nascosta 0.016; massa in ombra prevista: miscela 0.052, gaussiana A0 0.022
+  h=5.0 s: quota vera ancora nascosta 0.007; massa in ombra prevista: miscela 0.034, gaussiana A0 0.009
+Tempo 2.9 s

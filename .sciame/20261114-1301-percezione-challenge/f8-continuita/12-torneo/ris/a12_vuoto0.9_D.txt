@@ -1,0 +1,47 @@
+# torneo.c scena=D yp=1.9 ys=2.3 w=1.0 portata=3.0 | N=200 seme=9000 | dw=+0.00 pd=0.90 corpo=0.00 c6=0.22 v=1.20-1.20 cap=78 vp=0.00 segue=0 congela=0 mancati=0 estraneo=0 vuoto=0.90
+
+## 1. copertura per comportamento e tau (cicli a soggetto NON visibile). Per candidata: c90 c50 area90/ombra senzaRegione%
+comport.    tau    n | C004                  | C001                  | C005W                 | C005P                 | ESTA                  | ESTB                  | REACH   S1  S1congelato
+prosegue     0.5   52 | 0.981 0.750 0.45   0.0 | 0.981 0.788 0.46   0.0 | 0.885 0.346 0.29   0.0 | 0.654 0.269 0.13   0.0 | 0.904 0.673 0.42   0.0 | 0.904 0.673 0.42   0.0 | 1.000 1.000 1.000
+prosegue     1.0   52 | 0.981 0.673 0.74   0.0 | 1.000 0.846 0.76   0.0 | 1.000 0.365 0.96   0.0 | 0.596 0.231 0.21   0.0 | 1.000 0.654 0.79   0.0 | 1.000 0.750 0.79   0.0 | 1.000 1.000 1.000
+prosegue     2.0    2 | 1.000 1.000 0.87   0.0 | 1.000 1.000 0.91   0.0 | 1.000 1.000 1.00   0.0 | 1.000 0.000 0.00   0.0 | 0.000 0.000 0.50  50.0 | 0.000 0.000 0.00 100.0 | 1.000 1.000 1.000
+prosegue     3.0    2 | 1.000 0.500 0.85   0.0 | 1.000 0.000 0.88   0.0 | 1.000 1.000 1.00   0.0 | 0.500 0.000 0.00   0.0 | 0.000 0.000 0.00 100.0 | 0.000 0.000 0.00 100.0 | 1.000 1.000 1.000
+
+## 2. per ciclo nascosto e per passaggio. Per candidata: cicli senza regione % (passaggi) | regione vuota % | cicli R90 su libero oltre fascia % (passaggi) | cicli R90 su libero stretto % | cicli 'piccola e sbagliata' % (passaggi) | punto su libero oltre fascia %
+prosegue    passaggi 200, con occlusione 53, cicli nascosti 910 | fuori REACH: cicli 0 passaggi 0 | fuori S1: 0 / 0 | fuori S1 congelato: 0 / 0
+   C004   senza   0.0 (0) | vuota   0.0 | suFG   0.0 (0) | suLibero 100.0 | piccolaSbagliata   0.0 (0) | puntoFG   0.0
+   C001   senza   0.0 (0) | vuota   0.0 | suFG   0.0 (0) | suLibero  99.9 | piccolaSbagliata   0.0 (0) | puntoFG   0.0
+   C005W  senza   0.0 (0) | vuota   0.0 | suFG   0.0 (0) | suLibero  90.3 | piccolaSbagliata   0.0 (0) | puntoFG   6.8
+   C005P  senza   0.0 (0) | vuota   0.4 | suFG   0.0 (0) | suLibero  58.6 | piccolaSbagliata   3.6 (7) | puntoFG   6.8
+   ESTA   senza   6.9 (2) | vuota   0.0 | suFG   0.0 (0) | suLibero  90.7 | piccolaSbagliata   0.0 (0) | puntoFG   0.0
+   ESTB   senza   8.9 (2) | vuota   0.0 | suFG   0.0 (0) | suLibero  88.2 | piccolaSbagliata   0.0 (0) | puntoFG   0.0
+
+## 3. cicli a soggetto VISIBILE ma non rilevato durante l'occlusione dichiarata (fuori dalla fascia C6): n | contenuto da R90 per candidata | REACH | S1
+prosegue        6 | 0.000 0.000 0.000 0.000 0.000 0.000 | 0.000 | 0.833
+
+## 4. ricomparsa: n, buio medio s | per candidata: prima misura entro 0,45 / entro 0,30 / dentro R90 | ellisse 95% ESTA ESTB: calcolata [dichiarata, cioe non perso] (perso a quel punto) | R90 > meta ombra prima della ricomparsa, per candidata | > 80% | nucleo ancora mostrato
+prosegue      50 1.49 | 1.00/0.98/0.32 1.00/0.98/0.28 1.00/1.00/0.38 0.82/0.72/0.22 0.98/0.94/0.34 0.94/0.94/0.36 | 0.920 [0.920] (0.00) 1.000 [0.940] (0.06) | meta: 0.92 0.94 1.00 0.04 0.92 0.98 | 80: 0.64 0.68 0.98 0.00 0.76 0.80 | nucleo 0.02
+            salto mediano / p90 (m): C004 0.61/0.97  C001 0.61/0.87  vel.cost 0.54/1.04  EST-A media 0.77/0.97  fermo 1.73/1.86
+
+## 5. ciclo di vita: passaggi | con un ciclo nascosto senza traccia pendente (cicli) | traccia chiusa in campo aperto | entrata non confermata | velocita stimata/vera all'ingresso: mediana p10 p90
+prosegue     200 |  148 (7563) |  175 |  155 | corrette 0 | 1.00 0.70 1.30
+
+## 6. C-EST: passaggi con mu1 > 0,5 oltre 0,5 s dopo l'uscita attesa (A, B) | per tau: perso% A B, sigma_eff medio A B, mu1 medio A B
+prosegue    mu1 dominante: A 11  B 13 su 53 occlusioni
+     tau  0.5 n   52 | perso   0.0   0.0 | sigma 0.23 0.23 | mu1 0.81 0.80
+     tau  1.0 n   52 | perso   0.0   0.0 | sigma 0.40 0.42 | mu1 0.64 0.77
+     tau  2.0 n    2 | perso  50.0 100.0 | sigma 0.79 1.01 | mu1 0.23 0.82
+     tau  3.0 n    2 | perso 100.0 100.0 | sigma 1.12 1.28 | mu1 0.45 0.83
+
+## 7. miscele per ripesatura: 'squadra' = pesi di -mix (predefiniti 60/10/10/10/5/5), giurato 30/10/20/20/10/10: tau | per candidata c90 c50
+
+## 8. errore mediano del punto (m) per comportamento e tau: C004 fantasma | C001 media | vel.cost | EST-A media ritagliata | fermo
+prosegue     0.5   52 | 0.17 | 0.19 | 0.21 | 0.18 | 0.61
+prosegue     1.0   52 | 0.30 | 0.24 | 0.35 | 0.33 | 1.14
+
+## 10. costo per ciclo e traccia (C, -O2, macchina condivisa): media / massimo in microsecondi
+C004       45.5 /     60.4  (n 1200)
+C001       86.9 /    125.5  (n 1200)
+C005W       1.5 /      8.5  (n 1200)
+ESTA       10.1 /     32.3  (n 1200)
+ESTB       10.1 /     33.2  (n 1200)

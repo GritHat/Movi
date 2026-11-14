@@ -1,0 +1,295 @@
+Covarianza a regime dopo 30 misure: a=0.00106 b=0.00437 c=0.04201  (sigma_pos 0.033 m, sigma_vel 0.205 m/s)
+Raggio A0 al 95%%: 0.38 m a 0.5 s 0.84 m a 1.0 s 1.54 m a 1.6 s 2.08 m a 2.0 s 3.63 m a 3.0 s 7.52 m a 5.0 s
+Insiemi: taratura G0 seme 101 N=5000; scelta G0 seme 202 N=3000; prova G0 seme 303 N=6000  (3.2 s)
+B0: tau=6.0 s, q=0.20 (griglia: migliori tre tau=6 q=0.2 nll=1.740, tau=4 q=0.2 nll=1.754, tau=4 q=0.3 nll=1.787)
+    solo CV (tau=1e6): q=0.05 nll=2.184, q=0.1 nll=1.970, q=0.2 nll=1.958, q=0.3 nll=2.052, q=0.5 nll=2.265, q=0.8 nll=2.539, q=1.2 nll=2.824, q=2 nll=3.231
+D0: lambda=0.15 /s, qc=0.03 (griglia: lam=0.15 qc=0.03 nll=1.416, lam=0.3 qc=0.03 nll=1.423, lam=0.5 qc=0.03 nll=1.467, lam=0.15 qc=0.08 nll=1.510, lam=0.3 qc=0.08 nll=1.515, lam=0.5 qc=0.08 nll=1.549)
+C1: per orizzonte (centro/v*t, sigma lungo, sigma trasv): (0.79 0.15 0.16) (0.78 0.18 0.15) (0.72 0.24 0.19) (0.65 0.29 0.21) (0.55 0.37 0.26)
+
+== SCELTA (insieme di scelta, seme 202): orizzonti (0.5, 1.0, 2.0, 3.0, 5.0) ==
+  A0 attuale: CV q=0,2, cerchio chi2   [scelta, N=3000]
+   cop 50%     0.778  0.833  0.766  0.696  0.634   | r_eq        0.18  0.41  1.00  1.75  3.62
+   cop 90%     0.961  0.939  0.910  0.895  0.879   | r_eq        0.33  0.74  1.82  3.19  6.59
+     entro +-0,03 ovunque: NO; raggio medio al 90%: 2.534 m
+  A0cap: A0 intersecato col disco v_max*t+0,1   [scelta, N=3000]
+   cop 50%     0.778  0.833  0.766  0.696  0.634   | r_eq        0.18  0.41  1.00  1.75  3.61
+   cop 90%     0.961  0.939  0.910  0.895  0.879   | r_eq        0.33  0.74  1.81  3.15  6.39
+     entro +-0,03 ovunque: NO; raggio medio al 90%: 2.486 m
+  A1: centro CV, raggio conforme per orizzonte   [scelta, N=3000]
+   cop 50%     0.480  0.484  0.503  0.503  0.500   | r_eq        0.12  0.22  0.54  1.10  2.72
+   cop 90%     0.907  0.898  0.898  0.899  0.901   | r_eq        0.24  0.55  1.72  3.27  7.04
+     entro +-0,03 ovunque: si; raggio medio al 90%: 2.565 m
+  A2: centro CV, raggio conforme scalato con velocita' x tempo   [scelta, N=3000]
+   cop 50%     0.482  0.484  0.495  0.504  0.508   | r_eq        0.12  0.23  0.57  1.16  2.94
+   cop 90%     0.907  0.898  0.895  0.897  0.901   | r_eq        0.27  0.60  1.81  3.34  6.96
+     entro +-0,03 ovunque: si; raggio medio al 90%: 2.597 m
+  B0: velocita' che decade (OU), tau e q dalla verosimiglianza, cerchio chi2   [scelta, N=3000]
+   cop 50%     0.773  0.818  0.754  0.688  0.561   | r_eq        0.18  0.38  0.88  1.45  2.68
+   cop 90%     0.962  0.941  0.917  0.902  0.868   | r_eq        0.32  0.69  1.60  2.64  4.89
+     entro +-0,03 ovunque: NO; raggio medio al 90%: 2.028 m
+  B1: centro OU, raggio conforme per orizzonte   [scelta, N=3000]
+   cop 50%     0.477  0.491  0.508  0.511  0.503   | r_eq        0.12  0.23  0.59  1.10  2.50
+   cop 90%     0.912  0.901  0.901  0.902  0.902   | r_eq        0.24  0.51  1.47  2.65  5.52
+     entro +-0,03 ovunque: si; raggio medio al 90%: 2.077 m
+  C1: ellisse lungo la traccia (centro arretrato, semiassi ~ v*t), conforme   [scelta, N=3000]
+   cop 50%     0.488  0.488  0.503  0.490  0.502   | r_eq        0.12  0.24  0.61  1.14  2.48
+   cop 90%     0.903  0.896  0.894  0.897  0.899   | r_eq        0.26  0.55  1.46  2.56  5.51
+     entro +-0,03 ovunque: si; raggio medio al 90%: 2.069 m
+  D0: miscela a regimi, regione a densita' piu' alta, nominale   [scelta, N=3000]
+   cop 50%     0.686  0.725  0.645  0.576  0.558   | r_eq        0.16  0.31  0.69  1.15  2.14
+   cop 90%     0.955  0.938  0.922  0.905  0.889   | r_eq        0.31  0.62  1.41  2.39  4.84
+     entro +-0,03 ovunque: NO; raggio medio al 90%: 1.913 m
+  D1: miscela a regimi, livello conforme per orizzonte   [scelta, N=3000]
+   cop 50%     0.488  0.495  0.514  0.496  0.508   | r_eq        0.12  0.22  0.55  1.01  1.97
+   cop 90%     0.908  0.901  0.896  0.899  0.905   | r_eq        0.24  0.53  1.23  2.31  5.02
+     entro +-0,03 ovunque: si; raggio medio al 90%: 1.865 m
+  E0: la miscela collassata in una gaussiana (uscita di un IMM), ellisse chi2   [scelta, N=3000]
+   cop 50%     0.761  0.794  0.745  0.695  0.620   | r_eq        0.18  0.37  0.88  1.48  2.82
+   cop 90%     0.960  0.934  0.910  0.902  0.875   | r_eq        0.32  0.67  1.60  2.70  5.14
+     entro +-0,03 ovunque: NO; raggio medio al 90%: 2.087 m
+  E1: ellisse dell'IMM collassato, scala conforme per orizzonte   [scelta, N=3000]
+   cop 50%     0.488  0.485  0.503  0.498  0.496   | r_eq        0.12  0.22  0.57  1.06  2.30
+   cop 90%     0.908  0.901  0.898  0.899  0.902   | r_eq        0.24  0.53  1.50  2.65  5.66
+     entro +-0,03 ovunque: si; raggio medio al 90%: 2.117 m
+  >> le due migliori secondo la regola scritta prima: D1: miscela a regimi, livello conforme per orizzonte | C1: ellisse lungo la traccia (centro arretrato, semiassi ~ v*t), conforme
+     (4.8 s)
+
+== PROVA su G0 (seme 303), per comportamento: orizzonti (0.5, 1.0, 2.0, 3.0, 5.0) ==
+  A0 attuale: CV q=0,2, cerchio chi2   [prova G0, N=6000]
+   cop 50%     0.780  0.829  0.760  0.695  0.633   | r_eq        0.18  0.41  1.00  1.75  3.62
+   cop 90%     0.962  0.939  0.904  0.890  0.884   | r_eq        0.33  0.74  1.82  3.19  6.59
+     accelera     n= 315 50%:  0.800  0.822  0.784  0.768  0.768
+     ferma        n= 862 50%:  0.709  0.700  0.553  0.449  0.305
+     prosegue     n=2389 50%:  0.838  0.956  0.980  0.982  0.979
+     rallenta     n= 593 50%:  0.784  0.821  0.788  0.772  0.808
+     riparte      n= 310 50%:  0.761  0.771  0.574  0.448  0.600
+     svolta       n= 939 50%:  0.742  0.727  0.565  0.399  0.245
+     torna        n= 592 50%:  0.701  0.706  0.537  0.377  0.101
+     accelera     n= 315 90%:  0.984  0.984  0.987  0.997  0.994
+     ferma        n= 862 90%:  0.919  0.872  0.803  0.814  0.872
+     prosegue     n=2389 90%:  0.999  1.000  1.000  1.000  1.000
+     rallenta     n= 593 90%:  0.981  0.981  0.988  0.997  1.000
+     riparte      n= 310 90%:  0.929  0.903  0.852  0.897  0.997
+     svolta       n= 939 90%:  0.932  0.872  0.776  0.731  0.721
+     torna        n= 592 90%:  0.907  0.851  0.765  0.647  0.454
+  A0cap: A0 intersecato col disco v_max*t+0,1   [prova G0, N=6000]
+   cop 50%     0.780  0.829  0.760  0.695  0.633   | r_eq        0.18  0.41  1.00  1.75  3.61
+   cop 90%     0.962  0.939  0.904  0.890  0.884   | r_eq        0.33  0.74  1.81  3.15  6.39
+  D1: miscela a regimi, livello conforme per orizzonte   [prova G0, N=6000]
+   cop 50%     0.494  0.494  0.498  0.499  0.500   | r_eq        0.12  0.22  0.55  1.01  1.97
+   cop 90%     0.903  0.904  0.899  0.899  0.898   | r_eq        0.24  0.53  1.23  2.31  5.01
+     accelera     n= 315 50%:  0.479  0.470  0.397  0.267  0.105
+     ferma        n= 862 50%:  0.444  0.408  0.343  0.440  0.784
+     prosegue     n=2389 50%:  0.545  0.587  0.702  0.740  0.662
+     rallenta     n= 593 50%:  0.497  0.506  0.474  0.489  0.617
+     riparte      n= 310 50%:  0.455  0.461  0.352  0.423  0.658
+     svolta       n= 939 50%:  0.473  0.422  0.311  0.169  0.026
+     torna        n= 592 50%:  0.416  0.373  0.346  0.311  0.194
+     accelera     n= 315 90%:  0.911  0.927  0.844  0.863  0.813
+     ferma        n= 862 90%:  0.840  0.818  0.941  0.998  1.000
+     prosegue     n=2389 90%:  0.963  0.993  0.992  0.999  0.999
+     rallenta     n= 593 90%:  0.909  0.961  0.985  0.998  1.000
+     riparte      n= 310 90%:  0.874  0.865  0.968  1.000  1.000
+     svolta       n= 939 90%:  0.863  0.788  0.611  0.539  0.513
+     torna        n= 592 90%:  0.826  0.806  0.829  0.791  0.838
+  C1: ellisse lungo la traccia (centro arretrato, semiassi ~ v*t), conforme   [prova G0, N=6000]
+   cop 50%     0.490  0.490  0.481  0.481  0.489   | r_eq        0.12  0.24  0.61  1.13  2.47
+   cop 90%     0.901  0.897  0.898  0.896  0.895   | r_eq        0.26  0.55  1.46  2.56  5.50
+     accelera     n= 315 50%:  0.451  0.394  0.273  0.089  0.019
+     ferma        n= 862 50%:  0.444  0.458  0.415  0.497  0.653
+     prosegue     n=2389 50%:  0.540  0.566  0.598  0.560  0.548
+     rallenta     n= 593 50%:  0.504  0.528  0.644  0.850  0.981
+     riparte      n= 310 50%:  0.458  0.471  0.452  0.577  0.997
+     svolta       n= 939 50%:  0.471  0.401  0.269  0.168  0.043
+     torna        n= 592 50%:  0.412  0.390  0.400  0.422  0.216
+     accelera     n= 315 90%:  0.898  0.895  0.863  0.819  0.825
+     ferma        n= 862 90%:  0.841  0.812  0.883  1.000  1.000
+     prosegue     n=2389 90%:  0.957  0.983  0.995  0.995  0.998
+     rallenta     n= 593 90%:  0.924  0.961  0.998  0.998  1.000
+     riparte      n= 310 90%:  0.868  0.858  0.910  1.000  1.000
+     svolta       n= 939 90%:  0.852  0.782  0.665  0.569  0.558
+     torna        n= 592 90%:  0.838  0.819  0.811  0.745  0.738
+  A1: centro CV, raggio conforme per orizzonte   [prova G0, N=6000]
+   cop 50%     0.499  0.494  0.497  0.509  0.502   | r_eq        0.12  0.22  0.54  1.10  2.72
+   cop 90%     0.902  0.898  0.893  0.898  0.905   | r_eq        0.24  0.55  1.72  3.27  7.04
+     accelera     n= 315 50%:  0.495  0.470  0.416  0.400  0.473
+     ferma        n= 862 50%:  0.445  0.394  0.321  0.237  0.132
+     prosegue     n=2389 50%:  0.549  0.596  0.717  0.858  0.928
+     rallenta     n= 593 50%:  0.503  0.501  0.442  0.444  0.511
+     riparte      n= 310 50%:  0.452  0.439  0.329  0.261  0.297
+     svolta       n= 939 50%:  0.482  0.427  0.333  0.224  0.129
+     torna        n= 592 50%:  0.427  0.370  0.316  0.203  0.025
+     accelera     n= 315 90%:  0.908  0.946  0.984  0.997  0.997
+     ferma        n= 862 90%:  0.838  0.789  0.777  0.831  0.923
+     prosegue     n=2389 90%:  0.965  0.995  1.000  1.000  1.000
+     rallenta     n= 593 90%:  0.899  0.927  0.981  0.997  1.000
+     riparte      n= 310 90%:  0.868  0.848  0.823  0.910  1.000
+     svolta       n= 939 90%:  0.864  0.807  0.758  0.751  0.771
+     torna        n= 592 90%:  0.824  0.780  0.747  0.664  0.515
+  A2: centro CV, raggio conforme scalato con velocita' x tempo   [prova G0, N=6000]
+   cop 50%     0.492  0.489  0.492  0.501  0.502   | r_eq        0.12  0.23  0.57  1.16  2.94
+   cop 90%     0.902  0.898  0.895  0.900  0.906   | r_eq        0.27  0.60  1.81  3.33  6.96
+  B0: velocita' che decade (OU), tau e q dalla verosimiglianza, cerchio chi2   [prova G0, N=6000]
+   cop 50%     0.766  0.810  0.743  0.678  0.555   | r_eq        0.18  0.38  0.88  1.45  2.68
+   cop 90%     0.962  0.944  0.917  0.898  0.865   | r_eq        0.32  0.69  1.60  2.64  4.89
+  B1: centro OU, raggio conforme per orizzonte   [prova G0, N=6000]
+   cop 50%     0.492  0.490  0.490  0.496  0.496   | r_eq        0.12  0.23  0.59  1.10  2.50
+   cop 90%     0.906  0.901  0.896  0.899  0.902   | r_eq        0.24  0.51  1.47  2.65  5.52
+  D0: miscela a regimi, regione a densita' piu' alta, nominale   [prova G0, N=6000]
+   cop 50%     0.689  0.715  0.628  0.582  0.554   | r_eq        0.16  0.31  0.69  1.15  2.13
+   cop 90%     0.953  0.943  0.929  0.905  0.882   | r_eq        0.31  0.62  1.41  2.39  4.84
+  E0: la miscela collassata in una gaussiana (uscita di un IMM), ellisse chi2   [prova G0, N=6000]
+   cop 50%     0.756  0.783  0.733  0.681  0.611   | r_eq        0.18  0.37  0.88  1.48  2.81
+   cop 90%     0.958  0.936  0.915  0.905  0.869   | r_eq        0.32  0.67  1.60  2.70  5.13
+  E1: ellisse dell'IMM collassato, scala conforme per orizzonte   [prova G0, N=6000]
+   cop 50%     0.497  0.487  0.484  0.490  0.492   | r_eq        0.12  0.22  0.57  1.06  2.30
+   cop 90%     0.903  0.902  0.900  0.900  0.898   | r_eq        0.24  0.53  1.49  2.64  5.65
+  NLL media (piu' bassa e' meglio) per orizzonte, prova G0:
+   A0 attuale  -1.303   0.300   2.277   3.517   5.032
+   B0: veloci  -1.358   0.186   2.063   3.212   4.655
+   C1: elliss  -1.456   0.064   1.955   3.095   4.515
+   D0: miscel  -1.442  -0.082   1.665   2.799   4.202
+   E0: la mis  -1.358   0.146   1.998   3.129   4.541
+  Errore quadratico medio del centro (m) per orizzonte (0.5, 1.0, 2.0, 3.0, 5.0)
+   fermo all'ultima posizione  0.655  1.278  2.431  3.460  5.536
+   A0 attuale: CV q=0,2, cerc  0.167  0.376  1.051  1.979  4.233
+   B0: velocita' che decade (  0.163  0.357  0.950  1.704  3.485
+   C1: ellisse lungo la tracc  0.162  0.355  0.947  1.694  3.474
+   D0: miscela a regimi, regi  0.166  0.361  0.962  1.732  3.544
+  ... sul solo 'prosegue' (n=2389):
+  Errore quadratico medio del centro (m) per orizzonte (0.5, 1.0, 2.0, 3.0, 5.0)
+   fermo all'ultima posizione  0.673  1.342  2.679  4.010  6.656
+   A0 attuale: CV q=0,2, cerc  0.135  0.229  0.484  0.797  1.585
+   B0: velocita' che decade (  0.134  0.239  0.583  1.077  2.440
+   C1: ellisse lungo la tracc  0.134  0.242  0.611  1.200  2.686
+   D0: miscela a regimi, regi  0.135  0.232  0.535  0.964  2.126
+     (5.9 s)
+
+== ALTRA POPOLAZIONE (taratura su G0, prova su generatori di altri autori) ==
+  A0 attuale: CV q=0,2, cerchio chi2   [G1 avversario, N=4000]
+   cop 50%     0.900  0.943  0.917  0.886  0.852   | r_eq        0.18  0.41  1.00  1.75  3.62
+   cop 90%     0.998  0.989  0.964  0.955  0.945   | r_eq        0.33  0.74  1.82  3.19  6.59
+     prosegue     n=2436 50%:  0.901  0.966  0.994  0.998  1.000
+     sosta        n= 589 50%:  0.890  0.908  0.810  0.762  0.849
+     svolta       n= 571 50%:  0.897  0.919  0.820  0.725  0.602
+     torna        n= 404 50%:  0.911  0.886  0.743  0.621  0.322
+     prosegue     n=2436 90%:  0.999  1.000  1.000  1.000  1.000
+     sosta        n= 589 90%:  1.000  0.973  0.944  0.961  1.000
+     svolta       n= 571 90%:  0.996  0.982  0.937  0.916  0.911
+     torna        n= 404 90%:  0.990  0.950  0.809  0.730  0.582
+  D1: miscela a regimi, livello conforme per orizzonte   [G1 avversario, N=4000]
+   cop 50%     0.619  0.621  0.709  0.737  0.673   | r_eq        0.12  0.22  0.55  1.01  1.97
+   cop 90%     0.982  0.977  0.957  0.949  0.949   | r_eq        0.24  0.53  1.23  2.30  4.99
+     prosegue     n=2436 50%:  0.623  0.646  0.789  0.844  0.792
+     sosta        n= 589 50%:  0.596  0.574  0.593  0.667  0.793
+     svolta       n= 571 50%:  0.618  0.585  0.583  0.506  0.289
+     torna        n= 404 50%:  0.631  0.584  0.574  0.515  0.322
+     prosegue     n=2436 90%:  0.983  0.994  0.999  1.000  1.000
+     sosta        n= 589 90%:  0.983  0.956  0.992  1.000  1.000
+     svolta       n= 571 90%:  0.982  0.953  0.842  0.806  0.786
+     torna        n= 404 90%:  0.973  0.933  0.814  0.767  0.795
+  C1: ellisse lungo la traccia (centro arretrato, semiassi ~ v*t), conforme   [G1 avversario, N=4000]
+   cop 50%     0.597  0.592  0.608  0.583  0.598   | r_eq        0.12  0.23  0.61  1.13  2.46
+   cop 90%     0.972  0.972  0.960  0.951  0.949   | r_eq        0.26  0.55  1.45  2.55  5.47
+     prosegue     n=2436 50%:  0.599  0.610  0.659  0.631  0.621
+     sosta        n= 589 50%:  0.596  0.569  0.543  0.638  0.925
+     svolta       n= 571 50%:  0.571  0.546  0.511  0.392  0.320
+     torna        n= 404 50%:  0.619  0.582  0.527  0.480  0.379
+     prosegue     n=2436 90%:  0.974  0.986  0.995  0.998  0.999
+     sosta        n= 589 90%:  0.966  0.958  0.981  1.000  1.000
+     svolta       n= 571 90%:  0.975  0.951  0.886  0.827  0.816
+     torna        n= 404 90%:  0.963  0.933  0.819  0.772  0.760
+  A1: centro CV, raggio conforme per orizzonte   [G1 avversario, N=4000]
+   cop 50%     0.626  0.624  0.713  0.791  0.794   | r_eq        0.12  0.22  0.54  1.10  2.72
+   cop 90%     0.983  0.976  0.958  0.958  0.953   | r_eq        0.24  0.55  1.72  3.27  7.04
+  E1: ellisse dell'IMM collassato, scala conforme per orizzonte   [G1 avversario, N=4000]
+   cop 50%     0.611  0.602  0.647  0.663  0.681   | r_eq        0.12  0.22  0.57  1.05  2.29
+   cop 90%     0.980  0.976  0.961  0.954  0.950   | r_eq        0.24  0.53  1.49  2.63  5.63
+  Errore quadratico medio del centro (m) per orizzonte (0.5, 1.0, 2.0, 3.0, 5.0)
+   fermo all'ultima posizione  0.665  1.317  2.580  3.796  6.129
+   A0 attuale: CV q=0,2, cerc  0.122  0.255  0.740  1.401  3.050
+   B0: velocita' che decade (  0.122  0.259  0.744  1.386  2.941
+   C1: ellisse lungo la tracc  0.122  0.260  0.755  1.440  3.046
+   D0: miscela a regimi, regi  0.122  0.254  0.724  1.345  2.837
+  A0 attuale: CV q=0,2, cerchio chi2   [G2 tracciamento, N=4000]
+   cop 50%     0.806  0.814  0.756  0.717  0.693   | r_eq        0.18  0.41  1.00  1.75  3.62
+   cop 90%     0.917  0.898  0.888  0.898  0.934   | r_eq        0.33  0.74  1.82  3.19  6.59
+     con eventi   n=3301 50%:  0.781  0.778  0.705  0.656  0.628
+     senza eventi n= 699 50%:  0.923  0.986  1.000  1.000  1.000
+     con eventi   n=3301 90%:  0.899  0.876  0.864  0.877  0.920
+     senza eventi n= 699 90%:  1.000  1.000  1.000  1.000  1.000
+  D1: miscela a regimi, livello conforme per orizzonte   [G2 tracciamento, N=4000]
+   cop 50%     0.578  0.568  0.610  0.611  0.590   | r_eq        0.12  0.22  0.53  0.96  1.85
+   cop 90%     0.877  0.856  0.842  0.871  0.890   | r_eq        0.24  0.51  1.18  2.19  4.69
+     con eventi   n=3301 50%:  0.558  0.532  0.546  0.542  0.513
+     senza eventi n= 699 50%:  0.672  0.734  0.910  0.940  0.953
+     con eventi   n=3301 90%:  0.855  0.825  0.809  0.843  0.867
+     senza eventi n= 699 90%:  0.983  0.999  1.000  1.000  1.000
+  C1: ellisse lungo la traccia (centro arretrato, semiassi ~ v*t), conforme   [G2 tracciamento, N=4000]
+   cop 50%     0.470  0.459  0.452  0.434  0.464   | r_eq        0.11  0.21  0.56  1.03  2.25
+   cop 90%     0.735  0.715  0.716  0.759  0.887   | r_eq        0.23  0.50  1.33  2.33  5.00
+     con eventi   n=3301 50%:  0.450  0.431  0.409  0.386  0.418
+     senza eventi n= 699 50%:  0.569  0.591  0.654  0.658  0.680
+     con eventi   n=3301 90%:  0.708  0.680  0.680  0.730  0.863
+     senza eventi n= 699 90%:  0.860  0.880  0.887  0.897  1.000
+  A1: centro CV, raggio conforme per orizzonte   [G2 tracciamento, N=4000]
+   cop 50%     0.586  0.576  0.607  0.609  0.586   | r_eq        0.12  0.22  0.54  1.10  2.72
+   cop 90%     0.879  0.859  0.876  0.906  0.950   | r_eq        0.24  0.55  1.72  3.27  7.04
+  E1: ellisse dell'IMM collassato, scala conforme per orizzonte   [G2 tracciamento, N=4000]
+   cop 50%     0.568  0.548  0.543  0.559  0.552   | r_eq        0.12  0.21  0.54  0.99  2.13
+   cop 90%     0.872  0.851  0.849  0.872  0.917   | r_eq        0.24  0.51  1.41  2.47  5.25
+  Errore quadratico medio del centro (m) per orizzonte (0.5, 1.0, 2.0, 3.0, 5.0)
+   fermo all'ultima posizione  0.594  1.162  2.230  3.216  4.995
+   A0 attuale: CV q=0,2, cerc  0.206  0.440  1.055  1.795  3.510
+   B0: velocita' che decade (  0.201  0.422  0.970  1.586  2.889
+   C1: ellisse lungo la tracc  0.210  0.435  0.986  1.604  2.915
+   D0: miscela a regimi, regi  0.204  0.427  0.981  1.602  2.922
+  A0 attuale: CV q=0,2, cerchio chi2   [G0 con 40% di ritorni, N=3000]
+   cop 50%     0.750  0.780  0.690  0.578  0.399   | r_eq        0.18  0.41  1.00  1.75  3.62
+   cop 90%     0.945  0.913  0.856  0.797  0.741   | r_eq        0.33  0.74  1.82  3.19  6.59
+     ferma        n= 596 50%:  0.716  0.703  0.582  0.465  0.290
+     prosegue     n= 872 50%:  0.817  0.943  0.977  0.969  0.974
+     svolta       n= 273 50%:  0.736  0.729  0.568  0.370  0.220
+     torna        n=1259 50%:  0.723  0.715  0.569  0.405  0.091
+     ferma        n= 596 90%:  0.918  0.867  0.807  0.814  0.896
+     prosegue     n= 872 90%:  0.995  1.000  1.000  1.000  1.000
+     svolta       n= 273 90%:  0.930  0.864  0.758  0.703  0.659
+     torna        n=1259 90%:  0.926  0.886  0.801  0.669  0.507
+  D1: miscela a regimi, livello conforme per orizzonte   [G0 con 40% di ritorni, N=3000]
+   cop 50%     0.475  0.456  0.448  0.439  0.431   | r_eq        0.12  0.22  0.55  1.01  1.97
+   cop 90%     0.876  0.873  0.890  0.875  0.887   | r_eq        0.24  0.53  1.23  2.30  5.00
+     ferma        n= 596 50%:  0.463  0.421  0.362  0.443  0.770
+     prosegue     n= 872 50%:  0.511  0.557  0.670  0.718  0.642
+     svolta       n= 273 50%:  0.469  0.421  0.326  0.158  0.022
+     torna        n=1259 50%:  0.458  0.411  0.361  0.304  0.213
+     ferma        n= 596 90%:  0.839  0.822  0.938  1.000  1.000
+     prosegue     n= 872 90%:  0.946  0.989  0.994  0.997  1.000
+     svolta       n= 273 90%:  0.821  0.784  0.608  0.531  0.484
+     torna        n=1259 90%:  0.857  0.836  0.856  0.807  0.844
+  C1: ellisse lungo la traccia (centro arretrato, semiassi ~ v*t), conforme   [G0 con 40% di ritorni, N=3000]
+   cop 50%     0.483  0.456  0.462  0.455  0.391   | r_eq        0.12  0.24  0.61  1.13  2.47
+   cop 90%     0.872  0.864  0.866  0.856  0.851   | r_eq        0.26  0.55  1.46  2.55  5.49
+     ferma        n= 596 50%:  0.466  0.430  0.428  0.487  0.649
+     prosegue     n= 872 50%:  0.514  0.525  0.578  0.542  0.536
+     svolta       n= 273 50%:  0.480  0.429  0.330  0.150  0.048
+     torna        n=1259 50%:  0.469  0.427  0.427  0.446  0.244
+     ferma        n= 596 90%:  0.827  0.810  0.864  1.000  1.000
+     prosegue     n= 872 90%:  0.946  0.978  0.995  0.995  1.000
+     svolta       n= 273 90%:  0.835  0.780  0.659  0.579  0.560
+     torna        n=1259 90%:  0.849  0.828  0.822  0.752  0.740
+  A1: centro CV, raggio conforme per orizzonte   [G0 con 40% di ritorni, N=3000]
+   cop 50%     0.483  0.455  0.433  0.403  0.313   | r_eq        0.12  0.22  0.54  1.10  2.72
+   cop 90%     0.874  0.859  0.838  0.808  0.776   | r_eq        0.24  0.55  1.72  3.27  7.04
+  E1: ellisse dell'IMM collassato, scala conforme per orizzonte   [G0 con 40% di ritorni, N=3000]
+   cop 50%     0.479  0.447  0.460  0.442  0.324   | r_eq        0.12  0.22  0.57  1.06  2.29
+   cop 90%     0.873  0.867  0.862  0.844  0.827   | r_eq        0.24  0.53  1.49  2.64  5.65
+  Errore quadratico medio del centro (m) per orizzonte (0.5, 1.0, 2.0, 3.0, 5.0)
+   fermo all'ultima posizione  0.640  1.228  2.230  2.968  4.391
+   A0 attuale: CV q=0,2, cerc  0.180  0.415  1.222  2.455  5.695
+   B0: velocita' che decade (  0.174  0.383  1.048  1.976  4.289
+   C1: ellisse lungo la tracc  0.171  0.380  1.035  1.914  4.145
+   D0: miscela a regimi, regi  0.177  0.393  1.083  2.062  4.530
+     (7.9 s)
+
+Costo: 17 componenti; densita' su 2600 celle in 7.0 ms (Python puro)
+Tempo totale 7.9 s

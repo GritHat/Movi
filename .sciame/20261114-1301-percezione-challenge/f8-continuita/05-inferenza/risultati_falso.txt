@@ -1,0 +1,9 @@
+# inf.py falso — avviato 2026-11-14T15:31:04
+Falso "vuoto": soggetto riemerso oltre la fascia e non rilevato per k cicli di fila (10 condizioni iniziali, N=8000).
+Massa a posteriori entro 0,5 m dal vero (mediana [min, max]) e quota dei casi con massa >= 1% (cancello del torneo):
+  nominale  k=3: 0.0526 [0.0293, 0.0734], >=1%: 10/10 ; k=5: 0.0166 [0.0113, 0.0302], >=1%: 10/10 ; k=7: 0.0016 [0.0001, 0.0047], >=1%: 0/10
+  temperata k=3: 0.0646 [0.0336, 0.1059], >=1%: 10/10 ; k=5: 0.0283 [0.0162, 0.0356], >=1%: 10/10 ; k=7: 0.0059 [0.0045, 0.0106], >=1%: 1/10
+  miscela   k=3: 0.0567 [0.0309, 0.0826], >=1%: 10/10 ; k=5: 0.0223 [0.0164, 0.0370], >=1%: 10/10 ; k=7: 0.0088 [0.0042, 0.0133], >=1%: 3/10
+  particelle N=1000 nominali, nessuna particella entro 0,5 m dal vero: k=3: 0/30 ; k=5: 0/30 ; k=7: 1/30
+  peso del ramo "sensore cieco" (probabilita' iniziale 0.05) a k=5: mediana 0.094 [0.071, 0.121]
+# durata 5.4 s

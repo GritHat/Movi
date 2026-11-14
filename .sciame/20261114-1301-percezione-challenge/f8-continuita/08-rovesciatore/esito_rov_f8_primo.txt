@@ -1,0 +1,98 @@
+# rov_f8.py  seme base 20261114; scena dell'avversario (scena_parte3.py): dt 1/15 s, sigma 5 cm, Pd 0.9, q 0.2
+
+== T1a. Regola del nucleo V2 (cerchio 95 %% ritagliato sull'ombra, mostrato finche' < meta' dell'ombra): quota dei cicli in ombra con una stima emessa ==
+pannello  comportamento  prove  cicli_in_ombra  emessi   quota   durata_previsto_mediana_s  durata_ombra_mediana_s  vuoto_mediano_s
+1 m       prosegue         120            2840    2589   91.2%                       1.40                    1.53             0.00
+1 m       sosta            120            8468    3386   40.0%                       1.53                    4.80             3.13
+1 m       torna            120            2820    2341   83.0%                       1.33                    1.40             0.00
+1 m       lontano          120            4467    2993   67.0%                       1.60                    2.47             0.80
+1 m       TUTTI                          18595   11309   60.8%
+2 m       prosegue         120            5910    2766   46.8%                       1.53                    3.27             1.73
+2 m       sosta            120            9755    2776   28.5%                       1.53                    5.47             3.93
+2 m       torna            120            5959    2611   43.8%                       1.53                    3.67             2.00
+2 m       lontano          120            5822    2764   47.5%                       1.53                    3.33             1.80
+2 m       TUTTI                          27446   10917   39.8%
+
+== T1b. Cerchio nominale del Kalman (q=0,2) tenuto acceso: copertura vera al 50 %% e al 90 %% per comportamento e tempo (pannello 1 m, semi di prova) ==
+t_s   prosegue                 sosta                    torna                    lontano               
+0.5   90.0%/100.0% n=300       77.0%/91.0% n=300        80.6%/91.5% n=294        83.0%/92.7% n=300     
+1.0   98.0%/100.0% n=300       59.3%/80.7% n=300        59.8%/76.0% n=246        58.7%/73.7% n=300     
+1.5   100.0%/100.0% n=225      45.7%/73.7% n=300        32.7%/67.9% n=165        30.0%/58.0% n=300     
+2.0   100.0%/100.0% n=13       24.7%/71.2% n=299        11.1%/44.4% n=99         14.1%/49.0% n=255     
+3.0   n/d/n/d n=0              10.0%/76.6% n=299        0.0%/73.3% n=15          6.2%/100.0% n=48      
+4.0   n/d/n/d n=0              10.4%/90.3% n=259        n/d/n/d n=0              n/d/n/d n=0           
+5.0   n/d/n/d n=0              14.2%/100.0% n=113       n/d/n/d n=0              n/d/n/d n=0           
+
+== T1c. Taratura sul comportamento peggiore (pannello 1 m, semi di taratura). A = centro a velocita' costante, raggio = k*sigma(t); B = centro sull'ultima osservazione, raggio in metri ==
+t_s   kA50   kA90  (nominali 1.18 / 2.15)   rB50_m  rB90_m   comportamenti con n>=30 in taratura
+0.5    0.73   2.33                             0.67    0.79    lontano,prosegue,sosta,torna
+1.0    0.95   3.35                             1.24    1.45    lontano,prosegue,sosta,torna
+1.5    1.91   3.74                             1.75    2.01    lontano,prosegue,sosta,torna
+2.0    2.19   3.14                             1.84    2.14    lontano,sosta,torna
+3.0    1.79   2.49                             2.42    2.72    lontano,sosta
+4.0    1.59   2.15                             1.46    1.91    sosta
+5.0    1.43   1.87                             1.68    1.97    sosta
+
+== T1c/d/e. Prova sul pannello 1 m (stessa geometria, altri semi): copertura vera al 90 % per comportamento [IC 95 % di Wilson], e quota d'ombra coperta dalla regione al 50 / 90 % (regione = disco ritagliato sul non osservato) ==
+t_s  centro  prosegue                  sosta                     torna                     lontano                   ombra50%  ombra90%  su_libero_prima_del_ritaglio90%
+0.5  A       100.0% [ 99-100] n=300    92.7% [ 89- 95] n=300     92.5% [ 89- 95] n=294     94.3% [ 91- 96] n=300        0.6       6.1       0.0
+0.5  B       85.7% [ 81- 89] n=300     91.3% [ 88- 94] n=300     91.8% [ 88- 94] n=294     91.3% [ 88- 94] n=300        8.3      11.6      53.8
+1.0  A       100.0% [ 99-100] n=300    96.7% [ 94- 98] n=300     92.7% [ 89- 95] n=246     89.3% [ 85- 92] n=300        4.3      45.9      14.3
+1.0  B       84.3% [ 80- 88] n=300     94.7% [ 92- 97] n=300     93.5% [ 90- 96] n=246     94.7% [ 92- 97] n=300       29.4      40.2      52.1
+1.5  A       100.0% [ 98-100] n=225    99.7% [ 98-100] n=300     98.8% [ 96-100] n=165     89.0% [ 85- 92] n=300       27.8      86.4      48.2
+1.5  B       89.8% [ 85- 93] n=225     98.7% [ 97- 99] n=300     100.0% [ 98-100] n=165    100.0% [ 99-100] n=300      59.6      77.5      50.7
+2.0  A       100.0% [ 77-100] n=13     97.0% [ 94- 98] n=299     96.0% [ 90- 98] n=99      87.1% [ 82- 91] n=255       52.3      89.5      43.2
+2.0  B       84.6% [ 58- 96] n=13      100.0% [ 99-100] n=299    100.0% [ 96-100] n=99     87.8% [ 83- 91] n=255       65.1      83.5      49.8
+3.0  A       n=0                       92.6% [ 89- 95] n=299     93.3% [ 70- 99] n=15      100.0% [ 93-100] n=48       47.6      89.5      25.2
+3.0  B       n=0                       100.0% [ 99-100] n=299    100.0% [ 80-100] n=15     93.8% [ 83- 98] n=48        93.5      98.2      46.6
+4.0  A       n=0                       90.3% [ 86- 93] n=259     n=0                       n=0                         25.5      73.3      15.7
+4.0  B       n=0                       87.3% [ 83- 91] n=259     n=0                       n=0                         41.2      70.7      51.2
+5.0  A       n=0                       92.9% [ 87- 96] n=113     n=0                       n=0                         16.5      61.6      13.4
+5.0  B       n=0                       85.0% [ 77- 90] n=113     n=0                       n=0                         53.6      73.5      51.6
+
+== T1c/d/e. Prova sul pannello 2 m (ALTRA geometria): copertura vera al 90 % per comportamento [IC 95 % di Wilson], e quota d'ombra coperta dalla regione al 50 / 90 % (regione = disco ritagliato sul non osservato) ==
+t_s  centro  prosegue                  sosta                     torna                     lontano                   ombra50%  ombra90%  su_libero_prima_del_ritaglio90%
+0.5  A       100.0% [ 99-100] n=300    96.7% [ 94- 98] n=300     98.3% [ 96- 99] n=299     98.7% [ 97- 99] n=300        0.3       3.2       0.3
+0.5  B       89.3% [ 85- 92] n=300     88.7% [ 85- 92] n=300     92.6% [ 89- 95] n=299     90.7% [ 87- 93] n=300        4.3       6.0      54.8
+1.0  A       100.0% [ 99-100] n=300    98.3% [ 96- 99] n=300     97.5% [ 95- 99] n=282     95.3% [ 92- 97] n=300        2.3      27.5       3.5
+1.0  B       86.7% [ 82- 90] n=300     92.0% [ 88- 95] n=300     92.2% [ 88- 95] n=282     92.0% [ 88- 95] n=300       15.5      21.2      49.7
+1.5  A       100.0% [ 99-100] n=300    100.0% [ 99-100] n=300    100.0% [ 99-100] n=254    93.6% [ 90- 96] n=299       24.5      82.0      11.2
+1.5  B       76.7% [ 72- 81] n=300     83.7% [ 79- 87] n=300     82.7% [ 78- 87] n=254     81.3% [ 76- 85] n=299       30.4      38.3      33.9
+2.0  A       100.0% [ 99-100] n=300    98.3% [ 96- 99] n=300     99.1% [ 97-100] n=234     95.5% [ 92- 97] n=265       67.0      94.8      25.3
+2.0  B       15.3% [ 12- 20] n=300     57.7% [ 52- 63] n=300     44.0% [ 38- 50] n=234     44.5% [ 39- 51] n=265       33.1      42.1      30.9
+3.0  A       100.0% [ 98-100] n=221    96.0% [ 93- 98] n=299     95.1% [ 91- 97] n=185     100.0% [ 98-100] n=181      70.9      93.5      19.5
+3.0  B       0.0% [  0-  2] n=221      67.9% [ 62- 73] n=299     73.5% [ 67- 79] n=185     26.0% [ 20- 33] n=181       51.4      60.8      21.5
+4.0  A       100.0% [ 51-100] n=4      97.0% [ 94- 98] n=299     83.3% [ 76- 89] n=120     100.0% [ 94-100] n=56       66.7      92.3      12.9
+4.0  B       0.0% [  0- 49] n=4        36.1% [ 31- 42] n=299     73.3% [ 65- 80] n=120     0.0% [  0-  6] n=56         21.8      35.1      36.8
+5.0  A       n=0                       98.6% [ 97- 99] n=295     78.7% [ 67- 87] n=61      100.0% [ 57-100] n=5        65.4      90.9      10.6
+5.0  B       n=0                       13.2% [ 10- 18] n=295     100.0% [ 94-100] n=61     0.0% [ -0- 43] n=5          28.2      36.8      35.2
+
+== Controllo per costruzione: soggetto in ombra fuori dal disco di v_max (2.5 m/s) dall'ultima osservazione: 0 cicli su 115437 ==
+
+== T2a. Ricomparse per comportamento (pannello 1 m, semi di prova; entro 5.4 s dall'ingresso) ==
+comportamento  prove  con_ombra  ricomparsi  quota   tau_mediano_s   salto<=k50  salto<=k90 (cerchio nominale)
+prosegue         300        300         300  100.0%            1.67   100.0%      100.0%
+sosta            300        300         271   90.3%            4.73    27.3%      100.0%
+torna            300        300         300  100.0%            1.73     0.0%        4.0%
+lontano          300        300           0    0.0%             n/d      n/d         n/d
+
+== T2b. Scala ricavata dai salti alla ricomparsa (taratura, comportamenti mescolati, n=865): k50=1.34 k90=3.58 (nominali 1.18 / 2.15). Copertura vera nei cicli in ombra, semi di prova, pannello 1 m ==
+t_s   prosegue                     sosta                        torna                        lontano                      (50 % / 90 %)
+0.5   94.7%/100.0% n=300           80.3%/98.7% n=300            86.4%/98.0% n=294            88.0%/99.7% n=300         
+1.0   100.0%/100.0% n=300          64.0%/97.7% n=300            62.6%/94.7% n=246            61.7%/91.3% n=300         
+1.5   100.0%/100.0% n=225          50.7%/99.3% n=300            38.8%/98.2% n=165            35.0%/87.0% n=300         
+2.0   100.0%/100.0% n=13           34.1%/99.7% n=299            17.2%/100.0% n=99            19.2%/98.4% n=255         
+3.0   n/d/n/d n=0                  19.1%/100.0% n=299           0.0%/100.0% n=15             20.8%/100.0% n=48         
+4.0   n/d/n/d n=0                  22.8%/100.0% n=259           n/d/n/d n=0                  n/d/n/d n=0               
+5.0   n/d/n/d n=0                  42.5%/100.0% n=113           n/d/n/d n=0                  n/d/n/d n=0               
+
+== T2c. Copertura durante il nascosto stimata ALL'INDIETRO con il ponte rettilineo (ultima osservazione -> prima misura alla ricomparsa) contro la copertura VERA; cerchio nominale; solo prove con ricomparsa; tutti i cicli in ombra ==
+pannello  comportamento  prove  cicli   vera50   ponte50   scarto50   vera90   ponte90   scarto90   errore_medio_del_ponte_m
+1 m       prosegue         300   7205    90.5%    98.6%     +8.1      99.5%   100.0%     +0.4     0.05
+1 m       sosta            271  18692    31.1%     8.2%    -23.0      82.2%    71.3%    -10.9     0.44
+1 m       torna            300   7410    53.2%     0.4%    -52.8      77.6%     3.5%    -74.1     0.65
+1 m       lontano            0      0   nessuna ricomparsa
+2 m       prosegue         300  14693    96.5%    99.2%     +2.7      99.9%   100.0%     +0.0     0.05
+2 m       sosta             39   3015    56.4%    41.4%    -15.1      89.2%    95.5%     +6.3     0.57
+2 m       torna            267  12641    61.0%     0.3%    -60.7      88.9%    10.2%    -78.6     1.24
+2 m       lontano            0      0   nessuna ricomparsa

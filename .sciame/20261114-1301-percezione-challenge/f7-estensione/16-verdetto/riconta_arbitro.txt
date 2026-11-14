@@ -1,0 +1,68 @@
+torna     11-torneo/risultati_scenB.txt | Q3c: 0 su 147, resa 97,1 %, 0,48 ms
+torna     11-torneo/risultati_scenB.txt | VOa: 83,0 %, 6,24 ms
+torna     11-torneo/risultati_scenB.txt | S10 resa 30,6 %
+torna     11-torneo/risultati_a5.txt | N0 438
+torna     11-torneo/risultati_a5.txt | N1 14 (base 13)
+torna     11-torneo/risultati_a5c.txt | N1 1186 punti
+torna     11-torneo/risultati_a5c.txt | Q3c 0 profondi, 495 di bordo
+torna     11-torneo/risultati_a5c.txt | Q3 44 su 87
+torna     11-torneo/risultati_statica.txt | due vie 80505 su 146901
+torna     11-torneo/risultati_a2.txt | 830 (su 897)
+torna     11-torneo/risultati_a2.txt | 897
+torna     11-torneo/risultati_a3.txt | 14448 su 22240
+torna     11-torneo/risultati_a3.txt | 132 su 134
+torna     11-torneo/risultati_a4.txt | 144 su 150
+torna     11-torneo/risultati_a9.txt | 71006
+torna     11-torneo/risultati_a9.txt | 744 e 727
+torna     11-torneo/risultati_a10.txt | 33 ms, 70 max
+torna     11-torneo/risultati_a10.txt | rapporto 2,11
+torna     11-torneo/risultati_a10.txt | rapporto 2,09
+torna     11-torneo/risultati_a10.txt | rapporto 2,13; massimo 1,20 ms
+torna     11-torneo/risultati_a8.txt | vetro 654 su 800
+torna     11-torneo/risultati_a6.txt | posa 1225
+torna     11-torneo/risultati_s10.txt | S10 con fascia alta 0 su 2610
+torna     11-torneo/risultati_s10.txt | scatola 10 cm: S10 32, N1 0
+torna     11-torneo/risultati_s10.txt | N1 68 celle con la barra
+torna     11-torneo/risultati_s10.txt | 67 celle, 3170 pixel
+torna     11-torneo/risultati_k106.txt | 5 % sparso: Q3c 87,7; S10 0,0
+torna     11-torneo/risultati_k106.txt | chiazze 5 %: 92,0
+torna     11-torneo/risultati_k105.txt | 537
+torna     11-torneo/risultati_k105.txt | 0,4 %
+torna     11-torneo/risultati_k102.txt | K-102: 0 su 31
+torna     11-torneo/risultati_s11.txt | S11 b 200 su 200
+torna     11-torneo/risultati_s11.txt | S11 c 153 su 200
+torna     11-torneo/risultati_scenA.txt | 1444 (su 1460)
+torna     11-torneo/risultati_scenA.txt | 1460
+torna     11-torneo/risultati_pp.txt | PP3 60/60/0
+torna     14-attacco/risultati_av2_av3_av8.txt | 1404 pixel
+torna     14-attacco/risultati_av2_av3_av8.txt | 32,9 su 33
+torna     14-attacco/risultati_av2_av3_av8.txt | senza fondale 0,55 contro 1,95
+torna     14-attacco/risultati_av2_av3_av8.txt | 0,95 contro 1,70
+torna     14-attacco/risultati_av2_av3_av8.txt | 0 pixel da 1,65 m
+torna     14-attacco/risultati_av1.txt | resa 0,0 % a quota 0
+torna     14-attacco/risultati_av4.txt | AV4 0 su 10
+torna     14-attacco/risultati_av4.txt | V-019 10 su 10
+torna     14-attacco/risultati_av4.txt | errore 0,18-0,27 m
+torna     14-attacco/risultati_av5_av6_av7.txt | AV5 60/60, 100 %, 0/60, 30 cicli
+torna     14-attacco/risultati_av5_av6_av7.txt | soglia 10 cm, 1 grado: 21 su 21
+torna     14-attacco/risultati_av5_av6_av7.txt | 4,0 ore
+torna     14-attacco/risultati_av5_av6_av7.txt | 1,5 ore
+torna     14-attacco/risultati_av5_av6_av7.txt | -9,8 con 4
+torna     14-attacco/risultati_av10.txt | AV10: 16 righe con 0 celle
+torna     15-verifica/risultati_vq3c.txt | V: Q3c 0 profondi in 10 condizioni
+torna     15-verifica/risultati_vq3c.txt | N1 58 su 90
+torna     15-verifica/risultati_vq3c.txt | V-021 32 su 90
+torna     15-verifica/risultati_vq3c.txt | settori 1,4 m
+torna     15-verifica/risultati_vq3c.txt | V-018 3,0 m
+torna     15-verifica/risultati_vq3c.txt | resa 88,4
+torna     15-verifica/risultati_vq3c.txt | resa 91,8
+torna     15-verifica/risultati_vq3c.txt | resa 79,4
+torna     15-verifica/risultati_vq3c.txt | resa 83,1
+torna     15-verifica/risultati_vq3c.txt | resa 8,0
+torna     15-verifica/risultati_vq3c.txt | V-018 a chiazze: 4,55 cambi
+torna     15-verifica/risultati_vq3c.txt | V-018 a chiazze: 1,5 m
+torna     04-requisiti/risultati_eventi.txt | eventi mancati 103 su 200
+torna     04-requisiti/risultati_eventi.txt | braccio ingenuo 200
+torna     04-requisiti/risultati_eventi.txt | scomparse spurie 25 su 200 = 12,5 %
+registro: blocchi con 0 violazioni: 3 (200 scene l'uno)
+cifre cercate: 66 ; tornano: 66

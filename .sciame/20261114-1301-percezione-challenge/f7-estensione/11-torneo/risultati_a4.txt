@@ -1,0 +1,4 @@
+## A4 / K-102 (scenario B, 150 fotogrammi)
+   adulto dietro la cassa da 1 m con piu' di 500 pixel validi: 7 fotogrammi ; «occupato osservato» nella sua impronta: N alla lettera 1 ; N «ogni ritorno» 7 (di cui tutto nel cuneo della cassa: 6) ; Q1 (>= 3 punti della faccia) 7 ; P (livelli occupati sopra 1 m) 7
+   soggetti del tutto nascosti dentro la griglia: 25 soggetto-fotogrammi ; dati «osservato»: N1 0 ; Q1 7
+   VO: voxel «occupato» vuoti, lontani oltre 12 cm da ogni corpo: in ombra 1526 (in 144 fotogrammi su 150) ; in vista (scia) 5607

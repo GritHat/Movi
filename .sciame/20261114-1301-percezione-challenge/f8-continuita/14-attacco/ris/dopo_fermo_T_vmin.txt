@@ -1,0 +1,7 @@
+# prova geo=T vmin=0.3 n=400 beh=8
+# geo=T e=0.00 pd=0.90 rb=0.225 c6=0.10 imbardata fissa=0.0 tremolio=0.0 gradi; libreria 200 percorsi (vivaci=0); prova vivaci=0; curva=0.0 gradi/s; v=0.3-1.8
+# ombra stimata 7.82 m2, celle di A 1034; lancio 1.5 s
+fermo-in-vista validi=400 scartati=0 | R90 grezza a 1/2/3/5 s: 123/341=0.361 94/327=0.287 86/234=0.368 79/174=0.454 | mostrata: 0.633 0.615 0.624 0.563 | a corpo tutto nascosto: 15/141=0.106 21/134=0.157 14/54=0.259 5/14=0.357 | mostrata, tutto nascosto: 0.645 0.821 0.907 1.000 | area/ombra: 0.08 0.18 0.26 0.33
+    scoperti=2 (cicli 42) fuori_R100=0 centro_su_visto_libero=0 | ricomparsi=341 riagganciati=128 ambigui: solo_nucleo=161 solo_M7=13 entrambi=39 | ampio_prima_della_ricomparsa=288/341 area_ultimo_ciclo_med=0.24 dist_porta_med=0.15
+    false_entrate: passaggi=253 cicli=1881 con_pavimento=608 | cambi_di_stato_med=9 | punto: passaggi_con_arretramento=159 su_libero_dopo5: cicli=808 passaggi=79 | cicli_previsti=41435 pavimento=619 vuoti=0 corpo_tagliato_visibile_in_previsto=29360 in_altri_stati=1666 false_entrate_dopo_il_buio=24
+    in ampio (n=4000): errore mediano croce=1.23 m, segno fisso al baricentro dell'ombra=1.25 m | nucleo fallito per distanza=93 per bordo=0 | tempo al segno ampio (o alla ricomparsa), mediana=2.60 s

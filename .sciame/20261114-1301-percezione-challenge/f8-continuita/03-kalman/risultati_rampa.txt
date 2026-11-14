@@ -1,0 +1,6 @@
+rampa d=0.20 m/s: x-d*tL = -2.36e-07 m, v-d = -5.41e-07 m/s; errore a 5 s = -2.94e-06 m
+h=0.5: disco v_max*t+0,1: raggio 1.35 m; r90 A0 0.33; soglia v_stimata 1,3: r= 0.65
+h=1.0: disco v_max*t+0,1: raggio 2.60 m; r90 A0 0.74; soglia v_stimata 1,3: r= 1.30
+h=2.0: disco v_max*t+0,1: raggio 5.10 m; r90 A0 1.82; soglia v_stimata 1,3: r= 2.60
+h=3.0: disco v_max*t+0,1: raggio 7.60 m; r90 A0 3.19; soglia v_stimata 1,3: r= 3.90
+h=5.0: disco v_max*t+0,1: raggio 12.60 m; r90 A0 6.59; soglia v_stimata 1,3: r= 6.50

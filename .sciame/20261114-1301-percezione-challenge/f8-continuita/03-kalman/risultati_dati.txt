@@ -1,0 +1,14 @@
+A1 al 90%: copertura di prova (G0, N=6000) con raggio tarato su n passaggi; 300 estrazioni
+  h=1 s n=  30: copertura media 0.902, 5%-95% [0.797, 0.975] (larghezza 0.177); raggio 5%-95% [0.37, 1.01] m; Beta teorica media 0.903 dev.std 0.052
+  h=1 s n= 100: copertura media 0.900, 5%-95% [0.848, 0.940] (larghezza 0.092); raggio 5%-95% [0.43, 0.75] m; Beta teorica media 0.901 dev.std 0.030
+  h=1 s n= 300: copertura media 0.900, 5%-95% [0.875, 0.926] (larghezza 0.051); raggio 5%-95% [0.48, 0.66] m; Beta teorica media 0.900 dev.std 0.017
+  h=1 s n=1000: copertura media 0.898, 5%-95% [0.887, 0.909] (larghezza 0.022); raggio 5%-95% [0.51, 0.60] m; Beta teorica media 0.900 dev.std 0.009
+  h=2 s n=  30: copertura media 0.895, 5%-95% [0.801, 0.966] (larghezza 0.165); raggio 5%-95% [1.16, 2.60] m; Beta teorica media 0.903 dev.std 0.052
+  h=2 s n= 100: copertura media 0.893, 5%-95% [0.841, 0.941] (larghezza 0.100); raggio 5%-95% [1.36, 2.17] m; Beta teorica media 0.901 dev.std 0.030
+  h=2 s n= 300: copertura media 0.892, 5%-95% [0.860, 0.925] (larghezza 0.065); raggio 5%-95% [1.47, 1.99] m; Beta teorica media 0.900 dev.std 0.017
+  h=2 s n=1000: copertura media 0.893, 5%-95% [0.878, 0.906] (larghezza 0.028); raggio 5%-95% [1.59, 1.83] m; Beta teorica media 0.900 dev.std 0.009
+  h=5 s n=  30: copertura media 0.906, 5%-95% [0.816, 0.972] (larghezza 0.157); raggio 5%-95% [5.44, 9.84] m; Beta teorica media 0.903 dev.std 0.052
+  h=5 s n= 100: copertura media 0.906, 5%-95% [0.852, 0.950] (larghezza 0.098); raggio 5%-95% [5.98, 8.67] m; Beta teorica media 0.901 dev.std 0.030
+  h=5 s n= 300: copertura media 0.904, 5%-95% [0.878, 0.929] (larghezza 0.051); raggio 5%-95% [6.42, 7.82] m; Beta teorica media 0.900 dev.std 0.017
+  h=5 s n=1000: copertura media 0.905, 5%-95% [0.890, 0.918] (larghezza 0.028); raggio 5%-95% [6.73, 7.44] m; Beta teorica media 0.900 dev.std 0.009
+  Nota: i passaggi sono estratti con le quote di G0; per una fascia o un comportamento conta il numero di casi in quella fascia.

@@ -1,0 +1,73 @@
+eventi.py - controllo della logica dello strato eventi; Python 3.14.10 - SECONDA LETTURA [dopo]
+
+== B1/B2 rilevamento certo: Pd=1.0, conferma scomparsa=3 fotogrammi, ingenuo=False, 40 scene per tipo ('T', 'S', 'L', 'V', 'C')
+scene 200; scene con almeno un evento del copione mancato: 7 (3.5 %); mancati per tipo: {'USCITA': 1, 'RICOMPARSA': 6}
+  ritardo AFFIDABILITA_PERSA         N=  40 mediana 0.067 s  p95 0.067 s  max 0.067 s
+  ritardo AFFIDABILITA_RITROVATA     N=  40 mediana 0.000 s  p95 0.000 s  max 0.000 s
+  ritardo INGRESSO                   N= 482 mediana 0.133 s  p95 0.267 s  max 0.333 s
+  ritardo PERMANENZA_NON_OSSERVATA   N=  74 mediana -0.067 s  p95 -0.067 s  max 0.000 s
+  ritardo RICOMPARSA                 N= 122 mediana 0.000 s  p95 0.000 s  max 0.000 s
+  ritardo SCOMPARSA                  N= 164 mediana 0.133 s  p95 0.133 s  max 0.133 s
+  ritardo SOSTA                      N=  40 mediana 0.800 s  p95 0.933 s  max 0.933 s
+  ritardo USCITA                     N= 313 mediana 0.133 s  p95 0.200 s  max 0.333 s
+  ingressi trovati come INGRESSO: 316; come PRESENTE (ingresso non osservato): 166
+  violazioni (evento "osservato" senza vista vera, o sosta a soggetto nascosto): 0
+  scene con almeno una USCITA falsa (soggetto dentro la zona di oltre 0,15 m): 0 su 200; nei tipi S e L: 0 su 80
+  scene con almeno un evento spurio, per tipo: {'USCITA': 34, 'PRESENTE': 9, 'INGRESSO': 7, 'SCOMPARSA_in_fascia': 4}; totale eventi spuri: {'USCITA': 34, 'PRESENTE': 10, 'INGRESSO': 7, 'SCOMPARSA_in_fascia': 4}
+  scene con il soggetto nascosto in portata per >= 1 s, affidabilita' dichiarata buona e NESSUN avviso di possibile presenza, per tipo: {'C': 8}
+  tipo L (esce dalla portata restando in ombra): nessuna USCITA, PERMANENZA emessa, zona ancora "non osservato" a fine scena: 40 su 40
+  tipo V: SOSTA osservata trovata entro 2 s + 1,5 s: 40 su 40
+
+== B4 rilevamento 0,9, con conferma: Pd=0.9, conferma scomparsa=3 fotogrammi, ingenuo=False, 40 scene per tipo ('T', 'S', 'L', 'V', 'C')
+scene 200; scene con almeno un evento del copione mancato: 32 (16.0 %); mancati per tipo: {'INGRESSO': 10, 'USCITA': 29, 'SOSTA': 1, 'RICOMPARSA': 2}
+  ritardo AFFIDABILITA_PERSA         N=  40 mediana 0.067 s  p95 0.067 s  max 0.067 s
+  ritardo AFFIDABILITA_RITROVATA     N=  40 mediana 0.000 s  p95 0.000 s  max 0.000 s
+  ritardo INGRESSO                   N= 483 mediana 0.200 s  p95 0.333 s  max 0.467 s
+  ritardo PERMANENZA_NON_OSSERVATA   N=  76 mediana -0.067 s  p95 -0.067 s  max 0.000 s
+  ritardo RICOMPARSA                 N= 122 mediana 0.000 s  p95 0.067 s  max 0.133 s
+  ritardo SCOMPARSA                  N= 169 mediana 0.133 s  p95 0.133 s  max 0.133 s
+  ritardo SOSTA                      N=  39 mediana 0.800 s  p95 0.933 s  max 1.067 s
+  ritardo USCITA                     N= 284 mediana 0.133 s  p95 0.267 s  max 0.400 s
+  ingressi trovati come INGRESSO: 308; come PRESENTE (ingresso non osservato): 175
+  violazioni (evento "osservato" senza vista vera, o sosta a soggetto nascosto): 0
+  scene con almeno una USCITA falsa (soggetto dentro la zona di oltre 0,15 m): 0 su 200; nei tipi S e L: 0 su 80
+  scene con almeno un evento spurio, per tipo: {'USCITA': 39, 'SCOMPARSA_campo_aperto': 1, 'SCOMPARSA_in_fascia': 25, 'PERMANENZA_NON_OSSERVATA': 7, 'PRESENTE': 5, 'TRACCIA_CHIUSA': 1, 'RICOMPARSA': 1, 'INGRESSO': 4}; totale eventi spuri: {'USCITA': 39, 'SCOMPARSA_campo_aperto': 1, 'SCOMPARSA_in_fascia': 25, 'PERMANENZA_NON_OSSERVATA': 7, 'TRACCIA_CHIUSA': 1, 'PRESENTE': 5, 'RICOMPARSA': 1, 'INGRESSO': 4}
+  scene con il soggetto nascosto in portata per >= 1 s, affidabilita' dichiarata buona e NESSUN avviso di possibile presenza, per tipo: {'C': 3}
+  tipo L (esce dalla portata restando in ombra): nessuna USCITA, PERMANENZA emessa, zona ancora "non osservato" a fine scena: 39 su 40
+  tipo V: SOSTA osservata trovata entro 2 s + 1,5 s: 39 su 40
+
+== B7 rilevamento 0,9, senza conferma: Pd=0.9, conferma scomparsa=1 fotogrammi, ingenuo=False, 40 scene per tipo ('T', 'S', 'L', 'V', 'C')
+scene 200; scene con almeno un evento del copione mancato: 32 (16.0 %); mancati per tipo: {'INGRESSO': 10, 'USCITA': 31, 'SOSTA': 1}
+  ritardo AFFIDABILITA_PERSA         N=  40 mediana 0.067 s  p95 0.067 s  max 0.067 s
+  ritardo AFFIDABILITA_RITROVATA     N=  40 mediana 0.000 s  p95 0.000 s  max 0.000 s
+  ritardo INGRESSO                   N= 483 mediana 0.200 s  p95 0.333 s  max 0.467 s
+  ritardo PERMANENZA_NON_OSSERVATA   N=  76 mediana -0.067 s  p95 -0.067 s  max 0.000 s
+  ritardo RICOMPARSA                 N= 124 mediana 0.000 s  p95 0.067 s  max 0.467 s
+  ritardo SCOMPARSA                  N= 169 mediana 0.000 s  p95 0.000 s  max 0.000 s
+  ritardo SOSTA                      N=  39 mediana 0.800 s  p95 0.933 s  max 1.067 s
+  ritardo USCITA                     N= 282 mediana 0.133 s  p95 0.267 s  max 0.333 s
+  ingressi trovati come INGRESSO: 308; come PRESENTE (ingresso non osservato): 175
+  violazioni (evento "osservato" senza vista vera, o sosta a soggetto nascosto): 0
+  scene con almeno una USCITA falsa (soggetto dentro la zona di oltre 0,15 m): 0 su 200; nei tipi S e L: 0 su 80
+  scene con almeno un evento spurio, per tipo: {'USCITA': 39, 'RICOMPARSA': 98, 'SCOMPARSA_in_fascia': 116, 'SCOMPARSA_campo_aperto': 1, 'PERMANENZA_NON_OSSERVATA': 7, 'PRESENTE': 5, 'TRACCIA_CHIUSA': 1, 'INGRESSO': 4}; totale eventi spuri: {'SCOMPARSA_in_fascia': 173, 'RICOMPARSA': 145, 'USCITA': 39, 'SCOMPARSA_campo_aperto': 1, 'PERMANENZA_NON_OSSERVATA': 7, 'TRACCIA_CHIUSA': 1, 'PRESENTE': 5, 'INGRESSO': 4}
+  scene con il soggetto nascosto in portata per >= 1 s, affidabilita' dichiarata buona e NESSUN avviso di possibile presenza, per tipo: {'C': 3}
+  tipo L (esce dalla portata restando in ombra): nessuna USCITA, PERMANENZA emessa, zona ancora "non osservato" a fine scena: 39 su 40
+  tipo V: SOSTA osservata trovata entro 2 s + 1,5 s: 39 su 40
+
+== B3 braccio ingenuo (deve fallire): Pd=1.0, conferma scomparsa=3 fotogrammi, ingenuo=True, 100 scene per tipo ('S', 'L')
+scene 200; scene con almeno un evento del copione mancato: 2 (1.0 %); mancati per tipo: {'USCITA': 2}
+  ritardo INGRESSO                   N= 500 mediana 0.133 s  p95 0.267 s  max 0.267 s
+  ritardo PERMANENZA_NON_OSSERVATA   N= 182 mediana -0.067 s  p95 -0.067 s  max 0.000 s
+  ritardo RICOMPARSA                 N= 100 mediana 0.000 s  p95 0.000 s  max 0.000 s
+  ritardo SCOMPARSA                  N= 200 mediana 0.133 s  p95 0.133 s  max 0.133 s
+  ritardo USCITA                     N= 309 mediana 0.133 s  p95 0.200 s  max 0.333 s
+  ingressi trovati come INGRESSO: 330; come PRESENTE (ingresso non osservato): 170
+  violazioni (evento "osservato" senza vista vera, o sosta a soggetto nascosto): {'USCITA': 200}
+  scene con almeno una USCITA falsa (soggetto dentro la zona di oltre 0,15 m): 200 su 200; nei tipi S e L: 200 su 200
+  scene con almeno un evento spurio, per tipo: {'USCITA': 200, 'INGRESSO': 100}; totale eventi spuri: {'USCITA': 219, 'INGRESSO': 100}
+  scene con il soggetto nascosto in portata per >= 1 s, affidabilita' dichiarata buona e NESSUN avviso di possibile presenza, per tipo: 0
+  tipo L (esce dalla portata restando in ombra): nessuna USCITA, PERMANENZA emessa, zona ancora "non osservato" a fine scena: 0 su 100
+
+== B5 costo. Righe dell'estrattore (non vuote, non commento): 99
+1 traccia, 3 zone, 31625 fotogrammi: mediana 1.0 us, p95 2.2 us, max 92.2 us
+20 tracce, 8 zone, 5 regioni, 3000 fotogrammi (10341 eventi): mediana 45.0 us, p95 50.8 us, max 262.8 us; ciclo a 15 Hz = 66667 us

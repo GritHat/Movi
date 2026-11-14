@@ -1,0 +1,10 @@
+seme 9000: u(velocita') = 0.326084929521  u(rotta) = 0.915447682431
+seme 9001: u(velocita') = 0.915447682431  u(rotta) = 0.596565447960  | u(velocita') - u(rotta del seme prima) = 0.000e+00
+seme 9002: u(velocita') = 0.596565447960  u(rotta) = 0.009614830278  | u(velocita') - u(rotta del seme prima) = 1.110e-16
+seme 9003: u(velocita') = 0.009614830278  u(rotta) = 0.177319403709  | u(velocita') - u(rotta del seme prima) = 6.939e-18
+seme 9004: u(velocita') = 0.177319403709  u(rotta) = 0.801578732003  | u(velocita') - u(rotta del seme prima) = 0.000e+00
+seme 9005: u(velocita') = 0.801578732003  u(rotta) = 0.893771295084  | u(velocita') - u(rotta del seme prima) = 0.000e+00
+seme 9006: u(velocita') = 0.893771295084  u(rotta) = 0.020831458041  | u(velocita') - u(rotta del seme prima) = 0.000e+00
+coincidenze: 6 su 6
+flusso del seme 9001 = flusso del seme 9000 avanzato di 1: 1000 numeri uguali su 1000
+flusso delle misure (stream 2): seme 9005 = seme 9000 avanzato di 5: 1000 numeri uguali su 1000

@@ -1,0 +1,4 @@
+2026-11-14T16:35:31+01:00
+python 3.14.10 pixel letti 19200
+polare_py 1x0,1m 3m: min=1.54 mediana=1.57 max=1.66 ms
+voxel_denso_py 10cm: min=101.8 mediana=102.3 max=103.4 ms passi=1002931 ns_passo=102

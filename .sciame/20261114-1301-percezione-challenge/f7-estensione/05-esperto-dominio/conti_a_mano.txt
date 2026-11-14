@@ -1,0 +1,2 @@
+zona 1x1 m a 1,5-2,5 m: celle ~ 280  P(tutte valide), validita 0,95: 0.9656  validita 0,90: 0.7557
+errore di 1 grado: a 3 m 5.2 cm; a 6 m 10.5 cm

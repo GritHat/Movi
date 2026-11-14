@@ -1,0 +1,75 @@
+== A. Raggio della regione al 95 % senza misure (q = 0,2; 15 Hz) ==
+sigma_mis  t[s]   sigma_pos[m]  r95[m]
+   0.015   0.5        0.121     0.30
+   0.015   1.0        0.299     0.73
+   0.015   1.5        0.524     1.28
+   0.015   2.0        0.788     1.93
+   0.015   3.0        1.412     3.46
+   0.015   4.0        2.147     5.25
+   0.015   5.0        2.977     7.29
+   (stazionario: sigma_p = 0.012 m, sigma_v = 0.144 m/s)
+   0.050   0.5        0.156     0.38
+   0.050   1.0        0.344     0.84
+   0.050   1.5        0.578     1.41
+   0.050   2.0        0.848     2.08
+   0.050   3.0        1.485     3.63
+   0.050   4.0        2.230     5.46
+   0.050   5.0        3.071     7.52
+   (stazionario: sigma_p = 0.033 m, sigma_v = 0.205 m/s)
+   0.110   0.5        0.197     0.48
+   0.110   1.0        0.396     0.97
+   0.110   1.5        0.638     1.56
+   0.110   2.0        0.916     2.24
+   0.110   3.0        1.566     3.83
+   0.110   4.0        2.323     5.69
+   0.110   5.0        3.173     7.77
+   (stazionario: sigma_p = 0.061 m, sigma_v = 0.255 m/s)
+
+== B. Regola «previsto finche' il cerchio ritagliato copre meno di meta' del cuneo in griglia» ==
+pannello 1.0 m a 1.8 m, attore a 2.3 m e 0.8 m/s, griglia 3.0 m, sigma 0.015: cuneo 1.53 m^2, buio 1.60 s, «previsto» fino a 0.80 s
+     t = 0.53 s: r95 =  0.32 m, quota del cuneo coperta dal cerchio ritagliato =  21.4 %
+     t = 1.00 s: r95 =  0.73 m, quota del cuneo coperta dal cerchio ritagliato =  84.7 %
+     t = 2.00 s: r95 =  1.93 m, quota del cuneo coperta dal cerchio ritagliato = 100.0 %
+     t = 3.00 s: r95 =  3.46 m, quota del cuneo coperta dal cerchio ritagliato = 100.0 %
+     t = 5.00 s: r95 =  7.29 m, quota del cuneo coperta dal cerchio ritagliato = 100.0 %
+pannello 1.0 m a 1.8 m, attore a 2.3 m e 1.2 m/s, griglia 3.0 m, sigma 0.015: cuneo 1.53 m^2, buio 1.06 s, «previsto» fino a 0.87 s
+     t = 0.53 s: r95 =  0.32 m, quota del cuneo coperta dal cerchio ritagliato =  21.2 %
+     t = 1.00 s: r95 =  0.73 m, quota del cuneo coperta dal cerchio ritagliato =  55.3 %
+     t = 2.00 s: r95 =  1.93 m, quota del cuneo coperta dal cerchio ritagliato =  60.4 %
+     t = 3.00 s: r95 =  3.46 m, quota del cuneo coperta dal cerchio ritagliato =  86.7 %
+     t = 5.00 s: r95 =  7.29 m, quota del cuneo coperta dal cerchio ritagliato = 100.0 %
+pannello 1.0 m a 1.8 m, attore a 2.3 m e 0.8 m/s, griglia 3.0 m, sigma 0.05: cuneo 1.53 m^2, buio 1.60 s, «previsto» fino a 0.67 s
+     t = 0.53 s: r95 =  0.41 m, quota del cuneo coperta dal cerchio ritagliato =  34.3 %
+     t = 1.00 s: r95 =  0.84 m, quota del cuneo coperta dal cerchio ritagliato =  94.1 %
+     t = 2.00 s: r95 =  2.08 m, quota del cuneo coperta dal cerchio ritagliato = 100.0 %
+     t = 3.00 s: r95 =  3.63 m, quota del cuneo coperta dal cerchio ritagliato = 100.0 %
+     t = 5.00 s: r95 =  7.52 m, quota del cuneo coperta dal cerchio ritagliato = 100.0 %
+pannello 1.0 m a 1.8 m, attore a 2.3 m e 1.2 m/s, griglia 3.0 m, sigma 0.05: cuneo 1.53 m^2, buio 1.06 s, «previsto» fino a 0.67 s
+     t = 0.53 s: r95 =  0.41 m, quota del cuneo coperta dal cerchio ritagliato =  34.3 %
+     t = 1.00 s: r95 =  0.84 m, quota del cuneo coperta dal cerchio ritagliato =  65.3 %
+     t = 2.00 s: r95 =  2.08 m, quota del cuneo coperta dal cerchio ritagliato =  71.9 %
+     t = 3.00 s: r95 =  3.63 m, quota del cuneo coperta dal cerchio ritagliato =  97.1 %
+     t = 5.00 s: r95 =  7.52 m, quota del cuneo coperta dal cerchio ritagliato = 100.0 %
+
+== C. Quota dei cicli senza osservazione con una stima emessa (regola della versione 2) ==
+durata del «previsto» T_p dal conto B (indipendente dalla durata del buio: «perso» e' assorbente)
+v = 0.8, sigma = 0.015: T_p = 0.80 s -> buio demo 1.60 s: 50 %; 1.2 s: 67 %; 3.0 s: 27 %; 5.0 s: 16 %
+v = 1.2, sigma = 0.015: T_p = 0.87 s -> buio demo 1.06 s: 81 %; 1.2 s: 72 %; 3.0 s: 29 %; 5.0 s: 17 %
+v = 0.8, sigma = 0.05: T_p = 0.67 s -> buio demo 1.60 s: 42 %; 1.2 s: 56 %; 3.0 s: 22 %; 5.0 s: 13 %
+v = 1.2, sigma = 0.05: T_p = 0.67 s -> buio demo 1.06 s: 63 %; 1.2 s: 56 %; 3.0 s: 22 %; 5.0 s: 13 %
+con le durate MISURATE dalla validazione (MISURE_V2.md, P4): T_p = 0,40 / 0,47 / 0,53 s, buio 1,13 / 1,07 / 1,07 s
+T_p = 0.4: demo 35 %; 1.2 s: 33 %; 3.0 s: 13 %; 5.0 s: 8 %
+T_p = 0.47: demo 44 %; 1.2 s: 39 %; 3.0 s: 16 %; 5.0 s: 9 %
+T_p = 0.53: demo 50 %; 1.2 s: 44 %; 3.0 s: 18 %; 5.0 s: 11 %
+sosta (MISURE_V2.md, P4: «perso» 4,6-4,8 s): quota = T_p/(T_p + perso) = 8-10 %
+
+== D. Falsificatore di requisiti-2: quota dei cicli di buio in grado «saturo» (regione al 90 % >= 80 % del cuneo) ==
+v = 1.2 m/s, buio 1.06 s (16 cicli): saturi 0 = 0 %, primo ciclo saturo a mai
+     quota del cuneo coperta: 0.53 s: 50 % -> 8 %, 90 % -> 26 %; 1.00 s: 50 % -> 21 %, 90 % -> 56 %
+v = 0.8 m/s, buio 1.60 s (24 cicli): saturi 11 = 46 %, primo ciclo saturo a 0.93 s
+     quota del cuneo coperta: 0.53 s: 50 % -> 8 %, 90 % -> 26 %; 1.00 s: 50 % -> 34 %, 90 % -> 86 %
+sosta: buio forzato a 5 s; il filtro non sa della sosta e il punto previsto prosegue a velocita' costante
+v = 1.2 m/s, buio 5.00 s (75 cicli): saturi 23 = 31 %, primo ciclo saturo a 3.53 s
+     quota del cuneo coperta: 0.53 s: 50 % -> 8 %, 90 % -> 26 %; 1.00 s: 50 % -> 21 %, 90 % -> 56 %; 2.00 s: 50 % -> 0 %, 90 % -> 52 %; 3.00 s: 50 % -> 0 %, 90 % -> 66 %; 5.00 s: 50 % -> 0 %, 90 % -> 100 %
+v = 0.8 m/s, buio 5.00 s (75 cicli): saturi 62 = 83 %, primo ciclo saturo a 0.93 s
+     quota del cuneo coperta: 0.53 s: 50 % -> 8 %, 90 % -> 26 %; 1.00 s: 50 % -> 34 %, 90 % -> 86 %; 2.00 s: 50 % -> 48 %, 90 % -> 100 %; 3.00 s: 50 % -> 46 %, 90 % -> 100 %; 5.00 s: 50 % -> 68 %, 90 % -> 100 %

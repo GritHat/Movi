@@ -1,0 +1,122 @@
+# vq3c: reticolo 5 cm, 208000 punti; 2610 celle; 92 fotogrammi per condizione (i primi 2 non contati); seme 20261114
+# «prof» = dato per libero e dentro un corpo oltre 5 cm; «bordo» = dentro un corpo fino a 5 cm; F = fotogrammi con almeno un «prof»
+
+## (a) senza buchi — fotogrammi contati 90, pixel validi medi 100.0 %
+  PUNTI (liberi veri visibili per fotogramma: 58603)
+    Q1   F   0 su 90 ; prof       0 ; bordo      0 ; resa  88.4 %
+    Q3   F   0 su 90 ; prof       0 ; bordo      0 ; resa  88.4 %
+    Q3c  F   0 su 90 ; prof       0 ; bordo      0 ; resa  88.4 %
+  CELLE (2610), Q3c sul centro a quota h; cambi = cambi di stato libero/non libero per cella al secondo, sulle celle libere e visibili
+    h 0.05 m  F   0 su 90 ; prof      0 ; resa   3.1 % (celle vere per fotogramma 617) ; cambi 0.86 /s
+    h 0.10 m  F   0 su 90 ; prof      0 ; resa  87.1 % (celle vere per fotogramma 659) ; cambi 0.40 /s
+    h 0.15 m  F   0 su 90 ; prof      0 ; resa  88.1 % (celle vere per fotogramma 709) ; cambi 0.36 /s
+    Q1 sul centro a 0,10 m: resa  87.1 % ; cambi 0.40 /s
+    N1 (suolo visto in 1 di 3, occupato e ombra di ora vincono): F   0 su 90 ; prof      0 ; libere ma nascoste 0 ; resa  82.8 % (celle vere 586) ; cambi 0.35 /s
+
+## (b) sparsi 5 % — fotogrammi contati 90, pixel validi medi 95.0 %
+  PUNTI (liberi veri visibili per fotogramma: 58603)
+    Q1   F   0 su 90 ; prof       0 ; bordo      0 ; resa  55.7 %
+    Q3   F   0 su 90 ; prof       0 ; bordo      0 ; resa  83.1 %
+    Q3c  F   0 su 90 ; prof       0 ; bordo      0 ; resa  79.4 %
+  CELLE (2610), Q3c sul centro a quota h; cambi = cambi di stato libero/non libero per cella al secondo, sulle celle libere e visibili
+    h 0.05 m  F   0 su 90 ; prof      0 ; resa   2.0 % (celle vere per fotogramma 617) ; cambi 0.55 /s
+    h 0.10 m  F   0 su 90 ; prof      0 ; resa  78.5 % (celle vere per fotogramma 659) ; cambi 2.10 /s
+    h 0.15 m  F   0 su 90 ; prof      0 ; resa  79.5 % (celle vere per fotogramma 709) ; cambi 2.12 /s
+    Q1 sul centro a 0,10 m: resa  54.9 % ; cambi 6.27 /s
+    N1 (suolo visto in 1 di 3, occupato e ombra di ora vincono): F   0 su 90 ; prof      0 ; libere ma nascoste 0 ; resa  82.8 % (celle vere 586) ; cambi 0.36 /s
+
+## (c) sparsi 30 % — fotogrammi contati 90, pixel validi medi 70.0 %
+  PUNTI (liberi veri visibili per fotogramma: 58603)
+    Q1   F   0 su 90 ; prof       0 ; bordo      0 ; resa   3.6 %
+    Q3   F   1 su 90 ; prof       1 ; bordo      0 ; resa  10.0 %
+    Q3c  F   0 su 90 ; prof       0 ; bordo      0 ; resa   8.0 %
+  CELLE (2610), Q3c sul centro a quota h; cambi = cambi di stato libero/non libero per cella al secondo, sulle celle libere e visibili
+    h 0.05 m  F   0 su 90 ; prof      0 ; resa   0.2 % (celle vere per fotogramma 617) ; cambi 0.05 /s
+    h 0.10 m  F   0 su 90 ; prof      0 ; resa   8.0 % (celle vere per fotogramma 659) ; cambi 1.16 /s
+    h 0.15 m  F   0 su 90 ; prof      0 ; resa   8.0 % (celle vere per fotogramma 709) ; cambi 1.17 /s
+    Q1 sul centro a 0,10 m: resa   3.5 % ; cambi 1.02 /s
+    N1 (suolo visto in 1 di 3, occupato e ombra di ora vincono): F   0 su 90 ; prof      0 ; libere ma nascoste 0 ; resa  83.0 % (celle vere 586) ; cambi 0.37 /s
+
+## (d) chiazze 30 % — fotogrammi contati 90, pixel validi medi 69.8 %
+  PUNTI (liberi veri visibili per fotogramma: 58603)
+    Q1   F   0 su 90 ; prof       0 ; bordo      0 ; resa  58.0 %
+    Q3   F  54 su 90 ; prof    1528 ; bordo   3195 ; resa  83.5 %
+    Q3c  F   0 su 90 ; prof       0 ; bordo      1 ; resa  60.5 %
+  CELLE (2610), Q3c sul centro a quota h; cambi = cambi di stato libero/non libero per cella al secondo, sulle celle libere e visibili
+    h 0.05 m  F   0 su 90 ; prof      0 ; resa   2.0 % (celle vere per fotogramma 617) ; cambi 0.58 /s
+    h 0.10 m  F   0 su 90 ; prof      0 ; resa  59.5 % (celle vere per fotogramma 659) ; cambi 5.92 /s
+    h 0.15 m  F   0 su 90 ; prof      0 ; resa  60.5 % (celle vere per fotogramma 709) ; cambi 5.96 /s
+    Q1 sul centro a 0,10 m: resa  57.1 % ; cambi 6.09 /s
+    N1 (suolo visto in 1 di 3, occupato e ombra di ora vincono): F   0 su 90 ; prof      0 ; libere ma nascoste 0 ; resa  81.9 % (celle vere 586) ; cambi 0.62 /s
+
+## (e) soggetti muti — fotogrammi contati 90, pixel validi medi 88.0 %
+  PUNTI (liberi veri visibili per fotogramma: 58603)
+    Q1   F   0 su 90 ; prof       0 ; bordo      0 ; resa  80.3 %
+    Q3   F  50 su 90 ; prof    8237 ; bordo  10339 ; resa  82.0 %
+    Q3c  F   0 su 90 ; prof       0 ; bordo    144 ; resa  81.0 %
+  CELLE (2610), Q3c sul centro a quota h; cambi = cambi di stato libero/non libero per cella al secondo, sulle celle libere e visibili
+    h 0.05 m  F   0 su 90 ; prof      0 ; resa   2.9 % (celle vere per fotogramma 617) ; cambi 0.80 /s
+    h 0.10 m  F   0 su 90 ; prof      0 ; resa  86.1 % (celle vere per fotogramma 659) ; cambi 0.39 /s
+    h 0.15 m  F   0 su 90 ; prof      0 ; resa  85.9 % (celle vere per fotogramma 709) ; cambi 0.35 /s
+    Q1 sul centro a 0,10 m: resa  85.6 % ; cambi 0.41 /s
+    N1 (suolo visto in 1 di 3, occupato e ombra di ora vincono): F  58 su 90 ; prof    558 ; libere ma nascoste 669 ; resa  85.5 % (celle vere 586) ; cambi 0.09 /s
+
+## (f) muti + chiazze 30 % — fotogrammi contati 90, pixel validi medi 61.7 %
+  PUNTI (liberi veri visibili per fotogramma: 58603)
+    Q1   F   0 su 90 ; prof       0 ; bordo      0 ; resa  52.8 %
+    Q3   F  50 su 90 ; prof    5408 ; bordo   7737 ; resa  77.4 %
+    Q3c  F   0 su 90 ; prof       0 ; bordo     85 ; resa  55.6 %
+  CELLE (2610), Q3c sul centro a quota h; cambi = cambi di stato libero/non libero per cella al secondo, sulle celle libere e visibili
+    h 0.05 m  F   0 su 90 ; prof      0 ; resa   2.0 % (celle vere per fotogramma 617) ; cambi 0.56 /s
+    h 0.10 m  F   0 su 90 ; prof      0 ; resa  59.6 % (celle vere per fotogramma 659) ; cambi 5.65 /s
+    h 0.15 m  F   0 su 90 ; prof      0 ; resa  59.3 % (celle vere per fotogramma 709) ; cambi 5.63 /s
+    Q1 sul centro a 0,10 m: resa  57.0 % ; cambi 5.82 /s
+    N1 (suolo visto in 1 di 3, occupato e ombra di ora vincono): F  51 su 90 ; prof    461 ; libere ma nascoste 591 ; resa  84.4 % (celle vere 586) ; cambi 0.41 /s
+
+## (g) muti + sparsi 5 % — fotogrammi contati 90, pixel validi medi 83.6 %
+  PUNTI (liberi veri visibili per fotogramma: 58603)
+    Q1   F   0 su 90 ; prof       0 ; bordo      0 ; resa  50.7 %
+    Q3   F  50 su 90 ; prof    5392 ; bordo   7715 ; resa  76.7 %
+    Q3c  F   0 su 90 ; prof       0 ; bordo    108 ; resa  72.6 %
+  CELLE (2610), Q3c sul centro a quota h; cambi = cambi di stato libero/non libero per cella al secondo, sulle celle libere e visibili
+    h 0.05 m  F   0 su 90 ; prof      0 ; resa   2.1 % (celle vere per fotogramma 617) ; cambi 0.58 /s
+    h 0.10 m  F   0 su 90 ; prof      0 ; resa  77.5 % (celle vere per fotogramma 659) ; cambi 2.10 /s
+    h 0.15 m  F   0 su 90 ; prof      0 ; resa  77.2 % (celle vere per fotogramma 709) ; cambi 2.07 /s
+    Q1 sul centro a 0,10 m: resa  53.9 % ; cambi 6.14 /s
+    N1 (suolo visto in 1 di 3, occupato e ombra di ora vincono): F  55 su 90 ; prof    549 ; libere ma nascoste 670 ; resa  85.6 % (celle vere 586) ; cambi 0.09 /s
+
+## (s0) scena ferma, 0 % — fotogrammi contati 90, pixel validi medi 100.0 %
+  PUNTI (liberi veri visibili per fotogramma: 75353)
+    Q1   F   0 su 90 ; prof       0 ; bordo      0 ; resa  91.8 %
+    Q3   F   0 su 90 ; prof       0 ; bordo      0 ; resa  91.8 %
+    Q3c  F   0 su 90 ; prof       0 ; bordo      0 ; resa  91.8 %
+  CELLE (2610), Q3c sul centro a quota h; cambi = cambi di stato libero/non libero per cella al secondo, sulle celle libere e visibili
+    h 0.05 m  F   0 su 90 ; prof      0 ; resa   2.6 % (celle vere per fotogramma 759) ; cambi 0.72 /s
+    h 0.10 m  F   0 su 90 ; prof      0 ; resa  90.5 % (celle vere per fotogramma 802) ; cambi 0.22 /s
+    h 0.15 m  F   0 su 90 ; prof      0 ; resa  91.4 % (celle vere per fotogramma 854) ; cambi 0.13 /s
+    Q1 sul centro a 0,10 m: resa  90.5 % ; cambi 0.22 /s
+    N1 (suolo visto in 1 di 3, occupato e ombra di ora vincono): F   0 su 90 ; prof      0 ; libere ma nascoste 0 ; resa  87.7 % (celle vere 727) ; cambi 0.07 /s
+
+## (s5) scena ferma, sparsi 5 % — fotogrammi contati 90, pixel validi medi 95.0 %
+  PUNTI (liberi veri visibili per fotogramma: 75353)
+    Q1   F   0 su 90 ; prof       0 ; bordo      0 ; resa  57.9 %
+    Q3   F   0 su 90 ; prof       0 ; bordo      0 ; resa  87.1 %
+    Q3c  F   0 su 90 ; prof       0 ; bordo      0 ; resa  83.1 %
+  CELLE (2610), Q3c sul centro a quota h; cambi = cambi di stato libero/non libero per cella al secondo, sulle celle libere e visibili
+    h 0.05 m  F   0 su 90 ; prof      0 ; resa   1.8 % (celle vere per fotogramma 759) ; cambi 0.50 /s
+    h 0.10 m  F   0 su 90 ; prof      0 ; resa  81.9 % (celle vere per fotogramma 802) ; cambi 2.04 /s
+    h 0.15 m  F   0 su 90 ; prof      0 ; resa  82.9 % (celle vere per fotogramma 854) ; cambi 1.97 /s
+    Q1 sul centro a 0,10 m: resa  57.0 % ; cambi 6.45 /s
+    N1 (suolo visto in 1 di 3, occupato e ombra di ora vincono): F   0 su 90 ; prof      0 ; libere ma nascoste 0 ; resa  87.7 % (celle vere 727) ; cambi 0.08 /s
+
+## (s10) scena ferma, sparsi 10 % — fotogrammi contati 90, pixel validi medi 90.0 %
+  PUNTI (liberi veri visibili per fotogramma: 75353)
+    Q1   F   0 su 90 ; prof       0 ; bordo      0 ; resa  35.6 %
+    Q3   F   0 su 90 ; prof       0 ; bordo      0 ; resa  70.6 %
+    Q3c  F   0 su 90 ; prof       0 ; bordo      0 ; resa  64.8 %
+  CELLE (2610), Q3c sul centro a quota h; cambi = cambi di stato libero/non libero per cella al secondo, sulle celle libere e visibili
+    h 0.05 m  F   0 su 90 ; prof      0 ; resa   1.1 % (celle vere per fotogramma 759) ; cambi 0.31 /s
+    h 0.10 m  F   0 su 90 ; prof      0 ; resa  64.0 % (celle vere per fotogramma 802) ; cambi 3.72 /s
+    h 0.15 m  F   0 su 90 ; prof      0 ; resa  64.8 % (celle vere per fotogramma 854) ; cambi 3.70 /s
+    Q1 sul centro a 0,10 m: resa  35.1 % ; cambi 6.48 /s
+    N1 (suolo visto in 1 di 3, occupato e ombra di ora vincono): F   0 su 90 ; prof      0 ; libere ma nascoste 0 ; resa  87.7 % (celle vere 727) ; cambi 0.08 /s

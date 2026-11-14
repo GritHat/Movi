@@ -1,0 +1,14 @@
+## S10 scena 0 (stanza vuota): celle «libero» su 2610: S10(B+M+A) 0 ; S10(B+M) 1040 (fra 1,24 e 1,61 m: 0) ; S10p alla lettera 2026 ; N1 1460 ; P (libero fino a una quota>0) 1386
+   celle «libero» con un oggetto nella colonna 0-2 m: S10(B+M) 0 ; S10p 0 ; S10i (bit a zero = libero) 0 ; N1 0 ; P 0 (quota massima dichiarata 0.00 m)
+## S10 scena 1 (barra 1,7-1,9 m a 1,5 m): celle «libero» su 2610: S10(B+M+A) 0 ; S10(B+M) 350 (fra 1,24 e 1,61 m: 0) ; S10p alla lettera 1502 ; N1 534 ; P (libero fino a una quota>0) 614
+   celle «libero» con un oggetto nella colonna 0-2 m: S10(B+M) 0 ; S10p 78 ; S10i (bit a zero = libero) 109 ; N1 68 ; P 74 (quota massima dichiarata 1.55 m)
+## S10 scena 2 (barra 1,52-1,58 m a 1,3 m): celle «libero» su 2610: S10(B+M+A) 0 ; S10(B+M) 320 (fra 1,24 e 1,61 m: 0) ; S10p alla lettera 1423 ; N1 133 ; P (libero fino a una quota>0) 614
+   celle «libero» con un oggetto nella colonna 0-2 m: S10(B+M) 0 ; S10p 4 ; S10i (bit a zero = libero) 35 ; N1 6 ; P 49 (quota massima dichiarata 1.50 m)
+## S10 scena 3 (scatola alta 0,10 m a 2 m): celle «libero» su 2610: S10(B+M+A) 0 ; S10(B+M) 1038 (fra 1,24 e 1,61 m: 0) ; S10p alla lettera 2026 ; N1 1309 ; P (libero fino a una quota>0) 1323
+   celle «libero» con un oggetto nella colonna 0-2 m: S10(B+M) 32 ; S10p 33 ; S10i (bit a zero = libero) 33 ; N1 0 ; P 0 (quota massima dichiarata 0.00 m)
+   (pixel validi sulla barra: 278)
+## S10 scena 4 ([dopo] barra 1,7-1,9 m a 2,0 m): celle «libero» su 2610: S10(B+M+A) 0 ; S10(B+M) 1040 (fra 1,24 e 1,61 m: 0) ; S10p alla lettera 2026 ; N1 918 ; P (libero fino a una quota>0) 1386
+   celle «libero» con un oggetto nella colonna 0-2 m: S10(B+M) 75 ; S10p 75 ; S10i (bit a zero = libero) 75 ; N1 21 ; P 75 (quota massima dichiarata 1.70 m)
+   (pixel validi sulla barra: 3170)
+## S10 scena 5 ([dopo] barra 1,7-1,9 m a 2,5 m): celle «libero» su 2610: S10(B+M+A) 0 ; S10(B+M) 1040 (fra 1,24 e 1,61 m: 0) ; S10p alla lettera 2026 ; N1 1147 ; P (libero fino a una quota>0) 1386
+   celle «libero» con un oggetto nella colonna 0-2 m: S10(B+M) 67 ; S10p 67 ; S10i (bit a zero = libero) 67 ; N1 0 ; P 67 (quota massima dichiarata 1.70 m)

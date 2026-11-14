@@ -1,0 +1,28 @@
+   [N1] punti al suolo in celle «in ombra»: 20133, di cui in verita' visibili: 776 (3.9 %)
+## Scenario C, non validi: sparsi 50 %, a chiazze 0 %  (reticolo 10 cm, 18640 punti)
+candidata     fot F_ogni F_prof  punti_FL occupati nascosti profondi S_nas S_ogni   resa%   t_med   t_max
+N0-suolo       87    85     85      1429      360     1069      983     4    68    95.2    1.05    2.29
+N1-suolo       87    68     68       116        0      116      116     0     0    94.0    1.05    2.29
+N1-colonna     87    87     87     67537        0    67537    60816     0     0    60.8    1.05    2.29
+Q1             87     0      0         0        0        0        0     0     0    84.1    0.29    0.32
+Q3             87     2      2        20        3       17       12     0     3    86.1    0.60    1.24
+Q3c            87     0      0         0        0        0        0     0     0    85.1    0.57    1.21
+P              87    70      0       922      549      373        0     0    10    47.9    4.96    6.59
+S10(B+M)       87     2      0         2        0        2        0     0     0    32.8    4.96    6.59
+S10p(B+M)      87    87     87     55235       10    55225    35179     0     2    77.5   37.77   46.99
+VO             87    87     87    255248    31025   224223   196851    50   342    96.4    4.17    5.20
+VOa            87     3      1         6        1        5        1     0     1    78.5    6.23    6.52
+   [N1] punti al suolo in celle «in ombra»: 20118, di cui in verita' visibili: 767 (3.8 %)
+## Scenario C, non validi: sparsi 0 %, a chiazze 50 %  (reticolo 10 cm, 18640 punti)
+candidata     fot F_ogni F_prof  punti_FL occupati nascosti profondi S_nas S_ogni   resa%   t_med   t_max
+N0-suolo       87    87     87      1315      334      981      892     4    62    94.5    1.06    1.21
+N1-suolo       87    71     71       115        1      114      112     0     1    93.3    1.06    1.21
+N1-colonna     87    87     87     67004        4    67000    60312     0     1    60.4    1.06    1.21
+Q1             87     0      0         0        0        0        0     0     0    89.4    0.29    0.32
+Q3             87    15     15      4019     1375     2644     2773     4    55    94.1    0.61    0.74
+Q3c            87     0      0         0        0        0        0     0     0    89.9    0.57    0.70
+P              87    80      0       948      575      373        0     0    14    48.0    4.95    5.06
+S10(B+M)       87     2      0         2        0        2        0     0     0    32.8    4.95    5.06
+S10p(B+M)      87    87     87     54550       80    54470    34684     0     5    77.2   38.24   46.73
+VO             87    87     87    259290    33510   225780   199494    52   349    96.6    4.25    5.23
+VOa            87    15     15      4028     1086     2942     2647     5    84    79.0    6.29    7.10

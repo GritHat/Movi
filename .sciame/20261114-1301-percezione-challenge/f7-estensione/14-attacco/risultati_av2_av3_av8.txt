@@ -1,0 +1,28 @@
+AV2 — barra 1,40-1,50 m di quota, larga 1,2 m, a 2,0-2,1 m; stanza 6x4x3; k=0,004; 10 valutazioni
+pixel validi sulla barra: 1404 ; tetto del campo a 2 m: 1.70 m ; celle col centro sotto la barra: 33
+lettura letterale «cella libera <=> stato(centro)»: celle sotto la barra date per libere: 32.9 a fotogramma su 33
+lettura «occupato dai pixel e ombra oltre il primo ritorno vincono»: celle sotto la barra ancora libere: 0.0 a fotogramma
+con questa lettura, celle col suolo davvero visto (stato LIBERO) che escono «in ombra» oltre la barra: 326.4 a fotogramma
+colonna a (x=0.0, y=2.05), quote 0,05..1,95 passo 0,05: OLLLLLLLLLLLLLLLLLLLLLLLLLLOOOLLLLFFFFF
+colonna a (x=0.0, y=1.60), quote 0,05..1,95 passo 0,05: OLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLFFFFFFFF
+colonna a (x=0.0, y=2.60), quote 0,05..1,95 passo 0,05: OLLLLLLLLLLLLLLLLLLLLLLLLLLLOSSLLLLLFFF
+
+AV3 — senza fondale: solo il suolo, nessuna parete; k=0,004
+portata valida 6 m: pixel non validi 44.6 %
+  d=2 m: quota piu' alta con stato()==LIBERO 0.75 m ; la frase dichiara 1.70 m ; colonna 0,05..1,95: OLLLLLLLLLLLLLLNNNNNNNNNNNNNNNNNNFFFFFF
+  d=3 m: quota piu' alta con stato()==LIBERO 0.55 m ; la frase dichiara 1.95 m ; colonna 0,05..1,95: OLLLLLLLLLLNNNNNNNNNNNNNNNNNNNNNNNNNNNF
+  resa sulle celle (centro a 0,10 m): 99.4 % di 1441
+portata valida 10 m: pixel non validi 37.1 %
+  d=2 m: quota piu' alta con stato()==LIBERO 0.95 m ; la frase dichiara 1.70 m ; colonna 0,05..1,95: OLLLLLLLLLLLLLLLLLLNNNNNNNNNNNNNNFFFFFF
+  d=3 m: quota piu' alta con stato()==LIBERO 0.80 m ; la frase dichiara 1.95 m ; colonna 0,05..1,95: OLLLLLLLLLLLLLLLNNNNNNNNNNNNNNNNNNNNNNF
+  resa sulle celle (centro a 0,10 m): 99.7 % di 1441
+
+AV8 — pannello largo 1 m a 1,70-1,75 m; soggetto 0,45x0,25x1,75 a 2,3 m, centrato; pixel validi del soggetto (senza rumore)
+pannello alto 1.30 m: pixel del soggetto  1604 ; quote viste 1.34-1.74 m
+pannello alto 1.50 m: pixel del soggetto   576 ; quote viste 1.61-1.74 m
+pannello alto 1.60 m: pixel del soggetto    36 ; quote viste 1.74-1.74 m
+pannello alto 1.65 m: pixel del soggetto     0 ; quote viste -
+pannello alto 1.70 m: pixel del soggetto     0 ; quote viste -
+pannello 1,70 m, soggetto alto 1.90 m: pixel 0
+pannello 1,70 m a 1,90 m, soggetto 1,90 m a 2.3 m: pixel 0
+pannello 1,70 m a 1,90 m, soggetto 1,90 m a 2.8 m: pixel 0

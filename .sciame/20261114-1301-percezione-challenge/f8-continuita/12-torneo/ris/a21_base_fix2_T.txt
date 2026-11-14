@@ -1,0 +1,224 @@
+# torneo.c scena=T yp=2.0 ys=4.0 w=1.0 portata=6.0 | N=400 seme=9000 | dw=+0.00 pd=0.90 corpo=0.00 c6=0.22 v=0.30-1.80 cap=78 vp=0.00 segue=0 congela=0 mancati=0 estraneo=0 vuoto=-1.00
+
+## 1. copertura per comportamento e tau (cicli a soggetto NON visibile). Per candidata: c90 c50 area90/ombra senzaRegione%
+comport.    tau    n | C004                  | C001                  | C005W                 | C005P                 | ESTA                  | ESTB                  | REACH   S1  S1congelato
+prosegue     0.5  362 | 1.000 0.948 0.07   0.0 | 0.997 0.876 0.06   0.0 | 1.000 0.878 0.05   0.0 | 0.986 0.818 0.02   0.0 | 1.000 0.906 0.05   0.0 | 1.000 0.906 0.05   0.0 | 1.000 1.000 1.000
+prosegue     1.0  393 | 0.997 0.903 0.16   0.0 | 1.000 0.954 0.21   0.0 | 1.000 0.863 0.56   0.0 | 0.962 0.679 0.06   0.0 | 1.000 0.941 0.19   0.0 | 1.000 0.957 0.19   0.0 | 1.000 1.000 1.000
+prosegue     2.0  210 | 0.990 0.724 0.35   0.0 | 1.000 0.829 0.58   0.0 | 1.000 0.995 1.00   0.0 | 0.938 0.543 0.17   0.0 | 0.943 0.757 0.63   1.9 | 0.971 0.952 0.65   2.9 | 1.000 1.000 1.000
+prosegue     3.0  122 | 0.934 0.582 0.49   0.0 | 0.984 0.705 0.78   0.0 | 1.000 1.000 1.00   0.0 | 0.705 0.303 0.16   0.0 | 0.016 0.008 0.02  95.1 | 0.000 0.000 0.00 100.0 | 1.000 1.000 1.000
+prosegue     5.0   41 | 0.756 0.366 0.54   0.0 | 1.000 0.415 0.87   0.0 | 1.000 1.000 1.00   0.0 | 0.366 0.146 0.13   0.0 | 0.049 0.024 0.02  95.1 | 0.000 0.000 0.00 100.0 | 1.000 1.000 1.000
+rallenta     0.5  358 | 1.000 0.916 0.07   0.0 | 1.000 0.869 0.06   0.0 | 1.000 0.846 0.05   0.0 | 0.978 0.771 0.02   0.0 | 1.000 0.872 0.05   0.0 | 1.000 0.880 0.05   0.0 | 1.000 1.000 1.000
+rallenta     1.0  395 | 0.995 0.901 0.16   0.0 | 1.000 0.929 0.21   0.0 | 1.000 0.797 0.57   0.0 | 0.914 0.633 0.06   0.0 | 1.000 0.952 0.19   0.0 | 1.000 0.962 0.19   0.0 | 1.000 1.000 1.000
+rallenta     2.0  323 | 0.981 0.731 0.33   0.0 | 1.000 0.820 0.52   0.0 | 1.000 0.824 0.99   0.0 | 0.675 0.375 0.13   0.0 | 0.793 0.579 0.52   2.2 | 0.746 0.734 0.49  25.4 | 1.000 1.000 1.000
+rallenta     3.0  203 | 0.970 0.581 0.43   0.0 | 0.990 0.749 0.72   0.0 | 1.000 0.906 1.00   0.0 | 0.458 0.207 0.11   0.0 | 0.099 0.000 0.11  66.0 | 0.000 0.000 0.00 100.0 | 1.000 1.000 1.000
+rallenta     5.0   88 | 0.864 0.443 0.52   0.0 | 0.977 0.568 0.85   0.0 | 1.000 0.989 1.00   0.0 | 0.318 0.148 0.10   0.0 | 0.011 0.000 0.02  95.5 | 0.000 0.000 0.00 100.0 | 1.000 1.000 1.000
+sosta        0.5  362 | 0.994 0.906 0.07   0.0 | 0.997 0.834 0.06   0.0 | 0.997 0.815 0.05   0.0 | 0.950 0.762 0.02   0.0 | 1.000 0.862 0.05   0.0 | 0.997 0.848 0.05   0.0 | 1.000 1.000 1.000
+sosta        1.0  391 | 1.000 0.847 0.16   0.0 | 1.000 0.836 0.21   0.0 | 1.000 0.678 0.57   0.0 | 0.798 0.545 0.06   0.0 | 0.992 0.905 0.20   0.0 | 0.972 0.844 0.19   0.0 | 1.000 1.000 1.000
+sosta        2.0  378 | 0.989 0.741 0.31   0.0 | 1.000 0.860 0.48   0.0 | 1.000 0.571 0.98   0.0 | 0.434 0.230 0.11   0.0 | 0.923 0.696 0.46   1.1 | 0.627 0.577 0.41  37.3 | 1.000 1.000 1.000
+sosta        3.0  366 | 0.970 0.667 0.35   0.0 | 1.000 0.836 0.60   0.0 | 1.000 0.434 0.98   0.0 | 0.189 0.077 0.06   0.0 | 0.533 0.374 0.23  35.2 | 0.000 0.000 0.00 100.0 | 1.000 1.000 1.000
+sosta        5.0  267 | 0.929 0.472 0.38   0.0 | 1.000 0.783 0.71   0.0 | 0.996 0.509 0.95   0.0 | 0.067 0.022 0.03   0.0 | 0.446 0.180 0.27  47.9 | 0.000 0.000 0.00 100.0 | 1.000 1.000 1.000
+torna        0.5  364 | 0.995 0.920 0.06   0.0 | 0.997 0.876 0.06   0.0 | 1.000 0.841 0.05   0.0 | 0.959 0.786 0.02   0.0 | 1.000 0.868 0.04   0.0 | 1.000 0.879 0.04   0.0 | 1.000 1.000 1.000
+torna        1.0  394 | 0.997 0.853 0.16   0.0 | 1.000 0.838 0.21   0.0 | 1.000 0.706 0.57   0.0 | 0.807 0.536 0.06   0.0 | 0.995 0.906 0.19   0.0 | 0.977 0.838 0.19   0.0 | 1.000 1.000 1.000
+torna        2.0  336 | 0.961 0.726 0.32   0.0 | 0.991 0.810 0.51   0.0 | 1.000 0.658 0.99   0.0 | 0.509 0.283 0.12   0.0 | 0.893 0.699 0.51   1.5 | 0.717 0.652 0.48  28.3 | 1.000 1.000 1.000
+torna        3.0  229 | 0.952 0.646 0.40   0.0 | 1.000 0.773 0.65   0.0 | 0.996 0.585 0.99   0.0 | 0.253 0.131 0.08   0.0 | 0.362 0.249 0.16  54.6 | 0.000 0.000 0.00 100.0 | 1.000 1.000 1.000
+torna        5.0   85 | 0.812 0.447 0.47   0.0 | 0.953 0.765 0.81   0.0 | 1.000 0.671 1.00   0.0 | 0.082 0.035 0.05   0.0 | 0.176 0.129 0.09  82.4 | 0.000 0.000 0.00 100.0 | 1.000 1.000 1.000
+svolta       0.5  353 | 0.994 0.901 0.07   0.0 | 0.994 0.856 0.06   0.0 | 0.986 0.819 0.05   0.0 | 0.938 0.756 0.02   0.0 | 0.983 0.853 0.05   0.0 | 0.983 0.841 0.05   0.0 | 1.000 1.000 1.000
+svolta       1.0  391 | 0.898 0.719 0.16   0.0 | 0.918 0.788 0.21   0.0 | 0.990 0.714 0.57   0.0 | 0.806 0.532 0.06   0.0 | 0.921 0.803 0.19   0.0 | 0.926 0.816 0.19   0.0 | 1.000 1.000 1.000
+svolta       2.0  322 | 0.640 0.373 0.33   0.0 | 0.770 0.466 0.53   0.0 | 0.991 0.643 0.99   0.0 | 0.491 0.242 0.13   0.0 | 0.634 0.438 0.53   1.2 | 0.720 0.553 0.51  22.4 | 1.000 1.000 1.000
+svolta       3.0  240 | 0.496 0.254 0.41   0.0 | 0.717 0.300 0.68   0.0 | 0.988 0.596 0.99   0.0 | 0.250 0.129 0.09   0.0 | 0.013 0.000 0.15  56.7 | 0.000 0.000 0.00 100.0 | 1.000 1.000 1.000
+svolta       5.0  124 | 0.419 0.129 0.47   0.0 | 0.685 0.234 0.82   0.0 | 1.000 0.694 1.00   0.0 | 0.105 0.040 0.06   0.0 | 0.008 0.000 0.11  77.4 | 0.000 0.000 0.00 100.0 | 1.000 1.000 1.000
+lontano      0.5  362 | 0.981 0.870 0.07   0.0 | 0.970 0.843 0.06   0.0 | 0.970 0.826 0.05   0.0 | 0.925 0.776 0.02   0.0 | 0.964 0.862 0.05   0.0 | 0.964 0.859 0.04   0.0 | 1.000 1.000 1.000
+lontano      1.0  391 | 0.836 0.714 0.16   0.0 | 0.857 0.757 0.21   0.0 | 0.972 0.655 0.57   0.0 | 0.752 0.519 0.06   0.0 | 0.870 0.767 0.19   0.0 | 0.872 0.770 0.19   0.0 | 1.000 1.000 1.000
+lontano      2.0  389 | 0.473 0.324 0.32   0.0 | 0.612 0.365 0.49   0.0 | 0.925 0.473 0.98   0.0 | 0.386 0.219 0.11   0.0 | 0.519 0.355 0.48   0.3 | 0.555 0.447 0.42  36.2 | 1.000 1.000 1.000
+lontano      3.0  360 | 0.286 0.139 0.36   0.0 | 0.467 0.194 0.62   0.0 | 0.906 0.372 0.99   0.0 | 0.147 0.056 0.06   0.0 | 0.011 0.000 0.21  39.2 | 0.000 0.000 0.00 100.0 | 1.000 1.000 1.000
+lontano      5.0  194 | 0.196 0.072 0.43   0.0 | 0.505 0.077 0.80   0.0 | 0.990 0.448 1.00   0.0 | 0.052 0.026 0.04   0.0 | 0.010 0.000 0.15  69.6 | 0.000 0.000 0.00 100.0 | 1.000 1.000 1.000
+sostalunga   0.5  362 | 1.000 0.909 0.07   0.0 | 0.994 0.856 0.06   0.0 | 0.997 0.801 0.05   0.0 | 0.964 0.751 0.02   0.0 | 0.997 0.845 0.05   0.0 | 0.994 0.831 0.05   0.0 | 1.000 1.000 1.000
+sostalunga   1.0  397 | 0.995 0.851 0.16   0.0 | 0.997 0.861 0.21   0.0 | 1.000 0.708 0.57   0.0 | 0.824 0.552 0.06   0.0 | 0.992 0.914 0.19   0.0 | 0.977 0.889 0.19   0.0 | 1.000 1.000 1.000
+sostalunga   2.0  380 | 0.989 0.753 0.32   0.0 | 1.000 0.842 0.50   0.0 | 1.000 0.582 0.98   0.0 | 0.461 0.245 0.11   0.0 | 0.876 0.679 0.48   1.6 | 0.642 0.592 0.43  35.8 | 1.000 1.000 1.000
+sostalunga   3.0  373 | 0.979 0.635 0.36   0.0 | 1.000 0.804 0.61   0.0 | 0.997 0.496 0.99   0.0 | 0.172 0.054 0.06   0.0 | 0.450 0.279 0.20  41.6 | 0.000 0.000 0.00 100.0 | 1.000 1.000 1.000
+sostalunga   5.0  368 | 0.946 0.560 0.35   0.0 | 0.989 0.848 0.67   0.0 | 0.940 0.361 0.90   0.0 | 0.033 0.005 0.02   0.0 | 0.573 0.342 0.31  41.0 | 0.000 0.000 0.00 100.0 | 1.000 1.000 1.000
+
+## 2. per ciclo nascosto e per passaggio. Per candidata: cicli senza regione % (passaggi) | regione vuota % | cicli R90 su libero oltre fascia % (passaggi) | cicli R90 su libero stretto % | cicli 'piccola e sbagliata' % (passaggi) | punto su libero oltre fascia %
+prosegue    passaggi 400, con occlusione 484, cicli nascosti 13620 | fuori REACH: cicli 0 passaggi 0 | fuori S1: 0 / 0 | fuori S1 congelato: 0 / 0
+   C004   senza   0.0 (0) | vuota   0.0 | suFG   0.0 (0) | suLibero  99.9 | piccolaSbagliata   0.0 (0) | puntoFG   1.8
+   C001   senza   0.0 (0) | vuota   0.0 | suFG   0.0 (0) | suLibero  98.7 | piccolaSbagliata   0.0 (0) | puntoFG   0.0
+   C005W  senza   0.0 (0) | vuota   0.0 | suFG   0.0 (0) | suLibero  92.6 | piccolaSbagliata   0.0 (0) | puntoFG   4.6
+   C005P  senza   0.0 (0) | vuota   0.1 | suFG   0.0 (0) | suLibero  50.2 | piccolaSbagliata   2.7 (33) | puntoFG   4.6
+   ESTA   senza  29.1 (147) | vuota   0.0 | suFG   0.0 (0) | suLibero  57.2 | piccolaSbagliata   0.0 (2) | puntoFG   0.0
+   ESTB   senza  31.2 (199) | vuota   0.0 | suFG   0.0 (0) | suLibero  53.0 | piccolaSbagliata   0.0 (0) | puntoFG   0.0
+rallenta    passaggi 400, con occlusione 478, cicli nascosti 18120 | fuori REACH: cicli 0 passaggi 0 | fuori S1: 0 / 0 | fuori S1 congelato: 0 / 0
+   C004   senza   0.0 (0) | vuota   0.0 | suFG   0.0 (0) | suLibero  99.8 | piccolaSbagliata   0.0 (0) | puntoFG   1.5
+   C001   senza   0.0 (0) | vuota   0.0 | suFG   0.0 (0) | suLibero  98.9 | piccolaSbagliata   0.0 (0) | puntoFG   0.0
+   C005W  senza   0.0 (0) | vuota   0.0 | suFG   0.0 (0) | suLibero  94.9 | piccolaSbagliata   0.0 (0) | puntoFG  18.6
+   C005P  senza   0.0 (0) | vuota   3.6 | suFG   0.0 (0) | suLibero  58.6 | piccolaSbagliata  14.4 (185) | puntoFG  18.6
+   ESTA   senza  30.6 (150) | vuota   0.0 | suFG   0.0 (0) | suLibero  57.9 | piccolaSbagliata   0.1 (9) | puntoFG   0.0
+   ESTB   senza  44.3 (330) | vuota   0.0 | suFG   0.0 (0) | suLibero  44.4 | piccolaSbagliata   0.0 (0) | puntoFG   0.0
+sosta       passaggi 400, con occlusione 486, cicli nascosti 26567 | fuori REACH: cicli 0 passaggi 0 | fuori S1: 0 / 0 | fuori S1 congelato: 0 / 0
+   C004   senza   0.0 (0) | vuota   0.0 | suFG   0.0 (0) | suLibero 100.0 | piccolaSbagliata   0.0 (0) | puntoFG   1.6
+   C001   senza   0.0 (0) | vuota   0.0 | suFG   0.0 (0) | suLibero  99.3 | piccolaSbagliata   0.0 (0) | puntoFG   0.0
+   C005W  senza   0.0 (0) | vuota   0.0 | suFG   0.0 (0) | suLibero  96.3 | piccolaSbagliata   0.0 (1) | puntoFG  27.2
+   C005P  senza   0.0 (0) | vuota   5.3 | suFG   0.0 (0) | suLibero  59.1 | piccolaSbagliata  49.5 (332) | puntoFG  27.2
+   ESTA   senza  22.5 (136) | vuota   0.0 | suFG   0.0 (0) | suLibero  66.6 | piccolaSbagliata   0.0 (1) | puntoFG   0.0
+   ESTB   senza  61.7 (379) | vuota   0.0 | suFG   0.0 (0) | suLibero  30.2 | piccolaSbagliata   0.0 (0) | puntoFG   0.0
+torna       passaggi 400, con occlusione 493, cicli nascosti 18581 | fuori REACH: cicli 0 passaggi 0 | fuori S1: 0 / 0 | fuori S1 congelato: 0 / 0
+   C004   senza   0.0 (0) | vuota   0.0 | suFG   0.0 (0) | suLibero 100.0 | piccolaSbagliata   0.0 (1) | puntoFG   1.3
+   C001   senza   0.0 (0) | vuota   0.0 | suFG   0.0 (0) | suLibero  99.2 | piccolaSbagliata   0.0 (0) | puntoFG   0.0
+   C005W  senza   0.0 (0) | vuota   0.0 | suFG   0.0 (0) | suLibero  95.5 | piccolaSbagliata   0.0 (0) | puntoFG  21.8
+   C005P  senza   0.0 (0) | vuota   4.1 | suFG   0.0 (0) | suLibero  58.7 | piccolaSbagliata  31.5 (353) | puntoFG  21.8
+   ESTA   senza  26.5 (152) | vuota   0.0 | suFG   0.0 (0) | suLibero  61.5 | piccolaSbagliata   0.0 (3) | puntoFG   0.0
+   ESTB   senza  46.0 (347) | vuota   0.0 | suFG   0.0 (0) | suLibero  43.4 | piccolaSbagliata   0.0 (3) | puntoFG   0.0
+svolta      passaggi 400, con occlusione 501, cicli nascosti 19461 | fuori REACH: cicli 0 passaggi 0 | fuori S1: 0 / 0 | fuori S1 congelato: 0 / 0
+   C004   senza   0.0 (0) | vuota   0.0 | suFG   0.0 (0) | suLibero  99.9 | piccolaSbagliata   5.2 (77) | puntoFG   1.4
+   C001   senza   0.0 (0) | vuota   0.0 | suFG   0.0 (0) | suLibero  99.0 | piccolaSbagliata   0.6 (12) | puntoFG   0.0
+   C005W  senza   0.0 (0) | vuota   0.0 | suFG   0.0 (0) | suLibero  95.5 | piccolaSbagliata   0.0 (0) | puntoFG  22.0
+   C005P  senza   0.0 (0) | vuota   3.6 | suFG   0.0 (0) | suLibero  59.7 | piccolaSbagliata  34.7 (292) | puntoFG  22.0
+   ESTA   senza  28.7 (153) | vuota   0.0 | suFG   0.0 (0) | suLibero  60.7 | piccolaSbagliata   1.6 (77) | puntoFG   0.0
+   ESTB   senza  48.3 (330) | vuota   0.0 | suFG   0.0 (0) | suLibero  41.5 | piccolaSbagliata   0.2 (10) | puntoFG   0.0
+lontano     passaggi 400, con occlusione 468, cicli nascosti 24244 | fuori REACH: cicli 0 passaggi 0 | fuori S1: 0 / 0 | fuori S1 congelato: 0 / 0
+   C004   senza   0.0 (0) | vuota   0.0 | suFG   0.0 (0) | suLibero 100.0 | piccolaSbagliata  11.1 (136) | puntoFG   1.7
+   C001   senza   0.0 (0) | vuota   0.0 | suFG   0.0 (0) | suLibero  99.1 | piccolaSbagliata   0.7 (29) | puntoFG   0.0
+   C005W  senza   0.0 (0) | vuota   0.0 | suFG   0.0 (0) | suLibero  96.0 | piccolaSbagliata   0.0 (0) | puntoFG  30.6
+   C005P  senza   0.0 (0) | vuota   6.2 | suFG   0.0 (0) | suLibero  63.1 | piccolaSbagliata  52.1 (368) | puntoFG  30.6
+   ESTA   senza  26.4 (148) | vuota   0.0 | suFG   0.0 (0) | suLibero  62.3 | piccolaSbagliata   2.4 (108) | puntoFG   0.0
+   ESTB   senza  57.6 (390) | vuota   0.0 | suFG   0.0 (0) | suLibero  33.9 | piccolaSbagliata   0.5 (26) | puntoFG   0.0
+sostalunga  passaggi 400, con occlusione 483, cicli nascosti 28065 | fuori REACH: cicli 0 passaggi 0 | fuori S1: 0 / 0 | fuori S1 congelato: 0 / 0
+   C004   senza   0.0 (0) | vuota   0.0 | suFG   0.0 (0) | suLibero  99.9 | piccolaSbagliata   0.0 (0) | puntoFG   1.0
+   C001   senza   0.0 (0) | vuota   0.0 | suFG   0.0 (0) | suLibero  99.3 | piccolaSbagliata   0.0 (0) | puntoFG   0.0
+   C005W  senza   0.0 (0) | vuota   0.0 | suFG   0.0 (0) | suLibero  96.6 | piccolaSbagliata   0.4 (7) | puntoFG  25.4
+   C005P  senza   0.0 (0) | vuota   5.2 | suFG   0.0 (0) | suLibero  56.2 | piccolaSbagliata  50.7 (336) | puntoFG  25.4
+   ESTA   senza  25.4 (161) | vuota   0.0 | suFG   0.0 (0) | suLibero  65.2 | piccolaSbagliata   0.0 (4) | puntoFG   0.0
+   ESTB   senza  63.4 (378) | vuota   0.0 | suFG   0.0 (0) | suLibero  29.2 | piccolaSbagliata   0.0 (0) | puntoFG   0.0
+
+## 3. cicli a soggetto VISIBILE ma non rilevato durante l'occlusione dichiarata (fuori dalla fascia C6): n | contenuto da R90 per candidata | REACH | S1
+prosegue      164 | 0.024 0.018 0.012 0.024 0.012 0.012 | 0.024 | 0.915
+rallenta      157 | 0.025 0.019 0.025 0.013 0.013 0.013 | 0.025 | 0.911
+sosta         148 | 0.007 0.014 0.014 0.007 0.007 0.007 | 0.014 | 0.912
+torna         182 | 0.022 0.022 0.022 0.016 0.016 0.016 | 0.022 | 0.890
+svolta        183 | 0.027 0.033 0.066 0.027 0.011 0.011 | 0.071 | 0.896
+lontano       114 | 0.026 0.026 0.009 0.018 0.026 0.026 | 0.026 | 0.851
+sostalunga    116 | 0.017 0.009 0.009 0.017 0.017 0.017 | 0.017 | 0.871
+
+## 4. ricomparsa: n, buio medio s | per candidata: prima misura entro 0,45 / entro 0,30 / dentro R90 | ellisse 95% ESTA ESTB: calcolata [dichiarata, cioe non perso] (perso a quel punto) | R90 > meta ombra prima della ricomparsa, per candidata | > 80% | nucleo ancora mostrato
+prosegue     353 2.49 | 1.00/0.98/0.22 1.00/0.99/0.22 1.00/0.99/0.26 0.92/0.87/0.20 0.41/0.39/0.09 0.49/0.48/0.11 | 0.572 [0.326] (0.30) 1.000 [0.487] (0.51) | meta: 0.16 0.48 1.00 0.00 0.46 0.62 | 80: 0.00 0.17 0.93 0.00 0.05 0.08 | nucleo 0.33
+            salto mediano / p90 (m): C004 0.75/1.22  C001 1.04/1.39  vel.cost 0.43/0.95  EST-A media 1.38/1.77  fermo 2.56/2.81
+rallenta     293 3.11 | 1.00/0.98/0.29 1.00/1.00/0.32 1.00/1.00/0.39 0.38/0.35/0.10 0.22/0.12/0.02 0.12/0.12/0.03 | 0.208 [0.068] (0.19) 1.000 [0.123] (0.88) | meta: 0.09 0.53 1.00 0.00 0.38 0.68 | 80: 0.00 0.10 0.99 0.00 0.02 0.03 | nucleo 0.28
+            salto mediano / p90 (m): C004 1.01/1.31  C001 1.01/1.33  vel.cost 1.14/2.38  EST-A media 1.50/1.73  fermo 2.54/2.78
+sosta        124 4.32 | 1.00/0.98/0.14 1.00/0.99/0.20 1.00/0.99/0.23 0.15/0.14/0.05 0.72/0.54/0.07 0.07/0.07/0.04 | 0.306 [0.282] (0.03) 1.000 [0.073] (0.93) | meta: 0.01 0.54 1.00 0.00 0.65 0.50 | 80: 0.00 0.04 0.99 0.00 0.01 0.00 | nucleo 0.29
+            salto mediano / p90 (m): C004 1.22/1.42  C001 1.02/1.55  vel.cost 4.04/5.90  EST-A media 1.41/1.69  fermo 2.54/2.76
+torna        300 3.25 | 0.99/0.96/0.22 1.00/0.95/0.18 0.92/0.90/0.23 0.04/0.03/0.01 0.68/0.60/0.12 0.07/0.05/0.01 | 0.750 [0.490] (0.26) 0.833 [0.050] (0.89) | meta: 0.10 0.64 1.00 0.00 0.48 0.72 | 80: 0.00 0.14 0.99 0.00 0.05 0.06 | nucleo 0.19
+            salto mediano / p90 (m): C004 1.50/2.03  C001 1.68/2.46  vel.cost 3.63/5.86  EST-A media 1.12/1.54  fermo 0.18/0.42
+svolta       201 2.80 | 0.55/0.45/0.07 0.79/0.74/0.18 1.00/1.00/0.54 0.25/0.19/0.03 0.08/0.07/0.01 0.15/0.12/0.03 | 0.189 [0.025] (0.26) 0.861 [0.124] (0.82) | meta: 0.12 0.53 1.00 0.00 0.43 0.70 | 80: 0.00 0.16 0.99 0.00 0.05 0.05 | nucleo 0.26
+            salto mediano / p90 (m): C004 1.69/2.45  C001 1.78/2.94  vel.cost 1.80/3.04  EST-A media 1.89/2.43  fermo 2.59/2.91
+lontano       14 2.87 | 0.93/0.86/0.21 0.93/0.93/0.29 0.93/0.93/0.29 0.50/0.50/0.21 0.21/0.21/0.07 0.21/0.21/0.07 | 0.286 [0.143] (0.36) 0.929 [0.214] (0.71) | meta: 0.07 0.64 1.00 0.00 0.36 0.71 | 80: 0.00 0.07 0.93 0.00 0.00 0.07 | nucleo 0.29
+            salto mediano / p90 (m): C004 1.14/1.80  C001 1.15/1.65  vel.cost 1.45/2.23  EST-A media 1.78/2.39  fermo 2.55/3.16
+sostalunga    14 2.63 | 1.00/1.00/0.43 1.00/1.00/0.36 1.00/1.00/0.43 0.93/0.86/0.36 0.36/0.29/0.14 0.50/0.50/0.21 | 0.571 [0.143] (0.43) 1.000 [0.500] (0.50) | meta: 0.21 0.43 1.00 0.00 0.43 0.79 | 80: 0.00 0.29 0.93 0.00 0.07 0.14 | nucleo 0.21
+            salto mediano / p90 (m): C004 0.84/1.33  C001 1.08/1.70  vel.cost 0.38/0.95  EST-A media 1.38/1.57  fermo 2.49/2.66
+
+## 5. ciclo di vita: passaggi | con un ciclo nascosto senza traccia pendente (cicli) | traccia chiusa in campo aperto | entrata non confermata | velocita stimata/vera all'ingresso: mediana p10 p90
+prosegue     400 |    0 (0) |    1 |    0 | corrette 39 | 1.02 0.82 1.27
+rallenta     400 |    0 (0) |    2 |    0 | corrette 47 | 1.00 0.79 1.26
+sosta        400 |    0 (0) |    0 |    0 | corrette 42 | 1.02 0.81 1.25
+torna        400 |    4 (344) |    4 |    1 | corrette 55 | 1.01 0.81 1.28
+svolta       400 |    3 (98) |    4 |    0 | corrette 39 | 1.03 0.82 1.30
+lontano      400 |    2 (80) |    2 |    0 | corrette 43 | 1.02 0.81 1.27
+sostalunga   400 |    0 (0) |    0 |    0 | corrette 43 | 1.04 0.85 1.31
+
+## 6. C-EST: passaggi con mu1 > 0,5 oltre 0,5 s dopo l'uscita attesa (A, B) | per tau: perso% A B, sigma_eff medio A B, mu1 medio A B
+prosegue    mu1 dominante: A 65  B 92 su 484 occlusioni
+     tau  0.5 n  362 | perso   0.0   0.0 | sigma 0.17 0.17 | mu1 0.81 0.80
+     tau  1.0 n  393 | perso   0.0   0.0 | sigma 0.35 0.33 | mu1 0.82 0.80
+     tau  2.0 n  210 | perso   1.9   2.9 | sigma 0.71 0.72 | mu1 0.76 0.78
+     tau  3.0 n  122 | perso  95.1 100.0 | sigma 1.21 1.35 | mu1 0.68 0.78
+     tau  5.0 n   41 | perso  95.1 100.0 | sigma 2.50 2.46 | mu1 0.89 0.83
+rallenta    mu1 dominante: A 74  B 271 su 478 occlusioni
+     tau  0.5 n  358 | perso   0.0   0.0 | sigma 0.17 0.17 | mu1 0.81 0.80
+     tau  1.0 n  395 | perso   0.0   0.0 | sigma 0.34 0.33 | mu1 0.82 0.80
+     tau  2.0 n  323 | perso   2.2  25.4 | sigma 0.63 0.78 | mu1 0.54 0.74
+     tau  3.0 n  203 | perso  66.0 100.0 | sigma 0.95 1.43 | mu1 0.43 0.77
+     tau  5.0 n   88 | perso  95.5 100.0 | sigma 2.25 2.44 | mu1 0.76 0.83
+sosta       mu1 dominante: A 73  B 358 su 486 occlusioni
+     tau  0.5 n  362 | perso   0.0   0.0 | sigma 0.17 0.17 | mu1 0.81 0.80
+     tau  1.0 n  391 | perso   0.0   0.0 | sigma 0.35 0.33 | mu1 0.82 0.80
+     tau  2.0 n  378 | perso   1.1  37.3 | sigma 0.58 0.82 | mu1 0.43 0.72
+     tau  3.0 n  366 | perso  35.2 100.0 | sigma 0.71 1.53 | mu1 0.21 0.78
+     tau  5.0 n  267 | perso  47.9 100.0 | sigma 1.24 2.37 | mu1 0.29 0.84
+torna       mu1 dominante: A 82  B 279 su 493 occlusioni
+     tau  0.5 n  364 | perso   0.0   0.0 | sigma 0.17 0.16 | mu1 0.81 0.80
+     tau  1.0 n  394 | perso   0.0   0.0 | sigma 0.34 0.33 | mu1 0.82 0.80
+     tau  2.0 n  336 | perso   1.5  28.3 | sigma 0.62 0.80 | mu1 0.52 0.73
+     tau  3.0 n  229 | perso  54.6 100.0 | sigma 0.84 1.48 | mu1 0.33 0.78
+     tau  5.0 n   85 | perso  82.4 100.0 | sigma 1.76 2.41 | mu1 0.53 0.83
+svolta      mu1 dominante: A 85  B 266 su 501 occlusioni
+     tau  0.5 n  353 | perso   0.0   0.0 | sigma 0.17 0.17 | mu1 0.81 0.80
+     tau  1.0 n  391 | perso   0.0   0.0 | sigma 0.34 0.33 | mu1 0.82 0.80
+     tau  2.0 n  322 | perso   1.2  22.4 | sigma 0.63 0.77 | mu1 0.55 0.74
+     tau  3.0 n  240 | perso  56.7 100.0 | sigma 0.87 1.46 | mu1 0.35 0.77
+     tau  5.0 n  124 | perso  77.4 100.0 | sigma 1.72 2.41 | mu1 0.50 0.83
+lontano     mu1 dominante: A 75  B 362 su 468 occlusioni
+     tau  0.5 n  362 | perso   0.0   0.0 | sigma 0.17 0.17 | mu1 0.81 0.80
+     tau  1.0 n  391 | perso   0.0   0.0 | sigma 0.35 0.33 | mu1 0.82 0.80
+     tau  2.0 n  389 | perso   0.3  36.2 | sigma 0.59 0.81 | mu1 0.44 0.72
+     tau  3.0 n  360 | perso  39.2 100.0 | sigma 0.73 1.52 | mu1 0.24 0.78
+     tau  5.0 n  194 | perso  69.6 100.0 | sigma 1.50 2.40 | mu1 0.41 0.83
+sostalunga  mu1 dominante: A 71  B 355 su 483 occlusioni
+     tau  0.5 n  362 | perso   0.0   0.0 | sigma 0.17 0.17 | mu1 0.81 0.80
+     tau  1.0 n  397 | perso   0.0   0.0 | sigma 0.34 0.33 | mu1 0.82 0.80
+     tau  2.0 n  380 | perso   1.6  35.8 | sigma 0.59 0.82 | mu1 0.46 0.72
+     tau  3.0 n  373 | perso  41.6 100.0 | sigma 0.74 1.52 | mu1 0.23 0.78
+     tau  5.0 n  368 | perso  41.0 100.0 | sigma 1.09 2.34 | mu1 0.22 0.84
+
+## 7. miscele per ripesatura: 'squadra' = pesi di -mix (predefiniti 60/10/10/10/5/5), giurato 30/10/20/20/10/10: tau | per candidata c90 c50
+squadra   0.5 n.eff 180.7 | C004 0.998 0.931 | C001 0.996 0.868 | C005W 0.998 0.860 | C005P 0.974 0.799 | ESTA 0.997 0.890 | ESTB 0.997 0.889 |
+squadra   1.0 n.eff 196.5 | C004 0.984 0.874 | C001 0.989 0.910 | C005W 0.998 0.804 | C005P 0.907 0.632 | ESTA 0.988 0.920 | ESTB 0.985 0.918 |
+squadra   2.0 n.eff 132.6 | C004 0.926 0.677 | C001 0.956 0.774 | C005W 0.994 0.811 | C005P 0.712 0.403 | ESTA 0.866 0.670 | ESTB 0.817 0.773 |
+squadra   3.0 n.eff  91.5 | C004 0.855 0.542 | C001 0.921 0.668 | C005W 0.989 0.736 | C005P 0.433 0.190 | ESTA 0.171 0.109 | ESTB 0.000 0.000 |
+squadra   5.0 n.eff  42.2 | C004 0.738 0.364 | C001 0.913 0.530 | C005W 0.998 0.725 | C005P 0.183 0.075 | ESTA 0.176 0.077 | ESTB 0.000 0.000 |
+giurato   0.5 n.eff 180.5 | C004 0.995 0.918 | C001 0.994 0.862 | C005W 0.995 0.844 | C005P 0.962 0.785 | ESTA 0.995 0.876 | ESTB 0.994 0.875 |
+giurato   1.0 n.eff 196.3 | C004 0.972 0.844 | C001 0.978 0.869 | C005W 0.996 0.752 | C005P 0.857 0.588 | ESTA 0.977 0.897 | ESTB 0.970 0.878 |
+giurato   2.0 n.eff 154.6 | C004 0.881 0.642 | C001 0.925 0.735 | C005W 0.990 0.698 | C005P 0.578 0.320 | ESTA 0.826 0.627 | ESTB 0.730 0.667 |
+giurato   3.0 n.eff 118.0 | C004 0.808 0.520 | C001 0.886 0.643 | C005W 0.983 0.599 | C005P 0.304 0.136 | ESTA 0.250 0.166 | ESTB 0.000 0.000 |
+giurato   5.0 n.eff  61.7 | C004 0.724 0.358 | C001 0.882 0.562 | C005W 0.997 0.624 | C005P 0.118 0.048 | ESTA 0.225 0.098 | ESTB 0.000 0.000 |
+
+## 8. errore mediano del punto (m) per comportamento e tau: C004 fantasma | C001 media | vel.cost | EST-A media ritagliata | fermo
+prosegue     0.5  362 | 0.11 | 0.10 | 0.11 | 0.10 | 0.62
+prosegue     1.0  393 | 0.18 | 0.17 | 0.19 | 0.18 | 1.13
+prosegue     2.0  210 | 0.36 | 0.39 | 0.37 | 0.42 | 1.43
+prosegue     3.0  122 | 0.53 | 0.64 | 0.53 | 0.64 | 1.68
+prosegue     5.0   41 | 0.87 | 1.20 | 0.90 | 0.64 | 1.91
+rallenta     0.5  358 | 0.10 | 0.11 | 0.11 | 0.10 | 0.63
+rallenta     1.0  395 | 0.18 | 0.18 | 0.20 | 0.18 | 1.03
+rallenta     2.0  323 | 0.34 | 0.37 | 0.53 | 0.49 | 1.53
+rallenta     3.0  203 | 0.41 | 0.54 | 0.77 | 0.75 | 1.65
+rallenta     5.0   88 | 0.60 | 1.16 | 1.13 | 0.70 | 1.77
+sosta        0.5  362 | 0.10 | 0.11 | 0.11 | 0.10 | 0.62
+sosta        1.0  391 | 0.19 | 0.21 | 0.21 | 0.18 | 0.96
+sosta        2.0  378 | 0.40 | 0.45 | 0.85 | 0.42 | 1.26
+sosta        3.0  366 | 0.47 | 0.62 | 1.97 | 0.48 | 1.34
+sosta        5.0  267 | 0.61 | 1.14 | 2.96 | 0.77 | 1.70
+torna        0.5  364 | 0.11 | 0.11 | 0.11 | 0.11 | 0.57
+torna        1.0  394 | 0.20 | 0.21 | 0.22 | 0.20 | 0.91
+torna        2.0  336 | 0.42 | 0.46 | 0.71 | 0.46 | 1.27
+torna        3.0  229 | 0.51 | 0.66 | 1.34 | 0.55 | 1.24
+torna        5.0   85 | 0.75 | 1.39 | 2.24 | 0.76 | 1.06
+svolta       0.5  353 | 0.11 | 0.11 | 0.11 | 0.11 | 0.61
+svolta       1.0  391 | 0.21 | 0.22 | 0.22 | 0.22 | 1.01
+svolta       2.0  322 | 0.64 | 0.62 | 0.72 | 0.77 | 1.69
+svolta       3.0  240 | 1.16 | 1.08 | 1.39 | 1.34 | 1.99
+svolta       5.0  124 | 1.73 | 1.67 | 2.14 | 1.78 | 2.30
+lontano      0.5  362 | 0.11 | 0.11 | 0.11 | 0.10 | 0.58
+lontano      1.0  391 | 0.21 | 0.22 | 0.22 | 0.21 | 0.95
+lontano      2.0  389 | 0.90 | 0.83 | 1.10 | 1.02 | 1.66
+lontano      3.0  360 | 1.84 | 1.51 | 2.48 | 1.86 | 2.27
+lontano      5.0  194 | 2.26 | 1.51 | 3.34 | 2.52 | 2.87
+sostalunga   0.5  362 | 0.11 | 0.12 | 0.11 | 0.11 | 0.59
+sostalunga   1.0  397 | 0.19 | 0.21 | 0.22 | 0.20 | 0.91
+sostalunga   2.0  380 | 0.41 | 0.46 | 0.82 | 0.47 | 1.24
+sostalunga   3.0  373 | 0.53 | 0.63 | 1.79 | 0.58 | 1.39
+sostalunga   5.0  368 | 0.58 | 1.30 | 3.92 | 0.61 | 1.43
+
+## 10. costo per ciclo e traccia (C, -O2, macchina condivisa): media / massimo in microsecondi
+C004       39.0 /    205.1  (n 169493)
+C001       94.6 /    370.6  (n 169493)
+C005W       6.4 /     54.7  (n 169493)
+ESTA       30.6 /    227.7  (n 169493)
+ESTB       29.3 /    187.0  (n 169493)

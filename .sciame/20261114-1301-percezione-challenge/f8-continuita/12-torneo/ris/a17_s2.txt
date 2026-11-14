@@ -1,0 +1,13 @@
+# s2.py: latenza 155 ms; errore = |segno - vero all istante dell uscita|; N = 400 per riga, semi 9000-9399
+(a) moto regolare v=0.5: non compensato mediana 0.078 p90 0.117 | compensato mediana 0.030 p90 0.072
+(a) moto regolare v=1.2: non compensato mediana 0.186 p90 0.224 | compensato mediana 0.030 p90 0.072
+(a) moto regolare v=1.8: non compensato mediana 0.279 p90 0.317 | compensato mediana 0.030 p90 0.072
+(b) sosta improvvisa (0,13 s) v=0.5, 3 cicli dopo l inizio della frenata: non compensato mediana nan p90 nan | compensato mediana nan p90 nan | sorpasso massimo del compensato oltre il vero: mediana 0.100 p90 0.129
+(b) sosta improvvisa (0,13 s) v=1.2, 3 cicli dopo l inizio della frenata: non compensato mediana 0.040 p90 0.080 | compensato mediana 0.178 p90 0.242 | sorpasso massimo del compensato oltre il vero: mediana 0.216 p90 0.266
+(b) sosta improvvisa (0,13 s) v=1.8, 3 cicli dopo l inizio della frenata: non compensato mediana 0.058 p90 0.111 | compensato mediana 0.271 p90 0.341 | sorpasso massimo del compensato oltre il vero: mediana 0.316 p90 0.363
+(c) ingresso nell ombra, C6=0.00 v=0.5: passaggi con il segno pieno compensato dentro l ombra 371/400; dentro la fascia di 0,20 m 400/400
+(c) ingresso nell ombra, C6=0.00 v=1.2: passaggi con il segno pieno compensato dentro l ombra 393/400; dentro la fascia di 0,20 m 400/400
+(c) ingresso nell ombra, C6=0.00 v=1.8: passaggi con il segno pieno compensato dentro l ombra 396/400; dentro la fascia di 0,20 m 400/400
+(c) ingresso nell ombra, C6=0.22 v=0.5: passaggi con il segno pieno compensato dentro l ombra 0/400; dentro la fascia di 0,20 m 339/400
+(c) ingresso nell ombra, C6=0.22 v=1.2: passaggi con il segno pieno compensato dentro l ombra 31/400; dentro la fascia di 0,20 m 394/400
+(c) ingresso nell ombra, C6=0.22 v=1.8: passaggi con il segno pieno compensato dentro l ombra 188/400; dentro la fascia di 0,20 m 391/400

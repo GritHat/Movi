@@ -1,0 +1,14 @@
+verifica_strati.py F mondi 24 | Python 3.14.10
+== F. Seconda tornata (previsioni D1-D5): costo della regola PI per v_max e scena; buchi per cella ==
+  quota dichiarata dalla regola PI sul visto libero (dich/F), senza buchi, 12 mondi x 300 fotogrammi (scena vuota: 2 mondi)
+  v_max  margine_celle   vuota    pannelli   dinamica   | celle dichiarate per fotogramma (dinamica)
+  0.4    1              79.8%    66.9%     60.7%    | 203.7
+  0.9    2              61.5%    40.1%     31.8%    | 103.6
+  1.4    4              31.2%     9.1%      5.1%    | 16.8
+  2.5    6              10.9%     0.6%      0.2%    | 0.7
+  buchi per cella (5 %, indipendenti), scena dinamica, 24 mondi x 300 fotogrammi
+  v_max 0.9: PI senza buchi 79.6 celle/fot, con buchi 67.6 (84.9 %); cono1 senza 79.3, con 21.8 (27.5 %); PI_eta con buchi 67.6
+  v_max 1.4: PI senza buchi 9.2 celle/fot, con buchi 6.8 (74.3 %); cono1 senza 9.1, con 0.1 (1.3 %); PI_eta con buchi 6.8
+  in tutte le 200 corse della seconda tornata: falsi liberi della regola PI (finestra + latenza zero) = 0; celle occupate fuori da PI = 0
+
+tempo totale: 24.3 s

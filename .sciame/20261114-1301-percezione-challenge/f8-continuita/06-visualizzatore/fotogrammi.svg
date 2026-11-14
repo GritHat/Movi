@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="660" viewBox="0 0 1240 660" font-family="DejaVu Sans, Arial, sans-serif">
+<rect width="1240" height="660" fill="white"/>
+<defs><pattern id="rade" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="9" stroke="black" stroke-width="1.5"/></pattern><pattern id="contro" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="6" stroke="black" stroke-width="1.4"/></pattern><pattern id="fitte" width="3" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="3" stroke="black" stroke-width="1.1"/></pattern></defs>
+<rect x="10" y="10" width="236" height="262" fill="white" stroke="black" stroke-width="1"/>
+<text x="15" y="23" font-size="11" font-weight="bold">A1 · osservato</text>
+<text x="15" y="36" font-size="10">0,3 s prima dell'ingresso</text>
+<clipPath id="clip0"><path d="M93.0,125.0 L74.6,54.9 A210.0,210.0 0 0 1 181.4,54.9 L163.0,125.0 Z"/></clipPath>
+<path d="M93.0,125.0 L74.6,54.9 A210.0,210.0 0 0 1 181.4,54.9 L163.0,125.0 Z" fill="white" stroke="black" stroke-width="0.8"/>
+<line x1="128.0" y1="256.0" x2="19.5" y2="143.7" stroke="black" stroke-width="1" stroke-dasharray="1 5"/>
+<line x1="128.0" y1="256.0" x2="236.5" y2="143.7" stroke="black" stroke-width="1" stroke-dasharray="1 5"/>
+<text x="128.0" y="196.0" font-size="9" text-anchor="middle">suolo visto libero</text>
+<text x="128.0" y="74.6" font-size="9" text-anchor="middle">in ombra</text>
+<path d="M128.0,256.0 l-6,9 l12,0 Z" fill="black"/>
+<rect x="93.0" y="121.5" width="70.0" height="7" fill="black"/>
+<text x="128.0" y="140.0" font-size="9" text-anchor="middle">mezzo fermo</text>
+<line x1="27.5" y1="97.0" x2="62.5" y2="97.0" stroke="black" stroke-width="2"/>
+<circle cx="62.5" cy="97.0" r="6" fill="black"/>
+<rect x="254" y="10" width="236" height="262" fill="white" stroke="black" stroke-width="1"/>
+<text x="259" y="23" font-size="11" font-weight="bold">A2 · previsto</text>
+<text x="259" y="36" font-size="10">non visto da 0,3 s</text>
+<clipPath id="clip1"><path d="M337.0,125.0 L318.6,54.9 A210.0,210.0 0 0 1 425.4,54.9 L407.0,125.0 Z"/></clipPath>
+<path d="M337.0,125.0 L318.6,54.9 A210.0,210.0 0 0 1 425.4,54.9 L407.0,125.0 Z" fill="url(#rade)" stroke="black" stroke-width="0.8"/>
+<line x1="372.0" y1="256.0" x2="263.5" y2="143.7" stroke="black" stroke-width="1" stroke-dasharray="1 5"/>
+<line x1="372.0" y1="256.0" x2="480.5" y2="143.7" stroke="black" stroke-width="1" stroke-dasharray="1 5"/>
+<path d="M372.0,256.0 l-6,9 l12,0 Z" fill="black"/>
+<rect x="337.0" y="121.5" width="70.0" height="7" fill="black"/>
+<text x="372.0" y="140.0" font-size="9" text-anchor="middle">mezzo fermo</text>
+<line x1="271.5" y1="97.0" x2="329.6" y2="97.0" stroke="black" stroke-width="2"/>
+<g clip-path="url(#clip1)">
+<circle cx="352.7" cy="97.0" r="11.8" fill="white" stroke="black" stroke-width="1.6" stroke-dasharray="5 3"/>
+<circle cx="352.7" cy="97.0" r="11.8" fill="url(#contro)" stroke="none"/>
+<circle cx="352.7" cy="97.0" r="6.3" fill="url(#fitte)" stroke="black" stroke-width="0.8" stroke-dasharray="2 2"/>
+</g>
+<line x1="329.6" y1="97.0" x2="352.7" y2="97.0" stroke="black" stroke-width="2" stroke-dasharray="4 4"/>
+<circle cx="352.7" cy="97.0" r="6" fill="white" stroke="black" stroke-width="2"/>
+<rect x="498" y="10" width="236" height="262" fill="white" stroke="black" stroke-width="1"/>
+<text x="503" y="23" font-size="11" font-weight="bold">A3 · previsto</text>
+<text x="503" y="36" font-size="10">non visto da 0,8 s</text>
+<clipPath id="clip2"><path d="M581.0,125.0 L562.6,54.9 A210.0,210.0 0 0 1 669.4,54.9 L651.0,125.0 Z"/></clipPath>
+<path d="M581.0,125.0 L562.6,54.9 A210.0,210.0 0 0 1 669.4,54.9 L651.0,125.0 Z" fill="url(#rade)" stroke="black" stroke-width="0.8"/>
+<line x1="616.0" y1="256.0" x2="507.5" y2="143.7" stroke="black" stroke-width="1" stroke-dasharray="1 5"/>
+<line x1="616.0" y1="256.0" x2="724.5" y2="143.7" stroke="black" stroke-width="1" stroke-dasharray="1 5"/>
+<path d="M616.0,256.0 l-6,9 l12,0 Z" fill="black"/>
+<rect x="581.0" y="121.5" width="70.0" height="7" fill="black"/>
+<text x="616.0" y="140.0" font-size="9" text-anchor="middle">mezzo fermo</text>
+<line x1="515.5" y1="97.0" x2="573.6" y2="97.0" stroke="black" stroke-width="2"/>
+<g clip-path="url(#clip2)">
+<circle cx="635.2" cy="97.0" r="29.8" fill="white" stroke="black" stroke-width="1.6" stroke-dasharray="5 3"/>
+<circle cx="635.2" cy="97.0" r="29.8" fill="url(#contro)" stroke="none"/>
+<circle cx="635.2" cy="97.0" r="17.2" fill="url(#fitte)" stroke="black" stroke-width="0.8" stroke-dasharray="2 2"/>
+</g>
+<line x1="573.6" y1="97.0" x2="632.9" y2="95.2" stroke="black" stroke-width="2" stroke-dasharray="4 4"/>
+<circle cx="632.9" cy="95.2" r="6" fill="white" stroke="black" stroke-width="2"/>
+<rect x="742" y="10" width="236" height="262" fill="white" stroke="black" stroke-width="1"/>
+<text x="747" y="23" font-size="11" font-weight="bold">A4 · di nuovo osservato</text>
+<text x="747" y="36" font-size="10">ricompare a 1,1 s: dentro il 90 %</text>
+<clipPath id="clip3"><path d="M825.0,125.0 L806.6,54.9 A210.0,210.0 0 0 1 913.4,54.9 L895.0,125.0 Z"/></clipPath>
+<path d="M825.0,125.0 L806.6,54.9 A210.0,210.0 0 0 1 913.4,54.9 L895.0,125.0 Z" fill="white" stroke="black" stroke-width="0.8"/>
+<line x1="860.0" y1="256.0" x2="751.5" y2="143.7" stroke="black" stroke-width="1" stroke-dasharray="1 5"/>
+<line x1="860.0" y1="256.0" x2="968.5" y2="143.7" stroke="black" stroke-width="1" stroke-dasharray="1 5"/>
+<path d="M860.0,256.0 l-6,9 l12,0 Z" fill="black"/>
+<rect x="825.0" y="121.5" width="70.0" height="7" fill="black"/>
+<text x="860.0" y="140.0" font-size="9" text-anchor="middle">mezzo fermo</text>
+<line x1="759.5" y1="97.0" x2="817.6" y2="97.0" stroke="black" stroke-width="2"/>
+<line x1="817.6" y1="97.0" x2="884.1" y2="90.3" stroke="black" stroke-width="2" stroke-dasharray="4 4"/>
+<circle cx="884.1" cy="90.3" r="6" fill="white" stroke="black" stroke-width="2"/>
+<line x1="884.1" y1="78.3" x2="902.4" y2="85.0" stroke="black" stroke-width="1"/>
+<path d="M884.1,74.3 v8 M902.4,81.0 v8" stroke="black" stroke-width="1"/>
+<text x="893.2" y="71.3" font-size="9" text-anchor="middle">scarto 0,28 m</text>
+<circle cx="902.4" cy="97.0" r="6" fill="black"/>
+<rect x="986" y="10" width="236" height="262" fill="white" stroke="black" stroke-width="1"/>
+<text x="991" y="23" font-size="11" font-weight="bold">A5 · osservato</text>
+<text x="991" y="36" font-size="10">il tratto previsto resta tratteggiato</text>
+<clipPath id="clip4"><path d="M1069.0,125.0 L1050.6,54.9 A210.0,210.0 0 0 1 1157.4,54.9 L1139.0,125.0 Z"/></clipPath>
+<path d="M1069.0,125.0 L1050.6,54.9 A210.0,210.0 0 0 1 1157.4,54.9 L1139.0,125.0 Z" fill="white" stroke="black" stroke-width="0.8"/>
+<line x1="1104.0" y1="256.0" x2="995.5" y2="143.7" stroke="black" stroke-width="1" stroke-dasharray="1 5"/>
+<line x1="1104.0" y1="256.0" x2="1212.5" y2="143.7" stroke="black" stroke-width="1" stroke-dasharray="1 5"/>
+<path d="M1104.0,256.0 l-6,9 l12,0 Z" fill="black"/>
+<rect x="1069.0" y="121.5" width="70.0" height="7" fill="black"/>
+<text x="1104.0" y="140.0" font-size="9" text-anchor="middle">mezzo fermo</text>
+<line x1="1003.5" y1="97.0" x2="1061.6" y2="97.0" stroke="black" stroke-width="2"/>
+<line x1="1061.6" y1="97.0" x2="1128.1" y2="90.3" stroke="black" stroke-width="2" stroke-dasharray="4 4"/>
+<circle cx="1128.1" cy="90.3" r="6" fill="white" stroke="black" stroke-width="2"/>
+<circle cx="1169.5" cy="97.0" r="6" fill="black"/>
+<line x1="1146.4" y1="97.0" x2="1169.5" y2="97.0" stroke="black" stroke-width="2"/>
+<text x="10" y="290" font-size="12" font-weight="bold">Scena A — una persona passa dietro un mezzo fermo (vista dall'alto; il sensore è il triangolo in basso)</text>
+<rect x="10" y="306" width="236" height="262" fill="white" stroke="black" stroke-width="1"/>
+<text x="15" y="319" font-size="11" font-weight="bold">B1 · previsto</text>
+<text x="15" y="332" font-size="10">non visto da 0,5 s</text>
+<clipPath id="clip10"><path d="M93.0,421.0 L74.6,350.9 A210.0,210.0 0 0 1 181.4,350.9 L163.0,421.0 Z"/></clipPath>
+<path d="M93.0,421.0 L74.6,350.9 A210.0,210.0 0 0 1 181.4,350.9 L163.0,421.0 Z" fill="url(#rade)" stroke="black" stroke-width="0.8"/>
+<line x1="128.0" y1="552.0" x2="19.5" y2="439.7" stroke="black" stroke-width="1" stroke-dasharray="1 5"/>
+<line x1="128.0" y1="552.0" x2="236.5" y2="439.7" stroke="black" stroke-width="1" stroke-dasharray="1 5"/>
+<path d="M128.0,552.0 l-6,9 l12,0 Z" fill="black"/>
+<rect x="93.0" y="417.5" width="70.0" height="7" fill="black"/>
+<text x="128.0" y="436.0" font-size="9" text-anchor="middle">mezzo fermo</text>
+<line x1="27.5" y1="393.0" x2="85.6" y2="393.0" stroke="black" stroke-width="2"/>
+<g clip-path="url(#clip10)">
+<circle cx="124.1" cy="393.0" r="19.6" fill="white" stroke="black" stroke-width="1.6" stroke-dasharray="5 3"/>
+<circle cx="124.1" cy="393.0" r="19.6" fill="url(#contro)" stroke="none"/>
+<circle cx="124.1" cy="393.0" r="10.4" fill="url(#fitte)" stroke="black" stroke-width="0.8" stroke-dasharray="2 2"/>
+</g>
+<line x1="85.6" y1="393.0" x2="124.1" y2="393.0" stroke="black" stroke-width="2" stroke-dasharray="4 4"/>
+<circle cx="124.1" cy="393.0" r="6" fill="white" stroke="black" stroke-width="2"/>
+<path d="M121.1,403.0 l6,6 M127.1,403.0 l-6,6" stroke="black" stroke-width="1"/>
+<rect x="254" y="306" width="236" height="262" fill="white" stroke="black" stroke-width="1"/>
+<text x="259" y="319" font-size="11" font-weight="bold">B2 · previsto, regione larga</text>
+<text x="259" y="332" font-size="10">non visto da 1,5 s: soglia superata</text>
+<clipPath id="clip11"><path d="M337.0,421.0 L318.6,350.9 A210.0,210.0 0 0 1 425.4,350.9 L407.0,421.0 Z"/></clipPath>
+<path d="M337.0,421.0 L318.6,350.9 A210.0,210.0 0 0 1 425.4,350.9 L407.0,421.0 Z" fill="url(#rade)" stroke="none"/>
+<path d="M337.0,421.0 L318.6,350.9 A210.0,210.0 0 0 1 425.4,350.9 L407.0,421.0 Z" fill="url(#contro)" stroke="black" stroke-width="2.4" stroke-dasharray="1.5 4.5" stroke-linecap="round"/>
+<line x1="372.0" y1="552.0" x2="263.5" y2="439.7" stroke="black" stroke-width="1" stroke-dasharray="1 5"/>
+<line x1="372.0" y1="552.0" x2="480.5" y2="439.7" stroke="black" stroke-width="1" stroke-dasharray="1 5"/>
+<path d="M372.0,552.0 l-6,9 l12,0 Z" fill="black"/>
+<rect x="337.0" y="417.5" width="70.0" height="7" fill="black"/>
+<text x="372.0" y="436.0" font-size="9" text-anchor="middle">mezzo fermo</text>
+<line x1="271.5" y1="393.0" x2="329.6" y2="393.0" stroke="black" stroke-width="2"/>
+<line x1="329.6" y1="393.0" x2="395.9" y2="382.9" stroke="black" stroke-width="2" stroke-dasharray="4 4"/>
+<path d="M388.9,382.9 h14 M395.9,375.9 v14" stroke="black" stroke-width="2" fill="none"/>
+<path d="M369.0,403.0 l6,6 M375.0,403.0 l-6,6" stroke="black" stroke-width="1"/>
+<rect x="498" y="306" width="236" height="262" fill="white" stroke="black" stroke-width="1"/>
+<text x="503" y="319" font-size="11" font-weight="bold">B3 · previsto, regione larga</text>
+<text x="503" y="332" font-size="10">non visto da 3,0 s</text>
+<clipPath id="clip12"><path d="M581.0,421.0 L562.6,350.9 A210.0,210.0 0 0 1 669.4,350.9 L651.0,421.0 Z"/></clipPath>
+<path d="M581.0,421.0 L562.6,350.9 A210.0,210.0 0 0 1 669.4,350.9 L651.0,421.0 Z" fill="url(#rade)" stroke="none"/>
+<path d="M581.0,421.0 L562.6,350.9 A210.0,210.0 0 0 1 669.4,350.9 L651.0,421.0 Z" fill="url(#contro)" stroke="black" stroke-width="2.4" stroke-dasharray="1.5 4.5" stroke-linecap="round"/>
+<line x1="616.0" y1="552.0" x2="507.5" y2="439.7" stroke="black" stroke-width="1" stroke-dasharray="1 5"/>
+<line x1="616.0" y1="552.0" x2="724.5" y2="439.7" stroke="black" stroke-width="1" stroke-dasharray="1 5"/>
+<path d="M616.0,552.0 l-6,9 l12,0 Z" fill="black"/>
+<rect x="581.0" y="417.5" width="70.0" height="7" fill="black"/>
+<text x="616.0" y="436.0" font-size="9" text-anchor="middle">mezzo fermo</text>
+<line x1="515.5" y1="393.0" x2="573.6" y2="393.0" stroke="black" stroke-width="2"/>
+<line x1="573.6" y1="393.0" x2="628.0" y2="381.0" stroke="black" stroke-width="2" stroke-dasharray="4 4"/>
+<path d="M621.0,381.0 h14 M628.0,374.0 v14" stroke="black" stroke-width="2" fill="none"/>
+<path d="M613.0,403.0 l6,6 M619.0,403.0 l-6,6" stroke="black" stroke-width="1"/>
+<rect x="742" y="306" width="236" height="262" fill="white" stroke="black" stroke-width="1"/>
+<text x="747" y="319" font-size="11" font-weight="bold">B4 · di nuovo osservato</text>
+<text x="747" y="332" font-size="10">ricompare a 4,1 s (regione larga)</text>
+<clipPath id="clip13"><path d="M825.0,421.0 L806.6,350.9 A210.0,210.0 0 0 1 913.4,350.9 L895.0,421.0 Z"/></clipPath>
+<path d="M825.0,421.0 L806.6,350.9 A210.0,210.0 0 0 1 913.4,350.9 L895.0,421.0 Z" fill="white" stroke="black" stroke-width="0.8"/>
+<line x1="860.0" y1="552.0" x2="751.5" y2="439.7" stroke="black" stroke-width="1" stroke-dasharray="1 5"/>
+<line x1="860.0" y1="552.0" x2="968.5" y2="439.7" stroke="black" stroke-width="1" stroke-dasharray="1 5"/>
+<path d="M860.0,552.0 l-6,9 l12,0 Z" fill="black"/>
+<rect x="825.0" y="417.5" width="70.0" height="7" fill="black"/>
+<text x="860.0" y="436.0" font-size="9" text-anchor="middle">mezzo fermo</text>
+<line x1="759.5" y1="393.0" x2="817.6" y2="393.0" stroke="black" stroke-width="2"/>
+<line x1="817.6" y1="393.0" x2="872.0" y2="381.0" stroke="black" stroke-width="2" stroke-dasharray="4 4"/>
+<path d="M865.0,381.0 h14 M872.0,374.0 v14" stroke="black" stroke-width="2" fill="none"/>
+<line x1="872.0" y1="369.0" x2="902.4" y2="381.0" stroke="black" stroke-width="1"/>
+<path d="M872.0,365.0 v8 M902.4,377.0 v8" stroke="black" stroke-width="1"/>
+<text x="887.2" y="362.0" font-size="9" text-anchor="middle">scarto 0,47 m</text>
+<circle cx="902.4" cy="393.0" r="6" fill="black"/>
+<text x="10" y="586" font-size="12" font-weight="bold">Scena B — la persona si ferma dietro per 3 s (la crocetta × sotto la linea è la posizione vera: sta solo in figura, non a schermo)</text>
+<rect x="986" y="306" width="236" height="262" fill="white" stroke="black" stroke-width="1"/>
+<text x="992" y="320" font-size="11" font-weight="bold">Legenda minima</text>
+<circle cx="1008" cy="340" r="6" fill="black"/>
+<text x="1032" y="341" font-size="10">osservato: visto in questo ciclo</text>
+<text x="1032" y="352" font-size="9">disco pieno, scia a linea piena</text>
+<circle cx="1008" cy="374" r="6" fill="white" stroke="black" stroke-width="2"/>
+<text x="1032" y="375" font-size="10">previsto: posizione più probabile</text>
+<text x="1032" y="386" font-size="9">anello vuoto, scia tratteggiata, età</text>
+<rect x="994" y="398" width="30" height="20" fill="url(#contro)" stroke="black" stroke-width="1.6" stroke-dasharray="5 3"/>
+<rect x="1003" y="403" width="12" height="10" fill="url(#fitte)" stroke="black" stroke-width="0.8" stroke-dasharray="2 2"/>
+<text x="1032" y="407" font-size="10">dove può essere: 9 volte su 10</text>
+<text x="1032" y="418" font-size="9">(righe fitte: 1 su 2). NON è la taglia</text>
+<rect x="994" y="434" width="30" height="20" fill="url(#rade)" stroke="black" stroke-width="0.8"/>
+<text x="1032" y="443" font-size="10">possibile presenza: tutta l'ombra</text>
+<text x="1032" y="454" font-size="9">resta finché non lo si rivede</text>
+<rect x="994" y="470" width="30" height="20" fill="url(#contro)" stroke="black" stroke-width="2.4" stroke-dasharray="1.5 4.5" stroke-linecap="round"/>
+<path d="M1002,480 h14 M1009,473 v14" stroke="black" stroke-width="2" fill="none"/>
+<text x="1032" y="479" font-size="10">previsione larga (oltre soglia):</text>
+<text x="1032" y="490" font-size="9">bordo a punti, croce al posto dell'anello</text>
+<line x1="994" y1="516" x2="1024" y2="516" stroke="black" stroke-width="1"/>
+<path d="M994,512 v8 M1024,512 v8" stroke="black" stroke-width="1"/>
+<text x="1032" y="515" font-size="10">scarto alla ricomparsa: fra il punto</text>
+<text x="1032" y="526" font-size="9">previsto e la prima misura</text>
+<text x="994" y="546" font-size="9">Disco, anello e croce hanno taglia fissa:</text>
+<text x="994" y="557" font-size="9">la taglia non dice mai l'incertezza.</text>
+<text x="10" y="608" font-size="10">Posizioni e raggi dal modello di punto_mostrato.py (geometria della demo, 1,1 m/s, q = 0,2 m²/s³): è un disegno di progetto, non una misura.</text>
+<text x="10" y="622" font-size="10">La regione è l'insieme di massima densità della previsione troncata all'ombra: dove il sensore vede suolo libero la regione è tagliata dal bordo dell'ombra.</text>
+</svg>

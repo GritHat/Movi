@@ -1,0 +1,4 @@
+# inf2.py pf2 — avviato 2026-11-14T15:35:12
+PF N=1000 sistematico, due passate 3x3; a 1/2/3 s: IoU fra semi | IoU oracolo | massa oracolo | area: 0.91 | 0.86 | 0.925 | 2.08 ; 0.82 | 0.84 | 0.891 | 3.47 ; 0.78 | 0.82 | 0.878 | 3.85 ; tremolio 0.092
+PF N=4000 sistematico, due passate 3x3; a 1/2/3 s: IoU fra semi | IoU oracolo | massa oracolo | area: 0.95 | 0.88 | 0.928 | 2.09 ; 0.91 | 0.89 | 0.902 | 3.55 ; 0.87 | 0.88 | 0.895 | 4.04 ; tremolio 0.070
+# durata 5.0 s

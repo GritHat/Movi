@@ -1,0 +1,12 @@
+1d0
+< # zona morta marcata=0
+18c17
+< costo (un filo, ms): immagine sintetica 7.3 | N 5.2 | fasce B4+B8 136.9 (11655420 visite) | DDA V10 107.2 (21894866 passi) | DDA V5 214.4 (43885814 passi) | profilo P 3.5 | proiettivo sui 576000 centri di V5 2.4
+---
+> costo (un filo, ms): immagine sintetica 9.0 | N 4.8 | fasce B4+B8 122.7 (11655420 visite) | DDA V10 155.3 (21894866 passi) | DDA V5 307.8 (43885814 passi) | profilo P 3.9 | proiettivo sui 576000 centri di V5 2.3
+79c78
+< costo (un filo, ms): immagine sintetica 7.2 | N 5.1 | fasce B4+B8 139.9 (11655420 visite) | DDA V10 118.6 (21892498 passi) | DDA V5 226.9 (43882024 passi) | profilo P 3.9 | proiettivo sui 576000 centri di V5 2.4
+---
+> costo (un filo, ms): immagine sintetica 6.6 | N 5.0 | fasce B4+B8 121.1 (11655420 visite) | DDA V10 156.2 (21892498 passi) | DDA V5 306.5 (43882024 passi) | profilo P 4.0 | proiettivo sui 576000 centri di V5 2.2
+80a80
+> timeout 120 ./sim3d scene  3,34s user 0,00s system 99% cpu 3,347 total

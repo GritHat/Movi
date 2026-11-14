@@ -1,0 +1,5 @@
+== S4. Correlazione fra i fotogrammi dello stesso passaggio (indicatore «misura dentro il cerchio al 90 %») ==
+  D=1 s: 1500 passaggi x 15 fotogrammi; copertura per fotogramma 0.968; correlazione intraclasse 0.205; effetto del disegno 3.9; fotogrammi efficaci per passaggio 3.87
+          errore tipo se si contano i fotogrammi come indipendenti 0.0012; per passaggio (giusto) 0.0023; rapporto 2.0
+  D=3 s: 1500 passaggi x 45 fotogrammi; copertura per fotogramma 0.958; correlazione intraclasse 0.512; effetto del disegno 23.5; fotogrammi efficaci per passaggio 1.91
+          errore tipo se si contano i fotogrammi come indipendenti 0.0008; per passaggio (giusto) 0.0037; rapporto 4.9

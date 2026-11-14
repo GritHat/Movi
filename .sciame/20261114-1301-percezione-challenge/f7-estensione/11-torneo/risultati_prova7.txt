@@ -1,0 +1,6 @@
+# prova 7: due occlusori adiacenti, due soggetti che si incrociano dietro; 200 corse
+per_ombra              scambi muti 200   identita' ambigua   0   giusti   0
+per_ombra_con_porta    scambi muti  64   identita' ambigua 136   giusti   0
+globale                scambi muti   0   identita' ambigua 200   giusti   0
+semilarghezza della porta al 99 % al momento dell'uscita: mediana 1.81 m, minimo 0.65 m (ombra larga 2 m)
+controllo: una sola traccia pendente -> riaggancio in tutte e due le regole (per costruzione, non misurato)

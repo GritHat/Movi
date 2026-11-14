@@ -1,0 +1,16 @@
+stanza vuota                       k=0.0040 | celle libere con un ostacolo nella colonna sotto la quota verificata: 0 in 10 fot. | resa del libero 100.0 % | q_v mediana a 2 m 1.4, a 3 m 1.8
+barra 1,40-1,50 a 2,0-2,1 m        k=0.0040 | celle libere con un ostacolo nella colonna sotto la quota verificata: 0 in 10 fot. | resa del libero 76.8 % | q_v mediana a 2 m 1.0, a 3 m -
+barra sottile 1,15-1,25            k=0.0040 | celle libere con un ostacolo nella colonna sotto la quota verificata: 0 in 10 fot. | resa del libero 76.8 % | q_v mediana a 2 m 1.4, a 3 m -
+tubo 3 cm a 1,20 m di quota        k=0.0040 | celle libere con un ostacolo nella colonna sotto la quota verificata: 0 in 10 fot. | resa del libero 77.2 % | q_v mediana a 2 m 1.4, a 3 m -
+scatola 0,25 m                     k=0.0040 | celle libere con un ostacolo nella colonna sotto la quota verificata: 0 in 10 fot. | resa del libero 93.9 % | q_v mediana a 2 m 1.4, a 3 m 1.8
+scatola 0,10 m                     k=0.0040 | celle libere con un ostacolo nella colonna sotto la quota verificata: 0 in 10 fot. | resa del libero 94.0 % | q_v mediana a 2 m 1.4, a 3 m 1.8
+senza fondale, portata 6 m         k=0.0040 | celle libere con un ostacolo nella colonna sotto la quota verificata: 0 in 10 fot. | resa del libero 100.0 % | q_v mediana a 2 m 0.6, a 3 m 0.6
+senza fondale, portata 10 m        k=0.0040 | celle libere con un ostacolo nella colonna sotto la quota verificata: 0 in 10 fot. | resa del libero 100.0 % | q_v mediana a 2 m 0.6, a 3 m 0.6
+stanza vuota                       k=0.0100 | celle libere con un ostacolo nella colonna sotto la quota verificata: 0 in 10 fot. | resa del libero 98.5 % | q_v mediana a 2 m 1.4, a 3 m 1.8
+barra 1,40-1,50 a 2,0-2,1 m        k=0.0100 | celle libere con un ostacolo nella colonna sotto la quota verificata: 0 in 10 fot. | resa del libero 75.7 % | q_v mediana a 2 m -, a 3 m -
+barra sottile 1,15-1,25            k=0.0100 | celle libere con un ostacolo nella colonna sotto la quota verificata: 0 in 10 fot. | resa del libero 75.6 % | q_v mediana a 2 m -, a 3 m -
+tubo 3 cm a 1,20 m di quota        k=0.0100 | celle libere con un ostacolo nella colonna sotto la quota verificata: 0 in 10 fot. | resa del libero 76.0 % | q_v mediana a 2 m 1.4, a 3 m -
+scatola 0,25 m                     k=0.0100 | celle libere con un ostacolo nella colonna sotto la quota verificata: 0 in 10 fot. | resa del libero 91.8 % | q_v mediana a 2 m 1.4, a 3 m 1.8
+scatola 0,10 m                     k=0.0100 | celle libere con un ostacolo nella colonna sotto la quota verificata: 0 in 10 fot. | resa del libero 92.0 % | q_v mediana a 2 m 1.4, a 3 m 1.8
+senza fondale, portata 6 m         k=0.0100 | celle libere con un ostacolo nella colonna sotto la quota verificata: 0 in 10 fot. | resa del libero 98.4 % | q_v mediana a 2 m 0.6, a 3 m 0.6
+senza fondale, portata 10 m        k=0.0100 | celle libere con un ostacolo nella colonna sotto la quota verificata: 0 in 10 fot. | resa del libero 98.6 % | q_v mediana a 2 m 0.6, a 3 m 0.6

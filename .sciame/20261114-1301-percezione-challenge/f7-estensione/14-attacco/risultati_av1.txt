@@ -1,0 +1,26 @@
+AV1 — resa di stato(centro) sulle celle, stanza vuota 6x4x3, 10 valutazioni, centri 1,35-2,95 m
+quota_centro  k        celle_in_campo  resa_%   resa_1,3-1,8m  resa_1,8-2,4m  resa_2,4-3,0m  libero_piu_lontano_m
+0.00          0.0040     1391            0.0      0.0            0.0            0.0          0.00
+0.05          0.0040     1421            1.9      4.6            1.8            0.2          2.85
+0.10          0.0040     1441           99.4    100.0          100.0           98.2          2.95
+0.30          0.0040     1479          100.0    100.0          100.0          100.0          2.95
+0.00          0.0095     1391            0.0      0.0            0.0            0.0          0.00
+0.05          0.0095     1421            0.0      0.0            0.0            0.0          0.00
+0.10          0.0095     1441           15.2     40.9            9.8            1.0          2.95
+0.30          0.0095     1479          100.0    100.0          100.0          100.0          2.95
+
+AV1b — scatola bassa: celle col centro nella pianta date per LIBERO da stato(centro a quota hq)
+scatola(h)  hq    k       celle_nella_pianta  LIBERO_per_stato(media/fot)  di_cui_non_occupate_dai_pixel(>=3 px quota 0,07-2)
+0.10        0.10  0.0040   33                    0.0                          0.0
+0.10        0.30  0.0040   33                   33.0                          0.0
+0.10        0.10  0.0095   33                    0.0                          0.0
+0.10        0.30  0.0095   33                   33.0                          0.2
+0.25        0.10  0.0040   33                    0.0                          0.0
+0.25        0.30  0.0040   33                   15.3                          0.0
+0.25        0.10  0.0095   33                    0.0                          0.0
+0.25        0.30  0.0095   33                   11.0                          0.0
+
+AV1c — corpo che non rimanda segnale (0,45x0,25x1,75 a 2 m, pixel non validi), hq=0,10, k=0,004
+celle nella pianta del corpo: 37 ; nell'ombra al suolo dietro il corpo: 75
+LIBERO nella pianta: 0 in 10 fotogrammi ; LIBERO nell'ombra: 0 in 10 fotogrammi ; per fotogramma [(0, 0), (0, 0), (0, 0), (0, 0), (0, 0), (0, 0), (0, 0), (0, 0), (0, 0), (0, 0)]
+corpo che compare ora (i due fotogrammi prima vuoti): stato() LIBERO nella pianta 0, nell'ombra 0 ; braccio di controllo senza clausola: 37 e 75

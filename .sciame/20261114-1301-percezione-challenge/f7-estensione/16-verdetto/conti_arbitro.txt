@@ -1,0 +1,44 @@
+PA7 tetto del campo: 1,2 + 0.2493*d
+   d=1.7 m: 1.624 m
+   d=1.9 m: 1.674 m
+   d=2.0 m: 1.699 m
+   d=2.3 m: 1.773 m
+   d=3.0 m: 1.948 m
+   quota 1,8 m vista da d >= 2.41 m ; quota 2,0 m da 3.21 m
+   suolo visto da 1.243 m ; ostacolo di 0,15 m in campo da 1.087 m (e' una DISTANZA)
+   pannello che nasconde tutto cio' che gli sta dietro (cima sul raggio piu' alto): a 1,7 m 1.624, a 1,9 m 1.674, a 2,0 m 1.699
+   attore alto 1.75 a 2,3 m, pannello a 1.7 m: serve alto >= 1.607 m
+   attore alto 1.75 a 2,3 m, pannello a 1.9 m: serve alto >= 1.654 m
+   attore alto 1.90 a 2,3 m, pannello a 1.7 m: serve alto >= 1.624 m
+   attore alto 1.90 a 2,3 m, pannello a 1.9 m: serve alto >= 1.674 m
+
+PA6 occlusione completa: pannello largo L a dp, attore largo 0,45 m a 2,3 m, di traverso
+   L=1.0 dp=1.7: ombra 1.35 m, tratto del tutto nascosto 0.90 m: 0.64 s a 1,4 m/s, 0.90 s a 1,0, 1.81 s a 0,5
+   L=1.0 dp=1.8: ombra 1.28 m, tratto del tutto nascosto 0.83 m: 0.59 s a 1,4 m/s, 0.83 s a 1,0, 1.66 s a 0,5
+   L=1.0 dp=1.9: ombra 1.21 m, tratto del tutto nascosto 0.76 m: 0.54 s a 1,4 m/s, 0.76 s a 1,0, 1.52 s a 0,5
+   L=2.0 dp=1.7: ombra 2.71 m, tratto del tutto nascosto 2.26 m: 1.61 s a 1,4 m/s, 2.26 s a 1,0, 4.51 s a 0,5
+   L=2.0 dp=1.8: ombra 2.56 m, tratto del tutto nascosto 2.11 m: 1.50 s a 1,4 m/s, 2.11 s a 1,0, 4.21 s a 0,5
+   L=2.0 dp=1.9: ombra 2.42 m, tratto del tutto nascosto 1.97 m: 1.41 s a 1,4 m/s, 1.97 s a 1,0, 3.94 s a 0,5
+   campo orizzontale (87 gradi) a 1,8 m: 3.42 m ; a 2,3 m: 4.37 m
+   L=2,0 a 1,8 m, centrato: resta in vista 0.90 m per lato a 2,3 m (meno il corpo: 0.45 m) = 0.45 s a 1,0 m/s prima dell'ombra
+
+PA5 ore (stime altrui, non verificate): blocchi del nucleo B1..B9 = 3,6,6,5,9,4,3,6,12
+   somma 54 ; catena B1..B5,B7,B8 38 ; senza B1 35 ; nucleo senza B6 50
+   5 persone, f7 8.0: capienza 70 ; conto semplice (decisione) 12.0 ; con l'accettazione dentro (avversario) 4.0 ; con registro e testi durante l'accettazione [arb.] 8.0
+   5 persone, f7 10.5: capienza 70 ; conto semplice (decisione) 9.5 ; con l'accettazione dentro (avversario) 1.5 ; con registro e testi durante l'accettazione [arb.] 6.5
+      rami paralleli necessari per stare in 11.33 ore d'orologio con 35 ore in fila: 3.09
+   4 persone, f7 8.0: capienza 56 ; conto semplice (decisione) -2.0 ; con l'accettazione dentro (avversario) -7.3 ; con registro e testi durante l'accettazione [arb.] -3.3
+   4 persone, f7 10.5: capienza 56 ; conto semplice (decisione) -4.5 ; con l'accettazione dentro (avversario) -9.8 ; con registro e testi durante l'accettazione [arb.] -4.8
+      rami paralleli necessari per stare in 11.33 ore d'orologio con 35 ore in fila: 3.09
+   3 persone, f7 8.0: capienza 42 ; conto semplice (decisione) -16.0 ; con l'accettazione dentro (avversario) -18.7 ; con registro e testi durante l'accettazione [arb.] -16.0
+   3 persone, f7 10.5: capienza 42 ; conto semplice (decisione) -18.5 ; con l'accettazione dentro (avversario) -21.2 ; con registro e testi durante l'accettazione [arb.] -18.5
+      rami paralleli necessari per stare in 11.33 ore d'orologio con 35 ore in fila: 3.09
+   accettazione ridotta a 1 ora, 5 persone, f7 8.0: restano 9.0 ore-persona
+   accettazione ridotta a 1 ora, 5 persone, f7 10.5: restano 6.5 ore-persona
+   accettazione ridotta a 1 ora, 4 persone, f7 8.0: restano -4.0 ore-persona
+   accettazione ridotta a 1 ora, 4 persone, f7 10.5: restano -6.5 ore-persona
+   accettazione ridotta a 1 ora, 3 persone, f7 8.0: restano -17.0 ore-persona
+   accettazione ridotta a 1 ora, 3 persone, f7 10.5: restano -19.5 ore-persona
+
+Probabilita' che i 9 pixel del 3x3 siano tutti validi con buchi sparsi indipendenti: 5 %: 0.630 ; 10 %: 0.387 ; 30 %: 0.040
+Dieci esiti buoni su dieci: limite superiore al 95 % del tasso di fallimento 0.259 ; per il 5 % servono 59 prove

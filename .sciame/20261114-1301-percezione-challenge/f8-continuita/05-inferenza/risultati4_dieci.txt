@@ -1,0 +1,2 @@
+# inf3.py dieci — avviato 2026-11-14T15:38:40
+dieci oggetti, N=4000, 45 cicli: filtro 22.4 ms per ciclo, estrazione (2 lisciature, regioni 50 e 90, media) 6.2 ms per ciclo, totale 28.6 ms su 66,7

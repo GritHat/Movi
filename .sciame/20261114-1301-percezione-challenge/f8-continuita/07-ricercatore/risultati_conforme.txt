@@ -1,0 +1,83 @@
+N taratura 4000 N prova 40000 N prova con miscela spostata 40000
+miscela taratura/prova {'prosegue': 0.6, 'rallenta': 0.1, 'si_ferma': 0.1, 'torna': 0.1, 'svolta': 0.1} | spostata {'prosegue': 0.4, 'rallenta': 0.1, 'si_ferma': 0.1, 'torna': 0.3, 'svolta': 0.1}
+
+== Efficacia: errore medio (m) del predittore a velocita' costante contro 'fermo all'ultima posizione' ==
+tau=0.5 s  CV medio  0.07  fermo medio  0.63 | prosegue: CV 0.07 fermo 0.64 | rallenta: CV 0.07 fermo 0.62 | si_ferma: CV 0.07 fermo 0.62 | torna: CV 0.07 fermo 0.62 | svolta: CV 0.07 fermo 0.63
+tau=1.0 s  CV medio  0.18  fermo medio  1.12 | prosegue: CV 0.12 fermo 1.20 | rallenta: CV 0.23 fermo 1.02 | si_ferma: CV 0.29 fermo 0.95 | torna: CV 0.31 fermo 0.95 | svolta: CV 0.30 fermo 1.09
+tau=2.0 s  CV medio  0.75  fermo medio  1.99 | prosegue: CV 0.30 fermo 2.41 | rallenta: CV 0.83 fermo 1.65 | si_ferma: CV 1.38 fermo 1.04 | torna: CV 1.99 fermo 0.74 | svolta: CV 1.54 fermo 1.98
+tau=3.0 s  CV medio  1.46  fermo medio  2.91 | prosegue: CV 0.55 fermo 3.62 | rallenta: CV 1.47 fermo 2.28 | si_ferma: CV 2.57 fermo 1.04 | torna: CV 4.33 fermo 0.97 | svolta: CV 2.97 fermo 3.05
+tau=5.0 s  CV medio  2.96  fermo medio  4.96 | prosegue: CV 1.16 fermo 6.06 | rallenta: CV 2.79 fermo 3.59 | si_ferma: CV 4.97 fermo 1.04 | torna: CV 9.07 fermo 3.13 | svolta: CV 5.84 fermo 5.42
+
+== Livello 0.90 ==
+tau=0.5 s: raggio marginale 0.11 m; raggio 'comportamento peggiore' 0.12 m (x1.08); raggio nominale Kalman q=0,2 (solo q*tau^3/3) 0.20 m
+   marginale, prova:            0.907 [0.904, 0.910]
+   marginale, per comportamento: prosegue 0.919  rallenta 0.909  si_ferma 0.896  torna 0.891  svolta 0.855
+   peggiore, prova:             0.938 [0.936, 0.941]
+   peggiore, per comportamento:  prosegue 0.949  rallenta 0.941  si_ferma 0.934  torna 0.925  svolta 0.891
+   Kalman nominale, per comportamento: prosegue 0.999  rallenta 0.999  si_ferma 1.000  torna 0.998  svolta 0.994  | tutti 0.999
+   miscela spostata: marginale 0.903 [0.900, 0.906]; peggiore 0.933 [0.931, 0.936]
+tau=1.0 s: raggio marginale 0.42 m; raggio 'comportamento peggiore' 0.64 m (x1.55); raggio nominale Kalman q=0,2 (solo q*tau^3/3) 0.55 m
+   marginale, prova:            0.906 [0.904, 0.909]
+   marginale, per comportamento: prosegue 1.000  rallenta 0.888  si_ferma 0.745  torna 0.710  svolta 0.722
+   peggiore, prova:             0.980 [0.978, 0.981]
+   peggiore, per comportamento:  prosegue 1.000  rallenta 0.994  si_ferma 0.958  torna 0.913  svolta 0.932
+   Kalman nominale, per comportamento: prosegue 1.000  rallenta 0.977  si_ferma 0.892  torna 0.832  svolta 0.863  | tutti 0.956
+   miscela spostata: marginale 0.849 [0.846, 0.853]; peggiore 0.962 [0.961, 0.964]
+tau=2.0 s: raggio marginale 1.85 m; raggio 'comportamento peggiore' 2.92 m (x1.58); raggio nominale Kalman q=0,2 (solo q*tau^3/3) 1.57 m
+   marginale, prova:            0.903 [0.901, 0.906]
+   marginale, per comportamento: prosegue 1.000  rallenta 0.995  si_ferma 0.846  torna 0.455  svolta 0.733
+   peggiore, prova:             0.989 [0.988, 0.990]
+   peggiore, per comportamento:  prosegue 1.000  rallenta 1.000  si_ferma 1.000  torna 0.907  svolta 0.987
+   Kalman nominale, per comportamento: prosegue 1.000  rallenta 0.971  si_ferma 0.678  torna 0.291  svolta 0.564  | tutti 0.851
+   miscela spostata: marginale 0.796 [0.792, 0.800]; peggiore 0.972 [0.970, 0.973]
+tau=3.0 s: raggio marginale 3.67 m; raggio 'comportamento peggiore' 5.82 m (x1.58); raggio nominale Kalman q=0,2 (solo q*tau^3/3) 2.88 m
+   marginale, prova:            0.900 [0.897, 0.903]
+   marginale, per comportamento: prosegue 1.000  rallenta 0.999  si_ferma 0.927  torna 0.307  svolta 0.761
+   peggiore, prova:             0.989 [0.988, 0.990]
+   peggiore, per comportamento:  prosegue 1.000  rallenta 1.000  si_ferma 1.000  torna 0.892  svolta 0.996
+   Kalman nominale, per comportamento: prosegue 1.000  rallenta 0.981  si_ferma 0.649  torna 0.108  svolta 0.495  | tutti 0.824
+   miscela spostata: marginale 0.764 [0.760, 0.769]; peggiore 0.968 [0.966, 0.969]
+tau=5.0 s: raggio marginale 7.18 m; raggio 'comportamento peggiore' 12.20 m (x1.70); raggio nominale Kalman q=0,2 (solo q*tau^3/3) 6.19 m
+   marginale, prova:            0.897 [0.894, 0.900]
+   marginale, per comportamento: prosegue 1.000  rallenta 0.999  si_ferma 0.955  torna 0.267  svolta 0.739
+   peggiore, prova:             0.989 [0.987, 0.989]
+   peggiore, per comportamento:  prosegue 1.000  rallenta 1.000  si_ferma 1.000  torna 0.885  svolta 0.998
+   Kalman nominale, per comportamento: prosegue 1.000  rallenta 0.996  si_ferma 0.767  torna 0.147  svolta 0.599  | tutti 0.852
+   miscela spostata: marginale 0.750 [0.745, 0.754]; peggiore 0.966 [0.965, 0.968]
+
+== Livello 0.50 ==
+tau=0.5 s: raggio marginale 0.06 m; raggio 'comportamento peggiore' 0.07 m (x1.11); raggio nominale Kalman q=0,2 (solo q*tau^3/3) 0.11 m
+   marginale, prova:            0.514 [0.509, 0.518]
+   marginale, per comportamento: prosegue 0.526  rallenta 0.511  si_ferma 0.500  torna 0.505  svolta 0.461
+   peggiore, prova:             0.591 [0.587, 0.596]
+   peggiore, per comportamento:  prosegue 0.604  rallenta 0.591  si_ferma 0.580  torna 0.585  svolta 0.533
+   Kalman nominale, per comportamento: prosegue 0.888  rallenta 0.878  si_ferma 0.864  torna 0.855  svolta 0.814  | tutti 0.874
+   miscela spostata: marginale 0.513 [0.508, 0.518]; peggiore 0.590 [0.586, 0.595]
+tau=1.0 s: raggio marginale 0.14 m; raggio 'comportamento peggiore' 0.26 m (x1.90); raggio nominale Kalman q=0,2 (solo q*tau^3/3) 0.30 m
+   marginale, prova:            0.511 [0.506, 0.515]
+   marginale, per comportamento: prosegue 0.671  rallenta 0.311  si_ferma 0.262  torna 0.253  svolta 0.255
+   peggiore, prova:             0.811 [0.808, 0.815]
+   peggiore, per comportamento:  prosegue 0.981  rallenta 0.646  si_ferma 0.532  torna 0.522  svolta 0.526
+   Kalman nominale, per comportamento: prosegue 0.995  rallenta 0.734  si_ferma 0.596  torna 0.582  svolta 0.589  | tutti 0.847
+   miscela spostata: marginale 0.432 [0.427, 0.437]; peggiore 0.719 [0.715, 0.723]
+tau=2.0 s: raggio marginale 0.45 m; raggio 'comportamento peggiore' 1.88 m (x4.16); raggio nominale Kalman q=0,2 (solo q*tau^3/3) 0.86 m
+   marginale, prova:            0.513 [0.508, 0.518]
+   marginale, per comportamento: prosegue 0.828  rallenta 0.153  si_ferma 0.001  torna 0.000  svolta 0.007
+   peggiore, prova:             0.909 [0.906, 0.912]
+   peggiore, per comportamento:  prosegue 1.000  rallenta 0.996  si_ferma 0.860  torna 0.478  svolta 0.752
+   Kalman nominale, per comportamento: prosegue 0.998  rallenta 0.570  si_ferma 0.112  torna 0.010  svolta 0.093  | tutti 0.677
+   miscela spostata: marginale 0.344 [0.340, 0.349]; peggiore 0.806 [0.803, 0.810]
+tau=3.0 s: raggio marginale 0.81 m; raggio 'comportamento peggiore' 4.19 m (x5.16); raggio nominale Kalman q=0,2 (solo q*tau^3/3) 1.58 m
+   marginale, prova:            0.508 [0.503, 0.512]
+   marginale, per comportamento: prosegue 0.821  rallenta 0.145  si_ferma 0.000  torna 0.000  svolta 0.004
+   peggiore, prova:             0.935 [0.932, 0.937]
+   peggiore, per comportamento:  prosegue 1.000  rallenta 1.000  si_ferma 0.995  torna 0.466  svolta 0.879
+   Kalman nominale, per comportamento: prosegue 0.998  rallenta 0.598  si_ferma 0.084  torna 0.001  svolta 0.070  | tutti 0.674
+   miscela spostata: marginale 0.345 [0.341, 0.350]; peggiore 0.830 [0.826, 0.834]
+tau=5.0 s: raggio marginale 1.70 m; raggio 'comportamento peggiore' 8.84 m (x5.21); raggio nominale Kalman q=0,2 (solo q*tau^3/3) 3.40 m
+   marginale, prova:            0.508 [0.503, 0.513]
+   marginale, per comportamento: prosegue 0.814  rallenta 0.190  si_ferma 0.000  torna 0.000  svolta 0.008
+   peggiore, prova:             0.939 [0.937, 0.941]
+   peggiore, per comportamento:  prosegue 1.000  rallenta 1.000  si_ferma 1.000  torna 0.469  svolta 0.914
+   Kalman nominale, per comportamento: prosegue 0.999  rallenta 0.704  si_ferma 0.160  torna 0.002  svolta 0.112  | tutti 0.697
+   miscela spostata: marginale 0.347 [0.342, 0.352]; peggiore 0.834 [0.831, 0.838]

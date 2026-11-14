@@ -1,0 +1,9 @@
+# inf.py tempi — avviato 2026-11-14T15:24:43
+Tempo per ciclo e per oggetto, Python puro, compresa (dove indicato) l'estrazione della regione al 90% (ms):
+  PF N=250 sistematico: 0.19 ms
+  PF N=1000 sistematico: 0.58 ms
+  PF N=4000 sistematico: 2.13 ms
+  MG 4 gaussiane su 2112 celle: 1.46 ms
+  IST 50 modi x 2112 celle = 105600 stati: 15.53 ms
+  estrazione: regione al 90% 0.13 ms; lisciatura 3x3 0.16 ms; media 0.06 ms
+# durata 0.7 s

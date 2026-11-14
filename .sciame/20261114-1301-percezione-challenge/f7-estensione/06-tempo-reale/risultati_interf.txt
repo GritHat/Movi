@@ -1,0 +1,5 @@
+# parte=interf inizio=2026-11-14T15:25:57+01:00 gcc=16
+interferenza scena=tipica G a 15 Hz su cpu 4, D 5 cm k=1 su cpu 5: spento | N=240 media=0.802 p50=0.808 p95=0.837 p99=0.859 max=1.421 ms | ritardo massimo del risveglio=0.809 ms
+interferenza scena=tipica G a 15 Hz su cpu 4, D 5 cm k=1 su cpu 5: ATTIVO | N=240 media=0.803 p50=0.816 p95=0.882 p99=0.912 max=1.052 ms | ritardo massimo del risveglio=0.089 ms
+interferenza scena=tipica G a 15 Hz su cpu 4, D 5 cm k=1 su cpu 16: ATTIVO | N=240 media=0.951 p50=0.951 p95=1.028 p99=1.078 max=1.111 ms | ritardo massimo del risveglio=0.080 ms
+# fine=2026-11-14T15:26:48+01:00

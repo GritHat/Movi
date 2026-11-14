@@ -1,0 +1,24 @@
+$ ./prova_ombra 0 1 1 1 1 0 1
+== rumore=0 montaggio=verticale pannello=0 stanza=1 fotogrammi fusi per B=1 B ingenuo=0  immagine 240x320 campo 58x87 gradi ==
+-- sagoma 0,1-1,9 m, celle da 10 cm nella zona 1,24-3 m: zona 376 celle, colonne con un oggetto 0
+   regola piana del nucleo: libero 376 celle, di cui con un oggetto nella colonna 0 (sotto la barra 0)
+   sagoma: verificata libera per intero 300 celle (79.8 % della zona), di cui con un oggetto nella colonna 0; quota verificata media sulle celle 'libero' del nucleo 1.76 m
+   tempo B per fotogramma (min/max 3x3 + sagoma su tutta la zona; 20 lanci): mediana 0.524 ms, massimo 0.528 ms
+
+$ ./prova_ombra 0 0 1 1 1 0 1
+== rumore=0 montaggio=orizzontale pannello=0 stanza=1 fotogrammi fusi per B=1 B ingenuo=0  immagine 320x240 campo 87x58 gradi ==
+-- sagoma 0,1-1,9 m, celle da 10 cm nella zona 1,24-3 m: zona 570 celle, colonne con un oggetto 0
+   regola piana del nucleo: libero 550 celle, di cui con un oggetto nella colonna 0 (sotto la barra 0)
+   sagoma: verificata libera per intero 10 celle (1.8 % della zona), di cui con un oggetto nella colonna 0; quota verificata media sulle celle 'libero' del nucleo 1.58 m
+   tempo B per fotogramma (min/max 3x3 + sagoma su tutta la zona; 20 lanci): mediana 0.616 ms, massimo 0.621 ms
+
+$ python3 prova_logodds.py
+colpo +0.847, mancato -0.405, limiti -2.000 / +3.511; da saturo libero servono 3 colpi per superare 0,5; da saturo occupato 9 mancati per scendere sotto 0,5
+voxel 0.05 m, v 0.2 m/s: fotogrammi 226, faccia vista 'occupata' 105 (46 %); voxel-fotogramma dentro il corpo 1355, di cui tenuti 'liberi' 80 (6 %)
+voxel 0.05 m, v 0.5 m/s: fotogrammi 91, faccia vista 'occupata' 0 (0 %); voxel-fotogramma dentro il corpo 542, di cui tenuti 'liberi' 542 (100 %)
+voxel 0.05 m, v 1.0 m/s: fotogrammi 45, faccia vista 'occupata' 0 (0 %); voxel-fotogramma dentro il corpo 265, di cui tenuti 'liberi' 265 (100 %)
+voxel 0.05 m, v 1.5 m/s: fotogrammi 31, faccia vista 'occupata' 0 (0 %); voxel-fotogramma dentro il corpo 178, di cui tenuti 'liberi' 178 (100 %)
+voxel 0.10 m, v 0.2 m/s: fotogrammi 226, faccia vista 'occupata' 165 (73 %); voxel-fotogramma dentro il corpo 677, di cui tenuti 'liberi' 45 (7 %)
+voxel 0.10 m, v 0.5 m/s: fotogrammi 91, faccia vista 'occupata' 30 (33 %); voxel-fotogramma dentro il corpo 269, di cui tenuti 'liberi' 46 (17 %)
+voxel 0.10 m, v 1.0 m/s: fotogrammi 45, faccia vista 'occupata' 0 (0 %); voxel-fotogramma dentro il corpo 130, di cui tenuti 'liberi' 130 (100 %)
+voxel 0.10 m, v 1.5 m/s: fotogrammi 31, faccia vista 'occupata' 0 (0 %); voxel-fotogramma dentro il corpo 85, di cui tenuti 'liberi' 85 (100 %)

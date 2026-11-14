@@ -1,0 +1,27 @@
+PV-2a. Intervallo esatto al 95 % per k dentro su n (livello dichiarato 90 %)
+    9 su  10: 55.5 % - 99.7 %  (largo 44.2 punti)   <- contiene anche l'80 %
+   10 su  10: 69.2 % - 100.0 %  (largo 30.8 punti)   <- contiene anche l'80 %
+   18 su  20: 68.3 % - 98.8 %  (largo 30.5 punti)   <- contiene anche l'80 %
+   27 su  30: 73.5 % - 97.9 %  (largo 24.4 punti)   <- contiene anche l'80 %
+   54 su  60: 79.5 % - 96.2 %  (largo 16.7 punti)   <- contiene anche l'80 %
+   90 su 100: 82.4 % - 95.1 %  (largo 12.7 punti)
+  180 su 200: 85.0 % - 93.8 %  (largo 8.8 punti)
+  360 su 400: 86.6 % - 92.8 %  (largo 6.1 punti)
+
+PV-2b. Probabilità di vedere almeno 9 su 10 dentro, per copertura vera
+  copertura vera 0.95: 91.4 %
+  copertura vera 0.90: 73.6 %
+  copertura vera 0.80: 37.6 %
+  copertura vera 0.70: 14.9 %
+  copertura vera 0.60: 4.6 %
+  copertura vera 0.50: 1.1 %
+
+PV-2c. Minimo n con una soglia c tale che P(k >= c | 0,90) >= 0,90 e P(k >= c | p1) <= 0,10
+  contro copertura vera 0.80: n = 86, soglia 74 dentro
+  contro copertura vera 0.70: n = 25, soglia 21 dentro
+
+[dopo] Regione troppo larga: anche una regione al «90 %» che copre il 99 % va segnalata.
+  n =  10: P(tutti dentro | copertura vera 0,90) = 34.9 %; P(tutti dentro | 0,99) = 90.4 %
+  n =  30: P(tutti dentro | copertura vera 0,90) = 4.2 %; P(tutti dentro | 0,99) = 74.0 %
+  n =  60: P(tutti dentro | copertura vera 0,90) = 0.2 %; P(tutti dentro | 0,99) = 54.7 %
+  n = 100: P(tutti dentro | copertura vera 0,90) = 0.0 %; P(tutti dentro | 0,99) = 36.6 %

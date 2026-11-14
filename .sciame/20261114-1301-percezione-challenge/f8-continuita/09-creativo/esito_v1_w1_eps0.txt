@@ -1,0 +1,33 @@
+# cono.py  w=1.0  N=100  eps=0.000  dw=+0.00  membri=400  fascia=0.20  ombra in portata=7.82 m2  libreria={'prosegue': 258, 'torna': 44, 'svolta': 46, 'sosta': 52}
+
+## per comportamento e tempo senza osservazione (solo cicli a soggetto non visibile)
+beh       tau   n | c50%  c90% | a50%  a90% diff% | err: fant.  vel.cost  fermo (mediana, m) | nucleo: mostrato% cerchio contiene% | NLL cono  NLL kalman | S     beta
+sosta     0.5 100 |   58    78 |    2     6     0 |      0.13      0.13   0.60              |              100                95 |     0.05      -0.80 | 1.00  0.00
+sosta     1.0 100 |   40    68 |    5    15     0 |      0.32      0.35   1.00              |              100                84 |     2.00       1.02 | 0.99  0.00
+sosta     2.0 100 |   18    46 |    8    26     0 |      0.87      1.53   1.00              |               29                82 |     5.29       3.29 | 0.33  0.00
+sosta     3.0 100 |    6    27 |    7    18     0 |      0.88      2.69   1.05              |               10                91 |     8.13       4.35 | 0.09  0.00
+sosta     4.0  84 |    2    11 |    6    12     0 |      1.04      3.72   1.35              |                1                99 |     9.76       4.85 | 0.05  0.00
+sosta     5.0  35 |    3    20 |    7    12     0 |      1.36      4.10   1.63              |                0               100 |     8.91       5.08 | 0.04  0.00
+lontano   0.5 100 |   57    85 |    2     6     0 |      0.12      0.12   0.64              |              100                93 |     0.09      -0.69 | 1.00  0.00
+lontano   1.0 100 |   38    61 |    5    15     0 |      0.36      0.36   1.07              |              100                74 |     3.58       1.90 | 0.99  0.00
+lontano   2.0 100 |    1    14 |    8    25     0 |      1.56      2.14   1.97              |               29                51 |     9.27       5.11 | 0.28  0.00
+lontano   3.0 100 |    0     1 |    7    16     0 |      2.33      3.80   2.59              |                9                48 |    10.95       5.71 | 0.07  0.00
+lontano   4.0 100 |    2     4 |    5    10     0 |      2.14      4.89   2.74              |                4                81 |    10.59       5.77 | 0.04  0.00
+lontano   5.0 100 |    2     2 |    4     8     0 |      2.34      6.03   2.74              |                0                95 |    10.81       5.96 | 0.03  0.00
+
+## continuita: quota dei cicli nascosti con stima emessa
+beh        cicli | cono emesso% (costruzione) cono informativo% (r90 non diffusa e < meta ombra) r90 diffusa% r50 diffusa% | nucleo mostrato%
+sosta       7084 | 100  100.0    0.0    0.0 |  39.3
+lontano     8300 | 100   99.9    0.0    0.0 |  34.9
+
+## regolarita del fantasma (tutti i cicli dopo l ingresso)
+beh        cicli | passo max m | passi indietro > 2 cm % | passo indietro max m
+sosta       7098 | 0.167 |  10.1 | 0.167
+lontano     8300 | 0.167 |   9.9 | 0.167
+
+## ricomparsa: salto fra stima e prima misura (m), e prima misura entro 0,45 m dalla regione al 90 %
+beh         n | fantasma med p90 | vel.cost med p90 | fermo med p90 | entro r90 % | ultimo ciclo nascosto: c50% c90% | buio medio s
+sosta      90 | 1.07 3.10 | 3.72 5.04 | 2.02 2.13 |  55.6 |    2   17 | 4.64
+lontano     0
+
+## costo del passo del cono (Python puro): cicli 15398  mediana 0.08 ms  p95 0.29 ms  max 1.54 ms

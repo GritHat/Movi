@@ -1,0 +1,9 @@
+# inf.py oracolo — avviato 2026-11-14T15:25:19
+oracolo ic 101 seme 1 fatto a 12.9 s
+oracolo ic 101 seme 2 fatto a 27.3 s
+oracolo ic 102 seme 1 fatto a 42.6 s
+oracolo ic 102 seme 2 fatto a 56.5 s
+oracolo ic 103 seme 1 fatto a 71.6 s
+oracolo ic 103 seme 2 fatto a 87.0 s
+oracolo ic 104 seme 1 fatto a 101.2 s
+oracolo ic 104 seme 2 fatto a 115.6 s

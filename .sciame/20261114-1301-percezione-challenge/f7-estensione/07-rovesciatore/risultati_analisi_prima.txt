@@ -1,0 +1,49 @@
+sizeof(Vox)=12 byte; raggi 640 x 480; ritorno valido 0.4-6.0 m; EPS 0.03 m
+scena demo con parete: pixel validi 228889 su 307200 (74.5 %)
+[demo] h=0.10 m: voxel 72000 (40 x 60 x 30); denso 12 B/voxel = 864 kB (a 1 B/voxel: 72 kB)
+   toccati 16257 (22.6 %), colpiti 1898 (2.64 %), 'libero' da raggi 14359
+   blocchi 8^3: totali 160; con libero memorizzato 65 (40.6 %) = 399 kB (+25 kB tabella); solo occupato 35 (21.9 %) = 215 kB
+   P3 'libero' da raggi: con >=1 sottopunto su 64 non osservato-libero 3729 (26.0 %); con >=33 su 64 2176 (15.2 %); che intersecano materia 0 (0.000 %); con >=16/64 dentro materia 0
+   lettura immagine: 'libero' se il CENTRO e' osservato-libero 13430 (con materia 19); se TUTTI i 64 sottopunti 10996 (con materia 0)
+[demo] h=0.05 m: voxel 576000 (80 x 120 x 60); denso 12 B/voxel = 6912 kB (a 1 B/voxel: 576 kB)
+   toccati 118594 (20.6 %), colpiti 7299 (1.27 %), 'libero' da raggi 111295
+   blocchi 8^3: totali 1200; con libero memorizzato 367 (30.6 %) = 2255 kB (+25 kB tabella); solo occupato 111 (9.2 %) = 682 kB
+   P3 'libero' da raggi: con >=1 sottopunto su 64 non osservato-libero 15324 (13.8 %); con >=33 su 64 8325 (7.5 %); che intersecano materia 52 (0.047 %); con >=16/64 dentro materia 52
+   lettura immagine: 'libero' se il CENTRO e' osservato-libero 106414 (con materia 0); se TUTTI i 64 sottopunti 95971 (con materia 0)
+[demo con parete] nucleo: celle 'libero' fra 1,3 e 3 m: 948; quota della colonna 0,07-2,0 m osservata-libera: media 54.2 %, minimo 0.0 %
+   per anello: 1,3 m 69.4 % | 2,0 m 47.3 % | 2,9 m 50.3 %;  campioni: libero 99596, superficie 0, ombra 0, senza ritorno valido 34393, fuori campo 49923
+   celle che il nucleo da' 'in ombra' (oltre il primo ritorno) fra 1,3 e 3 m: 541; di queste con il suolo visto in questo fotogramma: 135
+   pixel che colpiscono 'parete': 22295
+   pixel che colpiscono 'pannello': 71618
+   pixel che colpiscono 'scatola bassa': 8177
+   pixel che colpiscono 'barra in quota': 0
+   pixel che colpiscono 'oggetto in volo': 1764
+   cella sotto la barra (az -28 gradi, anello 17): suolo visto 90 pixel, ritorni 0,07-2 m 0, primo ritorno sull'azimut all'anello 27 -> nucleo: LIBERO; classe 3D a quota 1,80 m: 4 (4 = fuori campo); a quota 1,00 m: 3
+   azimut della scatola bassa (36 gradi), anelli 12..29: ...ssOOOOO...sssss   (O ritorno 0,07-2 m; s suolo visto; . niente)
+   P5 h=0.10 delta=0.0 gradi: 'libero' con materia 0; con >=16/64 dentro materia 0; colpiti al fotogramma 1 che ora ricevono solo 'libero' 0
+   P5 h=0.10 delta=0.5 gradi: 'libero' con materia 0; con >=16/64 dentro materia 0; colpiti al fotogramma 1 che ora ricevono solo 'libero' 351
+   P5 h=0.10 delta=1.0 gradi: 'libero' con materia 17; con >=16/64 dentro materia 1; colpiti al fotogramma 1 che ora ricevono solo 'libero' 363
+   P5 h=0.10 delta=2.0 gradi: 'libero' con materia 27; con >=16/64 dentro materia 9; colpiti al fotogramma 1 che ora ricevono solo 'libero' 375
+   P5 h=0.05 delta=0.0 gradi: 'libero' con materia 52; con >=16/64 dentro materia 52; colpiti al fotogramma 1 che ora ricevono solo 'libero' 0
+   P5 h=0.05 delta=0.5 gradi: 'libero' con materia 34; con >=16/64 dentro materia 34; colpiti al fotogramma 1 che ora ricevono solo 'libero' 1430
+   P5 h=0.05 delta=1.0 gradi: 'libero' con materia 82; con >=16/64 dentro materia 82; colpiti al fotogramma 1 che ora ricevono solo 'libero' 1456
+   P5 h=0.05 delta=2.0 gradi: 'libero' con materia 782; con >=16/64 dentro materia 782; colpiti al fotogramma 1 che ora ricevono solo 'libero' 2124
+[peggiore] h=0.10 m: voxel 72000 (40 x 60 x 30); denso 12 B/voxel = 864 kB (a 1 B/voxel: 72 kB)
+   toccati 32440 (45.1 %), colpiti 3730 (5.18 %), 'libero' da raggi 28710
+   blocchi 8^3: totali 160; con libero memorizzato 92 (57.5 %) = 565 kB (+25 kB tabella); solo occupato 45 (28.1 %) = 276 kB
+   P3 'libero' da raggi: con >=1 sottopunto su 64 non osservato-libero 3968 (13.8 %); con >=33 su 64 2186 (7.6 %); che intersecano materia 0 (0.000 %); con >=16/64 dentro materia 0
+   lettura immagine: 'libero' se il CENTRO e' osservato-libero 29166 (con materia 0); se TUTTI i 64 sottopunti 25538 (con materia 0)
+[peggiore] h=0.05 m: voxel 576000 (80 x 120 x 60); denso 12 B/voxel = 6912 kB (a 1 B/voxel: 576 kB)
+   toccati 246584 (42.8 %), colpiti 14768 (2.56 %), 'libero' da raggi 231816
+   blocchi 8^3: totali 1200; con libero memorizzato 608 (50.7 %) = 3736 kB (+25 kB tabella); solo occupato 170 (14.2 %) = 1044 kB
+   P3 'libero' da raggi: con >=1 sottopunto su 64 non osservato-libero 16370 (7.1 %); con >=33 su 64 8492 (3.7 %); che intersecano materia 0 (0.000 %); con >=16/64 dentro materia 0
+   lettura immagine: 'libero' se il CENTRO e' osservato-libero 229656 (con materia 0); se TUTTI i 64 sottopunti 215446 (con materia 0)
+scena demo SENZA parete: pixel validi 206870 su 307200 (67.3 %)
+[demo senza parete] nucleo: celle 'libero' fra 1,3 e 3 m: 948; quota della colonna 0,07-2,0 m osservata-libera: media 41.2 %, minimo 0.0 %
+   per anello: 1,3 m 60.8 % | 2,0 m 33.7 % | 2,9 m 25.2 %;  campioni: libero 75726, superficie 0, ombra 0, senza ritorno valido 58263, fuori campo 49923
+   celle che il nucleo da' 'in ombra' (oltre il primo ritorno) fra 1,3 e 3 m: 541; di queste con il suolo visto in questo fotogramma: 135
+[demo senza parete] h=0.05 m: voxel 576000 (80 x 120 x 60); denso 12 B/voxel = 6912 kB (a 1 B/voxel: 576 kB)
+   toccati 57111 (9.9 %), colpiti 4627 (0.80 %), 'libero' da raggi 52484
+   blocchi 8^3: totali 1200; con libero memorizzato 201 (16.8 %) = 1235 kB (+25 kB tabella); solo occupato 91 (7.6 %) = 559 kB
+   P3 'libero' da raggi: con >=1 sottopunto su 64 non osservato-libero 9696 (18.5 %); con >=33 su 64 5223 (10.0 %); che intersecano materia 30 (0.057 %); con >=16/64 dentro materia 30
+   lettura immagine: 'libero' se il CENTRO e' osservato-libero 50738 (con materia 0); se TUTTI i 64 sottopunti 42788 (con materia 0)

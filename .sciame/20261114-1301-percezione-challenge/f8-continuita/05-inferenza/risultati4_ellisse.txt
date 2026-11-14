@@ -1,0 +1,5 @@
+# inf3.py ellisse — avviato 2026-11-14T15:38:40
+t=1.0 s: area ellisse ritagliata / area massima densita': mediana 1.22 [1.09, 1.30]; quota dell'ellisse intera su celle viste libere: mediana 0.03
+t=2.0 s: area ellisse ritagliata / area massima densita': mediana 1.25 [1.11, 1.31]; quota dell'ellisse intera su celle viste libere: mediana 0.07
+t=3.0 s: area ellisse ritagliata / area massima densita': mediana 1.19 [1.10, 1.30]; quota dell'ellisse intera su celle viste libere: mediana 0.07
+t=5.0 s: area ellisse ritagliata / area massima densita': mediana 1.15 [1.06, 1.23]; quota dell'ellisse intera su celle viste libere: mediana 0.08

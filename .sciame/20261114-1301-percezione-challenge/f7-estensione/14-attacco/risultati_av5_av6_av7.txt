@@ -1,0 +1,51 @@
+AV5 — in pianta: occlusori alti A (y=1,8; x da -1,2 a -0,2) e B (y=1,8; x da 0,2 a 1,2); soggetto nascosto dietro A a (-0,7; 2,3);
+      sensore coperto per T s; il soggetto cammina a 1,2 m/s verso B e si ferma a (0,7; 2,3); poi 60 fotogrammi. v_max = 1,4 m/s, fascia 0,40 m
+celle: cuneo di A 288 ; regione alla nascita (cuneo + fascia) 637 ; non osservate in tutto 1620 su 2610
+T=0.5 s: soggetto a (-0.10; 2,3), IN VISTA (fra A e B): sarebbe riagganciato o 'identita' ambigua' | regola scritta: 288 celle, soggetto fuori regione in 0/60 | riscritta: 1108 celle (68 % del non osservato), fuori in 0/60 | cicli senza uscita durante la copertura (lettura letterale di «esci»): 8
+T=1.0 s: soggetto a (0.50; 2,3), nascosto dietro B | regola scritta: 288 celle, soggetto fuori regione in 60/60 | riscritta: 1620 celle (100 % del non osservato), fuori in 0/60 | cicli senza uscita durante la copertura (lettura letterale di «esci»): 15
+T=2.0 s: soggetto a (0.70; 2,3), nascosto dietro B | regola scritta: 288 celle, soggetto fuori regione in 60/60 | riscritta: 1620 celle (100 % del non osservato), fuori in 0/60 | cicli senza uscita durante la copertura (lettura letterale di «esci»): 30
+
+AV6 — posa: camera creduta a 15 gradi, vera a 15+e; trave a terra larga 1 m a 2,8-2,9 m; k=0,004; 10 valutazioni; centro delle celle a 0,10 m
+trave(h)  e(gradi)  celle_nella_pianta  LIBERO_per_stato/fot  LIBERO_e_non_occupate_dai_pixel/fot  mediana_quota_ricostruita_del_suolo_2-3m(cm)
+0.12         +0.0      21                   0.0                   0.0                               +0.0
+0.12         -1.0      21                   0.0                   0.0                               -3.5
+0.12         +1.0      21                   0.0                   0.0                               +3.5
+0.12         -2.0      21                  21.0                  21.0                               -7.2
+0.12         +2.0      21                   0.0                   0.0                               +7.1
+0.10 [dopo]  +0.0      21                   0.0                   0.0                               -0.0
+0.10 [dopo]  -1.0      21                  21.0                  20.9                               -3.6
+0.10 [dopo]  +1.0      21                   0.0                   0.0                               +3.5
+0.15 [dopo]  +0.0      21                   0.0                   0.0                               +0.0
+0.15 [dopo]  -1.0      21                   0.0                   0.0                               -3.6
+0.15 [dopo]  +1.0      21                   0.0                   0.0                               +3.5
+0.15 [dopo]  -2.0      21                  21.0                  20.6                               -7.1
+0.15 [dopo]  +2.0      21                   0.0                   0.0                               +7.1
+
+AV1 [dopo, senza previsione] — resa di stato(centro) con le tre curve di rumore del blocco B1 del nucleo (a 2 m: 1,5 / 4 / 5 cm => k = 0,00375 / 0,0100 / 0,0125)
+k=0.00375  quota 0.10:  99.8 % | quota 0.15: 100.0 % | quota 0.20: 100.0 % | quota 0.30: 100.0 %
+k=0.01000  quota 0.10:  10.1 % | quota 0.15:  77.9 % | quota 0.20:  98.5 % | quota 0.30: 100.0 %
+k=0.01250  quota 0.10:   0.9 % | quota 0.15:  46.2 % | quota 0.20:  89.3 % | quota 0.30:  99.9 %
+
+AV7 — ore sul calendario (dati: SOLUZIONE_V2 par. 2, AUDIT ipotesi 8, DECISIONE par. 1.9, settimo addendum). Stime altrui, non verificate.
+somma dei blocchi 54 ; catena B1..B5,B7,B8 38 ; senza B1 35
+sensore all'ora 5, 5 persone: integrazione entro l'ora 11.33 ; capienza fino a li' 56.7 ; B1 3 + resto di B9 6.7 + B2..B8 35 + f7 8.0 => restano per f8 e integrazione 4.0 ore-persona (la decisione: 9,5-12)
+sensore all'ora 5, 5 persone: integrazione entro l'ora 11.33 ; capienza fino a li' 56.7 ; B1 3 + resto di B9 6.7 + B2..B8 35 + f7 10.5 => restano per f8 e integrazione 1.5 ore-persona (la decisione: 9,5-12)
+   ore d'orologio fra l'arrivo del sensore e l'inizio dell'accettazione: 6.33 (dentro: B1 3 h, taratura, registrazioni, prima prova della catena sui dati veri)
+sensore all'ora 5, 4 persone: integrazione entro l'ora 11.33 ; capienza fino a li' 45.3 ; B1 3 + resto di B9 6.7 + B2..B8 35 + f7 8.0 => restano per f8 e integrazione -7.3 ore-persona (la decisione: 9,5-12)
+sensore all'ora 5, 4 persone: integrazione entro l'ora 11.33 ; capienza fino a li' 45.3 ; B1 3 + resto di B9 6.7 + B2..B8 35 + f7 10.5 => restano per f8 e integrazione -9.8 ore-persona (la decisione: 9,5-12)
+   ore d'orologio fra l'arrivo del sensore e l'inizio dell'accettazione: 6.33 (dentro: B1 3 h, taratura, registrazioni, prima prova della catena sui dati veri)
+sensore all'ora 6, 5 persone: integrazione entro l'ora 11.33 ; capienza fino a li' 56.7 ; B1 3 + resto di B9 6.7 + B2..B8 35 + f7 8.0 => restano per f8 e integrazione 4.0 ore-persona (la decisione: 9,5-12)
+sensore all'ora 6, 5 persone: integrazione entro l'ora 11.33 ; capienza fino a li' 56.7 ; B1 3 + resto di B9 6.7 + B2..B8 35 + f7 10.5 => restano per f8 e integrazione 1.5 ore-persona (la decisione: 9,5-12)
+   ore d'orologio fra l'arrivo del sensore e l'inizio dell'accettazione: 5.33 (dentro: B1 3 h, taratura, registrazioni, prima prova della catena sui dati veri)
+sensore all'ora 6, 4 persone: integrazione entro l'ora 11.33 ; capienza fino a li' 45.3 ; B1 3 + resto di B9 6.7 + B2..B8 35 + f7 8.0 => restano per f8 e integrazione -7.3 ore-persona (la decisione: 9,5-12)
+sensore all'ora 6, 4 persone: integrazione entro l'ora 11.33 ; capienza fino a li' 45.3 ; B1 3 + resto di B9 6.7 + B2..B8 35 + f7 10.5 => restano per f8 e integrazione -9.8 ore-persona (la decisione: 9,5-12)
+   ore d'orologio fra l'arrivo del sensore e l'inizio dell'accettazione: 5.33 (dentro: B1 3 h, taratura, registrazioni, prima prova della catena sui dati veri)
+rami indipendenti necessari perche' B2..B8 (35 h in fila) stia in 11,33 h d'orologio: 3.1
+
+AV7 [dopo, stesso schema di conto] — 3 persone, e accettazione ridotta alla prima ora del protocollo (H0-H6, due persone)
+3 persone, accettazione completa: restano -18.7 ore-persona
+3 persone, accettazione completa: restano -21.2 ore-persona
+5 persone, accettazione di 1 h: integrazione entro l'ora 13 ; capienza 65 ; B1 3 + resto di B9 10 + B2..B8 35 + f7 8.0 => restano 9.0 ore-persona
+5 persone, accettazione di 1 h: integrazione entro l'ora 13 ; capienza 65 ; B1 3 + resto di B9 10 + B2..B8 35 + f7 10.5 => restano 6.5 ore-persona
+4 persone, accettazione di 1 h: integrazione entro l'ora 13 ; capienza 52 ; B1 3 + resto di B9 10 + B2..B8 35 + f7 8.0 => restano -4.0 ore-persona
+4 persone, accettazione di 1 h: integrazione entro l'ora 13 ; capienza 52 ; B1 3 + resto di B9 10 + B2..B8 35 + f7 10.5 => restano -6.5 ore-persona

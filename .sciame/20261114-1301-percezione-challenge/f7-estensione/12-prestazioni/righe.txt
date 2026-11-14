@@ -1,0 +1,10 @@
+righe comuni a tutte (sensore simulato, scene, statistiche, main): 220
+R_POLARE     righe proprie   36
+R_IMMAGINE   righe proprie   30
+R_FASCE      righe proprie   76
+R_DENSA      righe proprie   56
+R_HASH       righe proprie   77
+R_HASHOCC    righe proprie   50
+R_OCTREE     righe proprie   80
+R_OCTPOT     righe proprie   88
+R_COLBIT     righe proprie   57

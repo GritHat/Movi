@@ -1,0 +1,19 @@
+IST
+  t=0.53 s: IoU 0.44 | massa oracolo mediana 0.559 (min 0.398) | area 0.24 | pezzi 1.2
+  t=1.00 s: IoU 0.52 | massa oracolo mediana 0.575 (min 0.512) | area 1.01 | pezzi 1.0
+  t=1.53 s: IoU 0.83 | massa oracolo mediana 0.861 (min 0.792) | area 2.30 | pezzi 1.0
+  t=2.00 s: IoU 0.88 | massa oracolo mediana 0.870 (min 0.864) | area 3.20 | pezzi 1.2
+  t=3.00 s: IoU 0.88 | massa oracolo mediana 0.871 (min 0.865) | area 3.62 | pezzi 1.2
+  t=4.00 s: IoU 0.85 | massa oracolo mediana 0.862 (min 0.850) | area 3.68 | pezzi 1.0
+  t=5.00 s: IoU 0.80 | massa oracolo mediana 0.850 (min 0.834) | area 3.73 | pezzi 1.0
+NUCLEO95
+--
+tremolio medio fra cicli: MG 0.0759, IST 0.1242
+punto mostrato, passo massimo per sequenza (m): MG media ['0.09', '0.07', '0.11', '0.10', '0.09'] ; massimo a posteriori ['0.14', '0.14', '0.22', '0.10', '0.22']
+punto mostrato, passo massimo per sequenza (m): IST media ['0.10', '0.09', '0.09', '0.10', '0.09'] ; massimo a posteriori ['1.90', '1.70', '2.00', '2.53', '2.40']
+Ritaglio senza rinormalizzare (gaussiana del Kalman G, S = celle ammesse, cerchio al 95%):
+  t=1.0 s: G(S) mediana 0.982; livello nella gaussiana troncata G(E∩S)/G(S) mediana 0.963 (min 0.952); limite 1-0,05/G(S) mediana 0.949; violazioni del limite 0; regione emessa dal nucleo in 5 casi su 5
+  t=2.0 s: G(S) mediana 0.230; livello nella gaussiana troncata G(E∩S)/G(S) mediana 0.847 (min 0.651); limite 1-0,05/G(S) mediana 0.783; violazioni del limite 0; regione emessa dal nucleo in 4 casi su 5
+  t=3.0 s: G(S) mediana 0.080; livello nella gaussiana troncata G(E∩S)/G(S) mediana 0.646 (min 0.420); limite 1-0,05/G(S) mediana 0.375; violazioni del limite 0; regione emessa dal nucleo in 3 casi su 5
+area del cuneo (ombra + fascia) 9.62 m2; ombra vera 7.82 m2
+# durata 11.7 s

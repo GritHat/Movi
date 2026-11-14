@@ -1,0 +1,61 @@
+# torneo.c scena=D yp=1.9 ys=2.3 w=1.0 portata=3.0 | N=100 seme=9000 | dw=+0.00 pd=0.90 corpo=0.00 c6=0.22 v=0.30-1.80 cap=460 vp=0.00 segue=0 congela=0 mancati=0 estraneo=0 vuoto=-1.00
+
+## 1. copertura per comportamento e tau (cicli a soggetto NON visibile). Per candidata: c90 c50 area90/ombra senzaRegione%
+comport.    tau    n | C004                  | C001                  | C005W                 | C005P                 | ESTA                  | ESTB                  | REACH   S1  S1congelato
+sosta30      0.5   87 | 1.000 0.931 0.35   0.0 | 0.977 0.851 0.32   0.0 | 1.000 0.759 0.30   0.0 | 0.954 0.724 0.14   0.0 | 1.000 0.816 0.26   0.0 | 1.000 0.816 0.25   0.0 | 1.000 1.000 1.000
+sosta30      1.0   92 | 1.000 0.848 0.60   0.0 | 0.989 0.750 0.67   0.0 | 1.000 0.609 0.98   0.0 | 0.728 0.457 0.24   0.0 | 1.000 0.870 0.64   0.0 | 0.924 0.793 0.60   0.0 | 1.000 1.000 1.000
+sosta30      2.0   85 | 1.000 0.753 0.71   0.0 | 0.988 0.894 0.85   0.0 | 1.000 0.412 1.00   0.0 | 0.306 0.141 0.20   0.0 | 0.882 0.647 0.78  10.6 | 0.188 0.188 0.19  81.2 | 1.000 1.000 1.000
+sosta30      3.0   85 | 0.988 0.729 0.72   0.0 | 1.000 0.953 0.87   0.0 | 1.000 0.353 1.00   0.0 | 0.129 0.024 0.09   0.0 | 0.471 0.388 0.46  52.9 | 0.000 0.000 0.00 100.0 | 1.000 1.000 1.000
+sosta30      5.0   84 | 0.988 0.690 0.69   0.0 | 0.976 0.940 0.87   0.0 | 0.929 0.286 0.91   0.0 | 0.012 0.012 0.01   0.0 | 0.000 0.000 0.00 100.0 | 0.000 0.000 0.00 100.0 | 1.000 1.000 1.000
+sosta30     10.0   84 | 0.988 0.702 0.68   0.0 | 0.929 0.774 0.75   0.0 | 1.000 0.881 1.00   0.0 | 0.000 0.000 0.00   0.0 | 0.000 0.000 0.00 100.0 | 0.000 0.000 0.00 100.0 | 1.000 1.000 1.000
+sosta30     20.0   84 | 0.988 0.690 0.68   0.0 | 0.179 0.071 0.15   0.0 | 1.000 1.000 1.00   0.0 | 0.000 0.000 0.00   0.0 | 0.000 0.000 0.00 100.0 | 0.000 0.000 0.00 100.0 | 1.000 1.000 1.000
+sosta30     30.0   84 | 0.988 0.690 0.68   0.0 | 0.036 0.012 0.02   0.0 | 1.000 1.000 1.00   0.0 | 0.000 0.000 0.00   0.0 | 0.000 0.000 0.00 100.0 | 0.000 0.000 0.00 100.0 | 1.000 1.000 1.000
+
+## 2. per ciclo nascosto e per passaggio. Per candidata: cicli senza regione % (passaggi) | regione vuota % | cicli R90 su libero oltre fascia % (passaggi) | cicli R90 su libero stretto % | cicli 'piccola e sbagliata' % (passaggi) | punto su libero oltre fascia %
+sosta30     passaggi 100, con occlusione 114, cicli nascosti 38501 | fuori REACH: cicli 0 passaggi 0 | fuori S1: 0 / 0 | fuori S1 congelato: 0 / 0
+   C004   senza   0.0 (0) | vuota   0.0 | suFG   0.0 (0) | suLibero 100.0 | piccolaSbagliata   0.0 (0) | puntoFG   2.4
+   C001   senza   0.0 (0) | vuota   0.0 | suFG   0.0 (0) | suLibero  87.6 | piccolaSbagliata  16.6 (72) | puntoFG   0.0
+   C005W  senza   0.0 (0) | vuota   0.0 | suFG   0.0 (0) | suLibero  99.6 | piccolaSbagliata   0.2 (4) | puntoFG   2.0
+   C005P  senza   0.0 (0) | vuota  77.9 | suFG   0.0 (0) | suLibero   9.8 | piccolaSbagliata  93.1 (84) | puntoFG   2.0
+   ESTA   senza  91.1 (85) | vuota   0.0 | suFG   0.0 (0) | suLibero   8.3 | piccolaSbagliata   0.0 (0) | puntoFG   0.0
+   ESTB   senza  94.4 (85) | vuota   0.0 | suFG   0.0 (0) | suLibero   5.0 | piccolaSbagliata   0.0 (0) | puntoFG   0.0
+
+## 3. cicli a soggetto VISIBILE ma non rilevato durante l'occlusione dichiarata (fuori dalla fascia C6): n | contenuto da R90 per candidata | REACH | S1
+sosta30        26 | 0.000 0.000 0.000 0.000 0.000 0.000 | 0.000 | 0.962
+
+## 4. ricomparsa: n, buio medio s | per candidata: prima misura entro 0,45 / entro 0,30 / dentro R90 | ellisse 95% ESTA ESTB: calcolata [dichiarata, cioe non perso] (perso a quel punto) | R90 > meta ombra prima della ricomparsa, per candidata | > 80% | nucleo ancora mostrato
+sosta30        7 1.56 | 1.00/1.00/0.71 1.00/1.00/0.71 1.00/1.00/0.71 0.86/0.86/0.71 0.86/0.86/0.57 0.86/0.86/0.57 | 1.000 [0.857] (0.14) 1.000 [0.857] (0.14) | meta: 0.57 0.86 1.00 0.14 0.43 0.57 | 80: 0.14 0.14 0.86 0.14 0.29 0.29 | nucleo 0.29
+            salto mediano / p90 (m): C004 0.46/0.66  C001 0.38/1.32  vel.cost 0.38/0.56  EST-A media 0.48/0.75  fermo 1.13/1.79
+
+## 5. ciclo di vita: passaggi | con un ciclo nascosto senza traccia pendente (cicli) | traccia chiusa in campo aperto | entrata non confermata | velocita stimata/vera all'ingresso: mediana p10 p90
+sosta30      100 |    3 (1052) |    3 |    0 | corrette 0 | 1.03 0.81 1.27
+
+## 6. C-EST: passaggi con mu1 > 0,5 oltre 0,5 s dopo l'uscita attesa (A, B) | per tau: perso% A B, sigma_eff medio A B, mu1 medio A B
+sosta30     mu1 dominante: A 92  B 92 su 114 occlusioni
+     tau  0.5 n   87 | perso   0.0   0.0 | sigma 0.17 0.17 | mu1 0.81 0.80
+     tau  1.0 n   92 | perso   0.0   0.0 | sigma 0.32 0.32 | mu1 0.74 0.78
+     tau  2.0 n   85 | perso  10.6  81.2 | sigma 0.56 0.85 | mu1 0.26 0.81
+     tau  3.0 n   85 | perso  52.9 100.0 | sigma 0.89 1.24 | mu1 0.34 0.83
+     tau  5.0 n   84 | perso 100.0 100.0 | sigma 1.62 1.51 | mu1 0.98 0.83
+     tau 10.0 n   84 | perso 100.0 100.0 | sigma 2.06 1.67 | mu1 1.00 0.82
+     tau 20.0 n   84 | perso 100.0 100.0 | sigma 2.16 1.86 | mu1 1.00 0.81
+     tau 30.0 n   84 | perso 100.0 100.0 | sigma 2.17 1.96 | mu1 1.00 0.81
+
+## 7. miscele per ripesatura: 'squadra' = pesi di -mix (predefiniti 60/10/10/10/5/5), giurato 30/10/20/20/10/10: tau | per candidata c90 c50
+
+## 8. errore mediano del punto (m) per comportamento e tau: C004 fantasma | C001 media | vel.cost | EST-A media ritagliata | fermo
+sosta30      0.5   87 | 0.11 | 0.11 | 0.11 | 0.10 | 0.57
+sosta30      1.0   92 | 0.22 | 0.23 | 0.26 | 0.19 | 0.78
+sosta30      2.0   85 | 0.41 | 0.66 | 1.19 | 0.31 | 0.91
+sosta30      3.0   85 | 0.50 | 1.31 | 2.21 | 0.42 | 0.91
+sosta30      5.0   84 | 0.59 | 2.77 | 4.57 | 1.87 | 0.94
+sosta30     10.0   84 | 0.70 | 7.24 | 10.11 | 0.90 | 0.94
+sosta30     20.0   84 | 0.70 | 15.58 | 20.99 | 0.43 | 0.94
+sosta30     30.0   84 | 0.70 | 23.61 | 31.86 | 0.42 | 0.94
+
+## 10. costo per ciclo e traccia (C, -O2, macchina condivisa): media / massimo in microsecondi
+C004       18.6 /    131.0  (n 41576)
+C001       90.7 /    268.4  (n 41576)
+C005W       4.2 /     21.3  (n 41576)
+ESTA       22.7 /    344.4  (n 41576)
+ESTB       26.1 /     84.1  (n 41576)

@@ -1,0 +1,60 @@
+== S1. Numerosita' (binomiale esatta, a una coda, alfa 0,05) ==
+  H0 p=0.90 contro p=0.80: primo n con potenza >= 0,80: 78 ; n da cui la potenza resta >= 0,80: 89
+  H0 p=0.90 contro p=0.95: primo n con potenza >= 0,80: 179 ; n da cui la potenza resta >= 0,80: 203
+  H0 p=0.80 contro p=0.90: primo n con potenza >= 0,80: 82 ; n da cui la potenza resta >= 0,80: 94
+  H0 p=0.95 contro p=0.90: primo n con potenza >= 0,80: 169 ; n da cui la potenza resta >= 0,80: 191
+  Potenza con n fissato per H0 p=0,90 contro 0,80 (rifiuto se X<=c):
+    n= 20: c= 15  alfa vera=0.043  potenza=0.370
+    n= 30: c= 23  alfa vera=0.026  potenza=0.393
+    n= 60: c= 49  alfa vera=0.034  potenza=0.677
+    n=100: c= 84  alfa vera=0.040  potenza=0.871
+    n=150: c=128  alfa vera=0.044  potenza=0.963
+    n=200: c=172  alfa vera=0.043  potenza=0.989
+  Intervallo di Wilson al 95 %% attorno a 0,90 e limite inferiore a una coda (Clopper-Pearson 95 %%):
+    n=  20 k=  18: Wilson [0.699; 0.972] semiampiezza 0.137 | con 12 celle (z=2,87) [0.584; 0.983] | CP inf. a una coda 0.717 | n su n -> CP inf. 0.861
+    n=  30 k=  27: Wilson [0.744; 0.965] semiampiezza 0.111 | con 12 celle (z=2,87) [0.651; 0.978] | CP inf. a una coda 0.761 | n su n -> CP inf. 0.905
+    n=  40 k=  36: Wilson [0.769; 0.960] semiampiezza 0.095 | con 12 celle (z=2,87) [0.691; 0.973] | CP inf. a una coda 0.786 | n su n -> CP inf. 0.928
+    n=  60 k=  54: Wilson [0.799; 0.953] semiampiezza 0.077 | con 12 celle (z=2,87) [0.737; 0.967] | CP inf. a una coda 0.812 | n su n -> CP inf. 0.951
+    n= 100 k=  90: Wilson [0.826; 0.945] semiampiezza 0.060 | con 12 celle (z=2,87) [0.782; 0.958] | CP inf. a una coda 0.836 | n su n -> CP inf. 0.970
+    n= 150 k= 135: Wilson [0.842; 0.938] semiampiezza 0.048 | con 12 celle (z=2,87) [0.808; 0.951] | CP inf. a una coda 0.850 | n su n -> CP inf. 0.980
+    n= 200 k= 180: Wilson [0.851; 0.934] semiampiezza 0.042 | con 12 celle (z=2,87) [0.823; 0.946] | CP inf. a una coda 0.858 | n su n -> CP inf. 0.985
+    n= 400 k= 360: Wilson [0.867; 0.926] semiampiezza 0.030 | con 12 celle (z=2,87) [0.849; 0.935] | CP inf. a una coda 0.872 | n su n -> CP inf. 0.993
+    n=1000 k= 900: Wilson [0.880; 0.917] semiampiezza 0.019 | con 12 celle (z=2,87) [0.869; 0.924] | CP inf. a una coda 0.883 | n su n -> CP inf. 0.997
+  Per dichiarare «copertura >= 0,80» (CP a una coda 95 %%) servono almeno k su n:
+    n= 30: k>= 28 (0.933) ; P(riuscirci | copertura vera 0,90)=0.411 ; | vera 0,95)=0.812 ; | vera 0,80)=0.044
+    n= 40: k>= 37 (0.925) ; P(riuscirci | copertura vera 0,90)=0.423 ; | vera 0,95)=0.862 ; | vera 0,80)=0.028
+    n= 60: k>= 54 (0.900) ; P(riuscirci | copertura vera 0,90)=0.606 ; | vera 0,95)=0.970 ; | vera 0,80)=0.031
+    n=100: k>= 87 (0.870) ; P(riuscirci | copertura vera 0,90)=0.876 ; | vera 0,95)=1.000 ; | vera 0,80)=0.047
+
+== S2. Riconteggio con Wilson dai conteggi del torneo e del nucleo (k = round(p*n): +-2 conteggi) ==
+  G1 tutti D=0,5 (nom 95)               3908/4000  = 0.977  Wilson 95 % [0.972; 0.981]   (risultati_A_parte2.txt)
+  G1 tutti D=1 (nom 95)                 3736/4000  = 0.934  Wilson 95 % [0.926; 0.941]   (risultati_A_parte2.txt)
+  G1 tutti D=2 (nom 95)                 3708/4000  = 0.927  Wilson 95 % [0.919; 0.935]   (risultati_A_parte2.txt)
+  G1 tutti D=3 (nom 95)                 3752/4000  = 0.938  Wilson 95 % [0.930; 0.945]   (risultati_A_parte2.txt)
+  G2 tutti D=0,5 (nom 95)               3688/4000  = 0.922  Wilson 95 % [0.913; 0.930]   (risultati_A_parte2.txt)
+  G2 tutti D=1 (nom 95)                 3580/4000  = 0.895  Wilson 95 % [0.885; 0.904]   (risultati_A_parte2.txt)
+  G2 tutti D=2 (nom 95)                 3664/4000  = 0.916  Wilson 95 % [0.907; 0.924]   (risultati_A_parte2.txt)
+  G2 tutti D=3 (nom 95)                 3728/4000  = 0.932  Wilson 95 % [0.924; 0.939]   (risultati_A_parte2.txt)
+  G1 prosegue D=2                       2437/2437  = 1.000  Wilson 95 % [0.998; 1.000]   (risultati_A_parte2.txt)
+  G1 sosta D=2                           568/595   = 0.955  Wilson 95 % [0.935; 0.969]   (risultati_A_parte2.txt)
+  G1 svolta D=2                          489/583   = 0.839  Wilson 95 % [0.807; 0.866]   (risultati_A_parte2.txt)
+  G1 torna D=0,5                         342/416   = 0.822  Wilson 95 % [0.782; 0.856]   (risultati_A_parte2.txt)
+  G1 torna D=1                           280/422   = 0.664  Wilson 95 % [0.617; 0.707]   (risultati_A_parte2.txt)
+  G1 torna D=2                           216/385   = 0.561  Wilson 95 % [0.511; 0.610]   (risultati_A_parte2.txt)
+  G1 torna D=3                           241/424   = 0.568  Wilson 95 % [0.521; 0.615]   (risultati_A_parte2.txt)
+  G2 con manovra nel buio D=1            813/1143  = 0.711  Wilson 95 % [0.684; 0.737]   (risultati_A_parte2.txt)
+  G2 con manovra nel buio D=2           1554/1848  = 0.841  Wilson 95 % [0.824; 0.857]   (risultati_A_parte2.txt)
+  G3 tutte le riemersioni               3560/4000  = 0.890  Wilson 95 % [0.880; 0.899]   (risultati_A_parte2.txt)
+  G3 torna, buio 0,75-1,5 s                7/126   = 0.056  Wilson 95 % [0.027; 0.110]   (risultati_A_parte2.txt)
+  G3 torna, buio 1,5-2,5 s                15/173   = 0.087  Wilson 95 % [0.053; 0.138]   (risultati_A_parte2.txt)
+  G3 torna, buio 2,5-3,5 s                54/161   = 0.335  Wilson 95 % [0.267; 0.411]   (risultati_A_parte2.txt)
+  G3 torna, buio >= 3,5 s                 95/121   = 0.785  Wilson 95 % [0.704; 0.849]   (risultati_A_parte2.txt)
+  nucleo con C6, demo, torna (col)       200/400   = 0.500  Wilson 95 % [0.451; 0.549]   (v2_C6.txt)
+  nucleo con C6, demo, torna (wmin)      189/400   = 0.472  Wilson 95 % [0.424; 0.521]   (v2_C6.txt)
+  nucleo con C6, demo, prosegue         2000/2000  = 1.000  Wilson 95 % [0.998; 1.000]   (v2_C6.txt)
+  nucleo con C6, T1, torna (col)         266/400   = 0.665  Wilson 95 % [0.617; 0.709]   (v2_C6.txt)
+  Paradosso della media (G1, D=2, nominale 95): copertura complessiva = somma dei pesi per classe
+    torneo 60/15/10/15         -> 0.925
+    squadra 90/10/0/0          -> 0.996
+    giurato 50/20/20/10        -> 0.887
+    solo manovre 0/33/33/33    -> 0.785

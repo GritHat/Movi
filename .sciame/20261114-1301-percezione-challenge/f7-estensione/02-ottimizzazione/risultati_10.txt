@@ -1,0 +1,6 @@
+# lotto 10 sul nucleo 1, 2026-11-14T15:23:18+01:00
+# carico prima: %CPU PSR COMMAND
+# carico prima:  100  22 python3
+# carico prima: 99.6   8 banco
+# carico prima:  4.7  19 plasmashell
+python_puro densa 10cm raggi=19200 passi/fot=1056645 ms: min=152.0 mediana=154.2 max=156.3

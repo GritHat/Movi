@@ -1,0 +1,2 @@
+P7 scena=demo h=0.05: inserimento dei punti d'arrivo: mediana 1.166 ms | p95 1.176 | max 1.272 ; voxel occupati 5950 (1152 kB a 2 B/voxel densi) ; controllo 'visto attraverso' su 5950 voxel: mediana 0.037 ms | max 0.039 ; occupati con il centro visto attraverso: 189
+P7 scena=peggiore h=0.05: inserimento dei punti d'arrivo: mediana 1.151 ms | p95 1.161 | max 1.221 ; voxel occupati 10756 (1152 kB a 2 B/voxel densi) ; controllo 'visto attraverso' su 10756 voxel: mediana 0.065 ms | max 0.076 ; occupati con il centro visto attraverso: 244
