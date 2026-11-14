@@ -20,9 +20,9 @@
 \definecolor{rule}{HTML}{C9D1D9}
 \color{ink}
 
-\newcommand{\versione}{v0.7}
-\newcommand{\dataora}{14 novembre 2026, ore 17:49}
-\newcommand{\statodoc}{verdetti su continuità visiva, mappa in 3D e proposte esterne integrati; soluzione unica e piano in corso}
+\newcommand{\versione}{v0.8}
+\newcommand{\dataora}{14 novembre 2026, ore 17:54}
+\newcommand{\statodoc}{cinque verdetti integrati, compreso quello sui dati pubblici e sul sensore simulato; soluzione unica e piano in corso}
 
 % Marche di stato: leggibili anche in bianco e nero (lettera + colore)
 \newcommand{\chip}[2]{\tikz[baseline=(c.base)]\node[inner xsep=2.6pt,inner ysep=1.1pt,rounded corners=1.5pt,fill=#1,text=white,font=\fontsize{6.2}{6.2}\selectfont\bfseries](c){#2};}
@@ -84,17 +84,17 @@
 
 % ---------------------------------------------------------------- verdetti
 \sez{2 · Che cosa è stabilito: i verdetti dello sciame}
-\colorbox{warnbg}{\parbox{\dimexpr\linewidth-2\fboxsep}{\vspace{0.5pt}\textbf{Adottabile come progetto di prototipo, non come sistema validato.} Tutto ciò che segue è provato solo al calcolatore (simulazioni, conti, schede tecniche), con il \textbf{sensore fermo} e \textbf{una persona per ombra}: nessuna immagine di una camera vera è ancora passata da una prova vagliata. Le correzioni sono provate una per una; la prova d'insieme è in corso.\vspace{0.5pt}}}
+\colorbox{warnbg}{\parbox{\dimexpr\linewidth-2\fboxsep}{\vspace{0.5pt}\textbf{Adottabile come progetto di prototipo, non come sistema validato.} Tutto ciò che segue è provato solo al calcolatore (simulazioni, profondità simulata dalle schede tecniche di tre camere, tracciati pubblici di persone), con il \textbf{sensore fermo} e \textbf{una persona per ombra}: mai su un sensore della squadra. Le correzioni sono provate una per una; la prova d'insieme è in corso.\vspace{0.5pt}}}
 \begin{multicols}{2}
 \begin{enumerate}[leftmargin=1.35em]
 \item \Cv\ \textbf{La zona non sparisce più.} Durante l'occlusione il sistema mostra sempre un segno e una zona; oltre il suo limite dice «previsto ampio», non «perso». \nota{0 passaggi con un'interruzione su circa 8300 simulati; prima erano quasi tutti. Cede se la persona è persa prima dell'ostacolo: 9 passaggi su 2800.}
-\item \Cv\ \textbf{Precisione dichiarata.} Chi resta sul suo percorso (prosegue, rallenta, si ferma, torna indietro) sta dentro la zona in \textbf{almeno 9 casi su 10 fino a 2 s} senza essere visto, e in almeno 85 su 100 fino a 3 s. \nota{45 combinazioni su 45, tre disposizioni, una mai usata per la taratura.}
+\item \Cv\ \textbf{Precisione dichiarata.} Chi resta sul suo percorso (prosegue, rallenta, si ferma, torna indietro) sta dentro la zona in \textbf{almeno 9 casi su 10 fino a 2 s} senza essere visto, e in almeno 85 su 100 fino a 3 s. \nota{45 combinazioni su 45, tre disposizioni, una mai usata per la taratura. Su tracciati pubblici di 9 persone vere (cattura del moto, non una camera) l'errore tipico della previsione è 0,2 m dopo 1 s e 0,8 m dopo 3 s.}
 \item \Pv\ \textbf{Dove la zona cede, detto prima.} Chi svolta o esce dal lato lontano: 3–7 su 10 a 2 s. Bordo dell'ombra stimato male di 10–20 cm: 3–5 su 10. Chi parte da fermo accanto all'ostacolo: 1–3 su 10. \nota{In tutti questi casi resta l'avviso sull'ombra.}
-\item \Cv\ \textbf{La previsione non tocca la sicurezza.} La persona nascosta era dentro l'area d'avviso nel 100\,\% di oltre 170\,000 istanti simulati, anche quando la zona stretta sbagliava; la zona non sta mai su suolo visto libero (oltre 20 cm di margine). \nota{L'avviso cede in 13 passaggi su 4800 con un rilevamento mancato su dieci e l'ombra stimata 20 cm troppo stretta.}
+\item \Cv\ \textbf{La previsione non tocca la sicurezza.} La persona nascosta era dentro l'area d'avviso nel 100\,\% di oltre 170\,000 istanti simulati, anche quando la zona stretta sbagliava; la zona non sta mai su suolo visto libero (oltre 20 cm di margine). \nota{Sul sensore simulato dalle schede: 0 «libero» dentro l'ombra su 2,9 milioni di controlli, con la posa della camera nota. L'avviso cede in 13 passaggi su 4800 con un rilevamento mancato su dieci e l'ombra stimata 20 cm troppo stretta.}
 \item \Cv\ \textbf{«Libero» solo dove si guarda adesso.} Letto nel fotogramma corrente, non è mai caduto dentro un corpo, nemmeno se il corpo non rimanda segnale. \nota{La regola di prima lo ricordava per tre fotogrammi e lì cadeva: corretta. Prezzo: con il 5\,\% di misure mancanti si perde il 12–21\,\% del libero vero, dal lato prudente.}
-\item \Cv\ \textbf{Stessa identità al ritorno} con una sola persona nascosta \nota{(400 passaggi su 400 in 27 configurazioni)}. \Pv\ \nota{Con le correzioni nuove va riprovata; se dalla stessa ombra esce un'altra persona mai vista, la scambia.}
+\item \Pv\ \textbf{Stessa identità al ritorno: in correzione.} Reggeva con misure ideali \nota{(400 passaggi su 400)}; con il rumore realistico del sensore simulato \textbf{non regge} \nota{(0 su 90: persona e pannello si fondono quando le sagome si toccano)}. \nota{Con una soglia corretta torna a 41 su 45, a una sola risoluzione: prova correttiva in corso. Se dalla stessa ombra esce un'altra persona mai vista, la scambia.}
 \item \Cv\ \textbf{Massa e accelerazione non si stimano} da questi sensori (dimostrato nel modello fisico); la velocità sì. Una persona a 0,5 m/s è vista entro 1 s a 2 m \nota{(2000 passaggi simulati su 2000)}.
-\item \Pv\ \textbf{Aperti}: ritardo dal sensore all'uscita (stimati 155 ms, mai misurati); margine che copre oggetti fino a circa 1,4 m/s; tutto ciò che riguarda un sensore in moto.
+\item \Pv\ \textbf{Aperti}: falsi «in movimento» su un ostacolo fermo con rumore realistico (79 passaggi su 90, in correzione); ritardo dal sensore all'uscita (stimati 155 ms, mai misurati); oggetti oltre circa 1,4 m/s; tutto ciò che riguarda un sensore in moto.
 \end{enumerate}
 \end{multicols}
 
@@ -122,13 +122,13 @@ Scelta automatica della configurazione; sensori laterali come preallarme & no \C
 \toprule
 La traccia chiede & Che cosa fa il prototipo, e come si misura & Stato dopo le prove al calcolatore & \\
 \midrule
-Rilevare elementi mobili & 9 passaggi su 10 visti entro 1 s; falsi su un muro fermo ≤ 10\,\% & regge a 2 m; oltre, decide il rumore vero & \Cv \\
+Rilevare elementi mobili & 9 passaggi su 10 visti entro 1 s; falsi su un muro fermo ≤ 10\,\% & persona vista a 2 m: regge; falsi movimenti con rumore realistico: in correzione & \Pv \\
 Rilevare ostacoli & 5 su 5 entro 15 cm, fra 1,3 e 3 m dal sensore & conto geometrico; sotto 1,1 m un ostacolo di 15 cm esce dal campo & \Pv \\
 Gestire le interruzioni della visibilità & zona a ogni fotogramma; tabellone «dentro \emph{k} su \emph{n}» misurato sul posto & regge in simulazione, nel dominio dichiarato & \Cv \\
 Distinguere osservato e incerto & contorno pieno solo con una misura; zona tratteggiata con l'età del dato; registro che marca ogni evento «osservato» o «dedotto» & regole di disegno approvate; registro mai provato sul nucleo & \Pv \\
 Feedback chiari e tempestivi & livelli che dichiarano e non comandano: «nessun ostacolo osservato fino a \emph{d} metri», «attenzione», «zona non verificata» & da provare con persone & \Pv \\
 Segnalare la perdita di affidabilità & controllo all'avvio; segnale entro 1 s a sensore coperto, urtato o fermo; le zone previste restano, marcate «dedotto» & corretto in simulazione; il ritorno dopo una copertura è riscritto, non riprovato & \Pv \\
-Bassa latenza, efficienza & almeno 15 cicli al secondo senza scheda grafica & previsione: circa 1 ms per ciclo con dieci oggetti; mappa: meno di 1 ms. Ritardo totale: da misurare & \Pv \\
+Bassa latenza, efficienza & almeno 15 cicli al secondo senza scheda grafica & ciclo intero: 6 ms di media su scene simulate, 81 ms su una registrazione vera affollata. Ritardo totale: da misurare & \Pv \\
 Sicurezza delle indicazioni & mai «libero» su zone non viste; mai «via libera» & regge per costruzione; il vetro è un limite dichiarato & \Cv \\
 \bottomrule
 \end{tabularx}
@@ -158,13 +158,13 @@ Che cosa NON è provato & Sensore in moto, volo, esterni al sole, oltre 3 m, pi�
 \item Passa dietro un pannello → segno e zona tratteggiata restano a schermo, dentro l'avviso di «possibile presenza»; al ritorno, il tabellone conta se era dentro la zona.
 \item Non ricompare, o una mano copre il sensore → «non ricomparso da \emph{n} s»; «affidabilità persa».
 \end{enumerate}
-\nota{\textbf{La prova la sceglie il giurato}: decide lui quando coprire il sensore e quando l'attore si ferma. Ci smentisce un solo «libero» sulla zona nascosta. \textbf{Geometria}: pannello \textbf{alto almeno 1,7 m}, a 1,7–1,9 m dal sensore; attore a 2,3 m; una sola persona dietro; al chiuso. Con un pannello largo 1 m la zona localizza per circa 1 s e poi dice «è ancora dietro»; con un'ombra di circa 2 m la zona stretta si vede per 2–3 s. Senza sensore: stessi atti su registrazioni e dati simulati, dichiarati a schermo.}
+\nota{\textbf{La prova la sceglie il giurato}: decide lui quando coprire il sensore e quando l'attore si ferma. Ci smentisce un solo «libero» sulla zona nascosta. \textbf{Geometria}: pannello \textbf{alto almeno 1,8 m}, a 1,7–1,9 m dal sensore; attore a 2,3 m; una sola persona dietro; al chiuso. Con un pannello largo 1 m la zona localizza per circa 1 s e poi dice «è ancora dietro»; con un'ombra di circa 2 m la zona stretta si vede per 2–3 s. Senza sensore: stessi atti su registrazioni e dati simulati, dichiarati a schermo.}
 
 \sez{7 · In corso adesso \Sv}
 \begin{itemize}
 \item \textbf{Soluzione unica} (versione 3): nucleo più tutte le correzioni dei verdetti, attaccata come insieme.
 \item \textbf{Prova d'insieme della continuità} su casi nuovi, con una seconda persona mai vista e l'ombra stimata male.
-\item \textbf{Dati pubblici di sensori veri} e sensore simulato dalle schede tecniche.
+\item \textbf{Identità al ritorno} con rumore realistico: correzione e controprova.
 \item \textbf{Piano 14 + 4 ore} per cinque persone, senza sensori nelle prime 5–6.
 \end{itemize}
 \end{minipage}\hfill
@@ -180,16 +180,16 @@ Che cosa NON è provato & Sensore in moto, volo, esterni al sole, oltre 3 m, pi�
 
 \sez{9 · Decisioni che spettano alla squadra}
 \begin{enumerate}[leftmargin=1.3em]
-\item \textbf{Che cosa vale come valutazione preliminare} all'ora 14: proposta, dati simulati e registrazioni pubbliche dichiarati a schermo, più la prima ora di misure se arriva una camera.
+\item \textbf{Che cosa vale come valutazione preliminare} all'ora 14: proposta, dati simulati e registrazioni pubbliche dichiarati a schermo, più la prima ora di misure se arriva una camera. \nota{Un iPhone o iPad Pro fra i cinque dà profondità vera registrata subito.}
 \item \textbf{La demo}: pannello da 1 m con passo lento, oppure ombra larga circa 2 m. \textbf{La cifra a schermo}: «almeno 9 su 10 fino a 2 s» dalla simulazione, o solo il contatore misurato.
 \item \textbf{Le ore}: stimate 62–68 ore-persona contro 70 (cinque persone per 14 ore); in quattro non ci sta. Si taglia su etichetta «persona», registro, zone; mai su continuità e sicurezza. \nota{Stime non verificate.}
 \end{enumerate}
 \end{minipage}
 
 \vspace{3pt}
-\colorbox{accentbg}{\parbox{\dimexpr\linewidth-2\fboxsep}{\vspace{0.5pt}\textbf{Limiti da dire per primi.} Provato solo al calcolatore: nessuna immagine di una camera vera. Camera ferma a 1,2 m da terra, al chiuso, fino a 3 m, una persona per ombra, un ostacolo che la nasconde per intero. Non vede il \textbf{vetro}. Non vede il suolo a meno di 1,24 m. Dietro un ostacolo più basso del sensore perde chi è ancora in vista. Non distingue due persone che escono dalla stessa ombra. Non è un dispositivo di sicurezza né medico. \textbf{Da non dire}: «validato», «prevede dove sarà», «continuità garantita», «mappa 3D», «via libera», «in volo», «in movimento», «orientamento» per chi cammina.\vspace{0.5pt}}}
+\colorbox{accentbg}{\parbox{\dimexpr\linewidth-2\fboxsep}{\vspace{0.5pt}\textbf{Limiti da dire per primi.} Provato solo al calcolatore: nessuna immagine di una camera vera. Camera ferma a 1,2 m da terra, al chiuso, fino a 3 m, una persona per ombra, un ostacolo che la nasconde per intero. Posa della camera nota entro 1°. Non vede il \textbf{vetro} né un ostacolo che non rimanda segnale. Non vede il suolo a meno di 1,24 m. Dietro un ostacolo più basso del sensore perde chi è ancora in vista. Non distingue due persone che escono dalla stessa ombra. Non è un dispositivo di sicurezza né medico. \textbf{Da non dire}: «validato», «prevede dove sarà», «continuità garantita», «mappa 3D», «via libera», «in volo», «in movimento», «orientamento» per chi cammina.\vspace{0.5pt}}}
 
 \vspace{1pt}
-\nota{\textbf{Come è stato ottenuto.} Uno sciame di agenti specialisti: corsie cieche, torneo di falsificazione, soluzione misurata, attaccata e corretta, verdetti di un arbitro su nucleo, mappa in 3D, continuità visiva e proposte esterne. Stato esteso del progetto e 291 riferimenti verificati in \texttt{documentazione/}; ogni cifra rimanda ai file in \texttt{.sciame/20261114-1301-percezione-challenge/}.}
+\nota{\textbf{Come è stato ottenuto.} Uno sciame di agenti specialisti: corsie cieche, torneo di falsificazione, soluzione misurata, attaccata e corretta, cinque verdetti di un arbitro. Stato esteso del progetto e 291 riferimenti verificati in \texttt{documentazione/}; ogni cifra rimanda ai file in \texttt{.sciame/}.}
 
 \end{document}
