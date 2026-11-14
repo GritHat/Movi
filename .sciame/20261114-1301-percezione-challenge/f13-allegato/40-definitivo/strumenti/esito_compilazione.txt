@@ -1,0 +1,10 @@
+xelatex 1: 0
+bibtex: 0
+xelatex 2: 0
+xelatex 3: 0
+avvisi di BibTeX: 0
+errori (righe con !): 0
+riferimenti o citazioni indefiniti: 0
+Overfull hbox: 0
+Float too large: 0
+Output written on allegato_tecnico.pdf (71 pages).

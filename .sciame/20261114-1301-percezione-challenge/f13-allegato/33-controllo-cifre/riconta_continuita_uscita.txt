@@ -1,0 +1,11 @@
+c7=0: righe 60; confermati 23154; non confermati prima dell'ombra 248; somma 23402; con un vuoto 0; scoperti: fra i confermati 680, fra i non confermati 248, in tutto 928 (3.97 %); passaggi con ingresso riconosciuto (somma - scoperti) 22474
+c7=1: righe 60; confermati 23154; non confermati prima dell'ombra 248; somma 23402; con un vuoto 0; scoperti: fra i confermati 17, fra i non confermati 7, in tutto 24 (0.10 %); passaggi con ingresso riconosciuto (somma - scoperti) 23378
+-- per rilevamento e corpo (c7 = 1 e c7 = 0) --
+ c7=0 pd=0.7 corpo=esteso: {'n': 5704, 'scoperti': 506, 'vuoti': 0, 'geo_D': 1741, 'geo_L': 1984, 'geo_T': 1979}
+ c7=0 pd=0.7 corpo=punto: {'n': 5997, 'scoperti': 346, 'vuoti': 0, 'geo_D': 1997, 'geo_L': 2000, 'geo_T': 2000}
+ c7=0 pd=0.9 corpo=esteso: {'n': 5704, 'scoperti': 40, 'vuoti': 0, 'geo_D': 1741, 'geo_L': 1984, 'geo_T': 1979}
+ c7=0 pd=0.9 corpo=punto: {'n': 5997, 'scoperti': 36, 'vuoti': 0, 'geo_D': 1997, 'geo_L': 2000, 'geo_T': 2000}
+ c7=1 pd=0.7 corpo=esteso: {'n': 5704, 'scoperti': 17, 'vuoti': 0, 'geo_D': 1741, 'geo_L': 1984, 'geo_T': 1979}
+ c7=1 pd=0.7 corpo=punto: {'n': 5997, 'scoperti': 5, 'vuoti': 0, 'geo_D': 1997, 'geo_L': 2000, 'geo_T': 2000}
+ c7=1 pd=0.9 corpo=esteso: {'n': 5704, 'scoperti': 1, 'vuoti': 0, 'geo_D': 1741, 'geo_L': 1984, 'geo_T': 1979}
+ c7=1 pd=0.9 corpo=punto: {'n': 5997, 'scoperti': 1, 'vuoti': 0, 'geo_D': 1997, 'geo_L': 2000, 'geo_T': 2000}

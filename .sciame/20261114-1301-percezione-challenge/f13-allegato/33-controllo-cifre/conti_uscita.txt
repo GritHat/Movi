@@ -1,0 +1,22 @@
+== regola «mobile», prova singola alla finestra massima 13 passi, 0,5 m/s, avvicinamento da 3 m ==
+ pes: spostamento 0.4333 m; soglia 0.3674 m; (A) sigma_delta 0.0735 -> P = 0.8151; (B) capi a 2.967 e 2.533 m, sigma_delta 0.0629 -> P = 0.8527
+ sev: spostamento 0.4333 m; soglia 0.4593 m; (A) sigma_delta 0.0919 -> P = 0.3888; (B) capi a 2.967 e 2.533 m, sigma_delta 0.0786 -> P = 0.3707
+ prove nel primo secondo (k = 5..15 con j = 2):  11 ; limite usato nel testo: 13
+== posa: errore di quota a 3 m con 1 grado ==
+ rho=2: lineare 3.49 cm; rho*tan 3.49 cm
+ rho=2.8: lineare 4.89 cm; rho*tan 4.89 cm
+ rho=3: lineare 5.24 cm; rho*tan 5.24 cm
+== retta del costo a n_T=152 ==  45.93
+== zero su N: limite superiore di Wilson z^2/(N+z^2) ==
+ N=90: 4.0936 %  (3/N = 3.3333 %)
+ N=131: 2.8489 %  (3/N = 2.2901 %)
+ N=300: 1.2643 %  (3/N = 1.0000 %)
+ N=400: 0.9512 %  (3/N = 0.7500 %)
+ N=6000: 0.0640 %  (3/N = 0.0500 %)
+ N=24835: 0.0155 %  (3/N = 0.0121 %)
+ N=20000: 0.0192 %  (3/N = 0.0150 %)
+ N=140: 2.6706 %  (3/N = 2.1429 %)
+ N=264: 1.4342 %  (3/N = 1.1364 %)
+== +- di 85,85 % e 26,60 % su 2000 == 1.5275289267310128 1.9365553831481297
+== quote == 928/23402 = 3.9655 %, 24/23402 = 0.1026 %, 4/9152 = 0.0437 %
+== denominatori dell'avviso == 4324-297-106 = 3921  4325-297-106 = 3922

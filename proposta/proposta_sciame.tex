@@ -20,9 +20,9 @@
 \definecolor{rule}{HTML}{C9D1D9}
 \color{ink}
 
-\newcommand{\versione}{v0.9}
-\newcommand{\dataora}{14 novembre 2026, ore 19:42}
-\newcommand{\statodoc}{testo finale dopo la chiusura dello sciame e due letture (giurato esterno, giurato tecnico)}
+\newcommand{\versione}{v1.0}
+\newcommand{\dataora}{14 novembre 2026, ore 20:25}
+\newcommand{\statodoc}{testo finale dopo la chiusura dello sciame e due letture; con allegato tecnico}
 
 % Marche di stato: leggibili anche in bianco e nero (lettera + colore)
 \newcommand{\chip}[2]{\tikz[baseline=(c.base)]\node[inner xsep=2.4pt,inner ysep=1.0pt,rounded corners=1.5pt,fill=#1,text=white,font=\fontsize{6.0}{6.0}\selectfont\bfseries](c){#2};}
@@ -124,7 +124,7 @@ Un filtro di Kalman, che stima posizione e velocità, segue i gruppi di celle oc
 \sez{4 · Che cosa è provato, e come}
 \begin{enumerate}[leftmargin=1.3em]
 \item \Sv\ «Suolo visto libero» non è mai uscito sopra un ostacolo (camera ideale, cioè profondità calcolata dalla geometria: 300 condizioni, 9\,000 fotogrammi, due volte). Con 1° d'errore d'inclinazione cede.
-\item \Sv\ Su profondità simulata, una persona nascosta entro 3 m non è mai rimasta senza avviso (0 fotogrammi su 4\,324; replica: 0).
+\item \Sv\ Su profondità simulata, con due correzioni che partono spente (gruppi più selettivi; avviso che resta dopo il riaggancio), una persona nascosta entro 3 m non è mai rimasta senza avviso (0 fotogrammi su 4\,324; replica: 0). Con le regole di partenza, sugli stessi passaggi, resta senza avviso in 180 fotogrammi.
 \item \Sv\ Il numero di traccia al ritorno (a schermo «identità») è sempre «presunto»: coi parametri di partenza reggeva 0 volte su 90; con una correzione che parte spenta, 176 su 180 (94–99\,\%), solo per un adulto solo, a 0,5 m dal pannello, entro 2,6 m. Un'altra persona che esce dalla stessa ombra prende il numero (19 volte su 20); l'avviso resta.
 \item \Cv\ I 3 m di portata bastano ad avvisare in tempo chi si avvicina fino a 1,44 m/s, con 1 s di reazione (ipotesi): il passo normale sì; veicoli, treni e aerei no. Con un operatore remoto (1,8 s): 0,92 m/s. La fascia di 0,40 m copre chi è nascosto fino a 1,13 m/s.
 \end{enumerate}

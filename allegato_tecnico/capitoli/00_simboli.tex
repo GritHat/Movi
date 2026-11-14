@@ -24,7 +24,7 @@ $P_{\mathrm{mob}}$, $P_{fa}$ & probabilità che la regola «mobile» dichiari in
 $\vmax$ & velocità massima ammessa per un oggetto\\
 $\tau$ & latenza dall'evento all'uscita\\
 $\tocc$ & tempo trascorso dall'ultima osservazione\\
-$t_a$ & età del dato più vecchio usato da un'uscita\\
+$t_a$ & tempo entro cui un soggetto fuori dall'ombra, in campo e in portata, è riportato come osservato\\
 $t_{\mathrm{conf}}$ & tempo di conferma di una traccia\\
 $\Oss(t)$ & insieme del suolo osservato libero\\
 $\Omb(t)$, $\hat\Omb(t)$ & ombra di un ostacolo sul suolo, vera e stimata\\
@@ -49,7 +49,7 @@ traccia & la stima dello stato di un oggetto seguito, tenuta dal filtro da un ci
 regola «mobile» & regola che dichiara «in movimento» un gruppo in base allo spostamento su una finestra di tempo\\
 insieme di possibile presenza & parte del suolo in cui un oggetto non osservato può trovarsi; si riduce solo per osservazione\\
 area d'avviso & l'ombra stimata dell'ostacolo allargata della fascia di guardia, su cui esce l'avviso di possibile presenza\\
-fascia di guardia & allargamento dell'ombra che copre l'età del dato, la latenza e l'errore del bordo\\
+fascia di guardia & allargamento dell'ombra che copre il tempo $t_a$, la latenza, la tenuta di un ciclo e l'errore del bordo\\
 regione di previsione & regione emessa a ogni ciclo per una traccia entrata nell'ombra, con il suo livello\\
 «previsto ampio» & stato della regione quando il livello non è dichiarabile: la regione resta, senza punto e senza livello\\
 identità presunta & identità riassegnata alla ricomparsa: è un'ipotesi, e l'avviso non ne dipende\\

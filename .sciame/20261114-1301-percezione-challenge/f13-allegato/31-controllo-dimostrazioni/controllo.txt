@@ -1,0 +1,84 @@
+
+== A1. Contenimento e minimalita' a posa esatta (esaustivo)
+celle=4 fotogrammi=4: successioni=65536, differenze Pres/raggiungibile=0, violazioni monotonia=0
+celle=5 fotogrammi=3: successioni=32768, differenze Pres/raggiungibile=0, violazioni monotonia=0
+
+== A2. Controesempio di velocita' (passo vero 2, dichiarato 1)
+celle=3 fotogrammi=2: 64 successioni; violazione all'ultimo fotogramma=8; a un fotogramma qualsiasi=8
+celle=4 fotogrammi=4: 65536 successioni; violazione all'ultimo fotogramma=17696; a un fotogramma qualsiasi=30288
+
+== A3. Errore di posa di una cella: il sensore vede il mondo spostato (esaustivo su traiettorie)
+istanti=447; posizione vera fuori da Pres (ricorsione scritta)=447; con il libero eroso di 1 cella=0
+
+== B. Lettura per punto con il margine m(z): striscia dell'impronta letta come suolo
+k=0.004: rho=1.5: striscia=5.7 cm, quota=4.6 cm; rho=2.0: striscia=8.1 cm, quota=4.8 cm; rho=2.5: striscia=10.9 cm, quota=5.2 cm; rho=3.0: striscia=14.4 cm, quota=5.7 cm
+k=0.010: rho=1.5: striscia=10.5 cm, quota=8.4 cm; rho=2.0: striscia=16.1 cm, quota=9.7 cm; rho=2.5: striscia=23.2 cm, quota=11.1 cm; rho=3.0: striscia=31.7 cm, quota=12.7 cm
+k=0.004: persona larga 0.45 m con faccia a 2.3 m: punti dell'impronta letti come suolo fino a 0.103 m dalla faccia (23% dell'impronta in sezione): al fotogramma 1, Pres = X \ Oss non li contiene
+k=0.01: persona larga 0.45 m con faccia a 2.3 m: punti dell'impronta letti come suolo fino a 0.237 m dalla faccia (53% dell'impronta in sezione): al fotogramma 1, Pres = X \ Oss non li contiene
+oggetto in avvicinamento a 1,4 m/s da 2,6 m, 8 fotogrammi, k=0.004: profondita' massima dell'impronta fuori da Pres = 12.0 cm
+con m=0 (lettura esatta): punti occupati fuori da Pres = 0
+
+== C. Fascia di guardia: tabella e caso peggiore
+t_a=0.000 tau=0.15 eps=0 tenuta=True: tempo=0.2167 s, vmax coperta=1.846 m/s; 1,4*T=0.303 m; 2,5*T=0.542 m
+t_a=0.133 tau=0.155 eps=0 tenuta=False: tempo=0.2880 s, vmax coperta=1.389 m/s; 1,4*T=0.403 m; 2,5*T=0.720 m
+t_a=0.133 tau=0.155 eps=0 tenuta=True: tempo=0.3547 s, vmax coperta=1.128 m/s; 1,4*T=0.497 m; 2,5*T=0.887 m
+t_a=0.133 tau=0.155 eps=0.2 tenuta=True: tempo=0.3547 s, vmax coperta=0.564 m/s; 1,4*T=0.497 m; 2,5*T=0.887 m
+t_a=0.133 tau=0.155 eps=0 tenuta=True: tempo=0.3550 s, vmax coperta=1.127 m/s; 1,4*T=0.497 m; 2,5*T=0.887 m
+t_a=0.267 tau=0.155 eps=0 tenuta=True: tempo=0.4883 s, vmax coperta=0.819 m/s; 1,4*T=0.684 m; 2,5*T=1.221 m
+centro fuori da W: 0 su 200000 se (ii) vale per il centro; 48866 su 200000 se (ii) vale per il corpo intero (raggio 0,225 m): serve aggiungere r_c
+velocita' coperta se (ii) vale per il corpo intero, r_c=0,225: 0.493 m/s
+P(conferma entro +2 cicli | P_D=0,9) = 0.81 -> t_a=0,133 s come limite certo non e' il modello di rilevamento del cap. 4
+
+== D. Livello di una regione ritagliata: G(E∩S)/G(S) >= 1-(1-p)/G(S)
+violazioni=0 su 19455; uguaglianza nel caso S⊇X\E, G(E)=p: 19455 su 19455
+p=0,95: G(S)=0,23 -> 0.7826 ; G(S)=0,08 -> 0.375
+
+== E. Non identificabilita' della massa: rango dell'informazione di Fisher (razionali esatti)
+parametri (u,M): rango = 1 ; det = 0 ; I·(u,M)^T = [Fraction(0, 1), Fraction(0, 1)]
+parametri (p0,v0,u,M): rango = 3 su 4; I·(0,0,u,M)^T = [Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)]
+
+== F. Varianza della differenza seconda; minimi quadrati su 0,5 s
+coefficiente 1+4+1 = 6 -> sigma_a = sqrt(6) sigma_p / D^2
+30 Hz: sigma_a = 66.14 m/s^2
+15 Hz: sigma_a = 16.53 m/s^2
+10 Hz: sigma_a = 7.35 m/s^2
+Monte Carlo a 15 Hz (N=300000): 16.56
+minimi quadrati, 15 campioni a 30 Hz (0.467 s): sigma_a = 0.841 m/s^2
+minimi quadrati, 16 campioni a 30 Hz (0.500 s): sigma_a = 0.714 m/s^2
+rango osservabilita' [p,v,a]: 3
+
+== G. Q in forma chiusa, composizione, covarianza stazionaria e sigma_p(t_occ)
+composizione Q(d1+d2) = F(d2)Q(d1)F(d2)^T + Q(d2), 200 coppie razionali: scarto massimo = 0
+quadratura con d=0,3: [0.009, 0.045, 0.3] contro [0.009, 0.045, 0.3]
+q=0.2: sqrt(Ppp)=3.26 cm, sqrt(Pvv)=0.205 m/s; sigma_p = 0.156 / 0.344 / 0.848 / 1.485; r95 = 0.38 / 0.84 / 2.08 / 3.63
+q=0.1: sqrt(Ppp)=3.05 cm, sqrt(Pvv)=0.160 m/s; sigma_p = 0.121 / 0.257 / 0.618 / 1.072
+q=0.05: sqrt(Ppp)=2.85 cm, sqrt(Pvv)=0.124 m/s; sigma_p = 0.096 / 0.194 / 0.453 / 0.777
+r95 supera 1.0 m dopo 1.147 s
+r95 supera 2.0 m dopo 1.945 s
+r_alfa/sigma: [1.177, 2.146, 2.448] ; gamma 99%: 9.21
+
+== H. Conti binomiali e quantili
+non confermato con n=3,4,5: [0.271, 0.0523, 0.0086]
+conferma a +j, formula: {2: 0.81, 3: 0.162, 4: 0.0243} ; enumerazione: {2: 0.81, 3: 0.162, 4: 0.0243}
+ritardo medio: 0.1469 s (non condizionato), 0.1474 s (condizionato)
+P_fa = 2(1-Phi(5)) = 5.733031437583891e-07 ; unione 2*13: 1.4905881737718116e-05
+criterio: P(Bin(30,0.5)<=23) = 0.99928 ; P(Bin(30,0.9)<=23) = 0.02583
+Bin(219,0.9): media 197.1 sd 4.44 ; centrale 95%: 188 205 ; P(>=214)=8.08e-06 P(<=174)=2.51e-06 P(>=207)=0.0122
+z_m: {12: 2.865, 30: 3.144, 45: 3.261, 60: 3.341}
+0 su N: esatto e Wilson (%): {90: (3.2738, 4.0937), 131: (2.2609, 2.849), 300: (0.9936, 1.2643), 400: (0.7461, 0.9513), 24835: (0.0121, 0.0155)}
+Beta: 5o percentile n=30,k=28: 0.805 ; n=100,k=91: 0.848
+primo n_c con P(copertura>0,85)>=0,95: 68 ; stabile da: 110
+mobile: delta/sigma per 10% e 1%: 3.036 2.183
+±sigma in 2D: 0.3935 ; k al 95%: 2.448
+d_serve: velocita' coperta = 1.442 ; dopo il contatto oltre 7.11 m/s
+
+== I. Etichetta: inclusione di W sotto le premesse; i «rilasci» come celle tolte non sono un sottoinsieme
+passi=220000: W_etichette ⊉ W_senza: 0; L_etichette ⊄ L_senza: 0; celle tolte con etichette ⊄ celle tolte senza: 6776
+
+== J. Geometria
+z_min = 1.2426 ; |x| <= 0.9166 z + 0.2947
+area esatta = 5.785 m2; settore = 5.661 ; disco = 28.27
+piramide: 18.94 m3; quota: 0.263
+
+== K. Compilazione dei frammenti corretti (prova_frammenti.tex, preambolo dell'allegato, xelatex)
+uscita 0, errori: 0; Output written on prova_frammenti.pdf (2 pages).; riferimenti incrociati non risolti (attesi: frammenti isolati)

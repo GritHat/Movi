@@ -1,0 +1,60 @@
+\section*{Simboli e termini}\label{sec:simboli}
+\addcontentsline{toc}{section}{Simboli e termini}
+
+{\small
+\begin{tabularx}{\textwidth}{@{}p{2.6cm}L@{}}
+\toprule
+Simbolo & Significato\\
+\midrule
+$x$, $y$, $z$ & riferimento della camera riportato al suolo: $x$ a destra, $z$ in avanti lungo il suolo, quota $y$ verso l'alto\\
+$h$, $\theta$ & altezza e inclinazione verso il basso della camera\\
+$\rho$, $\varphi$ & distanza e azimut di un punto del suolo\\
+$d$ & profondità misurata lungo l'asse ottico\\
+$f$, $b$ & focale in pixel e base stereo\\
+$\sigma_d$, $\sigma_z(d)$ & rumore di disparità e rumore di profondità\\
+$a$ & altezza di un ostacolo\\
+$L$, $w_c$ & larghezza del pannello e larghezza del corpo\\
+$\Delta$ & periodo di campionamento\\
+$\mathbf x=[p_x,p_z,v_x,v_z]^{\mathsf T}$ & stato di una traccia: posizione e velocità al suolo\\
+$F$, $Q$, $q$ & matrice di transizione, covarianza del rumore di processo e sua densità\\
+$H$, $R$ & matrice di misura e covarianza del rumore di misura\\
+$\nu$, $S$, $\gamma$ & innovazione, sua covarianza, soglia della porta di validazione\\
+$P_D$ & probabilità di rilevamento per fotogramma\\
+$P_{\mathrm{mob}}$, $P_{fa}$ & probabilità che la regola «mobile» dichiari in movimento un oggetto in moto e un oggetto fermo\\
+$\vmax$ & velocità massima ammessa per un oggetto\\
+$\tau$ & latenza dall'evento all'uscita\\
+$\tocc$ & tempo trascorso dall'ultima osservazione\\
+$t_a$ & tempo entro cui un soggetto fuori dall'ombra, in campo e in portata, è riportato come osservato\\
+$t_{\mathrm{conf}}$ & tempo di conferma di una traccia\\
+$\Oss(t)$ & insieme del suolo osservato libero\\
+$\Omb(t)$, $\hat\Omb(t)$ & ombra di un ostacolo sul suolo, vera e stimata\\
+$\varepsilon_\Omb$, $e_\Omega$ & limite dell'errore del bordo dell'ombra; errore misurato, con segno\\
+$\Pres(t)$ & insieme di possibile presenza\\
+$W(t)$, $w$ & area d'avviso e larghezza della fascia di guardia\\
+$\Reg_\alpha(t)$ & regione di previsione al livello dichiarato $\alpha$ (qui $\alpha=0{,}90$)\\
+$\dilata(A,r)$ & dilatazione dell'insieme $A$ di raggio $r$\\
+$T_r$, $v_e$, $a_f$ & tempo di reazione, velocità propria e decelerazione di frenata di chi porta il sensore\\
+$N$ & numerosità di una prova\\
+$\ell^-$ & estremo inferiore dell'intervallo di Wilson al 95\,\%\\
+\bottomrule
+\end{tabularx}
+
+\medskip
+\begin{tabularx}{\textwidth}{@{}p{3.6cm}L@{}}
+\toprule
+Termine & Significato\\
+\midrule
+passaggio & un soggetto attraversa il campo, scompare dietro un ostacolo fermo e di norma ricompare; è l'unità statistica delle prove\\
+traccia & la stima dello stato di un oggetto seguito, tenuta dal filtro da un ciclo al successivo\\
+regola «mobile» & regola che dichiara «in movimento» un gruppo in base allo spostamento su una finestra di tempo\\
+insieme di possibile presenza & parte del suolo in cui un oggetto non osservato può trovarsi; si riduce solo per osservazione\\
+area d'avviso & l'ombra stimata dell'ostacolo allargata della fascia di guardia, su cui esce l'avviso di possibile presenza\\
+fascia di guardia & allargamento dell'ombra che copre il tempo $t_a$, la latenza, la tenuta di un ciclo e l'errore del bordo\\
+regione di previsione & regione emessa a ogni ciclo per una traccia entrata nell'ombra, con il suo livello\\
+«previsto ampio» & stato della regione quando il livello non è dichiarabile: la regione resta, senza punto e senza livello\\
+identità presunta & identità riassegnata alla ricomparsa: è un'ipotesi, e l'avviso non ne dipende\\
+affidabilità persa & segnale emesso quando il sensore non è in salute; la mappa è dichiarata «non osservato»\\
+\bottomrule
+\end{tabularx}}
+
+Il livello di prova di un risultato è indicato da una lettera: \prova{D} dimostrato nel modello dichiarato; \prova{C} verificato per calcolo; \prova{S} verificato in simulazione; \prova{P} misurato su dati pubblici; \prova{N} non verificato sperimentalmente.

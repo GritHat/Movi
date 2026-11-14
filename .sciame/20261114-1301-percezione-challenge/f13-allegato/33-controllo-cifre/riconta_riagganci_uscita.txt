@@ -1,0 +1,18 @@
+nuovi424.jsonl prima    nominale : passaggi 140; riagganci a nascosto: somma 12, passaggi con almeno uno 11; pannello mobile 130
+nuovi424.jsonl prima    limite   : passaggi 10; riagganci a nascosto: somma 0, passaggi con almeno uno 0; pannello mobile 0
+nuovi424.jsonl tutte_p  nominale : passaggi 140; riagganci a nascosto: somma 1, passaggi con almeno uno 1; pannello mobile 0
+      tipo a12 n 50 {'stessa': 49, 'diversa': 1}
+      tipo a05 n 30 {'stessa': 30}
+      tipo b n 30 {'stessa': 30}
+      tipo c n 20 {'stessa': 20}
+      tipo d n 10 {'non ricompare': 10}
+nuovi424.jsonl tutte_p  limite   : passaggi 10; riagganci a nascosto: somma 0, passaggi con almeno uno 0; pannello mobile 0
+nuovi848.jsonl prima    nominale : passaggi 140; riagganci a nascosto: somma 7, passaggi con almeno uno 6; pannello mobile 94
+nuovi848.jsonl prima    limite   : passaggi 10; riagganci a nascosto: somma 0, passaggi con almeno uno 0; pannello mobile 0
+nuovi848.jsonl tutte_p  nominale : passaggi 140; riagganci a nascosto: somma 1, passaggi con almeno uno 1; pannello mobile 0
+      tipo a12 n 50 {'stessa': 50}
+      tipo a05 n 30 {'stessa': 29, 'diversa': 1}
+      tipo b n 30 {'stessa': 29, 'diversa': 1}
+      tipo c n 20 {'stessa': 20}
+      tipo d n 10 {'non ricompare': 10}
+nuovi848.jsonl tutte_p  limite   : passaggi 10; riagganci a nascosto: somma 2, passaggi con almeno uno 2; pannello mobile 0

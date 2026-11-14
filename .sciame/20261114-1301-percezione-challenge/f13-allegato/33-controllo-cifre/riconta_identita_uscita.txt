@@ -1,0 +1,14 @@
+ 424 nuovi424.jsonl               a12: continuita' pulita 29/30; esito «stessa» 29
+ 424 nuovi424.jsonl               a05: continuita' pulita 29/30; esito «stessa» 30
+ 424 nuovi424.jsonl               b: continuita' pulita 30/30; esito «stessa» 30
+ 424 ultimi424_replica.jsonl      a12: continuita' pulita 30/30; esito «stessa» 30
+ 424 ultimi424_replica.jsonl      a05: continuita' pulita 30/30; esito «stessa» 30
+ 424 ultimi424_replica.jsonl      b: continuita' pulita 28/30; esito «stessa» 28
+ 424 px: 176 su 180
+ 848 nuovi848.jsonl               a12: continuita' pulita 30/30; esito «stessa» 30
+ 848 nuovi848.jsonl               a05: continuita' pulita 29/30; esito «stessa» 29
+ 848 nuovi848.jsonl               b: continuita' pulita 29/30; esito «stessa» 29
+ 848 ultimi848_replica.jsonl      a12: continuita' pulita 29/30; esito «stessa» 30
+ 848 ultimi848_replica.jsonl      a05: continuita' pulita 30/30; esito «stessa» 30
+ 848 ultimi848_replica.jsonl      b: continuita' pulita 27/30; esito «stessa» 27
+ 848 px: 174 su 180

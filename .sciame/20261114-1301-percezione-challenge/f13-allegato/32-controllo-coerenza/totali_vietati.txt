@@ -1,0 +1,1 @@
+TOTALI [('c1..c8', 5), ('chi verifica', 6), ('fascicolo', 2), ('modello linguistico', 2), ('nomi di lavoro', 26), ('orario', 134), ('percorso', 140), ('piano/squadra', 52), ('stato lavori', 13), ('storia', 34), ('versione', 5)]

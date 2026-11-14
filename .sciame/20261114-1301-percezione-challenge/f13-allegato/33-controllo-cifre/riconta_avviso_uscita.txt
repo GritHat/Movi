@@ -1,0 +1,104 @@
+== 06-identita/risultati/nuovi424.jsonl righe 1544 conf ['f401', 'f401p', 'f402', 'f408', 'f409', 'prima', 'tutte', 'tutte_p']
+   prima    tipo=a05            livello=nominale  {'passaggi': 30, 'entro3m': 786, 'fuori_griglia': 0, 'senza_avviso': 0, 'non_presenza': 0, 'pannello_mobile': 30, 'nascosti': 786}
+   prima    tipo=a12            livello=limite    {'passaggi': 10, 'entro3m': 106, 'fuori_griglia': 0, 'senza_avviso': 0, 'non_presenza': 0, 'pannello_mobile': 0, 'nascosti': 106}
+   prima    tipo=a12            livello=nominale  {'passaggi': 50, 'entro3m': 552, 'fuori_griglia': 0, 'senza_avviso': 99, 'non_presenza': 99, 'pannello_mobile': 48, 'nascosti': 552}
+   prima    tipo=b              livello=nominale  {'passaggi': 30, 'entro3m': 1919, 'fuori_griglia': 0, 'senza_avviso': 28, 'non_presenza': 28, 'pannello_mobile': 26, 'nascosti': 1919}
+   prima    tipo=c              livello=nominale  {'passaggi': 20, 'entro3m': 664, 'fuori_griglia': 0, 'senza_avviso': 30, 'non_presenza': 30, 'pannello_mobile': 20, 'nascosti': 664}
+   prima    tipo=d              livello=nominale  {'passaggi': 10, 'entro3m': 297, 'fuori_griglia': 334, 'senza_avviso': 23, 'non_presenza': 23, 'pannello_mobile': 6, 'nascosti': 631}
+   prima    TOTALE {'passaggi': 150, 'entro3m': 4324, 'fuori_griglia': 334, 'senza_avviso': 180, 'non_presenza': 180, 'pannello_mobile': 130, 'nascosti': 4658}
+      senza tipo a05          livello tutti    : passaggi 120 entro3m 3538 senza_avviso 180 non_presenza 180 pannello_mobile 100
+      senza tipo a05          livello nominale : passaggi 110 entro3m 3432 senza_avviso 180 non_presenza 180 pannello_mobile 100
+      senza tipo a12          livello tutti    : passaggi 90 entro3m 3666 senza_avviso 81 non_presenza 81 pannello_mobile 82
+      senza tipo a12          livello nominale : passaggi 90 entro3m 3666 senza_avviso 81 non_presenza 81 pannello_mobile 82
+      senza tipo b            livello tutti    : passaggi 120 entro3m 2405 senza_avviso 152 non_presenza 152 pannello_mobile 104
+      senza tipo b            livello nominale : passaggi 110 entro3m 2299 senza_avviso 152 non_presenza 152 pannello_mobile 104
+      senza tipo c            livello tutti    : passaggi 130 entro3m 3660 senza_avviso 150 non_presenza 150 pannello_mobile 110
+      senza tipo c            livello nominale : passaggi 120 entro3m 3554 senza_avviso 150 non_presenza 150 pannello_mobile 110
+      senza tipo d            livello tutti    : passaggi 140 entro3m 4027 senza_avviso 157 non_presenza 157 pannello_mobile 124
+      senza tipo d            livello nominale : passaggi 130 entro3m 3921 senza_avviso 157 non_presenza 157 pannello_mobile 124
+   tutte_p  tipo=a05            livello=nominale  {'passaggi': 30, 'entro3m': 786, 'fuori_griglia': 0, 'senza_avviso': 0, 'non_presenza': 0, 'pannello_mobile': 0, 'nascosti': 786}
+   tutte_p  tipo=a12            livello=limite    {'passaggi': 10, 'entro3m': 106, 'fuori_griglia': 0, 'senza_avviso': 0, 'non_presenza': 0, 'pannello_mobile': 0, 'nascosti': 106}
+   tutte_p  tipo=a12            livello=nominale  {'passaggi': 50, 'entro3m': 552, 'fuori_griglia': 0, 'senza_avviso': 0, 'non_presenza': 0, 'pannello_mobile': 0, 'nascosti': 552}
+   tutte_p  tipo=b              livello=nominale  {'passaggi': 30, 'entro3m': 1919, 'fuori_griglia': 0, 'senza_avviso': 0, 'non_presenza': 0, 'pannello_mobile': 0, 'nascosti': 1919}
+   tutte_p  tipo=c              livello=nominale  {'passaggi': 20, 'entro3m': 664, 'fuori_griglia': 0, 'senza_avviso': 0, 'non_presenza': 0, 'pannello_mobile': 0, 'nascosti': 664}
+   tutte_p  tipo=d              livello=nominale  {'passaggi': 10, 'entro3m': 297, 'fuori_griglia': 334, 'senza_avviso': 0, 'non_presenza': 0, 'pannello_mobile': 0, 'nascosti': 631}
+   tutte_p  TOTALE {'passaggi': 150, 'entro3m': 4324, 'fuori_griglia': 334, 'senza_avviso': 0, 'non_presenza': 0, 'pannello_mobile': 0, 'nascosti': 4658}
+      senza tipo a05          livello tutti    : passaggi 120 entro3m 3538 senza_avviso 0 non_presenza 0 pannello_mobile 0
+      senza tipo a05          livello nominale : passaggi 110 entro3m 3432 senza_avviso 0 non_presenza 0 pannello_mobile 0
+      senza tipo a12          livello tutti    : passaggi 90 entro3m 3666 senza_avviso 0 non_presenza 0 pannello_mobile 0
+      senza tipo a12          livello nominale : passaggi 90 entro3m 3666 senza_avviso 0 non_presenza 0 pannello_mobile 0
+      senza tipo b            livello tutti    : passaggi 120 entro3m 2405 senza_avviso 0 non_presenza 0 pannello_mobile 0
+      senza tipo b            livello nominale : passaggi 110 entro3m 2299 senza_avviso 0 non_presenza 0 pannello_mobile 0
+      senza tipo c            livello tutti    : passaggi 130 entro3m 3660 senza_avviso 0 non_presenza 0 pannello_mobile 0
+      senza tipo c            livello nominale : passaggi 120 entro3m 3554 senza_avviso 0 non_presenza 0 pannello_mobile 0
+      senza tipo d            livello tutti    : passaggi 140 entro3m 4027 senza_avviso 0 non_presenza 0 pannello_mobile 0
+      senza tipo d            livello nominale : passaggi 130 entro3m 3921 senza_avviso 0 non_presenza 0 pannello_mobile 0
+== 06-identita/risultati/nuovi848.jsonl righe 1544 conf ['f401', 'f401p', 'f402', 'f408', 'f409', 'prima', 'tutte', 'tutte_p']
+   prima    tipo=a05            livello=nominale  {'passaggi': 30, 'entro3m': 787, 'fuori_griglia': 0, 'senza_avviso': 33, 'non_presenza': 33, 'pannello_mobile': 30, 'nascosti': 787}
+   prima    tipo=a12            livello=limite    {'passaggi': 10, 'entro3m': 106, 'fuori_griglia': 0, 'senza_avviso': 0, 'non_presenza': 0, 'pannello_mobile': 0, 'nascosti': 106}
+   prima    tipo=a12            livello=nominale  {'passaggi': 50, 'entro3m': 552, 'fuori_griglia': 0, 'senza_avviso': 143, 'non_presenza': 148, 'pannello_mobile': 29, 'nascosti': 552}
+   prima    tipo=b              livello=nominale  {'passaggi': 30, 'entro3m': 1919, 'fuori_griglia': 0, 'senza_avviso': 61, 'non_presenza': 61, 'pannello_mobile': 17, 'nascosti': 1919}
+   prima    tipo=c              livello=nominale  {'passaggi': 20, 'entro3m': 664, 'fuori_griglia': 0, 'senza_avviso': 14, 'non_presenza': 14, 'pannello_mobile': 15, 'nascosti': 664}
+   prima    tipo=d              livello=nominale  {'passaggi': 10, 'entro3m': 297, 'fuori_griglia': 334, 'senza_avviso': 20, 'non_presenza': 20, 'pannello_mobile': 3, 'nascosti': 631}
+   prima    TOTALE {'passaggi': 150, 'entro3m': 4325, 'fuori_griglia': 334, 'senza_avviso': 271, 'non_presenza': 276, 'pannello_mobile': 94, 'nascosti': 4659}
+      senza tipo a05          livello tutti    : passaggi 120 entro3m 3538 senza_avviso 238 non_presenza 243 pannello_mobile 64
+      senza tipo a05          livello nominale : passaggi 110 entro3m 3432 senza_avviso 238 non_presenza 243 pannello_mobile 64
+      senza tipo a12          livello tutti    : passaggi 90 entro3m 3667 senza_avviso 128 non_presenza 128 pannello_mobile 65
+      senza tipo a12          livello nominale : passaggi 90 entro3m 3667 senza_avviso 128 non_presenza 128 pannello_mobile 65
+      senza tipo b            livello tutti    : passaggi 120 entro3m 2406 senza_avviso 210 non_presenza 215 pannello_mobile 77
+      senza tipo b            livello nominale : passaggi 110 entro3m 2300 senza_avviso 210 non_presenza 215 pannello_mobile 77
+      senza tipo c            livello tutti    : passaggi 130 entro3m 3661 senza_avviso 257 non_presenza 262 pannello_mobile 79
+      senza tipo c            livello nominale : passaggi 120 entro3m 3555 senza_avviso 257 non_presenza 262 pannello_mobile 79
+      senza tipo d            livello tutti    : passaggi 140 entro3m 4028 senza_avviso 251 non_presenza 256 pannello_mobile 91
+      senza tipo d            livello nominale : passaggi 130 entro3m 3922 senza_avviso 251 non_presenza 256 pannello_mobile 91
+   tutte_p  tipo=a05            livello=nominale  {'passaggi': 30, 'entro3m': 787, 'fuori_griglia': 0, 'senza_avviso': 0, 'non_presenza': 0, 'pannello_mobile': 0, 'nascosti': 787}
+   tutte_p  tipo=a12            livello=limite    {'passaggi': 10, 'entro3m': 106, 'fuori_griglia': 0, 'senza_avviso': 0, 'non_presenza': 0, 'pannello_mobile': 0, 'nascosti': 106}
+   tutte_p  tipo=a12            livello=nominale  {'passaggi': 50, 'entro3m': 552, 'fuori_griglia': 0, 'senza_avviso': 0, 'non_presenza': 0, 'pannello_mobile': 0, 'nascosti': 552}
+   tutte_p  tipo=b              livello=nominale  {'passaggi': 30, 'entro3m': 1919, 'fuori_griglia': 0, 'senza_avviso': 0, 'non_presenza': 0, 'pannello_mobile': 0, 'nascosti': 1919}
+   tutte_p  tipo=c              livello=nominale  {'passaggi': 20, 'entro3m': 664, 'fuori_griglia': 0, 'senza_avviso': 0, 'non_presenza': 0, 'pannello_mobile': 0, 'nascosti': 664}
+   tutte_p  tipo=d              livello=nominale  {'passaggi': 10, 'entro3m': 297, 'fuori_griglia': 334, 'senza_avviso': 0, 'non_presenza': 0, 'pannello_mobile': 0, 'nascosti': 631}
+   tutte_p  TOTALE {'passaggi': 150, 'entro3m': 4325, 'fuori_griglia': 334, 'senza_avviso': 0, 'non_presenza': 0, 'pannello_mobile': 0, 'nascosti': 4659}
+      senza tipo a05          livello tutti    : passaggi 120 entro3m 3538 senza_avviso 0 non_presenza 0 pannello_mobile 0
+      senza tipo a05          livello nominale : passaggi 110 entro3m 3432 senza_avviso 0 non_presenza 0 pannello_mobile 0
+      senza tipo a12          livello tutti    : passaggi 90 entro3m 3667 senza_avviso 0 non_presenza 0 pannello_mobile 0
+      senza tipo a12          livello nominale : passaggi 90 entro3m 3667 senza_avviso 0 non_presenza 0 pannello_mobile 0
+      senza tipo b            livello tutti    : passaggi 120 entro3m 2406 senza_avviso 0 non_presenza 0 pannello_mobile 0
+      senza tipo b            livello nominale : passaggi 110 entro3m 2300 senza_avviso 0 non_presenza 0 pannello_mobile 0
+      senza tipo c            livello tutti    : passaggi 130 entro3m 3661 senza_avviso 0 non_presenza 0 pannello_mobile 0
+      senza tipo c            livello nominale : passaggi 120 entro3m 3555 senza_avviso 0 non_presenza 0 pannello_mobile 0
+      senza tipo d            livello tutti    : passaggi 140 entro3m 4028 senza_avviso 0 non_presenza 0 pannello_mobile 0
+      senza tipo d            livello nominale : passaggi 130 entro3m 3922 senza_avviso 0 non_presenza 0 pannello_mobile 0
+== 07-controprova-identita/risultati/ultimi424_replica.jsonl righe 120 conf ['tutte_p']
+   tutte_p  tipo=a05            livello=nominale  {'passaggi': 30, 'entro3m': 804, 'fuori_griglia': 0, 'senza_avviso': 0, 'non_presenza': 0, 'pannello_mobile': 0, 'nascosti': 804}
+   tutte_p  tipo=a12            livello=nominale  {'passaggi': 40, 'entro3m': 431, 'fuori_griglia': 0, 'senza_avviso': 0, 'non_presenza': 0, 'pannello_mobile': 0, 'nascosti': 431}
+   tutte_p  tipo=a12z           livello=nominale  {'passaggi': 10, 'entro3m': 91, 'fuori_griglia': 0, 'senza_avviso': 0, 'non_presenza': 0, 'pannello_mobile': 7, 'nascosti': 91}
+   tutte_p  tipo=b              livello=nominale  {'passaggi': 30, 'entro3m': 1918, 'fuori_griglia': 0, 'senza_avviso': 0, 'non_presenza': 0, 'pannello_mobile': 0, 'nascosti': 1918}
+   tutte_p  tipo=c              livello=nominale  {'passaggi': 10, 'entro3m': 364, 'fuori_griglia': 0, 'senza_avviso': 0, 'non_presenza': 0, 'pannello_mobile': 0, 'nascosti': 364}
+   tutte_p  TOTALE {'passaggi': 120, 'entro3m': 3608, 'fuori_griglia': 0, 'senza_avviso': 0, 'non_presenza': 0, 'pannello_mobile': 7, 'nascosti': 3608}
+      senza tipo a05          livello tutti    : passaggi 90 entro3m 2804 senza_avviso 0 non_presenza 0 pannello_mobile 7
+      senza tipo a05          livello nominale : passaggi 90 entro3m 2804 senza_avviso 0 non_presenza 0 pannello_mobile 7
+      senza tipo a12          livello tutti    : passaggi 80 entro3m 3177 senza_avviso 0 non_presenza 0 pannello_mobile 7
+      senza tipo a12          livello nominale : passaggi 80 entro3m 3177 senza_avviso 0 non_presenza 0 pannello_mobile 7
+      senza tipo a12z         livello tutti    : passaggi 110 entro3m 3517 senza_avviso 0 non_presenza 0 pannello_mobile 0
+      senza tipo a12z         livello nominale : passaggi 110 entro3m 3517 senza_avviso 0 non_presenza 0 pannello_mobile 0
+      senza tipo b            livello tutti    : passaggi 90 entro3m 1690 senza_avviso 0 non_presenza 0 pannello_mobile 7
+      senza tipo b            livello nominale : passaggi 90 entro3m 1690 senza_avviso 0 non_presenza 0 pannello_mobile 7
+      senza tipo c            livello tutti    : passaggi 110 entro3m 3244 senza_avviso 0 non_presenza 0 pannello_mobile 7
+      senza tipo c            livello nominale : passaggi 110 entro3m 3244 senza_avviso 0 non_presenza 0 pannello_mobile 7
+== 07-controprova-identita/risultati/ultimi848_replica.jsonl righe 120 conf ['tutte_p']
+   tutte_p  tipo=a05            livello=nominale  {'passaggi': 30, 'entro3m': 804, 'fuori_griglia': 0, 'senza_avviso': 0, 'non_presenza': 0, 'pannello_mobile': 0, 'nascosti': 804}
+   tutte_p  tipo=a12            livello=nominale  {'passaggi': 40, 'entro3m': 431, 'fuori_griglia': 0, 'senza_avviso': 0, 'non_presenza': 0, 'pannello_mobile': 0, 'nascosti': 431}
+   tutte_p  tipo=a12z           livello=nominale  {'passaggi': 10, 'entro3m': 91, 'fuori_griglia': 0, 'senza_avviso': 0, 'non_presenza': 0, 'pannello_mobile': 7, 'nascosti': 91}
+   tutte_p  tipo=b              livello=nominale  {'passaggi': 30, 'entro3m': 1918, 'fuori_griglia': 0, 'senza_avviso': 0, 'non_presenza': 0, 'pannello_mobile': 0, 'nascosti': 1918}
+   tutte_p  tipo=c              livello=nominale  {'passaggi': 10, 'entro3m': 364, 'fuori_griglia': 0, 'senza_avviso': 0, 'non_presenza': 0, 'pannello_mobile': 0, 'nascosti': 364}
+   tutte_p  TOTALE {'passaggi': 120, 'entro3m': 3608, 'fuori_griglia': 0, 'senza_avviso': 0, 'non_presenza': 0, 'pannello_mobile': 7, 'nascosti': 3608}
+      senza tipo a05          livello tutti    : passaggi 90 entro3m 2804 senza_avviso 0 non_presenza 0 pannello_mobile 7
+      senza tipo a05          livello nominale : passaggi 90 entro3m 2804 senza_avviso 0 non_presenza 0 pannello_mobile 7
+      senza tipo a12          livello tutti    : passaggi 80 entro3m 3177 senza_avviso 0 non_presenza 0 pannello_mobile 7
+      senza tipo a12          livello nominale : passaggi 80 entro3m 3177 senza_avviso 0 non_presenza 0 pannello_mobile 7
+      senza tipo a12z         livello tutti    : passaggi 110 entro3m 3517 senza_avviso 0 non_presenza 0 pannello_mobile 0
+      senza tipo a12z         livello nominale : passaggi 110 entro3m 3517 senza_avviso 0 non_presenza 0 pannello_mobile 0
+      senza tipo b            livello tutti    : passaggi 90 entro3m 1690 senza_avviso 0 non_presenza 0 pannello_mobile 7
+      senza tipo b            livello nominale : passaggi 90 entro3m 1690 senza_avviso 0 non_presenza 0 pannello_mobile 7
+      senza tipo c            livello tutti    : passaggi 110 entro3m 3244 senza_avviso 0 non_presenza 0 pannello_mobile 7
+      senza tipo c            livello nominale : passaggi 110 entro3m 3244 senza_avviso 0 non_presenza 0 pannello_mobile 7

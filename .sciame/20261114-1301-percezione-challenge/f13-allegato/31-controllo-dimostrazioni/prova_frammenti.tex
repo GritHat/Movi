@@ -1,0 +1,51 @@
+\input{../30-finale/preambolo.tex}
+\begin{document}
+\paragraph{Frammento 1.}
+\begin{proposizione}[Contenimento]\label{prop:occ-contenimento}
+Sia $\Oss(t)$ l'insieme dei punti del suolo il cui raggio, nel fotogramma $t$, è letto da un pixel valido alla profondità attesa del suolo (lettura per punto \emph{esatta}: margine di lettura nullo nella \eqref{eq:map-margine}). Sotto le ipotesi (i), (iv) e (v), a posa esatta ($\varepsilon_p=0$), ogni punto interno all'impronta al suolo di un oggetto al fotogramma $t$ (punto \emph{occupato}) appartiene a $\Pres(t)$. In particolare la posizione di un soggetto entrato in un'ombra appartiene a $\Pres(t)$ per ogni $t$ fino alla riosservazione, senza alcuna ipotesi sul numero dei soggetti né sull'esistenza di una traccia. Con posa nota entro $\varepsilon_p$ (ipotesi (iii), intesa come spostamento nel piano del suolo, come nel Lemma~\ref{lem:map-posa}) l'enunciato vale nel riferimento stimato; nel riferimento vero vale se nella \eqref{eq:occ-presenza} a $\Oss(t)$ si sostituisce l'insieme dei punti $x$ il cui disco di raggio $\varepsilon_p$ è contenuto nel libero stimato $\hat{\Oss}(t)$. \prova{D}
+\end{proposizione}
+
+\paragraph{Frammento 2.}
+Per (i) e (v) un raggio letto alla profondità attesa del suolo è privo di superfici fino al suolo; il raggio diretto a un punto interno all'impronta incontra invece l'oggetto prima del suolo, quindi un punto occupato non è letto come suolo: $x\notin\Oss(t)$.
+
+\paragraph{Frammento 3.}
+Con il margine di lettura $m>0$ della \eqref{eq:map-margine} il passo «un punto occupato non è letto come suolo» cade su una striscia dell'impronta. Il raggio diretto a un punto che sta dietro la faccia vista dell'oggetto, a distanza $\delta$ in pianta, incontra la faccia alla profondità $z_0\,(1-\delta/\rho)$: se $\delta\le\rho\,m(z_0)/z_0$ la lettura dista da $z_0$ meno del margine e il punto è letto come suolo, qualunque sia l'altezza dell'oggetto. Sull'asse del campo, con $h=1{,}2\unita{m}$, $\theta=15^\circ$ e $k=0{,}004$, la striscia è larga $11\unita{cm}$ a $2{,}5\unita{m}$ e $14\unita{cm}$ a $3\unita{m}$; con $k=0{,}0100$, $23$ e $32\unita{cm}$ \prova{C}. La Proposizione è quindi dimostrata per la lettura per punto esatta \prova{D}; con il margine di lettura la parte dell'impronta più vicina alla camera può uscire da $\Pres$, e il contenimento dell'intera impronta non è dimostrato. Nemmeno per la regola della cella (Definizione~\ref{def:map-libero}) il passo è dimostrato: una cella può essere «libero» con meno di metà dell'impronta coperta da un oggetto. Con il margine di lettura e con la mappa a celle il contenimento poggia sulla verifica in simulazione del \S\ref{sec:map-banco} \prova{S}.
+
+\paragraph{Frammento 4.}
+Sotto le ipotesi (ii) e (iv), con la (ii) intesa per il centro (un soggetto con il centro fuori da $\Omb$, in campo e in portata, è riportato come osservato entro $t_a$), se $w\ge0$.
+
+\paragraph{Frammento 5.}
+Per contenere l'intero corpo di raggio $r_c$ si aggiunge $r_c$ al secondo membro; se la (ii) vale solo quando tutto il corpo è fuori dall'ombra, se ne aggiunge un altro. \prova{D}
+
+\paragraph{Frammento 6.}
+Con $P_D<1$ nessun tempo finito è un limite certo: per una traccia nuova la conferma entro due cicli ha probabilità $0{,}81$ con $P_D=0{,}9$ (\S\ref{sec:sti-porta}).
+
+\paragraph{Frammento 7.}
+\begin{tabular}{lp{10cm}}
+$t_a$ & tempo entro cui un soggetto fuori dall'ombra, in campo e in portata, è riportato come osservato\\
+\end{tabular}
+
+\paragraph{Frammento 8.}
+Lo zero della prima riga vale per costruzione dove l'ingresso è riconosciuto, l'ostacolo è fermo e l'ombra stimata coincide con la vera: allora $W(t)=\dilata(\hat\Omb,w)\supseteq\Omb$ (Definizione~\ref{def:occ-avviso}) e il centro di un soggetto nascosto sta in $\Omb$; altrove è un conteggio. Non è un'applicazione della Proposizione~\ref{prop:occ-fascia}, che riguarda il soggetto uscito dall'ombra e non ancora riportato come osservato, e la cui condizione \eqref{eq:occ-fascia} copre $1{,}13\unita{m/s}$, meno delle velocità d'ingresso di queste prove (fino a $1{,}8\unita{m/s}$).
+
+\paragraph{Frammento 9.}
+Un'etichetta non produce un «libero» e, per ogni ingresso in un'ombra riconosciuto, non riduce l'area d'avviso (Proposizione~\ref{prop:occ-etichetta}); può cambiare l'esito di un riaggancio, e quindi gli ingressi successivi (\S\ref{sec:occ-classe}).
+
+\paragraph{Frammento 10.}
+Un'etichetta non produce un «libero» e non toglie né restringe un avviso acceso (invarianti 5 e 15); può cambiare l'esito di un riaggancio, e quindi gli ingressi successivi (\S\ref{sec:occ-classe}).
+
+\paragraph{Frammento 11.}
+non entra nel costo d'associazione né nella porta di validazione; entra invece, attraverso la forma della regione di previsione, nella porta del riaggancio (\S\ref{sec:occ-classe});
+
+\paragraph{Frammento 12.}
+$\Reg_\alpha(t)=C_\alpha(t)\cap W(t)$ per $\alpha<1$; se questo insieme è vuoto, e in ogni altro caso di «previsto ampio», $\Reg_\alpha(t)=\bigl(\hat\Omb(t)\setminus\Oss(t)\bigr)\cap W(t)$, cioè tutto il non visto libero dell'ombra (\emph{regione di ripiego}). Si pone $\Reg_1(t)=W(t)$.
+
+\paragraph{Frammento 13.}
+(d) $\hat\Omb\cap\Oss(t)=\emptyset$ per definizione d'ombra e, con l'ostacolo fermo e l'ombra stimata costante, $\hat\Omb\subseteq W(t_0)=W(t)$; quindi la regione di ripiego è $\hat\Omb\neq\emptyset$.
+
+\paragraph{Frammento 14.}
+parte (b) dimostrata nel modello a posa esatta; con errore d'inclinazione entro $0{,}5^\circ$ la tenuta è verificata in simulazione, non dimostrata;
+
+\paragraph{Frammento 15.}
+l'ostacolo è fermo, il soggetto rimanda segnale, resta nel campo e in portata ed è riportato come osservato entro $t_a$ da quando il suo centro è fuori dall'ombra
+\end{document}

@@ -1,0 +1,102 @@
+% Prova di compilazione dei testi corretti (solo i frammenti; i riferimenti ad altre parti restano indefiniti qui).
+\input{../../30-finale/preambolo}
+\begin{document}
+\section*{R1}
+\begin{table}[H]\centering\footnotesize
+\begin{tabularx}{\textwidth}{@{}>{\RaggedRight}p{3.3cm}L>{\RaggedRight}p{1.25cm}>{\RaggedRight}p{2.75cm}>{\RaggedRight}p{2.45cm}l@{}}
+\toprule
+Misura & Condizioni & Valore & $N$ & Intervallo 95\,\% & Dato\\
+\midrule
+%R1
+Soggetto nascosto entro $3\unita{m}$ fuori dall'avviso, seconda serie (424 e 848 px) & configurazione di riferimento / con l'avviso che resta dopo il riaggancio & 180 e 271 / 0 e 0 & 4324 e 4325 fotogrammi in 150 passaggi (3921 e 3922 tolti i 10 passaggi al livello limite, 106 fotogrammi, e i 10 in cui il soggetto si allontana nell'ombra e non ricompare, 297 fotogrammi); replica: 0 su 3608 per risoluzione & — & II \prova{S}\\
+%R6b
+Traccia chiusa prima dell'ombra (avviso non acceso) & senza / con l'avviso mantenuto per le tracce chiuse entro $0{,}75\unita{m}$ dall'ombra; 12 configurazioni: 3 disposizioni, $P_D=0{,}9$ e $0{,}7$, corpo esteso e puntiforme & 928 / 24 & 23\,402 passaggi nascosti (11\,701 per valore di $P_D$) & quote: 3,97\,\% / 0,10\,\%; con $P_D=0{,}9$: 76 / 2 (0,65\,\% / 0,02\,\%); con $P_D=0{,}7$: 852 / 22 (7,28\,\% / 0,19\,\%) & I \prova{S}\\
+\bottomrule
+\end{tabularx}
+\end{table}
+\begin{table}[H]\centering\footnotesize
+\begin{tabularx}{\textwidth}{@{}>{\RaggedRight}p{3.9cm}L>{\RaggedRight}p{2.5cm}>{\RaggedRight}p{2.9cm}>{\RaggedRight}p{3.3cm}@{}}
+\toprule
+Misura & Condizioni & Valore & $N$ & Intervallo 95\,\%\\
+\midrule
+%R6a
+idem, prove d'insieme & 12 configurazioni (3 disposizioni, $P_D=0{,}9$ e $0{,}7$, corpo esteso e puntiforme) $\times$ 5 comportamenti; vuoti contati dopo l'ingresso nell'ombra & 0 & 23\,402 passaggi nascosti (6000 soggetti distinti); traccia entrata nell'ombra in 22\,474 & 0–0,064\,\% se tutti i 6000 soggetti hanno un passaggio con la traccia entrata; meno di 0,07\,\% nel caso peggiore\\
+\bottomrule
+\end{tabularx}
+\end{table}
+\section*{R2, R6c: capitolo 1}
+\begin{table}[H]\centering\footnotesize
+\begin{tabularx}{\textwidth}{@{}>{\RaggedRight\arraybackslash}p{2.8cm}>{\RaggedRight\arraybackslash}p{4.1cm}L>{\RaggedRight\arraybackslash}p{1.2cm}>{\RaggedRight\arraybackslash}p{1.05cm}@{}}
+\toprule
+Risultato & Condizioni & Valore & Prova & Dove\\
+\midrule
+%R6c
+Continuità & ideale; 12 combinazioni (3 disposizioni, $P_D=0{,}9$ e $0{,}7$, corpo esteso e puntiforme) per 5 comportamenti; premessa: ingresso nell'ombra riconosciuto & 0 passaggi con un ciclo senza regione dopo l'ingresso, su $23\,402$ passaggi nascosti (6000 camminatori distinti: al più $6{,}4$ su $10\,000$, meno di 7 se si tolgono i camminatori senza un passaggio con la premessa, nel caso peggiore); premessa mancata in 928 passaggi su $23\,402$ ($3{,}97\,\%$; 852 dei 928 con $P_D=0{,}7$), in 24 ($0{,}10\,\%$) con l'avviso acceso anche per le tracce chiuse entro $0{,}75\unita{m}$ da un'ombra, regola attiva solo dopo la prova d'ingresso sul suolo vuoto. Con corpo puntiforme: 0 su $24\,835$ $[0;\,0{,}016\,\%]$. Da scheda la regola della regione persistente non è stata eseguita & \prova{D}\prova{S}\prova{N} & \S\ref{sec:occ}, \S\ref{sec:val}\\
+%R2
+Avviso di possibile presenza & ideale; un soggetto per ombra & soggetto nascosto dentro l'area d'avviso per costruzione; avviso non acceso in 29 passaggi su $95\,399$ (ombra esatta) e in 15 su 2000 (ombra stimata più stretta di $0{,}20\unita{m}$). Da scheda, con l'avviso che resta dopo il riaggancio: soggetto nascosto entro $3\unita{m}$ senza avviso in 0 fotogrammi su 4324 a 424 pixel di larghezza e in 0 su 4325 a 848 (con la configurazione di riferimento, sugli stessi 150 passaggi, in 180 e in 271), e in 0 su 3608 per risoluzione in una replica. Dietro un ostacolo fermo l'avviso resta acceso; che l'avviso termini quando il suolo è rivisto dopo la rimozione dell'ostacolo non è sostenuto: nella realizzazione provata resta acceso dopo $2\unita{s}$ in 10 prove su 10 (72--100\,\%), per una causa non determinata & \prova{D}\prova{S} & \S\ref{sec:occ}\\
+%R8b
+Avviso tempestivo per classe & portata $3\unita{m}$, avvicinamento frontale, reazione di $1{,}0\unita{s}$ ipotizzata; velocità delle classi in parte ipotizzate (\S\ref{sec:sti}) & fino a $1{,}44\unita{m/s}$: 3 classi su 15 alla velocità tipica, 0 su 15 alla massima & \prova{C} & \S\ref{sec:occ}, \S\ref{sec:lim}\\
+\bottomrule
+\end{tabularx}
+\end{table}
+%R4a (capitolo 1)
+Il simulatore da scheda produce meno pixel senza dato di due registrazioni pubbliche di camere a stereo attivo con cui è stato confrontato: fra i pixel in cui la scena sta fra $0{,}5$ e $3\unita{m}$, $1{,}7\,\%$ al livello nominale e $7{,}8\,\%$ al livello limite, contro $24{,}1\,\%$ in una sequenza al chiuso con una persona \cite{depthtrack} e $34{,}4\,\%$ in una registrazione di esempio del costruttore (primi 60 fotogrammi di ciascuna; camere, risoluzioni e scene diverse da quelle simulate). Le cifre al livello nominale sono ottimistiche.
+
+%R4b (capitolo 6)
+Il simulatore è verificato contro il proprio modello, non contro una camera: confrontato con due registrazioni pubbliche di camere a stereo attivo, sottostima i pixel senza dato. Fra i pixel in cui la scena sta fra $0{,}5$ e $3\unita{m}$, nei primi 60 fotogrammi, i pixel senza dato sono 1,7\,\% al livello nominale e 7,8\,\% al livello limite, contro 24,1\,\% in una sequenza al chiuso con una persona \cite{depthtrack} e 34,4\,\% in una registrazione di esempio del costruttore (una scala ripresa da vicino, con un esemplare di pre-produzione); una registrazione con un sensore a luce strutturata \cite{tum-rgbd} dà 6,3\,\%. Camere, risoluzioni e scene non sono quelle simulate: il confronto dà il verso dello scarto, non la sua misura.
+
+%R4c (capitolo 8)
+Il simulatore sottostima i pixel senza dato ($7{,}8\,\%$ al livello limite contro $24{,}1\,\%$ e $34{,}4\,\%$ in due registrazioni pubbliche di camere a stereo attivo, fra i pixel in cui la scena sta fra $0{,}5$ e $3\unita{m}$ \prova{P}; \S\ref{sec:val}): le cifre al rumore nominale sono ottimistiche.
+
+%R4d (appendice B)
+I dati pubblici sono traiettorie di pedoni al chiuso con verità di riferimento \cite{thor}, che non contengono profondità, sequenze di profondità registrate \cite{tum-rgbd,depthtrack} e una registrazione di esempio distribuita dal costruttore di una delle camere, fatta con un esemplare di pre-produzione e usata solo per il confronto dei pixel senza dato (\S\ref{sec:val}).
+
+\section*{R3: capitolo 4, didascalia}
+\begin{table}[H]\centering\footnotesize
+\caption{Regola «mobile», oggetto a $0{,}5\unita{m/s}$: quota di tracce etichettate entro $1\unita{s}$. In simulazione, con modello ideale del sensore (centro puntiforme, rumore gaussiano indipendente e noto, $15\unita{Hz}$) \prova{S}. Da $2\unita{m}$: di traverso o in avvicinamento, tre curve di rumore; da $3\unita{m}$: in avvicinamento. Prova singola \prova{C}: probabilità che scatti la sola prova alla finestra massima, $T_w=0{,}867\unita{s}$ (spostamento $0{,}433\unita{m}$), con la soglia \eqref{eq:sti-soglia} calcolata alla distanza di partenza, la maggiore ($0{,}367$ e $0{,}459\unita{m}$ a $3\unita{m}$ per le curve pessimista e severa), e la dispersione della differenza calcolata con lo scarto tipo alle distanze dei due capi della finestra, $2{,}97$ e $2{,}53\unita{m}$ ($\sigma_\delta=0{,}063$ e $0{,}079\unita{m}$): il soggetto si avvicina e al secondo capo il rumore è minore. Con lo scarto tipo a $3\unita{m}$ a entrambi i capi, come nella Proposizione~\ref{prop:sti-mobile} alla lettera, si ottengono $0{,}815$ e $0{,}389$. Con la curva severa la prova singola sovrastima la simulazione, perché la regola usa la maggiore delle distanze \emph{misurate}, che il rumore gonfia. Le percentuali della prima colonna sono quelle stampate dalla simulazione; i conteggi sono dedotti.}\label{tab:sti-mobile}
+\begin{tabular}{lccc}\toprule
+Caso & Simulazione & Ricalcolo & Prova singola\\\midrule
+da 3 m, curva pessimista & 85,85\,\% (84,3--87,3) & 86,2\,\% (85,7--86,7) & 0,853\\
+\bottomrule\end{tabular}
+\end{table}
+%R9 (capitolo 4, facoltativa)
+Nel primo secondo di una traccia a $15\unita{Hz}$ le prove sono 11 per asse nella regola simulata (dal quinto al quindicesimo fotogramma) e in ogni caso al più 13: per la disuguaglianza dell'unione la probabilità di almeno un'etichetta falsa è $\le2\cdot13\cdot5{,}7\cdot10^{-7}=1{,}5\cdot10^{-5}$.
+
+\section*{R5: capitolo 4, definizione}
+%R5
+Una cella $(\varphi,\rho)$ della mappa polare ($1^\circ\times0{,}1\unita{m}$, $\rho\le3\unita{m}$) è «occupata osservata» se contiene almeno $n_{\min}=3$ punti di profondità con quota $y\in[0{,}07;\,2]\unita{m}$: è la definizione del \S\ref{sec:map}, e vale anche per una cella che sta oltre la prima cella occupata del suo azimut.
+
+\section*{R6d, R6e, R6f}
+%R6d (sommario)
+la regione di previsione è emessa a ogni ciclo dell'occlusione, una volta riconosciuto l'ingresso nell'ombra (0 interruzioni dopo l'ingresso su $23\,402$ passaggi nascosti; l'ingresso non è riconosciuto in 928 di essi, in 24 con una regola aggiuntiva; metà dei passaggi ha probabilità di rilevamento $0{,}7$ per fotogramma, l'altra metà $0{,}9$),
+
+%R6e (conclusioni)
+\emph{Con modello ideale del sensore.} La regione è emessa a ogni ciclo dell'occlusione dopo l'ingresso: 0 passaggi con un'interruzione su $23\,402$ passaggi nascosti, da 6000 soggetti distinti (12 combinazioni: 3 disposizioni, $P_D=0{,}9$ e $0{,}7$, corpo esteso e puntiforme); la premessa, cioè l'ingresso nell'ombra riconosciuto, manca in 928 passaggi su $23\,402$ ($3{,}97\,\%$; 76 con $P_D=0{,}9$ e 852 con $P_D=0{,}7$), e in 24 ($0{,}10\,\%$; 2 e 22) con l'avviso acceso anche per le tracce chiuse entro $0{,}75\unita{m}$ da un'ombra, regola attivata solo dopo la prova d'ingresso sul suolo vuoto (\S\ref{sec:lim-salute}).
+
+%R6f (capitolo 5)
+I 23\,402 passaggi nascosti della prova su semi nuovi (12 combinazioni: 3 disposizioni, $P_D=0{,}9$ e $0{,}7$, corpo esteso e puntiforme) vengono da 6\,000 camminatori distinti: il limite superiore al 95\,\% è «meno di 6,4 passaggi su 10\,000», non quello che si otterrebbe trattando i passaggi come indipendenti. La premessa è l'ingresso: nella stessa prova la traccia è chiusa prima dell'ombra in 928 passaggi su 23\,402 (3,97\,\%: 76 su 11\,701 con $P_D=0{,}9$ e 852 su 11\,701 con $P_D=0{,}7$), e lo zero vale per i 22\,474 passaggi restanti;
+
+\section*{R7, R8a}
+\begin{table}[H]\centering\footnotesize
+\begin{tabularx}{\linewidth}{@{}p{1.25cm}Lp{3.5cm}Lp{1.2cm}@{}}
+\toprule
+Simbolo & Significato & Valore & Origine & Tipo\\
+\midrule
+%R7
+--- & libreria di percorsi ricavata da camminate di persone (non realizzata) & almeno 200 percorsi, due persone, tre andature & requisito di progetto; nelle prove la libreria è di 400 percorsi simulati (\S\ref{sec:occ}) & scelto\\
+\bottomrule
+\end{tabularx}
+\end{table}
+\begin{table}[H]\centering\footnotesize
+\begin{tabularx}{\linewidth}{@{}p{4.6cm}p{2.0cm}p{2.0cm}L@{}}
+\toprule
+%R8a
+Classe & $v$ tipica / massima (m/s) & acc. / frenata massime (m/s$^2$) & Gradi di libertà e modello di moto\\
+\midrule
+persona a piedi & 1,4$^{a}$ / 2,5$^{a}$ & 3,0 / 4,0 & 2, quasi olonomo; si ferma e inverte in un passo\\
+\bottomrule
+\end{tabularx}
+\end{table}
+%R2b (conclusioni)
+\emph{Su profondità simulata dalle schede tecniche.} Con i gruppi a celle forti e l'avviso che resta dopo il riaggancio, un soggetto nascosto entro $3\unita{m}$ non resta senza avviso (0 fotogrammi su 4324 a 424 pixel di larghezza e 0 su 4325 a 848, e 0 su 3608 per risoluzione in una replica); con la configurazione di riferimento, sugli stessi passaggi, resta senza avviso in 180 e in 271 fotogrammi.
+\end{document}

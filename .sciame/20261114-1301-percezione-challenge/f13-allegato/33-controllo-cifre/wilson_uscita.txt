@@ -1,0 +1,91 @@
+z1=1.959964 z5=2.5758 z12=2.8653 z30=3.1440 z45=3.2608 z60=3.3415
+c1 libero cella 0/300                  k=0 n=300 m=1 [%] basso: calcolato 0.00000 stampato 0 ok; alto: calcolato 1.26430 stampato 1.3 ok
+c1 libero ombra 0/131                  k=0 n=131 m=1 [%] basso: calcolato 0.00000 stampato 0 ok; alto: calcolato 2.84887 stampato 2.9 ok
+c1 continuita 0/24835                  k=0 n=24835 m=1 [%] basso: calcolato 0.00000 stampato 0 ok; alto: calcolato 0.01547 stampato 0.016 ok
+c1 continuita 0/6000 (6,4 su 10000)    k=0 n=6000 m=1 [%] alto: calcolato 0.06398 stampato 0.064 ok
+c1 copertura 2125/2279                 k=2125 n=2279 m=1 [f] basso: calcolato 0.92138 stampato 0.921 ok
+c1 copertura 1754/1922                 k=1754 n=1922 m=1 [f] basso: calcolato 0.89913 stampato 0.899 ok
+c1 G1 942/1045                         k=942 n=1045 m=1 [f] basso: calcolato 0.88187 stampato 0.882 ok
+c1 G1 942/1045 m=5 ('0,87')            k=942 n=1045 m=5 [f] basso: calcolato 0.87509 stampato 0.87 NON TORNA
+c1 826/879                             k=826 n=879 m=1 [f] basso: calcolato 0.92197 stampato 0.922 ok
+c1/5/8/9 avviso 10/10                  k=10 n=10 m=1 [%] basso: calcolato 72.24672 stampato 72 ok; alto: calcolato 100.00000 stampato 100 ok
+c1 id 10711/10757                      k=10711 n=10757 m=1 [f] basso: calcolato 0.99430 stampato 0.994 ok
+c1 id 9228/9240                        k=9228 n=9240 m=1 [f] basso: calcolato 0.99773 stampato 0.998 ok
+c1 id 6772/6967                        k=6772 n=6967 m=1 [f] basso: calcolato 0.96787 stampato 0.968 ok
+c1/6 id 0/90                           k=0 n=90 m=1 [%] basso: calcolato 0.00000 stampato 0 ok; alto: calcolato 4.09356 stampato 4.1 ok
+c1/4/6 id 176/180                      k=176 n=180 m=1 [%] basso: calcolato 94.42637 stampato 94 ok; alto: calcolato 99.13251 stampato 99 ok
+c1/4/6 id 174/180                      k=174 n=180 m=1 [%] basso: calcolato 92.91957 stampato 93 ok; alto: calcolato 98.46352 stampato 98 ok
+c1 thor 214/219 (0,977)                k=214 n=219 m=1 [f] basso: calcolato 0.94768 stampato 0.948 ok; alto: calcolato 0.99021 stampato 0.990 ok
+c1/6 mobile 2000/2000                  k=2000 n=2000 m=1 [%] basso: calcolato 99.80830 stampato 99.81 ok
+c1/4/6 pannello 79/90                  k=79 n=90 m=1 [%] basso: calcolato 79.42626 stampato 79.4 ok; alto: calcolato 93.03638 stampato 93.0 ok
+c3 830/897                             k=830 n=897 m=1 [%] basso: calcolato 90.62299 stampato 90.6 ok; alto: calcolato 94.07560 stampato 94.1 ok
+c3 132/134                             k=132 n=134 m=1 [%] basso: calcolato 94.72151 stampato 94.7 ok; alto: calcolato 99.58973 stampato 99.6 ok
+c3 44/87                               k=44 n=87 m=1 [%] basso: calcolato 40.26910 stampato 40.3 ok; alto: calcolato 60.83172 stampato 60.8 ok
+c3 0/321                               k=0 n=321 m=1 [%] basso: calcolato 0.00000 stampato 0 ok; alto: calcolato 1.18256 stampato 1.18 ok
+c3 0/900                               k=0 n=900 m=1 [%] basso: calcolato 0.00000 stampato 0 ok; alto: calcolato 0.42501 stampato 0.43 ok
+c4 5/90                                k=5 n=90 m=1 [%] basso: calcolato 2.39610 stampato 2.4 ok; alto: calcolato 12.35374 stampato 12.4 ok
+c4/6 7/10                              k=7 n=10 m=1 [%] basso: calcolato 39.67781 stampato 40 ok; alto: calcolato 89.22087 stampato 89 ok
+c4/6 45/60                             k=45 n=60 m=1 [%] basso: calcolato 62.76793 stampato 63 ok; alto: calcolato 84.22348 stampato 84 ok
+c4 41/45                               k=41 n=45 m=1 [%] basso: calcolato 79.26642 stampato 79.3 ok; alto: calcolato 96.48889 stampato 96.5 ok
+c4/6 2/10                              k=2 n=10 m=1 [%] basso: calcolato 5.66822 stampato 6 ok; alto: calcolato 50.98375 stampato 51 ok
+c4/6 6/10                              k=6 n=10 m=1 [%] basso: calcolato 31.26738 stampato 31 ok; alto: calcolato 83.18197 stampato 83 ok
+c4/6 2400/2400                         k=2400 n=2400 m=1 [%] basso: calcolato 99.84020 stampato 99.84 ok; alto: calcolato 100.00000 stampato 100 ok
+c4/6/8/9 19/20                         k=19 n=20 m=1 [%] basso: calcolato 76.38688 stampato 76 ok; alto: calcolato 99.11186 stampato 99 ok
+c6/B 826/879 4 cifre                   k=826 n=879 m=1 [f] basso: calcolato 0.92197 stampato 0.9220 ok; alto: calcolato 0.95361 stampato 0.9536 ok
+c6 90/100 m=1                          k=90 n=100 m=1 [f] basso: calcolato 0.82563 stampato 0.826 ok; alto: calcolato 0.94477 stampato 0.945 ok
+c6 90/100 m=12                         k=90 n=100 m=12 [f] basso: calcolato 0.78162 stampato 0.782 ok; alto: calcolato 0.95768 stampato 0.958 ok
+c6 oss 283/339                         k=283 n=339 m=1 [f] basso: calcolato 0.79157 stampato 0.792 ok; alto: calcolato 0.87054 stampato 0.871 ok
+c6 oss 226/282                         k=226 n=282 m=1 [f] basso: calcolato 0.75094 stampato 0.751 ok; alto: calcolato 0.84379 stampato 0.844 ok
+c6 sic 1/5704 (<0,99 per mille)        k=1 n=5704 m=1 [pm] alto: calcolato 0.99246 stampato 0.99 ok
+c6 sic 17/5704                         k=17 n=5704 m=1 [pm] basso: calcolato 1.86168 stampato 1.9 ok; alto: calcolato 4.76805 stampato 4.8 ok
+c6 sic 0/14400                         k=0 n=14400 m=1 [%] basso: calcolato 0.00000 stampato 0 ok; alto: calcolato 0.02667 stampato 0.027 ok
+c6 sic 13/4800                         k=13 n=4800 m=1 [%] basso: calcolato 0.15835 stampato 0.16 ok; alto: calcolato 0.46285 stampato 0.46 ok
+c6 sic 15/90                           k=15 n=90 m=1 [%] basso: calcolato 10.36849 stampato 10.4 ok; alto: calcolato 25.69389 stampato 25.7 ok
+c6 cont 1958/1958                      k=1958 n=1958 m=1 [%] basso: calcolato 99.80419 stampato 99.8 ok; alto: calcolato 100.00000 stampato 100 ok
+c6 cont 1991/2000                      k=1991 n=2000 m=1 [%] basso: calcolato 99.14695 stampato 99.1 ok; alto: calcolato 99.76307 stampato 99.8 ok
+c6 cont 1999/2000                      k=1999 n=2000 m=1 [%] basso: calcolato 99.71731 stampato 99.7 ok; alto: calcolato 99.99117 stampato 100 ok
+c6 cont 0/13638                        k=0 n=13638 m=1 [%] basso: calcolato 0.00000 stampato 0 ok; alto: calcolato 0.02816 stampato 0.028 ok
+c6 cont 0/5600                         k=0 n=5600 m=1 [%] basso: calcolato 0.00000 stampato 0 ok; alto: calcolato 0.06855 stampato 0.069 ok
+c6 cont 0/5597                         k=0 n=5597 m=1 [%] basso: calcolato 0.00000 stampato 0 ok; alto: calcolato 0.06859 stampato 0.069 ok
+c6 soglie 826/879                      k=826 n=879 m=1 [f] basso: calcolato 0.92197 stampato 0.922 ok; alto: calcolato 0.95361 stampato 0.954 ok
+c6 soglie 826/879 z45                  k=826 n=879 m=45 [f] basso: calcolato 0.90790 stampato 0.908 ok
+c6 soglie 461/513                      k=461 n=513 m=1 [f] basso: calcolato 0.86948 stampato 0.869 ok; alto: calcolato 0.92186 stampato 0.922 ok
+c6 soglie 437/472                      k=437 n=472 m=1 [f] basso: calcolato 0.89862 stampato 0.899 ok; alto: calcolato 0.94620 stampato 0.946 ok
+c6 soglie 711/774                      k=711 n=774 m=1 [f] basso: calcolato 0.89721 stampato 0.897 ok; alto: calcolato 0.93586 stampato 0.936 ok
+c6 soglie 1222/1265                    k=1222 n=1265 m=1 [f] basso: calcolato 0.95453 stampato 0.955 ok
+c6 soglie 1222/1265 z30                k=1222 n=1265 m=30 [f] basso: calcolato 0.94603 stampato 0.946 ok
+c6 soglie 666/698                      k=666 n=698 m=1 [f] basso: calcolato 0.93600 stampato 0.936 ok
+c6 soglie 666/698 z30                  k=666 n=698 m=30 [f] basso: calcolato 0.92230 stampato 0.922 ok
+c6 soglie 2125/2279 z30                k=2125 n=2279 m=30 [f] basso: calcolato 0.91396 stampato 0.914 ok
+c6 soglie 1754/1922 z30                k=1754 n=1922 m=30 [f] basso: calcolato 0.89017 stampato 0.890 ok
+c6 soglie 942/1045 z5                  k=942 n=1045 m=5 [f] basso: calcolato 0.87509 stampato 0.875 ok
+c6 soglie 1257/1388                    k=1257 n=1388 m=1 [f] basso: calcolato 0.88910 stampato 0.889 ok
+c6 soglie 845/984                      k=845 n=984 m=1 [f] basso: calcolato 0.83558 stampato 0.836 ok
+c6 fuori 174/221                       k=174 n=221 m=1 [f] basso: calcolato 0.72871 stampato 0.729 ok; alto: calcolato 0.83613 stampato 0.836 ok
+c6 fuori 36/46                         k=36 n=46 m=1 [f] basso: calcolato 0.64426 stampato 0.64 ok; alto: calcolato 0.87739 stampato 0.88 ok
+c6 fuori 83/90                         k=83 n=90 m=1 [f] basso: calcolato 0.84806 stampato 0.85 ok; alto: calcolato 0.96182 stampato 0.96 ok
+c6 id 400/400                          k=400 n=400 m=1 [%] basso: calcolato 99.04877 stampato 99.05 ok; alto: calcolato 100.00000 stampato 100 ok
+c6 id 0/10                             k=0 n=10 m=1 [%] basso: calcolato 0.00000 stampato 0 ok; alto: calcolato 27.75328 stampato 28 ok
+c6 id 1/10                             k=1 n=10 m=1 [%] basso: calcolato 1.78762 stampato 2 ok; alto: calcolato 40.41500 stampato 40 ok
+c6 id 3027/3041                        k=3027 n=3041 m=1 [f] basso: calcolato 0.99229 stampato 0.992 ok; alto: calcolato 0.99726 stampato 0.997 ok
+c6 id 3493/3616                        k=3493 n=3616 m=1 [f] basso: calcolato 0.95956 stampato 0.960 ok; alto: calcolato 0.97142 stampato 0.971 ok
+c6 id 3239/3546                        k=3239 n=3546 m=1 [f] basso: calcolato 0.90371 stampato 0.904 ok; alto: calcolato 0.92224 stampato 0.922 ok
+c6 id 12/12                            k=12 n=12 m=1 [%] basso: calcolato 75.75060 stampato 76 ok; alto: calcolato 100.00000 stampato 100 ok
+c6 id 0/264                            k=0 n=264 m=1 [%] basso: calcolato 0.00000 stampato 0 ok; alto: calcolato 1.43423 stampato 1.4 ok
+c6 mob 0/400                           k=0 n=400 m=1 [%] basso: calcolato 0.00000 stampato 0 ok; alto: calcolato 0.95123 stampato 0.95 ok
+c6 mob 0/140                           k=0 n=140 m=1 [%] basso: calcolato 0.00000 stampato 0 ok; alto: calcolato 2.67062 stampato 2.7 ok
+c6 mob 0/60                            k=0 n=60 m=1 [%] basso: calcolato 0.00000 stampato 0 ok; alto: calcolato 6.01719 stampato 6 ok
+c7 4/9152                              k=4 n=9152 m=1 [%] basso: calcolato 0.01700 stampato 0.02 ok; alto: calcolato 0.11233 stampato 0.11 ok
+c2 9/10                                k=9 n=10 m=1 [f] basso: calcolato 0.59585 stampato 0.60 ok; alto: calcolato 0.98212 stampato 0.98 ok
+c2 10/10                               k=10 n=10 m=1 [f] basso: calcolato 0.72247 stampato 0.72 ok; alto: calcolato 1.00000 stampato 1 ok
+c4 thor 219/219                        k=219 n=219 m=1 [f] basso: calcolato 0.98276 stampato 0.983 ok; alto: calcolato 1.00000 stampato 1 ok
+c4 thor 207/219                        k=207 n=219 m=1 [f] basso: calcolato 0.90668 stampato 0.907 ok; alto: calcolato 0.96838 stampato 0.968 ok
+c4 thor 174/219                        k=174 n=219 m=1 [f] basso: calcolato 0.73615 stampato 0.736 ok; alto: calcolato 0.84274 stampato 0.843 ok
+c4 thor 176/219                        k=176 n=219 m=1 [f] basso: calcolato 0.74600 stampato 0.746 ok; alto: calcolato 0.85084 stampato 0.851 ok
+c4 thor 182/219                        k=182 n=219 m=1 [f] basso: calcolato 0.77582 stampato 0.776 ok; alto: calcolato 0.87487 stampato 0.875 ok
+c5 347/357                             k=347 n=357 m=1 [f] basso: calcolato 0.94921 stampato 0.95 ok; alto: calcolato 0.98472 stampato 0.98 ok
+c6 bordo 115/115                       k=115 n=115 m=1 [%] basso: calcolato 96.76758 stampato 96.8 ok; alto: calcolato 100.00000 stampato 100 ok
+c6 bordo 0/8                           k=0 n=8 m=1 [%] basso: calcolato 0.00000 stampato 0 ok; alto: calcolato 32.44076 stampato 32.4 ok
+c8 30/30                               k=30 n=30 m=1 [f] basso: calcolato 0.88649 stampato 0.886 ok
+c6 num 46/50                           k=46 n=50 m=1 [f] basso: calcolato 0.81162 stampato 0.812 ok; alto: calcolato 0.96845 stampato 0.968 ok
+estremi confrontati: 156; non tornano: 1

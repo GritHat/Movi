@@ -1,6 +1,6 @@
 \section{Parametri del sistema}\label{sec:par}
 
-La tabella~\ref{tab:par-parametri} raccoglie i parametri del sistema descritto nei capitoli precedenti. Nell'ultima colonna «scelto» indica un valore fissato a tavolino, «tarato» un valore ricavato da dati simulati, «stimato» un valore preso da una fonte esterna o da un conto e non misurato. Nessun parametro è tarato su un sensore fisico; i valori marcati «da misurare» vanno rifissati sulla camera usata. Le soglie di tempo valgono in secondi: il numero di fotogrammi è dato per il ciclo di $15\unita{Hz}$.
+La tabella~\ref{tab:par-parametri} raccoglie i parametri del sistema descritto nei capitoli precedenti. Nell'ultima colonna «scelto» indica un valore fissato a tavolino, «tarato» un valore ricavato da dati simulati, «stimato» un valore preso da una fonte esterna o da un conto e non misurato. Nessun parametro è tarato su un sensore fisico; i valori marcati «non misurato» vanno fissati sulla camera usata. Le soglie di tempo valgono in secondi: il numero di fotogrammi è dato per il ciclo di $15\unita{Hz}$.
 
 \begin{table}[H]\centering\footnotesize
 \caption{Parametri del sistema (prima parte): sorgente, mappa, gruppi, filtro e ciclo di vita della traccia.}\label{tab:par-parametri}
@@ -10,19 +10,19 @@ Simbolo & Significato & Valore & Origine & Tipo\\
 \midrule
 $h$, $\theta$ & quota e inclinazione della camera & $1{,}2\unita{m}$; $15^\circ$ verso il basso & geometria d'osservazione (\S\ref{sec:geo}) & scelto\\
 $\Delta$ & periodo del ciclo d'elaborazione & $1/15\unita{s}$ su un flusso a 30 fotogrammi al secondo & valore di progetto, non una prestazione misurata & scelto\\
---- & portata della mappa & $3\unita{m}$ & intervallo utile della camera; da misurare & scelto\\
+--- & portata della mappa & $3\unita{m}$ & intervallo utile della camera; non misurato & scelto\\
 --- & tolleranza sull'inclinazione & meno di $0{,}5^\circ$ & controesempio a $1^\circ$ (\S\ref{sec:lim-limiti}) & scelto\\
 --- & autoverifica all'avvio & pixel validi sotto il $10\,\%$ entro 3 fotogrammi a sensore coperto & regola di progetto & scelto\\
 --- & prove d'ingresso & oggetto di $10\unita{cm}$ a $2{,}5\unita{m}$ «occupato»; suolo vuoto per $30\unita{s}$ senza gruppi né tracce & regola di progetto & scelto\\
 --- & cella della mappa polare & $1^\circ\times0{,}1\unita{m}$ & \S\ref{sec:map} & scelto\\
 --- & quota d'ostacolo & da $0{,}07$ a $2{,}0\unita{m}$ sopra il suolo & \S\ref{sec:map} & scelto\\
 --- & pixel minimi per «occupato» & 3 nel fotogramma corrente & \S\ref{sec:map} & scelto\\
---- & margine di lettura del suolo alla profondità attesa $z_0$ & $0{,}03+3\,k\,z_0^2$ (m); $k=0{,}004$ nominale, $0{,}0100$ al limite & modello del rumore del sensore; da misurare sul suolo & stimato\\
+--- & margine di lettura del suolo alla profondità attesa $z_0$ & $0{,}03+3\,k\,z_0^2$ (m); $k=0{,}004$ nominale, $0{,}0100$ al limite & modello del rumore del sensore; non misurato sul suolo & stimato\\
 --- & condizione di «libero» & metà dei pixel dell'impronta della cella e di ognuna delle 8 vicine entro il margine & fissata dopo una prima simulazione & scelto\\
 --- & memoria del «libero» & 0 fotogrammi & controesempi alle regole con memoria (\S\ref{sec:map}) & scelto\\
 --- & inizio della frase sul suolo & $1{,}3\unita{m}$ & suolo visibile da $1{,}24\unita{m}$ sull'asse & scelto\\
 --- & gruppi a celle forti (attivi solo dopo le prove d'ingresso) & celle con almeno $0{,}30$ del massimo della componente; $0{,}05\unita{m}$ e $0{,}004\unita{m^2}$ per le soglie attese & $0{,}30$ ricavato dopo i dati simulati; le altre fissate prima & tarato; scelto\\
-$\sigma_z(d)$ & rumore di profondità & $1{,}5$ / $3{,}4$ / $6{,}0\unita{cm}$ a 2 / 3 / $4\unita{m}$ & dato del costruttore; da misurare & stimato\\
+$\sigma_z(d)$ & rumore di profondità & $1{,}5$ / $3{,}4$ / $6{,}0\unita{cm}$ a 2 / 3 / $4\unita{m}$ & dato del costruttore; non misurato & stimato\\
 --- & soglia della regola «mobile» & $5\,\sigma\sqrt{2/m}$, $m=3$ fotogrammi per media, misure distanti al più $1\unita{s}$ & \S\ref{sec:sti} & scelto\\
 $q$ & densità del rumore di processo & $0{,}2\unita{m^2/s^3}$ & prudente: $0{,}05$--$0{,}1$ su traiettorie pubbliche di pedoni & scelto\\
 $\gamma$ & soglia di porta & quantile al $99\,\%$ & \S\ref{sec:sti} & scelto\\
@@ -42,7 +42,7 @@ $\gamma$ & soglia di porta & quantile al $99\,\%$ & \S\ref{sec:sti} & scelto\\
 \toprule
 Simbolo & Significato & Valore & Origine & Tipo\\
 \midrule
-$w$ & fascia di guardia attorno all'ombra & $0{,}40\unita{m}$ & copre $1{,}13\unita{m/s}$ con età $0{,}133\unita{s}$, latenza $0{,}155\unita{s}$, tenuta $0{,}067\unita{s}$ & scelto\\
+$w$ & fascia di guardia attorno all'ombra & $0{,}40\unita{m}$ & copre $1{,}13\unita{m/s}$ con $t_a=0{,}133\unita{s}$ (assunto), latenza $0{,}155\unita{s}$, tenuta $0{,}067\unita{s}$ & scelto\\
 --- & fascia di ritaglio della regione sul suolo «libero» & $0{,}20\unita{m}$ & \S\ref{sec:occ} & scelto\\
 $\alpha$ & livello della regione di previsione & $0{,}90$ & \S\ref{sec:occ} & scelto\\
 --- & insieme di percorsi del predittore & 400, di cui 200 proseguono e 200 si fermano a un istante uniforme & \S\ref{sec:occ} & scelto\\
@@ -51,14 +51,14 @@ $\alpha$ & livello della regione di previsione & $0{,}90$ & \S\ref{sec:occ} & sc
 --- & soglia e orizzonte di «previsto ampio» & regione oltre l'$80\,\%$ delle celle dell'ombra; $3\unita{s}$ & fissati dopo aver visto i dati simulati & scelto\\
 --- & ingresso da fermo & velocità sotto $0{,}3\unita{m/s}$ all'ingresso o negli ultimi $2\unita{s}$ & \S\ref{sec:occ} & scelto\\
 --- & punto previsto fuori dal non visto libero & fermo 8 cicli, poi al più $0{,}167\unita{m}$ per ciclo & \S\ref{sec:occ} & scelto\\
---- & libreria di taratura dei percorsi & almeno 200 percorsi, due persone, tre andature & \S\ref{sec:val} & scelto\\
+--- & libreria di percorsi ricavata da camminate di persone (non realizzata) & almeno 200 percorsi, due persone, tre andature & requisito di progetto; nelle prove la libreria è di 400 percorsi simulati (\S\ref{sec:occ}) & scelto\\
 --- & rilascio di una cella dell'avviso & «libero» per 3 fotogrammi di fila e oltre $w$ dall'ombra corrente & \S\ref{sec:occ} & scelto\\
---- & fotogramma mancante & $0{,}13\unita{s}$ senza fotogramma nuovo, o tre identici & da rifissare con $60\unita{s}$ di conteggio a vuoto e sotto carico & scelto\\
+--- & fotogramma mancante & $0{,}13\unita{s}$ senza fotogramma nuovo, o tre identici & valore di progetto, non misurato; va fissato con $60\unita{s}$ di conteggio a vuoto e sotto carico & scelto\\
 --- & pixel validi & sotto metà della taratura per $0{,}2\unita{s}$ & \S\ref{sec:lim-salute} & scelto\\
 --- & unità inerziale; piano del suolo & $0{,}5^\circ$ o $5^\circ/\mathrm{s}$; $0{,}5^\circ$ & \S\ref{sec:lim-salute} & scelto\\
 --- & segnale sonoro & $0{,}3\unita{s}$ per cambio di stato & \S\ref{sec:lim-uscita} & scelto\\
 $\tau$ & latenza dall'evento all'uscita & $0{,}155\unita{s}$ (circa $0{,}131\unita{s}$ con un altro dato del costruttore) & somma di voci note (\S\ref{sec:lim-latenza}); non misurata & stimato\\
-$t_{\mathrm{conf}}$ & tempo di conferma & $0{,}267\unita{s}$ & 4 periodi a $15\unita{Hz}$: valore usato nei conti per la conferma «3 misure su 5»; il legame fra i due numeri non è documentato & scelto\\
+$t_{\mathrm{conf}}$ & tempo di conferma & $0{,}267\unita{s}$ & 4 periodi a $15\unita{Hz}$: valore usato nei conti per la conferma «3 misure su 5»; il legame fra i due numeri non è derivato in questo documento & scelto\\
 $C$ & margine della distanza d'avviso & $0{,}95\unita{m}$ & $0{,}85\unita{m}$ attribuiti a una norma, non riscontrati, più $0{,}10\unita{m}$ & stimato\\
 $T_r$, $v_e$, $a_f$ & tempo di reazione, velocità propria, frenata del portatore & per profilo (tabella~\ref{tab:lim-portatore}) & ipotesi di progetto o valori riportati & scelto\\
 --- & soglia di fiducia del classificatore; coerenza cinematica & $0{,}7$; 4 cicli su 6 & ipotesi; il classificatore non è realizzato (\S\ref{sec:sti}) & scelto\\
