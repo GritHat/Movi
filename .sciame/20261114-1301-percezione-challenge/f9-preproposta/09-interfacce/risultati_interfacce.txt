@@ -1,0 +1,77 @@
+== A. Colori (int-P1) ==
+-- terna: documento v0.5 (ok, warn, todo)
+   ok/verde     #1E7A4C  luminanza relativa 0.147
+   warn/ambra   #A8620A  luminanza relativa 0.171
+   todo/grigio  #6B7280  luminanza relativa 0.167
+   ok/verde / warn/ambra: grigio 1.12:1 | protanopia lum 1.11:1, dE 28 | deuteranopia lum 1.28:1, dE 40 | tritanopia lum 1.10:1, dE 76 | vista normale dE 71
+   ok/verde / todo/grigio: grigio 1.10:1 | protanopia lum 1.04:1, dE 32 | deuteranopia lum 1.15:1, dE 24 | tritanopia lum 1.10:1, dE 26 | vista normale dE 47
+   warn/ambra / todo/grigio: grigio 1.02:1 | protanopia lum 1.16:1, dE 60 | deuteranopia lum 1.12:1, dE 63 | tritanopia lum 1.00:1, dE 52 | vista normale dE 67
+-- terna: semaforo (verde, ambra, rosso)
+   verde        #2E7D32  luminanza relativa 0.155
+   ambra        #FFB300  luminanza relativa 0.535
+   rosso        #C62828  luminanza relativa 0.137
+   verde / ambra: grigio 2.86:1 | protanopia lum 2.39:1, dE 44 | deuteranopia lum 3.20:1, dE 61 | tritanopia lum 2.62:1, dE 73 | vista normale dE 81
+   verde / rosso: grigio 1.10:1 | protanopia lum 1.63:1, dE 19 | deuteranopia lum 1.13:1, dE 16 | tritanopia lum 1.00:1, dE 110 | vista normale dE 101
+   ambra / rosso: grigio 3.13:1 | protanopia lum 3.89:1, dE 63 | deuteranopia lum 2.83:1, dE 47 | tritanopia lum 2.63:1, dE 52 | vista normale dE 69
+-- campitura piena ambra (alfa 0,35) contro grigio 'in ombra' (alfa 0,35 di 6B7280), solo luminanza
+   fondo bianco: ambra/ombra 1.17:1; ambra/fondo 1.18:1; ombra/fondo 1.38:1
+   fondo scuro 16202B: ambra/ombra 2.10:1; ambra/fondo 3.86:1; ombra/fondo 1.84:1
+
+== B. Cifre che cambiano a ogni ciclo (int-P2) ==
+-- rumore di misura 0.02 m: sigma per asse a 0.5 s: 0.117 m, 1.0 s: 0.308 m, 2.0 s: 0.799 m, 3.0 s: 1.425 m
+   fra 0,3 e 2,0 s (26 cicli): '±X.XX' cambia in 26/26 cicli (100.0 %); 't_occ Y.Y' in 17/26 (65.4 %); etichetta (due campi) 15.0 cambi/s; con un decimale: 7 cambi in 1.73 s (4.0/s)
+-- rumore di misura 0.04 m: sigma per asse a 0.5 s: 0.137 m, 1.0 s: 0.333 m, 2.0 s: 0.834 m, 3.0 s: 1.468 m
+   fra 0,3 e 2,0 s (26 cicli): '±X.XX' cambia in 26/26 cicli (100.0 %); 't_occ Y.Y' in 17/26 (65.4 %); etichetta (due campi) 15.0 cambi/s; con un decimale: 7 cambi in 1.73 s (4.0/s)
+-- rumore di misura 0.10 m: sigma per asse a 0.5 s: 0.180 m, 1.0 s: 0.388 m, 2.0 s: 0.906 m, 3.0 s: 1.554 m
+   fra 0,3 e 2,0 s (26 cicli): '±X.XX' cambia in 26/26 cicli (100.0 %); 't_occ Y.Y' in 17/26 (65.4 %); etichetta (due campi) 15.0 cambi/s; con un decimale: 8 cambi in 1.73 s (4.6/s)
+
+== C. Che cosa contiene '±sigma' (int-P3) ==
+   1 dimensione, entro 1 sigma: 68.3 %
+   2 dimensioni (isotropa), entro il cerchio di raggio sigma: 39.3 %
+   raggio al 50 %: 1.177 sigma; con sigma = 0,8 m: 0.94 m (area 2.8 m2)
+   raggio al 90 %: 2.146 sigma; con sigma = 0,8 m: 1.72 m (area 9.3 m2)
+   raggio al 95 %: 2.448 sigma; con sigma = 0,8 m: 1.96 m (area 12.0 m2)
+
+== D. Scarto della massa stesa sul cuneo d'ombra (int-P4) ==
+   pannello 1.0 m a 1.7 m: cuneo 1.72 m2, scarto per asse 0.40 / 0.36 m, radiale 0.54 m | con fascia 0,40 m (per eccesso) 3.35 m2, per asse 0.59 / 0.47 m, radiale 0.75 m
+   pannello 1.0 m a 1.8 m: cuneo 1.53 m2, scarto per asse 0.38 / 0.33 m, radiale 0.51 m | con fascia 0,40 m (per eccesso) 3.09 m2, per asse 0.58 / 0.44 m, radiale 0.73 m
+   pannello 1.0 m a 1.9 m: cuneo 1.37 m2, scarto per asse 0.37 / 0.31 m, radiale 0.48 m | con fascia 0,40 m (per eccesso) 2.82 m2, per asse 0.57 / 0.41 m, radiale 0.70 m
+
+== E. Quanti decimali regge la taratura (int-P5) ==
+   27/30 = 90.0 %: Wilson 95 % [74.4; 96.5] %; il raggio che darebbe quella copertura va da 0.77 a 1.21 volte il dichiarato: su 0,80 m, da 0.62 a 0.97 m
+   28/30 = 93.3 %: Wilson 95 % [78.7; 98.2] %; il raggio che darebbe quella copertura va da 0.76 a 1.21 volte il dichiarato: su 0,80 m, da 0.60 a 0.97 m
+   360/400 = 90.0 %: Wilson 95 % [86.7; 92.6] %; il raggio che darebbe quella copertura va da 0.94 a 1.06 volte il dichiarato: su 0,80 m, da 0.75 a 0.85 m
+   380/400 = 95.0 %: Wilson 95 % [92.4; 96.7] %; il raggio che darebbe quella copertura va da 0.93 a 1.07 volte il dichiarato: su 0,80 m, da 0.74 a 0.86 m
+
+== F. Etichetta a leggibilita' da sala (int-P6; schermo 2,0 m e 1920 punti, giurato a 6 m: ipotesi) ==
+   etichetta della preproposta: 40 caratteri; corretta: 24 caratteri; scala mappa 360 punti/m; ombra del pannello larga 1,0 m = 360 punti al pannello, 600 punti a 3 m
+   16' a 4 m: maiuscola 19 mm = 18 punti, corpo 26 punti; etichetta 562 punti (1.6 volte l'ombra al pannello); tre etichette 1685 punti su 1920; corretta 337 punti
+   16' a 6 m: maiuscola 28 mm = 27 punti, corpo 38 punti; etichetta 843 punti (2.3 volte l'ombra al pannello); tre etichette 2528 punti su 1920; corretta 506 punti
+   16' a 8 m: maiuscola 37 mm = 36 punti, corpo 51 punti; etichetta 1123 punti (3.1 volte l'ombra al pannello); tre etichette 3370 punti su 1920; corretta 674 punti
+   20' a 4 m: maiuscola 23 mm = 22 punti, corpo 32 punti; etichetta 702 punti (2.0 volte l'ombra al pannello); tre etichette 2106 punti su 1920; corretta 421 punti
+   20' a 6 m: maiuscola 35 mm = 34 punti, corpo 48 punti; etichetta 1053 punti (2.9 volte l'ombra al pannello); tre etichette 3160 punti su 1920; corretta 632 punti
+   20' a 8 m: maiuscola 47 mm = 45 punti, corpo 64 punti; etichetta 1404 punti (3.9 volte l'ombra al pannello); tre etichette 4213 punti su 1920; corretta 843 punti
+   22' a 4 m: maiuscola 26 mm = 25 punti, corpo 35 punti; etichetta 772 punti (2.1 volte l'ombra al pannello); tre etichette 2317 punti su 1920; corretta 463 punti
+   22' a 6 m: maiuscola 38 mm = 37 punti, corpo 53 punti; etichetta 1159 punti (3.2 volte l'ombra al pannello); tre etichette 3476 punti su 1920; corretta 695 punti
+   22' a 8 m: maiuscola 51 mm = 49 punti, corpo 70 punti; etichetta 1545 punti (4.3 volte l'ombra al pannello); tre etichette 4634 punti su 1920; corretta 927 punti
+
+== G. Canale sonoro seriale con oggetti nascosti (int-P7) ==
+   segnale 0.3 s + pausa 0.1 s; ingressi in ombra uniformi in 0-2 s; occlusioni uniformi 0,7-2,0 s; 20000 scene per riga; seme 20261114
+-- 1 oggetti, settori a caso (3)
+   coda per oggetto : 40000 segnali; partiti oltre 0,3 s: 0.0 %; oltre 0,145 s: 0.0 %; p95 del ritardo 0.00 s; massimo 0.00 s; partiti a stato scaduto 0.0 %; 'previsto' mai detto mentre vale 0.0 %
+   regola per settore: 40000 segnali (40000 cambi di settore); oltre 0,3 s: 0.0 %; oltre 0,145 s: 0.0 %; p95 0.00 s; massimo 0.00 s; a stato scaduto 0.0 %; 'previsto' di settore mai detto mentre vale 0.0 %
+-- 1 oggetti, stesso settore
+   coda per oggetto : 40000 segnali; partiti oltre 0,3 s: 0.0 %; oltre 0,145 s: 0.0 %; p95 del ritardo 0.00 s; massimo 0.00 s; partiti a stato scaduto 0.0 %; 'previsto' mai detto mentre vale 0.0 %
+   regola per settore: 40000 segnali (40000 cambi di settore); oltre 0,3 s: 0.0 %; oltre 0,145 s: 0.0 %; p95 0.00 s; massimo 0.00 s; a stato scaduto 0.0 %; 'previsto' di settore mai detto mentre vale 0.0 %
+-- 2 oggetti, settori a caso (3)
+   coda per oggetto : 80000 segnali; partiti oltre 0,3 s: 6.0 %; oltre 0,145 s: 15.1 %; p95 del ritardo 0.32 s; massimo 0.47 s; partiti a stato scaduto 0.0 %; 'previsto' mai detto mentre vale 0.0 %
+   regola per settore: 68588 segnali (68588 cambi di settore); oltre 0,3 s: 5.0 %; oltre 0,145 s: 12.4 %; p95 0.30 s; massimo 0.47 s; a stato scaduto 0.0 %; 'previsto' di settore mai detto mentre vale 0.0 %
+-- 2 oggetti, stesso settore
+   coda per oggetto : 80000 segnali; partiti oltre 0,3 s: 6.0 %; oltre 0,145 s: 15.1 %; p95 del ritardo 0.32 s; massimo 0.46 s; partiti a stato scaduto 0.0 %; 'previsto' mai detto mentre vale 0.0 %
+   regola per settore: 45662 segnali (45662 cambi di settore); oltre 0,3 s: 1.2 %; oltre 0,145 s: 2.9 %; p95 0.00 s; massimo 0.40 s; a stato scaduto 0.0 %; 'previsto' di settore mai detto mentre vale 0.0 %
+-- 3 oggetti, settori a caso (3)
+   coda per oggetto : 120000 segnali; partiti oltre 0,3 s: 20.4 %; oltre 0,145 s: 37.0 %; p95 del ritardo 0.48 s; massimo 1.13 s; partiti a stato scaduto 0.0 %; 'previsto' mai detto mentre vale 0.0 %
+   regola per settore: 88321 segnali (88542 cambi di settore); oltre 0,3 s: 10.7 %; oltre 0,145 s: 21.6 %; p95 0.37 s; massimo 1.01 s; a stato scaduto 0.0 %; 'previsto' di settore mai detto mentre vale 0.0 %
+-- 3 oggetti, stesso settore
+   coda per oggetto : 120000 segnali; partiti oltre 0,3 s: 20.2 %; oltre 0,145 s: 36.9 %; p95 del ritardo 0.47 s; massimo 1.12 s; partiti a stato scaduto 0.0 %; 'previsto' mai detto mentre vale 0.0 %
+   regola per settore: 44506 segnali (44506 cambi di settore); oltre 0,3 s: 1.5 %; oltre 0,145 s: 3.2 %; p95 0.00 s; massimo 0.40 s; a stato scaduto 0.0 %; 'previsto' di settore mai detto mentre vale 0.0 %

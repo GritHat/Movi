@@ -1,0 +1,21 @@
+A) parte strutturale (nessun rumore): quota di celle del corridoio che NON sono osservabili
+  corridoio dal sensore 0-3 m, largo 1 m: celle 1992, non osservabili 1458 (73.2 %) {'fuori campo': 514, 'anello cieco': 944, 'osservabile': 534} -> attesa permanente: SI
+  corridoio 0-3 m, largo 2 m: celle 3204, non osservabili 2110 (65.9 %) {'fuori campo': 1034, 'anello cieco': 1056, 'osservabile': 1094, 'oltre portata': 20} -> attesa permanente: SI
+  corridoio 1,24-3 m (distanza lungo l'asse), largo 1 m: celle 500, non osservabili 0 (0.0 %) {'osservabile': 500} -> attesa permanente: no
+  corridoio 1,3-2,9 m, largo 1 m: celle 454, non osservabili 0 (0.0 %) {'osservabile': 454} -> attesa permanente: no
+  corridoio 1,3-2,9 m, largo 2 m: celle 880, non osservabili 2 (0.2 %) {'osservabile': 878, 'oltre portata': 2} -> attesa permanente: SI
+  corridoio 1,5-2,8 m, largo 2,4 m: celle 816, non osservabili 0 (0.0 %) {'osservabile': 816} -> attesa permanente: no
+B) parte casuale: corridoio tutto osservabile (1,3-2,9 m, largo 1 m), scena vuota, 15 Hz
+  celle: 454
+  suolo valido 0.99: S8 alla lettera: 1 cella         cicli in attesa   0.04 %  ingressi in attesa 0.4/min  (teoria 1 cella: 0.05 %)
+  suolo valido 0.99: >=1 cella per 3 cicli di fila    cicli in attesa   0.00 %  ingressi in attesa 0.0/min
+  suolo valido 0.99: >=2 % delle celle                cicli in attesa   0.00 %  ingressi in attesa 0.0/min
+  suolo valido 0.99: >=2 % delle celle per 3 cicli    cicli in attesa   0.00 %  ingressi in attesa 0.0/min
+  suolo valido 0.95: S8 alla lettera: 1 cella         cicli in attesa   5.72 %  ingressi in attesa 44.8/min  (teoria 1 cella: 5.52 %)
+  suolo valido 0.95: >=1 cella per 3 cicli di fila    cicli in attesa   0.08 %  ingressi in attesa 0.7/min
+  suolo valido 0.95: >=2 % delle celle                cicli in attesa   0.00 %  ingressi in attesa 0.0/min
+  suolo valido 0.95: >=2 % delle celle per 3 cicli    cicli in attesa   0.00 %  ingressi in attesa 0.0/min
+  suolo valido 0.8: S8 alla lettera: 1 cella         cicli in attesa  97.46 %  ingressi in attesa 21.9/min  (teoria 1 cella: 97.39 %)
+  suolo valido 0.8: >=1 cella per 3 cicli di fila    cicli in attesa  92.29 %  ingressi in attesa 21.6/min
+  suolo valido 0.8: >=2 % delle celle                cicli in attesa   0.43 %  ingressi in attesa 3.9/min
+  suolo valido 0.8: >=2 % delle celle per 3 cicli    cicli in attesa   0.00 %  ingressi in attesa 0.0/min

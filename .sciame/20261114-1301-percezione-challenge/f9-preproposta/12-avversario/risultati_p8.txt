@@ -1,0 +1,5 @@
+== P8 (S7): rilevamento costante e punto di massimo avvicinamento ==
+  identita' |theta'| = d_CPA*|v|/r^2 su 10000 coppie in avvicinamento: errore relativo massimo 6.33e-12
+  attraversamento a z=1.5 m, 1.2 m/s: |theta'| massimo 0.80 rad/s (46 gradi/s), d_CPA dal sensore 1.50 m; dentro un corridoio largo 1 m per 0.83 s
+  rumore di theta' con errore di velocita' trasversale 0,1 / 0,2 m/s a 2,3 m: 0.043 / 0.087 rad/s
+  bersaglio da (0;3) diretto a un varco 1,5 m a fianco del sensore: |theta'| rispetto al sensore 0.18 rad/s ('trasversale'), rispetto al varco 0,00 (convergente)

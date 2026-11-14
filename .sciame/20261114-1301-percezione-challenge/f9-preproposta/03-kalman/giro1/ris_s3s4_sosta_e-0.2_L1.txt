@@ -1,0 +1,13 @@
+comportamento=sosta errore_maschera=-0.20 m lettura=L1 N=2000 scartati=0 seme=20262121
+particelle: 0.16 ms per ciclo e per traccia (300 particelle, Python puro, indicativo)
+tau  n(nasc) bordo | K:cop  raggio | A:cop1s cop2s cop2.45s reg95 area  sig_eff(med) mu1  >0.8m zero vuota | B:cop1s cop2.45s reg95 area sig_eff mu1 >0.8m zero | C:reg95 reg50 area  su_libero oltre_fascia
+0.53   1974    26 | 0.998  0.37 | 0.515 0.945 0.995 0.678  0.26  0.13 0.986 0.000 0.320   0 | 0.553 0.997 0.680  0.26  0.13 0.889 0.000 0.320 | 0.997 0.826  0.42 0.509 0.056
+1.00   1996     1 | 0.971  0.79 | 0.623 0.944 0.985 0.915  0.96  0.26 0.994 0.000 0.062   0 | 0.669 1.000 0.938  0.94  0.26 0.781 0.000 0.062 | 0.995 0.679  1.29 0.393 0.041
+2.00   1994     2 | 0.946  2.00 | 0.361 0.814 0.933 0.852  8.48  0.86 0.940 0.845 0.123   0 | 0.441 0.999 0.877  8.34  0.87 0.798 0.817 0.123 | 0.959 0.641  2.51 0.343 0.045
+3.00   1994     1 | 0.969  3.55 | 0.177 0.631 0.827 0.688 15.20  1.17 0.981 0.991 0.127   0 | 0.242 1.000 0.873 15.29  1.23 0.858 1.000 0.127 | 0.939 0.638  3.03 0.258 0.033
+P-K3b: soste con velocita' d'ingresso >= 1,0 m/s ancora nascoste a 3 s n=911; B con mu1>0,5: 911
+DATI sosta -0.20 L1 2000 8 n=1974 bordo=26 Kc=1971 Kr=720.844 A1=1016 A2=1866 A245=1965 Ah=1339 Aa=519.47 Ase=257.605 Amu=1946.71 A08=0 Az=631 Avuota=0 B1=1092 B245=1968 Bh=1343 Ba=506.57 Bse=256.568 Bmu=1754.99 B08=0 Bz=631 Ch=1969 Ca=837.48 C50=1631 Clib=1004.97 Clibf=109.691
+DATI sosta -0.20 L1 2000 15 n=1996 bordo=1 Kc=1939 Kr=1574.47 A1=1243 A2=1884 A245=1967 Ah=1826 Aa=1917.8 Ase=528.311 Amu=1984.03 A08=0 Az=124 Avuota=0 B1=1336 B245=1996 Bh=1872 Ba=1871.69 Bse=527.204 Bmu=1559.81 B08=0 Bz=124 Ch=1986 Ca=2570.96 C50=1355 Clib=784.054 Clibf=81.9988
+DATI sosta -0.20 L1 2000 30 n=1994 bordo=2 Kc=1886 Kr=3997.54 A1=719 A2=1624 A245=1860 Ah=1699 Aa=16909.6 Ase=1681.05 Amu=1874.18 A08=1685 Az=246 Avuota=0 B1=880 B245=1993 Bh=1748 Ba=16624.4 Bse=1733.91 Bmu=1591.31 B08=1629 Bz=246 Ch=1913 Ca=4997.6 C50=1278 Clib=684.556 Clibf=90.148
+DATI sosta -0.20 L1 2000 45 n=1994 bordo=1 Kc=1933 Kr=7075.24 A1=353 A2=1258 A245=1649 Ah=1372 Aa=30317.9 Ase=2311.48 Amu=1956.35 A08=1976 Az=254 Avuota=0 B1=482 B245=1994 Bh=1740 Ba=30492.9 Bse=2449.63 Bmu=1710.39 B08=1994 Bz=254 Ch=1873 Ca=6038.72 C50=1272 Clib=514.154 Clibf=65.4879
+tempo totale 27.0 s

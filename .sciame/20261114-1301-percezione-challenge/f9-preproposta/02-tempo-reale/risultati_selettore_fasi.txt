@@ -1,0 +1,9 @@
+# P10: fasi di 60 s, centro 42 / 58 ms alternati, delta 12 ms, bianco 3, AR 2, punte 1,5 %; 20 semi x 10 min
+variante                 cambi/min  sfor. % sfor./min % in piena
+A_nessuna_isteresi            36.5     1.00       9.0       82.3
+B_isteresi_tempo              11.5     0.96       8.6       74.6
+C_due_soglie                  11.5     0.68       6.1       61.5
+CB_due_soglie+tempo            6.9     0.73       6.6       64.7
+D_corretto                     1.7     0.50       4.5       36.4
+sempre_piena                   0.0     1.32      11.9      100.0
+sempre_ridotta                 0.0     0.35       3.1        0.0

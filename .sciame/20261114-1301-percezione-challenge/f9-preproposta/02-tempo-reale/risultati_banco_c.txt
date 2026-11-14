@@ -1,0 +1,6 @@
+# Banco del ciclo, C -O2, un filo. Griglia 88 x 30 = 2640 celle; 10 tracce x 2 ipotesi.
+(a) moduli preproposta, griglia intera     , sigma 0.8 m   mediana   0.1764 ms   99o perc.   0.1852 ms   massimo   0.4766 ms   (n = 5000)
+(a) moduli preproposta, griglia intera     , sigma 0.3 m   mediana   0.1767 ms   99o perc.   0.1857 ms   massimo   0.2561 ms   (n = 5000)
+(a) moduli preproposta, riquadro a 3 sigma, sigma 0.8 m    mediana   0.1730 ms   99o perc.   0.1799 ms   massimo   0.2332 ms   (n = 5000)
+(a) moduli preproposta, riquadro a 3 sigma, sigma 0.3 m    mediana   0.0561 ms   99o perc.   0.0688 ms   massimo   0.0931 ms   (n = 5000)
+(b) proiezione 848x480 -> griglia polare (atan2f per pixel) mediana   2.9105 ms   99o perc.   2.9676 ms   massimo   3.0002 ms   (n = 500)

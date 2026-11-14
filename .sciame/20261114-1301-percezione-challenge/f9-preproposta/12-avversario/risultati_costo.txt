@@ -1,0 +1,1 @@
+due ipotesi ritagliate su 372 celle + pesi: 0.125 ms per ciclo e per traccia (Python puro, indicativo)

@@ -1,0 +1,16 @@
+# Strato 1 sulla griglia fine: 1548 celle, 5.033 m2 (pannello 1 m a 1,15 m, fascia 0,40 m)
+fattore modo          perse (celle) perse (m2) aggiunte (m2) area dopo/prima dopo 10 giri
+      2 centro                   23      0.051         0.055           1.001        1.001
+      2 maggioranza              32      0.088         0.012           0.985        0.985
+      2 conservativo              0      0.000         0.113           1.022        1.022
+      4 centro                   83      0.200         0.149           0.990        0.990
+      4 maggioranza              31      0.105         0.103           1.000        1.000
+      4 conservativo              0      0.000         0.319           1.063        1.063
+
+# Conservativo, fattore 2, origine della griglia grossa spostata di una cella fine a giri alterni
+giro  1: area/iniziale = 1.036; perse = 0
+giro  2: area/iniziale = 1.093; perse = 0
+giro  5: area/iniziale = 1.236; perse = 0
+giro 10: area/iniziale = 1.354; perse = 0
+
+# Griglia riallocata e azzerata al cambio: celle di presenza perse = 1548 (5.033 m2, 100 %)

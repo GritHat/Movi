@@ -1,0 +1,29 @@
+# banco_s3s4: pannello 1 m (Zp 1.80, soggetto a Z 2.30, portata 3.0), Pd 0.90, sigma misura 0.030 m, q 0.20, pesi W2, alfa L1, ammesse Nb, ritaglio 1, errore ombra +0.00 m, v fissa, N 400, seme 20261114
+# cuneo: 616 celle = 1.54 m2; semilarghezza ombra sulla linea 0.639 m
+
+== ferma-meta: passaggi 400, traccia entrata in occlusione 392 (98.0 %)
+(e) fotogrammi d'occlusione 48400: stima mostrata 98.0 %, «perso» 0.0 %, nessuna traccia 2.0 % | passaggi con stima per tutta l'occlusione 98.0 % | nucleo: area mostrata 7.1 % dei fotogrammi, tutta l'occlusione 0.0 % dei passaggi
+    passaggi a «perso»: per sigma_eff 0, per massa nulla 0, tempo medio nan s
+(a) fotogrammi con stima 47432: regione 95% su celle «libero» stimate 0, su celle davvero libere 0 (passaggi 0); disco ±sigma_eff che tocca «libero» 0.1 % (da 1 s: 0.1 %), quota media del disco su «libero» 0.0 %; posizione mostrata su «libero» 0; regione 95% oltre meta' cuneo da 1 s: 100.0 %
+    massa grezza < 0,05 con stima mostrata: 1.5 % dei fotogrammi (oltre 2 s: 2.0 %, n 35672)
+    sosta dominante in 392 passaggi su 392 con traccia; t assoluto mediano 1.40 s; rispetto a «tutto visibile»: mediana +0.06 s (5% -0.01, 95% +0.11); rispetto al bordo dell'ombra: mediana +0.24 s
+(b) t_occ:   n   stima% perso% senza% | err med  err p95 | sig_eff med | dentro 1sig  2sig  1,73sig  reg95 | reg95/cuneo  >meta'% | M<0,05% | nucleo: mostrata% contiene%
+    0.5 s   400   98.0   0.0   2.0 |  0.105   0.215 |  0.244 |  98.5 100.0 100.0 100.0 |  0.35   0.0 |   0.0 |  98.0 100.0
+        confronto 0.5 s: errore mediano del solo filtro (H1, senza ritaglio) 0.111 m; del punto fisso «centro del cuneo» 0.198 m
+    1.0 s   400   98.0   0.0   2.0 |  0.160   0.237 |  0.405 | 100.0 100.0 100.0 100.0 |  0.72 100.0 |   0.0 |   0.5 100.0
+        confronto 1.0 s: errore mediano del solo filtro (H1, senza ritaglio) 0.433 m; del punto fisso «centro del cuneo» 0.134 m
+    1.5 s   400   98.0   0.0   2.0 |  0.108   0.194 |  0.434 | 100.0 100.0 100.0 100.0 |  0.81 100.0 |   0.0 |   0.5 100.0
+        confronto 1.5 s: errore mediano del solo filtro (H1, senza ritaglio) 1.075 m; del punto fisso «centro del cuneo» 0.128 m
+    2.0 s   400   98.0   0.0   2.0 |  0.080   0.160 |  0.436 | 100.0 100.0 100.0 100.0 |  0.86 100.0 |   0.0 |   0.2 100.0
+        confronto 2.0 s: errore mediano del solo filtro (H1, senza ritaglio) 1.633 m; del punto fisso «centro del cuneo» 0.133 m
+    2.5 s   400   98.0   0.0   2.0 |  0.073   0.153 |  0.446 | 100.0 100.0 100.0 100.0 |  0.89 100.0 |   0.0 |   0.0   nan
+        confronto 2.5 s: errore mediano del solo filtro (H1, senza ritaglio) 2.274 m; del punto fisso «centro del cuneo» 0.130 m
+    3.0 s   400   98.0   0.0   2.0 |  0.081   0.150 |  0.454 | 100.0 100.0 100.0 100.0 |  0.90 100.0 |   0.0 |   0.0   nan
+        confronto 3.0 s: errore mediano del solo filtro (H1, senza ritaglio) 2.836 m; del punto fisso «centro del cuneo» 0.133 m
+(c) ricomparse con stima 0 (senza traccia 0, gia' «perso» 0); t_occ mediano nan s; errore mediano nan m (p95 nan), sigma_eff mediana nan m
+    al fotogramma della ricomparsa: dentro 1 sigma_eff nan % [nan; nan]; dentro 2 sigma_eff nan % [nan; nan]; dentro 1,73 sigma_eff nan % [nan; nan]; dentro la regione al 95 % nan % [nan; nan]
+    al fotogramma prima (ultimo «previsto» mostrato): 1 sigma_eff nan %; 2 sigma_eff nan % [nan; nan]; regione al 95 % nan %; sosta dominante nan %; area del nucleo ancora mostrata nan %
+(d) porta: dentro (stessa identita') 0 su 0 (nan %), violata 0 (nan %); ellisse 95% del solo filtro contiene la misura nan % [nan; nan]; riaggancio geometrico del nucleo ammesso nan %
+    dopo porta violata: traccia vecchia ancora «previsto» a fine prova 0 su 0; tracce nuove per A alla ricomparsa 0; identita' di A a fine prova uguale a quella iniziale: 0 su 0 (nan %)
+
+# costo di calcolo della stima mostrata (ritaglio, pesi, momenti, regione al 95 %): 47498 chiamate, media 53.2 microsecondi, massimo 117.4 microsecondi (C, -O2, un nucleo; altri processi attivi)

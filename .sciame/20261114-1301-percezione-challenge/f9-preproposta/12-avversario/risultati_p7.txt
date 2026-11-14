@@ -1,0 +1,4 @@
+== P7 (S4): sigma_eff della distribuzione uniforme sul cuneo d'ombra ==
+  pannello 0.5 m a 1,8 m: area del cuneo 0.79 m2; sigma_x 0.20 m, sigma_z 0.34 m; raggio efficace 0.39 m; asse maggiore 0.34 m -> soglia 0,8 m MAI superata da chi non sa niente
+  pannello 1.0 m a 1,8 m: area del cuneo 1.54 m2; sigma_x 0.38 m, sigma_z 0.33 m; raggio efficace 0.51 m; asse maggiore 0.38 m -> soglia 0,8 m MAI superata da chi non sa niente
+  pannello 2.0 m a 1,8 m: area del cuneo 2.76 m2; sigma_x 0.70 m, sigma_z 0.32 m; raggio efficace 0.77 m; asse maggiore 0.70 m -> soglia 0,8 m MAI superata da chi non sa niente

@@ -1,0 +1,18 @@
+comportamento=prosegue q=0.2 Pd_modello=0.9 fascia=0.2 N=2000 seme=20261114
+  mu1 medio a soggetto nascosto: 0.53 s: 0.810 (n=1975)  1.00 s: 0.801 (n=1987)  2.00 s: 0.740 (n=567)  3.00 s: 0.735 (n=179)
+  (a) transiti con il vero passato in ombra n=2000; mu1<0,5 all'ultimo ciclo in ombra: 2 = 0.001
+comportamento=sosta q=0.2 Pd_modello=0.9 fascia=0.2 N=2000 seme=20262114
+  mu1 medio a soggetto nascosto: 0.53 s: 0.810 (n=1979)  1.00 s: 0.799 (n=1997)  2.00 s: 0.642 (n=1984)  3.00 s: 0.621 (n=1982)
+  (b) soste con ingresso >= 1,0 m/s nascoste a 3 s n=894; mu1>0,5: 589 = 0.659
+comportamento=prosegue q=0.2 Pd_modello=1.0 fascia=0.0 N=2000 seme=20261114
+  mu1 medio a soggetto nascosto: 0.53 s: 0.896 (n=1968)  1.00 s: 0.861 (n=1993)  2.00 s: 0.763 (n=522)  3.00 s: 0.780 (n=148)
+  (a) transiti con il vero passato in ombra n=2000; mu1<0,5 all'ultimo ciclo in ombra: 186 = 0.093
+comportamento=sosta q=0.2 Pd_modello=1.0 fascia=0.0 N=2000 seme=20262114
+  mu1 medio a soggetto nascosto: 0.53 s: 0.894 (n=1977)  1.00 s: 0.861 (n=1998)  2.00 s: 0.744 (n=1985)  3.00 s: 0.764 (n=1984)
+  (b) soste con ingresso >= 1,0 m/s nascoste a 3 s n=917; mu1>0,5: 791 = 0.863
+comportamento=prosegue q=0.02 Pd_modello=0.9 fascia=0.2 N=2000 seme=20261114
+  mu1 medio a soggetto nascosto: 0.53 s: 0.810 (n=1974)  1.00 s: 0.807 (n=1987)  2.00 s: 0.745 (n=567)  3.00 s: 0.695 (n=156)
+  (a) transiti con il vero passato in ombra n=2000; mu1<0,5 all'ultimo ciclo in ombra: 32 = 0.016
+comportamento=sosta q=0.02 Pd_modello=0.9 fascia=0.2 N=2000 seme=20262114
+  mu1 medio a soggetto nascosto: 0.53 s: 0.810 (n=1975)  1.00 s: 0.808 (n=1997)  2.00 s: 0.534 (n=1991)  3.00 s: 0.402 (n=1989)
+  (b) soste con ingresso >= 1,0 m/s nascoste a 3 s n=893; mu1>0,5: 127 = 0.142

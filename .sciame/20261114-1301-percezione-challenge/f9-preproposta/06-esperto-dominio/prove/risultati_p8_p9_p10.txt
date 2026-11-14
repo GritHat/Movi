@@ -1,0 +1,35 @@
+P8a identita' |theta_punto| = d_retta*|v|/r^2: scarto relativo massimo su 10000 stati = 3.04e-16
+P8b controesempio: sensore in (0,0); punto protetto (varco) in x=1,0 m; oggetto da (1,0; 3,0) con v=(0; -1,2) m/s, cioe' DRITTO sul varco
+   z=3.0 m: velocita' angolare vista dal sensore   6.9 gradi/s; vista dal punto protetto  0.0 gradi/s
+   z=2.5 m: velocita' angolare vista dal sensore   9.5 gradi/s; vista dal punto protetto  0.0 gradi/s
+   z=2.0 m: velocita' angolare vista dal sensore  13.8 gradi/s; vista dal punto protetto  0.0 gradi/s
+   z=1.5 m: velocita' angolare vista dal sensore  21.2 gradi/s; vista dal punto protetto  0.0 gradi/s
+P8c una soglia fissa su theta_punto equivale a un raggio protetto che cambia con la distanza (v=1,2 m/s, soglia 5 gradi/s):
+   r=3.0 m -> d equivalente = 0.65 m
+   r=2.0 m -> d equivalente = 0.29 m
+   r=1.5 m -> d equivalente = 0.16 m
+   r=1.0 m -> d equivalente = 0.07 m
+P9 rotta di collisione esatta (d_CPA=0), volume protetto di raggio 0.5 m, q=0.2
+   sigma_mis   sigma_v  | t_CPA: 0,5 s          1,0 s          1,5 s          2,0 s      (sigma di posizione prevista per asse; P_intrusione forma chiusa / Monte Carlo 20000)
+   0.015 m   0.144 m/s |  s=0.12 P=1.00/1.00  s=0.30 P=0.75/0.75  s=0.52 P=0.37/0.37  s=0.79 P=0.18/0.18
+   0.040 m   0.192 m/s |  s=0.15 P=1.00/1.00  s=0.33 P=0.68/0.67  s=0.56 P=0.32/0.32  s=0.83 P=0.16/0.16
+   0.050 m   0.205 m/s |  s=0.16 P=0.99/0.99  s=0.34 P=0.65/0.65  s=0.58 P=0.31/0.31  s=0.85 P=0.16/0.16
+   0.200 m   0.300 m/s |  s=0.25 P=0.87/0.87  s=0.45 P=0.45/0.45  s=0.70 P=0.22/0.22  s=0.99 P=0.12/0.12
+   stessa geometria, solo q diverso (sigma_mis 0,05): P_intrusione a 2 s
+     q=0.05: sigma=0.45 m  P=0.46
+     q=0.2: sigma=0.85 m  P=0.16
+     q=0.5: sigma=1.30 m  P=0.07
+     q=1.0: sigma=1.80 m  P=0.04
+   prova alternativa «l'ellisse al 95 % (raggio 2,45 sigma) tocca il volume»: d_CPA - 2,45*sigma <= R
+     t_CPA=0.5 s: sigma=0.16 m; scatta per ogni d_CPA <= 0.88 m (rotta di collisione: sempre; passaggio a 1,5 m di lato: non scatta)
+     t_CPA=1.0 s: sigma=0.34 m; scatta per ogni d_CPA <= 1.34 m (rotta di collisione: sempre; passaggio a 1,5 m di lato: non scatta)
+     t_CPA=1.5 s: sigma=0.58 m; scatta per ogni d_CPA <= 1.92 m (rotta di collisione: sempre; passaggio a 1,5 m di lato: scatta (falso allarme))
+     t_CPA=2.0 s: sigma=0.85 m; scatta per ogni d_CPA <= 2.58 m (rotta di collisione: sempre; passaggio a 1,5 m di lato: scatta (falso allarme))
+   orizzonte oltre il quale la rotta di collisione esatta ha P_intrusione < 0,5 (sigma_mis 0,05): 1.19 s (sigma=0.43 m)
+P6 distanza protettiva (forma lineare di Marvel e Norcross, macchina ferma: S = vH*(TR+TS) + C + ZS), vH=1,6 m/s, ZS=0,10 m
+   chiede a una persona: latenza 0,155 + reazione umana 1,0 s; C=0,85: S = 2.80 m
+   idem, C=0: S = 1.95 m
+   arresto automatico: latenza 0,155 + arresto 0,3 s; C=0,85: S = 1.68 m
+   idem, C=0: S = 0.83 m
+   velocita' massima coperta con portata 3 m, conferma della traccia 4 fotogrammi (0,27 s), C=0,85, ZS=0,10: v = (3-0,85-0,10)/(T): persona nel ciclo 1.44 m/s; arresto automatico 2.83 m/s
+P10 costo di S6+S7 per traccia in Python puro: 0.42 microsecondi (200000 chiamate)

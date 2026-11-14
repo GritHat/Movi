@@ -1,0 +1,13 @@
+comportamento=prosegue errore_maschera=-0.20 m lettura=L2 q_occlusione=0.2 N=2000 scartati=1 seme=20261121
+particelle: 0.17 ms per ciclo e per traccia (300 particelle, Python puro, indicativo)
+tau  n(nasc) bordo | K:cop  raggio | A:cop1s cop2s cop2.45s reg95 area  sig_eff(med) mu1  >0.8m zero vuota | B:cop1s cop2.45s reg95 area sig_eff mu1 >0.8m zero | C:reg95 reg50 area  su_libero oltre_fascia
+0.53   1972    26 | 1.000  0.37 | 0.549 0.953 0.995 0.699  0.26  0.13 1.000 0.000 0.301   0 | 0.586 0.995 0.699  0.25  0.13 0.890 0.000 0.301 | 0.998 0.857  0.42 0.519 0.057
+1.00   1987     9 | 1.000  0.79 | 0.720 0.998 0.999 0.904  0.78  0.24 1.000 0.000 0.096   0 | 0.625 0.998 0.904  0.79  0.24 0.777 0.000 0.096 | 0.998 0.857  1.28 0.393 0.041
+2.00    543   200 | 1.000  2.00 | 0.192 0.810 0.958 0.552  1.01  0.30 0.964 0.000 0.448   0 | 0.186 0.943 0.552  1.01  0.29 0.622 0.000 0.448 | 0.934 0.376  2.57 0.374 0.041
+3.00    144    57 | 1.000  3.55 | 0.056 0.375 0.549 0.278  1.03  0.30 0.138 0.000 0.708   0 | 0.056 0.549 0.292  1.03  0.30 0.494 0.000 0.708 | 0.632 0.188  3.31 0.257 0.030
+P-K3: transiti con il vero passato in ombra n=1997; mu1<0,5 all'ultimo ciclo in ombra: A 161 B 391
+DATI prosegue -0.20 L2 0.2 1999 8 n=1972 bordo=26 Kc=1972 Kr=719.977 A1=1083 A2=1880 A245=1962 Ah=1379 Aa=511.3 Ase=255.168 Amu=1971.96 A08=0 Az=593 Avuota=0 B1=1155 B245=1962 Bh=1379 Ba=496.9 Bse=253.605 Bmu=1754.22 B08=0 Bz=593 Ch=1969 Ca=832.92 C50=1690 Clib=1023.46 Clibf=111.986 Cpo=4.84234 Cto=1 Cnin=1971 Chin=1968 Cain=819.32 Cpo_in=3.84235 Cpo_out=0.999992
+DATI prosegue -0.20 L2 0.2 1999 15 n=1987 bordo=9 Kc=1987 Kr=1567.22 A1=1430 A2=1983 A245=1986 Ah=1796 Aa=1550.33 Ase=471.378 Amu=1986.97 A08=0 Az=191 Avuota=0 B1=1241 B245=1984 Bh=1796 Ba=1566.49 Bse=477.018 Bmu=1543.77 B08=0 Bz=191 Ch=1984 Ca=2548.16 C50=1703 Clib=780.749 Clibf=81.6814 Cpo=49.9344 Cto=1 Cnin=1986 Chin=1983 Cain=2259.92 Cpo_in=48.9387 Cpo_out=0.995647
+DATI prosegue -0.20 L2 0.2 1999 30 n=543 bordo=200 Kc=543 Kr=1088.2 A1=104 A2=440 A245=520 Ah=300 Aa=547.76 Ase=159.825 Amu=523.683 A08=0 Az=243 Avuota=0 B1=101 B245=512 Bh=300 Ba=548.05 Bse=157.931 Bmu=337.585 B08=0 Bz=243 Ch=507 Ca=1393.36 C50=204 Clib=203.17 Clibf=22.503 Cpo=94.3226 Cto=20 Cnin=523 Chin=472 Cain=898.52 Cpo_in=85.9036 Cpo_out=8.419
+DATI prosegue -0.20 L2 0.2 1999 45 n=144 bordo=57 Kc=144 Kr=510.847 A1=8 A2=54 A245=79 Ah=40 Aa=147.64 Ase=42.5525 Amu=19.9035 A08=0 Az=102 Avuota=0 B1=8 B245=79 Bh=42 Ba=148.57 Bse=43.0078 Bmu=71.1036 B08=0 Bz=102 Ch=91 Ca=477 C50=27 Clib=37.0614 Clibf=4.28741 Cpo=49.7253 Cto=59 Cnin=85 Chin=51 Cain=139.4 Cpo_in=23.5266 Cpo_out=26.1987
+tempo totale 12.5 s

@@ -1,0 +1,19 @@
+== P2 (S6): probabilita' d'intrusione sulla distribuzione ritagliata ==
+soggetto entra a 1,2 m/s e si ferma 9 cm dentro l'ombra (x = -0,55); nessuna misura durante l'occlusione
+ PVa tutto visibile [-1,24;-0,64]; soggetto dentro il volume: False; distanza dal volume: 0.09 m
+   sigma2=0.2 lettura A: t=0.00s P=0.0000; t=0.53s P=0.0000; t=1.00s P=0.0000; t=1.53s P=0.0000; t=2.00s P=0.0000; t=3.00s P=0.0000 | max per t>=1,5 s: 0.0000; max assoluto: 0.0000
+   sigma2=0.2 lettura B: t=0.00s P=0.0000; t=0.53s P=0.0000; t=1.00s P=0.0000; t=1.53s P=0.0000; t=2.00s P=0.0000; t=3.00s P=0.0000 | max per t>=1,5 s: 0.0000; max assoluto: 0.0000
+   sigma2=0.32 lettura A: t=0.00s P=0.0000; t=0.53s P=0.0000; t=1.00s P=0.0000; t=1.53s P=0.0000; t=2.00s P=0.0000; t=3.00s P=0.0000 | max per t>=1,5 s: 0.0000; max assoluto: 0.0000
+   sigma2=0.32 lettura B: t=0.00s P=0.0000; t=0.53s P=0.0000; t=1.00s P=0.0000; t=1.53s P=0.0000; t=2.00s P=0.0000; t=3.00s P=0.0000 | max per t>=1,5 s: 0.0000; max assoluto: 0.0000
+   sigma2=q lettura A: t=0.00s P=0.0000; t=0.53s P=0.0000; t=1.00s P=0.0000; t=1.53s P=0.0000; t=2.00s P=0.0000; t=3.00s P=0.0000 | max per t>=1,5 s: 0.0000; max assoluto: 0.0000
+   sigma2=q lettura B: t=0.00s P=0.0000; t=0.53s P=0.0000; t=1.00s P=0.0000; t=1.53s P=0.0000; t=2.00s P=0.0000; t=3.00s P=0.0000 | max per t>=1,5 s: 0.0000; max assoluto: 0.0000
+ PVb entra 0,20 m nell'ombra [-0,94;-0,44]; soggetto dentro il volume: True; distanza dal volume: 0.00 m
+   sigma2=0.2 lettura A: t=0.00s P=0.9365; t=0.53s P=0.0106; t=1.00s P=0.0073; t=1.53s P=0.0221; t=2.00s P=0.0167; t=3.00s P=0.0138 | max per t>=1,5 s: 0.0221; max assoluto: 0.9365
+   sigma2=0.2 lettura B: t=0.00s P=0.9365; t=0.53s P=0.0292; t=1.00s P=0.0131; t=1.53s P=0.0155; t=2.00s P=0.0159; t=3.00s P=0.0189 | max per t>=1,5 s: 0.0189; max assoluto: 0.9365
+   sigma2=0.32 lettura A: t=0.00s P=0.8936; t=0.53s P=0.0055; t=1.00s P=0.0049; t=1.53s P=0.0800; t=2.00s P=0.0712; t=3.00s P=0.0658 | max per t>=1,5 s: 0.0800; max assoluto: 0.9136
+   sigma2=0.32 lettura B: t=0.00s P=0.8936; t=0.53s P=0.0337; t=1.00s P=0.0299; t=1.53s P=0.0530; t=2.00s P=0.0591; t=3.00s P=0.0639 | max per t>=1,5 s: 0.0639; max assoluto: 0.9136
+   sigma2=q lettura A: t=0.00s P=0.9999; t=0.53s P=0.0088; t=1.00s P=0.0318; t=1.53s P=0.1210; t=2.00s P=0.1367; t=3.00s P=0.1496 | max per t>=1,5 s: 0.1496; max assoluto: 0.9999
+   sigma2=q lettura B: t=0.00s P=0.9999; t=0.53s P=0.0090; t=1.00s P=0.0240; t=1.53s P=0.0750; t=2.00s P=0.1010; t=3.00s P=0.1209 | max per t>=1,5 s: 0.1209; max assoluto: 0.9999
+ soggetto nascosto a 0.09 m dal volume, parte a 1,4 m/s: dentro in 64 ms (latenza nota 155 ms + 1 ciclo 67 ms = 222 ms)
+ soggetto nascosto a 0.20 m dal volume, parte a 1,4 m/s: dentro in 143 ms (latenza nota 155 ms + 1 ciclo 67 ms = 222 ms)
+ soggetto nascosto a 0.40 m dal volume, parte a 1,4 m/s: dentro in 286 ms (latenza nota 155 ms + 1 ciclo 67 ms = 222 ms)

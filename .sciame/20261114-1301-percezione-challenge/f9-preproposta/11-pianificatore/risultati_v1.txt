@@ -1,0 +1,91 @@
+# piano_mc.py, seme 20261114, 4000 estrazioni per cella
+# ore utili W(D) triangolari: {24: (13, 16, 19), 36: (18, 22, 26), 48: (22, 27, 32)} ; chiusura F: (2, 3, 4)
+
+== Autocontrolli del simulatore (devono tornare) ==
+1 persona: fine 96.50 h, somma delle durate 96.50 h -> torna
+99 persone, camere illimitate: fine 37.00 h, cammino critico 37.00 h -> torna
+braccio che deve stare (solo gradino 1, 3 persone, 24 h): 1999/2000
+braccio che deve fallire (PRE24, 1 persona, 24 h): 0/2000
+
+== Somme (ore-persona), sensore posseduto ==
+NUC: 16 compiti; O 39.0  P 59.5  Pess 115.0  media PERT 65.3  media triangolare 71.2
+   cammino critico (persone e camere illimitate): O 17.0  P 26.8  Pess 52.0 h: N1 > N2 > N3 > J1 > LIVE > ACCa
+PRE24: 23 compiti; O 60.0  P 96.5  Pess 182.0  media PERT 104.7  media triangolare 112.8
+   cammino critico (persone e camere illimitate): O 22.0  P 37.0  Pess 69.0 h: X0a > N4 > N5 > A3 > A5 > LIVE > A4
+MIN: 19 compiti; O 39.0  P 59.5  Pess 116.0  media PERT 65.5  media triangolare 71.5
+   cammino critico (persone e camere illimitate): O 15.0  P 23.0  Pess 46.0 h: N1 > N2 > N3r > J1 > LIVE > CAL
+MED: 22 compiti; O 45.0  P 70.0  Pess 135.0  media PERT 76.7  media triangolare 83.3
+   cammino critico (persone e camere illimitate): O 17.5  P 28.0  Pess 54.0 h: X0a > N4r > N5 > C1 > C2 > LIVE > CAL
+-- Moduli aggiunti dal taglio a 24 ore della preproposta --
+   A1 filtri spenti + controllo all'avvio: 1 / 2 / 4  (PERT 2.2)
+   A2 tre fasce di quota: 2 / 4 / 8  (PERT 4.3)
+   A3 due ipotesi + ritaglio + pesi + previsto/perso: 5 / 9 / 16  (PERT 9.5)
+   A4 taratura della precisione dichiarata: 3 / 5 / 9  (PERT 5.3)
+   A5 massimo avvicinamento + P intrusione + livelli: 3 / 6 / 10  (PERT 6.2)
+   A6 macchina a stati delle attivita': 3 / 5 / 9  (PERT 5.3)
+   A7 disegno e suono per due profili: 3 / 5 / 9  (PERT 5.3)
+   A8 selettore ridotto: 2 / 3 / 6  (PERT 3.3)
+   somma: O 22.0  P 39.0  Pess 71.0  PERT 41.5  triangolare 44.0
+   integrazione (X0a, X0b, J1, LIVE): O 5.5  P 9.5  Pess 19.0  PERT 10.4
+
+== Calendario: fine dei lavori M in ore di lavoro (k = 1) e probabilita' di stare ==
+piano  sensore    N  M50   M80  | P(sta) 24h  36h  48h | k*(80%) 24h  36h  48h
+NUC    posseduto  3  33.0  35.5 |        0.0    0.0    0.2 |       0.35  0.52  0.65
+NUC    posseduto  4  32.9  35.4 |        0.0    0.0    0.4 |       0.35  0.52  0.66
+NUC    posseduto  5  33.0  35.5 |        0.0    0.0    0.4 |       0.35  0.52  0.65
+NUC    nuovo      3  35.4  38.4 |        0.0    0.0    0.1 |       0.33  0.48  0.60
+NUC    nuovo      4  35.5  38.5 |        0.0    0.0    0.1 |       0.32  0.48  0.60
+NUC    nuovo      5  35.4  38.5 |        0.0    0.0    0.1 |       0.32  0.48  0.61
+NUC    assente    3  32.5  35.2 |        0.0    0.0    0.3 |       0.35  0.52  0.66
+NUC    assente    4  32.5  35.2 |        0.0    0.0    0.6 |       0.35  0.52  0.66
+NUC    assente    5  32.4  35.1 |        0.0    0.0    0.5 |       0.35  0.52  0.66
+
+PRE24  posseduto  3  49.1  52.1 |        0.0    0.0    0.0 |       0.24  0.35  0.44
+PRE24  posseduto  4  48.3  51.9 |        0.0    0.0    0.0 |       0.24  0.35  0.45
+PRE24  posseduto  5  48.3  51.7 |        0.0    0.0    0.0 |       0.24  0.35  0.45
+PRE24  nuovo      3  49.6  52.4 |        0.0    0.0    0.0 |       0.23  0.35  0.44
+PRE24  nuovo      4  48.4  51.8 |        0.0    0.0    0.0 |       0.24  0.35  0.45
+PRE24  nuovo      5  48.4  51.7 |        0.0    0.0    0.0 |       0.24  0.35  0.44
+PRE24  assente    3  42.1  44.9 |        0.0    0.0    0.0 |       0.28  0.40  0.51
+PRE24  assente    4  41.4  44.6 |        0.0    0.0    0.0 |       0.28  0.41  0.52
+PRE24  assente    5  41.5  44.6 |        0.0    0.0    0.0 |       0.28  0.41  0.52
+
+MIN    posseduto  3  33.4  35.4 |        0.0    0.0    0.1 |       0.35  0.51  0.65
+MIN    posseduto  4  31.8  34.1 |        0.0    0.0    0.7 |       0.36  0.54  0.68
+MIN    posseduto  5  31.7  34.1 |        0.0    0.0    0.6 |       0.36  0.54  0.68
+MIN    nuovo      3  34.9  37.3 |        0.0    0.0    0.0 |       0.33  0.49  0.62
+MIN    nuovo      4  34.4  37.1 |        0.0    0.0    0.2 |       0.34  0.49  0.63
+MIN    nuovo      5  34.3  37.2 |        0.0    0.0    0.1 |       0.33  0.50  0.62
+MIN    assente    3  28.3  30.7 |        0.0    0.0    7.4 |       0.40  0.60  0.75
+MIN    assente    4  28.3  30.7 |        0.0    0.1    9.3 |       0.41  0.60  0.76
+MIN    assente    5  28.4  30.7 |        0.0    0.1    9.5 |       0.41  0.60  0.76
+
+MED    posseduto  3  37.5  39.7 |        0.0    0.0    0.0 |       0.31  0.46  0.58
+MED    posseduto  4  36.6  39.3 |        0.0    0.0    0.0 |       0.32  0.47  0.59
+MED    posseduto  5  36.6  39.4 |        0.0    0.0    0.0 |       0.32  0.47  0.59
+MED    nuovo      3  38.3  40.5 |        0.0    0.0    0.0 |       0.30  0.45  0.57
+MED    nuovo      4  37.2  39.8 |        0.0    0.0    0.0 |       0.31  0.46  0.58
+MED    nuovo      5  37.2  39.9 |        0.0    0.0    0.0 |       0.31  0.46  0.58
+MED    assente    3  31.8  34.0 |        0.0    0.0    0.2 |       0.36  0.54  0.68
+MED    assente    4  31.6  34.0 |        0.0    0.0    0.8 |       0.37  0.54  0.68
+MED    assente    5  31.4  33.8 |        0.0    0.0    0.9 |       0.37  0.54  0.69
+
+== Gradini del piano MIN e MED: ora di lavoro (k = 1) a cui il gradino e' completo ==
+(gradino g completo = finiti tutti i compiti dei gradini <= g; mediana / 80-esimo percentile)
+MIN posseduto  N=3: G1 16.7/18.1   G2 21.3/22.8   G3 21.8/23.3   G4 21.8/23.4   G5 33.4/35.4
+MIN posseduto  N=4: G1  9.8/10.7   G2 13.7/14.7   G3 19.9/21.8   G4 20.0/21.9   G5 31.8/34.1
+MIN posseduto  N=5: G1  7.9/ 8.9   G2 11.3/12.8   G3 20.0/21.9   G4 20.1/22.0   G5 31.7/34.1
+MIN assente    N=3: G1 16.8/18.2   G2 18.4/19.7   G3 21.9/24.3   G4 22.1/24.3   G5 28.3/30.7
+MIN assente    N=4: G1  9.8/10.7   G2 13.2/15.3   G3 21.9/24.3   G4 22.0/24.3   G5 28.3/30.7
+MIN assente    N=5: G1  7.9/ 8.9   G2 13.2/15.3   G3 21.9/24.2   G4 22.0/24.2   G5 28.4/30.7
+MED posseduto  N=3: G1 16.8/18.2   G2 24.7/26.1   G3 24.8/26.1   G4 25.8/27.4   G5 37.5/39.7
+MED posseduto  N=4: G1  9.8/10.7   G2 14.9/16.0   G3 20.0/22.0   G4 24.9/27.3   G5 36.6/39.3
+MED posseduto  N=5: G1  7.9/ 8.9   G2 11.6/12.8   G3 19.9/21.9   G4 24.8/27.3   G5 36.6/39.4
+MED assente    N=3: G1 17.0/18.4   G2 19.2/20.7   G3 22.2/24.2   G4 25.5/27.5   G5 31.8/34.0
+MED assente    N=4: G1  9.8/10.7   G2 13.3/15.4   G3 22.1/24.3   G4 25.3/27.5   G5 31.6/34.0
+MED assente    N=5: G1  8.0/ 8.9   G2 13.2/15.2   G3 22.0/24.1   G4 25.2/27.4   G5 31.4/33.8
+
+== Ore di costruzione disponibili W - F (mediana) ==
+D = 24 h: mediana 13.0 h, 20-esimo percentile 11.9 h
+D = 36 h: mediana 19.0 h, 20-esimo percentile 17.5 h
+D = 48 h: mediana 24.0 h, 20-esimo percentile 22.1 h

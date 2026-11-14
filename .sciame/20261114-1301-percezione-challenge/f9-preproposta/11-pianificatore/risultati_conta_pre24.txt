@@ -1,0 +1,10 @@
+sensore  N  | stanno su 4000 a 24, 36, 48 ore | rapporto massimo (ore disponibili / ore necessarie) a 48 ore
+posseduto  3 |    0    0    0 | 0.68
+posseduto  4 |    0    0    0 | 0.71
+posseduto  5 |    0    0    0 | 0.69
+nuovo      3 |    0    0    0 | 0.65
+nuovo      4 |    0    0    0 | 0.67
+nuovo      5 |    0    0    0 | 0.70
+assente    3 |    0    0    0 | 0.67
+assente    4 |    0    0    0 | 0.72
+assente    5 |    0    0    0 | 0.75

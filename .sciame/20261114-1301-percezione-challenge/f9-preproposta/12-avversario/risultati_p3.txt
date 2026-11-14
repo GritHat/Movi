@@ -1,0 +1,10 @@
+== P3 (S1): passaggio 3 fasce -> 2D e riga della scheda grafica ==
+suolo visto da 1.243 m; ostacolo alto 0,15 m visibile solo oltre 1.087 m; e' un limite del cono di vista, non della mappa
+  fascia bassa: quota 0.15 m entra nel campo da 1.087 m
+  fascia bassa: quota 0.30 m entra nel campo da 0.932 m
+  fascia bassa: quota 0.60 m entra nel campo da 0.621 m
+  quota 1.61 m dentro il campo solo oltre 1.64 m -> fascia alta NON osservata sul 15.6 % dell'area della zona 1.24-3 m
+  quota 1.80 m dentro il campo solo oltre 2.41 m -> fascia alta NON osservata sul 57.0 % dell'area della zona 1.24-3 m
+  quota 2.00 m dentro il campo solo oltre 3.21 m -> fascia alta NON osservata sul 100.0 % dell'area della zona 1.24-3 m
+  area della zona: 5.66 m2; con quota pertinente 1,8 m passano da 'non osservato in fascia alta' a 'libero' 3.22 m2 al cambio verso la 2D
+  quota massima vista a 1,0 / 2,0 / 3,0 m: 1.45 / 1.70 / 1.95 m

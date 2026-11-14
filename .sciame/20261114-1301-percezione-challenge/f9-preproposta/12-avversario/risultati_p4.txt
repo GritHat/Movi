@@ -1,0 +1,14 @@
+== P4 (attacco 3 del file): oscillazione del selettore ==
+P4a tempo di ciclo 55 ms +- 2 per tutte le configurazioni, senza isteresi temporale: 1 cambi in 60 s [(0.0, 'PIENA'), (3.13, 'RIDOTTA')]
+P4a tempo di ciclo 55 ms +- 5 per tutte le configurazioni, senza isteresi temporale: 1 cambi in 60 s [(0.0, 'PIENA'), (3.13, 'RIDOTTA')]
+[senza previsione] carico 50 +- 8 ms, periodo 10 s, permanenza 0 s: 12 cambi in 60 s
+[senza previsione] carico 50 +- 8 ms, periodo 10 s, permanenza 3 s: 12 cambi in 60 s
+P4b piena 58 ms, ridotta 38 ms, permanenza 0 s: 56 cambi in 60 s; ultimo cambio a 59.7 s
+P4b piena 58 ms, ridotta 38 ms, permanenza 2 s: 28 cambi in 60 s; ultimo cambio a 58.6 s
+P4b piena 58 ms, ridotta 38 ms, permanenza 3 s: 19 cambi in 60 s; ultimo cambio a 58.6 s
+P4b su 600 s con permanenza 3 s: 188 cambi; ultimo a 599.4 s (non si ferma)
+P4b confine: cambi in 60 s (permanenza 3 s) al variare del risparmio D = piena - ridotta, piena = 58 ms
+   D=5: 1; D=10: 1; D=12: 5; D=13: 17; D=14: 19; D=16: 19; D=20: 19; D=30: 19
+P4c 3 fasce 25 ms -> voxel 60 ms -> 2D 20 ms, permanenza 0 s: 56 cambi in 60 s [(0.0, 'FASCE'), (1.0, 'VOXEL'), (2.07, 'RIDOTTA_2D'), (3.13, 'VOXEL'), (4.2, 'RIDOTTA_2D')]
+P4c 3 fasce 25 ms -> voxel 60 ms -> 2D 20 ms, permanenza 3 s: 19 cambi in 60 s [(0.0, 'FASCE'), (1.0, 'VOXEL'), (4.2, 'RIDOTTA_2D'), (7.4, 'VOXEL'), (10.6, 'RIDOTTA_2D')]
+P4d piena 52, ridotta 47, carico +6 ms fino a 20 s: 1 cambi, ritorni alla piena: 0, storia [(0.0, 'PIENA'), (1.0, 'RIDOTTA')]

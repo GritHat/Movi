@@ -1,0 +1,15 @@
+== P1 (S8): attesa prudente con il non osservato del nucleo ==
+suolo visto da 1.243 m (anello cieco sotto)
+P1a corridoio alla lettera: 1031 celle in griglia, di cui 501 nell'anello cieco (sempre 'non osservato'); in piu' tutto il tratto 0-0,5 m non e' in griglia
+P1a fotogrammi in attesa su 900, stanza vuota, suolo sempre valido: 900 su 900 = 100.0 %
+P1b corridoio ristretto alla zona 1.24-3 m: 530 celle
+  p=1.00: in attesa 0/900 = 0.0 % (atteso a conto 0.0 %), ingressi in attesa 0.00/s
+  p=0.99: in attesa 0/900 = 0.0 % (atteso a conto 0.1 %), ingressi in attesa 0.00/s
+  p=0.95: in attesa 76/900 = 8.4 % (atteso a conto 6.4 %), ingressi in attesa 1.10/s
+  1 % di celle sempre non valide: attesa permanente in 198/200 estrazioni (a conto 99.5 %)
+P1c enumerazione dei quattro livelli come sono scritti
+  combinazioni coerenti: 384; senza nessun livello: 7 (1.8 %); con due o piu' livelli: 289 (75.3 %)
+  atto 2 (ostacolo fermo, nessun bersaglio): NESSUN LIVELLO; con la sua ombra: NESSUN LIVELLO
+  atto 3 (attraversamento in vista): NESSUN LIVELLO
+  ombra senza traccia (K-016): NESSUN LIVELLO
+  esempi con piu' livelli: [(['NOMINALE', 'AVARIA'], 'nessuno', False, False, 'zero', 'persa'), (['ATTESA', 'AVARIA'], 'nessuno', False, True, 'zero', 'persa'), (['ATTESA', 'AVARIA'], 'nessuno', True, False, 'zero', 'persa')]

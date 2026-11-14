@@ -1,0 +1,26 @@
+== P6 (S3-S4): falsa 'sosta in ombra' nei transiti normali; il modo che cammina ==
+ombra (-0.64, 0.64), tempo d'attraversamento a 1,2 m/s: 1.07 s
+P6a misura valida a corpo tutto fuori (C6); sigma2=0.32; lettura A: falsa sosta (mu2>0,5 prima della prima misura) 1207/2000 = 60.4 %; mu1 mediano alla prima misura 0.194
+P6a misura valida a corpo tutto fuori (C6); sigma2=0.32; lettura B: falsa sosta (mu2>0,5 prima della prima misura) 28/2000 = 1.4 %; mu1 mediano alla prima misura 0.573
+P6a misura valida a corpo tutto fuori (C6); sigma2=0.2; lettura A: falsa sosta (mu2>0,5 prima della prima misura) 2000/2000 = 100.0 %; mu1 mediano alla prima misura 0.032
+P6a misura valida a corpo tutto fuori (C6); sigma2=0.2; lettura B: falsa sosta (mu2>0,5 prima della prima misura) 43/2000 = 2.1 %; mu1 mediano alla prima misura 0.561
+P6a misura valida a corpo tutto fuori (C6); sigma2=q; lettura A: falsa sosta (mu2>0,5 prima della prima misura) 1990/2000 = 99.5 %; mu1 mediano alla prima misura 0.047
+P6a misura valida a corpo tutto fuori (C6); sigma2=q; lettura B: falsa sosta (mu2>0,5 prima della prima misura) 26/2000 = 1.3 %; mu1 mediano alla prima misura 0.632
+P6a misura valida appena il centro esce; sigma2=0.32; lettura A: falsa sosta (mu2>0,5 prima della prima misura) 168/2000 = 8.4 %; mu1 mediano alla prima misura 0.846
+P6a misura valida appena il centro esce; sigma2=0.32; lettura B: falsa sosta (mu2>0,5 prima della prima misura) 0/2000 = 0.0 %; mu1 mediano alla prima misura 0.657
+P6a misura valida appena il centro esce; sigma2=0.2; lettura A: falsa sosta (mu2>0,5 prima della prima misura) 628/2000 = 31.4 %; mu1 mediano alla prima misura 0.476
+P6a misura valida appena il centro esce; sigma2=0.2; lettura B: falsa sosta (mu2>0,5 prima della prima misura) 0/2000 = 0.0 %; mu1 mediano alla prima misura 0.645
+P6a misura valida appena il centro esce; sigma2=q; lettura A: falsa sosta (mu2>0,5 prima della prima misura) 1010/2000 = 50.5 %; mu1 mediano alla prima misura 0.357
+P6a misura valida appena il centro esce; sigma2=q; lettura B: falsa sosta (mu2>0,5 prima della prima misura) 0/2000 = 0.0 %; mu1 mediano alla prima misura 0.688
+P6b sosta 9 cm dentro l'ombra (x=-0,55), v d'ingresso 1,2 m/s, sigma2=0,32
+  lettura A: distanza massima fra il modo mostrato (H1, mu1>0,5) e il soggetto 1.19 m; mu2 supera 0,5 a t=1.27 s (uscita attesa a 1.07 s)
+  lettura B: distanza massima fra il modo mostrato (H1, mu1>0,5) e il soggetto 1.19 m; mu2 supera 0,5 a t=1.33 s (uscita attesa a 1.07 s)
+[senza previsione] copertura dell'etichetta 'PREVISTO +-sigma_eff' (miscela ritagliata, 1D lungo la linea), sigma2=0,32
+  sosta a 9 cm dal bordo d'ingresso; lettura A: fotogrammi nascosti 60; dentro +-sigma_eff 3 %; dentro +-1,96 sigma_eff 75 %; errore massimo 0.93 m; sigma_eff massimo 0.33 m
+  sosta a 9 cm dal bordo d'ingresso; lettura B: fotogrammi nascosti 60; dentro +-sigma_eff 3 %; dentro +-1,96 sigma_eff 58 %; errore massimo 0.82 m; sigma_eff massimo 0.33 m
+  sosta al centro; lettura A: fotogrammi nascosti 60; dentro +-sigma_eff 88 %; dentro +-1,96 sigma_eff 100 %; errore massimo 0.38 m; sigma_eff massimo 0.33 m
+  sosta al centro; lettura B: fotogrammi nascosti 60; dentro +-sigma_eff 100 %; dentro +-1,96 sigma_eff 100 %; errore massimo 0.27 m; sigma_eff massimo 0.33 m
+  rallenta a 0,3 m/s; lettura A: fotogrammi nascosti 60; dentro +-sigma_eff 43 %; dentro +-1,96 sigma_eff 70 %; errore massimo 0.66 m; sigma_eff massimo 0.33 m
+  rallenta a 0,3 m/s; lettura B: fotogrammi nascosti 60; dentro +-sigma_eff 43 %; dentro +-1,96 sigma_eff 83 %; errore massimo 0.61 m; sigma_eff massimo 0.33 m
+  torna indietro dal centro; lettura A: fotogrammi nascosti 15; dentro +-sigma_eff 53 %; dentro +-1,96 sigma_eff 67 %; errore massimo 0.94 m; sigma_eff massimo 0.20 m
+  torna indietro dal centro; lettura B: fotogrammi nascosti 15; dentro +-sigma_eff 60 %; dentro +-1,96 sigma_eff 73 %; errore massimo 0.83 m; sigma_eff massimo 0.30 m

@@ -1,0 +1,16 @@
+P9 cuneo demo: area 1.54 m2, sigma_x 0.38 m, sigma_z 0.33 m, raggio efficace 0.51 m (soglia della preproposta 0,8 m)
+   uniforme su un segmento: sigma = L/sqrt(12); sigma 0,8 m chiede L = 2.77 m d'ombra
+H2 alpha 0.8 distanza d'arresto (m) a 0,5 / 1,2 / 1,4 m/s: [0.13, 0.32, 0.37]  decelerazione iniziale a 1,2 m/s: 3.6 m/s2
+H2 alpha 0.9 distanza d'arresto (m) a 0,5 / 1,2 / 1,4 m/s: [0.3, 0.72, 0.84]  decelerazione iniziale a 1,2 m/s: 1.8 m/s2
+H2 alpha 0.95 distanza d'arresto (m) a 0,5 / 1,2 / 1,4 m/s: [0.63, 1.52, 1.77]  decelerazione iniziale a 1,2 m/s: 0.9 m/s2
+   meta' ombra sulla linea dell'attore: 0,64 m (0,84 m dall'ultima misura con C6)
+striscia critica a 0.5 m/s: 3.3 cm (una cella da 1 grado a 2,3 m = 4.0 cm)
+striscia critica a 1.2 m/s: 8.0 cm (una cella da 1 grado a 2,3 m = 4.0 cm)
+striscia critica a 1.4 m/s: 9.3 cm (una cella da 1 grado a 2,3 m = 4.0 cm)
+uscita radiale 2,3 -> 3,0 m a 0.5 m/s: 1.40 s
+uscita radiale 2,3 -> 3,0 m a 1.2 m/s: 0.58 s
+uscita radiale 2,3 -> 3,0 m a 1.4 m/s: 0.50 s
+S1 media su 15 cicli: 12 cicli a 40 ms + 3 a 100 ms -> 52.0 ms (soglia 55; il 20 % dei cicli supera 66,6 ms)
+S1 media: 14 cicli a 40 ms + 1 singhiozzo di 300 ms -> 57.3 ms (supera 55 per un solo ciclo anomalo)
+S1 ciclo limite: cambi di configurazione in 60 s con isteresi di 2,5 s = 24
+S8: anello cieco 0,5-1,24 m su 0,5-3 m = 29.6 % dell'estensione radiale

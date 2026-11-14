@@ -1,0 +1,14 @@
+== P6x [DOPO gli esiti di P6, senza previsione]: lettura B, sensibilita' al ritardo della prima misura ==
+  ritardo 0 fotogrammi (0 ms), Pd 0.9: falsa sosta 22/2000 = 1.1 %
+  ritardo 0 fotogrammi (0 ms), Pd 0.7: falsa sosta 105/2000 = 5.2 %
+  ritardo 1 fotogrammi (67 ms), Pd 0.9: falsa sosta 274/2000 = 13.7 %
+  ritardo 1 fotogrammi (67 ms), Pd 0.7: falsa sosta 364/2000 = 18.2 %
+  ritardo 2 fotogrammi (133 ms), Pd 0.9: falsa sosta 622/2000 = 31.1 %
+  ritardo 2 fotogrammi (133 ms), Pd 0.7: falsa sosta 692/2000 = 34.6 %
+  ritardo 3 fotogrammi (200 ms), Pd 0.9: falsa sosta 819/2000 = 41.0 %
+  ritardo 3 fotogrammi (200 ms), Pd 0.7: falsa sosta 864/2000 = 43.2 %
+  sosta al centro, lettura A e B, sigma2 0,32: istante in cui mu2 supera 0,5 per velocita' d'ingresso
+   v=0.5: uscita attesa 2.56 s; prima misura possibile con C6 2.96 s; A: 2.33 s; B: 3.53 s
+   v=0.8: uscita attesa 1.60 s; prima misura possibile con C6 1.85 s; A: 1.80 s; B: 2.40 s
+   v=1.2: uscita attesa 1.07 s; prima misura possibile con C6 1.23 s; A: 1.27 s; B: 1.33 s
+   v=1.4: uscita attesa 0.91 s; prima misura possibile con C6 1.06 s; A: 1.07 s; B: 1.07 s

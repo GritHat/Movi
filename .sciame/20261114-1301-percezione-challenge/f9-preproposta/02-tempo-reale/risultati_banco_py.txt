@@ -1,0 +1,7 @@
+# Banco del ciclo, Python 3.14.10 puro, un filo. Griglia 2640 celle; 10 tracce x 2 ipotesi.
+(a) ritaglio + pesi, griglia intera     , sigma 0.8 m      mediana     7.37 ms   massimo    10.72 ms   (n = 15)
+(a) ritaglio + pesi, griglia intera     , sigma 0.3 m      mediana     7.31 ms   massimo     7.72 ms   (n = 15)
+(a) ritaglio + pesi, riquadro a 3 sigma, sigma 0.8 m       mediana     6.86 ms   massimo     7.64 ms   (n = 15)
+(a) ritaglio + pesi, riquadro a 3 sigma, sigma 0.3 m       mediana     2.25 ms   massimo     2.64 ms   (n = 15)
+(b) proiezione su 212x120 pixel (1/16 del fotogramma)      mediana    10.03 ms   massimo    10.07 ms   (n = 8)
+    stima per 848x480 in Python puro: circa 161 ms (x16; con numpy: non verificato, numpy non e' installato)

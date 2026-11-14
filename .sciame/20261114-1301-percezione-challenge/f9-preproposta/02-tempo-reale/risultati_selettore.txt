@@ -1,0 +1,82 @@
+# Attacco 3: oscillazione del selettore. Semi 1000..1019. Periodo 66,7 ms; 900 cicli al minuto.
+# Tetti: selettore a 2 Hz -> al piu' 112 cambi/min; con 2,5 s di tempo minimo -> al piu' 24 cambi/min.
+
+## attacco3_completo: centro 55.0 ms, delta 5.0 ms, bianco 3.0, AR 2.0, punte 1.5 %, salti si; 20 semi x 10 min
+variante                 cambi/min  sfor. % sfor./min % in piena
+A_nessuna_isteresi            37.9     1.41      12.7       67.3
+B_isteresi_tempo              16.0     1.54      13.8       57.9
+C_due_soglie                   3.2     1.14      10.3       17.7
+CB_due_soglie+tempo            3.2     1.14      10.3       17.7
+D_corretto                     0.2     1.07       9.7        0.6
+sempre_piena                   0.0     3.29      29.6      100.0
+sempre_ridotta                 0.0     1.07       9.6        0.0
+
+## attacco3_completo: centro 55.0 ms, delta 12.0 ms, bianco 3.0, AR 2.0, punte 1.5 %, salti si; 20 semi x 10 min
+variante                 cambi/min  sfor. % sfor./min % in piena
+A_nessuna_isteresi            46.7     1.81      16.3       75.4
+B_isteresi_tempo              17.5     1.85      16.7       60.9
+C_due_soglie                  25.8     1.03       9.3       56.6
+CB_due_soglie+tempo           14.6     1.16      10.4       54.6
+D_corretto                     0.2     0.50       4.5        0.6
+sempre_piena                   0.0     3.29      29.6      100.0
+sempre_ridotta                 0.0     0.50       4.5        0.0
+
+## attacco3_completo: centro 55.0 ms, delta 20.0 ms, bianco 3.0, AR 2.0, punte 1.5 %, salti si; 20 semi x 10 min
+variante                 cambi/min  sfor. % sfor./min % in piena
+A_nessuna_isteresi            47.4     2.05      18.5       78.2
+B_isteresi_tempo              17.6     1.71      15.4       61.0
+C_due_soglie                  38.3     1.61      14.5       69.3
+CB_due_soglie+tempo           17.4     1.54      13.9       60.7
+D_corretto                     0.2     0.11       1.0        0.6
+sempre_piena                   0.0     3.29      29.6      100.0
+sempre_ridotta                 0.0     0.10       0.9        0.0
+
+## attacco3_solo_rumore: centro 55.0 ms, delta 12.0 ms, bianco 3.0, AR 2.0, punte 0.0 %, salti no; 20 semi x 10 min
+variante                 cambi/min  sfor. % sfor./min % in piena
+A_nessuna_isteresi            44.8     0.03       0.3       80.0
+B_isteresi_tempo              17.7     0.02       0.2       60.7
+C_due_soglie                  30.9     0.01       0.1       63.6
+CB_due_soglie+tempo           16.7     0.02       0.1       58.8
+D_corretto                     0.1     0.00       0.0        0.7
+sempre_piena                   0.0     0.06       0.5      100.0
+sempre_ridotta                 0.0     0.00       0.0        0.0
+
+## sensibilita_rumore: centro 55.0 ms, delta 12.0 ms, bianco 1.5, AR 2.0, punte 1.5 %, salti si; 20 semi x 10 min
+variante                 cambi/min  sfor. % sfor./min % in piena
+A_nessuna_isteresi            46.2     1.41      12.7       75.7
+B_isteresi_tempo              17.4     1.36      12.3       61.4
+C_due_soglie                  25.1     0.99       8.9       57.2
+CB_due_soglie+tempo           14.3     1.01       9.1       55.1
+D_corretto                     0.5     0.52       4.7        3.3
+sempre_piena                   0.0     2.22      20.0      100.0
+sempre_ridotta                 0.0     0.49       4.4        0.0
+
+## sensibilita_rumore: centro 55.0 ms, delta 12.0 ms, bianco 6.0, AR 2.0, punte 1.5 %, salti si; 20 semi x 10 min
+variante                 cambi/min  sfor. % sfor./min % in piena
+A_nessuna_isteresi            47.1     4.15      37.3       74.9
+B_isteresi_tempo              17.8     3.86      34.8       60.3
+C_due_soglie                  27.0     2.29      20.6       55.8
+CB_due_soglie+tempo           15.1     2.56      23.0       54.0
+D_corretto                     0.1     0.64       5.8        0.3
+sempre_piena                   0.0     7.20      64.8      100.0
+sempre_ridotta                 0.0     0.63       5.7        0.0
+
+## P5_stazionario_media52: centro 52.0 ms, delta 12.0 ms, bianco 7.0, AR 0.0, punte 0.0 %, salti no; 20 semi x 10 min
+variante                 cambi/min  sfor. % sfor./min % in piena
+A_nessuna_isteresi             8.6     1.73      15.5       96.2
+B_isteresi_tempo               6.8     1.55      13.9       84.8
+C_due_soglie                   8.3     1.67      15.1       92.8
+CB_due_soglie+tempo            6.8     1.55      13.9       84.8
+D_corretto                     0.1     0.01       0.1        0.3
+sempre_piena                   0.0     1.79      16.1      100.0
+sempre_ridotta                 0.0     0.01       0.0        0.0
+
+## P5bis_media50_code: centro 50.0 ms, delta 12.0 ms, bianco 4.0, AR 0.0, punte 4.0 %, salti no; 20 semi x 10 min
+variante                 cambi/min  sfor. % sfor./min % in piena
+A_nessuna_isteresi             1.3     2.62      23.6       99.4
+B_isteresi_tempo               1.3     2.57      23.2       97.1
+C_due_soglie                   1.3     2.61      23.5       98.9
+CB_due_soglie+tempo            1.3     2.57      23.2       97.1
+D_corretto                     0.1     0.47       4.3        0.8
+sempre_piena                   0.0     2.64      23.7      100.0
+sempre_ridotta                 0.0     0.46       4.1        0.0

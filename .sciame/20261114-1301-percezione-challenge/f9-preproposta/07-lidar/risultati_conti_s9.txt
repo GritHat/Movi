@@ -1,0 +1,93 @@
+
+==== A. Tempo di preallarme di un sensore laterale
+soglia_m  v_m/s  periodo_ms  conferme  t_lordo  t_dopo_misura  t_dopo_latenza  t_a_fine_segnale  dist_residua_m
+   0.50   1.40         67         1     0.36           0.29            0.14             -0.16            0.00
+        ^ L7CX 8x8 a 15 Hz, un campione
+   0.50   1.40         67         2     0.36           0.22            0.07             -0.23            0.00
+        ^ L7CX 8x8 a 15 Hz, due campioni (il primo, con stato 10, vale meno del 50 %)
+   0.50   1.40        200         1     0.36           0.16            0.00             -0.30            0.00
+        ^ alternanza ideale di tre sensori: 5 Hz ciascuno
+   0.50   1.40        400         1     0.36          -0.04           -0.20             -0.50            0.00
+        ^ alternanza con start/stop: 3 sensori x 2 fotogrammi x 67 ms
+   0.50   1.40         33         2     0.36           0.29            0.14             -0.16            0.00
+        ^ L7CX 4x4 a 30 Hz, due campioni
+   0.50   2.50         67         2     0.20           0.07           -0.09             -0.39            0.00
+        ^ v_max del nucleo (2,5 m/s)
+   0.50   0.50         67         2     1.00           0.87            0.71              0.41            0.21
+        ^ persona lenta (0,5 m/s)
+   0.35   1.40         67         2     0.25           0.12           -0.04             -0.34            0.00
+        ^ grigio 17 % a 5 klx, 8x8 (scheda: 350 mm tipici)
+   0.30   1.40         67         2     0.21           0.08           -0.07             -0.37            0.00
+        ^ nero 5 % a 5 klx, 8x8 (estrapolato, vedi D: 304 mm)
+   1.00   1.40         33         2     0.71           0.65            0.49              0.19            0.27
+        ^ L7CX 4x4 al buio su grigio 17 % (1,4 m): soglia 1,0 m
+   1.50   1.40         33         2     1.07           1.00            0.85              0.55            0.77
+        ^ L8CX 4x4 a 5 klx su grigio 17 % (1,65 m): soglia 1,5 m
+   2.00   1.40         67         1     1.43           1.36            1.21              0.91            1.27
+        ^ BRACCIO CHE DEVE FALLIRE: soglia 2 m, deve dare oltre 1 s
+   2.00   1.40         67         1     1.43           1.36            1.21              0.91            1.27
+
+==== B. Copertura angolare e d'area
+somma dei campi: camera 87.0 + 3 x 60.0 = 267 gradi su 360 (74 %); con L8CX: 222 gradi
+asse laterale a +-90.0: il sensore copre 60.0..120.0; fessura fra camera e sensore: 16.5 gradi per lato
+asse laterale a +-73.5: il sensore copre 43.5..103.5; fessura fra camera e sensore: 0.0 gradi per lato
+disco di 3.0 m: 28.27 m2; settore della camera: 6.83 m2 = 24.2 %
+  tre L7CX al buio, bianco, 8x8        portata 2.00 m:  6.28 m2 =  22.2 % del disco
+  tre L7CX a 5 klx, bianco, 8x8        portata 0.50 m:  0.39 m2 =   1.4 % del disco
+  tre L7CX a 5 klx, grigio 17 %, 8x8   portata 0.35 m:  0.19 m2 =   0.7 % del disco
+  tre L7CX a 5 klx, grigio 17 %, 4x4   portata 0.55 m:  0.48 m2 =   1.7 % del disco
+  tre L8CX a 5 klx, grigio 17 %, 4x4   portata 1.65 m:  3.21 m2 =  11.3 % del disco
+  tre L8CX a 5 klx, grigio 17 %, 8x8   portata 1.15 m:  1.56 m2 =   5.5 % del disco
+  bersaglio che passa a 0.50 m di lato (limite del sensore laterale): taglia la direzione 43.5 gradi a 0.73 m dalla camera (zona di valutazione del nucleo: 1,24-3 m)
+  bersaglio che passa a 0.35 m di lato (limite del sensore laterale): taglia la direzione 43.5 gradi a 0.51 m dalla camera (zona di valutazione del nucleo: 1,24-3 m)
+  bersaglio che passa a 1.00 m di lato (limite del sensore laterale): taglia la direzione 43.5 gradi a 1.45 m dalla camera (zona di valutazione del nucleo: 1,24-3 m)
+  bersaglio che passa a 1.50 m di lato (limite del sensore laterale): taglia la direzione 43.5 gradi a 2.18 m dalla camera (zona di valutazione del nucleo: 1,24-3 m)
+  L7CX 8x8: una zona (7,5 gradi) a 0.5 m e' larga 6.6 cm; 4x4 (15 gradi): 13.2 cm
+  L7CX 8x8: una zona (7,5 gradi) a 1.0 m e' larga 13.1 cm; 4x4 (15 gradi): 26.3 cm
+  L7CX 8x8: una zona (7,5 gradi) a 2.0 m e' larga 26.2 cm; 4x4 (15 gradi): 52.7 cm
+
+==== C. Persona in nero vista come buco: quota dei pixel, delle direzioni e delle celle
+dist_m  larghezza_m  pixel_%  direzioni_%  celle_zona_%   (soglia del nucleo: validi sotto il 50 % della taratura)
+  2.50        0.50      6.5         13.1           3.7
+  2.50        0.60      7.8         15.7           4.5
+  1.00        0.50     25.5         32.3          32.3
+  1.00        0.60     30.5         38.4          38.4
+  0.75        0.50     33.9         42.4          42.4
+  0.75        0.60     40.7         50.1          50.1
+  0.60        0.50     42.4         52.0          52.0
+  0.60        0.60     50.9         61.1          61.1
+  0.40        0.50     63.6         73.6          73.6
+  0.40        0.60     76.4         84.8          84.8
+larghezza 0.5 m: la quota di direzioni supera il 50 % sotto 0.63 m
+larghezza 0.6 m: la quota di direzioni supera il 50 % sotto 0.75 m
+atto 1 della demo (meta' campo coperta: 50,0 % di buchi) piu' una persona in nero a 2,5 m nella meta' scoperta: buchi 56.5 %, validi 43.5 % della taratura: sotto la soglia
+  raggio che colpisce la persona a 2,5 m alla quota 0.1 m: prolungato tocca il suolo a 2.73 m
+  raggio che colpisce la persona a 2,5 m alla quota 0.2 m: prolungato tocca il suolo a 3.00 m
+  raggio che colpisce la persona a 2,5 m alla quota 0.4 m: prolungato tocca il suolo a 3.75 m
+  raggio che colpisce la persona a 2,5 m alla quota 0.6 m: prolungato tocca il suolo a 5.00 m
+
+==== D. Portata sul nero, estrapolata dalle tabelle 17 e 18 della scheda VL53L7CX (non e' una misura)
+modo                      esponente   nero 5 %   nero 3 %   (mm; ancorato a 54 % e 17 %)
+L7CX 8x8 15 Hz buio           0.60        384        283
+L7CX 8x8 15 Hz 5 klx          0.12        304        286
+L7CX 4x4 30 Hz buio           0.60        672        495
+L7CX 4x4 30 Hz 5 klx          0.08        502        483
+L8CX 8x8 15 Hz buio           0.26       1787       1567
+L8CX 8x8 15 Hz 5 klx          0.17        934        856
+L8CX 4x4 30 Hz 5 klx          0.39       1019        834
+con la legge della radice (limite di segnale): L7CX 8x8 al buio, nero 5 %: 434 mm; a 2,5 m servirebbe una portata 6.5 volte maggiore
+
+==== E. Bus I2C con tre sensori
+firmware caricato a ogni avvio: 86016 byte per sensore (driver ST 1.2.3; il manuale UM3038 scrive ~84 kbyte)
+  bus a 400 kHz: firmware 1.94 s per sensore, 5.8 s per tre; risultati completi (1452 byte) 32.7 ms a sensore, 98 ms per tre; ridotti (588 byte) 40 ms per tre (periodo a 15 Hz: 66,7 ms)
+  bus a 1000 kHz: firmware 0.77 s per sensore, 2.3 s per tre; risultati completi (1452 byte) 13.1 ms a sensore, 39 ms per tre; ridotti (588 byte) 16 ms per tre (periodo a 15 Hz: 66,7 ms)
+alternanza con start/stop su L7CX (nessun piedino di sincronia): per sensore almeno 2 fotogrammi (il primo ha stato 6 o 10) = 133 ms a 15 Hz; giro di tre = 400 ms -> 2.5 Hz per sensore, senza contare il tempo di start e stop (non verificato)
+
+==== F. Limite superiore dell'irraggiamento del proiettore sul bersaglio (se il filtro a 940 nm non respingesse niente)
+angolo solido del proiettore: 1.514 sr; riferimento ST: 2 W/m2 a 940 nm = 5 klx di luce diurna
+  potenza 150 mW, bersaglio a 0.5 m dalla camera: 0.396 W/m2 medi = 20 % del riferimento (come 0.99 klx)
+  potenza 150 mW, bersaglio a 1.0 m dalla camera: 0.099 W/m2 medi = 5 % del riferimento (come 0.25 klx)
+  potenza 150 mW, bersaglio a 2.0 m dalla camera: 0.025 W/m2 medi = 1 % del riferimento (come 0.06 klx)
+  potenza 360 mW, bersaglio a 0.5 m dalla camera: 0.951 W/m2 medi = 48 % del riferimento (come 2.38 klx)
+  potenza 360 mW, bersaglio a 1.0 m dalla camera: 0.238 W/m2 medi = 12 % del riferimento (come 0.59 klx)
+  potenza 360 mW, bersaglio a 2.0 m dalla camera: 0.059 W/m2 medi = 3 % del riferimento (come 0.15 klx)

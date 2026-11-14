@@ -1,0 +1,1 @@
+quadri 300, 1920x1080: totale media 18.91 ms, massimo 26.38 ms; di cui sfondo + maschera ricalcolata punto per punto (modo ingenuo) media 18.32 ms; sola campitura a righe + contorno tratteggiato sulla maschera media 0.59 ms, massimo 1.03 ms; controllo 76500

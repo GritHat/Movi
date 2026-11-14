@@ -1,0 +1,13 @@
+comportamento=prosegue errore_maschera=-0.20 m lettura=L1 N=2000 scartati=1 seme=20261121
+particelle: 0.16 ms per ciclo e per traccia (300 particelle, Python puro, indicativo)
+tau  n(nasc) bordo | K:cop  raggio | A:cop1s cop2s cop2.45s reg95 area  sig_eff(med) mu1  >0.8m zero vuota | B:cop1s cop2.45s reg95 area sig_eff mu1 >0.8m zero | C:reg95 reg50 area  su_libero oltre_fascia
+0.53   1972    26 | 1.000  0.37 | 0.553 0.958 0.995 0.700  0.26  0.13 0.986 0.000 0.300   0 | 0.588 0.996 0.700  0.25  0.13 0.890 0.000 0.300 | 0.998 0.857  0.42 0.519 0.057
+1.00   1987     9 | 1.000  0.79 | 0.779 1.000 1.000 0.904  0.96  0.26 0.995 0.000 0.096   0 | 0.688 1.000 0.904  0.94  0.26 0.785 0.000 0.096 | 0.998 0.857  1.28 0.393 0.041
+2.00    543   200 | 1.000  2.00 | 0.959 1.000 1.000 0.584  8.34  0.84 0.991 0.731 0.416   0 | 0.961 1.000 0.584  7.82  0.79 0.803 0.424 0.416 | 0.934 0.376  2.57 0.374 0.041
+3.00    144    57 | 1.000  3.55 | 1.000 1.000 1.000 0.708 16.88  1.27 0.998 1.000 0.292   0 | 0.986 1.000 0.708 16.39  1.23 0.840 1.000 0.292 | 0.632 0.188  3.31 0.257 0.030
+P-K3: transiti con il vero passato in ombra n=1997; mu1<0,5 all'ultimo ciclo in ombra: A 25 B 24
+DATI prosegue -0.20 L1 1999 8 n=1972 bordo=26 Kc=1972 Kr=719.977 A1=1091 A2=1890 A245=1963 Ah=1380 Aa=512.97 Ase=256.088 Amu=1944.24 A08=0 Az=592 Avuota=0 B1=1159 B245=1965 Bh=1380 Ba=500.25 Bse=254.919 Bmu=1754.12 B08=0 Bz=592 Ch=1969 Ca=832.92 C50=1690 Clib=1023.46 Clibf=111.986
+DATI prosegue -0.20 L1 1999 15 n=1987 bordo=9 Kc=1987 Kr=1567.22 A1=1547 A2=1987 A245=1987 Ah=1797 Aa=1906.47 Ase=525.31 Amu=1977.51 A08=0 Az=190 Avuota=0 B1=1367 B245=1987 Bh=1797 Ba=1858.23 Bse=523.351 Bmu=1560.07 B08=0 Bz=190 Ch=1984 Ca=2548.16 C50=1703 Clib=780.749 Clibf=81.6814
+DATI prosegue -0.20 L1 1999 30 n=543 bordo=200 Kc=543 Kr=1088.2 A1=521 A2=543 A245=543 Ah=317 Aa=4528.85 Ase=452.298 Amu=538.199 A08=397 Az=226 Avuota=0 B1=522 B245=543 Bh=317 Ba=4244.73 Bse=430.651 Bmu=435.876 B08=230 Bz=226 Ch=507 Ca=1393.36 C50=204 Clib=203.17 Clibf=22.503
+DATI prosegue -0.20 L1 1999 45 n=144 bordo=57 Kc=144 Kr=510.847 A1=144 A2=144 A245=144 Ah=102 Aa=2430.13 Ase=180.015 Amu=143.767 A08=144 Az=42 Avuota=0 B1=142 B245=144 Bh=102 Ba=2360 Bse=176.611 Bmu=120.9 B08=144 Bz=42 Ch=91 Ca=477 C50=27 Clib=37.0614 Clibf=4.28741
+tempo totale 14.0 s

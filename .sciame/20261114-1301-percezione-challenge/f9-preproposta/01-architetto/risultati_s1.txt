@@ -1,0 +1,70 @@
+prove_s1.py, seme 20261114, Python 3.14.10
+== P1: i limiti 1,24 / 1,09 / 2,41 m sono limiti del campo visivo ==
+bordo inferiore 44.0 gradi sotto l'orizzonte, superiore 14.0 sopra
+suolo visto da                     1.243 m   (nucleo: 1,24)
+ostacolo di 15 cm fuori campo sotto 1.087 m   (nucleo: 1,09)
+oggetto a 1,8 m di quota visto oltre 2.406 m   (nucleo: 2,41)
+montaggio verticale (87 gradi): suolo da 0.735 m   (nucleo: 0,74)
+nessuna delle formule contiene la struttura dati: quota, inclinazione, campo.
+
+== P2: oscillazione del selettore (10 minuti simulati, 15 Hz, valutazione ogni 1 s) ==
+scenario A: piena 60 ms, ridotta 40 ms, sigma 2 ms. scenario B: piena 55 ms +/- 6 ms (periodo 4 s), ridotta 12 ms in meno.
+scen braccio                      cambi/10min cambi/min cicli>55ms cicli>66,7 tempo in piena
+A    a tabella nuda                       600      60.0      49.7%       0.0%          50.0%
+A    b + isteresi 2,5 s                   200      20.0      49.7%       0.0%          50.0%
+A    c costo previsto, sosta 10 s           1       0.1       0.2%       0.0%           0.2%
+A    d a scatto (minima)                    1       0.1       0.2%       0.0%           0.2%
+B    a tabella nuda                       300      30.0      24.1%       0.0%          50.0%
+B    b + isteresi 2,5 s                   150      15.0      36.1%       0.0%          62.5%
+B    c costo previsto, sosta 10 s           1       0.1       0.2%       0.0%           0.2%
+B    d a scatto (minima)                    1       0.1       0.2%       0.0%           0.2%
+sensibilita' del braccio c alla soglia di risalita (fissata DOPO le previsioni, vedi CONSEGNA):
+  scenario A, risale se costo previsto < 45 ms: 1 cambi in 10 min, cicli > 55 ms 0.2%
+  scenario A, risale se costo previsto < 50 ms: 1 cambi in 10 min, cicli > 55 ms 0.2%
+  scenario A, risale se costo previsto < 55 ms: 1 cambi in 10 min, cicli > 55 ms 0.2%
+  scenario B, risale se costo previsto < 45 ms: 1 cambi in 10 min, cicli > 55 ms 0.2%
+  scenario B, risale se costo previsto < 50 ms: 11 cambi in 10 min, cicli > 55 ms 0.9%
+  scenario B, risale se costo previsto < 55 ms: 100 cambi in 10 min, cicli > 55 ms 8.1%
+altri 4 semi, scenario A e B, bracci b e d (cambi in 10 min):
+  seme 1 Ab=200 Ad=1 Bb=150 Bd=1
+  seme 2 Ab=200 Ad=1 Bb=150 Bd=1
+  seme 3 Ab=200 Ad=1 Bb=150 Bd=1
+  seme 4 Ab=200 Ad=1 Bb=150 Bd=1
+valutazione a 2 Hz (ogni 8 cicli) invece che a 1 Hz, scenario A:
+  braccio a: 562 cambi in 10 min (56.2/min), cicli > 55 ms 49.7%
+  braccio b: 225 cambi in 10 min (22.5/min), cicli > 55 ms 49.6%
+
+== P3a: griglia piu' grossa (1 grado x 0,1 m -> 2 gradi x 0,2 m), pannello 1 m a 1,8 m ==
+misura: celle fini 'in ombra' o 'non osservato' che finiscono dentro una cella grossa 'libero'
+- come scritto in P3a: griglia 1,2-3 m, 1 % di raggi senza dato
+  celle fini 1566: {'libero': 1194, 'occupato': 31, 'ombra': 341, 'non_oss': 0}
+  (i) regola alla lettera: 10 celle non viste sotto un 'libero' (2.9 % delle non viste); (ii) prudente: 0
+- VARIANTE NOTATA DOPO: griglia 0,5-3 m come in B1 del nucleo
+  celle fini 2175: {'libero': 1194, 'occupato': 31, 'ombra': 341, 'non_oss': 609}
+  (i) regola alla lettera: 98 celle non viste sotto un 'libero' (10.3 % delle non viste); (ii) prudente: 0
+- VARIANTE NOTATA DOPO: 0,5-3 m e 1 % di celle morte (audit, ipotesi 6)
+  celle fini 2175: {'libero': 1180, 'occupato': 31, 'ombra': 341, 'non_oss': 623}
+  (i) regola alla lettera: 112 celle non viste sotto un 'libero' (11.6 % delle non viste); (ii) prudente: 0
+- VARIANTE NOTATA DOPO: il pannello si sposta di lato da -0,50 a +0,50 m a passi di 5 cm (griglia 0,5-3 m, 1 % di raggi senza dato)
+  (i): minimo 87, mediana 98, massimo 109 celle fini; (ii): massimo 0
+
+== P3b: da tre fasce di quota (S10) alla mappa sul piano ==
+a distanza d il campo copre le quote da max(0, 1,2 - d tan44) a 1,2 + d tan14
+fascia bassa (0.15-0.60 m): osservata per intero da d >= 1.087 m
+fascia media (0.60-1.60 m): osservata per intero da d >= 1.604 m
+fascia alta (1.60-2.00 m): osservata per intero da d >= 3.209 m
+profilo bassa+media: 'libero' a tre fasce solo da 1.604 m; passando alla mappa sul piano l'anello 1.24-1.60 m (0.78 m2, 13.8 % della zona di 5.66 m2) passa da 'non libero' a 'libero'
+profilo bassa+media+alta: nessuna cella 'libero' entro 3 m con le tre fasce; sul piano tutta la zona 1,24-3 m (5.66 m2) puo' diventare 'libero'
+
+== P4: costo di calcolo del selettore (Python puro, tabella a 6 righe + media su 15) ==
+una valutazione: 0.22 microsecondi (migliore di 5 giri da 200000); a 2 Hz = 0.000044 % del tempo; indicativo, macchina condivisa
+
+== P5: la tabella della preproposta come funzione degli ingressi ==
+stati d'ingresso: 128 (T x GPU x saturazione IR x interferenza x camera x ToF)
+riga 2 letta 'oppure': nessuna riga 17 (13.3 %), una sola 58 (45.3 %), due o piu' 53 (41.4 %); rete accesa e spenta insieme 8, due mappe insieme 12
+   esempi senza riga: [('30-45', 'GPU', 'camera sana', 'ToF assenti'), ('30-45', 'GPU', 'camera guasta', 'ToF assenti'), ('30-45', 'GPU', 'camera sana', 'ToF assenti')]
+riga 2 letta 'e': nessuna riga 51 (39.8 %), una sola 38 (29.7 %), due o piu' 39 (30.5 %); rete accesa e spenta insieme 0, due mappe insieme 4
+   esempi senza riga: [('<30', 'no GPU', 'camera sana', 'ToF assenti'), ('<30', 'no GPU', 'camera guasta', 'ToF assenti'), ('<30', 'no GPU', 'camera sana', 'ToF assenti')]
+configurazioni nominabili con gli assi della tabella: 40 con la camera + 5 senza = 45, contro 6 righe
+ore di prova se ognuna passa il protocollo H0-H13 (2 h 40 in due = 5,33 ore-persona): 6 righe = 32 ore-persona; 45 configurazioni = 240 ore-persona
+

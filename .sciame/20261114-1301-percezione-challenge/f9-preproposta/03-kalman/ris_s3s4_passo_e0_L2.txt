@@ -1,0 +1,12 @@
+comportamento=passo errore_maschera=+0.00 m lettura=L2 q_occlusione=0.2 N=2000 scartati=0 seme=20265114
+particelle: 0.17 ms per ciclo e per traccia (300 particelle, Python puro, indicativo)
+tau  n(nasc) bordo | K:cop  raggio | A:cop1s cop2s cop2.45s reg95 area  sig_eff(med) mu1  >0.8m zero vuota | B:cop1s cop2.45s reg95 area sig_eff mu1 >0.8m zero | C:reg95 reg50 area  su_libero oltre_fascia
+0.53   1957    43 | 1.000  0.37 | 0.854 0.999 1.000 0.993  0.35  0.14 0.993 0.000 0.007   0 | 0.874 1.000 0.993  0.34  0.14 0.817 0.000 0.007 | 0.999 0.831  0.48 0.324 0.002
+1.00   1884    69 | 1.000  0.79 | 0.826 0.998 1.000 0.995  1.02  0.26 0.990 0.000 0.005   0 | 0.808 1.000 0.994  1.05  0.27 0.776 0.000 0.005 | 0.992 0.769  1.40 0.271 0.006
+2.00    712   252 | 1.000  2.00 | 0.337 0.822 0.966 0.903  1.35  0.33 0.413 0.000 0.042   0 | 0.386 0.982 0.958  1.39  0.33 0.581 0.000 0.042 | 0.926 0.451  2.97 0.306 0.015
+3.00    286   124 | 1.000  3.55 | 0.126 0.671 0.783 0.706  1.41  0.34 0.006 0.000 0.266   0 | 0.161 0.794 0.734  1.43  0.35 0.485 0.000 0.266 | 0.738 0.234  3.66 0.233 0.010
+DATI passo +0.00 L2 0.2 2000 8 n=1957 bordo=43 Kc=1957 Kr=714.66 A1=1672 A2=1955 A245=1957 Ah=1943 Aa=686.98 Ase=277.5 Amu=1943.94 A08=0 Az=14 Avuota=0 B1=1711 B245=1957 Bh=1943 Ba=674.61 Bse=278.266 Bmu=1598 B08=0 Bz=14 Ch=1956 Ca=939.72 C50=1626 Clib=634.225 Clibf=3.95953 Cpo=6.00072 Cto=0 Cnin=1957 Chin=1956 Cain=915.16 Cpo_in=6.00072 Cpo_out=0
+DATI passo +0.00 L2 0.2 2000 15 n=1884 bordo=69 Kc=1884 Kr=1486.14 A1=1557 A2=1880 A245=1884 Ah=1875 Aa=1926.15 Ase=492.993 Amu=1864.77 A08=0 Az=9 Avuota=0 B1=1523 B245=1884 Bh=1873 Ba=1969.95 Bse=506.466 Bmu=1462.38 B08=0 Bz=9 Ch=1869 Ca=2643.8 C50=1448 Clib=511.325 Clibf=10.5612 Cpo=48.5764 Cto=0 Cnin=1884 Chin=1868 Cain=2314.36 Cpo_in=48.5764 Cpo_out=0
+DATI passo +0.00 L2 0.2 2000 30 n=712 bordo=252 Kc=712 Kr=1427.32 A1=240 A2=585 A245=688 Ah=643 Aa=962.21 Ase=229.269 Amu=293.725 A08=0 Az=30 Avuota=0 B1=275 B245=699 Bh=682 Ba=986.38 Bse=237.037 Bmu=413.876 B08=0 Bz=30 Ch=659 Ca=2116.92 C50=321 Clib=218.001 Clibf=10.4301 Cpo=120.12 Cto=22 Cnin=690 Chin=630 Cain=1355.36 Cpo_in=112.245 Cpo_out=7.87543
+DATI passo +0.00 L2 0.2 2000 45 n=286 bordo=124 Kc=286 Kr=1014.6 A1=36 A2=192 A245=224 Ah=202 Aa=402.77 Ase=96.6307 Amu=1.7028 A08=0 Az=76 Avuota=0 B1=46 B245=227 Bh=210 Ba=409.8 Bse=98.9534 Bmu=138.572 B08=0 Bz=76 Ch=211 Ca=1047.8 C50=67 Clib=66.6836 Clibf=2.98511 Cpo=84.4792 Cto=68 Cnin=218 Chin=165 Cain=411.8 Cpo_in=57.8875 Cpo_out=26.5917
+tempo totale 13.1 s

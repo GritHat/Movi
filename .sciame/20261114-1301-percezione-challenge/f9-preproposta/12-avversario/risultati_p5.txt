@@ -1,0 +1,13 @@
+== P5 (attacco 4 del file): tessuto nero contro 'sensore coperto' ==
+P5a persona in nero 0,5 x 1,75 m a 2,5 m, nessun ritorno: pixel non validi 6.8 %; celle della zona non valide 55/1566 = 3.5 %
+P5a soglia 'sensore coperto': valide < 50 % della taratura per 3 fotogrammi -> scatta: NO (0 fotogrammi su 900: scena statica, conto esatto)
+P5a distanza a cui la stessa persona toglie il 50 % dei pixel: 0.5 m
+   [senza previsione] 2 persone in nero affiancate a 2,5 m: pixel non validi 13.5 %
+   [senza previsione] 3 persone in nero affiancate a 2,5 m: pixel non validi 20.4 %
+   [senza previsione] 4 persone in nero affiancate a 2,5 m: pixel non validi 27.0 %
+   [senza previsione] 6 persone in nero affiancate a 2,5 m: pixel non validi 40.6 %
+   [senza previsione] pannello della demo NERO (1 x 1,5 m a 1,8 m), nessun ritorno: pixel 20.6 %, celle 23.5 %: nessun 'occupato', quindi nessun occlusore e nessun cuneo dello strato 1
+P5b persona invisibile che cammina, 'libero' = suolo visto in uno degli ultimi 3 fotogrammi
+  v=1.4 m/s: fotogrammi con >=1 cella 'libero' sotto il corpo 5826/5826 = 100.0 %; media 1.86 celle, massimo 2 (celle da 0,1 m)
+  v=0.5 m/s: fotogrammi con >=1 cella 'libero' sotto il corpo 11391/17191 = 66.3 %; media 0.66 celle, massimo 1 (celle da 0,1 m)
+  ferma: dopo 3 fotogrammi 0 celle 'libero' sotto il corpo (per costruzione della regola)

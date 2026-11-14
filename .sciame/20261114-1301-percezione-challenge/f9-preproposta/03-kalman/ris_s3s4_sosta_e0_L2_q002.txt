@@ -1,0 +1,13 @@
+comportamento=sosta errore_maschera=+0.00 m lettura=L2 q_occlusione=0.02 N=2000 scartati=0 seme=20262114
+particelle: 0.16 ms per ciclo e per traccia (300 particelle, Python puro, indicativo)
+tau  n(nasc) bordo | K:cop  raggio | A:cop1s cop2s cop2.45s reg95 area  sig_eff(med) mu1  >0.8m zero vuota | B:cop1s cop2.45s reg95 area sig_eff mu1 >0.8m zero | C:reg95 reg50 area  su_libero oltre_fascia
+0.53   1977    22 | 0.990  0.28 | 0.701 0.979 0.991 0.983  0.23  0.12 0.994 0.000 0.008   0 | 0.746 0.999 0.991  0.23  0.12 0.816 0.000 0.008 | 0.999 0.814  0.48 0.323 0.002
+1.00   1999     0 | 0.864  0.51 | 0.530 0.816 0.871 0.870  0.64  0.20 0.991 0.000 0.001   0 | 0.617 0.970 0.987  0.69  0.22 0.786 0.000 0.001 | 0.995 0.701  1.43 0.270 0.006
+2.00   1994     1 | 0.529  1.07 | 0.369 0.765 0.862 0.860  0.81  0.20 0.312 0.000 0.003   0 | 0.449 0.942 0.945  0.94  0.26 0.362 0.000 0.003 | 0.959 0.635  2.94 0.290 0.017
+3.00   1991     1 | 0.386  1.70 | 0.395 0.820 0.935 0.926  0.90  0.23 0.016 0.000 0.003   0 | 0.428 0.950 0.946  0.99  0.25 0.161 0.000 0.003 | 0.928 0.613  3.37 0.218 0.012
+P-K3b: soste con velocita' d'ingresso >= 1,0 m/s ancora nascoste a 3 s n=915; B con mu1>0,5: 0
+DATI sosta +0.00 L2 0.02 2000 8 n=1977 bordo=22 Kc=1957 Kr=554.895 A1=1385 A2=1936 A245=1959 Ah=1944 Aa=458.16 Ase=223.334 Amu=1965.15 A08=0 Az=15 Avuota=0 B1=1474 B245=1976 Bh=1960 Ba=462.24 Bse=229.078 Bmu=1612.45 B08=0 Bz=15 Ch=1975 Ca=944.24 C50=1610 Clib=638.983 Clibf=3.67007 Cpo=5.81815 Cto=0 Cnin=1977 Chin=1975 Cain=920.52 Cpo_in=5.81815 Cpo_out=0
+DATI sosta +0.00 L2 0.02 2000 15 n=1999 bordo=0 Kc=1727 Kr=1024.49 A1=1060 A2=1632 A245=1742 Ah=1740 Aa=1285.08 Ase=390.249 Amu=1981.98 A08=0 Az=1 Avuota=0 B1=1233 B245=1939 Bh=1973 Ba=1388.17 Bse=433.988 Bmu=1570.75 B08=0 Bz=1 Ch=1990 Ca=2861.8 C50=1401 Clib=539.256 Clibf=11.8828 Cpo=53.9416 Cto=0 Cnin=1999 Chin=1987 Cain=2484.96 Cpo_in=53.9416 Cpo_out=0
+DATI sosta +0.00 L2 0.02 2000 30 n=1994 bordo=1 Kc=1055 Kr=2131.88 A1=736 A2=1525 A245=1719 Ah=1715 Aa=1605.9 Ase=443.657 Amu=621.145 A08=0 Az=5 Avuota=0 B1=895 B245=1879 Bh=1885 Ba=1872.3 Bse=508.968 Bmu=722.801 B08=0 Bz=5 Ch=1912 Ca=5867.56 C50=1267 Clib=578.666 Clibf=34.3894 Cpo=420.001 Cto=4 Cnin=1990 Chin=1882 Cain=3576.56 Cpo_in=418.718 Cpo_out=1.28328
+DATI sosta +0.00 L2 0.02 2000 45 n=1991 bordo=1 Kc=769 Kr=3381.07 A1=786 A2=1633 A245=1861 Ah=1843 Aa=1787.41 Ase=458.953 Amu=32.6727 A08=0 Az=6 Avuota=0 B1=853 B245=1891 Bh=1884 Ba=1967.08 Bse=496.599 Bmu=319.959 B08=0 Bz=6 Ch=1847 Ca=6713.28 C50=1220 Clib=434.199 Clibf=22.972 Cpo=659.859 Cto=4 Cnin=1987 Chin=1806 Cain=3134.64 Cpo_in=658.075 Cpo_out=1.78405
+tempo totale 18.8 s

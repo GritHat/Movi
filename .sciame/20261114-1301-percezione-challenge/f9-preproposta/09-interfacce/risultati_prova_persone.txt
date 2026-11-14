@@ -1,0 +1,8 @@
+Prova con tre persone: 60 risposte per canale (3 persone x 20 stimoli), soglia >= 54 (come nel nucleo, V2 par. 6)
+  riconoscimento vero 0.33: probabilita' di superare la soglia 0.0 %
+  riconoscimento vero 0.70: probabilita' di superare la soglia 0.0 %
+  riconoscimento vero 0.80: probabilita' di superare la soglia 3.1 %
+  riconoscimento vero 0.85: probabilita' di superare la soglia 18.5 %
+  riconoscimento vero 0.90: probabilita' di superare la soglia 60.6 %
+  riconoscimento vero 0.95: probabilita' di superare la soglia 97.0 %
+  riconoscimento vero 0.98: probabilita' di superare la soglia 100.0 %

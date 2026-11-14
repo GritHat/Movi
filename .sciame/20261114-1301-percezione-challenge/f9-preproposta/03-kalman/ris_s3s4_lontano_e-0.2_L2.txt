@@ -1,0 +1,12 @@
+comportamento=lontano errore_maschera=-0.20 m lettura=L2 q_occlusione=0.2 N=2000 scartati=0 seme=20264121
+particelle: 0.16 ms per ciclo e per traccia (300 particelle, Python puro, indicativo)
+tau  n(nasc) bordo | K:cop  raggio | A:cop1s cop2s cop2.45s reg95 area  sig_eff(med) mu1  >0.8m zero vuota | B:cop1s cop2.45s reg95 area sig_eff mu1 >0.8m zero | C:reg95 reg50 area  su_libero oltre_fascia
+0.53   1981    18 | 0.987  0.37 | 0.481 0.921 0.979 0.657  0.26  0.13 1.000 0.000 0.332   0 | 0.512 0.983 0.659  0.25  0.13 0.889 0.000 0.332 | 0.989 0.816  0.42 0.526 0.060
+1.00   1997     0 | 0.900  0.79 | 0.553 0.818 0.878 0.820  0.78  0.24 1.000 0.000 0.085   0 | 0.529 0.895 0.815  0.79  0.24 0.775 0.000 0.085 | 0.842 0.572  1.28 0.393 0.042
+2.00   1987     0 | 0.739  2.00 | 0.098 0.291 0.371 0.281  0.96  0.29 0.594 0.000 0.699   0 | 0.084 0.358 0.277  0.97  0.28 0.415 0.000 0.699 | 0.398 0.095  2.50 0.348 0.045
+3.00   1986     0 | 0.794  3.55 | 0.009 0.045 0.083 0.043  1.00  0.29 0.029 0.000 0.947   0 | 0.009 0.091 0.051  1.01  0.29 0.275 0.000 0.947 | 0.198 0.022  3.02 0.261 0.032
+DATI lontano -0.20 L2 0.2 2000 8 n=1981 bordo=18 Kc=1955 Kr=723.499 A1=952 A2=1825 A245=1940 Ah=1301 Aa=512.66 Ase=256.133 Amu=1980.97 A08=0 Az=657 Avuota=0 B1=1015 B245=1947 Bh=1306 Ba=498.46 Bse=254.662 Bmu=1761.03 B08=0 Bz=657 Ch=1959 Ca=834.2 C50=1617 Clib=1042.28 Clibf=118.181 Cpo=3.85951 Cto=0 Cnin=1981 Chin=1957 Cain=820.68 Cpo_in=3.85951 Cpo_out=0
+DATI lontano -0.20 L2 0.2 2000 15 n=1997 bordo=0 Kc=1797 Kr=1575.37 A1=1105 A2=1633 A245=1753 Ah=1638 Aa=1557.09 Ase=473.655 Amu=1996.99 A08=0 Az=169 Avuota=0 B1=1057 B245=1788 Bh=1627 Ba=1574.73 Bse=479.391 Bmu=1547.91 B08=0 Bz=169 Ch=1681 Ca=2555.32 C50=1142 Clib=784.597 Clibf=84.7651 Cpo=47.9178 Cto=112 Cnin=1885 Chin=1631 Cain=2130.08 Cpo_in=43.5445 Cpo_out=4.37327
+DATI lontano -0.20 L2 0.2 2000 30 n=1987 bordo=0 Kc=1468 Kr=3983.63 A1=194 A2=579 A245=738 Ah=558 Aa=1903.6 Ase=554.715 Amu=1179.57 A08=0 Az=1389 Avuota=0 B1=167 B245=711 Bh=551 Ba=1936.58 Bse=556.383 Bmu=825.423 B08=0 Bz=1389 Ch=791 Ca=4964.96 C50=188 Clib=691.611 Clibf=89.4647 Cpo=429.854 Cto=1350 Cnin=637 Chin=487 Cain=1075.8 Cpo_in=95.9061 Cpo_out=333.948
+DATI lontano -0.20 L2 0.2 2000 45 n=1986 bordo=0 Kc=1576 Kr=7047 A1=17 A2=90 A245=164 Ah=86 Aa=1985.05 Ase=568.487 Amu=57.1112 A08=0 Az=1880 Avuota=0 B1=18 B245=181 Bh=101 Ba=2005.22 Bse=576.376 Bmu=545.699 B08=0 Bz=1880 Ch=394 Ca=6003.08 C50=44 Clib=518.317 Clibf=64.4352 Cpo=652.365 Cto=1866 Cnin=120 Chin=67 Cain=197.36 Cpo_in=27.7876 Cpo_out=624.577
+tempo totale 19.0 s

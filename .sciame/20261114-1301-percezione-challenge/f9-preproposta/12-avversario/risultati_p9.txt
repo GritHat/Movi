@@ -1,0 +1,3 @@
+== P9 (S9): anticipo dei sensori laterali sull'ingresso nel campo frontale ==
+  portata laterale 0.5 m: z=0.3: 0.10 s; z=1.0: 0.00 s; z=1.5: 0.00 s; z=2.0: 0.00 s; z=2.3: 0.00 s | anticipo > 0 solo per linee sotto 0.36 m
+  portata laterale 2.0 m: z=0.3: 1.41 s; z=1.0: 0.65 s; z=1.5: 0.00 s; z=2.0: 0.00 s; z=2.3: 0.00 s | anticipo > 0 solo per linee sotto 1.45 m

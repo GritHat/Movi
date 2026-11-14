@@ -118,3 +118,18 @@ Il `CONTRATTO.md` non si tocca (è legato al cancello f0). Questo file registra,
 - **I sensori.** Oggi non ce ne sono. L'utente ne possiede alcuni a casa e li può mettere a disposizione da remoto fra 5–6 ore; non sa se servono, e manderà un inventario. Fino ad allora (e forse oltre) si lavora senza sensori veri. Conseguenza per il piano: le prime 5–6 ore delle 14 si fanno su dati registrati o simulati, e l'architettura deve poter cambiare sorgente (registrazione, sensore simulato, sensore vero) senza toccare il resto.
 - **Nuove prove ammesse.** Cade il limite «niente prove oltre la classe 2» del contratto: ora sono ammessi e richiesti (a) l'**hardware simulato**, cioè modelli dei sensori costruiti sulle schede tecniche pubbliche e sulla letteratura; (b) gli **insiemi di dati pubblici** con registrazioni di sensori veri (camere di profondità, e altri sensori), scaricati dalla rete; (c) gli **strumenti allo stato dell'arte** per la verifica e la validazione. È quindi ammesso un ambiente Python locale dentro la cartella della convocazione (senza `sudo` e senza toccare il sistema) e lo scaricamento di dati pubblici in una cartella dedicata, trattati come dati non fidati.
 - **Come si lavora.** Estensione f10 (`f10-dati/`, contratto in `f10-dati/CONTRATTO_DATI.md`): validazione delle ipotesi del nucleo su registrazioni vere e su sensori simulati. È la «prossima prova che cambia la decisione» che il verdetto dell'arbitro rimandava all'hardware.
+
+---
+
+# Ottavo addendum dell'utente (ricevuto durante f7–f10, il 14 novembre 2026)
+
+## Il messaggio dell'utente, per intero
+
+«inoltre tieni traccia di tutti i paper e riferimenti scientifici utilizzati con relativi riferimenti dove opportuno. oltre ai pdf tieni anche un documento separato con la descrizione estensiva dello stato attuale del progetto da aggiornare dopo ogni valutazione, con riferimenti, dati numerici e indicazioni generali e dettagliate su ogni componente del sistema»
+
+## Come lo legge il coordinatore
+
+- **Due documenti nuovi nel progetto**, nella cartella `documentazione/` (accanto ai PDF di `proposta/`):
+  1. `RIFERIMENTI.md` (più `riferimenti.bib`): l'elenco di TUTTI gli articoli scientifici e delle altre fonti usate dallo sciame (schede tecniche, norme, documentazione di software, insiemi di dati), ciascuno con i dati bibliografici completi, il link, lo stato della verifica (verificata dal curatore; aperta dal ruolo che la cita; vista solo in un riassunto di ricerca; non verificata) e dove è usata (per quale affermazione, in quale file).
+  2. `STATO_PROGETTO.md`: la descrizione estesa dello stato attuale del progetto, componente per componente, con i dati numerici (numerosità, intervalli, file che li sostengono), i riferimenti e le indicazioni generali e di dettaglio; dichiara per ogni affermazione lo stato della prova. Si aggiorna dopo ogni valutazione dello sciame, con la data e l'elenco di ciò che è cambiato.
+- **Come si lavora.** Gli agenti scrivono le bozze in `f11-documentazione/`; il coordinatore le porta in `documentazione/` e fa il commit. Ogni cifra del documento di stato deve potersi ritrovare in un file dello sciame; ogni riferimento citato deve stare nell'elenco.

@@ -1,0 +1,88 @@
+# piano_14h.py, seme 20261114, 4000 estrazioni per cella, piano MIN e MED, ordine «due corsie»
+# ore utili nelle 14 ore: triangolare (11.0, 12.5, 14.0); mediana 12.51 h
+# autocontrollo (t_cam = 0 contro il calendario del pianificatore, 500 estrazioni): scarto massimo 0.00e+00 h -> torna
+# colonne: mediana / 80-esimo percentile (ore di lavoro, k = 1) | P(chiusa entro le ore utili, k = 1) | P(entro 14,0 h) | k*(80 %)
+-- MIN, nessun sensore per tutte le 14 ore (dati registrati o simulati), N = 3
+   uscita con dati finti               13.4 /  14.5 h |  28.0 % |  68.3 % | k* 0.86
+   mappa vera + controllo all'avvio    19.1 /  21.1 h |   0.0 % |   0.1 % | k* 0.59
+   continuita' sul simulatore          17.0 /  19.2 h |   0.4 % |   4.8 % | k* 0.65
+   catena vera (innesto)               27.8 /  30.0 h |   0.0 % |   0.0 % | k* 0.41
+   dal vivo                            30.1 /  32.4 h |   0.0 % |   0.0 % | k* 0.38
+   fine (taratura e accettazione)      34.7 /  37.0 h |   0.0 % |   0.0 % | k* 0.33
+-- MIN, nessun sensore per tutte le 14 ore (dati registrati o simulati), N = 4
+   uscita con dati finti                9.6 /  10.5 h |  98.9 % | 100.0 % | k* 1.18
+   mappa vera + controllo all'avvio    15.0 /  17.0 h |   8.4 % |  29.8 % | k* 0.73
+   continuita' sul simulatore          17.0 /  19.2 h |   1.1 % |   7.1 % | k* 0.65
+   catena vera (innesto)               23.7 /  26.0 h |   0.0 % |   0.0 % | k* 0.48
+   dal vivo                            26.1 /  28.3 h |   0.0 % |   0.0 % | k* 0.44
+   fine (taratura e accettazione)      30.6 /  32.9 h |   0.0 % |   0.0 % | k* 0.38
+-- MIN, nessun sensore per tutte le 14 ore (dati registrati o simulati), N = 5
+   uscita con dati finti                8.0 /   8.9 h | 100.0 % | 100.0 % | k* 1.40
+   mappa vera + controllo all'avvio    13.4 /  15.5 h |  35.0 % |  59.2 % | k* 0.80
+   continuita' sul simulatore          17.0 /  19.2 h |   1.1 % |   7.3 % | k* 0.65
+   catena vera (innesto)               22.2 /  24.4 h |   0.0 % |   0.0 % | k* 0.51
+   dal vivo                            24.6 /  26.8 h |   0.0 % |   0.0 % | k* 0.46
+   fine (taratura e accettazione)      29.1 /  31.4 h |   0.0 % |   0.0 % | k* 0.39
+-- MIN, sensore mai provato, disponibile dall'ora 5,5, N = 3
+   uscita con dati finti               11.4 /  13.0 h |  71.3 % |  90.3 % | k* 0.95
+   mappa vera + controllo all'avvio    20.9 /  23.2 h |   0.0 % |   0.0 % | k* 0.54
+   continuita' sul simulatore          17.2 /  19.4 h |   1.0 % |   6.2 % | k* 0.64
+   catena vera (innesto)               29.6 /  32.2 h |   0.0 % |   0.0 % | k* 0.39
+   dal vivo                            34.2 /  37.1 h |   0.0 % |   0.0 % | k* 0.33
+   fine (taratura e accettazione)      38.8 /  41.6 h |   0.0 % |   0.0 % | k* 0.30
+-- MIN, sensore mai provato, disponibile dall'ora 5,5, N = 4
+   uscita con dati finti                7.9 /   8.9 h | 100.0 % | 100.0 % | k* 1.40
+   mappa vera + controllo all'avvio    19.4 /  21.8 h |   0.0 % |   0.3 % | k* 0.57
+   continuita' sul simulatore          17.0 /  19.2 h |   1.2 % |   7.1 % | k* 0.65
+   catena vera (innesto)               28.1 /  30.7 h |   0.0 % |   0.0 % | k* 0.40
+   dal vivo                            32.8 /  35.6 h |   0.0 % |   0.0 % | k* 0.35
+   fine (taratura e accettazione)      37.3 /  40.1 h |   0.0 % |   0.0 % | k* 0.31
+-- MIN, sensore mai provato, disponibile dall'ora 5,5, N = 5
+   uscita con dati finti                7.8 /   8.8 h | 100.0 % | 100.0 % | k* 1.41
+   mappa vera + controllo all'avvio    19.3 /  21.7 h |   0.0 % |   0.3 % | k* 0.57
+   continuita' sul simulatore          16.9 /  19.1 h |   1.3 % |   7.7 % | k* 0.65
+   catena vera (innesto)               28.0 /  30.7 h |   0.0 % |   0.0 % | k* 0.40
+   dal vivo                            32.6 /  35.5 h |   0.0 % |   0.0 % | k* 0.35
+   fine (taratura e accettazione)      37.2 /  40.2 h |   0.0 % |   0.0 % | k* 0.31
+-- MIN, riferimento: sensore posseduto dall'ora 0 (caso del pianificatore), N = 3
+   uscita con dati finti               12.3 /  13.3 h |  56.0 % |  90.8 % | k* 0.93
+   mappa vera + controllo all'avvio    17.8 /  19.7 h |   0.1 % |   1.4 % | k* 0.63
+   continuita' sul simulatore          17.0 /  19.2 h |   0.9 % |   6.3 % | k* 0.65
+   catena vera (innesto)               26.5 /  28.7 h |   0.0 % |   0.0 % | k* 0.43
+   dal vivo                            31.2 /  33.6 h |   0.0 % |   0.0 % | k* 0.37
+   fine (taratura e accettazione)      35.8 /  38.2 h |   0.0 % |   0.0 % | k* 0.32
+-- MIN, riferimento: sensore posseduto dall'ora 0 (caso del pianificatore), N = 4
+   uscita con dati finti                9.1 /  10.0 h |  99.9 % | 100.0 % | k* 1.24
+   mappa vera + controllo all'avvio    14.0 /  15.8 h |  21.6 % |  50.6 % | k* 0.79
+   continuita' sul simulatore          17.0 /  19.2 h |   1.2 % |   7.1 % | k* 0.65
+   catena vera (innesto)               22.7 /  24.8 h |   0.0 % |   0.0 % | k* 0.50
+   dal vivo                            27.5 /  29.6 h |   0.0 % |   0.0 % | k* 0.42
+   fine (taratura e accettazione)      32.0 /  34.2 h |   0.0 % |   0.0 % | k* 0.36
+-- MIN, riferimento: sensore posseduto dall'ora 0 (caso del pianificatore), N = 5
+   uscita con dati finti                7.9 /   8.9 h | 100.0 % | 100.0 % | k* 1.40
+   mappa vera + controllo all'avvio    11.9 /  13.8 h |  59.6 % |  82.6 % | k* 0.90
+   continuita' sul simulatore          16.9 /  19.1 h |   1.3 % |   7.7 % | k* 0.65
+   catena vera (innesto)               20.8 /  22.9 h |   0.0 % |   0.0 % | k* 0.54
+   dal vivo                            25.6 /  27.8 h |   0.0 % |   0.0 % | k* 0.44
+   fine (taratura e accettazione)      30.1 /  32.4 h |   0.0 % |   0.0 % | k* 0.38
+-- MED, piano con seconda ipotesi, livelli e massimo avvicinamento; sensore dall'ora 5,5, N = 3
+   uscita con dati finti               11.4 /  13.0 h |  71.9 % |  90.2 % | k* 0.96
+   mappa vera + controllo all'avvio    21.4 /  23.7 h |   0.0 % |   0.0 % | k* 0.52
+   continuita' sul simulatore          17.2 /  19.5 h |   0.8 % |   6.4 % | k* 0.64
+   catena vera (innesto)               30.1 /  32.7 h |   0.0 % |   0.0 % | k* 0.38
+   dal vivo                            34.9 /  37.5 h |   0.0 % |   0.0 % | k* 0.33
+   fine (taratura e accettazione)      39.5 /  42.1 h |   0.0 % |   0.0 % | k* 0.29
+-- MED, piano con seconda ipotesi, livelli e massimo avvicinamento; sensore dall'ora 5,5, N = 4
+   uscita con dati finti                8.0 /   9.1 h | 100.0 % | 100.0 % | k* 1.37
+   mappa vera + controllo all'avvio    19.9 /  22.2 h |   0.0 % |   0.0 % | k* 0.56
+   continuita' sul simulatore          17.1 /  19.2 h |   1.0 % |   7.0 % | k* 0.65
+   catena vera (innesto)               28.6 /  31.2 h |   0.0 % |   0.0 % | k* 0.40
+   dal vivo                            33.6 /  36.3 h |   0.0 % |   0.0 % | k* 0.34
+   fine (taratura e accettazione)      38.1 /  40.8 h |   0.0 % |   0.0 % | k* 0.30
+-- MED, piano con seconda ipotesi, livelli e massimo avvicinamento; sensore dall'ora 5,5, N = 5
+   uscita con dati finti                7.8 /   8.8 h | 100.0 % | 100.0 % | k* 1.40
+   mappa vera + controllo all'avvio    19.4 /  21.9 h |   0.0 % |   0.3 % | k* 0.57
+   continuita' sul simulatore          16.9 /  19.1 h |   1.0 % |   7.3 % | k* 0.65
+   catena vera (innesto)               28.1 /  30.7 h |   0.0 % |   0.0 % | k* 0.40
+   dal vivo                            33.2 /  35.9 h |   0.0 % |   0.0 % | k* 0.34
+   fine (taratura e accettazione)      37.8 /  40.5 h |   0.0 % |   0.0 % | k* 0.30

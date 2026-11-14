@@ -1,0 +1,60 @@
+== P-K9: scarto tipo di regime del Kalman a velocita' quasi costante (q = 0,2; 15 Hz), dopo l'aggiornamento
+  rumore di posizione  1.5 cm, q 0.20: sigma_pos 1.20 cm, sigma_vel 0.144 m/s
+  rumore di posizione  1.5 cm, q 0.02: sigma_pos 0.99 cm, sigma_vel 0.064 m/s
+  rumore di posizione  3.4 cm, q 0.20: sigma_pos 2.38 cm, sigma_vel 0.184 m/s
+  rumore di posizione  3.4 cm, q 0.02: sigma_pos 1.91 cm, sigma_vel 0.080 m/s
+  rumore di posizione  6.0 cm, q 0.20: sigma_pos 3.78 cm, sigma_vel 0.216 m/s
+  rumore di posizione  6.0 cm, q 0.02: sigma_pos 2.99 cm, sigma_vel 0.093 m/s
+
+== P-K7: t_CPA = max(0, -r.v/|v|^2), d_CPA = |r + v t_CPA|; errore di velocita' 0,2 m/s per asse, posizione 3 cm; N = 100000
+   R(m) v(m/s) d_vera | t vero  sd(t)  R*sv/v^2 | mediana(d) 0,67*R*sv/v  p95(d)  2*R*sv/v | P(t=0) | P(d_stim<0,5 m)
+   2.0  0.5   0.0   |  4.00    2.54   1.60   |  0.54       0.54        1.55    1.60   | 0.0060 | 0.465
+   2.0  0.5   0.5   |  3.87    3.09   1.60   |  0.66       0.54        1.69    1.60   | 0.0078 | 0.385
+   2.0  0.5   1.0   |  3.46    3.10   1.60   |  1.02       0.54        1.90    1.60   | 0.0147 | 0.212
+   2.0  1.0   0.0   |  2.00    0.44   0.40   |  0.27       0.27        0.78    0.80   | 0.0000 | 0.788
+   2.0  1.0   0.5   |  1.94    0.44   0.40   |  0.51       0.27        1.11    0.80   | 0.0000 | 0.493
+   2.0  1.0   1.0   |  1.73    0.44   0.40   |  1.00       0.27        1.52    0.80   | 0.0000 | 0.090
+   2.0  1.4   0.0   |  1.43    0.21   0.20   |  0.19       0.19        0.56    0.57   | 0.0000 | 0.918
+   2.0  1.4   0.5   |  1.38    0.22   0.20   |  0.50       0.19        0.94    0.57   | 0.0000 | 0.502
+   2.0  1.4   1.0   |  1.24    0.21   0.20   |  1.00       0.19        1.39    0.57   | 0.0000 | 0.032
+   3.0  0.5   0.0   |  6.00    4.11   2.40   |  0.81       0.81        2.34    2.40   | 0.0063 | 0.322
+   3.0  0.5   0.5   |  5.92    4.03   2.40   |  0.88       0.81        2.44    2.40   | 0.0069 | 0.299
+   3.0  0.5   1.0   |  5.66    4.26   2.40   |  1.13       0.81        2.65    2.40   | 0.0094 | 0.222
+   3.0  1.0   0.0   |  3.00    0.66   0.60   |  0.40       0.40        1.17    1.20   | 0.0000 | 0.595
+   3.0  1.0   0.5   |  2.96    0.66   0.60   |  0.56       0.40        1.45    1.20   | 0.0000 | 0.452
+   3.0  1.0   1.0   |  2.83    0.67   0.60   |  1.00       0.40        1.87    1.20   | 0.0000 | 0.187
+   3.0  1.4   0.0   |  2.14    0.32   0.31   |  0.29       0.29        0.84    0.86   | 0.0000 | 0.755
+   3.0  1.4   0.5   |  2.11    0.32   0.31   |  0.51       0.29        1.18    0.86   | 0.0000 | 0.491
+   3.0  1.4   1.0   |  2.02    0.32   0.31   |  1.00       0.29        1.64    0.86   | 0.0000 | 0.116
+   oggetto FERMO a R, velocita' stimata = solo rumore:
+   R 2.0 m, sigma_v 0.2: P(t>0 e d_CPA<0,5 m) = 0.080; con orizzonte t<5 s = 0.011
+   R 2.0 m, sigma_v 0.1: P(t>0 e d_CPA<0,5 m) = 0.080; con orizzonte t<5 s = 0.000
+   R 3.0 m, sigma_v 0.2: P(t>0 e d_CPA<0,5 m) = 0.054; con orizzonte t<5 s = 0.001
+   R 3.0 m, sigma_v 0.1: P(t>0 e d_CPA<0,5 m) = 0.052; con orizzonte t<5 s = 0.000
+
+== P-K8: velocita' angolare del rilevamento; rumore d'angolo per campione 1 grado (e 0,29 gradi = cella/radice di 12); 15 Hz
+   formula: sd(pendenza) = sigma_ang * sqrt(12 / (n (n^2-1))) / dt ; soglia a due code 5 % = 1,96 sd; mancati 5 % -> serve pendenza >= 3,60 sd
+   attraversamento 0,3 m/s a 2,0 m                 8.59 gradi/s | sigma 1.00 gradi: 8 campioni = 0.47 s | sigma 0.29 gradi: 4 campioni = 0.20 s
+   attraversamento 0,3 m/s a 2,3 m                 7.47 gradi/s | sigma 1.00 gradi: 9 campioni = 0.53 s | sigma 0.29 gradi: 4 campioni = 0.20 s
+   attraversamento 0,3 m/s a 3,0 m                 5.73 gradi/s | sigma 1.00 gradi: 11 campioni = 0.67 s | sigma 0.29 gradi: 5 campioni = 0.27 s
+   attraversamento 0,3 m/s a 4,0 m                 4.30 gradi/s | sigma 1.00 gradi: 13 campioni = 0.80 s | sigma 0.29 gradi: 6 campioni = 0.33 s
+   attraversamento 0,1 m/s a 2,3 m                 2.49 gradi/s | sigma 1.00 gradi: 18 campioni = 1.13 s | sigma 0.29 gradi: 8 campioni = 0.47 s
+   avvicinamento 0,5 m/s da 3 m, passa a 0,5 m     1.59 gradi/s | sigma 1.00 gradi: 25 campioni = 1.60 s | sigma 0.29 gradi: 11 campioni = 0.67 s
+   avvicinamento 0,5 m/s da 2 m, passa a 0,5 m     3.58 gradi/s | sigma 1.00 gradi: 15 campioni = 0.93 s | sigma 0.29 gradi: 7 campioni = 0.40 s
+   avvicinamento 1,0 m/s da 3 m, passa a 0,5 m     3.18 gradi/s | sigma 1.00 gradi: 16 campioni = 1.00 s | sigma 0.29 gradi: 7 campioni = 0.40 s
+   avvicinamento 1,0 m/s da 3 m, passa a 1,0 m     6.37 gradi/s | sigma 1.00 gradi: 10 campioni = 0.60 s | sigma 0.29 gradi: 5 campioni = 0.27 s
+   Monte Carlo (20000 prove per ipotesi): retta ai minimi quadrati, soglia tarata al 5 % di falsi sotto 'rotta convergente' (stessa velocita', mira al sensore)
+   attraversamento 0,3 m/s a 2,3 m contro fermo-in-rilevamento [rumore gaussiano di 1 grado]: mancati <= 5 % con 9 campioni = 0.53 s (soglia 3.74 gradi/s, mancati 0.027)
+   attraversamento 0,3 m/s a 2,3 m contro fermo-in-rilevamento [angolo quantizzato a 1 grado + rumore laterale del centro]: mancati <= 5 % con 8 campioni = 0.47 s (soglia 3.75 gradi/s, mancati 0.024)
+   attraversamento 0,3 m/s a 4,0 m [rumore gaussiano di 1 grado]: mancati <= 5 % con 15 campioni = 0.93 s (soglia 1.79 gradi/s, mancati 0.002)
+   attraversamento 0,3 m/s a 4,0 m [angolo quantizzato a 1 grado + rumore laterale del centro]: mancati <= 5 % con 12 campioni = 0.73 s (soglia 2.26 gradi/s, mancati 0.037)
+   0,5 m/s da 3 m: passa a 0,5 m contro mira al sensore [rumore gaussiano di 1 grado]: mancati <= 5 % con 21 campioni = 1.33 s (soglia 1.08 gradi/s, mancati 0.039)
+   0,5 m/s da 3 m: passa a 0,5 m contro mira al sensore [angolo quantizzato a 1 grado + rumore laterale del centro]: mancati <= 5 % con 18 campioni = 1.13 s (soglia 1.07 gradi/s, mancati 0.049)
+   1,0 m/s da 3 m: passa a 0,5 m contro mira al sensore [rumore gaussiano di 1 grado]: mancati <= 5 % con 15 campioni = 0.93 s (soglia 1.74 gradi/s, mancati 0.001)
+   1,0 m/s da 3 m: passa a 0,5 m contro mira al sensore [angolo quantizzato a 1 grado + rumore laterale del centro]: mancati <= 5 % con 12 campioni = 0.73 s (soglia 1.99 gradi/s, mancati 0.014)
+
+   'subito', dalla velocita' del filtro: sd(vel. angolare) = sigma_v / r; attraversamento minimo separabile (3,60 sd) = 3,60 * sigma_v
+   sigma_v 0.200 m/s: a 2,3 m sd =  5.0 gradi/s; velocita' trasversale minima separabile = 0.72 m/s (a qualunque distanza)
+   sigma_v 0.144 m/s: a 2,3 m sd =  3.6 gradi/s; velocita' trasversale minima separabile = 0.52 m/s (a qualunque distanza)
+   sigma_v 0.184 m/s: a 2,3 m sd =  4.6 gradi/s; velocita' trasversale minima separabile = 0.66 m/s (a qualunque distanza)
+   sigma_v 0.216 m/s: a 2,3 m sd =  5.4 gradi/s; velocita' trasversale minima separabile = 0.78 m/s (a qualunque distanza)

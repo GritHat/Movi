@@ -1,0 +1,819 @@
+=== scatola di 15 cm (15x15x15), sensore a 1,2 m inclinato di 15 gradi: pixel sulla scatola per distanza del bordo vicino ===
+  0.80 m: 0 pixel
+  0.90 m: 0 pixel
+  0.95 m: 114 pixel
+  1.00 m: 600 pixel
+  1.05 m: 996 pixel
+  1.10 m: 1376 pixel
+  1.15 m: 1692 pixel
+  1.20 m: 1956 pixel
+  1.30 m: 1982 pixel
+  1.50 m: 1558 pixel
+  2.00 m: 880 pixel
+  3.00 m: 416 pixel
+
+=== P8 controllo: scatola 15 cm a 0,8 m, sensore a 0,3 m orizzontale  (sensore 0.30 m, inclinazione 0 gradi, pareti 1, rumore no) ===
+pixel: suolo 129102, pareti 172160, senza ritorno 0, scatola0 5938
+volume vero nel dominio (litri): solido 5, vuoto visto 9108, vuoto mai visto 4416
+mappa          | litri: libero-su-solido  libero-su-mai-visto  nascosto-a-torto  occupato-a-torto
+N-cuneo        |               0.0               3759.9            1263.3              10.6
+N-cella        |               0.0               3920.7             339.6              23.6
+F3-lett        |               5.2               2266.4              40.7               0.0
+F3-lett+suolo  |               5.2               2266.4              40.7               0.0
+F3-corr        |               1.2                 10.1            2944.0              15.6
+V10            |               1.8                281.7              31.5               2.7
+V10p           |               0.0                  4.5             268.4               1.7
+F3d            |               1.2                 10.1            2944.0              15.6
+profilo BMA (quota 0.00-2.00 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   5.797      0.000          5.797 |      0.000 |    22      0     11     11
+  N-cella        |   6.333      0.000          6.333 |      0.000 |    22      0     22      0
+  F3-lett        |   1.851      0.000          1.851 |      0.000 |    22      0      0     22
+  F3-lett+suolo  |   1.851      0.000          1.851 |      0.000 |    22      0      0     22
+  F3-corr        |   0.067      0.000          0.067 |      0.000 |    22      0     22      0
+  V10            |   0.214      0.000          0.214 |      0.000 |    22      0     22      0
+  V10p           |   0.000      0.000          0.000 |      0.000 |    22      0     22      0
+  F3d            |   0.067      0.000          0.067 |      0.000 |    22      0     22      0
+profilo BM  (quota 0.00-1.60 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   5.797      0.000          4.168 |      0.356 |    22      0     11     11
+  N-cella        |   6.333      0.000          4.348 |      0.000 |    22      0     22      0
+  F3-lett        |   6.600      0.035          4.580 |      0.000 |    22     22      0      0
+  F3-lett+suolo  |   6.367      0.035          4.348 |      0.000 |    22     22      0      0
+  F3-corr        |   2.229      0.000          0.243 |      0.000 |    22      0     22      0
+  V10            |   2.523      0.000          0.538 |      0.000 |    22      0     22      0
+  V10p           |   2.003      0.000          0.018 |      0.000 |    22      0     22      0
+  F3d            |   2.229      0.000          0.243 |      0.000 |    22      0     22      0
+profilo M   (quota 0.60-1.60 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   5.797      0.000          4.168 |      0.356 |    22      0     11     11
+  N-cella        |   6.333      0.000          4.348 |      0.000 |    22      0     22      0
+  F3-lett        |   6.600      0.000          4.614 |      0.000 |    22     22      0      0
+  F3-lett+suolo  |   6.600      0.000          4.614 |      0.000 |    22     22      0      0
+  F3-corr        |   2.229      0.000          0.243 |      0.000 |    22      0      0     22
+  V10            |   2.523      0.000          0.538 |      0.000 |    22      0      0     22
+  V10p           |   2.003      0.000          0.018 |      0.000 |    22      0      0     22
+  F3d            |   2.229      0.000          0.243 |      0.000 |    22      0      0     22
+profilo F18 (quota 0.00-1.80 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   5.797      0.000          5.248 |      0.215 |    22      0     11     11
+  N-cella        |   6.333      0.000          5.569 |      0.000 |    22      0     22      0
+  F3-lett        |   1.851      0.000          1.087 |      0.000 |    22      0      0     22
+  F3-lett+suolo  |   1.851      0.000          1.087 |      0.000 |    22      0      0     22
+  F3-corr        |   0.067      0.000          0.000 |      0.697 |    22      0     22      0
+  V10            |   1.014      0.000          0.251 |      0.000 |    22      0     22      0
+  V10p           |   0.782      0.000          0.019 |      0.000 |    22      0     22      0
+  F3d            |   0.067      0.000          0.000 |      0.697 |    22      0     22      0
+suolo visto e colonna senza solidi, ma cella dichiarata in ombra/non osservata nel profilo BM (m2): N-cuneo 0.627; N-cella 0.091; F3-lett 0.024; F3-lett+suolo 0.091; F3-corr 4.196; V10 3.892; V10p 4.421; F3d 4.196;
+cuneo d'ombra di N-cuneo: 1572 litri dichiarati in ombra, di cui vuoto visto 1180 (75 %); dentro il cuneo, vuoto visto dichiarato nascosto: N-cuneo 1180; N-cella 257; F3-lett 24; F3-lett+suolo 24; F3-corr 370; V10 14; V10p 49; F3d 370;
+F3-corr, profilo BM: celle nascoste con colonna vista vuota 0, di cui in ombra solo in parte (raggi passanti e raggi bloccati insieme) 0
+F3d contro F3-corr, celle con classe diversa su 2349: BMA 0 (F3d libero 0, F3-corr libero 0); BM 0 (F3d libero 0, F3-corr libero 0); M 0 (F3d libero 0, F3-corr libero 0); F18 0 (F3d libero 0, F3-corr libero 0);
+
+=== C: scatola 15 cm a 0,8 m  (sensore 1.20 m, inclinazione 15 gradi, pareti 1, rumore no) ===
+pixel: suolo 154240, pareti 152960, senza ritorno 0, scatola0 0
+volume vero nel dominio (litri): solido 5, vuoto visto 10810, vuoto mai visto 2714
+mappa          | litri: libero-su-solido  libero-su-mai-visto  nascosto-a-torto  occupato-a-torto
+N-cuneo        |               0.0               1525.1            1367.9               0.0
+N-cella        |               0.0               1525.1            1367.9               0.0
+F3-lett        |               0.0               1471.1              27.4               0.0
+F3-lett+suolo  |               0.0               1471.1              27.4               0.0
+F3-corr        |               0.0                  7.3            2531.2               0.0
+V10            |               0.0                305.5              27.1               0.0
+V10p           |               0.0                  2.4             297.8               0.0
+F3d            |               0.0                  7.3            2531.2               0.0
+profilo BMA (quota 0.00-2.00 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   5.484      0.000          5.484 |      0.000 |    22      0      0     22
+  N-cella        |   5.484      0.000          5.484 |      0.000 |    22      0      0     22
+  F3-lett        |   4.341      0.000          4.341 |      0.000 |    22      0      0     22
+  F3-lett+suolo  |   4.341      0.000          4.341 |      0.000 |    22      0      0     22
+  F3-corr        |   0.000      0.000          0.000 |      0.000 |    22      0      0     22
+  V10            |   0.214      0.000          0.214 |      0.000 |    22      0      0     22
+  V10p           |   0.000      0.000          0.000 |      0.000 |    22      0      0     22
+  F3d            |   0.000      0.000          0.000 |      0.000 |    22      0      0     22
+profilo BM  (quota 0.00-1.60 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   5.484      0.000          0.869 |      0.000 |    22      0      0     22
+  N-cella        |   5.484      0.000          0.869 |      0.000 |    22      0      0     22
+  F3-lett        |   6.513      0.035          1.864 |      0.000 |    22     22      0      0
+  F3-lett+suolo  |   5.479      0.000          0.865 |      0.000 |    22      0      0     22
+  F3-corr        |   4.864      0.000          0.249 |      0.000 |    22      0      0     22
+  V10            |   5.221      0.000          0.613 |      0.007 |    22      0      0     22
+  V10p           |   4.615      0.000          0.000 |      0.000 |    22      0      0     22
+  F3d            |   4.864      0.000          0.249 |      0.000 |    22      0      0     22
+profilo M   (quota 0.60-1.60 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   5.484      0.000          0.869 |      0.000 |    22      0      0     22
+  N-cella        |   5.484      0.000          0.869 |      0.000 |    22      0      0     22
+  F3-lett        |   6.765      0.000          2.150 |      0.000 |    22     22      0      0
+  F3-lett+suolo  |   6.765      0.000          2.150 |      0.000 |    22     22      0      0
+  F3-corr        |   4.864      0.000          0.249 |      0.000 |    22      0      0     22
+  V10            |   5.221      0.000          0.613 |      0.007 |    22      0      0     22
+  V10p           |   4.615      0.000          0.000 |      0.000 |    22      0      0     22
+  F3d            |   4.864      0.000          0.249 |      0.000 |    22      0      0     22
+profilo F18 (quota 0.00-1.80 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   5.484      0.000          3.517 |      0.000 |    22      0      0     22
+  N-cella        |   5.484      0.000          3.517 |      0.000 |    22      0      0     22
+  F3-lett        |   4.341      0.000          2.374 |      0.000 |    22      0      0     22
+  F3-lett+suolo  |   4.341      0.000          2.374 |      0.000 |    22      0      0     22
+  F3-corr        |   0.000      0.000          0.000 |      1.967 |    22      0      0     22
+  V10            |   2.829      0.000          0.862 |      0.000 |    22      0      0     22
+  V10p           |   1.967      0.000          0.000 |      0.000 |    22      0      0     22
+  F3d            |   0.000      0.000          0.000 |      1.967 |    22      0      0     22
+suolo visto e colonna senza solidi, ma cella dichiarata in ombra/non osservata nel profilo BM (m2): N-cuneo 0.033; N-cella 0.033; F3-lett 0.000; F3-lett+suolo 0.037; F3-corr 0.653; V10 0.295; V10p 0.902; F3d 0.653;
+cuneo d'ombra di N-cuneo: 0 litri dichiarati in ombra, di cui vuoto visto 0 (0 %); dentro il cuneo, vuoto visto dichiarato nascosto: N-cuneo 0; N-cella 0; F3-lett 0; F3-lett+suolo 0; F3-corr 0; V10 0; V10p 0; F3d 0;
+F3-corr, profilo BM: celle nascoste con colonna vista vuota 0, di cui in ombra solo in parte (raggi passanti e raggi bloccati insieme) 0
+F3d contro F3-corr, celle con classe diversa su 2349: BMA 0 (F3d libero 0, F3-corr libero 0); BM 0 (F3d libero 0, F3-corr libero 0); M 0 (F3d libero 0, F3-corr libero 0); F18 0 (F3d libero 0, F3-corr libero 0);
+
+=== C2: scatola 15 cm a 1,2 m  (sensore 1.20 m, inclinazione 15 gradi, pareti 1, rumore no) ===
+pixel: suolo 152284, pareti 152960, senza ritorno 0, scatola0 1956
+volume vero nel dominio (litri): solido 5, vuoto visto 10805, vuoto mai visto 2720
+mappa          | litri: libero-su-solido  libero-su-mai-visto  nascosto-a-torto  occupato-a-torto
+N-cuneo        |               0.0               1388.3            2385.8              27.7
+N-cella        |               0.0               1503.0            1387.5              50.7
+F3-lett        |               4.8               1471.1              28.9               0.0
+F3-lett+suolo  |               4.8               1471.1              28.9               0.0
+F3-corr        |               1.1                  7.3            2543.6              16.6
+V10            |               1.6                305.8              28.9               2.9
+V10p           |               0.0                  2.4             300.6               2.5
+F3d            |               1.1                  7.3            2543.6              16.6
+profilo BMA (quota 0.00-2.00 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   4.890      0.000          4.890 |      0.000 |    14      0      7      7
+  N-cella        |   5.435      0.000          5.435 |      0.000 |    14      0     14      0
+  F3-lett        |   4.341      0.000          4.341 |      0.000 |    14      0      0     14
+  F3-lett+suolo  |   4.341      0.000          4.341 |      0.000 |    14      0      0     14
+  F3-corr        |   0.000      0.000          0.000 |      0.000 |    14      0     14      0
+  V10            |   0.214      0.000          0.214 |      0.000 |    14      0     14      0
+  V10p           |   0.000      0.000          0.000 |      0.000 |    14      0     14      0
+  F3d            |   0.000      0.000          0.000 |      0.000 |    14      0     14      0
+profilo BM  (quota 0.00-1.60 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   4.890      0.000          0.805 |      0.530 |    14      0      7      7
+  N-cella        |   5.435      0.000          0.820 |      0.000 |    14      0     14      0
+  F3-lett        |   6.513      0.032          1.866 |      0.000 |    14     14      0      0
+  F3-lett+suolo  |   5.467      0.032          0.820 |      0.000 |    14     14      0      0
+  F3-corr        |   4.846      0.000          0.231 |      0.000 |    14      0     14      0
+  V10            |   5.153      0.000          0.545 |      0.007 |    14      0     14      0
+  V10p           |   4.615      0.000          0.000 |      0.000 |    14      0     14      0
+  F3d            |   4.846      0.000          0.231 |      0.000 |    14      0     14      0
+profilo M   (quota 0.60-1.60 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   4.890      0.000          0.805 |      0.530 |    14      0      7      7
+  N-cella        |   5.435      0.000          0.820 |      0.000 |    14      0     14      0
+  F3-lett        |   6.765      0.000          2.150 |      0.000 |    14     14      0      0
+  F3-lett+suolo  |   6.765      0.000          2.150 |      0.000 |    14     14      0      0
+  F3-corr        |   4.864      0.000          0.249 |      0.000 |    14      0      0     14
+  V10            |   5.221      0.000          0.613 |      0.007 |    14     14      0      0
+  V10p           |   4.615      0.000          0.000 |      0.000 |    14      0      0     14
+  F3d            |   4.864      0.000          0.249 |      0.000 |    14      0      0     14
+profilo F18 (quota 0.00-1.80 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   4.890      0.000          3.215 |      0.291 |    14      0      7      7
+  N-cella        |   5.435      0.000          3.468 |      0.000 |    14      0     14      0
+  F3-lett        |   4.341      0.000          2.374 |      0.000 |    14      0      0     14
+  F3-lett+suolo  |   4.341      0.000          2.374 |      0.000 |    14      0      0     14
+  F3-corr        |   0.000      0.000          0.000 |      1.967 |    14      0     14      0
+  V10            |   2.829      0.000          0.862 |      0.000 |    14      0     14      0
+  V10p           |   1.967      0.000          0.000 |      0.000 |    14      0     14      0
+  F3d            |   0.000      0.000          0.000 |      1.967 |    14      0     14      0
+suolo visto e colonna senza solidi, ma cella dichiarata in ombra/non osservata nel profilo BM (m2): N-cuneo 0.578; N-cella 0.033; F3-lett 0.000; F3-lett+suolo 0.037; F3-corr 0.622; V10 0.306; V10p 0.853; F3d 0.622;
+cuneo d'ombra di N-cuneo: 1148 litri dichiarati in ombra, di cui vuoto visto 1018 (89 %); dentro il cuneo, vuoto visto dichiarato nascosto: N-cuneo 1018; N-cella 20; F3-lett 2; F3-lett+suolo 2; F3-corr 136; V10 2; V10p 24; F3d 136;
+F3-corr, profilo BM: celle nascoste con colonna vista vuota 0, di cui in ombra solo in parte (raggi passanti e raggi bloccati insieme) 0
+F3d contro F3-corr, celle con classe diversa su 2349: BMA 0 (F3d libero 0, F3-corr libero 0); BM 0 (F3d libero 0, F3-corr libero 0); M 0 (F3d libero 0, F3-corr libero 0); F18 0 (F3d libero 0, F3-corr libero 0);
+
+=== B: sbarra a quota 1,8-1,9 m, a 2,0 m  (sensore 1.20 m, inclinazione 15 gradi, pareti 1, rumore no) ===
+pixel: suolo 154240, pareti 152960, senza ritorno 0, scatola0 0
+volume vero nel dominio (litri): solido 19, vuoto visto 10810, vuoto mai visto 2700
+mappa          | litri: libero-su-solido  libero-su-mai-visto  nascosto-a-torto  occupato-a-torto
+N-cuneo        |              19.3               1505.8            1367.9               0.0
+N-cella        |              19.3               1505.8            1367.9               0.0
+F3-lett        |              19.3               1451.8              27.4               0.0
+F3-lett+suolo  |              19.3               1451.8              27.4               0.0
+F3-corr        |               0.0                  7.3            2531.2               0.0
+V10            |               0.0                305.5              27.1               0.0
+V10p           |               0.0                  2.4             297.8               0.0
+F3d            |               0.0                  7.3            2531.2               0.0
+profilo BMA (quota 0.00-2.00 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   5.484      0.193          5.291 |      0.000 |    53     53      0      0
+  N-cella        |   5.484      0.193          5.291 |      0.000 |    53     53      0      0
+  F3-lett        |   4.341      0.193          4.148 |      0.000 |    53     53      0      0
+  F3-lett+suolo  |   4.341      0.193          4.148 |      0.000 |    53     53      0      0
+  F3-corr        |   0.000      0.000          0.000 |      0.000 |    53      0      0     53
+  V10            |   0.214      0.000          0.214 |      0.000 |    53      0      0     53
+  V10p           |   0.000      0.000          0.000 |      0.000 |    53      0      0     53
+  F3d            |   0.000      0.000          0.000 |      0.000 |    53      0      0     53
+profilo BM  (quota 0.00-1.60 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   5.484      0.000          0.869 |      0.000 |    53     53      0      0
+  N-cella        |   5.484      0.000          0.869 |      0.000 |    53     53      0      0
+  F3-lett        |   6.513      0.000          1.898 |      0.000 |    53     53      0      0
+  F3-lett+suolo  |   5.479      0.000          0.865 |      0.000 |    53     53      0      0
+  F3-corr        |   4.864      0.000          0.249 |      0.000 |    53     53      0      0
+  V10            |   5.221      0.000          0.613 |      0.007 |    53     53      0      0
+  V10p           |   4.615      0.000          0.000 |      0.000 |    53     53      0      0
+  F3d            |   4.864      0.000          0.249 |      0.000 |    53     53      0      0
+profilo M   (quota 0.60-1.60 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   5.484      0.000          0.869 |      0.000 |    53     53      0      0
+  N-cella        |   5.484      0.000          0.869 |      0.000 |    53     53      0      0
+  F3-lett        |   6.765      0.000          2.150 |      0.000 |    53     53      0      0
+  F3-lett+suolo  |   6.765      0.000          2.150 |      0.000 |    53     53      0      0
+  F3-corr        |   4.864      0.000          0.249 |      0.000 |    53     53      0      0
+  V10            |   5.221      0.000          0.613 |      0.007 |    53     53      0      0
+  V10p           |   4.615      0.000          0.000 |      0.000 |    53     53      0      0
+  F3d            |   4.864      0.000          0.249 |      0.000 |    53     53      0      0
+profilo F18 (quota 0.00-1.80 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   5.484      0.000          3.517 |      0.000 |    53     53      0      0
+  N-cella        |   5.484      0.000          3.517 |      0.000 |    53     53      0      0
+  F3-lett        |   4.341      0.000          2.374 |      0.000 |    53     53      0      0
+  F3-lett+suolo  |   4.341      0.000          2.374 |      0.000 |    53     53      0      0
+  F3-corr        |   0.000      0.000          0.000 |      1.967 |    53      0      0     53
+  V10            |   2.829      0.000          0.862 |      0.000 |    53     35      0     18
+  V10p           |   1.967      0.000          0.000 |      0.000 |    53      0      0     53
+  F3d            |   0.000      0.000          0.000 |      1.967 |    53      0      0     53
+suolo visto e colonna senza solidi, ma cella dichiarata in ombra/non osservata nel profilo BM (m2): N-cuneo 0.033; N-cella 0.033; F3-lett 0.000; F3-lett+suolo 0.037; F3-corr 0.653; V10 0.295; V10p 0.902; F3d 0.653;
+cuneo d'ombra di N-cuneo: 0 litri dichiarati in ombra, di cui vuoto visto 0 (0 %); dentro il cuneo, vuoto visto dichiarato nascosto: N-cuneo 0; N-cella 0; F3-lett 0; F3-lett+suolo 0; F3-corr 0; V10 0; V10p 0; F3d 0;
+F3-corr, profilo BM: celle nascoste con colonna vista vuota 0, di cui in ombra solo in parte (raggi passanti e raggi bloccati insieme) 0
+F3d contro F3-corr, celle con classe diversa su 2349: BMA 0 (F3d libero 0, F3-corr libero 0); BM 0 (F3d libero 0, F3-corr libero 0); M 0 (F3d libero 0, F3-corr libero 0); F18 0 (F3d libero 0, F3-corr libero 0);
+
+=== B2: sbarra a quota 1,8-1,9 m, a 2,6 m  (sensore 1.20 m, inclinazione 15 gradi, pareti 1, rumore no) ===
+pixel: suolo 154240, pareti 150566, senza ritorno 0, scatola0 2394
+volume vero nel dominio (litri): solido 19, vuoto visto 10770, vuoto mai visto 2740
+mappa          | litri: libero-su-solido  libero-su-mai-visto  nascosto-a-torto  occupato-a-torto
+N-cuneo        |               0.0               1479.5            2113.1             224.8
+N-cella        |               0.0               1526.7            1367.9             345.7
+F3-lett        |               0.0               1472.7              27.4              38.4
+F3-lett+suolo  |               0.0               1472.7              27.4              38.4
+F3-corr        |               0.0                  7.3            2452.8              38.4
+V10            |               1.9                287.3              48.1               0.0
+V10p           |               0.0                  2.4             298.1               0.0
+F3d            |               0.0                  7.3            2452.8              38.4
+profilo BMA (quota 0.00-2.00 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   4.956      0.000          4.956 |      0.000 |    41      0     27     14
+  N-cella        |   5.292      0.000          5.292 |      0.000 |    41      0     41      0
+  F3-lett        |   4.149      0.000          4.149 |      0.000 |    41      0     41      0
+  F3-lett+suolo  |   4.149      0.000          4.149 |      0.000 |    41      0     41      0
+  F3-corr        |   0.000      0.000          0.000 |      0.000 |    41      0     41      0
+  V10            |   0.010      0.000          0.010 |      0.000 |    41      0     41      0
+  V10p           |   0.000      0.000          0.000 |      0.000 |    41      0     41      0
+  F3d            |   0.000      0.000          0.000 |      0.000 |    41      0     41      0
+profilo BM  (quota 0.00-1.60 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   4.956      0.000          0.869 |      0.403 |    41      0     27     14
+  N-cella        |   5.292      0.000          0.869 |      0.000 |    41      0     41      0
+  F3-lett        |   6.513      0.000          1.898 |      0.000 |    41     41      0      0
+  F3-lett+suolo  |   5.479      0.000          0.865 |      0.000 |    41     41      0      0
+  F3-corr        |   4.864      0.000          0.249 |      0.000 |    41     41      0      0
+  V10            |   5.221      0.000          0.613 |      0.007 |    41     41      0      0
+  V10p           |   4.615      0.000          0.000 |      0.000 |    41     41      0      0
+  F3d            |   4.864      0.000          0.249 |      0.000 |    41     41      0      0
+profilo M   (quota 0.60-1.60 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   4.956      0.000          0.869 |      0.403 |    41      0     27     14
+  N-cella        |   5.292      0.000          0.869 |      0.000 |    41      0     41      0
+  F3-lett        |   6.765      0.000          2.150 |      0.000 |    41     41      0      0
+  F3-lett+suolo  |   6.765      0.000          2.150 |      0.000 |    41     41      0      0
+  F3-corr        |   4.864      0.000          0.249 |      0.000 |    41     41      0      0
+  V10            |   5.221      0.000          0.613 |      0.007 |    41     41      0      0
+  V10p           |   4.615      0.000          0.000 |      0.000 |    41     41      0      0
+  F3d            |   4.864      0.000          0.249 |      0.000 |    41     41      0      0
+profilo F18 (quota 0.00-1.80 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   4.956      0.000          3.517 |      0.403 |    41      0     27     14
+  N-cella        |   5.292      0.000          3.517 |      0.000 |    41      0     41      0
+  F3-lett        |   4.149      0.000          2.374 |      0.000 |    41      0     41      0
+  F3-lett+suolo  |   4.149      0.000          2.374 |      0.000 |    41      0     41      0
+  F3-corr        |   0.000      0.000          0.000 |      1.775 |    41      0     41      0
+  V10            |   2.829      0.000          0.862 |      0.000 |    41     41      0      0
+  V10p           |   1.967      0.000          0.000 |      0.000 |    41     41      0      0
+  F3d            |   0.000      0.000          0.000 |      1.775 |    41      0     41      0
+suolo visto e colonna senza solidi, ma cella dichiarata in ombra/non osservata nel profilo BM (m2): N-cuneo 0.369; N-cella 0.033; F3-lett 0.000; F3-lett+suolo 0.037; F3-corr 0.653; V10 0.295; V10p 0.902; F3d 0.653;
+cuneo d'ombra di N-cuneo: 806 litri dichiarati in ombra, di cui vuoto visto 745 (92 %); dentro il cuneo, vuoto visto dichiarato nascosto: N-cuneo 745; N-cella 0; F3-lett 0; F3-lett+suolo 0; F3-corr 87; V10 20; V10p 20; F3d 87;
+F3-corr, profilo BM: celle nascoste con colonna vista vuota 0, di cui in ombra solo in parte (raggi passanti e raggi bloccati insieme) 0
+F3d contro F3-corr, celle con classe diversa su 2349: BMA 0 (F3d libero 0, F3-corr libero 0); BM 0 (F3d libero 0, F3-corr libero 0); M 0 (F3d libero 0, F3-corr libero 0); F18 0 (F3d libero 0, F3-corr libero 0);
+
+=== A1: cassa 1 m, persona accovacciata (0,9 m) dietro  (sensore 1.20 m, inclinazione 15 gradi, pareti 1, rumore no) ===
+pixel: suolo 123000, pareti 140602, senza ritorno 0, scatola0 43598, scatola1 0
+volume vero nel dominio (litri): solido 732, vuoto visto 9184, vuoto mai visto 3613
+mappa          | litri: libero-su-solido  libero-su-mai-visto  nascosto-a-torto  occupato-a-torto
+N-cuneo        |               0.0               1149.9            2963.3              55.7
+N-cella        |               0.0               1173.3            2455.4             362.1
+F3-lett        |              79.9               1792.2              27.4             325.3
+F3-lett+suolo  |              79.9               1792.2              27.4             325.3
+F3-corr        |               5.9                  7.3            3492.6             325.7
+V10            |               0.6                316.2             260.9              19.6
+V10p           |               0.0                  2.4             469.8               5.4
+F3d            |               5.9                  7.3            3492.6             325.7
+profilo BMA (quota 0.00-2.00 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   3.658      0.000          3.658 |      0.000 |    48      0      0     48
+  N-cella        |   3.770      0.000          3.770 |      0.000 |    48      0      0     48
+  F3-lett        |   2.711      0.000          2.711 |      0.000 |    48      0      0     48
+  F3-lett+suolo  |   2.711      0.000          2.711 |      0.000 |    48      0      0     48
+  F3-corr        |   0.000      0.000          0.000 |      0.000 |    48      0      0     48
+  V10            |   0.000      0.000          0.000 |      0.000 |    48      0      0     48
+  V10p           |   0.000      0.000          0.000 |      0.000 |    48      0      0     48
+  F3d            |   0.000      0.000          0.000 |      0.000 |    48      0      0     48
+profilo BM  (quota 0.00-1.60 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   3.658      0.000          0.869 |      0.112 |    48      0      0     48
+  N-cella        |   3.770      0.000          0.869 |      0.000 |    48      0      0     48
+  F3-lett        |   4.799      0.000          1.898 |      0.000 |    48      0      0     48
+  F3-lett+suolo  |   3.766      0.000          0.865 |      0.000 |    48      0      0     48
+  F3-corr        |   3.038      0.000          0.249 |      0.112 |    48      0      0     48
+  V10            |   3.205      0.000          0.613 |      0.239 |    48      0      0     48
+  V10p           |   2.789      0.000          0.000 |      0.112 |    48      0      0     48
+  F3d            |   3.038      0.000          0.249 |      0.112 |    48      0      0     48
+profilo M   (quota 0.60-1.60 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   3.658      0.000          0.869 |      0.112 |    48      0      0     48
+  N-cella        |   3.770      0.000          0.869 |      0.000 |    48      0      0     48
+  F3-lett        |   6.230      0.225          3.105 |      0.000 |    48     48      0      0
+  F3-lett+suolo  |   6.230      0.225          3.105 |      0.000 |    48     48      0      0
+  F3-corr        |   3.038      0.000          0.249 |      0.112 |    48      0      0     48
+  V10            |   3.205      0.000          0.613 |      0.239 |    48      0      0     48
+  V10p           |   2.789      0.000          0.000 |      0.112 |    48      0      0     48
+  F3d            |   3.038      0.000          0.249 |      0.112 |    48      0      0     48
+profilo F18 (quota 0.00-1.80 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   3.658      0.000          2.695 |      0.065 |    48      0      0     48
+  N-cella        |   3.770      0.000          2.742 |      0.000 |    48      0      0     48
+  F3-lett        |   2.711      0.000          1.684 |      0.000 |    48      0      0     48
+  F3-lett+suolo  |   2.711      0.000          1.684 |      0.000 |    48      0      0     48
+  F3-corr        |   0.000      0.000          0.000 |      1.028 |    48      0      0     48
+  V10            |   1.437      0.000          0.539 |      0.130 |    48      0      0     48
+  V10p           |   0.963      0.000          0.000 |      0.065 |    48      0      0     48
+  F3d            |   0.000      0.000          0.000 |      1.028 |    48      0      0     48
+suolo visto e colonna senza solidi, ma cella dichiarata in ombra/non osservata nel profilo BM (m2): N-cuneo 0.145; N-cella 0.033; F3-lett 0.000; F3-lett+suolo 0.037; F3-corr 0.765; V10 0.528; V10p 1.014; F3d 0.765;
+cuneo d'ombra di N-cuneo: 3484 litri dichiarati in ombra, di cui vuoto visto 1595 (46 %); dentro il cuneo, vuoto visto dichiarato nascosto: N-cuneo 1595; N-cella 1088; F3-lett 0; F3-lett+suolo 0; F3-corr 1317; V10 163; V10p 236; F3d 1317;
+F3-corr, profilo BM: celle nascoste con colonna vista vuota 28, di cui in ombra solo in parte (raggi passanti e raggi bloccati insieme) 28
+F3d contro F3-corr, celle con classe diversa su 2349: BMA 0 (F3d libero 0, F3-corr libero 0); BM 0 (F3d libero 0, F3-corr libero 0); M 0 (F3d libero 0, F3-corr libero 0); F18 0 (F3d libero 0, F3-corr libero 0);
+
+=== A2: cassa 1 m, persona in piedi (1,7 m) dietro  (sensore 1.20 m, inclinazione 15 gradi, pareti 1, rumore no) ===
+pixel: suolo 123000, pareti 130248, senza ritorno 0, scatola0 43598, scatola1 10354
+volume vero nel dominio (litri): solido 906, vuoto visto 8920, vuoto mai visto 3703
+mappa          | litri: libero-su-solido  libero-su-mai-visto  nascosto-a-torto  occupato-a-torto
+N-cuneo        |               0.0               1149.9            2699.2              55.7
+N-cella        |               0.0               1173.3            2184.4             369.1
+F3-lett        |              39.8               1761.5              27.4             332.2
+F3-lett+suolo  |              39.8               1761.5              27.4             332.2
+F3-corr        |               5.9                  7.3            3221.6             332.6
+V10            |               0.6                316.2             307.3              26.0
+V10p           |               0.0                  2.4             501.0               5.4
+F3d            |               5.9                  7.3            3221.6             332.6
+profilo BMA (quota 0.00-2.00 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   3.658      0.000          3.658 |      0.000 |    48      0      0     48
+  N-cella        |   3.770      0.000          3.770 |      0.000 |    48      0     13     35
+  F3-lett        |   2.711      0.000          2.711 |      0.000 |    48      0     13     35
+  F3-lett+suolo  |   2.711      0.000          2.711 |      0.000 |    48      0     13     35
+  F3-corr        |   0.000      0.000          0.000 |      0.000 |    48      0     13     35
+  V10            |   0.000      0.000          0.000 |      0.000 |    48      0     13     35
+  V10p           |   0.000      0.000          0.000 |      0.000 |    48      0     13     35
+  F3d            |   0.000      0.000          0.000 |      0.000 |    48      0     13     35
+profilo BM  (quota 0.00-1.60 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   3.658      0.000          0.869 |      0.112 |    48      0      0     48
+  N-cella        |   3.770      0.000          0.869 |      0.000 |    48      0     13     35
+  F3-lett        |   4.799      0.000          1.898 |      0.000 |    48      0     13     35
+  F3-lett+suolo  |   3.766      0.000          0.865 |      0.000 |    48      0     13     35
+  F3-corr        |   3.038      0.000          0.249 |      0.112 |    48      0     13     35
+  V10            |   3.205      0.000          0.613 |      0.239 |    48      0     13     35
+  V10p           |   2.789      0.000          0.000 |      0.112 |    48      0     13     35
+  F3d            |   3.038      0.000          0.249 |      0.112 |    48      0     13     35
+profilo M   (quota 0.60-1.60 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   3.658      0.000          0.869 |      0.112 |    48      0      0     48
+  N-cella        |   3.770      0.000          0.869 |      0.000 |    48      0     13     35
+  F3-lett        |   5.911      0.016          2.993 |      0.000 |    48      2     13     33
+  F3-lett+suolo  |   5.911      0.016          2.993 |      0.000 |    48      2     13     33
+  F3-corr        |   3.038      0.000          0.249 |      0.112 |    48      0     13     35
+  V10            |   3.205      0.000          0.613 |      0.239 |    48      0     13     35
+  V10p           |   2.789      0.000          0.000 |      0.112 |    48      0     13     35
+  F3d            |   3.038      0.000          0.249 |      0.112 |    48      0     13     35
+profilo F18 (quota 0.00-1.80 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   3.658      0.000          2.695 |      0.065 |    48      0      0     48
+  N-cella        |   3.770      0.000          2.742 |      0.000 |    48      0     13     35
+  F3-lett        |   2.711      0.000          1.684 |      0.000 |    48      0     13     35
+  F3-lett+suolo  |   2.711      0.000          1.684 |      0.000 |    48      0     13     35
+  F3-corr        |   0.000      0.000          0.000 |      1.028 |    48      0     13     35
+  V10            |   1.437      0.000          0.539 |      0.130 |    48      0     13     35
+  V10p           |   0.963      0.000          0.000 |      0.065 |    48      0     13     35
+  F3d            |   0.000      0.000          0.000 |      1.028 |    48      0     13     35
+suolo visto e colonna senza solidi, ma cella dichiarata in ombra/non osservata nel profilo BM (m2): N-cuneo 0.145; N-cella 0.033; F3-lett 0.000; F3-lett+suolo 0.037; F3-corr 0.765; V10 0.528; V10p 1.014; F3d 0.765;
+cuneo d'ombra di N-cuneo: 3484 litri dichiarati in ombra, di cui vuoto visto 1331 (38 %); dentro il cuneo, vuoto visto dichiarato nascosto: N-cuneo 1331; N-cella 817; F3-lett 0; F3-lett+suolo 0; F3-corr 1046; V10 210; V10p 267; F3d 1046;
+F3-corr, profilo BM: celle nascoste con colonna vista vuota 28, di cui in ombra solo in parte (raggi passanti e raggi bloccati insieme) 28
+F3d contro F3-corr, celle con classe diversa su 2349: BMA 0 (F3d libero 0, F3-corr libero 0); BM 0 (F3d libero 0, F3-corr libero 0); M 0 (F3d libero 0, F3-corr libero 0); F18 0 (F3d libero 0, F3-corr libero 0);
+
+=== A0: cassa 1 m, nessuno dietro  (sensore 1.20 m, inclinazione 15 gradi, pareti 1, rumore no) ===
+pixel: suolo 123000, pareti 140602, senza ritorno 0, scatola0 43598
+volume vero nel dominio (litri): solido 537, vuoto visto 9184, vuoto mai visto 3809
+mappa          | litri: libero-su-solido  libero-su-mai-visto  nascosto-a-torto  occupato-a-torto
+N-cuneo        |               0.0               1149.9            2963.3              55.7
+N-cella        |               0.0               1173.3            2455.4             362.1
+F3-lett        |              14.8               1857.3              27.4             325.3
+F3-lett+suolo  |              14.8               1857.3              27.4             325.3
+F3-corr        |               5.9                  7.3            3492.6             325.7
+V10            |               0.6                316.2             260.9              19.6
+V10p           |               0.0                  2.4             469.8               5.4
+F3d            |               5.9                  7.3            3492.6             325.7
+profilo BMA (quota 0.00-2.00 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   3.658      0.000          3.658 |      0.000 |   170      0     29    141
+  N-cella        |   3.770      0.000          3.770 |      0.000 |   170      0    168      2
+  F3-lett        |   2.711      0.000          2.711 |      0.000 |   170      0    168      2
+  F3-lett+suolo  |   2.711      0.000          2.711 |      0.000 |   170      0    168      2
+  F3-corr        |   0.000      0.000          0.000 |      0.000 |   170      0    168      2
+  V10            |   0.000      0.000          0.000 |      0.000 |   170      0    170      0
+  V10p           |   0.000      0.000          0.000 |      0.000 |   170      0    168      2
+  F3d            |   0.000      0.000          0.000 |      0.000 |   170      0    168      2
+profilo BM  (quota 0.00-1.60 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   3.658      0.000          0.869 |      0.112 |   170      0     29    141
+  N-cella        |   3.770      0.000          0.869 |      0.000 |   170      0    168      2
+  F3-lett        |   4.799      0.000          1.898 |      0.000 |   170      0    168      2
+  F3-lett+suolo  |   3.766      0.000          0.865 |      0.000 |   170      0    168      2
+  F3-corr        |   3.038      0.000          0.249 |      0.112 |   170      0    168      2
+  V10            |   3.205      0.000          0.613 |      0.239 |   170      0    170      0
+  V10p           |   2.789      0.000          0.000 |      0.112 |   170      0    168      2
+  F3d            |   3.038      0.000          0.249 |      0.112 |   170      0    168      2
+profilo M   (quota 0.60-1.60 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   3.658      0.000          0.869 |      0.112 |   170      0     29    141
+  N-cella        |   3.770      0.000          0.869 |      0.000 |   170      0    168      2
+  F3-lett        |   6.230      0.008          3.322 |      0.000 |   170      2    168      0
+  F3-lett+suolo  |   6.230      0.008          3.322 |      0.000 |   170      2    168      0
+  F3-corr        |   3.038      0.000          0.249 |      0.112 |   170      0    168      2
+  V10            |   3.205      0.000          0.613 |      0.239 |   170      0    170      0
+  V10p           |   2.789      0.000          0.000 |      0.112 |   170      0    168      2
+  F3d            |   3.038      0.000          0.249 |      0.112 |   170      0    168      2
+profilo F18 (quota 0.00-1.80 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   3.658      0.000          2.695 |      0.065 |   170      0     29    141
+  N-cella        |   3.770      0.000          2.742 |      0.000 |   170      0    168      2
+  F3-lett        |   2.711      0.000          1.684 |      0.000 |   170      0    168      2
+  F3-lett+suolo  |   2.711      0.000          1.684 |      0.000 |   170      0    168      2
+  F3-corr        |   0.000      0.000          0.000 |      1.028 |   170      0    168      2
+  V10            |   1.437      0.000          0.539 |      0.130 |   170      0    170      0
+  V10p           |   0.963      0.000          0.000 |      0.065 |   170      0    168      2
+  F3d            |   0.000      0.000          0.000 |      1.028 |   170      0    168      2
+suolo visto e colonna senza solidi, ma cella dichiarata in ombra/non osservata nel profilo BM (m2): N-cuneo 0.145; N-cella 0.033; F3-lett 0.000; F3-lett+suolo 0.037; F3-corr 0.765; V10 0.528; V10p 1.014; F3d 0.765;
+cuneo d'ombra di N-cuneo: 3484 litri dichiarati in ombra, di cui vuoto visto 1595 (46 %); dentro il cuneo, vuoto visto dichiarato nascosto: N-cuneo 1595; N-cella 1088; F3-lett 0; F3-lett+suolo 0; F3-corr 1317; V10 163; V10p 236; F3d 1317;
+F3-corr, profilo BM: celle nascoste con colonna vista vuota 28, di cui in ombra solo in parte (raggi passanti e raggi bloccati insieme) 28
+F3d contro F3-corr, celle con classe diversa su 2349: BMA 0 (F3d libero 0, F3-corr libero 0); BM 0 (F3d libero 0, F3-corr libero 0); M 0 (F3d libero 0, F3-corr libero 0); F18 0 (F3d libero 0, F3-corr libero 0);
+
+=== D: gradino di 10 cm fra 1,8 e 2,4 m  (sensore 1.20 m, inclinazione 15 gradi, pareti 1, rumore no) ===
+pixel: suolo 143114, pareti 152960, senza ritorno 0, scatola0 11126
+volume vero nel dominio (litri): solido 67, vuoto visto 10739, vuoto mai visto 2723
+mappa          | litri: libero-su-solido  libero-su-mai-visto  nascosto-a-torto  occupato-a-torto
+N-cuneo        |               0.0               1250.1            3981.0             157.6
+N-cella        |               0.0               1325.1            1579.1            1206.5
+F3-lett        |              67.1               1473.9              41.8               0.0
+F3-lett+suolo  |              67.1               1473.9              41.8               0.0
+F3-corr        |               7.5                  7.3            2557.7             372.7
+V10            |               2.1                305.5              36.5               9.6
+V10p           |               0.0                  2.4             307.2               4.4
+F3d            |               7.5                  7.3            2557.7             372.7
+profilo BMA (quota 0.00-2.00 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   3.925      0.000          3.925 |      0.000 |   182      0     31    151
+  N-cella        |   4.639      0.000          4.639 |      0.000 |   182      0    182      0
+  F3-lett        |   4.341      0.671          3.671 |      0.000 |   182    182      0      0
+  F3-lett+suolo  |   4.239      0.671          3.568 |      0.000 |   182    182      0      0
+  F3-corr        |   0.000      0.000          0.000 |      0.000 |   182      0    182      0
+  V10            |   0.214      0.000          0.214 |      0.000 |   182      0    182      0
+  V10p           |   0.000      0.000          0.000 |      0.000 |   182      0    182      0
+  F3d            |   0.000      0.000          0.000 |      0.000 |   182      0    182      0
+profilo BM  (quota 0.00-1.60 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   3.925      0.000          0.869 |      0.796 |   182      0     31    151
+  N-cella        |   4.639      0.000          0.869 |      0.067 |   182      0    182      0
+  F3-lett        |   6.513      0.671          1.989 |      0.000 |   182    182      0      0
+  F3-lett+suolo  |   5.377      0.671          0.920 |      0.067 |   182    182      0      0
+  F3-corr        |   4.004      0.000          0.249 |      0.083 |   182      0    182      0
+  V10            |   4.234      0.000          0.613 |      0.111 |   182      0    182      0
+  V10p           |   3.771      0.000          0.000 |      0.067 |   182      0    182      0
+  F3d            |   4.004      0.000          0.249 |      0.083 |   182      0    182      0
+profilo M   (quota 0.60-1.60 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   3.925      0.000          0.869 |      1.458 |   182      0     31    151
+  N-cella        |   4.639      0.000          0.869 |      0.115 |   182      0    182      0
+  F3-lett        |   6.765      0.000          2.150 |      0.000 |   182    182      0      0
+  F3-lett+suolo  |   6.765      0.000          2.150 |      0.000 |   182    182      0      0
+  F3-corr        |   4.864      0.000          0.249 |      0.000 |   182    182      0      0
+  V10            |   5.221      0.000          0.613 |      0.007 |   182    182      0      0
+  V10p           |   4.615      0.000          0.000 |      0.000 |   182    182      0      0
+  F3d            |   4.864      0.000          0.249 |      0.000 |   182    182      0      0
+profilo F18 (quota 0.00-1.80 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   3.925      0.000          2.962 |      0.759 |   182      0     31    151
+  N-cella        |   4.639      0.000          2.993 |      0.067 |   182      0    182      0
+  F3-lett        |   4.341      0.671          1.949 |      0.000 |   182    182      0      0
+  F3-lett+suolo  |   4.239      0.671          1.913 |      0.067 |   182    182      0      0
+  F3-corr        |   0.000      0.000          0.000 |      1.713 |   182      0    182      0
+  V10            |   2.153      0.000          0.586 |      0.104 |   182      0    182      0
+  V10p           |   1.647      0.000          0.000 |      0.067 |   182      0    182      0
+  F3d            |   0.000      0.000          0.000 |      1.713 |   182      0    182      0
+suolo visto e colonna senza solidi, ma cella dichiarata in ombra/non osservata nel profilo BM (m2): N-cuneo 0.829; N-cella 0.100; F3-lett 0.000; F3-lett+suolo 0.104; F3-corr 0.736; V10 0.400; V10p 0.969; F3d 0.736;
+cuneo d'ombra di N-cuneo: 2916 litri dichiarati in ombra, di cui vuoto visto 2613 (90 %); dentro il cuneo, vuoto visto dichiarato nascosto: N-cuneo 2613; N-cella 211; F3-lett 14; F3-lett+suolo 14; F3-corr 367; V10 11; V10p 59; F3d 367;
+F3-corr, profilo BM: celle nascoste con colonna vista vuota 19, di cui in ombra solo in parte (raggi passanti e raggi bloccati insieme) 4
+F3d contro F3-corr, celle con classe diversa su 2349: BMA 0 (F3d libero 0, F3-corr libero 0); BM 0 (F3d libero 0, F3-corr libero 0); M 0 (F3d libero 0, F3-corr libero 0); F18 0 (F3d libero 0, F3-corr libero 0);
+
+=== E: scatola di 30 cm fra 1,5 e 1,8 m  (sensore 1.20 m, inclinazione 15 gradi, pareti 1, rumore no) ===
+pixel: suolo 142558, pareti 152960, senza ritorno 0, scatola0 11682
+volume vero nel dominio (litri): solido 62, vuoto visto 10700, vuoto mai visto 2768
+mappa          | litri: libero-su-solido  libero-su-mai-visto  nascosto-a-torto  occupato-a-torto
+N-cuneo        |               0.0               1248.4            3609.6              80.9
+N-cella        |               0.0               1336.7            2044.8             301.1
+F3-lett        |              10.2               1477.2              51.9              71.2
+F3-lett+suolo  |              10.2               1477.2              51.9              71.2
+F3-corr        |               5.1                  7.3            2709.9              71.2
+V10            |               1.2                307.5              72.2               6.8
+V10p           |               0.6                  2.4             343.0               1.6
+F3d            |               5.1                  7.3            2709.9              71.2
+profilo BMA (quota 0.00-2.00 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   4.129      0.000          4.129 |      0.000 |    71      0     23     48
+  N-cella        |   4.845      0.000          4.845 |      0.000 |    71      0     71      0
+  F3-lett        |   4.172      0.000          4.172 |      0.000 |    71      0     71      0
+  F3-lett+suolo  |   3.765      0.000          3.765 |      0.000 |    71      0     71      0
+  F3-corr        |   0.000      0.000          0.000 |      0.000 |    71      0     71      0
+  V10            |   0.214      0.000          0.214 |      0.000 |    71      0     71      0
+  V10p           |   0.000      0.000          0.000 |      0.000 |    71      0     71      0
+  F3d            |   0.000      0.000          0.000 |      0.000 |    71      0     71      0
+profilo BM  (quota 0.00-1.60 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   4.129      0.000          0.869 |      0.802 |    71      0     23     48
+  N-cella        |   4.845      0.000          0.869 |      0.085 |    71      0     71      0
+  F3-lett        |   6.282      0.000          2.220 |      0.000 |    71      0     71      0
+  F3-lett+suolo  |   4.841      0.000          0.865 |      0.085 |    71      0     71      0
+  F3-corr        |   4.191      0.000          0.249 |      0.120 |    71      0     71      0
+  V10            |   4.442      0.000          0.613 |      0.162 |    71      0     71      0
+  V10p           |   3.942      0.000          0.000 |      0.120 |    71      0     71      0
+  F3d            |   4.191      0.000          0.249 |      0.120 |    71      0     71      0
+profilo M   (quota 0.60-1.60 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   4.129      0.000          0.869 |      1.293 |    71      0     23     48
+  N-cella        |   4.845      0.000          0.869 |      0.413 |    71      0     71      0
+  F3-lett        |   6.765      0.000          2.150 |      0.000 |    71     71      0      0
+  F3-lett+suolo  |   6.765      0.000          2.150 |      0.000 |    71     71      0      0
+  F3-corr        |   4.864      0.000          0.249 |      0.000 |    71     71      0      0
+  V10            |   5.221      0.000          0.613 |      0.007 |    71     71      0      0
+  V10p           |   4.615      0.000          0.000 |      0.000 |    71     71      0      0
+  F3d            |   4.864      0.000          0.249 |      0.000 |    71     71      0      0
+profilo F18 (quota 0.00-1.80 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   4.129      0.000          2.907 |      0.745 |    71      0     23     48
+  N-cella        |   4.845      0.000          2.957 |      0.078 |    71      0     71      0
+  F3-lett        |   4.172      0.000          2.205 |      0.000 |    71      0     71      0
+  F3-lett+suolo  |   3.765      0.000          1.876 |      0.078 |    71      0     71      0
+  F3-corr        |   0.000      0.000          0.000 |      1.967 |    71      0     71      0
+  V10            |   2.495      0.000          0.640 |      0.112 |    71      0     71      0
+  V10p           |   1.889      0.000          0.000 |      0.078 |    71      0     71      0
+  F3d            |   0.000      0.000          0.000 |      1.967 |    71      0     71      0
+suolo visto e colonna senza solidi, ma cella dichiarata in ombra/non osservata nel profilo BM (m2): N-cuneo 0.835; N-cella 0.118; F3-lett 0.000; F3-lett+suolo 0.123; F3-corr 0.773; V10 0.451; V10p 1.022; F3d 0.773;
+cuneo d'ombra di N-cuneo: 2585 litri dichiarati in ombra, di cui vuoto visto 2242 (87 %); dentro il cuneo, vuoto visto dichiarato nascosto: N-cuneo 2242; N-cella 677; F3-lett 25; F3-lett+suolo 25; F3-corr 444; V10 41; V10p 93; F3d 444;
+F3-corr, profilo BM: celle nascoste con colonna vista vuota 31, di cui in ombra solo in parte (raggi passanti e raggi bloccati insieme) 12
+F3d contro F3-corr, celle con classe diversa su 2349: BMA 0 (F3d libero 0, F3-corr libero 0); BM 0 (F3d libero 0, F3-corr libero 0); M 0 (F3d libero 0, F3-corr libero 0); F18 0 (F3d libero 0, F3-corr libero 0);
+
+=== T: piano di tavolo a 0,70-0,75 m fra 1,6 e 2,4 m  (sensore 1.20 m, inclinazione 15 gradi, pareti 1, rumore no) ===
+pixel: suolo 150430, pareti 147662, senza ritorno 0, scatola0 9108
+volume vero nel dominio (litri): solido 44, vuoto visto 10437, vuoto mai visto 3048
+mappa          | litri: libero-su-solido  libero-su-mai-visto  nascosto-a-torto  occupato-a-torto
+N-cuneo        |               0.0               1135.5            4380.4             158.7
+N-cella        |               0.0               1511.3            1367.9            1397.6
+F3-lett        |               0.0               1738.2              27.4             786.2
+F3-lett+suolo  |               0.0               1738.2              27.4             786.2
+F3-corr        |               0.0                  7.3            4051.3             786.2
+V10            |               0.9                305.5             338.9              47.2
+V10p           |               0.0                  2.4             560.4              45.0
+F3d            |               0.0                  7.3            4051.3             786.2
+profilo BMA (quota 0.00-2.00 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   3.517      0.000          3.517 |      0.000 |   254      0     35    219
+  N-cella        |   4.591      0.000          4.591 |      0.000 |   254      0    254      0
+  F3-lett        |   3.449      0.000          3.449 |      0.000 |   254      0    254      0
+  F3-lett+suolo  |   3.449      0.000          3.449 |      0.000 |   254      0    254      0
+  F3-corr        |   0.000      0.000          0.000 |      0.000 |   254      0    254      0
+  V10            |   0.000      0.000          0.000 |      0.000 |   254      0    254      0
+  V10p           |   0.000      0.000          0.000 |      0.000 |   254      0    254      0
+  F3d            |   0.000      0.000          0.000 |      0.000 |   254      0    254      0
+profilo BM  (quota 0.00-1.60 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   3.517      0.000          0.869 |      0.101 |   254      0     35    219
+  N-cella        |   4.591      0.000          1.843 |      0.000 |   254      0    254      0
+  F3-lett        |   5.621      0.000          2.872 |      0.000 |   254      0    254      0
+  F3-lett+suolo  |   4.587      0.000          1.839 |      0.000 |   254      0    254      0
+  F3-corr        |   2.897      0.000          0.249 |      0.101 |   254      0    254      0
+  V10            |   3.047      0.000          0.613 |      0.257 |   254      0    254      0
+  V10p           |   2.648      0.000          0.000 |      0.101 |   254      0    254      0
+  F3d            |   2.897      0.000          0.249 |      0.101 |   254      0    254      0
+profilo M   (quota 0.60-1.60 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   3.517      0.000          0.869 |      0.308 |   254      0     35    219
+  N-cella        |   4.591      0.000          1.636 |      0.000 |   254      0    254      0
+  F3-lett        |   5.872      0.000          2.917 |      0.000 |   254      0    254      0
+  F3-lett+suolo  |   5.872      0.000          2.917 |      0.000 |   254      0    254      0
+  F3-corr        |   3.042      0.000          0.249 |      0.163 |   254      0    254      0
+  V10            |   3.273      0.000          0.613 |      0.238 |   254      0    254      0
+  V10p           |   2.792      0.000          0.000 |      0.163 |   254      0    254      0
+  F3d            |   3.042      0.000          0.249 |      0.163 |   254      0    254      0
+profilo F18 (quota 0.00-1.80 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   3.517      0.000          2.667 |      0.057 |   254      0     35    219
+  N-cella        |   4.591      0.000          3.685 |      0.000 |   254      0    254      0
+  F3-lett        |   3.449      0.000          2.542 |      0.000 |   254      0    254      0
+  F3-lett+suolo  |   3.449      0.000          2.542 |      0.000 |   254      0    254      0
+  F3-corr        |   0.000      0.000          0.000 |      0.907 |   254      0    254      0
+  V10            |   1.239      0.000          0.484 |      0.151 |   254      0    254      0
+  V10p           |   0.850      0.000          0.000 |      0.057 |   254      0    254      0
+  F3d            |   0.000      0.000          0.000 |      0.907 |   254      0    254      0
+suolo visto e colonna senza solidi, ma cella dichiarata in ombra/non osservata nel profilo BM (m2): N-cuneo 1.115; N-cella 0.033; F3-lett 0.000; F3-lett+suolo 0.037; F3-corr 1.728; V10 1.484; V10p 1.977; F3d 1.728;
+cuneo d'ombra di N-cuneo: 3732 litri dichiarati in ombra, di cui vuoto visto 3013 (81 %); dentro il cuneo, vuoto visto dichiarato nascosto: N-cuneo 3013; N-cella 0; F3-lett 0; F3-lett+suolo 0; F3-corr 1915; V10 276; V10p 332; F3d 1915;
+F3-corr, profilo BM: celle nascoste con colonna vista vuota 24, di cui in ombra solo in parte (raggi passanti e raggi bloccati insieme) 24
+F3d contro F3-corr, celle con classe diversa su 2349: BMA 0 (F3d libero 0, F3-corr libero 0); BM 0 (F3d libero 0, F3-corr libero 0); M 0 (F3d libero 0, F3-corr libero 0); F18 0 (F3d libero 0, F3-corr libero 0);
+
+=== V: scena vuota con pareti  (sensore 1.20 m, inclinazione 15 gradi, pareti 1, rumore no) ===
+pixel: suolo 154240, pareti 152960, senza ritorno 0
+volume vero nel dominio (litri): solido 0, vuoto visto 10810, vuoto mai visto 2719
+mappa          | litri: libero-su-solido  libero-su-mai-visto  nascosto-a-torto  occupato-a-torto
+N-cuneo        |               0.0               1525.1            1367.9               0.0
+N-cella        |               0.0               1525.1            1367.9               0.0
+F3-lett        |               0.0               1471.1              27.4               0.0
+F3-lett+suolo  |               0.0               1471.1              27.4               0.0
+F3-corr        |               0.0                  7.3            2531.2               0.0
+V10            |               0.0                305.5              27.1               0.0
+V10p           |               0.0                  2.4             297.8               0.0
+F3d            |               0.0                  7.3            2531.2               0.0
+profilo BMA (quota 0.00-2.00 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   5.484      0.000          5.484 |      0.000 |     0      0      0      0
+  N-cella        |   5.484      0.000          5.484 |      0.000 |     0      0      0      0
+  F3-lett        |   4.341      0.000          4.341 |      0.000 |     0      0      0      0
+  F3-lett+suolo  |   4.341      0.000          4.341 |      0.000 |     0      0      0      0
+  F3-corr        |   0.000      0.000          0.000 |      0.000 |     0      0      0      0
+  V10            |   0.214      0.000          0.214 |      0.000 |     0      0      0      0
+  V10p           |   0.000      0.000          0.000 |      0.000 |     0      0      0      0
+  F3d            |   0.000      0.000          0.000 |      0.000 |     0      0      0      0
+profilo BM  (quota 0.00-1.60 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   5.484      0.000          0.869 |      0.000 |     0      0      0      0
+  N-cella        |   5.484      0.000          0.869 |      0.000 |     0      0      0      0
+  F3-lett        |   6.513      0.000          1.898 |      0.000 |     0      0      0      0
+  F3-lett+suolo  |   5.479      0.000          0.865 |      0.000 |     0      0      0      0
+  F3-corr        |   4.864      0.000          0.249 |      0.000 |     0      0      0      0
+  V10            |   5.221      0.000          0.613 |      0.007 |     0      0      0      0
+  V10p           |   4.615      0.000          0.000 |      0.000 |     0      0      0      0
+  F3d            |   4.864      0.000          0.249 |      0.000 |     0      0      0      0
+profilo M   (quota 0.60-1.60 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   5.484      0.000          0.869 |      0.000 |     0      0      0      0
+  N-cella        |   5.484      0.000          0.869 |      0.000 |     0      0      0      0
+  F3-lett        |   6.765      0.000          2.150 |      0.000 |     0      0      0      0
+  F3-lett+suolo  |   6.765      0.000          2.150 |      0.000 |     0      0      0      0
+  F3-corr        |   4.864      0.000          0.249 |      0.000 |     0      0      0      0
+  V10            |   5.221      0.000          0.613 |      0.007 |     0      0      0      0
+  V10p           |   4.615      0.000          0.000 |      0.000 |     0      0      0      0
+  F3d            |   4.864      0.000          0.249 |      0.000 |     0      0      0      0
+profilo F18 (quota 0.00-1.80 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   5.484      0.000          3.517 |      0.000 |     0      0      0      0
+  N-cella        |   5.484      0.000          3.517 |      0.000 |     0      0      0      0
+  F3-lett        |   4.341      0.000          2.374 |      0.000 |     0      0      0      0
+  F3-lett+suolo  |   4.341      0.000          2.374 |      0.000 |     0      0      0      0
+  F3-corr        |   0.000      0.000          0.000 |      1.967 |     0      0      0      0
+  V10            |   2.829      0.000          0.862 |      0.000 |     0      0      0      0
+  V10p           |   1.967      0.000          0.000 |      0.000 |     0      0      0      0
+  F3d            |   0.000      0.000          0.000 |      1.967 |     0      0      0      0
+suolo visto e colonna senza solidi, ma cella dichiarata in ombra/non osservata nel profilo BM (m2): N-cuneo 0.033; N-cella 0.033; F3-lett 0.000; F3-lett+suolo 0.037; F3-corr 0.653; V10 0.295; V10p 0.902; F3d 0.653;
+cuneo d'ombra di N-cuneo: 0 litri dichiarati in ombra, di cui vuoto visto 0 (0 %); dentro il cuneo, vuoto visto dichiarato nascosto: N-cuneo 0; N-cella 0; F3-lett 0; F3-lett+suolo 0; F3-corr 0; V10 0; V10p 0; F3d 0;
+F3-corr, profilo BM: celle nascoste con colonna vista vuota 0, di cui in ombra solo in parte (raggi passanti e raggi bloccati insieme) 0
+F3d contro F3-corr, celle con classe diversa su 2349: BMA 0 (F3d libero 0, F3-corr libero 0); BM 0 (F3d libero 0, F3-corr libero 0); M 0 (F3d libero 0, F3-corr libero 0); F18 0 (F3d libero 0, F3-corr libero 0);
+
+=== V0: scena vuota senza pareti (nessun ritorno sopra l'orizzonte)  (sensore 1.20 m, inclinazione 15 gradi, pareti 0, rumore no) ===
+pixel: suolo 227840, pareti 0, senza ritorno 79360
+volume vero nel dominio (litri): solido 0, vuoto visto 7672, vuoto mai visto 5858
+mappa          | litri: libero-su-solido  libero-su-mai-visto  nascosto-a-torto  occupato-a-torto
+N-cuneo        |               0.0               4386.9            1091.2               0.0
+N-cella        |               0.0               4386.9            1091.2               0.0
+F3-lett        |               0.0               2873.1              27.4               0.0
+F3-lett+suolo  |               0.0               2873.1              27.4               0.0
+F3-corr        |               0.0                  1.1            4250.3               0.0
+V10            |               0.0                 30.0              15.5               0.0
+V10p           |               0.0                  1.2              55.7               0.0
+F3d            |               0.0                  1.1            4250.3               0.0
+profilo BMA (quota 0.00-2.00 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   5.484      0.000          5.484 |      0.000 |     0      0      0      0
+  N-cella        |   5.484      0.000          5.484 |      0.000 |     0      0      0      0
+  F3-lett        |   0.000      0.000          0.000 |      0.000 |     0      0      0      0
+  F3-lett+suolo  |   0.000      0.000          0.000 |      0.000 |     0      0      0      0
+  F3-corr        |   0.000      0.000          0.000 |      0.000 |     0      0      0      0
+  V10            |   0.000      0.000          0.000 |      0.000 |     0      0      0      0
+  V10p           |   0.000      0.000          0.000 |      0.000 |     0      0      0      0
+  F3d            |   0.000      0.000          0.000 |      0.000 |     0      0      0      0
+profilo BM  (quota 0.00-1.60 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   5.484      0.000          5.484 |      0.000 |     0      0      0      0
+  N-cella        |   5.484      0.000          5.484 |      0.000 |     0      0      0      0
+  F3-lett        |   6.513      0.000          6.513 |      0.000 |     0      0      0      0
+  F3-lett+suolo  |   5.479      0.000          5.479 |      0.000 |     0      0      0      0
+  F3-corr        |   0.000      0.000          0.000 |      0.000 |     0      0      0      0
+  V10            |   0.000      0.000          0.000 |      0.000 |     0      0      0      0
+  V10p           |   0.000      0.000          0.000 |      0.000 |     0      0      0      0
+  F3d            |   0.000      0.000          0.000 |      0.000 |     0      0      0      0
+profilo M   (quota 0.60-1.60 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   5.484      0.000          5.484 |      0.000 |     0      0      0      0
+  N-cella        |   5.484      0.000          5.484 |      0.000 |     0      0      0      0
+  F3-lett        |   6.765      0.000          6.765 |      0.000 |     0      0      0      0
+  F3-lett+suolo  |   6.765      0.000          6.765 |      0.000 |     0      0      0      0
+  F3-corr        |   0.000      0.000          0.000 |      0.000 |     0      0      0      0
+  V10            |   0.000      0.000          0.000 |      0.000 |     0      0      0      0
+  V10p           |   0.000      0.000          0.000 |      0.000 |     0      0      0      0
+  F3d            |   0.000      0.000          0.000 |      0.000 |     0      0      0      0
+profilo F18 (quota 0.00-1.80 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   5.484      0.000          5.484 |      0.000 |     0      0      0      0
+  N-cella        |   5.484      0.000          5.484 |      0.000 |     0      0      0      0
+  F3-lett        |   0.000      0.000          0.000 |      0.000 |     0      0      0      0
+  F3-lett+suolo  |   0.000      0.000          0.000 |      0.000 |     0      0      0      0
+  F3-corr        |   0.000      0.000          0.000 |      0.000 |     0      0      0      0
+  V10            |   0.000      0.000          0.000 |      0.000 |     0      0      0      0
+  V10p           |   0.000      0.000          0.000 |      0.000 |     0      0      0      0
+  F3d            |   0.000      0.000          0.000 |      0.000 |     0      0      0      0
+suolo visto e colonna senza solidi, ma cella dichiarata in ombra/non osservata nel profilo BM (m2): N-cuneo 0.033; N-cella 0.033; F3-lett 0.000; F3-lett+suolo 0.037; F3-corr 5.517; V10 5.517; V10p 5.517; F3d 5.517;
+cuneo d'ombra di N-cuneo: 0 litri dichiarati in ombra, di cui vuoto visto 0 (0 %); dentro il cuneo, vuoto visto dichiarato nascosto: N-cuneo 0; N-cella 0; F3-lett 0; F3-lett+suolo 0; F3-corr 0; V10 0; V10p 0; F3d 0;
+F3-corr, profilo BM: celle nascoste con colonna vista vuota 0, di cui in ombra solo in parte (raggi passanti e raggi bloccati insieme) 0
+F3d contro F3-corr, celle con classe diversa su 2349: BMA 0 (F3d libero 0, F3-corr libero 0); BM 0 (F3d libero 0, F3-corr libero 0); M 0 (F3d libero 0, F3-corr libero 0); F18 0 (F3d libero 0, F3-corr libero 0);
+
+=== A1r: come A1, con rumore e 2 % di pixel non validi  (sensore 1.20 m, inclinazione 15 gradi, pareti 1, rumore si) ===
+pixel: suolo 123000, pareti 140602, senza ritorno 0, scatola0 43598, scatola1 0
+volume vero nel dominio (litri): solido 732, vuoto visto 9184, vuoto mai visto 3613
+mappa          | litri: libero-su-solido  libero-su-mai-visto  nascosto-a-torto  occupato-a-torto
+N-cuneo        |               0.0               1127.4            2997.1             105.3
+N-cella        |               0.0               1150.8            2459.3             441.6
+F3-lett        |              82.7               1694.7             698.2             396.7
+F3-lett+suolo  |              82.7               1694.7             698.2             396.7
+F3-corr        |               5.9                  5.5            3925.6             402.1
+V10            |               0.6                314.2             223.2             149.4
+V10p           |               0.0                  2.4            1125.2              98.2
+F3d            |               5.9                  5.4            3551.0             402.1
+profilo BMA (quota 0.00-2.00 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   3.605      0.000          3.605 |      0.000 |    48      0      0     48
+  N-cella        |   3.717      0.000          3.717 |      0.000 |    48      0      0     48
+  F3-lett        |   2.433      0.000          2.433 |      0.000 |    48      0      0     48
+  F3-lett+suolo  |   2.433      0.000          2.433 |      0.000 |    48      0      0     48
+  F3-corr        |   0.000      0.000          0.000 |      0.000 |    48      0      0     48
+  V10            |   0.000      0.000          0.000 |      0.000 |    48      0      0     48
+  V10p           |   0.000      0.000          0.000 |      0.000 |    48      0      0     48
+  F3d            |   0.000      0.000          0.000 |      0.000 |    48      0      0     48
+profilo BM  (quota 0.00-1.60 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   3.605      0.000          0.816 |      0.112 |    48      0      0     48
+  N-cella        |   3.717      0.000          0.816 |      0.000 |    48      0      0     48
+  F3-lett        |   4.427      0.000          1.804 |      0.278 |    48      0      0     48
+  F3-lett+suolo  |   3.396      0.000          0.773 |      0.278 |    48      0      0     48
+  F3-corr        |   2.697      0.000          0.176 |      0.380 |    48      0      0     48
+  V10            |   3.156      0.000          0.535 |      0.241 |    48      0      0     48
+  V10p           |   2.518      0.000          0.000 |      0.384 |    48      0      0     48
+  F3d            |   2.959      0.000          0.171 |      0.112 |    48      0      0     48
+profilo M   (quota 0.60-1.60 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   3.605      0.000          0.816 |      0.112 |    48      0      0     48
+  N-cella        |   3.717      0.000          0.816 |      0.000 |    48      0      0     48
+  F3-lett        |   5.731      0.232          2.876 |      0.278 |    48     48      0      0
+  F3-lett+suolo  |   5.731      0.232          2.876 |      0.278 |    48     48      0      0
+  F3-corr        |   2.716      0.000          0.176 |      0.361 |    48      0      0     48
+  V10            |   3.156      0.000          0.535 |      0.241 |    48      0      0     48
+  V10p           |   2.518      0.000          0.000 |      0.384 |    48      0      0     48
+  F3d            |   2.959      0.000          0.171 |      0.112 |    48      0      0     48
+profilo F18 (quota 0.00-1.80 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   3.605      0.000          2.642 |      0.065 |    48      0      0     48
+  N-cella        |   3.717      0.000          2.689 |      0.000 |    48      0      0     48
+  F3-lett        |   2.433      0.000          1.663 |      0.257 |    48      0      0     48
+  F3-lett+suolo  |   2.433      0.000          1.663 |      0.257 |    48      0      0     48
+  F3-corr        |   0.000      0.000          0.000 |      1.028 |    48      0      0     48
+  V10            |   1.453      0.000          0.555 |      0.130 |    48      0      0     48
+  V10p           |   0.716      0.000          0.000 |      0.312 |    48      0      0     48
+  F3d            |   0.000      0.000          0.000 |      1.028 |    48      0      0     48
+suolo visto e colonna senza solidi, ma cella dichiarata in ombra/non osservata nel profilo BM (m2): N-cuneo 0.145; N-cella 0.033; F3-lett 0.321; F3-lett+suolo 0.356; F3-corr 1.053; V10 0.530; V10p 1.237; F3d 0.790;
+cuneo d'ombra di N-cuneo: 3598 litri dichiarati in ombra, di cui vuoto visto 1630 (45 %); dentro il cuneo, vuoto visto dichiarato nascosto: N-cuneo 1630; N-cella 1092; F3-lett 176; F3-lett+suolo 176; F3-corr 1297; V10 151; V10p 377; F3d 1316;
+F3-corr, profilo BM: celle nascoste con colonna vista vuota 80, di cui in ombra solo in parte (raggi passanti e raggi bloccati insieme) 26
+F3d contro F3-corr, celle con classe diversa su 2349: BMA 0 (F3d libero 0, F3-corr libero 0); BM 54 (F3d libero 52, F3-corr libero 2); M 58 (F3d libero 52, F3-corr libero 6); F18 0 (F3d libero 0, F3-corr libero 0);
+
+=== Dr: come D, con rumore e 2 % di pixel non validi  (sensore 1.20 m, inclinazione 15 gradi, pareti 1, rumore si) ===
+pixel: suolo 143114, pareti 152960, senza ritorno 0, scatola0 11126
+volume vero nel dominio (litri): solido 67, vuoto visto 10739, vuoto mai visto 2723
+mappa          | litri: libero-su-solido  libero-su-mai-visto  nascosto-a-torto  occupato-a-torto
+N-cuneo        |               0.0               1229.9            4077.3             156.8
+N-cella        |               0.0               1306.4            1562.0            1303.4
+F3-lett        |              67.1               1423.7             811.1               0.0
+F3-lett+suolo  |              67.1               1423.7             811.1               0.0
+F3-corr        |               7.5                  7.3            3221.2             397.8
+V10            |               0.8                305.9              32.5              86.1
+V10p           |               0.0                  2.4            1088.5              77.1
+F3d            |               7.5                  7.3            2557.1             397.8
+profilo BMA (quota 0.00-2.00 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   3.868      0.000          3.868 |      0.000 |   182      0     12    170
+  N-cella        |   4.590      0.000          4.590 |      0.000 |   182      0    182      0
+  F3-lett        |   3.914      0.671          3.243 |      0.000 |   182    182      0      0
+  F3-lett+suolo  |   3.816      0.671          3.145 |      0.000 |   182    182      0      0
+  F3-corr        |   0.000      0.000          0.000 |      0.000 |   182      0    182      0
+  V10            |   0.214      0.000          0.214 |      0.000 |   182      0    182      0
+  V10p           |   0.000      0.000          0.000 |      0.000 |   182      0    182      0
+  F3d            |   0.000      0.000          0.000 |      0.000 |   182      0    182      0
+profilo BM  (quota 0.00-1.60 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   3.868      0.000          0.869 |      0.796 |   182      0     12    170
+  N-cella        |   4.590      0.000          0.869 |      0.066 |   182      0    182      0
+  F3-lett        |   6.065      0.671          1.969 |      0.427 |   182    182      0      0
+  F3-lett+suolo  |   4.936      0.671          0.902 |      0.490 |   182    182      0      0
+  F3-corr        |   3.512      0.000          0.249 |      0.526 |   182      0    182      0
+  V10            |   4.183      0.000          0.613 |      0.074 |   182      0    182      0
+  V10p           |   3.260      0.000          0.000 |      0.533 |   182      0    182      0
+  F3d            |   3.943      0.000          0.249 |      0.096 |   182      0    182      0
+profilo M   (quota 0.60-1.60 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   3.868      0.000          0.869 |      1.519 |   182      0     12    170
+  N-cella        |   4.590      0.000          0.869 |      0.106 |   182      0    182      0
+  F3-lett        |   6.317      0.000          2.129 |      0.427 |   182    182      0      0
+  F3-lett+suolo  |   6.317      0.000          2.129 |      0.427 |   182    182      0      0
+  F3-corr        |   4.437      0.000          0.249 |      0.427 |   182    182      0      0
+  V10            |   5.221      0.000          0.613 |      0.007 |   182    182      0      0
+  V10p           |   4.184      0.000          0.000 |      0.431 |   182    182      0      0
+  F3d            |   4.864      0.000          0.249 |      0.000 |   182    182      0      0
+profilo F18 (quota 0.00-1.80 m) | m2: libero  di-cui-su-solido  di-cui-su-mai-visto | nascosto-con-colonna-vista-vuota | bersaglio: celle  libero occupato nascosto
+  N-cuneo        |   3.868      0.000          2.904 |      0.759 |   182      0     12    170
+  N-cella        |   4.590      0.000          2.935 |      0.062 |   182      0    182      0
+  F3-lett        |   3.914      0.671          1.928 |      0.407 |   182    182      0      0
+  F3-lett+suolo  |   3.816      0.671          1.893 |      0.469 |   182    182      0      0
+  F3-corr        |   0.000      0.000          0.000 |      1.718 |   182      0    182      0
+  V10            |   2.202      0.000          0.590 |      0.068 |   182      0    182      0
+  V10p           |   1.249      0.000          0.000 |      0.469 |   182      0    182      0
+  F3d            |   0.000      0.000          0.000 |      1.718 |   182      0    182      0
+suolo visto e colonna senza solidi, ma cella dichiarata in ombra/non osservata nel profilo BM (m2): N-cuneo 0.829; N-cella 0.099; F3-lett 0.448; F3-lett+suolo 0.545; F3-corr 1.179; V10 0.363; V10p 1.435; F3d 0.749;
+cuneo d'ombra di N-cuneo: 3039 litri dichiarati in ombra, di cui vuoto visto 2710 (89 %); dentro il cuneo, vuoto visto dichiarato nascosto: N-cuneo 2710; N-cella 194; F3-lett 301; F3-lett+suolo 301; F3-corr 597; V10 7; V10p 350; F3d 354;
+F3-corr, profilo BM: celle nascoste con colonna vista vuota 109, di cui in ombra solo in parte (raggi passanti e raggi bloccati insieme) 0
+F3d contro F3-corr, celle con classe diversa su 2349: BMA 0 (F3d libero 0, F3-corr libero 0); BM 86 (F3d libero 85, F3-corr libero 1); M 83 (F3d libero 83, F3-corr libero 0); F18 0 (F3d libero 0, F3-corr libero 0);
+
+=== costo per fotogramma, scena A2, 640x480, un filo, 200 ripetizioni (dall'immagine di profondita' agli stati) ===
+  N (una fascia, nucleo)             min 0.248  mediana 0.250  p95 0.256  max 0.268 ms
+  F3-lett (tre fasce, regola larga)  min 27.746  mediana 28.110  p95 28.275  max 29.228 ms
+  F3-corr (tre fasce, regola stretta) min 28.512  mediana 28.595  p95 28.805  max 32.403 ms
+  V10p (voxel cilindrico, 20 strati) min 32.629  mediana 32.786  p95 33.514  max 38.779 ms
+  V10 (voxel cartesiano, DDA)        min 22.532  mediana 23.424  p95 23.832  max 24.317 ms
+  F3d (tre fasce, per differenze)    min 1.088  mediana 1.111  p95 1.155  max 1.201 ms
+controllo di N: ritorni di suolo contati 74514, di ostacolo 51642 (pixel totali 307200)
+memoria di F3d: per fotogramma 63684 B, tabelle fisse 1866690 B
+memoria: N 13050 B; F3 (una mappa a 3 fasce, campi usati) 125280 B; V10p (20 strati) 790830 B; V10 cartesiano 219600 B; tabella dei raggi 7987200 B
