@@ -1,0 +1,170 @@
+N = 20000 estrazioni per riga; stime, non misure.
+
+== 0. Taratura del programma: stime e ipotesi del piano (attesi 0,46 con i tagli, 0,29 intero)
+S0  stime del piano, modello leggero, con i tagli                          P(MD<=14)=0.370 [0.363;0.376]  <=15: 0.51  <=16: 0.65  mediana 14.90 h  80o 17.46 h
+    continuita' e sicurezza A2+A3r+B2+B3a+B3b tutte chiuse: entro l'ora 11: 0.55; 12: 0.69; 14: 0.89; 16: 0.96; mediana 10.72 h
+S0i stime del piano, modello leggero, minimo intero                        P(MD<=14)=0.294 [0.288;0.301]  <=15: 0.44  <=16: 0.58  mediana 15.44 h  80o 18.05 h
+
+== 1. Ipotesi dure sul calendario proposto (con i tagli)
+S1  stime del piano, ipotesi dure                                          P(MD<=14)=0.013 [0.012;0.015]  <=15: 0.03  <=16: 0.05  mediana 23.04 h  80o 28.51 h
+    continuita' e sicurezza A2+A3r+B2+B3a+B3b tutte chiuse: entro l'ora 11: 0.08; 12: 0.15; 14: 0.32; 16: 0.50; mediana 15.97 h
+S2  stime mie, ipotesi dure                                                P(MD<=14)=0.001 [0.001;0.002]  <=15: 0.00  <=16: 0.01  mediana 29.00 h  80o 35.87 h
+    continuita' e sicurezza A2+A3r+B2+B3a+B3b tutte chiuse: entro l'ora 11: 0.02; 12: 0.04; 14: 0.11; 16: 0.22; mediana 20.26 h
+    sul percorso critico (frazione di 4000 estrazioni) | correlazione di rango durata-fine:
+      K0    1.00 | +0.52 | fine mediana 1.87 h
+      PI    0.97 | +0.68 | fine mediana 24.73 h
+      B1    0.69 | +0.58 | fine mediana 5.83 h
+      B2    0.69 | +0.64 | fine mediana 11.38 h
+      TAB   0.58 | +0.37 | fine mediana 27.55 h
+      B3b   0.52 | +0.63 | fine mediana 19.23 h
+      LAT   0.42 | +0.50 | fine mediana 27.17 h
+      B3a   0.36 | +0.66 | fine mediana 17.81 h
+      E1    0.19 | +0.52 | fine mediana 4.47 h
+      E2    0.19 | +0.43 | fine mediana 8.93 h
+      C1    0.07 | +0.38 | fine mediana 7.18 h
+      C2    0.07 | +0.40 | fine mediana 12.29 h
+      D1    0.03 | +0.30 | fine mediana 5.10 h
+      D2    0.03 | +0.39 | fine mediana 13.80 h
+      A1    0.01 | +0.22 | fine mediana 4.12 h
+      A2    0.01 | +0.33 | fine mediana 7.52 h
+      A3r   0.01 | +0.35 | fine mediana 10.19 h
+      C3a   0.00 | +0.36 | fine mediana 14.18 h
+S2  altro seme 2                                                           P(MD<=14)=0.001 [0.001;0.002]  <=15: 0.00  <=16: 0.01  mediana 29.08 h  80o 35.98 h
+S2  altro seme 3                                                           P(MD<=14)=0.001 [0.001;0.002]  <=15: 0.00  <=16: 0.01  mediana 28.99 h  80o 36.02 h
+S2i stime mie, ipotesi dure, minimo intero                                 P(MD<=14)=0.001 [0.000;0.001]  <=15: 0.00  <=16: 0.00  mediana 29.51 h  80o 36.44 h
+S3  S2 con una persona ferma 2 h di sicuro                                 P(MD<=14)=0.001 [0.001;0.002]  <=15: 0.00  <=16: 0.01  mediana 29.31 h  80o 36.23 h
+   una ipotesi dura alla volta sopra il modello leggero (stime mie):
+      leggero + bias=1.1                                                   P(MD<=14)=0.018 [0.016;0.020]  <=15: 0.04  <=16: 0.09  mediana 20.83 h  80o 24.64 h
+      leggero + eff=(0.62, 0.74, 0.85)                                     P(MD<=14)=0.007 [0.006;0.008]  <=15: 0.02  <=16: 0.04  mediana 22.48 h  80o 26.60 h
+      leggero + p_ril=0.3                                                  P(MD<=14)=0.031 [0.029;0.034]  <=15: 0.07  <=16: 0.13  mediana 19.81 h  80o 23.33 h
+      leggero + p_fermo=0.5                                                P(MD<=14)=0.043 [0.040;0.046]  <=15: 0.09  <=16: 0.16  mediana 19.33 h  80o 22.80 h
+      leggero + p_sens=0.5                                                 P(MD<=14)=0.045 [0.043;0.048]  <=15: 0.10  <=16: 0.17  mediana 19.20 h  80o 22.61 h
+      leggero + p_lenta=0.3                                                P(MD<=14)=0.044 [0.041;0.046]  <=15: 0.09  <=16: 0.16  mediana 19.38 h  80o 22.90 h
+      leggero + tassa=(0.1, 0.6)                                           P(MD<=14)=0.023 [0.021;0.026]  <=15: 0.06  <=16: 0.11  mediana 20.00 h  80o 23.48 h
+      leggero + fatica=0.9                                                 P(MD<=14)=0.046 [0.043;0.049]  <=15: 0.09  <=16: 0.16  mediana 19.50 h  80o 23.32 h
+      leggero, stime mie                                                   P(MD<=14)=0.055 [0.052;0.059]  <=15: 0.11  <=16: 0.19  mediana 19.01 h  80o 22.47 h
+
+== 2. Il piano con F-401/402/408/409 sul percorso protetto (VD), ipotesi dure, stime mie
+S5  + F4 (1,5/3/6) prima di B3a, + THOR ridotto                            P(MD<=14)=0.000 [0.000;0.001]  <=15: 0.00  <=16: 0.00  mediana 30.91 h  80o 38.08 h
+    continuita' e sicurezza A2+A3r+B2+B3a+B3b+F4 tutte chiuse: entro l'ora 11: 0.01; 12: 0.01; 14: 0.05; 16: 0.12; mediana 22.15 h
+    sul percorso critico (frazione di 4000 estrazioni) | correlazione di rango durata-fine:
+      K0    1.00 | +0.54 | fine mediana 1.87 h
+      PI    0.95 | +0.65 | fine mediana 26.56 h
+      B3a   0.59 | +0.67 | fine mediana 21.07 h
+      TAB   0.57 | +0.39 | fine mediana 29.44 h
+      LAT   0.43 | +0.47 | fine mediana 28.99 h
+      B1    0.40 | +0.52 | fine mediana 5.83 h
+      B2    0.40 | +0.58 | fine mediana 11.38 h
+      A1    0.40 | +0.36 | fine mediana 4.12 h
+      A2    0.40 | +0.49 | fine mediana 7.52 h
+      F4    0.40 | +0.52 | fine mediana 12.57 h
+      B3b   0.31 | +0.55 | fine mediana 19.23 h
+      E1    0.11 | +0.48 | fine mediana 4.47 h
+      E2    0.11 | +0.39 | fine mediana 8.93 h
+      D1    0.05 | +0.32 | fine mediana 5.10 h
+      D2    0.05 | +0.42 | fine mediana 13.80 h
+      THL   0.05 | +0.38 | fine mediana 17.10 h
+      C1    0.04 | +0.37 | fine mediana 7.18 h
+      C2    0.04 | +0.40 | fine mediana 12.30 h
+      A3r   0.02 | +0.49 | fine mediana 15.49 h
+      C3a   0.00 | +0.37 | fine mediana 14.16 h
+S5d + F4d (0,5/1/2,5: se 06-identita passa; non verificato)                P(MD<=14)=0.001 [0.000;0.001]  <=15: 0.00  <=16: 0.00  mediana 29.70 h  80o 36.61 h
+    continuita' e sicurezza A2+A3r+B2+B3a+B3b+F4d tutte chiuse: entro l'ora 11: 0.01; 12: 0.02; 14: 0.08; 16: 0.18; mediana 20.84 h
+
+== 3. Rovesciamenti (ipotesi dure, stime mie); il confronto giusto e' con S5
+RA  catena f10 cosi' com'e' fino all'ora 5, scheletro SK, poi correzioni   P(MD<=14)=0.000 [0.000;0.001]  <=15: 0.00  <=16: 0.00  mediana 29.04 h  80o 35.66 h
+    continuita' e sicurezza A2+A3r+B2i+B3a+B3b+F4 tutte chiuse: entro l'ora 11: 0.00; 12: 0.00; 14: 0.02; 16: 0.06; mediana 23.91 h
+    sul percorso critico (frazione di 4000 estrazioni) | correlazione di rango durata-fine:
+      TABr  0.99 | +0.38 | fine mediana 27.88 h
+      PIr   0.98 | +0.49 | fine mediana 26.09 h
+      K0    0.98 | +0.54 | fine mediana 1.87 h
+      B3b   0.45 | +0.57 | fine mediana 21.87 h
+      B1    0.35 | +0.48 | fine mediana 5.83 h
+      B2s   0.35 | +0.52 | fine mediana 10.55 h
+      B2i   0.35 | +0.55 | fine mediana 12.39 h
+      SK    0.34 | +0.31 | fine mediana 13.46 h
+      B3a   0.32 | +0.59 | fine mediana 21.12 h
+      F4    0.28 | +0.50 | fine mediana 11.86 h
+      A1    0.26 | +0.34 | fine mediana 4.12 h
+      TR    0.26 | +0.50 | fine mediana 6.82 h
+      D1    0.23 | +0.37 | fine mediana 5.10 h
+      D2a   0.23 | +0.46 | fine mediana 10.72 h
+      A2    0.20 | +0.49 | fine mediana 15.54 h
+      A3r   0.20 | +0.50 | fine mediana 18.43 h
+      E1    0.10 | +0.48 | fine mediana 4.47 h
+      E2    0.10 | +0.38 | fine mediana 8.93 h
+      C1    0.03 | +0.37 | fine mediana 7.18 h
+      C2    0.02 | +0.39 | fine mediana 12.32 h
+      D2b   0.01 | +0.47 | fine mediana 17.55 h
+      C3a   0.01 | +0.36 | fine mediana 14.19 h
+RAd come RA con F4d                                                        P(MD<=14)=0.001 [0.000;0.001]  <=15: 0.00  <=16: 0.01  mediana 28.25 h  80o 34.69 h
+    continuita' e sicurezza A2+A3r+B2i+B3a+B3b+F4d tutte chiuse: entro l'ora 11: 0.00; 12: 0.00; 14: 0.03; 16: 0.08; mediana 23.12 h
+    RA: scheletro SK chiuso entro l'ora 5: 0.00; 6: 0.00; 8: 0.02; mediana 13.46 h
+    S5: schermo + tabellone + banco (C1, D2, E2) tutti chiusi entro l'ora 5: 0.00; 8: 0.04; mediana 14.03 h
+RB  S5 senza LAT (il tempo per ciclo e' una riga del tabellone)            P(MD<=14)=0.000 [0.000;0.001]  <=15: 0.00  <=16: 0.00  mediana 30.57 h  80o 37.63 h
+RC  S5 senza alcun suono (C3a 0,25/0,5/1)                                  P(MD<=14)=0.000 [0.000;0.001]  <=15: 0.00  <=16: 0.00  mediana 30.91 h  80o 38.08 h
+RA+RB+RC insieme non serve: RA non ha LAT; RA senza suono                  P(MD<=14)=0.000 [0.000;0.001]  <=15: 0.00  <=16: 0.00  mediana 29.04 h  80o 35.65 h
+
+Differenze: RA-S5 = -0.000; RB-S5 = -0.000; RC-S5 = +0.000; S5-S2 = -0.001
+
+== 4. Modello medio (fra il leggero del piano e il duro), stime mie
+M2  piano con i tagli, modello medio                                       P(MD<=14)=0.007 [0.006;0.008]  <=15: 0.02  <=16: 0.04  mediana 22.78 h  80o 27.27 h
+    continuita' e sicurezza A2+A3r+B2+B3a+B3b tutte chiuse: entro l'ora 11: 0.06; 12: 0.11; 14: 0.29; 16: 0.49; mediana 16.06 h
+M5  piano + F4 + THOR ridotto, modello medio                               P(MD<=14)=0.002 [0.001;0.003]  <=15: 0.01  <=16: 0.02  mediana 24.30 h  80o 28.75 h
+    continuita' e sicurezza A2+A3r+B2+B3a+B3b+F4 tutte chiuse: entro l'ora 11: 0.02; 12: 0.04; 14: 0.16; 16: 0.34; mediana 17.64 h
+M1  piano con i tagli, STIME DEL PIANO, modello medio                      P(MD<=14)=0.081 [0.078;0.085]  <=15: 0.15  <=16: 0.25  mediana 18.14 h  80o 21.39 h
+    continuita' e sicurezza A2+A3r+B2+B3a+B3b tutte chiuse: entro l'ora 11: 0.25; 12: 0.39; 14: 0.65; 16: 0.83; mediana 12.82 h
+
+== 5. Calendario alternativo ALT (scheletro prima, B3a spezzato, coda corta)
+ALT   F4 1,5/3/6, cancello all'ora 5, modello leggero                      P(MD<=14)=0.083 [0.079;0.087]  <=15: 0.19  <=16: 0.34  mediana 17.09 h  80o 19.78 h
+    continuita' e sicurezza A2+F9+A3r+B2+B3a1+B3a2+F4 tutte chiuse: entro l'ora 11: 0.05; 12: 0.15; 14: 0.47; 16: 0.75; mediana 14.16 h
+ALTd  F4d 0,5/1/2,5 (non verificato), modello leggero                      P(MD<=14)=0.131 [0.126;0.135]  <=15: 0.28  <=16: 0.44  mediana 16.34 h  80o 18.67 h
+    continuita' e sicurezza A2+F9+A3r+B2+B3a1+B3a2+F4d tutte chiuse: entro l'ora 11: 0.10; 12: 0.25; 14: 0.63; 16: 0.86; mediana 13.26 h
+ALTn  come ALT senza il cancello dell'ora 5, modello leggero               P(MD<=14)=0.168 [0.163;0.173]  <=15: 0.28  <=16: 0.41  mediana 16.67 h  80o 19.57 h
+ALTp  ALT con una persona ferma 2 h di sicuro, modello leggero             P(MD<=14)=0.039 [0.036;0.041]  <=15: 0.11  <=16: 0.24  mediana 17.74 h  80o 20.49 h
+ALT   F4 1,5/3/6, cancello all'ora 5, modello medio                        P(MD<=14)=0.011 [0.009;0.012]  <=15: 0.04  <=16: 0.08  mediana 20.28 h  80o 23.76 h
+    continuita' e sicurezza A2+F9+A3r+B2+B3a1+B3a2+F4 tutte chiuse: entro l'ora 11: 0.02; 12: 0.06; 14: 0.23; 16: 0.48; mediana 16.15 h
+    sul percorso critico (frazione di 4000 estrazioni) | correlazione di rango durata-fine:
+      TABr  0.99 | +0.34 | fine mediana 19.26 h
+      PIr   0.84 | +0.41 | fine mediana 17.75 h
+      K0    0.74 | +0.46 | fine mediana 1.57 h
+      F4    0.49 | +0.52 | fine mediana 12.03 h
+      B3a1  0.49 | +0.53 | fine mediana 15.04 h
+      SK    0.47 | +0.38 | fine mediana 7.63 h
+      C1    0.45 | +0.48 | fine mediana 6.05 h
+      B2    0.23 | +0.40 | fine mediana 9.91 h
+      A2    0.18 | +0.35 | fine mediana 7.81 h
+      F9    0.18 | +0.36 | fine mediana 10.67 h
+      A3r   0.18 | +0.38 | fine mediana 13.04 h
+      B3a2  0.17 | +0.39 | fine mediana 12.83 h
+      D2b   0.15 | +0.40 | fine mediana 14.75 h
+      B1    0.14 | +0.35 | fine mediana 4.74 h
+      D1    0.09 | +0.30 | fine mediana 4.11 h
+      E1r   0.09 | +0.34 | fine mediana 4.85 h
+      D2r   0.09 | +0.34 | fine mediana 8.88 h
+      E2r   0.04 | +0.30 | fine mediana 3.50 h
+      A1    0.02 | +0.24 | fine mediana 3.28 h
+      C2    0.02 | +0.39 | fine mediana 10.35 h
+      C3a   0.01 | +0.35 | fine mediana 11.85 h
+ALTd  F4d 0,5/1/2,5 (non verificato), modello medio                        P(MD<=14)=0.021 [0.020;0.024]  <=15: 0.06  <=16: 0.13  mediana 19.23 h  80o 22.34 h
+    continuita' e sicurezza A2+F9+A3r+B2+B3a1+B3a2+F4d tutte chiuse: entro l'ora 11: 0.04; 12: 0.11; 14: 0.37; 16: 0.65; mediana 14.90 h
+ALTn  come ALT senza il cancello dell'ora 5, modello medio                 P(MD<=14)=0.031 [0.029;0.033]  <=15: 0.07  <=16: 0.12  mediana 20.07 h  80o 23.70 h
+ALTp  ALT con una persona ferma 2 h di sicuro, modello medio               P(MD<=14)=0.005 [0.004;0.006]  <=15: 0.02  <=16: 0.06  mediana 20.75 h  80o 24.24 h
+ALT   F4 1,5/3/6, cancello all'ora 5, modello duro                         P(MD<=14)=0.001 [0.001;0.002]  <=15: 0.00  <=16: 0.01  mediana 25.61 h  80o 31.45 h
+    continuita' e sicurezza A2+F9+A3r+B2+B3a1+B3a2+F4 tutte chiuse: entro l'ora 11: 0.01; 12: 0.02; 14: 0.07; 16: 0.19; mediana 20.06 h
+ALTd  F4d 0,5/1/2,5 (non verificato), modello duro                         P(MD<=14)=0.003 [0.002;0.003]  <=15: 0.01  <=16: 0.02  mediana 24.15 h  80o 29.51 h
+    continuita' e sicurezza A2+F9+A3r+B2+B3a1+B3a2+F4d tutte chiuse: entro l'ora 11: 0.01; 12: 0.04; 14: 0.13; 16: 0.30; mediana 18.24 h
+ALTn  come ALT senza il cancello dell'ora 5, modello duro                  P(MD<=14)=0.004 [0.003;0.005]  <=15: 0.01  <=16: 0.02  mediana 25.54 h  80o 31.43 h
+ALTp  ALT con una persona ferma 2 h di sicuro, modello duro                P(MD<=14)=0.001 [0.001;0.001]  <=15: 0.00  <=16: 0.01  mediana 26.00 h  80o 31.87 h
+
+== 6. La scala: che cosa c'e' nel tronco al gelo dell'ora 12 (e all'ora 14)
+    piano+F4, medio: chiuso entro l'ora 12 (da solo / con tutti i precedenti): schermo C1 0.99/0.99; libero A2 0.99/0.98; avviso B3b 0.16/0.16; regione B2+C2 0.60/0.14; stati B3a 0.08/0.04; identita' F4 0.69/0.04; sensore A3r 0.41/0.04; tabellone D2 0.57/0.03
+    ALT,      medio: chiuso entro l'ora 12 (da solo / con tutti i precedenti): scheletro SK 0.96/0.96; libero A2 0.99/0.95; avviso F9 0.73/0.71; regione B2+C2 0.59/0.47; stati B3a1+B3a2 0.10/0.09; identita' F4 0.50/0.09; sensore A3r 0.34/0.06; tabellone D2r+D2b 0.16/0.03
+    piano+F4, medio: chiuso entro l'ora 14 (da solo / con tutti i precedenti): schermo C1 1.00/1.00; libero A2 1.00/1.00; avviso B3b 0.35/0.35; regione B2+C2 0.81/0.33; stati B3a 0.22/0.15; identita' F4 0.85/0.15; sensore A3r 0.63/0.15; tabellone D2 0.77/0.14
+    ALT,      medio: chiuso entro l'ora 14 (da solo / con tutti i precedenti): scheletro SK 0.99/0.99; libero A2 1.00/0.99; avviso F9 0.91/0.91; regione B2+C2 0.80/0.75; stati B3a1+B3a2 0.29/0.28; identita' F4 0.73/0.28; sensore A3r 0.64/0.23; tabellone D2r+D2b 0.41/0.17
+    piano+F4, duro: chiuso entro l'ora 12 (da solo / con tutti i precedenti): schermo C1 0.93/0.93; libero A2 0.92/0.87; avviso B3b 0.05/0.05; regione B2+C2 0.33/0.04; stati B3a 0.03/0.01; identita' F4 0.45/0.01; sensore A3r 0.23/0.01; tabellone D2 0.34/0.01
+    ALT,      duro: chiuso entro l'ora 12 (da solo / con tutti i precedenti): scheletro SK 0.79/0.79; libero A2 0.92/0.75; avviso F9 0.52/0.45; regione B2+C2 0.32/0.22; stati B3a1+B3a2 0.03/0.03; identita' F4 0.24/0.03; sensore A3r 0.20/0.02; tabellone D2r+D2b 0.06/0.01
+    piano+F4, duro: chiuso entro l'ora 14 (da solo / con tutti i precedenti): schermo C1 0.97/0.97; libero A2 0.97/0.95; avviso B3b 0.15/0.14; regione B2+C2 0.53/0.13; stati B3a 0.08/0.05; identita' F4 0.63/0.05; sensore A3r 0.38/0.05; tabellone D2 0.52/0.04
+    ALT,      duro: chiuso entro l'ora 14 (da solo / con tutti i precedenti): scheletro SK 0.90/0.90; libero A2 0.97/0.89; avviso F9 0.73/0.69; regione B2+C2 0.53/0.44; stati B3a1+B3a2 0.11/0.10; identita' F4 0.43/0.10; sensore A3r 0.41/0.07; tabellone D2r+D2b 0.16/0.04
+    medio: ALT, scheletro SK entro l'ora 5: 0.07; 8: 0.57; mediana 7.63 h | piano: C1 entro l'ora 8: 0.82; prima corsa di tutto insieme (PI) entro l'ora 12: 0.00; mediana 20.98 h
+    duro: ALT, scheletro SK entro l'ora 5: 0.03; 8: 0.29; mediana 9.43 h | piano: C1 entro l'ora 8: 0.61; prima corsa di tutto insieme (PI) entro l'ora 12: 0.00; mediana 26.56 h

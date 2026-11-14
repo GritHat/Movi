@@ -1,0 +1,7 @@
+flussi distinti per seme, comportamento, geometria e ruolo: 437400 ; stati iniziali distinti: 437400
+stati visitati nei primi 40 passi: 17496000; distinti: 17496000; sovrapposizioni (flussi uguali a meno di uno spostamento entro 39 passi): 0
+controllo positivo (1000 flussi e gli stessi spostati di uno): stati ripetuti 39000 (attesi 39000 )
+correlazione fra uniformi di semi vicini (passo 1000003, 255936 coppie, errore tipo 0.0020): r=+0.0005; massimo |r| a spostamenti 1..8: 0.0035
+correlazione fra uniformi di semi vicini (contigui +1, 255936 coppie, errore tipo 0.0020): r=-0.0015; massimo |r| a spostamenti 1..8: 0.0026
+media e varianza delle uniformi (attese 0,5 e 0,0833): 0.5007 0.0835
+semi di prova uguali a semi di libreria: 0

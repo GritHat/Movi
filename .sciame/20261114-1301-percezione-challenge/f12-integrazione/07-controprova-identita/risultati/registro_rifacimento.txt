@@ -1,0 +1,8 @@
+2026-11-14T18:22:51+01:00
+<frozen site>:101: RuntimeWarning: Unexpected value in sys.prefix, expected /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f10-dati/ambiente/venv, got /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f12-integrazione/07-controprova-identita/../../f10-dati/ambiente/venv
+<frozen site>:101: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f10-dati/ambiente/venv, got /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f12-integrazione/07-controprova-identita/../../f10-dati/ambiente/venv
+nuovi424_rifatto: 193 sequenze, 3 configurazioni, 81 s, parametri in più {}
+<frozen site>:101: RuntimeWarning: Unexpected value in sys.prefix, expected /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f10-dati/ambiente/venv, got /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f12-integrazione/07-controprova-identita/../../f10-dati/ambiente/venv
+<frozen site>:101: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f10-dati/ambiente/venv, got /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f12-integrazione/07-controprova-identita/../../f10-dati/ambiente/venv
+nuovi848_rifatto: 193 sequenze, 1 configurazioni, 254 s, parametri in più {}
+2026-11-14T18:28:27+01:00

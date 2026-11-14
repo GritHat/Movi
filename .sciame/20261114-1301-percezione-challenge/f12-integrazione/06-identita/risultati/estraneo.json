@@ -1,0 +1,1424 @@
+{
+ "prima": [
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 22,
+   "primo_scambio": 27,
+   "A_osservato_mentre_nascosta": 22,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 29,
+   "variante": {
+    "x_sosta_A": -0.25,
+    "fotogramma_uscita_B": 24,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 26,
+   "primo_scambio": 30,
+   "A_osservato_mentre_nascosta": 26,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 26,
+   "variante": {
+    "x_sosta_A": -0.25,
+    "fotogramma_uscita_B": 24,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 21,
+   "primo_scambio": 35,
+   "A_osservato_mentre_nascosta": 21,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 21,
+   "variante": {
+    "x_sosta_A": -0.25,
+    "fotogramma_uscita_B": 32,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 18,
+   "primo_scambio": 38,
+   "A_osservato_mentre_nascosta": 18,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 18,
+   "variante": {
+    "x_sosta_A": -0.25,
+    "fotogramma_uscita_B": 32,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 22,
+   "primo_scambio": 27,
+   "A_osservato_mentre_nascosta": 22,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 29,
+   "variante": {
+    "x_sosta_A": -0.1,
+    "fotogramma_uscita_B": 24,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 26,
+   "primo_scambio": 30,
+   "A_osservato_mentre_nascosta": 26,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 26,
+   "variante": {
+    "x_sosta_A": -0.1,
+    "fotogramma_uscita_B": 24,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 21,
+   "primo_scambio": 35,
+   "A_osservato_mentre_nascosta": 21,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 21,
+   "variante": {
+    "x_sosta_A": -0.1,
+    "fotogramma_uscita_B": 32,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 18,
+   "primo_scambio": 38,
+   "A_osservato_mentre_nascosta": 18,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 18,
+   "variante": {
+    "x_sosta_A": -0.1,
+    "fotogramma_uscita_B": 32,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 22,
+   "primo_scambio": 27,
+   "A_osservato_mentre_nascosta": 22,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 29,
+   "variante": {
+    "x_sosta_A": 0.05,
+    "fotogramma_uscita_B": 24,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 26,
+   "primo_scambio": 30,
+   "A_osservato_mentre_nascosta": 26,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 26,
+   "variante": {
+    "x_sosta_A": 0.05,
+    "fotogramma_uscita_B": 24,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 21,
+   "primo_scambio": 35,
+   "A_osservato_mentre_nascosta": 21,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 21,
+   "variante": {
+    "x_sosta_A": 0.05,
+    "fotogramma_uscita_B": 32,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 18,
+   "primo_scambio": 38,
+   "A_osservato_mentre_nascosta": 18,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 18,
+   "variante": {
+    "x_sosta_A": 0.05,
+    "fotogramma_uscita_B": 32,
+    "v_B": 0.7
+   }
+  }
+ ],
+ "f401": [
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 21,
+   "primo_scambio": 28,
+   "A_osservato_mentre_nascosta": 21,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 28,
+   "variante": {
+    "x_sosta_A": -0.25,
+    "fotogramma_uscita_B": 24,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 26,
+   "primo_scambio": 30,
+   "A_osservato_mentre_nascosta": 26,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 26,
+   "variante": {
+    "x_sosta_A": -0.25,
+    "fotogramma_uscita_B": 24,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 20,
+   "primo_scambio": 36,
+   "A_osservato_mentre_nascosta": 20,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 20,
+   "variante": {
+    "x_sosta_A": -0.25,
+    "fotogramma_uscita_B": 32,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 18,
+   "primo_scambio": 38,
+   "A_osservato_mentre_nascosta": 18,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 18,
+   "variante": {
+    "x_sosta_A": -0.25,
+    "fotogramma_uscita_B": 32,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 21,
+   "primo_scambio": 28,
+   "A_osservato_mentre_nascosta": 21,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 28,
+   "variante": {
+    "x_sosta_A": -0.1,
+    "fotogramma_uscita_B": 24,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 26,
+   "primo_scambio": 30,
+   "A_osservato_mentre_nascosta": 26,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 26,
+   "variante": {
+    "x_sosta_A": -0.1,
+    "fotogramma_uscita_B": 24,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 20,
+   "primo_scambio": 36,
+   "A_osservato_mentre_nascosta": 20,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 20,
+   "variante": {
+    "x_sosta_A": -0.1,
+    "fotogramma_uscita_B": 32,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 18,
+   "primo_scambio": 38,
+   "A_osservato_mentre_nascosta": 18,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 18,
+   "variante": {
+    "x_sosta_A": -0.1,
+    "fotogramma_uscita_B": 32,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 21,
+   "primo_scambio": 28,
+   "A_osservato_mentre_nascosta": 21,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 28,
+   "variante": {
+    "x_sosta_A": 0.05,
+    "fotogramma_uscita_B": 24,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 26,
+   "primo_scambio": 30,
+   "A_osservato_mentre_nascosta": 26,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 26,
+   "variante": {
+    "x_sosta_A": 0.05,
+    "fotogramma_uscita_B": 24,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 20,
+   "primo_scambio": 36,
+   "A_osservato_mentre_nascosta": 20,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 20,
+   "variante": {
+    "x_sosta_A": 0.05,
+    "fotogramma_uscita_B": 32,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 18,
+   "primo_scambio": 38,
+   "A_osservato_mentre_nascosta": 18,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 18,
+   "variante": {
+    "x_sosta_A": 0.05,
+    "fotogramma_uscita_B": 32,
+    "v_B": 0.7
+   }
+  }
+ ],
+ "f402": [
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 16,
+   "primo_scambio": 33,
+   "A_osservato_mentre_nascosta": 16,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 23,
+   "variante": {
+    "x_sosta_A": -0.25,
+    "fotogramma_uscita_B": 24,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 16,
+   "primo_scambio": 40,
+   "A_osservato_mentre_nascosta": 16,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 16,
+   "variante": {
+    "x_sosta_A": -0.25,
+    "fotogramma_uscita_B": 24,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 15,
+   "primo_scambio": 41,
+   "A_osservato_mentre_nascosta": 15,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 15,
+   "variante": {
+    "x_sosta_A": -0.25,
+    "fotogramma_uscita_B": 32,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 8,
+   "primo_scambio": 48,
+   "A_osservato_mentre_nascosta": 8,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 8,
+   "variante": {
+    "x_sosta_A": -0.25,
+    "fotogramma_uscita_B": 32,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 16,
+   "primo_scambio": 33,
+   "A_osservato_mentre_nascosta": 16,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 23,
+   "variante": {
+    "x_sosta_A": -0.1,
+    "fotogramma_uscita_B": 24,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 16,
+   "primo_scambio": 40,
+   "A_osservato_mentre_nascosta": 16,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 16,
+   "variante": {
+    "x_sosta_A": -0.1,
+    "fotogramma_uscita_B": 24,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 15,
+   "primo_scambio": 41,
+   "A_osservato_mentre_nascosta": 15,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 15,
+   "variante": {
+    "x_sosta_A": -0.1,
+    "fotogramma_uscita_B": 32,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 8,
+   "primo_scambio": 48,
+   "A_osservato_mentre_nascosta": 8,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 8,
+   "variante": {
+    "x_sosta_A": -0.1,
+    "fotogramma_uscita_B": 32,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 16,
+   "primo_scambio": 33,
+   "A_osservato_mentre_nascosta": 16,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 23,
+   "variante": {
+    "x_sosta_A": 0.05,
+    "fotogramma_uscita_B": 24,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 16,
+   "primo_scambio": 40,
+   "A_osservato_mentre_nascosta": 16,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 16,
+   "variante": {
+    "x_sosta_A": 0.05,
+    "fotogramma_uscita_B": 24,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 15,
+   "primo_scambio": 41,
+   "A_osservato_mentre_nascosta": 15,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 15,
+   "variante": {
+    "x_sosta_A": 0.05,
+    "fotogramma_uscita_B": 32,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 8,
+   "primo_scambio": 48,
+   "A_osservato_mentre_nascosta": 8,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 8,
+   "variante": {
+    "x_sosta_A": 0.05,
+    "fotogramma_uscita_B": 32,
+    "v_B": 0.7
+   }
+  }
+ ],
+ "f408": [
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 22,
+   "primo_scambio": 27,
+   "A_osservato_mentre_nascosta": 22,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 29,
+   "variante": {
+    "x_sosta_A": -0.25,
+    "fotogramma_uscita_B": 24,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 26,
+   "primo_scambio": 30,
+   "A_osservato_mentre_nascosta": 26,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 26,
+   "variante": {
+    "x_sosta_A": -0.25,
+    "fotogramma_uscita_B": 24,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 21,
+   "primo_scambio": 35,
+   "A_osservato_mentre_nascosta": 21,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 21,
+   "variante": {
+    "x_sosta_A": -0.25,
+    "fotogramma_uscita_B": 32,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 18,
+   "primo_scambio": 38,
+   "A_osservato_mentre_nascosta": 18,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 18,
+   "variante": {
+    "x_sosta_A": -0.25,
+    "fotogramma_uscita_B": 32,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 22,
+   "primo_scambio": 27,
+   "A_osservato_mentre_nascosta": 22,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 29,
+   "variante": {
+    "x_sosta_A": -0.1,
+    "fotogramma_uscita_B": 24,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 26,
+   "primo_scambio": 30,
+   "A_osservato_mentre_nascosta": 26,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 26,
+   "variante": {
+    "x_sosta_A": -0.1,
+    "fotogramma_uscita_B": 24,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 21,
+   "primo_scambio": 35,
+   "A_osservato_mentre_nascosta": 21,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 21,
+   "variante": {
+    "x_sosta_A": -0.1,
+    "fotogramma_uscita_B": 32,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 18,
+   "primo_scambio": 38,
+   "A_osservato_mentre_nascosta": 18,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 18,
+   "variante": {
+    "x_sosta_A": -0.1,
+    "fotogramma_uscita_B": 32,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 22,
+   "primo_scambio": 27,
+   "A_osservato_mentre_nascosta": 22,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 29,
+   "variante": {
+    "x_sosta_A": 0.05,
+    "fotogramma_uscita_B": 24,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 26,
+   "primo_scambio": 30,
+   "A_osservato_mentre_nascosta": 26,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 26,
+   "variante": {
+    "x_sosta_A": 0.05,
+    "fotogramma_uscita_B": 24,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 21,
+   "primo_scambio": 35,
+   "A_osservato_mentre_nascosta": 21,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 21,
+   "variante": {
+    "x_sosta_A": 0.05,
+    "fotogramma_uscita_B": 32,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 18,
+   "primo_scambio": 38,
+   "A_osservato_mentre_nascosta": 18,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 18,
+   "variante": {
+    "x_sosta_A": 0.05,
+    "fotogramma_uscita_B": 32,
+    "v_B": 0.7
+   }
+  }
+ ],
+ "f409": [
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 22,
+   "primo_scambio": 27,
+   "A_osservato_mentre_nascosta": 22,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": -0.25,
+    "fotogramma_uscita_B": 24,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 26,
+   "primo_scambio": 30,
+   "A_osservato_mentre_nascosta": 26,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": -0.25,
+    "fotogramma_uscita_B": 24,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 21,
+   "primo_scambio": 35,
+   "A_osservato_mentre_nascosta": 21,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": -0.25,
+    "fotogramma_uscita_B": 32,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 18,
+   "primo_scambio": 38,
+   "A_osservato_mentre_nascosta": 18,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": -0.25,
+    "fotogramma_uscita_B": 32,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 22,
+   "primo_scambio": 27,
+   "A_osservato_mentre_nascosta": 22,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": -0.1,
+    "fotogramma_uscita_B": 24,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 26,
+   "primo_scambio": 30,
+   "A_osservato_mentre_nascosta": 26,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": -0.1,
+    "fotogramma_uscita_B": 24,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 21,
+   "primo_scambio": 35,
+   "A_osservato_mentre_nascosta": 21,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": -0.1,
+    "fotogramma_uscita_B": 32,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 18,
+   "primo_scambio": 38,
+   "A_osservato_mentre_nascosta": 18,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": -0.1,
+    "fotogramma_uscita_B": 32,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 22,
+   "primo_scambio": 27,
+   "A_osservato_mentre_nascosta": 22,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": 0.05,
+    "fotogramma_uscita_B": 24,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 26,
+   "primo_scambio": 30,
+   "A_osservato_mentre_nascosta": 26,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": 0.05,
+    "fotogramma_uscita_B": 24,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 21,
+   "primo_scambio": 35,
+   "A_osservato_mentre_nascosta": 21,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": 0.05,
+    "fotogramma_uscita_B": 32,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 18,
+   "primo_scambio": 38,
+   "A_osservato_mentre_nascosta": 18,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": 0.05,
+    "fotogramma_uscita_B": 32,
+    "v_B": 0.7
+   }
+  }
+ ],
+ "tutte": [
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 16,
+   "primo_scambio": 33,
+   "A_osservato_mentre_nascosta": 16,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": -0.25,
+    "fotogramma_uscita_B": 24,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 16,
+   "primo_scambio": 40,
+   "A_osservato_mentre_nascosta": 16,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": -0.25,
+    "fotogramma_uscita_B": 24,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 15,
+   "primo_scambio": 41,
+   "A_osservato_mentre_nascosta": 15,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": -0.25,
+    "fotogramma_uscita_B": 32,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 8,
+   "primo_scambio": 48,
+   "A_osservato_mentre_nascosta": 8,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": -0.25,
+    "fotogramma_uscita_B": 32,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 16,
+   "primo_scambio": 33,
+   "A_osservato_mentre_nascosta": 16,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": -0.1,
+    "fotogramma_uscita_B": 24,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 16,
+   "primo_scambio": 40,
+   "A_osservato_mentre_nascosta": 16,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": -0.1,
+    "fotogramma_uscita_B": 24,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 15,
+   "primo_scambio": 41,
+   "A_osservato_mentre_nascosta": 15,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": -0.1,
+    "fotogramma_uscita_B": 32,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 8,
+   "primo_scambio": 48,
+   "A_osservato_mentre_nascosta": 8,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": -0.1,
+    "fotogramma_uscita_B": 32,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 16,
+   "primo_scambio": 33,
+   "A_osservato_mentre_nascosta": 16,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": 0.05,
+    "fotogramma_uscita_B": 24,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 16,
+   "primo_scambio": 40,
+   "A_osservato_mentre_nascosta": 16,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": 0.05,
+    "fotogramma_uscita_B": 24,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 15,
+   "primo_scambio": 41,
+   "A_osservato_mentre_nascosta": 15,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": 0.05,
+    "fotogramma_uscita_B": 32,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 8,
+   "primo_scambio": 48,
+   "A_osservato_mentre_nascosta": 8,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": 0.05,
+    "fotogramma_uscita_B": 32,
+    "v_B": 0.7
+   }
+  }
+ ],
+ "f401p": [
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 21,
+   "primo_scambio": 28,
+   "A_osservato_mentre_nascosta": 21,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 28,
+   "variante": {
+    "x_sosta_A": -0.25,
+    "fotogramma_uscita_B": 24,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 26,
+   "primo_scambio": 30,
+   "A_osservato_mentre_nascosta": 26,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 26,
+   "variante": {
+    "x_sosta_A": -0.25,
+    "fotogramma_uscita_B": 24,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 20,
+   "primo_scambio": 36,
+   "A_osservato_mentre_nascosta": 20,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 20,
+   "variante": {
+    "x_sosta_A": -0.25,
+    "fotogramma_uscita_B": 32,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 18,
+   "primo_scambio": 38,
+   "A_osservato_mentre_nascosta": 18,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 18,
+   "variante": {
+    "x_sosta_A": -0.25,
+    "fotogramma_uscita_B": 32,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 21,
+   "primo_scambio": 28,
+   "A_osservato_mentre_nascosta": 21,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 28,
+   "variante": {
+    "x_sosta_A": -0.1,
+    "fotogramma_uscita_B": 24,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 26,
+   "primo_scambio": 30,
+   "A_osservato_mentre_nascosta": 26,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 26,
+   "variante": {
+    "x_sosta_A": -0.1,
+    "fotogramma_uscita_B": 24,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 20,
+   "primo_scambio": 36,
+   "A_osservato_mentre_nascosta": 20,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 20,
+   "variante": {
+    "x_sosta_A": -0.1,
+    "fotogramma_uscita_B": 32,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 18,
+   "primo_scambio": 38,
+   "A_osservato_mentre_nascosta": 18,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 18,
+   "variante": {
+    "x_sosta_A": -0.1,
+    "fotogramma_uscita_B": 32,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 21,
+   "primo_scambio": 28,
+   "A_osservato_mentre_nascosta": 21,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 28,
+   "variante": {
+    "x_sosta_A": 0.05,
+    "fotogramma_uscita_B": 24,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 26,
+   "primo_scambio": 30,
+   "A_osservato_mentre_nascosta": 26,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 26,
+   "variante": {
+    "x_sosta_A": 0.05,
+    "fotogramma_uscita_B": 24,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 20,
+   "primo_scambio": 36,
+   "A_osservato_mentre_nascosta": 20,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 20,
+   "variante": {
+    "x_sosta_A": 0.05,
+    "fotogramma_uscita_B": 32,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 18,
+   "primo_scambio": 38,
+   "A_osservato_mentre_nascosta": 18,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 18,
+   "variante": {
+    "x_sosta_A": 0.05,
+    "fotogramma_uscita_B": 32,
+    "v_B": 0.7
+   }
+  }
+ ],
+ "tutte_p": [
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 16,
+   "primo_scambio": 33,
+   "A_osservato_mentre_nascosta": 16,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": -0.25,
+    "fotogramma_uscita_B": 24,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 17,
+   "primo_scambio": 39,
+   "A_osservato_mentre_nascosta": 17,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": -0.25,
+    "fotogramma_uscita_B": 24,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 15,
+   "primo_scambio": 41,
+   "A_osservato_mentre_nascosta": 15,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": -0.25,
+    "fotogramma_uscita_B": 32,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 9,
+   "primo_scambio": 47,
+   "A_osservato_mentre_nascosta": 9,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": -0.25,
+    "fotogramma_uscita_B": 32,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 16,
+   "primo_scambio": 33,
+   "A_osservato_mentre_nascosta": 16,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": -0.1,
+    "fotogramma_uscita_B": 24,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 17,
+   "primo_scambio": 39,
+   "A_osservato_mentre_nascosta": 17,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": -0.1,
+    "fotogramma_uscita_B": 24,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 15,
+   "primo_scambio": 41,
+   "A_osservato_mentre_nascosta": 15,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": -0.1,
+    "fotogramma_uscita_B": 32,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 9,
+   "primo_scambio": 47,
+   "A_osservato_mentre_nascosta": 9,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": -0.1,
+    "fotogramma_uscita_B": 32,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 16,
+   "primo_scambio": 33,
+   "A_osservato_mentre_nascosta": 16,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": 0.05,
+    "fotogramma_uscita_B": 24,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 17,
+   "primo_scambio": 39,
+   "A_osservato_mentre_nascosta": 17,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": 0.05,
+    "fotogramma_uscita_B": 24,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 15,
+   "primo_scambio": 41,
+   "A_osservato_mentre_nascosta": 15,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": 0.05,
+    "fotogramma_uscita_B": 32,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 9,
+   "primo_scambio": 47,
+   "A_osservato_mentre_nascosta": 9,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": 0.05,
+    "fotogramma_uscita_B": 32,
+    "v_B": 0.7
+   }
+  }
+ ],
+ "tutte_p2": [
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 16,
+   "primo_scambio": 33,
+   "A_osservato_mentre_nascosta": 16,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": -0.25,
+    "fotogramma_uscita_B": 24,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 16,
+   "primo_scambio": 40,
+   "A_osservato_mentre_nascosta": 16,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": -0.25,
+    "fotogramma_uscita_B": 24,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 15,
+   "primo_scambio": 41,
+   "A_osservato_mentre_nascosta": 15,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": -0.25,
+    "fotogramma_uscita_B": 32,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 8,
+   "primo_scambio": 48,
+   "A_osservato_mentre_nascosta": 8,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": -0.25,
+    "fotogramma_uscita_B": 32,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 16,
+   "primo_scambio": 33,
+   "A_osservato_mentre_nascosta": 16,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": -0.1,
+    "fotogramma_uscita_B": 24,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 16,
+   "primo_scambio": 40,
+   "A_osservato_mentre_nascosta": 16,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": -0.1,
+    "fotogramma_uscita_B": 24,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 15,
+   "primo_scambio": 41,
+   "A_osservato_mentre_nascosta": 15,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": -0.1,
+    "fotogramma_uscita_B": 32,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 8,
+   "primo_scambio": 48,
+   "A_osservato_mentre_nascosta": 8,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": -0.1,
+    "fotogramma_uscita_B": 32,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 16,
+   "primo_scambio": 33,
+   "A_osservato_mentre_nascosta": 16,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": 0.05,
+    "fotogramma_uscita_B": 24,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 16,
+   "primo_scambio": 40,
+   "A_osservato_mentre_nascosta": 16,
+   "A_nascosta_dopo_uscita_B": 32,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": 0.05,
+    "fotogramma_uscita_B": 24,
+    "v_B": 0.7
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 15,
+   "primo_scambio": 41,
+   "A_osservato_mentre_nascosta": 15,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": 0.05,
+    "fotogramma_uscita_B": 32,
+    "v_B": 1.2
+   }
+  },
+  {
+   "id_A": 1,
+   "identita_di_A_su_B_fotogrammi": 8,
+   "primo_scambio": 48,
+   "A_osservato_mentre_nascosta": 8,
+   "A_nascosta_dopo_uscita_B": 24,
+   "A_fuori_avviso": 0,
+   "variante": {
+    "x_sosta_A": 0.05,
+    "fotogramma_uscita_B": 32,
+    "v_B": 0.7
+   }
+  }
+ ]
+}

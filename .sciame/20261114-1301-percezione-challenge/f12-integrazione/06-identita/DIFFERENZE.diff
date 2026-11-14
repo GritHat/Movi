@@ -1,0 +1,261 @@
+diff --color -u -r catena_originale/catena.py catena/catena.py
+--- catena_originale/catena.py	2026-11-14 17:56:12.252563743 +0100
++++ catena/catena.py	2026-11-14 17:57:50.251781769 +0100
+@@ -49,7 +49,7 @@
+         self.mappa_ciclo = self.mappa.aggiorna(prof, t)
+         self.gruppi, self.etichette = trova_gruppi(self.mappa_ciclo, self.par)
+         eventi = self.inseguitore.passo(t, self.mappa_ciclo, self.gruppi, self.etichette)
+-        strati = [tr.strato for tr in self.inseguitore.tracce if tr.strato is not None]
++        strati = [tr.strato for tr in self.inseguitore.tracce if tr.strato is not None] + list(self.inseguitore.orfani)
+         self.possibile_presenza = np.zeros_like(self.possibile_presenza)
+         for s in strati:
+             self.possibile_presenza |= s.maschera
+diff --color -u -r catena_originale/geometria.py catena/geometria.py
+--- catena_originale/geometria.py	2026-11-14 17:56:12.252412733 +0100
++++ catena/geometria.py	2026-11-14 17:57:50.249620060 +0100
+@@ -111,6 +111,7 @@
+ 
+     def __init__(self, meta, posa, par):
+         self.posa, self.h = posa, np.float32(posa.altezza_m)
++        self.fx, self.fy = float(meta["fx"]), float(meta["fy"])          # f12: per le soglie proporzionali
+         u = (np.arange(meta["larghezza"], dtype=np.float64) - meta["cx"]) / meta["fx"]
+         v = (np.arange(meta["altezza"], dtype=np.float64) - meta["cy"]) / meta["fy"]
+         xn, yn = np.meshgrid(u, v)
+@@ -120,5 +121,7 @@
+         ia = np.floor((azimut + par.azimut_max_gradi) / par.passo_azimut_gradi).astype(np.int64)
+         self.in_azimut = ((az > 0) & (ia >= 0) & (ia < par.n_azimut)).ravel()
+         self.ia = np.clip(ia, 0, par.n_azimut - 1).ravel().astype(np.int32)
++        dentro = self.ia[self.in_azimut]                                  # f12: bordo del campo in azimut
++        self.ia_campo = (int(dentro.min()), int(dentro.max())) if dentro.size else (0, par.n_azimut - 1)
+         self.ax, self.az = ax.ravel().astype(np.float32), az.ravel().astype(np.float32)
+         self.aq, self.ar = aq.ravel().astype(np.float32), np.hypot(ax, az).ravel().astype(np.float32)
+diff --color -u -r catena_originale/gruppi.py catena/gruppi.py
+--- catena_originale/gruppi.py	2026-11-14 17:56:12.252412733 +0100
++++ catena/gruppi.py	2026-11-14 18:15:01.802793397 +0100
+@@ -23,16 +23,47 @@
+     z: float
+     larghezza_m: float         # corda sottesa dall'estensione in azimut alla distanza del centro
+     tagliato: bool = False
++    al_bordo: bool = False     # f12: tocca il bordo del campo (azimut o portata)
+ 
+     @property
+     def distanza(self):
+         return math.hypot(self.x, self.z)
+ 
+ 
++def _forti(occupato, n, frazione, soglia_attesi):
++    """tracciamento-1 (f12): le celle con almeno `frazione` dei punti della cella più piena della loro componente
++    connessa. Un ponte di pixel misti fra due superfici piene ha pochi punti rispetto a entrambe e cade."""
++    na, nr = occupato.shape
++    visto = np.zeros_like(occupato)
++    forti = np.zeros_like(occupato)
++    for a0, r0 in zip(*np.nonzero(occupato)):
++        if visto[a0, r0]:
++            continue
++        visto[a0, r0] = True
++        pila, celle = [(int(a0), int(r0))], []
++        while pila:
++            a, r = pila.pop()
++            celle.append((a, r))
++            for da, dr in VICINE:
++                b, s = a + da, r + dr
++                if 0 <= b < na and 0 <= s < nr and occupato[b, s] and not visto[b, s]:
++                    visto[b, s] = True
++                    pila.append((b, s))
++        if len(celle) == 1 and n[celle[0]] < soglia_attesi[celle[0][1]]:
++            continue
++        ia, ir = np.array(celle, dtype=np.int64).T
++        punti = n[ia, ir]
++        tiene = (punti >= frazione * punti.max()) & (punti >= soglia_attesi[ir])
++        forti[ia[tiene], ir[tiene]] = True
++    return forti
++
++
+ def trova_gruppi(ciclo, par):
+     """Restituisce (gruppi, etichette): etichette è (na, nr) con l'id del gruppo di ogni cella occupata, -1 altrove."""
+     occupato = ciclo.stati == OCCUPATO
+     na, nr = occupato.shape
++    if par.gruppi_per_picco:                          # f12: la mappa non cambia, cambiano le celle che fanno gruppo
++        occupato = _forti(occupato, ciclo.n_ostacolo, par.frazione_picco, ciclo.soglia_attesi)
+     etichette = np.full((na, nr), -1, dtype=np.int32)
+     gruppi = []
+     for a0, r0 in zip(*np.nonzero(occupato)):
+@@ -61,11 +92,22 @@
+             if len(g.ia) < par.min_celle_gruppo:
+                 etichette[g.ia, g.ir] = -1
+         gruppi = [g for g in gruppi if len(g.ia) >= par.min_celle_gruppo]
++    if par.soglia_proporzionale or par.gruppi_per_picco:   # f12: punti del gruppo contro l'area frontale di riferimento
++        piccoli = [g for g in gruppi if g.n_punti < ciclo.fxfy * par.area_rif_gruppo_m2 / max(g.distanza, 0.3) ** 2]
++        for g in piccoli:
++            etichette[g.ia, g.ir] = -1
++        gruppi = [g for g in gruppi if not any(g is p for p in piccoli)]
+     for g in gruppi:
++        g.al_bordo = bool(g.ia.min() <= ciclo.ia_campo[0] + 1 or g.ia.max() >= ciclo.ia_campo[1] - 1
++                          or g.ir.max() >= nr - 1)
+         for da in (-1, 1):
+             b = g.ia + da
+             ok = (b >= 0) & (b < na)
+             b, s = b[ok], g.ir[ok]
++            if par.tagliato_su_componente:            # f12: le celle deboli (occupate, senza gruppo) sono ancora l'oggetto
++                for _ in range(2):
++                    debole = (ciclo.stati[b, s] == OCCUPATO) & (etichette[b, s] < 0)
++                    b = np.clip(np.where(debole, b + da, b), 0, na - 1)
+             primo = ciclo.primo[b]
+             in_ombra = (ciclo.stati[b, s] == IN_OMBRA) & (primo < s)
+             chi = etichette[b[in_ombra], primo[in_ombra]]         # il gruppo che fa quell'ombra
+diff --color -u -r catena_originale/inseguimento.py catena/inseguimento.py
+--- catena_originale/inseguimento.py	2026-11-14 17:56:12.252563743 +0100
++++ catena/inseguimento.py	2026-11-14 17:57:50.251543134 +0100
+@@ -34,6 +34,7 @@
+         self.si_muove, self.t_moto = None, None
+         self.strato = self.predittore = self.previsione = None
+         self.attesa_misura_piena = False
++        self.appena_ripartito = False            # f12 (F-408)
+ 
+     def cambia_stato(self, nuovo, t):
+         if nuovo != self.stato:
+@@ -72,6 +73,7 @@
+         self.par, self.griglia, self.fabbrica_predittore = par, griglia, fabbrica_predittore
+         self.tracce, self.prossimo_id = [], 1
+         self.t_prec, self.k = None, -1
++        self.orfani = []                         # f12 (F-409): strati rimasti dopo un riaggancio
+ 
+     # ------------------------------------------------------------------ misure
+     def _r(self, x, z, tagliato=False, larghezza=0.0):
+@@ -88,7 +90,12 @@
+         tr.ultima_misura = (g.x, g.z, t)
+         tr.storia.append(True)
+         tr.senza_misura = 0
+-        if not g.tagliato:
++        if tr.appena_ripartito:                    # f12 (F-408): il filtro è appena ripartito da questa misura
++            tr.appena_ripartito = False
++            tr.larghezza_m = max(tr.larghezza_m, g.larghezza_m)
++        elif g.tagliato and self.par.riparti_al_riaggancio and tr.attesa_misura_piena:
++            tr.kf.aggiorna((g.x, g.z), self._r(g.x, g.z, True, tr.larghezza_m))   # tagliata dopo un riaggancio: R gonfiato
++        elif not g.tagliato:
+             r = self._r(g.x, g.z)
+             d2 = tr.kf.innovazione((g.x, g.z), r)[2]
+             if tr.attesa_misura_piena:
+@@ -152,9 +159,20 @@
+                        "durata_s": round(t - tr.strato.t_ingresso, 4), "buio_s": round(t - tr.ultima_misura[2], 4),
+                        "errore_previsione_m": round(float(np.hypot(*y)), 4), "raggio95_m": round(prev.raggio95, 4),
+                        "d2": round(d2, 3), "in95": d2 <= CHI2_95, "misura_tagliata": g.tagliato})
+-        tr.strato.fine = "riaggancio"
++        if self.par.strato_resta:                  # f12 (F-409): l'avviso resta finché le celle non sono viste libere
++            tr.strato.orfano = True
++            self.orfani.append(tr.strato)
++            eventi[-1]["identita"] = "presunta"
++        else:
++            tr.strato.fine = "riaggancio"
+         tr.strato = tr.predittore = tr.previsione = None
+         tr.attesa_misura_piena = True
++        if self.par.riparti_al_riaggancio:         # f12 (F-408): riparte dalla misura, R gonfiato di metà larghezza
++            tr.kf.riparti(g.x, g.z, self._r(g.x, g.z, True, max(tr.larghezza_m, g.larghezza_m)),
++                          self.par.v_iniziale_m_s)
++            tr.campioni.clear()
++            tr.medie.clear()
++            tr.appena_ripartito = True
+         self._misura(tr, g, t, eventi)
+ 
+     # ------------------------------------------------------------------ cicli senza misura
+@@ -234,4 +252,12 @@
+                 self.tracce[-1].aggiorna_moto(self.k, t, g.x, g.z)
+                 eventi.append({"tipo": "nascita", "id": self.prossimo_id})
+                 self.prossimo_id += 1
++        vivi = []                                    # f12 (F-409): gli strati orfani si rilasciano cella per cella
++        for s in self.orfani:
++            if s.aggiorna(ciclo):
++                eventi.append({"tipo": "strato_finito", "id": s.id_traccia, "motivo": "celle_libere_dopo_riaggancio",
++                               "eta_s": round(t - s.t_ingresso, 4)})
++            else:
++                vivi.append(s)
++        self.orfani = vivi
+         return eventi
+diff --color -u -r catena_originale/mappa.py catena/mappa.py
+--- catena_originale/mappa.py	2026-11-14 17:56:12.252412733 +0100
++++ catena/mappa.py	2026-11-14 18:03:40.233787726 +0100
+@@ -75,6 +75,9 @@
+     primo: np.ndarray          # (na,) indice di distanza del primo ritorno; nr se non c'è
+     pixel_validi: int
+     suolo_visto_in_ombra: int  # diagnostico: celle «in ombra» in cui il suolo si vede (lettura prudente)
++    ia_campo: tuple = (0, 10 ** 9)   # f12: primo e ultimo azimut con pixel
++    fxfy: float = 0.0                # f12: fx·fy, per la soglia di punti del gruppo
++    soglia_attesi: np.ndarray = None  # f12: (nr,) punti attesi per cella (soglia delle celle che fanno gruppo)
+ 
+     def conteggi(self):
+         return np.bincount(self.stati.ravel(), minlength=4)
+@@ -87,6 +90,12 @@
+         self.eta = np.full(forma, ETA_MAI, dtype=np.int16)
+         self._ultimi = deque(maxlen=par.memoria_fotogrammi)      # per l'invariante 1, a parte dal contatore d'età
+         self._indici_r = np.arange(par.n_distanza)[None, :]
++        soglia = np.full(par.n_distanza, par.min_punti_ostacolo, dtype=np.int64)
++        # f12 (F-401/F-412): pixel attesi in una cella da una superficie verticale alta alt_rif e larga una cella
++        attesi = (proiezione.fx * proiezione.fy * math.radians(par.passo_azimut_gradi)
++                  * par.alt_rif_cella_m / self.griglia.distanza)
++        self.soglia_attesi = np.maximum(soglia, np.ceil(attesi).astype(np.int64))
++        self.soglia_ostacolo = (self.soglia_attesi if par.soglia_proporzionale else soglia)[None, :]
+ 
+     def aggiorna(self, prof, t):
+         par, pr = self.par, self.pr
+@@ -105,7 +114,7 @@
+         somma_z = np.bincount(c_ost, weights=z_ost * pr.az[ostacolo], minlength=na * nr).reshape(na, nr)
+ 
+         suolo_ora = n_suolo >= par.min_punti_suolo
+-        occupato = n_ost >= par.min_punti_ostacolo
++        occupato = n_ost >= self.soglia_ostacolo
+         primo = np.where(occupato.any(axis=1), occupato.argmax(axis=1), nr)
+         oltre = self._indici_r > primo[:, None]
+         pulita = n_ost == 0
+@@ -123,7 +132,8 @@
+         stati[occupato] = OCCUPATO
+         self._ultimi.append(vista_libera)
+         ciclo = CicloMappa(t, stati, self.eta, suolo_ora, suolo_ora & ~pulita & ~occupato & ~ombra,
+-                           n_ost, somma_x, somma_z, primo, int(np.count_nonzero(prof)), visto_in_ombra)
++                           n_ost, somma_x, somma_z, primo, int(np.count_nonzero(prof)), visto_in_ombra,
++                           pr.ia_campo, pr.fx * pr.fy, self.soglia_attesi)
+         if par.verifica_invarianti:
+             self.verifica(ciclo, int(n_suolo.sum() + n_ost.sum()))
+         return ciclo
+diff --color -u -r catena_originale/parametri.py catena/parametri.py
+--- catena_originale/parametri.py	2026-11-14 17:56:12.252412733 +0100
++++ catena/parametri.py	2026-11-14 18:15:01.802575321 +0100
+@@ -52,6 +52,17 @@
+     frazione_perso: float = 0.5             # «previsto» finché il cerchio al 95 % copre meno di metà del cuneo
+     pendenti_ambito: str = "globale"        # lettura: «una sola traccia pendente» in tutta la scena («ombra»: nella fascia)
+     min_celle_altro_bordo: int = 1          # lettura: basta una cella non osservata entro la fascia per rifiutare
++    # --- correzioni f12 (tutte spente = catena di f10)
++    soglia_proporzionale: bool = False      # F-401/F-412: soglie di punti in proporzione ai pixel attesi
++    alt_rif_cella_m: float = 0.05           # superficie verticale di riferimento per cella (alta così, larga una cella)
++    area_rif_gruppo_m2: float = 0.004       # area frontale minima di un gruppo
++    gruppi_per_picco: bool = False          # tracciamento-1: gruppi solo dalle celle «forti» (mappa invariata)
++    frazione_picco: float = 0.30            # cella forte = almeno questa quota dei punti della più piena della componente
++    tagliato_su_componente: bool = False    # tracciamento-2: «tagliato» scavalca le celle deboli accanto al gruppo
++    riaggancio_rifiuta_tagliati: bool = False   # F-402: né gruppi tagliati dall'ombra o dal bordo…
++    riaggancio_rifiuta_occlusore: bool = False  # …né il gruppo che fa l'ombra d'ingresso
++    riparti_al_riaggancio: bool = False     # F-408: il filtro riparte dalla misura con R gonfiato
++    strato_resta: bool = False              # F-409: lo strato sopravvive al riaggancio finché non è visto libero
+     # --- uscita
+     settore_gradi: float = 10.0
+     verifica_invarianti: bool = True
+diff --color -u -r catena_originale/presenza.py catena/presenza.py
+--- catena_originale/presenza.py	2026-11-14 17:56:12.252563743 +0100
++++ catena/presenza.py	2026-11-14 17:57:50.250783088 +0100
+@@ -67,6 +67,7 @@
+         self.liberi_di_fila = np.zeros(self.nucleo.shape, dtype=np.int16)
+         self.celle_rilasciate = 0
+         self.fine = None                      # motivo della fine: «riaggancio» o «celle_libere» (invariante 7)
++        self.orfano = False                   # f12 (F-409): la traccia è stata riagganciata, lo strato resta
+ 
+     def aggiorna(self, ciclo):
+         """Rilascio cella per cella. Lettura prudente: conta solo il suolo visto in QUESTO fotogramma, non la
+@@ -132,6 +133,10 @@
+     if par.portata_m - gruppo.distanza <= par.fascia_m:
+         return False, "a meno della fascia dal bordo della portata"
+     chi = _gruppo_del_primo_ritorno(ciclo, etichette)
++    if par.riaggancio_rifiuta_tagliati and (gruppo.tagliato or gruppo.al_bordo):          # f12 (F-402)
++        return False, "gruppo tagliato da un'ombra o dal bordo del campo"
++    if par.riaggancio_rifiuta_occlusore and (chi[strato.nucleo.any(axis=1)] == gruppo.id).any():
++        return False, "gruppo dell'occlusore (dà il primo ritorno su un azimut del cuneo)"
+     oltre = np.arange(etichette.shape[1])[None, :] > ciclo.primo[:, None]
+     ombra_propria = (chi == gruppo.id)[:, None] & oltre
+     altro = ((ciclo.stati == NON_OSSERVATO) | (ciclo.stati == IN_OMBRA)) & ~ciclo.ambigua \

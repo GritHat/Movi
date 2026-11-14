@@ -1,0 +1,40 @@
+(1) secondaria (tutti gli istanti a corpo nascosto, R90 grezza), cinque comportamenti insieme, 400 semi l'uno, c7=1
+   D pd=0.9 punto : 1 s 1780/1825=0.975 [0.967-0.982]; 2 s 1224/1266=0.967 [0.955-0.975]; 3 s 949/998=0.951 [0.936-0.963]; cella peggiore a 2 s prosegue 130/134 W 0.926
+   D pd=0.9 esteso: 1 s 973/1037=0.938 [0.922-0.951]; 2 s 895/969=0.924 [0.905-0.939]; 3 s 722/791=0.913 [0.891-0.930]; cella peggiore a 2 s prosegue 127/143 W 0.826
+   D pd=0.7 punto : 1 s 1660/1732=0.958 [0.948-0.967]; 2 s 1160/1223=0.948 [0.935-0.960]; 3 s 895/956=0.936 [0.919-0.950]; cella peggiore a 2 s torna 283/306 W 0.890
+   D pd=0.7 esteso: 1 s 867/935=0.927 [0.909-0.942]; 2 s 828/901=0.919 [0.899-0.935]; 3 s 665/735=0.905 [0.881-0.924]; cella peggiore a 2 s prosegue 116/132 W 0.812
+   T pd=0.9 punto : 1 s 1977/2016=0.981 [0.974-0.986]; 2 s 1529/1573=0.972 [0.963-0.979]; 3 s 1208/1269=0.952 [0.939-0.962]; cella peggiore a 2 s sosta 348/361 W 0.939
+   T pd=0.9 esteso: 1 s 1545/1572=0.983 [0.975-0.988]; 2 s 1341/1387=0.967 [0.956-0.975]; 3 s 1035/1086=0.953 [0.939-0.964]; cella peggiore a 2 s prosegue 189/197 W 0.922
+   T pd=0.7 punto : 1 s 1856/1908=0.973 [0.964-0.979]; 2 s 1438/1503=0.957 [0.945-0.966]; 3 s 1142/1223=0.934 [0.918-0.946]; cella peggiore a 2 s torna 301/322 W 0.902
+   T pd=0.7 esteso: 1 s 1378/1415=0.974 [0.964-0.981]; 2 s 1207/1265=0.954 [0.941-0.964]; 3 s 950/1000=0.950 [0.935-0.962]; cella peggiore a 2 s sosta 278/296 W 0.906
+   L pd=0.9 punto : 1 s 1978/2006=0.986 [0.980-0.990]; 2 s 1899/1996=0.951 [0.941-0.960]; 3 s 1671/1814=0.921 [0.908-0.933]; cella peggiore a 2 s torna 373/398 W 0.909
+   L pd=0.9 esteso: 1 s 1471/1505=0.977 [0.969-0.984]; 2 s 1823/1927=0.946 [0.935-0.955]; 3 s 1606/1735=0.926 [0.912-0.937]; cella peggiore a 2 s torna 351/376 W 0.904
+   L pd=0.7 punto : 1 s 1881/1922=0.979 [0.971-0.984]; 2 s 1790/1914=0.935 [0.923-0.945]; 3 s 1569/1742=0.901 [0.886-0.914]; cella peggiore a 2 s torna 347/377 W 0.889
+   L pd=0.7 esteso: 1 s 1330/1380=0.964 [0.953-0.972]; 2 s 1667/1795=0.929 [0.916-0.940]; 3 s 1472/1617=0.910 [0.895-0.923]; cella peggiore a 2 s torna 318/346 W 0.886
+(2) denominatori
+   tutti i lanci: validi 217861 ; validi+nonconf 218646 ; semi lanciati 226400
+   senza estraneo: validi 194861 ; senza estraneo e senza «toglie»: istanti nascosti 11946289 fuori R100 0
+   camminatori distinti (seme, comportamento, geometria) in tutti i lanci, al piu': 70400 ; nei lanci (a): 6000
+   0 vuoti: limite superiore di Wilson al 95 % su 23402 = 0.00016; su 6000 camminatori distinti = 0.00064
+(3) tabellone «dentro k su n»: prova esatta a una coda, livello 0,05
+   escludere 0.80 se il vero e' 0.90, potenza 0.80: n = 94, regola «dentro almeno 82 su 94»
+   escludere 0.80 se il vero e' 0.90, potenza 0.90: n = 124, regola «dentro almeno 107 su 124»
+   escludere 0.85 se il vero e' 0.90, potenza 0.80: n = 296, regola «dentro almeno 262 su 296»
+   escludere 0.85 se il vero e' 0.90, potenza 0.90: n = 401, regola «dentro almeno 353 su 401»
+   escludere 0.80 se il vero e' 0.95, potenza 0.80: n = 37, regola «dentro almeno 34 su 37»
+   escludere 0.80 se il vero e' 0.95, potenza 0.90: n = 44, regola «dentro almeno 40 su 44»
+   escludere 0.85 se il vero e' 0.95, potenza 0.80: n = 68, regola «dentro almeno 63 su 68»
+   escludere 0.85 se il vero e' 0.95, potenza 0.90: n = 85, regola «dentro almeno 78 su 85»
+   escludere 0.80 se il vero e' 0.97, potenza 0.80: n = 22, regola «dentro almeno 21 su 22»
+   escludere 0.80 se il vero e' 0.97, potenza 0.90: n = 30, regola «dentro almeno 28 su 30»
+   escludere 0.85 se il vero e' 0.97, potenza 0.80: n = 40, regola «dentro almeno 38 su 40»
+   escludere 0.85 se il vero e' 0.97, potenza 0.90: n = 50, regola «dentro almeno 47 su 50»
+   che cosa dice un tabellone di n prove (limite inferiore di Wilson al 95 % a due code):
+   n=20: 20/20: 0.839; 19/20: 0.764; 18/20: 0.699 | minimo k per un limite >= 0,80: 20; >= 0,85: None; >= 0,90: None
+   n=30: 30/30: 0.886; 28/30: 0.787; 27/30: 0.744 | minimo k per un limite >= 0,80: 29; >= 0,85: 30; >= 0,90: None
+   n=40: 40/40: 0.912; 38/40: 0.835; 36/40: 0.769 | minimo k per un limite >= 0,80: 37; >= 0,85: 39; >= 0,90: 40
+   n=60: 60/60: 0.940; 57/60: 0.863; 54/60: 0.799 | minimo k per un limite >= 0,80: 55; >= 0,85: 57; >= 0,90: 59
+   n=80: 80/80: 0.954; 76/80: 0.878; 72/80: 0.815 | minimo k per un limite >= 0,80: 72; >= 0,85: 75; >= 0,90: 78
+   n=100: 100/100: 0.963; 95/100: 0.888; 90/100: 0.826 | minimo k per un limite >= 0,80: 88; >= 0,85: 92; >= 0,90: 96
+   n=120: 120/120: 0.969; 114/120: 0.895; 108/120: 0.833 | minimo k per un limite >= 0,80: 105; >= 0,85: 110; >= 0,90: 115
+   n=150: 150/150: 0.975; 142/150: 0.898; 135/150: 0.842 | minimo k per un limite >= 0,80: 130; >= 0,85: 137; >= 0,90: 143

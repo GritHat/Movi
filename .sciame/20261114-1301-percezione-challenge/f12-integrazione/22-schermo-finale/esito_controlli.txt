@@ -1,0 +1,6 @@
+== Q1: frasi «da non dire» fuori dal paragrafo 6
+  totale fuori dal paragrafo 6: 0
+== Q2: stati della versione 3 contro righe della tabella dei segni
+  stati nell'elenco: 19; righe della tabella dei segni: 19
+== Q7: lunghezza
+ 4024 23383 SCHERMO_E_DEMO.md

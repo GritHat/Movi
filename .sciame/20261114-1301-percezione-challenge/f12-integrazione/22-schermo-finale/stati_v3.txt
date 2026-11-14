@@ -1,0 +1,20 @@
+# Stati che la versione 3 produce (V3 §1.2, §1.5-§1.9; tabella di COMPLETEZZA §2), una sigla per riga della tabella dei segni
+C1 libero
+C2 occupato
+C3 in ombra
+C4 non osservato
+A1 possibile presenza
+A2 avviso senza traccia (c7)
+A3 ramo C2
+T0 tentativa
+T1 osservato
+T2 visto in parte
+T3 non confermato
+T4 previsto
+T5 previsto ampio
+N non ricomparso
+X1 riagganciata
+X2 identità ambigua
+X3 ombra vista libera
+X4 affidabilità persa
+X5 fuori dall'area osservata

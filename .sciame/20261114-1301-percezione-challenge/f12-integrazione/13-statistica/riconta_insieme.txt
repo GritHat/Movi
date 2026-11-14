@@ -1,0 +1,119 @@
+righe R lette: 300 in 75 file
+(a) c7=1: righe 60 semi 24000 = validi 23154 + nonconf 248 + mai_nascosti 598 (somma 24000); vuoti 0; scoperti confermati 17 + non confermati 7 = 24 su 23402; Wilson sup 0.00153; vuoti sup 0.00016
+     pd=0.90 rb=0.225: scoperti 1/5704 [Wilson 0.00003-0.00099]
+     pd=0.90 rb=0.000: scoperti 1/5997 [Wilson 0.00003-0.00094]
+     pd=0.70 rb=0.225: scoperti 17/5704 [Wilson 0.00186-0.00477]
+     pd=0.70 rb=0.000: scoperti 5/5997 [Wilson 0.00036-0.00195]
+(a) c7=0: righe 60 semi 24000 = validi 23154 + nonconf 248 + mai_nascosti 598 (somma 24000); vuoti 0; scoperti confermati 680 + non confermati 248 = 928 su 23402; Wilson sup 0.04223; vuoti sup 0.00016
+     pd=0.90 rb=0.225: scoperti 40/5704 [Wilson 0.00515-0.00953]
+     pd=0.90 rb=0.000: scoperti 36/5997 [Wilson 0.00434-0.00830]
+     pd=0.70 rb=0.225: scoperti 506/5704 [Wilson 0.08161-0.09637]
+     pd=0.70 rb=0.000: scoperti 346/5997 [Wilson 0.05207-0.06388]
+tutti i lanci: passaggi (validi+nonconf) 218646, solo validi 217861, vuoti 0; cicli nascosti 13181034, fuori R100 cicli 0 passaggi 0
+(b) celle sul percorso: geo beh s | primaria k/n W | secondaria k/n W W_bonf30 | quota passaggi nel denominatore (n secondaria / semi)
+  D prosegue   1 | 1032/1134 0.892 | 1835/1963 0.923 0.915 | 0.49  prim_bonf 0.880
+  D prosegue   2 | 88/133 0.578 | 1257/1388 0.889 0.878 | 0.35  prim_bonf 0.526
+  D prosegue   3 | 3/33 0.031 | 845/984 0.836 0.820 | 0.25  prim_bonf 0.018
+  D rallenta   1 | 1053/1138 0.909 | 1990/2097 0.939 0.932 | 0.52  prim_bonf 0.897
+  D rallenta   2 | 95/142 0.588 | 1509/1636 0.908 0.899 | 0.41  prim_bonf 0.537
+  D rallenta   3 | 2/28 0.020 | 1088/1216 0.876 0.864 | 0.30  prim_bonf 0.011
+  D sosta      1 | 999/1098 0.891 | 2000/2120 0.933 0.925 | 0.53  prim_bonf 0.879
+  D sosta      2 | 118/182 0.577 | 2047/2222 0.909 0.901 | 0.56  prim_bonf 0.532
+  D sosta      3 | 34/79 0.327 | 1962/2148 0.901 0.892 | 0.54  prim_bonf 0.273
+  D torna      1 | 972/1076 0.884 | 2001/2168 0.911 0.903 | 0.54  prim_bonf 0.871
+  D torna      2 | 106/166 0.563 | 2043/2194 0.920 0.912 | 0.55  prim_bonf 0.517
+  D torna      3 | 25/49 0.375 | 1537/1618 0.938 0.930 | 0.40  prim_bonf 0.304
+  D sostalunga 1 | 942/1045 0.882 | 2006/2131 0.931 0.923 | 0.53  prim_bonf 0.869
+  D sostalunga 2 | 111/165 0.598 | 2064/2241 0.909 0.901 | 0.56  prim_bonf 0.551
+  D sostalunga 3 | 31/69 0.338 | 1987/2178 0.900 0.891 | 0.54  prim_bonf 0.279
+  T prosegue   1 | 1751/1759 0.991 | 1875/1886 0.990 0.986 | 0.79  prim_bonf 0.987
+  T prosegue   2 | 1104/1132 0.964 | 1222/1265 0.955 0.946 | 0.53  prim_bonf 0.956
+  T prosegue   3 | 590/608 0.954 | 666/698 0.936 0.922 | 0.29  prim_bonf 0.940
+  T rallenta   1 | 1792/1805 0.988 | 1918/1933 0.987 0.983 | 0.81  prim_bonf 0.983
+  T rallenta   2 | 1417/1456 0.964 | 1562/1604 0.965 0.958 | 0.67  prim_bonf 0.956
+  T rallenta   3 | 851/891 0.939 | 955/1001 0.939 0.928 | 0.42  prim_bonf 0.928
+  T sosta      1 | 1720/1729 0.990 | 1840/1851 0.989 0.985 | 0.77  prim_bonf 0.986
+  T sosta      2 | 1679/1730 0.961 | 1839/1899 0.960 0.953 | 0.79  prim_bonf 0.955
+  T sosta      3 | 1586/1643 0.955 | 1741/1806 0.954 0.948 | 0.75  prim_bonf 0.948
+  T torna      1 | 1740/1771 0.975 | 1840/1907 0.956 0.949 | 0.79  prim_bonf 0.970
+  T torna      2 | 1633/1678 0.964 | 1766/1818 0.963 0.956 | 0.76  prim_bonf 0.958
+  T torna      3 | 1146/1183 0.957 | 1243/1286 0.955 0.947 | 0.54  prim_bonf 0.949
+  T sostalunga 1 | 1713/1730 0.984 | 1824/1843 0.984 0.979 | 0.77  prim_bonf 0.979
+  T sostalunga 2 | 1710/1750 0.969 | 1851/1899 0.967 0.961 | 0.79  prim_bonf 0.963
+  T sostalunga 3 | 1575/1628 0.958 | 1706/1769 0.955 0.948 | 0.74  prim_bonf 0.951
+  L prosegue   1 | 1712/1737 0.979 | 1793/1825 0.975 0.970 | 0.76  prim_bonf 0.973
+  L prosegue   2 | 2089/2209 0.935 | 2225/2359 0.933 0.926 | 0.98  prim_bonf 0.928
+  L prosegue   3 | 1525/1629 0.923 | 1637/1754 0.921 0.912 | 0.73  prim_bonf 0.914
+  L rallenta   1 | 1689/1719 0.975 | 1783/1821 0.971 0.966 | 0.76  prim_bonf 0.970
+  L rallenta   2 | 2095/2184 0.950 | 2230/2346 0.941 0.934 | 0.98  prim_bonf 0.944
+  L rallenta   3 | 1860/1989 0.923 | 1989/2146 0.915 0.907 | 0.89  prim_bonf 0.916
+  L sosta      1 | 1626/1656 0.974 | 1713/1751 0.970 0.964 | 0.73  prim_bonf 0.968
+  L sosta      2 | 2025/2103 0.954 | 2163/2260 0.948 0.942 | 0.94  prim_bonf 0.948
+  L sosta      3 | 1940/2053 0.934 | 2084/2215 0.930 0.923 | 0.92  prim_bonf 0.927
+  L torna      1 | 1676/1723 0.964 | 1757/1828 0.951 0.944 | 0.76  prim_bonf 0.957
+  L torna      2 | 1995/2112 0.934 | 2125/2279 0.921 0.914 | 0.95  prim_bonf 0.927
+  L torna      3 | 1637/1774 0.909 | 1754/1922 0.899 0.890 | 0.80  prim_bonf 0.900
+  L sostalunga 1 | 1688/1709 0.981 | 1776/1806 0.976 0.971 | 0.75  prim_bonf 0.976
+  L sostalunga 2 | 2043/2142 0.944 | 2168/2286 0.939 0.932 | 0.95  prim_bonf 0.937
+  L sostalunga 3 | 1942/2064 0.930 | 2074/2208 0.929 0.921 | 0.92  prim_bonf 0.922
+    z di Bonferroni per 30 celle: 3.144
+  D prim 1 s: celle n>=400: 5/5; sopra soglia 0.9: Wilson 1, Bonferroni 0; peggiore (0.8818659493055492, 0.8685757287605478, 'sostalunga', 942, 1045)
+  D prim 2 s: celle n>=400: 0/5; sopra soglia 0.9: Wilson 0, Bonferroni 0; peggiore None
+  D prim 3 s: celle n>=400: 0/5; sopra soglia 0.85: Wilson 0, Bonferroni 0; peggiore None
+  D sec 1 s: celle n>=400: 5/5; sopra soglia 0.9: Wilson 5, Bonferroni 5; peggiore (0.9109835235618159, 0.9029852376506562, 'torna', 2001, 2168)
+  D sec 2 s: celle n>=400: 5/5; sopra soglia 0.9: Wilson 4, Bonferroni 3; peggiore (0.8891002033183968, 0.8780003576534023, 'prosegue', 1257, 1388)
+  D sec 3 s: celle n>=400: 5/5; sopra soglia 0.85: Wilson 4, Bonferroni 4; peggiore (0.8355807698925044, 0.8202554388599405, 'prosegue', 845, 984)
+  T prim 1 s: celle n>=400: 5/5; sopra soglia 0.9: Wilson 5, Bonferroni 5; peggiore (0.9752616628705425, 0.96968724034027, 'torna', 1740, 1771)
+  T prim 2 s: celle n>=400: 5/5; sopra soglia 0.9: Wilson 5, Bonferroni 5; peggiore (0.9614480638270945, 0.954820667948671, 'sosta', 1679, 1730)
+  T prim 3 s: celle n>=400: 5/5; sopra soglia 0.85: Wilson 5, Bonferroni 5; peggiore (0.9394456894287728, 0.9278556242275783, 'rallenta', 851, 891)
+  T sec 1 s: celle n>=400: 5/5; sopra soglia 0.9: Wilson 5, Bonferroni 5; peggiore (0.955623737085445, 0.9490322003079027, 'torna', 1840, 1907)
+  T sec 2 s: celle n>=400: 5/5; sopra soglia 0.9: Wilson 5, Bonferroni 5; peggiore (0.9545270716551593, 0.9460348325891714, 'prosegue', 1222, 1265)
+  T sec 3 s: celle n>=400: 5/5; sopra soglia 0.85: Wilson 5, Bonferroni 5; peggiore (0.9359971794152633, 0.9222977588358617, 'prosegue', 666, 698)
+  L prim 1 s: celle n>=400: 5/5; sopra soglia 0.9: Wilson 5, Bonferroni 5; peggiore (0.9639159109023873, 0.957430921248866, 'torna', 1676, 1723)
+  L prim 2 s: celle n>=400: 5/5; sopra soglia 0.9: Wilson 5, Bonferroni 5; peggiore (0.934014563426114, 0.9267812496347315, 'torna', 1995, 2112)
+  L prim 3 s: celle n>=400: 5/5; sopra soglia 0.85: Wilson 5, Bonferroni 5; peggiore (0.9094174293270177, 0.9004218198281945, 'torna', 1637, 1774)
+  L sec 1 s: celle n>=400: 5/5; sopra soglia 0.9: Wilson 5, Bonferroni 5; peggiore (0.9512920129366211, 0.9442944081730908, 'torna', 1757, 1828)
+  L sec 2 s: celle n>=400: 5/5; sopra soglia 0.9: Wilson 5, Bonferroni 5; peggiore (0.9213762744775326, 0.9139582671467995, 'torna', 2125, 2279)
+  L sec 3 s: celle n>=400: 5/5; sopra soglia 0.85: Wilson 5, Bonferroni 5; peggiore (0.8991272094797518, 0.8901674979698999, 'torna', 1754, 1922)
+  D insieme 1 s: primaria 4998/5491=0.910 W 0.902; secondaria 9832/10479=0.938 W 0.933; nel denominatore 10479/20000=0.52; primaria/secondaria 0.52
+  D insieme 2 s: primaria 518/788=0.657 W 0.624; secondaria 8920/9681=0.921 W 0.916; nel denominatore 9681/20000=0.48; primaria/secondaria 0.08
+  D insieme 3 s: primaria 95/258=0.368 W 0.312; secondaria 7419/8144=0.911 W 0.905; nel denominatore 8144/20000=0.41; primaria/secondaria 0.03
+  T insieme 1 s: primaria 8716/8794=0.991 W 0.989; secondaria 9297/9420=0.987 W 0.984; nel denominatore 9420/12000=0.79; primaria/secondaria 0.93
+  T insieme 2 s: primaria 7543/7746=0.974 W 0.970; secondaria 8240/8485=0.971 W 0.967; nel denominatore 8485/12000=0.71; primaria/secondaria 0.91
+  T insieme 3 s: primaria 5748/5953=0.966 W 0.961; secondaria 6311/6560=0.962 W 0.957; nel denominatore 6560/12000=0.55; primaria/secondaria 0.91
+  L insieme 1 s: primaria 8391/8544=0.982 W 0.979; secondaria 8822/9031=0.977 W 0.974; nel denominatore 9031/12000=0.75; primaria/secondaria 0.95
+  L insieme 2 s: primaria 10247/10750=0.953 W 0.949; secondaria 10911/11530=0.946 W 0.942; nel denominatore 11530/12000=0.96; primaria/secondaria 0.93
+  L insieme 3 s: primaria 8904/9509=0.936 W 0.931; secondaria 9538/10245=0.931 W 0.926; nel denominatore 10245/12000=0.85; primaria/secondaria 0.93
+(f) D: riagganci 10711/10757=0.9957 W 0.9943; mancati per distanza 0 bordo 0 M7 46
+(f) T: riagganci 9228/9240=0.9987 W 0.9977; mancati per distanza 0 bordo 0 M7 12
+(f) L: riagganci 6772/6967=0.9720 W 0.9679; mancati per distanza 0 bordo 173 M7 22
+(d) D c1=si: {'es_n': 3041, 'es_id': 3027, 'es_ril': 2124, 'es_amb': 14, 'es_na': 249, 'es_mai': 710, 'es_ampio': 2990, 'n': 4000}  id/n=0.995 W 0.992-0.997
+(d) D c1=no: {'es_n': 3029, 'es_id': 1457, 'es_ril': 1015, 'es_amb': 1572, 'es_na': 252, 'es_mai': 719, 'es_ampio': 2979, 'n': 4000}  id/n=0.481 W 0.463-0.499
+(d) T c1=si: {'es_n': 3616, 'es_id': 3493, 'es_ril': 2713, 'es_amb': 123, 'es_na': 270, 'es_mai': 114, 'es_ampio': 2730, 'n': 4000}  id/n=0.966 W 0.960-0.971
+(d) T c1=no: {'es_n': 3609, 'es_id': 2567, 'es_ril': 1973, 'es_amb': 1042, 'es_na': 270, 'es_mai': 121, 'es_ampio': 2723, 'n': 4000}  id/n=0.711 W 0.696-0.726
+(d) L c1=si: {'es_n': 3546, 'es_id': 3239, 'es_ril': 2984, 'es_amb': 307, 'es_na': 135, 'es_mai': 319, 'es_ampio': 3192, 'n': 4000}  id/n=0.913 W 0.904-0.922
+(d) L c1=no: {'es_n': 3540, 'es_id': 2393, 'es_ril': 2200, 'es_amb': 1147, 'es_na': 135, 'es_mai': 325, 'es_ampio': 3186, 'n': 4000}  id/n=0.676 W 0.660-0.691
+(c) c_D_e-0.10_pd0.9_c3no 915/1248=0.733[0.708] 758/864=0.877[0.854] 649/703=0.923[0.901] scoperti 69/1741
+(c) c_D_e-0.10_pd0.9_c3p08 1070/1270=0.843[0.821] 756/865=0.874[0.850] 638/682=0.935[0.914] scoperti 15/1741
+(c) c_D_e-0.10_pd0.9_c3si 942/996=0.946[0.930] 818/881=0.928[0.910] 648/714=0.908[0.884] scoperti 1/1741
+(c) c_D_e-0.20_pd0.9_c3no 892/1222=0.730[0.704] 754/854=0.883[0.860] 648/698=0.928[0.907] scoperti 85/1741
+(c) c_D_e-0.20_pd0.9_c3p08 765/896=0.854[0.829] 515/581=0.886[0.858] 442/462=0.957[0.934] scoperti 18/1741
+(c) c_D_e-0.20_pd0.9_c3si 621/655=0.948[0.928] 396/437=0.906[0.875] 327/363=0.901[0.866] scoperti 18/1741
+(c) c_L_e-0.10_pd0.9_c3no 1065/1995=0.534[0.512] 1002/1967=0.509[0.487] 960/1669=0.575[0.551] scoperti 25/1984
+(c) c_L_e-0.10_pd0.9_c3p08 1377/1885=0.731[0.710] 1329/1911=0.695[0.674] 1190/1633=0.729[0.707] scoperti 34/1984
+(c) c_L_e-0.10_pd0.9_c3si 1454/1483=0.980[0.972] 1758/1838=0.956[0.946] 1526/1641=0.930[0.917] scoperti 1/1984
+(c) c_L_e-0.20_pd0.9_c3no 701/2001=0.350[0.330] 737/1964=0.375[0.354] 792/1643=0.482[0.458] scoperti 130/1984
+(c) c_L_e-0.20_pd0.9_c3p08 1142/1522=0.750[0.728] 1072/1515=0.708[0.684] 927/1265=0.733[0.708] scoperti 34/1984
+(c) c_L_e-0.20_pd0.9_c3si 1139/1155=0.986[0.978] 1182/1231=0.960[0.948] 964/1039=0.928[0.910] scoperti 6/1984
+(c) c_T_e-0.10_pd0.7_c3no 2165/3836=0.564[0.549] 1688/2500=0.675[0.657] 1487/1940=0.766[0.747] scoperti 153/3956
+(c) c_T_e-0.10_pd0.7_c3p08 2641/3300=0.800[0.786] 1877/2298=0.817[0.800] 1498/1737=0.862[0.845] scoperti 63/3956
+(c) c_T_e-0.10_pd0.7_c3si 2605/2647=0.984[0.979] 2202/2275=0.968[0.960] 1715/1777=0.965[0.956] scoperti 54/3956
+(c) c_T_e-0.10_pd0.9_c3no 2108/3943=0.535[0.519] 1679/2542=0.661[0.642] 1519/1979=0.768[0.748] scoperti 188/3956
+(c) c_T_e-0.10_pd0.9_c3p08 2951/3782=0.780[0.767] 2068/2574=0.803[0.788] 1688/1959=0.862[0.846] scoperti 51/3956
+(c) c_T_e-0.10_pd0.9_c3si 3042/3068=0.992[0.988] 2562/2624=0.976[0.970] 1977/2040=0.969[0.961] scoperti 6/3956
+(c) c_T_e-0.20_pd0.7_c3no 1893/3845=0.492[0.477] 1629/2476=0.658[0.639] 1483/1921=0.772[0.753] scoperti 202/3956
+(c) c_T_e-0.20_pd0.7_c3p08 1948/2387=0.816[0.800] 1260/1489=0.846[0.827] 957/1087=0.880[0.860] scoperti 115/3956
+(c) c_T_e-0.20_pd0.7_c3si 1887/1904=0.991[0.986] 1196/1247=0.959[0.947] 880/915=0.962[0.947] scoperti 175/3956
+(c) c_T_e-0.20_pd0.9_c3no 1796/3917=0.459[0.443] 1628/2507=0.649[0.630] 1495/1953=0.765[0.746] scoperti 265/3956
+(c) c_T_e-0.20_pd0.9_c3p08 2396/2993=0.801[0.786] 1564/1872=0.835[0.818] 1216/1376=0.884[0.866] scoperti 62/3956
+(c) c_T_e-0.20_pd0.9_c3si 2378/2387=0.996[0.993] 1512/1552=0.974[0.965] 1094/1130=0.968[0.956] scoperti 31/3956

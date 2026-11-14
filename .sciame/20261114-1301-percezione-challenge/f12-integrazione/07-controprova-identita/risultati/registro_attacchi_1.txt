@@ -1,0 +1,35 @@
+2026-11-14T18:23:57+01:00
+<frozen site>:101: RuntimeWarning: Unexpected value in sys.prefix, expected /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f10-dati/ambiente/venv, got /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f12-integrazione/07-controprova-identita/../../f10-dati/ambiente/venv
+<frozen site>:101: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f10-dati/ambiente/venv, got /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f12-integrazione/07-controprova-identita/../../f10-dati/ambiente/venv
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/usr/lib/python3.14/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+                    ~~~~^^^^^^^^^^^^^^^
+  File "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f12-integrazione/07-controprova-identita/attacco.py", line 235, in uno
+    m = MP.misura(nome, base)
+  File "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f10-dati/20-validazione/misura_passaggi.py", line 45, in misura
+    ver = K.leggi_verita(os.path.join(K.SEQ_SIM, nome))
+  File "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f10-dati/20-validazione/comune.py", line 71, in leggi_verita
+    with open(os.path.join(cartella, "verita.json"), encoding="utf-8") as f:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f12-integrazione/07-controprova-identita/tmp/A2_640px_143566_24/_verita/d435i_nom__A2_640px__s304/verita.json'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f12-integrazione/07-controprova-identita/attacco.py", line 336, in <module>
+    main()
+    ~~~~^^
+  File "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f12-integrazione/07-controprova-identita/attacco.py", line 328, in main
+    for righe in pool.imap_unordered(uno, L, chunksize=1):
+                 ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/multiprocessing/pool.py", line 873, in next
+    raise value
+FileNotFoundError: [Errno 2] No such file or directory: '/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f12-integrazione/07-controprova-identita/tmp/A2_640px_143566_24/_verita/d435i_nom__A2_640px__s304/verita.json'
+<frozen site>:101: RuntimeWarning: Unexpected value in sys.prefix, expected /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f10-dati/ambiente/venv, got /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f12-integrazione/07-controprova-identita/../../f10-dati/ambiente/venv
+<frozen site>:101: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f10-dati/ambiente/venv, got /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f12-integrazione/07-controprova-identita/../../f10-dati/ambiente/venv
+att_persona: 40 sequenze, 23 s
+2026-11-14T18:24:36+01:00

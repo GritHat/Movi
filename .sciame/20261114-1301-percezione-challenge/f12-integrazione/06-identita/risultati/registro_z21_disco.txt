@@ -1,0 +1,4 @@
+z21_424: 10 sequenze, 8 configurazioni, 6 s, parametri in più {}
+z21_848: 10 sequenze, 8 configurazioni, 16 s, parametri in più {}
+disco: 130 sequenze, 8 configurazioni, 84 s, parametri in più {}
+2026-11-14T18:14:34+01:00

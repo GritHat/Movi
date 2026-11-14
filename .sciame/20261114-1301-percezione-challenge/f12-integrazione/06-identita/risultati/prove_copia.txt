@@ -1,0 +1,4 @@
+ERROR: test_p14_sequenza_dell_infrastruttura_da_riga_di_comando (__main__.ProvaCatena.test_p14_sequenza_dell_infrastruttura_da_riga_di_comando)
+ERROR: test_p01_suolo_come_l_infrastruttura (__main__.ProvaMappa.test_p01_suolo_come_l_infrastruttura)
+Ran 25 tests in 11.656s
+FAILED (errors=2)

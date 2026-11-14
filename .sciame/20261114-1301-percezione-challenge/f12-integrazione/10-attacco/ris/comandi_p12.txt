@@ -1,0 +1,6 @@
+av_f_D_c5scritta prova geo=D n=800 beh=8 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 bordo=0 seme=31000000000
+av_f_D_c5no prova geo=D n=800 beh=8 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 bordo=0 vmin=0 seme=31000000000
+av_f_D_c5b prova geo=D n=800 beh=8 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 bordo=0 c5b=1 seme=31000000000
+av_f_T_c5scritta prova geo=T n=800 beh=8 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1  seme=31000000000
+av_f_T_c5no prova geo=T n=800 beh=8 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1  vmin=0 seme=31000000000
+av_f_T_c5b prova geo=T n=800 beh=8 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1  c5b=1 seme=31000000000

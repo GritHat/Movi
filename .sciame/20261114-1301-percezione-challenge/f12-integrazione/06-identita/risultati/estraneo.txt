@@ -1,0 +1,11 @@
+conf; varianti con l'identità di A passata a B; fotogrammi A «osservato» mentre è nascosta; A nascosta e fuori dall'avviso (dopo l'uscita di B)
+prima; 12 su 12; 261; 282 su 336
+f401; 12 su 12; 255; 276 su 336
+f402; 12 su 12; 165; 186 su 336
+f408; 12 su 12; 261; 282 su 336
+f409; 12 su 12; 261; 0 su 336
+tutte; 12 su 12; 165; 0 su 336
+f401p; 12 su 12; 255; 276 su 336
+tutte_p; 12 su 12; 171; 0 su 336
+tutte_p2; 12 su 12; 165; 0 su 336
+variante originale A3 (x = -0,25; uscita al fot. 24; 1,2 m/s), conf «prima»: {'id_A': 1, 'identita_di_A_su_B_fotogrammi': 22, 'primo_scambio': 27, 'A_osservato_mentre_nascosta': 22, 'A_nascosta_dopo_uscita_B': 32, 'A_fuori_avviso': 29}

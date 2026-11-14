@@ -1,0 +1,5 @@
+nuovi424: 193 sequenze, 8 configurazioni, 137 s, parametri in più {}
+due424: 12 sequenze, 8 configurazioni, 7 s, parametri in più {}
+nuovi848: 193 sequenze, 8 configurazioni, 327 s, parametri in più {}
+due848: 12 sequenze, 8 configurazioni, 19 s, parametri in più {}
+2026-11-14T18:12:46+01:00

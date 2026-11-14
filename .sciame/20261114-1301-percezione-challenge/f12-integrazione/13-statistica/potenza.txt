@@ -1,0 +1,23 @@
+A. regola «dentro almeno c su n» per escludere 0,80 (una coda, livello <= 0,05)
+   n=30: c=28; P(passa) se il vero e' 0,80: 0.044; 0,85: 0.15; 0,90: 0.41; 0,95: 0.81
+   n=40: c=37; P(passa) se il vero e' 0,80: 0.028; 0,85: 0.13; 0,90: 0.42; 0,95: 0.86
+   n=60: c=54; P(passa) se il vero e' 0,80: 0.031; 0,85: 0.18; 0,90: 0.61; 0,95: 0.97
+   n=90: c=79; P(passa) se il vero e' 0,80: 0.038; 0,85: 0.29; 0,90: 0.81; 0,95: 1.00
+   n=94: c=82; P(passa) se il vero e' 0,80: 0.047; 0,85: 0.33; 0,90: 0.86; 0,95: 1.00
+   n=100: c=87; P(passa) se il vero e' 0,80: 0.047; 0,85: 0.35; 0,90: 0.88; 0,95: 1.00
+   n=120: c=104; P(passa) se il vero e' 0,80: 0.039; 0,85: 0.36; 0,90: 0.91; 0,95: 1.00
+B. regola per escludere 0,85
+   n=60: c=56; P(passa) se il vero e' 0,85: 0.042; 0,90: 0.27; 0,95: 0.82
+   n=100: c=92; P(passa) se il vero e' 0,85: 0.027; 0,90: 0.32; 0,95: 0.94
+   n=120: c=109; P(passa) se il vero e' 0,85: 0.042; 0,90: 0.46; 0,95: 0.98
+   n=296: c=262; P(passa) se il vero e' 0,85: 0.050; 0,90: 0.83; 0,95: 1.00
+   n=401: c=353; P(passa) se il vero e' 0,85: 0.048; 0,90: 0.92; 0,95: 1.00
+C. per scrivere «almeno 9 su 10» (limite inferiore di Wilson al 95 % >= 0,90)
+   n=30: impossibile anche con 30 su 30 (limite 0.886)
+   n=40: servono 40 su 40; P(riuscirci) se il vero e' 0,90: 0.015; 0,95: 0.13; 0,97: 0.30; 0,99: 0.67
+   n=60: servono 59 su 60; P(riuscirci) se il vero e' 0,90: 0.014; 0,95: 0.19; 0,97: 0.46; 0,99: 0.88
+   n=80: servono 78 su 80; P(riuscirci) se il vero e' 0,90: 0.011; 0,95: 0.23; 0,97: 0.57; 0,99: 0.95
+   n=100: servono 96 su 100; P(riuscirci) se il vero e' 0,90: 0.024; 0,95: 0.44; 0,97: 0.82; 0,99: 1.00
+   n=120: servono 115 su 120; P(riuscirci) se il vero e' 0,90: 0.016; 0,95: 0.44; 0,97: 0.85; 0,99: 1.00
+   n=150: servono 143 su 150; P(riuscirci) se il vero e' 0,90: 0.014; 0,95: 0.52; 0,97: 0.92; 0,99: 1.00
+D. VD: regione che contiene la verita' 83 passaggi su 90: limite di Wilson 0.848 ; identita' 41 su 45: 0.793 ; V8 scoperti 130/1581 e 9/2800: quote 0.0822 0.0032

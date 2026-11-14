@@ -1,0 +1,69 @@
+== 5. C2 diviso (C2a prima): piolo 'regione' = B2 + C2a + SK
+FIN-C2 stime mie                               leggero  P(MD<=14)=0.428 [0.421;0.435] <=16: 0.71 mediana 14.47 p80 16.89 | protetti nel tronco h12/14/16: 0.959 0.992 0.998
+   pioli (h12 / h14 / h16): libero 1.00/1.00/1.00; avviso 0.99/1.00/1.00; regione 0.97/0.99/1.00; identita 1.00/1.00/1.00; stati 0.95/0.99/1.00; salute 0.61/0.83/0.93; tab_base 0.98/1.00/1.00; tab_regione 0.63/0.85/0.95
+   scheletro entro h6/h8: 0.53 0.86 ; PI chiusa entro h12/13: 0.51 0.66
+   mediane inizio-fine: K0:0.0-1.0 A1:1.0-2.3 B1:1.0-3.0 C1:1.0-5.0 D1:1.0-3.0 E2:1.0-2.5 E1:3.0-3.7 D2a:3.7-6.8 SK:5.0-5.9 A2:2.3-4.7 B2:3.0-5.8 F4:2.5-4.0 F9:4.7-6.7 B3q:4.0-6.0 B3p:5.8-7.9 A5:6.0-7.3 A3r:6.7-8.7 C2a:5.9-7.3 C2b:7.3-9.4 C3a:9.4-10.7 D2b:7.2-10.0 THL:8.8-10.1 PI:10.6-11.9 TAB:12.4-13.7 PG:13.7-14.5
+   sul percorso critico: K0:1.00 PG:1.00 TAB:0.97 PI:0.58 C1:0.36 SK:0.36 C2a:0.36 C2b:0.36 A1:0.27 A2:0.27 F9:0.27 A3r:0.27 D2b:0.20 D1:0.19 E1:0.19 D2a:0.19 THL:0.19 B1:0.11 B2:0.11 B3p:0.11 E2:0.07 F4:0.07 B3q:0.07 A5:0.07
+   rapporto ora 2 in [0.00;1.00): quota 0.25  protetti h14 1.00  MD<=14 0.66  (attesa K0+B1 = 2.56 h)
+   rapporto ora 2 in [1.00;1.25): quota 0.32  protetti h14 1.00  MD<=14 0.47  (attesa K0+B1 = 2.56 h)
+   rapporto ora 2 in [1.25;1.50): quota 0.23  protetti h14 0.99  MD<=14 0.34  (attesa K0+B1 = 2.56 h)
+   rapporto ora 2 in [1.50;1.80): quota 0.13  protetti h14 0.98  MD<=14 0.19  (attesa K0+B1 = 2.56 h)
+   rapporto ora 2 in [1.80;9.00): quota 0.06  protetti h14 0.97  MD<=14 0.04  (attesa K0+B1 = 2.56 h)
+FIN-C2 stime mie                               medio    P(MD<=14)=0.108 [0.104;0.113] <=16: 0.31 mediana 17.57 p80 20.60 | protetti nel tronco h12/14/16: 0.851 0.951 0.985
+   pioli (h12 / h14 / h16): libero 1.00/1.00/1.00; avviso 0.95/0.99/1.00; regione 0.89/0.96/0.99; identita 1.00/1.00/1.00; stati 0.80/0.92/0.98; salute 0.38/0.64/0.81; tab_base 0.91/0.97/0.99; tab_regione 0.32/0.59/0.79
+   scheletro entro h6/h8: 0.34 0.72 ; PI chiusa entro h12/13: 0.21 0.34
+   mediane inizio-fine: K0:0.0-1.1 A1:1.1-2.7 B1:1.1-3.6 C1:1.1-5.5 D1:1.1-3.6 E2:1.1-3.0 E1:3.6-4.3 D2a:4.3-8.1 SK:5.6-6.7 A2:2.7-5.5 B2:3.6-7.0 F4:3.0-4.9 F9:5.5-7.7 B3q:4.9-7.5 B3p:7.0-9.3 A5:7.5-9.0 A3r:7.7-9.9 C2a:6.7-8.3 C2b:8.3-10.7 C3a:10.7-12.1 D2b:8.7-12.1 THL:10.1-11.9 PI:12.3-14.2 TAB:14.8-16.5 PG:16.8-17.6
+   sul percorso critico: K0:1.00 PG:1.00 TAB:0.99 PI:0.63 SK:0.30 C2a:0.30 C2b:0.30 C1:0.30 A1:0.24 A2:0.24 F9:0.24 A3r:0.24 D2b:0.21 D1:0.19 E1:0.19 D2a:0.19 THL:0.15 B1:0.15 B2:0.15 B3p:0.13 E2:0.12 F4:0.12 B3q:0.12 A5:0.12
+   rapporto ora 2 in [0.00;1.00): quota 0.22  protetti h14 0.99  MD<=14 0.26  (attesa K0+B1 = 2.81 h)
+   rapporto ora 2 in [1.00;1.25): quota 0.25  protetti h14 0.97  MD<=14 0.12  (attesa K0+B1 = 2.81 h)
+   rapporto ora 2 in [1.25;1.50): quota 0.21  protetti h14 0.95  MD<=14 0.06  (attesa K0+B1 = 2.81 h)
+   rapporto ora 2 in [1.50;1.80): quota 0.16  protetti h14 0.94  MD<=14 0.04  (attesa K0+B1 = 2.81 h)
+   rapporto ora 2 in [1.80;9.00): quota 0.15  protetti h14 0.87  MD<=14 0.01  (attesa K0+B1 = 2.81 h)
+FIN-C2 stime mie                               duro     P(MD<=14)=0.016 [0.014;0.018] <=16: 0.06 mediana 22.50 p80 27.51 | protetti nel tronco h12/14/16: 0.535 0.730 0.855
+   pioli (h12 / h14 / h16): libero 0.97/0.99/1.00; avviso 0.79/0.89/0.95; regione 0.63/0.79/0.89; identita 0.96/0.99/1.00; stati 0.49/0.68/0.82; salute 0.15/0.31/0.48; tab_base 0.65/0.82/0.92; tab_regione 0.11/0.25/0.42
+   scheletro entro h6/h8: 0.16 0.46 ; PI chiusa entro h12/13: 0.05 0.09
+   mediane inizio-fine: K0:0.0-1.3 A1:1.3-3.4 B1:1.3-4.5 C1:1.3-6.5 D1:1.3-4.4 E2:1.3-3.7 E1:4.4-5.3 D2a:5.3-9.9 SK:6.7-8.3 A2:3.4-6.6 B2:4.5-8.6 F4:3.7-6.5 F9:6.6-9.3 B3q:6.5-9.4 B3p:8.6-11.3 A5:9.4-11.1 A3r:9.3-11.9 C2a:8.3-10.1 C2b:10.1-13.0 C3a:13.0-14.9 D2b:10.8-15.3 THL:12.3-14.8 PI:15.7-18.1 TAB:19.0-21.4 PG:21.8-22.5
+   sul percorso critico: K0:1.00 PG:1.00 TAB:0.99 PI:0.62 SK:0.28 C2a:0.28 C2b:0.28 C1:0.27 A1:0.23 A2:0.23 F9:0.23 A3r:0.23 D2b:0.21 D1:0.19 E1:0.19 D2a:0.19 THL:0.16 B1:0.16 B2:0.16 E2:0.15 F4:0.15 B3q:0.15 A5:0.15 B3p:0.14
+   rapporto ora 2 in [0.00;1.00): quota 0.16  protetti h14 0.94  MD<=14 0.07  (attesa K0+B1 = 3.04 h)
+   rapporto ora 2 in [1.00;1.25): quota 0.18  protetti h14 0.86  MD<=14 0.02  (attesa K0+B1 = 3.04 h)
+   rapporto ora 2 in [1.25;1.50): quota 0.18  protetti h14 0.79  MD<=14 0.01  (attesa K0+B1 = 3.04 h)
+   rapporto ora 2 in [1.50;1.80): quota 0.19  protetti h14 0.74  MD<=14 0.00  (attesa K0+B1 = 3.04 h)
+   rapporto ora 2 in [1.80;9.00): quota 0.29  protetti h14 0.49  MD<=14 0.00  (attesa K0+B1 = 3.04 h)
+FIN-C2 stime del secondo ruolo                 leggero  P(MD<=14)=0.214 [0.208;0.220] <=16: 0.48 mediana 16.13 p80 18.86 | protetti nel tronco h12/14/16: 0.843 0.954 0.989
+   pioli (h12 / h14 / h16): libero 1.00/1.00/1.00; avviso 0.95/0.98/1.00; regione 0.89/0.97/0.99; identita 0.98/1.00/1.00; stati 0.60/0.82/0.93; salute 0.36/0.64/0.84; tab_base 0.96/0.99/1.00; tab_regione 0.34/0.63/0.84
+   scheletro entro h6/h8: 0.42 0.80 ; PI chiusa entro h12/13: 0.21 0.35
+   mediane inizio-fine: K0:0.0-1.4 A1:1.4-2.8 B1:1.4-4.1 C1:1.4-5.5 D1:1.4-3.5 E2:1.4-2.9 E1:3.5-4.2 D2a:4.2-7.5 SK:5.5-6.4 A2:2.8-5.4 B2:4.1-7.9 F4:2.9-6.8 F9:5.4-7.9 B3q:6.8-9.4 B3p:7.9-10.5 A5:9.4-10.8 A3r:7.9-10.0 C2a:6.4-7.9 C2b:7.9-10.3 C3a:10.3-11.6 D2b:8.7-12.1 THL:10.4-11.7 PI:12.9-14.1 TAB:14.5-15.4 PG:15.4-16.1
+   sul percorso critico: K0:1.00 PG:1.00 TAB:0.94 PI:0.59 B1:0.25 B2:0.25 E2:0.25 F4:0.25 B3q:0.25 A5:0.25 A1:0.19 A2:0.19 F9:0.19 A3r:0.19 B3p:0.19 D2b:0.19 C1:0.18 SK:0.18 C2a:0.18 C2b:0.18 THL:0.16 D1:0.13 E1:0.13 D2a:0.13 C3a:0.06
+   rapporto ora 2 in [0.00;1.00): quota 0.28  protetti h14 0.99  MD<=14 0.44  (attesa K0+B1 = 3.41 h)
+   rapporto ora 2 in [1.00;1.25): quota 0.29  protetti h14 0.98  MD<=14 0.23  (attesa K0+B1 = 3.41 h)
+   rapporto ora 2 in [1.25;1.50): quota 0.23  protetti h14 0.96  MD<=14 0.11  (attesa K0+B1 = 3.41 h)
+   rapporto ora 2 in [1.50;1.80): quota 0.14  protetti h14 0.91  MD<=14 0.02  (attesa K0+B1 = 3.41 h)
+   rapporto ora 2 in [1.80;9.00): quota 0.07  protetti h14 0.71  MD<=14 0.00  (attesa K0+B1 = 3.41 h)
+FIN-C2 stime del secondo ruolo                 medio    P(MD<=14)=0.039 [0.036;0.042] <=16: 0.15 mediana 19.56 p80 23.08 | protetti nel tronco h12/14/16: 0.594 0.818 0.930
+   pioli (h12 / h14 / h16): libero 0.99/1.00/1.00; avviso 0.85/0.94/0.98; regione 0.71/0.88/0.95; identita 0.89/0.96/0.99; stati 0.32/0.56/0.76; salute 0.16/0.37/0.60; tab_base 0.84/0.95/0.98; tab_regione 0.13/0.33/0.56
+   scheletro entro h6/h8: 0.24 0.63 ; PI chiusa entro h12/13: 0.06 0.12
+   mediane inizio-fine: K0:0.0-1.6 A1:1.6-3.3 B1:1.6-4.7 C1:1.6-6.1 D1:1.6-4.1 E2:1.6-3.5 E1:4.1-4.9 D2a:4.9-8.9 SK:6.1-7.3 A2:3.3-6.2 B2:4.7-9.3 F4:3.5-8.5 F9:6.2-9.0 B3q:8.5-11.3 B3p:9.3-12.2 A5:11.3-12.8 A3r:9.0-11.3 C2a:7.3-9.0 C2b:9.0-11.6 C3a:11.6-13.1 D2b:10.4-14.4 THL:11.9-13.7 PI:15.2-16.8 TAB:17.3-18.5 PG:18.8-19.6
+   sul percorso critico: K0:1.00 PG:1.00 TAB:0.98 PI:0.65 E2:0.31 F4:0.31 B3q:0.31 A5:0.31 B1:0.26 B2:0.26 B3p:0.20 D2b:0.19 A1:0.16 A2:0.16 F9:0.16 A3r:0.16 SK:0.14 C2a:0.14 C2b:0.14 C1:0.14 THL:0.13 D1:0.13 E1:0.13 D2a:0.13
+   rapporto ora 2 in [0.00;1.00): quota 0.24  protetti h14 0.97  MD<=14 0.12  (attesa K0+B1 = 3.75 h)
+   rapporto ora 2 in [1.00;1.25): quota 0.25  protetti h14 0.91  MD<=14 0.03  (attesa K0+B1 = 3.75 h)
+   rapporto ora 2 in [1.25;1.50): quota 0.21  protetti h14 0.85  MD<=14 0.01  (attesa K0+B1 = 3.75 h)
+   rapporto ora 2 in [1.50;1.80): quota 0.16  protetti h14 0.74  MD<=14 0.00  (attesa K0+B1 = 3.75 h)
+   rapporto ora 2 in [1.80;9.00): quota 0.14  protetti h14 0.43  MD<=14 0.00  (attesa K0+B1 = 3.75 h)
+FIN-C2 stime del secondo ruolo                 duro     P(MD<=14)=0.005 [0.004;0.006] <=16: 0.03 mediana 25.09 p80 30.86 | protetti nel tronco h12/14/16: 0.263 0.473 0.659
+   pioli (h12 / h14 / h16): libero 0.92/0.97/0.99; avviso 0.61/0.77/0.87; regione 0.40/0.60/0.76; identita 0.66/0.82/0.90; stati 0.13/0.26/0.43; salute 0.05/0.14/0.27; tab_base 0.55/0.74/0.86; tab_regione 0.04/0.11/0.22
+   scheletro entro h6/h8: 0.10 0.37 ; PI chiusa entro h12/13: 0.01 0.03
+   mediane inizio-fine: K0:0.0-1.9 A1:1.9-4.1 B1:1.9-5.8 C1:1.9-7.2 D1:1.9-5.1 E2:1.9-4.4 E1:5.1-6.0 D2a:6.0-10.8 SK:7.4-8.9 A2:4.1-7.5 B2:5.8-11.4 F4:4.4-10.5 F9:7.5-10.9 B3q:10.5-14.1 B3p:11.4-15.1 A5:14.1-16.0 A3r:10.9-13.8 C2a:8.9-11.0 C2b:11.0-14.3 C3a:14.3-16.2 D2b:12.8-18.1 THL:14.7-17.1 PI:19.3-21.4 TAB:22.2-23.9 PG:24.3-25.1
+   sul percorso critico: K0:1.00 PG:1.00 TAB:0.98 PI:0.65 E2:0.31 F4:0.31 B3q:0.31 A5:0.31 B1:0.25 B2:0.25 B3p:0.20 D2b:0.19 A1:0.17 A2:0.17 F9:0.17 A3r:0.17 D1:0.14 E1:0.14 D2a:0.14 SK:0.14 C2a:0.14 C2b:0.14 C1:0.14 THL:0.14
+   rapporto ora 2 in [0.00;1.00): quota 0.17  protetti h14 0.82  MD<=14 0.03  (attesa K0+B1 = 4.05 h)
+   rapporto ora 2 in [1.00;1.25): quota 0.18  protetti h14 0.70  MD<=14 0.00  (attesa K0+B1 = 4.05 h)
+   rapporto ora 2 in [1.25;1.50): quota 0.19  protetti h14 0.54  MD<=14 0.00  (attesa K0+B1 = 4.05 h)
+   rapporto ora 2 in [1.50;1.80): quota 0.19  protetti h14 0.39  MD<=14 0.00  (attesa K0+B1 = 4.05 h)
+   rapporto ora 2 in [1.80;9.00): quota 0.27  protetti h14 0.11  MD<=14 0.00  (attesa K0+B1 = 4.05 h)
+FIN-C2 stime mie, seme 2                       leggero  P(MD<=14)=0.421 [0.414;0.428] <=16: 0.71 mediana 14.49 p80 16.91 | protetti nel tronco h12/14/16: 0.957 0.992 0.999
+FIN-C2 ruolo 2, seme 2                         medio    P(MD<=14)=0.038 [0.036;0.041] <=16: 0.15 mediana 19.57 p80 23.13 | protetti nel tronco h12/14/16: 0.597 0.820 0.930
+FIN-C2 stime mie, seme 3                       leggero  P(MD<=14)=0.425 [0.418;0.432] <=16: 0.71 mediana 14.47 p80 16.87 | protetti nel tronco h12/14/16: 0.960 0.991 0.998
+FIN-C2 ruolo 2, seme 3                         medio    P(MD<=14)=0.037 [0.035;0.040] <=16: 0.15 mediana 19.59 p80 23.11 | protetti nel tronco h12/14/16: 0.589 0.815 0.928
+FIN-C2 K0 preparato prima (mie)                leggero  P(MD<=14)=0.507 [0.500;0.514] <=16: 0.77 mediana 13.96 p80 16.33 | protetti nel tronco h12/14/16: 0.974 0.995 0.999
+FIN-C2 K0 preparato prima (ruolo 2)            leggero  P(MD<=14)=0.333 [0.327;0.340] <=16: 0.62 mediana 15.15 p80 17.73 | protetti nel tronco h12/14/16: 0.926 0.982 0.996
+FIN-C2 K0 preparato prima (mie)                medio    P(MD<=14)=0.145 [0.140;0.150] <=16: 0.38 mediana 16.97 p80 19.94 | protetti nel tronco h12/14/16: 0.900 0.970 0.991
+FIN-C2 K0 preparato prima (ruolo 2)            medio    P(MD<=14)=0.073 [0.069;0.076] <=16: 0.23 mediana 18.42 p80 21.78 | protetti nel tronco h12/14/16: 0.753 0.909 0.972

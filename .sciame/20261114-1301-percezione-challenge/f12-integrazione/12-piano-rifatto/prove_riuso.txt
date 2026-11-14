@@ -1,0 +1,75 @@
+2026-11-14T18:09:45+01:00
+== R1: 25 prove della catena f10 (copia in cartella temporanea)
+
+  P18: linea a 2,7 m: 8 eventi «identità ambigua» (bordo della portata), identità 1 → 3, la traccia 1 resta «perso»
+
+  P21 (fumo): celle medie {'non_osservato': 3762, 'libero': 1252, 'occupato': 71, 'in_ombra': 315}; tracce nate 2, confermate 2; identità della sagoma conservata; eventi ['conferma', 'ingresso_in_ombra', 'nascita', 'perso', 'prima_misura_piena', 'riaggancio']; celle ambigue medie 2.1
+uscita: 0
+tempo s: 17.7
+== R2: compilazione di comp.c e banco.c
+  410 |     for (int k = 0; k < T.n; k++) { double z[2]; zok[k] = measure(g, &rm, T.x[k], T.y[k], pd, curve, z); zx[k] = z[0]; zy[k] = z[1];
+      |                                                                                                                        ~~~~~~^~~~~~
+/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f8-continuita/13-soluzione/comp.c:410:44: note: ‘z[1]’ was declared here
+  410 |     for (int k = 0; k < T.n; k++) { double z[2]; zok[k] = measure(g, &rm, T.x[k], T.y[k], pd, curve, z); zx[k] = z[0]; zy[k] = z[1];
+      |                                            ^
+uscita comp: 0
+  375 |     for (int k = 0; k < T.n; k++) { double z[2]; zok[k] = measure(g, &rm, T.x[k], T.y[k], pd, curve, z); zx[k] = z[0]; zy[k] = z[1];
+      |                                                                                                                        ~~~~~~^~~~~~
+/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f8-continuita/11-misure/banco.c:375:44: note: ‘z[1]’ was declared here
+  375 |     for (int k = 0; k < T.n; k++) { double z[2]; zok[k] = measure(g, &rm, T.x[k], T.y[k], pd, curve, z); zx[k] = z[0]; zy[k] = z[1];
+      |                                            ^
+uscita banco: 0
+tempo s: 4.2
+== righe non vuote e non commento
+208 catena.py
+72 esegui.py
+106 geometria.py
+65 gruppi.py
+214 inseguimento.py
+91 kalman.py
+125 mappa.py
+56 parametri.py
+114 presenza.py
+482 prove.py
+40 scene_a_mano.py
+48 sorgente.py
+== comp.c: righe, byte, lunghezza media e massima della riga
+635 49984 78.715 542
+237 12648 53.3671 117
+== diff della prova d'identita (righe aggiunte/tolte)
+95
+5
++++ catena/catena.py	2026-11-14 17:57:50.251781769 +0100
++++ catena/geometria.py	2026-11-14 17:57:50.249620060 +0100
++++ catena/gruppi.py	2026-11-14 18:03:40.234089098 +0100
++++ catena/inseguimento.py	2026-11-14 17:57:50.251543134 +0100
++++ catena/mappa.py	2026-11-14 18:03:40.233787726 +0100
++++ catena/parametri.py	2026-11-14 18:02:15.368686322 +0100
++++ catena/presenza.py	2026-11-14 17:57:50.250783088 +0100
+
+== R1 bis 2026-11-14T18:16:14+01:00: prove.py nella struttura f10 ricreata (03-infrastruttura collegata in sola lettura)
+uscita prove.py: 0
+  P18: linea a 2,7 m: 8 eventi «identità ambigua» (bordo della portata), identità 1 → 3, la traccia 1 resta «perso»
+
+  P21 (fumo): celle medie {'non_osservato': 3762, 'libero': 1252, 'occupato': 71, 'in_ombra': 315}; tracce nate 2, confermate 2; identità della sagoma conservata; eventi ['conferma', 'ingresso_in_ombra', 'nascita', 'perso', 'prima_misura_piena', 'riaggancio']; celle ambigue medie 2.1
+tempo s: 4.7
+== R1 ter: la stessa copia SENZA 03-infrastruttura accanto (cartella /tmp/claude-1000/-home-fede-Scrivania-ed-GitHub-Movi-Hackthon/5e23f93d-4455-4e40-867d-5818514a7c35/scratchpad/rov/catena)
+uscita prove.py: 1
+  P18: linea a 2,7 m: 8 eventi «identità ambigua» (bordo della portata), identità 1 → 3, la traccia 1 resta «perso»
+
+  P21 (fumo): celle medie {'non_osservato': 3762, 'libero': 1252, 'occupato': 71, 'in_ombra': 315}; tracce nate 2, confermate 2; identità della sagoma conservata; eventi ['conferma', 'ingresso_in_ombra', 'nascita', 'perso', 'prima_misura_piena', 'riaggancio']; celle ambigue medie 2.1
+3
+ERROR: test_p14_sequenza_dell_infrastruttura_da_riga_di_comando (__main__.ProvaCatena.test_p14_sequenza_dell_infrastruttura_da_riga_di_comando)
+ERROR: test_p01_suolo_come_l_infrastruttura (__main__.ProvaMappa.test_p01_suolo_come_l_infrastruttura)
+FAILED (errors=2)
+== R3: eventi.py
+uscita eventi.py: 0
+73
+tempo s: 0.7
+== R2 bis: un lancio del predittore compilato (comp tempo T 1)
+manca taratura.txt
+uscita comp: 0
+T	T	1	sd-1+sd-0 (in piu' di C-004)	mediana 0.0042 ms	p95 0.0051 ms	max 0.0215 ms
+T	T	1	inizializzazione (all'ingresso)	mediana 0.1231 ms	max 0.1859 ms
+uscita comp: 0
+tempo s: 0.7

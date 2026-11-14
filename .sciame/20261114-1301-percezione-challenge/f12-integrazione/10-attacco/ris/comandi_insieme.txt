@@ -1,0 +1,11 @@
+av_d_D_c1no prova geo=D n=2000 beh=26 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 rh=0.40 bordo=1 estr=1 seme=31000000000
+av_d_D_c1si prova geo=D n=2000 beh=26 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 bordo=0 estr=1 seme=31000000000
+av_d_T_c1no prova geo=T n=2000 beh=26 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 rh=0.40 bordo=1 estr=1 seme=31000000000
+av_d_T_c1si prova geo=T n=2000 beh=26 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 estr=1 seme=31000000000
+av_d_L_c1no prova geo=L n=2000 beh=26 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 rh=0.40 bordo=1 estr=1 seme=31000000000
+av_d_L_c1si prova geo=L n=2000 beh=26 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 estr=1 seme=31000000000
+av_p8_T_e-0.10 prova geo=T e=-0.10 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 seme=31000000000
+av_p8_T_e-0.20 prova geo=T e=-0.20 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 seme=31000000000
+av_p8_T_e-0.45 prova geo=T e=-0.45 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 seme=31000000000
+av_p8_T_e-0.60 prova geo=T e=-0.60 n=400 beh=01236 rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 seme=31000000000
+av_s_D sessione geo=D rh=0.75 assorb=0 m1n=2 vmin=0.3 c3=1 c7=1 bordo=0 seme=31000000000

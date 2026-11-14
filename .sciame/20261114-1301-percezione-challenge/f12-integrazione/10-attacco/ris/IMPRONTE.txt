@@ -1,0 +1,4 @@
+acd8d9741b8d9b5f53d58ffde6053706f6f00c98eb9809da9f9faa6661550438  ../02-prova-insieme/insieme.c
+acd8d9741b8d9b5f53d58ffde6053706f6f00c98eb9809da9f9faa6661550438  insieme_rifatto/insieme.c
+fe4f4f16ab0d6ca41ffb4b79265d4c327c41a2da4785df853a1d53162c779489  ../03-libero/libero.py
+fe4f4f16ab0d6ca41ffb4b79265d4c327c41a2da4785df853a1d53162c779489  libero_rifatto/libero.py

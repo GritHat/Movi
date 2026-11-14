@@ -1,0 +1,14 @@
+-rw-r--r-- 1 fede fede   4999 2026-11-14 17:51:12.724055660 +0100 ../02-prova-insieme/PREVISIONI.md
+-rw-r--r-- 1 fede fede 864681 2026-11-14 17:55:23.936965674 +0100 ../03-libero/banco_lancio1.json
+-rw-r--r-- 1 fede fede   7460 2026-11-14 17:59:43.712804723 +0100 ../03-libero/PREVISIONI.md
+-rw-r--r-- 1 fede fede  42918 2026-11-14 17:55:23.935965682 +0100 ../03-libero/riepilogo_banco_lancio1.txt
+-rw-r--r-- 1 fede fede 655699 2026-11-14 17:55:23.934965690 +0100 ../03-libero/risultati_banco_lancio1.txt
+-rw-r--r-- 1 fede fede   6096 2026-11-14 17:43:55.354695567 +0100 ../CONTRATTO_INTEGRAZIONE.md
+
+../02-prova-insieme/fumo:
+totale 8
+drwxr-xr-x 1 fede fede   20 2026-11-14 17:54:47.374269841 +0100 .
+drwxr-xr-x 1 fede fede  232 2026-11-14 18:08:31.066418370 +0100 ..
+-rw-r--r-- 1 fede fede 6889 2026-11-14 17:54:48.529260232 +0100 fumo_T.txt
+b60d31d0cc66626c28aa6502c7ca5eaf60a1ce0a063590e9cfb171c7903eec16  ../02-prova-insieme/PREVISIONI.md
+2a39eafd82bf7ad0ea4c3e0231a10788807faa8f0131c88b0d6beb39bc1b6169  ../03-libero/PREVISIONI.md

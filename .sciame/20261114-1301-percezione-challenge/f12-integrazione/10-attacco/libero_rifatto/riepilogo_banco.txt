@@ -1,0 +1,293 @@
+# riepilogo di banco.json — 30 fotogrammi per condizione
+
+S1a — le 16 combinazioni x 5 buchi, errore d'inclinazione 0 e ±0,5 gradi
+regola  condizioni  celle libere: dentro un corpo (di cui oltre 5 cm) | suolo nascosto | q_v >= base del sospeso | fotogrammi con violazione
+SC       240             0 (     0) |  10714 |    0 |   932 su 7200
+RP       240         15648 (  8260) |  39246 |    0 |  1732 su 7200
+V17      240           770 (   527) |    835 |  238 |   163 su 7200
+V18-1    240           533 (    20) |      0 |    0 |    98 su 7200
+V18-m    240             6 (     3) |      0 |    0 |     6 su 7200
+PR1      240             0 (     0) |      0 |    0 |     0 su 7200
+PR2      240             0 (     0) |      0 |    0 |     0 su 7200
+PR3      240             0 (     0) |      0 |    0 |     0 su 7200
+PR4      240             0 (     0) |      0 |    0 |     0 su 7200
+
+S1b — le 16 combinazioni x 5 buchi, errore +1 grado (camera piu' in basso di quanto crede)
+regola  condizioni  celle libere: dentro un corpo (di cui oltre 5 cm) | suolo nascosto | q_v >= base del sospeso | fotogrammi con violazione
+SC        80             0 (     0) |     43 |    0 |    35 su 2400
+RP        80          3041 (  1482) |   8211 |    0 |   535 su 2400
+V17       80            40 (    29) |     46 |   75 |    46 su 2400
+V18-1     80           216 (     4) |      0 |    0 |    45 su 2400
+V18-m     80             0 (     0) |      0 |    0 |     0 su 2400
+PR1       80             0 (     0) |      0 |    0 |     0 su 2400
+PR2       80             0 (     0) |      0 |    0 |     0 su 2400
+PR3       80             0 (     0) |      0 |    0 |     0 su 2400
+PR4       80             0 (     0) |      0 |    0 |     0 su 2400
+
+S1c — le 16 combinazioni x 5 buchi, errore -1 grado (camera piu' in alto di quanto crede)
+regola  condizioni  celle libere: dentro un corpo (di cui oltre 5 cm) | suolo nascosto | q_v >= base del sospeso | fotogrammi con violazione
+SC        80          1592 (   852) |   7138 |    0 |   548 su 2400
+RP        80          6520 (  3150) |  17446 |    0 |   592 su 2400
+V17       80           871 (   467) |    638 |  166 |   208 su 2400
+V18-1     80          1124 (   362) |    547 |    0 |   215 su 2400
+V18-m     80           440 (   118) |    255 |    0 |   181 su 2400
+PR1       80           258 (    56) |    142 |    0 |   130 su 2400
+PR2       80             9 (     2) |    248 |    0 |   130 su 2400
+PR3       80            16 (     5) |     21 |    0 |    24 su 2400
+PR4       80             0 (     0) |      0 |    0 |     0 su 2400
+
+S1d — [in piu'] corpo muto, 2 k x 5 buchi, errore 0 e ±0,5
+regola  condizioni  celle libere: dentro un corpo (di cui oltre 5 cm) | suolo nascosto | q_v >= base del sospeso | fotogrammi con violazione
+SC        30             0 (     0) |      0 |    0 |     0 su 900
+RP        30             0 (     0) |      0 |    0 |     0 su 900
+V17       30             0 (     0) |      0 |    0 |     0 su 900
+V18-1     30          4122 (   294) |   6621 |    0 |   900 su 900
+V18-m     30           412 (     0) |      0 |    0 |   239 su 900
+PR1       30             0 (     0) |      0 |    0 |     0 su 900
+PR2       30           404 (     0) |      0 |    0 |   239 su 900
+PR3       30             0 (     0) |      0 |    0 |     0 su 900
+PR4       30             0 (     0) |      0 |    0 |     0 su 900
+
+S1e — [in piu'] scatola 0,10 m a 2,6-2,9 m, 2 k x 5 buchi, errore 0 e ±0,5
+regola  condizioni  celle libere: dentro un corpo (di cui oltre 5 cm) | suolo nascosto | q_v >= base del sospeso | fotogrammi con violazione
+SC        30             0 (     0) |   1628 |    0 |   253 su 900
+RP        30         13224 (  7566) |   4657 |    0 |   833 su 900
+V17       30           691 (   525) |    326 |    0 |   138 su 900
+V18-1     30           312 (    81) |     83 |    0 |   132 su 900
+V18-m     30           243 (    66) |     55 |    0 |   123 su 900
+PR1       30            79 (    17) |     14 |    0 |    53 su 900
+PR2       30            10 (     0) |     41 |    0 |    38 su 900
+PR3       30            72 (    13) |     17 |    0 |    48 su 900
+PR4       30             0 (     0) |      0 |    0 |     0 su 900
+
+S1f — le due scene in piu', errore ±1
+regola  condizioni  celle libere: dentro un corpo (di cui oltre 5 cm) | suolo nascosto | q_v >= base del sospeso | fotogrammi con violazione
+SC        40          1035 (   695) |    984 |    0 |   252 su 1200
+RP        40          6431 (  3478) |   2727 |    0 |   537 su 1200
+V17       40          3321 (  1604) |   1113 |    0 |   294 su 1200
+V18-1     40          8381 (  2618) |   5422 |    0 |   892 su 1200
+V18-m     40          6887 (  1883) |   1357 |    0 |   587 su 1200
+PR1       40          2640 (  1085) |    875 |    0 |   264 su 1200
+PR2       40          5805 (  1500) |   1357 |    0 |   586 su 1200
+PR3       40          1092 (   327) |    337 |    0 |   266 su 1200
+PR4       40           503 (   168) |    295 |    0 |   150 su 1200
+
+Dove cadono V18-m e le varianti prudenti (condizioni con almeno una violazione, errore fra -0,5 e +0,5):
+  V18-m k=0.0040 scatola 0,10 m                     err -0.5 sparsi 30 %  dentro 2 (prof 1) nasc 0 qv 0, fot. 2/30
+  V18-m k=0.0040 [in piu'] corpo muto 1,75 m a 2 m  err +0.5 nessuno      dentro 59 (prof 0) nasc 0 qv 0, fot. 30/30
+  PR2   k=0.0040 [in piu'] corpo muto 1,75 m a 2 m  err +0.5 nessuno      dentro 59 (prof 0) nasc 0 qv 0, fot. 30/30
+  V18-m k=0.0040 [in piu'] corpo muto 1,75 m a 2 m  err +0.5 sparsi 5 %   dentro 46 (prof 0) nasc 0 qv 0, fot. 29/30
+  PR2   k=0.0040 [in piu'] corpo muto 1,75 m a 2 m  err +0.5 sparsi 5 %   dentro 46 (prof 0) nasc 0 qv 0, fot. 29/30
+  V18-m k=0.0040 [in piu'] corpo muto 1,75 m a 2 m  err +0.5 sparsi 30 %  dentro 6 (prof 0) nasc 0 qv 0, fot. 6/30
+  PR2   k=0.0040 [in piu'] corpo muto 1,75 m a 2 m  err +0.5 sparsi 30 %  dentro 6 (prof 0) nasc 0 qv 0, fot. 6/30
+  V18-m k=0.0040 [in piu'] corpo muto 1,75 m a 2 m  err +0.5 chiazze 5 %  dentro 59 (prof 0) nasc 0 qv 0, fot. 30/30
+  PR2   k=0.0040 [in piu'] corpo muto 1,75 m a 2 m  err +0.5 chiazze 5 %  dentro 59 (prof 0) nasc 0 qv 0, fot. 30/30
+  V18-m k=0.0040 [in piu'] corpo muto 1,75 m a 2 m  err +0.5 chiazze 30 % dentro 36 (prof 0) nasc 0 qv 0, fot. 25/30
+  PR2   k=0.0040 [in piu'] corpo muto 1,75 m a 2 m  err +0.5 chiazze 30 % dentro 36 (prof 0) nasc 0 qv 0, fot. 25/30
+  V18-m k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err +0.0 sparsi 30 %  dentro 2 (prof 0) nasc 0 qv 0, fot. 2/30
+  V18-m k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err +0.5 sparsi 30 %  dentro 1 (prof 0) nasc 0 qv 0, fot. 1/30
+  V18-m k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -0.5 nessuno      dentro 7 (prof 4) nasc 0 qv 0, fot. 6/30
+  PR1   k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -0.5 nessuno      dentro 7 (prof 4) nasc 0 qv 0, fot. 6/30
+  PR3   k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -0.5 nessuno      dentro 3 (prof 2) nasc 0 qv 0, fot. 3/30
+  V18-m k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -0.5 sparsi 5 %   dentro 11 (prof 4) nasc 0 qv 0, fot. 9/30
+  PR1   k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -0.5 sparsi 5 %   dentro 6 (prof 3) nasc 0 qv 0, fot. 5/30
+  PR3   k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -0.5 sparsi 5 %   dentro 2 (prof 0) nasc 0 qv 0, fot. 2/30
+  V18-m k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -0.5 sparsi 30 %  dentro 21 (prof 6) nasc 1 qv 0, fot. 17/30
+  PR3   k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -0.5 sparsi 30 %  dentro 2 (prof 2) nasc 0 qv 0, fot. 2/30
+  V18-m k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -0.5 chiazze 5 %  dentro 3 (prof 1) nasc 0 qv 0, fot. 3/30
+  PR1   k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -0.5 chiazze 5 %  dentro 3 (prof 1) nasc 0 qv 0, fot. 3/30
+  PR3   k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -0.5 chiazze 5 %  dentro 2 (prof 1) nasc 0 qv 0, fot. 2/30
+  V18-m k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -0.5 chiazze 30 % dentro 9 (prof 4) nasc 1 qv 0, fot. 9/30
+  PR1   k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -0.5 chiazze 30 % dentro 6 (prof 1) nasc 0 qv 0, fot. 6/30
+  PR3   k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -0.5 chiazze 30 % dentro 4 (prof 1) nasc 0 qv 0, fot. 4/30
+  V18-m k=0.0100 scatola 0,10 m                     err +0.0 sparsi 30 %  dentro 2 (prof 1) nasc 0 qv 0, fot. 2/30
+  V18-m k=0.0100 scatola 0,10 m                     err -0.5 sparsi 30 %  dentro 1 (prof 0) nasc 0 qv 0, fot. 1/30
+  V18-m k=0.0100 scatola 0,10 m                     err -0.5 chiazze 30 % dentro 1 (prof 1) nasc 0 qv 0, fot. 1/30
+  V18-m k=0.0100 [in piu'] corpo muto 1,75 m a 2 m  err +0.5 nessuno      dentro 59 (prof 0) nasc 0 qv 0, fot. 30/30
+  PR2   k=0.0100 [in piu'] corpo muto 1,75 m a 2 m  err +0.5 nessuno      dentro 56 (prof 0) nasc 0 qv 0, fot. 30/30
+  V18-m k=0.0100 [in piu'] corpo muto 1,75 m a 2 m  err +0.5 sparsi 5 %   dentro 45 (prof 0) nasc 0 qv 0, fot. 27/30
+  PR2   k=0.0100 [in piu'] corpo muto 1,75 m a 2 m  err +0.5 sparsi 5 %   dentro 44 (prof 0) nasc 0 qv 0, fot. 27/30
+  V18-m k=0.0100 [in piu'] corpo muto 1,75 m a 2 m  err +0.5 sparsi 30 %  dentro 3 (prof 0) nasc 0 qv 0, fot. 3/30
+  PR2   k=0.0100 [in piu'] corpo muto 1,75 m a 2 m  err +0.5 sparsi 30 %  dentro 3 (prof 0) nasc 0 qv 0, fot. 3/30
+  V18-m k=0.0100 [in piu'] corpo muto 1,75 m a 2 m  err +0.5 chiazze 5 %  dentro 56 (prof 0) nasc 0 qv 0, fot. 30/30
+  PR2   k=0.0100 [in piu'] corpo muto 1,75 m a 2 m  err +0.5 chiazze 5 %  dentro 53 (prof 0) nasc 0 qv 0, fot. 30/30
+  V18-m k=0.0100 [in piu'] corpo muto 1,75 m a 2 m  err +0.5 chiazze 30 % dentro 43 (prof 0) nasc 0 qv 0, fot. 29/30
+  PR2   k=0.0100 [in piu'] corpo muto 1,75 m a 2 m  err +0.5 chiazze 30 % dentro 42 (prof 0) nasc 0 qv 0, fot. 29/30
+  V18-m k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err +0.0 sparsi 5 %   dentro 3 (prof 0) nasc 0 qv 0, fot. 3/30
+  PR3   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err +0.0 sparsi 5 %   dentro 2 (prof 0) nasc 0 qv 0, fot. 2/30
+  V18-m k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err +0.0 sparsi 30 %  dentro 5 (prof 0) nasc 0 qv 0, fot. 4/30
+  V18-m k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err +0.0 chiazze 5 %  dentro 3 (prof 3) nasc 0 qv 0, fot. 3/30
+  PR3   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err +0.0 chiazze 5 %  dentro 1 (prof 1) nasc 0 qv 0, fot. 1/30
+  V18-m k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err +0.0 chiazze 30 % dentro 6 (prof 6) nasc 3 qv 0, fot. 4/30
+  PR1   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err +0.0 chiazze 30 % dentro 0 (prof 0) nasc 1 qv 0, fot. 1/30
+  V18-m k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err +0.5 nessuno      dentro 1 (prof 0) nasc 0 qv 0, fot. 1/30
+  PR3   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err +0.5 nessuno      dentro 1 (prof 0) nasc 0 qv 0, fot. 1/30
+  V18-m k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err +0.5 sparsi 30 %  dentro 4 (prof 0) nasc 0 qv 0, fot. 2/30
+  V18-m k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -0.5 nessuno      dentro 19 (prof 2) nasc 5 qv 0, fot. 8/30
+  PR1   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -0.5 nessuno      dentro 19 (prof 2) nasc 5 qv 0, fot. 8/30
+  PR2   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -0.5 nessuno      dentro 1 (prof 0) nasc 5 qv 0, fot. 5/30
+  PR3   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -0.5 nessuno      dentro 18 (prof 2) nasc 3 qv 0, fot. 8/30
+  V18-m k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -0.5 sparsi 5 %   dentro 26 (prof 3) nasc 7 qv 0, fot. 10/30
+  PR1   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -0.5 sparsi 5 %   dentro 15 (prof 1) nasc 3 qv 0, fot. 9/30
+  PR2   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -0.5 sparsi 5 %   dentro 0 (prof 0) nasc 4 qv 0, fot. 4/30
+  PR3   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -0.5 sparsi 5 %   dentro 18 (prof 2) nasc 5 qv 0, fot. 9/30
+  V18-m k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -0.5 sparsi 30 %  dentro 91 (prof 19) nasc 29 qv 0, fot. 25/30
+  PR1   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -0.5 sparsi 30 %  dentro 4 (prof 0) nasc 1 qv 0, fot. 4/30
+  PR2   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -0.5 sparsi 30 %  dentro 9 (prof 0) nasc 23 qv 0, fot. 20/30
+  PR3   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -0.5 sparsi 30 %  dentro 3 (prof 0) nasc 5 qv 0, fot. 6/30
+  V18-m k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -0.5 chiazze 5 %  dentro 11 (prof 1) nasc 3 qv 0, fot. 5/30
+  PR1   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -0.5 chiazze 5 %  dentro 11 (prof 1) nasc 3 qv 0, fot. 5/30
+  PR2   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -0.5 chiazze 5 %  dentro 0 (prof 0) nasc 3 qv 0, fot. 3/30
+  PR3   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -0.5 chiazze 5 %  dentro 10 (prof 0) nasc 3 qv 0, fot. 4/30
+  V18-m k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -0.5 chiazze 30 % dentro 20 (prof 13) nasc 6 qv 0, fot. 11/30
+  PR1   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -0.5 chiazze 30 % dentro 8 (prof 4) nasc 1 qv 0, fot. 6/30
+  PR2   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -0.5 chiazze 30 % dentro 0 (prof 0) nasc 6 qv 0, fot. 6/30
+  PR3   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -0.5 chiazze 30 % dentro 6 (prof 2) nasc 1 qv 0, fot. 4/30
+
+Dove cadono V18-m e le varianti prudenti a ±1 grado (solo le righe con celle oltre 5 cm dentro un corpo o suolo nascosto):
+  V18-m k=0.0040 scatola 0,10 m                     err -1.0 nessuno      dentro 85 (prof 17) nasc 47 qv 0, fot. 29/30
+  PR1   k=0.0040 scatola 0,10 m                     err -1.0 nessuno      dentro 85 (prof 17) nasc 47 qv 0, fot. 29/30
+  PR2   k=0.0040 scatola 0,10 m                     err -1.0 nessuno      dentro 1 (prof 1) nasc 46 qv 0, fot. 24/30
+  PR3   k=0.0040 scatola 0,10 m                     err -1.0 nessuno      dentro 0 (prof 0) nasc 4 qv 0, fot. 4/30
+  V18-m k=0.0040 scatola 0,10 m                     err -1.0 sparsi 5 %   dentro 76 (prof 11) nasc 39 qv 0, fot. 30/30
+  PR1   k=0.0040 scatola 0,10 m                     err -1.0 sparsi 5 %   dentro 44 (prof 7) nasc 25 qv 0, fot. 26/30
+  PR2   k=0.0040 scatola 0,10 m                     err -1.0 sparsi 5 %   dentro 0 (prof 0) nasc 39 qv 0, fot. 25/30
+  PR3   k=0.0040 scatola 0,10 m                     err -1.0 sparsi 5 %   dentro 0 (prof 0) nasc 3 qv 0, fot. 3/30
+  V18-m k=0.0040 scatola 0,10 m                     err -1.0 sparsi 30 %  dentro 59 (prof 12) nasc 53 qv 0, fot. 29/30
+  PR1   k=0.0040 scatola 0,10 m                     err -1.0 sparsi 30 %  dentro 3 (prof 1) nasc 0 qv 0, fot. 3/30
+  PR2   k=0.0040 scatola 0,10 m                     err -1.0 sparsi 30 %  dentro 3 (prof 0) nasc 53 qv 0, fot. 25/30
+  V18-m k=0.0040 scatola 0,10 m                     err -1.0 chiazze 5 %  dentro 64 (prof 12) nasc 29 qv 0, fot. 27/30
+  PR1   k=0.0040 scatola 0,10 m                     err -1.0 chiazze 5 %  dentro 62 (prof 10) nasc 28 qv 0, fot. 27/30
+  PR2   k=0.0040 scatola 0,10 m                     err -1.0 chiazze 5 %  dentro 2 (prof 0) nasc 29 qv 0, fot. 17/30
+  PR3   k=0.0040 scatola 0,10 m                     err -1.0 chiazze 5 %  dentro 0 (prof 0) nasc 3 qv 0, fot. 3/30
+  V18-m k=0.0040 scatola 0,10 m                     err -1.0 chiazze 30 % dentro 37 (prof 13) nasc 33 qv 0, fot. 23/30
+  PR1   k=0.0040 scatola 0,10 m                     err -1.0 chiazze 30 % dentro 29 (prof 5) nasc 29 qv 0, fot. 21/30
+  PR2   k=0.0040 scatola 0,10 m                     err -1.0 chiazze 30 % dentro 0 (prof 0) nasc 32 qv 0, fot. 18/30
+  V18-m k=0.0040 [in piu'] corpo muto 1,75 m a 2 m  err +1.0 nessuno      dentro 389 (prof 30) nasc 0 qv 0, fot. 30/30
+  PR2   k=0.0040 [in piu'] corpo muto 1,75 m a 2 m  err +1.0 nessuno      dentro 389 (prof 30) nasc 0 qv 0, fot. 30/30
+  V18-m k=0.0040 [in piu'] corpo muto 1,75 m a 2 m  err +1.0 sparsi 5 %   dentro 377 (prof 29) nasc 0 qv 0, fot. 30/30
+  PR2   k=0.0040 [in piu'] corpo muto 1,75 m a 2 m  err +1.0 sparsi 5 %   dentro 377 (prof 29) nasc 0 qv 0, fot. 30/30
+  V18-m k=0.0040 [in piu'] corpo muto 1,75 m a 2 m  err +1.0 sparsi 30 %  dentro 248 (prof 19) nasc 0 qv 0, fot. 30/30
+  PR2   k=0.0040 [in piu'] corpo muto 1,75 m a 2 m  err +1.0 sparsi 30 %  dentro 248 (prof 19) nasc 0 qv 0, fot. 30/30
+  V18-m k=0.0040 [in piu'] corpo muto 1,75 m a 2 m  err +1.0 chiazze 5 %  dentro 372 (prof 30) nasc 0 qv 0, fot. 30/30
+  PR2   k=0.0040 [in piu'] corpo muto 1,75 m a 2 m  err +1.0 chiazze 5 %  dentro 372 (prof 30) nasc 0 qv 0, fot. 30/30
+  V18-m k=0.0040 [in piu'] corpo muto 1,75 m a 2 m  err +1.0 chiazze 30 % dentro 232 (prof 19) nasc 0 qv 0, fot. 26/30
+  PR2   k=0.0040 [in piu'] corpo muto 1,75 m a 2 m  err +1.0 chiazze 30 % dentro 232 (prof 19) nasc 0 qv 0, fot. 26/30
+  V18-m k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 nessuno      dentro 627 (prof 290) nasc 217 qv 0, fot. 30/30
+  PR1   k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 nessuno      dentro 627 (prof 290) nasc 217 qv 0, fot. 30/30
+  PR2   k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 nessuno      dentro 569 (prof 270) nasc 217 qv 0, fot. 30/30
+  PR3   k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 nessuno      dentro 82 (prof 12) nasc 28 qv 0, fot. 30/30
+  PR4   k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 nessuno      dentro 130 (prof 62) nasc 83 qv 0, fot. 28/30
+  V18-m k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 sparsi 5 %   dentro 583 (prof 253) nasc 210 qv 0, fot. 30/30
+  PR1   k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 sparsi 5 %   dentro 366 (prof 163) nasc 136 qv 0, fot. 30/30
+  PR2   k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 sparsi 5 %   dentro 528 (prof 234) nasc 210 qv 0, fot. 30/30
+  PR3   k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 sparsi 5 %   dentro 61 (prof 17) nasc 22 qv 0, fot. 29/30
+  PR4   k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 sparsi 5 %   dentro 65 (prof 22) nasc 51 qv 0, fot. 26/30
+  V18-m k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 sparsi 30 %  dentro 402 (prof 141) nasc 150 qv 0, fot. 30/30
+  PR1   k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 sparsi 30 %  dentro 12 (prof 4) nasc 4 qv 0, fot. 14/30
+  PR2   k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 sparsi 30 %  dentro 396 (prof 139) nasc 150 qv 0, fot. 30/30
+  PR3   k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 sparsi 30 %  dentro 7 (prof 0) nasc 6 qv 0, fot. 12/30
+  PR4   k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 sparsi 30 %  dentro 2 (prof 1) nasc 4 qv 0, fot. 6/30
+  V18-m k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 chiazze 5 %  dentro 548 (prof 246) nasc 192 qv 0, fot. 29/30
+  PR1   k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 chiazze 5 %  dentro 520 (prof 225) nasc 176 qv 0, fot. 29/30
+  PR2   k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 chiazze 5 %  dentro 483 (prof 220) nasc 192 qv 0, fot. 29/30
+  PR3   k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 chiazze 5 %  dentro 80 (prof 17) nasc 14 qv 0, fot. 27/30
+  PR4   k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 chiazze 5 %  dentro 93 (prof 31) nasc 56 qv 0, fot. 27/30
+  V18-m k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 chiazze 30 % dentro 436 (prof 195) nasc 152 qv 0, fot. 28/30
+  PR1   k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 chiazze 30 % dentro 326 (prof 117) nasc 91 qv 0, fot. 28/30
+  PR2   k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 chiazze 30 % dentro 373 (prof 170) nasc 152 qv 0, fot. 28/30
+  PR3   k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 chiazze 30 % dentro 75 (prof 11) nasc 11 qv 0, fot. 27/30
+  PR4   k=0.0040 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 chiazze 30 % dentro 56 (prof 16) nasc 40 qv 0, fot. 22/30
+  V18-m k=0.0100 scatola 0,10 m                     err -1.0 nessuno      dentro 14 (prof 5) nasc 4 qv 0, fot. 9/30
+  PR1   k=0.0100 scatola 0,10 m                     err -1.0 nessuno      dentro 14 (prof 5) nasc 4 qv 0, fot. 9/30
+  PR2   k=0.0100 scatola 0,10 m                     err -1.0 nessuno      dentro 0 (prof 0) nasc 2 qv 0, fot. 1/30
+  PR3   k=0.0100 scatola 0,10 m                     err -1.0 nessuno      dentro 8 (prof 3) nasc 4 qv 0, fot. 4/30
+  V18-m k=0.0100 scatola 0,10 m                     err -1.0 sparsi 5 %   dentro 13 (prof 7) nasc 6 qv 0, fot. 7/30
+  PR1   k=0.0100 scatola 0,10 m                     err -1.0 sparsi 5 %   dentro 11 (prof 7) nasc 5 qv 0, fot. 7/30
+  PR2   k=0.0100 scatola 0,10 m                     err -1.0 sparsi 5 %   dentro 0 (prof 0) nasc 5 qv 0, fot. 3/30
+  PR3   k=0.0100 scatola 0,10 m                     err -1.0 sparsi 5 %   dentro 6 (prof 2) nasc 5 qv 0, fot. 6/30
+  V18-m k=0.0100 scatola 0,10 m                     err -1.0 sparsi 30 %  dentro 83 (prof 35) nasc 41 qv 0, fot. 21/30
+  PR1   k=0.0100 scatola 0,10 m                     err -1.0 sparsi 30 %  dentro 5 (prof 2) nasc 1 qv 0, fot. 4/30
+  PR2   k=0.0100 scatola 0,10 m                     err -1.0 sparsi 30 %  dentro 3 (prof 1) nasc 39 qv 0, fot. 15/30
+  PR3   k=0.0100 scatola 0,10 m                     err -1.0 sparsi 30 %  dentro 0 (prof 0) nasc 2 qv 0, fot. 2/30
+  V18-m k=0.0100 scatola 0,10 m                     err -1.0 chiazze 30 % dentro 8 (prof 6) nasc 3 qv 0, fot. 5/30
+  PR1   k=0.0100 scatola 0,10 m                     err -1.0 chiazze 30 % dentro 4 (prof 2) nasc 3 qv 0, fot. 3/30
+  PR2   k=0.0100 scatola 0,10 m                     err -1.0 chiazze 30 % dentro 0 (prof 0) nasc 3 qv 0, fot. 2/30
+  V18-m k=0.0100 [in piu'] corpo muto 1,75 m a 2 m  err +1.0 nessuno      dentro 333 (prof 27) nasc 0 qv 0, fot. 30/30
+  PR2   k=0.0100 [in piu'] corpo muto 1,75 m a 2 m  err +1.0 nessuno      dentro 312 (prof 27) nasc 0 qv 0, fot. 30/30
+  V18-m k=0.0100 [in piu'] corpo muto 1,75 m a 2 m  err +1.0 sparsi 5 %   dentro 299 (prof 27) nasc 0 qv 0, fot. 30/30
+  PR2   k=0.0100 [in piu'] corpo muto 1,75 m a 2 m  err +1.0 sparsi 5 %   dentro 280 (prof 26) nasc 0 qv 0, fot. 30/30
+  V18-m k=0.0100 [in piu'] corpo muto 1,75 m a 2 m  err +1.0 sparsi 30 %  dentro 276 (prof 21) nasc 0 qv 0, fot. 30/30
+  PR2   k=0.0100 [in piu'] corpo muto 1,75 m a 2 m  err +1.0 sparsi 30 %  dentro 256 (prof 21) nasc 0 qv 0, fot. 30/30
+  V18-m k=0.0100 [in piu'] corpo muto 1,75 m a 2 m  err +1.0 chiazze 5 %  dentro 271 (prof 25) nasc 0 qv 0, fot. 30/30
+  PR2   k=0.0100 [in piu'] corpo muto 1,75 m a 2 m  err +1.0 chiazze 5 %  dentro 242 (prof 25) nasc 0 qv 0, fot. 30/30
+  V18-m k=0.0100 [in piu'] corpo muto 1,75 m a 2 m  err +1.0 chiazze 30 % dentro 164 (prof 18) nasc 0 qv 0, fot. 25/30
+  PR2   k=0.0100 [in piu'] corpo muto 1,75 m a 2 m  err +1.0 chiazze 30 % dentro 152 (prof 18) nasc 0 qv 0, fot. 25/30
+  V18-m k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 nessuno      dentro 260 (prof 101) nasc 83 qv 0, fot. 30/30
+  PR1   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 nessuno      dentro 260 (prof 101) nasc 83 qv 0, fot. 30/30
+  PR2   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 nessuno      dentro 100 (prof 36) nasc 83 qv 0, fot. 30/30
+  PR3   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 nessuno      dentro 242 (prof 94) nasc 74 qv 0, fot. 30/30
+  PR4   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 nessuno      dentro 39 (prof 10) nasc 13 qv 0, fot. 9/30
+  V18-m k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 sparsi 5 %   dentro 251 (prof 93) nasc 80 qv 0, fot. 30/30
+  PR1   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 sparsi 5 %   dentro 160 (prof 58) nasc 53 qv 0, fot. 30/30
+  PR2   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 sparsi 5 %   dentro 103 (prof 35) nasc 80 qv 0, fot. 30/30
+  PR3   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 sparsi 5 %   dentro 156 (prof 54) nasc 51 qv 0, fot. 30/30
+  PR4   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 sparsi 5 %   dentro 27 (prof 4) nasc 9 qv 0, fot. 5/30
+  V18-m k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 sparsi 30 %  dentro 396 (prof 163) nasc 134 qv 0, fot. 30/30
+  PR1   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 sparsi 30 %  dentro 20 (prof 11) nasc 8 qv 0, fot. 16/30
+  PR2   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 sparsi 30 %  dentro 241 (prof 107) nasc 134 qv 0, fot. 30/30
+  PR3   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 sparsi 30 %  dentro 38 (prof 8) nasc 15 qv 0, fot. 26/30
+  PR4   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 sparsi 30 %  dentro 61 (prof 20) nasc 29 qv 0, fot. 18/30
+  V18-m k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 chiazze 5 %  dentro 209 (prof 74) nasc 68 qv 0, fot. 30/30
+  PR1   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 chiazze 5 %  dentro 200 (prof 70) nasc 64 qv 0, fot. 30/30
+  PR2   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 chiazze 5 %  dentro 69 (prof 21) nasc 68 qv 0, fot. 29/30
+  PR3   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 chiazze 5 %  dentro 179 (prof 58) nasc 63 qv 0, fot. 28/30
+  PR4   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 chiazze 5 %  dentro 9 (prof 0) nasc 3 qv 0, fot. 3/30
+  V18-m k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 chiazze 30 % dentro 214 (prof 82) nasc 71 qv 0, fot. 29/30
+  PR1   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 chiazze 30 % dentro 149 (prof 46) nasc 43 qv 0, fot. 27/30
+  PR2   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 chiazze 30 % dentro 83 (prof 24) nasc 71 qv 0, fot. 29/30
+  PR3   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 chiazze 30 % dentro 172 (prof 56) nasc 53 qv 0, fot. 27/30
+  PR4   k=0.0100 [in piu'] scatola 0,10 m a 2,6-2,9 err -1.0 chiazze 30 % dentro 21 (prof 2) nasc 7 qv 0, fot. 6/30
+
+S2 — stanza vuota, errore 0: mediana per settore (m) | resa (%) | cambi per cella al secondo | «sconosciuto» (%)
+k=0.0040 nessuno      | SC    2.9 m  99.4 % 0.18/s   0.0 % | RP    3.0 m 100.0 % 0.00/s   0.0 % | V17   3.0 m 100.0 % 0.00/s   0.0 % | V18-1 3.0 m 100.0 % 0.00/s   0.0 % | V18-m 3.0 m 100.0 % 0.00/s   0.0 % | PR1   3.0 m 100.0 % 0.00/s   0.0 % | PR2   3.0 m 100.0 % 0.00/s   0.0 % | PR3   3.0 m 100.0 % 0.01/s   0.0 % | PR4   3.0 m 100.0 % 0.00/s   0.0 %   [settori-fotogramma 270]
+k=0.0040 sparsi 5 %   | SC    1.3 m  62.8 % 7.06/s  90.0 % | RP    1.3 m  62.9 % 7.03/s  87.4 % | V17   1.3 m  62.9 % 7.03/s  87.4 % | V18-1 3.0 m 100.0 % 0.00/s   0.0 % | V18-m 3.0 m 100.0 % 0.00/s   0.0 % | PR1   1.3 m  62.9 % 7.03/s  87.4 % | PR2   3.0 m 100.0 % 0.00/s   0.0 % | PR3   1.3 m  45.4 % 6.87/s 100.0 % | PR4   3.0 m 100.0 % 0.01/s   0.7 %   [settori-fotogramma 270]
+k=0.0040 sparsi 30 %  | SC    1.3 m   3.9 % 1.13/s 100.0 % | RP    1.3 m   4.2 % 1.20/s 100.0 % | V17   1.3 m   4.2 % 1.20/s 100.0 % | V18-1 3.0 m 100.0 % 0.00/s   0.0 % | V18-m 1.8 m  95.8 % 1.18/s   9.6 % | PR1   1.3 m   4.0 % 1.14/s 100.0 % | PR2   1.8 m  95.8 % 1.18/s   9.6 % | PR3   1.3 m   1.5 % 0.44/s 100.0 % | PR4   1.5 m  69.9 % 5.72/s  42.6 %   [settori-fotogramma 270]
+k=0.0040 chiazze 5 %  | SC    2.8 m  93.0 % 1.90/s  10.7 % | RP    3.0 m  93.4 % 1.82/s  10.0 % | V17   3.0 m  93.4 % 1.82/s  10.0 % | V18-1 3.0 m  96.2 % 1.07/s   8.1 % | V18-m 3.0 m  94.6 % 1.52/s   9.6 % | PR1   3.0 m  89.1 % 2.83/s  18.9 % | PR2   3.0 m  94.6 % 1.52/s   9.6 % | PR3   3.0 m  92.5 % 2.01/s   9.6 % | PR4   3.0 m  89.4 % 2.72/s  10.0 %   [settori-fotogramma 270]
+k=0.0040 chiazze 30 % | SC    1.4 m  64.3 % 6.62/s  47.8 % | RP    1.4 m  64.9 % 6.65/s  42.6 % | V17   1.4 m  64.9 % 6.65/s  42.6 % | V18-1 1.5 m  76.3 % 4.97/s  35.6 % | V18-m 1.5 m  70.0 % 6.11/s  40.7 % | PR1   1.3 m  48.0 % 7.18/s  63.7 % | PR2   1.5 m  70.0 % 6.11/s  40.7 % | PR3   1.4 m  62.2 % 6.53/s  40.7 % | PR4   1.4 m  51.0 % 6.66/s  46.7 %   [settori-fotogramma 270]
+k=0.0100 nessuno      | SC    1.3 m   8.7 % 1.92/s  98.9 % | RP    2.8 m  98.6 % 0.39/s   0.0 % | V17   2.8 m  98.4 % 0.43/s   0.0 % | V18-1 3.0 m  99.9 % 0.04/s   0.0 % | V18-m 3.0 m  99.9 % 0.04/s   0.0 % | PR1   2.8 m  98.4 % 0.43/s   0.0 % | PR2   3.0 m  99.6 % 0.11/s   0.0 % | PR3   3.0 m  99.5 % 0.16/s   0.0 % | PR4   3.0 m  99.5 % 0.16/s   0.0 %   [settori-fotogramma 270]
+k=0.0100 sparsi 5 %   | SC    1.3 m   5.4 % 1.35/s 100.0 % | RP    1.3 m  62.5 % 6.99/s  88.9 % | V17   1.3 m  62.4 % 7.00/s  88.9 % | V18-1 3.0 m  99.8 % 0.06/s   0.0 % | V18-m 3.0 m  99.8 % 0.06/s   0.0 % | PR1   1.3 m  62.4 % 7.00/s  88.9 % | PR2   3.0 m  99.5 % 0.16/s   0.0 % | PR3   1.3 m  45.4 % 6.85/s 100.0 % | PR4   3.0 m  99.2 % 0.22/s   0.4 %   [settori-fotogramma 270]
+k=0.0100 sparsi 30 %  | SC    1.3 m   0.4 % 0.11/s 100.0 % | RP    1.3 m   4.1 % 1.18/s 100.0 % | V17   1.3 m   4.1 % 1.18/s 100.0 % | V18-1 3.0 m 100.0 % 0.01/s   0.0 % | V18-m 1.8 m  95.6 % 1.23/s   8.9 % | PR1   1.3 m   3.9 % 1.12/s 100.0 % | PR2   1.8 m  95.6 % 1.25/s   8.9 % | PR3   1.3 m   1.5 % 0.42/s 100.0 % | PR4   1.5 m  68.6 % 5.92/s  41.5 %   [settori-fotogramma 270]
+k=0.0100 chiazze 5 %  | SC    1.3 m   8.4 % 1.87/s  98.1 % | RP    2.6 m  92.8 % 1.98/s   6.3 % | V17   2.6 m  92.6 % 2.03/s   6.3 % | V18-1 3.0 m  96.2 % 1.07/s   9.6 % | V18-m 3.0 m  94.8 % 1.45/s  11.1 % | PR1   2.5 m  88.8 % 2.96/s  17.0 % | PR2   3.0 m  94.4 % 1.57/s  11.1 % | PR3   2.6 m  92.6 % 2.04/s  11.1 % | PR4   3.0 m  89.6 % 2.70/s  11.9 %   [settori-fotogramma 270]
+k=0.0100 chiazze 30 % | SC    1.3 m   5.9 % 1.50/s  99.6 % | RP    1.4 m  66.6 % 6.70/s  40.4 % | V17   1.4 m  66.5 % 6.70/s  40.4 % | V18-1 1.5 m  78.3 % 5.01/s  39.3 % | V18-m 1.4 m  72.3 % 6.21/s  44.4 % | PR1   1.3 m  50.7 % 7.54/s  64.4 % | PR2   1.4 m  72.1 % 6.24/s  44.4 % | PR3   1.4 m  64.7 % 6.71/s  44.8 % | PR4   1.3 m  54.0 % 7.01/s  50.4 %   [settori-fotogramma 270]
+
+Inclinazione — stanza vuota, senza buchi e col 5 % sparso: resa (%) e mediana per settore (m) per errore
+k=0.0040 nessuno    err -1.0 | SC    100.0 % 3.0 m | RP    100.0 % 3.0 m | V17   100.0 % 3.0 m | V18-1 100.0 % 3.0 m | V18-m  96.4 % 2.5 m | PR1    96.4 % 2.5 m | PR2    96.4 % 2.5 m | PR3    25.6 % 1.4 m | PR4    82.4 % 2.3 m
+k=0.0040 nessuno    err -0.5 | SC    100.0 % 3.0 m | RP    100.0 % 3.0 m | V17   100.0 % 3.0 m | V18-1 100.0 % 3.0 m | V18-m 100.0 % 3.0 m | PR1   100.0 % 3.0 m | PR2   100.0 % 3.0 m | PR3    94.2 % 2.1 m | PR4   100.0 % 3.0 m
+k=0.0040 nessuno    err +0.0 | SC     99.4 % 2.9 m | RP    100.0 % 3.0 m | V17   100.0 % 3.0 m | V18-1 100.0 % 3.0 m | V18-m 100.0 % 3.0 m | PR1   100.0 % 3.0 m | PR2   100.0 % 3.0 m | PR3   100.0 % 3.0 m | PR4   100.0 % 3.0 m
+k=0.0040 nessuno    err +0.5 | SC     86.5 % 2.2 m | RP    100.0 % 3.0 m | V17   100.0 % 3.0 m | V18-1 100.0 % 3.0 m | V18-m 100.0 % 3.0 m | PR1   100.0 % 3.0 m | PR2   100.0 % 3.0 m | PR3    97.1 % 2.3 m | PR4   100.0 % 3.0 m
+k=0.0040 nessuno    err +1.0 | SC     51.9 % 1.7 m | RP    100.0 % 3.0 m | V17    99.6 % 3.0 m | V18-1  99.6 % 3.0 m | V18-m  99.0 % 2.8 m | PR1    99.0 % 2.8 m | PR2    97.8 % 2.8 m | PR3    45.5 % 1.5 m | PR4    94.3 % 2.7 m
+k=0.0040 sparsi 5 % err -1.0 | SC     62.9 % 1.3 m | RP     63.0 % 1.3 m | V17    63.0 % 1.3 m | V18-1 100.0 % 3.0 m | V18-m  94.9 % 2.4 m | PR1    59.8 % 1.3 m | PR2    94.9 % 2.4 m | PR3     8.6 % 1.3 m | PR4    76.6 % 2.2 m
+k=0.0040 sparsi 5 % err -0.5 | SC     63.4 % 1.3 m | RP     62.6 % 1.3 m | V17    62.6 % 1.3 m | V18-1 100.0 % 3.0 m | V18-m 100.0 % 3.0 m | PR1    62.6 % 1.3 m | PR2   100.0 % 3.0 m | PR3    42.3 % 1.3 m | PR4    99.9 % 3.0 m
+k=0.0040 sparsi 5 % err +0.0 | SC     62.8 % 1.3 m | RP     62.9 % 1.3 m | V17    62.9 % 1.3 m | V18-1 100.0 % 3.0 m | V18-m 100.0 % 3.0 m | PR1    62.9 % 1.3 m | PR2   100.0 % 3.0 m | PR3    45.4 % 1.3 m | PR4   100.0 % 3.0 m
+k=0.0040 sparsi 5 % err +0.5 | SC     54.8 % 1.3 m | RP     63.3 % 1.3 m | V17    63.3 % 1.3 m | V18-1 100.0 % 3.0 m | V18-m 100.0 % 3.0 m | PR1    63.3 % 1.3 m | PR2   100.0 % 3.0 m | PR3    43.7 % 1.3 m | PR4   100.0 % 3.0 m
+k=0.0040 sparsi 5 % err +1.0 | SC     32.7 % 1.3 m | RP     62.7 % 1.3 m | V17    62.5 % 1.3 m | V18-1  99.7 % 3.0 m | V18-m  98.5 % 2.7 m | PR1    61.8 % 1.3 m | PR2    97.6 % 2.7 m | PR3    17.6 % 1.3 m | PR4    91.1 % 2.5 m
+k=0.0100 nessuno    err -1.0 | SC     59.6 % 1.4 m | RP     99.9 % 3.0 m | V17    99.9 % 3.0 m | V18-1 100.0 % 3.0 m | V18-m 100.0 % 3.0 m | PR1    99.9 % 3.0 m | PR2   100.0 % 3.0 m | PR3    79.7 % 1.4 m | PR4   100.0 % 3.0 m
+k=0.0100 nessuno    err -0.5 | SC     28.8 % 1.3 m | RP     99.7 % 3.0 m | V17    99.7 % 3.0 m | V18-1 100.0 % 3.0 m | V18-m 100.0 % 3.0 m | PR1    99.7 % 3.0 m | PR2   100.0 % 3.0 m | PR3    97.0 % 2.0 m | PR4   100.0 % 3.0 m
+k=0.0100 nessuno    err +0.0 | SC      8.7 % 1.3 m | RP     98.6 % 2.8 m | V17    98.4 % 2.8 m | V18-1  99.9 % 3.0 m | V18-m  99.9 % 3.0 m | PR1    98.4 % 2.8 m | PR2    99.6 % 3.0 m | PR3    99.5 % 3.0 m | PR4    99.5 % 3.0 m
+k=0.0100 nessuno    err +0.5 | SC      1.6 % 1.3 m | RP     94.4 % 2.4 m | V17    89.3 % 2.3 m | V18-1  93.8 % 2.5 m | V18-m  93.8 % 2.5 m | PR1    89.3 % 2.3 m | PR2    85.0 % 2.4 m | PR3    92.5 % 2.1 m | PR4    80.6 % 2.4 m
+k=0.0100 nessuno    err +1.0 | SC      0.1 % 1.3 m | RP     84.4 % 2.1 m | V17    53.7 % 1.8 m | V18-1  55.3 % 1.8 m | V18-m  55.3 % 1.8 m | PR1    53.7 % 1.8 m | PR2    35.3 % 1.6 m | PR3    52.4 % 1.6 m | PR4    33.7 % 1.6 m
+k=0.0100 sparsi 5 % err -1.0 | SC     37.4 % 1.3 m | RP     62.9 % 1.3 m | V17    62.9 % 1.3 m | V18-1 100.0 % 3.0 m | V18-m 100.0 % 3.0 m | PR1    62.9 % 1.3 m | PR2   100.0 % 3.0 m | PR3    35.8 % 1.3 m | PR4    99.9 % 3.0 m
+k=0.0100 sparsi 5 % err -0.5 | SC     18.1 % 1.3 m | RP     62.6 % 1.3 m | V17    62.6 % 1.3 m | V18-1 100.0 % 3.0 m | V18-m 100.0 % 3.0 m | PR1    62.6 % 1.3 m | PR2   100.0 % 3.0 m | PR3    44.0 % 1.3 m | PR4   100.0 % 3.0 m
+k=0.0100 sparsi 5 % err +0.0 | SC      5.4 % 1.3 m | RP     62.5 % 1.3 m | V17    62.4 % 1.3 m | V18-1  99.8 % 3.0 m | V18-m  99.8 % 3.0 m | PR1    62.4 % 1.3 m | PR2    99.5 % 3.0 m | PR3    45.4 % 1.3 m | PR4    99.2 % 3.0 m
+k=0.0100 sparsi 5 % err +0.5 | SC      1.0 % 1.3 m | RP     59.6 % 1.3 m | V17    56.6 % 1.3 m | V18-1  93.9 % 2.6 m | V18-m  93.9 % 2.6 m | PR1    56.6 % 1.3 m | PR2    85.4 % 2.4 m | PR3    41.0 % 1.3 m | PR4    81.0 % 2.4 m
+k=0.0100 sparsi 5 % err +1.0 | SC      0.1 % 1.3 m | RP     53.0 % 1.3 m | V17    34.5 % 1.3 m | V18-1  57.2 % 1.8 m | V18-m  57.2 % 1.8 m | PR1    34.5 % 1.3 m | PR2    36.9 % 1.7 m | PR3    20.7 % 1.3 m | PR4    34.8 % 1.7 m
+
+Resa media (%) sulle 16 combinazioni, errore 0, per buchi
+nessuno      | SC     54.0 (min   8.6) | RP     99.0 (min  96.9) | V17    88.7 (min  72.4) | V18-1  89.3 (min  72.8) | V18-m  89.3 (min  72.8) | PR1    88.7 (min  72.4) | PR2    87.5 (min  69.4) | PR3    89.1 (min  72.5) | PR4    86.8 (min  68.3)
+sparsi 5 %   | SC     34.1 (min   5.4) | RP     62.5 (min  61.3) | V17    56.0 (min  45.5) | V18-1  89.3 (min  72.8) | V18-m  89.3 (min  72.8) | PR1    56.0 (min  45.5) | PR2    87.5 (min  69.3) | PR3    38.7 (min  28.8) | PR4    86.8 (min  68.1)
+sparsi 30 %  | SC      2.2 (min   0.3) | RP      4.0 (min   3.8) | V17     3.6 (min   2.9) | V18-1  89.5 (min  73.2) | V18-m  86.0 (min  70.7) | PR1     3.4 (min   2.8) | PR2    84.4 (min  67.5) | PR3     1.0 (min   0.4) | PR4    62.6 (min  51.2)
+chiazze 5 %  | SC     50.7 (min   8.1) | RP     92.9 (min  90.2) | V17    83.4 (min  68.5) | V18-1  86.3 (min  70.9) | V18-m  85.0 (min  69.9) | PR1    79.8 (min  65.6) | PR2    83.3 (min  66.7) | PR3    83.1 (min  68.2) | PR4    78.3 (min  62.2)
+chiazze 30 % | SC     35.6 (min   5.5) | RP     65.1 (min  62.3) | V17    59.4 (min  49.1) | V18-1  70.0 (min  58.2) | V18-m  64.1 (min  53.1) | PR1    44.2 (min  35.6) | PR2    63.0 (min  50.9) | PR3    56.9 (min  46.5) | PR4    45.4 (min  34.7)
+
+Celle libere sotto un ostacolo sospeso (suolo visto, nessuna quota dichiarata salvo V17), errore 0, tutte le condizioni: SC 7530, RP 14664, V17 665, V18-1 851, V18-m 689, PR1 573, PR2 521, PR3 546, PR4 374

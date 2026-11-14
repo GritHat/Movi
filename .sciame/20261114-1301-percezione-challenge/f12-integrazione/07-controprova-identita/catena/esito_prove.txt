@@ -1,0 +1,65 @@
+# Esito di prove.py — 2026-11-14T16:37:40+01:00
+# comando: OPENBLAS_NUM_THREADS=1 <ambiente>/venv/bin/python -I -B prove.py
+test_p13_suolo_stimato_senza_posa (__main__.ProvaCatena.test_p13_suolo_stimato_senza_posa) ... ok
+test_p14_sequenza_dell_infrastruttura_da_riga_di_comando (__main__.ProvaCatena.test_p14_sequenza_dell_infrastruttura_da_riga_di_comando) ... ok
+test_p15_invarianti_forzati (__main__.ProvaCatena.test_p15_invarianti_forzati) ... ok
+test_p06_un_oggetto_che_attraversa (__main__.ProvaInseguimento.test_p06_un_oggetto_che_attraversa) ... ok
+test_p06b_fermo_tagliato_da_un_ombra (__main__.ProvaInseguimento.test_p06b_fermo_tagliato_da_un_ombra) ... ok
+test_p11_ungherese (__main__.ProvaInseguimento.test_p11_ungherese) ... ok
+test_p12_kalman_e_predittore (__main__.ProvaInseguimento.test_p12_kalman_e_predittore) ... ok
+test_p01_pavimento_vuoto (__main__.ProvaMappa.test_p01_pavimento_vuoto) ... ok
+test_p01_suolo_come_l_infrastruttura (__main__.ProvaMappa.test_p01_suolo_come_l_infrastruttura)
+Il suolo della scena coincide con `profondita_del_suolo` dell'infrastruttura (altro autore). ... ok
+test_p02_nessun_dato (__main__.ProvaMappa.test_p02_nessun_dato) ... ok
+test_p03_buchi (__main__.ProvaMappa.test_p03_buchi) ... ok
+test_p04_un_ostacolo (__main__.ProvaMappa.test_p04_un_ostacolo) ... ok
+test_p05_ostacolo_basso_con_la_sua_ombra (__main__.ProvaMappa.test_p05_ostacolo_basso_con_la_sua_ombra) ... ok
+test_portata_configurabile (__main__.ProvaMappa.test_portata_configurabile) ... ok
+test_p07_passaggio_dietro_il_pannello (__main__.ProvaOcclusione.test_p07_passaggio_dietro_il_pannello) ... ok
+test_p07n_fascia_zero_deve_fallire (__main__.ProvaOcclusione.test_p07n_fascia_zero_deve_fallire) ... ok
+test_p08_sosta_dietro_il_pannello (__main__.ProvaOcclusione.test_p08_sosta_dietro_il_pannello) ... ok
+test_p09_sparizione_in_campo_aperto (__main__.ProvaOcclusione.test_p09_sparizione_in_campo_aperto) ... ok
+test_p10_rilascio_cella_per_cella (__main__.ProvaOcclusione.test_p10_rilascio_cella_per_cella) ... ok
+test_p16_costo (__main__.ProvaOcclusione.test_p16_costo) ... ok
+test_p17_niente_riaggancio_lontano_dall_ombra (__main__.ProvaOcclusione.test_p17_niente_riaggancio_lontano_dall_ombra) ... ok
+test_p18_niente_riaggancio_al_bordo_della_portata (__main__.ProvaOcclusione.test_p18_niente_riaggancio_al_bordo_della_portata) ... ok
+test_p19_affidabilita_persa_su_un_buco (__main__.ProvaOcclusione.test_p19_affidabilita_persa_su_un_buco) ... ok
+test_p21_fumo_con_rumore (__main__.ProvaOcclusione.test_p21_fumo_con_rumore)
+Rumore indipendente per pixel e buchi a caso: NON è un modello di sensore, serve a esercitare i rami. ... ok
+test_parametri_non_predefiniti (__main__.ProvaOcclusione.test_parametri_non_predefiniti)
+Fumo: i parametri che le altre prove lasciano al valore predefinito non rompono la catena. ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 5.910s
+
+OK
+
+  P13: posa stimata 1.2000 m, 15.000°, rollio 0.000° (90% dei punti sul piano); libero 1490 con la posa nota, 1490 stimata
+
+  P14: esempio 160×120 dell'infrastruttura: {'non_osservato': 120270, 'libero': 35110, 'occupato': 1080, 'in_ombra': 10940}; eventi {'nascita': 2, 'conferma': 2, 'ingresso_in_ombra': 1, 'perso': 1, 'riaggancio': 1, 'prima_misura_piena': 1}; tempo {'media': 0.819, 'p95': 0.844, 'massimo': 8.593, 'nota': 'solo elaborazione (lettura e scrittura escluse), invarianti accesi'}
+
+  P6: «si muove» dal fotogramma 5; errore massimo del centro 0.0 cm; velocità finale (1.000; -0.000) m/s
+
+  P6b: pannello fermo con misura tagliata in 15 fotogrammi su 46, mai «si muove»
+
+  P1: celle per stato sul pavimento vuoto: {'non_osservato': 3770, 'libero': 1630, 'occupato': 0, 'in_ombra': 0}
+
+  P2: «libero» fotogramma per fotogramma (3 di pavimento, 4 senza dato): [1630, 1630, 1630, 1630, 1630, 0, 0]
+
+  P4: {'non_osservato': 3770, 'libero': 1490, 'occupato': 14, 'in_ombra': 126}; gruppo {'x': 0.0, 'z': 2.05, 'larghezza_m': 0.4997, 'celle': 14, 'punti': 29478, 'tagliato': False}; si_muove all'ultimo fotogramma: False
+
+  P5: suolo visto dentro l'ombra (lettura prudente): 68 celle; con l'interruttore: 24 libere su 24 oltre 2,8 m
+
+  P7: nascosta 13 fotogrammi (4 «previsto», 9 «perso»); misure tagliate 12; perso dopo 0.2667 s; riaggancio {'tipo': 'riaggancio', 'id': 1, 'stato_prima': 'perso', 'durata_s': 0.8667, 'buio_s': 0.9333, 'errore_previsione_m': 0.1695, 'raggio95_m': 1.1181, 'd2': 0.123, 'in95': True, 'misura_tagliata': True}; prima misura piena [{'tipo': 'prima_misura_piena', 'id': 1, 'd2': 0.0, 'in95': True, 'in99': True}]
+
+  P7n: fascia 0 → eventi [(21, 'chiusura')]
+
+  P8: dopo il riaggancio, 6 fotogrammi «osservato» con misura tagliata: il filtro (non aggiornato, C6) dista dalla verità fino a 5.00 m
+  P8: strato acceso 88 fotogrammi, 640 celle, età finale 5.8 s; dopo la sosta l'identità si conserva; riaggancio [{'tipo': 'riaggancio', 'id': 1, 'stato_prima': 'perso', 'durata_s': 5.8667, 'buio_s': 5.9333, 'errore_previsione_m': 4.8297, 'raggio95_m': 10.3834, 'd2': 1.312, 'in95': True, 'misura_tagliata': True}]
+
+  P16: tempo per ciclo a 848×480, un filo, invarianti accesi: media 2.53 ms, p95 2.89 ms, massimo 4.69 ms (N = 48)
+
+  P18: linea a 2,7 m: 8 eventi «identità ambigua» (bordo della portata), identità 1 → 3, la traccia 1 resta «perso»
+
+  P21 (fumo): celle medie {'non_osservato': 3762, 'libero': 1252, 'occupato': 71, 'in_ombra': 315}; tracce nate 2, confermate 2; identità della sagoma conservata; eventi ['conferma', 'ingresso_in_ombra', 'nascita', 'perso', 'prima_misura_piena', 'riaggancio']; celle ambigue medie 2.1
+codice d'uscita: 0

@@ -1,0 +1,91 @@
+== banco.json: NF=30, righe 4500, regole 9, condizioni 500, fotogrammi 15000; scene 10 (di cui nelle 16 combinazioni: 8 x 2 k)
+   regola | S1 16 comb., err 0 e ±0,5: condizioni, dentro (oltre 5 cm), nascoste, qv, fotogrammi con violazione/tot, condizioni con violazione | tutte le 10 scene, err 0 e ±0,5: celle, fot. viol./tot, cond. viol./tot | ±1 grado tutte le scene: celle, fot. viol./tot | S2 mediana k=0,004 / 0,01
+   PR1   | 240, 0 (0), 0, 0, 0/7200, 0/240 | 93, 53/9000, 10/300 | 3915, 394/6000 | 1.3 / 1.3
+   PR2   | 240, 0 (0), 0, 0, 0/7200, 0/240 | 455, 277/9000, 15/300 | 7419, 716/6000 | 3.0 / 3.0
+   PR3   | 240, 0 (0), 0, 0, 0/7200, 0/240 | 89, 48/9000, 13/300 | 1466, 290/6000 | 1.3 / 1.3
+   PR4   | 240, 0 (0), 0, 0, 0/7200, 0/240 | 0, 0/9000, 0/300 | 798, 150/6000 | 3.0 / 3.0
+   RP    | 240, 15648 (8260), 39246, 0, 1732/7200, 60/240 | 72775, 2565/9000, 90/300 | 44376, 1664/6000 | 1.3 / 1.3
+   SC    | 240, 0 (0), 10714, 0, 932/7200, 43/240 | 12342, 1185/9000, 58/300 | 10792, 835/6000 | 1.3 / 1.3
+   V17   | 240, 770 (527), 835, 238, 163/7200, 38/240 | 2860, 301/9000, 57/300 | 6270, 548/6000 | 1.3 / 1.3
+   V18-1 | 240, 533 (20), 0, 0, 98/7200, 22/240 | 11671, 1130/9000, 71/300 | 15690, 1152/6000 | 3.0 / 3.0
+   V18-m | 240, 6 (3), 0, 0, 6/7200, 4/240 | 716, 368/9000, 32/300 | 8939, 768/6000 | 3.0 / 3.0
+   PR4 (nuvole-1), err 0 e ±0,5: 0 violazioni? True. Limite superiore di Wilson al 95 %: per fotogramma 0.00043 (n=9000, NON indipendenti); per condizione 0.0126 (n=300); per geometria (scena x errore) 0.114 (n=30); per scena 0.278 (n=10)
+      PR4 resa media 16 comb. err 0, nessuno: 86.8 %  (n=16)
+      PR4 resa media 16 comb. err 0, sparsi 5 %: 86.8 %  (n=16)
+      PR4 resa media 16 comb. err 0, sparsi 30 %: 62.6 %  (n=16)
+      PR4 resa media 16 comb. err 0, chiazze 5 %: 78.3 %  (n=16)
+      PR4 resa media 16 comb. err 0, chiazze 30 %: 45.4 %  (n=16)
+      PR4 stanza vuota k=0.004 err=+0.0 nessuno: mediana 3.0 m, resa 100.0 %, settori 9, sconosciuto 0.0 %
+      PR4 stanza vuota k=0.004 err=+0.0 sparsi 5 %: mediana 3.0 m, resa 100.0 %, settori 9, sconosciuto 0.7 %
+      PR4 stanza vuota k=0.004 err=+0.5 nessuno: mediana 3.0 m, resa 100.0 %, settori 9, sconosciuto 0.0 %
+      PR4 stanza vuota k=0.004 err=+0.5 sparsi 5 %: mediana 3.0 m, resa 100.0 %, settori 9, sconosciuto 0.0 %
+      PR4 stanza vuota k=0.004 err=-0.5 nessuno: mediana 3.0 m, resa 100.0 %, settori 7, sconosciuto 0.0 %
+      PR4 stanza vuota k=0.004 err=-0.5 sparsi 5 %: mediana 3.0 m, resa 99.9 %, settori 7, sconosciuto 1.0 %
+      PR4 stanza vuota k=0.004 err=+1.0 nessuno: mediana 2.7 m, resa 94.3 %, settori 9, sconosciuto 0.0 %
+      PR4 stanza vuota k=0.004 err=+1.0 sparsi 5 %: mediana 2.5 m, resa 91.1 %, settori 9, sconosciuto 0.4 %
+      PR4 stanza vuota k=0.004 err=-1.0 nessuno: mediana 2.3 m, resa 82.4 %, settori 5, sconosciuto 0.0 %
+      PR4 stanza vuota k=0.004 err=-1.0 sparsi 5 %: mediana 2.2 m, resa 76.6 %, settori 5, sconosciuto 0.0 %
+      PR4 stanza vuota k=0.01 err=+0.0 nessuno: mediana 3.0 m, resa 99.5 %, settori 9, sconosciuto 0.0 %
+      PR4 stanza vuota k=0.01 err=+0.0 sparsi 5 %: mediana 3.0 m, resa 99.2 %, settori 9, sconosciuto 0.4 %
+      PR4 stanza vuota k=0.01 err=+0.5 nessuno: mediana 2.4 m, resa 80.6 %, settori 9, sconosciuto 0.0 %
+      PR4 stanza vuota k=0.01 err=+0.5 sparsi 5 %: mediana 2.4 m, resa 81.0 %, settori 9, sconosciuto 0.0 %
+      PR4 stanza vuota k=0.01 err=-0.5 nessuno: mediana 3.0 m, resa 100.0 %, settori 7, sconosciuto 0.0 %
+      PR4 stanza vuota k=0.01 err=-0.5 sparsi 5 %: mediana 3.0 m, resa 100.0 %, settori 7, sconosciuto 1.0 %
+      PR4 stanza vuota k=0.01 err=+1.0 nessuno: mediana 1.6 m, resa 33.7 %, settori 9, sconosciuto 2.6 %
+      PR4 stanza vuota k=0.01 err=+1.0 sparsi 5 %: mediana 1.7 m, resa 34.8 %, settori 9, sconosciuto 4.1 %
+      PR4 stanza vuota k=0.01 err=-1.0 nessuno: mediana 3.0 m, resa 100.0 %, settori 5, sconosciuto 0.0 %
+      PR4 stanza vuota k=0.01 err=-1.0 sparsi 5 %: mediana 3.0 m, resa 99.9 %, settori 5, sconosciuto 0.0 %
+== banco_semi2.json: NF=30, righe 4500, regole 9, condizioni 500, fotogrammi 15000; scene 10 (di cui nelle 16 combinazioni: 8 x 2 k)
+   regola | S1 16 comb., err 0 e ±0,5: condizioni, dentro (oltre 5 cm), nascoste, qv, fotogrammi con violazione/tot, condizioni con violazione | tutte le 10 scene, err 0 e ±0,5: celle, fot. viol./tot, cond. viol./tot | ±1 grado tutte le scene: celle, fot. viol./tot | S2 mediana k=0,004 / 0,01
+   PR1   | 240, 0 (0), 0, 0, 0/7200, 0/240 | 89, 43/9000, 12/300 | 4067, 406/6000 | 1.3 / 1.3
+   PR2   | 240, 0 (0), 1, 0, 1/7200, 1/240 | 480, 280/9000, 17/300 | 7491, 717/6000 | 3.0 / 3.0
+   PR3   | 240, 1 (0), 0, 0, 1/7200, 1/240 | 93, 45/9000, 14/300 | 1492, 294/6000 | 1.3 / 1.3
+   PR4   | 240, 0 (0), 0, 0, 0/7200, 0/240 | 0, 0/9000, 0/300 | 759, 145/6000 | 3.0 / 3.0
+   RP    | 240, 15774 (8392), 39527, 0, 1742/7200, 60/240 | 73235, 2578/9000, 90/300 | 44253, 1667/6000 | 1.3 / 1.3
+   SC    | 240, 0 (0), 10925, 0, 899/7200, 40/240 | 12566, 1156/9000, 54/300 | 10939, 810/6000 | 1.3 / 1.3
+   V17   | 240, 893 (618), 1029, 252, 179/7200, 36/240 | 3065, 295/9000, 54/300 | 6588, 595/6000 | 1.3 / 1.3
+   V18-1 | 240, 672 (28), 4, 0, 126/7200, 23/240 | 11903, 1149/9000, 70/300 | 15717, 1150/6000 | 3.0 / 3.0
+   V18-m | 240, 11 (6), 3, 0, 9/7200, 4/240 | 768, 371/9000, 30/300 | 9014, 776/6000 | 3.0 / 3.0
+   PR4 (nuvole-1), err 0 e ±0,5: 0 violazioni? True. Limite superiore di Wilson al 95 %: per fotogramma 0.00043 (n=9000, NON indipendenti); per condizione 0.0126 (n=300); per geometria (scena x errore) 0.114 (n=30); per scena 0.278 (n=10)
+      PR4 resa media 16 comb. err 0, nessuno: 86.9 %  (n=16)
+      PR4 resa media 16 comb. err 0, sparsi 5 %: 86.9 %  (n=16)
+      PR4 resa media 16 comb. err 0, sparsi 30 %: 62.4 %  (n=16)
+      PR4 resa media 16 comb. err 0, chiazze 5 %: 78.6 %  (n=16)
+      PR4 resa media 16 comb. err 0, chiazze 30 %: 45.2 %  (n=16)
+      PR4 stanza vuota k=0.004 err=+0.0 nessuno: mediana 3.0 m, resa 100.0 %, settori 9, sconosciuto 0.0 %
+      PR4 stanza vuota k=0.004 err=+0.0 sparsi 5 %: mediana 3.0 m, resa 100.0 %, settori 9, sconosciuto 0.4 %
+      PR4 stanza vuota k=0.004 err=+0.5 nessuno: mediana 3.0 m, resa 100.0 %, settori 9, sconosciuto 0.0 %
+      PR4 stanza vuota k=0.004 err=+0.5 sparsi 5 %: mediana 3.0 m, resa 99.9 %, settori 9, sconosciuto 0.4 %
+      PR4 stanza vuota k=0.004 err=-0.5 nessuno: mediana 3.0 m, resa 100.0 %, settori 7, sconosciuto 0.0 %
+      PR4 stanza vuota k=0.004 err=-0.5 sparsi 5 %: mediana 3.0 m, resa 100.0 %, settori 7, sconosciuto 0.0 %
+      PR4 stanza vuota k=0.004 err=+1.0 nessuno: mediana 2.7 m, resa 94.3 %, settori 9, sconosciuto 0.0 %
+      PR4 stanza vuota k=0.004 err=+1.0 sparsi 5 %: mediana 2.5 m, resa 91.5 %, settori 9, sconosciuto 0.7 %
+      PR4 stanza vuota k=0.004 err=-1.0 nessuno: mediana 2.3 m, resa 81.7 %, settori 5, sconosciuto 0.0 %
+      PR4 stanza vuota k=0.004 err=-1.0 sparsi 5 %: mediana 2.3 m, resa 76.7 %, settori 5, sconosciuto 0.0 %
+      PR4 stanza vuota k=0.01 err=+0.0 nessuno: mediana 3.0 m, resa 99.3 %, settori 9, sconosciuto 0.0 %
+      PR4 stanza vuota k=0.01 err=+0.0 sparsi 5 %: mediana 3.0 m, resa 99.3 %, settori 9, sconosciuto 0.4 %
+      PR4 stanza vuota k=0.01 err=+0.5 nessuno: mediana 2.3 m, resa 80.2 %, settori 9, sconosciuto 0.0 %
+      PR4 stanza vuota k=0.01 err=+0.5 sparsi 5 %: mediana 2.4 m, resa 82.4 %, settori 9, sconosciuto 0.4 %
+      PR4 stanza vuota k=0.01 err=-0.5 nessuno: mediana 3.0 m, resa 100.0 %, settori 7, sconosciuto 0.0 %
+      PR4 stanza vuota k=0.01 err=-0.5 sparsi 5 %: mediana 3.0 m, resa 100.0 %, settori 7, sconosciuto 1.0 %
+      PR4 stanza vuota k=0.01 err=+1.0 nessuno: mediana 1.6 m, resa 31.8 %, settori 9, sconosciuto 10.0 %
+      PR4 stanza vuota k=0.01 err=+1.0 sparsi 5 %: mediana 1.6 m, resa 34.6 %, settori 9, sconosciuto 6.3 %
+      PR4 stanza vuota k=0.01 err=-1.0 nessuno: mediana 3.0 m, resa 100.0 %, settori 5, sconosciuto 0.0 %
+      PR4 stanza vuota k=0.01 err=-1.0 sparsi 5 %: mediana 3.0 m, resa 99.9 %, settori 5, sconosciuto 0.0 %
+== banco_lancio1.json: NF=30, righe 2500, regole 5, condizioni 500, fotogrammi 15000; scene 10 (di cui nelle 16 combinazioni: 8 x 2 k)
+   regola | S1 16 comb., err 0 e ±0,5: condizioni, dentro (oltre 5 cm), nascoste, qv, fotogrammi con violazione/tot, condizioni con violazione | tutte le 10 scene, err 0 e ±0,5: celle, fot. viol./tot, cond. viol./tot | ±1 grado tutte le scene: celle, fot. viol./tot | S2 mediana k=0,004 / 0,01
+   RP    | 240, 15648 (8260), 39246, 0, 1732/7200, 60/240 | 72775, 2565/9000, 90/300 | 44376, 1664/6000 | 1.3 / 1.3
+   SC    | 240, 0 (0), 10714, 0, 932/7200, 43/240 | 12342, 1185/9000, 58/300 | 10792, 835/6000 | 1.3 / 1.3
+   V17   | 240, 770 (527), 835, 238, 163/7200, 38/240 | 2860, 301/9000, 57/300 | 6270, 548/6000 | 1.3 / 1.3
+   V18-1 | 240, 533 (20), 0, 0, 98/7200, 22/240 | 11671, 1130/9000, 71/300 | 15690, 1152/6000 | 3.0 / 3.0
+   V18-m | 240, 6 (3), 0, 0, 6/7200, 4/240 | 716, 368/9000, 32/300 | 8939, 768/6000 | 3.0 / 3.0
+semi «»: condizioni 500, semi distinti 500
+semi «semi2»: condizioni 500, semi distinti 500
+semi comuni fra i due lanci: 0
+righe di risultato: 4500 4500
+   nessuno: righe 900, identiche fra i due lanci 303 (33.7 %)
+   sparsi 5 %: righe 900, identiche fra i due lanci 120 (13.3 %)
+   sparsi 30 %: righe 900, identiche fra i due lanci 81 (9.0 %)
+   chiazze 5 %: righe 900, identiche fra i due lanci 5 (0.6 %)
+   chiazze 30 %: righe 900, identiche fra i due lanci 8 (0.9 %)
+righe del lancio 1 ritrovate identiche nel lancio 2 con gli stessi semi: 2500 su 2500
