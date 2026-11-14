@@ -1,0 +1,297 @@
+\section{Occlusione: possibile presenza e previsione con livello dichiarato}\label{sec:occ}
+
+Quando un oggetto seguito scompare dietro un ostacolo il sistema continua a produrre un'uscita per tutta la durata dell'occlusione. L'uscita ha due strati con compiti distinti. Il primo, l'\emph{area d'avviso di possibile presenza}, è un insieme prudente: sotto le ipotesi dichiarate contiene le posizioni che l'oggetto nascosto può occupare e non si riduce se non per osservazione diretta del suolo. Il secondo, la \emph{regione di previsione}, è un sottoinsieme dell'area d'avviso che contiene l'oggetto con una frequenza dichiarata, misurata in simulazione; serve a localizzare, non a proteggere. Trattare l'occlusione come una previsione a breve termine è la linea di \cite{khurana2021}; un filtro lasciato senza misure accumula errore per tutta l'occlusione \cite{cao2023}, e per questo la precisione dichiarata non è letta dalla covarianza del filtro (\S\ref{sec:occ-indicatori}). Nessun risultato di questo capitolo è stato ottenuto su un sensore fisico: sono dimostrazioni in un modello dichiarato \prova{D}, calcoli \prova{C}, simulazioni \prova{S}; ciò che non è stato esercitato è marcato \prova{N}.
+
+\subsection{Notazione e ipotesi}\label{sec:occ-ipotesi}
+
+Sia $X$ la regione del suolo coperta dalla mappa, $B(r)$ il disco chiuso di raggio $r$ e $\dilata(A,r)=A\oplus B(r)=\{x:\operatorname{dist}(x,A)\le r\}$ la dilatazione di $A$. Si indicano con $\hat\Omb$ l'ombra stimata dell'ostacolo e con $\varepsilon_\Omb$ l'errore del suo bordo, con $w$ la larghezza della fascia di guardia, con $W(t)$ l'area d'avviso, con $a$ l'età del dato più vecchio usato da un'uscita, con $\varepsilon_p(\rho)=\varepsilon_t+\rho\,\delta_\theta$ il margine di posa a distanza $\rho$ (errore di traslazione $\varepsilon_t$, errore angolare $\delta_\theta$ in radianti) e con $c(t)$ il centro del soggetto. Gli stati della cella (libero, occupato osservato, in ombra, non osservato) sono quelli di \S\ref{sec:map} e formano una partizione di $X$.
+
+\begin{ipotesi}[Modello]\label{ip:occ-modello}
+Ogni enunciato dichiara quali di queste ipotesi usa.
+\begin{enumerate}[label=(\roman*),itemsep=0pt]
+\item \emph{Profondità valida uguale a profondità giusta:} un pixel valido con profondità $d$ garantisce che il raggio è privo di superfici fino a $d$, a meno della tolleranza di misura.
+\item \emph{Superfici che rimandano segnale:} ogni superficie nel campo e in portata produce un pixel valido; un soggetto fuori dall'ombra, in campo e in portata, è rilevato entro un tempo $a$.
+\item \emph{Camera ferma, posa nota entro una tolleranza:} l'errore di posa sposta un punto a distanza $\rho$ di al più $\varepsilon_p(\rho)$.
+\item \emph{Velocità limitata:} ogni punto di ogni oggetto si muove con continuità a velocità non superiore a $\vmax$.
+\item \emph{Suolo planare.}
+\item \emph{Un solo soggetto per ombra.}
+\end{enumerate}
+\end{ipotesi}
+
+\subsection{Insieme di possibile presenza}\label{sec:occ-presenza}
+
+\begin{definizione}[Insieme di possibile presenza]\label{def:occ-presenza}
+$\Pres(0)=X$ e, a ogni fotogramma,
+\begin{equation}\label{eq:occ-presenza}
+\Pres(t)=\dilata\bigl(\Pres(t-\Delta),\ \vmax\Delta+\varepsilon_p\bigr)\setminus\Oss(t).
+\end{equation}
+Sulla griglia la dilatazione si calcola per eccesso; ciò che è fuori dalla griglia o non è mai stato valutato appartiene a $\Pres$.
+\end{definizione}
+
+La ricorsione \eqref{eq:occ-presenza} è il passo di previsione di un filtro a insiemi con dinamica a velocità limitata: è l'insieme raggiungibile dagli oggetti non osservati, nella linea dei metodi che sovrastimano lo stato degli ostacoli nascosti \cite{orzechowski2018} e della previsione insiemistica dei partecipanti rilevati e potenzialmente nascosti \cite{koschi2021}.
+
+\begin{proposizione}[Contenimento]\label{prop:occ-contenimento}
+Sotto le ipotesi (i), (iii) e (iv), ogni punto occupato al fotogramma $t$ appartiene a $\Pres(t)$. In particolare la posizione di un soggetto entrato in un'ombra appartiene a $\Pres(t)$ per ogni $t$ fino alla riosservazione, senza alcuna ipotesi sul numero dei soggetti né sull'esistenza di una traccia. \prova{D}
+\end{proposizione}
+\begin{proof}
+Per induzione su $t$. Base: $\Pres(0)=X$. Passo: sia $x$ occupato al tempo $t$. Per (iv) il punto materiale che sta in $x$ si trovava al tempo $t-\Delta$ in un punto $y$ con $|x-y|\le\vmax\Delta$; $y$ era occupato, quindi $y\in\Pres(t-\Delta)$ per ipotesi induttiva; tenuto conto dell'errore di posa fra i due fotogrammi (iii), $x\in\dilata(\Pres(t-\Delta),\vmax\Delta+\varepsilon_p)$. Per (i) un punto occupato non è visto libero: $x\notin\Oss(t)$. Dunque $x\in\Pres(t)$.
+\end{proof}
+
+\begin{corollario}[«Libero adesso»]\label{cor:occ-libero-adesso}
+Se l'uscita del fotogramma $t$ è in uso in $[t+\tau,\,t+\tau+\Delta]$, una cella $V$ con $\operatorname{dist}(V,\Pres(t))>\vmax(\tau+\Delta)+\varepsilon_p$ è vuota in tutto $[t,\,t+\tau+\Delta]$. \prova{D}
+\end{corollario}
+\begin{proof}
+Ogni punto occupato in un istante $s$ dell'intervallo dista al più $\vmax(s-t)\le\vmax(\tau+\Delta)$ da un punto occupato al tempo $t$, che per la Proposizione~\ref{prop:occ-contenimento} sta in $\Pres(t)$.
+\end{proof}
+
+\begin{proposizione}[Monotonia: nessun rilascio a tempo]\label{prop:occ-monotonia}
+$\Pres(t)\supseteq\Pres(t-\Delta)\setminus\Oss(t)$: un punto esce da $\Pres$ solo in un fotogramma in cui è osservato libero. Né un contatore di tempo, né la covarianza di un filtro, né la chiusura di una traccia riducono $\Pres$. Inoltre, per oggetti puntiformi e $\varepsilon_p=0$, $\Pres(t)$ è minimo: per ogni $x\in\Pres(t)$ esiste un mondo ammesso dalle ipotesi (i) e (iv), coerente con tutti i fotogrammi, con un oggetto in $x$ al tempo $t$. \prova{D}
+\end{proposizione}
+\begin{proof}
+Poiché $0\in B(r)$, $A\subseteq\dilata(A,r)$; togliendo $\Oss(t)$ ai due membri si ha l'inclusione, e nella ricorsione non compare altro termine sottrattivo. Minimalità, per induzione: se $x\in\Pres(t)$ allora $x\notin\Oss(t)$ ed esiste $y\in\Pres(t-\Delta)$ con $|x-y|\le\vmax\Delta$; per ipotesi induttiva una traiettoria ammessa e coerente con i fotogrammi fino a $t-\Delta$ arriva in $y$; la si prolunga con il segmento da $y$ a $x$ percorso in $\Delta$ a velocità non superiore a $\vmax$, coerente con il fotogramma $t$ perché $x\notin\Oss(t)$.
+\end{proof}
+
+Dalla minimalità segue che ogni regola che dichiari libera una cella esclusa dal Corollario~\ref{cor:occ-libero-adesso} sbaglia in almeno un mondo ammesso: una probabilità d'occupazione accumulata nel tempo può solo restringere il «libero», mai estenderlo.
+
+\emph{Verifiche.} Per calcolo esaustivo su griglie in una dimensione (passo di al più una cella per fotogramma, tutte le successioni di insiemi osservati): 4 celle e 4 fotogrammi, 65\,536 successioni; 5 celle e 3 fotogrammi, 32\,768 successioni; in tutte l'insieme delle posizioni finali delle traiettorie coerenti coincide con $\Pres(t)$, senza violazioni della monotonia \prova{C}. In simulazione su una sezione bidimensionale (2--4 oggetti, 300 fotogrammi per corsa), con $\vmax$ dichiarata pari a quella vera ($2{,}5$ e $1{,}4\unita{m/s}$; misure mancanti 0 e 5\,\%), le corse con almeno una cella «libera adesso» occupata durante l'uso sono 0 su 96 (intervallo di Wilson al 95\,\%: 0--0,038); con la regola «suolo visto, senza margine» sono 24 su 24 (45\,829 celle-fotogramma) \prova{S}. Il controllo esaustivo è in una dimensione: copre la ricorsione, non la geometria del sensore.
+
+\begin{controesempio}[Velocità oltre quella dichiarata]\label{ce:occ-velocita}
+Cade (iv). Tre celle e due fotogrammi: al primo sono viste libere le celle 1 e 2, quindi $\Pres=\{3\}$; al secondo non si vede nulla, $\Pres=\{2,3\}$; un oggetto che percorre due celle per fotogramma può essere nella cella 1 (8 successioni su 64; 17\,696 su 65\,536 con 4 celle) \prova{C}. In simulazione, con velocità vera doppia della dichiarata ($0{,}9$ contro $1{,}8\unita{m/s}$ e $0{,}4$ contro $0{,}8\unita{m/s}$), le corse con almeno un errore sono 23 su 24 (0,80--0,99) e 21 su 24 (0,69--0,96) \prova{S}. Se cade (i), cioè con profondità valida e sbagliata, la sottrazione di $\Oss(t)$ toglie punti occupati e il contenimento non vale.
+\end{controesempio}
+
+\emph{Costo.} Il «libero adesso» garantito è quasi vuoto a passo d'uomo: nella stessa simulazione resta dichiarabile lo 0,1\,\% del suolo visto libero con $\vmax=2{,}5\unita{m/s}$ e il 3,2\,\% con $1{,}4\unita{m/s}$ \prova{S}. Per questo l'uscita non afferma mai «via libera» ma «suolo visto libero fino a $d$» all'istante d'acquisizione (\S\ref{sec:lim}). L'insieme $\Pres$ è il riferimento teorico; il sistema realizza l'area d'avviso $W$ del \S\ref{sec:occ-avviso}, che nasce solo quando una traccia entra in un'ombra.
+
+\subsection{Ciclo di vita dell'oggetto seguito e ingresso nell'ombra}\label{sec:occ-ciclo}
+
+Ogni traccia confermata (\S\ref{sec:sti}) è in uno e un solo stato, ciascuno con la propria uscita: \emph{osservato} (una misura non tagliata dentro la porta nel ciclo corrente; disco pieno); \emph{visto in parte} (il gruppo è tagliato da un bordo di profondità più vicino o dal bordo del campo; contorno senza velocità); \emph{non confermato} (senza misura in campo aperto: anello vuoto con l'età per $0{,}2\unita{s}$, poi la traccia è chiusa come «non più rilevato»); \emph{previsto} (entrata in un'ombra, con un livello dichiarabile: anello vuoto, regione tratteggiata, etichetta con livello, larghezza ed età); \emph{previsto ampio} (regione senza punto e senza livello; non torna a «previsto»). Non esiste uno stato «perso»: una previsione non esce mai come osservazione, e un disco pieno compare solo con una misura nel ciclo.
+
+\emph{Regola d'ingresso.} Per una traccia con almeno 4 fotogrammi di misura, rimasta senza misura non tagliata nel ciclo, si considera l'ombra di un occlusore diverso dal gruppo della traccia. L'ingresso scatta (a) subito, se il gruppo è tagliato in quel ciclo; (b) dopo 2 cicli senza misura, se l'ultima misura dista meno di $w$ dall'ombra \emph{oppure} il punto previsto dal filtro sta nell'ombra o entro $w$ da essa. Se l'ultima misura dista meno di $w$ dal bordo del campo o dalla zona cieca vicina alla camera, la traccia è chiusa come «fuori dall'area osservata» e l'avviso resta sul non osservato entro $w$. Dall'ingresso partono l'area d'avviso (\S\ref{sec:occ-avviso}) e la regione di previsione (\S\ref{sec:occ-regione}); l'età «non visto da» si conta dall'ultima misura non tagliata.
+
+\emph{Chiusure in ombra}, elenco chiuso: riaggancio dell'identità; ombra vista libera oltre $w$; tutti i membri della previsione fuori dall'area osservata. Nessun contatore di tempo chiude una traccia. «Identità ambigua» e «affidabilità persa» sono eventi, non chiusure: la traccia resta «previsto ampio».
+
+In simulazione, con modello ideale del sensore, la soglia di 4 fotogrammi è tarata (con 3 fotogrammi la traccia manca nel 27,1\,\% dei casi, con 4 nel 5,2\,\%); con la sola condizione sull'ultima misura il soggetto resta nascosto senza traccia in previsione in 87 passaggi su 2\,800, con la disgiunzione completa in 9 su 2\,800 (0,3\,\%; Wilson 0,2--0,6\,\%); l'attesa di 2 cicli porta le false entrate da 92 a 7 passaggi su 400 \prova{S}.
+
+\subsection{Area d'avviso e fascia di guardia}\label{sec:occ-avviso}
+
+\begin{definizione}[Area d'avviso]\label{def:occ-avviso}
+Quando all'istante $t_0$ una traccia entra nell'ombra di un occlusore nasce l'area $W(t_0)=\dilata(\hat\Omb,w)$, tagliata alla griglia, con $w=0{,}40\unita{m}$ e senza limite di durata. A ogni fotogramma $W(t)=W(t-\Delta)\setminus L(t)$, dove $L(t)$ è l'insieme delle celle viste libere per 3 fotogrammi consecutivi e distanti più di $w$ dall'ombra corrente dell'occlusore d'ingresso.
+\end{definizione}
+
+L'avviso finisce solo per osservazione, cella per cella: non lo tolgono il riaggancio, l'identità, la chiusura di una traccia, un contatore di tempo o l'operatore. Dopo un riaggancio l'area resta come «possibile presenza residua», senza traccia, distinta a schermo da quella con una traccia in previsione. Più tracce nella stessa ombra danno un solo avviso con contatore ed età. Un'ombra in cui non è entrata alcuna traccia resta «in ombra»: non è mai «libero» e non porta l'avviso. Con l'occlusore fermo $L(t)=\emptyset$ e $W(t)=W(t_0)$.
+
+\begin{proposizione}[Fascia di guardia]\label{prop:occ-fascia}
+Sia l'occlusore fermo, $\Omb$ l'ombra vera e $\hat\Omb$ quella stimata, con $\Omb\subseteq\dilata(\hat\Omb,\varepsilon_\Omb)$, e sia $W=\dilata(\hat\Omb,w)$. Sotto le ipotesi (ii) e (iv), se
+\begin{equation}\label{eq:occ-fascia}
+w\;\ge\;\varepsilon_\Omb+\vmax\,(a+\tau+\Delta),
+\end{equation}
+allora in ogni istante $s$ in cui il soggetto è nel campo e in portata ed è in uso un'uscita che non lo riporta come osservato, $c(s)\in W$. Per contenere l'intero corpo di raggio $r_c$ si aggiunge $r_c$ al secondo membro. \prova{D}
+\end{proposizione}
+\begin{proof}
+L'uscita in uso in $s$ viene da un fotogramma $t$ con $s\le t+\tau+\Delta$, nel quale il soggetto non è rilevato. Per (ii) esiste $t'\ge t-a$ con $c(t')\in\Omb$: altrimenti il soggetto sarebbe fuori dall'ombra da più di $a$ e sarebbe rilevato. Per (iv), $|c(s)-c(t')|\le\vmax(a+\tau+\Delta)$; poiché $c(t')\in\dilata(\hat\Omb,\varepsilon_\Omb)$, $\operatorname{dist}(c(s),\hat\Omb)\le\varepsilon_\Omb+\vmax(a+\tau+\Delta)\le w$.
+\end{proof}
+
+La velocità coperta dalla fascia è $\vmax=(w-\varepsilon_\Omb)/(a+\tau+\Delta)$. La Tabella~\ref{tab:occ-fascia} riporta i conti con i termini che ciascuno include; la latenza $\tau$ è stimata, non misurata \prova{N}.
+
+\begin{table}[H]\centering\small
+\caption{Velocità coperta dalla fascia $w=0{,}40\unita{m}$ con $\Delta=1/15\unita{s}$ \prova{C}. L'ultima colonna dice quali termini della \eqref{eq:occ-fascia} il conto include.}\label{tab:occ-fascia}
+\begin{tabularx}{\linewidth}{ccccc L}
+\toprule
+$a$ (s) & $\tau$ (s) & $\varepsilon_\Omb$ (m) & Tempo totale (s) & $\vmax$ coperta (m/s) & Che cosa include\\
+\midrule
+0 & 0,150 & 0 & 0,217 & 1,85 & latenza e tenuta; dato del solo fotogramma corrente\\
+0,133 & 0,155 & 0 & 0,288 & 1,4 (margine nullo) & età e latenza, senza tenuta: $2{,}5\cdot0{,}288=0{,}72\unita{m}$, oltre la fascia\\
+0,133 & 0,155 & 0 & 0,355 & 1,13 & conto completo: età (3 fotogrammi), latenza, tenuta\\
+0,133 & 0,155 & 0,20 & 0,355 & 0,56 & conto completo con errore del bordo d'ombra\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+La condizione \eqref{eq:occ-fascia} è sufficiente, non necessaria: il caso peggiore è un soggetto che si allontana dall'ombra alla velocità massima senza essere rilevato per tutto il tempo $a$. Il valore da ritenere per il sistema è quello del conto completo: $1{,}13\unita{m/s}$, e $0{,}56\unita{m/s}$ se il bordo dell'ombra sbaglia di $20\unita{cm}$; il passo d'uomo ($1{,}4\unita{m/s}$) è coperto solo trascurando la tenuta, a margine nullo. La tenuta su un sensore fisico, dove $\varepsilon_\Omb$ e $a$ vanno misurati, non è verificata \prova{N}. Fuori dalle ipotesi: occlusore mobile ($\Omb$ non costante); velocità doppia di quella dichiarata (raddoppia il termine cinematico); soggetto che non rimanda segnale ($a$ non è limitato).
+
+\emph{Differenza fra $\Pres$ e $W$.} $\Pres$ non dipende dalle tracce e vale per qualunque numero di soggetti (Proposizione~\ref{prop:occ-contenimento}); $W$ esiste solo se l'ingresso di una traccia è stato riconosciuto ed è dimensionata dalla fascia $w$ anziché dalla ricorsione \eqref{eq:occ-presenza}. Una variante esaminata chiudeva $W$ anche al riaggancio dell'identità: quella chiusura non è un'osservazione del suolo, ed è corretta solo sotto l'ipotesi (vi). Il caso che la smentisce è riportato nel \S\ref{sec:occ-risultati}; per questo nella regola adottata l'avviso non dipende dall'identità.
+
+\subsection{Regione di previsione con livello dichiarato}\label{sec:occ-regione}
+
+\emph{Costruzione.} Il predittore riceve lo stato della traccia all'ultima misura non tagliata e, a ogni ciclo, la maschera delle celle non viste libere; restituisce a ogni ciclo, fino a una chiusura, un insieme di celle, un punto, l'età, il livello e lo stato. Il predittore principale usa una libreria di 400 percorsi registrati, trapiantati sul punto e sulla velocità d'ingresso: 200 proseguono, 200 si fermano a un istante estratto in modo uniforme. Un membro che si trova su una cella vista libera a più di $w_p=0{,}20\unita{m}$ dall'ombra ha il peso moltiplicato per $0{,}1$ a ogni ciclo in cui vi resta: è l'uso dell'informazione negativa nel seguimento \cite{koch2007,wyffels2015}, che qui restringe solo la regione e mai l'area d'avviso. L'insieme $C_\alpha(t)$ è formato dalle celle più dense fino alla quota $\alpha=0{,}9$ del peso, dopo 3 lisciature. Il predittore di ripiego è un disco attorno alla previsione a velocità costante, con raggio da tabella, ritagliato sulla maschera.
+
+\begin{definizione}[Regione mostrata]\label{def:occ-regione}
+$\Reg_\alpha(t)=C_\alpha(t)\cap W(t)$ per $\alpha<1$; se questo insieme è vuoto, $\Reg_\alpha(t)=W(t)\setminus\Oss(t)$, cioè tutto il non visto libero dell'ombra e della sua fascia (\emph{pavimento}), con lo stato «previsto ampio». Si pone $\Reg_1(t)=W(t)$.
+\end{definizione}
+
+\emph{Punto.} È quello del filtro finché cade sulla maschera; altrimenti resta fermo per 8 cicli e poi si muove verso il baricentro dei membri sulla maschera, di al più $0{,}167\unita{m}$ per ciclo. In «previsto ampio» non è mostrato.
+
+\emph{Livello a schermo.} Il livello non viene dalla covarianza del filtro: è la frequenza con cui la regione contiene il soggetto, misurata in simulazione per comportamento e per durata dell'occlusione (\S\ref{sec:val}), ed è dichiarato con la parola «almeno». Con il predittore principale e un'ombra larga almeno $2\unita{m}$: «almeno 9 su 10» fino a $\tocc=2\unita{s}$, «almeno 85 su 100» fra 2 e $3\unita{s}$; con un'ombra più stretta (pannello da $1\unita{m}$): «almeno 87 su 100» fino a $1\unita{s}$, poi «previsto ampio». Con il predittore di ripiego non è dichiarata alcuna cifra. Una garanzia di copertura ottenuta per taratura è marginale, cioè una media sulla popolazione di taratura \cite{angelopoulos2021}, e la copertura condizionata esatta non è ottenibile senza ipotesi sulla distribuzione \cite{barber2019}: per questo il livello è verificato per comportamento e dichiarato con il suo dominio (\S\ref{sec:occ-risultati}).
+
+\emph{Passaggio a «previsto ampio».} Avviene se la regione supera l'80\,\% delle celle dell'ombra, se scatta il pavimento, oltre l'orizzonte del livello, se la velocità d'ingresso è inferiore a $0{,}3\unita{m/s}$, se il filtro è stato sotto $0{,}3\unita{m/s}$ in un ciclo degli ultimi $2\unita{s}$ prima dell'ultima misura, o se profondità o posa sono degradate. In «previsto ampio» la regione è tutta la maschera dell'ombra, tratteggiata, con l'età; non sparisce e non torna a «previsto». La soglia dell'80\,\% e l'orizzonte di $3\unita{s}$ sono stati scelti dopo aver visto i dati di simulazione e non sono stati riprovati su dati indipendenti dalla scelta.
+
+\begin{figure}[H]\centering
+\begin{tikzpicture}[scale=0.92,font=\footnotesize]
+\foreach \k/\tit in {0/{(a) appena nascosto: «previsto»},1/{(b) $\tocc=1\unita{s}$: «previsto», livello dichiarato},2/{(c) oltre l'orizzonte: «previsto ampio»}}{
+\begin{scope}[xshift=\k*5.45cm]
+  \begin{scope}
+  \clip (-2.45,-0.15) rectangle (2.45,3.12);
+  % campo e portata
+  \draw[muted,very thin] (0,0)--(46.5:3) arc[start angle=46.5,end angle=133.5,radius=3]--cycle;
+  % ombra stimata
+  \fill[black!18] (-1,1.5)--(1,1.5)--(56.31:3) arc[start angle=56.31,end angle=123.69,radius=3]--cycle;
+  % area d'avviso
+  \draw[accent,dashed,thick] (-1,1.1)--(1,1.1) arc[start angle=-90,end angle=-33.69,radius=0.4]--(1.982,2.252) arc[start angle=48.65,end angle=131.35,radius=3]--(-1.333,1.278) arc[start angle=213.69,end angle=270,radius=0.4]--cycle;
+  % ostacolo
+  \draw[line width=2.2pt] (-1,1.5)--(1,1.5);
+  % camera
+  \fill (0,0) circle[radius=0.06];
+  % ultima misura
+  \fill[muted] (-1.75,2.2) circle[radius=0.07];
+  \ifnum\k=0
+    \draw[pattern=north east lines,pattern color=accent] (-1.28,2.2) ellipse[x radius=0.27,y radius=0.19];
+    \draw[thick,fill=white] (-1.38,2.2) circle[radius=0.07];
+  \fi
+  \ifnum\k=1
+    \draw[pattern=north east lines,pattern color=accent] (-0.65,2.2) ellipse[x radius=0.95,y radius=0.38];
+    \draw[thick,fill=white] (-0.35,2.2) circle[radius=0.07];
+  \fi
+  \ifnum\k=2
+    \draw[pattern=north east lines,pattern color=accent] (-1,1.5)--(1,1.5)--(56.31:3) arc[start angle=56.31,end angle=123.69,radius=3]--cycle;
+  \fi
+  \end{scope}
+  \node[below] at (0,-0.12) {\tit};
+\end{scope}}
+\end{tikzpicture}
+\caption{Pianta schematica. In basso la camera; il segmento spesso è l'ostacolo; in grigio l'ombra stimata $\hat\Omb$ fino alla portata; la linea tratteggiata è il bordo dell'area d'avviso $W=\dilata(\hat\Omb,w)$; il disco grigio è l'ultima misura; la zona a righe è la regione $\Reg_{0,9}$; l'anello è il punto mostrato. In (c) la regione è tutto il non visto libero dell'ombra, senza punto; $W$ è la stessa nei tre istanti.}\label{fig:occ-pianta}
+\end{figure}
+
+\begin{proposizione}[Annidamento, interferenza monotòna, continuità]\label{prop:occ-annidamento}
+(a) $\Reg_\alpha(t)\subseteq\Reg_1(t)=W(t)\subseteq\dilata(\hat\Omb,w)$ per ogni $t$ e ogni $\alpha$. (b) Il predittore non scrive alcuno stato di cella e non produce uscite «osservato»: a parità di fotogrammi, due predittori diversi danno gli stessi stati delle celle e gli stessi eventi «osservato». (c) L'area d'avviso con il predittore contiene quella senza: la previsione può accendere o mantenere l'avviso, mai toglierlo. (d) Con l'occlusore fermo, dall'ingresso nell'ombra alla chiusura della traccia, $\Reg_\alpha(t)\neq\emptyset$ a ogni ciclo. \prova{D}
+\end{proposizione}
+\begin{proof}
+(a) Entrambe le espressioni della Definizione~\ref{def:occ-regione} sono sottoinsiemi di $W(t)$, e $W(t)\subseteq W(t_0)$ perché la ricorsione solo sottrae. (b) Lo stato della cella è funzione dei soli fotogrammi di profondità; «osservato» è emesso se e solo se nel ciclo c'è una misura dentro la porta della traccia; gli insiemi $C_\alpha$ compaiono solo in $\Reg_\alpha$ e nel punto mostrato. (c) La condizione d'ingresso è una disgiunzione, e il termine che usa il punto previsto è un disgiunto in più: non toglie ingressi. Il rilascio $L(t)$ non dipende dal predittore, e il riaggancio, che usa la regione nella sua porta, non chiude l'avviso. (d) $\hat\Omb\cap\Oss(t)=\emptyset$ per definizione d'ombra e, con l'occlusore fermo, $\hat\Omb\subseteq W(t_0)=W(t)$; quindi $W(t)\setminus\Oss(t)\supseteq\hat\Omb\neq\emptyset$.
+\end{proof}
+
+L'enunciato «la previsione non interferisce con l'avviso» va quindi letto nella forma (c): l'interferenza esiste, perché la regola d'ingresso usa il punto previsto, ed è monotòna dal lato prudente. La continuità (d) è condizionata all'ingresso: se la traccia è chiusa prima che l'ingresso sia riconosciuto, non c'è né avviso né regione. La proprietà «$\Reg_{0,9}$ non copre celle viste libere oltre $w_p$» è ottenuta con il peso descritto sopra e non è garantita dalla sola regola: è verificata in simulazione (0 cicli; entro la fascia $w_p$ la regione tocca celle viste libere nel 92--100\,\% dei cicli) \prova{S}.
+
+\begin{proposizione}[Livello di una regione ritagliata]\label{prop:occ-ritaglio}
+Sia $G$ una misura di probabilità sul suolo, $E_p$ una regione con $G(E_p)\ge p$ e $S$ l'insieme delle celle ammesse, con $G(S)>0$. Il livello della regione ritagliata $E_p\cap S$ rispetto alla distribuzione condizionata a $S$ è
+\begin{equation}\label{eq:occ-ritaglio}
+\alpha_S=\frac{G(E_p\cap S)}{G(S)}\;\ge\;1-\frac{1-p}{G(S)},
+\end{equation}
+con uguaglianza se $S\supseteq X\setminus E_p$ e $G(E_p)=p$. \prova{D}
+\end{proposizione}
+\begin{proof}
+$G(E_p\cap S)=G(S)-G(S\setminus E_p)$ e $G(S\setminus E_p)\le G(X\setminus E_p)\le1-p$; si divide per $G(S)$. Se $S\supseteq X\setminus E_p$ la prima disuguaglianza è un'uguaglianza.
+\end{proof}
+
+Il risultato non richiede che $G$ sia gaussiana ed è informativo solo se $G(S)>1-p$. Con $p=0{,}95$ e $G(S)=0{,}23$ si ha $\alpha_S\ge1-0{,}05/0{,}23=0{,}78$; con $G(S)=0{,}08$, $\alpha_S\ge0{,}375$ (0 violazioni su 2\,000 casi casuali con gaussiana discreta e $S$ semipiano \prova{C}). Ritagliare un cerchio «al 95\,\%» sulle celle ammesse senza rinormalizzare non conserva dunque il livello dichiarato: per questo la regione è estratta dalla distribuzione dei membri già pesata sulla maschera, e il suo livello è misurato, non dedotto.
+
+\emph{Riaggancio.} Alla ricomparsa, candidata è la prima misura non tagliata che non tocca il bordo del campo; l'identità è riagganciata se la misura è entro $w$ da $\Reg_{0,9}$, entro $0{,}75\unita{m}$ dall'ombra d'ingresso e la traccia è la più recente in previsione per quell'ombra. L'identità riagganciata è marcata «presunta»; negli altri casi si ha l'evento «identità ambigua», con una traccia nuova e la vecchia in «previsto ampio». In entrambi i casi l'avviso resta. Le cifre sull'identità sono nel \S\ref{sec:sti}.
+
+\subsection{Risultati che spiegano il meccanismo}\label{sec:occ-risultati}
+
+Le tavole complete sono nel \S\ref{sec:val}; qui si riportano i risultati che mostrano perché la regione è costruita così. Le disposizioni di prova sono tre: $G_1$ con un pannello largo $1\unita{m}$, $G_2$ e $G_3$ con un ostacolo largo $2\unita{m}$. I comportamenti «sul percorso» sono cinque: prosegue, rallenta, si ferma, torna indietro, sosta lunga. Tutte le prove sono in simulazione, con modello ideale del sensore (posizioni al suolo con rumore gaussiano di $5\unita{cm}$, rilevamento con probabilità fissa $P_D$), camera ferma e un soggetto per volta salvo dove detto.
+
+\emph{Prima e dopo.} La Tabella~\ref{tab:occ-prima-dopo} confronta due costruzioni. Nella prima la regione mostrata è il cerchio d'incertezza del filtro e viene spenta, con la traccia dichiarata persa, quando supera una soglia d'ampiezza; nella seconda è la regione persistente della Definizione~\ref{def:occ-regione}. Con la prima, in $G_1$ lo stato «previsto» dura $0{,}67\unita{s}$ ed è spento prima della ricomparsa in 332 transiti su 355.
+
+\begin{table}[H]\centering\small
+\caption{Continuità e precisione prima e dopo l'introduzione della regione persistente, in simulazione con modello ideale del sensore \prova{S}. Terne: $G_1$ / $G_2$ / $G_3$. Gli intervalli della seconda e della terza riga sono in \S\ref{sec:val}.}\label{tab:occ-prima-dopo}
+\begin{tabularx}{\linewidth}{L L L}
+\toprule
+Misura & Cerchio del filtro, spento oltre soglia & Regione persistente con pavimento\\
+\midrule
+Cicli senza osservazione con una regione mostrata & 19,0 / 38,1 / 33,3\,\% ($N=105\,301$ / $118\,875$ / $139\,132$ cicli) & 100\,\% ($N=785\,645$ / $342\,552$ / $395\,479$ cicli)\\
+Passaggi con almeno un ciclo senza regione & 1\,958 su 1\,958; 1\,991 su 2\,000; 1\,999 su 2\,000 & 0 su 13\,638; 0 su 5\,600; 0 su 5\,597; su semi nuovi 0 su 23\,402\\
+Soggetto dentro la regione a $\tocc=2\unita{s}$ & 0,00--0,06 & limite inferiore di Wilson sopra 0,90 nel dominio della Tabella~\ref{tab:occ-dominio}\\
+Errore mediano del punto in $G_2$ a 1 / 2 / $3\unita{s}$ ($N=2\,400$ / 2\,077--2\,115 / 1\,674--1\,734) & punto fermo all'ultima misura: 0,97--1,00 / 1,48--1,54 / 1,59--$1{,}66\unita{m}$ & 0,18--0,19 / 0,37--0,39 / 0,54--$0{,}60\unita{m}$\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Lo zero della seconda riga vale per costruzione (Proposizione~\ref{prop:occ-annidamento}, d) ed è confermato dal conteggio. I 23\,402 passaggi della prova su semi nuovi vengono da 6\,000 camminatori distinti: il limite superiore al 95\,\% è «meno di 6,4 passaggi su 10\,000», non quello che si otterrebbe trattando i passaggi come indipendenti. La premessa è l'ingresso: nella stessa prova la traccia è chiusa prima dell'ombra in 928 passaggi su 23\,402 (3,97\,\%); accendendo l'avviso anche per le tracce non confermate o chiuse la cui ultima misura dista meno di $0{,}75\unita{m}$ da un'ombra, i passaggi scoperti scendono a 24 su 23\,402 e non a zero (con $P_D=0{,}9$ e corpo esteso 1 su 5\,704; con $P_D=0{,}7$ fino a 5 su 1\,000); la causa del residuo non è determinata. Il punto mostrato cade su celle viste libere dopo il quinto ciclo in 13 / 0 / 23 cicli: la soglia zero non è raggiunta.
+
+\emph{Dominio dichiarato e fuori dominio.} La Tabella~\ref{tab:occ-dominio} riporta la frequenza con cui $\Reg_{0,9}$ contiene il soggetto, finché resta nascosto.
+
+\begin{table}[H]\centering\footnotesize
+\caption{Quota di istanti con il soggetto dentro $\Reg_{0,9}$, in simulazione con modello ideale del sensore \prova{S}. In alto il dominio dichiarato (corpo esteso, $P_D=0{,}9$, bordo dell'ombra noto, comportamenti sul percorso, semi nuovi): limite inferiore di Wilson al 95\,\% della cella peggiore. In basso, fuori dominio: stime puntuali. Terne: $G_1$ / $G_2$ / $G_3$.}\label{tab:occ-dominio}
+\begin{tabularx}{\linewidth}{>{\RaggedRight\arraybackslash}p{4.3cm} L}
+\toprule
+Condizione & Quota dentro $\Reg_{0,9}$\\
+\midrule
+$G_2$, ostacolo da $2\unita{m}$ & fino a $2\unita{s}$: 0,955 (1\,222 su 1\,265); a $3\unita{s}$: 0,936 (666 su 698)\\
+$G_3$, ostacolo da $2\unita{m}$ & fino a $2\unita{s}$: 0,921 (2\,125 su 2\,279); a $3\unita{s}$: 0,899 (1\,754 su 1\,922)\\
+$G_2$ e $G_3$ insieme & sopra 0,90 fino a $2\unita{s}$ e sopra 0,85 a $3\unita{s}$ in 30 celle su 30, anche con la correzione di Bonferroni; da 608 a 2\,359 casi per cella\\
+$G_1$, pannello da $1\unita{m}$ & a $1\unita{s}$: 0,882 (942 su 1\,045), 0,87 sulle cinque celle giudicate insieme; oltre $1\unita{s}$ nessun livello («previsto ampio» nel 92\,\% degli istanti)\\
+\midrule
+Chi svolta, a 2 e $3\unita{s}$ & corpo esteso: 0,86 / 0,67 / 0,79 e 0,84 / 0,58 / 0,67; soggetto puntiforme, altri semi: 0,54--0,70 e 0,38--0,52\\
+Chi esce dal lato lontano, a 2 e $3\unita{s}$ & corpo esteso: 0,82 / 0,61 / 0,79 e 0,76 / 0,57 / 0,70; soggetto puntiforme, altri semi: 0,32--0,67 e 0,13--0,47\\
+Ombra stimata più stretta di 10 e $20\unita{cm}$ ($G_2$, prosegue, $1\unita{s}$) & 0,414 e 0,297; con il bordo di profondità riconosciuto a ogni ciclo 0,998 e 1,000; riconosciuto in 8 cicli su 10: 0,742 e 0,757\\
+Chi parte da fermo, a $1\unita{s}$ & regione senza ritocchi: 0,146 / 0,049 / 0,043; con la sola soglia di $0{,}3\unita{m/s}$: 0,787 / 0,745 / 0,717\\
+Camminatori meno regolari della libreria ($G_3$), a 1 / 2 / $3\unita{s}$ & 0,944 / 0,835 / 0,801 ($N=342$ / 339 / 282)\\
+Oltre l'orizzonte: $5\unita{s}$, $G_1$, prosegue & 174 su 221 = 0,787 (0,729--0,836)\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Lettura. (1) Il livello «almeno 9 su 10 fino a $2\unita{s}$» regge con l'ostacolo largo; con il pannello da $1\unita{m}$ cade, e la caduta dipende dal corpo esteso: sugli stessi 400 semi per comportamento, in $G_1$, il soggetto puntiforme dà 0,975 / 0,967 / 0,951 a 1 / 2 / $3\unita{s}$ e quello esteso 0,938 / 0,924 / 0,913. (2) Per chi svolta o esce dal lato lontano le due serie non concordano e la differenza non è spiegata; in entrambe la regione non raggiunge il livello: questi casi sono coperti solo dall'area d'avviso. (3) Il bordo dell'ombra è la grandezza critica: su un sensore il livello non va dichiarato finché non è misurata la quota dei cicli in cui il bordo si riconosce. (4) Chi parte da fermo non è nel dominio: la regola sugli ultimi $2\unita{s}$ lo porta a «previsto ampio», dove il soggetto è dentro la regione in 256 su 256, 342 su 342 e 249 su 249 istanti con il corpo tutto nascosto ($N<400$ per cella), ma in 0,832 e 0,818 di tutti gli istanti con il centro nascosto; nessun livello è dichiarato. (5) In nessuna prova la libreria viene da un generatore di camminate e i passaggi da un altro; una libreria di 30 percorsi non basta (0,88 e 0,82 a 2 e $3\unita{s}$). (6) Il centro del soggetto nascosto è dentro $W$ per costruzione finché l'errore dell'ombra non supera $w$ più mezzo corpo: lo «0 su 11,9 milioni di istanti» non è una misura del sistema. Con l'avviso effettivamente acceso come requisito, i passaggi scoperti sono 29 su 95\,399 con la maschera esatta, e 2 / 15 / 1\,704 / 1\,979 su 2\,000 con l'ombra stimata più stretta di 0,10 / 0,20 / 0,45 / $0{,}60\unita{m}$. Su profondità simulata dalle schede tecniche, con il predittore a velocità costante, il soggetto resta nella regione in 36 passaggi su 46 e, con la soglia di punti adattata alla risoluzione, in 83 su 90.
+
+\emph{Secondo soggetto nella stessa ombra (limite di validità).} Il soggetto seguito entra e sosta dietro l'ostacolo; un secondo soggetto, mai visto, parte da dentro l'ombra 0,5--$3\unita{s}$ dopo ed esce da un lato a caso. Alla sua prima misura valida, l'identità del primo gli è attribuita in 3\,027 casi su 3\,041, 3\,493 su 3\,616 e 3\,239 su 3\,546 (0,995 / 0,966 / 0,913; Wilson 0,992--0,997 / 0,960--0,971 / 0,904--0,922), in 2\,124, 2\,713 e 2\,984 dei quali il primo è ancora tutto nascosto; con una porta di riaggancio più stretta ($0{,}40\unita{m}$) le quote sono 0,481 / 0,711 / 0,676 \prova{S}. La porta sulla regione non lo impedisce perché all'uscita del secondo soggetto la regione è già «previsto ampio», cioè tutta l'ombra, nel 98 / 75 / 90\,\% dei casi. Nessuna regola esaminata ripara l'identità: con due soggetti nella stessa ombra non è determinabile, ed è per questo marcata «presunta». Con la variante in cui il riaggancio chiude l'avviso, ogni scambio rilascia l'avviso senza che il primo soggetto sia stato visto (in altre due prove: 193 casi su 193 e 347 su 357, 0,97; Wilson 0,95--0,98). Con la regola adottata i rilasci senza osservazione sono zero per costruzione; la verifica sul caso del secondo soggetto con modello ideale del sensore non è stata eseguita \prova{N}. Su profondità simulata dalle schede tecniche, in una scena costruita con due persone, i fotogrammi con la persona nascosta fuori dall'avviso passano da 282 su 336 a 0 su 336 (0 su 169 con il rumore) \prova{S}. Il costo è dichiarato: dietro un occlusore fermo l'avviso non si spegne (140 passaggi su 140; 0 celle rilasciabili su 808) e finisce solo quando l'ombra si sposta o l'ostacolo è tolto; il rilascio dopo la rimozione dell'ostacolo non è verificato (nell'implementazione provata l'avviso è ancora acceso $2\unita{s}$ dopo in 10 prove su 10, per una causa non determinata) \prova{N}.
+
+L'alternativa con due ipotesi di moto pesate (transito e sosta) è esclusa perché attribuisce una sosta inesistente nel 38--100\,\% dei transiti; il confronto è nel \S\ref{sec:cos}.
+
+\subsection{Tre indicatori che non misurano ciò che dichiarano}\label{sec:occ-indicatori}
+
+\begin{osservazione}[Il «$\pm\sigma$» in due dimensioni]\label{oss:occ-sigma}
+Per $x\sim\mathcal N(\mu,\Sigma)$ in $\Reali^2$, $P\bigl((x-\mu)^{\top}\Sigma^{-1}(x-\mu)\le k^2\bigr)=1-e^{-k^2/2}$: con il cambio di variabile che rende $\Sigma$ l'identità e in coordinate polari, $\int_0^k r\,e^{-r^2/2}\,dr=1-e^{-k^2/2}$. Per $k=1$ si ha $0{,}393$: un'etichetta «posizione $\pm\sigma$» contiene il soggetto nel 39\,\% dei casi anche con un modello esatto (in una dimensione sarebbe il 68,3\,\%); il 95\,\% richiede $k=\sqrt{-2\ln 0{,}05}=2{,}45$ \prova{D}; Monte Carlo con $N=2\cdot10^6$: 0,3932 \prova{C}.
+\end{osservazione}
+
+\begin{osservazione}[Probabilità d'intrusione su una distribuzione ritagliata]\label{oss:occ-intrusione}
+Sia $\pi_t$ la distribuzione di posizione di un soggetto nascosto, con supporto nelle celle non viste libere $S(t)=X\setminus\Oss(t)$, e $V$ un volume protetto. Se $V\subseteq\Oss(t)$ allora $\pi_t(V)=0$ a ogni ciclo, qualunque sia la distanza del soggetto da $V$, perché $V\cap S(t)=\emptyset$ \prova{D}. Con il soggetto fermo nell'ombra a $9\unita{cm}$ da $V$, il tempo per entrarvi a $1{,}4\unita{m/s}$ è $0{,}09/1{,}4=64\unita{ms}$, meno della latenza. L'indicatore dice dov'è il soggetto secondo il modello, non se può entrare: può solo abbassare un allarme, e non è usato come criterio.
+\end{osservazione}
+
+\begin{osservazione}[Criterio d'accettazione non stratificato]\label{oss:occ-criterio}
+Si consideri il criterio a due stadi su 30 passaggi (almeno 28 dentro: superato; al più 22: respinto; altrimenti altri 30 e almeno 52 su 60), con 21 passaggi di chi prosegue, 5 di chi sosta e 4 di chi torna. Se i primi due comportamenti sono sempre coperti e il terzo mai, i passaggi dentro sono 26 con certezza: si va al secondo stadio, dove $26+26=52$ supera il criterio con probabilità 1 \prova{C}. Con 30 passaggi per comportamento (almeno 28: superato; al più 23: respinto) una copertura di 0,5 è respinta al primo stadio con probabilità 0,999 e una di 0,90 è respinta per errore con probabilità 0,026. Un criterio che conta l'identità al ritorno, inoltre, misura l'identità e non la presenza del soggetto nella regione: la precisione dichiarata si verifica sulla regione e per comportamento (\S\ref{sec:val}).
+\end{osservazione}
+
+\subsection{Dipendenza dalla classe e dominio per classe}\label{sec:occ-classe}
+
+Il classificatore su più classi è un componente richiesto dal sistema (\S\ref{sec:sti}). In questo lavoro non è realizzato né valutato: è simulato, con le etichette assegnate a mano; la sensibilità a etichette errate è misurata solo in prove brevi, su sequenze di etichette generate a caso e fuori dalla catena completa; nessuna classe diversa da «persona a piedi» è stata simulata nella catena completa, e in quella catena nessuna funzione legge ancora un'etichetta. Questo paragrafo descrive come la classe entra nelle tre costruzioni del capitolo e con quale livello di prova.
+
+\emph{Possibile presenza e fascia.} La velocità $\vmax$ dell'ipotesi (iv) deve limitare ogni oggetto che può stare nell'ombra, non quello etichettato (la Proposizione~\ref{prop:occ-contenimento} non suppone una traccia). La fissa quindi lo \emph{scenario} dichiarato all'avvio, cioè l'insieme delle classi ammesse nel sito: $v_{\mathrm{scen}}$ è la massima $\vmax$ delle classi dello scenario e, dalla \eqref{eq:occ-fascia}, $w_{\mathrm{scen}}=\max\{w,\ \varepsilon_\Omb+(v_{\mathrm{scen}}+v_{\mathrm{ego}})(a+\tau+\Delta)\}$, con $a+\tau+\Delta=0{,}355\unita{s}$ e $v_{\mathrm{ego}}$ velocità di chi porta il sensore (zero nel dominio provato). Per ogni ombra con un'area d'avviso la fascia è $w_\Omb(t)=\max\{w_\Omb(t-\Delta),\ w_{\mathrm{scen}},\ 0{,}355\unita{s}\cdot\vmax(c)\}$ per ogni classe $c$ non smentita entrata in quell'ombra; $W=\dilata(\hat\Omb,w_\Omb)$ e il rilascio richiede la distanza $w_\Omb$ dall'ombra corrente. Nel prototipo descritto la fascia è fissa a $w=0{,}40\unita{m}$ e l'uscita dichiara la velocità coperta ($1{,}13\unita{m/s}$) e le classi dello scenario che la superano; la fascia di scenario è una regola di progetto non eseguita nella catena \prova{N}.
+
+\emph{Regione di previsione.} La forma della regione dipende dal modello di moto della classe. Solo per «persona a piedi» esiste una libreria con cifre, e il livello è dichiarato «se l'etichetta è giusta»; per ogni altra classe, per una categoria o per «non classificato» la regione è il disco a velocità costante, senza livello, e così resta fino alla chiusura se l'etichetta cambia o è smentita durante l'occlusione. La forma non tocca mai $W$.
+
+\begin{proposizione}[Un'etichetta non riduce l'avviso né produce un «libero»]\label{prop:occ-etichetta}
+Si supponga che (1) lo stato delle celle sia funzione dei soli fotogrammi di profondità, (2) associazione, porta, riaggancio e ciclo di vita non leggano l'etichetta, (3) la fascia segua la regola precedente. Siano date due esecuzioni sugli stessi fotogrammi e con lo stesso scenario, che differiscono solo nelle etichette (assenti, tardive, errate, variabili durante l'occlusione). Allora le celle «libero» sono identiche; in ogni istante l'area d'avviso con etichette contiene quella senza etichette; i rilasci con etichette sono un sottoinsieme di quelli senza. \prova{D}
+\end{proposizione}
+\begin{proof}
+Per (1) e (2) stati delle celle, tracce e ingressi coincidono. Senza etichette $w_\Omb=w_{\mathrm{scen}}$; con etichette $w_\Omb(t)\ge w_{\mathrm{scen}}$ in ogni istante e non decresce. La dilatazione è monotòna nel raggio, quindi $W(t_0)$ con etichette contiene quella senza; la condizione di rilascio «oltre $w_\Omb$ dall'ombra corrente» è più restrittiva con $w_\Omb$ maggiore, quindi $L(t)$ con etichette è contenuto in $L(t)$ senza; per induzione su $W(t)=W(t-\Delta)\setminus L(t)$ l'inclusione si conserva.
+\end{proof}
+
+\emph{Livello di prova e limiti.} L'enunciato vale per costruzione della regola. In simulazione è stato esercitato sulla sola fascia, non su mappa, ombra e rilascio: 0 sequenze su 20\,000 con la fascia più stretta che senza etichette (limite superiore al 95\,\%: 1,5 su 10\,000), e 0 su 20\,000 con un secondo programma \prova{S}; sulla catena completa non è stato eseguito \prova{N}. La regola alternativa «fascia dalla $\vmax$ dell'etichetta, mai sotto $w$» lo viola: con scenario \{persona, carrello elevatore\} la fascia senza etichetta è $4{,}5\cdot0{,}355=1{,}60\unita{m}$; con l'etichetta «persona» scende a $0{,}89\unita{m}$, e un carrello a $4{,}0\unita{m/s}$, che ne chiede 1,42, resta scoperto di $0{,}53\unita{m}$; su 20\,000 sequenze di etichette la violazione compare in una quota di 0,353 e di 0,791 con due generatori diversi \prova{S}. L'enunciato vale rispetto allo scenario dichiarato, non contro uno scenario dichiarato male: un'auto fuori scenario resta scoperta nel 4,8\,\% di 20\,000 uscite dall'ombra anche con la fascia di scenario.
+
+\emph{Effetto di un'etichetta sbagliata sulla regione} (prove brevi: soggetto puntiforme, suolo senza ostacoli, senza ritaglio sulla maschera, un solo generatore; 6\,000 prove) \prova{S}: una persona è dentro la regione costruita per «carrello» in 0,70--0,74 dei casi a 1--$3\unita{s}$ e dentro quella per «treno» in 0,11--0,24; un carrello a $3\unita{m/s}$ è dentro la regione «persona» in 0,02--0,10. Se la fascia fosse presa dall'etichetta, un carrello etichettato «persona» resterebbe scoperto nel 29,1\,\% di 20\,000 uscite. Il controllo di coerenza cinematica (\S\ref{sec:sti}) toglie le etichette incompatibili con il moto ma non le convalida: «persona» a $6\unita{m/s}$ è smentita in 4\,000 tracce su 4\,000, dopo $0{,}47\unita{s}$, cioè $2{,}8\unita{m}$ di percorso; un carrello lento etichettato «persona» è smentito nel 4,1\,\% delle tracce. Per questo nessun livello numerico è dichiarato per una classe senza libreria provata.
+
+\emph{Dominio per classe.} Per un destinatario fermo l'avviso è tempestivo se l'oggetto è rilevato a una distanza non inferiore a $d_{\mathrm{serve}}(v)=v\,(t_{\mathrm{conf}}+\tau+T_r)+C$ (\S\ref{sec:lim}), con tempo di conferma $t_{\mathrm{conf}}=0{,}267\unita{s}$, latenza stimata $\tau=0{,}155\unita{s}$, tempo di reazione $T_r=1{,}0\unita{s}$ (ipotesi) e margine $C=0{,}95\unita{m}$. Con la portata di $3\unita{m}$, avvicinamento frontale e oggetto che non frena, la velocità coperta è $1{,}44\unita{m/s}$ \prova{C}; oltre $7{,}1\unita{m/s}$ i $3\unita{m}$ sono percorsi in meno di $t_{\mathrm{conf}}+\tau=0{,}42\unita{s}$ e l'avviso uscirebbe dopo il contatto. La Tabella~\ref{tab:occ-classi} applica il conto ai profili di classe del \S\ref{sec:sti}.
+
+\begin{table}[H]\centering\footnotesize
+\caption{Dominio per classe con camera ferma e portata di $3\unita{m}$ \prova{C}. Fascia a $\vmax$: $0{,}355\unita{s}\cdot\vmax$. Nessuna classe diversa da «persona a piedi» è stata simulata nella catena \prova{N}; le velocità dei profili sono in parte ipotesi (\S\ref{sec:sti}).}\label{tab:occ-classi}
+\begin{tabularx}{\linewidth}{>{\RaggedRight\arraybackslash}p{3.4cm} c c c L c}
+\toprule
+Classe & $v$ tipica / $\vmax$ (m/s) & Fascia (m) & $d_{\mathrm{serve}}$ (m) & Avviso tempestivo entro $3\unita{m}$ & Portata necessaria (m)\\
+\midrule
+persona a piedi & 1,4 / 2,5 & 0,89 & 2,94 / 4,51 & sì a passo normale ($6\unita{cm}$ di margine); no a passo svelto & 4,5\\
+veicolo a guida automatica & 1,0 / 2,0 & 0,71 & 2,37 / 3,79 & sì a velocità tipica; no alla massima & 3,8\\
+carrello elevatore & 2,2 / 4,5 & 1,60 & 4,08 / 7,35 & no & 4--7,5\\
+persona di corsa & 3,0 / 8,0 & 2,84 & 5,22 / 12,33 & no; alla massima dopo il contatto & 13\\
+trattore di piazzale con rimorchi & 1,7 / 8,3 & 2,95 & 3,37 / 12,75 & no & 3,4--13\\
+auto, strada urbana & 8,3 / 13,9 & 4,93 & 12,75 / 20,72 & no: dopo il contatto già a velocità tipica & 13--21\\
+aereo in rullaggio & 9,0 / 15,4 & 5,47 & 13,75 / 22,85 & no: dopo il contatto & 14--23\\
+treno in arrivo in banchina & 11,0 / 16,7 & 5,93 & 16,59 / 24,70 & no: dopo il contatto & 17--25\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Sulle 15 classi profilate, l'avviso è tempestivo entro $3\unita{m}$ per 3 a velocità tipica (la terza, l'aereo al traino, non è etichettabile da questo sensore) e per nessuna a velocità massima; l'avviso uscirebbe dopo il contatto per 3 classi a velocità tipica e per 10 alla massima. Con lo scenario «sole persone a piedi» la fascia di scenario è $0{,}89\unita{m}$ e la distanza massima del «suolo visto libero» scende da 2,6 a $2{,}11\unita{m}$; con una classe di $\vmax\ge4{,}8\unita{m/s}$ (11 su 15) la fascia è almeno $1{,}7\unita{m}$ e nessun settore può più dichiarare «suolo visto libero». Per traffico urbano, banchine e rullaggio servirebbero da 13 a $25\unita{m}$ di portata; per treni, tram e aerei il caso rilevante non è l'avvicinamento frontale ma la distanza dal binario o dall'ala, una zona fissa di configurazione esterna a questo lavoro.
+
+\begin{riquadro}{Condizioni di validità del capitolo}
+\textbf{Verificato in simulazione, con modello ideale del sensore:} continuità, dato l'ingresso nell'ombra; livello «almeno 9 su 10 fino a $2\unita{s}$, almeno 85 su 100 fino a $3\unita{s}$» con camera e ostacolo fermi, ostacolo largo $2\unita{m}$, un soggetto per ombra visto almeno 4 fotogrammi, ingresso fra 0,3 e $1{,}8\unita{m/s}$, comportamento sul percorso, bordo dell'ombra noto esattamente, libreria dello stesso tipo di camminatore.
+\textbf{Fuori dal livello dichiarato} (resta la sola area d'avviso): pannello da $1\unita{m}$ oltre $1\unita{s}$; chi svolta, esce dal lato lontano o parte da fermo; oltre $3\unita{s}$; bordo dell'ombra stimato; secondo soggetto nella stessa ombra; occlusore mobile; camera in moto; classi diverse da «persona a piedi».
+\textbf{Non verificato sperimentalmente:} ogni enunciato su un sensore fisico, in particolare $\varepsilon_\Omb$, $a$, $\tau$ e la quota dei cicli in cui il bordo dell'ombra è riconosciuto.
+\end{riquadro}

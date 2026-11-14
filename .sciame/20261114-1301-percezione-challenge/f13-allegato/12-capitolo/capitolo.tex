@@ -1,0 +1,399 @@
+\section{Sensore e geometria d'osservazione}\label{sec:geo}
+
+Questo capitolo fissa che cosa la camera può osservare dal punto di montaggio e con quale incertezza. Tutti i risultati sono dimostrazioni in un modello dichiarato, calcoli, letture di schede dei costruttori, misure pubblicate da terzi o simulazioni: nessuna grandezza è stata misurata su un sensore fisico, e dove un risultato dipende dal sensore reale lo si scrive come limite di validità. Ai simboli comuni si aggiungono: $\Phi_h$, $\Phi_v$ ampiezze orizzontale e verticale del campo, $T_h=\tan(\Phi_h/2)$, $T_v=\tan(\Phi_v/2)$; $\beta_-=\theta+\Phi_v/2$ e $\beta_+=\Phi_v/2-\theta$, angoli del bordo basso e del bordo alto del campo rispetto all'orizzontale; $a$ altezza di un ostacolo, $s$ statura di una persona, $z_o$ e $z_p$ coordinate in avanti dell'ostacolo e della persona.
+
+\subsection{Modello della camera}\label{sec:geo-camera}
+
+\begin{definizione}[Camera]\label{def:geo-camera}
+La camera è un foro stenopeico senza distorsione, con centro $\mathbf c=(0,h,0)$, asse ottico $\mathbf e_d=(0,-\sin\theta,\cos\theta)$, asse d'immagine verso il basso $\mathbf e_\eta=(0,-\cos\theta,-\sin\theta)$ e verso destra $\mathbf e_\xi=(1,0,0)$. Un punto $P=(x,y,z)$ ha profondità e coordinate d'immagine normalizzate
+\begin{equation}\label{eq:geo-proiezione}
+d=(P-\mathbf c)\cdot\mathbf e_d=(h-y)\sin\theta+z\cos\theta,\qquad \xi=\frac{x}{d},\qquad \eta=\frac{(h-y)\cos\theta-z\sin\theta}{d},
+\end{equation}
+ed è nel campo se $d>0$, $|\xi|\le T_h$ e $|\eta|\le T_v$; il suo pixel è $(c_x+f\,\xi,\;c_y+f\,\eta)$. Posa di riferimento: $h=1{,}2\unita{m}$, $\theta=15^\circ$.
+\end{definizione}
+
+\begin{table}[htb]\centering\small
+\caption{Profili di sensore considerati: tre camere di profondità a stereo attivo. Valori dichiarati dai costruttori per il flusso a 848 × 480 pixel e 30 fotogrammi al secondo; nessun valore è misurato su un esemplare. I valori senza richiamo bibliografico sono letti dalle schede tecniche.}\label{tab:geo-profili}
+\begin{tabularx}{\textwidth}{@{}p{4.1cm}p{2.9cm}p{3.3cm}L@{}}
+\toprule
+ & RealSense D455 & RealSense D435i & Orbbec Gemini 335\\
+\midrule
+Campo $\Phi_h\times\Phi_v$ & 87° × 58° \cite{realsense-d455} & 87° × 58° \cite{realsense-confronto-camere} & 90° × 60° (90° × 65° a 1280 × 800 \cite{orbbec-gemini-335})\\
+Base stereo $b$ & 95 mm \cite{realsense-d455} & 50 mm \cite{realsense-taratura-profondita} & 50 mm \cite{orbbec-gemini-335}\\
+Focale $f$ (conti di rumore) & 424 px & 424 px \cite{realsense-taratura-profondita} & 410,7 px\\
+Distanza minima & 0,35 m & 0,195 m & 0,18 m\\
+Intervallo ideale & 0,6--6 m \cite{realsense-d455} & 0,3--3 m \cite{realsense-confronto-camere} & 0,3--3 m (scheda); 0,26--3 m (pagina del prodotto \cite{orbbec-gemini-335})\\
+$\sigma_d$ nominale / limite & 0,08 / 0,20 px & 0,08 / 0,21 px & 0,082 / 0,154 px\\
+Tolleranza sul campo & ±3° & ±3° & ±3°\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{osservazione}[Focale e campo]\label{oss:geo-focale}
+Nel foro stenopeico la focale in pixel è la semilarghezza dell'immagine divisa per $T_h$: con 848 px, 87° danno 446,8 px, e 58° su 480 px danno 433,0 px; $f=424\unita{px}$ corrisponde invece a 90° × 59,0°. I 424 px sono il valore con cui il costruttore traccia la curva di rumore (campo dell'imager di 90° \cite{realsense-taratura-profondita}); 87° × 58° è il campo utile della profondità. In tutto il capitolo la geometria del campo usa gli angoli dichiarati (87° × 58°) e il rumore usa il prodotto $f\,b$ con $f=424\unita{px}$; lo scarto fra le due scelte è il 5 \% sulle grandezze laterali e 2 cm sulla distanza minima a cui si vede il suolo (1,22 m con 59,0° contro 1,24 m). I parametri intrinseci veri si leggono dall'esemplare. \prova{C}
+\end{osservazione}
+
+\subsection{Visibilità del suolo}\label{sec:geo-suolo}
+
+\begin{proposizione}[Campo in coordinate del suolo]\label{prop:geo-campo}
+Nel modello della Definizione~\ref{def:geo-camera}, con $\beta_\pm\in(0,90^\circ)$, un punto $P=(x,y,z)$ con $z>0$ è nel campo se e solo se
+\begin{equation}\label{eq:geo-campo}
+h-z\tan\beta_-\;\le\;y\;\le\;h+z\tan\beta_+\qquad\text{e}\qquad |x|\le T_h\,\bigl[(h-y)\sin\theta+z\cos\theta\bigr].\ \text{\prova{D}}
+\end{equation}
+\end{proposizione}
+\begin{proof}
+Sia $\beta=\operatorname{atan}\bigl((h-y)/z\bigr)$ la depressione del punto vista dal centro. Dividendo numeratore e denominatore di $\eta$ per $z\cos\theta$ si ha $\eta=(\tan\beta-\tan\theta)/(1+\tan\beta\tan\theta)=\tan(\beta-\theta)$. Quindi $|\eta|\le T_v$ equivale a $\theta-\Phi_v/2\le\beta\le\theta+\Phi_v/2$, cioè $-\tan\beta_+\le(h-y)/z\le\tan\beta_-$, che è la prima condizione; in questo intervallo $d>0$. La seconda è $|\xi|\le T_h$ con $d$ della~\eqref{eq:geo-proiezione}.
+\end{proof}
+
+I due bordi verticali del campo sono dunque due piani che dipendono solo da $z$ e non dall'azimut. Con la posa di riferimento e $\Phi_v=58^\circ$ si ha $\beta_-=44^\circ$ e $\beta_+=14^\circ$ (figura~\ref{fig:geo-sezione}).
+
+\begin{corollario}[Suolo]\label{cor:geo-suolo}
+Il suolo ($y=0$) è nel campo per
+\begin{equation}\label{eq:geo-zmin}
+z\;\ge\;z_{\min}=\frac{h}{\tan\beta_-}=\frac{1{,}2}{\tan 44^\circ}=1{,}243\unita{m}\qquad\text{e}\qquad |x|\le T_h\,(z\cos\theta+h\sin\theta)=0{,}917\,z+0{,}295\unita{m}.
+\end{equation}
+Il confine vicino è la retta $z=z_{\min}$: la zona cieca vicina è una striscia, non un anello. In coordinate polari $\rho_{\min}(\varphi)=z_{\min}/\cos\varphi$: 1,24 m sull'asse, 1,43 m a 30°, 1,71 m a 43,5°; lo spigolo del campo tocca il suolo in $x=\pm1{,}43\unita{m}$, cioè a $\varphi=\pm49{,}1^\circ$ e $\rho=1{,}90\unita{m}$. Con $f=424\unita{px}$ ($\Phi_v=59{,}0^\circ$) si ha $z_{\min}=1{,}221\unita{m}$, e 1,70 m a 44°.
+\end{corollario}
+
+\begin{corollario}[Ostacolo basso]\label{cor:geo-basso}
+La cima di un ostacolo alto $a<h$ è nel campo solo per $z\ge(h-a)/\tan\beta_-$: 1,087 m per $a=0{,}15\unita{m}$, 1,139 m per $a=0{,}10\unita{m}$. Sotto questa distanza l'ostacolo è interamente fuori campo.
+\end{corollario}
+
+\begin{corollario}[Tetto del campo]\label{cor:geo-tetto}
+La quota massima visibile è $y_{\max}(z)=h+z\tan\beta_+=1{,}2+0{,}249\,z$ (metri); una quota $y>h$ è vista solo per $z\ge(y-h)/\tan\beta_+$.
+\end{corollario}
+
+\begin{figure}[htb]\centering
+\begin{tikzpicture}[x=1.95cm,y=1.95cm,font=\scriptsize,>=Stealth]
+  \fill[accent!10] (0,1.2)--(1.243,0)--(3.3,0)--(3.3,2.023)--cycle;
+  \draw[->] (0,0)--(3.5,0) node[right]{$z$};
+  \draw[->] (0,0)--(0,2.2) node[above]{$y$};
+  \foreach \t in {0.5,1,...,3}{\draw (\t,0)--(\t,-0.03);}
+  \foreach \t in {1,2}{\draw (0,\t)--(-0.03,\t) node[left]{\t};}
+  \draw[accent,thick] (0,1.2)--(1.243,0) node[pos=0.45,sloped,below,text=black]{$\beta_-=44^\circ$};
+  \draw[accent,thick] (0,1.2)--(3.3,2.023) node[pos=0.2,sloped,above,text=black]{$\beta_+=14^\circ$};
+  \draw[muted,dashed] (0,1.2)--(1.3,0.852);
+  \node[muted] at (1.42,0.90) {asse};
+  \draw[red!70!black,line width=1.6pt] (0,0)--(1.243,0);
+  \fill (0,1.2) circle (1.6pt);
+  \node[left] at (-0.03,1.2) {$h$};
+  \fill[black!65] (1.087,0) rectangle (1.117,0.15);
+  \draw[muted] (1.085,0.13)--(0.50,0.13) node[left,text=black]{15 cm};
+  \fill[black!65] (1.5,0) rectangle (1.54,0.5);
+  \draw[densely dotted] (0,1.2)--(2.571,0);
+  \draw[orange!85!black,line width=1.6pt] (1.54,0)--(2.571,0);
+  \node[orange!60!black] at (1.86,0.09) {ombra};
+  \draw[dashed,muted] (3,0)--(3,2.12);
+  \draw[densely dotted] (0,1.70)--(2.006,1.70)--(2.006,0);
+  \foreach \z/\y in {1.7/1.624,2.3/1.773,3.0/1.948}{\fill[accent] (\z,\y) circle (1.1pt);}
+  \node[above] at (1.62,1.63) {1,62};
+  \node[above] at (2.26,1.78) {1,77};
+  \node[above left] at (3.0,1.95) {1,95};
+  \node[left] at (0,1.72) {1,70};
+  \node[below] at (0.62,-0.03) {\color{red!70!black}suolo non visto};
+  \node[below] at (1.243,-0.03) {1,24};
+  \node[below] at (2.006,-0.03) {2,01};
+  \node[below] at (2.571,-0.03) {2,57};
+  \node[below] at (3,-0.03) {3};
+  \node at (1.65,-0.36) {(a)};
+\end{tikzpicture}\hfill
+\begin{tikzpicture}[x=1.95cm,y=1.95cm,font=\scriptsize,>=Stealth]
+  \fill[accent!10] (0,1.2)--(1.243,0)--(1.8,0)--(1.8,1.649)--cycle;
+  \fill[black!12] (1.83,0)--(3.3,0)--(3.3,2.023)--(1.83,1.656)--cycle;
+  \draw[->] (0,0)--(3.5,0) node[right]{$z$};
+  \draw[->] (0,0)--(0,2.2) node[above]{$y$};
+  \foreach \t in {0.5,1,...,3}{\draw (\t,0)--(\t,-0.03);}
+  \foreach \t in {1,2}{\draw (0,\t)--(-0.03,\t) node[left]{\t};}
+  \draw[accent,thick] (0,1.2)--(1.243,0);
+  \draw[accent,thick] (0,1.2)--(3.3,2.023);
+  \fill (0,1.2) circle (1.6pt);
+  \fill[black!75] (1.8,0) rectangle (1.83,1.7);
+  \draw[white,line width=0.8pt] (1.795,1.5)--(1.835,1.5);
+  \draw[densely dashed] (0,1.2)--(2.3,1.583);
+  \draw[rounded corners=2pt,fill=white] (2.2,0) rectangle (2.4,1.75);
+  \draw[red!75!black,line width=1.8pt] (2.3,1.583)--(2.3,1.75);
+  \draw[muted] (2.32,1.67)--(2.72,1.42) node[below,text=black,align=center]{in vista sopra\\un pannello di 1,5 m};
+  \node[below] at (1.8,-0.03) {$z_o=1{,}8$};
+  \node[below] at (2.42,-0.03) {$z_p=2{,}3$};
+  \node[above] at (1.72,1.72) {$a=1{,}7$};
+  \node at (2.3,0.8) {$s$};
+  \node at (2.88,0.5) {ombra};
+  \node at (1.65,-0.36) {(b)};
+\end{tikzpicture}
+\caption{Sezione verticale nel piano $x=0$ (lunghezze in metri). (a)~Campo della camera ($h=1{,}2$ m, $\theta=15^\circ$, $\Phi_v=58^\circ$): il suolo è visto da 1,24 m; un ostacolo di 15 cm è fuori campo sotto 1,09 m; il tetto del campo vale 1,62, 1,77 e 1,95 m a 1,7, 2,3 e 3 m, e una quota di 1,70 m è vista solo da 2,01 m; un ostacolo alto 0,5 m a 1,5 m nasconde il suolo fino a 2,57 m; la linea tratteggiata verticale è la portata di 3 m. (b)~Un pannello alto 1,7 m a 1,8 m nasconde per intero una persona a 2,3 m; sopra un pannello di 1,5 m resterebbe in vista la parte alta del corpo (tratto rosso).}\label{fig:geo-sezione}
+\end{figure}
+
+\begin{table}[htb]\centering\small
+\caption{Limiti verticali del campo ($h=1{,}2$ m, $\theta=15^\circ$). In alto: quota massima visibile e distanza minima da cui una quota è vista, per $\Phi_v=58^\circ$. In basso: gli stessi limiti per profilo. \prova{C}}\label{tab:geo-verticale}
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+$z$ (m) & 1,24 & 1,7 & 1,9 & 2,0 & 2,3 & 3,0\\
+$y_{\max}$ (m) & 1,51 & 1,62 & 1,67 & 1,70 & 1,77 & 1,95\\
+\bottomrule
+\end{tabular}\qquad
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+quota (m) & 1,60 & 1,70 & 1,80 & 1,90 & 2,00\\
+vista da $z\ge$ (m) & 1,60 & 2,01 & 2,41 & 2,81 & 3,21\\
+\bottomrule
+\end{tabular}
+
+\smallskip
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+Profilo ($\Phi_v$) & $z_{\min}$ del suolo & $z$ minima per $a=0{,}15$ m & $\tan\beta_+$ & quota 1,80 m vista da\\
+\midrule
+D455, D435i (58°) & 1,243 m & 1,087 m & 0,249 & 2,41 m\\
+Gemini 335 (60°) & 1,200 m & 1,050 m & 0,268 & 2,24 m\\
+Gemini 335 (65°) & 1,100 m & 0,962 m & 0,315 & 1,90 m\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Ne segue che entro 3 m la colonna da 0 a 2 m di quota non è mai osservata per intero: una testa a 1,70 m non è vista sotto 2,01 m, e un ostacolo sospeso a 1,80 m non è visto sotto 2,41 m (tabella~\ref{tab:geo-verticale}). Lo stato «libero» della mappa (\S\ref{sec:map}) è quindi un'affermazione sul suolo e sul volume fino a $y_{\max}(z)$, non sulla colonna intera. La distanza $z_{\min}$ varia da 1,18 a 1,31 m per $\Phi_v=58^\circ\pm3^\circ$ e da 1,20 a 1,29 m per $\theta=15^\circ\pm1^\circ$. I valori sono verificati per calcolo e con un lancio di raggi su 848 × 480 pixel (minimo di $z$ al suolo 1,245 m ai centri dei pixel, uguale su tutte le colonne) \prova{C}. Valgono con suolo piano, posa nota e assenza di distorsione: su una rampa, o con la camera più inclinata, i limiti si spostano secondo il \S\ref{sec:geo-posa}.
+
+\begin{proposizione}[Frazione del disco coperta]\label{prop:geo-disco}
+Sia $D$ il disco di raggio 3 m centrato sulla proiezione della camera sul suolo, di area 28,27 m². (i)~Approssimando la regione vista con il settore d'anello di apertura $\Phi_h$ fra $\rho=z_{\min}$ e 3 m, l'area è $\tfrac12\Phi_h(3^2-z_{\min}^2)=5{,}66\unita{m^2}$, il 20,0 \% di $D$. (ii)~Con la regione esatta del Corollario~\ref{cor:geo-suolo} intersecata con $D$, l'area è 5,79 m², il 20,5 \% (integrazione numerica su una griglia di 2 mm). In entrambi i conti quattro quinti del disco non sono osservati dalla camera. \prova{C}
+\end{proposizione}
+
+\subsection{Ombra di un ostacolo}\label{sec:geo-ombra}
+
+\begin{proposizione}[Ombra sul suolo]\label{prop:geo-ombra}
+Un ostacolo opaco alto $a$, a distanza $\rho_o$ lungo una direzione $\varphi$, nasconde il suolo in quella direzione per
+\begin{equation}\label{eq:geo-ombra}
+\rho_o<\rho<\rho_o\,\frac{h}{h-a}\quad\text{se } a<h,\qquad\text{e per ogni }\rho>\rho_o\ \text{se } a\ge h.\ \text{\prova{D}}
+\end{equation}
+\end{proposizione}
+\begin{proof}
+Nel piano verticale per il centro e la direzione $\varphi$, il raggio che sfiora la cima $(\rho_o,a)$ ha equazione $y=h-(h-a)\rho/\rho_o$ e tocca il suolo in $\rho=\rho_o h/(h-a)$; i punti del suolo più vicini hanno il raggio intercettato dall'ostacolo. Se $a\ge h$ il raggio non scende.
+\end{proof}
+
+Esempi: $a=0{,}3$ m a 1,7 m dà ombra fino a 2,27 m; $a=0{,}5$ m a 1,5 m fino a 2,57 m; $a=1{,}0$ m a 1,5 m fino a 9,0 m. In pianta l'ombra è il cuneo compreso fra gli azimut dei due bordi dell'ostacolo (figura~\ref{fig:geo-pianta}); per un ostacolo più basso della camera il cuneo è troncato alla distanza della~\eqref{eq:geo-ombra} e non arriva al bordo della portata. Il risultato vale in ottica geometrica, per un ostacolo opaco su suolo piano.
+
+\begin{proposizione}[Altezza che nasconde una persona]\label{prop:geo-amin}
+Un pannello opaco a $z_o$, alto $a$, nasconde per intero dall'alto una persona di statura $s$ a $z_p>z_o$ se e solo se
+\begin{equation}\label{eq:geo-amin}
+a\;\ge\;a_{\min}=h+z_o\,\min\!\Bigl(\frac{s-h}{z_p},\;\tan\beta_+\Bigr).\ \text{\prova{D}}
+\end{equation}
+Viceversa, sopra un pannello alto $a$ resta visibile a $z_p$ la fascia di quota fra $h+(a-h)\,z_p/z_o$ e $\min\bigl(s,\,y_{\max}(z_p)\bigr)$.
+\end{proposizione}
+\begin{proof}
+Il raggio dal centro alla sommità $(z_p,s)$ passa a $z_o$ alla quota $h+(s-h)z_o/z_p$; se il pannello la raggiunge, ogni punto più basso della persona è nascosto, perché il suo raggio passa più in basso. Se $s>y_{\max}(z_p)$, la parte sopra il tetto del campo non è comunque vista e basta raggiungere il tetto a $z_o$, cioè $h+z_o\tan\beta_+$.
+\end{proof}
+
+\begin{table}[htb]\centering\small
+\caption{Altezza minima $a_{\min}$ (m) del pannello che nasconde per intero una persona a $z_p=2{,}3$ m, secondo la~\eqref{eq:geo-amin}, per statura $s$ e distanza $z_o$ del pannello. \prova{C}}\label{tab:geo-amin}
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+$s$ \textbackslash{} $z_o$ & 1,15 m & 1,5 m & 1,7 m & 1,8 m & 1,9 m & 2,0 m\\
+\midrule
+1,60 m & 1,40 & 1,46 & 1,50 & 1,51 & 1,53 & 1,55\\
+1,70 m & 1,45 & 1,53 & 1,57 & 1,59 & 1,61 & 1,63\\
+1,75 m & 1,48 & 1,56 & 1,61 & 1,63 & 1,65 & 1,68\\
+$\ge$ 1,77 m (tetto del campo) & 1,49 & 1,57 & 1,62 & 1,65 & 1,67 & 1,70\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Un pannello alto 1,5 m a 1,7--1,9 m dalla camera non nasconde una persona a 2,3 m: resta in vista ciò che supera 1,61 m (pannello a 1,7 m) o 1,56 m (a 1,9 m), fino al tetto di 1,77 m. A quelle distanze servono fra 1,61 m (statura 1,75 m) e 1,67 m (qualunque statura). Un pannello di 1,7 m nasconde ogni statura fino a $z_o=2{,}0$ m, a margine nullo a 2,0 m e con 3--8 cm a 1,9--1,7 m; un pannello di 1,8 m dà da 10 a 18 cm di margine contro l'errore di posa e la tolleranza del campo, che da sola sposta il tetto di circa ±5 cm a 1,9 m. Il pannello deve inoltre coprire in larghezza, come precisa la proposizione seguente.
+
+\begin{proposizione}[Durata dell'occlusione totale]\label{prop:geo-durata}
+Un pannello largo $L$ a $z_o$, parallelo al piano dell'immagine, proietta alla distanza $z_p$ un'ombra larga $L\,z_p/z_o$. Un corpo largo $w$ che la attraversa di traverso a velocità $v$ è nascosto per intero per
+\begin{equation}\label{eq:geo-durata}
+T_{\mathrm{tot}}=\frac{L\,z_p/z_o-w}{v}.\ \text{\prova{D}}
+\end{equation}
+\end{proposizione}
+\begin{proof}
+In pianta i raggi per i due bordi del pannello sono rette per l'origine: a $z_p$ distano $L z_p/z_o$ (triangoli simili). Il corpo è tutto nascosto finché entrambi i suoi estremi stanno nell'ombra, cioè lungo un tratto $L z_p/z_o-w$.
+\end{proof}
+
+A passo normale (1,0--1,4 m/s) un pannello da 1 m dà 0,54--0,90 s di occlusione totale, uno da 2 m dà 1,4--2,3 s (tabella~\ref{tab:geo-durata}).
+
+\begin{figure}[htb]\centering
+\begin{tikzpicture}[x=1.3cm,y=1.3cm,font=\scriptsize,>=Stealth]
+  \draw[muted] (-3,0) arc (180:0:3);
+  \draw[muted] (-3,0)--(3,0);
+  \fill[accent!13] (-1.435,1.243)--(1.435,1.243)--(2.182,2.058) arc (43.3:136.7:3)--cycle;
+  \begin{scope}
+    \clip (-1.435,1.243)--(1.435,1.243)--(2.182,2.058) arc (43.3:136.7:3)--cycle;
+    \foreach \r in {1.5,2,2.5}{\draw[white,line width=0.4pt] (0,0) circle (\r);}
+    \foreach \g in {50,60,...,130}{\draw[white,line width=0.4pt] (0,0)--(\g:3);}
+  \end{scope}
+  \draw[accent] (1.435,1.243)--(2.182,2.058);
+  \draw[accent] (-1.435,1.243)--(-2.182,2.058);
+  \draw[dashed,muted] (46.5:1.243) arc (46.5:133.5:1.243);
+  \draw[red!70!black,thick] (-1.435,1.243)--(1.435,1.243);
+  \begin{scope}
+    \clip (-3,0) arc (180:0:3)--cycle;
+    \draw[orange!40,line width=0.78cm,line join=round] (-0.5,1.8)--(0.5,1.8)--(0.9,3.24)--(-0.9,3.24)--cycle;
+    \fill[black!35] (-0.5,1.8)--(0.5,1.8)--(0.9,3.24)--(-0.9,3.24)--cycle;
+    \fill[red!65] (-0.5,1.8)--(-0.9,3.24)--(-1.03,3.24)--cycle;
+  \end{scope}
+  \draw[densely dotted] (0,0)--(-0.5,1.8);
+  \draw[densely dotted] (0,0)--(0.5,1.8);
+  \draw[line width=1.8pt] (-0.5,1.8)--(0.5,1.8);
+  \draw[white,line width=0.5pt] (-0.639,2.3)--(0.639,2.3);
+  \draw[fill=white] (0.12,2.3) ellipse [x radius=0.225,y radius=0.11];
+  \fill (0,0) circle (1.6pt) node[below]{camera};
+  \draw[muted] (0.62,2.3)--(1.75,2.62) node[right,text=black]{ombra larga $L\,z_p/z_o$; corpo largo $w$};
+  \draw[muted] (0.5,1.8)--(1.75,1.62) node[right,text=black]{pannello largo $L$ a $z_o$};
+  \draw[muted] (0.93,2.05)--(1.75,2.12) node[right,text=black]{fascia di guardia, larga $g$};
+  \draw[muted] (-0.74,2.6)--(-1.75,2.62) node[left,text=black]{banda senza dato $\Delta x$};
+  \draw[muted] (-1.0,1.243)--(-1.75,1.5) node[left,text=black]{$z=z_{\min}$};
+  \draw[muted] (-0.7,1.03)--(-1.75,0.9) node[left,text=black]{$\rho=z_{\min}$ (anello)};
+  \node[left] at (-2.6,2.2) {portata 3 m};
+  \node at (0,2.66) {ombra};
+\end{tikzpicture}
+\caption{Pianta. In azzurro la parte del suolo nel campo entro 3 m, con la griglia polare accennata: il confine vicino è la retta $z=z_{\min}$ (in rosso), non l'arco $\rho=z_{\min}$ (tratteggiato). Un pannello largo $L$ a $z_o$ proietta il cuneo d'ombra (grigio), largo $L\,z_p/z_o$ alla distanza $z_p$; attorno al cuneo, la fascia di guardia (arancione), la cui larghezza $g$ è fissata nel \S\ref{sec:occ}; sul lato sinistro del bordo, la banda senza disparità della Proposizione~\ref{prop:geo-banda} (disegno non in scala per $g$ e $\Delta x$).}\label{fig:geo-pianta}
+\end{figure}
+
+\begin{proposizione}[Banda senza dato accanto a un bordo]\label{prop:geo-banda}
+In una coppia stereo con riferimento sull'imager sinistro e base $b$, accanto a un bordo verticale a profondità $d_{\mathrm{bordo}}$, dal lato sinistro, lo sfondo a profondità $d_{\mathrm{sfondo}}$ non ha disparità su una banda larga
+\begin{equation}\label{eq:geo-banda}
+\Delta x=b\,\frac{d_{\mathrm{sfondo}}-d_{\mathrm{bordo}}}{d_{\mathrm{bordo}}}\ \ \text{(sullo sfondo)},\qquad \Delta u=f\,b\Bigl(\frac1{d_{\mathrm{bordo}}}-\frac1{d_{\mathrm{sfondo}}}\Bigr)\ \ \text{(in pixel)}.\ \text{\prova{D}}
+\end{equation}
+\end{proposizione}
+\begin{proof}
+In pianta, con l'imager sinistro in $(0,0)$ e il destro in $(b,0)$, l'ostacolo occupi $x\ge x_e$ alla profondità $d_{\mathrm{bordo}}$. Un punto $(x,d_{\mathrm{sfondo}})$ è visto dal sinistro se $x<x_e\,d_{\mathrm{sfondo}}/d_{\mathrm{bordo}}$; dal destro se il segmento da $(b,0)$ passa a sinistra del bordo, $b+(x-b)\,d_{\mathrm{bordo}}/d_{\mathrm{sfondo}}<x_e$, cioè $x<x_e\,d_{\mathrm{sfondo}}/d_{\mathrm{bordo}}-b\,(d_{\mathrm{sfondo}}-d_{\mathrm{bordo}})/d_{\mathrm{bordo}}$. La differenza dei due limiti è $\Delta x$; in pixel $\Delta u=f\,\Delta x/d_{\mathrm{sfondo}}$.
+\end{proof}
+
+\begin{table}[htb]\small
+\begin{minipage}[t]{0.52\textwidth}\centering
+\caption{Durata dell'occlusione totale $T_{\mathrm{tot}}$ (s) secondo la~\eqref{eq:geo-durata}, con $z_p=2{,}3$ m e $w=0{,}45$ m. \prova{C}}\label{tab:geo-durata}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+ & ombra & tratto & \multicolumn{3}{c}{velocità $v$ (m/s)}\\
+$L$; $z_o$ & (m) & nascosto (m) & 1,4 & 1,0 & 0,5\\
+\midrule
+1 m; 1,7 m & 1,35 & 0,90 & 0,64 & 0,90 & 1,81\\
+1 m; 1,9 m & 1,21 & 0,76 & 0,54 & 0,76 & 1,52\\
+2 m; 1,7 m & 2,71 & 2,26 & 1,61 & 2,26 & 4,51\\
+2 m; 1,9 m & 2,42 & 1,97 & 1,41 & 1,97 & 3,94\\
+\bottomrule
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.45\textwidth}\centering
+\caption{Banda senza disparità secondo la~\eqref{eq:geo-banda}, sullo sfondo (cm) e in pixel. \prova{C}}\label{tab:geo-banda}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+bordo; sfondo & D455 & D435i & Gemini 335\\
+\midrule
+1 m; 3 m & 19,0; 27 & 10,0; 14 & 10,0; 14\\
+1,5 m; 3 m & 9,5; 13 & 5,0; 7 & 5,0; 7\\
+2 m; 3 m & 4,8; 7 & 2,5; 4 & 2,5; 3\\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+
+La banda è sistematica e sta da un lato solo; i bordi orizzontali non ne hanno. Per la stessa ragione manca il dato su una striscia di $f\,b/d$ pixel al bordo sinistro dell'immagine (20 px a 2 m con $b=95$ mm, 11 px con 50 mm). Chi ricompare dal lato della banda è misurato $\Delta x/v$ più tardi: 0,16 s a 1,2 m/s con una banda di 19 cm. Il risultato è dimostrato nella geometria epipolare ideale e verificato numericamente (0,1900 m). Una misura di terzi su una camera della stessa famiglia riporta un rumore laterale di 4,3 cm, al 90° percentile, sul bordo sinistro del bersaglio \cite{ahn2019}, cioè dal lato previsto; l'ampiezza della banda su un esemplare reale non è verificata sperimentalmente \prova{N}, e i filtri di riempimento del costruttore, se attivi, la mascherano copiando lo sfondo \cite{realsense-filtri-post}.
+
+\subsection{Rumore di profondità dello stereo}\label{sec:geo-rumore}
+
+\begin{proposizione}[Rumore di profondità]\label{prop:geo-rumore}
+Se la disparità $\delta=f\,b/d$ è misurata con un errore di scarto tipo $\sigma_d$ (pixel), al primo ordine
+\begin{equation}\label{eq:geo-sigmaz}
+\sigma_z(d)=\frac{d^2}{f\,b}\,\sigma_d=k\,d^2,\qquad k=\frac{\sigma_d}{f\,b}.\ \text{\prova{D}}
+\end{equation}
+\end{proposizione}
+\begin{proof}
+Da $d=f\,b/\delta$ segue $\partial d/\partial\delta=-f\,b/\delta^2=-d^2/(f\,b)$; la tesi è la propagazione lineare dell'errore.
+\end{proof}
+
+Il costruttore dichiara che l'errore di profondità cresce con il quadrato della distanza e traccia la curva teorica con $\sigma_d=0{,}08$ px \cite{realsense-taratura-profondita}, indicando meno di 0,1 px per una camera ben tarata \cite{realsense-bkm-taratura}: è il valore qui detto «nominale». Il valore «limite» si ricava dal massimo dichiarato: scarto quadratico medio non superiore al 2 \% a 4 m per la D455 \cite{realsense-d455} ($k=0{,}02\cdot4/16=0{,}005\unita{m^{-1}}$), al 2 \% a 2 m per la D435i \cite{realsense-d400-accuratezza} ($k=0{,}010\unita{m^{-1}}$), all'1,5 \% a 2 m per la Gemini 335 \cite{orbbec-gemini-335} ($k=0{,}0075\unita{m^{-1}}$); per quest'ultima il nominale ($k=0{,}004\unita{m^{-1}}$) è letto da un grafico della scheda.
+
+\begin{table}[htb]\centering\small
+\caption{Rumore di profondità $\sigma_z$ (cm) secondo la~\eqref{eq:geo-sigmaz}, e passo di quantizzazione (mm) per una disparità quantizzata a 1/32 px. I valori nominali e limite sono calcolati da dati di scheda. \prova{C}}\label{tab:geo-rumore}
+\begin{tabular}{@{}llccccc@{}}
+\toprule
+Profilo ($f\,b$ in px·m) & & 1 m & 2 m & 3 m & 4 m & $\sigma_z=5$ cm a\\
+\midrule
+D455 (40,28) & nominale & 0,20 & 0,79 & 1,79 & 3,18 & 5,0 m\\
+ & limite & 0,50 & 2,00 & 4,50 & 8,00 & 3,2 m\\
+D435i (21,20) & nominale & 0,38 & 1,51 & 3,40 & 6,04 & 3,6 m\\
+ & limite & 1,00 & 4,00 & 9,00 & 16,0 & 2,2 m\\
+Gemini 335 (20,54) & nominale & 0,40 & 1,60 & 3,60 & 6,40 & 3,5 m\\
+ & limite & 0,75 & 3,00 & 6,75 & 12,0 & 2,6 m\\
+\midrule
+Passo di quantizzazione (mm) & D455 & 0,8 & 3,1 & 7,0 & 12,4 & \\
+ & D435i & 1,5 & 5,9 & 13,3 & 23,6 & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\emph{Quantizzazione.} Un passo di disparità $\epsilon_\delta$ dà un passo di profondità $d^2\epsilon_\delta/(f\,b)$ e uno scarto tipo pari a $1/\sqrt{12}$ di quel passo (2,0 mm a 3 m per la D455, 3,8 mm per la D435i): è inferiore al rumore nominale. Il valore $\epsilon_\delta=1/32$ px è un'ipotesi, non confermata da una scheda.
+
+\emph{Confronto con una misura indipendente.} Su una D435 a 848 × 480, con un bersaglio bianco frontale fra 0,4 e 2,1 m, è stato misurato $\sigma_z=0{,}00106+0{,}00073\,d+0{,}00395\,d^2$ (metri) \cite{ahn2019}: 1,83 cm a 2 m, cioè 1,21 volte il nominale (0,097 px equivalenti). A 3 m la stessa formula dà 3,9 cm, ma è un'estrapolazione fuori dall'intervallo misurato.
+
+\emph{Limiti di validità.} I valori dichiarati valgono su un bersaglio chiaro e frontale, nella parte centrale del campo. Il rumore è correlato nello spazio, quindi la media su $N$ pixel non lo riduce come $\sqrt N$. Dal punto di montaggio il suolo è visto con un'incidenza $\operatorname{atan}(\rho/h)$ dalla normale: 46° a 1,24 m, 60° a $\rho=h\tan 60^\circ=2{,}08$ m, 68° a 3 m; oltre 60° non esiste una misura del rumore sul suolo. Il comportamento sul suolo radente, su tessuti scuri e su superfici lucide non è verificato sperimentalmente \prova{N}.
+
+\emph{Risoluzione e rumore laterali.} Un pixel copre $d/f$: con il campo dichiarato di 87° ($f=446{,}8$ px) sono 4,5 mm a 2 m e 6,7 mm a 3 m. Un oggetto che debba coprire 5 pixel di lato è quindi osservabile a 3 m solo se è largo almeno 3,4 cm (6,7 cm a 6 m), e un oggetto di 1 cm solo entro 0,89 m; con $f=424$ px i valori crescono del 5 \% (3,5 cm). Il criterio dei 5 pixel è una convenzione. La sfocatura da moto vale la velocità per il tempo d'esposizione: 12 mm a 1,5 m/s con 8 ms, 45 mm con 30 ms. \prova{C}
+
+\subsection{Effetto di un errore di posa}\label{sec:geo-posa}
+
+\begin{proposizione}[Errore di quota]\label{prop:geo-posa}
+Se l'inclinazione creduta differisce dalla vera di $\delta\theta$, un punto del suolo a distanza $\rho$ sull'asse è ricostruito alla quota
+\begin{equation}\label{eq:geo-posa}
+\Delta y=\rho\sin\delta\theta+h\,(1-\cos\delta\theta)\;\approx\;\rho\,\delta\theta.\ \text{\prova{D}}
+\end{equation}
+\end{proposizione}
+\begin{proof}
+Rispetto al centro il punto è $(\rho,-h)$ nel piano verticale; una rotazione di $\delta\theta$ attorno all'asse trasversale porta la sua quota a $-h\cos\delta\theta+\rho\sin\delta\theta$, e la differenza da $-h$ è $\Delta y$.
+\end{proof}
+
+Con $\delta\theta=1^\circ$ l'errore è 3,5 cm a 2 m, 4,9 cm a 2,8 m e 5,2 cm a 3 m. Sia $y_s=0{,}07$ m la soglia di quota sopra la quale un ritorno è «occupato». Con un errore che alza il suolo, il pavimento supera la soglia oltre $\rho\approx y_s/\delta\theta$: con 2° il suolo risulta occupato da 1,99 m in poi. Con un errore che lo abbassa, un ostacolo alto $a$ scende sotto la soglia, ed è preso per suolo, quando
+\begin{equation}\label{eq:geo-suolo-falso}
+\rho\,\delta\theta>a-y_s :
+\end{equation}
+per $a=0{,}10$ m bastano 0,86° a 2 m, 0,67° a 2,55 m e 0,57° a 3 m; per $a=0{,}15$ m servono 2,3° a 2 m.
+
+\emph{Riscontro in simulazione} (catena di elaborazione completa su profondità simulata dalle schede tecniche; il primo caso su una scena senza rumore, il secondo con il profilo nominale della D435i). Un ostacolo di 10 cm a 2,55 m risulta «occupato» in 7 celle su 7 con errore nullo e «libero» in 7 su 7 con $+1^\circ$ (soglia prevista: 0,67°); uno di 12 cm cambia stato fra 1,0° e 1,5° (previsione 1,12°), uno di 15 cm fra 1,5° e 2,0° (previsione 1,78°). Per una scatola di 15 cm a 2,0--2,15 m, i fotogrammi con almeno una cella dell'impronta «libero» sono 0 su 10 a 0°, 1 su 10 a 1°, 2 su 10 a 2°, 9 su 10 a 2,5° (intervallo di Wilson al 95 \%: 0,60--0,98) e 10 su 10 a 3° (0,72--1); la soglia prevista è 2,1--2,3°. Le soglie previste dalla~\eqref{eq:geo-suolo-falso} sono compatibili con i cambi di stato osservati; le numerosità ($N=7$ celle, $N=10$ fotogrammi) sono piccole e non bastano a misurare una soglia \prova{S}. La proprietà «mai libero su un ostacolo» (\S\ref{sec:map}) vale quindi solo a posa nota entro questi margini. I requisiti sulla posa per un sensore in moto, che usano la~\eqref{eq:geo-posa}, sono analizzati nel \S\ref{sec:lim}.
+
+\subsection{Sensori a tempo di volo multizona e LiDAR a scansione su un piano}\label{sec:geo-altri}
+
+Sono stati considerati, come complemento laterale, i sensori a tempo di volo multizona. Il VL53L7CX ha un campo di 60° × 60° su una matrice di 8 × 8 zone, con portata di 2,0 m al buio e 0,5 m con 5 klx (chilolux) di luce ambiente a 15 Hz \cite{st-vl53l7cx}; il VL53L8CX ha un campo di 45° × 45°, con 1,55 m a 5 klx \cite{st-vl53l8cx}. Una zona sottende 7,5° (5,625° nel secondo), e a distanza $D$ il suo lato è $2D\tan(\text{passo}/2)$ (tabella~\ref{tab:geo-tof}).
+
+\begin{table}[htb]\small
+\begin{minipage}[c]{0.57\textwidth}\centering
+\begin{tabular}{@{}lcc@{}}
+\toprule
+ & VL53L7CX & VL53L8CX\\
+\midrule
+Lato di una zona a 2 m; diagonale & 26 cm; 37 cm & 20 cm; 28 cm\\
+Campo intero a 2 m & 2,31 m & 1,66 m\\
+Tre sensori affiancati & 180° × 60° & 135° × 45°\\
+Sensori necessari per 360° & 6 & 8\\
+Portata: buio / 5 klx & 2,0 m / 0,5 m & 4,0 m / 1,55 m\\
+Persona larga 0,5 m a 4 m & 0,95 zone & 1,27 zone\\
+\bottomrule
+\end{tabular}
+\caption{Sensori a tempo di volo multizona: geometria delle zone e copertura. Campi e portate (matrice 8 × 8 a 15 Hz, bersaglio bianco) dalle schede \cite{st-vl53l7cx,st-vl53l8cx}; il resto per calcolo. \prova{C}}\label{tab:geo-tof}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.40\textwidth}\centering
+\begin{tikzpicture}[x=0.56cm,y=0.56cm,font=\scriptsize]
+  \draw[muted] (0,0) circle (3);
+  \fill[accent!18] (46.5:1.243) arc (46.5:133.5:1.243)--(133.5:3) arc (133.5:46.5:3)--cycle;
+  \foreach \g in {0,60,120}{\fill[orange!45,opacity=0.55] (0,0)--(\g:2) arc (\g:\g+60:2)--cycle; \draw[orange!70!black] (0,0)--(\g:2) arc (\g:\g+60:2)--cycle;}
+  \foreach \g in {0,60,120}{\fill[orange!80!black] (0,0)--(\g:0.5) arc (\g:\g+60:0.5)--cycle;}
+  \fill (0,0) circle (1.2pt);
+  \node at (0,2.35) {campo};
+  \node at (0,-1.5) {180° scoperti};
+  \node[orange!50!black] at (-1.25,0.75) {2 m};
+  \begin{scope}[shift={(3.6,-2.0)},x=1.0cm,y=1.0cm]
+    \fill[black!22] (0.905,0) rectangle (1.405,1.655);
+    \draw[step=0.28875,muted] (0,0) grid (2.31,2.31);
+    \draw (0,0) rectangle (2.31,2.31);
+    \node[above] at (1.155,2.31) {8 × 8 a 2 m: 2,31 m};
+  \end{scope}
+\end{tikzpicture}
+\captionof{figure}{Copertura in pianta entro il disco di 3 m: settore della camera (azzurro, schematico), tre sensori a tempo di volo da 60° con portata 2 m al buio e 0,5 m a 5 klx (arancione). A destra, la matrice a 2 m (zone di 26 cm) con la sagoma di una persona larga 0,5 m.}\label{fig:geo-tof}
+\end{minipage}
+\end{table}
+
+Tre sensori affiancati coprono dunque 180°, non 360° (figura~\ref{fig:geo-tof}). Per regola di progetto il canale a tempo di volo è solo un indicatore laterale di prossimità e non genera mai lo stato «libero», per tre ragioni geometriche. (a)~Una zona restituisce una sola distanza per un cono largo 26 cm a 2 m, contro celle della mappa di 1° × 0,1 m (3,5 cm × 10 cm a 2 m): non distingue il suolo visto alla quota attesa da un ostacolo basso. (b)~Da 1,2 m di altezza la distanza obliqua dal suolo è almeno 1,20 m e vale 2,33 m a $\rho=2$ m: è oltre la portata con luce ambiente (0,5 m a 5 klx su un bersaglio bianco). (c)~Una zona senza bersaglio valido significa «nessun dato», non «vuoto»: la guida del costruttore assegna al primo campione dopo un'assenza di bersaglio uno stato con fiducia inferiore al 50 \% \cite{st-um3038}. Come copertura, tre sensori da 60° con portata 2 m aggiungono $3\cdot\tfrac12\cdot\tfrac{\pi}{3}\cdot2^2=6{,}28\unita{m^2}$, il 22,2 \% del disco di 3 m, al buio; con portata 0,5 m l'1,4 \%. L'interferenza ottica fra il proiettore della camera e i sensori a tempo di volo non è verificata sperimentalmente \prova{N}.
+
+Un LiDAR (\emph{light detection and ranging}) a scansione su un piano, con passo angolare di 0,72° \cite{slamtec-rplidar-c1} o di 0,8° (valore derivato da 4500 misure al secondo a 10 giri al secondo \cite{ldrobot-ld19}), vede solo ciò che interseca il piano alla quota di montaggio: non gradini, ostacoli bassi, tavoli od oggetti sospesi. Il passo fra due punti a 3 m è 3,8--4,2 cm: 12--13 punti su una persona larga 0,5 m a 3 m, meno di 2 su una gamba di 12 cm a 5 m. Ogni punto ha inoltre il proprio istante: a 30°/s il sensore ruota di 3° dentro un giro. \prova{C}
+
+\begin{riquadro}{Condizioni di validità del capitolo}
+Foro stenopeico senza distorsione; suolo piano; posa $(h,\theta)$ nota e camera ferma (per il sensore in moto valgono i requisiti del \S\ref{sec:lim}); ostacoli opachi che restituiscono profondità (vetro, specchi, nero assorbente e pavimenti lucidi sono fuori dal modello); campi e basi come da scheda, con ±3° di tolleranza; rumore gaussiano in disparità. La fascia di guardia attorno all'ombra è trattata nel \S\ref{sec:occ}, il bilancio di latenza nel \S\ref{sec:lim}. Tutte le cifre sono conti o simulazioni: la loro validità su un sensore reale non è verificata sperimentalmente.
+\end{riquadro}

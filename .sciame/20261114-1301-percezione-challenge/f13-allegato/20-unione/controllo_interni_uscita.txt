@@ -1,0 +1,5 @@
+File esaminati: 14
+ECCEZIONE allegato_tecnico.tex:4  [squadra]  «squadra»  motivo: definizione del comando \squadra chiesto per il frontespizio: lo compila l'utente
+ECCEZIONE allegato_tecnico.tex:4  [squadra]  «squadra»  motivo: definizione del comando \squadra chiesto per il frontespizio: lo compila l'utente
+ECCEZIONE allegato_tecnico.tex:13  [squadra]  «squadra»  motivo: uso del comando \squadra nel frontespizio: nel PDF compare il nome scritto dall'utente
+Occorrenze non ammesse: 0; eccezioni motivate: 3

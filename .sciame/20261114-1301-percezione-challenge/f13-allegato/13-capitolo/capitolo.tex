@@ -1,0 +1,211 @@
+\section{Rappresentazione dello spazio e sicurezza del «libero»}\label{sec:map}
+
+Il capitolo definisce la mappa del suolo e la regola con cui una cella è dichiarata «libero», enuncia che cosa quella dichiarazione garantisce e in quale modello, elenca i casi in cui la garanzia cade e misura quanto «libero» vero la regola rinuncia a dichiarare. Tutti i risultati numerici sono dimostrazioni, conti o simulazioni: nessuno è stato ottenuto su un sensore fisico.
+
+\subsection{Mappa polare del suolo a quattro stati}\label{sec:map-stati}
+
+Il suolo davanti alla camera è diviso in celle polari $c=(\varphi,\rho)$ di $1^\circ\times0{,}1\unita{m}$ fino alla portata di $3\unita{m}$: con un campo orizzontale di $87^\circ$ sono $N_c=87\cdot30=2\,610$ celle \prova{C}. Sia $X$ la regione coperta. La camera è ferma ($h=1{,}2\unita{m}$, $\theta=15^\circ$, \S\ref{sec:geo}), quindi la corrispondenza fra pixel e celle si calcola una sola volta: per ogni pixel $p$ il cui raggio tocca il suolo entro $3\unita{m}$ si tabulano la cella toccata $c(p)$ e la profondità attesa del suolo $z_0(p)$. L'\emph{impronta} di una cella è $I(c)=\{p: c(p)=c\}$, con $n(c)=|I(c)|$ pixel; nella camera usata in simulazione ($320\times240$ pixel) una cella ha circa 12 pixel a $2\unita{m}$ e 4 a $3\unita{m}$. A ogni fotogramma ogni pixel valido è assegnato alla sua cella con queste tabelle; nessun raggio viene percorso.
+
+\begin{definizione}[Stati della cella]\label{def:map-stati}
+Sia $D_t$ l'immagine di profondità del fotogramma $t$. Una cella $c\in X$ è:
+\begin{enumerate}[label=(\roman*)]
+\item \emph{occupato osservato}, se almeno 3 pixel validi di $D_t$ hanno il punto ricostruito dentro $c$ a quota compresa fra $0{,}07$ e $2{,}0\unita{m}$;
+\item \emph{in ombra}, cioè $c\in\Omb(t)$, se non è occupata e sta oltre la prima cella occupata del suo azimut;
+\item \emph{libero}, cioè $c\in\Oss(t)$, se soddisfa la regola della Definizione~\ref{def:map-libero};
+\item \emph{non osservato}, in ogni altro caso.
+\end{enumerate}
+I quattro stati formano una partizione di $X$ e sono ricalcolati a ogni fotogramma.
+\end{definizione}
+
+I due stati senza osservazione diretta hanno significati diversi. «In ombra» dice che il fotogramma contiene un ostacolo e che la cella sta dietro di esso lungo la linea di vista: il contenuto non è noto, la causa sì. «Non osservato» dice che il fotogramma non porta alcuna informazione sufficiente sulla cella: fuori campo, oltre la portata, pixel non validi, suolo letto da troppo pochi pixel, oppure cella adiacente a una cella non letta. La distinzione serve al capitolo \S\ref{sec:occ}: la «possibile presenza» nasce sull'ombra in cui è entrato un oggetto seguito, non su tutto il non osservato. In nessun caso «non osservato» o «in ombra» diventano «libero».
+
+\begin{figure}[H]\centering
+\begin{tikzpicture}[scale=1.35,font=\footnotesize]
+  % non osservato: tutto il settore
+  \fill[muted!22] (0,0) -- (46.5:3) arc (46.5:133.5:3) -- cycle;
+  % libero: centro da 1,3 m, lati da 1,7 m
+  \fill[accent!22] (61.5:1.3) arc (61.5:118.5:1.3) -- (118.5:3) arc (118.5:61.5:3) -- cycle;
+  \fill[accent!22] (46.5:1.7) arc (46.5:61.5:1.7) -- (61.5:3) arc (61.5:46.5:3) -- cycle;
+  \fill[accent!22] (118.5:1.7) arc (118.5:133.5:1.7) -- (133.5:3) arc (133.5:118.5:3) -- cycle;
+  % cella di guardia attorno a occupato e ombra (torna «non osservato»)
+  \fill[muted!22] (91:1.88) arc (91:112:1.88) -- (112:3) arc (112:91:3) -- cycle;
+  \draw[muted,densely dotted] (91:3) -- (91:1.88) arc (91:112:1.88) -- (112:3);
+  % ombra
+  \fill[white] (94:2.12) arc (94:109:2.12) -- (109:3) arc (109:94:3) -- cycle;
+  \fill[pattern=north east lines,pattern color=muted] (94:2.12) arc (94:109:2.12) -- (109:3) arc (109:94:3) -- cycle;
+  % occupato
+  \fill[accent] (94:2.0) arc (94:109:2.0) -- (109:2.12) arc (109:94:2.12) -- cycle;
+  % reticolo
+  \foreach \r in {1,2,3} {\draw[muted!70,very thin] (46.5:\r) arc (46.5:133.5:\r); \node[muted,anchor=west] at (45:\r) {$\r\unita{m}$};}
+  \draw[muted] (0,0) -- (46.5:3) arc (46.5:133.5:3) -- cycle;
+  \draw[muted,very thin,dashed] (94:0) -- (94:2.0) (109:0) -- (109:2.0);
+  \fill (0,0) circle (1.4pt) node[below] {camera};
+  \draw[-{Stealth}] (0,0) -- (90:0.55) node[right] {$z$};
+  \draw[-{Stealth}] (0,0) -- (0:0.55) node[below] {$x$};
+  % legenda
+  \begin{scope}[shift={(2.9,2.55)}]
+    \fill[accent!22] (0,0) rectangle (0.32,0.2); \node[anchor=west] at (0.4,0.1) {libero, $\Oss(t)$};
+    \fill[accent] (0,-0.38) rectangle (0.32,-0.18); \node[anchor=west] at (0.4,-0.28) {occupato osservato};
+    \draw[muted] (0,-0.76) rectangle (0.32,-0.56); \fill[pattern=north east lines,pattern color=muted] (0,-0.76) rectangle (0.32,-0.56); \node[anchor=west] at (0.4,-0.66) {in ombra, $\Omb(t)$};
+    \fill[muted!22] (0,-1.14) rectangle (0.32,-0.94); \node[anchor=west] at (0.4,-1.04) {non osservato};
+    \draw[muted,densely dotted] (0,-1.52) rectangle (0.32,-1.32); \node[anchor=west,text width=4.4cm] at (0.4,-1.42) {cella di guardia (non osservato)};
+  \end{scope}
+\end{tikzpicture}
+\caption{Mappa polare del suolo attorno a un ostacolo, in pianta (schema non in scala: celle e cella di guardia ingrandite). Il suolo vicino alla camera, i lati del campo dove il suolo entra più lontano, l'esterno del campo e ciò che sta oltre $3\unita{m}$ sono «non osservato».}\label{fig:map-polare}
+\end{figure}
+
+\subsection{La regola del «libero»: impronta del suolo con cella di guardia}\label{sec:map-regola}
+
+Un pixel $p$ \emph{legge il suolo} nel fotogramma $t$ se $D_t(p)$ è valido e
+\begin{equation}\label{eq:map-margine}
+|D_t(p)-z_0(p)|\le m\big(z_0(p)\big),\qquad m(z)=0{,}03+3\,k\,z^2\ \ [\mathrm{m}],
+\end{equation}
+dove il termine $k\,z^2$ segue la crescita quadratica del rumore di profondità con la distanza (\S\ref{sec:geo}) e $k$ dipende dal sensore.
+
+\begin{definizione}[Regola del «libero» della cella]\label{def:map-libero}
+A ogni fotogramma, senza alcuna memoria dei fotogrammi precedenti:
+\begin{enumerate}
+\item $\mathrm{buoni}(c)$ è il numero di pixel di $I(c)$ che leggono il suolo secondo la \eqref{eq:map-margine};
+\item $c$ è \emph{letta} se $\mathrm{buoni}(c)\ge n(c)/2$ (e almeno 1), e $c$ non è occupata né in ombra;
+\item $c$ è \emph{libero} se è letta e sono lette tutte le sue 8 celle vicine con $n>0$ (\emph{cella di guardia}).
+\end{enumerate}
+Occupato e ombra del fotogramma corrente prevalgono; nessun «libero» è ricordato, dedotto o prodotto da un contatore di tempo.
+\end{definizione}
+
+\textbf{Parametri.} Cella $1^\circ\times0{,}1\unita{m}$; quota d'ostacolo $0{,}07$–$2{,}0\unita{m}$; 3 pixel minimi per l'occupato; $k=0{,}004$ per il modello nominale del sensore e $k=0{,}0100$ per quello al limite; soglia di metà impronta; una cella di guardia; inclinazione nota entro $0{,}5^\circ$; memoria di 0 fotogrammi (Appendice~\ref{sec:par}). La soglia di metà impronta e la cella di guardia sono state scelte dopo un primo confronto fra varianti sullo stesso insieme di scene (Tabella~\ref{tab:map-regole}); la verifica è stata poi ripetuta su semi diversi.
+
+\subsection{Proposizione di sicurezza}\label{sec:map-sicurezza}
+
+\begin{ipotesi}[Profondità valida = giusta]\label{ip:map-valida} Un pixel valido con profondità $d$ garantisce che il suo raggio è privo di superfici fino a $d$, meno la tolleranza di misura.\end{ipotesi}
+\begin{ipotesi}[Camera ferma, posa nota entro una tolleranza]\label{ip:map-posa} L'errore di posa sposta un punto a distanza $\rho$ di al più $\varepsilon_p(\rho)=\varepsilon_t+\rho\,\delta_\theta$, con $\varepsilon_t$ errore di traslazione e $\delta_\theta$ errore angolare in radianti.\end{ipotesi}
+\begin{ipotesi}[Pavimento piano]\label{ip:map-piano} Il suolo è un piano.\end{ipotesi}
+
+\begin{proposizione}[Sicurezza del «libero»]\label{prop:map-sicurezza}
+Si assuma la regola: lo stato «libero» è scritto solo dalla funzione che legge il fotogramma corrente, e solo per le celle di $\Oss(t)$. Allora:
+\begin{enumerate}[label=(\alph*)]
+\item nessuna cella in ombra, fuori campo, oltre portata o con pixel non validi nel fotogramma $t$ è dichiarata libera al fotogramma $t$;
+\item sotto le Ipotesi~\ref{ip:map-valida}, \ref{ip:map-posa} (con $\varepsilon_p=0$) e \ref{ip:map-piano}, se una cella è dichiarata libera al fotogramma $t$, all'istante d'acquisizione nessuna superficie interseca i raggi dei pixel che ne leggono il suolo.
+\end{enumerate}
+\end{proposizione}
+\begin{proof}
+(a) Per la Definizione~\ref{def:map-libero}, $\Oss(t)$ contiene solo celle il cui suolo è letto da pixel validi del fotogramma $t$ e che non sono occupate né in ombra; gli stati sono una partizione, quindi una cella in ombra o non osservata non sta in $\Oss(t)$, e nessun'altra funzione scrive «libero». (b) Un pixel valido che restituisce il suolo alla quota attesa ha profondità pari alla distanza del suolo lungo il raggio (Ipotesi~\ref{ip:map-piano} e posa esatta); per l'Ipotesi~\ref{ip:map-valida} il raggio è vuoto fino a quella profondità.
+\end{proof}
+\emph{Livello di prova.} (a) \prova{D} per costruzione; (b) \prova{D} nel modello delle tre ipotesi, \prova{N}.
+
+\begin{osservazione}[Che cosa la proposizione non dice]\label{oss:map-nondice}
+(i) La garanzia riguarda il suolo e i raggi che lo raggiungono, non la colonna sopra la cella: un oggetto sospeso sopra quei raggi lascia la cella «libero». L'uscita corretta è «suolo visto libero», non «spazio libero». (ii) La parte (b) copre i raggi dei pixel che leggono il suolo, non l'intera cella: con la soglia di metà impronta gli altri pixel non sono coperti dalla dimostrazione, e la sicurezza della cella intera è verificata in simulazione (\S\ref{sec:map-banco}), non dimostrata. (iii) La garanzia vale all'istante d'acquisizione, non a quello d'uso (\S\ref{sec:occ}). In simulazione, con modello ideale del sensore (150 fotogrammi, finestra d'uso di $0{,}20\unita{s}$), 537 celle·fotogramma dichiarate libere su 88\,418 risultano occupate entro la finestra; un margine di $0{,}33\unita{m}$ (per $1{,}4\unita{m/s}$) attorno a ombra e non osservato porta gli errori a 0 ma conserva lo $0{,}4\,\%$ del libero \prova{S}.
+\end{osservazione}
+
+\begin{lemma}[Margine di posa]\label{lem:map-posa}
+Sotto l'Ipotesi~\ref{ip:map-posa}, sia $\hat{\Oss}(t)$ il libero calcolato con la posa stimata e $x$ un punto a distanza $\rho$. Se il disco di centro $x$ e raggio $\varepsilon_p(\rho)$ è contenuto in $\hat{\Oss}(t)$, allora $x$ è libero nel riferimento vero.
+\end{lemma}
+\begin{proof} La posa vera porta $x$ in un punto $x'$ con $|x-x'|\le\varepsilon_p(\rho)$; quindi $x'$ appartiene al disco, che è contenuto in $\hat{\Oss}(t)$.\end{proof}
+A $\rho=3\unita{m}$: $\delta_\theta=0{,}5^\circ$ dà $3\cdot0{,}00873=2{,}6\unita{cm}$; $\varepsilon_t=3\unita{cm}$ e $\delta_\theta=1^\circ$ danno $3+5{,}2=8{,}2\unita{cm}$; $\varepsilon_t=5\unita{cm}$ e $\delta_\theta=2^\circ$ danno $5+10{,}5=15{,}5\unita{cm}$ \prova{C}. In simulazione su una sezione piana (200 scene per caso), senza margine le scene con almeno un falso «libero» sono 114 su 200 e 162 su 200; con un margine non inferiore a quello teorico 0 su 200; con $10\unita{cm}$ dove ne servono $15{,}5$, 1 su 200 \prova{S}. Per l'errore d'inclinazione vale inoltre un conto diretto (piano e raggio ideali): un oggetto alto $10\unita{cm}$ resta sopra la soglia di quota di $0{,}07\unita{m}$ se l'errore è sotto $0{,}69^\circ$ a $2{,}5\unita{m}$ e sotto $0{,}57^\circ$ a $3\unita{m}$; con $1^\circ$ la sua quota letta scende a $5{,}6$ e $4{,}8\unita{cm}$ \prova{C}. Da qui la tolleranza d'inclinazione di $0{,}5^\circ$ del dominio.
+
+\subsection{Verifica in simulazione della regola}\label{sec:map-banco}
+
+\textbf{Insieme di prova.} In simulazione, con modello ideale del sensore: camera ferma $320\times240$ pixel, campo $87^\circ\times58^\circ$, $h=1{,}2\unita{m}$, $\theta=15^\circ$; griglia $87\times30$. Dieci scene; $k\in\{0{,}004;\,0{,}0100\}$; cinque regimi di pixel non validi (nessuno; sparsi al $5\,\%$ e al $30\,\%$; a chiazze di $20\times20$ pixel al $5\,\%$ e al $30\,\%$); cinque errori d'inclinazione ($0$, $\pm0{,}5^\circ$, $\pm1^\circ$: la camera è inclinata di $15^\circ+e$, la regola assume $15^\circ$): 500 condizioni di 30 fotogrammi, cioè 15\,000 fotogrammi, generati due volte con semi diversi. Si conta una \emph{violazione} quando una cella «libero» ha il centro dentro la pianta di un corpo appoggiato, o quando il suolo del suo centro è nascosto da un corpo.
+
+\begin{table}[t]\centering\small
+\caption{Regole candidate per il «libero» della cella: fotogrammi con almeno una violazione su 7\,200 (8 scene, 2 valori di $k$, 5 regimi di pixel non validi, errore d'inclinazione $0$ e $\pm0{,}5^\circ$); fra parentesi la ripetizione con semi diversi. Ultima colonna: mediana per settore della distanza di suolo libero in una stanza vuota con il $5\,\%$ di pixel non validi sparsi (scala da $1{,}3$ a $3{,}0\unita{m}$; uguale per i due valori di $k$). In simulazione, con modello ideale del sensore \prova{S}.}\label{tab:map-regole}
+\begin{tabularx}{\linewidth}{Lrr}
+\toprule
+Regola & Fotogrammi con violazione & Distanza mediana \\
+\midrule
+Lettura di un punto sopra il centro della cella (a $0{,}10\unita{m}$) & 932 (899) & $1{,}3\unita{m}$\\
+Lettura di un punto a $0{,}20\unita{m}$ dal suolo & 1\,732 (1\,742) & $1{,}3\unita{m}$\\
+Lettura a $0{,}20\unita{m}$ con veto delle celle occupate e quota verificata & 163 (179) & $1{,}3\unita{m}$\\
+Impronta: basta un pixel che legge il suolo & 98 (126) & $3{,}0\unita{m}$\\
+Impronta: metà dei pixel, senza cella di guardia & 6 (9) & $3{,}0\unita{m}$\\
+\textbf{Impronta: metà dei pixel e cella di guardia} (Def.~\ref{def:map-libero}) & \textbf{0 (0)} & $3{,}0\unita{m}$\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\textbf{Sicurezza.} La Tabella~\ref{tab:map-regole} confronta la regola adottata con le varianti più semplici. La lettura di un solo punto per cella cade perché la cella è estesa (a $0{,}20\unita{m}$: 15\,648 celle libere dentro un corpo); la variante con veto cade con i pixel non validi a chiazze, che tolgono i pixel che testimoniano l'ostacolo; con un solo pixel dell'impronta basta un raggio che sfiora il bordo del corpo. La regola adottata dà 0 violazioni su 9\,000 fotogrammi (10 scene, 300 condizioni con errore d'inclinazione entro $\pm0{,}5^\circ$), in entrambe le generazioni; le 300 condizioni comprendono un corpo che non rimanda segnale (0 su 900 fotogrammi, dove la regola a un pixel cade in 900 su 900) e una scatola alta $10\unita{cm}$ a $2{,}6$–$2{,}9\unita{m}$ (0 su 900). Una seconda esecuzione, con semi scelti in modo indipendente, dà ancora 0 su 9\,000 \prova{S}. Lo zero va letto per condizione, non per fotogramma, perché i fotogrammi di una condizione condividono la scena: 0 su 300 condizioni ha limite superiore al $95\,\%$ pari a $1{,}3\,\%$ (Wilson~\cite{wilson1927}); per scena, 0 su 10, il limite è $28\,\%$. Le scene sono state scelte, non campionate: il risultato è «verificato sull'insieme dichiarato», e la garanzia resta la Proposizione~\ref{prop:map-sicurezza} nelle sue ipotesi.
+
+\textbf{Il prezzo in resa.} La Tabella~\ref{tab:map-resa} riporta la quota del libero vero che la regola dichiara. La cella di guardia costa $2{,}5$ punti senza pixel non validi, 23 punti con il $30\,\%$ sparso e 19 con il $30\,\%$ a chiazze. La perdita è sempre dal lato prudente: libero vero dichiarato «non osservato». Con pixel non validi fitti lo stato di una cella cambia fino a 6–7 volte al secondo, sempre verso il lato prudente, contro $0{,}01$ cambi per cella al secondo con il $5\,\%$ sparso \prova{S}. Quale forma abbiano i pixel non validi di un sensore reale non è verificato sperimentalmente \prova{N}.
+
+\begin{table}[t]\centering\small
+\caption{Resa del libero vero (media su 8 scene e 2 valori di $k$, errore d'inclinazione nullo) e distanza mediana di suolo libero per settore (stanza vuota, $k=0{,}004$). In simulazione, con modello ideale del sensore; rapporti di conteggi, senza intervallo \prova{S}.}\label{tab:map-resa}
+\begin{tabular}{lrrr}
+\toprule
+Pixel non validi & Metà impronta, senza guardia & Regola adottata & Distanza per settore\\
+\midrule
+nessuno & $89{,}3\,\%$ & $86{,}8\,\%$ & —\\
+$5\,\%$ sparsi & $89{,}3\,\%$ & $86{,}8\,\%$ & $3{,}0\unita{m}$\\
+$30\,\%$ sparsi & $86{,}0\,\%$ & $62{,}6\,\%$ & $1{,}5\unita{m}$\\
+$5\,\%$ a chiazze & $85{,}0\,\%$ & $78{,}3\,\%$ & $3{,}0\unita{m}$\\
+$30\,\%$ a chiazze & $64{,}1\,\%$ & $45{,}4\,\%$ & $1{,}4\unita{m}$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Con il $30\,\%$ di pixel non validi la distanza mediana scende a $1{,}4$–$1{,}5\unita{m}$ e il $43$–$47\,\%$ dei settori risponde «sconosciuto». Anche l'errore d'inclinazione dentro il dominio costa resa: in una stanza vuota, con $k=0{,}0100$ e $+0{,}5^\circ$ la resa è $80{,}6\,\%$ e la distanza mediana $2{,}4\unita{m}$; con $+1^\circ$, $33{,}7\,\%$ e $1{,}6\unita{m}$; con $k=0{,}004$ e $-1^\circ$, $82{,}4\,\%$ e $2{,}3\unita{m}$ \prova{S}.
+
+\subsection{Controesempi e limiti del dominio}\label{sec:map-controesempi}
+
+\begin{controesempio}[Errore d'inclinazione di $1^\circ$]\label{cex:map-inclinazione}
+Cade l'Ipotesi~\ref{ip:map-posa} oltre la tolleranza. Con errore di $-1^\circ$ la scatola alta $10\unita{cm}$ a $2{,}6$–$2{,}9\unita{m}$ è dichiarata «libero» in 150 fotogrammi su 300 (503 celle); in una seconda esecuzione con altri semi, in 146 su 300. Sulle 8 scene di base la regola resta a 0 violazioni anche a $\pm1^\circ$ (4\,800 fotogrammi). In simulazione, con modello ideale del sensore \prova{S}.
+\end{controesempio}
+
+\begin{controesempio}[Vetro: profondità valida ma sbagliata]\label{cex:map-vetro}
+Cade l'Ipotesi~\ref{ip:map-valida}: il pixel è valido, ma misura ciò che sta dietro la lastra. In simulazione, con una lastra trasparente di $1\times2\unita{m}$ a $2{,}0\unita{m}$ dal sensore, la lettura del fotogramma corrente dà per liberi 654 punti della lastra su 800 (600 su 800 con la lastra a $1{,}5\unita{m}$) \prova{S}. Nessuna regola sulla mappa risolve questo limite.
+\end{controesempio}
+
+\begin{controesempio}[Ostacolo che non rimanda segnale]\label{cex:map-muto}
+La parte (a) della Proposizione~\ref{prop:map-sicurezza} protegge solo dove i pixel dell'ostacolo risultano non validi su più di metà dell'impronta della cella o di una cella vicina. Un corpo esteso che non rimanda segnale è retto dalla regola adottata (0 su 900 fotogrammi, \S\ref{sec:map-banco}). Un palo di $3\unita{cm}$ a $2{,}05\unita{m}$ con i pixel posti a zero, in una scena di prova letta con una regola precedente, ha il piede «libero» in 6 fotogrammi su 6 \prova{S}; con la regola adottata il caso non è stato provato \prova{N}.
+\end{controesempio}
+
+\textbf{Altri limiti} (in simulazione, con modello ideale del sensore \prova{S}). Sotto un ostacolo sospeso il suolo visto resta «libero» (374 celle nell'insieme di prova): è il caso (i) dell'Osservazione~\ref{oss:map-nondice}. Una barra orizzontale di $1\unita{cm}$ a quota $0{,}8\unita{m}$ e a $2{,}0\unita{m}$ di distanza lascia la distanza per settore oltre la barra nel $4{,}7$–$7{,}3\,\%$ dei settori·fotogramma (7–11 su 150); con $2\unita{cm}$ o più, 0 su 150. Un oggetto alto $0{,}35\unita{m}$ a $0{,}5$–$0{,}8\unita{m}$, o alto $0{,}60\unita{m}$ a $0{,}3$–$0{,}6\unita{m}$, non produce alcun pixel, e il settore riporta $3{,}0\unita{m}$: l'uscita dichiara perciò in modo esplicito che il suolo è visto solo da $1{,}3\unita{m}$ in poi (\S\ref{sec:map-uscita}). Restano fuori dal dominio il suolo non piano e il sensore in moto (\S\ref{sec:lim}).
+
+\subsection{Misure su profondità simulata dalle schede tecniche}\label{sec:map-schede}
+
+Su profondità simulata dalle schede tecniche di tre camere di profondità (modelli di rumore nominale e al limite), a posa esatta e con ostacoli che restituiscono profondità, le celle dichiarate «libero» dentro l'ombra vera di un ostacolo sono 0 su 2\,907\,032 celle·fotogramma, in 135 sequenze con tre forme d'ombra; per sequenza, 0 su 131 con i filtri della camera spenti (limite superiore $2{,}9\,\%$) \prova{S}. La misura è stata fatta con una regola di lettura precedente, che conservava il «libero» per tre fotogrammi: sostiene la parte (a) su una profondità con rumore e pixel non validi realistici, non la Definizione~\ref{def:map-libero}. Una ripetizione successiva su 381 sequenze, con la stessa regola precedente, dà 5 celle·fotogramma «libero» nell'ombra vera su 3\,992\,186 (4 con il modello al limite e una scatola a $2\unita{m}$, 1 con il modello nominale e la scatola a $2{,}8\unita{m}$); non è risolto se dipendano dalla regola o dal bordo della maschera di riferimento. Fuori dominio, con la stessa regola precedente: in una scena costruita a mano, con $+1^\circ$ di errore di posa, un oggetto di $10\unita{cm}$ a $2{,}55\unita{m}$ è «libero» in 7 celle su 7; su profondità simulata, con $+2{,}5^\circ$, una scatola di $15\unita{cm}$ a $2\unita{m}$ lo è in 9 fotogrammi su 10; con i filtri temporali della camera accesi e il sensore coperto restano 989–995 celle «libero» per altri 3 fotogrammi, e per questo i filtri vanno spenti \prova{S}.
+
+La regola adottata è stata applicata a tre gruppi di 6 fotogrammi consecutivi della stessa profondità simulata (senza riferimento per il «libero»): con il modello nominale, una cassa e una persona, dichiara libero il $50{,}8\,\%$ delle celle con impronta fino a $3{,}0\unita{m}$, e nessuna cella dentro le piante note; con il modello al limite e il pavimento vuoto il $15{,}9\,\%$ e fino a $2{,}2\unita{m}$, perché il $21\,\%$ dei pixel validi dell'impronta legge fuori dal margine \eqref{eq:map-margine}; con il pavimento lucido lo $0{,}1\,\%$ \prova{S}. Su 6 fotogrammi di una sequenza pubblica ripresa con un'altra camera di profondità, tenuta in mano \cite{tum-rgbd}, la regola non dichiara quasi niente ($0{,}0$–$0{,}1\,\%$): il $37\,\%$ dei pixel validi dell'impronta legge più vicino del suolo atteso, e non è risolto se per gli oggetti in scena o per la posa \prova{P}. Il margine $m(z)$ va quindi tarato sul pavimento reale prima di dichiarare una distanza \prova{N}.
+
+\subsection{Perché non una mappa persistente o probabilistica a sensore fermo}\label{sec:map-persistente}
+
+Le griglie di occupazione sono la rappresentazione classica per la percezione dei robot mobili \cite{elfes1989}; le mappe a octree rappresentano anche lo spazio libero e quello sconosciuto \cite{hornung2013}, e le mappe a voxel sparsi con tabella hash sono state proposte per la ricostruzione in tempo reale \cite{niessner2013}. Sono state considerate, oltre alla mappa polare, la lettura diretta nell'immagine di profondità, la griglia densa di voxel, i voxel sparsi a blocchi, l'octree, la mappa a fasce di quota e la griglia bayesiana in logaritmo delle quote; costi e memoria sono nel capitolo \S\ref{sec:cos}. Qui interessa il solo argomento di sicurezza.
+
+\begin{osservazione}[Sensore fermo]\label{oss:map-fermo}
+A sensore fermo ogni fotogramma osserva gli stessi raggi: una mappa persistente contiene o ciò che il fotogramma corrente dice già, o un valore ricordato che il fotogramma corrente non conferma. Per lo stato «libero», in un mondo che cambia, un valore ricordato non è una garanzia. È una deduzione, non un teorema; la sostengono i controesempi seguenti.
+\end{osservazione}
+
+\begin{controesempio}[Regola con memoria]\label{cex:map-memoria}
+La regola «libero se il suolo è stato visto in almeno uno degli ultimi 3 fotogrammi» non soddisfa la Proposizione~\ref{prop:map-sicurezza}. Caso minimo, una cella e due fotogrammi: al primo il suolo è visto; al secondo un corpo che non rimanda segnale entra nella cella e i pixel diventano non validi. La regola con memoria dichiara «libero» una cella occupata; la regola del solo fotogramma corrente dichiara «non osservato». L'età massima del dato ricordato è $2\Delta=0{,}133\unita{s}$ a $15\unita{Hz}$, cioè $0{,}33\unita{m}$ a $2{,}5\unita{m/s}$ \prova{C}. In simulazione, con due programmi indipendenti: 1\,186 punti del suolo sotto il corpo dati per liberi, con almeno un errore in 87 fotogrammi su 87; e 58 fotogrammi su 90 con almeno un errore ($0{,}64$; Wilson $0{,}54$–$0{,}74$) \prova{S}.
+\end{controesempio}
+
+\begin{proposizione}[Latenza della griglia bayesiana]\label{prop:map-logodds}
+Con i parametri predefiniti di una libreria diffusa (probabilità $0{,}7$ al colpo e $0{,}4$ al mancato colpo, saturazione a $0{,}1192$ e $0{,}971$ \cite{octomap}) l'incremento al colpo è $\ln(0{,}7/0{,}3)=0{,}847$ e il limite inferiore $\ln(0{,}1192/0{,}8808)=-2{,}000$: un voxel saturo «libero» torna positivo dopo $\lceil 2{,}000/0{,}847\rceil=3$ colpi, cioè $0{,}2\unita{s}$ a $15\unita{Hz}$. Un voxel interno a un corpo appena comparso non riceve mai un colpo, perché i ritorni stanno sulla superficie: il suo valore resta negativo senza limite di tempo. \prova{C}; il secondo enunciato \prova{S} (Tabella~\ref{tab:map-varianti}, quarta riga).
+\end{proposizione}
+
+\begin{table}[t]\centering\small
+\caption{Varianti che ricordano o deducono un «libero», con il controesempio che le esclude. In simulazione, con modello ideale del sensore (camera ferma, $h=1{,}2\unita{m}$, $\theta=15^\circ$, $15\unita{Hz}$); fra parentesi quadre l'intervallo di Wilson al $95\,\%$ dove il conteggio è per fotogrammi \prova{S}.}\label{tab:map-varianti}
+\begin{tabularx}{\linewidth}{>{\hsize=0.78\hsize}L>{\hsize=0.72\hsize}L>{\hsize=1.5\hsize}L}
+\toprule
+Variante & Scena di prova & Esito \\
+\midrule
+Due stati: «non occupato $\Rightarrow$ libero» su blocchi sparsi & scena ferma, blocchi non allocati & 80\,505 falsi su 146\,901 punti dati per liberi ($54{,}8\,\%$); con tre stati: 0\\\addlinespace[2pt]
+Decadimento del ricordo verso il libero & pannello che scorre davanti a un soggetto fermo già visto & corpo dato per libero in 830 fotogrammi su 897 ($92{,}5\,\%$ $[90{,}6;\,94{,}1]$)\\\addlinespace[2pt]
+Blocchi a memoria limitata, espulsione del meno recente & soggetto dietro un ostacolo & soggetto fuori da $\Pres(t)$ in 132 fotogrammi su 134 ($98{,}5\,\%$ $[94{,}7;\,99{,}6]$)\\\addlinespace[2pt]
+Logaritmo delle quote letto come stato corrente & 40 scatole compaiono; lettura 14 fotogrammi dopo & 5\,553 voxel interni «liberi» su 16\,851 ($33{,}0\,\%$); lettura del fotogramma corrente: 0\\\addlinespace[2pt]
+«Attraversato = libero» senza età & sensore coperto; scena con ostacolo & 71\,006 punti restano «libero»; falsi dentro i corpi in 147 fotogrammi su 147\\\addlinespace[2pt]
+Raggi decimati (un pixel ogni $4\times4$) & scena tipica, voxel di $5\unita{cm}$ & 2\,096 voxel con superficie dati per liberi su 6\,648 ($31{,}5\,\%$)\\\addlinespace[2pt]
+Finestra di tre fotogrammi senza condizione sul pixel centrale & soggetto che non rimanda segnale & falsi dentro i corpi in 44 fotogrammi su 87 ($50{,}6\,\%$ $[40{,}3;\,60{,}8]$)\\\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+La Tabella~\ref{tab:map-varianti} raccoglie le varianti provate. Sistemi industriali di sorveglianza 3D dichiarano lo stesso principio: trattano come occupato ciò che nessun sensore vede \cite{therobotreport-veo,us-brevetto-11846916}.
+
+\textbf{Lettura di un punto nell'immagine di profondità.} Per interrogare un punto 3D $p$, di profondità $d_p$ e pixel di proiezione $(u,v)$ con intorno $3\times3$ $\mathcal N$, si usa la lettura diretta: «fuori campo» se $(u,v)$ è fuori dall'immagine; «non valido» se un pixel di $\mathcal N$ non è valido; «libero» se $d_p<\min_{\mathcal N}D_t-m(d_p)$; «in ombra» se $d_p>\max_{\mathcal N}D_t+m(d_p)$; «occupato» altrimenti. Se lo stato è «libero» allora $D_t(u,v)\ge d_p+m(d_p)$, e se la misura valida differisce meno di $m(d_p)$ dalla profondità della prima superficie lungo il raggio, nessuna superficie sta fra il sensore e $p$ \prova{D} (nel modello: assetto noto, misura valida entro il margine, una profondità per pixel). Una variante \emph{con conferma} accetta il «libero» di uno dei due fotogrammi precedenti, purché nel fotogramma corrente il pixel centrale sia valido e nessun pixel valido di $\mathcal N$ sia più vicino di $d_p+m(d_p)$. Per entrambe, i punti dati per liberi dentro un corpo a più di $5\unita{cm}$ dalla superficie sono 0 in 321 fotogrammi ($0\,\%$ $[0;\,1{,}18]$) con un primo programma e 0 in 900 fotogrammi ($0\,\%$ $[0;\,0{,}43]$; 10 condizioni di 90 fotogrammi, reticolo di 208\,000 punti a $5\unita{cm}$) con un secondo programma indipendente; i fotogrammi di una sequenza non sono indipendenti \prova{S}. Le rese delle due letture sono distinte: senza pixel non validi $97{,}1\,\%$ per entrambe ($88{,}4$–$91{,}8\,\%$ con il secondo programma); con il $5\,\%$ sparso $61{,}1\,\%$ a un fotogramma ($55{,}7$–$57{,}9\,\%$) e $87{,}7\,\%$ con conferma ($79{,}4$–$83{,}1\,\%$); con il $30\,\%$ sparso $3{,}6\,\%$ e $8{,}0\,\%$ (secondo programma) \prova{S}. La lettura per punto non basta però a dichiarare libera una \emph{cella} (prime righe della Tabella~\ref{tab:map-regole}): per le celle vale la Definizione~\ref{def:map-libero}, che non usa alcuna conferma.
+
+\subsection{Uscita per settore: «suolo visto libero da 1,3 m a $d$ m»}\label{sec:map-uscita}
+
+I settori dell'uscita raggruppano 5 azimut ($5^\circ$). Per ogni settore, $d$ è il minimo, sui 5 azimut, del raggio della prima cella non «libero» incontrata da $1{,}3\unita{m}$ in fuori; $d$ si ferma quindi una cella ($0{,}1\unita{m}$) prima di un ostacolo, ed è limitata a $2{,}6\unita{m}$, cioè alla portata meno la fascia di guardia di $0{,}40\unita{m}$ (\S\ref{sec:occ}). Se $d=1{,}3\unita{m}$, o se il settore non vede il suolo da $1{,}3\unita{m}$, l'uscita è «sconosciuto»: con la camera dell'insieme di prova il suolo si vede da $1{,}3\unita{m}$ in 9 settori su 17, e gli 8 laterali rispondono «sconosciuto» per geometria \prova{C}. La frase non porta mai una quota e non equivale a «nessun ostacolo»: per l'Osservazione~\ref{oss:map-nondice} e per i limiti del \S\ref{sec:map-controesempi} parla del suolo, non del volume. Le parole dell'uscita e la loro priorità sono nel capitolo \S\ref{sec:lim}.
+
+\begin{riquadro}{Condizioni di validità del «libero»}
+Camera ferma; inclinazione nota entro $0{,}5^\circ$; pavimento piano; ostacoli che restituiscono profondità valida; filtri temporali della camera spenti. Entro queste condizioni: parte (a) dimostrata per costruzione; parte (b) dimostrata nel modello; regola della cella verificata in simulazione, con modello ideale del sensore, su 300 condizioni dichiarate. Fuori: vetro, ostacoli sottili che non rimandano segnale, errore d'inclinazione di $1^\circ$, ostacoli sospesi o sotto il campo, pavimento lucido. Nessuna verifica su un sensore fisico.
+\end{riquadro}

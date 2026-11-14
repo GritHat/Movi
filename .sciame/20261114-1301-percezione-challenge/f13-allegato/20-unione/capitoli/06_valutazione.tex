@@ -1,0 +1,314 @@
+\section{Metodo di valutazione e risultati}\label{sec:val}
+
+Ogni risultato porta condizioni, valore, numerosità $N$, intervallo e \emph{tipo di dato}: (I)~modello ideale del sensore (posizioni al suolo, o immagini di profondità sintetiche, con rumore gaussiano e misure mancanti assegnati); (II)~profondità simulata dai parametri delle schede tecniche di tre camere a stereo attivo \cite{realsense-confronto-camere,realsense-d455,orbbec-gemini-335}; (III)~dati pubblici. Livello di prova: \prova{D} dimostrato nel modello dichiarato, \prova{C} calcolo, \prova{S} simulazione, \prova{P} dati pubblici, \prova{N} non verificato sperimentalmente. \textbf{Nessun risultato è stato ottenuto su un sensore fisico.}
+
+\subsection{Misure e denominatori}\label{sec:val-misure}
+
+L'unità statistica è il \emph{passaggio}: una persona attraversa il campo, scompare dietro un ostacolo fermo e di norma ricompare. Un passaggio è \emph{valido} se la traccia ha ricevuto almeno 4 misure prima di scomparire. I fotogrammi di uno stesso passaggio non sono indipendenti: gli intervalli si calcolano sui passaggi, salvo dove è detto. Si usano tre disposizioni di prova $G_1$, $G_2$, $G_3$, con ombra stimata di $1{,}36$, $7{,}82$ e $14{,}70\unita{m^2}$ ($G_1$: pannello largo $1\unita{m}$; $G_2$ e $G_3$: $2\unita{m}$). Simboli: $k$ eventi su $N$ prove, $\hat p=k/N$; $P_D$ probabilità di rilevamento per fotogramma; $e_\Omega$ errore con segno del bordo dell'ombra stimata (negativo: ombra stimata più stretta della vera).
+
+\begin{definizione}[Misure]\label{def:val-misure}
+\begin{enumerate}[label=(\alph*),itemsep=0pt]
+\item \emph{Continuità per passaggio}: quota dei passaggi validi con almeno un \emph{vuoto}, cioè un ciclo senza osservazione del soggetto e senza regione $\Reg_\alpha(t)\neq\emptyset$. \emph{Per ciclo}: quota dei cicli senza osservazione in cui una regione è emessa.
+\item \emph{Copertura della regione}: per un tempo dall'ultima osservazione $\tocc$ e un comportamento $b$,
+\begin{equation}\label{eq:val-copertura}
+c(\tocc,b)=\frac{\#\{\text{passaggi di tipo } b \text{ ancora nascosti a } \tocc \text{ con il soggetto in } \Reg_\alpha\}}{\#\{\text{passaggi di tipo } b \text{ ancora nascosti a } \tocc\}} .
+\end{equation}
+\item \emph{Area relativa}: $|\Reg_\alpha(\tocc)|/|\Omb|$, media sui passaggi ancora nascosti a $\tocc$.
+\item \emph{Errore del punto}: distanza al suolo fra il punto mostrato e la posizione vera a $\tocc$ (mediana sui passaggi ancora nascosti).
+\item \emph{Sicurezza}: (i) quota degli istanti con il soggetto nascosto il cui centro sta fuori dall'area d'avviso $\Pres(t)$; (ii) numero di celle dichiarate «libero» e contenute per intero nell'ombra vera, sul totale delle celle in ombra vera per fotogramma (celle·fotogramma). La soglia per entrambe è zero.
+\item \emph{Identità al ritorno}: quota dei passaggi con ricomparsa in cui la traccia ha lo stesso identificativo di prima e nessuna associazione intermedia a un altro oggetto.
+\item \emph{Falsi «in movimento»}: quota dei passaggi in cui un oggetto fermo riceve almeno un'etichetta «in movimento».
+\end{enumerate}
+\end{definizione}
+
+\emph{Scelta del denominatore.} Il denominatore della~\eqref{eq:val-copertura} comprende tutti i passaggi ancora nascosti, anche quelli in cui il soggetto è uscito dalla portata di $3\unita{m}$ senza essere rivisto: è la scelta prudente. Il denominatore alternativo («ancora nascosti e dentro l'area osservata») è il solo misurabile sul posto con un'occlusione virtuale; dà valori uguali o maggiori e differisce in modo sensibile solo in $G_1$ (stessa cella: 461 su 513 contro 461 su 480). Il livello dichiarato è uno solo, $1-\alpha=0{,}90$. Una \emph{cella} è una terna (disposizione, comportamento, $\tocc$) con $\tocc\in\{0{,}5;1;2;3\}\unita{s}$. I comportamenti \emph{sul percorso} sono cinque (prosegue, rallenta, si ferma, torna indietro, sosta lunga); \emph{fuori dal percorso}: svolta, esce dal lato lontano. Una copertura alta con area relativa vicina a 1 dice «è dietro l'ostacolo», non «dove».
+
+\emph{Regola d'esito.} Detti $\ell^-$ e $\ell^+$ gli estremi dell'intervallo, una soglia $s$ su una quota è \emph{rispettata} se $\ell^->s$, \emph{violata} se $\ell^+<s$, altrimenti \emph{non decisa}. Soglie e numerosità delle prove principali sono state fissate prima dei lanci; dove un parametro è stato scelto dopo aver visto i dati lo si dice nella riga.
+
+\subsection{Intervalli}\label{sec:val-intervalli}
+
+Per $k$ eventi su $N$ prove indipendenti si usa l'intervallo di Wilson \cite{wilson1927}, raccomandato per numerosità piccole \cite{brown2001}; con $z=1{,}960$ (95\,\% a due code):
+\begin{equation}\label{eq:val-wilson}
+\ell^\pm=\frac{\hat p+\dfrac{z^2}{2N}\pm z\sqrt{\dfrac{\hat p(1-\hat p)}{N}+\dfrac{z^2}{4N^2}}}{1+\dfrac{z^2}{N}} .
+\end{equation}
+\emph{Esempio} ($k=826$, $N=879$): $\hat p=0{,}93970$; centro $(0{,}93970+0{,}002185)/1{,}004370=0{,}93779$; semiampiezza $1{,}960\cdot0{,}008106/1{,}004370=0{,}01582$; intervallo $[0{,}9220;\,0{,}9536]$. \prova{C}
+
+\begin{proposizione}[Zero eventi su $N$]\label{prop:val-zero}
+Se in $N$ prove indipendenti con probabilità d'evento $p$ si osservano 0 eventi: (i) il limite superiore esatto a una coda al 95\,\% è $p^+=1-0{,}05^{1/N}$; (ii) $p^+<3/N$; (iii) l'estremo superiore di Wilson a due code vale $z^2/(N+z^2)=3{,}84/(N+3{,}84)$. \prova{D}
+\end{proposizione}
+\begin{proof}
+(i) La probabilità di 0 eventi è $(1-p)^N$, decrescente in $p$; i valori non rifiutati al livello $0{,}05$ sono quelli con $(1-p)^N\ge0{,}05$. (ii) $1-0{,}05^{1/N}=1-e^{-x}$ con $x=2{,}9957/N$, e $1-e^{-x}<x$ per $x>0$. (iii) Con $\hat p=0$ nella~\eqref{eq:val-wilson} centro e semiampiezza coincidono, quindi $\ell^-=0$ e $\ell^+=\frac{z^2/N}{1+z^2/N}$.
+\end{proof}
+Valori \prova{C}: $N=90$: $3{,}27\,\%$ esatto, $4{,}09\,\%$ Wilson; $N=131$: $2{,}26\,\%$ e $2{,}85\,\%$; $N=400$: $0{,}746\,\%$ e $0{,}951\,\%$; $N=24\,835$: $0{,}0121\,\%$ e $0{,}0155\,\%$. Per simmetria, $N$ successi su $N$ danno il limite inferiore $N/(N+z^2)$: con 400 su 400, $99{,}05\,\%$ ($99{,}25\,\%$ con il limite esatto a una coda \cite{clopper1934}). \emph{Convenzione:} nelle tavole l'intervallo per «0 su $N$» è quello di Wilson a due code; il limite a una coda, più stretto, è citato solo dove è dichiarato.
+
+\begin{proposizione}[Dichiarazioni «in tutte le celle»]\label{prop:val-celle}
+Se si giudicano insieme $m$ celle e ogni intervallo è costruito al livello $1-0{,}05/m$, cioè con $z_m=\Phi^{-1}\bigl(1-\tfrac{0{,}05}{2m}\bigr)$, la probabilità che almeno un intervallo non contenga il proprio valore vero è al più $0{,}05$, qualunque sia la dipendenza fra le celle. \prova{D}
+\end{proposizione}
+\begin{proof}
+Se $E_j$ è l'evento «l'intervallo $j$ non copre», $P(E_j)\le0{,}05/m$ e $P(\bigcup_jE_j)\le\sum_jP(E_j)\le0{,}05$.
+\end{proof}
+Valori \prova{C}: $z_{12}=2{,}865$, $z_{45}=3{,}261$, $z_{60}=3{,}342$; con 90 su 100 l'intervallo passa da $[0{,}826;0{,}945]$ ($m=1$) a $[0{,}782;0{,}958]$ ($m=12$).
+
+\begin{osservazione}[Unità d'analisi]\label{oss:val-unita}
+Un conteggio «0 su $M$» fatto su fotogrammi, istanti o celle·fotogramma non autorizza il limite $3/M$: le unità dello stesso passaggio o della stessa sequenza sono dipendenti. Il limite si calcola sul numero di passaggi, di sequenze o di soggetti simulati distinti; il conteggio fine resta come descrizione dell'estensione del controllo.
+\end{osservazione}
+
+\subsection{Numerosità e lettura di una prova sul posto «dentro $k$ su $n$»}\label{sec:val-numerosita}
+
+Per distinguere una copertura $p_0$ da una $p_1$ si usa la prova binomiale esatta a una coda: si rifiuta $H_0\colon p=p_0$ quando $k$ supera (o non raggiunge) una soglia $c$ scelta in modo che il livello sia al più $\alpha$; la potenza è la probabilità di rifiuto sotto $p_1$. Poiché $c$ è intero, la potenza in funzione di $n$ è a dente di sega: la tabella~\ref{tab:val-numerosita} riporta il primo $n$ che raggiunge la potenza voluta e l'$n$ \emph{stabile}, dal quale la raggiunge ogni $n$ maggiore. Per dimensionare una prova vale l'$n$ stabile.
+
+\begin{table}[H]\centering\footnotesize
+\caption{Numerosità per distinguere due coperture (livello $0{,}05$, potenza $0{,}80$) e lettura di un conteggio «dentro $k$ su $n$». \prova{C}}\label{tab:val-numerosita}
+\begin{tabular}{@{}lll@{\hspace{2.2em}}lll@{}}
+\toprule
+$H_0$ contro alternativa & primo $n$ (soglia) & $n$ stabile & osservato & Wilson 95\,\% & esatto 95\,\% (due code)\\
+\midrule
+0,90 contro 0,80 & 78 ($k\le65$) & \textbf{89} & 9 su 10 & 0,596–0,982 & 0,555–0,997\\
+0,80 contro 0,90 & 82 ($k\ge72$) & 94 & 27 su 30 & 0,744–0,965 & 0,735–0,979\\
+0,90 contro 0,85 & 270 ($k\le234$) & \textbf{299} & 30 su 30 & 0,887–1 & 0,884–1\\
+0,85 contro 0,90 & 281 ($k\ge249$) & 304 & 46 su 50 & 0,812–0,969 & 0,808–0,978\\
+0,90 contro 0,95 & 179 ($k\ge168$) & \textbf{203} & 90 su 100 & 0,826–0,945 & 0,824–0,951\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Servono dunque circa 90 passaggi per cella per distinguere $0{,}90$ da $0{,}80$, circa 300 per distinguerlo da $0{,}85$ e circa 200 da $0{,}95$. \textbf{«27 su 30»} dice «fra $0{,}74$ e $0{,}97$»: non esclude $0{,}80$. Con $n=30$ la prova di $H_0\colon p=0{,}90$ contro $0{,}80$ rifiuta per $k\le23$ e ha potenza $0{,}39$; «30 su 30» dice «almeno $0{,}89$», non «sempre», e con copertura vera $0{,}90$ capita nel $4{,}2\,\%$ dei casi: un conteggio senza errori su trenta prove è più probabile con una regione troppo larga che con una tarata. Una regione che copre $0{,}80$ mostra «almeno 9 su 10» nel $37{,}6\,\%$ delle prove da dieci passaggi; una che copre $0{,}90$ nel $73{,}6\,\%$. In forma operativa \prova{C}: «dentro almeno 82 su 94» esclude $0{,}80$ con potenza $0{,}86$ se il valore vero è $0{,}90$; «almeno 262 su 296» esclude $0{,}85$ con potenza $0{,}83$; per scrivere «almeno 9 su 10» (limite inferiore di Wilson $\ge0{,}90$) servono almeno 96 su 100, con potenza $0{,}44$ se il vero è $0{,}95$ e $0{,}82$ se è $0{,}97$.
+
+\emph{Regole di lettura.} (1)~Si mostra «dentro $k$ su $n$» con l'intervallo, mai una percentuale sola; sotto $n=10$ solo i conteggi. (2)~L'evento contato è «la persona è dentro $\Reg_\alpha$ a $\tocc=1\unita{s}$ e a $2\unita{s}$», non «la prima misura dopo la ricomparsa cade vicino al punto previsto»: le due grandezze divergono (in simulazione, con $e_\Omega=-0{,}2\unita{m}$ e senza margine, la seconda segna 1216 su 1244 $=0{,}977$ mentre la cella peggiore della prima vale $0{,}68$). (3)~I cicli in cui la regione coincide con quasi tutta l'ombra si contano a parte. (4)~Comportamento e $n$ si fissano prima; nessun azzeramento; i passaggi usati per la taratura sono esclusi. (5)~Passaggi della stessa persona si somigliano: con $m$ passaggi a testa e correlazione $\rho_c$ la numerosità efficace è $n/(1+(m-1)\rho_c)$; con $m=10$ e $\rho_c=0{,}2$, 40 passaggi ne valgono 14.
+
+\subsection{Taratura della regione per quantili}\label{sec:val-taratura}
+
+Per ogni fascia di $\tocc$ si calcola, su $n_c$ passaggi di taratura, un punteggio di non conformità $s_i$ (per esempio la distanza fra la posizione vera e il punto previsto) e si prende come soglia la statistica d'ordine $s_{(k)}$ con $k=\lceil(1-\alpha)(n_c+1)\rceil$; $\Reg_\alpha$ è l'insieme delle posizioni con punteggio $\le s_{(k)}$. Se $k>n_c$ la soglia è infinita.
+
+\begin{proposizione}[Garanzia marginale sotto scambiabilità]\label{prop:val-marginale}
+Se i punteggi $s_1,\dots,s_{n_c},s_{n_c+1}$ (taratura più il passaggio nuovo) sono scambiabili, allora $P\bigl(s_{n_c+1}\le s_{(k)}\bigr)\ge1-\alpha$; se inoltre sono quasi certamente distinti, la probabilità vale $k/(n_c+1)\le1-\alpha+1/(n_c+1)$. \prova{D}
+\end{proposizione}
+\begin{proof}
+Per scambiabilità e assenza di parità il rango di $s_{n_c+1}$ fra gli $n_c+1$ punteggi è uniforme su $\{1,\dots,n_c+1\}$; l'evento equivale a «il rango è $\le k$», di probabilità $k/(n_c+1)\in[1-\alpha,\,1-\alpha+1/(n_c+1))$. Con parità l'uguaglianza diventa $\ge$.
+\end{proof}
+È la copertura \emph{marginale} della previsione conforme a insieme separato \cite{angelopoulos2021}: una media sulla popolazione da cui vengono taratura e prova.
+
+\begin{proposizione}[Copertura realizzata con una taratura data]\label{prop:val-beta}
+Se i punteggi sono indipendenti con la stessa distribuzione continua $F$, la copertura condizionata all'insieme di taratura, $C=F(s_{(k)})$, ha distribuzione $\mathrm{Beta}(k,\,n_c+1-k)$. \prova{D}
+\end{proposizione}
+\begin{proof}
+$U_i=F(s_i)$ sono uniformi indipendenti e $F$ è monotona, quindi $F(s_{(k)})=U_{(k)}$, la $k$-esima statistica d'ordine di $n_c$ uniformi.
+\end{proof}
+Valori al livello $0{,}90$ \prova{C}: con $n_c=30$ ($k=28$) il 5º percentile della copertura realizzata è $0{,}805$; con $n_c=100$ ($k=91$) è $0{,}848$; il primo $n_c$ per cui la copertura realizzata supera $0{,}85$ con probabilità $0{,}95$ è 68 (stabilmente da 110); sotto $n_c=9$ la regione è tutto lo spazio.
+
+\begin{osservazione}[Dove la garanzia non vale]\label{oss:val-nonvale}
+La Proposizione~\ref{prop:val-marginale} non dice nulla (a)~sulla copertura \emph{per comportamento}, perché una media $\sum_bw_bc_b\ge1-\alpha$ non implica $c_b\ge1-\alpha$ per ogni $b$; (b)~su una popolazione diversa da quella della taratura, perché cade la scambiabilità. In simulazione, con modello ideale del sensore \prova{S}: una soglia unica per fascia di tempo copre $0{,}897$–$0{,}907$ nel complesso, ma solo $0{,}455$ a $2\unita{s}$ e $0{,}307$ a $3\unita{s}$ per chi torna indietro; una taratura su una miscela 90/10/0/0 (prosegue, si ferma, torna, svolta) provata su 50/20/20/10 copre $0{,}72$, $0{,}66$ e $0{,}64$ a 1, 2 e $3\unita{s}$; la regione adottata, con camminatori meno regolari di quelli della taratura (variabilità di velocità 15\,\% anziché 6\,\%, di rotta $8^\circ$ anziché $3^\circ$) in $G_3$, copre 323/342 $=0{,}944$, 283/339 $=0{,}835$ $[0{,}792$–$0{,}871]$ e 226/282 $=0{,}801$ $[0{,}751$–$0{,}844]$ fino a 1, 2 e $3\unita{s}$.
+\end{osservazione}
+
+\begin{proposizione}[Suolo per comportamento peggiore]\label{prop:val-suolo}
+Se per ogni comportamento $b$ di un insieme finito $B$ si tara una soglia $s^{(b)}$ con la costruzione sopra e si adotta $s^\ast=\max_{b\in B}s^{(b)}$, allora per ogni $b\in B$ la copertura sul comportamento $b$ è almeno $1-\alpha$, sotto scambiabilità dentro ciascun comportamento. \prova{D}
+\end{proposizione}
+\begin{proof}
+La regione è monotona nella soglia: $\{s\le s^{(b)}\}\subseteq\{s\le s^\ast\}$; si applica la Proposizione~\ref{prop:val-marginale} a ogni $b$.
+\end{proof}
+Il prezzo è l'area \prova{S}: il disco con il raggio massimo sui comportamenti sul percorso, ritagliato sull'ombra, occupa a 2 e $3\unita{s}$ una quota dell'ombra di $0{,}99$ e $1{,}21$ in $G_2$ e di $0{,}79$ e $1{,}12$ in $G_3$ (sopra 1: la regione comprende il margine attorno all'ombra); la regione adottata, costruita da una libreria di percorsi registrati (\S\ref{sec:occ}), ne occupa $0{,}24$ e $0{,}31$ in $G_2$ e $0{,}16$ e $0{,}27$ in $G_3$.
+
+\subsection{Indipendenza dei campioni: generatore e semi}\label{sec:val-semi}
+
+Le simulazioni usano un generatore a incremento costante: stato $s\in\mathbb Z_{2^{64}}$, a ogni estrazione $s\leftarrow s+G\pmod{2^{64}}$ ($G$ dispari) e uscita $\mu(s)$, con $\mu$ una funzione di mescolamento biiettiva.
+
+\begin{lemma}[Semi contigui]\label{lem:val-semi}
+Se lo stato iniziale del seme $\sigma$ è $s_0(\sigma)=\sigma G+c\pmod{2^{64}}$, con $c$ indipendente da $\sigma$, la successione prodotta dal seme $\sigma+1$ è quella del seme $\sigma$ avanzata di un'estrazione: $x_i(\sigma+1)=x_{i+1}(\sigma)$ per ogni $i\ge1$. \prova{D}
+\end{lemma}
+\begin{proof}
+$s_0(\sigma+1)=s_0(\sigma)+G$; lo stato dopo $i$ estrazioni è $s_0+iG$, quindi $x_i(\sigma+1)=\mu(s_0(\sigma)+(i+1)G)=x_{i+1}(\sigma)$.
+\end{proof}
+\emph{Avvertenza di metodo.} Con lo schema del Lemma~\ref{lem:val-semi} (verificato per calcolo: 1000 valori uguali su 1000 fra due semi contigui; 0 su 1000 con lo stato iniziale $\mu(\sigma G+c)$) i passaggi di un lancio a semi contigui non sono prove indipendenti. Su dieci blocchi da 400 semi contigui in $G_1$, nella cella «prosegue» a $3\unita{s}$ la quota va da $0{,}726$ a $0{,}977$ fra i blocchi e la varianza fra blocchi è $6{,}0$ volte quella binomiale; sulle 20 celle sul percorso fino a $3\unita{s}$ il rapporto vale in media $2{,}67$ ($1{,}62$ con il denominatore «dentro l'area osservata»). Gli intervalli binomiali su quei lanci sono quindi troppo stretti di un fattore fra $1{,}3$ e $2{,}5$; con i semi riparati il rapporto torna a $0{,}94$. Le tavole dicono quali cifre vengono da semi indipendenti; non sono stati rifatti con semi riparati 71\,671 dei 175\,802 istanti del controllo sull'area d'avviso né le prove fuori dal dominio con il soggetto puntiforme, eseguite con un altro programma e un altro schema di semi. Le prove su profondità simulata e su dati pubblici non usano quel generatore. Le prove d'insieme più recenti usano semi distanziati e uno stato iniziale mescolato (0 flussi spostati su 1000 coppie di semi vicini), ma riusano gli stessi semi nelle diverse configurazioni: i totali contano perciò i soggetti simulati distinti (Osservazione~\ref{oss:val-unita}). In ogni prova taratura e verifica usano insiemi di semi disgiunti; in nessuna prova la libreria di taratura viene da un generatore di camminate e i passaggi di verifica da un altro.
+
+\subsection{Tavole dei risultati}\label{sec:val-tavole}
+
+Condizioni comuni del tipo (I), salvo diversa indicazione: sensore e ostacolo fermi; un soggetto per ombra; velocità d'ingresso $0{,}3$–$1{,}8\unita{m/s}$, rotta entro $\pm15^\circ$; rumore di misura gaussiano di $5\unita{cm}$ per asse, noto al filtro; $P_D=0{,}9$; $\Delta=1/15\unita{s}$; $q=0{,}2\unita{m^2/s^3}$; maschera dell'ombra esatta. Il soggetto è \emph{puntiforme} nelle prove di base e un \emph{corpo esteso} (disco di $0{,}45\unita{m}$, misura nel baricentro della parte visibile) nelle prove d'insieme. Tipo (II): tre profili di camera (Intel RealSense D435i e D455, Orbbec Gemini 335) a $424\times240$ (salvo indicazione), a due livelli di rumore («nominale» e «limite»), posa nota esattamente. Intervalli: Wilson al 95\,\% a due code.
+
+\subsubsection*{Sicurezza}
+
+I risultati sono nella tabella~\ref{tab:val-sicurezza}. In 240 delle 300 condizioni della regola adottata (7200 fotogrammi) le regole del «libero» scartate danno violazioni: lettura al centro della cella, 932 fotogrammi; un solo pixel sul suolo, 98; metà dell'impronta senza cella di guardia, 6. La regola adottata vede libero fino a $3{,}0\unita{m}$ con il 5\,\% di misure mancanti sparse e fino a $1{,}5\unita{m}$ con il 30\,\%; con rumore al livello limite e inclinazione errata di $+0{,}5^\circ$ fino a $2{,}4\unita{m}$; con inclinazione errata di $-1^\circ$ dà violazioni in 150 fotogrammi su 300 (scatola di 10 cm a 2,6–2,9 m). \emph{Che cosa il risultato non dice.} Lo zero della regola adottata è «verificato sull'insieme dichiarato» (scene scelte, non campionate; regola scelta fra quattro dopo un primo lancio), non una frequenza; vale a posa nota entro $0{,}5^\circ$ e per ostacoli che restituiscono profondità. Lo zero su 2\,907\,032 celle·fotogramma non si ripete nelle serie successive: 4 celle·fotogramma «libero» in ombra vera a 848 px (livello limite, scatola di 15 cm a $2\unita{m}$) e 5 in una serie indipendente (4 al livello limite con misure mancanti 3,5 volte più frequenti, 1 al livello nominale con la scatola a $2{,}8\unita{m}$); non è stabilito se dipendano dalla catena o dal bordo della maschera di verità. L'area d'avviso è garantita per un solo soggetto per ombra e per un ostacolo fermo. L'avviso che sopravvive al riaggancio non si spegne dietro un pannello fermo (140 passaggi su 140) e resta acceso $2\unita{s}$ dopo la rimozione del pannello in 10 prove su 10.
+
+\begin{table}[H]\centering\footnotesize
+\caption{Sicurezza: area d'avviso e «libero».}\label{tab:val-sicurezza}
+\begin{tabularx}{\textwidth}{@{}>{\RaggedRight}p{3.3cm}L>{\RaggedRight}p{1.25cm}>{\RaggedRight}p{2.75cm}>{\RaggedRight}p{2.45cm}l@{}}
+\toprule
+Misura & Condizioni & Valore & $N$ & Intervallo 95\,\% & Dato\\
+\midrule
+Soggetto nascosto fuori da $\Pres$ & $G_1,G_2,G_3$; 7 comportamenti; $\tocc=0{,}5$–$5\unita{s}$ & 0 & 175\,802 istanti; 24\,835 passaggi a semi indipendenti & per passaggio: 0–0,016\,\% & I \prova{D}\prova{S}\\
+idem, prove d'insieme & corpo esteso; anche $e_\Omega=-0{,}2\unita{m}$ & 0 & 11\,946\,289 istanti (dipendenti) & — & I \prova{S}\\
+Traccia chiusa prima dell'ombra (avviso non acceso) & senza / con l'avviso mantenuto per le tracce chiuse entro $0{,}75\unita{m}$ dall'ombra & 928 / 24 & 23\,402 passaggi & quote: 3,97\,\% / 0,10\,\% & I \prova{S}\\
+idem, con la regola & corpo esteso; $P_D=0{,}9$ / $0{,}7$ & 1 / 17 & 5704 & $<0{,}99$ per mille / 1,9–4,8 per mille & I \prova{S}\\
+Avviso mancante & $P_D=1$, $e_\Omega\in\{-0{,}2;0;+0{,}2\}\unita{m}$, margine $0{,}40\unita{m}$ / $P_D=0{,}9$, $e_\Omega=-0{,}2\unita{m}$ & 0 / 13 & 14\,400 / 4800 & 0–0,027\,\% / 0,16–0,46\,\% & I \prova{S}\\
+Celle «libero» nell'ombra vera, regola di partenza & tre camere; 131 sequenze senza filtri del costruttore & 0 & 2\,907\,032 celle·fotogramma & per sequenza: 0–2,9\,\% & II \prova{S}\\
+idem, serie successive & nominale e limite, 424 e 848 px; con buchi 3,5 volte più frequenti & 0 e 4; 5 & 3\,588\,836; 3\,992\,186 celle·fot. & — & II \prova{S}\\
+«Libero» con ostacolo sopra, regola adottata (\S\ref{sec:map}) & immagine sintetica $320\times240$; 10 scene, 300 condizioni; inclinazione entro $\pm0{,}5^\circ$ & 0 & 9000 fotogrammi, due lanci & per condizione: 0–1,3\,\% & I \prova{S}\\
+Soggetto nascosto fuori dall'avviso & pannello; catena di partenza / con l'avviso che sopravvive al riaggancio (424 e 848 px) & 99 / 0 e 0 & 3038 / 3921 e 3922 fotogrammi & 15 passaggi su 90: 10,4–25,7\,\% / — & II \prova{S}\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsubsection*{Continuità}
+
+\begin{table}[H]\centering\footnotesize
+\caption{Continuità (tipo I, in simulazione). Terne: $G_1$ / $G_2$ / $G_3$.}\label{tab:val-continuita}
+\begin{tabularx}{\textwidth}{@{}>{\RaggedRight}p{3.9cm}L>{\RaggedRight}p{2.5cm}>{\RaggedRight}p{2.9cm}>{\RaggedRight}p{3.3cm}@{}}
+\toprule
+Misura & Condizioni & Valore & $N$ & Intervallo 95\,\%\\
+\midrule
+Passaggi con almeno un vuoto, senza regione persistente & 5 comportamenti sul percorso; semi contigui & 1958 / 1991 / 1999 & 1958 / 2000 / 2000 & 99,8–100 / 99,1–99,8 / 99,7–100\,\% (ottimistici)\\
+Cicli senza osservazione con una regione, senza regione persistente & idem & 19,0 / 38,1 / 33,3\,\% & 105\,301 / 118\,875 / 139\,132 cicli & non calcolato (cicli dipendenti)\\
+Passaggi con almeno un vuoto, con regione persistente & 7 comportamenti; semi indipendenti; soggetto puntiforme & 0 / 0 / 0 & 13\,638 / 5600 / 5597 & 0–0,028 / 0–0,069 / 0–0,069\,\%; insieme 0–0,016\,\%\\
+idem, prove d'insieme & corpo esteso; 12 configurazioni $\times$ 5 comportamenti & 0 & 23\,402 passaggi (6000 soggetti distinti) & 0–0,064\,\% (su 6000)\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Sull'insieme di tutti i lanci d'insieme i vuoti sono 0 su 217\,861 passaggi (al più 70\,400 soggetti distinti). \prova{D} per costruzione, data la premessa, e \prova{S}. \emph{Che cosa il risultato non dice.} La continuità è garantita solo dopo che la traccia è entrata nell'ombra: se la traccia si chiude prima (tabella~\ref{tab:val-sicurezza}) non c'è regione. Lo zero non riguarda l'identità al ritorno né una camera in moto.
+
+\subsubsection*{Precisione della regione nel dominio dichiarato}
+
+Dominio: sensore e ostacolo fermi; un soggetto per ombra, visto per almeno 4 fotogrammi; ingresso fra $0{,}3$ e $1{,}8\unita{m/s}$; comportamenti sul percorso; rumore noto; libreria di taratura dello stesso tipo di camminatore (400 percorsi registrati); maschera dell'ombra esatta. Tabella~\ref{tab:val-copertura}: copertura~\eqref{eq:val-copertura}, soggetto puntiforme, semi indipendenti; semiampiezza degli intervalli $\le0{,}03$ in ogni cella.
+
+\begin{table}[H]\centering\footnotesize
+\caption{Copertura della regione al 90\,\%, soggetto puntiforme, $G_1$ / $G_2$ / $G_3$ (tipo I). \prova{S}}\label{tab:val-copertura}
+\begin{tabular}{@{}llll@{}}
+\toprule
+Comportamento & $\tocc=1\unita{s}$ & $\tocc=2\unita{s}$ & $\tocc=3\unita{s}$\\
+\midrule
+prosegue & 0,980 / 0,995 / 0,990 & 0,940 / 0,964 / 0,960 & 0,899 / 0,968 / 0,924\\
+rallenta & 0,988 / 0,991 / 0,996 & 0,959 / 0,959 / 0,959 & 0,935 / 0,926 / 0,919\\
+si ferma & 0,985 / 0,991 / 0,989 & 0,965 / 0,977 / 0,959 & 0,956 / 0,968 / 0,939\\
+torna indietro & 0,985 / 0,993 / 0,987 & 0,972 / 0,969 / 0,956 & 0,977 / 0,976 / 0,935\\
+sosta lunga & 0,991 / 0,991 / 0,993 & 0,970 / 0,973 / 0,971 & 0,961 / 0,966 / 0,948\\
+\midrule
+$N$ per cella & 1872–1935 / 800 / 799–800 & 879–1844 / 529–783 / 774–800 & 513–1818 / 284–770 / 669–791\\
+area relativa & 0,72 / 0,12 / 0,06 & 0,95 / 0,24 / 0,16 & 1,00 / 0,31 / 0,27\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]\centering\footnotesize
+\caption{Riepilogo per soglia (tipo I). $\ell^-$: limite inferiore di Wilson; fra parentesi con la correzione della Proposizione~\ref{prop:val-celle}. \prova{S}}\label{tab:val-soglie}
+\begin{tabularx}{\textwidth}{@{}>{\RaggedRight}p{5.4cm}>{\RaggedRight}p{2.6cm}L@{}}
+\toprule
+Enunciato & Celle sopra soglia & Cella peggiore\\
+\midrule
+\multicolumn{3}{@{}l}{\emph{Soggetto puntiforme, semi indipendenti}}\\
+$\ell^->0{,}90$ fino a $2\unita{s}$ ($\tocc=0{,}5;1;2$) & 45 su 45 (45 con $z_{45}$) & $G_1$, prosegue, 2 s: 826/879 $=0{,}940$ $[0{,}922$–$0{,}954]$ ($0{,}908$)\\
+$\ell^->0{,}85$ fino a $3\unita{s}$ & 60 su 60 & $G_1$, prosegue, 3 s: 461/513 $=0{,}899$ $[0{,}869$–$0{,}922]$\\
+$\ell^->0{,}90$ a $3\unita{s}$ & 12 su 15; 3 non decise & 461/513; 437/472 $[0{,}899$–$0{,}946]$; 711/774 $[0{,}897$–$0{,}936]$\\
+\midrule
+\multicolumn{3}{@{}l}{\emph{Corpo esteso, semi nuovi, prove d'insieme (2400 passaggi per comportamento in $G_2$ e $G_3$, 4000 in $G_1$)}}\\
+$G_2$: $\ell^->0{,}90$ a 1 e 2 s, $>0{,}85$ a 3 s & 15 su 15 (15) & fino a 2 s: 1222/1265, $\ell^-=0{,}955$ ($0{,}946$); 3 s: 666/698, $0{,}936$ ($0{,}922$)\\
+$G_3$: idem & 15 su 15 (15) & fino a 2 s: 2125/2279, $0{,}921$ ($0{,}914$); 3 s: 1754/1922, $0{,}899$ ($0{,}890$)\\
+$G_1$, solo istanti in cui l'uscita dichiara il livello & 1 su 5 a 1 s (0 su 5) & 1 s: 942/1045, $0{,}882$ ($0{,}875$ su 5 celle); a 2 e 3 s meno di 400 casi per cella\\
+$G_1$, tutti gli istanti & 5 su 5 a 1 s; 4 su 5 a 2 s e a 3 s & 2 s: 1257/1388, $0{,}889$; 3 s: 845/984, $0{,}836$\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Errore mediano del punto mostrato in $G_2$ (miscela di comportamenti, $N=2400$ / 2077–2115 / 1674–1734): $0{,}18$–$0{,}19$, $0{,}37$–$0{,}39$ e $0{,}54$–$0{,}60\unita{m}$ a 1, 2 e $3\unita{s}$, contro $0{,}97$–$1{,}00$, $1{,}48$–$1{,}54$ e $1{,}59$–$1{,}66\unita{m}$ di un punto fermo all'ultima misura. \prova{S}
+
+\emph{Forma dichiarabile.} In simulazione, con modello ideale del sensore, ostacolo largo $2\unita{m}$, bordo dell'ombra noto, una persona alla volta che resta sul percorso: la persona nascosta sta nella regione in almeno 9 casi su 10 fino a $2\unita{s}$ dall'ultima misura e in almeno 85 su 100 fino a $3\unita{s}$, finché resta nascosta (30 celle su 30; limiti peggiori $0{,}921$ e $0{,}899$). Con il pannello da $1\unita{m}$ ($G_1$) il risultato del soggetto puntiforme non si ritrova con il corpo esteso: sugli stessi 400 semi per comportamento il primo dà $0{,}975$ / $0{,}967$ / $0{,}951$ a 1, 2 e $3\unita{s}$, il secondo $0{,}938$ / $0{,}924$ / $0{,}913$; lì si dichiara solo «a $1\unita{s}$ circa 9 su 10 (limite $0{,}87$)», poi l'uscita dice «è dietro l'ostacolo» senza livello (area relativa $0{,}95$–$1{,}00$).
+
+\subsubsection*{Precisione della regione fuori dal dominio dichiarato}
+
+\begin{table}[H]\centering\footnotesize
+\caption{Controesempi alla copertura dichiarata. \prova{S}}\label{tab:val-fuori}
+\begin{tabularx}{\textwidth}{@{}>{\RaggedRight}p{5.6cm}L>{\RaggedRight}p{2.6cm}l@{}}
+\toprule
+Che cosa cambia & Copertura a 1 / 2 / 3 s & $N$ & Dato\\
+\midrule
+chi svolta, soggetto puntiforme ($G_1$ / $G_2$ / $G_3$) & 0,864 / 0,871 / 0,941; 0,567 / 0,541 / 0,698; 0,451 / 0,383 / 0,517 & 538–1911 per cella & I\\
+chi esce dal lato lontano, idem & 0,771 / 0,839 / 0,920; 0,320 / 0,448 / 0,665; 0,131 / 0,262 / 0,466 & 725–1933 per cella & I\\
+chi svolta; chi esce lontano, corpo esteso & a 2 s: 0,86 / 0,67 / 0,79; 0,82 / 0,61 / 0,79. A 3 s: 0,84 / 0,58 / 0,67; 0,76 / 0,57 / 0,70 & — & I\\
+oltre l'orizzonte: $\tocc=5\unita{s}$, $G_1$, prosegue & 174/221 $=0{,}787$ $[0{,}729$–$0{,}836]$ & 221 & I\\
+bordo dell'ombra stimato, $e_\Omega=-0{,}2\unita{m}$, corpo esteso, sul percorso, senza la marca «tagliato» ($G_2$; $G_3$) & 0,459 / 0,649 / 0,765; 0,350 / 0,375 / 0,482 & — & I\\
+idem, con la marca decisa sul bordo vero a ogni ciclo & 0,996 / 0,974 / 0,968; 0,986 / 0,960 / 0,928 & — & I\\
+idem, con la marca che manca 2 cicli su 10 & 0,801 / 0,835 / 0,884; 0,750 / 0,708 / 0,733 & — & I\\
+chi parte da fermo accanto al pannello, $G_2$ & 15/141 $=0{,}11$; 21/134 $=0{,}16$; 14/54 $=0{,}26$ & 141; 134; 54 & I\\
+profondità simulata, parametri di partenza: il soggetto resta sempre nella regione & 36 passaggi su 46 con una previsione (su 90) $=0{,}78$ $[0{,}64$–$0{,}88]$ & 46 & II\\
+idem, variante con soglia di punti per cella portata da 3 a 40 & 83 su 90 $=0{,}92$ $[0{,}85$–$0{,}96]$ & 90 & II\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\emph{Che cosa il risultato non dice.} Fuori dal dominio (svolte, uscite laterali, bordo dell'ombra stimato male di 10–20 cm, partenza da fermi, popolazione diversa) la copertura scende fino a $0{,}1$–$0{,}8$ e resta solo l'area d'avviso: in nessuna di queste prove un soggetto nascosto esce da $\Pres$. La riparazione del bordo stimato è ottimistica per costruzione (la marca è decisa sul bordo vero) e fragile: sul sensore il livello non si dichiara finché non è misurata la quota dei cicli in cui il bordo si riconosce. Chi è fermo negli ultimi $2\unita{s}$ riceve «previsto ampio» (256/256, 342/342, 249/249 a $1\unita{s}$, meno di 400 casi per cella). Le due righe del tipo (II) si riferiscono a due varianti diverse e non sono confrontabili fra loro; la seconda variante è stata poi scartata perché introduce «libero» nell'ombra vera (2 celle·fotogramma, più 45 al bordo). Nessuna cifra è dichiarata oltre $3\unita{s}$, né per una camera in moto.
+
+\subsubsection*{Identità al ritorno}
+
+\begin{table}[H]\centering\footnotesize
+\caption{Identità al ritorno. Terne: $G_1$ / $G_2$ / $G_3$.}\label{tab:val-identita}
+\begin{tabularx}{\textwidth}{@{}>{\RaggedRight}p{4.6cm}L>{\RaggedRight}p{3.2cm}>{\RaggedRight}p{2.6cm}l@{}}
+\toprule
+Misura & Condizioni & Valore su $N$ & Intervallo 95\,\% & Dato\\
+\midrule
+Stessa identità & una persona, $P_D=1$; 27 configurazioni & 400 su 400 in ciascuna & 99,05–100\,\% & I \prova{S}\\
+Stessa identità, riaggancio esteso & corpo esteso, sul percorso & 10\,711/10\,757; 9228/9240; 6772/6967 & $\ell^-$: 0,994 / 0,998 / 0,968 & I \prova{S}\\
+Stessa identità, catena di partenza & D435i nominale; pannello, 3 disposizioni $\times$ 30 semi & 0 su 90 & 0–4,1\,\% & II \prova{S}\\
+Stessa identità (dichiarata «presunta»), gruppi dalle celle forti e riaggancio rivisto & adulto solo, $0{,}5\unita{m}$ dietro il pannello, entro $2{,}6\unita{m}$; nominale; 424 px / 848 px & 176 su 180 / 174 su 180 & 94–99\,\% / 93–98\,\% & II \prova{S}\\
+idem, fuori dal dominio & persona a $0{,}3\unita{m}$ dal pannello; livello limite; oltre $2{,}6\unita{m}$; bambino di $1{,}0\unita{m}$; posa errata di $+0{,}5^\circ$ & 0 e 1 su 10; 0 su 10; 0 su 10; 2 su 10; 6 su 10 & 0–28\,\% (0 su 10); 6–51\,\%; 31–83\,\% & II \prova{S}\\
+Identità data a un secondo soggetto, mai visto, uscito dalla stessa ombra & prova di base, 2 disposizioni $\times$ 3 valori di $e_\Omega$ & 2400 su 2400 & 99,84–100\,\% & I \prova{S}\\
+idem, prove d'insieme & riaggancio entro $0{,}40\unita{m}$ / riaggancio esteso & 1457/3029; 2567/3609; 2393/3540 / 3027/3041; 3493/3616; 3239/3546 & quote 0,481; 0,711; 0,676 / 0,992–0,997; 0,960–0,971; 0,904–0,922 & I \prova{S}\\
+idem & scene costruite a mano / con rumore & 12 su 12 / 19 su 20 & 76–100\,\% / 76–99\,\% & II \prova{S}\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\emph{Che cosa il risultato non dice.} Il risultato del modello ideale non si trasferisce alla profondità simulata: con la catena di partenza la sagoma della persona si fonde con quella del pannello in 90 passaggi su 90. La correzione che porta a 176 su 180 è stata scelta dopo aver visto i dati (rapporto col picco $0{,}30$) e i semi nuovi cambiano rumore e percorso, non la scena: è una prova di ripetibilità, non di generalità; il valore è un tasso (circa 97\,\%, su tre comportamenti e due serie di semi), non il superamento di una soglia fissata per ciascun comportamento (in una serie uno dei tre dà 27 su 30). Con due persone nella stessa ombra l'identità passa alla persona sbagliata e, con il modello ideale, l'avviso viene rilasciato insieme all'identità (quote della tabella). Su profondità simulata, con l'avviso che sopravvive al riaggancio, il primo soggetto resta nell'avviso (0 fotogrammi fuori su 264, 0–1,4\,\%); le due regole non sono state eseguite insieme nello stesso programma \prova{N}. Chi ricompare sul bordo del campo riceve un'identità nuova (10 su 10).
+
+\subsubsection*{Elementi mobili e ostacoli}
+
+\begin{table}[H]\centering\footnotesize
+\caption{Etichetta «in movimento», ostacoli fermi, tracce spurie.}\label{tab:val-mobili}
+\begin{tabularx}{\textwidth}{@{}>{\RaggedRight}p{4.2cm}L>{\RaggedRight}p{2.1cm}>{\RaggedRight}p{1.9cm}>{\RaggedRight}p{2.3cm}l@{}}
+\toprule
+Misura & Condizioni & Valore & $N$ & Intervallo 95\,\% & Dato\\
+\midrule
+Soggetto a $0{,}5\unita{m/s}$ «in movimento» entro $1\unita{s}$ & da $2\unita{m}$; tre curve di rumore / da $3\unita{m}$, in avvicinamento, due curve peggiori & 100\,\% / 85,85\,\%; 26,60\,\% & 2000 per cella & $\ge99{,}81\,\%$ / $\pm1{,}5$; $\pm1{,}9$ punti & I \prova{S}\\
+Parete ferma «in movimento» mentre passa una persona & con / senza lo scarto delle misure al bordo di un'ombra & 0 / 400 & 400 & 0–0,95\,\% / 99,05–100\,\% & I \prova{S}\\
+Pannello fermo «in movimento» & catena di partenza, 3 disposizioni $\times$ 30 semi & 79 & 90 passaggi & 79,4–93,0\,\% & II \prova{S}\\
+idem, gruppi dalle celle forti & semi nuovi; 424 e 848 px & 0 e 0 & 140 passaggi & — & II \prova{S}\\
+Tracce confermate su suolo vuoto & 9 sequenze: di partenza / celle forti (424 e 848 px) & 137 e 206 / 0 e 0 & 270 fotogrammi & — & II \prova{S}\\
+Scatola di 15 cm a $2\unita{m}$ vista come ostacolo & 19 sequenze (3 al livello limite) & 190 & 190 fotogrammi & — & II \prova{S}\\
+Oggetto piccolo che forma un gruppo inseguibile & cubo di 10 cm a $2\unita{m}$ / scatola di 15 cm a $2{,}8\unita{m}$ & 0 / 45 & 60 fotogrammi & 0–6\,\% / 63–84\,\% & II \prova{S}\\
+Ostacolo entro 15 cm dalla posizione vera, casi limite & scatola di 15 cm a $0{,}8\unita{m}$; lastra di vetro; ostacolo sospeso a $2{,}0\unita{m}$ & 0; 0; 7 & 10 fotogrammi ciascuno & — & II \prova{S}\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\emph{Che cosa il risultato non dice.} Le righe sugli ostacoli contano fotogrammi di poche sequenze: descrivono casi, non frequenze. Con i gruppi dalle celle forti il cubo di 10 cm resta «occupato» nella mappa (60 fotogrammi su 60) ma non è un oggetto seguito: la taglia minima inseguibile è 15 cm entro $2\unita{m}$. Al livello limite del rumore le tracce spurie tornano (105–106 tracce confermate su 3 pavimenti vuoti) e l'identità al ritorno cade (tabella~\ref{tab:val-identita}).
+
+\subsubsection*{Profondità simulata dalle schede tecniche di tre camere}
+
+Errore del bordo dell'ombra stimata, al livello nominale, con un pannello: da $+2{,}0$ a $+14{,}6\unita{cm}$, mediana $+6{,}2\unita{cm}$ (verso il largo), con tutto l'errore entro $\pm20\unita{cm}$ in 115 sequenze su 115 (96,8–100\,\%); al livello limite in 0 su 8 (0–32,4\,\%; errori da $-65$ a $+73\unita{cm}$). \prova{S} \emph{Che cosa il risultato non dice.} Il simulatore è verificato contro il proprio modello, non contro una camera: confrontato con registrazioni pubbliche, sottostima i pixel senza dato (7,8\,\% al livello limite contro 24–34\,\% osservati). Le cifre del tipo (II) al livello nominale sono quindi ottimistiche e non sostituiscono una misura sul sensore.
+
+\subsubsection*{Traiettorie pubbliche di pedoni}
+
+Tracciati di persone in cammino al chiuso, registrati con un sistema di cattura del moto e non con una camera di profondità \cite{thor}: una registrazione per scegliere $q$ (227 tratti), un'altra per la prova (219 tratti, 9 persone). Si simula un'occlusione e si verifica se la posizione vera sta nella regione al 90\,\% del filtro a velocità quasi costante.
+
+\begin{table}[H]\centering\footnotesize
+\caption{Su traiettorie pubbliche di pedoni (tipo III). \prova{P}}\label{tab:val-pubblici}
+\begin{tabularx}{\textwidth}{@{}>{\RaggedRight}p{4.4cm}>{\RaggedRight}p{2.6cm}L>{\RaggedRight}p{4.3cm}@{}}
+\toprule
+Misura & Condizioni & Valore a 1 / 2 / 3 s & Intervallo 95\,\% (tratti come indipendenti)\\
+\midrule
+Copertura della regione al 90\,\% & $q=0{,}2$; $N=219$ & 0,977 / 1,000 / 1,000 (214, 219, 219 su 219); con un secondo programma 0,982 / 0,995 / 1,000 & 0,948–0,990 / 0,983–1 / 0,983–1\\
+idem & $q=0{,}05$; $q=0{,}01$ & 0,795 / 0,804 / 0,831; 0,534 / 0,521 / 0,516 & $\pm0{,}05$; $\pm0{,}07$\\
+Errore mediano della previsione & $q=0{,}2$ & 0,21 / 0,49 / 0,81 m (secondo programma: 0,22 / 0,44 / 0,73 m) & —\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\emph{Che cosa il risultato non dice.} Il filtro parte da posizioni misurate con precisione millimetrica fino all'ultimo istante: la prova riguarda il modello di moto, non la catena su profondità, e non conferma il livello $0{,}90$ della regione adottata. I tratti di una stessa persona sono correlati (da 7 a 42 a testa): la numerosità efficace sta fra 9 e 219. Con $q=0{,}2$ la regione copre più del livello dichiarato, cioè è più larga del necessario.
+
+\subsubsection*{Classificazione e profili di classe}
+
+Il classificatore è un componente richiesto dal sistema (\S\ref{sec:sti}); in questo lavoro \textbf{non è realizzato né valutato} \prova{N}: nelle prove le etichette sono assegnate a mano, e nessuna classe diversa da «persona» è stata simulata nella catena completa. Le prove fatte riguardano le regole che usano l'etichetta, su modelli ridotti: (i)~«un'etichetta non riduce l'avviso né produce un libero» vale per costruzione (\S\ref{sec:occ}) e, in una simulazione della sola fascia di guardia, dà 0 violazioni su 20\,000 sequenze di etichette casuali (limite superiore a una coda $1{,}5$ su 10\,000) e 0 su 20\,000 in una seconda simulazione scritta in modo indipendente \prova{S}; una regola alternativa, scartata, viola in $0{,}353$ e $0{,}791$ delle sequenze; (ii)~se l'etichetta potesse restringere la fascia, un carrello etichettato «pedone» resterebbe scoperto nel 29,1\,\% di 20\,000 uscite \prova{S}; (iii)~il controllo di coerenza cinematica non protegge da un'etichetta lenta finché l'oggetto è fermo: 0 scatti su 2000 da fermo; con partenza a $3{,}0\unita{m/s^2}$ lo scatto precede il contatto in 2 casi su 2000 \prova{S}; (iv)~con l'etichetta sbagliata la persona sta nella regione di un'altra classe in $0{,}70$–$0{,}74$ (carrello) e $0{,}11$–$0{,}24$ (treno) dei casi, e un carrello a $3\unita{m/s}$ nella regione «pedone» in $0{,}02$–$0{,}10$ (6000 prove) \prova{S}: per questo nessun livello è dichiarato per classi diverse da «persona». La regola (i) non è mai stata eseguita sulla catena completa \prova{N}.
+
+\subsection{Limiti di validità comuni}\label{sec:val-limiti}
+
+Il costo per ciclo (tempi e memoria) è riportato in \S\ref{sec:cos}.
+\begin{riquadro}{Limiti di validità}
+Tutte le frequenze di questo capitolo sono condizionate al generatore che le ha prodotte: modello ideale del sensore (I), profondità simulata da scheda tecnica a posa nota (II), traiettorie pubbliche prive di profondità (III). La continuità e la copertura della regione sono misurate solo con il tipo (I): su profondità simulata la regola della regione persistente non è stata eseguita (\S\ref{sec:lim-limiti}). La copertura della regione, l'errore del bordo dell'ombra, il rumore del centro, l'identità al ritorno e la latenza \textbf{non sono verificati sperimentalmente su un sensore} \prova{N}. Le riconte dei risultati condividono con le simulazioni i programmi di simulazione e i loro modelli: rilevano errori di somma, di denominatore e d'intervallo, non un difetto del simulatore. Sul posto vale il conteggio «dentro $k$ su $n$» letto con le regole di \S\ref{sec:val-numerosita}: con 10–50 passaggi per riga esso può smentire una cifra, non confermarla al centesimo.
+\end{riquadro}

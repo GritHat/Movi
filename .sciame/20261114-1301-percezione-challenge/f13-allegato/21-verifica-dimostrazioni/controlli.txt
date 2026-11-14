@@ -1,0 +1,112 @@
+== A. Ricorsione di Pi in una dimensione (esaustivo)
+  4 celle, 4 fotogrammi: 65536 successioni; Pi != raggiungibile in 0; violazioni di monotonia 0
+  5 celle, 3 fotogrammi: 32768 successioni; Pi != raggiungibile in 0; violazioni di monotonia 0
+  velocità vera doppia, 3 celle, 2 fotogrammi: oggetto possibile fuori da Pi in 8 successioni su 64
+  velocità vera doppia, 4 celle, 4 fotogrammi: oggetto possibile fuori da Pi in 30288 successioni su 65536
+== A2. Contenimento con errore di posa: O calcolato nel riferimento stimato (spostamento di s celle)
+  ricorsione dell'allegato (dilatazione con eps_p, O stimato): posizione vera fuori da Pi in 132 istanti su 132
+  con O eroso di eps_p (Lemma del margine di posa):              posizione vera fuori da Pi in 0 istanti su 132
+== B. Livello di una regione ritagliata
+  violazioni del limite: 0 su 2000; uguaglianza quando S contiene il complemento di E: 2000 su 2000
+  p=0,95: G(S)=0,23 -> 0.7826; G(S)=0,08 -> 0.3750
+== C. Fascia di guardia, w = 0,40 m
+  t_a=0.000 tau=0.150 eps=0.00: tempo 0.2167 s, v coperta 1.846 m/s
+  t_a=0.000 tau=0.155 eps=0.00: tempo 0.2217 s, v coperta 1.805 m/s
+  t_a=0.133 tau=0.155 eps=0.00: tempo 0.3550 s, v coperta 1.127 m/s
+  t_a=0.133 tau=0.155 eps=0.20: tempo 0.3550 s, v coperta 0.563 m/s
+  senza tenuta: 0.2883 s; v coperta 1.3873 m/s; 1,4*T = 0.4037 m; 2,5*T = 0.721 m
+  fascia per classe 0,355*vmax: 2.5->0.887, 2.0->0.710, 4.5->1.597, 8.0->2.840, 8.3->2.946, 13.9->4.934, 15.4->5.467, 16.7->5.928, 4.0->1.420, 4.8->1.704
+  d_serve [t_conf=0,267]: 1.4->2.941, 2.5->4.505, 1.0->2.372, 2.0->3.794, 2.2->4.078, 4.5->7.349, 3.0->5.216, 8.0->12.326, 1.7->3.367, 8.3->12.753, 13.9->20.716, 9.0->13.748, 15.4->22.849, 11.0->16.592, 16.7->24.697
+    v coperta 1.442 m/s (Tr=1,5: 1.067); dopo il contatto oltre 7.11 m/s
+  d_serve [t_conf=4/15]: 1.4->2.940, 2.5->4.504, 1.0->2.372, 2.0->3.793, 2.2->4.078, 4.5->7.348, 3.0->5.215, 8.0->12.323, 1.7->3.367, 8.3->12.750, 13.9->20.711, 9.0->13.745, 15.4->22.844, 11.0->16.588, 16.7->24.692
+    v coperta 1.442 m/s (Tr=1,5: 1.067); dopo il contatto oltre 7.11 m/s
+== D. Massa: informazione di Fisher in aritmetica razionale
+  det 2x2 = 0; I*(u,M) = [Fraction(0, 1), Fraction(0, 1)]
+  rango dello jacobiano rispetto a (p0, v0, u, M): 3 su 4
+== E. Accelerazione
+  differenza seconda, sigma_p=3 cm, 30 Hz: 66.14 m/s^2
+  differenza seconda, sigma_p=3 cm, 15 Hz: 16.53 m/s^2
+  differenza seconda, sigma_p=3 cm, 10 Hz: 7.35 m/s^2
+  minimi quadrati, accelerazione costante, 15 campioni a 30 Hz: sigma_a = 0.841 m/s^2
+  minimi quadrati, accelerazione costante, 16 campioni a 30 Hz: sigma_a = 0.714 m/s^2
+  varianza della differenza seconda (Monte Carlo, 200000): 6.012 (atteso 6)
+== F. Filtro a velocità quasi costante: covarianza stazionaria e crescita senza misure
+  q=0.2: sqrt(Ppp)=3.26 cm, sqrt(Pvv)=0.205 m/s; sigma_p = 0.156 / 0.344 / 0.848 / 1.485; r95 = 0.38 / 0.84 / 2.08 / 3.63
+  q=0.1: sqrt(Ppp)=3.05 cm, sqrt(Pvv)=0.160 m/s; sigma_p = 0.121 / 0.257 / 0.618 / 1.072
+  q=0.05: sqrt(Ppp)=2.85 cm, sqrt(Pvv)=0.124 m/s; sigma_p = 0.096 / 0.194 / 0.453 / 0.777
+  q=0,2: r95 supera 1.0 m dopo 1.15 s
+  q=0,2: r95 supera 2.0 m dopo 1.95 s
+  raggi: 1.1774 2.1460 2.4477; 1-exp(-1/2) = 0.3935; gamma99 = 9.210
+== G. Intervalli
+  Wilson 826/879: 0.9397 [0.9220; 0.9536]
+  Wilson 58/90: 0.6444 [0.5415; 0.7356]
+  Wilson 9/2800: 0.0032 [0.0017; 0.0061]
+  Wilson 347/357: 0.9720 [0.9492; 0.9847]
+  Wilson 174/221: 0.7873 [0.7287; 0.8361]
+  Wilson 23/24: 0.9583 [0.7976; 0.9926]
+  Wilson 21/24: 0.8750 [0.6900; 0.9566]
+  Wilson 283/339: 0.8348 [0.7916; 0.8705]
+  Wilson 226/282: 0.8014 [0.7509; 0.8438]
+  Wilson 830/897: 0.9253 [0.9062; 0.9408]
+  Wilson 132/134: 0.9851 [0.9472; 0.9959]
+  Wilson 44/87: 0.5057 [0.4027; 0.6083]
+  0 su 90: esatto a una coda 3.2738 %, Wilson 4.0936 %, 3/N = 3.3333 %
+  0 su 96: esatto a una coda 3.0724 %, Wilson 3.8476 %, 3/N = 3.1250 %
+  0 su 131: esatto a una coda 2.2609 %, Wilson 2.8489 %, 3/N = 2.2901 %
+  0 su 300: esatto a una coda 0.9936 %, Wilson 1.2643 %, 3/N = 1.0000 %
+  0 su 10: esatto a una coda 25.8866 %, Wilson 27.7535 %, 3/N = 30.0000 %
+  0 su 400: esatto a una coda 0.7461 %, Wilson 0.9512 %, 3/N = 0.7500 %
+  0 su 8314: esatto a una coda 0.0360 %, Wilson 0.0462 %, 3/N = 0.0361 %
+  0 su 24835: esatto a una coda 0.0121 %, Wilson 0.0155 %, 3/N = 0.0121 %
+  400 su 400: Wilson 0.9905; esatto a una coda 0.9925
+  z_12 = 2.865
+  z_45 = 3.261
+  z_60 = 3.341
+  90 su 100: m=1 [0.826; 0.945]; m=12 [0.782; 0.958]
+  copertura effettiva minima dell'intervallo di Wilson al 95 %, N=100, p in [0,005; 0,995]: 0.9102 a p=0.005
+== H. Copertura realizzata Beta(k, n+1-k)
+  n_c=30, k=28: 5º percentile 0.8047
+  n_c=100, k=91: 5º percentile 0.8482
+  primo n_c con P(C>0,85)>=0,95: 68; stabilmente da 110; soglia infinita per n_c < 9
+== I. Criterio d'accettazione
+  non stratificato 21/5/4, coperture 1/1/0:   P(supera) = 1.0000
+  non stratificato 21/5/4, coperture 1/1/0,5: P(supera) = 1.0000
+  tutti a 0.9: P(supera) = 0.8652
+  tutti a 0.8: P(supera) = 0.1423
+  stratificato (>=28 / <=23), copertura 0.5: respinto al primo stadio 0.9993; respinto in tutto con il secondo stadio a 52 su 60: 1.0000
+  stratificato (>=28 / <=23), copertura 0.9: respinto al primo stadio 0.0258; respinto in tutto con il secondo stadio a 52 su 60: 0.1381
+== J. Geometria
+  z_min = 1.2426; T_h cos = 0.9166; T_h h sin = 0.2947; tan14 = 0.2493
+  spigolo: x = 1.434, phi = 49.1, rho = 1.897; rho_min(30°) = 1.435, (43,5°) = 1.713
+  ostacolo basso: 1.087, 1.139; testa 1,70: 2.005; sospeso 1,80: 2.406
+  z_min per Phi_v 55/61: 1.310/1.179; per theta 14/16: 1.287/1.200
+  f=424: Phi_v = 59.02, z_min = 1.2206; f da 87°: 446.8; da 58°: 433.0
+  settore d'anello: 5.661 m2 = 20.0 %
+  regione esatta nel disco (griglia di 4 mm): 5.788 m2 = 20.5 %
+  ombra: 2.267, 2.571, 9.00; a_min(1,60; 1,15)=1.400; tetto(2,0)=1.699; fascia visibile 1.606, 1.563
+  durata: 1 m: 0.54-0.90 s; 2 m: 1.41-2.26 s
+  errore di quota 1° a 2.0 m: 3.51 cm;  errore di quota 1° a 2.8 m: 4.90 cm;  errore di quota 1° a 3.0 m: 5.25 cm;
+  suolo occupato con 2° da 1.985 m; soglia 10 cm: 0.69° a 2,5 m, 0.57° a 3 m
+  sigma_z nominale 2/3/4 m: 1.51/3.40/6.04 cm; sigma_t: 1.01/1.51/2.02
+== K. Margine della lettura del suolo (eq. del margine): quota massima di una superficie che legge ancora 'suolo'
+  k=0.004, rho=2.0 m: z0=2.242 m, m=0.090 m, superficie sul raggio fino a quota 4.8 cm sopra il suolo resta entro il margine
+  k=0.004, rho=3.0 m: z0=3.208 m, m=0.154 m, superficie sul raggio fino a quota 5.7 cm sopra il suolo resta entro il margine
+  k=0.01, rho=2.0 m: z0=2.242 m, m=0.181 m, superficie sul raggio fino a quota 9.7 cm sopra il suolo resta entro il margine
+  k=0.01, rho=3.0 m: z0=3.208 m, m=0.339 m, superficie sul raggio fino a quota 12.7 cm sopra il suolo resta entro il margine
+== L. Griglia bayesiana, conferma, mobile
+  ln(0,7/0,3)=0.8473; ln(0,1192/0,8808)=-2.0000; colpi: 3
+  non confermato con 3 fotogrammi, P_D=0,9: 27.10 %
+  non confermato con 4 fotogrammi, P_D=0,9: 5.23 %
+  non confermato con 5 fotogrammi, P_D=0,9: 0.86 %
+  ritardo: {2: 0.81, 3: 0.16200000000000003, 4: 0.024300000000000006}; media 0.1469 s (non condizionata), 0.1474 s (condizionata)
+  P_fa = 5.733e-07; 26*P_fa = 1.491e-05; sigma_delta = 0.8165 sigma; soglia 4.082 sigma
+  nominale 2 m: v0,5 = 0.071, v0,9 = 0.089 m/s
+  nominale 3 m: v0,5 = 0.160, v0,9 = 0.201 m/s
+  pessimista 3 m: v0,5 = 0.424, v0,9 = 0.533 m/s
+  severa 3 m: v0,5 = 0.530, v0,9 = 0.666 m/s
+  spostamento apparente: 10 % per delta = 3.036 sigma; 1 % per 2.183 sigma
+  piramide: 18.94 m3; 26.3 %; 72/V = 3.80; blocchi 160, 1200
+== M. Aggiunte dopo il primo lancio (non cieche): convenzione del conteggio del controesempio di velocità, z_60
+  velocità doppia, 4 celle, 4 fotogrammi, violazione contata solo all'ultimo fotogramma: 17696 su 65536
+  (contata a un fotogramma qualsiasi: 30288, vedi sezione A)
+  z_60 = 3.34148; z_12 = 2.86526; z_45 = 3.26077

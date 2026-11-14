@@ -1,0 +1,6 @@
+Previsioni scritte prima della prima compilazione (2026-11-14T18:59:24+01:00):
+P1. capitolo.tex compila con xelatex+bibtex senza errori e senza citazioni indefinite al primo o al secondo tentativo. Smentita: errori dopo due correzioni.
+P2. Lunghezza composta: fra 4 e 5 pagine alla prima stesura (da tagliare a 4). Smentita: <= 4 o > 5 alla prima compilazione.
+P3. Ricerca delle parole vietate (criterio A-4): 0 occorrenze dopo al piu' una correzione. Smentita: occorrenze residue alla consegna.
+
+Esiti (2026-11-14T19:07:49+01:00): P1 regge (compila al primo tentativo: 0 errori, 0 citazioni indefinite). P2 regge (prima stesura: corpo di circa 4,3 pagine; consegnato a 4). P3 regge (0 occorrenze al primo controllo).

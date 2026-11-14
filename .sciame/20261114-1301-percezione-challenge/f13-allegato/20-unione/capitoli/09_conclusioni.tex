@@ -1,0 +1,36 @@
+\section{Conclusioni}\label{sec:con}
+
+Il lavoro risponde a una domanda: che cosa può dichiarare un sistema di percezione nell'intervallo in cui un ostacolo nasconde il soggetto. La risposta adottata è un'uscita che tiene distinti l'osservato, il previsto con la sua regione e il suo livello, e il non noto, e che non dichiara mai «libero» ciò che non è stato osservato. I risultati hanno tre livelli di prova diversi, che qui si tengono separati.
+
+\paragraph{Che cosa è dimostrato, nel modello dichiarato \prova{D}.}
+\begin{itemize}
+\item Nessuna cella non osservata è dichiarata «libero», e una cella dichiarata «libero» è priva di superfici fino al suolo, se la profondità valida è corretta, la posa è nota entro la tolleranza e il suolo è piano (Proposizione~\ref{prop:map-sicurezza}). Fuori da queste ipotesi l'enunciato cade: i controesempi sono il vetro, l'ostacolo che non rimanda segnale e l'errore d'inclinazione di $1^\circ$ (\S\ref{sec:map-controesempi}).
+\item Un soggetto nascosto, con velocità non superiore a $\vmax$, resta nell'insieme di possibile presenza $\Pres(t)$, che si riduce solo per osservazione e mai per il tempo trascorso (Proposizioni~\ref{prop:occ-contenimento} e~\ref{prop:occ-monotonia}).
+\item La fascia di guardia $w$ contiene il soggetto se vale la condizione~\eqref{eq:occ-fascia}; con $w=0{,}40\unita{m}$ la velocità coperta, per calcolo, è $1{,}13\unita{m/s}$, e $0{,}56\unita{m/s}$ se il bordo dell'ombra sbaglia di $0{,}20\unita{m}$ (Proposizione~\ref{prop:occ-fascia}) \prova{C}.
+\item La regione di previsione è contenuta nell'area d'avviso, non la riduce e non si svuota finché la traccia è nell'ombra (Proposizione~\ref{prop:occ-annidamento}); un'etichetta di classe non riduce l'avviso né produce un «libero» (Proposizione~\ref{prop:occ-etichetta}).
+\item La massa non è identificabile da misure di posizione, e l'accelerazione non è stimabile con precisione utile alla frequenza e al rumore assunti (Proposizione~\ref{prop:sti-massa}) \prova{C}.
+\item La geometria d'osservazione è in forma chiusa: visibilità del suolo, ombra di un ostacolo, durata dell'occlusione, rumore di profondità ed effetto di un errore di posa (\S\ref{sec:geo}).
+\end{itemize}
+
+\paragraph{Che cosa è verificato in simulazione \prova{S}.}
+\begin{itemize}
+\item \emph{Con modello ideale del sensore.} La regione è emessa a ogni ciclo dell'occlusione: 0 passaggi con un'interruzione su $23\,402$, da 6000 soggetti distinti; la premessa, cioè l'ingresso nell'ombra riconosciuto, manca in 24 passaggi su $23\,402$. Con un ostacolo largo $2\unita{m}$, il bordo dell'ombra noto e il soggetto sul proprio percorso, la regione contiene il soggetto con estremo inferiore dell'intervallo sopra $0{,}90$ fino a $2\unita{s}$ e sopra $0{,}85$ a $3\unita{s}$, in 30 combinazioni su 30. Con un pannello largo $1\unita{m}$ la soglia di $0{,}90$ non è raggiunta a $1\unita{s}$ ($942/1045$, $\ell^-=0{,}882$) e oltre non si dichiara alcuna cifra (\S\ref{sec:val}).
+\item La regola del «libero» della cella non dichiara libera alcuna cella sopra un ostacolo in 300 condizioni dichiarate, con errore d'inclinazione entro $0{,}5^\circ$; lo zero vale per quell'insieme di condizioni e non è una frequenza (\S\ref{sec:map}).
+\item \emph{Su profondità simulata dalle schede tecniche.} Un soggetto nascosto entro $3\unita{m}$ non resta senza avviso (0 fotogrammi su 4324, e 0 su 3608 in una replica). L'identità alla ricomparsa, che con i parametri di partenza tiene in 0 passaggi su 90, con i gruppi e il riaggancio modificati tiene in 176 passaggi su 180 a 424 pixel di larghezza e in 174 su 180 a 848, in un dominio ristretto: un adulto solo, a $0{,}5\unita{m}$ dietro il pannello, entro $2{,}6\unita{m}$, rumore nominale (\S\ref{sec:sti}, \S\ref{sec:val}).
+\item \emph{Su traiettorie pubbliche di pedoni} \prova{P}. Il modello di moto a velocità quasi costante, con $q=0{,}2\unita{m^2/s^3}$, copre il soggetto in $0{,}977$, $1{,}000$ e $1{,}000$ dei casi a 1, 2 e $3\unita{s}$ (219 tratti di 9 persone, senza profondità).
+\item Il costo di calcolo è in media $6{,}35\unita{ms}$ per ciclo su profondità simulata, su un filo di un processore da portatile, e $81\unita{ms}$ su una registrazione pubblica affollata (\S\ref{sec:cos}).
+\end{itemize}
+
+\paragraph{Dove le simulazioni mostrano che il sistema cede.} Chi svolta o esce dal lato lontano dell'ombra è nella regione in una quota di casi fra $0{,}57$ e $0{,}86$ a 2 e $3\unita{s}$; con il bordo dell'ombra stimato e non riconosciuto la quota a $1\unita{s}$ scende a $0{,}30$--$0{,}46$. In questi casi non si dichiara un livello e resta la sola area d'avviso. Un secondo soggetto che esce dalla stessa ombra riceve l'identità del primo (19 casi su 20): per questo l'identità è presunta e l'avviso non ne dipende. Dietro un ostacolo fermo l'avviso non si spegne.
+
+\paragraph{Che cosa resta non verificato sperimentalmente \prova{N}.}
+\begin{itemize}
+\item \emph{Ogni grandezza su un sensore fisico.} Nessuna prova è stata eseguita su una camera: rumore, pixel senza dato, errore del bordo dell'ombra, copertura della regione, identità alla ricomparsa, latenza e costo sulla scheda di bordo non sono misurati. La latenza di $155\unita{ms}$ è una somma di voci note.
+\item \emph{La continuità su profondità simulata.} La regola della regione persistente è stata eseguita solo con modello ideale del sensore (\S\ref{sec:lim-limiti}).
+\item \emph{Il termine dell'avviso per osservazione.} Che l'avviso non termini senza osservazione è dimostrato; che termini quando il suolo è rivisto, dopo la rimozione dell'ostacolo, non è verificato (acceso dopo $2\unita{s}$ in 10 prove su 10).
+\item \emph{Il classificatore.} È un componente richiesto dal sistema; in questo lavoro non è realizzato né valutato: è simulato con etichette assegnate a mano. Nessuna classe diversa da «persona» è stata simulata nella catena completa, e la regola che lega la classe alla fascia di guardia è stata provata sulla sola fascia (0 riduzioni dell'avviso su $20\,000$ sequenze di etichette, due volte). La sicurezza delle indicazioni non dipende dall'etichetta.
+\item \emph{L'avviso tempestivo per classe e per portatore.} Con $3\unita{m}$ di portata, sensore fermo e un tempo di reazione ipotizzato di $1{,}0\unita{s}$, l'avviso è tempestivo per calcolo fino a $1{,}44\unita{m/s}$: 3 classi su 15 alla velocità tipica, nessuna alla massima. Il sensore in moto è trattato solo come analisi dei requisiti.
+\item \emph{L'uso da parte di persone.} Lo schermo e i segnali sonori non sono stati provati con persone, vedenti o no.
+\end{itemize}
+
+Le misure che deciderebbero ciascuno di questi punti, con la soglia che li smentirebbe, sono elencate in \S\ref{sec:lim-misure}. Il sistema svolge solo osservazione, monitoraggio e avviso: non è un dispositivo di protezione.

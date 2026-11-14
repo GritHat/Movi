@@ -1,0 +1,72 @@
+OK  c1 0/300 cond                    p=0.0000 Wilson=[0.00000; 0.01264] dichiarato=[None; 0.013]
+NO  c1 0/131 seq                     p=0.0000 Wilson=[0.00000; 0.02849] dichiarato=[None; 0.029]
+OK  c1 0/6000 camm                   p=0.0000 Wilson=[0.00000; 0.00064] dichiarato=[None; 0.00064]
+NO  c1 0/24835                       p=0.0000 Wilson=[0.00000; 0.00015] dichiarato=[None; 0.00016]
+OK  c1 2125/2279                     p=0.9324 Wilson=[0.92138; 0.94202] dichiarato=[0.921; None]
+OK  c1 1754/1922                     p=0.9126 Wilson=[0.89913; 0.92441] dichiarato=[0.899; None]
+OK  c1 942/1045                      p=0.9014 Wilson=[0.88187; 0.91806] dichiarato=[0.882; None]
+OK  c1 826/879                       p=0.9397 Wilson=[0.92197; 0.95361] dichiarato=[0.922; None]
+OK  c1 10711/10757                   p=0.9957 Wilson=[0.99430; 0.99679] dichiarato=[0.994; None]
+OK  c1 9228/9240                     p=0.9987 Wilson=[0.99773; 0.99926] dichiarato=[0.998; None]
+OK  c1 6772/6967                     p=0.9720 Wilson=[0.96787; 0.97563] dichiarato=[0.968; None]
+OK  c1 0/90                          p=0.0000 Wilson=[0.00000; 0.04094] dichiarato=[None; 0.041]
+OK  c1 176/180                       p=0.9778 Wilson=[0.94426; 0.99133] dichiarato=[0.94; 0.99]
+OK  c1 174/180                       p=0.9667 Wilson=[0.92920; 0.98464] dichiarato=[0.93; 0.98]
+OK  c1 214/219                       p=0.9772 Wilson=[0.94768; 0.99021] dichiarato=[0.948; 0.99]
+OK  c1 2000/2000                     p=1.0000 Wilson=[0.99808; 1.00000] dichiarato=[0.9981; None]
+OK  c1 79/90                         p=0.8778 Wilson=[0.79426; 0.93036] dichiarato=[0.794; 0.93]
+OK  c2 9/10                          p=0.9000 Wilson=[0.59585; 0.98212] dichiarato=[0.6; 0.98]
+OK  c2 10/10                         p=1.0000 Wilson=[0.72247; 1.00000] dichiarato=[0.72; 1]
+OK  c3 0/10 scene                    p=0.0000 Wilson=[0.00000; 0.27753] dichiarato=[None; 0.28]
+OK  c3 58/90                         p=0.6444 Wilson=[0.54150; 0.73556] dichiarato=[0.54; 0.74]
+OK  c3 830/897                       p=0.9253 Wilson=[0.90623; 0.94076] dichiarato=[0.906; 0.941]
+OK  c3 132/134                       p=0.9851 Wilson=[0.94722; 0.99590] dichiarato=[0.947; 0.996]
+OK  c3 44/87                         p=0.5057 Wilson=[0.40269; 0.60832] dichiarato=[0.403; 0.608]
+OK  c3 0/321                         p=0.0000 Wilson=[0.00000; 0.01183] dichiarato=[None; 0.0118]
+OK  c3 0/900                         p=0.0000 Wilson=[0.00000; 0.00425] dichiarato=[None; 0.0043]
+NO  c4 1718/2000 (85,9%)             p=0.8590 Wilson=[0.84306; 0.87357] dichiarato=[0.843; 0.873]
+OK  c4 532/2000 (26,6%)              p=0.2660 Wilson=[0.24710; 0.28580] dichiarato=[0.247; 0.286]
+OK  c4 17240/20000 (86,2%)           p=0.8620 Wilson=[0.85715; 0.86671] dichiarato=[0.857; 0.867]
+OK  c4 5380/20000 (26,9%)            p=0.2690 Wilson=[0.26290; 0.27519] dichiarato=[0.263; 0.275]
+OK  c4 0/4000                        p=0.0000 Wilson=[0.00000; 0.00096] dichiarato=[None; 0.001]
+OK  c4 20000/20000                   p=1.0000 Wilson=[0.99981; 1.00000] dichiarato=[0.9998; None]
+OK  c4 5/90                          p=0.0556 Wilson=[0.02396; 0.12354] dichiarato=[0.024; 0.124]
+OK  c4 45/60                         p=0.7500 Wilson=[0.62768; 0.84223] dichiarato=[0.63; 0.84]
+OK  c4 207/219                       p=0.9452 Wilson=[0.90668; 0.96838] dichiarato=[0.907; 0.968]
+OK  c4 219/219                       p=1.0000 Wilson=[0.98276; 1.00000] dichiarato=[0.983; 1]
+OK  c4 174/219                       p=0.7945 Wilson=[0.73615; 0.84274] dichiarato=[0.736; 0.843]
+OK  c4 176/219                       p=0.8037 Wilson=[0.74600; 0.85084] dichiarato=[0.746; 0.851]
+OK  c4 182/219                       p=0.8311 Wilson=[0.77582; 0.87487] dichiarato=[0.776; 0.875]
+OK  c4 400/400                       p=1.0000 Wilson=[0.99049; 1.00000] dichiarato=[0.9905; None]
+OK  c4 0/2400                        p=0.0000 Wilson=[0.00000; 0.00160] dichiarato=[None; 0.0016]
+OK  c4 41/45                         p=0.9111 Wilson=[0.79266; 0.96489] dichiarato=[0.793; 0.965]
+OK  c4 2/10                          p=0.2000 Wilson=[0.05668; 0.50984] dichiarato=[0.06; 0.51]
+OK  c4 6/10                          p=0.6000 Wilson=[0.31267; 0.83182] dichiarato=[0.31; 0.83]
+OK  c4 2400/2400                     p=1.0000 Wilson=[0.99840; 1.00000] dichiarato=[0.9984; None]
+OK  c4 19/20                         p=0.9500 Wilson=[0.76387; 0.99112] dichiarato=[0.76; 0.99]
+OK  c5 0/96                          p=0.0000 Wilson=[0.00000; 0.03848] dichiarato=[None; 0.038]
+OK  c5 23/24                         p=0.9583 Wilson=[0.79758; 0.99261] dichiarato=[0.8; 0.99]
+OK  c5 21/24                         p=0.8750 Wilson=[0.68996; 0.95656] dichiarato=[0.69; 0.96]
+OK  c5 9/2800                        p=0.0032 Wilson=[0.00169; 0.00610] dichiarato=[0.002; 0.006]
+OK  c5 1222/1265                     p=0.9660 Wilson=[0.95453; 0.97467] dichiarato=[0.955; None]
+OK  c5 666/698                       p=0.9542 Wilson=[0.93600; 0.96734] dichiarato=[0.936; None]
+OK  c5 174/221                       p=0.7873 Wilson=[0.72871; 0.83613] dichiarato=[0.729; 0.836]
+OK  c5 3027/3041                     p=0.9954 Wilson=[0.99229; 0.99726] dichiarato=[0.992; 0.997]
+OK  c5 3493/3616                     p=0.9660 Wilson=[0.95956; 0.97142] dichiarato=[0.96; 0.971]
+OK  c5 3239/3546                     p=0.9134 Wilson=[0.90371; 0.92224] dichiarato=[0.904; 0.922]
+OK  c5 347/357                       p=0.9720 Wilson=[0.94921; 0.98472] dichiarato=[0.95; 0.98]
+NO  c5 0/20000 (dich. 1,5/10000)     p=0.0000 Wilson=[0.00000; 0.00019] dichiarato=[None; 0.00015]
+voci 58 non tornano 4
+3027/3041 0.9954
+3493/3616 0.966
+3239/3546 0.9134
+347/357 0.972
+174/221 0.7873
+80505/146901 0.548
+5553/16851 0.3295
+2096/6648 0.3153
+928/23402 0.0397
+537/88418 0.0061
+9/2800 0.0032
+0/20000: regola del tre 0.00015  CP unilat 0.000149775396222962  CP bilat 0.0001844269639619256
+0/24835 CP unilat 0.00012061814375230462 regola del tre 0.00012079726192872962

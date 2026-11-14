@@ -1,0 +1,18 @@
+identità 424 px                         176/180    = 0.9778  Wilson 95 % [0.9443; 0.9913]
+identità 848 px                         174/180    = 0.9667  Wilson 95 % [0.9292; 0.9846]
+estraneo                                 19/20     = 0.9500  Wilson 95 % [0.7639; 0.9911]
+pannello mobile, partenza                79/90     = 0.8778  Wilson 95 % [0.7943; 0.9304]
+pannello mobile fuori dominio             7/10     = 0.7000  Wilson 95 % [0.3968; 0.8922]
+avviso acceso dopo rimozione             10/10     = 1.0000  Wilson 95 % [0.7225; 1.0000]
+copertura pannello 1 m a 1 s            942/1045   = 0.9014  Wilson 95 % [0.8819; 0.9181]
+vuoti su camminatori distinti             0/6000   = 0.0000  Wilson 95 % [0.0000; 0.0006]
+secondo soggetto, ideale               2400/2400   = 1.0000  Wilson 95 % [0.9984; 1.0000]
+secondo soggetto a                     3027/3041   = 0.9954  Wilson 95 % [0.9923; 0.9973]
+secondo soggetto b                     3493/3616   = 0.9660  Wilson 95 % [0.9596; 0.9714]
+secondo soggetto c                     3239/3546   = 0.9134  Wilson 95 % [0.9037; 0.9222]
+posa +0,5°                                6/10     = 0.6000  Wilson 95 % [0.3127; 0.8318]
+bambino                                   2/10     = 0.2000  Wilson 95 % [0.0567; 0.5098]
+premessa mancante                        24/23402  = 0.0010  Wilson 95 % [0.0007; 0.0015]
+fascia: 0,40/0,355 = 1.127  (0,40-0,20)/0,355 = 0.563
+latenza: 16,7+95+22+21,3 = 155.0  con 71 ms: 131.0
+avviso: (3-0,95)/(0,267+0,155+1,0) = 1.442

@@ -1,0 +1,10 @@
+Previsioni scritte alle 2026-11-14T19:28 (prima dei controlli), curatore delle fonti, verifica avversaria f13.
+P1. Ogni chiave citata nei capitoli esiste in allegato.bib. Misura: chiavi citate meno chiavi del .bib. Smentita: almeno 1 chiave mancante.
+P2. Nessuna chiave marcata N nella mappa II.3 sta nella stessa frase di una cifra che la fonte dovrebbe sostenere. Smentita: almeno 1 caso.
+P3. Almeno 10 voci del .bib non sono mai citate (90 voci, capitoli scritti da mani diverse). Smentita: meno di 10.
+P4. bibtex sul documento: 0 errori e 0 avvisi. Smentita: almeno 1 avviso.
+P5. Su un campione di almeno 15 fonti riaperte in rete, almeno 1 cifra o frase non coincide con la fonte. Smentita: 0 scostamenti (allora "non trovato scostamento sul campione", non prova universale).
+
+Esiti (scritti dopo i controlli, 2026-11-14 19:38 circa; dettagli in VERIFICA.md):
+P1 regge (0 mancanti su 78). P2 smentita (pellegrini2009, lerner2007, barshalom2001). P3 regge (12). P4 smentita (11 avvisi). P5 regge (tre scostamenti nel campione).
+Nota: l'ora «19:28» in testa è scritta a mano; date -Is dava 19:26:25 prima e 19:27:52 dopo la scrittura.

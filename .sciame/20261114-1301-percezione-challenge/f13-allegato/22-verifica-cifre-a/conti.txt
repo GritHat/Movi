@@ -1,0 +1,87 @@
+== cap.2
+58 zmin 1.243 a=0.15 1.087 a=0.10 1.139 tanb+ 0.249 q1.80 da 2.41
+59.0 zmin 1.221 a=0.15 1.068 a=0.10 1.119 tanb+ 0.259 q1.80 da 2.32
+60 zmin 1.2 a=0.15 1.05 a=0.10 1.1 tanb+ 0.268 q1.80 da 2.24
+65 zmin 1.1 a=0.15 0.962 a=0.10 1.008 tanb+ 0.315 q1.80 da 1.9
+lat 0.917 0.295 rho30 1.43 rho43.5 1.71
+spigolo x 1.434 phi 49.1 rho 1.9
+f424: zmin/cos44 1.698
+ymax [(1.24, 1.51), (1.7, 1.62), (1.9, 1.67), (2.0, 1.7), (2.3, 1.77), (3.0, 1.95)]
+vista da [(1.6, 1.6), (1.7, 2.01), (1.8, 2.41), (1.9, 2.81), (2.0, 3.21)]
+zmin Pv 55,61: 1.31 1.18  th 14,16: 1.29 1.2
+focali 446.8 433.0 424-> 90.0 59.0 gemini 410.7: 91.8
+disco 28.27 settore 5.66 20.0
+area esatta 5.79 20.5
+ombre 2.27 2.57 9.0
+amin
+1.6 [1.4, 1.46, 1.5, 1.51, 1.53, 1.55]
+1.7 [1.45, 1.53, 1.57, 1.59, 1.61, 1.63]
+1.75 [1.48, 1.56, 1.61, 1.63, 1.65, 1.68]
+9 [1.49, 1.57, 1.62, 1.65, 1.67, 1.7]
+visibile sopra 1.5: 1.61 1.56
+durata
+1 1.7 1.35 0.9 [0.64, 0.9, 1.81]
+1 1.9 1.21 0.76 [0.54, 0.76, 1.52]
+2 1.7 2.71 2.26 [1.61, 2.26, 4.51]
+2 1.9 2.42 1.97 [1.41, 1.97, 3.94]
+banda
+1 [(19.0, 26.9), (10.0, 14.1), (10.0, 13.7)]
+1.5 [(9.5, 13.4), (5.0, 7.1), (5.0, 6.8)]
+2 [(4.8, 6.7), (2.5, 3.5), (2.5, 3.4)]
+striscia px a 2 m 20.14 10.600000000000001 ritardo 0.16
+rumore
+D455 40.28 nom [0.2, 0.79, 1.79, 3.18] 5.0 lim [0.5, 2.0, 4.5, 8.0] 3.2 sd nom/lim px 0.08 0.201 quant mm [0.8, 3.1, 7.0, 12.4] q/sqrt12 a 3m 2.0
+D435i 21.2 nom [0.38, 1.51, 3.4, 6.04] 3.6 lim [1.0, 4.0, 9.0, 16.0] 2.2 sd nom/lim px 0.08 0.212 quant mm [1.5, 5.9, 13.3, 23.6] q/sqrt12 a 3m 3.8
+G335 20.54 nom [0.4, 1.6, 3.6, 6.4] 3.5 lim [0.75, 3.0, 6.75, 12.0] 2.6 sd nom/lim px 0.082 0.154 quant mm [1.5, 6.1, 13.7, 24.3] q/sqrt12 a 3m 4.0
+ahn 2m 1.83 rapporto 1.21 px eq 0.097 3m 3.9
+incidenza [46, 60, 68] px 4.5 6.7 5px a 3m 3.4 6.7 1cm entro 0.89 f424 3.5 blur 12.0 45.0
+posa 1° [3.5, 4.9, 5.3] 2°: rho 2.01 a=.10 [0.86, 0.67, 0.57] a=.15 a 2m 2.3 a=.12@2.55 1.12 a=.15@2.55 1.8 15cm@2.0-2.15 2.1 2.3
+tof 26.2 19.7 diag 37 28 campo 2.31 1.66 zone 0.95 1.27 obl 2.33 area 6.28 22.2 1.4
+lidar 3.8 4.2 punti 13.3 11.9 gamba 5m 1.9 1.7 passo 0.8
+== cap.3
+2610 posa 2.6 5.2 10.5 logodds 0.847 -2.0 incl 0.69 0.57 quota con 1° 5.6 4.8 2Δ·2.5 0.33 cella a 2m cm 3.5
+== cap.4
+sz [1.51, 3.4, 6.04] st [1.01, 1.51, 2.02]
+sdelta 0.8165 soglia 4.08 cm 6.2 4.1 Pfa 5.733031438470704e-07 unione 1.490588174002383e-05
+nom2 0.071 0.089 P(0.5) 1.0
+nom3 0.16 0.201 P(0.5) 1.0
+pess3 0.424 0.533 P(0.5) 0.815
+sev3 0.53 0.666 P(0.5) 0.389
+soglia dimezzata Pfa 0.012419330651552318
+non conf [27.1, 5.2, 0.9] rit [(2, 0.81), (3, 0.162), (4, 0.0243)] media s 0.147 0.147
+ralpha [1.177, 2.146, 2.448] gamma 9.21
+0.2 Ppp 3.3 Pvv 0.205 [0.156, 0.344, 0.848, 1.485] r95 [0.38, 0.84, 2.08, 3.64] r90 [0.33, 0.74, 1.82, 3.19]
+r95=1 a 1.15 r95=2 a 1.94
+0.1 Ppp 3.1 Pvv 0.16 [0.121, 0.257, 0.618, 1.072] r95 [0.3, 0.63, 1.51, 2.63] r90 [0.26, 0.55, 1.33, 2.3]
+0.05 Ppp 2.8 Pvv 0.124 [0.096, 0.194, 0.453, 0.777] r95 [0.23, 0.48, 1.11, 1.9] r90 [0.21, 0.42, 0.97, 1.67]
+sigma_a [66.1, 16.5, 7.3] 8cm@30 176 1.5cm@30 33.1 nominale=3cm a 2.82
+LS n 15 0.84
+LS n 16 0.71
+Bin(219,.9) 197.1 4.4 188 205 P>=214 8.081571648132306e-06 P<=174 2.5114155068251434e-06 P>=207 0.012177135016450057
+rapporto quantili 1.82 attraversa 3m 0.75 0.21
+== cap.5
+0.217 1.85 2.5*T 0.54
+0.288 1.39 2.5*T 0.72
+0.355 1.13 2.5*T 0.89
+0.355 0.56 2.5*T 0.89
+0.222 1.8 2.5*T 0.55
+fasce [(2.5, 0.89), (2.0, 0.71), (4.5, 1.6), (8.0, 2.84), (8.3, 2.95), (13.9, 4.93), (15.4, 5.47), (16.7, 5.93), (4.0, 1.42), (4.8, 1.7)] scoperto 0.53
+vel coperta 1.44 3/0.422 7.1
+piedi 2.94 4.51 tip<=1.44 True max<=1.44 False tip>7.1 False max>7.1 False vmax>=4.8 False
+agv 2.37 3.79 tip<=1.44 True max<=1.44 False tip>7.1 False max>7.1 False vmax>=4.8 False
+carrello 4.08 7.35 tip<=1.44 False max<=1.44 False tip>7.1 False max>7.1 False vmax>=4.8 False
+corsa 5.22 12.33 tip<=1.44 False max<=1.44 False tip>7.1 False max>7.1 True vmax>=4.8 True
+trattore 3.37 12.75 tip<=1.44 False max<=1.44 False tip>7.1 False max>7.1 True vmax>=4.8 True
+auto urb 12.75 20.72 tip<=1.44 False max<=1.44 False tip>7.1 True max>7.1 True vmax>=4.8 True
+rullaggio 13.75 22.85 tip<=1.44 False max<=1.44 False tip>7.1 True max>7.1 True vmax>=4.8 True
+treno 16.59 24.7 tip<=1.44 False max<=1.44 False tip>7.1 True max>7.1 True vmax>=4.8 True
+bici 7.06 12.75 tip<=1.44 False max<=1.44 False tip>7.1 False max>7.1 True vmax>=4.8 True
+monop 6.92 8.91 tip<=1.44 False max<=1.44 False tip>7.1 False max>7.1 False vmax>=4.8 True
+auto lav 4.93 12.75 tip<=1.44 False max<=1.44 False tip>7.1 False max>7.1 True vmax>=4.8 True
+traino 2.94 6.92 tip<=1.44 True max<=1.44 False tip>7.1 False max>7.1 False vmax>=4.8 False
+tram 8.91 20.72 tip<=1.44 False max<=1.44 False tip>7.1 False max>7.1 True vmax>=4.8 True
+manovra 6.92 12.75 tip<=1.44 False max<=1.44 False tip>7.1 False max>7.1 True vmax>=4.8 True
+multirotore 5.22 27.97 tip<=1.44 False max<=1.44 False tip>7.1 False max>7.1 True vmax>=4.8 True
+ritaglio 0.782608695652174 0.375 1-e^-1/2 0.3934693402873666 k95 2.4477468306808166 9cm 0.0642857142857143 2.6-(0.89-0.40) 2.1100000000000003 3-0.89 2.11 3-1.7 1.3
+criterio 30: P(resp|0.5) 0.9992845468223095 P(resp|0.9) 0.025826788661909846
+esaustivo 65536 32768 (2^4)^4 65536 (2^5)^3 32768
