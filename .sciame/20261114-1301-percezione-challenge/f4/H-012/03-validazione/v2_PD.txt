@@ -1,0 +1,6 @@
+# Pd 0,9, attraversamento di 4 s (60 fotogrammi) in campo aperto, N=20000: tracce vere chiuse dalla regola «non confermato»
+ chiuse al quarto mancato di fila: 118/20000 (0.59%) ; se si chiude al terzo: 1047/20000 (5.24%)
+
+real	0m0,055s
+user	0m0,051s
+sys	0m0,003s

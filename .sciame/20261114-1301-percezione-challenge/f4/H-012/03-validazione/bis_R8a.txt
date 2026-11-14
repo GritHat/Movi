@@ -1,0 +1,8 @@
+# Pd 0,9, 36 celle principali, N=400 per cella, stessi semi di v2_R8_pd09.txt
+ PRIMA (regola della versione 2)    errore -0.2: falliti 13/4800 ; strati da v4 0 ; avviso ancora acceso a fine passaggio con soggetto visibile 613 ; riagganciate 99.97% | errore +0.0: falliti 0/4800 ; strati da v4 0 ; avviso ancora acceso a fine passaggio con soggetto visibile 674 ; riagganciate 100.00% | errore +0.2: falliti 0/4800 ; strati da v4 0 ; avviso ancora acceso a fine passaggio con soggetto visibile 686 ; riagganciate 99.97%
+ prima + rinascita                  errore -0.2: falliti 3/4800 ; strati da v4 0 ; avviso ancora acceso a fine passaggio con soggetto visibile 615 ; riagganciate 99.97% | errore +0.0: falliti 0/4800 ; strati da v4 0 ; avviso ancora acceso a fine passaggio con soggetto visibile 676 ; riagganciate 100.00% | errore +0.2: falliti 0/4800 ; strati da v4 0 ; avviso ancora acceso a fine passaggio con soggetto visibile 687 ; riagganciate 99.97%
+ validazione-4                      errore -0.2: falliti 8/4800 ; strati da v4 8 ; avviso ancora acceso a fine passaggio con soggetto visibile 616 ; riagganciate 99.97% | errore +0.0: falliti 0/4800 ; strati da v4 7 ; avviso ancora acceso a fine passaggio con soggetto visibile 678 ; riagganciate 99.97% | errore +0.2: falliti 0/4800 ; strati da v4 4 ; avviso ancora acceso a fine passaggio con soggetto visibile 690 ; riagganciate 99.92%
+
+real	1m4,103s
+user	1m4,001s
+sys	0m0,002s

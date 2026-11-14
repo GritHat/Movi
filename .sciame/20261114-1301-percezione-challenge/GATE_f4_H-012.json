@@ -1,0 +1,23 @@
+{
+ "fase": "f4/H-012",
+ "ora": "2026-11-14T15:05:21+01:00",
+ "note": "Controprove (dodici attacchi), misure A e B, soluzione versione 2 con le correzioni, riprova dell'insieme con i bracci che dovevano fallire, anomalia con Pd 0,9 non chiusa e dichiarata (K-014), audit delle ipotesi nascoste, verdetto dell'arbitro (adottabile come progetto di prototipo, con nove condizioni; non come sistema validato) e dossier completato. Le previsioni di f4 sono scritte con l'ora in testa ai file delle misure, prima dei lanci; nessun file PREVISIONI.md è nato in f4.",
+ "non_consegnati": [],
+ "impronte": {
+  "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f4/H-012/01-avversario/CONTROPROVE.md": "78fe6bf44aa06e4291be7dee71636e92b179110501fab7778cf6bc0ffea9d34b",
+  "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f4/H-012/01-avversario/TASK.md": "c30e67fb9a777e70fbfec8c62ef0a4761d21c43fe6592bc70f41c819893e7cbf",
+  "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f4/H-012/01-avversario/stato.md": "2597b877240cca762cc07778c2665d2b79736764aab7d9785991a4bb1289cb7e",
+  "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f4/H-012/02-debugger/TASK.md": "4e2d9060d232abe87a895244ade2343cda3f632476f5def75126a110848239e0",
+  "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f4/H-012/03-validazione/MISURE.md": "e92e17590c20bc62afe0dadfd3602b2417500a137a5804b0bbf3ea323777b46b",
+  "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f4/H-012/03-validazione/MISURE_V2.md": "392e45c5a3fc886b41e14b4f518ffa42f162daf9c54e0d0cc7c81b543279be4f",
+  "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f4/H-012/03-validazione/MISURE_V2_bis.md": "573882aa5bc998de6dd2ab8beb8de809618f61a50f308178d3642f4faf1abd7c",
+  "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f4/H-012/03-validazione/TASK.md": "f26a5d0dc01d8aad13d3615b6d4b519f894277542ebc1d8b4251054bfb87136d",
+  "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f4/H-012/03-validazione/stato.md": "c04b5bdc1b8b5ce1e44dac8be3098e6dc43b567e96887800bd5b79bc7d88105b",
+  "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f4/H-012/04-statistico/TASK.md": "2fd069fc73a59415a254a3f602fcd31c80e4d1f58feb9166efbf27122be9b554",
+  "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f4/H-012/05-correzioni/SOLUZIONE_V2.md": "e813b3d0e3660cced4ec52c47a9ed78e2062e30449db2e8a81b25e53542f8bec",
+  "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f4/H-012/05-correzioni/stato.md": "c63da5857bd02e02dd078ce2048f8f2f94bc0d94d87a025b305b69cc6e721878",
+  "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f4/H-012/09-arbitro/TASK.md": "4181979b3e6f8ce1f0faf3939b6a14a863370db16a7374fe7930dca28b44d2de",
+  "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f4/H-012/09-arbitro/VERDETTO.md": "d0c3d4585999f78b1d1025d91420c05ae6d5d03c3a84e8bf88cba108d8d6608c",
+  "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f4/H-012/09-arbitro/stato.md": "d6ee476b9e9ec33eafa28f5b732e0bae1919d34fb54b9eb02022ffdb67620ee8"
+ }
+}

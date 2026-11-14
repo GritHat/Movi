@@ -1,0 +1,5 @@
+Attacco 8. Pedone a 0,5 m/s in avvicinamento da 2 m, sigma = 5 cm; tempo dal primo fotogramma in cui e' visibile; serve la traccia confermata. 2000 prove per riga.
+  Pd 1.0 | finestra fissa: entro 1 s (<=)  98.0 %, prima di 1 s (<)   0.0 %, entro 1,2 s 100.0 % | finestra che cresce: entro 1 s 100.0 %, entro 0,8 s  94.3 %, mediana 0.67 s
+  Pd 0.9 | finestra fissa: entro 1 s (<=)  79.0 %, prima di 1 s (<)   0.0 %, entro 1,2 s  99.9 % | finestra che cresce: entro 1 s  99.9 %, entro 0,8 s  89.1 %, mediana 0.67 s
+  Traccia riagganciata dopo il buio: la finestra di 1 s contiene misure solo se il buio dura meno di 1 s; con buio >= 1 s l'etichetta riparte da zero (stessi numeri di sopra).
+  Controllo: bersaglio fermo, falsi 'mobile' entro 2,6 s (finestra che cresce): 0.05 %

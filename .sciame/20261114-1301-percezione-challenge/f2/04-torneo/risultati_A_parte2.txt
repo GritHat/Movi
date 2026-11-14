@@ -1,0 +1,58 @@
+== A. Copertura alla ricomparsa (95% / 99%), +- errore tipo; N=4000 per cella ==
+-- G1 miscela mia 60/15/10/15
+  D=0.5 s:  q=0.1: 95%=0.957+-0.003 99%=0.977  q=0.2: 95%=0.977+-0.002 99%=0.990  q=0.5: 95%=0.993+-0.001 99%=0.999
+      per manovra (q=0,2, 95%): prosegue 1.000 (n=2378); sosta 0.989 (n=612); svolta 0.980 (n=594); torna 0.822 (n=416)
+  D=1.0 s:  q=0.1: 95%=0.885+-0.005 99%=0.926  q=0.2: 95%=0.934+-0.004 99%=0.962  q=0.5: 95%=0.979+-0.002 99%=0.992
+      per manovra (q=0,2, 95%): prosegue 1.000 (n=2378); sosta 0.931 (n=606); svolta 0.867 (n=594); torna 0.664 (n=422)
+      P(passare 26/30 | copertura 0.934) = 0.956
+  D=2.0 s:  q=0.1: 95%=0.879+-0.005 99%=0.912  q=0.2: 95%=0.927+-0.004 99%=0.956  q=0.5: 95%=0.977+-0.002 99%=0.990
+      per manovra (q=0,2, 95%): prosegue 1.000 (n=2437); sosta 0.955 (n=595); svolta 0.839 (n=583); torna 0.561 (n=385)
+      P(passare 26/30 | copertura 0.927) = 0.938
+  D=3.0 s:  q=0.1: 95%=0.882+-0.005 99%=0.921  q=0.2: 95%=0.938+-0.004 99%=0.963  q=0.5: 95%=0.979+-0.002 99%=0.992
+      per manovra (q=0,2, 95%): prosegue 1.000 (n=2416); sosta 0.983 (n=585); svolta 0.901 (n=575); torna 0.568 (n=424)
+-- G2 truth() di simA.py (tracciamento)
+  D=0.5 s:  q=0.1: 95%=0.885+-0.005 99%=0.913  q=0.2: 95%=0.922+-0.004 99%=0.949  q=0.5: 95%=0.968+-0.003 99%=0.986
+      per manovra (q=0,2, 95%): con manovra nel buio 0.692 (n=659); senza manovra nel buio 0.967 (n=3341)
+  D=1.0 s:  q=0.1: 95%=0.847+-0.006 99%=0.878  q=0.2: 95%=0.895+-0.005 99%=0.937  q=0.5: 95%=0.968+-0.003 99%=0.987
+      per manovra (q=0,2, 95%): con manovra nel buio 0.711 (n=1143); senza manovra nel buio 0.969 (n=2857)
+      P(passare 26/30 | copertura 0.895) = 0.801
+  D=2.0 s:  q=0.1: 95%=0.839+-0.006 99%=0.888  q=0.2: 95%=0.916+-0.004 99%=0.962  q=0.5: 95%=0.988+-0.002 99%=0.998
+      per manovra (q=0,2, 95%): con manovra nel buio 0.841 (n=1848); senza manovra nel buio 0.981 (n=2152)
+      P(passare 26/30 | copertura 0.916) = 0.899
+  D=3.0 s:  q=0.1: 95%=0.832+-0.006 99%=0.897  q=0.2: 95%=0.932+-0.004 99%=0.974  q=0.5: 95%=0.995+-0.001 99%=0.999
+      per manovra (q=0,2, 95%): con manovra nel buio 0.893 (n=2424); senza manovra nel buio 0.993 (n=1576)
+-- G1 per manovra pura (q=0,2; 95%; N=2000)
+  D=1 s: prosegue 1.000, sosta 0.932, torna 0.655, svolta 0.893 ; quota di manovre (in parti uguali) oltre cui la copertura < 0,85: 87%
+  D=2 s: prosegue 1.000, sosta 0.922, torna 0.568, svolta 0.878 ; quota di manovre (in parti uguali) oltre cui la copertura < 0,85: 71%
+-- G3 traiettoria() di prova_r2.py (rovesciatore), ombra geometrica, N=4000
+  q=0.1: tutte le riemersioni 95%=0.846 99%=0.872 (n=4000)
+     durata [0.20,0.75) s: 95%=0.000+-0.000 99%=0.000 n=31  (torna 0/31)
+     durata [0.75,1.50) s: 95%=0.000+-0.000 99%=0.016 n=126  (torna 0/126)
+     durata [1.50,2.50) s: 95%=0.894+-0.008 99%=0.898 n=1616  (prosegue 1443/1443; torna 1/173)
+     durata [2.50,3.50) s: 95%=0.844+-0.011 99%=0.861 n=1025  (prosegue 864/864; torna 1/161)
+     durata [3.50,99.00) s: 95%=0.894+-0.009 99%=0.958 n=1202  (prosegue 40/40; sosta 1007/1041; torna 28/121)
+  q=0.2: tutte le riemersioni 95%=0.890 99%=0.929 (n=4000)
+     durata [0.20,0.75) s: 95%=0.000+-0.000 99%=0.032 n=31  (torna 0/31)
+     durata [0.75,1.50) s: 95%=0.056+-0.020 99%=0.206 n=126  (torna 7/126)
+     durata [1.50,2.50) s: 95%=0.902+-0.007 99%=0.933 n=1616  (prosegue 1443/1443; torna 15/173)
+     durata [2.50,3.50) s: 95%=0.896+-0.010 99%=0.961 n=1025  (prosegue 864/864; torna 54/161)
+     durata [3.50,99.00) s: 95%=0.978+-0.004 99%=0.997 n=1202  (prosegue 40/40; sosta 1041/1041; torna 95/121)
+  q=0.5: tutte le riemersioni 95%=0.963 99%=0.990 (n=4000)
+     durata [0.20,0.75) s: 95%=0.065+-0.044 99%=0.452 n=31  (torna 2/31)
+     durata [0.75,1.50) s: 95%=0.444+-0.044 99%=0.817 n=126  (torna 56/126)
+     durata [1.50,2.50) s: 95%=0.972+-0.004 99%=0.999 n=1616  (prosegue 1443/1443; torna 128/173)
+     durata [2.50,3.50) s: 95%=0.997+-0.002 99%=1.000 n=1025  (prosegue 864/864; torna 158/161)
+     durata [3.50,99.00) s: 95%=1.000+-0.000 99%=1.000 n=1202  (prosegue 40/40; sosta 1041/1041; torna 121/121)
+-- regola di H-012: q scelto dal NIS medio (atteso 2) sui tratti visibili di G2 (60 fotogrammi, dal 15esimo)
+  q=0.01  NIS medio=4.23  quota a un passo entro il 95%=0.827
+  q=0.02  NIS medio=3.32  quota a un passo entro il 95%=0.863
+  q=0.05  NIS medio=2.58  quota a un passo entro il 95%=0.904
+  q=0.1   NIS medio=2.24  quota a un passo entro il 95%=0.927
+  q=0.2   NIS medio=2.01  quota a un passo entro il 95%=0.945
+  q=0.5   NIS medio=1.81  quota a un passo entro il 95%=0.960
+  q=1     NIS medio=1.68  quota a un passo entro il 95%=0.969
+  q=2     NIS medio=1.57  quota a un passo entro il 95%=0.976
+  q=5     NIS medio=1.42  quota a un passo entro il 95%=0.984
+  q del NIS = 0.2: copertura 95% a 1 s su G2 = 0.912+-0.004 ; P(26/30)=0.880
+  q del NIS = 0.2: copertura 95% a 2 s su G2 = 0.906+-0.005 ; P(26/30)=0.856
+timeout 120 python3 torneo_parte2.py A  7,65s user 0,02s system 99% cpu 7,684 total

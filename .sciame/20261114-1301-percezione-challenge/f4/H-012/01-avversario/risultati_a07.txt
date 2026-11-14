@@ -1,0 +1,11 @@
+Attacco 7a. Tratto visibile di n fotogrammi prima dell'ombra, Pd = 0,9; conferma 3 su 5.
+  n = 2: entra nell'ombra NON confermata: esatto 100.0 %, 300 scene 100.0 %
+  n = 3: entra nell'ombra NON confermata: esatto  27.1 %, 300 scene  21.7 %
+  n = 4: entra nell'ombra NON confermata: esatto   5.2 %, 300 scene   3.7 %
+  n = 5: entra nell'ombra NON confermata: esatto   0.9 %, 300 scene   0.7 %
+  n = 6: entra nell'ombra NON confermata: esatto   0.4 %, 300 scene   0.3 %
+  n = 8: entra nell'ombra NON confermata: esatto   0.1 %, 300 scene   0.0 %
+Attacco 7b. Soggetto mai tracciato che sbuca di fianco al pannello a 1,55 m e viene verso il sensore a 1,4 m/s (300 scene).
+  A 0,5 m (portata minima) arriva dopo 0.75 s: da li' in poi la profondita' e' un buco.
+  finestra fissa di 1 s: 'mobile in avvicinamento' prima di 0,5 m nel   0.0 %; tempo mediano 1.00 s, strada gia' fatta 1.40 m su 1,05 m utili
+  finestra che cresce: 'mobile in avvicinamento' prima di 0,5 m nel 100.0 %; tempo mediano 0.33 s, strada gia' fatta 0.47 m su 1,05 m utili

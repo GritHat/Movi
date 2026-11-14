@@ -1,0 +1,8 @@
+Attacco 12b. Conto delle aree sul disco di 3 m attorno al sensore (28.27 m2).
+  Camera sola: suolo osservabile 5.66 m2 = 20.0 % del disco (87 gradi, da 1.24 a 3 m)
+  + 3 ToF da 60 gradi sui fianchi e dietro, sola prossimita' fino a 2.0 m: 6.28 m2 in piu' = 22.2 % del disco (totale con dato 42.2 %)
+  + 2 ToF da 60 gradi sui fianchi e dietro, sola prossimita' fino a 2.0 m: 4.19 m2 in piu' = 14.8 % del disco (totale con dato 34.8 %)
+  + 3 ToF da 45 gradi sui fianchi e dietro, sola prossimita' fino a 2.0 m: 4.71 m2 in piu' = 16.7 % del disco (totale con dato 36.7 %)
+  + 3 ToF da 60 gradi sui fianchi e dietro, sola prossimita' fino a 1.0 m: 1.57 m2 in piu' = 5.6 % del disco (totale con dato 25.6 %)
+  Un ToF da 60 gradi puntato in basso davanti: anello cieco 0,5-1.24 m coperto per 0.68 m2 su 0.98 m2 dell'anello nel campo della camera
+  I 60 gradi e i 2,0 m al chiuso sono le cifre dei file dello sciame (scheda ST citata in SELEZIONE.md): non riverificate da me.

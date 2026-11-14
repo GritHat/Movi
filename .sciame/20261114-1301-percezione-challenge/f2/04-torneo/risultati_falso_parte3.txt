@@ -1,0 +1,101 @@
+# esperimento falso, seme base 20261114, dt 1/15 s, sigma 5 cm, Pd 0.9, q 0.2, v_max 2.5, 250 particelle
+
+== falso libero, campo aperto, Pd del modello 0.9 (60 prove): per fotogramma mancato j ==
+ j  r_st   massa<0,5m(st)  r*massa  massa_in_ombra(st)  raggio1_chiusa%  raggio3_chiusa%  disco_contiene%
+ 1  0.847  1.000           0.847    0.000               100.0              0.0              0.0
+ 2  0.442  1.000           0.442    0.000               100.0              0.0              0.0
+ 3  0.079  1.000           0.079    0.000               100.0            100.0              0.0
+ 4  0.009  1.000           0.009    0.000               100.0            100.0              0.0
+ 5  0.001  0.999           0.001    0.000               100.0            100.0              0.0
+ 6  0.000  0.995           0.000    0.000               100.0            100.0              0.0
+ 7  0.000  0.980           0.000    0.000               100.0            100.0              0.0
+ 8  0.000  0.953           0.000    0.000               100.0            100.0              0.0
+ 9  0.000  0.913           0.000    0.000               100.0            100.0              0.0
+10  0.000  0.859           0.000    0.000               100.0            100.0              0.0
+11  0.000  0.797           0.000    0.000               100.0            100.0              0.0
+12  0.000  0.731           0.000    0.000               100.0            100.0              0.0
+massa giusta (r x massa entro 0,5 m) sotto il 5 % dal fotogramma j = 4
+
+== falso libero, uscita dall'ombra (pannello 1 m), Pd del modello 0.9 (60 prove): per fotogramma mancato j ==
+ j  r_st   massa<0,5m(st)  r*massa  massa_in_ombra(st)  raggio1_chiusa%  raggio3_chiusa%  disco_contiene%
+ 1  0.957  0.168           0.162    0.988                20.0              0.0              0.0
+ 2  0.955  0.128           0.123    0.986                20.0              0.0              0.0
+ 3  0.953  0.089           0.085    0.984                20.0              0.0              0.0
+ 4  0.951  0.054           0.052    0.981                20.0              0.0              0.0
+ 5  0.950  0.026           0.025    0.978                20.0              0.0              0.0
+ 6  0.948  0.009           0.009    0.975                20.0              0.0              0.0
+ 7  0.946  0.002           0.001    0.971                20.0              0.0              0.0
+ 8  0.945  0.000           0.000    0.968                20.0              0.0              0.0
+ 9  0.943  0.000           0.000    0.964                20.0              0.0              0.0
+10  0.942  0.000           0.000    0.960                20.0              0.0              0.0
+11  0.940  0.000           0.000    0.956                20.0              0.0              0.0
+12  0.939  0.000           0.000    0.951                20.0              0.0              0.0
+massa giusta (r x massa entro 0,5 m) sotto il 5 % dal fotogramma j = 5
+
+== falso libero, campo aperto, Pd del modello 0.8 (60 prove): per fotogramma mancato j ==
+ j  r_st   massa<0,5m(st)  r*massa  massa_in_ombra(st)  raggio1_chiusa%  raggio3_chiusa%  disco_contiene%
+ 1  0.926  1.000           0.926    0.000               100.0              0.0              0.0
+ 2  0.746  1.000           0.746    0.000               100.0              0.0              0.0
+ 3  0.400  1.000           0.400    0.000               100.0            100.0              0.0
+ 4  0.122  1.000           0.122    0.000               100.0            100.0              0.0
+ 5  0.027  0.999           0.027    0.000               100.0            100.0              0.0
+ 6  0.006  0.996           0.006    0.000               100.0            100.0              0.0
+ 7  0.001  0.983           0.001    0.000               100.0            100.0              0.0
+ 8  0.000  0.961           0.000    0.000               100.0            100.0              0.0
+ 9  0.000  0.923           0.000    0.000               100.0            100.0              0.0
+10  0.000  0.871           0.000    0.000               100.0            100.0              0.0
+11  0.000  0.812           0.000    0.000               100.0            100.0              0.0
+12  0.000  0.746           0.000    0.000               100.0            100.0              0.0
+massa giusta (r x massa entro 0,5 m) sotto il 5 % dal fotogramma j = 5
+
+== falso libero, uscita dall'ombra (pannello 1 m), Pd del modello 0.8 (60 prove): per fotogramma mancato j ==
+ j  r_st   massa<0,5m(st)  r*massa  massa_in_ombra(st)  raggio1_chiusa%  raggio3_chiusa%  disco_contiene%
+ 1  0.967  0.160           0.155    0.977                15.0              0.0              0.0
+ 2  0.966  0.123           0.119    0.977                15.0              0.0              0.0
+ 3  0.965  0.087           0.084    0.975                15.0              0.0              0.0
+ 4  0.963  0.055           0.053    0.973                15.0              0.0              0.0
+ 5  0.962  0.029           0.028    0.971                15.0              0.0              0.0
+ 6  0.961  0.011           0.010    0.967                15.0              0.0              0.0
+ 7  0.959  0.003           0.003    0.964                15.0              0.0              0.0
+ 8  0.958  0.000           0.000    0.962                15.0              0.0              0.0
+ 9  0.957  0.000           0.000    0.958                15.0              0.0              0.0
+10  0.956  0.000           0.000    0.954                15.0              0.0              0.0
+11  0.955  0.000           0.000    0.949                15.0              0.0              0.0
+12  0.954  0.000           0.000    0.946                15.0              0.0              0.0
+massa giusta (r x massa entro 0,5 m) sotto il 5 % dal fotogramma j = 5
+
+== falso libero, campo aperto, Pd del modello 0.7 (60 prove): per fotogramma mancato j ==
+ j  r_st   massa<0,5m(st)  r*massa  massa_in_ombra(st)  raggio1_chiusa%  raggio3_chiusa%  disco_contiene%
+ 1  0.958  1.000           0.958    0.000               100.0              0.0              0.0
+ 2  0.877  1.000           0.877    0.000               100.0              0.0              0.0
+ 3  0.695  1.000           0.695    0.000               100.0            100.0              0.0
+ 4  0.418  1.000           0.418    0.000               100.0            100.0              0.0
+ 5  0.180  0.999           0.180    0.000               100.0            100.0              0.0
+ 6  0.062  0.995           0.062    0.000               100.0            100.0              0.0
+ 7  0.020  0.984           0.019    0.000               100.0            100.0              0.0
+ 8  0.006  0.958           0.006    0.000               100.0            100.0              0.0
+ 9  0.002  0.918           0.002    0.000               100.0            100.0              0.0
+10  0.001  0.867           0.000    0.000               100.0            100.0              0.0
+11  0.000  0.807           0.000    0.000               100.0            100.0              0.0
+12  0.000  0.741           0.000    0.000               100.0            100.0              0.0
+massa giusta (r x massa entro 0,5 m) sotto il 5 % dal fotogramma j = 7
+
+== falso libero, uscita dall'ombra (pannello 1 m), Pd del modello 0.7 (60 prove): per fotogramma mancato j ==
+ j  r_st   massa<0,5m(st)  r*massa  massa_in_ombra(st)  raggio1_chiusa%  raggio3_chiusa%  disco_contiene%
+ 1  0.974  0.160           0.156    0.971                16.7              0.0              0.0
+ 2  0.973  0.123           0.120    0.970                16.7              0.0              0.0
+ 3  0.972  0.089           0.086    0.969                16.7              0.0              0.0
+ 4  0.970  0.058           0.056    0.969                16.7              0.0              0.0
+ 5  0.969  0.034           0.033    0.967                16.7              0.0              0.0
+ 6  0.968  0.015           0.014    0.965                16.7              0.0              0.0
+ 7  0.967  0.005           0.004    0.962                16.7              0.0              0.0
+ 8  0.966  0.001           0.001    0.958                16.7              0.0              0.0
+ 9  0.965  0.000           0.000    0.955                16.7              0.0              0.0
+10  0.964  0.000           0.000    0.953                16.7              0.0              0.0
+11  0.963  0.000           0.000    0.950                16.7              0.0              0.0
+12  0.962  0.000           0.000    0.948                16.7              0.0              0.0
+massa giusta (r x massa entro 0,5 m) sotto il 5 % dal fotogramma j = 5
+uscita dall'ombra non rilevata per k=1 fotogrammi poi rilevata (Pd modello 0,9, n=100): identita' tenuta kf=100.0%  ray1=0.0%  ray3=0.0%  disc=100.0%  ns=100.0%  st=100.0%
+uscita dall'ombra non rilevata per k=2 fotogrammi poi rilevata (Pd modello 0,9, n=100): identita' tenuta kf=100.0%  ray1=0.0%  ray3=0.0%  disc=100.0%  ns=100.0%  st=100.0%
+uscita dall'ombra non rilevata per k=3 fotogrammi poi rilevata (Pd modello 0,9, n=100): identita' tenuta kf=100.0%  ray1=0.0%  ray3=0.0%  disc=100.0%  ns=100.0%  st=99.0%
+uscita dall'ombra non rilevata per k=5 fotogrammi poi rilevata (Pd modello 0,9, n=100): identita' tenuta kf=100.0%  ray1=0.0%  ray3=0.0%  disc=100.0%  ns=72.0%  st=59.0%

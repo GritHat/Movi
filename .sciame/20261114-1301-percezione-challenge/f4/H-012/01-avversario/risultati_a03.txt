@@ -1,0 +1,16 @@
+Attacco 3. Camera a 1.2 m, 15 gradi in basso, 58 gradi in verticale.
+Raggio piu' basso: -44 gradi; primo suolo visto a 1.243 m
+  ostacolo alto 0.07 m: visibile solo oltre 1.170 m
+  ostacolo alto 0.15 m: visibile solo oltre 1.087 m
+  ostacolo alto 0.30 m: visibile solo oltre 0.932 m
+  ostacolo alto 0.50 m: visibile solo oltre 0.725 m
+Scatola alta 0,15 m, 5 prove a 0,8 m: quota piu' bassa vista a 0,8 m = 0.427 m -> viste 0 su 5
+Scatola alta 0,15 m a 0,5 / 1,125 / 1,75 / 2,375 / 3,0 m: viste 4 su 5 ([1.125, 1.75, 2.375, 3.0])
+Quota dell'estensione radiale 0,5-3 m senza suolo visto: 30 %
+
+Persona in avvicinamento (gia' etichettata 'mobile': ipotesi generosa), 22 fotogrammi da 3,0 a 1,0 m
+p_suolo  lettura A (alla lettera)  lettura B (prima cella non libera)  lettura C (anello tolto)  -> quota di fotogrammi con 'mobile in avvicinamento'
+ 1.00       0.0 %                     0.0 %                              95.5 %
+ 0.99       0.0 %                     0.0 %                              51.8 %
+ 0.95       0.0 %                     0.0 %                              21.4 %
+(con p_suolo < 1 la colonna C e' l'interazione con l'attacco 9: [notato dopo], non era nella previsione)

@@ -1,0 +1,74 @@
+=== P1 (H-001) errore di profondita' stereo a 4 m ===
+  classe base 50 mm, 848 px: f= 446.8 px, sottopixel 0.08: sigma_z(4 m) =   5.7 cm
+  classe base 50 mm, 848 px: f= 446.8 px, sottopixel 0.1: sigma_z(4 m) =   7.2 cm
+  classe base 50 mm, 1280 px: f= 674.4 px, sottopixel 0.08: sigma_z(4 m) =   3.8 cm
+  classe base 50 mm, 1280 px: f= 674.4 px, sottopixel 0.1: sigma_z(4 m) =   4.7 cm
+  D455 base 95 mm, 848 px: f= 446.8 px, sottopixel 0.08: sigma_z(4 m) =   3.0 cm
+  D455 base 95 mm, 848 px: f= 446.8 px, sottopixel 0.1: sigma_z(4 m) =   3.8 cm
+  D455 base 95 mm, 1280 px: f= 674.4 px, sottopixel 0.08: sigma_z(4 m) =   2.0 cm
+  D455 base 95 mm, 1280 px: f= 674.4 px, sottopixel 0.1: sigma_z(4 m) =   2.5 cm
+  limite dichiarato '<=2 % a 2 m' scalato z^2 a 4 m (base 50 mm): 16.0 cm  -> soglia R2 15 cm: SUPERA
+  limite dichiarato '<=2 % a 4 m' (D455): 8.0 cm -> sotto
+  sottopixel implicito nel limite 2 % a 2 m (base 50, 1280 px): 0.34 px
+  distanza a cui il limite dichiarato (base 50 mm) tocca 15 cm: 3.87 m
+
+=== P2 (H-002) gradino 15 cm a 2 m, sensore a 1,2 m ===
+  d=2.0 m, gradino 15 cm, 0,08 px, 848 px, base 50: sigma_z= 1.9 cm, sigma_h= 1.0 cm, distanza = 15.0 sigma
+  d=2.0 m, gradino 15 cm, limite 2 % a 2 m scalato: sigma_z= 5.4 cm, sigma_h= 2.8 cm, distanza =  5.4 sigma
+  d=3.0 m, gradino 7 cm, 0,08 px, 848 px, base 50: sigma_z= 3.7 cm, sigma_h= 1.4 cm, distanza =  5.0 sigma
+  d=3.0 m, gradino 7 cm, limite 2 % a 2 m scalato: sigma_z=10.4 cm, sigma_h= 3.9 cm, distanza =  1.8 sigma
+  d=4.0 m, gradino 7 cm, 0,08 px, 848 px, base 50: sigma_z= 6.2 cm, sigma_h= 1.8 cm, distanza =  3.9 sigma
+  d=4.0 m, gradino 7 cm, limite 2 % a 2 m scalato: sigma_z=17.4 cm, sigma_h= 5.0 cm, distanza =  1.4 sigma
+  errore d'assetto (beccheggio) come errore di quota del suolo: dh = d*tan(err)
+    err 0.5 gradi: 2 m -> 1.7 cm; 4 m -> 3.5 cm; il suolo supera 7 cm oltre 8.0 m
+    err 1.0 gradi: 2 m -> 3.5 cm; 4 m -> 7.0 cm; il suolo supera 7 cm oltre 4.0 m
+    err 2.0 gradi: 2 m -> 7.0 cm; 4 m -> 14.0 cm; il suolo supera 7 cm oltre 2.0 m
+
+=== P2b (H-002) camera inclinata in basso: ostacolo alla quota della testa (1,8 m) ===
+  inclinazione  0 gradi: suolo visto da 2.16 m; ostacolo a 1,8 m visibile solo oltre 1.08 m
+  inclinazione 10 gradi: suolo visto da 1.48 m; ostacolo a 1,8 m visibile solo oltre 1.74 m
+  inclinazione 15 gradi: suolo visto da 1.24 m; ostacolo a 1,8 m visibile solo oltre 2.41 m
+  inclinazione 20 gradi: suolo visto da 1.04 m; ostacolo a 1,8 m visibile solo oltre 3.79 m
+  inclinazione 30 gradi: suolo visto da 0.72 m; ostacolo a 1,8 m MAI visibile (bordo alto sotto l'orizzonte)
+
+=== P3 (H-003) LiDAR 2D al petto ===
+  RPLIDAR C1 0,72 gradi: gamba 0.12 m a 3.0 m -> 3.2 punti per giro
+  RPLIDAR C1 0,72 gradi: gamba 0.12 m a 5.0 m -> 1.9 punti per giro
+  RPLIDAR C1 0,72 gradi: busto 0.4 m a 3.0 m -> 10.6 punti per giro
+  RPLIDAR C1 0,72 gradi: busto 0.4 m a 5.0 m -> 6.4 punti per giro
+  LD19 0,8 gradi: gamba 0.12 m a 3.0 m -> 2.9 punti per giro
+  LD19 0,8 gradi: gamba 0.12 m a 5.0 m -> 1.7 punti per giro
+  LD19 0,8 gradi: busto 0.4 m a 3.0 m -> 9.5 punti per giro
+  LD19 0,8 gradi: busto 0.4 m a 5.0 m -> 5.7 punti per giro
+  LiDAR a 5 cm dal petto, busto 0.4 m: coperti 152 gradi = 42% del giro, 84% del semigiro posteriore
+  LiDAR a 5 cm dal petto, busto 0.45 m: coperti 155 gradi = 43% del giro, 86% del semigiro posteriore
+  LiDAR a 10 cm dal petto, busto 0.4 m: coperti 127 gradi = 35% del giro, 70% del semigiro posteriore
+  LiDAR a 10 cm dal petto, busto 0.45 m: coperti 132 gradi = 37% del giro, 73% del semigiro posteriore
+  sul capo (piano a ~1,75 m): una persona alta < 1,75 m non interseca il piano -> 0 punti
+
+=== P8 (H-008) regola firmata, un settore, celle di 0,1 m ===
+  caso vetro (lastra a 2,0 m, nessun ritorno dalla lastra, suolo visto attraverso):
+    cella 2,0 m -> libero  (fisicamente OCCUPATA dal vetro) => 'libero' FALSO
+  caso rampa 3 gradi: il suolo supera 7 cm dopo 1.34 m dall'inizio della rampa -> 'occupato' FALSO (R5), in discesa 'non osservato'
+  caso rampa 5 gradi: il suolo supera 7 cm dopo 0.80 m dall'inizio della rampa -> 'occupato' FALSO (R5), in discesa 'non osservato'
+  caso rampa 8 gradi: il suolo supera 7 cm dopo 0.50 m dall'inizio della rampa -> 'occupato' FALSO (R5), in discesa 'non osservato'
+  caso mobile a 1.4 m/s in cella 'libero' ricordata (0,5 s): avanza 0.70 m (margine 0,7 m) -> entro; in 1 fotogramma a 15 Hz: 0.09 m
+  caso mobile a 3.0 m/s in cella 'libero' ricordata (0,5 s): avanza 1.50 m (margine 0,7 m) -> VIOLATO; in 1 fotogramma a 15 Hz: 0.20 m
+  caso mobile a 5.6 m/s in cella 'libero' ricordata (0,5 s): avanza 2.80 m (margine 0,7 m) -> VIOLATO; in 1 fotogramma a 15 Hz: 0.37 m
+  caso fuori campo: dopo 60 s la cella C e' 'occupato ricordato' con eta' 60 s; la persona se n'e' andata a t=1 s -> FANTASMA senza limite d'eta'
+  caso sosta: la persona e' ferma a 0,5 m dentro l'ombra; il punto previsto esce a 0.77 s, traccia CHIUSA a 0.93 s con la persona ancora nascosta (le celle restano 'in ombra': R8 salvo, R3 perso)
+
+=== P17 (H-017) battito e fotogramma ripetuto ===
+  regola 'fresco' = marca: il battito continua 25.07 s dopo il blocco (finestra osservata 25 s)
+  regola 'fresco' = contatore: il battito continua 0.13 s dopo il blocco (finestra osservata 25 s)
+  regola 'fresco' = contenuto: il battito continua 0.07 s dopo il blocco (finestra osservata 25 s)
+
+=== PK6 (K-006) le due regole di memoria sugli stessi casi ===
+  vetro (la cella col vetro e' vista 'libero' a ogni fotogramma)
+     H-008 -> libero (eta' 0.0 s) | H-009 con T=2 s -> libero (eta' 0.0 s)
+  mobile uscito: occupato, poi cella non vista per 60 s (persona via dopo 1 s)
+     H-008 -> occupato (eta' 60.0 s) | H-009 con T=2 s -> sconosciuto (eta' 60.0 s)
+  muro fuori campo da 60 s (ancora li')
+     H-008 -> occupato (eta' 60.0 s) | H-009 con T=2 s -> sconosciuto (eta' 60.0 s)
+  libero visto, poi non visto per 1,5 s (un pedone a 1,4 m/s ha fatto 2,1 m)
+     H-008 -> sconosciuto (eta' 1.5 s) | H-009 con T=2 s -> libero (eta' 1.5 s)

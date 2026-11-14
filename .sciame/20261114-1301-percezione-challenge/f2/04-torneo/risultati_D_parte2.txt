@@ -1,0 +1,22 @@
+== D. Scommessa sulla riemersione: finestra [q05,q95] del rapporto, tarata su 100 passaggi, provata su un'altra popolazione ==
+-- taratura su «autore» (200 tarature da 100 passaggi)
+   q05 medio 0.964, q95 medio 1.983 ; larghezza mediana della finestra sul giurato 2.52 s
+   prova su autore (stessa di sim2.py)                           copertura 0.901 (dev. std fra tarature 0.031, min 0.809)
+   prova su squadra                                              copertura 0.946 (dev. std fra tarature 0.025, min 0.857)
+   prova su giurato 0,8 m/s, 30% rallenta, 20% sosta             copertura 0.855 (dev. std fra tarature 0.048, min 0.728)
+   prova su giurato 0,8 m/s, soste 0%, nessun rallentamento      copertura 0.839 (dev. std fra tarature 0.045, min 0.708)
+   prova su giurato 0,8 m/s, soste 10%, nessun rallentamento     copertura 0.824 (dev. std fra tarature 0.044, min 0.696)
+   prova su giurato 0,8 m/s, soste 20%, nessun rallentamento     copertura 0.834 (dev. std fra tarature 0.049, min 0.714)
+   prova su giurato 0,8 m/s, soste 30%, nessun rallentamento     copertura 0.814 (dev. std fra tarature 0.070, min 0.662)
+   prova su giurato 0,8 m/s, soste 40%, nessun rallentamento     copertura 0.801 (dev. std fra tarature 0.087, min 0.625)
+-- taratura su «squadra» (200 tarature da 100 passaggi)
+   q05 medio 0.962, q95 medio 1.332 ; larghezza mediana della finestra sul giurato 0.92 s
+   prova su autore (stessa di sim2.py)                           copertura 0.741 (dev. std fra tarature 0.059, min 0.539)
+   prova su squadra                                              copertura 0.905 (dev. std fra tarature 0.028, min 0.782)
+   prova su giurato 0,8 m/s, 30% rallenta, 20% sosta             copertura 0.633 (dev. std fra tarature 0.071, min 0.411)
+   prova su giurato 0,8 m/s, soste 0%, nessun rallentamento      copertura 0.847 (dev. std fra tarature 0.044, min 0.723)
+   prova su giurato 0,8 m/s, soste 10%, nessun rallentamento     copertura 0.768 (dev. std fra tarature 0.038, min 0.650)
+   prova su giurato 0,8 m/s, soste 20%, nessun rallentamento     copertura 0.734 (dev. std fra tarature 0.038, min 0.604)
+   prova su giurato 0,8 m/s, soste 30%, nessun rallentamento     copertura 0.642 (dev. std fra tarature 0.039, min 0.508)
+   prova su giurato 0,8 m/s, soste 40%, nessun rallentamento     copertura 0.568 (dev. std fra tarature 0.049, min 0.440)
+timeout 120 python3 torneo_parte2.py D  0,84s user 0,01s system 99% cpu 0,853 total

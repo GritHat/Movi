@@ -1,0 +1,30 @@
+== E. Regola «mobile»: chi2 sulla covarianza (v'Pv^-1 v > 9,21) contro soglia fissa |v| > 0,3 m/s; stesso filtro q=0,2, 15 Hz ==
+-- (1) rumore dell'autore: isotropo 5 cm. Pedone: quota di prove con almeno un «mobile» entro 1 s / entro 2 s dalla prima misura; quota di fotogrammi a regime (2-6 s)
+   v=0.00 m/s: chi2: entro 1 s 0.011, entro 2 s 0.011, fotogrammi 0.000 | soglia 0,3: entro 1 s 0.995, entro 2 s 0.996, fotogrammi 0.023
+   v=0.30 m/s: chi2: entro 1 s 0.072, entro 2 s 0.107, fotogrammi 0.002 | soglia 0,3: entro 1 s 1.000, entro 2 s 1.000, fotogrammi 0.575
+   v=0.50 m/s: chi2: entro 1 s 0.754, entro 2 s 0.973, fotogrammi 0.155 | soglia 0,3: entro 1 s 1.000, entro 2 s 1.000, fotogrammi 0.975
+   v=0.62 m/s: chi2: entro 1 s 0.998, entro 2 s 1.000, fotogrammi 0.528 | soglia 0,3: entro 1 s 1.000, entro 2 s 1.000, fotogrammi 0.999
+   v=0.80 m/s: chi2: entro 1 s 1.000, entro 2 s 1.000, fotogrammi 0.956 | soglia 0,3: entro 1 s 1.000, entro 2 s 1.000, fotogrammi 1.000
+   v=1.20 m/s: chi2: entro 1 s 1.000, entro 2 s 1.000, fotogrammi 1.000 | soglia 0,3: entro 1 s 1.000, entro 2 s 1.000, fotogrammi 1.000
+-- (2) muro FERMO, rumore di profondita' 5 cm*(z/2)^2, laterale 1 cm*z/2: quota di fotogrammi «mobile» a regime
+   z=2 m (sigma_z=5 cm): filtro con R=5 cm isotropo: chi2 0.000, soglia 0.006 | filtro con R(z) giusto: chi2 0.000, soglia 0.008
+   z=3 m (sigma_z=11 cm): filtro con R=5 cm isotropo: chi2 0.011, soglia 0.227 | filtro con R(z) giusto: chi2 0.000, soglia 0.034
+   z=4 m (sigma_z=20 cm): filtro con R=5 cm isotropo: chi2 0.155, soglia 0.492 | filtro con R(z) giusto: chi2 0.000, soglia 0.067
+   z=6 m (sigma_z=45 cm): filtro con R=5 cm isotropo: chi2 0.533, soglia 0.765 | filtro con R(z) giusto: chi2 0.000, soglia 0.139
+-- (3) pedone con rumore ∝ z^2 e filtro con R(z) GIUSTO: quota di prove «mobile» entro 1 s / 2 s; fotogrammi a regime
+   z=2 m, v=0.5 m/s laterale: chi2: 1 s 1.000, 2 s 1.000, fotogr. 0.951 | soglia: 1 s 1.000, 2 s 1.000, fotogr. 0.999
+   z=2 m, v=0.5 m/s radiale : chi2: 1 s 0.754, 2 s 0.976, fotogr. 0.155 | soglia: 1 s 1.000, 2 s 1.000, fotogr. 0.975
+   z=2 m, v=1.2 m/s laterale: chi2: 1 s 1.000, 2 s 1.000, fotogr. 1.000 | soglia: 1 s 1.000, 2 s 1.000, fotogr. 1.000
+   z=2 m, v=1.2 m/s radiale : chi2: 1 s 1.000, 2 s 1.000, fotogr. 1.000 | soglia: 1 s 1.000, 2 s 1.000, fotogr. 1.000
+   z=4 m, v=0.5 m/s laterale: chi2: 1 s 1.000, 2 s 1.000, fotogr. 0.639 | soglia: 1 s 1.000, 2 s 1.000, fotogr. 0.995
+   z=4 m, v=0.5 m/s radiale : chi2: 1 s 0.110, 2 s 0.178, fotogr. 0.007 | soglia: 1 s 1.000, 2 s 1.000, fotogr. 0.914
+   z=4 m, v=1.2 m/s laterale: chi2: 1 s 1.000, 2 s 1.000, fotogr. 1.000 | soglia: 1 s 1.000, 2 s 1.000, fotogr. 1.000
+   z=4 m, v=1.2 m/s radiale : chi2: 1 s 0.976, 2 s 1.000, fotogr. 0.974 | soglia: 1 s 1.000, 2 s 1.000, fotogr. 1.000
+   z=6 m, v=0.5 m/s laterale: chi2: 1 s 0.994, 2 s 1.000, fotogr. 0.376 | soglia: 1 s 1.000, 2 s 1.000, fotogr. 0.991
+   z=6 m, v=0.5 m/s radiale : chi2: 1 s 0.032, 2 s 0.056, fotogr. 0.001 | soglia: 1 s 1.000, 2 s 1.000, fotogr. 0.872
+   z=6 m, v=1.2 m/s laterale: chi2: 1 s 1.000, 2 s 1.000, fotogr. 1.000 | soglia: 1 s 1.000, 2 s 1.000, fotogr. 1.000
+   z=6 m, v=1.2 m/s radiale : chi2: 1 s 0.348, 2 s 0.980, fotogr. 0.689 | soglia: 1 s 1.000, 2 s 1.000, fotogr. 1.000
+-- (4) alternativa a finestra (mia, notata dopo): spostamento su 1 s > 5*sigma*sqrt(2), rumore isotropo 5 cm
+   v=0.0 m/s: «mobile» in 0.0000 delle finestre di 1 s
+   v=0.5 m/s: «mobile» in 0.9872 delle finestre di 1 s
+timeout 120 python3 torneo_parte2.py E  1,78s user 0,00s system 99% cpu 1,789 total

@@ -1,0 +1,15 @@
+== 2a: bersaglio FERMO dietro l'occlusore (media su 100 prove) ==
+dopo  | A Kalman CV: massa in celle osservate libere | B particelle+evid.neg.: libere / ombra | B' senza evid.neg.: libere
+1 s   | 0.000 | 0.0000 / 1.0000 | 0.001
+2 s   | 0.981 | 0.0160 / 0.9840 | 0.869
+3 s   | 1.000 | 0.0011 / 0.9989 | 0.901
+== 2b/3: bersaglio che ATTRAVERSA, 400 passaggi ==
+A: copertura intervallo 90% = 0.693 ; larghezza mediana = 0.40 s ; intervalli aperti (inf) = 0
+B: copertura intervallo 90% = 1.000 ; larghezza mediana = 6.27 s ; intervalli aperti (inf) = 27
+  costante  n=240  coperti A=240  B=240
+  rallenta  n=126  coperti A= 36  B=126
+  sosta     n= 34  coperti A=  1  B= 34
+== 4: un solo sguardo per passo, 300 scene ==
+turno     RMSE sul piu' minaccioso (ultimi 2 s) = 0.060 m ; RMSE sugli altri = 0.059 m
+priorita  RMSE sul piu' minaccioso (ultimi 2 s) = 0.031 m ; RMSE sugli altri = 0.151 m
+riduzione dell'errore sul piu' minaccioso: 48.4 % ; variazione sugli altri: +157.6 %

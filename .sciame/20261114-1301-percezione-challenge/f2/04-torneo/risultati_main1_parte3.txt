@@ -1,0 +1,104 @@
+# esperimento main1, seme base 20261114, dt 1/15 s, sigma 5 cm, Pd 0.9, q 0.2, v_max 2.5, 250 particelle
+
+== pannello 1 m, ombra stimata +0.0 m, pedone a 4.0 m, prosegue; area ombra 7.82 m2 (prove 100) ==
+tau  n_nasc | famiglia          contiene%  in_libere%  area/ombra%  copre_ombra%  stato
+0.5   100  | (a) cerchio KF95   100.0        0.1         9.1          9.1    raggio medio 0.48 m; centro in cella libera 0.0%; MASSA gaussiana in libere 0.1%
+           | (a) +raggio H-014  M=1: prev=77.0 closed=23.0 unk=0.0 | M=3: prev=100.0 closed=0.0 unk=0.0
+           | (b) disco H-009    100.0        0.0        44.4         44.3    sconosciuto(>=90% ombra) 0.0%
+           | (c) part. no sosta 100.0        0.0        13.6         13.6    r medio 0.96; morte(r<0,05) 0.0%
+           | (c) part. sosta    100.0        0.0        14.7         14.7    r medio 0.96; morte(r<0,05) 0.0%
+1.0   100  | (a) cerchio KF95   100.0        8.9        34.6         31.5    raggio medio 0.93 m; centro in cella libera 0.0%; MASSA gaussiana in libere 5.3%
+           | (a) +raggio H-014  M=1: prev=73.0 closed=23.0 unk=4.0 | M=3: prev=96.0 closed=0.0 unk=4.0
+           | (b) disco H-009    100.0        0.0       156.5         97.8    sconosciuto(>=90% ombra) 100.0%
+           | (c) part. no sosta 100.0        0.3        33.4         32.8    r medio 0.96; morte(r<0,05) 0.0%
+           | (c) part. sosta    100.0        0.2        35.0         34.7    r medio 0.96; morte(r<0,05) 0.0%
+2.0  0
+3.0  0
+raggio M=1: CHIUSA a soggetto non visibile 24.0% (tempo medio 0.05 s dall'ingresso); scaduta a SCONOSCIUTO 76.0% (a 1.12 s)
+raggio M=3: CHIUSA a soggetto non visibile 0.0% (tempo medio nan s dall'ingresso); scaduta a SCONOSCIUTO 100.0% (a 1.12 s)
+identita' tenuta alla prima ri-rilevazione (n=100, tau medio 1.70 s): kf=100.0%  kf15=30.0%  ray1=0.0%  ray3=0.0%  disc=100.0%  ns=100.0%  st=100.0%
+particelle ns: r minimo nei primi 6 fotogrammi d'ombra < 0,5 in 1.0% dei casi, < 0,05 in 0.0%
+particelle st: r minimo nei primi 6 fotogrammi d'ombra < 0,5 in 1.0% dei casi, < 0,05 in 0.0%
+
+== pannello 1 m, ombra stimata +0.0 m, pedone a 4.0 m, sosta; area ombra 7.82 m2 (prove 100) ==
+tau  n_nasc | famiglia          contiene%  in_libere%  area/ombra%  copre_ombra%  stato
+0.5   100  | (a) cerchio KF95    93.0        0.2         9.1          9.1    raggio medio 0.47 m; centro in cella libera 0.0%; MASSA gaussiana in libere 0.2%
+           | (a) +raggio H-014  M=1: prev=85.0 closed=15.0 unk=0.0 | M=3: prev=100.0 closed=0.0 unk=0.0
+           | (b) disco H-009    100.0        0.0        44.7         44.6    sconosciuto(>=90% ombra) 0.0%
+           | (c) part. no sosta  93.0        0.0        13.7         13.7    r medio 0.97; morte(r<0,05) 0.0%
+           | (c) part. sosta     95.0        0.0        14.6         14.6    r medio 0.97; morte(r<0,05) 0.0%
+1.0   100  | (a) cerchio KF95    88.0       10.2        34.6         31.0    raggio medio 0.93 m; centro in cella libera 0.0%; MASSA gaussiana in libere 6.2%
+           | (a) +raggio H-014  M=1: prev=82.0 closed=15.0 unk=3.0 | M=3: prev=97.0 closed=0.0 unk=3.0
+           | (b) disco H-009    100.0        0.0       155.3         97.8    sconosciuto(>=90% ombra) 100.0%
+           | (c) part. no sosta  85.0        0.4        33.1         32.3    r medio 0.97; morte(r<0,05) 0.0%
+           | (c) part. sosta     96.0        0.3        35.3         34.7    r medio 0.97; morte(r<0,05) 0.0%
+2.0    99  | (a) cerchio KF95    83.8       51.3       192.8         62.1    raggio medio 2.19 m; centro in cella libera 92.9%; MASSA gaussiana in libere 64.1%
+           | (a) +raggio H-014  M=1: prev=0.0 closed=16.2 unk=83.8 | M=3: prev=0.0 closed=0.0 unk=100.0
+           | (b) disco H-009    100.0        0.0       765.9        100.0    sconosciuto(>=90% ombra) 100.0%
+           | (c) part. no sosta  78.8        0.9        66.8         54.7    r medio 0.90; morte(r<0,05) 0.0%
+           | (c) part. sosta    100.0        0.4        59.0         52.1    r medio 0.94; morte(r<0,05) 0.0%
+3.0    99  | (a) cerchio KF95    87.9       22.9       571.4         79.5    raggio medio 3.77 m; centro in cella libera 91.9%; MASSA gaussiana in libere 37.1%
+           | (a) +raggio H-014  M=1: prev=0.0 closed=16.2 unk=83.8 | M=3: prev=0.0 closed=0.0 unk=100.0
+           | (b) disco H-009    100.0        0.0       1504.5        100.0    sconosciuto(>=90% ombra) 100.0%
+           | (c) part. no sosta  82.8        0.4       128.0         69.8    r medio 0.83; morte(r<0,05) 0.0%
+           | (c) part. sosta    100.0        0.2        81.3         60.1    r medio 0.92; morte(r<0,05) 0.0%
+raggio M=1: CHIUSA a soggetto non visibile 16.0% (tempo medio 0.07 s dall'ingresso); scaduta a SCONOSCIUTO 84.0% (a 1.11 s)
+raggio M=3: CHIUSA a soggetto non visibile 0.0% (tempo medio nan s dall'ingresso); scaduta a SCONOSCIUTO 100.0% (a 1.11 s)
+identita' tenuta alla prima ri-rilevazione (n=100, tau medio 4.69 s): kf=100.0%  kf15=0.0%  ray1=0.0%  ray3=0.0%  disc=100.0%  ns=71.0%  st=100.0%
+particelle ns: r minimo nei primi 6 fotogrammi d'ombra < 0,5 in 0.0% dei casi, < 0,05 in 0.0%
+particelle st: r minimo nei primi 6 fotogrammi d'ombra < 0,5 in 1.0% dei casi, < 0,05 in 0.0%
+
+== pannello 1 m, ombra stimata +0.0 m, pedone a 4.0 m, torna; area ombra 7.82 m2 (prove 100) ==
+tau  n_nasc | famiglia          contiene%  in_libere%  area/ombra%  copre_ombra%  stato
+0.5    99  | (a) cerchio KF95    87.9        0.1         9.0          9.0    raggio medio 0.47 m; centro in cella libera 0.0%; MASSA gaussiana in libere 0.2%
+           | (a) +raggio H-014  M=1: prev=89.9 closed=10.1 unk=0.0 | M=3: prev=100.0 closed=0.0 unk=0.0
+           | (b) disco H-009    100.0        0.0        45.1         45.1    sconosciuto(>=90% ombra) 0.0%
+           | (c) part. no sosta  88.9        0.0        13.7         13.7    r medio 0.98; morte(r<0,05) 0.0%
+           | (c) part. sosta     97.0        0.0        15.0         15.0    r medio 0.98; morte(r<0,05) 0.0%
+1.0    68  | (a) cerchio KF95    80.9        8.6        34.3         31.4    raggio medio 0.92 m; centro in cella libera 0.0%; MASSA gaussiana in libere 4.6%
+           | (a) +raggio H-014  M=1: prev=85.3 closed=13.2 unk=1.5 | M=3: prev=98.5 closed=0.0 unk=1.5
+           | (b) disco H-009    100.0        0.0       154.0         97.9    sconosciuto(>=90% ombra) 100.0%
+           | (c) part. no sosta  77.9        0.3        33.4         32.7    r medio 0.98; morte(r<0,05) 0.0%
+           | (c) part. sosta     92.6        0.2        34.9         34.7    r medio 0.98; morte(r<0,05) 0.0%
+2.0    26  | (a) cerchio KF95    65.4       50.9       193.3         68.0    raggio medio 2.19 m; centro in cella libera 88.5%; MASSA gaussiana in libere 62.3%
+           | (a) +raggio H-014  M=1: prev=0.0 closed=11.5 unk=88.5 | M=3: prev=0.0 closed=0.0 unk=100.0
+           | (b) disco H-009    100.0        0.0       767.3        100.0    sconosciuto(>=90% ombra) 100.0%
+           | (c) part. no sosta  34.6        0.8        69.6         58.0    r medio 0.93; morte(r<0,05) 0.0%
+           | (c) part. sosta     96.2        0.4        61.8         55.5    r medio 0.96; morte(r<0,05) 0.0%
+3.0     3  | (a) cerchio KF95   100.0       24.2       565.3         98.3    raggio medio 3.75 m; centro in cella libera 100.0%; MASSA gaussiana in libere 39.3%
+           | (a) +raggio H-014  M=1: prev=0.0 closed=0.0 unk=100.0 | M=3: prev=0.0 closed=0.0 unk=100.0
+           | (b) disco H-009    100.0        0.0       1496.0        100.0    sconosciuto(>=90% ombra) 100.0%
+           | (c) part. no sosta  66.7        0.3       153.5         73.5    r medio 0.95; morte(r<0,05) 0.0%
+           | (c) part. sosta    100.0        0.2       106.6         70.3    r medio 0.97; morte(r<0,05) 0.0%
+raggio M=1: CHIUSA a soggetto non visibile 10.0% (tempo medio 0.00 s dall'ingresso); scaduta a SCONOSCIUTO 56.0% (a 1.12 s)
+raggio M=3: CHIUSA a soggetto non visibile 0.0% (tempo medio nan s dall'ingresso); scaduta a SCONOSCIUTO 63.0% (a 1.12 s)
+identita' tenuta alla prima ri-rilevazione (n=100, tau medio 1.63 s): kf=38.0%  kf15=5.0%  ray1=0.0%  ray3=1.0%  disc=100.0%  ns=22.0%  st=100.0%
+particelle ns: r minimo nei primi 6 fotogrammi d'ombra < 0,5 in 0.0% dei casi, < 0,05 in 0.0%
+particelle st: r minimo nei primi 6 fotogrammi d'ombra < 0,5 in 0.0% dei casi, < 0,05 in 0.0%
+
+== pannello 1 m, ombra stimata +0.0 m, pedone a 4.0 m, lontano; area ombra 7.82 m2 (prove 100) ==
+tau  n_nasc | famiglia          contiene%  in_libere%  area/ombra%  copre_ombra%  stato
+0.5   100  | (a) cerchio KF95    93.0        0.1         9.0          9.0    raggio medio 0.47 m; centro in cella libera 0.0%; MASSA gaussiana in libere 0.1%
+           | (a) +raggio H-014  M=1: prev=88.0 closed=12.0 unk=0.0 | M=3: prev=100.0 closed=0.0 unk=0.0
+           | (b) disco H-009    100.0        0.0        44.7         44.7    sconosciuto(>=90% ombra) 0.0%
+           | (c) part. no sosta  96.0        0.0        13.7         13.7    r medio 0.98; morte(r<0,05) 0.0%
+           | (c) part. sosta     99.0        0.0        14.9         14.9    r medio 0.98; morte(r<0,05) 0.0%
+1.0   100  | (a) cerchio KF95    77.0       10.4        34.4         30.8    raggio medio 0.93 m; centro in cella libera 0.0%; MASSA gaussiana in libere 6.3%
+           | (a) +raggio H-014  M=1: prev=86.0 closed=12.0 unk=2.0 | M=3: prev=97.0 closed=0.0 unk=3.0
+           | (b) disco H-009    100.0        0.0       154.9         97.9    sconosciuto(>=90% ombra) 100.0%
+           | (c) part. no sosta  74.0        0.4        32.9         32.2    r medio 0.97; morte(r<0,05) 0.0%
+           | (c) part. sosta     74.0        0.3        35.4         34.9    r medio 0.97; morte(r<0,05) 0.0%
+2.0   100  | (a) cerchio KF95    49.0       51.2       192.4         61.1    raggio medio 2.19 m; centro in cella libera 94.0%; MASSA gaussiana in libere 65.2%
+           | (a) +raggio H-014  M=1: prev=0.0 closed=14.0 unk=86.0 | M=3: prev=0.0 closed=0.0 unk=100.0
+           | (b) disco H-009    100.0        0.0       763.6        100.0    sconosciuto(>=90% ombra) 100.0%
+           | (c) part. no sosta  49.0        0.9        66.8         54.7    r medio 0.92; morte(r<0,05) 0.0%
+           | (c) part. sosta     36.0        0.4        60.6         52.9    r medio 0.95; morte(r<0,05) 0.0%
+3.0   100  | (a) cerchio KF95    55.0       22.0       570.7         79.5    raggio medio 3.77 m; centro in cella libera 93.0%; MASSA gaussiana in libere 37.0%
+           | (a) +raggio H-014  M=1: prev=0.0 closed=14.0 unk=86.0 | M=3: prev=0.0 closed=0.0 unk=100.0
+           | (b) disco H-009    100.0        0.0       1503.9        100.0    sconosciuto(>=90% ombra) 100.0%
+           | (c) part. no sosta  47.0        0.4       129.8         71.6    r medio 0.85; morte(r<0,05) 0.0%
+           | (c) part. sosta     22.0        0.2        82.3         60.5    r medio 0.93; morte(r<0,05) 0.0%
+raggio M=1: CHIUSA a soggetto non visibile 12.0% (tempo medio 0.19 s dall'ingresso); scaduta a SCONOSCIUTO 86.0% (a 1.12 s)
+raggio M=3: CHIUSA a soggetto non visibile 0.0% (tempo medio nan s dall'ingresso); scaduta a SCONOSCIUTO 100.0% (a 1.12 s)
+particelle ns: r minimo nei primi 6 fotogrammi d'ombra < 0,5 in 1.0% dei casi, < 0,05 in 0.0%
+particelle st: r minimo nei primi 6 fotogrammi d'ombra < 0,5 in 1.0% dei casi, < 0,05 in 0.0%

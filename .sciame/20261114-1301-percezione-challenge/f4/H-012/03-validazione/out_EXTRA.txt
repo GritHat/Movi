@@ -1,0 +1,21 @@
+# (1) causa del 15 % in D, pannello 0,5 m, prosegue: misura = centro della parte visibile (progetto) contro misura = centro vero del corpo
+ D w=0.5 curva nom: nel cerchio al 95% alla riemersione: progetto 16.5% (contenuta resp. 16.5%) ; centro vero 100.0% (contenuta resp. 100.0%) ; N=400
+ D w=0.5 curva lim: nel cerchio al 95% alla riemersione: progetto 28.0% (contenuta resp. 28.0%) ; centro vero 100.0% (contenuta resp. 100.0%) ; N=400
+ D w=1.0 curva nom: nel cerchio al 95% alla riemersione: progetto 97.8% (contenuta resp. 97.8%) ; centro vero 100.0% (contenuta resp. 100.0%) ; N=400
+ D w=1.0 curva lim: nel cerchio al 95% alla riemersione: progetto 99.5% (contenuta resp. 99.5%) ; centro vero 100.0% (contenuta resp. 100.0%) ; N=400
+ T w=1.0 curva nom: nel cerchio al 95% alla riemersione: progetto 100.0% (contenuta resp. 100.0%) ; centro vero 100.0% (contenuta resp. 100.0%) ; N=400
+ T w=1.0 curva lim: nel cerchio al 95% alla riemersione: progetto 100.0% (contenuta resp. 100.0%) ; centro vero 100.0% (contenuta resp. 100.0%) ; N=400
+# (2) oggetto FERMO appena visto: quota con un'etichetta «mobile» entro 1 s + 1 fotogramma dalla prima misura (falso), N=4000
+ nom z=2 m: spostamento 0.00% ; chi2 0.15% ; v1a 0.00%
+ nom z=3 m: spostamento 0.00% ; chi2 0.62% ; v1a 0.00%
+ nom z=4 m: spostamento 0.00% ; chi2 0.88% ; v1a 0.00%
+ lim z=2 m: spostamento 0.00% ; chi2 0.55% ; v1a 0.00%
+ lim z=3 m: spostamento 0.00% ; chi2 1.27% ; v1a 0.00%
+ lim z=4 m: spostamento 0.00% ; chi2 1.88% ; v1a 0.00%
+ tor z=2 m: spostamento 0.00% ; chi2 0.60% ; v1a 0.00%
+ tor z=3 m: spostamento 0.00% ; chi2 1.52% ; v1a 0.00%
+ tor z=4 m: spostamento 0.00% ; chi2 2.27% ; v1a 0.00%
+
+real	0m3,297s
+user	0m3,287s
+sys	0m0,003s

@@ -1,0 +1,14 @@
+Attacco 1. Attore fermo nell'ombra, traccia pendente unica; un nuovo arrivato compare dopo tau.
+Quota di scene con riaggancio SBAGLIATO e MUTO (N = 200 per riga); ogni riaggancio rilascia lo strato 1
+tau_s  L1_bordo=strato1  L2_bordo=ombra+fascia  L3=L2+porta99  CORREZIONE
+ 0.5     53.0 %            12.0 %                  1.0 %           0.0 %
+ 1.0    100.0 %            14.5 %                 10.5 %           0.0 %
+ 2.0    100.0 %            14.0 %                 10.5 %           0.0 %
+ 5.0    100.0 %             9.5 %                  9.5 %           0.0 %
+Fotogrammi 'nascosto fuori dallo strato 1' per scena rubata, se l'attore resta nascosto altri 3 s: 45
+
+Costo della correzione: riemersioni LEGITTIME (attore che prosegue) riagganciate, N = 300 per riga
+z = 2.0 m: transiti con traccia e riemersione 300; riagganciati prima 100.0 %, dopo la correzione 100.0 % (il resto: 'identita' ambigua', strato 1 tenuto)
+z = 2.3 m: transiti con traccia e riemersione 300; riagganciati prima 100.0 %, dopo la correzione 100.0 % (il resto: 'identita' ambigua', strato 1 tenuto)
+z = 2.5 m: transiti con traccia e riemersione 300; riagganciati prima 100.0 %, dopo la correzione  86.3 % (il resto: 'identita' ambigua', strato 1 tenuto)
+z = 2.8 m: transiti con traccia e riemersione 300; riagganciati prima 100.0 %, dopo la correzione   0.0 % (il resto: 'identita' ambigua', strato 1 tenuto)

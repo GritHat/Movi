@@ -1,0 +1,22 @@
+Attacco 9. Suolo valido con probabilita' p per cella e fotogramma, indipendente (modello MIO, non di scheda). 18 celle fra 1,24 e 3 m, 60 s a 15 Hz.
+'isteresi' = [correzione] una cella diventa buco solo dopo 3 fotogrammi non validi di fila (il libero resta 'visto' con eta' <= 0,2 s).
+  p 0.99, una direzione:             'fino a 3 m' nel  84.9 % dei fotogrammi; distanza annunciata:  4.12 cambi/s (a passi di 0,5 m:  4.05 cambi/s)
+  p 0.99, settore di 10 direzioni:   'fino a 3 m' nel  13.1 % dei fotogrammi; distanza annunciata: 14.22 cambi/s (a passi di 0,5 m: 11.47 cambi/s)
+  p 0.99, una direzione, isteresi:   'fino a 3 m' nel 100.0 % dei fotogrammi; distanza annunciata:  0.00 cambi/s (a passi di 0,5 m:  0.00 cambi/s)
+  p 0.99, settore, isteresi:         'fino a 3 m' nel 100.0 % dei fotogrammi; distanza annunciata:  0.00 cambi/s (a passi di 0,5 m:  0.00 cambi/s)
+  p 0.95, una direzione:             'fino a 3 m' nel  42.2 % dei fotogrammi; distanza annunciata: 11.88 cambi/s (a passi di 0,5 m: 10.92 cambi/s)
+  p 0.95, settore di 10 direzioni:   'fino a 3 m' nel   0.1 % dei fotogrammi; distanza annunciata: 11.40 cambi/s (a passi di 0,5 m:  5.83 cambi/s)
+  p 0.95, una direzione, isteresi:   'fino a 3 m' nel 100.0 % dei fotogrammi; distanza annunciata:  0.00 cambi/s (a passi di 0,5 m:  0.00 cambi/s)
+  p 0.95, settore, isteresi:         'fino a 3 m' nel  97.7 % dei fotogrammi; distanza annunciata:  0.65 cambi/s (a passi di 0,5 m:  0.65 cambi/s)
+  p 0.80, una direzione:             'fino a 3 m' nel   1.7 % dei fotogrammi; distanza annunciata: 13.25 cambi/s (a passi di 0,5 m:  9.62 cambi/s)
+  p 0.80, settore di 10 direzioni:   'fino a 3 m' nel   0.0 % dei fotogrammi; distanza annunciata:  3.03 cambi/s (a passi di 0,5 m:  0.07 cambi/s)
+  p 0.80, una direzione, isteresi:   'fino a 3 m' nel  87.0 % dei fotogrammi; distanza annunciata:  2.83 cambi/s (a passi di 0,5 m:  2.80 cambi/s)
+  p 0.80, settore, isteresi:         'fino a 3 m' nel  22.9 % dei fotogrammi; distanza annunciata: 11.80 cambi/s (a passi di 0,5 m: 10.17 cambi/s)
+  p 0.00, una direzione:             'fino a 3 m' nel   0.0 % dei fotogrammi; distanza annunciata:  0.00 cambi/s (a passi di 0,5 m:  0.00 cambi/s)
+  p 0.00, settore di 10 direzioni:   'fino a 3 m' nel   0.0 % dei fotogrammi; distanza annunciata:  0.00 cambi/s (a passi di 0,5 m:  0.00 cambi/s)
+  p 0.00, una direzione, isteresi:   'fino a 3 m' nel   0.2 % dei fotogrammi; distanza annunciata:  0.02 cambi/s (a passi di 0,5 m:  0.02 cambi/s)
+  p 0.00, settore, isteresi:         'fino a 3 m' nel   0.2 % dei fotogrammi; distanza annunciata:  0.02 cambi/s (a passi di 0,5 m:  0.02 cambi/s)
+Rilascio dello strato 1 per osservazione, zona di 50 celle (60 s al piu'):
+  p 0.99: cella per cella 0.27 s; tutte insieme per 3 fotogrammi 0.27 s
+  p 0.95: cella per cella 0.40 s; tutte insieme per 3 fotogrammi mai in 60 s
+  p 0.80: cella per cella 0.93 s; tutte insieme per 3 fotogrammi mai in 60 s

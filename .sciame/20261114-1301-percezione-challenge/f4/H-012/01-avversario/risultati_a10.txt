@@ -1,0 +1,11 @@
+Attacco 10. Regole di B8 alla lettera: 'affidabilita' persa' se (1) il contatore non avanza in un ciclo, o (2) tre fotogrammi di profondita' identici.
+  (a) profondita' valida al 10 %, rumore nel resto                   contatore profondita: NESSUN segnale in 3 s | contatore rgb o coppia: NESSUN segnale in 3 s
+  (a') lente coperta del tutto: tutti zeri [controllo, notato dopo]  contatore profondita: segnale a 0.13 s | contatore rgb o coppia: segnale a 0.13 s
+  (b) profondita' ferma (contatore e contenuto), RGB vivo            contatore profondita: segnale a 0.07 s | contatore rgb o coppia: segnale a 0.13 s
+  (c) treppiede urtato: fotogrammi nuovi e diversi                   contatore profondita: NESSUN segnale in 3 s | contatore rgb o coppia: NESSUN segnale in 3 s
+  (d1) nessun fotogramma nuovo [controllo]                           contatore profondita: segnale a 0.07 s | contatore rgb o coppia: segnale a 0.07 s
+  (d2) fotogramma ripetuto con contatore nuovo [controllo]           contatore profondita: segnale a 0.13 s | contatore rgb o coppia: segnale a 0.13 s
+  (c) beccheggio di 2 gradi: il pavimento supera la soglia di 7 cm oltre 2.00 m; di 1 grado: oltre 4.01 m
+  (c) imbardata di 10 gradi in 0,2 s: gruppi FERMI etichettati 'mobile' nei 1,2 s seguenti (500 prove per cella, finestra <= 1 s)
+     sigma trasversale 0.050 m (soglia 0.354 m): 1.5 m:  96.0 % | 2.0 m: 100.0 % | 2.5 m: 100.0 % | 3.0 m: 100.0 %
+     sigma trasversale 0.015 m (soglia 0.106 m): 1.5 m: 100.0 % | 2.0 m: 100.0 % | 2.5 m: 100.0 % | 3.0 m: 100.0 %

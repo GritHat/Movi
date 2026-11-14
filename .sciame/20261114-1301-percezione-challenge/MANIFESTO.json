@@ -1,0 +1,52 @@
+{
+ "versione": "3.1",
+ "nome": "percezione-challenge",
+ "strategia": "classica",
+ "profilo": "percezione",
+ "domanda": "Quale architettura di prototipo (sensori, percezione, stima e tracciamento, decisione, feedback) soddisfa meglio i requisiti della challenge in regole_challenge.md ed è realizzabile e dimostrabile in un hackathon?",
+ "seme": 826465284,
+ "creato": "2026-11-14T13:01:29+01:00",
+ "f1": {
+  "visione": {
+   "cartella": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f1/c85dbcc51ea6",
+   "corsia": "A"
+  },
+  "nuvole-punti": {
+   "cartella": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f1/dfac83300259",
+   "corsia": "A"
+  },
+  "tracciamento": {
+   "cartella": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f1/992c41c8860e",
+   "corsia": "A"
+  },
+  "kalman": {
+   "cartella": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f1/21d3813ca7e1",
+   "corsia": "A"
+  },
+  "lidar": {
+   "cartella": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f1/985ccd9bca46",
+   "corsia": "A"
+  },
+  "requisiti": {
+   "cartella": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f1/b8262bfed263",
+   "corsia": "A"
+  },
+  "ricercatore": {
+   "cartella": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f1/3fff79e9c3ea",
+   "corsia": "A"
+  },
+  "creativo": {
+   "cartella": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f1/e30f9e2dd4d7",
+   "corsia": "B"
+  },
+  "rovesciatore": {
+   "cartella": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f1/8f275a60e807",
+   "corsia": "B"
+  }
+ },
+ "selezionate": [
+  "H-012"
+ ],
+ "radicale": null,
+ "mappa": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/.20261114-1301-percezione-challenge.corsie/MAPPA.json"
+}

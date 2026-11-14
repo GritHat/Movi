@@ -1,0 +1,11 @@
+Attacco 2. Pannello 0,5 m a 1,5 m; attore sulla retta z; corpo 0,4 m; Pd 0,9; 500 transiti per riga.
+D1 = cerchio ∩ ombra in griglia / ombra in griglia; D2 = cerchio ritagliato sul non osservato / ombra in griglia.
+z = 3.0 m                          ril.prima  0.4 | traccia  32.0 % | confermata   0.4 % | mobile(cresc.)   0.0 % | mobile(fissa)   0.0 % | previsto vivo alla riem.: D1   1.9 % D2   0.0 % | fine previsto med. D1 0.20 s D2 0.13 s | buio med. 0.93 s | contiene  98.1 % (n=53)
+z = 2.8 m                          ril.prima  8.1 | traccia 100.0 % | confermata 100.0 % | mobile(cresc.)  92.8 % | mobile(fissa)   0.6 % | previsto vivo alla riem.: D1  67.6 % D2  18.2 % | fine previsto med. D1 0.67 s D2 0.60 s | buio med. 0.67 s | contiene  74.4 % (n=500)
+z = 2.5 m                          ril.prima 15.5 | traccia 100.0 % | confermata 100.0 % | mobile(cresc.) 100.0 % | mobile(fissa)  72.8 % | previsto vivo alla riem.: D1  65.0 % D2  64.2 % | fine previsto med. D1 0.60 s D2 0.60 s | buio med. 0.60 s | contiene  70.8 % (n=500)
+Arco r = 3,0 m: quota di misure entro portata (rumore 5 cm): 50.1 %
+Tratto visibile prima dell'ombra a z = 2,8 m: da x = -1.077 a x = -0.667 m (corpo intero)
+
+[correzione] stessa ombra di 1 m alla distanza dell'attore, ma dentro la portata: pannello 0,5 m a 1,15 m, attore a 2,3 m
+z = 2,3 m, pannello a 1,15 m       ril.prima 17.5 | traccia 100.0 % | confermata 100.0 % | mobile(cresc.) 100.0 % | mobile(fissa)  93.2 % | previsto vivo alla riem.: D1  49.8 % D2  49.2 % | fine previsto med. D1 0.73 s D2 0.73 s | buio med. 0.73 s | contiene  86.4 % (n=500)
+z = 2,0 m, pannello a 1,0 m        ril.prima 18.4 | traccia 100.0 % | confermata 100.0 % | mobile(cresc.) 100.0 % | mobile(fissa)  98.0 % | previsto vivo alla riem.: D1  75.4 % D2  75.4 % | fine previsto med. D1 0.80 s D2 0.80 s | buio med. 0.73 s | contiene  87.0 % (n=500)

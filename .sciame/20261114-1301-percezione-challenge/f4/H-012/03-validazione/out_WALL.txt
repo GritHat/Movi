@@ -1,0 +1,41 @@
+# B1: muro fermo, 12000 finestre da 1 s per riga. falsi «mobile»: spost. (una valutazione per finestra | almeno una su 15 scorrevoli) ; chi2 (fotogrammi | finestre con almeno uno) ; v1a v1b (una valutazione per finestra)
+ nom z=2 m sigma_r=1.5 cm creduto x1.00 anomale 0%: spost 0.000% | 0.000% ; chi2 0.000% | 0.000% ; v1a 0.000% v1b 0.000%
+ nom z=2 m sigma_r=1.5 cm creduto x0.50 anomale 0%: spost 2.317% | 31.833% ; chi2 2.507% | 31.225% ; v1a 2.542% v1b 2.442%
+ nom z=2 m sigma_r=1.5 cm creduto x0.33 anomale 0%: spost 18.850% | 94.667% ; chi2 18.547% | 94.117% ; v1a 17.708% v1b 18.008%
+ nom z=2 m sigma_r=1.5 cm creduto x1.00 anomale 2%: spost 6.125% | 61.858% ; chi2 8.252% | 43.892% ; v1a 14.850% v1b 14.800%
+ nom z=3 m sigma_r=3.4 cm creduto x1.00 anomale 0%: spost 0.000% | 0.000% ; chi2 0.001% | 0.008% ; v1a 0.000% v1b 0.000%
+ nom z=3 m sigma_r=3.4 cm creduto x0.50 anomale 0%: spost 2.725% | 30.850% ; chi2 2.297% | 28.308% ; v1a 2.350% v1b 2.300%
+ nom z=3 m sigma_r=3.4 cm creduto x0.33 anomale 0%: spost 17.775% | 94.933% ; chi2 19.027% | 94.533% ; v1a 17.608% v1b 17.817%
+ nom z=3 m sigma_r=3.4 cm creduto x1.00 anomale 2%: spost 5.100% | 54.333% ; chi2 4.809% | 35.908% ; v1a 9.117% v1b 8.783%
+ nom z=4 m sigma_r=6.0 cm creduto x1.00 anomale 0%: spost 0.000% | 0.000% ; chi2 0.000% | 0.000% ; v1a 0.000% v1b 0.000%
+ nom z=4 m sigma_r=6.0 cm creduto x0.50 anomale 0%: spost 2.475% | 31.500% ; chi2 2.121% | 26.092% ; v1a 2.650% v1b 2.542%
+ nom z=4 m sigma_r=6.0 cm creduto x0.33 anomale 0%: spost 17.717% | 95.150% ; chi2 18.609% | 94.108% ; v1a 18.158% v1b 18.242%
+ nom z=4 m sigma_r=6.0 cm creduto x1.00 anomale 2%: spost 3.475% | 40.600% ; chi2 2.632% | 24.975% ; v1a 6.167% v1b 6.325%
+ lim z=2 m sigma_r=4.0 cm creduto x1.00 anomale 0%: spost 0.000% | 0.000% ; chi2 0.000% | 0.000% ; v1a 0.000% v1b 0.000%
+ lim z=2 m sigma_r=4.0 cm creduto x0.50 anomale 0%: spost 2.458% | 30.792% ; chi2 2.234% | 27.717% ; v1a 2.183% v1b 2.592%
+ lim z=2 m sigma_r=4.0 cm creduto x0.33 anomale 0%: spost 17.933% | 94.967% ; chi2 18.163% | 93.908% ; v1a 18.017% v1b 18.100%
+ lim z=2 m sigma_r=4.0 cm creduto x1.00 anomale 2%: spost 5.108% | 54.750% ; chi2 5.841% | 36.450% ; v1a 9.592% v1b 9.367%
+ lim z=3 m sigma_r=9.0 cm creduto x1.00 anomale 0%: spost 0.000% | 0.000% ; chi2 0.001% | 0.008% ; v1a 0.000% v1b 0.000%
+ lim z=3 m sigma_r=9.0 cm creduto x0.50 anomale 0%: spost 2.317% | 30.842% ; chi2 2.157% | 26.433% ; v1a 2.367% v1b 2.200%
+ lim z=3 m sigma_r=9.0 cm creduto x0.33 anomale 0%: spost 17.992% | 95.125% ; chi2 18.241% | 93.092% ; v1a 18.483% v1b 18.808%
+ lim z=3 m sigma_r=9.0 cm creduto x1.00 anomale 2%: spost 2.992% | 37.067% ; chi2 3.694% | 23.733% ; v1a 7.292% v1b 6.942%
+ lim z=4 m sigma_r=16.0 cm creduto x1.00 anomale 0%: spost 0.000% | 0.000% ; chi2 0.000% | 0.000% ; v1a 0.000% v1b 0.000%
+ lim z=4 m sigma_r=16.0 cm creduto x0.50 anomale 0%: spost 2.417% | 31.592% ; chi2 1.934% | 23.633% ; v1a 2.658% v1b 2.367%
+ lim z=4 m sigma_r=16.0 cm creduto x0.33 anomale 0%: spost 18.325% | 95.275% ; chi2 17.827% | 92.275% ; v1a 17.808% v1b 18.458%
+ lim z=4 m sigma_r=16.0 cm creduto x1.00 anomale 2%: spost 2.850% | 35.042% ; chi2 2.353% | 21.842% ; v1a 5.700% v1b 5.758%
+ tor z=2 m sigma_r=5.0 cm creduto x1.00 anomale 0%: spost 0.000% | 0.000% ; chi2 0.000% | 0.000% ; v1a 0.000% v1b 0.000%
+ tor z=2 m sigma_r=5.0 cm creduto x0.50 anomale 0%: spost 2.375% | 30.992% ; chi2 2.199% | 27.125% ; v1a 2.342% v1b 2.375%
+ tor z=2 m sigma_r=5.0 cm creduto x0.33 anomale 0%: spost 17.942% | 95.075% ; chi2 18.117% | 93.667% ; v1a 17.958% v1b 18.217%
+ tor z=2 m sigma_r=5.0 cm creduto x1.00 anomale 2%: spost 4.583% | 49.450% ; chi2 5.325% | 32.408% ; v1a 8.450% v1b 8.575%
+ tor z=3 m sigma_r=11.2 cm creduto x1.00 anomale 0%: spost 0.000% | 0.000% ; chi2 0.000% | 0.000% ; v1a 0.000% v1b 0.000%
+ tor z=3 m sigma_r=11.2 cm creduto x0.50 anomale 0%: spost 2.642% | 31.400% ; chi2 2.075% | 25.175% ; v1a 2.483% v1b 2.400%
+ tor z=3 m sigma_r=11.2 cm creduto x0.33 anomale 0%: spost 18.408% | 95.217% ; chi2 18.098% | 93.125% ; v1a 18.867% v1b 18.150%
+ tor z=3 m sigma_r=11.2 cm creduto x1.00 anomale 2%: spost 2.867% | 37.317% ; chi2 3.685% | 24.083% ; v1a 7.058% v1b 6.925%
+ tor z=4 m sigma_r=20.0 cm creduto x1.00 anomale 0%: spost 0.000% | 0.000% ; chi2 0.000% | 0.000% ; v1a 0.000% v1b 0.000%
+ tor z=4 m sigma_r=20.0 cm creduto x0.50 anomale 0%: spost 2.683% | 30.850% ; chi2 1.962% | 23.525% ; v1a 2.417% v1b 2.817%
+ tor z=4 m sigma_r=20.0 cm creduto x0.33 anomale 0%: spost 18.183% | 95.275% ; chi2 17.802% | 92.067% ; v1a 19.250% v1b 18.600%
+ tor z=4 m sigma_r=20.0 cm creduto x1.00 anomale 2%: spost 2.942% | 35.367% ; chi2 2.398% | 22.050% ; v1a 6.358% v1b 6.075%
+
+real	0m8,575s
+user	0m8,528s
+sys	0m0,021s

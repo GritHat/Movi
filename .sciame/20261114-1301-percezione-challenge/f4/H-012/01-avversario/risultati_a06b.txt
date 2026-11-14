@@ -1,0 +1,12 @@
+Attacco 6b. Pannello 0,5 m a 1,5 m; una persona larga 0,4 m cammina verso il sensore sfiorando il bordo del pannello (scarto laterale = gap).
+Celle 1 grado x 0,1 m, primo ritorno per direzione. Stretta: celle a contatto (8 vicini). Larga: fino a 2 celle di scarto. 100 passaggi per riga.
+gap 0.02 m, rumore radiale 0.00 m | stretta: >= 1 fotogramma fusi 100.0 %, >= 3 fotogrammi  97.0 % | larga: >= 1 fotogramma fusi 100.0 %, >= 3 fotogrammi 100.0 %
+gap 0.02 m, rumore radiale 0.05 m | stretta: >= 1 fotogramma fusi 100.0 %, >= 3 fotogrammi  77.0 % | larga: >= 1 fotogramma fusi 100.0 %, >= 3 fotogrammi 100.0 %
+gap 0.05 m, rumore radiale 0.00 m | stretta: >= 1 fotogramma fusi 100.0 %, >= 3 fotogrammi   0.0 % | larga: >= 1 fotogramma fusi 100.0 %, >= 3 fotogrammi 100.0 %
+gap 0.05 m, rumore radiale 0.05 m | stretta: >= 1 fotogramma fusi  82.0 %, >= 3 fotogrammi   5.0 % | larga: >= 1 fotogramma fusi 100.0 %, >= 3 fotogrammi 100.0 %
+gap 0.10 m, rumore radiale 0.00 m | stretta: >= 1 fotogramma fusi   0.0 %, >= 3 fotogrammi   0.0 % | larga: >= 1 fotogramma fusi 100.0 %, >= 3 fotogrammi   0.0 %
+gap 0.10 m, rumore radiale 0.05 m | stretta: >= 1 fotogramma fusi   1.0 %, >= 3 fotogrammi   0.0 % | larga: >= 1 fotogramma fusi  83.0 %, >= 3 fotogrammi   4.0 %
+gap 0.15 m, rumore radiale 0.00 m | stretta: >= 1 fotogramma fusi   0.0 %, >= 3 fotogrammi   0.0 % | larga: >= 1 fotogramma fusi   0.0 %, >= 3 fotogrammi   0.0 %
+gap 0.15 m, rumore radiale 0.05 m | stretta: >= 1 fotogramma fusi   0.0 %, >= 3 fotogrammi   0.0 % | larga: >= 1 fotogramma fusi   1.0 %, >= 3 fotogrammi   0.0 %
+gap 0.25 m, rumore radiale 0.00 m | stretta: >= 1 fotogramma fusi   0.0 %, >= 3 fotogrammi   0.0 % | larga: >= 1 fotogramma fusi   0.0 %, >= 3 fotogrammi   0.0 %
+gap 0.25 m, rumore radiale 0.05 m | stretta: >= 1 fotogramma fusi   0.0 %, >= 3 fotogrammi   0.0 % | larga: >= 1 fotogramma fusi   0.0 %, >= 3 fotogrammi   0.0 %

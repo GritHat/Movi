@@ -1,0 +1,11 @@
+# secondo soggetto mai tracciato, con una traccia pendente nell'ombra: riaggancio (sbagliato) secondo C1 su una delle sue prime 3 rilevazioni; N=400
+ DC errore -0.2: riagganci sbagliati: campo 0/400 ; portata 0/400 ; ombra 400/400
+ DC errore +0.0: riagganci sbagliati: campo 0/400 ; portata 0/400 ; ombra 400/400
+ DC errore +0.2: riagganci sbagliati: campo 0/400 ; portata 0/400 ; ombra 400/400
+ T1 errore -0.2: riagganci sbagliati: campo 0/400 ; portata 0/400 ; ombra 400/400
+ T1 errore +0.0: riagganci sbagliati: campo 0/400 ; portata 0/400 ; ombra 400/400
+ T1 errore +0.2: riagganci sbagliati: campo 0/400 ; portata 2/400 ; ombra 400/400
+
+real	0m0,079s
+user	0m0,070s
+sys	0m0,004s

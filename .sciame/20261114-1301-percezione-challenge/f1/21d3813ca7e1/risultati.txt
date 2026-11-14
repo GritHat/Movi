@@ -1,0 +1,63 @@
+== sim_kalman.py: verita' = pedone che manovra (non il modello del filtro) ==
+
+-- S1: che cosa e' stimabile (velocita' quasi costante, q tarato sul NIS; valori per asse) --
+Hz  sz[m]  q*    NIS(2) NEES(4) rho1   sig_p  rmse_p  sig_v  rmse_v [m, m/s]
+10  0.05   0.20  1.93   3.41    -0.02  0.036  0.036   0.211  0.188 
+15  0.05   0.20  1.95   3.34    -0.02  0.033  0.032   0.205  0.181 
+30  0.05   0.20  1.97   3.29    -0.02  0.027  0.026   0.193  0.169 
+15  0.02   0.10  2.18   4.39    +0.09  0.014  0.015   0.123  0.135 
+15  0.10   0.20  1.97   3.47    -0.01  0.057  0.056   0.248  0.227 
+
+-- S2: occlusione, sola predizione; alla ricomparsa (1500 prove) --
+config                T_occ  copertura95(verita')  copertura95(misura)  raggio95[m]  rmse2D[m]
+CV 15Hz q*=0.2               0.5   0.936                 0.941                0.41         0.22
+CV 15Hz q*=0.2               1.0   0.917                 0.914                0.84         0.47
+CV 15Hz q*=0.2               2.0   0.903                 0.907                2.08         1.18
+CV 15Hz q*=0.2               3.0   0.920                 0.923                3.63         2.03
+CV 15Hz q=0.01 (ottim.)      0.5   0.472                 0.549                0.15         0.29
+CV 15Hz q=0.01 (ottim.)      1.0   0.477                 0.498                0.26         0.57
+CV 15Hz q=0.01 (ottim.)      2.0   0.417                 0.424                0.55         1.29
+CV 15Hz q=0.01 (ottim.)      3.0   0.375                 0.378                0.92         2.15
+CV 15Hz q=4q*=0.8            0.5   0.998                 0.997                0.70         0.24
+CV 15Hz q=4q*=0.8            1.0   0.995                 0.993                1.54         0.50
+CV 15Hz q=4q*=0.8            2.0   0.997                 0.997                3.96         1.22
+CV 15Hz q=4q*=0.8            3.0   0.997                 0.997                7.04         2.07
+CV 10Hz q*=0.2               0.5   0.927                 0.939                0.39         0.22
+CV 10Hz q*=0.2               1.0   0.912                 0.913                0.86         0.49
+CV 10Hz q*=0.2               2.0   0.909                 0.904                2.09         1.19
+CV 10Hz q*=0.2               3.0   0.921                 0.921                3.66         2.04
+CV 30Hz q*=0.2               0.5   0.930                 0.935                0.36         0.20
+CV 30Hz q*=0.2               1.0   0.913                 0.910                0.82         0.46
+CV 30Hz q*=0.2               2.0   0.907                 0.908                2.04         1.16
+CV 30Hz q*=0.2               3.0   0.923                 0.923                3.59         2.01
+CV 15Hz sz=10cm q*=0.2       0.5   0.934                 0.945                0.50         0.27
+CV 15Hz sz=10cm q*=0.2       1.0   0.915                 0.913                0.95         0.54
+CV 15Hz sz=10cm q*=0.2       2.0   0.905                 0.911                2.22         1.27
+CV 15Hz sz=10cm q*=0.2       3.0   0.921                 0.923                3.80         2.12
+raggio95 > 1.0 m dopo 1.20 s di occlusione (CV 15 Hz, q*=0.2)
+raggio95 > 1.5 m dopo 1.60 s di occlusione (CV 15 Hz, q*=0.2)
+raggio95 > 2.0 m dopo 2.00 s di occlusione (CV 15 Hz, q*=0.2)
+
+-- S2b: accelerazione costante (jerk tarato sul NIS), 15 Hz, 5 cm --
+jerk q*=1  NIS=2.06  sig_a dichiarata=0.66 m/s^2  rmse_a=0.82  valore efficace a vera=0.67  rapporto rmse_a/rms_a=1.22
+sig_v=0.180 rmse_v=0.206
+CA T_occ=0.5: copertura95=0.931 raggio95=0.51 m rmse2D=0.30 m (CV: 0.22 m; rapporto CA/CV=1.36)
+CA T_occ=1.0: copertura95=0.953 raggio95=1.36 m rmse2D=0.73 m (CV: 0.47 m; rapporto CA/CV=1.53)
+CA T_occ=2.0: copertura95=0.976 raggio95=5.08 m rmse2D=2.29 m (CV: 1.18 m; rapporto CA/CV=1.94)
+CA T_occ=3.0: copertura95=0.985 raggio95=12.00 m rmse2D=4.70 m (CV: 2.03 m; rapporto CA/CV=2.32)
+
+-- S3: moto proprio (portatore 1,2 m/s, testa +-30 gradi a 0,5 Hz; ostacolo FERMO) --
+(a) nessuna compensazione            errore RMS CPA = 1.49 m   dichiarato 'mobile' = 100.0% del tempo
+(b) solo giroscopio                  errore RMS CPA = 0.25 m   dichiarato 'mobile' = 100.0% del tempo
+(c) giroscopio + traslazione (10%)   errore RMS CPA = 0.25 m   dichiarato 'mobile' = 0.0% del tempo
+   stesso scenario, ostacolo MOBILE (0,8 m/s trasversale):
+(a) errore RMS CPA = 0.87 m   dichiarato 'mobile' = 98.5%
+(b) errore RMS CPA = 0.16 m   dichiarato 'mobile' = 100.0%
+(c) errore RMS CPA = 0.16 m   dichiarato 'mobile' = 95.6%
+tempo per dichiarare 'mobile' un pedone a 1,2 m/s (riferimento compensato): mediana 0.20 s, 95% 0.27 s
+ostacolo fermo, riferimento ideale: primo falso 'mobile' mediana inf s (inf = mai in 4 s)
+
+-- S4: massa (punto materiale, forza ignota): x = x0 + v0 t + (F/m) t^2/2 --
+FIM(F,m): det/traccia^2 = 5.40e-17 (0 = rango 1: osservabile solo F/m)
+
+tempo di calcolo: 8.1 s

@@ -1,0 +1,19 @@
+Attacco 4. Sosta dietro il pannello; T_g = 10 s; 15 Hz.
+Lettura (a): a T_g la traccia cade con l'avviso. Lettura (b): la traccia resta 'perso' senza strato 1.
+lettura a, sosta  4 s: fotogrammi 'nascosto fuori dallo strato 1' =   0; dopo T_g uscita identica alla scena vuota in   0 su   0 fotogrammi; riemersione: stessa identita, riaggancio dichiarato
+lettura a, sosta  9 s: fotogrammi 'nascosto fuori dallo strato 1' =   0; dopo T_g uscita identica alla scena vuota in   0 su   0 fotogrammi; riemersione: stessa identita, riaggancio dichiarato
+lettura a, sosta 11 s: fotogrammi 'nascosto fuori dallo strato 1' =  15; dopo T_g uscita identica alla scena vuota in  15 su  15 fotogrammi; riemersione: identita NUOVA, riaggancio non dichiarato
+lettura a, sosta 12 s: fotogrammi 'nascosto fuori dallo strato 1' =  30; dopo T_g uscita identica alla scena vuota in  30 su  30 fotogrammi; riemersione: identita NUOVA, riaggancio non dichiarato
+lettura a, sosta 20 s: fotogrammi 'nascosto fuori dallo strato 1' = 150; dopo T_g uscita identica alla scena vuota in 150 su 150 fotogrammi; riemersione: identita NUOVA, riaggancio non dichiarato
+lettura a, sosta 60 s: fotogrammi 'nascosto fuori dallo strato 1' = 750; dopo T_g uscita identica alla scena vuota in 750 su 750 fotogrammi; riemersione: identita NUOVA, riaggancio non dichiarato
+lettura b, sosta  4 s: fotogrammi 'nascosto fuori dallo strato 1' =   0; dopo T_g uscita identica alla scena vuota in   0 su   0 fotogrammi; riemersione: stessa identita, riaggancio dichiarato
+lettura b, sosta  9 s: fotogrammi 'nascosto fuori dallo strato 1' =   0; dopo T_g uscita identica alla scena vuota in   0 su   0 fotogrammi; riemersione: stessa identita, riaggancio dichiarato
+lettura b, sosta 11 s: fotogrammi 'nascosto fuori dallo strato 1' =  15; dopo T_g uscita identica alla scena vuota in  15 su  15 fotogrammi; riemersione: stessa identita, riaggancio dichiarato
+lettura b, sosta 12 s: fotogrammi 'nascosto fuori dallo strato 1' =  30; dopo T_g uscita identica alla scena vuota in  30 su  30 fotogrammi; riemersione: stessa identita, riaggancio dichiarato
+lettura b, sosta 20 s: fotogrammi 'nascosto fuori dallo strato 1' = 150; dopo T_g uscita identica alla scena vuota in 150 su 150 fotogrammi; riemersione: stessa identita, riaggancio dichiarato
+lettura b, sosta 60 s: fotogrammi 'nascosto fuori dallo strato 1' = 750; dopo T_g uscita identica alla scena vuota in 750 su 750 fotogrammi; riemersione: stessa identita, riaggancio dichiarato
+
+[correzione] T_g non toglie la 'possibile presenza': le aggiunge l'eta'; rilascio solo per riaggancio o per celle viste libere
+sosta 12 s: fotogrammi 'nascosto fuori dallo strato 1' =   0; dopo T_g uscita identica alla scena vuota in   0 su  30; riemersione: stessa identita, riaggancio dichiarato
+sosta 20 s: fotogrammi 'nascosto fuori dallo strato 1' =   0; dopo T_g uscita identica alla scena vuota in   0 su 150; riemersione: stessa identita, riaggancio dichiarato
+sosta 60 s: fotogrammi 'nascosto fuori dallo strato 1' =   0; dopo T_g uscita identica alla scena vuota in   0 su 750; riemersione: stessa identita, riaggancio dichiarato

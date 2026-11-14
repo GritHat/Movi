@@ -1,0 +1,32 @@
+== B2. Due persone, ungherese + porta al 99% (q=0,5), associazione in due stadi (confermate prima), N=2000 ==
+   tenuta = stesse due identita'; scambio = una persona finisce con l'identita' dell'altra; nuova = nessuno scambio, almeno un'identita' nuova;
+   ambigue = almeno un riaggancio con >=2 candidati in porta; muti = scambi senza alcun riaggancio ambiguo
+  persa15  W=1 m (i) opposti, proseguono                tenuta 0.893  scambio 0.002+-0.001  nuova 0.105  ambigue 0.357  muti 0.002
+  persa15  W=1 m (ii) opposti, tornano entrambi         tenuta 0.106  scambio 0.440+-0.011  nuova 0.454  ambigue 0.511  muti 0.199
+  persa15  W=1 m (iv) opposti, uno sosta 1-3 s          tenuta 0.002  scambio 0.017+-0.003  nuova 0.982  ambigue 0.363  muti 0.003
+  persa15  W=1 m (v) opposti, uno torna e uno sosta     tenuta 0.000  scambio 0.335+-0.011  nuova 0.665  ambigue 0.410  muti 0.160
+  persa15  W=1 m (iii) opposti, miscela 70/18/12        tenuta 0.490  scambio 0.051+-0.005  nuova 0.459  ambigue 0.348  muti 0.028
+  persa15  W=1 m (vi) stessa direzione, il primo sosta  tenuta 0.001  scambio 0.117+-0.007  nuova 0.883  ambigue 0.239  muti 0.069
+  persa15  W=1 m (vii) stessa direzione, miscela        tenuta 0.497  scambio 0.059+-0.005  nuova 0.444  ambigue 0.358  muti 0.018
+  persa15  W=2 m (i) opposti, proseguono                tenuta 0.000  scambio 0.246+-0.010  nuova 0.754  ambigue 0.044  muti 0.238
+  persa15  W=2 m (ii) opposti, tornano entrambi         tenuta 0.031  scambio 0.178+-0.009  nuova 0.790  ambigue 0.162  muti 0.109
+  persa15  W=2 m (iv) opposti, uno sosta 1-3 s          tenuta 0.000  scambio 0.081+-0.006  nuova 0.919  ambigue 0.059  muti 0.080
+  persa15  W=2 m (v) opposti, uno torna e uno sosta     tenuta 0.000  scambio 0.117+-0.007  nuova 0.883  ambigue 0.102  muti 0.082
+  persa15  W=2 m (iii) opposti, miscela 70/18/12        tenuta 0.000  scambio 0.199+-0.009  nuova 0.801  ambigue 0.063  muti 0.184
+  persa15  W=2 m (vi) stessa direzione, il primo sosta  tenuta 0.000  scambio 0.037+-0.004  nuova 0.963  ambigue 0.013  muti 0.037
+  persa15  W=2 m (vii) stessa direzione, miscela        tenuta 0.000  scambio 0.179+-0.009  nuova 0.821  ambigue 0.021  muti 0.172
+  tetto3s  W=1 m (i) opposti, proseguono                tenuta 0.952  scambio 0.001+-0.001  nuova 0.047  ambigue 0.389  muti 0.000
+  tetto3s  W=1 m (ii) opposti, tornano entrambi         tenuta 0.194  scambio 0.570+-0.011  nuova 0.237  ambigue 0.807  muti 0.117
+  tetto3s  W=1 m (iv) opposti, uno sosta 1-3 s          tenuta 0.505  scambio 0.079+-0.006  nuova 0.415  ambigue 0.690  muti 0.001
+  tetto3s  W=1 m (v) opposti, uno torna e uno sosta     tenuta 0.021  scambio 0.644+-0.011  nuova 0.335  ambigue 0.930  muti 0.066
+  tetto3s  W=1 m (iii) opposti, miscela 70/18/12        tenuta 0.692  scambio 0.086+-0.006  nuova 0.222  ambigue 0.484  muti 0.021
+  tetto3s  W=1 m (vi) stessa direzione, il primo sosta  tenuta 0.167  scambio 0.407+-0.011  nuova 0.425  ambigue 0.982  muti 0.004
+  tetto3s  W=1 m (vii) stessa direzione, miscela        tenuta 0.580  scambio 0.187+-0.009  nuova 0.233  ambigue 0.650  muti 0.013
+  tetto3s  W=2 m (i) opposti, proseguono                tenuta 0.848  scambio 0.048+-0.005  nuova 0.105  ambigue 0.752  muti 0.000
+  tetto3s  W=2 m (ii) opposti, tornano entrambi         tenuta 0.103  scambio 0.624+-0.011  nuova 0.272  ambigue 0.876  muti 0.057
+  tetto3s  W=2 m (iv) opposti, uno sosta 1-3 s          tenuta 0.126  scambio 0.210+-0.009  nuova 0.663  ambigue 0.923  muti 0.002
+  tetto3s  W=2 m (v) opposti, uno torna e uno sosta     tenuta 0.013  scambio 0.589+-0.011  nuova 0.398  ambigue 0.885  muti 0.053
+  tetto3s  W=2 m (iii) opposti, miscela 70/18/12        tenuta 0.527  scambio 0.159+-0.008  nuova 0.314  ambigue 0.788  muti 0.015
+  tetto3s  W=2 m (vi) stessa direzione, il primo sosta  tenuta 0.037  scambio 0.459+-0.011  nuova 0.504  ambigue 0.836  muti 0.052
+  tetto3s  W=2 m (vii) stessa direzione, miscela        tenuta 0.326  scambio 0.285+-0.010  nuova 0.389  ambigue 0.841  muti 0.029
+timeout 120 python3 torneo_B2A2_parte2.py B2  25,72s user 0,01s system 99% cpu 25,796 total

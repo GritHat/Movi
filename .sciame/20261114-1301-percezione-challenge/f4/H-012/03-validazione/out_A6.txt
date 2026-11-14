@@ -1,0 +1,14 @@
+# A6: due bersagli da lati opposti (il secondo specchiato), sfasamento U(-1.5,1.5) s, geometria T, e=0, N=400 coppie per riga
+# regola della soluzione: se pendono due tracce nella stessa ombra -> «identita' ambigua» (non consuma le pendenti); una sola -> riaggancio
+ w=1 m prosegue+prosegue: coppie 400, riemersioni 800, «ambigua» dichiarata 94.5%, scambi muti 0
+ w=1 m torna+torna: coppie 400, riemersioni 800, «ambigua» dichiarata 99.0%, scambi muti 0
+ w=1 m prosegue+sosta: coppie 400, riemersioni 800, «ambigua» dichiarata 97.5%, scambi muti 0
+ w=1 m sosta+torna: coppie 400, riemersioni 800, «ambigua» dichiarata 100.0%, scambi muti 0
+ w=2 m prosegue+prosegue: coppie 400, riemersioni 800, «ambigua» dichiarata 100.0%, scambi muti 0
+ w=2 m torna+torna: coppie 400, riemersioni 800, «ambigua» dichiarata 100.0%, scambi muti 0
+ w=2 m prosegue+sosta: coppie 400, riemersioni 800, «ambigua» dichiarata 100.0%, scambi muti 0
+ w=2 m sosta+torna: coppie 400, riemersioni 800, «ambigua» dichiarata 100.0%, scambi muti 0
+
+real	0m2,468s
+user	0m2,459s
+sys	0m0,002s

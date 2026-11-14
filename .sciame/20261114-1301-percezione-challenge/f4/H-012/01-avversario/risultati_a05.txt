@@ -1,0 +1,20 @@
+Attacco 5. Pannello 0,5 m a 1,5 m; riempimento per contiguita' (4 vicini) dalla cella d'ombra in cui entra la traccia.
+G1: celle anche oltre portata e fuori campo (definizione di PREVISIONI.md), fino a 4 m
+  (i) strato 1 = 100.0 % delle celle non osservate (100.0 % in area); ombra del pannello = 1.01 m2; strato 1 = 45.47 m2
+  (ii) libero visto dentro la fascia di 0,40 m attorno a tutto lo strato 1: 77.4 % (libero visto: 4.75 m2)
+  (ii) libero visto dentro la fascia di 0,40 m attorno a la sola ombra del pannello: 28.2 % (libero visto: 4.75 m2)
+G2: esistono solo le celle del campo fra 0,5 e 3 m
+  (i) strato 1 = 29.0 % delle celle non osservate (52.5 % in area); ombra del pannello = 1.01 m2; strato 1 = 1.01 m2
+  (ii) libero visto dentro la fascia di 0,40 m attorno a tutto lo strato 1: 28.2 % (libero visto: 4.75 m2)
+  (ii) libero visto dentro la fascia di 0,40 m attorno a la sola ombra del pannello: 28.2 % (libero visto: 4.75 m2)
+
+(iii) fine del 'previsto' (cerchio al 95 % che copre >= meta' del denominatore), attore entrato a z = 2,5 m a 1,2 m/s; P a regime: sigma_p = 0.033 m, sigma_v = 0.205 m/s
+  D-a: cerchio ∩ ombra in griglia / ombra in griglia (1,11 m2)           -> 'perso' a 1.87 s (raggio 1.89 m)
+  D-c: cerchio ritagliato sul non osservato / ombra in griglia           -> 'perso' a 0.80 s (raggio 0.64 m)
+  D-b: denominatore = strato 1, non osservato rappresentato fino a 3 m   -> 'perso' a 4.13 s (raggio 5.72 m)
+  D-b: ... fino a 4 m                                                    -> 'perso' a 4.33 s (raggio 6.12 m)
+  D-b: ... fino a 6 m                                                    -> 'perso' a 4.80 s (raggio 7.09 m)
+  D-b: ... fino a 10 m                                                   -> 'perso' a 5.80 s (raggio 9.31 m)
+
+Variante, a conto: l'ombra di un giurato largo 0,4 m a 1 m vale 1.58 m2; fusa con quella del pannello (1.11 m2) porta una copertura di 0,55 a 0.23:
+  se 'perso' non e' assorbente (il testo tace) lo stato torna a 'previsto' senza nessuna misura.

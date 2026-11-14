@@ -1,0 +1,6 @@
+Correzione dell'attacco 3: (1) anello cieco e oltre portata dichiarati una volta, fuori dal messaggio per fotogramma;
+(2) una cella e' 'buco' solo dopo 3 fotogrammi non validi di fila. Settore di 10 gradi, persona da 2,95 a 1,0 m a 1,4 m/s, 200 ripetizioni.
+  p_suolo 1.00: 'mobile in avvicinamento' emesso: solo (1) 100.0 %; (1) + (2) 100.0 %
+  p_suolo 0.99: 'mobile in avvicinamento' emesso: solo (1)  53.1 %; (1) + (2) 100.0 %
+  p_suolo 0.95: 'mobile in avvicinamento' emesso: solo (1)  22.0 %; (1) + (2)  99.5 %
+  p_suolo 0.80: 'mobile in avvicinamento' emesso: solo (1)  14.9 %; (1) + (2)  65.6 %

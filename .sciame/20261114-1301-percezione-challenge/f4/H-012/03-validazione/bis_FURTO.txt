@@ -1,0 +1,11 @@
+# limite P2b: a 1,0 s dall'ingresso un secondo soggetto viene riagganciato e lo strato 1 si rilascia con il primo ancora nascosto (Pd=1). Passaggi con il primo soggetto, senza misura, in una cella «libero» DOPO il rilascio; N=400
+ DC errore -0.2: sosta 400/400 ; torna 400/400 ; lontano 10/400
+ DC errore +0.0: sosta 0/400 ; torna 0/400 ; lontano 0/400
+ DC errore +0.2: sosta 0/400 ; torna 0/400 ; lontano 0/400
+ T1 errore -0.2: sosta 400/400 ; torna 399/399 ; lontano 7/400
+ T1 errore +0.0: sosta 0/400 ; torna 0/400 ; lontano 0/400
+ T1 errore +0.2: sosta 0/400 ; torna 0/399 ; lontano 0/400
+
+real	0m2,267s
+user	0m2,252s
+sys	0m0,004s

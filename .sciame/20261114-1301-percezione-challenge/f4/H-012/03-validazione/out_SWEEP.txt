@@ -1,0 +1,28 @@
+# sensibilita' di A1 all'errore d'ombra, geometria T, pannello 1 m, curva nom, N=400 per cella
+# errore corpo | passaggi con N1 fuori dallo strato 1 (lettura ii) o senza strato | passaggi con fallimento N2 ; su 3 comportamenti (prosegue, sosta, torna)
+ e=-0.5 corpo=0.4 : N1 fuori 1200/1200 passaggi (100.00%), fotogrammi 4772/65014 (contenuti 92.66%) ; N2 661/1200
+ e=-0.4 corpo=0.4 : N1 fuori 1075/1200 passaggi (89.58%), fotogrammi 1702/65030 (contenuti 97.38%) ; N2 66/1200
+ e=-0.3 corpo=0.4 : N1 fuori 107/1200 passaggi (8.92%), fotogrammi 114/65029 (contenuti 99.82%) ; N2 0/1200
+ e=-0.2 corpo=0.4 : N1 fuori 0/1200 passaggi (0.00%), fotogrammi 0/64439 (contenuti 100.00%) ; N2 0/1200
+ e=-0.1 corpo=0.4 : N1 fuori 0/1200 passaggi (0.00%), fotogrammi 0/64734 (contenuti 100.00%) ; N2 0/1200
+ e=+0.0 corpo=0.4 : N1 fuori 0/1200 passaggi (0.00%), fotogrammi 0/65174 (contenuti 100.00%) ; N2 0/1200
+ e=+0.1 corpo=0.4 : N1 fuori 0/1200 passaggi (0.00%), fotogrammi 0/64720 (contenuti 100.00%) ; N2 0/1200
+ e=+0.2 corpo=0.4 : N1 fuori 0/1200 passaggi (0.00%), fotogrammi 0/65602 (contenuti 100.00%) ; N2 0/1200
+ e=+0.3 corpo=0.4 : N1 fuori 0/1200 passaggi (0.00%), fotogrammi 0/64388 (contenuti 100.00%) ; N2 0/1200
+ e=+0.4 corpo=0.4 : N1 fuori 0/1200 passaggi (0.00%), fotogrammi 0/65166 (contenuti 100.00%) ; N2 0/1200
+ e=+0.5 corpo=0.4 : N1 fuori 0/1200 passaggi (0.00%), fotogrammi 0/64708 (contenuti 100.00%) ; N2 0/1200
+ e=-0.5 corpo=0.6 : N1 fuori 1200/1200 passaggi (100.00%), fotogrammi 6027/62018 (contenuti 90.28%) ; N2 1111/1200
+ e=-0.4 corpo=0.6 : N1 fuori 1200/1200 passaggi (100.00%), fotogrammi 3534/61599 (contenuti 94.26%) ; N2 514/1200
+ e=-0.3 corpo=0.6 : N1 fuori 399/1200 passaggi (33.25%), fotogrammi 497/61621 (contenuti 99.19%) ; N2 6/1200
+ e=-0.2 corpo=0.6 : N1 fuori 0/1200 passaggi (0.00%), fotogrammi 0/62482 (contenuti 100.00%) ; N2 0/1200
+ e=-0.1 corpo=0.6 : N1 fuori 0/1200 passaggi (0.00%), fotogrammi 0/61414 (contenuti 100.00%) ; N2 0/1200
+ e=+0.0 corpo=0.6 : N1 fuori 0/1200 passaggi (0.00%), fotogrammi 0/61713 (contenuti 100.00%) ; N2 0/1200
+ e=+0.1 corpo=0.6 : N1 fuori 0/1200 passaggi (0.00%), fotogrammi 0/61660 (contenuti 100.00%) ; N2 0/1200
+ e=+0.2 corpo=0.6 : N1 fuori 0/1200 passaggi (0.00%), fotogrammi 0/61301 (contenuti 100.00%) ; N2 0/1200
+ e=+0.3 corpo=0.6 : N1 fuori 0/1200 passaggi (0.00%), fotogrammi 0/62697 (contenuti 100.00%) ; N2 0/1200
+ e=+0.4 corpo=0.6 : N1 fuori 0/1200 passaggi (0.00%), fotogrammi 0/61548 (contenuti 100.00%) ; N2 0/1200
+ e=+0.5 corpo=0.6 : N1 fuori 0/1200 passaggi (0.00%), fotogrammi 0/61253 (contenuti 100.00%) ; N2 0/1200
+
+real	0m10,719s
+user	0m10,689s
+sys	0m0,003s

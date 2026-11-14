@@ -1,0 +1,53 @@
+== zero fallimenti ==
+N minimo per dire >= 99 % al 95 %: 299 | al 97,5 %: 368 | per 24 celle insieme (Bonferroni): 615 | per >= 95 %: 59
+0 fallimenti su 10 -> quota di fallimento <= 0.25887
+0 fallimenti su 20 -> quota di fallimento <= 0.13911
+0 fallimenti su 30 -> quota di fallimento <= 0.09503
+0 fallimenti su 59 -> quota di fallimento <= 0.04951
+0 fallimenti su 100 -> quota di fallimento <= 0.02951
+0 fallimenti su 300 -> quota di fallimento <= 0.00994
+0 fallimenti su 1000 -> quota di fallimento <= 0.00299
+0 fallimenti su 7200 -> quota di fallimento <= 0.00042
+1 fallimento su 300 -> <= 0.0157
+== soglie "almeno": regge se il limite inferiore >= soglia; smentita se il limite superiore < soglia ==
+soglia >= 0.85, n =   30: regge da 29 successi; smentita fino a 21
+soglia >= 0.85, n =  100: regge da 92 successi; smentita fino a 78
+soglia >= 0.85, n =  300: regge da 266 successi; smentita fino a 244
+soglia >= 0.85, n = 1000: regge da 869 successi; smentita fino a 830
+soglia >= 0.85, n = 2000: regge da 1727 successi; smentita fino a 1673
+soglia >= 0.90, n =   30: regge da 30 successi; smentita fino a 23
+soglia >= 0.90, n =  100: regge da 96 successi; smentita fino a 84
+soglia >= 0.90, n =  300: regge da 279 successi; smentita fino a 260
+soglia >= 0.90, n = 1000: regge da 916 successi; smentita fino a 883
+soglia >= 0.90, n = 2000: regge da 1823 successi; smentita fino a 1777
+soglia >= 0.95, n =   30: regge da None successi; smentita fino a 25
+soglia >= 0.95, n =  100: regge da 99 successi; smentita fino a 90
+soglia >= 0.95, n =  300: regge da 292 successi; smentita fino a 278
+soglia >= 0.95, n = 1000: regge da 962 successi; smentita fino a 937
+soglia >= 0.95, n = 2000: regge da 1917 successi; smentita fino a 1883
+== soglia "al piu' 10 %" ==
+n =  60: regge fino a 1 falsi; smentita da 11
+n = 120: regge fino a 6 falsi; smentita da 19
+n = 300: regge fino a 21 falsi; smentita da 40
+== potenza dei criteri del giorno dell'hackathon: P(passa | quota vera p) ==
+26 su 30: [(0.95, 0.984), (0.93, 0.945), (0.9, 0.825), (0.895, 0.798), (0.85, 0.524), (0.8, 0.255), (0.75, 0.098), (0.71, 0.039)]
+due stadi (>= 28 passa; <= 22 bocciato; 23-27: altri 30, passa con >= 52 su 60): [(0.95, 0.997, 'n medio 36'), (0.93, 0.978, 'n medio 41'), (0.9, 0.865, 'n medio 47'), (0.895, 0.834, 'n medio 48'), (0.85, 0.463, 'n medio 53'), (0.8, 0.142, 'n medio 51'), (0.75, 0.028, 'n medio 45'), (0.71, 0.006, 'n medio 40')]
+9 su 10: [(0.95, 0.914), (0.9, 0.736), (0.8, 0.376), (0.75, 0.244), (0.5, 0.011)]
+27 su 30: [(0.95, 0.939), (0.9, 0.647), (0.8, 0.123), (0.75, 0.037)]
+0 su 20 (passa con quota vera di guasto f): [(0.01, 0.818), (0.05, 0.358), (0.1, 0.122), (0.14, 0.049), (0.25, 0.003), (0.45, 0.0)]
+0 su 10: [(0.05, 0.599), (0.1, 0.349), (0.26, 0.049)]
+p95: probabilita' che il massimo di n campioni superi il p95 vero: [(30, 0.785), (59, 0.952), (60, 0.954), (100, 0.994)]
+== regola "spostamento su 1 s oltre 5 sigma(z) radice di 2", pedone a 0,5 m/s in avvicinamento ==
+P(visto) = Phi((0,5 - 5*sigma(z_fine)*rad2) / rad(sigma(z_inizio)^2 + sigma(z_fine)^2)); sigma(z) = limite dichiarato a 4 m scalato con z^2 (TORNEO parte 1)
+D455       d = 2 m | parte da d: sigma 1.1 cm, soglia 0.08 m, P = 1.000 | arriva a d: sigma 2.0 cm, soglia 0.14 m, P = 1.000
+D455       d = 3 m | parte da d: sigma 3.1 cm, soglia 0.22 m, P = 1.000 | arriva a d: sigma 4.5 cm, soglia 0.32 m, P = 0.992
+D455       d = 4 m | parte da d: sigma 6.1 cm, soglia 0.43 m, P = 0.747 | arriva a d: sigma 8.0 cm, soglia 0.57 m, P = 0.305
+Gemini 335 d = 2 m | parte da d: sigma 1.7 cm, soglia 0.12 m, P = 1.000 | arriva a d: sigma 3.0 cm, soglia 0.21 m, P = 1.000
+Gemini 335 d = 3 m | parte da d: sigma 4.7 cm, soglia 0.33 m, P = 0.980 | arriva a d: sigma 6.8 cm, soglia 0.48 m, P = 0.579
+Gemini 335 d = 4 m | parte da d: sigma 9.2 cm, soglia 0.65 m, P = 0.161 | arriva a d: sigma 12.0 cm, soglia 0.85 m, P = 0.036
+D435i      d = 2 m | parte da d: sigma 2.2 cm, soglia 0.16 m, P = 1.000 | arriva a d: sigma 4.0 cm, soglia 0.28 m, P = 0.998
+D435i      d = 3 m | parte da d: sigma 6.2 cm, soglia 0.44 m, P = 0.702 | arriva a d: sigma 9.0 cm, soglia 0.64 m, P = 0.185
+D435i      d = 4 m | parte da d: sigma 12.2 cm, soglia 0.87 m, P = 0.035 | arriva a d: sigma 16.0 cm, soglia 1.13 m, P = 0.007
+sigma massima (uguale ai due estremi) perche' P >= 0,90: 0.0563 m
+falsi per confronto e per asse se il rumore vero e' k volte quello del modello: [(1, '5.7e-07'), (1.5, '8.6e-04'), (2, '1.2e-02'), (2.5, '4.6e-02'), (3, '9.6e-02')]
+incertezza relativa di una sigma stimata su n fotogrammi indipendenti: [(30, 0.131), (100, 0.071), (300, 0.041)]

@@ -1,0 +1,44 @@
+# prova A, geometria T, pannello 1.0 m, N=400 per cella, curva nom, Pd=0.90, seme base 5101
+== errore d'ombra -0.2 m; ombra vera 2.00 m alla linea del pedone; area ombra stimata 6.31 m2
+ prosegue A1: N1=11256 fotogr.; fuori(i)=0 [0 pass.] fuori(ii)=0 [0 pass.] senza strato=0 [0 pass.] dopoTg=0 | N2=10736 fallimenti=0 [0 pass.] | mancati in campo aperto=1981 senza traccia=0
+          A3: riem=400 in95=97.8% | d1: cont+mostrato=2.2% cont+perso=78.2% | d2: cont+mostrato=0.0% cont+perso=80.5% | contenuta (resp., tol 0,40) 80.5% ; tol 0,20 0.0% | A4 mostrato: d1 18.8% d2 16.5% | A5 disco=100.0%
+          A7: R-a durata media 1.61 s max 2.60 s (n=400, oltre Tg+3f: 0, a Tg: 0) | R-b rilasci=1 di cui a soggetto nascosto=1 (0.2% dei passaggi)
+ sosta    A1: N1=36135 fotogr.; fuori(i)=0 [0 pass.] fuori(ii)=0 [0 pass.] senza strato=0 [0 pass.] dopoTg=0 | N2=35625 fallimenti=0 [0 pass.] | mancati in campo aperto=1927 senza traccia=0
+          A3: riem=400 in95=99.8% | d1: cont+mostrato=0.0% cont+perso=77.5% | d2: cont+mostrato=0.0% cont+perso=77.5% | contenuta (resp., tol 0,40) 77.5% ; tol 0,20 0.0% | A4 mostrato: d1 19.2% d2 19.2% | A5 disco=100.0%
+          A7: R-a durata media 4.93 s max 7.20 s (n=400, oltre Tg+3f: 0, a Tg: 0) | R-b rilasci=395 di cui a soggetto nascosto=395 (98.8% dei passaggi)
+ torna    A1: N1=17793 fotogr.; fuori(i)=0 [0 pass.] fuori(ii)=0 [0 pass.] senza strato=0 [0 pass.] dopoTg=0 | N2=17292 fallimenti=0 [0 pass.] | mancati in campo aperto=1897 senza traccia=0
+          A3: riem=400 in95=88.8% | d1: cont+mostrato=0.0% cont+perso=67.5% | d2: cont+mostrato=0.0% cont+perso=67.5% | contenuta (resp., tol 0,40) 67.5% ; tol 0,20 0.0% | A4 mostrato: d1 20.2% d2 20.2% | A5 disco=100.0%
+          A7: R-a durata media 2.45 s max 5.20 s (n=400, oltre Tg+3f: 0, a Tg: 0) | R-b rilasci=213 di cui a soggetto nascosto=207 (51.8% dei passaggi)
+ lontano  A1: N1=84689 fotogr.; fuori(i)=36423 [400 pass.] fuori(ii)=0 [0 pass.] senza strato=0 [0 pass.] dopoTg=24832 | N2=22782 fallimenti=0 [0 pass.] | mancati in campo aperto=898 senza traccia=0
+          A3: riem=70 in95=90.0% | d1: cont+mostrato=0.0% cont+perso=0.0% | d2: cont+mostrato=0.0% cont+perso=0.0% | contenuta (resp., tol 0,40) 0.0% ; tol 0,20 0.0% | A4 mostrato: d1 100.0% d2 100.0% | A5 disco=100.0%
+          A7: R-a durata media 8.26 s max 10.00 s (n=400, oltre Tg+3f: 0, a Tg: 400) | R-b rilasci=397 di cui a soggetto nascosto=397 (99.2% dei passaggi)
+== errore d'ombra +0.0 m; ombra vera 2.00 m alla linea del pedone; area ombra stimata 7.82 m2
+ prosegue A1: N1=11187 fotogr.; fuori(i)=0 [0 pass.] fuori(ii)=0 [0 pass.] senza strato=0 [0 pass.] dopoTg=0 | N2=10674 fallimenti=0 [0 pass.] | mancati in campo aperto=1672 senza traccia=0
+          A3: riem=400 in95=97.5% | d1: cont+mostrato=6.8% cont+perso=61.2% | d2: cont+mostrato=3.2% cont+perso=64.8% | contenuta (resp., tol 0,40) 68.0% ; tol 0,20 67.0% | A4 mostrato: d1 38.8% d2 35.2% | A5 disco=100.0%
+          A7: R-a durata media 1.24 s max 2.53 s (n=400, oltre Tg+3f: 0, a Tg: 0) | R-b rilasci=0 di cui a soggetto nascosto=0 (0.0% dei passaggi)
+ sosta    A1: N1=35900 fotogr.; fuori(i)=0 [0 pass.] fuori(ii)=0 [0 pass.] senza strato=0 [0 pass.] dopoTg=0 | N2=35399 fallimenti=0 [0 pass.] | mancati in campo aperto=1672 senza traccia=0
+          A3: riem=400 in95=98.0% | d1: cont+mostrato=1.2% cont+perso=65.2% | d2: cont+mostrato=1.2% cont+perso=65.2% | contenuta (resp., tol 0,40) 66.5% ; tol 0,20 65.0% | A4 mostrato: d1 34.8% d2 34.8% | A5 disco=100.0%
+          A7: R-a durata media 3.96 s max 7.27 s (n=400, oltre Tg+3f: 0, a Tg: 0) | R-b rilasci=396 di cui a soggetto nascosto=396 (99.0% dei passaggi)
+ torna    A1: N1=17695 fotogr.; fuori(i)=0 [0 pass.] fuori(ii)=0 [0 pass.] senza strato=0 [0 pass.] dopoTg=0 | N2=17176 fallimenti=0 [0 pass.] | mancati in campo aperto=1668 senza traccia=0
+          A3: riem=400 in95=90.0% | d1: cont+mostrato=2.2% cont+perso=56.0% | d2: cont+mostrato=2.0% cont+perso=56.2% | contenuta (resp., tol 0,40) 58.2% ; tol 0,20 57.2% | A4 mostrato: d1 35.8% d2 35.5% | A5 disco=100.0%
+          A7: R-a durata media 1.94 s max 5.07 s (n=400, oltre Tg+3f: 0, a Tg: 0) | R-b rilasci=202 di cui a soggetto nascosto=198 (49.5% dei passaggi)
+ lontano  A1: N1=84543 fotogr.; fuori(i)=36652 [400 pass.] fuori(ii)=0 [0 pass.] senza strato=0 [0 pass.] dopoTg=24680 | N2=22557 fallimenti=0 [0 pass.] | mancati in campo aperto=815 senza traccia=0
+          A3: riem=144 in95=96.5% | d1: cont+mostrato=9.7% cont+perso=0.0% | d2: cont+mostrato=9.7% cont+perso=0.0% | contenuta (resp., tol 0,40) 9.7% ; tol 0,20 9.7% | A4 mostrato: d1 100.0% d2 100.0% | A5 disco=100.0%
+          A7: R-a durata media 6.43 s max 10.00 s (n=400, oltre Tg+3f: 0, a Tg: 400) | R-b rilasci=397 di cui a soggetto nascosto=397 (99.2% dei passaggi)
+== errore d'ombra +0.2 m; ombra vera 2.00 m alla linea del pedone; area ombra stimata 9.29 m2
+ prosegue A1: N1=11080 fotogr.; fuori(i)=0 [0 pass.] fuori(ii)=0 [0 pass.] senza strato=0 [0 pass.] dopoTg=0 | N2=10580 fallimenti=0 [0 pass.] | mancati in campo aperto=1419 senza traccia=0
+          A3: riem=400 in95=97.5% | d1: cont+mostrato=25.0% cont+perso=41.0% | d2: cont+mostrato=20.5% cont+perso=45.5% | contenuta (resp., tol 0,40) 66.0% ; tol 0,20 66.0% | A4 mostrato: d1 59.0% d2 54.5% | A5 disco=100.0%
+          A7: R-a durata media 0.88 s max 2.53 s (n=400, oltre Tg+3f: 0, a Tg: 0) | R-b rilasci=0 di cui a soggetto nascosto=0 (0.0% dei passaggi)
+ sosta    A1: N1=35835 fotogr.; fuori(i)=0 [0 pass.] fuori(ii)=0 [0 pass.] senza strato=0 [0 pass.] dopoTg=0 | N2=35329 fallimenti=0 [0 pass.] | mancati in campo aperto=1447 senza traccia=0
+          A3: riem=400 in95=98.0% | d1: cont+mostrato=17.0% cont+perso=48.8% | d2: cont+mostrato=17.0% cont+perso=48.8% | contenuta (resp., tol 0,40) 65.8% ; tol 0,20 65.8% | A4 mostrato: d1 51.2% d2 51.2% | A5 disco=100.0%
+          A7: R-a durata media 2.96 s max 7.20 s (n=400, oltre Tg+3f: 0, a Tg: 0) | R-b rilasci=388 di cui a soggetto nascosto=388 (97.0% dei passaggi)
+ torna    A1: N1=18025 fotogr.; fuori(i)=0 [0 pass.] fuori(ii)=0 [0 pass.] senza strato=0 [0 pass.] dopoTg=0 | N2=17540 fallimenti=0 [0 pass.] | mancati in campo aperto=1499 senza traccia=0
+          A3: riem=400 in95=94.0% | d1: cont+mostrato=19.5% cont+perso=40.5% | d2: cont+mostrato=18.8% cont+perso=41.2% | contenuta (resp., tol 0,40) 60.0% ; tol 0,20 60.0% | A4 mostrato: d1 55.0% d2 54.2% | A5 disco=100.0%
+          A7: R-a durata media 1.48 s max 4.93 s (n=400, oltre Tg+3f: 0, a Tg: 0) | R-b rilasci=158 di cui a soggetto nascosto=157 (39.2% dei passaggi)
+ lontano  A1: N1=84686 fotogr.; fuori(i)=36369 [400 pass.] fuori(ii)=0 [0 pass.] senza strato=0 [0 pass.] dopoTg=24831 | N2=22843 fallimenti=0 [0 pass.] | mancati in campo aperto=700 senza traccia=0
+          A3: riem=221 in95=97.3% | d1: cont+mostrato=33.5% cont+perso=0.0% | d2: cont+mostrato=33.5% cont+perso=0.0% | contenuta (resp., tol 0,40) 33.5% ; tol 0,20 33.5% | A4 mostrato: d1 100.0% d2 100.0% | A5 disco=100.0%
+          A7: R-a durata media 4.52 s max 10.00 s (n=400, oltre Tg+3f: 0, a Tg: 400) | R-b rilasci=398 di cui a soggetto nascosto=398 (99.5% dei passaggi)
+
+real	0m2,097s
+user	0m2,088s
+sys	0m0,004s

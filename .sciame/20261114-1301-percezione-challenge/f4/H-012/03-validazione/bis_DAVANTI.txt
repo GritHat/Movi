@@ -1,0 +1,8 @@
+# costo: strati 1 a vuoto, Pd 0,9, N=4000
+ PRIMA                              passaggio DAVANTI al pannello (a 0,5 m), per 100 passaggi: errore -0.2: strati nati 0.0, rimasti accesi a fine passaggio 0.0 | errore +0.0: strati nati 0.0, rimasti accesi a fine passaggio 0.0 | errore +0.2: strati nati 0.0, rimasti accesi a fine passaggio 0.0
+ validazione-4 + rinascita          passaggio DAVANTI al pannello (a 0,5 m), per 100 passaggi: errore -0.2: strati nati 0.1, rimasti accesi a fine passaggio 0.1 | errore +0.0: strati nati 0.1, rimasti accesi a fine passaggio 0.1 | errore +0.2: strati nati 0.2, rimasti accesi a fine passaggio 0.2
+ ingresso subito entro 1 m + rinascita passaggio DAVANTI al pannello (a 0,5 m), per 100 passaggi: errore -0.2: strati nati 94.4, rimasti accesi a fine passaggio 84.2 | errore +0.0: strati nati 94.0, rimasti accesi a fine passaggio 83.3 | errore +0.2: strati nati 95.1, rimasti accesi a fine passaggio 84.6
+
+real	0m2,982s
+user	0m2,855s
+sys	0m0,006s

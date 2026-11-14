@@ -1,0 +1,11 @@
+# regola «mobile» finale (finestra che cresce, media di 3): quota vista entro 1,0 s (k<=15) [entro 1 s + 1 fotogramma], 0,5 m/s, N=2000; fermo: etichette false entro 1 s, N=4000
+ nom da 2 m: di traverso 100.00% [100.00%] ; avvicinam. 100.00% [100.00%] ; FERMO 0.00% [0.00%]
+ nom da 3 m: di traverso 100.00% [100.00%] ; avvicinam. 100.00% [100.00%] ; FERMO 0.00% [0.00%]
+ lim da 2 m: di traverso 100.00% [100.00%] ; avvicinam. 100.00% [100.00%] ; FERMO 0.00% [0.00%]
+ lim da 3 m: di traverso 100.00% [100.00%] ; avvicinam. 85.85% [95.65%] ; FERMO 0.00% [0.00%]
+ tor da 2 m: di traverso 100.00% [100.00%] ; avvicinam. 100.00% [100.00%] ; FERMO 0.00% [0.00%]
+ tor da 3 m: di traverso 100.00% [100.00%] ; avvicinam. 26.60% [46.75%] ; FERMO 0.00% [0.00%]
+
+real	0m0,749s
+user	0m0,738s
+sys	0m0,004s

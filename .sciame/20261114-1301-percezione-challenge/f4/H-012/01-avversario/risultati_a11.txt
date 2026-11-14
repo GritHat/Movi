@@ -1,0 +1,7 @@
+Attacco 11. Canale vocale senza interruzione: una frase alla volta; a canale libero dice lo stato corrente.
+z = 2.8 m, frase di 2.0 s: 'previsto' dura (mediana) 0.67 s; frase finita a stato scaduto 100.0 %; 'perso' mai detto mentre vale  28.4 % (n = 500)
+z = 2.8 m, frase di 1.0 s: 'previsto' dura (mediana) 0.67 s; frase finita a stato scaduto 100.0 %; 'perso' mai detto mentre vale  28.2 % (n = 500)
+z = 2.5 m, frase di 2.0 s: 'previsto' dura (mediana) 0.60 s; frase finita a stato scaduto 100.0 %; 'perso' mai detto mentre vale  35.4 % (n = 500)
+z = 2.5 m, frase di 1.0 s: 'previsto' dura (mediana) 0.60 s; frase finita a stato scaduto 100.0 %; 'perso' mai detto mentre vale  35.4 % (n = 500)
+z = 2.3 m, frase di 2.0 s: 'previsto' dura (mediana) 0.67 s; frase finita a stato scaduto 100.0 %; 'perso' mai detto mentre vale  47.0 % (n = 500)
+z = 2.3 m, frase di 1.0 s: 'previsto' dura (mediana) 0.67 s; frase finita a stato scaduto 100.0 %; 'perso' mai detto mentre vale  46.2 % (n = 500)

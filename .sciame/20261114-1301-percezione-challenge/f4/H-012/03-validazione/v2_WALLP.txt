@@ -1,0 +1,8 @@
+# muro fermo (largo 1,2 m a 2,8 m) con una persona (40 cm) che passa a 1,6 m: passaggi con almeno un'etichetta «mobile» falsa sul muro; N=400
+ curva nom: senza C6 400/400 (100.0%) ; con C6 0/400 (0.0%)
+ curva lim: senza C6 400/400 (100.0%) ; con C6 0/400 (0.0%)
+ curva tor: senza C6 400/400 (100.0%) ; con C6 0/400 (0.0%)
+
+real	0m0,210s
+user	0m0,205s
+sys	0m0,004s

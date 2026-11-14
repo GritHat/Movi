@@ -1,0 +1,42 @@
+S1. Anello cieco: suolo visto da 1.243 m. Un soggetto alto h a distanza d e' invisibile se h <= 1,2 - d*tan(44):
+   d = 0.5 m: invisibile fino a h = 0.72 m; raggi al suolo coperti fra 1,24 e 3 m: nessuno -> settore: NESSUN OSTACOLO FINO ALLA PORTATA
+   d = 0.6 m: invisibile fino a h = 0.62 m; raggi al suolo coperti fra 1,24 e 3 m: nessuno -> settore: NESSUN OSTACOLO FINO ALLA PORTATA
+   d = 0.8 m: invisibile fino a h = 0.43 m; raggi al suolo coperti fra 1,24 e 3 m: nessuno -> settore: NESSUN OSTACOLO FINO ALLA PORTATA
+   d = 1.0 m: invisibile fino a h = 0.23 m; raggi al suolo coperti fra 1,24 e 3 m: nessuno -> settore: NESSUN OSTACOLO FINO ALLA PORTATA
+S1. Pannello 1 m a 1,15 m (semiangolo 23.5 gradi), possibile presenza spenta:
+    -45:sconosciuto -40:nessun ostacolo -35:nessun ostacolo -30:nessun ostacolo -25:sconosciuto -20:sconosciuto -15:sconosciuto -10:sconosciuto -5:sconosciuto 0:sconosciuto 5:sconosciuto 10:sconosciuto 15:sconosciuto 20:sconosciuto 25:nessun ostacolo 30:nessun ostacolo 35:nessun ostacolo 40:sconosciuto
+    settori con il soggetto nascosto a 2,3 m e valore oltre 2,3 m o 'nessun ostacolo': 0
+S1. Pannello 1 m a 1,15 m (semiangolo 23.5 gradi), possibile presenza accesa:
+    -45:sconosciuto -40:sconosciuto -35:sconosciuto -30:sconosciuto -25:sconosciuto -20:sconosciuto -15:sconosciuto -10:sconosciuto -5:sconosciuto 0:sconosciuto 5:sconosciuto 10:sconosciuto 15:sconosciuto 20:sconosciuto 25:sconosciuto 30:sconosciuto 35:sconosciuto 40:sconosciuto
+    settori con il soggetto nascosto a 2,3 m e valore oltre 2,3 m o 'nessun ostacolo': 0
+    (la smentita formale del testo e' una tautologia della regola: valore = prima cella non libera nella direzione peggiore)
+
+S3. Fascia = max(0,20 + mezza larghezza, v_max*t) come nel testo, e come SOMMA dei tre termini; t = eta' + latenza 0,155 s
+   persona            camera solo eta': max 0.40 m | con latenza: max 0.72 m, somma 1.12 m
+   persona            LiDAR  solo eta': max 0.50 m | con latenza: max 0.89 m, somma 1.29 m
+   mezzo di piazzale  camera solo eta': max 1.20 m | con latenza: max 2.31 m, somma 3.51 m
+   mezzo di piazzale  LiDAR  solo eta': max 1.60 m | con latenza: max 2.84 m, somma 4.04 m
+   piccolo drone      camera solo eta': max 2.53 m | con latenza: max 5.48 m, somma 5.88 m
+   piccolo drone      LiDAR  solo eta': max 3.80 m | con latenza: max 6.74 m, somma 7.14 m
+   Velocita' massima onesta con fascia 0,40 m e t = 0.288 s: 1.39 m/s (fascia come massimo); 0.69 m/s (0,20 m di margine); 0.35 m/s (0,10 m di margine, ombra a -20 cm)
+   chi entra dal bordo della portata a 1.2 m/s: 'nessun ostacolo fino a 3 m' e' onesto solo fino a 2.65 m (t = 0.288 s); con 0,1-0,5 s di ritardo del messaggio: 2.05-2.53 m
+   chi entra dal bordo della portata a 1.4 m/s: 'nessun ostacolo fino a 3 m' e' onesto solo fino a 2.60 m (t = 0.288 s); con 0,1-0,5 s di ritardo del messaggio: 1.90-2.46 m
+   chi entra dal bordo della portata a 2.5 m/s: 'nessun ostacolo fino a 3 m' e' onesto solo fino a 2.28 m (t = 0.288 s); con 0,1-0,5 s di ritardo del messaggio: 1.03-2.03 m
+   chi entra dal bordo della portata a 8.0 m/s: 'nessun ostacolo fino a 3 m' e' onesto solo fino a 0.69 m (t = 0.288 s); con 0,1-0,5 s di ritardo del messaggio: -3.31--0.11 m
+
+S6b. Porta di +-2 gradi e +-5 cm sul piano ristimato a ogni fotogramma; soglia di 'occupato' 0,07 m
+   scatola di 0.15 m a 2.0 m con piano sbagliato di 2 gradi: quota letta 0.080 m -> occupato; con 2 gradi + 5 cm: 0.030 m -> LIBERO (falso)
+   scatola di 0.20 m a 2.0 m con piano sbagliato di 2 gradi: quota letta 0.130 m -> occupato; con 2 gradi + 5 cm: 0.080 m -> occupato
+   scatola di 0.15 m a 2.5 m con piano sbagliato di 2 gradi: quota letta 0.063 m -> LIBERO (falso); con 2 gradi + 5 cm: 0.013 m -> LIBERO (falso)
+   scatola di 0.20 m a 2.5 m con piano sbagliato di 2 gradi: quota letta 0.113 m -> occupato; con 2 gradi + 5 cm: 0.063 m -> LIBERO (falso)
+   scatola di 0.15 m a 3.0 m con piano sbagliato di 2 gradi: quota letta 0.045 m -> LIBERO (falso); con 2 gradi + 5 cm: -0.005 m -> LIBERO (falso)
+   scatola di 0.20 m a 3.0 m con piano sbagliato di 2 gradi: quota letta 0.095 m -> occupato; con 2 gradi + 5 cm: 0.045 m -> LIBERO (falso)
+   Requisito Q4 dello stesso file a 3 m: 1,02 gradi; la porta ne ammette 2 a fotogramma, rispetto al precedente: fino a 30 gradi/s di deriva
+S6c. Oltre 0,37 m/s vale solo il fotogramma corrente: settore di 5 gradi = 5 x 18 celle
+   suolo valido 0.99: 'nessun ostacolo fino alla portata' nel 40.5 % dei fotogrammi (conto: 40.5 %)
+   suolo valido 0.95: 'nessun ostacolo fino alla portata' nel 1.0 % dei fotogrammi (conto: 1.0 %)
+
+S7. Camera su un drone posato, a 0,25 m dal suolo (ipotesi mia), stessi 15 e 58 gradi:
+   suolo visto da 0.26 m; radenza al suolo a 3 m: 4.8 gradi (a 1,2 m: 21.8); quota massima vista a 3 m: 1.00 m (a 1,2 m: 1.95)
+   ogni ostacolo alto >= 0.25 m fa ombra fino alla portata; a 1,2 m una cassa di 0,6 m a 1,15 m nasconde il suolo solo fino a 2.30 m
+   rover a 0,5 m/s con t = 0.288 s: 0.14 m percorsi prima di ogni reazione; zona utile profonda 1.76 m

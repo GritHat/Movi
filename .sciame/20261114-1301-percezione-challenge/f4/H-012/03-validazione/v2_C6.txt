@@ -1,0 +1,29 @@
+# «contiene alla riemersione» = prima misura usata dal filtro dopo il buio dentro il cerchio al 95%; con e senza C6; N=2000; errore 0; curva nom
+ D05 rilevatore col  prosegue senza C6: 20.5% (n=1999; mostrato 46.8%; buio 0.67 s) | con C6: 99.9% (n=1998; mostrato 18.5%; buio 0.73 s)
+ D05 rilevatore col  sosta    senza C6: 100.0% (n=400; mostrato 0.0%; buio 4.73 s) | con C6: 100.0% (n=400; mostrato 0.0%; buio 4.73 s)
+ D05 rilevatore col  torna    senza C6: 99.0% (n=398; mostrato 0.0%; buio 1.73 s) | con C6: 40.2% (n=400; mostrato 7.0%; buio 1.73 s)
+ D05 rilevatore wmin prosegue senza C6: 35.2% (n=1992; mostrato 34.7%; buio 0.73 s) | con C6: 99.9% (n=1990; mostrato 17.9%; buio 0.73 s)
+ D05 rilevatore wmin sosta    senza C6: 100.0% (n=398; mostrato 0.0%; buio 4.80 s) | con C6: 100.0% (n=400; mostrato 0.0%; buio 4.80 s)
+ D05 rilevatore wmin torna    senza C6: 99.5% (n=398; mostrato 0.0%; buio 1.80 s) | con C6: 39.7% (n=398; mostrato 7.5%; buio 1.73 s)
+ D1 rilevatore col  prosegue senza C6: 97.8% (n=320; mostrato 0.0%; buio 1.47 s) | con C6: 99.7% (n=351; mostrato 0.3%; buio 1.53 s)
+ D1 rilevatore col  sosta    senza C6: 100.0% (n=58; mostrato 0.0%; buio 5.73 s) | con C6: 100.0% (n=56; mostrato 0.0%; buio 5.60 s)
+ D1 rilevatore col  torna    senza C6: 98.5% (n=65; mostrato 0.0%; buio 2.60 s) | con C6: 64.1% (n=78; mostrato 0.0%; buio 2.67 s)
+ D1 rilevatore wmin prosegue senza C6: 99.6% (n=258; mostrato 0.0%; buio 1.47 s) | con C6: 100.0% (n=246; mostrato 0.0%; buio 1.53 s)
+ D1 rilevatore wmin sosta    senza C6: 100.0% (n=54; mostrato 0.0%; buio 5.60 s) | con C6: 100.0% (n=62; mostrato 0.0%; buio 5.73 s)
+ D1 rilevatore wmin torna    senza C6: 97.0% (n=67; mostrato 0.0%; buio 2.73 s) | con C6: 74.2% (n=62; mostrato 0.0%; buio 2.60 s)
+ DC rilevatore col  prosegue senza C6: 61.1% (n=2000; mostrato 5.5%; buio 1.00 s) | con C6: 100.0% (n=2000; mostrato 2.1%; buio 1.00 s)
+ DC rilevatore col  sosta    senza C6: 100.0% (n=400; mostrato 0.0%; buio 5.13 s) | con C6: 100.0% (n=400; mostrato 0.0%; buio 5.13 s)
+ DC rilevatore col  torna    senza C6: 99.2% (n=400; mostrato 0.5%; buio 2.20 s) | con C6: 50.0% (n=400; mostrato 0.8%; buio 2.20 s)
+ DC rilevatore wmin prosegue senza C6: 80.2% (n=2000; mostrato 2.6%; buio 1.07 s) | con C6: 100.0% (n=2000; mostrato 1.6%; buio 1.07 s)
+ DC rilevatore wmin sosta    senza C6: 100.0% (n=400; mostrato 0.0%; buio 5.20 s) | con C6: 100.0% (n=400; mostrato 0.0%; buio 5.13 s)
+ DC rilevatore wmin torna    senza C6: 99.0% (n=400; mostrato 0.2%; buio 2.20 s) | con C6: 47.2% (n=400; mostrato 0.5%; buio 2.20 s)
+ T1 rilevatore col  prosegue senza C6: 99.4% (n=2000; mostrato 4.1%; buio 1.93 s) | con C6: 100.0% (n=2000; mostrato 4.1%; buio 1.93 s)
+ T1 rilevatore col  sosta    senza C6: 100.0% (n=400; mostrato 0.0%; buio 6.13 s) | con C6: 100.0% (n=400; mostrato 0.0%; buio 6.07 s)
+ T1 rilevatore col  torna    senza C6: 91.0% (n=400; mostrato 1.5%; buio 3.13 s) | con C6: 66.5% (n=400; mostrato 1.0%; buio 3.07 s)
+ T1 rilevatore wmin prosegue senza C6: 99.1% (n=2000; mostrato 3.0%; buio 1.80 s) | con C6: 99.9% (n=2000; mostrato 7.1%; buio 1.80 s)
+ T1 rilevatore wmin sosta    senza C6: 100.0% (n=400; mostrato 0.0%; buio 6.00 s) | con C6: 100.0% (n=400; mostrato 0.0%; buio 6.00 s)
+ T1 rilevatore wmin torna    senza C6: 98.5% (n=400; mostrato 5.5%; buio 3.00 s) | con C6: 62.5% (n=400; mostrato 0.8%; buio 2.87 s)
+
+real	0m10,139s
+user	0m10,093s
+sys	0m0,004s

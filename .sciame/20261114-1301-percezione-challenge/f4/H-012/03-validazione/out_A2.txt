@@ -1,0 +1,17 @@
+# A2: area dello strato 1 (ombra stimata dilatata di g) su suolo davvero visibile; griglia 1 grado x 0,1 m
+ T w=1.0 e=-0.2: strato1 10.02 m2; su suolo visibile 2.21 m2 (22.0%); oltre 0,40 m dal bordo vero 0.00 m2 (0.0%); oltre 0,60 m 0.000 m2; distanza max 0.40 m; celle NASCOSTE fuori dallo strato 1 0.000 m2
+ T w=1.0 e=+0.0: strato1 11.57 m2; su suolo visibile 3.76 m2 (32.5%); oltre 0,40 m dal bordo vero 0.00 m2 (0.0%); oltre 0,60 m 0.000 m2; distanza max 0.40 m; celle NASCOSTE fuori dallo strato 1 0.000 m2
+ T w=1.0 e=+0.2: strato1 13.13 m2; su suolo visibile 5.32 m2 (40.5%); oltre 0,40 m dal bordo vero 1.56 m2 (11.9%); oltre 0,60 m 0.171 m2; distanza max 0.67 m; celle NASCOSTE fuori dallo strato 1 0.000 m2
+ T w=2.0 e=-0.2: strato1 17.38 m2; su suolo visibile 2.44 m2 (14.0%); oltre 0,40 m dal bordo vero 0.00 m2 (0.0%); oltre 0,60 m 0.000 m2; distanza max 0.40 m; celle NASCOSTE fuori dallo strato 1 0.000 m2
+ T w=2.0 e=+0.0: strato1 18.68 m2; su suolo visibile 3.74 m2 (20.0%); oltre 0,40 m dal bordo vero 0.00 m2 (0.0%); oltre 0,60 m 0.000 m2; distanza max 0.40 m; celle NASCOSTE fuori dallo strato 1 0.000 m2
+ T w=2.0 e=+0.2: strato1 19.93 m2; su suolo visibile 4.99 m2 (25.0%); oltre 0,40 m dal bordo vero 1.25 m2 (6.3%); oltre 0,60 m 0.041 m2; distanza max 0.62 m; celle NASCOSTE fuori dallo strato 1 0.000 m2
+ D w=0.5 e=-0.2: strato1 2.12 m2; su suolo visibile 1.06 m2 (49.9%); oltre 0,40 m dal bordo vero 0.00 m2 (0.0%); oltre 0,60 m 0.000 m2; distanza max 0.38 m; celle NASCOSTE fuori dallo strato 1 0.000 m2
+ D w=0.5 e=+0.0: strato1 2.72 m2; su suolo visibile 1.66 m2 (61.0%); oltre 0,40 m dal bordo vero 0.00 m2 (0.0%); oltre 0,60 m 0.000 m2; distanza max 0.40 m; celle NASCOSTE fuori dallo strato 1 0.000 m2
+ D w=0.5 e=+0.2: strato1 3.31 m2; su suolo visibile 2.25 m2 (67.9%); oltre 0,40 m dal bordo vero 0.59 m2 (17.8%); oltre 0,60 m 0.010 m2; distanza max 0.62 m; celle NASCOSTE fuori dallo strato 1 0.000 m2
+ D w=1.0 e=-0.2: strato1 3.33 m2; su suolo visibile 1.23 m2 (36.8%); oltre 0,40 m dal bordo vero 0.00 m2 (0.0%); oltre 0,60 m 0.000 m2; distanza max 0.40 m; celle NASCOSTE fuori dallo strato 1 0.000 m2
+ D w=1.0 e=+0.0: strato1 3.88 m2; su suolo visibile 1.78 m2 (45.8%); oltre 0,40 m dal bordo vero 0.00 m2 (0.0%); oltre 0,60 m 0.000 m2; distanza max 0.40 m; celle NASCOSTE fuori dallo strato 1 0.000 m2
+ D w=1.0 e=+0.2: strato1 4.38 m2; su suolo visibile 2.28 m2 (52.0%); oltre 0,40 m dal bordo vero 0.50 m2 (11.4%); oltre 0,60 m 0.000 m2; distanza max 0.60 m; celle NASCOSTE fuori dallo strato 1 0.000 m2
+
+real	0m0,032s
+user	0m0,030s
+sys	0m0,002s

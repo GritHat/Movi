@@ -1,0 +1,22 @@
+=== P2c montaggio verticale (campo verticale 87 gradi) ===
+  orizzontale 87x58, inclinazione  0: suolo da 2.16 m; ostacolo a 1,8 m visibile oltre 1.08 m
+  orizzontale 87x58, inclinazione 10: suolo da 1.48 m; ostacolo a 1,8 m visibile oltre 1.74 m
+  orizzontale 87x58, inclinazione 15: suolo da 1.24 m; ostacolo a 1,8 m visibile oltre 2.41 m
+  orizzontale 87x58, inclinazione 20: suolo da 1.04 m; ostacolo a 1,8 m visibile oltre 3.79 m
+  verticale 58x87, inclinazione  0: suolo da 1.26 m; ostacolo a 1,8 m visibile oltre 0.63 m
+  verticale 58x87, inclinazione 10: suolo da 0.89 m; ostacolo a 1,8 m visibile oltre 0.91 m
+  verticale 58x87, inclinazione 15: suolo da 0.74 m; ostacolo a 1,8 m visibile oltre 1.11 m
+  verticale 58x87, inclinazione 20: suolo da 0.60 m; ostacolo a 1,8 m visibile oltre 1.38 m
+
+=== P8b scala in discesa da 2 m: lancio dei raggi contro 'suolo visto' ===
+  cella 1.5 m: lancio dei raggi -> libero; suolo visto -> libero; quota vera del suolo +0.00 m
+  cella 1.9 m: lancio dei raggi -> libero; suolo visto -> libero; quota vera del suolo +0.00 m
+  cella 2.0 m: lancio dei raggi -> libero; suolo visto -> libero; quota vera del suolo -0.17 m
+  cella 2.2 m: lancio dei raggi -> libero; suolo visto -> non osservato; quota vera del suolo -0.17 m
+  cella 2.5 m: lancio dei raggi -> libero; suolo visto -> non osservato; quota vera del suolo -0.34 m
+  cella 3.0 m: lancio dei raggi -> libero; suolo visto -> non osservato; quota vera del suolo -0.68 m
+
+=== P6c tempo del percorso critico minimo in Python puro (limite superiore grossolano) ===
+  160x120: mediana    1.2 ms per fotogramma (Python puro, un core)
+  320x240: mediana    5.1 ms per fotogramma (Python puro, un core)
+  640x480: mediana   20.1 ms per fotogramma (Python puro, un core)

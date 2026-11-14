@@ -1,0 +1,5 @@
+Correzione dell'attacco 11: in voce non la frase ma un segnale breve per stato (0,3 s); la frase solo a stato stabile.
+  ombra 1 m a 2,3 m, messaggio di 2.0 s: finito a stato scaduto 100.0 %; 'perso' mai detto mentre vale  49.4 %; buio mediano 0.73 s (n = 500)
+  ombra 1 m a 2,3 m, messaggio di 0.3 s: finito a stato scaduto   0.0 %; 'perso' mai detto mentre vale   0.0 %; buio mediano 0.73 s (n = 500)
+  ombra 2 m a 2,3 m, messaggio di 2.0 s: finito a stato scaduto 100.0 %; 'perso' mai detto mentre vale  95.8 %; buio mediano 1.60 s (n = 500)
+  ombra 2 m a 2,3 m, messaggio di 0.3 s: finito a stato scaduto   0.0 %; 'perso' mai detto mentre vale   0.0 %; buio mediano 1.60 s (n = 500)

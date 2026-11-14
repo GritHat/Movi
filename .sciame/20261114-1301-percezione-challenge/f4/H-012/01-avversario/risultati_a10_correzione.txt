@@ -1,0 +1,7 @@
+Correzione dell'attacco 10: due cause in piu' per 'affidabilita' persa':
+(3) quota di celle con profondita' valida < 50 % di quella della taratura per 3 fotogrammi; (4) gravita' dell'IMU a piu' di 0,5 gradi dalla taratura, o giroscopio oltre 5 gradi/s.
+  (a) valida al 10 %                         prima: nessun segnale | dopo: segnale a 0.13 s
+  (c) beccheggio di 2 gradi                  prima: nessun segnale | dopo: segnale a 0.00 s
+  (c) imbardata di 10 gradi in 0,2 s         prima: nessun segnale | dopo: segnale a 0.00 s
+  scena sana, 60 s [controllo dei falsi]     prima: nessun segnale | dopo: nessun segnale (giusto)
+  (rumore dell'IMU ipotizzato: 0,1 gradi sulla gravita', 0,5 gradi/s sul giroscopio: non di scheda)

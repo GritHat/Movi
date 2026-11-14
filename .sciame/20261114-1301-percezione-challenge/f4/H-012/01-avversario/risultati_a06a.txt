@@ -1,0 +1,6 @@
+Attacco 6a. Muro largo 1 m a 2 m (fermo); una persona larga 0,4 m passa davanti a 1 m. Primo ritorno per direzione.
+Regola 'mobile': spostamento del centro su una finestra <= 1 s oltre 5*sigma*sqrt(2). 500 passaggi per riga.
+sigma trasversale 0.050 m, porta 1.0 m: falso 'mobile' sul muro 100.0 % | controllo senza persona   0.2 % | [correzione] gruppi troncati da un'ombra esclusi dalla finestra   0.2 %
+sigma trasversale 0.050 m, porta 0.3 m: falso 'mobile' sul muro 100.0 % | controllo senza persona   0.0 % | [correzione] gruppi troncati da un'ombra esclusi dalla finestra   0.0 %
+sigma trasversale 0.015 m, porta 1.0 m: falso 'mobile' sul muro 100.0 % | controllo senza persona   0.0 % | [correzione] gruppi troncati da un'ombra esclusi dalla finestra   0.0 %
+sigma trasversale 0.015 m, porta 0.3 m: falso 'mobile' sul muro 100.0 % | controllo senza persona   0.0 % | [correzione] gruppi troncati da un'ombra esclusi dalla finestra   0.0 %

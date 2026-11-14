@@ -1,0 +1,2 @@
+rapporti di taratura: q05 = 0.965, q95 = 1.730
+copertura sui 300 di prova = 0.917 ; larghezza mediana = 1.24 s

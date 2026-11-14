@@ -1,0 +1,21 @@
+{
+ "fase": "f3/H-012",
+ "ora": "2026-11-14T14:18:59+01:00",
+ "note": "Soluzione integrata, verifica, piano delle misure, attacco e previsioni congelati prima di ogni prova. La verifica e l'attacco segnalano buchi di definizione nella soluzione (rilascio dello strato 1, graduatoria di B7, cancello del riaggancio, tetto T_g, sensore coperto): le prove di f4 si fanno sulla soluzione così com'è congelata; le correzioni verranno dopo, ciascuna legata al suo controesempio e riprovata.",
+ "non_consegnati": [],
+ "impronte": {
+  "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f3/H-012/01-scene-dinamiche/PREVISIONI.md": "3f0cd5a2a932321528f86e4e8031333f756697b9e23adbebd423c7e042fa44e0",
+  "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f3/H-012/01-scene-dinamiche/SOLUZIONE.md": "26885a2b2c933d8cb60cca5059ce38d471d3acab9cfe0390a3094c083dd83327",
+  "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f3/H-012/01-scene-dinamiche/TASK.md": "08685a7c8fff19b1958e1a6c31ec979b444398a8efdd091a465b6c5cf9a1e5c7",
+  "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f3/H-012/01-scene-dinamiche/stato.md": "325a37abef9069f89a967d434c8e755ad08973278007cf9df6282c895a98b607",
+  "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f3/H-012/02-validazione/TASK.md": "c742391343695148921c8fd26fb8bc7abc4e0b1d6d98e3f6941f10d71e9d01b1",
+  "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f3/H-012/02-validazione/VERIFICA.md": "1ab1affa5b68e36a3b4b46e16b9c7c9cbb7e99f785f3a0e15d0d5f081f631715",
+  "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f3/H-012/02-validazione/stato.md": "dfd69e7e2f3039b3c9ac581880fb2d44a288b5bf729b666b116c87fc054355f1",
+  "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f3/H-012/03-metrologo/PIANO_MISURE.md": "b22587867a7de52c743f95b9e5a70ba22adbdc4affc66f15b6319d5128c78f75",
+  "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f3/H-012/03-metrologo/TASK.md": "36f570e8310144da4deb96b12db409d707e420b7981428e6a1489663d7cb9ced",
+  "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f3/H-012/03-metrologo/stato.md": "bda54a0d516ba57f89af80e4575e66bd5ae703a6334849773836cc3b4932c3fa",
+  "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f3/H-012/04-avversario/ATTACCO.md": "ebdec13c02059d75275e599c3e7e614b82077c603ddcbd36337643d59037fcc3",
+  "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f3/H-012/04-avversario/TASK.md": "47f890831f98cfc78d16b39c46e5408fe7140699c1eb4f73e4b299490478032f",
+  "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f3/H-012/H-012.md": "7840fb8d265638e9ed3cd016d5dae05ff890b8f293e417ab5c4bc765828e8ac0"
+ }
+}

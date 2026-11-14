@@ -1,0 +1,9 @@
+# esperimento vmax, seme base 20261114, dt 1/15 s, sigma 5 cm, Pd 0.9, q 0.2, v_max 2.5, 250 particelle
+
+== bersaglio veloce, pannello 2 m (ombra 4 m a 4 m), prosegue: contenimento a 0,5 s e identita' alla riemersione ==
+v     n   cerchioKF%  disco%  part_ns%  part_st% | identita': kf  disco  ns  st
+2.0   80  100.0      100.0  100.0    100.0    | 100.0  100.0  100.0  100.0
+2.4   80  100.0       90.0  100.0    100.0    | 100.0  100.0  100.0  100.0
+2.6   80  100.0       10.0  100.0    100.0    | 100.0   80.0  100.0  100.0
+3.0   80  100.0        0.0  100.0    100.0    | 100.0    0.0  100.0  100.0
+3.5   80  100.0        0.0   98.8     98.8    | 100.0    0.0  100.0  100.0

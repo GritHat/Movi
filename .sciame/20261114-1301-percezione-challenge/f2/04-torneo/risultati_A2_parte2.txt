@@ -1,0 +1,17 @@
+== A2. q scelto dal NIS medio sui tratti VISIBILI di G1 (camminata dritta), poi copertura sulla miscela G1 ==
+  q=0.005  NIS medio=2.099
+  q=0.01   NIS medio=1.998
+  q=0.02   NIS medio=1.921
+  q=0.05   NIS medio=1.841
+  q=0.1    NIS medio=1.787
+  q=0.2    NIS medio=1.734
+  q=0.5    NIS medio=1.657
+  q=1      NIS medio=1.589
+  q=5      NIS medio=1.382
+  q=0.01 (scelto dal NIS): copertura 95% a 1 s su G1 = 0.738+-0.007 ; P(passare 26/30)=0.075
+  q=0.01 (scelto dal NIS): copertura 95% a 2 s su G1 = 0.710+-0.007 ; P(passare 26/30)=0.039
+  q=0.02: copertura 95% a 1 s su G1 = 0.791+-0.006 ; P(passare 26/30)=0.220
+  q=0.02: copertura 95% a 2 s su G1 = 0.769+-0.007 ; P(passare 26/30)=0.145
+  q=0.05: copertura 95% a 1 s su G1 = 0.840+-0.006 ; P(passare 26/30)=0.461
+  q=0.05: copertura 95% a 2 s su G1 = 0.827+-0.006 ; P(passare 26/30)=0.386
+timeout 120 python3 torneo_B2A2_parte2.py A2  2,75s user 0,00s system 99% cpu 2,759 total
