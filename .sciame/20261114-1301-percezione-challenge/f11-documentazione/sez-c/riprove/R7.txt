@@ -1,0 +1,103 @@
+# bilancio_posa.py - seme 20261114 - regola: medie di 3, capi a 13 fotogrammi, soglia 4.08 sigma
+
+## S1  Regola «mobile» NON modificata, gruppo fermo: falsi contro la deriva relativa (N = 20 000 valutazioni)
+soglia trasversale = 1.18 gradi a ogni distanza (4,08 * 1 grado / radice(12))
+r =    2 m  imbardata gradi/s -> falsi: 0.0:0.000  0.2:0.000  0.4:0.000  0.6:0.003  0.7:0.008  0.8:0.019  0.9:0.046  1.0:0.091  1.1:0.168  1.2:0.283  1.4:0.559  1.7:0.893  2.0:0.991  2.6:1.000  3.0:1.000
+          10 % dei falsi a 1.01 gradi/s; 1 % a 0.719; errore sulla finestra di 0,867 s: 0.876 gradi
+r =    3 m  imbardata gradi/s -> falsi: 0.0:0.000  0.2:0.000  0.4:0.000  0.6:0.002  0.7:0.008  0.8:0.021  0.9:0.044  1.0:0.095  1.1:0.168  1.2:0.281  1.4:0.561  1.7:0.891  2.0:0.992  2.6:1.000  3.0:1.000
+          10 % dei falsi a 1.01 gradi/s; 1 % a 0.717; errore sulla finestra di 0,867 s: 0.873 gradi
+r =   10 m  imbardata gradi/s -> falsi: 0.0:0.000  0.2:0.000  0.4:0.000  0.6:0.004  0.7:0.007  0.8:0.020  0.9:0.043  1.0:0.093  1.1:0.174  1.2:0.275  1.4:0.562  1.7:0.894  2.0:0.991  2.6:1.000  3.0:1.000
+          10 % dei falsi a 1.01 gradi/s; 1 % a 0.72; errore sulla finestra di 0,867 s: 0.874 gradi
+r =   30 m  imbardata gradi/s -> falsi: 0.0:0.000  0.2:0.000  0.4:0.000  0.6:0.003  0.7:0.008  0.8:0.020  0.9:0.047  1.0:0.091  1.1:0.172  1.2:0.282  1.4:0.561  1.7:0.895  2.0:0.991  2.6:1.000  3.0:1.000
+          10 % dei falsi a 1.01 gradi/s; 1 % a 0.72; errore sulla finestra di 0,867 s: 0.876 gradi
+-- traslazione (errore di velocita' lungo l'asse radiale e lungo il trasversale, m/s)
+r =    2 m  10 % dei falsi: radiale 0.0522 m/s, trasversale 0.0337 m/s
+r =    3 m  10 % dei falsi: radiale 0.11 m/s, trasversale 0.0522 m/s
+r =   10 m  10 % dei falsi: radiale 0.102 m/s, trasversale 0.169 m/s
+r =   30 m  10 % dei falsi: radiale 0.102 m/s, trasversale oltre il massimo provato m/s
+
+## S2  Soglia allargata con la sigma di posa in quadratura (deriva estratta per prova da N(0, s), 400 prove x 60 fotogrammi)
+r  s_psi(gradi/s)  falsi  velocita' trasversale minima vista (soglia/0,867 s)  pedone a 1,2 m/s visto  a 0,5 m/s visto
+   2   0.0  0.0000  0.047 m/s  1.000  1.000
+   2   0.1  0.0000  0.051 m/s  1.000  1.000
+   2   0.3  0.0000  0.071 m/s  1.000  1.000
+   2   1.0  0.0000  0.181 m/s  1.000  1.000
+   3   0.0  0.0000  0.071 m/s  1.000  1.000
+   3   0.1  0.0000  0.076 m/s  1.000  1.000
+   3   0.3  0.0001  0.106 m/s  1.000  1.000
+   3   1.0  0.0000  0.271 m/s  1.000  1.000
+  10   0.0  0.0000  0.237 m/s  1.000  1.000
+  10   0.1  0.0000  0.253 m/s  1.000  1.000
+  10   0.3  0.0000  0.353 m/s  1.000  0.981
+  10   1.0  0.0000  0.904 m/s  0.950  0.014
+  30   0.0  0.0000  0.712 m/s  1.000  0.071
+  30   0.1  0.0000  0.759 m/s  0.997  0.039
+  30   0.3  0.0000  1.060 m/s  0.747  0.003
+  30   1.0  0.0000  2.713 m/s  0.001  0.000
+
+## S3  Ritardo posa-profondita' tau: l'errore d'imbardata e' psi(t - tau) - psi(t). Falsi sul gruppo fermo.
+-- giro 30 gradi a 30 gradi/s, brusco (rover, prova del muro)
+r =    2 m  tau al 10 % dei falsi: 29.8 ms   (almeno un falso nel 10 % dei giri a tau = 20 ms)   falsi a 0/10/20/33/67 ms: 0.00 0.00 0.00 0.15 0.83
+r =    3 m  tau al 10 % dei falsi: 29.4 ms   (almeno un falso nel 10 % dei giri a tau = 19.6 ms)   falsi a 0/10/20/33/67 ms: 0.00 0.00 0.00 0.16 0.83
+r =   10 m  tau al 10 % dei falsi: 29.6 ms   (almeno un falso nel 10 % dei giri a tau = 19.5 ms)   falsi a 0/10/20/33/67 ms: 0.00 0.00 0.00 0.16 0.83
+r =   30 m  tau al 10 % dei falsi: 29.7 ms   (almeno un falso nel 10 % dei giri a tau = 20.1 ms)   falsi a 0/10/20/33/67 ms: 0.00 0.00 0.01 0.15 0.83
+-- volo stazionario +-3 gradi a 1 Hz
+r =    2 m  tau al 10 % dei falsi: 73.3 ms   falsi a 0/10/20/33/67 ms: 0.00 0.00 0.00 0.00 0.06
+r =    3 m  tau al 10 % dei falsi: 73.2 ms   falsi a 0/10/20/33/67 ms: 0.00 0.00 0.00 0.00 0.05
+r =   10 m  tau al 10 % dei falsi: 73.5 ms   falsi a 0/10/20/33/67 ms: 0.00 0.00 0.00 0.00 0.05
+r =   30 m  tau al 10 % dei falsi: 73.4 ms   falsi a 0/10/20/33/67 ms: 0.00 0.00 0.00 0.00 0.05
+-- busto +-8 gradi a 1 Hz (indossato al petto)
+r =    2 m  tau al 10 % dei falsi: 27.2 ms   falsi a 0/10/20/33/67 ms: 0.00 0.00 0.01 0.23 0.70
+r =    3 m  tau al 10 % dei falsi: 27 ms   falsi a 0/10/20/33/67 ms: 0.00 0.00 0.01 0.24 0.69
+r =   10 m  tau al 10 % dei falsi: 27.1 ms   falsi a 0/10/20/33/67 ms: 0.00 0.00 0.01 0.24 0.69
+r =   30 m  tau al 10 % dei falsi: 26.8 ms   falsi a 0/10/20/33/67 ms: 0.00 0.00 0.01 0.24 0.70
+-- testa +-30 gradi a 0,5 Hz (indossato sulla testa)
+r =    2 m  tau al 10 % dei falsi: 5.56 ms   falsi a 0/10/20/33/67 ms: 0.00 0.54 0.79 0.87 0.93
+r =    3 m  tau al 10 % dei falsi: 5.58 ms   falsi a 0/10/20/33/67 ms: 0.00 0.55 0.79 0.87 0.93
+r =   10 m  tau al 10 % dei falsi: 5.55 ms   falsi a 0/10/20/33/67 ms: 0.00 0.54 0.79 0.87 0.93
+r =   30 m  tau al 10 % dei falsi: 5.55 ms   falsi a 0/10/20/33/67 ms: 0.00 0.54 0.79 0.87 0.93
+-- spostamento del bordo d'ombra per il solo ritardo, omega * tau * r (conto): omega 30 / 94 gradi/s
+r =    2 m  tau 10 ms: 0.010 / 0.033 m   33 ms: 0.035 / 0.108 m   67 ms: 0.070 / 0.220 m
+r =    3 m  tau 10 ms: 0.016 / 0.049 m   33 ms: 0.052 / 0.162 m   67 ms: 0.105 / 0.330 m
+r =   10 m  tau 10 ms: 0.052 / 0.164 m   33 ms: 0.173 / 0.541 m   67 ms: 0.351 / 1.099 m
+r =   30 m  tau 10 ms: 0.157 / 0.492 m   33 ms: 0.518 / 1.624 m   67 ms: 1.052 / 3.298 m
+
+## S4  Sorgenti di posa (modelli ipotizzati), sincronia perfetta, gruppo fermo: falsi «mobile»
+giroscopio tarato (0,1 gradi/s, scala 1 %), giro di 30 gradi, nessuna traslazione                    2 m: 0.000  3 m: 0.000  10 m: 0.000  30 m: 0.000
+giroscopio NON tarato (1 grado/s), sensore fermo                                                     2 m: 0.093  3 m: 0.095  10 m: 0.090  30 m: 0.090
+rover 0,5 m/s, ruote al 3 % + giroscopio 0,1 gradi/s                                                 2 m: 0.000  3 m: 0.000  10 m: 0.000  30 m: 0.000
+rover 0,5 m/s, ruote al 10 % (slittamento) + giroscopio 0,1 gradi/s                                  2 m: 0.072  3 m: 0.001  10 m: 0.000  30 m: 0.001
+indossato 1,2 m/s, testa +-30 gradi, giroscopio 0,1 gradi/s scala 1 %, traslazione NON compensata    2 m: 1.000  3 m: 1.000  10 m: 1.000  30 m: 1.000
+indossato 1,2 m/s, testa +-30 gradi, visuale-inerziale: 1 % della distanza, 0,1 gradi/s, scala 0     2 m: 0.000  3 m: 0.000  10 m: 0.000  30 m: 0.000
+indossato 1,2 m/s, testa +-30 gradi, visuale-inerziale: 3 % della distanza, 0,3 gradi/s              2 m: 0.006  3 m: 0.000  10 m: 0.000  30 m: 0.000
+drone 3 m/s, errore di velocita' 0,1 m/s, imbardata 0,2 gradi/s                                      2 m: 0.981  3 m: 0.031  10 m: 0.075  30 m: 0.071
+
+## S5  Quota del suolo 0,07 m: frazione delle celle di suolo «occupato» (quota > 0,07) e «non libero» (|quota| > 0,07)
+sensore a 1,2 m; rumore di quota = sigma radiale * h / distanza obliqua; N = 20 000 per punto
+-- rimbalzo verticale non compensato: +-0.0 cm a 2 Hz
+r =    2 m (sigma di quota 0.8 cm)  «occupato» al 10 %: 1.68 gradi; al 50 %: 1.98 gradi;  falsi a beccheggio zero: 0.0000
+r =    3 m (sigma di quota 1.3 cm)  «occupato» al 10 %: 1.02 gradi; al 50 %: 1.33 gradi;  falsi a beccheggio zero: 0.0000
+r =   10 m (sigma di quota 0.4 cm)  «occupato» al 10 %: 0.321 gradi; al 50 %: 0.404 gradi;  falsi a beccheggio zero: 0.0000
+r =   30 m (sigma di quota 0.1 cm)  «occupato» al 10 %: 0.133 gradi; al 50 %: 0.163 gradi;  falsi a beccheggio zero: 0.0000
+-- rimbalzo verticale non compensato: +-2.5 cm a 2 Hz
+r =    2 m (sigma di quota 0.8 cm)  «occupato» al 10 %: 1.26 gradi; al 50 %: 1.99 gradi;  falsi a beccheggio zero: 0.0000
+r =    3 m (sigma di quota 1.3 cm)  «occupato» al 10 %: 0.776 gradi; al 50 %: 1.33 gradi;  falsi a beccheggio zero: 0.0001
+r =   10 m (sigma di quota 0.4 cm)  «occupato» al 10 %: 0.241 gradi; al 50 %: 0.402 gradi;  falsi a beccheggio zero: 0.0000
+r =   30 m (sigma di quota 0.1 cm)  «occupato» al 10 %: 0.088 gradi; al 50 %: 0.133 gradi;  falsi a beccheggio zero: 0.0000
+
+## S6  Copertura del cerchio al 95 % con uno scostamento di posa NON modellato e (in sigma), N = 200 000
+e/sigma -> copertura: 0.00:0.918  0.10:0.917  0.20:0.915  0.30:0.911  0.40:0.905  0.50:0.897  0.60:0.888  0.70:0.876  0.80:0.862  0.90:0.847  1.00:0.830  1.10:0.812  1.20:0.790  1.30:0.767  1.40:0.741  1.50:0.715
+copertura 0,90 a e = 0.46 sigma; 0,85 a e = 0.883 sigma
+sigma per asse dell'area prevista (0,03 m; 0,21 m/s; q = 0,2): t -> sigma -> scostamento che porta a 0,90 -> in gradi a 2 / 3 / 10 / 30 m
+t = 0.67 s  sigma 0.202 m  e = 0.093 m  ->  2.66 / 1.77 / 0.53 / 0.18 gradi sull'orizzonte t
+t = 1.00 s  sigma 0.334 m  e = 0.154 m  ->  4.41 / 2.94 / 0.88 / 0.29 gradi sull'orizzonte t
+t = 2.00 s  sigma 0.843 m  e = 0.388 m  ->  11.12 / 7.41 / 2.22 / 0.74 gradi sull'orizzonte t
+con la covarianza di posa sommata (sigma_tot^2 = sigma^2 + e^2) la copertura torna >= 0,92; il raggio cresce di radice(1 + (e/sigma)^2)
+
+## S7  Fascia di guardia 0,40 m (conto, nessun campionamento)
+margine lasciato alla posa: 0,10 m (il nucleo dichiara meno di 10 cm oltre i -20 cm d'errore della maschera) e, per confronto, tutta la fascia
+r =    2 m  0,10 m = 2.86 gradi; 0,40 m = 11.46 gradi;  ritardo che consuma 0,10 m a 30 / 94 gradi/s: 95 / 30 ms;  griglia di 1 grado = 0.03 m
+r =    3 m  0,10 m = 1.91 gradi; 0,40 m = 7.64 gradi;  ritardo che consuma 0,10 m a 30 / 94 gradi/s: 64 / 20 ms;  griglia di 1 grado = 0.05 m
+r =   10 m  0,10 m = 0.57 gradi; 0,40 m = 2.29 gradi;  ritardo che consuma 0,10 m a 30 / 94 gradi/s: 19 / 6 ms;  griglia di 1 grado = 0.17 m
+r =   30 m  0,10 m = 0.19 gradi; 0,40 m = 0.76 gradi;  ritardo che consuma 0,10 m a 30 / 94 gradi/s: 6 / 2 ms;  griglia di 1 grado = 0.52 m
+fascia che scala con la distanza: f(r) = 0,40 + r * (errore d'imbardata sull'eta' della traccia pendente) + errore di traslazione

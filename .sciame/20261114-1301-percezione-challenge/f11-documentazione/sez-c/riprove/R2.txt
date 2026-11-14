@@ -1,0 +1,25 @@
+# esperimento due, seme base 20261114, dt 1/15 s, sigma 5 cm, Pd 0.9, q 0.2, v_max 2.5, 250 particelle
+
+== due bersagli da lati opposti, prosegue entrambi, pannello 1 m (n=100): alla prima riemersione ==
+  Kalman: scambio 0.0%; misura nel cancello 99% della traccia SBAGLIATA 32.0%, della giusta 100.0%; ambiguita' visibile (in entrambi) 32.0%
+  scambio Kalman SENZA segnale di ambiguita' (sbagliata nel cancello, giusta fuori): 0.0%
+  particelle (sosta): scambio 4.0%; ambiguita' visibile 100.0%; nessuna traccia compatibile 0.0%
+  disco: misura in entrambi i dischi (ambiguo dichiarato) 100.0%
+
+== due bersagli da lati opposti, prosegue entrambi, pannello 2 m (n=100): alla prima riemersione ==
+  Kalman: scambio 0.0%; misura nel cancello 99% della traccia SBAGLIATA 89.0%, della giusta 100.0%; ambiguita' visibile (in entrambi) 89.0%
+  scambio Kalman SENZA segnale di ambiguita' (sbagliata nel cancello, giusta fuori): 0.0%
+  particelle (sosta): scambio 79.0%; ambiguita' visibile 87.0%; nessuna traccia compatibile 0.0%
+  disco: misura in entrambi i dischi (ambiguo dichiarato) 100.0%
+
+== due bersagli da lati opposti, torna entrambi, pannello 1 m (n=100): alla prima riemersione ==
+  Kalman: scambio 74.0%; misura nel cancello 99% della traccia SBAGLIATA 67.0%, della giusta 23.0%; ambiguita' visibile (in entrambi) 23.0%
+  scambio Kalman SENZA segnale di ambiguita' (sbagliata nel cancello, giusta fuori): 44.0%
+  particelle (sosta): scambio 48.0%; ambiguita' visibile 72.0%; nessuna traccia compatibile 0.0%
+  disco: misura in entrambi i dischi (ambiguo dichiarato) 71.0%
+
+== due bersagli da lati opposti, torna entrambi, pannello 2 m (n=100): alla prima riemersione ==
+  Kalman: scambio 61.0%; misura nel cancello 99% della traccia SBAGLIATA 59.0%, della giusta 54.0%; ambiguita' visibile (in entrambi) 49.0%
+  scambio Kalman SENZA segnale di ambiguita' (sbagliata nel cancello, giusta fuori): 10.0%
+  particelle (sosta): scambio 10.0%; ambiguita' visibile 42.0%; nessuna traccia compatibile 1.0%
+  disco: misura in entrambi i dischi (ambiguo dichiarato) 60.0%

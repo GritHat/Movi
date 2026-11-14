@@ -1,0 +1,1609 @@
+# Stato del progetto — percezione-challenge
+
+**Versione 1 — 2026-11-14T17:05:19+01:00** (`date -Is`) · convocazione dello sciame `20261114-1301-percezione-challenge` · fase f11 (documentazione) · unione di sei sezioni a cura di `sciame-redattore`.
+
+> **Niente di ciò che segue è provato sull'hardware.** Ogni cifra viene da una simulazione, da un conto o da una scheda tecnica, quasi sempre a sensore fermo. Nessun fotogramma di una camera vera è stato elaborato da una prova vagliata dall'arbitro (`f4/H-012/09-arbitro/VERDETTO.md`, §5, punto 10).
+
+**A che cosa serve.** È la descrizione estesa dello stato del progetto chiesta dall'utente con l'ottavo addendum (`ADDENDUM_UTENTE.md`): che cos'è il sistema, componente per componente; che cosa è provato e come; quali cifre lo sostengono e in quale file stanno; che cosa è aperto; che cosa si sta ancora valutando. Serve a chi costruisce il prototipo nelle 14 + 4 ore dell'hackathon e a chi deve decidere. Non sostituisce i due PDF della proposta né l'elenco dei riferimenti (`f11-documentazione/unione/RIFERIMENTI.md`, 290 voci, con `riferimenti.bib`), che è un documento separato della stessa fase f11: questo documento ne usa le chiavi.
+
+**Come si aggiorna.** Dopo **ogni valutazione** dello sciame (il verdetto di un'estensione, una misura sull'hardware, una decisione dell'utente):
+
+1. si correggono i capitoli toccati (il §5.7 dice che cosa cambia alla chiusura di ogni estensione);
+2. un cambio di stato si scrive per esteso, «da … a …», con il file che lo decide: lo stato vecchio non si cancella in silenzio;
+3. ogni cifra nuova entra con il suo file, la numerosità e l'intervallo; ogni fonte nuova entra con la chiave nell'appendice B e nell'elenco dei riferimenti;
+4. si aggiornano la sintesi e la data in testa;
+5. si aggiunge **una riga al registro delle modifiche** in fondo: data, valutazione, che cosa è cambiato.
+
+**Che cosa fotografa questa versione.** Lo stato dopo le fasi f1–f6 (chiuse; f6 non è passata dall'arbitro), con le estensioni f7–f10 in corso. Le sei sezioni d'ingresso fotografano i file fra le 16:13 e le 16:22 del 14 novembre 2026 (appendice C).
+
+> **Dopo la fotografia (controllo del redattore alle 16:35, con `ls`; file non letti salvo le prime righe di quattro, non vagliati, non integrati in questa versione).**
+> - **f9:** è comparso `f9-preproposta/13-verdetto/VERDETTO_PREPROPOSTA.md`, il verdetto dell'arbitro sulla preproposta esterna, ancora in scrittura alle 16:35 (dichiara lavoro fino alle 16:37). In testa dà per smentiti: il «taglio minimo garantito a 24 ore» (S12); i pesi aggiornati «a ogni ciclo» e la soglia «σ_eff ≤ 0,8 m» (S4); l'etichetta «± σ_eff» (S5); «l'isteresi di 2–3 s ferma l'oscillazione» (S1); «sotto 1,1 m» letto come quota; S7 come indice distinto da S6; S9 come «preallarme»; e fa nascere F-301…F-311, K-301…K-309, H-301…H-311. Nella stessa cartella: `piano_14h.py`, `piano_14h_spezzato.py` e i loro risultati (16:25–16:26): un piano a 14 ore, che i §1.4 e §6.1 danno per mancante. Sono comparse anche le consegne `f9-preproposta/03-kalman/CONSEGNA.md` (16:16) e `f9-preproposta/04-validazione/CONSEGNA.md` (16:20), che il §5.1 dà per assenti.
+> - **f8:** `f8-continuita/12-torneo/TORNEO.md` (16:33), che in testa propone «C-EST com'è scritta: smentita»; nuovi congelamenti e risultati in `f8-continuita/11-misure/`.
+> - **f7:** risultati del torneo in `f7-estensione/11-torneo/` (16:24–16:34) e del banco in `f7-estensione/12-prestazioni/`.
+> - **f11:** alle 16:50 il curatore delle fonti ha chiuso l'elenco unico dei riferimenti (`f11-documentazione/unione/RIFERIMENTI.md`, 290 voci; `riferimenti.bib`, 166 voci). Le chiavi di questo documento sono già quelle definitive dell'elenco; le correzioni che l'elenco propone alle frasi **non** sono applicate: sono segnate in riga e raccolte nel §10.1, riquadro 6.
+> - **f10:** dati scaricati (`f10-dati/scaricati/`: 3,9 GB, `du`), codice e previsioni in `f10-dati/10-catena/` e `f10-dati/11-simulatore/`, e `f10-dati/12-dati-veri/DATI_VERI.md` (16:29): si veda il riquadro del §5.5.
+>
+> Il primo aggiornamento di questo documento (riga 2 del registro) deve partire da questi file e dal riquadro 6 del §10.1.
+
+## Sintesi
+
+**Che cos'è il sistema.** Un prototipo di percezione per la challenge (rilevare elementi mobili e ostacoli, gestire le interruzioni della visibilità, distinguere ciò che è osservato da ciò che è incerto, dare un feedback spaziale e dire quando l'affidabilità è persa). Una camera stereo attiva **ferma** (treppiede a 1,2 m, inclinata di 15° in basso) alimenta una **mappa** a celle con quattro stati (libero, occupato osservato, in ombra, non osservato); gli oggetti si seguono con un filtro di Kalman; ogni **traccia** è osservata, prevista o persa; chi sparisce dietro un ostacolo lascia sull'ombra una **«possibile presenza»** che si toglie solo guardando; una tabella di regole fisse produce segnali brevi, uno schermo e il segnale di **«affidabilità persa»**. Sono nove blocchi (B1–B9) e nove invarianti (cap. 2). È il «nucleo», la soluzione versione 2, che l'arbitro giudica **«adottabile come progetto di prototipo, non come sistema validato»**, con nove condizioni (§2.4).
+
+**Lo stato in dieci righe.**
+
+1. **Hardware:** niente è provato su un sensore vero; la squadra oggi non ha sensori e il modello della camera non è deciso (§3.1, cap. 7).
+2. **Sicurezza (R8):** «mai libero ciò che non è osservato» è una dimostrazione condizionata, per costruzione. La «possibile presenza» ha 0 passaggi falliti su 14 400 con rilevamento certo (limite 0,75 % per cella), ma 13 falliti su 4800 con un rilevamento mancato su dieci e l'ombra stimata 20 cm più stretta (K-014: aperta, non decidibile senza hardware) (§4.1.6).
+3. **Identità dopo un'occlusione (R3):** 100 % in 27 celle da 400 passaggi (limite inferiore 99,25 %) con una sola persona nascosta e pannello fermo; con un secondo soggetto mai visto che esce dalla stessa ombra l'identità è sbagliata, senza avviso, in 2400 casi su 2400 (K-016) (§4.1.6).
+4. **Continuità visiva (obiettivo principale dal quarto addendum):** il nucleo non la rispetta nel movimento mostrato: la stima esce nel 35–50 % dei cicli senza osservazione nella demo e nell'8–10 % in sosta; il «previsto» dura 0,40–0,53 s **[prel.]** (§5.3; §2.2, B5).
+5. **Elementi mobili (R1):** persona a 0,5 m/s vista entro 1 s nel 100 % dei casi a 2 m (N = 2000, tre curve di rumore); da 3 m 100 / 85,9 / 26,6 % secondo la curva: non risolto (K-007) (§2.2, B3).
+6. **Latenza (R7):** le sole voci note sommano circa 155 ms in media contro la soglia di 150: non risolto. Con quella latenza la fascia di 0,40 m copre circa 1,4 m/s, a margine zero (K-015) (§2.2, B8; §2.3).
+7. **Limiti geometrici (conto, camera ideale):** suolo visto solo da 1,24 m; un ostacolo di 15 cm è invisibile a meno di 1,09 m; la camera vede il 20,0 % del disco di 3 m; il vetro risulta «libero» (smentito, limite dichiarato) (§2.2, B1; §3.4).
+8. **Sensori:** tre sensori a tempo di volo multizona coprono al più 180°, non 360° (verificato sulle schede dei sensori citati); in moto nessuna soglia del nucleo vale (§3.3, §3.6).
+9. **Lavoro:** il nucleo è stimato in 54 ore-persona, 38 in fila (26,8 con corsie parallele, **[prel.]**), contro 14 ore × 5 persone = 70 ore-persona: in ogni lettura la catena supera le 14 ore. Sono stime mai misurate (§6.1).
+10. **Estensioni:** f7 (mappa voxel), f8 (continuità visiva), f9 (preproposta esterna), f10 (dati pubblici) erano tutte senza verdetto alla fotografia delle sezioni; il verdetto di f9 è comparso dopo e non è integrato (riquadro qui sopra).
+
+**Che cosa è stabilito** (ciascuno nel suo modello: §4.3). La massa non è osservabile (dimostrato nel modello del punto materiale con forza ignota) e l'accelerazione è sotto il rumore (σ ≈ 66 m/s² a 30 Hz: conto); l'ordine rilevamento → associazione → filtro → decisione (per costruzione); la regola della bozza a scadenza fissa mette «libero» dove non spetta (quattro simulazioni); dodici attacchi alla versione 1 hanno fatto cadere sette regole, corrette nella versione 2 (§4.1.4); nessun attacco ha prodotto un «libero» falso, ma nessuno script ha mai calcolato «libero» da un'immagine di profondità: è un controllo della logica, non un dato.
+
+**Che cosa è aperto.** Le contraddizioni K-004, K-007, K-010, K-011 (R7), K-014, K-015, K-016, K-017, K-018 e, sul vero, K-001…K-003, K-006 (vetro), K-009 (sole) (§4.3); tutto ciò che dipende dal sensore (§4.5, §3.9); le parti della soluzione mai provate insieme (C3, C9, C10, C11, B7 e B8); il piano per 14 + 4 ore e cinque persone; sei punti in cui le sezioni di questo documento non concordano (§10.1).
+
+**Che cosa è in valutazione.** f7: nessuna mappa memorizzata nelle 14 ore, tre aggiunte leggere candidate (§5.2). f8: quale predittore dà la continuità; il minimo vale 9–12 ore di una persona (§5.3). f9: dodici strategie, verdetti proposti dai ruoli (§5.4). f10: ambiente, formato comune e modello del sensore pronti; nessun esito sulle sei ipotesi (§5.5).
+
+**Le decisioni che spettano all'utente** (cap. 7). (1) L'inventario dei sensori e che cosa vuol dire «da remoto». (2) Da quando contano le 14 ore. (3) Che cosa si dichiara provato: il profilo «sensore fermo» o si attende l'hardware. (4) Velocità coperta (circa 1,4 m/s) o fascia più larga. (5) Che cosa si taglia. (6) Continuità visiva: solo a schermo o anche in suono, con quali livelli e fin quando. (7) Il racconto della demo. (8) Montaggio, linguaggio, macchina, 360°. (9) Le domande per gli organizzatori.
+
+## Legenda
+
+**Gli stati della prova.** Non si mescolano. In prosa si scrivono per esteso; nelle tabelle con la marca.
+
+| Stato | Marca | Che cosa vuol dire |
+|---|---|---|
+| dimostrato | [DIM] | c'è una prova scritta; si nomina sempre il modello in cui vale |
+| verificato | [VER] | controllo esaustivo su un insieme dichiarato; per una fonte: il dato è stato ritrovato nella fonte |
+| sostenuto dai dati in simulazione | [SIM] | c'è una misura, con la numerosità e l'intervallo; a sensore fermo, salvo dove è scritto |
+| vero per costruzione | [COSTR] | segue da come è scritta la regola: la prova non poteva fallire; vale come controllo della logica o del codice, non come dato |
+| smentito | [SMENT] | c'è un controesempio o una misura contraria; «smentito e corretto»: la regola è cambiata e si dice dove la correzione è stata riprovata |
+| non risolto | [NR] | con la causa e la prova che lo deciderebbe |
+| non verificato fino all'hardware | [NV-HW] | lo decide solo una misura sul sensore vero |
+| conto, stima | [CONTO], [STIMA] | calcolo su dati dichiarati; stima dell'autore, mai misurata |
+| preliminare | **[prel.]** | viene dalle estensioni in corso (f7–f10): **non ancora vagliato dall'arbitro**; dentro [prel.] resta lo stato dato dal ruolo |
+
+In due tabelle del cap. 8 compare anche «progetto, mai simulato»: descritto, ma mai eseguito nemmeno in simulazione. Zero errori su un campione non sono una prova universale: zero fallimenti su 400 passaggi dicono solo che il tasso vero è ≤ 0,75 % (§4.1.3). Le cifre di f6 portano «non vagliato dall'arbitro (f6)»: la fase è chiusa, ma il verdetto non l'ha letta (§4.1.8).
+
+**Chi ha fatto un conto o un ricontrollo in f11.** [req.] ruolo dei requisiti (cap. 1, 7, 9); [arch.] architetto (cap. 2); [sens.] ruolo dei sensori (cap. 3), con [ries.] = cifra ristampata il 14 novembre rieseguendo `f10-dati/02-sensori/controlla_parametri.py` (0 errori) o `f10-dati/04-embedded/geometria_sensori.py`, e [ricontr.] = frase ritrovata il 14 novembre nella copia locale della scheda; [metr.] metrologo (cap. 4); [pian.] pianificatore (cap. 5 e 6); [dom.] esperto di dominio (cap. 8); [arb.] conto dell'arbitro; [red.] redattore dell'unione. Sono ruoli dello stesso modello linguistico: nessuno di questi ricontrolli è una verifica indipendente (§4.0).
+
+**Come è stata letta una fonte esterna.** **[C]** verificata dal curatore delle fonti in f3 (`f3/fonti/FONTI_VERIFICATE.md`); **[A]** aperta dal ruolo che la cita; **[A11]** riaperta il 14 novembre, in f11, dall'autore della sezione; **[g]** dato cercato e trovato nel testo scaricato; **[rias.]** letta con uno strumento che riassume la pagina (prova più debole di una lettura del testo); **[R]** vista solo nel risultato o nel riassunto di una ricerca; **NV** non verificata; **manca** = il dato non è nei file.
+
+**I rimandi.** I percorsi dei file sono relativi alla cartella della convocazione, `.sciame/20261114-1301-percezione-challenge/`, e stanno fra parentesi nel testo o nella colonna delle fonti delle tabelle; «radice del progetto» indica i file che stanno fuori dalla convocazione (`regole_challenge.md`, `proposta/`, `sciame/`). Dopo il nome di un file, «§» è un paragrafo *di quel file*; i rimandi interni a questo documento hanno la forma «§2.2» o «cap. 2». Un nome di file senza cartella sta nella cartella del file citato subito prima. Le fonti esterne si citano con una chiave fra parentesi quadre, per esempio [scholler2020]: è la chiave definitiva dell'elenco dei riferimenti (`f11-documentazione/unione/RIFERIMENTI.md`), dove stanno i dati bibliografici completi e lo stato della verifica; l'appendice B dà, per ogni chiave usata qui, il numero della voce, il link e come la fonte è stata letta secondo le sezioni.
+
+**Le sigle dello sciame.** R1–R8: i requisiti ricavati dalla traccia della challenge (§1.3). B1–B9: i blocchi del sistema (§2.2). H-001…H-020: le venti ipotesi nate in f1; **H-012** è il ramo scelto, il nucleo. F-001…F-008: fatti stabiliti da più ruoli (F-1xx, F-2xx, F-3xx: fatti proposti da f7, f8, f9, **[prel.]**). K-001…K-018: contraddizioni fra due enunciati, con la prova che le decide (K-1xx, K-2xx, K-3xx: delle estensioni, **[prel.]**). C1–C12: le correzioni del nucleo nate dai dodici attacchi di f4. H0–H13: le quattordici prove ancora da fare sull'hardware (`f3/H-012/03-metrologo/PIANO_MISURE.md`). S1–S12: le strategie della preproposta esterna (§5.4). V-0xx, T-0xx: candidate di f7; C-0xx: candidate di f8.
+
+**Attenzione agli omonimi.** (a) **B1–B4** sono anche quattro misure della «prova B» di f4, e **A1–A7**, **P1–P5** le altre misure di f4 (§4.1.5, §4.1.6): fuori dal cap. 4 si scrive «misura B4». (b) **C1–C8** nel §8.5 sono le correzioni dell'attacco alla specializzazione, non quelle del nucleo; «C-…» con il trattino sono candidate di f8; «`…/05-esperto-dominio/CONSEGNA.md`, C6» è una critica di quel file. (c) **S1–S7** nei §4.1.8 e §8.5 sono gli attacchi alla specializzazione, non le strategie S1–S12. (d) **Q1–Q6** nel §3.6 sono i requisiti sulla posa del sensore in moto; nel cap. 5 sono le domande dei contratti delle estensioni. (e) **T1–T6** nel §6.1 sono le tappe del piano; la scena «T» del cap. 4 è quella del torneo. (f) **H0–H13** (senza trattino) sono prove sull'hardware, **H-0xx** ipotesi. (g) «**traccia**» è sempre l'oggetto seguito; il testo dell'hackathon è la «**traccia della challenge**» (glossario).
+
+## Indice
+
+- **1. Scopo, traccia della challenge, requisiti e vincoli** — 1.1 lo scopo · 1.2 la traccia della challenge, frase per frase · 1.3 gli otto requisiti e il loro stato · 1.4 vincoli e obiettivi posti dall'utente · 1.5 l'idea di partenza della squadra
+- **2. Architettura del nucleo, componente per componente** — 2.1 schema a blocchi · 2.2 i componenti B1–B9 · 2.3 i nove invarianti · 2.4 costo, dipendenze, le nove condizioni del verdetto
+- **3. Sensori e hardware** — 3.1 in breve · 3.2 i sensori considerati · 3.3 perché tre sensori a tempo di volo non danno 360° · 3.4 il sensore principale e i suoi limiti · 3.5 montaggio e condizioni della demo · 3.6 il sensore in moto · 3.7 senza sensori nelle prime ore · 3.8 dove due file dicono cose diverse · 3.9 le prime misure quando arriva un sensore
+- **4. Prove eseguite e risultati numerici** — 4.0 come leggere · 4.1 inventario delle prove (f1–f6, f11) · 4.2 le cifre principali · 4.3 requisiti e contraddizioni dopo le prove · 4.4 dove due file dicono cose diverse · 4.5 ciò che nessuna prova ha ancora toccato
+- **5. Valutazioni in corso: le estensioni f7–f10** — 5.1 a che punto sono · 5.2 f7 · 5.3 f8 · 5.4 f9 · 5.5 f10 · 5.6 il passo d'integrazione · 5.7 che cosa cambia qui alla chiusura di ogni estensione
+- **6. Piano e rischi** — 6.1 il piano · 6.2 registro dei rischi
+- **7. Le decisioni che spettano all'utente**
+- **8. Ambiti d'uso, profili e dominio** — 8.1 l'ambito · 8.2 i profili · 8.3 che cosa dà credito al nucleo · 8.4 norme · 8.5 correzioni dopo l'attacco alla specializzazione · 8.6 la società che propone la sfida · 8.7 che cosa dire a una giuria mista · 8.8 la strada degli sviluppi · 8.9 dove i file dicono cose diverse
+- **9. Metodo dello sciame e cronologia** — 9.1 il metodo · 9.2 la cronologia delle decisioni
+- **10. Punti da sciogliere** — 10.1 dove le sezioni non concordano · 10.2 discordanze fra file che toccano più capitoli
+- **Glossario** · **Registro delle modifiche** · **Appendice A** (file dello sciame che fanno da fonte a ciascun capitolo) · **Appendice B** (chiavi dei riferimenti) · **Appendice C** (provenienza delle sezioni e controlli dell'unione)
+
+---
+
+## 1. Scopo, traccia della challenge, requisiti e vincoli
+
+### 1.1 Lo scopo in breve
+
+La domanda del contratto: «Quale architettura di prototipo (sensori, percezione, stima e tracciamento, decisione, feedback) soddisfa meglio i requisiti della challenge […] ed è realizzabile e dimostrabile in un hackathon?» (`CONTRATTO.md`). La risposta è buona se passa quattro controlli: copertura di R1–R8 con una misura per ciascuno, resistenza ai controesempi, fattibilità, fonti con il link.
+
+Lo sciame ha risposto con un nucleo (`f4/H-012/05-correzioni/SOLUZIONE_V2.md`) che l'arbitro giudica **«adottabile come progetto di prototipo, non come sistema validato»**, con nove condizioni (`f4/H-012/09-arbitro/VERDETTO.md`, §4; elenco in §2.4). In una riga: camera di profondità ferma → mappa a celle con quattro stati → oggetti seguiti con un filtro di Kalman (uno stimatore che unisce misure e previsione) → tre stati per oggetto (**osservato, previsto, perso**) → regole fisse → segnali brevi e schermo. Dopo il verdetto l'utente ha cambiato l'obiettivo principale (continuità visiva) e i vincoli (14 + 4 ore, cinque persone, nessun sensore all'inizio): quattro estensioni sono in corso, **nessuna ha ancora un verdetto**.
+
+### 1.2 La traccia della challenge, frase per frase
+
+La traccia della challenge (`regole_challenge.md`, radice del progetto) ha 7 frasi su 6 righe (`CONTRATTO.md`) e 156 parole (`wc`, conto [req.]). I numeri delle frasi sono quelli di `f3/H-012/02-validazione/VERIFICA.md`, §3.
+
+**Frasi 1 e 3: contesto.** (1) «Le tecnologie di Computer Vision e Intelligenza Artificiale permettono di interpretare ambienti dinamici e trasformare immagini in informazioni utili.» (3) «Questo problema accomuna sistemi per l'accessibilità e soluzioni di osservazione e ispezione nei settori Aerospace & Industry, dove tempestività e affidabilità sono essenziali.» La 3 nomina i due ambiti; l'«ispezione» non è una funzione del nucleo: niente valuta lo stato di un oggetto (`f7-estensione/04-requisiti/CONSEGNA.md`, critica 8 **[prel.]**).
+
+| N. | Frase | Che cosa ne ricava lo sciame | Stato della copertura |
+|--|------------------------------------------|---------------|--------------------------------|
+| 2 | «Tuttavia, riconoscere un oggetto o un soggetto in movimento non basta: un ostacolo può nasconderlo temporaneamente, mentre la scena continua a cambiare.» | R3; «riconoscere» è presupposto | «riconoscere»: coperto **per lettura dichiarata** (etichetta persona / non persona); «mentre la scena continua a cambiare»: **nessuna misura** (`f3/H-012/02-validazione/VERIFICA.md`, §3a) |
+| 4 | «La sfida è ideare e sviluppare un prototipo capace di rilevare elementi mobili e ostacoli, gestire interruzioni della visibilità e distinguere le informazioni osservate da quelle incerte.» | R1, R2, R3, R4 | vedi §1.3 |
+| 5 | «Il sistema dovrà fornire feedback spaziali chiari e tempestivi quando le condizioni lo consentono, segnalando invece la perdita di affidabilità quando necessario.» | R5, R6 | c'è una misura solo per «tempestivi»; **«chiari» e «spaziali» senza misura** (`f3/H-012/02-validazione/VERIFICA.md`, §3a) |
+| 6 | «I team potranno applicare la soluzione all'orientamento assistito di persone con disabilità visiva oppure al monitoraggio di attività e oggetti in ambienti aerospaziali e industriali.» | applicazione: la sceglie l'utente | orientamento assistito: coperto **per lettura**, a sensore e persona fermi; **«il monitoraggio di attività non è coperto»** (`f4/H-012/05-correzioni/SOLUZIONE_V2.md`, §7); in corso la proposta di un registro di eventi **[prel.]** |
+| 7 | «L'obiettivo è dimostrare continuità percettiva, bassa latenza ed efficienza elaborativa, senza rinunciare alla sicurezza delle indicazioni.» | R3 (continuità), R7, R8 | vedi §1.3 |
+
+**Che cosa la traccia della challenge non dice** (verificato, esaustivo sul file; fatto F-005 in `f2/03-triage/TRIAGE.md`, ricontato [req.]): 0 occorrenze di 360, massa, accelerazione, classificazione, terreno, velocità, mappa, ToF, Kalman, transformer; 0 di uncrewed, drone, UAV, veicolo, volo, 3D, voxel. «Riconoscere», «continuità» e «latenza» compaiono una volta ciascuna. Le aggiunte della squadra (§1.5) e il veicolo uncrewed (§1.4) sono quindi scelte, non richieste. La frase 6 dice «oppure»: se due applicazioni siano un merito lo decide chi organizza (**non risolto**).
+
+### 1.3 Gli otto requisiti
+
+Testo da `CONTRATTO.md`; blocco, misura, soglia e cifre delle correzioni da `f4/H-012/05-correzioni/SOLUZIONE_V2.md`, §2, §4 e §7; stato da `f4/H-012/09-arbitro/VERDETTO.md`, §1 e §3. Le soglie sono dello sciame, non della traccia della challenge. La copertura è «verificata come mappa», ma **nessuna misura è stata superata** (`f4/H-012/09-arbitro/VERDETTO.md`, §1).
+
+| R | Requisito | Misura e soglia di accettazione | Stato dopo le prove |
+|--|----------------|---------------------|----------------------------------------------------|
+| R1 | rilevare elementi mobili (B3) | 9 su 10 entro 1 s a 0,5 m/s, fino a 2 m; falsi sul muro ≤ 10 % | **sostenuto in simulazione a 2 m**: 100 % (N = 2000, tre curve di rumore); muro: 0 falsi su 400 con C6. **Oltre 2 m non risolto** (K-007): da 3 m la regola vede il 100 / 10,8 / 0,1 % secondo la curva di rumore (nota di [red.]: è la regola dello spostamento nella prova B di f4; con la regola finale 100 / 85,9 / 26,6 %: §2.2, B3). In moto: non provato |
+| R2 | rilevare ostacoli (B1, B2) | 5 su 5 entro 15 cm, fra 1,1 e 3 m | conto geometrico, nessuna profondità simulata: **non verificato fino all'hardware**. Un ostacolo di 15 cm non si vede a meno di 1,09 m dal sensore |
+| R3 | gestire le interruzioni della visibilità: continuità percettiva (B5) | stessa identità al ritorno, su 30 occlusioni: ≥ 28 regge, ≤ 22 smentita, altrimenti altre 30 e ≥ 52 su 60 | identità: **sostenuta in simulazione**, 100 % (N = 400 per cella, limite inferiore 99,25 %), con **una** persona nascosta e pannello fermo. **Controesempio** (K-016): con un secondo soggetto mai visto nella stessa ombra sbaglia 2400 volte su 2400 (`f4/H-012/03-validazione/MISURE_V2.md`, riga P2b-limite). «Area prevista ancora mostrata alla riemersione»: **smentita**, tolta dalla promessa (0,5–1,2 %: §4.4, punto 3). È il punto che il quarto addendum riapre (f8, in corso: §5.3) |
+| R4 | distinguere osservato da incerto (B5, B8) | 0 fotogrammi «osservato» a soggetto nascosto, esclusa la transizione | **per costruzione, in un solo verso**; in voce **smentito e corretto** (C11; `f4/H-012/05-correzioni/SOLUZIONE_V2.md`, §7); rilevamenti falsi mai simulati; regola per il campo aperto da riscrivere (K-018) |
+| R5 | feedback spaziali chiari e tempestivi (B7, B8) | ≤ 300 ms dal primo fotogramma con l'ostacolo al comando audio | **smentito e corretto nel solo modello dell'avversario** (correzione C3: da 0 % a 100 / 100 / 99,5 %; con C9); buchi persistenti non provati (`f5/02-audit/AUDIT.md`, ipotesi 6); non verificato fino all'hardware |
+| R6 | segnalare la perdita di affidabilità (B8) | segnale entro 1 s, 10 prove per causa; 0 falsi in 60 s | **smentito e corretto in simulazione, nel solo modello dell'avversario** (C10: 0,13 s); i filtri della camera possono nascondere il guasto (`f5/02-audit/AUDIT.md`, ipotesi 1): non verificato |
+| R7 | bassa latenza ed efficienza (B2, B8) | 95° percentile ≤ 150 ms dalla cattura al comando audio | **non risolto**: le sole voci note sommano circa 155 ms in media (`f3/H-012/02-validazione/VERIFICA.md`, §3c; fonti [realsense-alta-velocita-d435], [pipewire-conf]) |
+| R8 | sicurezza: mai «libero» ciò che non è osservato (B2, strato 1) | 0 «libero» su celle non osservate | regola: **dimostrazione condizionata**, per costruzione (premesse: quattro stati esaustivi, un buco arriva come «nessun dato», profondità valida = giusta, pavimento piano, sensore fermo). Garanzia «chi sparisce resta possibile presenza»: **sostenuta in simulazione** (0 su 14 400 passaggi), con **controesempio** (K-014, aperta): 13 su 4800 con un rilevamento mancato su dieci e ombra stimata 20 cm più stretta. **Vetro: smentito**, limite dichiarato |
+
+Fonti di R7: [realsense-alta-velocita-d435], [pipewire-conf] (non riaperte da [req.]; riaperte il 14 novembre da [arch.], con le cautele scritte in §2.2, B8). Link in appendice B.
+
+**Due avvertenze.** (1) Lo «zero falsi liberi» controlla la logica, non è un dato: nessuno script ha mai calcolato «libero» da un'immagine di profondità (`f5/02-audit/AUDIT.md`, ipotesi 2). (2) Quattro requisiti su otto (R3, R4, R6, R8) chiedono di sapere che cosa non si sa: serve un sistema che resta onesto quando perde la vista, non uno che stima più grandezze (`f1/b8262bfed263/CONSEGNA.md`, §1: una lettura).
+
+### 1.4 Vincoli e obiettivi posti dall'utente
+
+**In ordine di tempo.** Testi integrali e letture del coordinatore in `ADDENDUM_UTENTE.md`. Il contratto non si tocca: gli addendum lo correggono dove differiscono. Le ore d'arrivo non sono registrate: sono **dedotte** dagli orari dei file che ne dipendono.
+
+| N. | Quando | Che cosa chiede l'utente, e che cosa cambia | Dove · stato |
+|--|------|--------------------------------------------------------------|----------|
+| 0 | prima delle 13:01 | Far convergere lo sciame su bozza e regole; «un breve pdf di massimo 2 pagine». Ne nasce il contratto; l'idea di partenza è un dato da vagliare | f0–f5 · chiuse |
+| 1 | 13:56–14:06 | Specializzare il sistema approvato per i sistemi uncrewed, lasciando aperti gli sviluppi. Prima il verdetto, poi la specializzazione; niente ingaggio né puntamento | f6 · chiusa, senza prove nuove |
+| 2 | 14:19–14:41 | Due ambiti (uncrewed e non vedenti), fuoco sul primo; sistema adattabile; giuria mista. Ne nasce «un nucleo, due profili» | f6 |
+| 3 | 14:54–15:00 | Valutare `promptMare.txt` (mappa voxel 3D) e conciliare tutto con la traccia della challenge: il primo ambito si dice con le sue parole, il veicolo è un modo di portare il sensore | f7 · in corso |
+| 4 | 15:00–15:11 | «La continuità visiva» come «obbiettivo imperativo e principale»: R3 passa da requisito a obiettivo principale | f8 · in corso |
+| 5 | 15:29–15:36 | Valutare le dodici strategie di `prepropostaEsterna.md` (S1–S12), da integrare solo se approvate | f7, f8, f9 · in corso |
+| 6 | 15:36–15:48 | Scadenza imperativa: 14 ore per progetto e valutazione preliminare, poi 4 di raffinamento. Sostituisce «24–48 ore»; ogni componente va in una fascia: 14 ore, 4 ore, dopo | tutte |
+| 7 | 15:48–15:54 | Commit locali; squadra di 5; nessun sensore ora, forse fra 5–6 ore «da remoto»; usare simulazioni, schede tecniche, dati pubblici. Cade «niente prove oltre la classe 2» | f10 · in corso |
+| 8 | prima delle 16:09 | Elenco di tutti i riferimenti e documento esteso dello stato, da aggiornare a ogni valutazione | f11 |
+
+**In ordine di priorità.** Solo i primi tre punti sono detti «imperativi» o «non negoziabili» (quarto e sesto addendum). L'ordine dal quarto in giù è una lettura dell'autore della sezione [req.]: **ipotesi da confermare**.
+
+1. **Continuità visiva, obiettivo principale.** Il movimento di ogni oggetto seguito resta visualizzabile anche quando non è visto, con una previsione efficace, una stima realistica della sua precisione e un'incertezza «controllata». Criteri in `f8-continuita/CONTRATTO_CONTINUITA.md`. **Il nucleo non lo rispetta** nel movimento mostrato: la stima esce nel 35–50 % dei cicli senza osservazione in demo e nell'8–10 % in sosta (`f8-continuita/01-requisiti/CONSEGNA.md`, §1, sui numeri di `f4/H-012/03-validazione/MISURE_V2.md`, riga P4) **[prel.]**; il dettaglio è in §5.3. Rispetta la continuità dell'avviso e dell'identità.
+2. **Sicurezza delle indicazioni, vincolo.** Una previsione non si mostra mai come osservazione; ciò che non è osservato non diventa mai «libero»; nessun timer toglie la «possibile presenza».
+3. **Scadenza: 14 + 4 ore.** Con cinque persone sono 70 ore-persona nelle 14 ore (conto degli arbitri di f7 e f8, che dà per utili tutte le ore: non verificato) più 20 nel raffinamento (conto [req.]). Il nucleo era stimato in circa 54 ore-persona, di cui 38 in fila (`f4/H-012/05-correzioni/SOLUZIONE_V2.md`, B9; `f5/02-audit/AUDIT.md`, ipotesi 8): la catena in fila non sta in 14 ore se non si spezza in rami paralleli. **Un piano a 14 + 4 ore per cinque persone manca nei file**: il solo piano esistente è su 24, 36 e 48 ore (`f9-preproposta/11-pianificatore/CONSEGNA.md`) **[prel.]**. Bilancio e tappe: §6.1.
+4. **Squadra di cinque.** Più persone non accorciano da sole la catena: nel modello del pianificatore, da tre a cinque persone il fattore k* dell'ultima tappa (§6.1) passa da 0,33 a 0,38 **[prel.]** (stime mai misurate).
+5. **Sensori assenti all'inizio.** Le prime 5–6 ore si lavorano su dati registrati o simulati; l'architettura deve poter cambiare sorgente (registrazione, sensore simulato, sensore vero) senza toccare il resto. Inventario: **non ancora ricevuto**.
+6. **Ambiti d'uso.** Primo: monitoraggio di attività e oggetti in ambienti aerospaziali e industriali, con il veicolo uncrewed **fermo** come uno dei portatori del sensore. Secondo: avviso a una persona non vedente. Fuori ambito: ingaggio e puntamento. Il contratto citato dall'utente risulta essere un *ordine* da circa 1,7 milioni di euro per «sistemi uncrewed», del 21 ottobre 2026 [maregroup-ordine-uncrewed-2026] (riaperta il 14 novembre da [req.]; di più in §8.6); cliente, piattaforma e uso non sono indicati (`f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md`, §1). Ambito medico: prototipo dimostrativo, non dispositivo medico; **qualificazione regolatoria non verificata**.
+7. **Giuria mista.** Ogni termine spiegato la prima volta, nessuna sigla interna senza spiegazione, ogni affermazione con il suo perché e il suo limite.
+8. **Commit locali** del coordinatore, mai verso un deposito remoto. **Documenti da tenere:** il PDF di due pagine (v0.1–v0.6 in `proposta/`, radice), l'elenco dei riferimenti, questo documento (ottavo addendum).
+
+### 1.5 L'idea di partenza della squadra, punto per punto
+
+Punti da `CONTRATTO.md`; esiti da `f4/H-012/05-correzioni/SOLUZIONE_V2.md`, §8, e `f4/H-012/09-arbitro/VERDETTO.md`, §3 e §5; fatti da `f2/03-triage/TRIAGE.md`, §2.
+
+| Idea della squadra | Esito | Il fatto che lo decide | Dopo gli addendum **[prel.]** |
+|----------------|---------------------|----------------------------------|----------------------|
+| (a) tre sensori ToF (a tempo di volo) per 360° | **smentita** per i sensori controllati; **corretta** in canale laterale facoltativo, di sola prossimità, che non dichiara mai «libero» | F-001: tre sensori da 45°–60° coprono 135°–180°. La scheda del costruttore scrive «three sensors can cover 180° x 60° FoV» [st-vl53l7cx]. Il perché, in quattro punti: §3.3. Tre camere ToF da 120°: non risolto | S9: canale laterale sì; «preallarme» a 0,5 m respinto, a 1,4 m/s restano 0,07 s (proposta del ruolo LiDAR in f9) |
+| (b) mappa del terreno e dei gradi di libertà di utente e ostacoli | **corretta**: mappa locale a celle, pavimento piano dichiarato; moto dell'utente non trattato | scelta d'ambito (H-004); F-008: indossato, senza compensare il moto proprio, errori di 1,49 m e 2,50 m/s (due simulazioni) | mappa 3D in esame in f7; nel triage nessuna mappa memorizzata entra nelle 14 ore |
+| (c) classificazione degli ostacoli | **corretta**: solo persona / non persona, a parte, senza potere sugli allarmi | F-005 (la traccia della challenge non la chiede). Modelli candidati: [roboflow-rf-detr], [ultralytics-yolo26] | primo taglio possibile (4 ore) |
+| (d) massa | **esclusa** | F-002: non osservabile; **dimostrato nel modello del punto materiale con forza ignota** | — |
+| (d) accelerazione | **esclusa** | F-004: sotto il rumore (σ ≈ 66 m/s² a 30 Hz, 7 a 10 Hz); due calcoli indipendenti | — |
+| (d) velocità | **confermata** | è lo stato del filtro; minima vista da 2 m: 0,095–0,278 m/s secondo il rumore (simulazione) | — |
+| (e) previsione della posizione fuori vista | **corretta e ridotta**: un'area per 0,40–0,53 s, poi «perso» con «possibile presenza» | F-006: l'orizzonte onesto della previsione puntuale di un pedone è circa 1–1,6 s (simulazioni e algebra, nessun pedone vero) | **riaperta dal quarto addendum** (obiettivo principale): cinque predittori in gara in f8, nessun vincitore |
+| (f) Kalman → vision transformer → modello di decisione | **corretta**: rilevamento → associazione → Kalman → tabella di regole | F-003: il filtro consuma misure per oggetto, non le produce (**dimostrato per costruzione**) | — |
+
+Della bozza cade anche il «libero» a scadenza fissa: mette «libero» o «previsto» dove non spetta (F-007, **sostenuto da quattro simulazioni**: 265 celle su 552; 100 % a 3 s; 73,5 %). Fonti: [st-vl53l7cx] (frase ritrovata nel PDF il 14 novembre da [req.]); [roboflow-rf-detr] e [ultralytics-yolo26] (non riaperte in f11). Link in appendice B.
+
+---
+
+## 2. Architettura del nucleo, componente per componente
+
+Il nucleo è la **soluzione versione 2** (`f4/H-012/05-correzioni/SOLUZIONE_V2.md`), nata dalla versione 1 (`f3/H-012/01-scene-dinamiche/SOLUZIONE.md`) dopo i dodici attacchi di f4. Ogni cifra del capitolo viene da una simulazione, da un conto o da una scheda tecnica, sempre **a sensore fermo**. L'autore della sezione [arch.] non ha eseguito prove: ha letto i file, ricontrollato dodici file grezzi di risultati (appendice A) e fatto due conti, marcati [arch.]. Le stesse prove, lette prova per prova, sono nel cap. 4; i sensori nel cap. 3.
+
+Per ogni blocco si dice: che cosa entra e che cosa esce; i parametri con la loro origine; che cosa è stato corretto rispetto alla versione 1; gli invarianti che lo riguardano (§2.3); le contraddizioni aperte; le ipotesi nascoste trovate dall'audit; le condizioni del verdetto (§2.4); il costo, da che cosa dipende, che cosa lo invalida.
+
+### 2.1 Schema a blocchi
+
+```
+scena ─► B1 camera stereo attiva + IMU, ferma (treppiede 1,2 m, 15° in basso)
+           │ profondità 30 fps + contatore di fotogramma        │ RGB a bassa frequenza
+           ▼                                                    ▼
+         B2 griglia polare 1° × 0,1 m fino a 3 m              B6 rete a lato:
+           │ quattro stati per cella                            persona / non persona
+           ├─► celle occupate ─► B3 gruppi + regola «si muove»  (solo un'etichetta)
+           │                       ▼                              ┆
+           │                     B4 associazione + Kalman         ┆
+           │                       ▼ tracce                       ┆
+           └─► libero, ombra, ─► B5 stati della traccia ◄┄┄┄┄┄┄┄┄┄┘
+               non osservato        osservato / previsto / perso
+                                    strato 1 (possibile presenza), strato 2 (area probabile)
+                                   ▼
+                                 B7 tabella di regole, un messaggio per settore
+                                   ▼
+ contatore, celle valide, IMU ─► B8 suoni brevi, schermo, «affidabilità persa»
+                                   ▼
+                                 B9 demo in cinque atti; accettazione sulle registrazioni
+```
+
+L'ordine rilevamento → associazione → filtro → decisione è il fatto F-003 ([COSTR]; `f2/03-triage/TRIAGE.md`). Se B6 manca, la catena non cambia (`f4/H-012/05-correzioni/SOLUZIONE_V2.md`, B6).
+
+### 2.2 I componenti
+
+#### B1. Sensore e montaggio
+
+- **Entra / esce.** Entra la scena; escono profondità e RGB a 30 fotogrammi al secondo con il contatore di fotogramma. L'elaborazione gira a 15 Hz, la frequenza di tutte le simulazioni (`f3/H-012/01-scene-dinamiche/SOLUZIONE.md`, B1).
+
+| Parametro | Valore | Da dove viene, stato |
+|---|---|---|
+| Camera | stereo attiva con IMU: D455 o D435i (campo 87°×58°), Gemini 335 (90°×65°) | `f4/H-012/05-correzioni/SOLUZIONE_V2.md`, B1; campi verificati in `f3/fonti/FONTI_VERIFICATE.md` [realsense-confronto-camere]; [orbbec-gemini-335] (in `f3/fonti/FONTI_VERIFICATE.md` il link manca; lo dà il cap. 3: appendice B). «Posseduta dalla squadra»: **superato**, oggi la squadra non ha sensori (`ADDENDUM_UTENTE.md`, settimo) |
+| Montaggio | treppiede a 1,2 m, orizzontale, inclinata di 15° in basso | 1,2 m è un'ipotesi del torneo, da misurare in H0 |
+| Portata dichiarata | dove il rumore radiale del centro di una persona resta ≤ 5 cm | da misurare in H1 [NV-HW]; nella versione 1 era «0,5–3 m» |
+| Curve di rumore delle prove, a 2 / 3 / 4 m | nominale 1,5 / 3,4 / 6,0 cm; pessimista 4 / 9 / 16; del torneo 5 / 11 / 20 | nominale: σ = z²·s/(f·B), f = 424 px, B = 50 mm, s = 0,08 (`f3/H-012/02-validazione/VERIFICA.md`, §4) [realsense-taratura-profondita]; le altre due sono ipotesi |
+| Limiti geometrici | suolo visto solo da 1,24 m (anello cieco: 30 % dell'estensione 0,5–3 m); ostacolo di 15 cm invisibile a meno di 1,09 m **di distanza**; ostacolo a 1,8 m di quota visto solo oltre 2,41 m | [DIM] nel modello geometrico (camera ideale, pavimento piano): `f4/H-012/01-avversario/CONTROPROVE.md`, attacco 3; 2,41 m dal torneo (via `f3/H-012/02-validazione/VERIFICA.md`, §1) |
+
+- **Corretto rispetto alla versione 1.** La portata non è più un intervallo fisso e i limiti vicini sono dichiarati. Controesempio: scatola a 0,8 m vista 0 volte su 5 (`f4/H-012/01-avversario/CONTROPROVE.md`, attacco 3).
+- **Invarianti:** 2. **Aperte:** K-009 (tenuta al sole: H3); montaggio orizzontale o verticale (verticale: suolo da 0,74 m, ma 58° in orizzontale; `f4/H-012/05-correzioni/SOLUZIONE_V2.md`, §6).
+- **Ipotesi nascoste [NR].** `f5/02-audit/AUDIT.md`, ipotesi 9: il piano del suolo si stima all'avvio su scena vuota; 1,34° d'errore alzano il suolo di 7 cm a 3 m. `f5/02-audit/AUDIT.md`, ipotesi 10: accanto all'ombra, da un lato, c'è una banda senza dato di 9,5 cm (D455) o 5 cm (D435i). `f5/02-audit/AUDIT.md`, ipotesi 11: allineando la profondità all'RGB il campo della D435i scende a circa 69°×42° (non verificato) e il suolo si vede da 1,65 m.
+- **Condizioni del verdetto** (numeri del §2.4): 1, 4, 7.
+- **Costo:** 3 ore [STIMA]. **Dipende da:** quale sensore arriva; fino ad allora la sorgente è una registrazione o un sensore simulato ([prel.]: f10 li sta preparando, nessun esito: §5.5). **Lo invalida:** sole pieno, sensore indossato o in moto, campo diverso.
+
+#### B2. Mappa a quattro stati
+
+- **Entra / esce.** Entra la profondità; esce una griglia polare centrata sul sensore. Ogni cella è: **libero** (suolo visto alla quota attesa e nessun ostacolo), **occupato osservato** (primo ritorno fra 0,07 e 2 m di quota), **in ombra** (oltre il primo ritorno), **non osservato** (fuori campo, oltre portata, anello cieco, buco nei dati).
+
+| Parametro | Valore | Da dove viene, stato |
+|---|---|---|
+| Cella | 1° × 0,1 m, fino a 3 m | `f3/H-012/01-scene-dinamiche/SOLUZIONE.md`, B2 (ipotesi H-008) |
+| «Libero» | suolo visto in almeno uno degli ultimi 3 fotogrammi; esce con l'età (0,13 s) | correzione C9 |
+| «Buco» | dopo 3 fotogrammi non validi di fila | correzione C3 |
+| «Occupato ricordato» | esce con l'età | la scadenza di 2 s della versione 1 («ipotizzata, non tarata») nella versione 2 non è ripetuta: **manca** |
+| Soglia di quota | 0,07–2 m; quanti pixel fanno «occupato»: **manca** | `f5/02-audit/AUDIT.md`, ipotesi 11 |
+| Tempo di calcolo | 20 ms a 640×480, Python puro, scene sintetiche: non è il prototipo | torneo (via `f3/H-012/02-validazione/VERIFICA.md`, §1) |
+
+- **Corretto rispetto alla versione 1.** Con «libero solo nel fotogramma corrente» e suolo valido al 95 %, la distanza annunciata cambiava 11,9 volte al secondo; con C9: 0,00 per direzione, 0,65 per settore (`f4/H-012/01-avversario/risultati_a09.txt`; 60 s a 15 Hz, buchi indipendenti: modello dell'avversario) [SIM]. All'80 % la correzione non basta (2,8–11,8).
+- **Invarianti:** 1, 2, 5, 6. **Contraddizioni:** K-006 (risolta per composizione; vetro aperto); K-015 (§2.3).
+- **Limiti dichiarati.** Vetro: la lastra risulta «libero» [SMENT], limite scritto. Pavimento piano dichiarato: a 5° di pendenza «occupato» falso dopo 0,80 m; con 2° d'errore d'assetto oltre 2 m (`f3/H-012/01-scene-dinamiche/SOLUZIONE.md`, B2).
+- **Ipotesi nascoste [NR].** `f5/02-audit/AUDIT.md`, ipotesi 1: i filtri della camera trasformano un buco in un dato (B8). `f5/02-audit/AUDIT.md`, ipotesi 2: **nessuno script ha mai calcolato «libero» da un'immagine di profondità**; i quattro stati non coprono i ritorni sotto il suolo o solo sopra 2 m. `f5/02-audit/AUDIT.md`, ipotesi 6: con l'1 % di celle sempre non valide l'83,6 % dei settori da 10° contiene un buco permanente. `f5/02-audit/AUDIT.md`, ipotesi 7: «3 fotogrammi» sono 0,13–0,2 s a 15 Hz, ma 33–50 ms a 60–90 fps.
+- **Condizioni:** 1, 2, 7, 9.
+- **Costo:** 6 ore [STIMA]. **Dipende da:** B1. **Lo invalida:** rampe, vetro, suolo valido in meno del 95 % dei fotogrammi, filtri accesi.
+- **[prel.]** (`f7-estensione/10-triage/TRIAGE.md`) L'uscita va detta «suolo visto libero»: entro 3 m la colonna fino a 2 m non è mai vista tutta (fatto F-108). Una mappa che conserva il «libero» nel tempo crea falsi liberi (138 230 celle-fotogramma; proposta V-010, smentita). Aperta K-105: 45 829 celle-fotogramma «libere» e occupate, secondo la lettura di un ruolo; da rifare col codice del nucleo.
+
+#### B3. Rilevamento e regola «si muove»
+
+- **Entra / esce.** Entrano le celle occupate; escono gruppi connessi con centro e larghezza, e per ciascuno l'etichetta «mobile» o no. Nessuna rete.
+
+| Parametro | Valore | Da dove viene, stato |
+|---|---|---|
+| Regola | «mobile» se lo spostamento fra due misure distanti al più 1 s supera 5·σ(z)·√2 lungo un asse | ipotesi H-010 corretta (`f3/H-012/01-scene-dinamiche/SOLUZIONE.md`, B3) |
+| Finestra | cresce fino a 1 s | correzione C8 |
+| Misure | ciascuna è la media di 3 fotogrammi | proposta `validazione-1` |
+| Gruppo tagliato da un'ombra | non entra nella finestra, non aggiorna il filtro | correzione C6, **obbligata** (condizione 5) |
+| Larghezza minima rilevabile | 0,15 m, oppure 3 colonne da 1° | `f3/H-012/03-metrologo/PIANO_MISURE.md`, critica 2; `f3/H-012/02-validazione/VERIFICA.md`, §4; nella versione 2 non è fissata |
+| Regola alternativa | test χ² con R(z), registrato in parallelo | K-007 |
+
+- **Testo contro codice.** Il testo dà la stessa soglia sui due assi; il codice della validazione usa sull'asse trasversale una soglia d'angolo, 1,18° a ogni distanza (`f6-specializzazione/02-slam/MOTO_PROPRIO.md`, in testa, da `f4/H-012/03-validazione/sim_v2.py`, righe 449 e 496–499). Va scritto quale vale.
+- **Prove** [SIM]. Persona a 0,5 m/s vista entro 1 s: di traverso a 2 e 3 m 100 % (N = 2000, limite inferiore 99,85 %); in avvicinamento a 2 m 100 % con lo spostamento e 99,0–100 % con la χ² (`f4/H-012/03-validazione/MISURE.md`). Da 3 m decide la curva di rumore: spostamento 100 / 10,8 / 0,1 %, χ² 100 / 56,7 / 45,2 % (nominale / pessimista / torneo; `f4/H-012/03-validazione/MISURE.md`, misura B4); con la regola finale 100 / 85,9 / 26,6 % (`f4/H-012/03-validazione/MISURE_V2.md`, P3a). Falsi sul muro con rumore noto: 0 su 12 000 finestre (`f4/H-012/03-validazione/MISURE.md`).
+
+| Correzione | Controesempio (prima) | Dopo | File |
+|---|---|---|---|
+| C6 | muro fermo detto «mobile» nel 100 % (500 passaggi); 400 su 400 nella riprova | 0,0–0,2 %; 0 su 400 con tre curve | `f4/H-012/01-avversario/CONTROPROVE.md`, 6a; `f4/H-012/03-validazione/v2_WALLP.txt` |
+| C8 | finestra fissa: visto entro 1 s nel 79,0 % (Pd 0,9, N = 2000) | 99,9 % | `f4/H-012/01-avversario/CONTROPROVE.md`, attacco 8 |
+| `validazione-1` | velocità minima vista da 2 m: 0,380 m/s (curva del torneo) | 0,278 m/s (0,095 con la nominale) | `f4/H-012/03-validazione/MISURE.md` |
+
+- **Discordanza.** La versione 2 (§5) scrive che il pannello da 1 m «regge senza C6». **[SMENT]**: senza C6 la previsione contiene la riemersione nel 61,1 % o 80,2 % dei passaggi secondo il rilevatore, con C6 nel 100,0 % (N = 2000; `f4/H-012/03-validazione/v2_C6.txt`).
+- **Costo di C6** (K-017, aperta). Il buio dietro il pannello passa da 0,60–0,67 s a 1,07–1,27 s (`f4/H-012/01-avversario/CONTROPROVE.md`); per chi torna indietro il contenimento scende dal 99 % al 47–50 % (N = 400; `f4/H-012/03-validazione/MISURE_V2.md`, P2c).
+- **Invarianti:** 3. **Aperta:** K-007, spostamento contro χ²: a 2 m passano tutte e due; la decide il rumore misurato del centro di una persona a 2–4 m (H1, H8). Lo spostamento è scelta provvisoria: 0 etichette false nel primo secondo di una traccia ferma, contro lo 0,15–2,3 % della χ² (N = 4000; `f4/H-012/03-validazione/MISURE.md`).
+- **Costo:** 6 ore [STIMA] (5 nella versione 1). **Dipende da:** B2 e R(z) misurata. **Lo invalida:** misure anomale (con il 2 %, falsi sul muro al 5,7–14,9 %); rumore creduto la metà del vero (31 % delle finestre scorrevoli con un'etichetta falsa); sensore che ruota (dopo 10° d'imbardata i gruppi fermi sono «mobile» nel 96–100 %; `f4/H-012/01-avversario/CONTROPROVE.md`, attacco 10).
+
+#### B4. Associazione e filtro di Kalman
+
+- **Entra / esce.** Entrano i gruppi; escono le tracce: identità, posizione e velocità sul piano con la loro incertezza, stato «tentativa» o «confermata». Il filtro di Kalman fonde ogni misura con la previsione del passo prima.
+
+| Parametro | Valore | Da dove viene, stato |
+|---|---|---|
+| Stato del filtro | [x, y, vx, vy], velocità quasi costante | H-010, H-012. Niente accelerazione (F-004: sotto il rumore) né massa (F-002: non osservabile, [DIM] nel modello del punto materiale) |
+| Rumore di processo q | 0,2 m²/s³ | torneo: copertura 0,927 / 0,916 / 0,902 a 2 s su tre generatori non dell'autore; con q = 0,01: 0,738 / 0,710 (`f2/05-selezione/SELEZIONE.md`, §1) [SIM] |
+| Rumore di misura | R(z) per asse | da H1 [NV-HW] |
+| Associazione | porta al 99 %, assegnazione ungherese, priorità alle confermate | H-013 |
+| Conferma | 3 rilevamenti su 5 | H-013, mai attaccata |
+| Taratura di q | sulle innovazioni alla riemersione, su 15 passaggi diversi da quelli del criterio | `f2/05-selezione/SELEZIONE.md`, §4; `f3/H-012/03-metrologo/PIANO_MISURE.md` |
+| Copertura del cerchio al 95 % | 0,89–0,93 (cerchio intero, pochi ritorni); 0,56–0,66 per chi torna | `f3/H-012/02-validazione/VERIFICA.md`, §1 [SIM] |
+
+- **Corretto rispetto alla versione 1:** niente nel blocco; cambia ciò che riceve (C6) e il riaggancio (B5).
+- **Invarianti:** 3, 9. **Contraddizione:** K-003 (valore di q) risolta in simulazione, aperta sul vero (H9).
+- **Lo invalida:** due persone che tornano insieme da dietro il pannello: 74 % di scambi, 44 % senza avviso (torneo, via `f3/H-012/02-validazione/VERIFICA.md`, §1). Per questo con due tracce pendenti l'identità non si dà mai.
+- **Costo:** 5 ore [STIMA]; calcolo trascurabile (SORT, stessa famiglia: 260 Hz [bewley2016]). Schema d'associazione: [cao2023]. Velocità costante contro predittori appresi sui pedoni: [scholler2020]. Tutte verificate in `f3/fonti/FONTI_VERIFICATE.md`.
+- **[prel.]** (`f8-continuita/10-triage/TRIAGE.md`) Il cerchio non è tarato per comportamento né al 50 % (fatto F-202): per chi torna contiene 0,29–0,77 a 2 s.
+
+#### B5. Stati dell'oggetto e i due strati durante l'occlusione
+
+- **Entra / esce.** Entrano tracce e griglia. Esce per ogni traccia uno stato: **osservato** (c'è una misura nel ciclo), **previsto** (non c'è: si mostra un'area probabile), **perso** (l'area non informa più). Escono anche «non confermato», «identità ambigua» e due aree:
+  - **strato 1, garanzia:** il cuneo d'ombra dell'ostacolo in cui la traccia è entrata, allargato di una fascia; dice «possibile presenza» con la sua età;
+  - **strato 2, informazione:** il cerchio al 95 % del filtro ritagliato sul cuneo; dice «probabile qui».
+
+| Parametro | Valore | Da dove viene, stato |
+|---|---|---|
+| Ingresso nell'ombra | ultima **misura** a meno di 0,40 m da un'ombra | definizione del responsabile, non provata (`f4/H-012/05-correzioni/SOLUZIONE_V2.md`, §9) |
+| «Non confermato» | in campo aperto, al più 3 fotogrammi, poi traccia chiusa | idem. Tracce vere chiuse per errore: 118 su 20 000 (0,59 %) con Pd 0,9 (`f4/H-012/03-validazione/v2_PD.txt`) [SIM] |
+| Fascia | 0,40 m = 0,20 d'errore d'ombra + mezzo corpo di 40 cm | `f3/H-012/01-scene-dinamiche/SOLUZIONE.md`, B5 |
+| Durata dello strato 1 | nessun tetto; esce l'età | correzione C4 |
+| Rilascio dello strato 1 | per riaggancio, o cella per cella se «libero» per ≥ 3 fotogrammi oltre la fascia | `f4/H-012/03-validazione/MISURE.md`, A7; con ostacolo fermo: mai |
+| Fine del «previsto» | quando il cerchio copre metà dell'area del cuneo in griglia; «perso» è assorbente | fissata, non misurata (K-004) |
+| Riaggancio | rilevamento entro la fascia dell'ombra d'ingresso, a più di 0,40 m da ogni altro bordo del non osservato, con una sola traccia pendente; altrimenti «identità ambigua» | correzione C1 |
+| Portata della garanzia | solo chi è stato visto ≥ 4 fotogrammi | con 3 la traccia manca nel 27,1 % dei casi, con 4 nel 5,2 % (`f4/H-012/01-avversario/CONTROPROVE.md`, attacco 7) |
+
+| Correzione | Controesempio (prima) | Dopo | File |
+|---|---|---|---|
+| C1 riaggancio | riaggancio sbagliato e muto nel 9,5–100 % delle scene (200 per riga) | 0,0 %. Costo: riemersioni legittime riagganciate 100 % fino a 2,3 m, 86,3 % a 2,5 m, 0 % a 2,8 m | `f4/H-012/01-avversario/risultati_a01.txt` |
+| C4 tetto di 10 s | sosta di 11 / 12 / 20 / 60 s: 15 / 30 / 150 / 750 fotogrammi di nascosto senza avviso | 0. (`f4/H-012/01-avversario/CONTROPROVE.md`, §2 scrive «30–750», la versione 2 «15–750»: il file dà 15 per la sosta di 11 s) | `f4/H-012/01-avversario/risultati_a04.txt` |
+| C5 estensione dello strato 1 | con le celle contigue copriva il 100 % del non osservato: 45,47 m² contro 1,01 d'ombra | 1,01 m² | `f4/H-012/01-avversario/risultati_a05.txt` |
+| Rilascio | rilascio a soggetto nascosto nel 92,5–99,5 % delle soste (prova sul punto previsto) | nessuno [COSTR] | `f4/H-012/03-validazione/MISURE.md`, A7 |
+
+- **Prove dell'insieme** [SIM] (`f4/H-012/03-validazione/MISURE_V2.md`, N = 400 per cella).
+  - Garanzia: 0 passaggi falliti su 14 400 (36 celle, limite 0,75 % per cella) con Pd = 1; i bracci che dovevano fallire sono falliti.
+  - Stessa identità al ritorno: 100 % in 27 celle (limite inferiore 99,25 %); 99,7–100 % con Pd 0,9.
+  - Demo corretta: buio 1,07–1,13 s, «previsto» 0,40–0,53 s, «perso» 0,47–0,67 s; area prevista ancora mostrata alla riemersione nello 0,5–1,2 % dei transiti. **La continuità la porta lo strato 1, non l'area prevista** (`f4/H-012/05-correzioni/SOLUZIONE_V2.md`, §1; `f4/H-012/09-arbitro/VERDETTO.md`, §5).
+- **Discordanza sulla durata del «previsto»** (K-211 nel triage di f8, **[prel.]**; qui stanno tutte le cifre, gli altri capitoli rimandano). `f4/H-012/05-correzioni/SOLUZIONE_V2.md`, §1: 0,6–0,7 s (da `f4/H-012/01-avversario/CONTROPROVE.md`, attacco 11); `f4/H-012/03-validazione/MISURE_V2.md`, riga P4, e `f4/H-012/09-arbitro/VERDETTO.md`, K-004: 0,40–0,53 s; `f4/H-012/09-arbitro/VERDETTO.md`, §5: «circa mezzo secondo»; `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md`, §2c, scritto prima della versione 2: «1–1,6 s»; **[prel.]** due emulazioni di f8: 0,67–0,87 e 0,66–1,14 s (`f8-continuita/10-triage/TRIAGE.md`). Causa non verificata; decide il banco di f8 (§5.3).
+- **Costo dichiarato.** La fascia mette «possibile presenza» sul 28,2 % del suolo visto libero: circa 1,34 m² su 4,75 [arch.] (`f4/H-012/01-avversario/risultati_a05.txt`). Con Pd 0,9, nel 12,8–14,3 % dei passaggi resta acceso uno strato 1 a soggetto visibile (`f4/H-012/03-validazione/MISURE_V2_bis.md`).
+- **Margine sull'errore d'ombra** [SIM] (`f4/H-012/03-validazione/MISURE.md`, 1200 passaggi per riga). Corpo di 40 cm: a −20 cm 0 fuori, a −30 cm 107 (8,9 %), a −40 cm 1075 (89,6 %); corpo di 60 cm a −30 cm: 399 (33,3 %). Oltre i 20 cm ipotizzati il margine è meno di 10 cm.
+- **Invarianti:** 3, 4, 6, 7.
+
+| Contraddizione aperta | Enunciato e cifra | La decide |
+|---|---|---|
+| K-014 | con Pd 0,9 e ombra stimata 20 cm più stretta del vero: 13 passaggi falliti su 4800; 0 su 9600 a 0 e +20 cm. `validazione-4` li riduce a 8, o a 2 se la traccia chiusa rinasce: non chiude (`f4/H-012/03-validazione/MISURE_V2_bis.md`) | hardware: celle «libero» dentro l'ombra vera, 150 fotogrammi |
+| K-016 | un secondo soggetto mai visto che esce dalla stessa ombra è riagganciato con l'identità sbagliata, senza avviso, in 2400 casi su 2400 (`f4/H-012/03-validazione/v2_SECOND.txt`) | H11; regola nuova |
+| K-018 | «a meno di 0,40 m da un'ombra» è sempre vero per l'ombra propria della persona: alla lettera il ramo «campo aperto» non scatta mai (`f5/02-audit/AUDIT.md`, ipotesi 4) | regola scritta prima del codice |
+| K-004 | «metà dell'area del cuneo»: le letture davano «perso» fra 0,8 e 5,8 s (`f4/H-012/01-avversario/risultati_a05.txt`) | — |
+
+- **Limiti dichiarati.** Ostacolo che si muove; rilevamenti falsi al bordo del pannello (mai simulati); un'ombra in cui non è entrato nessuno resta «in ombra», senza avviso. «Perso» si dice sempre «può aver lasciato l'area».
+- **Condizioni:** 2, 3, 5, 6, 7, 8. **Costo:** 9 ore [STIMA] (8 nella versione 1). **Dipende da:** B2 (maschera d'ombra), B4.
+- **[prel.]** Lo strato 2 com'è **non rispetta** l'imperativo della continuità (quarto addendum) per nove ruoli su nove: il nucleo emette una stima solo nel 35–50 % dei cicli senza osservazione in demo; in gara «perso» non assorbente e cinque predittori (`f8-continuita/10-triage/TRIAGE.md`, §1, §3; qui §5.3). «Il cuneo arriva sempre al bordo della portata» è smentito per ostacoli più bassi del sensore (fatto F-109 in `f7-estensione/10-triage/TRIAGE.md`; già `f5/02-audit/AUDIT.md`, ipotesi 5).
+
+#### B6. Ramo asincrono di riconoscimento
+
+- **Entra / esce.** Entra l'immagine a colori a bassa frequenza; esce l'etichetta «persona / non persona» su una traccia che esiste già, mostrata a schermo.
+- **Parametri.** RF-DETR-N (2,3 ms su scheda grafica T4, licenza Apache 2.0) [roboflow-rf-detr], oppure YOLO26n (38,9 ± 0,7 ms su CPU, licenza AGPL-3.0; per l'elenco dei riferimenti è una CPU da server: §10.1, riquadro 6, l) [ultralytics-yolo26] : verificati in `f3/fonti/FONTI_VERIFICATE.md`. Il tempo sulla macchina della squadra: **manca**.
+- **Regole.** Non crea né chiude tracce, non tocca celle, non decide allarmi (invariante 5).
+- **Stato.** Nessuna correzione, nessun attacco specifico. Copre la parola «riconoscere» della traccia per lettura dichiarata (`f4/H-012/05-correzioni/SOLUZIONE_V2.md`, §7). Le classi d'ostacolo (muro, porta, gradino) non sono fra quelle del rilevatore: 0 su 7 (`f2/05-selezione/SELEZIONE.md`, H-006).
+- **Costo:** 4 ore [STIMA]; primo taglio se manca tempo (`f5/02-audit/AUDIT.md`, ipotesi 8; `f4/H-012/09-arbitro/VERDETTO.md`, §6). **Dipende da:** B4.
+
+#### B7. Logica di decisione
+
+- **Entra / esce.** Entrano griglia e tracce; esce, per ogni settore angolare, il messaggio più grave. È una tabella di regole scritta a mano, non un modello appreso.
+
+| Parametro | Valore | Da dove viene, stato |
+|---|---|---|
+| Zona di valutazione | 1,24–3 m dentro il campo; anello cieco, fuori campo e oltre portata si dicono una volta all'avvio | proposta `validazione-3`, correzione C3 |
+| Graduatoria | buco > mobile in avvicinamento > occupato > previsto > perso con possibile presenza > in ombra > «nessun ostacolo osservato fino a d metri» | `f4/H-012/05-correzioni/SOLUZIONE_V2.md`, B7 |
+| Larghezza del settore | 10° nelle prove; nella versione 2: **manca** | `f4/H-012/01-avversario/risultati_a03_correzione.txt` |
+
+- **Corretto rispetto alla versione 1.** Con «non osservato» sempre in testa, «mobile in avvicinamento» non usciva mai (0 %). Dopo C3: 100 / 100 / 99,5 % con il suolo valido al 100 / 99 / 95 % (200 ripetizioni); 65,6 % all'80 % [SIM], solo nel simulatore dell'avversario.
+- **Regola fissa:** mai «via libera» (condizione 9). **Invarianti:** 2, 5.
+- **Limiti.** Mai riprovata insieme al resto (`f4/H-012/09-arbitro/VERDETTO.md`, §2). Con buchi persistenti «buco» copre il messaggio utile (`f5/02-audit/AUDIT.md`, ipotesi 6). Un oggetto alto fino a 0,42 m a 0,8 m dà «nessun ostacolo fino alla portata» nel 100 % dei fotogrammi (`f6-specializzazione/03-avversario/ATTACCO_SPECIALIZZAZIONE.md`, S1).
+- **Costo:** 3 ore [STIMA] (2 nella versione 1). **Dipende da:** B2, B5.
+
+#### B8. Uscita e segnale di «affidabilità persa»
+
+- **Entra / esce.** Entrano i messaggi, il contatore di fotogramma, la quota di celle valide, l'IMU. Escono: in voce un segnale di 0,3 s per stato (C11), la frase «direzione, distanza, stato» solo a stato stabile; a schermo tre colori con l'età e il contatore della latenza; il segnale «affidabilità persa».
+
+| Causa di «affidabilità persa» | Soglia | Ritardo in simulazione | Origine |
+|---|---|---|---|
+| Nessun fotogramma nuovo, o tre identici | contatore fermo; contenuto uguale | 0,13 e 0,07 s. **I file non concordano su quale cifra a quale causa:** nel torneo 0,13 s è la regola sul contatore e 0,07 quella sul contenuto (`f2/04-torneo/esito_attacchi_parte1.txt`, righe 63–64); nell'attacco 10 «nessun fotogramma nuovo» 0,07 s e «ripetuto con contatore nuovo» 0,13 s (`f4/H-012/01-avversario/risultati_a10.txt`) | H-017 (`f3/H-012/01-scene-dinamiche/SOLUZIONE.md`, B8) |
+| Poche celle valide | sotto metà della taratura per 3 fotogrammi | 0,13 s | C10 |
+| Sensore mosso | IMU a più di 0,5° dalla taratura, o oltre 5°/s | 0,00 s | C10; rumore dell'IMU ipotizzato, non di scheda |
+
+- **Corretto rispetto alla versione 1.** C10: con il 10 % di celle valide, o dopo un urto, nessun segnale in 3 s → 0,13 s e 0,00 s, 0 falsi in 60 s (`f4/H-012/01-avversario/risultati_a10_correzione.txt`). C11: la frase finiva a stato già scaduto nel 100 % dei passaggi → 0 % (n = 500; `f4/H-012/01-avversario/risultati_a11_correzione.txt`). Entrambe solo nel simulatore dell'avversario.
+- **Latenza: [NR]** (K-011; H12). Soglia di R7: 95° percentile ≤ 150 ms dalla marca di cattura alla chiamata audio. Le sole voci note sommano circa 155 ms in media (`f3/H-012/02-validazione/VERIFICA.md`, §3c): 95 ms dall'esposizione all'applicazione a 30 fps [realsense-alta-velocita-d435]; 22 ms di calcolo; almeno 21,3 ms di audio [pipewire-conf]. Riaperta il 14 novembre da [arch.] la prima pagina (con uno strumento che riassume: prova debole): i 95 ms comprendono schermo, scheda grafica e USB, cioè sono un limite superiore per la sola camera (lo conferma l'elenco dei riferimenti: §10.1, riquadro 6, b).
+- **Ipotesi nascoste.** `f5/02-audit/AUDIT.md`, ipotesi 1: con i filtri accesi una mano sul sensore non fa scendere le celle valide; la pagina [realsense-filtri-post] conferma la persistenza predefinita «valido in 2 degli ultimi 4» e il riempimento dei buchi con un pixel vicino (riaperta il 14 novembre da [arch.], stessa cautela). `f5/02-audit/AUDIT.md`, ipotesi 7: se la camera salta l'1 % dei fotogrammi sono 9 segnali falsi attesi in 60 s.
+- **Condizioni:** 1 (autoverifica all'avvio: mano sul sensore, pixel validi sotto il 10 % in 3 fotogrammi, altrimenti il programma non parte), 4 (il criterio dell'IMU vale solo a sensore fermo), 9. **Invarianti:** 8. **Aperte:** K-010 (suoni o battito: tre persone bendate, ≥ 54 stati giusti su 60), K-011, K-015.
+- **Costo:** 6 ore [STIMA] (5 nella versione 1). **Dipende da:** B7. **Lo invalida:** una camera che ripete i fotogrammi cambiando il contatore [NV-HW].
+- **[prel.]** Con la latenza nota la fascia di 0,40 m copre fino a 0,40 / (0,133 + 0,155) = 1,39 m/s (`f9-preproposta/02-tempo-reale/CONSEGNA.md`).
+
+#### B9. Demo e accettazione
+
+- **Che cosa si mostra.** Cinque atti: campo mezzo coperto; ostacolo fermo oltre 1,1 m; attraversamento; passaggio dietro il pannello mentre una seconda persona si muove in vista; sosta, o mano sul sensore.
+- **Accettazione.** Sulle registrazioni riprodotte, non dal vivo, con le prove H0–H13 (due persone, circa 2 h 40; H0–H6 nella prima ora perché possono cambiare sensore, portata e luogo; `f3/H-012/03-metrologo/PIANO_MISURE.md`).
+
+| Parametro | Valore | Da dove viene, stato |
+|---|---|---|
+| Attore | sulla linea a non più di 2,3 m | C2: a 3 m le tracce confermate erano lo 0,4 % (500 transiti), a 2,3 m il 100 % (`f4/H-012/01-avversario/CONTROPROVE.md`) |
+| Pannello, larghezza | 1 m; quello da 0,5 m solo dopo dieci passaggi riusciti sull'hardware | con 0,5 m la previsione conteneva la riemersione nel 14,2–16,5 %, con 1 m nel 97,0–100 % (`f4/H-012/03-validazione/MISURE.md`, A3) |
+| Pannello, altezza | almeno 1,5 m | condizione 3; `f5/02-audit/AUDIT.md`, ipotesi 5 |
+| Dietro il pannello | una sola persona | condizione 3 (K-016) |
+| Criterio delle 30 occlusioni (H9) | ≥ 28 regge; ≤ 22 smentita; fra 23 e 27 altre 30, e ≥ 52 su 60 | `f3/H-012/03-metrologo/PIANO_MISURE.md`: il «26 su 30» secco promuoveva una taratura mediocre nel 25,5 % dei casi, i due stadi nel 14,2 % [conto] |
+
+- **Discordanza sulla distanza del pannello.** La versione 2 non la fissa: **manca**. Nei file: 1,15 m (C2, «stessa ombra di 1 m»: pannello da 0,5 m); 1,5 m con attore a 2,5 m (`f4/H-012/03-validazione/MISURE.md`); 1 m di larghezza a 1,9 m con attore a 2,3 m, 1,21 m d'ombra (`f4/H-012/03-validazione/MISURE_V2.md`: la sola riprovata con le correzioni insieme). L'attacco alla specializzazione chiede il pannello a non meno di 1,7 m dal sensore (§4.1.8, S1b; §8.5, C3). Punto raccolto in §10.1, riquadro 3.
+- **Critica nuova [arch.], conto non vagliato.** «Almeno 1,5 m» viene dall'audit, con il pannello a 1,15 m: lì il raggio più alto del campo passa a 1,49 m. A 1,9 m lo stesso raggio passa a 1,67 m: sopra un pannello alto 1,5 m la camera vede, a 2,3 m, tutto ciò che supera 1,56 m, cioè la testa dell'attore. Altezza minima = 1,2 m + distanza del pannello × tan 14°. La smentisce un metro a nastro (H0).
+- **Limiti.** La seconda persona dell'atto 4 non è mai stata simulata (`f4/H-012/05-correzioni/SOLUZIONE_V2.md`, §9); se passa davanti all'attore è un ostacolo mobile, che il nucleo dichiara di non reggere (`f5/02-audit/AUDIT.md`, ipotesi 4).
+- **Prossima prova che cambia la decisione** (`f4/H-012/09-arbitro/VERDETTO.md`, §6): H0–H6 più tre controlli (autoverifica dei filtri; celle per stato su 150 fotogrammi della sala vuota; «libero» dentro l'ombra vera), poi H12: circa un'ora e quaranta in due.
+- **Costo:** 12 ore [STIMA] (10 nella versione 1). **Dipende da:** tutti i blocchi, un pannello opaco, nastro a terra, un luogo lontano da vetri e finestre.
+- **[prel.]** (`f8-continuita/10-triage/TRIAGE.md`, §1) Il criterio H9 misura l'identità, non la continuità: passa anche se chi torna non è mai coperto dalla previsione; un buio di 1,1 s non mostra una previsione di 2–5 s.
+
+### 2.3 I nove invarianti e il loro stato
+
+Un invariante è una regola che deve valere a ogni ciclo, da scrivere come controllo nel codice. Testo dalla versione 2 §3; garanzia da `f3/H-012/02-validazione/VERIFICA.md`, §2; stato da `f4/H-012/01-avversario/CONTROPROVE.md`, §3, `f5/02-audit/AUDIT.md` e `f4/H-012/09-arbitro/VERDETTO.md`, §1.
+
+| # | Regola | Stato oggi |
+|---|---|---|
+| 1 | «Libero» solo dove il suolo è stato visto in almeno uno degli ultimi 3 fotogrammi; esce con l'età; non si deduce mai | Riscritto e indebolito di proposito (C9). La regola è [COSTR] (premesse: pavimento piano, profondità valida = giusta). **Il margine è [SMENT]:** la versione 2 scrive «0,33 m in 0,13 s a 2,5 m/s, meno della fascia»; con la latenza nota sono 0,288 s e 0,72 m, e il margine è zero già a 1,4 m/s (`f5/02-audit/AUDIT.md`, ipotesi 3; `f4/H-012/09-arbitro/VERDETTO.md`). Aperta K-015 |
+| 2 | Buco, fuori campo, oltre portata, anello cieco, ombra: mai «libero» | [COSTR], se un buco arriva come «nessun dato». Nessun «libero» falso in dodici attacchi e 14 400 passaggi: controllo della logica, non dato (`f5/02-audit/AUDIT.md`, ipotesi 2). Lo violano i filtri accesi e il vetro. [NV-HW] |
+| 3 | Nessuna uscita «osservato» senza una misura in porta nel ciclo | [COSTR] **in un solo verso**: un rilevamento falso al bordo del pannello uscirebbe «osservato». Mai simulato [NR] |
+| 4 | «Previsto» e «possibile presenza» non stanno su celle «libero» oltre la fascia | [COSTR] sull'ombra stimata; su quella vera è una misura. Costo: 28,2 % del suolo visto libero |
+| 5 | Nessun timer e nessun modello appreso produce un «libero», toglie un avviso o decide un allarme | [COSTR]. Nella versione 1 il tetto di 10 s lo violava nella sostanza: corretto con C4 |
+| 6 | Evidenza negativa solo dove la profondità è valida, e mai sul punto previsto | [COSTR]; riscritto dopo `f4/H-012/03-validazione/MISURE.md`, A7; non attaccato. Tessuti scuri [NV-HW] |
+| 7 | Lo strato 1 finisce solo per riaggancio o per celle viste libere | [COSTR] con ostacolo fermo; riscritto senza tetto. Controesempi [SIM]: K-014 (13 su 4800), K-016 (2400 su 2400) |
+| 8 | Ogni uscita porta il contatore del sensore | **Necessario, non sufficiente:** servono anche celle valide e IMU (C10). Sulla camera [NV-HW] |
+| 9 | Una grandezza non osservabile (massa, accelerazione) non compare in uscita | [COSTR] (interfaccia); non attaccato, nessun caso che lo violi |
+
+Per l'arbitro gli invarianti 2, 5 e 9 sono una «dimostrazione condizionata» alle premesse; 2, 3, 5 e 9 reggono come logica in ogni profilo d'uso; 1, 4, 6 e 7 sono provati solo a sensore fermo, con la griglia che coincide col mondo (`f5/02-audit/AUDIT.md`, ipotesi 12; `f4/H-012/09-arbitro/VERDETTO.md`, §4). **[prel.]** f8 propone un decimo invariante sulla continuità e di riscrivere il 6 e il 9 (`f8-continuita/10-triage/TRIAGE.md`, C-014; §5.3).
+
+### 2.4 Costo, dipendenze, condizioni
+
+| Blocco | B1 | B2 | B3 | B4 | B5 | B6 | B7 | B8 | B9 | Totale |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Ore-persona, versione 2 (`f4/H-012/05-correzioni/SOLUZIONE_V2.md`, §2) | 3 | 6 | 6 | 5 | 9 | 4 | 3 | 6 | 12 | **54** |
+| Ore-persona, versione 1 (`f3/H-012/01-scene-dinamiche/SOLUZIONE.md`, §2) | 3 | 6 | 5 | 5 | 8 | 4 | 2 | 5 | 10 | 48 |
+
+- **Tutte [STIMA]**, senza prova (`f4/H-012/05-correzioni/SOLUZIONE_V2.md`, §9), e senza l'integrazione.
+- **Ore in fila: due cifre.** B1 → B2 → B3 → B4 → B5 → B7 → B8 in serie fanno 38 ore (`f5/02-audit/AUDIT.md`, ipotesi 8). [prel.] Con corsie parallele e dati finti dietro le interfacce: 26,8 ore in fila, e 59,5 ore-persona probabili (39–115) con l'integrazione (`f9-preproposta/11-pianificatore/CONSEGNA.md`). Contro 14 ore e 5 persone (sesto e settimo addendum) comanda la catena, non il numero di mani (bilancio in §6.1).
+- **Che cosa si può tagliare.** Per l'audit: B6, lo strato 2, l'assegnazione ungherese, la regola «si muove» fine; senza B2, il cuneo e i contatori di B8 non c'è demo (`f5/02-audit/AUDIT.md`, ipotesi 8). **[prel.]** Dopo il quarto addendum lo strato 2 non si taglia più: è la continuità visiva (`f7-estensione/10-triage/TRIAGE.md`, §6; i due file che si contraddicono sono messi a fronte in §6.1, «Candidati al taglio»).
+- **Mai provato** (`f4/H-012/05-correzioni/SOLUZIONE_V2.md`, §9; `f4/H-012/09-arbitro/VERDETTO.md`, §2). Provate insieme da un altro autore: C1, C4, C5, C6, C8, media di 3 fotogrammi, rilascio cella per cella, geometria nuova (`f4/H-012/03-validazione/MISURE_V2.md`). Solo nel simulatore dell'avversario: C3, C9, C10, C11. Senza prova: «non confermato», «metà dell'area del cuneo», la seconda persona dell'atto 4, B7 e B8 nell'insieme, il canale laterale dei sensori a tempo di volo (un conto d'aree: la camera vede il 20,0 % del disco di 3 m, tre sensori da 60° aggiungono il 22,2 %; `f4/H-012/01-avversario/CONTROPROVE.md`, attacco 12; [st-vl53l7cx]). E tutto ciò che dipende dal sensore vero.
+
+**Le nove condizioni del verdetto** (`f4/H-012/09-arbitro/VERDETTO.md`, §4): (1) filtri della camera spenti e autoverifica all'avvio; (2) fascia a formula, v_max · (età + latenza) più l'errore d'ombra, oppure velocità coperta dichiarata (circa 1,4 m/s); soglie in secondi; (3) pannello alto almeno 1,5 m e largo 1 m, attore a non più di 2,3 m, una sola persona dietro; (4) profilo «sensore fermo» dichiarato: nessuna soglia vale in moto; (5) C6 obbligata, con il suo costo; (6) garanzia solo per chi è stato visto almeno 4 fotogrammi, con una traccia pendente e ostacolo fermo; (7) limiti scritti: rilevamenti mancati vicino all'ombra, secondo soggetto, vetro, ostacoli bassi sotto 1,09 m, sole; (8) regola per l'ombra propria fissata prima del codice; (9) la dicitura «provato solo in simulazione, a sensore fermo», e mai «via libera».
+
+---
+
+## 3. Sensori e hardware
+
+Nessun sensore è mai stato acceso. Ogni cifra del capitolo è una **dichiarazione del costruttore**, un **conto** su quelle dichiarazioni, o un risultato **in simulazione a sensore fermo**: nessuna è misurata su un esemplare della squadra. L'autore della sezione [sens.] non ha eseguito prove nuove; dei 24 indirizzi citati ha controllato il 14 novembre solo che rispondano, non il contenuto.
+
+### 3.1 In breve
+
+- **Sensore principale:** una camera di profondità a *stereo attivo* (due camere a infrarossi e un proiettore di trama: la distanza viene dallo scarto fra le due immagini) con unità inerziale (IMU), ferma su treppiede a 1,2 m, inclinata di 15° in basso (`f4/H-012/05-correzioni/SOLUZIONE_V2.md`, B1). È l'ipotesi H-001, **adottata** (`f2/05-selezione/SELEZIONE.md`).
+- **Il modello non è deciso.** Il nucleo dice «quella posseduta dalla squadra» fra D455, D435i e Gemini 335; il settimo addendum dice che oggi la squadra non ha sensori e che l'inventario di quelli di casa arriva fra 5–6 ore. **Non risolto.**
+- **Tre sensori a tempo di volo non danno 360°**, ma al più 180° (§3.3): verificato sulle fonti, per i soli sensori citati (`f4/H-012/09-arbitro/VERDETTO.md`, §5, punto 8).
+- I limiti del sensore principale sono **dichiarati, non misurati** (§3.4); in moto **nessuna soglia vale** (§3.6); le prime ore si fanno su registrazioni e su un sensore simulato (§3.7).
+
+### 3.2 I sensori considerati
+
+**Tempo di volo multizona (ST, famiglia VL53).** Misurano la distanza dal tempo di andata e ritorno di un impulso di luce a 940 nm (`f9-preproposta/07-lidar/CONSEGNA.md` [g]), su 4×4 o 8×8 zone. Solo I2C, niente USB: serve un microcontrollore (`f10-dati/04-embedded/PREVISIONI.md`, E10 [g]).
+
+| | VL53L5CX | VL53L7CX | VL53L8CX | File |
+|---|---|---|---|---|
+| Campo (diagonale) | 45°×45° (63°) | 60°×60° (90°) | 45°×45° (65°) | `f3/fonti/FONTI_VERIFICATE.md` [g] |
+| 4×4 a 30 Hz, bianco 88 %: buio / 5 klx | 4,0 / 1,7 m | 3,5 / 0,65 m | 4,0 / 2,85 m | `f3/fonti/FONTI_VERIFICATE.md`, punti 2–3 [g]; `f10-dati/02-sensori/parametri_sensori.json` |
+| 8×8 a 15 Hz, bianco 88 %: buio / 5 klx | manca | 2,0 / 0,5 m | 4,0 / 1,55 m | `f3/fonti/FONTI_VERIFICATE.md`, punti 2–3 [g]; `f10-dati/02-sensori/parametri_sensori.json` |
+| 8×8 a 15 Hz, grigio 17 %: buio / 5 klx | manca | 0,8 / 0,35 m | 2,45 / 1,15 m | `f1/985ccd9bca46/PREVISIONI.md`, P3; `f10-dati/02-sensori/parametri_sensori.json` |
+| Accuratezza in 8×8 oltre 0,2 m | manca | ±5 % buio; ±9–14 % a 5 klx | ±5 % buio; ±5–8 % a 5 klx | `f10-dati/02-sensori/MODELLO_SENSORE.md`, §2 |
+| Zona in 8×8: passo; lato a 2 m | 5,6°; manca | 7,5°; 13 cm | 5,6°; 10 cm | `f1/985ccd9bca46/PREVISIONI.md`, P2; `f10-dati/02-sensori/MODELLO_SENSORE.md` [ries.] |
+
+Schede: [st-vl53l5cx] DS13754 Rev 2, [st-vl53l7cx] DS13865 Rev 6, [st-vl53l8cx] DS14161 Rev 7, guida [st-um3038]: copie ospitate da rivenditori (st.com non risponde: `f3/fonti/FONTI_VERIFICATE.md`), forse non l'ultima revisione. Da sapere: le portate sono «tipiche», al 90 % di misure valide (`f10-dati/02-sensori/parametri_sensori.json`); l'accuratezza è data a **2,7 σ** ([ricontr.] DS13865, riga 883 della copia locale), quindi lo scarto tipo per zona in 8×8 al buio è 1,9 % della distanza, 3,7 cm a 2 m (`f10-dati/02-sensori/MODELLO_SENSORE.md`, §2 [ries.]); «5 klx» è la condizione di prova della scheda, non il sole pieno (`f3/fonti/FONTI_VERIFICATE.md`, punto 3); ogni zona porta un codice (5 valida, 9 valida con impulso largo, 255 nessun bersaglio: `f10-dati/02-sensori/parametri_sensori.json`), e «nessun bersaglio» non è «libero»; l'L7CX fa al più 15 Hz in 8×8 e 60 Hz in 4×4 (`f10-dati/02-sensori/parametri_sensori.json`). Prezzi: non verificati (`f1/985ccd9bca46/CONSEGNA.md`). **Stato:** dichiarato dal costruttore, riscontrato nel testo delle schede.
+
+**Camere a tempo di volo.** [orbbec-femto-bolt] (850 nm): campo largo 120°×120° con portata 0,25–2,88 m (512×512, fino a 30 fps) o 0,25–2,21 m (1024×1024, 5 o 15 fps); campo stretto 75°×65° con 0,5–3,86 m o 0,5–5,46 m; 418 $ nel negozio Orbbec; ambiente «Indoor» nella pagina e «Indoor/Semi-Outdoor» nella scheda PDF del 2023 (`f3/fonti/FONTI_VERIFICATE.md`, punti 1 e 8 [g]). Più unità insieme: catture sfalsate di almeno 160 µs con cavo di sincronizzazione, o i laser interferiscono ([orbbec-femto-bolt-sincronia]; `f3/fonti/FONTI_VERIFICATE.md` [g]). Camera ToF [luxonis-tof]: 640×480, 0,2–5 m, «<1% indoors, <2% outdoors», senza dire a quale illuminamento (`f3/fonti/FONTI_VERIFICATE.md` [g]). All'aperto l'uso del ToF resta limitato dall'interferenza del sole ([qiu2023]: Qiu, Martínez-Sánchez, Arias, ISPRS Annals 2023; `f3/fonti/FONTI_VERIFICATE.md` [g]). Camera Arducam 240×180 e camere a matrice SPAD: nessuna scheda controllata (`f1/985ccd9bca46/CONSEGNA.md`).
+
+**Camere a stereo attivo (la famiglia scelta).**
+
+| | RealSense D455 | RealSense D435i | Orbbec Gemini 335 | File |
+|---|---|---|---|---|
+| Campo di profondità | 87°×58° | 87°×58° | 90°×65° a 1280×800; 90°×60° a 848×480 | `f3/fonti/FONTI_VERIFICATE.md` [g]; `f10-dati/02-sensori/parametri_sensori.json` |
+| Base (distanza fra le due camere) | 95 mm | 50 mm | 50 mm | `f10-dati/02-sensori/PREVISIONI.md`, P1, P3 [g] |
+| Fascia ideale; minimo a 848×480 | 0,6–6 m; 0,35 m | 0,3–3 m; 0,195 m | 0,26–3 m; 0,18 m | `f3/fonti/FONTI_VERIFICATE.md`; `f10-dati/02-sensori/PREVISIONI.md`, P2; `f10-dati/02-sensori/parametri_sensori.json` |
+| Errore dichiarato | RMS ≤ 2 % entro 4 m | RMS ≤ 2 % entro 2 m | ≤ ±2 % a 2 m | `f10-dati/02-sensori/PREVISIONI.md`, P1, P3 [g] |
+| Rumore a 2 / 3 / 4 m, nominale (conto) | 0,8 / 1,8 / 3,2 cm | 1,5 / 3,4 / 6,0 cm | 1,6 / 3,6 / 6,4 cm | `f10-dati/02-sensori/MODELLO_SENSORE.md`, §1 [ries.] |
+| Rumore a 2 / 3 / 4 m, limite di scheda (conto) | 2,0 / 4,5 / 8,0 cm | 4 / 9 / 16 cm | 3,0 / 6,8 / 12 cm | `f10-dati/02-sensori/MODELLO_SENSORE.md`, §1 [ries.]; `f2/04-torneo/TORNEO_parte1.md` |
+| Fotogrammi al secondo a 848×480 | 30, fino a 90 | 30, fino a 90 | 30, fino a 60 | `f10-dati/02-sensori/parametri_sensori.json` |
+| Otturatore globale | profondità e colore | solo profondità | solo profondità | `f3/fonti/FONTI_VERIFICATE.md`; `f10-dati/02-sensori/parametri_sensori.json` |
+| IMU | BMI085, giroscopio 200/400 Hz | idem | 50–1000 Hz | `f10-dati/02-sensori/parametri_sensori.json` |
+| Filtri del costruttore | nessuno nel sensore | nessuno nel sensore | **attivi di norma** | `f10-dati/02-sensori/MODELLO_SENSORE.md`, §1 |
+| Prezzo (dollari, rivenditori) | 399–417 | 362–550 | 330–369 | `f1/985ccd9bca46/PREVISIONI.md`, P6, **non ricontrollati**; per l'elenco dei riferimenti la pagina citata per la D455 dà ora 650 $ (§10.1, riquadro 6, e) |
+
+Il rumore «nominale» è il conto σ(z) = z²·s/(f·B) con s = 0,08 pixel, il valore che il costruttore usa per la curva della D435; applicarlo alla D455 è un'ipotesi (`f10-dati/02-sensori/MODELLO_SENSORE.md`, §1). **Una sola misura di terzi:** D435 su parete bianca fra 0,4 e 2,1 m, 1,83 cm a 2 m, cioè 1,21 volte il nominale; a 3 m solo estrapolazione (`f10-dati/02-sensori/PREVISIONI.md`, P5; [ahn2019]: Ahn, Chae, Noh, Nam, Hong, UR 2019, pp. 707–711, dati bibliografici da `f10-dati/02-sensori/parametri_sensori.json`). I valori di scheda valgono su bersaglio bianco, frontale, nell'80 % centrale del campo. Fonti: [realsense-confronto-camere], [realsense-d400-scheda], [realsense-bkm-taratura], [orbbec-gemini-335], [orbbec-gemini-330-scheda]. Tre OAK-D Pro W (127° orizzontali, 499–529 $ l'una [R]) sarebbero l'unica terna che chiude i 360°: scartate per il costo (`f1/985ccd9bca46/CONSEGNA.md`; non controllate dal curatore).
+
+**LiDAR** (di competenza dell'esperto di LiDAR: qui solo i numeri).
+
+| | RPLIDAR C1 (2D) | LD19 (2D) | File |
+|---|---|---|---|
+| Passo angolare; misure al secondo; giri | 0,72°; 5000; 10 Hz (8–12) | 0,8°; 4500; 10 Hz (5–13) | `f3/fonti/FONTI_VERIFICATE.md`, punto 4; `f10-dati/02-sensori/parametri_sensori.json` |
+| Portata, bersaglio chiaro / scuro | 12 m (70 %) / 6 m (10 %) | 12 m / non dichiarata | `f3/fonti/FONTI_VERIFICATE.md`, punto 4; `f10-dati/02-sensori/parametri_sensori.json` |
+| Accuratezza; luce ambiente | ±30 mm; 40 klx | ±45 mm (scarto tipo 10 mm); 30 klx | `f10-dati/02-sensori/PREVISIONI.md`, P9; `f3/fonti/FONTI_VERIFICATE.md`, punto 4 |
+| Prezzo (dollari) | 79,99 | 69–70 [R] | `f1/985ccd9bca46/PREVISIONI.md`, P7 |
+
+Un solo piano a 360°. Su una persona larga 0,5 m cadono 13 punti (C1) o 12 (LD19) a 3 m (`f10-dati/02-sensori/MODELLO_SENSORE.md`, §3 [ries.]); su una gamba di 12 cm a 5 m 1,9 o 1,7 (`f2/04-torneo/TORNEO_parte1.md`, P3). L'ipotesi H-003 (LiDAR 2D più camera) è **esclusa** dal ramo: al petto è smentita (meno di 4 punti su una gamba; il busto copre 127°–155°), su palo resta possibile solo se l'utente vuole i 360° (`f2/05-selezione/SELEZIONE.md`). LiDAR 3D: Unitree L2, 360°×90°, 64 000 punti/s, giro completo a 5,55 Hz, 30 m (15 m al 10 %), 419 $; Livox Mid-360, 360°×59°, 40 m [R], 899–1092 $ [R] (`f1/985ccd9bca46/PREVISIONI.md`, P9; non controllati dal curatore). Fonti: [slamtec-rplidar-c1], [waveshare-rplidar-c1], [ldrobot-ld19-scheda], [unitree-l2], [livox-mid-360].
+
+### 3.3 Perché tre sensori a tempo di volo non danno 360°
+
+1. **Geometria.** Servono tre campi da 120°. Il multizona più largo, il VL53L7CX, ne ha 60°: la sua scheda scrive «three sensors can cover 180° x 60° FoV» ([ricontr.] riga 42 della copia locale; `f3/fonti/FONTI_VERIFICATE.md` [g]). Con L5CX o L8CX (45°) tre sensori fanno 135° (`f2/03-triage/TRIAGE.md`, F-001).
+2. **Risoluzione.** A 4 m una persona larga 0,5 m occupa 1,27 zone (passo 5,6°) o 0,95 (passo 7,5°): presenza sì, forma e traccia no (`f1/985ccd9bca46/PREVISIONI.md`, P2).
+3. **Portata.** Il sensore più largo è anche il più corto: in 8×8 2,0 m al buio e 0,5 m a 5 klx.
+4. **Camere ToF da 120°.** La Femto Bolt arriva a 2,88 m nel modo largo; tre costano 1254 $ e vanno sincronizzate; con tre campi da 120° esatti non c'è sovrapposizione per tararle fra loro (argomento geometrico, non verificato) (`f1/985ccd9bca46/CONSEGNA.md`, critiche 3–4).
+
+**Stati.** «Tre ToF multizona coprono 360°»: **smentito** sui sensori controllati (F-001; contraddizione K-009 risolta per i sensori citati: `f2/05-selezione/SELEZIONE.md`). «Tre camere ToF da 120°»: **non risolto**. Non è una ricerca esaustiva del mercato (`f3/fonti/FONTI_VERIFICATE.md`, punto 3).
+
+**Che cosa resta dei ToF.** Un canale laterale facoltativo di sola prossimità, che non dichiara mai «libero» (`f4/H-012/05-correzioni/SOLUZIONE_V2.md`, §8). Conto delle aree (`f4/H-012/01-avversario/risultati_a12.txt`): la camera vede il 20,0 % del disco di 3 m; tre ToF da 60° fino a 2 m aggiungono il 22,2 %; uno puntato in basso copre 0,68 dei 0,98 m² dell'anello cieco. **[prel.]** (`f9-preproposta/07-lidar/CONSEGNA.md`): a 5 klx i tre VL53L7CX aggiungono l'1,4 % (0,7 % sul grigio); restano 16,5° ciechi per lato; come «preallarme» con soglia a 0,5 m il margine a 1,4 m/s è 0,07 s: respinto; proposta corretta: VL53L8CX in 4×4 a 30 Hz, soglia a 1,5 m (margine 0,85 s), circa 9 ore-persona. L'interferenza fra il proiettore della camera (850 nm) e i ToF (940 nm) va provata sull'hardware.
+
+### 3.4 Il sensore principale: perché, e con quali limiti
+
+**Perché una camera frontale** (`f1/985ccd9bca46/CONSEGNA.md`, proposta lidar-1): 42–56 pixel su una persona a 4 m contro 1,3 zone; colore allineato per l'etichetta; un solo cavo USB, nessuna interferenza né taratura fra sensori; l'occlusione della demo avviene nel campo frontale. Fuori campo tutto è «non osservato» per costruzione. Costo stimato del blocco B1: 3 ore (`f4/H-012/05-correzioni/SOLUZIONE_V2.md`).
+
+- **Portata dichiarata.** Prima «0,5–3 m» (`f2/05-selezione/SELEZIONE.md`); ora «dove il rumore radiale del centro di una persona resta ≤ 5 cm», da misurare con la prova H1; griglia fino a 3 m (`f4/H-012/05-correzioni/SOLUZIONE_V2.md`, B1). Le tre curve di rumore usate nelle simulazioni (nominale, pessimista, del torneo) sono in §2.2, B1. *Stato:* conto da scheda, non verificato fino all'hardware. **[prel.]** (`f10-dati/02-sensori/MODELLO_SENSORE.md`, §6): le prime due curve sono quelle della **D435i**; con la D455 valgono la metà.
+- **Anello cieco** (suolo vicino non visto). Suolo visto solo da 1,24 m, cioè il 30 % dell'estensione 0,5–3 m; un ostacolo alto 15 cm è invisibile sotto 1,09 m (`f4/H-012/05-correzioni/SOLUZIONE_V2.md`, B1). Senza inclinazione: da 2,16 m; a 20°: da 1,04 m; camera in verticale a 15°: da 0,74 m (`f2/04-torneo/TORNEO_parte1.md`). *Stato:* conto geometrico, con l'altezza di 1,2 m ipotizzata.
+- **Cono cieco in alto.** Un ostacolo a 1,8 m di quota si vede solo oltre 2,41 m (a 20° oltre 3,79 m; a 30° mai) (`f2/04-torneo/TORNEO_parte1.md`); quota massima vista a 3 m: 1,95 m (`f10-dati/04-embedded/PREVISIONI.md` [ries.]). *Stato:* conto geometrico.
+- **Fuori campo.** La camera vede il 20,0 % del disco di 3 m (`f4/H-012/01-avversario/risultati_a12.txt`); il resto è sempre «non osservato».
+- **Vetro.** La lastra risulta «libero» in ogni griglia provata (`f2/04-torneo/TORNEO.md`, H-008; `f4/H-012/05-correzioni/SOLUZIONE_V2.md`, §7). *Stato:* **smentito** (R8 sul vetro), limite dichiarato; decide H2.
+- **Superfici scure.** Attesi buchi; rischio di profondità inventata. Una persona in nero vista tutta come buco toglie il 6,5 % dei pixel a 2,5 m e il 25,5 % a 1 m (`f9-preproposta/07-lidar/CONSEGNA.md`, conto **[prel.]**). *Stato:* **non verificato**; decidono P10 di `f1/985ccd9bca46/PREVISIONI.md` (almeno il 70 % di pixel validi a 4 m) e H1 con la giacca nera.
+- **Sole.** B1 è «invalidata se: sole» (`f4/H-012/05-correzioni/SOLUZIONE_V2.md`). Misura di terzi su una D435 a 0,67 m: riempimento sotto l'80 % a 7770 lux su tutte le tessere, a 4350 lux sulla più scura, letto dai grafici (`f10-dati/02-sensori/MODELLO_SENSORE.md`, §1; [dxomark-rapporto-camera3d]). *Stato:* K-009 **aperta**, costruttori discordi (`f2/05-selezione/SELEZIONE.md`); decide H3.
+- **Filtri del costruttore che riempiono i buchi.** RealSense, se il programma li crea: il filtro temporale rimette l'ultimo valore valido se il pixel era valido in 2 degli ultimi 4 fotogrammi; il riempimento dei buchi predefinito copia il vicino **più lontano** ([librealsense], file `doc/post-processing-filters.md`; `f10-dati/02-sensori/MODELLO_SENSORE.md`, §1; `f5/02-audit/AUDIT.md`, ipotesi 1). Gemini 335: post-elaborazione attiva di norma. Un buco diventa così sfondo, cioè «libero»: è il meccanismo della contraddizione K-014 secondo `f10-dati/02-sensori/MODELLO_SENSORE.md` (**[prel.]**; il cap. 4 ne descrive un altro: §10.1, riquadro 2). *Stato:* sostenuto dalla documentazione, non provato (P13 di `f10-dati/02-sensori/PREVISIONI.md`). Condizione 1 del verdetto: filtri spenti e autoverifica all'avvio (mano sul sensore: pixel validi sotto il 10 % in 3 fotogrammi, o il programma non parte) (`f4/H-012/09-arbitro/VERDETTO.md`, §4).
+- **Banda senza dato ai bordi.** (a) Al bordo sinistro dell'immagine: 40 / 20 / 13 pixel a 1 / 2 / 3 m (D455), 21 / 11 / 7 (D435i). (b) A sinistra di ogni bordo verticale di un oggetto vicino: 19,0 cm (D455) e 10,0 cm (D435i, Gemini 335) con ostacolo a 1 m e sfondo a 3 m (`f10-dati/02-sensori/MODELLO_SENSORE.md`, §1 [ries.]); 9,5 e 5 cm nella geometria della demo (`f5/02-audit/AUDIT.md`, ipotesi 10). Le simulazioni assumevano ±20 cm **simmetrici**, con meno di 10 cm di margine (`f4/H-012/05-correzioni/SOLUZIONE_V2.md`, §5). *Stato:* conto; lato confermato da [ahn2019] e dalla scheda, formula derivata (`f10-dati/02-sensori/PREVISIONI.md`, P8); **non risolto** (P11).
+- **Suolo visto di striscio.** Oltre 2,08 m il suolo è visto a più di 60° d'incidenza (68,2° a 3 m); l'unica misura di terzi dà rumore piatto fino a 60° e oltre 0,1 m a 75°, su un altro asse (`f10-dati/02-sensori/PREVISIONI.md`; `f10-dati/02-sensori/MODELLO_SENSORE.md`, §6 [ries.]). *Stato:* **non risolto** (P12): tocca il «libero» fra 2,1 e 3 m.
+- **Buchi fissi del pavimento.** Con l'1 % di celle sempre senza dato, l'83,6 % dei settori da 10° contiene un buco fisso (`f5/02-audit/AUDIT.md`, ipotesi 6, conto). *Stato:* non risolto; decide H5.
+- **Latenza e tempo.** Voci note: circa 155 ms in media contro la soglia di 150 (bilancio in §2.2, B8); dall'esposizione all'applicazione 95 ms a 30 fps, 47 a 60, 39 a 90, misurati dal costruttore nei modi 848×100 ([realsense-alta-velocita-d435]; `f3/H-012/02-validazione/VERIFICA.md`, §3c), che coprono circa 12° in verticale (non verificato: `f5/02-audit/AUDIT.md`, ipotesi 7). *Stato:* R7 **non risolta**; decide H12. Altro numero, **[prel.]**: 70 ms da un solo esempio della documentazione (`f10-dati/02-sensori/MODELLO_SENSORE.md`). La marca da usare è `SENSOR_TIMESTAMP` (metà dell'esposizione, orologio del dispositivo), non l'ora d'arrivo al calcolatore ([librealsense], file `doc/frame_metadata.md`; `f10-dati/02-sensori/MODELLO_SENSORE.md`, §1).
+- **IMU.** Il criterio «affidabilità persa se si scosta di 0,5° o supera 5°/s» (`f4/H-012/05-correzioni/SOLUZIONE_V2.md`, B8) vale solo a sensore fermo, con un rumore dell'IMU ipotizzato (`f4/H-012/05-correzioni/SOLUZIONE_V2.md`, §7).
+
+### 3.5 Montaggio e condizioni della demo
+
+- **Montaggio:** treppiede a 1,2 m (ipotesi: si misura con H0, ±1 cm e ±1°), camera orizzontale inclinata di 15° in basso, 30 fps con elaborazione a 15 Hz (`f4/H-012/05-correzioni/SOLUZIONE_V2.md`, B1; `f3/H-012/03-metrologo/PIANO_MISURE.md`). Risoluzione da fissare e stampare all'avvio: i tempi del nucleo sono a 640×480, i conti dell'audit e di f10 a 848×480. Se la profondità viene allineata al colore, sulla D435i il campo scenderebbe a circa 69°×42° (non verificato) e il suolo si vedrebbe da 1,65 m (`f5/02-audit/AUDIT.md`, ipotesi 11).
+- **Scena:** al chiuso, senza sole, pavimento piano, lontano dai vetri o con nastro opaco sulla lastra (`f4/H-012/05-correzioni/SOLUZIONE_V2.md`; `f3/H-012/03-metrologo/PIANO_MISURE.md` H2). All'avvio vuota e ferma: lì si stimano il piano del suolo e la quota di pixel validi; 1,34° d'errore alzano il suolo di 7 cm a 3 m (`f5/02-audit/AUDIT.md`, ipotesi 9).
+- **Pannello e attore:** pannello fermo, largo 1 m e alto almeno 1,5 m; attore a non più di 2,3 m; una sola persona dietro (`f4/H-012/09-arbitro/VERDETTO.md`, §4, condizioni 3 e 6; altezza e distanza: §10.1, riquadro 3). Con la camera a 1,2 m un pannello alto 1 m lascia vedere tutto sopra 0,80 m (`f5/02-audit/AUDIT.md`, ipotesi 5).
+- **Da registrare a ogni prova:** numero di serie, firmware, driver, risoluzione, frequenza, preimpostazione di profondità, filtri, altezza, inclinazione, luce (`f3/H-012/03-metrologo/PIANO_MISURE.md`).
+- **[prel.]** Nell'atto 1 (metà campo coperta) una persona in nero a 2,5 m porta i pixel validi al 43,5 %, sotto la soglia del 50 %: scatta «affidabilità persa» (`f9-preproposta/07-lidar/CONSEGNA.md`). A un'altra quota tutto cambia: a 0,25 m (drone posato) il suolo si vede da 0,26 m e la quota massima vista a 3 m è 1,00 m (`f6-specializzazione/03-avversario/ATTACCO_SPECIALIZZAZIONE.md`, S7).
+- **Sicurezza ottica:** classe 1 dichiarata per VL53, C1 e L2; per Femto Bolt e RealSense non verificato; vale per il prodotto integro (`f1/985ccd9bca46/CONSEGNA.md`).
+
+### 3.6 Il sensore in moto: i requisiti sulla posa (Q1–Q6)
+
+Per seguire gli oggetti mentre il sensore si muove serve la *posa* (dove sta e come è orientato il sensore, istante per istante). `f6-specializzazione/02-slam/MOTO_PROPRIO.md` ricava quanto dev'essere precisa perché le soglie del nucleo tengano. **Stato:** sostenuto da un modello (N = 20 000 valutazioni nella prima tabella di `f6-specializzazione/02-slam/risultati.txt`); gli errori delle sorgenti sono **ipotesi**; nessuna soglia del nucleo è provata in moto. Previsioni, comando e limiti di questi conti: §4.1.8.
+
+| | Requisito | Valore a 2 / 3 / 10 / 30 m |
+|---|---|---|
+| Q1 | rotazione attorno alla verticale (imbardata), su 0,87 s, perché i falsi «mobile» restino ≤ 10 % | ≤ 0,87° a ogni distanza |
+| Q2 | errore di velocità propria, trasversale / radiale (cm/s) | 3,4 / 5,2 · 5,2 / 11 · 17 / 10 · — / 10 |
+| Q3 | sincronia fra posa e profondità | 20–30 ms (rover che gira a 30°/s); 73 ms (volo stazionario); 27 ms (petto); 5,6 ms (testa) |
+| Q4 | inclinazione in avanti (beccheggio) rispetto al suolo | 1,68° / 1,02° / 0,32° / 0,13° |
+| Q5 | scostamento non modellato nell'area prevista | 9 cm a 0,67 s, 15 cm a 1 s, 39 cm a 2 s |
+| Q6 | imbardata sull'età dell'ultima misura | 2,9° / 1,9° / 0,57° / 0,19° |
+
+**Quale sorgente li rispetta, nel modello** (`f6-specializzazione/02-slam/MOTO_PROPRIO.md`, §2 e §6):
+- *treppiede o rover fermo, giroscopio tarato da fermo:* Q1 rispettato (0 falsi «mobile» con 0,1°/s di deriva; 9 %, sulla soglia, con 1°/s);
+- *rover a 0,3–0,5 m/s, ruote più giroscopio:* Q2 rispettato con errore del 3 % della distanza, al limite con il 10 % (7 % di falsi a 2 m);
+- *drone con autopilota* (errore di velocità ipotizzato 0,1 m/s): Q2 **non rispettato** a 2 m (98 % di falsi; 3 % a 3 m);
+- *indossato senza odometria:* **non rispettato** (100 % di falsi); con odometria visuale-inerziale all'1–3 % rispettato nel modello (0 falsi all'1 %), ma ottenerla camminando è non verificato;
+- *sola IMU per il beccheggio:* Q4 **non rispettato** a 10–30 m; a 2–3 m serve ristimare il piano del suolo a ogni fotogramma (non verificato).
+
+«Ciò che non è osservato non è mai libero» non dipende dalla posa (per costruzione). La camera da sola non dà un'odometria: servono ruote, autopilota o un programma di terzi (elenco con licenze e link in `f6-specializzazione/02-slam/MOTO_PROPRIO.md`, §2). Da non promettere: il volo, il sensore sulla testa, oltre 0,5 m/s (`f6-specializzazione/02-slam/MOTO_PROPRIO.md`, §4).
+
+### 3.7 Senza sensori nelle prime ore
+
+**Che cosa cambia** (settimo addendum). Le prime 5–6 ore delle 14 si fanno su dati registrati o simulati; l'architettura deve poter cambiare sorgente (registrazione, sensore simulato, sensore vero) senza toccare il resto. **Solo il sensore della squadra** può decidere: rumore dell'esemplare e portata (H1), vetro (H2), sole (H3), nero, stato dei filtri, «libero» dentro l'ombra vera (K-014), latenza (H12). Stima **[prel.]**, fatta su 24 ore e non sulle 14 + 4 (`f9-preproposta/11-pianificatore/CONSEGNA.md`): senza sensore si perdono la latenza, «affidabilità persa» e la prova scelta dal giurato; con una camera sola conviene **una** sessione di registrazione e poi l'analisi in parallelo.
+
+Che cosa f10 ha già preparato (parametri del sensore simulato, dati pubblici scelti, ambiente, formato comune delle sequenze, strumenti per l'inventario dei sensori di casa) è descritto una volta sola, nel §5.5. Un risultato ottenuto con un altro sensore non diventa «validato sul sensore della squadra» (`f10-dati/CONTRATTO_DATI.md`, criterio 5).
+
+### 3.8 Dove due file dicono cose diverse
+
+1. **LD19, luce ambiente:** 60 klx (`f1/985ccd9bca46/PREVISIONI.md`, P7) contro 30 klx (`f3/fonti/FONTI_VERIFICATE.md`, punto 4; `f10-dati/02-sensori/parametri_sensori.json`). I 60 klx sono del modello STL-19P: vale 30.
+2. **LD19, passo di 0,8°:** «non trovato» (`f3/fonti/FONTI_VERIFICATE.md`, punto 4) contro «è nella scheda V2.5» (`f10-dati/02-sensori/PREVISIONI.md`). Per l'elenco dei riferimenti la pagina scrive «≤1°» e 0,8° è un valore derivato (§10.1, riquadro 6, c).
+3. **Gemini 335, campo:** 90°×65° (`f3/fonti/FONTI_VERIFICATE.md`, `f4/H-012/05-correzioni/SOLUZIONE_V2.md`, `f10-dati/04-embedded/PREVISIONI.md`) contro 90°×60° a 848×480 (`f10-dati/02-sensori/parametri_sensori.json`): due risoluzioni. `geometria_sensori.py` usa però 65° con 848 pixel e dà il suolo da 1,10 m; con 60° viene 1,20 m (conto [sens.]).
+4. **Banda d'occlusione:** 9,5 e 5 cm (`f5/02-audit/AUDIT.md`) contro 19 e 10 cm (`f10-dati/02-sensori/MODELLO_SENSORE.md`): geometrie diverse (sfondo al doppio oppure al triplo della distanza dell'ostacolo), giuste entrambe.
+5. **Copertura dei ToF laterali:** 22,2 % (`f4/H-012/01-avversario/risultati_a12.txt`: al buio, sul bianco) contro 1,4 % (`f9-preproposta/07-lidar/CONSEGNA.md`: a 5 klx, **[prel.]**).
+6. **Latenza della camera:** 95 ms (`f3/H-012/02-validazione/VERIFICA.md`) contro 70 ms (`f10-dati/02-sensori/MODELLO_SENSORE.md`): fonti diverse, nessuna è una specifica.
+7. **Rumore nominale a 4 m, base 50 mm:** 5,7 cm con focale 446,8 pixel (`f2/04-torneo/TORNEO_parte1.md`) contro 6,0 cm con 424 (`f10-dati/02-sensori/MODELLO_SENSORE.md`).
+8. **Femto Bolt:** «Indoor» contro «Indoor/Semi-Outdoor» (`f3/fonti/FONTI_VERIFICATE.md`, punto 8); 418 $ (`f3/fonti/FONTI_VERIFICATE.md`) contro 418–559 $ (`f1/dfac83300259/CONSEGNA.md`, da ricerca). Per l'elenco dei riferimenti la pagina prodotto porta ora tutte e due le diciture (§10.1, riquadro 6, d).
+9. **Portata dichiarata:** «0,5–3 m» (`f2/05-selezione/SELEZIONE.md`) contro «dove il rumore è ≤ 5 cm, da misurare» (`f4/H-012/05-correzioni/SOLUZIONE_V2.md`): vale la seconda.
+
+### 3.9 Le prime misure quando arriva un sensore
+
+(1) Autoverifica dei filtri, due minuti (`f5/02-audit/AUDIT.md`, ipotesi 1). (2) H0–H6 nella prima ora: possono cambiare sensore, portata e luogo della demo (`f3/H-012/03-metrologo/PIANO_MISURE.md`). (3) Celle per stato su 150 fotogrammi della sala vuota; «libero» dentro l'ombra vera del pannello, con la banda senza dato misurata sui due lati (`f4/H-012/09-arbitro/VERDETTO.md`, §3 e §6). (4) H12 per la latenza. Proposta **[prel.]** di f10: parete piana a 1, 2 e 3 m, suolo e un bordo verticale, 15 minuti, per tarare le 32 ipotesi del simulatore (`f10-dati/02-sensori/MODELLO_SENSORE.md`).
+
+---
+
+## 4. Prove eseguite e risultati numerici
+
+Ogni cifra di questo capitolo viene da una simulazione, da un conto o dalla lettura di una scheda tecnica; le simulazioni sono tutte a sensore fermo, salvo i conti sul moto del §4.1.8. Le stesse cifre, ordinate per componente, sono nel cap. 2. Oltre a leggere, l'autore della sezione [metr.] ha fatto un controllo di ripetibilità (§4.1.9) e ha ritrovato con `grep` nei file grezzi ventisei righe della tabella del §4.2 (segnate con *: tornano tutte); le altre cifre vengono dai rapporti che le citano, e il loro riconteggio sui file è quello dell'arbitro (`f4/H-012/09-arbitro/VERDETTO.md`, in testa).
+
+### 4.0 Come leggere
+
+**Scene.** *T* (torneo): pannello a 2 m largo 1 o 2 m, pedone a 4 m, portata 6 m. *D* (demo): pannello a 1,5 m largo 0,5 o 1 m, attore a 2,5 m, griglia fino a 3 m. *DC* (demo corretta): pannello da 1 m a 1,9 m, attore a 2,3 m, ombra di 1,21 m (`f4/H-012/03-validazione/MISURE_V2.md`). Comportamenti del soggetto dietro il pannello: *prosegue*, *sosta* (2–4 s), *torna* indietro, *lontano* (esce dalla portata restando in ombra). Curve di rumore a 2 / 3 / 4 m: *nominale* 1,5 / 3,4 / 6,0 cm (formula del costruttore [realsense-taratura-profondita], pagina aperta dal ruolo di validazione, formula non letta: `f3/H-012/02-validazione/VERIFICA.md` §4), *pessimista* 4 / 9 / 16 cm, *del torneo* 5 / 11 / 20 cm (`f4/H-012/03-validazione/MISURE.md`).
+
+**Termini e sigle.** Pd, σ, q, prova χ², strato 1, strato 2, fascia, «ombra a −20 cm», scambio muto, braccio che deve fallire: nel glossario. A1–A7, B1–B4, P1–P5 sono le misure delle prove di f4 (legenda, «omonimi»).
+
+**Indipendenza, una volta per tutte.** Tutti i simulatori sono scritti da istanze dello stesso modello linguistico sulla stessa specifica: un difetto della specifica comune sfugge a tutti (`f5/02-audit/AUDIT.md` §2). «Indipendente» qui vuol dire ruolo diverso, codice diverso, semi diversi. Nelle tabelle la colonna «condivide» dice che cos'altro è in comune.
+
+### 4.1 Inventario delle prove, in ordine
+
+#### 4.1.1 f1 — i falsificatori dei nove ruoli (13:04–13:17)
+
+Nove ruoli in corsie cieche (§9.1); ciascuno ha scritto le previsioni con l'ora prima di provare (`f1/<cartella>/PREVISIONI.md`). **Condividono con ciò che controllano** l'autore e il modello simulato (nel triage: «[aut.], non indipendente»). Python puro, pochi secondi di CPU.
+
+| Ruolo (cartella) · comando | Che cosa misura · modello · N | Risultato | Soglia scritta prima | Esito |
+|---|---|---|---|---|
+| kalman (`f1/21d3813ca7e1/`) · `python3 sim_kalman.py`, 8 s → `risultati.txt` | osservabilità della massa; copertura del cerchio al 95 % dopo un'occlusione; moto proprio. Pedone con salti di velocità, rumore 5 cm (ipotesi dell'autore), 15 Hz | Fisher di (forza, massa) di rango 1 (det/traccia² = 5·10⁻¹⁷); copertura con q = 0,2: 0,94 / 0,92 / 0,90 / 0,92 a 0,5 / 1 / 2 / 3 s (errore tipo 0,008); con q = 0,01: 42 % a 2 s; ostacolo fermo visto in cammino: 1,49 m d'errore senza giroscopio, 0,25 m con; muro «mobile» 0,0 % con traslazione compensata (500 prove), 100 % senza | copertura in [0,88; 0,99], smentita sotto 0,85; > 1 m senza e < 0,3 m con il giroscopio (13:06:28) | **regge** (dieci su dieci). Massa: **dimostrato** nel modello del punto materiale con forza ignota |
+| tracciamento (`f1/992c41c8860e/`) · `python3 -I prove/simA.py` (anche `simA2`, `simB`, `simB2`) → esiti in `PREVISIONI.md` | porta al 99 % alla riemersione; scadenza fissa della traccia contro chiusura «per causa». 1D, un oggetto, ombra nota; N = 3000 per punto | con q = 0,5 la porta contiene la riemersione nel 98,6–99,9 % fino a 3 s; scadenza di 1 s: identità 0 %; di 5 s: 75–77 % e fantasma per 2,0 s; chiusura per causa: 100 %, fantasma 0,06–0,07 s; errore al 95 % oltre 1,5 m già a 1,2 s | copertura < 90 % smentisce; tenuta < 80 % con sosta smentisce (13:05:30) | **regge** sulle due soglie; **smentite** 4 previsioni su 11 dell'autore (orizzonte 1,2 s, non 1,5–3 s) |
+| rovesciatore (`f1/8f275a60e807/`) · `timeout 280 python3 -I prova_r1.py` e `prova_r2.py` → esiti in `PREVISIONI.md` | regola della bozza; ellisse del Kalman con soste e ritorni. 2000 traiettorie (1172 proseguono, 525 sostano, 303 tornano) | traccia cancellata dopo 1 s: per il 73,5 % del tempo in occlusione il soggetto sta dove il sistema non dichiara nulla; fuori dall'ellisse al 95 %: 14,3 % (0,1 % chi prosegue, 23,8 % chi sosta, 25,3 % chi torna); a sensore fermo velocità spuria 0,241 m/s, 21,6 % di falsi «mobile» a soglia 0,3 m/s | > 20 % previsto, < 5 % smentita; velocità spuria ≤ 0,05 m/s (13:12:50) | 14,3 %: **non risolta**; 73,5 %: **regge**; «≤ 0,05 m/s»: **smentita** |
+| nuvole-punti (`f1/dfac83300259/`) · `python3 -I prova_np.py` → esiti in `PREVISIONI.md` | «libero» falsi: regola log-odds della bozza contro mappa a quattro stati. 2D senza rumore, 552 casi | bozza: 265 «libero» falsi su 552 (173 in ombra, 92 da visibile); quattro stati: 0. Costo 2,0 ms a fotogramma | tre previsioni (13:05:43) | **regge** (per la mappa: per costruzione) |
+| creativo (`f1/e30f9e2dd4d7/`) · script `sim.py` (4,4 s), `sim2.py` → `esito_sim.txt`, `esito_sim2.txt` | dove finisce la probabilità di un Kalman senza misure se il soggetto sosta. 1D, 100 prove; 400 passaggi per la finestra | massa in celle viste libere: 98 % a 2 s, 100 % a 3 s; con l'evidenza negativa (particelle) 0,1 %; finestra di riemersione del Kalman: copre il 69,3 % (nominale 90 %); particelle: 100 % ma larga 6,27 s | finestra fra 75 e 97 %, smentita < 70 % (13:11:50) | massa: **regge**; finestra: **smentita in alto** (inutile perché troppo larga) |
+| visione (`f1/c85dbcc51ea6/`) · script `calcoli_p2_p3_p4.py` | classi d'ostacolo nel rilevatore pronto; scadenza della previsione; sfocatura | 0 su 7 categorie d'ostacolo fra le 80 classi COCO [ultralytics-coco-yaml]; raggio al 95 % oltre 1 m dopo 1,0–1,4 s; accelerazione da differenze: σ ≈ 66 m/s² a 30 Hz | (13:05:40) | **regge**; P5 e P6 (hardware) **non risolte** |
+| requisiti (`f1/b8262bfed263/`) · nessuno script conservato | parole della traccia della challenge; campo dei ToF; finestra del «previsto» | 0 occorrenze di 360, massa, accelerazione, classific-, terreno… nella traccia della challenge (esaustivo, `grep`); campo < 130° su 7 sensori; 2σ > 1 m dopo 1,30 / 1,07 / 0,87 s per q = 0,25 / 0,5 / 1,0 | (13:10:16) | **verificato** (parole); **regge** (le altre due; stessa algebra dell'enunciato) |
+| lidar (`f1/985ccd9bca46/`) e ricercatore (`f1/3fff79e9c3ea/`) · letture di schede e articoli | geometria dei ToF; stato dell'arte | tre ToF multizona coprono 180° × 60° [st-vl53l7cx]; velocità costante 0,39 / 0,83 m a 4,8 s contro 0,44 / 0,91 di un modello appreso [scholler2020]; massa dalla visione: errore medio 66,5 % [lee2026] | (13:04:44; 13:10:29) | 360° con tre ToF: **smentito** sui sensori controllati; P10–P11 (prove fisiche) non eseguite |
+
+File dei risultati: nella cartella di ciascun ruolo. Per requisiti la prova P2 non è rifacibile dal file (lo script non c'è).
+
+#### 4.1.2 f2 — il torneo di falsificazione, tre parti (13:37–13:51)
+
+Tre istanze del ruolo avversario su gruppi disgiunti di ipotesi. **Condividono** con le idee il testo delle schede, il modello linguistico e le schede dei costruttori; nessun codice degli autori, salvo dove indicato. Rapporto: `f2/04-torneo/TORNEO.md` (somma di `TORNEO_parte1…3.md`); previsioni in `f2/04-torneo/PREVISIONI_parte1…3.md`.
+
+**Parte 1 — sensore, griglia, ambito** (`f2/04-torneo/attacchi_parte1.py`, `attacchi2_parte1.py`, 0,4 s; `f2/04-torneo/esito_attacchi_parte1.txt`, `esito_attacchi2_parte1.txt`). Conti su schede e uno script di logica. Le previsioni su H-001, H-003, H-004 non erano cieche (dichiarato).
+
+| Ipotesi | Misura | Risultato | Esito |
+|---|---|---|---|
+| H-001 camera stereo | errore di profondità a 4 m al limite dichiarato (soglia: 15 cm) | Gemini 335 12 cm, D455 8 cm, D435i 16 cm; fino a 3 m ≤ 9 cm | **regge** fino a 3 m; a 4 m **non risolta** |
+| H-002 inclinazione | gradino di 15 cm a 2 m; ostacolo a 1,8 m di quota | gradino a 5,4σ; a 15° l'ostacolo alto si vede solo oltre 2,41 m | gradino **regge**; cono cieco in alto: **attacco riuscito** |
+| H-003 LiDAR al petto | punti su una gamba a 5 m (soglia 4) | 1,7–1,9 punti; busto copre 127°–155° | **smentita** la variante al petto |
+| H-004 ambito | frasi della traccia della challenge non coperte | nessuna prescrittiva; tre non prescrittive («riconoscere», «monitoraggio di attività», «mentre la scena continua a cambiare») | da riformulare |
+| H-006 percorso geometrico | tempo del percorso minimo, Python puro | 1,2 / 4,7 / 20 ms a 160×120 / 320×240 / 640×480 | regge sul calcolo; latenza totale **non risolta** |
+| H-008 mappa a 4 stati | sei casi sulla regola | vetro → «libero» falso; «libero» ricordato 0,5 s con mobile a 3 m/s: 1,50 m contro 0,7 di margine | **smentita** la clausola «0 libero falsi» |
+| H-017 battito | sensore che ripete l'ultimo fotogramma | il battito dura tutti i 25 s; con il contatore del sensore si ferma in 0,13 s | **smentita** «si spegne da solo» se l'età è la marca temporale |
+
+**Parte 2 — filtro, identità, demo** (previsioni alle 13:39:12; `cd f2/04-torneo; PYTHONDONTWRITEBYTECODE=1 timeout 120 python3 torneo_parte2.py A` (poi `B C D E`), e `torneo_B2A2_parte2.py A2` (poi `B2`); file `f2/04-torneo/risultati_{A,A2,B,B2,C,D,E}_parte2.txt`). Pedone puntiforme, 15 Hz, σ = 5 cm.
+
+| Ipotesi | Misura · N | Risultato | Soglia | Esito |
+|---|---|---|---|---|
+| H-012 (q = 0,2) | copertura dell'area prevista al 95 % su tre generatori non dell'autore; 4000 riemersioni per cella | a 1 s / 2 s: 0,934 / 0,927 (± 0,004); 0,895 / 0,916 (± 0,005); 0,902 ± 0,007; per manovra: sosta 0,92–0,98, torna **0,56–0,66**; con q scelto sui tratti dritti (0,01): 0,738 / 0,710 | sotto 0,85 a 1–2 s smentisce | **regge** (la previsione di smentita dell'avversario è caduta) |
+| H-013 (q = 0,5) | scambi d'identità con due persone; 2000 scene per caso | tornano entrambi: scambi 0,440 ± 0,011, muti 0,199; incrocio dietro 2 m: 0,246 ± 0,010, muti 0,238 | ≤ 2 % all'incrocio | «la geometria basta»: **smentita in simulazione** |
+| H-018 demo | stessa traccia con pedone a 0,8 m/s; 2000 passaggi | finestra del «previsto» 1,60 s solo con (q 0,2; raggio massimo 1,5 m): 0,811 con 1 m di buio, ≤ 0,004 con 2 m | — | da riformulare |
+| H-019 scommessa | finestra tarata sulla squadra, provata su un giurato lento; 200 tarature × 2000 | 0,633 (dev. std 0,071) | 0,75 | sotto soglia; il controllo **copia il codice dell'autore**: da riformulare, non smentita dell'idea |
+| H-010 regola «mobile» | χ² a 0,5 m/s a 2 m; muro con rumore che cresce con z²; 500–1000 prove | vista entro 1 s nel 75,4 %; falsi sul muro a 4 m 15,5 % con R fisso, 0,0 % con R(z); con R(z) chi si avvicina a 4 m è visto nell'11,0 % | 90 %; 10 % | da riformulare (K-007) |
+
+Le previsioni di B2 e A2 sono scritte dopo aver visto B e A (dichiarato: la prima B aveva un difetto dell'avversario).
+
+**Parte 3 — l'area «prevista»** (`timeout 120 python3 scena_parte3.py <main1|main2|ombra|k001|falso|vmax|due>`, seme 20261114, al più 29 s; file `f2/04-torneo/risultati_*_parte3.txt`). Scena T, Pd 0,9, 100 prove per comportamento.
+
+| Misura | Risultato | Esito |
+|---|---|---|
+| Sosta a 3 s: l'area contiene il soggetto · quota su celle viste libere (pannello 1 m) | cerchio del Kalman 88 % · 23 %; disco v_max·t ∩ non osservato 100 % · 0 %; particelle con modo «sosta» 100 % · 0,2 % | nessuna famiglia vince (K-002) |
+| A 1 s: quota dell'ombra coperta | cerchio 31 %, particelle 35 %, disco **98 %** | il disco garantisce ma non informa |
+| H-014: traccia chiusa a persona nascosta | con un fotogramma 10–26 % (20,3 % su n = 300 a 4 m); con tre: 0 % a 4 m, 14 % a 3 m, 53 % a 2,5 m; con ombra a −20 cm 45–50 % | esito misto: da riformulare |
+| H-009: soggetto oltre v_max (2,5 m/s) | contenimento a 0,5 s: 100 / 90 / 10 / 0 / 0 % a 2,0 / 2,4 / 2,6 / 3,0 / 3,5 m/s | regge la previsione; v_max va dichiarata |
+| H-015: identità dopo la sosta | senza modo «sosta» 71 % (1 m), 28 % (2 m); con: 100 % e 76 %; con ombra a −20 cm 68 % | scatta la soglia del triage (80 %) |
+| H-016: falso «libero» per k fotogrammi | la massa giusta scende sotto il 5 % a k = 4 / 5 / 7 (0,27–0,47 s) | nessuna famiglia regge un falso libero di 0,3 s |
+| Due soggetti che tornano (q = 0,2) | Kalman: 74 % di scambi (pannello 1 m), 44 % muti | l'identità con due nascosti va dichiarata «ambigua» |
+
+Limite dichiarato della parte 3: i tre risultati marcati «[dopo]» non avevano previsione; le smentite valgono «da riformulare» perché molte scelte del simulatore sono dell'avversario.
+
+#### 4.1.3 f3 — prove progettate, conti del metrologo, prova C a mano (14:00–14:18)
+
+- **Soglie delle prove A, B, C** scritte dal responsabile alle 14:00:30 (`f3/H-012/01-scene-dinamiche/PREVISIONI.md`); i dodici attacchi con le previsioni alle 14:09:46 (`f3/H-012/04-avversario/ATTACCO.md`); numerosità e regola di decisione alle 14:13:55 (`f3/H-012/03-metrologo/PIANO_MISURE.md`). Tutto prima dei lanci di f4 (14:23).
+- **Regola di decisione.** Si conta il *passaggio* (un seme), non il fotogramma. Con zero fallimenti: su 300 passaggi il tasso vero è ≤ 0,99 %, su 100 solo ≤ 2,95 %, su 20 solo ≤ 13,9 % (`f3/H-012/03-metrologo/conti_metrologo.txt`; `python3 conti_metrologo.py`); su 400, la numerosità poi usata, ≤ 0,75 % (`f3/H-012/02-validazione/VERIFICA.md` §4).
+- **Potenza dei criteri per il giorno dell'hackathon** (conto binomiale, stesso file): «26 su 30» promuove una taratura mediocre (quota vera 0,80) nel 25,5 % dei casi; il criterio a due stadi (≥ 28 regge, ≤ 22 smentita, altrimenti altri 30 e ≥ 52 su 60) nel 14,2 %. «9 su 10» passa nel 24 % dei casi con quota vera 0,75. Stato: **dimostrato** nel modello binomiale (passaggi indipendenti).
+- **Prova C, a mano** (`f3/H-012/02-validazione/VERIFICA.md` §3): le 7 frasi della traccia della challenge hanno tutte un componente (C1 **regge**; tre clausole senza misura); bilancio della latenza: le sole voci note sommano **circa 155 ms** in media contro la soglia di 150 (C2 **non risolta**). Fonti dei tratti: [realsense-alta-velocita-d435] (95 ms in media a 30 fps; aperta dal ruolo) e [pipewire-conf] (21,3 ms).
+- **Rilettura.** 20 numeri del torneo ricontati sui file: 17 tornano, 3 con nota (stesso file, §1).
+
+#### 4.1.4 f4 — i dodici attacchi alla soluzione (14:23:48–14:29:12)
+
+Rapporto: `f4/H-012/01-avversario/CONTROPROVE.md`. Modelli dell'avversario: rilevatore «centro della parte visibile», suolo che manca a caso, frase di 2 s, rumore dell'IMU ipotizzato. **Condivide** con la soluzione: modello linguistico, testo della soluzione, numeri del torneo (σ 5 cm, 15 Hz, Pd 0,9, q 0,2), altezza 1,2 m; nessun codice degli autori. Soglie: `f3/H-012/04-avversario/ATTACCO.md` (14:09:46). **Rifare:** in `f4/H-012/01-avversario/`, `PYTHONDONTWRITEBYTECODE=1 timeout 120 python3 <script> [argomento]`, con `a01_riaggancio.py`; `a02_demo.py a2|a6c|a11`; `a03_priorita.py`; `a04_tetto.py`; `a05_contiguita.py`; `a06_centroide.py a|b`; `a07_a08_primo_secondo.py a7|a8`; `a09_a10_a12.py a9|a10|a12`; `correzioni.py a3|a10|a11`. **Nessun attacco ha prodotto un «libero» falso**; ma nessuno script calcola un «libero» da una profondità (§4.1.7, ipotesi 2). Le stesse correzioni, lette blocco per blocco, sono in §2.2.
+
+| # | Che cosa attacca · N | Prima | Dopo la correzione | Esito · file |
+|---|---|---|---|---|
+| 1 | riaggancio rubato da un soggetto mai tracciato · 200 scene per ritardo | sbagliato e muto 9,5–100 % | C1: 0,0 %; costo: riemersioni legittime 100 % fino a 2,3 m, 86,3 % a 2,5 m, 0 % a 2,8 m (N = 300) | regola **smentita e corretta** · `f4/H-012/01-avversario/risultati_a01.txt` |
+| 2 | demo in scala, attore a 3 m · 500 transiti | tracce confermate 0,4 % | C2 (attore ≤ 2,3 m): 100 % | geometria **smentita e corretta** · `f4/H-012/01-avversario/risultati_a02.txt` |
+| 3 | graduatoria dei messaggi e anello cieco | «mobile in avvicinamento» detto nello 0 %; suolo visto solo da 1,243 m; ostacolo di 15 cm invisibile sotto 1,087 m; scatola a 0,8 m: 0 su 5 | C3: 100 / 100 / 99,5 % con suolo valido 1 / 0,99 / 0,95; 65,6 % a 0,80 | **smentita e corretta**; ostacoli bassi vicini: limite che resta · `f4/H-012/01-avversario/risultati_a03.txt`, `f4/H-012/01-avversario/risultati_a03_correzione.txt` |
+| 4 | tetto di 10 s sull'avviso · soste di 11–60 s | 15–750 fotogrammi di nascosto senza avviso | C4 (nessun tetto, solo l'età): 0 | **smentita e corretta** · `f4/H-012/01-avversario/risultati_a04.txt` |
+| 5 | strato 1 esteso alle celle contigue | copre il 100 % del non osservato (45,5 m² contro 1,01 d'ombra) | C5 (solo il cuneo): 1,01 m²; la fascia resta sul 28,2 % dei 4,75 m² di libero visto | **smentita e corretta**; «metà dell'ombra» **non risolta** (0,8–5,8 s secondo la lettura) · `f4/H-012/01-avversario/risultati_a05.txt` |
+| 6a | muro con una persona che gli passa davanti · 500 passaggi | muro «mobile» nel 100 % | C6 (gruppo tagliato dall'ombra escluso): 0,0–0,2 % | **smentita e corretta** · `f4/H-012/01-avversario/risultati_a06a.txt` |
+| 6b | fusione di due gruppi vicini | a contatto solo a 2 cm (77–97 %) | — | **regge** (previsione dell'avversario smentita) · `f4/H-012/01-avversario/risultati_a06b.txt` |
+| 6c | corpo largo che entra nell'ombra | contenimento 70,8–85,8 % (soglia 85 %) | C6: 100 %, ma il buio sale a 1,07–1,27 s e il «previsto» è vivo alla riemersione nel 9,8–18,8 % | **smentita** nella demo in scala · `f4/H-012/01-avversario/risultati_a06c.txt` |
+| 7 | soggetto visto pochi fotogrammi | con 3 fotogrammi la traccia manca nel 27,1 %; con 4 nel 5,2 % | C7 (garanzia solo da 4 fotogrammi): **non provata** | portata della garanzia **smentita**, da dichiarare · `f4/H-012/01-avversario/risultati_a07.txt` |
+| 8 | finestra della regola «mobile» · 2000 prove | fissa, Pd 0,9: vista entro 1 s nel 79,0 % | C8 (finestra che cresce): 99,9–100 %; falsi da fermo 0,05 % | **smentita e corretta** · `f4/H-012/01-avversario/risultati_a08.txt` |
+| 9 | «libero» senza memoria, suolo valido 0,95 | 11,9 cambi di messaggio al secondo | C9 (3 fotogrammi): 0,00 per direzione, 0,65 per settore; a 0,80 non basta | **smentita e corretta** nel modello a buchi indipendenti · `f4/H-012/01-avversario/risultati_a09.txt` |
+| 10 | affidabilità persa: sensore quasi coperto, urto | nessun segnale in 3 s; dopo 10° d'imbardata i fermi sono «mobili» nel 96–100 % | C10: segnale in 0,13 s e 0,00 s; 0 falsi in 60 s | **smentita e corretta** (rumore dell'IMU ipotizzato) · `f4/H-012/01-avversario/risultati_a10.txt`, `f4/H-012/01-avversario/risultati_a10_correzione.txt` |
+| 11 | tre stati in voce | frase finita a stato scaduto nel 100 % | C11 (segnali di 0,3 s): 0 % | **smentita e corretta** (durata della frase ipotizzata) · `f4/H-012/01-avversario/risultati_a11.txt`, `f4/H-012/01-avversario/risultati_a11_correzione.txt` |
+| 12 | copertura della traccia della challenge; esclusione dei ToF | la camera vede il 20,0 % del disco di 3 m; tre ToF laterali fino a 2 m aggiungono il 22,2 %; uno in basso copre 0,68 dei 0,98 m² dell'anello cieco | C12: ToF come canale laterale facoltativo, mai «libero» | esclusione **smentita a ragionamento**; cifre dei ToF non riverificate · `f4/H-012/01-avversario/risultati_a12.txt` |
+
+#### 4.1.5 f4 — prova A (la composizione) e prova B (regola «mobile») (14:24–14:35)
+
+Rapporto: `f4/H-012/03-validazione/MISURE.md`. Simulatore nuovo `f4/H-012/03-validazione/sim_h012.py` (sha256 `c0a94feb…`), seme 5101, corpo di 40 cm, 400 passaggi per cella (zero fallimenti → limite superiore 0,75 % per cella). **Condivide** con la soluzione specifica, modello linguistico, rumore gaussiano bianco, pavimento piano, pannello e sensore fermi, nessun rilevamento falso; **non** codice, semi, traiettorie, forma del corpo e curva di rumore del torneo. **Rifare:** `sh f4/H-012/03-validazione/rifai.sh` (13 lanci, circa 50 s; **riscrive** i file `f4/H-012/03-validazione/out_*.txt`).
+
+| # | Che cosa misura | Risultato (N) | Soglia scritta prima | Esito |
+|---|---|---|---|---|
+| A1 | fotogrammi con il nascosto fuori dallo strato 1 | lettura «cuneo più celle contigue»: 0 in 48 celle, 19 200 passaggi; lettura «solo cuneo»: 400 su 400 nelle celle «lontano» | un solo caso smentisce | regge / smentita secondo la lettura; sciolta poi nella versione 2 (§4.1.6) |
+| A1, sensibilità | errore d'ombra che rompe il contenimento (1200 passaggi per riga) | corpo 40 cm: −20 cm 0 fuori; −30 cm 107 (8,9 %); −40 cm 1075 (89,6 %). Corpo 60 cm a −30 cm: 399 (33,3 %) | — | il margine oltre −20 cm è **meno di 10 cm** |
+| A2 | costo: strato 1 su suolo davvero visibile | 14–41 % in T; 37–68 % in D (1,1–2,3 m²) | descrittiva | costo dichiarato |
+| A3 | la riemersione cade nell'area prevista | T: prosegue 95,8–100 %, torna 90,2–92,2 %; D con pannello da 1 m: 97,0–100 %; **D con pannello da 0,5 m: 14,2–16,5 %** (errore tipo ≤ 1,8 punti) | < 85 % smentisce | T regge; D-0,5 m **smentita** |
+| A3 bis, A4 | area prevista ancora *mostrata* alla riemersione | T: 0–6,2 %; D: 0–1,5 %; buio medio in T-1 m 1,9 s | previsto 30–70 % | **smentita**: lo strato 2 è quasi sempre già spento |
+| A5 | stessa identità al ritorno, una traccia pendente | 100 % in ogni cella; limite inferiore 99,25 % | < 95 % smentisce | **regge** |
+| A6 | scambi muti con due soggetti | 0 su 6400 riemersioni; «ambigua» dichiarata nel 94,5–100 % | > 0 smentisce | regge **per costruzione** |
+| A7 | rilascio dello strato 1 a soggetto nascosto | cella per cella: nessuno; con la prova del raggio sul punto previsto: 92,5–99,5 % in sosta (T) | un caso smentisce | cella per cella regge (per costruzione); raggio **smentita** |
+| B1 | falsi «mobile» su un muro fermo | 0 su 12 000 finestre (limite 0,025 %) con R giusto; con σ creduto la metà: 31 % delle finestre scorrevoli | > 10 % smentisce | **regge**; fragile se σ è sbagliato |
+| B2, B3 | pedone a 0,5 m/s visto entro 1 s a 2 m (N = 2000) | di traverso 100 % (limite inferiore 99,85 %); in avvicinamento: spostamento 100 / 100 / 100 %, χ² 100 / 100 / 99,0 % con le tre curve | < 90 % smentisce | **regge** per tutte e due le regole (la previsione «χ² al 70–80 %» è smentita) |
+| B4 | lo stesso da 3 e 4 m | da 3 m: spostamento 100 / 10,8 / 0,1 %, χ² 100 / 56,7 / 45,2 %; da 4 m con la nominale 98,5 % e 81,4 % | nessuna | oltre 2 m **non risolta**: decide il rumore vero (K-007) |
+| `validazione-1` | media di 3 fotogrammi: velocità minima vista al 90 % da 2 m | 0,380 → 0,278 m/s (curva del torneo); 0,138 → 0,095 (nominale); guadagno 1,31–1,46 | guadagno < 1,3 smentisce | **regge**, per poco |
+
+File grezzi: `f4/H-012/03-validazione/out_A_*.txt`, `f4/H-012/03-validazione/out_SWEEP.txt`, `f4/H-012/03-validazione/out_A2.txt`, `f4/H-012/03-validazione/out_A6.txt`, `f4/H-012/03-validazione/out_WALL.txt`, `f4/H-012/03-validazione/out_PED.txt`, `f4/H-012/03-validazione/out_V1.txt`, `f4/H-012/03-validazione/out_EXTRA.txt`.
+
+#### 4.1.6 f4 — riprova dell'insieme (versione 2) e anomalia non chiusa (14:42–14:55)
+
+Rapporti: `f4/H-012/03-validazione/MISURE_V2.md`, `f4/H-012/03-validazione/MISURE_V2_bis.md`. Simulatore `f4/H-012/03-validazione/sim_v2.py` (sha256 `dd7a5a1c…`): copia di `sim_h012.py` con le regole della versione 2. Previsioni alle 14:42:18, prima del codice. **Insieme provato:** C1, C4, C5, C6, C8, media di 3, rilascio cella per cella, geometria DC. **Non provati insieme:** C3, C9, C10, C11, graduatoria dei messaggi e uscita in voce. **Rifare:** `sh f4/H-012/03-validazione/rifai_v2.sh` (8 lanci, circa 1 min) e `rifai_v2bis.sh` (4 lanci, il più lungo 64 s); riscrivono `f4/H-012/03-validazione/v2_*.txt` e `f4/H-012/03-validazione/bis_*.txt`.
+
+| # | Che cosa misura | Risultato (N, limite al 95 %) | Soglia | Esito · file |
+|---|---|---|---|---|
+| P1 | passaggi con il centro del nascosto in una cella «libero» (Pd = 1) | 0 su 14 400 in 36 celle (0,75 % per cella); a −20 cm 0 su 4800 (0,06 %) | 0 su 400 | **regge** · `f4/H-012/03-validazione/v2_R8.txt` |
+| P1, bracci | fascia 0 e 0,20 m con ombra a −20 cm; ombra a −40 cm | 400, 399–400, 396–400 falliti su 400 | devono fallire | falliti: la prova non è cieca (ma si veda §4.4, punto 4) |
+| **P1 con Pd 0,9** | lo stesso, con un rilevamento mancato su dieci | a −20 cm **13 falliti su 4800** (limite 0,43 %), in 8 celle su 12; a 0 e +20 cm 0 su 9600 | 0 falliti (nessuna previsione scritta) | **smentita**: è l'anomalia K-014 · `f4/H-012/03-validazione/v2_R8_pd09.txt` |
+| P2a | riemersioni riagganciate, una traccia pendente | 100 % in 27 celle (limite inferiore 99,25 %); con Pd 0,9: 99,7–100 % | ≥ 95 % | **regge** · `f4/H-012/03-validazione/v2_R8.txt` |
+| P2b | secondo soggetto mai tracciato | dal bordo del campo 0 su 2400; dal bordo della portata 0 su 1200 (DC), 2 su 1200 (T); **dalla stessa ombra 2400 su 2400** riagganci sbagliati e muti | 0 | DC regge, T **smentita**; stessa ombra: **controesempio** (K-016) · `f4/H-012/03-validazione/v2_SECOND.txt` |
+| P2c | la riemersione cade nel cerchio (N = 2000) | DC senza C6: 61,1 % e 80,2 % (due rilevatori) → con C6 100,0 %; pannello 0,5 m: 20,5 → 99,9 % | ≥ 85 % (regge da 86,4 %, smentita sotto 83,7 %) | con C6 **regge**; senza **smentita** anche con il pannello da 1 m · `f4/H-012/03-validazione/v2_C6.txt` |
+| P2c, «torna» | costo di C6 su chi torna indietro (N = 400) | DC 99 % → 47–50 %; T 91–98,5 % → 62–67 % | nessuna previsione | costo da dichiarare (K-017) · `f4/H-012/03-validazione/v2_C6.txt` |
+| P3a, P3b | regola «mobile» finale; muro con persona davanti | 100 % nei sei casi (N = 2000); muro: con C6 0 su 400, senza 400 su 400 | ≥ 90 %; ≤ 10 % | **regge** a 2 m · `f4/H-012/03-validazione/v2_MOB.txt`, `f4/H-012/03-validazione/v2_WALLP.txt` |
+| P4 | che cosa vede la demo (DC, prosegue; mediane a −20 / 0 / +20 cm) | buio 1,13 / 1,07 / 1,07 s; «previsto» 0,40 / 0,47 / 0,53 s; area prevista ancora mostrata alla riemersione **0,5 / 1,2 / 0,8 %**; «perso» 0,67 / 0,60 / 0,47 s | descrittiva (previsto 5–40 %: smentito) | · `f4/H-012/03-validazione/v2_R8.txt` |
+| P5 | tracce vere chiuse per errore in 4 s, Pd 0,9 | 118 su 20 000 (0,59 %) chiudendo al quarto mancato; 1047 (5,24 %) al terzo | descrittiva | · `f4/H-012/03-validazione/v2_PD.txt` |
+
+**L'anomalia (K-014), tentativo di chiusura** (`f4/H-012/03-validazione/MISURE_V2_bis.md`; previsioni alle 14:49:49; stessi semi; `f4/H-012/03-validazione/sim_v2bis.py` importa `f4/H-012/03-validazione/sim_v2.py`: stesso codice, non è un controllo indipendente). Meccanismo: con un rilevamento mancato la traccia si chiude prima di entrare nell'ombra, lo strato 1 non nasce, e il soggetto attraversa la striscia di 20 cm che il sistema crede visibile.
+
+| Variante | Falliti a −20 cm su 4800 | Costo |
+|---|---|---|
+| regola della versione 2 | **13** (riprodotto; riprodotto di nuovo il 14 novembre in f11, §4.1.9) | 613–686 strati 1 rimasti accesi a soggetto visibile (12,8–14,3 %) |
+| `validazione-4` (la traccia chiusa vicino a un'ombra lascia l'avviso) | 8 (limite 0,30 %); 2 (0,13 %) se la traccia chiusa rinasce | riaggancio 99,92–99,97 % |
+| ingresso immediato entro 1 m dall'ombra, con rinascita | 0 (limite 0,06 %) | strati a vuoto 2523–2700; primo riaggancio 50,3–55,0 %: **esclusa** |
+
+Esito: la previsione «0 su 4800 con `validazione-4`» è **smentita**; l'anomalia **non è chiusa**. Secondo l'arbitro (`f4/H-012/09-arbitro/VERDETTO.md`, §3) il simulatore assegna «libero» per definizione senza calcolare una profondità: il difetto vero è la perdita dell'avviso (a 0 e +20 cm il soggetto resta in celle «in ombra»: 0 su 9600); il «libero» falso esiste solo se la camera dà profondità valide e sbagliate dentro l'ombra vera: **non decidibile senza hardware**. Dopo un riaggancio sbagliato (K-016) il primo soggetto, a −20 cm, finisce in una cella «libero» in 800 su 800 (sosta), 799 su 799 (torna), 17 su 800 (lontano); a 0 e +20 cm mai (`f4/H-012/03-validazione/bis_FURTO.txt`).
+
+#### 4.1.7 f5 — audit delle ipotesi nascoste (14:39–14:50)
+
+`f5/02-audit/AUDIT.md`; previsioni P1–P9 alle 14:43:13 in `f5/02-audit/stato.md`. Sono **conti a mano** sui numeri dei file, senza script (non c'è un comando: si rifanno con la calcolatrice); l'autore dichiara di averne scelto il verso in anticipo, quindi valgono come conti, non come prove riuscite. **Condivide** con ciò che controlla i numeri dei file e il modello linguistico.
+
+| Ipotesi nascosta | Conto | Stato |
+|---|---|---|
+| 1. Un buco di profondità arriva come «nessun dato» | i filtri del costruttore lo riempiono con l'ultimo valore valido o con un vicino [realsense-filtri-post] (letto solo il riassunto di ricerca) | **non risolta**; controllo: mano sul sensore, pixel validi sotto il 10 % in 3 fotogrammi |
+| 2. «Libero» calcolato da una profondità | nessuno script di f4 genera pixel (`f4/H-012/01-avversario/a03_priorita.py` riga 35; `f4/H-012/01-avversario/comune_f4.py`) | «nessun libero falso» vale come **controllo della logica**, non come dato |
+| 3. Età del «libero» senza la latenza | 0,13 s + 0,155 s = 0,288 s → **0,72 m** a 2,5 m/s (la versione 2 scriveva 0,33 m); a 1,4 m/s 0,40 m: margine zero | riga dell'invariante 1 **smentita** (K-015) |
+| 4. «A meno di 0,40 m da un'ombra» | l'ombra propria comincia a 0,1 m: il ramo «campo aperto» alla lettera non scatta mai | difetto di scrittura (K-018) |
+| 5. Altezza del pannello | deve essere alto almeno 1,45–1,50 m; nessun file la fissava | **non risolta**, basta un metro a nastro |
+| 6. Buchi del suolo indipendenti | con l'1 % di celle sempre non valide, l'83,6 % dei settori da 10° contiene un buco permanente | **non risolta** (prova H5) |
+| 7. Soglie in fotogrammi | all'1 % di fotogrammi saltati: 9 falsi attesi in 60 s; zero falsi ha probabilità 0,012 % | **non risolta**; soglie da riscrivere in secondi |
+| 8. Catena dei blocchi | 54 ore-persona in tutto (3+6+6+5+9+4+3+6+12), **38 in fila** | conto di pianificazione |
+| 10. Ombra da un punto solo | banda senza dato accanto all'ombra: 9,5 cm con base 95 mm (D455), 5 cm con 50 mm (D435i) | **non risolta** |
+| 11. Soglia di quota 0,07 m | curva pessimista, a 3 m: il 3,6 % dei pixel di suolo la supera; con la nominale zero | **non risolta** |
+| 9, 12 | avvio con scena non vuota (1,34° d'errore = 7 cm a 3 m); costanti che valgono solo per pedone, sala e sensore fermo (a 10 m/s, 0,288 s sono 2,9 m) | **non risolte** |
+
+#### 4.1.8 f6 — attacco alla specializzazione e conti sul moto del sensore (14:41–14:54)
+
+**Queste cifre non sono passate dal verdetto dell'arbitro**, che dichiara di non aver letto `f6-specializzazione/` (`f4/H-012/09-arbitro/VERDETTO.md`, in testa): stato «sostenuto dal modello, non vagliato».
+
+**Attacco alla specializzazione** (`f6-specializzazione/03-avversario/ATTACCO_SPECIALIZZAZIONE.md`; previsioni alle 14:52:45 in `PREVISIONI_in_testa.txt`; `python3 conti_spec.py`, `conti_spec2.py`, meno di 2 s → `risultati_spec.txt`, `risultati_spec2.txt`). Conti geometrici; **condividono** con i testi attaccati camera a 1,2 m, 15°, 58°, griglia, fascia, latenza di 0,155 s.
+
+| # | Che cosa attacca | Risultato | Esito |
+|---|---|---|---|
+| S1a | messaggio per settori con un soggetto basso e vicino | invisibile fino a 0,72 / 0,62 / 0,43 / 0,23 m d'altezza a 0,5 / 0,6 / 0,8 / 1,0 m: il settore dice «nessun ostacolo fino alla portata» | riga della demo **smentita** |
+| S1b | pannello a 1,15 m | 18 settori su 18 dicono «sconosciuto»; con il pannello a 1,70–1,90 m solo 2 | pannello a non meno di 1,7 m |
+| S2 | «adattabile» | regole identiche 4 su 9, riscritte 5; blocchi cambiati 6 su 9 | frase **smentita dal testo stesso** |
+| S3 | fascia con la latenza (0,288 s) | persona 0,72 m, mezzo 2,31 m, drone 5,48 m; velocità coperta con 0,40 m: 1,39 m/s (0,35–0,69 se i termini si sommano) | tabella della fascia **smentita** |
+| S5 | frasi per la giuria | 4 su 7 non reggono alla lettera | riscritte nel file |
+| S6b | piano del suolo ristimato con 2° d'errore | scatola di 15 cm letta a 8,0 cm a 2 m, 4,5 cm a 3 m (sotto la soglia di 7 cm) | da riformulare |
+| S6c | memoria del «libero» spenta oltre 0,37 m/s | «nessun ostacolo» nell'1,0 % dei fotogrammi con suolo valido al 95 % | non provato in moto |
+| S7 | camera a 0,25 m di quota (drone posato) | suolo da 0,26 m; radenza a 3 m di 4,8° (21,8° a 1,2 m) | i numeri valgono solo per 1,2 m |
+
+**Conti sul moto del sensore** (`f6-specializzazione/02-slam/MOTO_PROPRIO.md`; previsioni alle 14:41:38 e 14:42:21 in `PREVISIONI.md`; `PYTHONDONTWRITEBYTECODE=1 timeout 300 python3 bilancio_posa.py > risultati.txt`, 6 s). Modello: gruppo fermo, regola «mobile» del nucleo, 15 Hz, curva nominale; gli errori delle sorgenti di posa sono **ipotesi dell'autore**. **Condivide** con il nucleo la regola «mobile» e le curve di rumore. Previsioni **smentite**: P1, P3, P10, metà di P2 e di P7 (l'autore aveva letto la regola dal testo e non dal codice: la soglia trasversale è un angolo, 1,18°, uguale a ogni distanza); reggono P4, P5, P6, P8, P9, P11.
+
+I requisiti sulla posa che escono da questi conti (Q1–Q4, più Q5 e Q6) e l'esito per ogni sorgente di posa (giroscopio da fermi, ruote, autopilota di un drone, sensore indossato) stanno nella tabella del §3.6, dove servono a chi sceglie il portatore del sensore.
+
+Stato: **sostenuto dal modello**; l'errore vero di ogni sorgente di posa è **non risolto**; nessuna soglia del nucleo è provata in moto. I valori dei requisiti Q1–Q6 e delle sorgenti di posa sono in §3.6.
+
+#### 4.1.9 Controllo di ripetibilità fatto in f11 (14 novembre, 16:12–16:14)
+
+Previsione scritta alle 16:12:36, prima dei rilanci (`f11-documentazione/sez-c/riprove/PREVISIONI.md`): «sette script ridanno il file consegnato riga per riga, tempi esclusi; smentita: una riga numerica diversa». Rilanciati senza modifiche, uno alla volta, con `PYTHONDONTWRITEBYTECODE=1 timeout 120 python3 <script> [argomenti] > riprove/Rn.txt` (cartella `f11-documentazione/sez-c/riprove/`), poi `diff`: `f1/21d3813ca7e1/sim_kalman.py`; `f2/04-torneo/scena_parte3.py due`; `f4/H-012/01-avversario/a01_riaggancio.py`; `f4/H-012/03-validazione/sim_h012.py A6 400`; `f4/H-012/03-validazione/sim_v2.py R8 400 0.9`; `f6-specializzazione/03-avversario/conti_spec.py`; `f6-specializzazione/02-slam/bilancio_posa.py`. **Esito: regge**, sette su sette; le sole righe diverse sono tempi di calcolo. Il rilancio di `f4/H-012/03-validazione/sim_v2.py` ridà i 13 falliti su 4800. **Condivide tutto** con ciò che controlla (codice, semi, macchina, Python 3.14.10): prova che i numeri sono *ripetibili*, non che il modello è giusto, né che si riproducono altrove.
+
+### 4.2 Le cifre principali
+
+L'asterisco accanto al numero di riga dice che [metr.] ha ritrovato la cifra nel file grezzo. Gli stati hanno le marche della legenda; qui [CONTO] vuol dire «conto o stima, non misura», e [SIM] vale sempre a sensore fermo. Nessuna riga è verificata sull'hardware.
+
+| # | Cifra | Valore (N o intervallo) | Stato | File |
+|---|---|---|---|---|
+| 1* | Massa: informazione di Fisher di rango 1 | det/traccia² = 5·10⁻¹⁷ | [DIM] (punto materiale, forza ignota) | `f1/21d3813ca7e1/risultati.txt` |
+| 2 | Massa da un'immagine, letteratura [lee2026] | errore percentuale medio 0,665 | [VER] sulla fonte (dal curatore) | `f3/fonti/FONTI_VERIFICATE.md` |
+| 3 | Accelerazione da differenze | σ ≈ 66 m/s² a 30 Hz; 7 m/s² a 10 Hz | [CONTO] (due conti) | `f2/03-triage/TRIAGE.md`, F-004 |
+| 4 | Tre ToF multizona [st-vl53l7cx] | 180° × 60°, non 360° | [VER] sulla scheda | `f3/fonti/FONTI_VERIFICATE.md` |
+| 5* | Campo coperto | camera 20,0 % del disco di 3 m; tre ToF +22,2 % | [CONTO] | `f4/H-012/01-avversario/risultati_a12.txt` |
+| 6* | Copertura del cerchio «al 95 %», q = 0,2, a 2 s | 0,927 / 0,916 / 0,902 (± 0,004–0,007; N = 4000) | [SIM] | `f2/04-torneo/risultati_A_parte2.txt` |
+| 7 | La stessa, per chi torna indietro | 0,56–0,66 | [SIM] (sotto il nominale) | `f2/04-torneo/risultati_A_parte2.txt` |
+| 8* | Copertura con q scelto sui tratti dritti (0,01) | 0,738 / 0,710 | [SMENT] (quella taratura) | `f2/04-torneo/risultati_A2_parte2.txt` |
+| 9 | Velocità costante su pedoni veri, 4,8 s [scholler2020] | 0,39 / 0,83 m (errore medio / finale) | [VER] sulla fonte; camere fisse | `f3/fonti/FONTI_VERIFICATE.md` |
+| 10 | Regola della bozza: «libero» falsi | 265 su 552 (173 in ombra, 92 da visibile), contro 0 | [SIM] (2D, senza rumore) | `f1/dfac83300259/CONSEGNA.md`, `PREVISIONI.md` |
+| 11* | Kalman senza misure, sosta: massa su celle viste libere | 98 % a 2 s, 100 % a 3 s (100 prove) | [SIM] (1D) | `f1/e30f9e2dd4d7/esito_sim.txt` |
+| 12* | Sensore in moto senza compensazione | 1,49 m d'errore; muro «mobile» 100 % | [SIM] (F-008) | `f1/21d3813ca7e1/risultati.txt` |
+| 13 | Errore di profondità al limite dichiarato, a 4 m | 8 / 12 / 16 cm (D455 / Gemini 335 / D435i); i 12 cm non sono nell'uscita dello script: conto dell'arbitro | [CONTO] su schede | `f2/04-torneo/esito_attacchi_parte1.txt`; `f2/05-selezione/SELEZIONE.md` |
+| 14* | Anello cieco (camera a 1,2 m, 15°) | suolo da 1,243 m; ostacolo di 15 cm invisibile sotto 1,087 m | [CONTO] | `f4/H-012/01-avversario/risultati_a03.txt` |
+| 15 | Ostacolo a 1,8 m di quota | visibile solo oltre 2,41 m | [CONTO] | `f2/04-torneo/esito_attacchi_parte1.txt` |
+| 16 | Mappa a quattro stati (griglia polare), Python puro, 640×480 | 20 ms (non è il prototipo) | [SIM] | `f2/04-torneo/esito_attacchi2_parte1.txt` |
+| 17* | Due persone che tornano, solo Kalman | 74 % scambi, 44 % muti (n = 100: circa ± 9 punti, conto [metr.]) | [SMENT] (identità con due nascosti) | `f2/04-torneo/risultati_due_parte3.txt` |
+| 18 | Falso «libero» che uccide l'ipotesi giusta | 4–7 fotogrammi (0,27–0,47 s) | [SIM] | `f2/04-torneo/risultati_falso_parte3.txt` |
+| 19* | Riaggancio rubato | 9,5–100 % → 0,0 % (200 scene per riga) | [SMENT], corretto (C1) | `f4/H-012/01-avversario/risultati_a01.txt` |
+| 20 | Attore a 3 m: tracce confermate | 0,4 % → 100 % a ≤ 2,3 m (500) | [SMENT], corretto (C2) | `f4/H-012/01-avversario/risultati_a02.txt` |
+| 21 | Avviso tolto dal tetto di 10 s | 15–750 fotogrammi → 0 | [SMENT], corretto (C4) | `f4/H-012/01-avversario/risultati_a04.txt` |
+| 22 | Strato 1 esteso | 45,5 m² contro 1,01 m² | [SMENT], corretto (C5) | `f4/H-012/01-avversario/risultati_a05.txt` |
+| 23 | Costo della fascia | 28,2 % dei 4,75 m² di libero visto | [SIM] (costo aperto) | `f4/H-012/01-avversario/risultati_a05.txt` |
+| 24* | Muro «mobile» con persona davanti | 100 % → 0,0–0,2 % (500); 400 → 0 su 400 | [SMENT], corretto (C6) | `f4/H-012/01-avversario/risultati_a06a.txt`, `f4/H-012/03-validazione/v2_WALLP.txt` |
+| 25* | Garanzia per chi è visto 3 / 4 fotogrammi | traccia assente nel 27,1 % / 5,2 % | [SIM] (limite dichiarato) | `f4/H-012/01-avversario/risultati_a07.txt` |
+| 26 | Finestra fissa → che cresce | 79,0 % → 99,9 % (N = 2000) | [SMENT], corretto (C8) | `f4/H-012/01-avversario/risultati_a08.txt` |
+| 27 | «Libero» senza memoria | 11,9 cambi/s → 0,00 | [SMENT], corretto (C9) | `f4/H-012/01-avversario/risultati_a09.txt` |
+| 28 | Affidabilità persa | nessun segnale → 0,13 s e 0,00 s | [SMENT], corretto (C10) | `f4/H-012/01-avversario/risultati_a10_correzione.txt` |
+| 29 | Voce: frase a stato scaduto | 100 % → 0 % | [SMENT], corretto (C11) | `f4/H-012/01-avversario/risultati_a11_correzione.txt` |
+| 30* | Nascosto fuori dallo strato 1, Pd = 1 | 0 su 14 400 (0,75 % per cella) | [SIM] | `f4/H-012/03-validazione/v2_R8.txt` |
+| 31* | Lo stesso, Pd 0,9 e ombra a −20 cm | 13 su 4800 (≤ 0,43 %) | [SMENT] (K-014, aperta) | `f4/H-012/03-validazione/v2_R8_pd09.txt` |
+| 32* | Errore d'ombra che rompe lo strato 1 | −30 cm: 8,9 %; −40 cm: 89,6 % (1200) | [SIM] (margine < 10 cm) | `f4/H-012/03-validazione/out_SWEEP.txt` |
+| 33* | Identità al ritorno, una persona nascosta | 100 %; limite inferiore 99,25 % (N = 400 per cella) | [SIM] | `f4/H-012/03-validazione/v2_R8.txt` |
+| 34* | Secondo soggetto dalla stessa ombra | 2400 su 2400 riagganci sbagliati | [SMENT] (K-016) | `f4/H-012/03-validazione/v2_SECOND.txt` |
+| 35* | Riemersione nel cerchio, demo corretta | 61,1 % e 80,2 % → 100 % con C6 (N = 2000) | [SIM] con C6; [SMENT] senza | `f4/H-012/03-validazione/v2_C6.txt` |
+| 36* | Costo di C6 su chi torna | 99 % → 47–50 % (N = 400) | [SIM] (K-017) | `f4/H-012/03-validazione/v2_C6.txt` |
+| 37 | Pannello da 0,5 m | 14,2–16,5 %; 20,5 % nella riprova | [SMENT] (non si mostra) | `f4/H-012/03-validazione/out_A_D_w05.txt`, `f4/H-012/03-validazione/v2_C6.txt` |
+| 38* | Durata del «previsto» nella demo | 0,40–0,53 s (mediana); buio 1,07–1,13 s | [SIM] | `f4/H-012/03-validazione/v2_R8.txt` |
+| 39* | Area prevista ancora mostrata alla riemersione | 0,5–1,2 % (demo corretta) | [SMENT] (tolta dalla promessa) | `f4/H-012/03-validazione/v2_R8.txt` |
+| 40 | Falsi «mobile» sul muro, R giusto | 0 su 12 000 finestre (≤ 0,025 %) | [SIM] | `f4/H-012/03-validazione/out_WALL.txt` |
+| 41* | Lo stesso con σ creduto la metà | 31 % delle finestre scorrevoli | [SIM] (fragilità) | `f4/H-012/03-validazione/out_WALL.txt` |
+| 42* | Pedone a 0,5 m/s visto entro 1 s a 2 m | 100 % (N = 2000; ≥ 99,85 %) | [SIM] | `f4/H-012/03-validazione/v2_MOB.txt` |
+| 43* | Lo stesso da 3 m, in avvicinamento | 100 / 85,9 / 26,6 % secondo la curva | [NR] (decide il rumore vero) | `f4/H-012/03-validazione/v2_MOB.txt` |
+| 44* | Velocità minima vista da 2 m | 0,095–0,278 m/s secondo la curva | [SIM] | `f4/H-012/03-validazione/out_V1.txt` |
+| 45* | Traccia vera chiusa per errore, Pd 0,9, 4 s | 0,59 % (118 su 20 000) | [SIM] | `f4/H-012/03-validazione/v2_PD.txt` |
+| 46 | Strati 1 accesi a vuoto, Pd 0,9 | 12,8–14,3 % dei passaggi | [SIM] (costo) | `f4/H-012/03-validazione/bis_R8a.txt`, `f4/H-012/03-validazione/bis_R8b.txt` |
+| 47 | Spazio percorso in «età + latenza» | 0,72 m a 2,5 m/s (non 0,33) | [SMENT] (K-015) | `f5/02-audit/AUDIT.md` |
+| 48 | Velocità coperta dalla fascia di 0,40 m | circa 1,4 m/s, a margine zero | [CONTO] | `f5/02-audit/AUDIT.md`; `f6-specializzazione/03-avversario/risultati_spec.txt` |
+| 49 | Latenza, voci note | circa 155 ms in media (soglia 150) | [NR] (R7) | `f3/H-012/02-validazione/VERIFICA.md` |
+| 50 | Altezza minima del pannello | 1,45–1,50 m | [CONTO] | `f5/02-audit/AUDIT.md` |
+| 51 | Banda senza dato accanto all'ombra | 9,5 cm (D455), 5 cm (D435i) | [CONTO] | `f5/02-audit/AUDIT.md` |
+| 52 | Lavoro stimato | 54 ore-persona, 38 in fila | [CONTO] (stima) | `f5/02-audit/AUDIT.md` |
+| 53* | «26 su 30» promuove una taratura a 0,80 | 25,5 %; due stadi 14,2 % | [DIM] (binomiale) | `f3/H-012/03-metrologo/conti_metrologo.txt` |
+| 54 | Soggetto basso nell'anello cieco | invisibile fino a 0,43 m d'altezza a 0,8 m | [CONTO], non vagliato dall'arbitro (f6) | `f6-specializzazione/03-avversario/risultati_spec.txt` |
+| 55 | Imbardata tollerata in moto | 0,87° su 0,87 s | [CONTO], non vagliato dall'arbitro (f6) | `f6-specializzazione/02-slam/risultati.txt` |
+| 56 | Indossato senza odometria | falsi «mobile» 100 % | [CONTO], non vagliato dall'arbitro (f6) | `f6-specializzazione/02-slam/risultati.txt` |
+
+### 4.3 Requisiti e contraddizioni dopo le prove
+
+**Requisiti.** Nessuna misura di accettazione è stata superata: ogni requisito ha un componente e una misura *prevista*. Lo stato di R1–R8 dopo le prove (dal verdetto, `f4/H-012/09-arbitro/VERDETTO.md`, §3, con ciò che audit e f6 aggiungono) è nell'ultima colonna della tabella del §1.3, che unisce le due sezioni d'origine.
+
+**Contraddizioni** (`f4/H-012/09-arbitro/VERDETTO.md` §3; origine in `f2/03-triage/TRIAGE.md` e `f2/05-selezione/SELEZIONE.md`).
+
+| K | In una riga | Stato | Che cosa la decide |
+|---|---|---|---|
+| K-001 | traccia chiusa mentre la persona è nascosta | risolta in simulazione (nessun tetto, rilascio cella per cella); aperta sul vero | H9, H10 |
+| K-002 | forma dell'area prevista | risolta in simulazione (due strati); aperta sul vero | H9, H10 |
+| K-003 | valore di q | risolta in simulazione (0,2); aperta sul vero | H9, H10 |
+| K-004 | quando finisce il «previsto» | **aperta nel numero** («metà dell'area del cuneo» è fissata, non misurata) | — |
+| K-005 | sulla sosta: continuità o perdita | decisione dell'utente | — |
+| K-006 | memoria delle celle | risolta per composizione; vetro aperto | H2 |
+| K-007 | regola «mobile»: spostamento o χ² | **aperta**: a 2 m passano tutte e due | H1, H8 |
+| K-008 | applicazione e posa | decisione dell'utente, sciolta in parte dagli addendum | — |
+| K-009 | 360° e sole | 360° risolta; sole **aperta** | H3 |
+| K-010 | battito o messaggi | **aperta** | persone bendate |
+| K-011 | soglie di accettazione | R3 fissata; R7 **aperta** | H12 |
+| K-012 | numeri discordi sulle schede | apparente, risolta dalle fonti | — |
+| K-013 | strato 1: solo ombra o celle contigue | risolta in simulazione (cuneo; 0 su 14 400) | — |
+| K-014 | anomalia Pd 0,9 e ombra a −20 cm | **aperta, non decidibile senza hardware** | «libero» dentro l'ombra vera di un pannello, 150 fotogrammi, soglia 0 |
+| K-015 | invariante 1 e latenza | **aperta** (0,72 m a 2,5 m/s) | H12, poi una scelta |
+| K-016 | secondo soggetto mai tracciato, stessa ombra | **controesempio in simulazione**; nessuna regola lo esclude | H11; regola nuova |
+| K-017 | C6 necessaria contro il suo costo su chi torna | aperta: costo da dichiarare | H9 |
+| K-018 | «a meno di 0,40 m da un'ombra» vale sempre per l'ombra propria | **aperta**: difetto di scrittura | camminata in campo aperto |
+
+I fatti F-001…F-008 restano come nel triage e nella selezione: F-002 (massa) dimostrato nel modello del punto materiale; F-005 verificato alla lettera, con la riserva su «riconoscere»; F-008 (moto proprio) mai toccato dal torneo (`f2/05-selezione/SELEZIONE.md` §3).
+
+### 4.4 Dove due file dicono cose diverse
+
+1. **Margine dell'invariante 1.** `f4/H-012/05-correzioni/SOLUZIONE_V2.md` §3: 0,33 m, «meno della fascia». `f5/02-audit/AUDIT.md` (ipotesi 3) e `f4/H-012/09-arbitro/VERDETTO.md`: 0,72 m con la latenza. Vale la seconda; la soluzione non è stata riscritta (stato dell'invariante: §2.3).
+2. **«Il pannello da 1 m regge senza C6».** `f4/H-012/05-correzioni/SOLUZIONE_V2.md` §5 lo afferma; `f4/H-012/03-validazione/MISURE_V2.md` (P2c) lo smentisce: 61,1 % e 80,2 % senza C6 (costo di C6: §2.2, B3).
+3. **Area prevista ancora mostrata alla riemersione.** `f4/H-012/05-correzioni/SOLUZIONE_V2.md`: 0–6,2 % (T) e 9,8–18,8 % (con C6, simulatore dell'avversario). `f4/H-012/03-validazione/MISURE_V2.md`: 0,5–1,2 % nella demo corretta (P4) e 1,6–18,5 % (P2c). Nei file grezzi, con le regole della versione 2: T-1 m 4,8 / 6,5 / 8,8 % (`f4/H-012/03-validazione/v2_R8.txt`, letto da [metr.]), demo corretta 1,6–2,1 % con N = 2000 (`f4/H-012/03-validazione/v2_C6.txt`). Sono rilevatori, geometrie e numerosità diversi: la cifra dipende dalla scena; in tutti i casi è sotto il 20 %.
+4. **«I bracci che dovevano fallire sono falliti tutti».** Vero nella lettura principale (`f4/H-012/03-validazione/MISURE_V2.md`); nella lettura «gruppo tagliato = ingresso» due bracci su tre danno 0 falliti su 4800 (`f4/H-012/03-validazione/v2_R8_cut.txt`, nota dell'arbitro). Nella principale falliscono con «entrata in ombra 0»: cade la regola d'ingresso, non il contenimento (lo conferma il rilancio di f11 di [metr.], `f11-documentazione/sez-c/riprove/R5.txt`).
+5. **«7198 su 7198»** (`f4/H-012/03-validazione/MISURE_V2_bis.md`) non è stampato in `f4/H-012/03-validazione/bis_FURTO.txt`: torna solo il denominatore (nota dell'arbitro).
+6. **χ² a 0,5 m/s a 2 m.** Torneo: 75,4 % (`f2/04-torneo/risultati_E_parte2.txt`); validazione: 99,0–100 % (`f4/H-012/03-validazione/out_PED.txt`). Spiegazione proposta e non verificata: nel secondo simulatore il rumore cala mentre il pedone si avvicina (`f4/H-012/03-validazione/MISURE.md`).
+7. **Falsi «mobile» a soglia fissa.** 21,6 % (`f1/8f275a60e807/PREVISIONI.md`) contro 2,3 % (`f2/04-torneo/risultati_E_parte2.txt`): filtri diversi, contraddizione apparente.
+8. **Chi torna indietro.** Copertura 0,56–0,66 nel torneo, 90,2–92,2 % nella prova A (rampe a 1 m/s² che allungano il buio), 47–50 % con C6: tre scene diverse, non confrontabili.
+9. **Pannello da 0,5 m.** Avversario: contenimento 86,4 % con 1 m d'ombra (`f4/H-012/01-avversario/CONTROPROVE.md`, C2); validazione: 14,2–16,5 %, poi 20,5 % (fuori dalla fascia 14–17 % che la validazione stessa aveva previsto). Due rilevatori diversi.
+10. **Durata del buio nella demo.** 0,60–0,67 s (avversario, corpo coperto a metà ancora rilevato), 1,07–1,27 s con C6, 1,07–1,13 s nella riprova.
+11. **Tempo della griglia a 320×240.** 5,1 ms nel file, 4,7 ms in `f2/04-torneo/TORNEO.md` (nota della selezione). I «2,0 ms» sono dell'autore di f1 e non stanno in nessun file del torneo.
+12. **Copertura «0,902 a 2 s».** È la fascia 1,5–2,5 s del terzo generatore; sull'intero dà 0,890 (`f3/H-012/02-validazione/VERIFICA.md` §1).
+13. **Attacco 3.** La prima uscita (86,4 / 42,8 / 12,3 %) conteneva un errore dell'avversario ed è stata sovrascritta (95,5 / 51,8 / 21,4 %): la prima non è più verificabile.
+
+### 4.5 Ciò che nessuna prova ha ancora toccato
+
+**Il sensore vero.** Rumore del centro di una persona a 2–4 m; maschera d'ombra da una profondità vera (errore oltre −20 cm, banda senza dato ai bordi); pixel a mezz'aria sui bordi del pannello e rilevamenti falsi (un «osservato» falso non è mai stato simulato); vetro, tessuti scuri, sole, pavimento lucido; filtri della camera che riempiono i buchi; fotogrammi persi o ripetuti; rumore correlato o con code; latenza dal fotone al suono. Nessuno script ha mai calcolato un «libero» da una profondità.
+
+**Parti della soluzione mai provate.** Le correzioni C1–C11 tutte insieme (C3, C9, C10, C11, graduatoria dei messaggi e uscita in voce esistono solo nel simulatore dell'avversario); C7 e C12; il criterio a due stadi (solo un conto); lo stato «non confermato» e la regola sull'ultima misura; «metà dell'area del cuneo»; la seconda persona nell'atto 4 della demo; il canale dei ToF (solo un conto d'aree); il ramo asincrono con la rete (nessuna prova); `validazione-5`; l'avvio con persone nel campo; le 54 ore (stima).
+
+**Scene.** Occlusore mobile; una persona che ne nasconde un'altra; occlusore più basso del sensore; due persone nascoste insieme con identità; pavimento non piano, rampe, gradini in discesa; ostacoli sotto 1,09 m; più di due soggetti; oggetti diversi da una persona.
+
+**Persone.** Pedoni veri (30 occlusioni, 20 soste: H9, H10); segnali sonori con persone bendate (K-010); qualunque giudizio di chiarezza del feedback.
+
+**Moto.** Tutto: nessuna soglia del nucleo è provata con il sensore in movimento (veicolo, drone, indossato); i conti di f6 sono requisiti, non prove; l'ombra legata all'occlusore con la parallasse non è mai stata simulata; la quota della camera diversa da 1,2 m.
+
+**Metodo.** La rilettura indipendente della versione 2 manca (`f4/H-012/09-arbitro/VERDETTO.md` §2); f6 non è passato dall'arbitro; tutti i simulatori condividono modello linguistico e specifica; la ripetibilità è provata solo su questa macchina.
+
+**Estensioni in corso [prel.].** Le prove di f7–f10 non sono riportate in questo capitolo: lo stato è nel cap. 5. Il triage di f8 (`f8-continuita/10-triage/TRIAGE.md`) propone di smentire, per il movimento mostrato, «la continuità la porta l'avviso sull'ombra» (§5.3). Alle 16:15 nessuna prova aveva ancora elaborato un fotogramma di un sensore vero; che cosa è cambiato dopo è nel riquadro del §5.5.
+
+---
+
+## 5. Valutazioni in corso: le estensioni f7–f10
+
+**Fotografia delle 16:13 del 14 novembre 2026** (`date -Is`: 2026-11-14T16:13:24+01:00), di [pian.]. La convocazione è cominciata alle 13:01:29 (`MANIFESTO.json`). Le quattro estensioni stavano ancora scrivendo: fra le 16:10 e le 16:13 erano comparsi file nuovi in f8, f9 e f10.
+
+Tutto ciò che sta in questo capitolo è **[prel.]**: alle 16:13 nessuna delle quattro estensioni aveva un verdetto (le cartelle `f7-estensione/16-verdetto`, `f8-continuita/16-verdetto`, `f9-preproposta/13-verdetto`, `f10-dati/23-verdetto` erano vuote; per f9 non è più così: riquadro in testa al documento). Dentro [prel.] resta lo stato dato dal ruolo (sostenuto in simulazione, smentito, dimostrato in un modello).
+
+### 5.1 Le quattro estensioni: a che punto sono
+
+| | Domanda e criterio (nel contratto) | Consegnato alle 16:13 | Ancora vuoto |
+|-----|------------------|----------------------|--------|
+| **f7** | Q1: una mappa a cubetti 3D (voxel) probabilistica e sparsa entra nel nucleo con un beneficio misurato, reggendo dieci prove di falsificazione, a 15 cicli al secondo e 95° percentile ≤ 150 ms? Q2: come si dice il lavoro con le parole della traccia della challenge? (`f7-estensione/CONTRATTO_ESTENSIONE.md`, quota 20 agenti) | 8 consegne in corsie cieche (matematico, ottimizzazione, nuvole di punti, requisiti, esperto di dominio, tempo reale; rovesciatore, creativo); triage dell'arbitro (`f7-estensione/10-triage/TRIAGE.md`, 16:06); previsioni del banco delle prestazioni (`f7-estensione/12-prestazioni/`, 16:10) | torneo, soluzione, attacco, verifica, verdetto, redazione |
+| **f8** | Q3: la «continuità visiva» è rispettata in ogni parte? Q4: quali modifiche minime la fanno rispettare? Sei controlli: stima a ogni ciclo, errore, taratura per comportamento, incertezza limitata, sicurezza, costo (`f8-continuita/CONTRATTO_CONTINUITA.md`, quota 18) | 9 consegne (requisiti, tracciamento, Kalman, statistico, inferenza, visualizzatore, ricercatore; rovesciatore, creativo); triage (`f8-continuita/10-triage/TRIAGE.md`, 16:00); banco indipendente con generatore congelato alle 16:10:24 (`f8-continuita/11-misure/`); torneo dell'avversario: previsioni e prime tabelle grezze (`f8-continuita/12-torneo/`, 16:12) | soluzione, attacco, statistica, verdetto |
+| **f9** | Q5: quali strategie S1–S12 si approvano, si correggono, si rimandano all'hardware o si respingono, con la prova, le ore e il costo per ciclo? (`f9-preproposta/CONTRATTO_PREPROPOSTA.md`, quota 13) | 10 consegne (architetto, tempo reale, tracciamento, esperto di dominio, LiDAR, nuvole di punti, interfacce, rovesciatore, pianificatore, avversario); senza consegna: `f9-preproposta/03-kalman/` e `f9-preproposta/04-validazione/` (banco su S3 e S4) | verdetto |
+| **f10** | Q6: quali ipotesi del nucleo si confermano, correggono o smentiscono su profondità simulata con rumore realistico e su registrazioni pubbliche di sensori veri? (`f10-dati/CONTRATTO_DATI.md`, quota 14) | sola ricognizione: `f10-dati/01-ricercatore/DATI_PUBBLICI.md`; `f10-dati/02-sensori/MODELLO_SENSORE.md`; `f10-dati/03-infrastruttura/AMBIENTE.md` e `formato_sequenza.md`; `f10-dati/04-embedded/` (previsioni con esiti, senza consegna) | catena, simulatore, dati veri, validazione, verdetto. **Nessun insieme di dati scaricato** (`f10-dati/scaricati/`: 5,1 MB di prove; alle 16:35 non è più così: §5.5) |
+
+### 5.2 f7 — mappa voxel e conciliazione con la traccia della challenge [prel.]
+
+Fonte di tutto il paragrafo: `f7-estensione/10-triage/TRIAGE.md`; le prove sono degli autori delle idee, su scene sintetiche e camera ideale, sette ruoli su otto rilanciati dall'arbitro.
+
+- **Indicazione provvisoria su Q1: nessuna mappa memorizzata entra nelle 14 ore.** La griglia polare del nucleo resta il percorso critico (V-001: 0,03–0,05 ms e 0,50 ms a 307 200 pixel, due codici indipendenti). Lo sparso non paga a questa scala: in scena vuota restano allocati 736 blocchi su 1 200 e 116 su 160, cifre identiche da due codici (F-102, sostenuto dai dati); la tabella a blocchi occupa il 67–84 % della densa (V-007, smentita); octree e formati a righe compresse costano 2,5–2,9 e 5,7–9,3 volte la densa (V-008, smentita, **misura di un solo ruolo**). Con tutti i raggi a 5 cm l'aggiornamento costa 76–308 ms contro i 66,7 del ciclo (F-103, una sola macchina).
+- **Che cosa entra al suo posto (fascia «14 ore», se regge al torneo).** V-002: lo stato di un punto 3D letto nell'immagine di profondità corrente, senza mappa: 0 falsi «libero» su 576 000 punti, 0,33 ms per 61 074 letture, ma perde il 21,4 % del libero con il rumore e ha un solo fotogramma di prova (2–3 ore [arb.]). V-003: «libero fino a quota h» per cella (libero a torto da 1 100–1 660 a 0 litri; 1–2 ore [arb.]). V-012: la «possibile presenza» come ombra d'ingresso con la forma vera dell'ostacolo, al posto del cuneo (143 celle contro 164 vere e 283 del cuneo; mai provata in scena dinamica; +2–3 ore [arb.]).
+- **Cambi di stato proposti sul nucleo.** «Il cuneo arriva sempre al bordo della portata» è **smentito** per ostacoli più bassi del sensore: l'ombra al suolo finisce a d·H/(H − h) (F-109, dimostrato per geometria, sette casi ricalcolati). Il «libero» del nucleo regge come «suolo visto libero», non come colonna 0–2 m: entro 3 m la colonna non è mai vista tutta, il tetto del campo è a 1,95 m a 3 m (F-108). Il limite «1,1 m» della preproposta è una **distanza** dal sensore (1,09 m), non un'altezza: nessuna mappa lo chiude (F-110).
+- **Aperte:** K-102 (chi è visibile dalla vita in su dietro una cassa resta «osservato» nel nucleo? decide se il cuneo ostacola la continuità); K-105 (0 «liberi» falsi nel nucleo contro 45 829 celle-fotogramma false in 24 corse su 24 nella lettura del matematico); K-106 (resa della regola rigida con i buchi: 13,7 % oppure 74–85 %); K-104 (la frase d'uscita s'impegna fino a 2 m di quota? la sceglie l'utente).
+- **Q2, la traccia della challenge.** T-001: tre assi (applicazione, portatore del sensore, uscita) e primo ambito detto con le parole della traccia della challenge; lì le sette radici cercate dall'arbitro danno 0 occorrenze (non nomina uncrewed, volo, 3D), mentre `promptMare.txt` ha 12 «UAV» o «drone» (F-113, verificato con `grep`). T-002: registro degli eventi sopra gli stati, 0 violazioni su 600 scene ma 103 scene su 200 con un evento mancato (generatore e giudice dello stesso autore; 3–4 ore, non verificato). T-007: lessico senza «UAV», «drone», «volo stazionario». La prova con lettori esterni non è eseguita. Come l'ambito si dice oggi: §8.1.
+- **Ore [arb.], non verificate:** le aggiunte in fascia «14 ore» sommano 8–12 ore-persona.
+
+### 5.3 f8 — la continuità visiva [prel.]
+
+Fonte: `f8-continuita/10-triage/TRIAGE.md` (51 cifre su 51 ricontate dall'arbitro sui file dei ruoli). Tutto è simulazione o conto, a sensore fermo, soggetto puntiforme.
+
+- **Q3: il nucleo non rispetta l'imperativo nel movimento mostrato.** Nove ruoli su nove. Il nucleo emette una stima solo nel 35–50 % dei cicli senza osservazione nella demo e nell'8–10 % in sosta (`f4/H-012/03-validazione/MISURE_V2.md`, citato dal triage); quattro riscritture indipendenti danno in sosta 40,0 / 41,3 / 39,4 / 45 % (F-201, sostenuto dai dati). Restano rispettati lo strato 1 («possibile presenza») e gli invarianti 1–5 e 7.
+- **Precisione dichiarata.** Il cerchio del filtro a velocità quasi costante (q = 0,2) è giusto in media al 90 % (0,88–0,96) ma copre chi torna indietro solo nello 0,29–0,77 a 2 s, e il suo «50 %» contiene lo 0,63–0,85 (F-202). Il punto a velocità costante finisce su suolo visto libero nell'86–88 % dei casi a 2 s (F-204). Tarando sul comportamento peggiore ogni classe sta a 0,87–1,00, ma da 1,5–2 s l'area è l'86–90 % dell'ombra (F-208). Trenta prove non separano una copertura di 0,90 da una di 0,80: ne servono 60–89 (F-210, calcolo esatto).
+- **Durata dello stato «previsto» nel nucleo: i file dicono cose diverse** (K-211): le cifre sono tutte in §2.2, B5. Decide il banco.
+- **Le candidate.** Compatibili con qualunque predittore: tre aree annidate, 50 % dentro 90 % dentro lo strato 1 intatto (C-006, 1 ora); «perso» che diventa «previsto ampio» invece di sparire (C-013, 1 ora); regole di schermo (C-016, 2–3 ore; comprende S5); occlusione virtuale per avere la verità durante il buio (C-019, 3–4 ore, **non eseguita**); scheda di accettazione stratificata (C-020, 1 ora). In gara per il predittore: ripiego a tabella sul comportamento peggiore (C-005: 87–100 % per cella fino a 3 s, 1–2 ore, **da costruire per primo**); «fronte + scia» (C-004: almeno 96 % in ogni prova dell'autore, compreso un terzo generatore; 0,48 ms in Python; 3–5 ore); particelle con modo «sosta» (C-001: ≥ 0,865 sul percorso, 5–8 ore); le due ipotesi della preproposta (C-EST, cioè S3 e S4: **nessuna prova** alla data del triage, 3–5 ore). Nessuna area «probabile» copre chi svolta o esce dal lato lontano (14–45 % a 2 s): lì vale solo il limite esterno (F-206).
+- **Regola della scadenza [arb.]:** una candidata sostituisce C-005 solo se, a pari copertura, la sua area al 90 % è almeno un terzo più stretta. Il minimo per la continuità (C-005, 006, 013, 016, 019, 020) vale **9–12 ore di una persona**.
+- **Soglie del banco, fissate prima** (§6 del triage): 0 passaggi su 400 con un ciclo senza area; area al 90 % ≥ 0,85 in ogni cella sul percorso; 0 cicli con l'area su suolo visto libero oltre la fascia; 95° percentile ≤ 6,7 ms. Prova su 400 passaggi per comportamento e geometria, con semi diversi da quelli della taratura.
+- **Chieste all'utente:** «visiva» vuol dire solo schermo o anche suono; livelli e soglia del «previsto ampio» (K-202); se il punto può spegnersi quando l'area resta (K-203). Le altre decisioni dell'utente: cap. 7.
+
+### 5.4 f9 — le strategie della preproposta esterna [prel.]
+
+Verdetti **proposti dai ruoli**, non dell'arbitro. Dove due ruoli danno ore diverse le riporto entrambe: sono tutte stime non verificate.
+
+| S | Che cosa propone | Verdetto proposto e cifra che lo regge (file in `f9-preproposta/`) | Ore stimate |
+|--|----------|----------------------------------|--------|
+| S1 | selettore automatico della configurazione | **solo forma ridotta** (controllo all'avvio, degrado in un solo verso, identificativo della configurazione in ogni uscita); completa respinta. L'isteresi di 2,5 s fissa l'oscillazione a 17,5 cambi al minuto (`f9-preproposta/02-tempo-reale/CONSEGNA.md`, 20 semi × 10 min); ridurre la mappa in esercizio fa diventare «libero» 3,22 m² su 5,66 (`f9-preproposta/12-avversario/CONSEGNA.md`, p3) | 2–3 (`f9-preproposta/01-architetto/CONSEGNA.md`), 2 (`f9-preproposta/02-tempo-reale/CONSEGNA.md`), 3 (`f9-preproposta/12-avversario/CONSEGNA.md`) |
+| S2 | stato portato all'istante dell'uscita | **approvata con correzioni**: toglie un ritardo di 0,217 m a 1,4 m/s, ma all'arresto brusco va oltre il vero di 0,240 m (`f9-preproposta/02-tempo-reale/CONSEGNA.md`, 500 semi); va fatta su una copia d'uscita; in f8 è C-017 | 2 più 1 di misura; 1 in f8 [arb.] |
+| S3 | due ipotesi durante l'occlusione (transito, sosta) | **con correzioni, solo come informazione sopra la «possibile presenza»**; la regola dei pesi alla lettera annuncia una sosta nel 70,6 % dei transiti normali a 1,2 m/s, 0,1 % con il ritaglio vero (`f9-preproposta/10-rovesciatore/CONSEGNA.md`, 1000 prove per cella); tre letture del peso danno tre esiti incompatibili (`f9-preproposta/05-tracciamento/CONSEGNA.md`). **Decide il banco di f8** | con S4: 6–8 (`f9-preproposta/10-rovesciatore/CONSEGNA.md`), 9 probabile, 5–16 (`f9-preproposta/11-pianificatore/CONSEGNA.md`) |
+| S4 | ritaglio con ciò che il sensore vede libero | **con correzioni (fascia)**: con la maschera d'ombra sbagliata di −20 cm le ipotesi si estinguono nel 100 % dei casi, con la fascia di 0,40 m nello 0 %; la soglia «σ ≤ 0,8 m» non scatta mai nella demo (`f9-preproposta/10-rovesciatore/CONSEGNA.md`) | con S3 |
+| S5 | disegno e suono per osservato, previsto, perso | disegno **con sette correzioni**; etichetta «± X,XX m, conf Z %» **respinta** («± σ» contiene il 39,3 %); suono: nessuna regola nel testo, da provare con persone, almeno 54 risposte giuste su 60 (`f9-preproposta/09-interfacce/CONSEGNA.md`) | circa 6, 3 nel taglio |
+| S6 | punto di massimo avvicinamento, volume protetto | formule sì come informazione; **probabilità d'intrusione respinta** come criterio: su rotta di collisione esatta vale 0,16–0,18 a 2 s e cala se il dato peggiora (`f9-preproposta/06-esperto-dominio/CONSEGNA.md`) | 4, oppure 2 ridotta (`f9-preproposta/12-avversario/CONSEGNA.md`) |
+| S7 | indice di rotta convergente | **respinta come indice a sé**: è la stessa grandezza di S6 (scarto 3,0e-16 su 10 000 stati) | 0,5 come etichetta |
+| S8 | logica a livelli | **con correzioni** (per `f9-preproposta/12-avversario/CONSEGNA.md` respinta com'è scritta): attesa in 900 fotogrammi su 900 a stanza vuota; il 73,2 % del corridoio 0–3 m non è osservabile; i nomi «TA» e «RA» promettono una manovra che il prototipo non comanda [eurocontrol-acas-guide] | 3, di cui circa 2 già in B7 |
+| S9 | tre sensori a tempo di volo laterali | canale laterale di sola prossimità **facoltativo, per ultimo**; «preallarme» **respinto**: a 1,4 m/s restano 0,07 s dopo la latenza (`f9-preproposta/07-lidar/CONSEGNA.md`, conto sulla scheda [st-vl53l7cx]) | circa 9 |
+| S10 | mappa a tre fasce di quota | **con correzioni**: regola stretta, 0 celle «libero» sopra un solido in 15 scene; com'è scritta, falsi «libero» in 4 scene mirate su 4; «chiude il buco sotto 1,1 m» **respinta**; passaggio automatico alla voxel **respinto** (`f9-preproposta/08-nuvole-punti/CONSEGNA.md`). In f7 è V-005: nessun ruolo l'ha provata lì | circa 5, minima 1; ≤ 1 in f7 [arb.] |
+| S11 | macchina a stati per le attività | **con correzioni**: alla lettera, avvicinamento falso in 171 transiti su 400 e riapparizione falsa in 386 soste su 400; corretta, 0 e 0 (`f9-preproposta/05-tracciamento/CONSEGNA.md`, banco dell'autore). In f7 è T-005 | 4–5 |
+| S12 | piano a 24 e a 38 ore | «taglio minimo garantito a 24 ore» **respinto**: 96,5 ore-persona probabili (60–182) contro 39–65 disponibili in 24 ore con 3–5 persone; sta nel tempo in 0 estrazioni su 4000 in 27 celle (`f9-preproposta/11-pianificatore/CONSEGNA.md`) | 9,5 d'integrazione (5,5–19) |
+
+Costo di calcolo: tutti i moduli della preproposta insieme valgono 0,176 ms di mediana in C (in Python puro 7,4 ms per i soli ritaglio e pesi); lo stadio che minaccia i 15 cicli al secondo è la proiezione dei pixel, 2,91 ms in C e circa 161 ms stimati in Python puro (`f9-preproposta/02-tempo-reale/CONSEGNA.md`, §3).
+
+### 5.5 f10 — dati pubblici e sensori simulati [prel.]
+
+Alla fotografia **nessuna delle sei ipotesi del contratto aveva un esito**: era pronta solo la ricognizione. Questo paragrafo unisce ciò che ne dicevano la sezione sul piano e quella sui sensori.
+
+> **Da sciogliere 4 — I dati pubblici sono scaricati? Un fotogramma vero è stato elaborato?**
+> - Sezione sul piano, 16:13: «Nessun insieme di dati scaricato» (`f10-dati/scaricati/`: 5,1 MB di prove) (§5.1).
+> - Sezione sulle prove, 16:15: `f10-dati/01-ricercatore/stato.md` dice «nessun dato scaricato»; alle 16:11 era pronto l'ambiente (`f10-dati/03-infrastruttura/esito_prove.txt`: 0 prove fallite); `f10-dati/12-dati-veri/` e `f10-dati/20-validazione/` vuote: «nessuna prova ha ancora elaborato un fotogramma di un sensore vero».
+> - Sezione sui sensori, 16:16: «l'archivio TUM è scaricato; le cartelle della catena, del simulatore, della validazione e del verdetto di f10 sono vuote: nessun risultato su dati veri esiste ancora».
+> - Controllo di [red.] alle 16:35 (`ls`, `du`; lette solo le prime righe di `f10-dati/12-dati-veri/stato.md`, delle 16:28:30): `f10-dati/scaricati/` pesa 3,9 GB; lo stato del ruolo dichiara scaricati TUM, THÖR (due archivi), tre registrazioni RealSense, Princeton e DepthTrack (4,17 GB con gli archivi aperti), 8 sequenze convertite e controllate (0 errori), 2 tracce THÖR; l'insieme di Friburgo **non** è scaricato (indirizzo solo `http://`, rifiutato dallo script: decisione rimessa al coordinatore).
+>
+> Le tre frasi delle sezioni sono tre istanti diversi, non tre versioni dello stesso fatto. Ma dopo le 16:28 «nessun fotogramma vero elaborato» non vale più alla lettera: sequenze vere sono state convertite e controllate. **Resta vero** che nessuna prova *vagliata* ha fatto girare il nucleo su dati veri. Lo scioglie il prossimo aggiornamento, leggendo `f10-dati/12-dati-veri/DATI_VERI.md`.
+
+- **Ambiente** (`f10-dati/03-infrastruttura/AMBIENTE.md`): Python 3.14.10 con numpy 2.5.4, scipy 1.18.1, OpenCV 5.0.0.93 (non 4.x), pillow, rosbags 0.11.9, in `f10-dati/ambiente/venv`; nove previsioni su nove reggono (una con riserva: una prova ha lasciato un residuo fuori dalla cartella, dichiarata), 0 prove fallite (`f10-dati/03-infrastruttura/esito_prove.txt`). Formato comune di una sequenza (cartella con `meta.json`, `tempi.csv`, `profondita/NNNNNN.npy` a 16 bit in millimetri, dove 0 vuol dire «nessun dato»): è il punto in cui si cambia sorgente fra registrazione, sensore simulato e sensore vero (`f10-dati/03-infrastruttura/formato_sequenza.md`); il controllo accetta 4 sequenze valide su 4 e rifiuta 24 difettose su 24, scritte dallo stesso autore.
+- **Dati scelti** (`f10-dati/01-ricercatore/DATI_PUBBLICI.md`, indirizzi interrogati il 14 novembre): 4,04 GB su 6 ammessi. (1) TUM RGB-D, sequenza `fr3/walking_static`, 474 MB (474 074 105 byte), CC BY 4.0 [tum-rgbd]: i quattro stati da una profondità vera; è un Kinect v1 a luce strutturata, suolo visto solo da 2,2 m (in quella sequenza la camera sta a 1,38–1,43 m, puntata in media 8,5° sotto l'orizzonte: stessa riga del file, letta da [red.]). (2) THÖR, traiettorie vere di persone a 100 Hz, 99,5 MB, CC BY 4.0 [thor]: errore della previsione contro il tempo d'occlusione e valore di q su pedoni veri; parte da posizioni perfette. (3) RGB-D People di Friburgo, 2,8 GB, 29 minuti di scaricamento, CC BY-NC-SA 3.0 [friburgo-rgbd-people]: identità alla riemersione con la visibilità annotata; profondità non metrica. In più tre registrazioni d'esempio RealSense, 657 MB, senza verità e di 4–8 s [realsense-file-di-esempio]. **Lacune:** nessuna fonte ha la camera a 1,2 m inclinata di 15°; l'insieme più vicino (HUM4D, sei D455 ferme con cattura del moto, [park2026]) si scarica solo da un browser; nessun insieme di sensori a tempo di volo multizona con persone.
+- **Modello del sensore** (`f10-dati/02-sensori/MODELLO_SENSORE.md` e `parametri_sensori.json`, cifre ristampate [ries.]: tre camere, due sensori a tempo di volo, due LiDAR 2D; 93 parametri dichiarati dal costruttore, 5 misurati da terzi, 20 calcolati, 32 ipotesi da tarare, cioè buchi per materiale, correlazione del rumore, margine della banda): rumore di profondità a 2 / 3 / 4 m di 1,5 / 3,4 / 6,0 cm per la D435i nominale e 0,8 / 1,8 / 3,2 cm per la D455; una misura di terzi a 2 m dà 1,83 cm, 1,21 volte il nominale [ahn2019]. **Notato dal ruolo:** le curve «nominale» e «pessimista» del nucleo coincidono con la D435i, non con la D455. Banda senza dato accanto a un ostacolo a 1 m con sfondo a 3 m: 19 cm (D455) e 10 cm (D435i, Gemini 335), da un lato solo; la formula ai bordi degli oggetti è una derivazione del ruolo. Nessuno strumento pubblico su sola CPU simula lo stereo attivo (8 cercati): il modello va scritto a mano. Il simulatore gira sempre due volte, nominale e limite. Previsioni aperte (`f10-dati/02-sensori/PREVISIONI.md`): P11 (ombra asimmetrica), P12 (suolo di striscio), P13 (filtro che crea «libero»), P14 (rumore del centro di una persona). Le tabelle dei sensori sono nel §3.2, i limiti nel §3.4.
+- **Per l'inventario dei sensori** (`f10-dati/04-embedded/PREVISIONI.md`, esiti): `pyrealsense2` 2.59.1 ha il pacchetto precompilato per Python 3.14 [pyrealsense2-pypi]; le note della versione 2.59.1 di librealsense non elencano il kernel 7.3 di questa macchina (il supporto dichiarato arriva al 6.14) [librealsense]; un flusso remoto di profondità 640 × 480 a 15 fotogrammi al secondo compresso senza perdita pesa 5,32 MB/s (42,6 Mbit/s) su una sequenza **sintetica**, 1,97 MB/s a metà risoluzione. Inoltre (`f10-dati/04-embedded/`, cifre [ries.]): uno script registra da RealSense, OAK e Orbbec nel formato comune, **mai provato con un dispositivo**; al montaggio del nucleo (1,2 m, 15°: `geometria_sensori.py`) il suolo si vedrebbe da 1,62 m con un Kinect v1, da 1,55 m con un'Astra, da 1,46 m con un'OAK-D; una OAK chiede un cavo USB 3 e una regola di sistema da installare con privilegi.
+
+### 5.6 Il passo d'integrazione
+
+Il quarto e il quinto addendum prevedono un passo finale che fonde il nucleo e le estensioni, rifà la chiusura e il documento. **Alla data non ha cartella né contratto**; la sigla «f9», che il quarto addendum gli dava, è poi passata alla preproposta. Dipendenze: S3 e S4 aspettano il banco di f8; S10 e S11 aspettano f7; f10 innesta il predittore scelto da f8; le ore di ogni pezzo vanno ridette sulle 14 + 4. Deve uscirne, per componente: indispensabile nelle 14 ore, nelle 4 di raffinamento, dopo l'hackathon (sesto addendum).
+
+### 5.7 Che cosa cambia qui alla chiusura di ogni estensione
+
+- **f7:** §5.2 passa da «preliminare» allo stato del verdetto; si fissano V-002, V-003, V-012 dentro o fuori; si chiudono K-102, K-105, K-106; la riga 6 del registro dei rischi (§6.2) riceve le misure del banco indipendente.
+- **f8:** §5.3 riceve il predittore scelto con copertura, area e tempo misurati dal banco; si chiude K-211; la riga 10 del registro dei rischi e la casella «previsione continua» del piano ricevono le ore vere.
+- **f9:** la tabella di §5.4 riceve la colonna «verdetto dell'arbitro»; S3 e S4 si allineano a f8; le ore approvate entrano nel bilancio di §6.1.
+- **f10:** §5.5 riceve un esito per ciascuna delle sei ipotesi; le righe 1, 7 e 9 del registro dei rischi ricevono le cifre su profondità realistica; la portata dichiarata si corregge.
+- **Integrazione, inventario dei sensori, prima misura di k:** si rifà la tabella delle tappe per 14 + 4 ore e 5 persone, con la data e l'elenco di ciò che è cambiato.
+
+---
+
+## 6. Piano e rischi
+
+Tutte le ore di questo capitolo sono stime mai misurate. La tabella delle tappe è calcolata per 24 ore e 4 persone: il ricalcolo per 14 + 4 ore e 5 persone, alla fotografia, mancava (un piano a 14 ore è comparso dopo nella cartella del verdetto di f9: riquadro in testa al documento; non letto).
+
+### 6.1 Il piano
+
+**Il bilancio.** Tutte le ore sono stime mai misurate.
+
+| Voce | Ore-persona | Ore in fila | Fonte |
+|------------------|------|------|----------------|
+| Disponibili: 14 ore × 5 persone | 70 | 14 di orologio | `f7-estensione/10-triage/TRIAGE.md`, §6 [arb.] |
+| Raffinamento: 4 ore × 5 | 20 | 4 | sesto addendum [pian.] |
+| Nucleo, somma dei blocchi B1–B9 | circa 54 | 38 (lettura tutta seriale) | `f4/H-012/05-correzioni/SOLUZIONE_V2.md`, B9; `f5/02-audit/AUDIT.md`, ipotesi 8 |
+| Nucleo con l'integrazione, corsie parallele | 59,5 (39–115) | 26,8 | `f9-preproposta/11-pianificatore/CONSEGNA.md`, §2 [prel.] |
+| Piano minimo a due corsie | 59 (39–115,5) | 23,5 | ivi, §4 [prel.] |
+| Aggiunte f7 in fascia «14 ore» | 8–12 | — | triage f7 [arb.] |
+| Minimo per la continuità (f8) | 9–12 | una persona | triage f8 [arb.] |
+
+I due conti della catena (38 e 26,8 ore) differiscono perché il primo mette tutti i blocchi in fila e il secondo no. In ogni lettura **la catena supera le 14 ore**: comanda lei, non il numero di persone (da 3 a 5 persone il fattore k* dell'ultima tappa passa da 0,33 a 0,38, [prel.]). Sommando nucleo, integrazione e i due minimi si arriva a 80,5–87,5 ore-persona contro 70 [pian.: è un limite superiore, perché il minimo di f8 sostituisce parte del blocco B5 e V-012 sostituisce il cuneo].
+
+**L'ordine che protegge la demo** (`f5/02-audit/AUDIT.md`, ipotesi 8, costruito all'indietro dall'uscita; tappe da `f9-preproposta/11-pianificatore/CONSEGNA.md`, §4). A ogni tappa un finto è sostituito da un vero dietro la stessa interfaccia, con a schermo la scritta dell'origine dei dati.
+
+| Tappa | Che cosa gira | Ore di lavoro alle stime dello sciame | Fattore k* |
+|--|----------------------|--------|----|
+| T1 | i cinque atti a schermo e in suono su dati simulati, previsione continua compresa | 9,1 | 1,26 |
+| T2 | mappa vera a quattro stati, controllo all'avvio, prima ora di misure | 14,0 | 0,80 |
+| T3 | traccia, cuneo, previsione ritagliata e mai tolta, sul simulatore | 17,0 | 0,66 |
+| T4 | rilevamenti veri nelle tracce, su registrazione | 22,7 | 0,50 |
+| T5 | dal vivo, con cicli e latenza misurati; video di ripiego subito | 27,5 | 0,42 |
+| T6 | una sessione di 45 passaggi e 10 soste, poi taratura e accettazione | 32,0 | 0,36 |
+
+k* è il rapporto fra ore vere e ore stimate entro cui la tappa chiude con probabilità 80 %: sotto 1 vuol dire che la squadra deve andare più svelta delle stime. **Attenzione:** la tabella è calcolata per 24 ore e 4 persone, prima del sesto e del settimo addendum; il ricalcolo per 14 + 4 ore e 5 persone **manca**. La colonna delle 24 ore vale come approssimazione [pian.], perché quel modello conta circa 13 ore di costruzione a testa. Lettura: alle stime dello sciame nelle 14 ore si chiude T1 e non T2. **Criterio per cambiare strada:** si misura k alla chiusura di T1; con T1 chiusa entro 3,3 / 3,8 / 4,5 / 6,0 ore ci si impegna su T6 / T5 / T4 / T3 (4 persone, 24 ore; [prel.]).
+
+**Le prime 5–6 ore senza sensori** (settimo addendum; proposta `pianificatore-f11-1`, non provata; la smentisce T1 non chiusa all'arrivo dei sensori).
+1. Ora 0–1: interfacce congelate sul formato comune di f10 e riproduttore di sequenze.
+2. Persona A: mappa a quattro stati (B2) su profondità registrata e simulata. Persona B, **fissa sulla continuità**: una traccia, il cuneo, poi C-005, C-006 e C-013. Persone C e D: uscita (B8, B7) alimentata da rilevamenti finti, con i simulatori di f4 come sorgente. Quinta persona: scarica i dati scelti da f10, procura il pannello, prepara il protocollo H0–H13, la registrazione remota e il video di ripiego.
+3. All'arrivo dei sensori (fra le 20:50 e le 21:50 circa, se le 5–6 ore partono dal settimo addendum e questo è di poco anteriore al contratto di f10, che porta l'ora 15:54 [pian.]: l'ora dell'addendum e l'inizio delle 14 ore non sono scritti in nessun file): autoverifica dei filtri (2 minuti), H0–H6 nella prima ora, **una sola sessione di registrazione**, poi tutto il lavoro sulle registrazioni.
+
+**Candidati al taglio.** L'etichetta della rete neurale (B6, 4 ore): concordi audit, triage f7 e tre ruoli di f9. I sensori laterali (S9, circa 9 ore) e ogni mappa memorizzata. L'associazione ungherese e la regola «mobile» fine (ripiego: velocità del filtro). S6, S7, selettore completo, passaggio alla voxel. In fascia «4 ore»: taratura conforme (C-010, C-011), S2, riassunto per fasce di quota (V-005), tabellone (C-018). **Due file si contraddicono sullo strato 2** (l'area prevista): il verdetto (§6) e l'audit lo mettono fra i tagli; il triage di f7 (§6) scrive che «non si può più tagliare», perché dopo il quarto addendum è la continuità visiva. Vale il secondo. **Non si taglia mai:** «non osservato» mai libero, controllo all'avvio, cuneo di possibile presenza, contatori dell'affidabilità, previsione mostrata come previsione con la sua area.
+
+### 6.2 Registro dei rischi
+
+| # | Rischio | Cifra e fonte | Contromisura |
+|--|------------|--------------------|--------------------|
+| 1 | I filtri della camera riempiono i buchi: un «nessun dato» diventa un dato | documentazione del costruttore [realsense-filtri-post]; sulla Gemini 330 la post-elaborazione è attiva di norma (`f10-dati/02-sensori/PREVISIONI.md`, P10) | filtri spenti; mano sul sensore all'avvio: pixel validi sotto il 10 % in 3 fotogrammi, altrimenti il programma non parte (verdetto, condizione 1) |
+| 2 | La fascia di 0,40 m non copre la latenza | 0,288 s × 2,5 m/s = 0,72 m; margine zero a 1,4 m/s; 155 ms noti contro la soglia di 150 (`f5/02-audit/AUDIT.md`, 3; contraddizione K-015) | fascia a formula oppure velocità massima dichiarata; latenza misurata (H12) e mostrata; nessuna soglia promessa |
+| 3 | Catena più lunga del tempo; stime mai misurate | §6.1 | misura di k a T1; interfacce congelate; una persona fissa sulla continuità |
+| 4 | Sensori in ritardo, remoti, forse inadatti; inventario non arrivato | §5.5, ultimo punto | sorgente intercambiabile; registrare e lavorare sulle registrazioni; metà risoluzione per il flusso |
+| 5 | Nessun sensore utile | si perdono latenza, affidabilità persa dal vivo e la prova scelta dal giurato (`f9-preproposta/11-pianificatore/CONSEGNA.md`, §4) | demo su dati pubblici e sensore simulato, **dichiarati a schermo**; «taratura: solo simulazione» |
+| 6 | Il ciclo non sta in 66,7 ms nel linguaggio scelto | proiezione dei pixel in Python puro: circa 161 ms stimati a 848 × 480 (f9) contro i 20 ms a 640 × 480 scritti in `f4/H-012/05-correzioni/SOLUZIONE_V2.md`, B2: cifre discordi; griglia voxel in Python puro 154 ms (f7, un solo ruolo) | numpy o C per lo stadio dei pixel (non misurato sulla catena); linguaggio deciso all'ora 0 |
+| 7 | Il pannello non nasconde | serve alto 1,45–1,50 m (`f5/02-audit/AUDIT.md`, 5); banda senza dato di 9,5 cm con la D455 e 5 cm con la D435i, contro un margine sotto 10 cm (ivi, 10) | pannello ≥ 1,5 × 1 m, attore a non più di 2,3 m, nastro a terra (verdetto, condizione 3) |
+| 8 | Un secondo soggetto esce dalla stessa ombra | identità sbagliata in 2400 passaggi su 2400 (verdetto, K-016); 392–393 su 400 (`f9-preproposta/05-tracciamento/CONSEGNA.md`) | una sola persona dietro il pannello; identità detta «presunta»; giurati fuori dal campo |
+| 9 | Rilevamenti mancati vicino all'ombra | 13 passaggi falliti su 4800 (verdetto, K-014) | 150 fotogrammi con il pannello sul nastro: 0 celle «libero» dentro l'ombra vera |
+| 10 | Continuità costruita tardi o non tarata | stima emessa nel 35–50 % dei cicli (§5.3); 30 prove non bastano | C-005 per primo; area mai tolta; nessuna percentuale di confidenza senza taratura |
+| 11 | Le estensioni chiudono dopo l'inizio della costruzione | quattro verdetti mancanti | costruire ciò che vale con ogni esito: nucleo, C-006, C-013, C-016, S1 ridotta, lessico T-007 |
+| 12 | Avvio con persone nel campo; buchi fissi del suolo; soglie in fotogrammi | 1,34° d'errore portano il suolo a 7 cm a 3 m; con l'1 % di celle morte l'83,6 % dei settori ha un buco fisso (`f5/02-audit/AUDIT.md`, 9, 6, 7) | H0 e H5; soglie in secondi |
+| 13 | Dati pubblici diversi dal sensore; licenze non dichiarate | §5.5 | scrivere che cosa il risultato non dice; non ridistribuire |
+| 14 | Parole che promettono troppo | «validato», «via libera», «garantito», «UAV» (verdetto §4; T-007) | controllo con `grep` prima della consegna |
+
+---
+
+## 7. Le decisioni che spettano all'utente
+
+Le decisioni sono raccolte qui una volta sola; i capitoli che le motivano sono indicati fra parentesi. Dove serve una scelta fra due letture dei file, si veda anche il cap. 10.
+
+| # | Decisione (e chi la pone) | Default oggi · stato |
+|--|------------------------------------------------|------------------------------------------|
+| 1 | **Inventario dei sensori**, e che cosa vuol dire «da remoto»: il sensore arriva in sala o resta a casa dell'utente? (settimo addendum; domanda `requisiti-f11-1` di [req.]) | camera stereo attiva con IMU (ipotesi del nucleo, mai confermata) · **aperta**. Se il sensore resta lontano, prove col pannello, latenza e demo dal vivo chiedono una persona sul posto |
+| 2 | **Da quando contano le 14 ore?** (domanda `requisiti-f11-2` di [req.]) | non scritto · **aperta**. Dalle 13:01 finirebbero alle 03:01 del 15 novembre, il raffinamento alle 07:01 (conto [req.]) |
+| 3 | Che cosa si dichiara provato: il profilo «sensore fermo», oppure si attende l'hardware (`f4/H-012/09-arbitro/VERDETTO.md`, §6.1) | sensore fermo; moto e ausilio indossato «non verificati» · aperta (f10 prova intanto su dati pubblici) |
+| 4 | Velocità coperta (circa 1,4 m/s) o fascia di sicurezza più larga (`f4/H-012/09-arbitro/VERDETTO.md`, §6.2, K-015) | fascia di 0,40 m, che mette «possibile presenza» sul 28,2 % del suolo visto libero · aperta |
+| 5 | Che cosa si taglia per stare nelle ore (`f4/H-012/09-arbitro/VERDETTO.md`, §6.3; sesto addendum) | etichetta (4 ore), sensori laterali, mappe memorizzate; **non** la previsione, che è la continuità visiva (triage f7 **[prel.]**) · aperta |
+| 6 | Continuità visiva: solo a schermo o anche in suono? Quali livelli (ipotesi: 50 e 90 %) e quale soglia? Fin quando? Demo con un'ombra più larga, per mostrare almeno 2 s? Se confligge con la sicurezza, la sicurezza resta il vincolo? (requisiti di f8, §8 **[prel.]**) | le ipotesi fra parentesi; sicurezza come vincolo (lettura del coordinatore) · aperte |
+| 7 | Racconto della demo: «stazione ferma che osserva il varco di un hangar» o «area attorno a un velivolo o a una macchina»; tenere la riga sull'ordine «uncrewed»? (triage f7, §7 **[prel.]**) | non fissato · aperta |
+| 8 | Montaggio del sensore (orizzontale o verticale); linguaggio del prototipo e macchina della demo; se i 360° servono (`f4/H-012/05-correzioni/SOLUZIONE_V2.md`, §6; `f2/05-selezione/SELEZIONE.md`, §6.3; triage f7 **[prel.]**) | orizzontale a 15°; linguaggio non fissato; 360° no (la traccia della challenge non li chiede) · aperte |
+| 9 | Per gli organizzatori: una applicazione o due; che cosa conta come «attività»; criteri della giuria; demo dal vivo o registrata; se si può lavorare prima dell'evento; limiti di latenza (requisiti di f1, D3–D7, e di f7, §6; pianificatore di f9) | nessuna risposta nei file · **non verificato** |
+
+Già sciolte dagli addendum: applicazione (due ambiti, fuoco sul monitoraggio), durata, squadra. Sciolta in parte, per lettura dell'autore della sezione [req.], la scelta su che cosa mostrare quando una persona si ferma dietro il pannello (K-005): l'utente chiede la continuità, il modo lo sceglie f8.
+
+Altre richieste all'utente nate nelle estensioni, **[prel.]**: livelli e soglia del «previsto ampio» (K-202) e se il punto può spegnersi quando l'area resta (K-203) (§5.3); se la frase d'uscita s'impegna fino a 2 m di quota (K-104) (§5.2).
+
+---
+
+## 8. Ambiti d'uso, profili e dominio
+
+**Campo dell'autore della sezione [dom.]:** monitoraggio e ispezione in ambienti aerospaziali e industriali, sistemi uncrewed (senza equipaggio), ausili per persone non vedenti, dal lato della percezione. **Non è un parere legale, regolatorio, medico o di sicurezza funzionale: per quelle decisioni serve un professionista.** Le pagine in rete sono state lette con uno strumento che riassume: le frasi fra «» vanno ricontrollate dal curatore sul testo grezzo. Il nucleo è provato solo in simulazione, a sensore fermo, alla scala di una stanza.
+
+**Cambi di stato proposti da [dom.], da vagliare.** (1) «L'ordine del 21 ottobre 2026 è della controllata CTMAVIO»: sostenuto **dalla stampa**; la pagina della società, riaperta il 14 novembre da [dom.], non nomina la controllata (§8.6). (2) Il messaggio per settori degli autopiloti aperti, in f6 solo un risultato di ricerca, è ora **pagina aperta** (§8.3). (3) La distanza protettiva di 2,80 e 1,68 m (f9) vale per una persona a 1,6 m/s; la fonte raccomanda 2,0 m/s: **non risolto** quale usare (§8.3).
+
+### 8.1 L'ambito, con le parole della traccia della challenge
+
+La traccia della challenge (`regole_challenge.md`, radice del progetto, sei righe) ammette due applicazioni: l'«orientamento assistito di persone con disabilità visiva» oppure il «monitoraggio di attività e oggetti in ambienti aerospaziali e industriali»; in premessa nomina «sistemi per l'accessibilità e soluzioni di osservazione e ispezione nei settori Aerospace & Industry».
+
+- **Verificato** (ricerca testuale su tutta la traccia della challenge; elenco completo delle parole assenti in §1.2): `uncrewed`, `drone`, `UAV`, `veicol`, `volo`, `3D`, `voxel` compaiono 0 volte (`f7-estensione/04-requisiti/CONSEGNA.md` §2 e §4; `f7-estensione/10-triage/TRIAGE.md`, F-113; ricontato il 14 novembre da [dom.], anche `autopilot`, `unmanned`, `pilot`: 0). `f7-estensione/04-requisiti/CONSEGNA.md` dice «dieci radici», `f7-estensione/10-triage/TRIAGE.md` «sette»: cambia l'elenco, non l'esito.
+- **La storia.** Il contratto lasciava aperta la scelta fra le due applicazioni; la selezione l'ha rimessa all'utente (K-008, `f2/05-selezione/SELEZIONE.md` §6: «solo il sensore fermo ha prove»). Il primo addendum chiede la specializzazione uncrewed; il secondo fissa due ambiti; il terzo chiede le parole della traccia della challenge: **il veicolo uncrewed è un modo di portare il sensore, non l'ambito** (`ADDENDUM_UTENTE.md`).
+- **Formulazione in uso** (proposta dalla v0.4: `proposta/VERSIONI.md`, radice del progetto): caso principale «monitoraggio di attività e oggetti in ambienti aerospaziali e industriali»; secondo profilo «avviso per una persona non vedente». Nel sorgente v0.6 `uncrewed` compare una volta, accanto a «ferma»; «volo stazionario» mai (ricontato il 14 novembre da [dom.]).
+- **Tre assi** (T-001, **[prel.]**): l'**applicazione** (le due della traccia della challenge), il **portatore del sensore** (supporto fisso o piattaforma uncrewed ferma), l'**uscita** (schermo e registro, oppure suoni). Regola di redazione: ogni frase con «uncrewed» contiene «ferma» o «non provato» (`f7-estensione/04-requisiti/CONSEGNA.md` §5).
+
+**Nel campo, «monitoraggio di attività e oggetti»** vuol dire sapere chi e che cosa si muove in un'area di lavoro dichiarata, dov'è, e quando non lo si sa più (`f7-estensione/05-esperto-dominio/CONSEGNA.md` §4, **[prel.]**). Tre casi documentati: (1) l'area attorno a un velivolo, dove velivolo e mezzi nascondono le persone: il danno a terra potrebbe arrivare a «nearly $10 billion by 2035», nastri, caricatori, scale e pontili causano il «40% of total incidents», mezzi con anticollisione ridurrebbero il costo atteso del 42 % (stima dell'associazione; per l'elenco dei riferimenti vale se il 75 % della flotta passa ai mezzi evoluti: §10.1, riquadro 6, i) [iata-enhanced-gse-2022] **[A11]**; (2) l'area condivisa fra persone e robot o mezzi (§8.3); (3) l'ispezione visiva con drone in hangar [aviationweek-ispezioni-droni] **[A]**.
+
+**Che cosa il prototipo non fa in questo ambito.**
+
+| Limite | Numero | File e stato |
+|---------------------|---------------------|------------------------------|
+| Il «monitoraggio di attività» non è coperto dal nucleo; l'«ispezione» non è una sua funzione | — | `f4/H-012/05-correzioni/SOLUZIONE_V2.md` §7; `f7-estensione/04-requisiti/CONSEGNA.md`, critica 8. Lo coprirebbe un registro di eventi (T-002, **[prel.]**): 0 violazioni su 600 scene, ma un evento mancato in 103 scene su 200 e «scomparse» spurie nel 12,5 % |
+| Non rileva oggetti estranei al suolo | gli oggetti di riferimento delle piste (sfera di 4,3 cm, cilindro di 3 × 3,8 cm) stanno sotto i 7 cm di quota minima; con 5 pixel di lato: 3,4 cm a 3 m | `f7-estensione/05-esperto-dominio/CONSEGNA.md`, C6, `f7-estensione/05-esperto-dominio/risultati_osservabilita.txt`: *dimostrato* nella geometria della camera (848 × 480, 87°); [faa-ac-150-5220-24] **[A]**, secondaria |
+| Senza una superficie di fondo non c'è «libero» | stanza vuota di 6 m: 44,2 % dei raggi senza ritorno | `f7-estensione/05-esperto-dominio/CONSEGNA.md`, C4 (scena sintetica); F-112: *sostenuto dai dati*, **[prel.]** |
+| Con un ostacolo basso (cassa, bancale: il caso comune in industria) il cuneo d'ombra è sbagliato | l'ombra finisce a d·H/(H − h): cuneo 283 celle, vere 164 | F-109: *dimostrato* (geometria); l'effetto sulla continuità è K-102, **aperta** (`f7-estensione/10-triage/TRIAGE.md`) |
+| Scala e luogo | fino a 3 m, camera a 1,2 m, al chiuso | `f4/H-012/05-correzioni/SOLUZIONE_V2.md`, B1; `f6-specializzazione/03-avversario/ATTACCO_SPECIALIZZAZIONE.md`, C8 |
+
+### 8.2 I profili d'uso
+
+Due profili, entrambi a **sensore fermo**: **monitoraggio** da stazione fissa o da piattaforma uncrewed ferma; **avviso per una persona non vedente ferma** (in attesa a un varco, a una fermata). Fonti: `f6-specializzazione/01-esperto-dominio/SPECIALIZZAZIONE.md` §1 corretta da `f6-specializzazione/03-avversario/ATTACCO_SPECIALIZZAZIONE.md`; `f5/02-audit/AUDIT.md`, ipotesi 12; `f4/H-012/09-arbitro/VERDETTO.md` §4.
+
+| Voce (e natura) | Monitoraggio (principale) | Avviso, persona ferma | Stato |
+|--------------------|----------------|-------------|--------------------|
+| Contratto d'uscita: tre stati (osservato, previsto, perso); il non osservato non diventa mai «libero»; la «possibile presenza» finisce solo guardando — *comune* | identico | identico | «mai libero»: dimostrazione condizionata, per costruzione (`f4/H-012/09-arbitro/VERDETTO.md` §1). Possibile presenza: *sostenuta in simulazione* (0 su 14 400 passaggi), con controesempio (13 su 4800) |
+| Nove regole fisse — *comune e parametro* | 4 identiche; 5 prendono un termine del profilo | idem | lettura dei testi (`f6-specializzazione/03-avversario/ATTACCO_SPECIALIZZAZIONE.md`, S2) |
+| Metodo: soglie prima, bracci che devono fallire — *comune* | identico | identico | — |
+| Sensore e montaggio — *parametro, oggi uguale* | camera stereo attiva su supporto a 1,2 m, inclinata di 15°; o piattaforma ferma alla stessa quota | la stessa, accanto alla persona | altra quota *non provata*: a 0,25 m il suolo si vede da 0,26 m (non 1,24) e a 3 m fino a 1,00 m di quota (non 1,95) (`f6-specializzazione/03-avversario/ATTACCO_SPECIALIZZAZIONE.md`, S7: conto) |
+| Moto proprio — *parametro, oggi uguale* | nessuno | nessuno | in moto nessuna soglia vale (`f4/H-012/09-arbitro/VERDETTO.md`, condizione 4) |
+| Classe e margine — *parametro, oggi uguale* | persona; fascia 0,40 m | idem | onesto fino a circa 1,4 m/s (1,39: conto con 0,288 s fra età del dato e latenza; `f6-specializzazione/03-avversario/ATTACCO_SPECIALIZZAZIONE.md`, S3) |
+| Zona di valutazione — *parametro, oggi uguale* | da 1,24 a 3 m, al chiuso | idem; l'anello cieco lo copre il bastone | conto; *non verificato fino all'hardware* |
+| Canale d'uscita — *parametro, diverso* | schermo dell'operatore (tre stati, età del dato, ritardo); registro di eventi (**[prel.]**); valore per settore verso un autopilota (*progetto, mai simulato*) | un segnale sonoro di 0,3 s per stato | segnali: una durata ipotizzata, senza persone (`f6-specializzazione/03-avversario/ATTACCO_SPECIALIZZAZIONE.md`, S4) |
+| Alla perdita di affidabilità — *parametro, diverso* | la dichiara e *chiede* attesa o verifica dell'operatore | segnale dedicato; si torna a bastone o cane guida | 0,13 s in simulazione (`f4/H-012/05-correzioni/SOLUZIONE_V2.md` §4, correzione C10 del nucleo); «collegamento caduto»: *non provato* |
+| **Da provare** | moto, volo, sole, oltre 3 m, classi veloci, altra quota, valore per settore | persona che cammina, sensore indossato, segnali con persone | *non verificato* |
+
+- **Il conto dell'attacco** (`f6-specializzazione/03-avversario/ATTACCO_SPECIALIZZAZIONE.md`, S2): dei sei parametri, allo stato provato **ne differiscono due** (uscita e reazione alla perdita). Regole identiche 4 su 9 (nessun «osservato» senza misura; assenza dedotta solo dove la profondità è valida; la possibile presenza finisce solo guardando; niente grandezze non osservabili). «Adattabile» si dice quindi come in C5 (§8.5).
+- **Il profilo assistivo non ha elementi provati oltre il nucleo comune** (`f6-specializzazione/03-avversario/ATTACCO_SPECIALIZZAZIONE.md`, S4). Camminando, senza una stima del moto, ogni oggetto fermo risulta «mobile» nel 100 % dei casi (`f6-specializzazione/02-slam/MOTO_PROPRIO.md` §2d: modello con errori ipotizzati).
+- **Ciò che è comune davvero** (`f5/02-audit/AUDIT.md`, ipotesi 12): contratto d'uscita e metodo. Fascia, zona, portata, criterio del sensore inerziale, «libero = suolo visto», parametri del pedone (corpo di 40 cm, conferma 3 su 5) sono del profilo «fermo, pedone, sala»: a 10 m/s 0,288 s valgono 2,9 m, tutta la portata.
+- **Cautele assistive.** Prototipo dimostrativo: non è un dispositivo medico né di sicurezza, non sostituisce bastone o cane guida (`CONTRATTO.md`; secondo addendum). Due avvisi **[prel.]**: un battito regolare è già un codice per una persona non vedente in Italia (semafori acustici: 60 impulsi al minuto via libera, 120 sgombero; [codice-strada-reg-art162] art. 162, letto su un sito divulgativo, **NV**: `f9-preproposta/09-interfacce/CONSEGNA.md`, critica 11); e non risultano studi su come dire l'incertezza di una previsione a una persona non vedente: l'ausilio più vicino estrapola a 5 s, con sei partecipanti, senza incertezza [kayukawa2019] **[A]** (`f8-continuita/07-ricercatore/CONSEGNA.md`). Suono o vibrazione: in due studi l'aptico costa più dell'audio ([martinez2014] **[C]**; [lupu2020] **[C]**, in riassunto; per l'elenco dei riferimenti la frase è «smentita come scritta» e gli studi sono discordi: §10.1, riquadro 6, a); non decide (K-010, aperta).
+
+### 8.3 Che cosa del dominio dà credito al nucleo
+
+Tre pratiche consolidate usano il principio del nucleo. Danno credito **all'idea**, non al prototipo: nessuna fonte lo certifica, e non risulta una metrica pubblica per «mai libero dove non è osservato» (`f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §3).
+
+| Principio | Nel dominio | Fonte e stato | Dove il paragone finisce |
+|-----------|----------------------|------------------|------------------|
+| **«Sconosciuto» non è «libero»** | Autopiloti aperti: senza dati in una direzione «velocity in that direction is restricted to 0»; oltre 0,5 s un avviso e nessun movimento, dopo 5 s l'attesa; la regione di un sensore guasto è «treated as uncovered». Nel messaggio per settori `UINT16_MAX` è sconosciuto, `max_distance + 1` nessun ostacolo | [px4-collision-prevention] **[A, A11]**; [px4-obstacle-distance] **[A11]** | L'autopilota **comanda**, il prototipo dichiara. Il valore per settore non è mai stato generato. Funzione solo orizzontale, provata a 4 m/s con messaggi a 10 Hz |
+| **La traccia non più osservata resta, con età e accuratezza** | Sorveglianza del traffico aereo: bit CST, «Age of the last received track update is higher than system dependent threshold (coasting)»; bit CNF (confermata o provvisoria); età (I062/290) e accuratezze stimate (I062/500). Radar navali: la traccia persa si segnala e «the target's last position should be clearly indicated» | [eurocontrol-asterix-cat062] **[A, A11]**: copia strutturata dell'edizione 1.18, **non** il documento ufficiale (la corrente è la 1.21: §10.1, riquadro 6, h); [imo-msc192-79] **[A]**, da f8 (**[prel.]**) | È il vocabolario, a un'altra scala. La «possibile presenza» sull'ombra **non** è in queste norme |
+| **Latenza e incertezza stanno nella distanza protettiva** | Sorveglianza di velocità e separazione, forma lineare: S = v_H·T_R + v_H·T_S + v_R·T_R + B + C + Z_S + Z_R (T_R reazione del sistema, T_S arresto, C margine d'intrusione, Z_S incertezza del sensore). Un sistema commerciale classifica i volumi in vuoto, occupato, sconosciuto; lo sconosciuto è «treated as occupied» | [marvel2017] **[A, A11]**; [therobotreport-veo] **[A, A11]**, autrice del costruttore; norme ISO a pagamento, **non lette** | Quel sistema avvia un arresto. Con i numeri del nucleo (latenza 0,155 s, Z_S 0,10 m, C 0,85 m **[R]**, senza una fonte letta: §10.1, riquadro 6, j): **2,80 m** se si chiede a una persona, **1,68 m** con arresto in 0,3 s; velocità coperta con 3 m di portata: 1,44 m/s (`f9-preproposta/06-esperto-dominio/CONSEGNA.md`, `f9-preproposta/06-esperto-dominio/prove/risultati_p8_p9_p10.txt`, P6: conto, **[prel.]**) |
+
+**Precisazione del 14 novembre (f11).** La fonte usa v_H = 1,6 m/s ma, letta attraverso lo strumento che riassume, nota che la norma dà 2,0 m/s come massimo e lo raccomanda. Con 2,0 le distanze diventano 3,26 e 1,86 m (conto [dom.], notato dopo, non vagliato): la prima supera la portata. **Non risolto.**
+
+**Altri agganci, da f9 (**[prel.]**).** Il tempo al massimo avvicinamento dell'anticollisione di bordo [eurocontrol-acas-guide] **[A]**: passa il principio, **non le soglie** (rapporti di circa 8600 in distanza, 250 in velocità, 12–29 in tempo: `f9-preproposta/06-esperto-dominio/CONSEGNA.md`, critica 3). Le luci di stato della pista: lo spegnimento «is not clearance», il sistema «does not substitute for or convey an ATC clearance» [faa-aim-2-1-6] **[A11]**, sito di terzi. Il rilevamento costante in mare, che a distanza ravvicinata non basta [colreg-regola7] **[A11]**.
+
+**Non consolidato.** La «possibile presenza» viene dalla ricerca sulla guida automatica: ostacoli nascosti ai bordi del campo visivo, sovrastimati per intervalli [orzechowski2018] **[C]**; oggetti possibili fuori dall'area osservata [koschi2021] **[C]** per i soli dati bibliografici; griglie dinamiche [nuss2018] **[C]**. Una probabilità d'intrusione non si usa per dire «nominale»: dati peggiori sembrano ridurre il rischio [balch2019] **[A, A11]**; su rotta di collisione esatta vale 0,16–0,18 a 2 s e 0,12 con rumore di 0,20 m (`f9-preproposta/06-esperto-dominio/CONSEGNA.md`, ivi, P9).
+
+### 8.4 Norme e quadri regolatori: «ispirato a», mai «conforme a»
+
+**Nessuna norma è stata applicata.** Il nucleo è prevenzione delle collisioni a corto raggio, non un «detect and avoid» nel senso delle norme (`f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §3). Le norme si nominano solo per dire da dove viene un'idea. Nessuna di queste fonti è passata dal curatore.
+
+| Quadro | Che cosa se ne prende | Fonte e stato |
+|-------------------------|-------------------------|-------------------------|
+| Rilevare ed evitare per velivoli senza equipaggio: valutazione del rischio europea (SORA 2.5, decisione 2025/018/R); RTCA DO-365, EUROCAE ED-275, ASTM F3442-25 | la definizione («detect, decide, command, execute and feedback loop») e la richiesta di individuare i modi di deterioramento. Ragiona su 35 s e oltre un chilometro (da un riassunto di ricerca; per l'elenco dei riferimenti le due cifre non sono nelle pagine citate, ed ED-275 riguarda il solo sistema ACAS Xu: §10.1, riquadro 6, f): **un'altra scala** | [easa-amc-gm-2019-947] **[A]**; [rtca-do-365], [eurocae-ed-275], [astm-f3442-25] **[R]** |
+| Droni in Europa: regolamenti (UE) 2019/947, 2019/945, 2021/664 | 19 m/s come tetto di alcune classi (da guide secondarie). Valgono per chi vola: **all'hackathon conviene non volare** | [ue-2019-947], [ue-2019-945], [ue-2021-664], [easa-faq-open-category] **[R]** |
+| Macchine mobili autonome: regolamento (UE) 2023/1230 (dal 20 gennaio 2027), ISO 3691-4:2023. Navi: codice MASS dell'IMO | contesto; nessuna regola usata | [ue-2023-1230], [iso-3691-4], [dnv-imo-codice-mass] **[R]** |
+| Sicurezza delle macchine: ISO/TS 15066, confluita in ISO 10218-2:2025; ISO 13855 | la formula della distanza protettiva | tramite [marvel2017]; [iso-ts-15066], [iso-10218-2], [iso-13855] non letti; «confluita» **[R]** |
+| Anticollisione di bordo; luci di stato della pista | tempo al massimo avvicinamento; «spento non è autorizzato» | [eurocontrol-acas-guide] **[A]**; [faa-aim-2-1-6] **[A11]** |
+| Dispositivi medici: regolamento (UE) 2017/745, art. 2, punto 1 | è dispositivo medico ciò che il fabbricante destina, fra l'altro, a «compensation for, an injury or disability». **Se un ausilio all'orientamento vi rientri è non verificato** | [ue-2017-745] **[A, A11]**, copia non ufficiale |
+| Duplice uso: regolamento (UE) 2021/821, legge 185/1990; regolamento sull'intelligenza artificiale | per un prototipo lo valuta la società | [ue-2021-821], [it-legge-185-1990], [vogiatzoglou2024] **[R]** |
+
+**Ambito, sempre:** osservazione, monitoraggio, ispezione, navigazione sicura, avviso a una persona non vedente. **Nessuna funzione d'ingaggio o di puntamento**; il prototipo dichiara e chiede, non comanda (`ADDENDUM_UTENTE.md`; contratti di f9 e f10).
+
+### 8.5 Che cosa è stato corretto dopo l'attacco alla specializzazione
+
+La specializzazione «un nucleo, due profili» (`f6-specializzazione/01-esperto-dominio/SPECIALIZZAZIONE.md`) è stata attaccata con conti sulla geometria (`f6-specializzazione/03-avversario/ATTACCO_SPECIALIZZAZIONE.md`): condividono con i testi attaccati camera, griglia, fascia e latenza, e non valgono per il sensore vero. Ne escono otto **correzioni obbligate** (C1–C8 *di quel file*: non sono le C1–C12 del nucleo; i risultati dell'attacco, prova per prova, sono in §4.1.8) prima di ogni documento per la giuria; **nessuna è stata riprovata** (`f6-specializzazione/03-avversario/ATTACCO_SPECIALIZZAZIONE.md` §3). L'ultima colonna è un controllo testuale del 14 novembre di [dom.] su `proposta/proposta_sciame.tex` (radice del progetto, v0.6).
+
+| # | Che cosa cadeva | Numero | Correzione | Nel v0.6 |
+|---|------------|--------------------|---------------|-------|
+| C1 | la frase «una prova» («ogni volta»; «dodici tentativi») | «ogni volta» vale con una persona e rilevamento certo (27 configurazioni da 400 passaggi); con un mancato su dieci 99,7–100 %; con un secondo soggetto dalla stessa ombra 2400 scambi su 2400; nessuno script ha calcolato un «libero» da una profondità | frasi riscritte (§8.7) | sì (righe 91–92) |
+| C2 | «mai "nessun ostacolo" a soggetto nascosto» | chi è alto fino a 0,72 / 0,62 / 0,43 / 0,23 m a 0,5 / 0,6 / 0,8 / 1,0 m non è visto: il settore direbbe «nessun ostacolo» | una traccia finita a meno di 0,40 m dall'anello cieco lascia «sconosciuto» finché non è rivista | solo il limite (riga 190), non la regola |
+| C3 | «nell'occlusione i settori tengono la distanza» | pannello a 1,15 m: 18 settori su 18 «sconosciuto»; a 1,50 m 16 su 18; a 1,70–1,90 m 2 «sconosciuto», 12 con distanza, 4 «nessun ostacolo» | pannello a non meno di 1,7 m, attore a 2,3 m | sì (riga 160) |
+| C4 | la fascia per classe contava solo l'età del dato | con la latenza: persona 0,72 m, mezzo 2,31 m, piccolo drone 5,48 m (non 0,40 / 1,2 / 2,5) | fascia ≥ 0,20 m + mezza larghezza + velocità massima × (età + latenza misurata); intanto «fino a 1,4 m/s, di corsa no» | sì (righe 97, 184) |
+| C5 | «non cambia mai… le nove regole»; «in moto riusa tutto il nucleo» | regole identiche 4 su 9; blocchi cambiati 6 su 9; in moto cambiano 9 righe su 9 | restano identici contratto d'uscita e quattro regole; in moto si riusano solo contratto e griglia del fotogramma | sì (riga 136), senza «quattro su nove» |
+| C6 | profilo assistivo detto «orientamento» | zero elementi provati oltre il nucleo | «avviso di presenza per una persona non vedente ferma» | sì (righe 141–143) |
+| C7 | piano del suolo ristimato con porta di ±2° | con 2° d'errore una scatola di 15 cm è letta 8,0 / 6,3 / 4,5 cm a 2 / 2,5 / 3 m (soglia 7 cm); oltre 0,37 m/s «nessun ostacolo» a torto nell'1,0 % dei fotogrammi | porta riferita alla taratura da fermo, 1° a 3 m; velocità propria ≤ 0,37 m/s | riguarda il moto, dato per non provato |
+| C8 | limiti incompleti | a 0,25 m di quota i numeri cambiano; varco e piazzale sono all'aperto, il sensore no | «al chiuso, fino a 3 m, camera a 1,2 m; il valore per l'autopilota è progetto» | in parte (righe 190, 144) |
+
+Reggono senza riserve nuove: la regola del valore per settore alla lettera, la proposta «nessuna uscita è un comando», l'elenco «da non dire» (`f6-specializzazione/03-avversario/ATTACCO_SPECIALIZZAZIONE.md` §3).
+
+### 8.6 La società che propone la sfida: che cosa risulta in pubblico
+
+La società è Mare Group, come riferisce l'utente nel primo addendum. Le notizie derivano tutte dai suoi comunicati: **più testate non sono più prove** (`f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md`, in testa). Nessuna è passata dal curatore. Nel sorgente v0.6 la società non è nominata (0 occorrenze, ricontato il 14 novembre da [dom.]).
+
+| Affermazione | Stato | Fonte |
+|------------------------------|------------------|--------------------|
+| 21-10-2026: «Primo ordine da cliente estero da 1,7 milioni di euro per sistemi uncrewed» | *sostenuto* | [maregroup-ordine-uncrewed-2026] **[A, A11]** |
+| L'ordine è della controllata CTMAVIO | *sostenuto dalla stampa*; sulla pagina della società «CTMAVIO» e «controllata» **non compaiono** | [soldionline-ordine-uncrewed-2026] **[A, A11]** |
+| Cliente, piattaforma, uso | **non risolto**: nessuna fonte li dice | ivi |
+| 05-06-2026: prime commesse (circa 1,05 milioni), sottosistemi di bordo di un velivolo a pilotaggio remoto | *sostenuto* | [teleborsa-commessa-rpas-2026] **[A]** |
+| 09-06-2026: 20 % di NIDO, con diritto di salire al 51 % entro 24 mesi (per l'elenco dei riferimenti la pagina citata dice «opzione per il controllo entro 24 mesi», non il 51 %: §10.1, riquadro 6, g). Piattaforma: drone, stazione di ricovero e ricarica, calcolo a bordo, voli oltre la linea di vista con supervisione remota. Usi: ispezione di strade e infrastrutture, condotte e reti, sorveglianza perimetrale | *sostenuto* | [teleborsa-nido-2026] **[A, A11]** |
+| 10-07-2026: Task Force X (iniziativa NATO, Torre Veneri) con NIDO, GMSPAZIO e CTM Avio: «la sorveglianza continua e la protezione delle infrastrutture critiche» | *sostenuto* | [websim-task-force-x-2026] **[A, A11]** |
+| 24-07-2026: accordo per acquisire CTMAVIO (9 milioni); 15-09-2026: via libera Golden Power | *sostenuto*; chiusura **NV** | [teleborsa-ctmavio-2026]; [maregroup-news] **[A]** |
+| 28-07-2026: accordo quadro da 8,3 milioni, oltre 6000 kit motore per velivoli senza pilota | *sostenuto dalla stampa* | [teleborsa-propulsione-uav-2026] **[R]** |
+| Linee terrestri o navali; prodotti di percezione; notizie sull'hackathon | **non trovate** | [maregroup-news] |
+
+**Lettura (inferenza, non fatto).** Il profilo pubblico è aereo, da ispezione con supervisione remota: la demo più vicina è l'osservazione con un operatore remoto, non il traffico aereo. Ciò che l'utente ha riferito si dice così: «un ordine da circa 1,7 milioni per sistemi uncrewed, annunciato il 21 ottobre 2026».
+
+### 8.7 Che cosa dire a una giuria mista, e che cosa no
+
+Frasi di `f6-specializzazione/01-esperto-dominio/SPECIALIZZAZIONE.md` §6, riscritte dove l'attacco le ha smentite (C1, C5, C6, C8). **Non rilette da un lettore esterno**: la prova di T-001 (un esterno, dopo 30 secondi, dice che cosa fa il sistema) non è stata eseguita.
+
+**A chi non ha il contesto.**
+
+- *Il problema.* «Chi osserva con una macchina perde di vista le cose: una persona passa dietro un ostacolo, e il rischio è che il sistema si comporti come se non ci fosse più.»
+- *Il principio.* «È progettato per dire, di ogni oggetto che ha seguito, se lo vede, se non lo vede ma sa dove può essere, o se non lo sa; e per non dare per libero uno spazio che non ha visto negli ultimi istanti.»
+- *Una prova.* «Al computer, con una persona sola e rilevamento senza errori, in 400 passaggi dietro l'ostacolo per ciascuna di 27 configurazioni il sistema l'ha ritrovata con la stessa identità ogni volta. Sappiamo dove cede: se dalla stessa ombra esce un'altra persona mai vista, la scambia sempre; e con un rilevamento mancato su dieci e l'ombra stimata stretta di 20 cm, in 13 passaggi su 4800 la persona nascosta è finita in uno spazio dato per libero.» E: «La regola "mai libero senza aver visto" ha retto a dodici attacchi alla sua logica; nessuna prova l'ha ancora esercitata su immagini vere.»
+- *Un limite.* «Finora è provato solo in simulazione, con il sensore fermo, al chiuso, fino a 3 m, con la camera a 1,2 m; non vede il vetro; non è un dispositivo di sicurezza né un dispositivo medico.»
+
+**Al giurato della società.**
+
+- «Una stazione ferma, o una piattaforma uncrewed ferma, monitora un varco per un operatore remoto. Con un'altra uscita, lo stesso contratto dà un avviso a una persona non vedente ferma: lì, oltre il nucleo comune, non è provato niente.»
+- «L'operatore vede tre stati con l'età del dato, come le tracce "in coasting" dei dati di sorveglianza. In progetto, per un autopilota: un valore per settore in cui "sconosciuto" non è "libero", il principio con cui gli autopiloti aperti azzerano la velocità verso i settori senza dati.» Sempre «ispirato a».
+- «La strada: sensore in moto, altri sensori, più punti di vista, ciascuno con la prova che lo sblocca.»
+
+**Da non dire.**
+
+| Non dire | Perché | Al suo posto |
+|----------------------|---------------------------|----------------------|
+| «conforme a», «compatibile con» una norma | nessuna è stata applicata | «ispirato a» |
+| «detect and avoid» | nelle norme è il traffico con equipaggio, a chilometri | «percezione per la navigazione sicura a corto raggio» |
+| «validato», «R8 garantito», «bassa latenza», «funziona in movimento» | `f4/H-012/09-arbitro/VERDETTO.md` §4; latenza nota circa 155 ms contro la soglia di 150 | «provato solo in simulazione, a sensore fermo» |
+| «via libera», «Go», «libero» da solo | il sistema non autorizza; «libero» è «suolo visto libero» (`f7-estensione/07-rovesciatore/CONSEGNA.md`, **[prel.]**) | «nessun ostacolo osservato fino a d metri» |
+| «orientamento» per il secondo profilo; «dispositivo medico»; «sostituisce il bastone» | C6; secondo addendum | «avviso di presenza per una persona non vedente ferma»; a voce: «per chi cammina non è provato niente» |
+| «drone in volo stazionario simulato dal treppiede» | un drone in volo trasla: bastano 3,4 cm/s non compensati per i falsi a 2 m (`f6-specializzazione/02-slam/MOTO_PROPRIO.md` §2a: conto) | «su una piattaforma ferma è lo stesso caso; in moto non è provato» |
+| «UAV» o «drone» come ambito; «rileva detriti od oggetti estranei» | la traccia della challenge non li nomina; sotto 7 cm di quota non vede | le parole della traccia della challenge; «non osservabili» |
+| «RA», «TA», «ACAS», «ABAR», «anti-bird strike», «fail-safe»; «minaccia», «bersaglio», «On-Boresight» | il prototipo non prescrive manovre e non comanda; lessico di puntamento, fuori ambito (`f9-preproposta/06-esperto-dominio/CONSEGNA.md`, **[prel.]**) | livelli nominati da ciò che chiedono; «avvicinamento diretto»; «priorità di rischio di collisione» |
+
+### 8.8 La strada degli sviluppi, con la prova che sblocca ogni tappa
+
+Ogni tappa è «non verificata» finché la sua prova non passa. Le soglie sono quelle dei file.
+
+| Tappa | Aggiunge | Prova che la sblocca | File |
+|--------------|-----------------|------------------------------|-----------|
+| 0. Sensore vero, fermo | filtri della camera spenti, autoverifica all'avvio | pannello sul suolo segnato col nastro, 150 fotogrammi: **0 celle «libero» dentro l'ombra vera**; poi le misure sull'hardware (circa un'ora e quaranta in due) | `f4/H-012/09-arbitro/VERDETTO.md` §3, §6 |
+| 1. Avviso sonoro con persone | la prova con persone | tre persone bendate **ferme**, soglia «≥ 54 su 60» (che cosa si conta va fissato prima) | `f4/H-012/05-correzioni/SOLUZIONE_V2.md` §6; rinviata oltre le 14 ore (`f8-continuita/01-requisiti/CONSEGNA.md`, **[prel.]**) |
+| 2. Sensore che ruota da fermo | giroscopio tarato all'avvio; sincronia | dieci rotazioni di 30° in circa 1 s: muro o persona ferma «mobile» in **non più del 10 %** (oggi, dopo 10°, 96–100 %: `f4/H-012/05-correzioni/SOLUZIONE_V2.md` §6). Il conto: regge fino a 20 ms di ritardo, 15 % a 33 ms, 83 % a 67 ms | `f6-specializzazione/02-slam/MOTO_PROPRIO.md` §4 |
+| 3. Piattaforma che avanza piano | posa da ruote e giroscopio o da odometria visuale; piano del suolo come in C7 | 2 m a 0,3–0,5 m/s lungo un muro: falsi ≤ 10 %, distanza entro il 6 %; con ±2° d'inclinazione una scatola di 15 cm a 2 m resta «occupato» 5 volte su 5; nessun «libero» falso | `f6-specializzazione/02-slam/MOTO_PROPRIO.md` §4; `f6-specializzazione/03-avversario/ATTACCO_SPECIALIZZAZIONE.md`, C5, C7 |
+| 4. Sensore indossato | odometria visuale-inerziale; **al petto, non sulla testa** (sincronia richiesta 27 ms contro 5,6 ms: conto) | le prove 2 e 3 indossando il sensore, poi la 1 in cammino | `f6-specializzazione/02-slam/MOTO_PROPRIO.md` §2d, §3 |
+| 5. Altri sensori, 10–40 m | LiDAR per la portata (40 m al 10 % di riflettività: [livox-mid-360] **[A]**), radar per la velocità, termico come etichetta | rumore misurato a 10–30 m; elementi mobili e occlusioni rimisurati a quella scala con la fascia di C4 | `f6-specializzazione/01-esperto-dominio/SPECIALIZZAZIONE.md` §5; `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §2b |
+| 6. Quota (ostacoli sospesi: ala, carico) | stato di un punto letto nell'immagine di profondità corrente; «libero fino a quota h» | in corso in f7 (**[prel.]**): 0 falsi liberi su 576 000 punti, scena ferma; mancano le prove dinamiche e con buchi a chiazze | `f7-estensione/10-triage/TRIAGE.md`, V-002, V-003, K-106 |
+| 7. Più punti di vista o veicoli | riferimento e orologio comuni; fusione prudente | due sensori fermi con viste incrociate: la zona nascosta a uno e vista dall'altro **si libera cella per cella, senza un «libero» falso** | `f6-specializzazione/01-esperto-dominio/SPECIALIZZAZIONE.md` §5 |
+| 8. Valore per settore verso un autopilota | il messaggio; la causa «collegamento» | su registrazioni: **mai** un settore non osservato con una distanza valida, mai un valore oltre la prima cella non libera | `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md`, `esperto-dominio-1`; `f6-specializzazione/01-esperto-dominio/SPECIALIZZAZIONE.md` §3.1 |
+| 9. Avviso di avvicinamento | tempo e distanza al massimo avvicinamento rispetto a un punto protetto dichiarato | su 30 avvicinamenti diretti l'avviso mai a meno di 0,5 s dal contatto; su 30 passaggi a 1,5 m di lato al più 3 scatti | `f9-preproposta/06-esperto-dominio/CONSEGNA.md` §5 (**[prel.]**) |
+| 10. Prodotto | qualificazione regolatoria | parere di un professionista: fuori dallo sciame | §8.4 |
+
+**Non promettere, a nessuna tappa** (`f6-specializzazione/02-slam/MOTO_PROPRIO.md` §4): una mappa, una precisione di localizzazione, oltre 0,5 m/s, il volo, il sensore sulla testa, una soglia del nucleo valida in moto.
+
+### 8.9 Dove i file dicono cose diverse
+
+- **Volo stazionario.** `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §4 lo dà per simulabile dal treppiede; `f6-specializzazione/01-esperto-dominio/SPECIALIZZAZIONE.md` §2 lo esclude, `f6-specializzazione/02-slam/MOTO_PROPRIO.md` §2a lo smentisce, e `f7-estensione/04-requisiti/CONSEGNA.md` (critica 7) trova falsa la frase nel PDF v0.3. Vale l'esclusione.
+- **Controllata dell'ordine.** `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §1 scrive «tramite la controllata CTMAVIO»; la pagina della società, riaperta il 14 novembre da [dom.], non la nomina; la stampa sì. In §8.6 sono due righe distinte.
+- **Durata del «previsto».** Quattro cifre nei file del nucleo e di f6, due in f8: tutte in §2.2, B5 (discordanza K-211); f8 sta rivedendo il punto (§5.3).
+- **Stati in uscita.** «Tre stati» (`f4/H-012/05-correzioni/SOLUZIONE_V2.md`; `f4/H-012/09-arbitro/VERDETTO.md` §5); ma le uscite per traccia sono cinque, con «non confermato» e «identità ambigua» (`f6-specializzazione/03-avversario/ATTACCO_SPECIALIZZAZIONE.md`, S5). Alla giuria tre condizioni; nel dettaglio cinque.
+- **Righe che cambiano in moto.** «Almeno 7 su 9» in testa ad `f6-specializzazione/03-avversario/ATTACCO_SPECIALIZZAZIONE.md`, «9 su 9» nella sua tabella (S6a).
+- **Lo sconosciuto nella sicurezza industriale.** `f7-estensione/05-esperto-dominio/CONSEGNA.md` (C3) cita «treated as occupied for SSM purposes»; il 14 novembre lo strumento che riassume restituisce «classified as unknown and treated as occupied until the system can determine it to be otherwise». Stesso senso; da ricontrollare sul testo grezzo.
+- **Radar su quadrirotore.** `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §2b scrive «errori laterali fino a 0,9 m»; il riassunto, letto il 14 novembre, dà errori medi fino a 0,15 / 0,93 / 0,87 m sui tre assi [mandaokar2026] **[A, A11]**, preprint.
+- **Cuneo d'ombra con ostacoli bassi.** «Sbaglia dal lato prudente» (`f7-estensione/05-esperto-dominio/CONSEGNA.md`, C7) contro «nasconde ciò che si vede» (ruolo delle nuvole di punti, f7): è la contraddizione K-102, aperta.
+
+---
+
+## 9. Metodo dello sciame e cronologia
+
+### 9.1 Il metodo, in mezza pagina
+
+Regole: `sciame/PIPELINE.md` (radice), versione 3.1, strategia «classica», profilo «percezione» (`MANIFESTO.json`).
+
+- **Contratto (f0) e corsie cieche (f1).** Una domanda e un criterio fatto di controlli, mai di meccanismi. Poi nove ruoli lavorano senza leggersi: sette in corsia conservativa (visione, nuvole di punti, tracciamento, Kalman, LiDAR, requisiti, ricercatore) e due in corsia divergente (creativo, rovesciatore); un «canarino», una stringa in testa a ogni consegna, scopre le copie. Esito: venti idee.
+- **Schede, firme, triage (f2).** Un ruolo senza idee in gara le traduce in venti schede; i nove autori le firmano; l'arbitro assegna le sigle: 20 ipotesi, 8 fatti, 12 contraddizioni.
+- **Torneo di falsificazione e selezione.** L'avversario esegue per ogni idea la prova più economica che la potrebbe smentire (al più cinque minuti): nessuna cade per intero, tre clausole sono smentite (`f2/05-selezione/SELEZIONE.md`). Resta un solo ramo, H-012 (i tre stati osservato / previsto / perso), con le altre idee come componenti.
+- **Soluzione e prove (f3, f4).** Soluzione, rilettura, piano delle misure con le soglie scritte prima, attacco; poi dodici attacchi, le misure, la versione 2 con le correzioni, la riprova dell'insieme.
+- **Audit, verdetto, cancelli (f5).** Un ruolo non coinvolto cerca le ipotesi non dette: ne trova dodici, tre cambiano il verdetto. L'arbitro riconta le cifre sui file e dà uno stato per proprietà. Ogni fase si chiude con un «cancello», un file che lega i documenti alla loro impronta (sha256): un file cambiato dopo lo rende non valido.
+
+**Tre regole reggono tutto:** le previsioni si scrivono prima delle prove, con l'ora e la soglia; ogni prova ha un «braccio che deve fallire» (se non fallisce, la prova è cieca); ogni controllo dichiara che cosa condivide con ciò che controlla. Limite dichiarato: i ruoli condividono lo stesso modello linguistico; «indipendente» vuol dire ruoli, corsie e script diversi.
+
+**Che cosa i file mostrano sul rispetto del metodo.** Ci sono i cancelli di f0, f1, f2 e, per il ramo H-012, di f3 e f4; non per f5, f6 e le estensioni. Nelle cartelle del debugger e dello statistico di f4 c'è solo la consegna. Manca una rilettura indipendente della versione 2 (`f4/H-012/09-arbitro/VERDETTO.md`, §2). Il contratto dava 28 agenti e 90 minuti: fino al cancello f4 ne sono passati 124; le estensioni hanno quote proprie (20, 18, 13, 14 agenti).
+
+### 9.2 Cronologia delle decisioni
+
+Orari dei file e dei cancelli; contratti delle estensioni nelle loro cartelle, versioni del PDF in `proposta/VERSIONI.md` (radice).
+
+| Ora | Che cosa | File |
+|-----------|--------------------------------------------------------|--------------------|
+| 13:01:29 | contratto: una domanda, quattro controlli | `CONTRATTO.md`; `GATE_f0.json` |
+| 13:18–13:36 | f1 chiusa (nove consegne, venti idee); triage sigillato: 20 ipotesi, 8 fatti, 12 contraddizioni | `GATE_f1.json`; `SIGILLI.jsonl` |
+| 13:56:19 | **un solo ramo, H-012 portante**; 15 agenti spesi su 28 | `GATE_f2.json` |
+| 14:03–14:19 | soluzione versione 1, piano delle misure, soglie congelate | `GATE_f3_H-012.json` |
+| 14:30–14:38 | dodici attacchi e misure: cadono sette regole; **soluzione versione 2**. PDF v0.1 (14:29) e v0.2 (14:35) | `f4/H-012/01-avversario/CONTROPROVE.md`; `f4/H-012/05-correzioni/SOLUZIONE_V2.md` |
+| 14:06–14:56 | quadro di dominio, specializzazione a due profili, moto del sensore, attacco; PDF v0.3 (14:41) | `f6-specializzazione/` |
+| 14:40–14:55 | audit (dodici ipotesi nascoste); riprova dell'insieme, anomalia K-014 | `f5/02-audit/AUDIT.md`; `f4/H-012/03-validazione/MISURE_V2_bis.md` |
+| 14:56–15:05 | **verdetto**: progetto di prototipo, nove condizioni; nascono K-013…K-018 | `f4/H-012/09-arbitro/VERDETTO.md`; `GATE_f4_H-012.json` |
+| 15:00–15:14 | aperte f7 (15:00:35: mappa voxel, conciliazione con la traccia della challenge) e f8 (15:11:20: continuità visiva). PDF v0.4 (15:07) e v0.5 (15:14): la previsione passa da «convergente» a «in revisione» | contratti di f7 e f8 |
+| 15:36–15:58 | aperte f9 (15:36:02: preproposta esterna) e f10 (15:54:28: dati pubblici, sensori simulati). PDF v0.6 (15:48): scadenza 14 + 4 ore. Tre commit locali (15:57:51) | contratti di f9 e f10; `git log` |
+| 16:00–16:09 | triage di f8 e di f7 **[prel.]**; ottavo addendum, aperta f11 | i due triage; `ADDENDUM_UTENTE.md` |
+
+---
+
+## 10. Punti da sciogliere
+
+### 10.1 Dove le sezioni non concordano
+
+Le sei sezioni d'origine sono state scritte in parallelo da sei ruoli. Dove non concordano, qui non si sceglie: si riportano le due versioni, i file e ciò che scioglierebbe il punto. Dove [red.] ha aperto un file per controllare, lo dice.
+
+> **Da sciogliere 1 — Le correzioni del nucleo sono C1–C11 o C1–C12?**
+> - **C1–C11:** la sezione sui requisiti (nelle sue sigle), quella sul dominio («non le C1–C11 del nucleo») e il §4.5 («le correzioni C1–C11 tutte insieme»).
+> - **C1–C12:** la sezione sull'architettura («C1–C12: le correzioni nate dai dodici attacchi dell'avversario») e quella sulle prove (§4.1.4, attacco 12: «C12: ToF come canale laterale facoltativo»; §4.5: «C7 e C12» fra le parti mai provate).
+> - **Nei file** (letti da [red.]): `f4/H-012/01-avversario/CONTROPROVE.md` definisce «C12. Riga dei ToF: da "esclusa" a "corretta: canale laterale facoltativo di sola prossimità, mai libero"»; `f4/H-012/05-correzioni/SOLUZIONE_V2.md`, §9, scrive «Le correzioni C1–C11 insieme: ognuna è provata da sola».
+> - **Lo scioglie** l'arbitro, fissando la numerazione. Questo documento scrive «C1–C12» nella legenda e lascia «C1–C11» dove lo scrive la fonte.
+
+> **Da sciogliere 2 — Qual è il meccanismo dell'anomalia K-014?**
+> - **§4.1.6** (da `f4/H-012/03-validazione/MISURE_V2_bis.md`): con un rilevamento mancato la traccia si chiude prima di entrare nell'ombra, lo strato 1 non nasce, e il soggetto attraversa la striscia di 20 cm che il sistema crede visibile. Per l'arbitro (`f4/H-012/09-arbitro/VERDETTO.md`, §3) il difetto vero è la perdita dell'avviso; il «libero» falso esiste solo se la camera dà profondità valide e sbagliate dentro l'ombra vera.
+> - **§3.4** (da `f10-dati/02-sensori/MODELLO_SENSORE.md`, **[prel.]**): i filtri del costruttore trasformano un buco in sfondo, cioè in «libero»: «è il meccanismo della contraddizione K-014». Nel file (riga 82, letta da [red.]): «K-014 ha un meccanismo concreto […] Sostenuto dalla documentazione, non provato: lo decide P13».
+> - Le due frasi parlano forse di due anelli della stessa catena (la seconda direbbe *come* il sensore vero può dare la profondità «valida e sbagliata» che la prima rimanda all'hardware): è una lettura di [red.], **non verificata**, e nessun file le collega.
+> - **Lo scioglie** la misura sull'hardware: celle «libero» dentro l'ombra vera di un pannello, 150 fotogrammi, con i filtri spenti e accesi (condizione 1 del verdetto; previsione P13 di f10).
+
+> **Da sciogliere 3 — Il pannello della demo: quanto alto, e a che distanza dal sensore?**
+> - **Altezza «almeno 1,5 m»:** condizione 3 del verdetto (§2.4), §3.5 e riga 7 del registro dei rischi (§6.2: «pannello ≥ 1,5 × 1 m»); l'audit dà 1,45–1,50 m (§4.1.7, ipotesi 5).
+> - **Altezza «circa 1,67 m»:** critica nuova di [arch.], non vagliata (§2.2, B9): l'1,5 vale con il pannello a 1,15 m; a 1,9 m, la sola geometria riprovata con le correzioni insieme, serve 1,2 m + distanza × tan 14°.
+> - **Distanza:** la versione 2 non la fissa; nei file 1,15 m, 1,5 m e 1,9 m (§2.2, B9); l'attacco alla specializzazione chiede «non meno di 1,7 m», perché a 1,15 m 18 settori su 18 dicono «sconosciuto» (§4.1.8, S1b; §8.5, C3: f6, non vagliato dall'arbitro).
+> - **Lo scioglie** un metro a nastro alla prova H0, e una sola geometria scritta nella soluzione (larghezza, altezza, distanza, posizione dell'attore).
+
+> **Da sciogliere 4 — f10: i dati pubblici sono scaricati?** Il riquadro è nel §5.5.
+
+> **Da sciogliere 5 — f6 ha portato «prove nuove» oppure no?**
+> - **§1.4** (tabella degli addendum, riga 1): «f6 · chiusa, senza prove nuove».
+> - **§4.1.8:** f6 ha due gruppi di conti con le previsioni scritte prima e gli script rifacibili (`conti_spec.py`, `conti_spec2.py`, `bilancio_posa.py`): l'attacco alla specializzazione e i requisiti sulla posa. Hanno cambiato frasi e fasce (§8.5). L'arbitro dichiara di non averli letti.
+> - **Lo scioglie** una dicitura unica, da far fissare all'arbitro; per esempio: «f6: chiusa; conti geometrici e di modello, non vagliati dall'arbitro; nessuna prova del nucleo e nessuna sull'hardware».
+
+> **Da sciogliere 6 — L'elenco dei riferimenti corregge alcune frasi scritte qui.**
+> L'elenco unico dei riferimenti (`f11-documentazione/unione/RIFERIMENTI.md`, chiuso alle 16:50 dal curatore delle fonti unendo le quattro bozze `rif-1` … `rif-4`; non ancora verificato: `f11-documentazione/verifica-rif/` era vuota alle 17:04) mette in testa le sue «correzioni importanti» e chiede di portarle nelle frasi di questo documento. [red.] **non le ha applicate**, perché cambiano affermazioni: le ha segnate in riga accanto alla frase e le raccoglie qui. Fra parentesi, l'elenco e il numero che la correzione ha in testa a quel file.
+> - (a) «In due studi l'aptico costa più dell'audio» (§8.2; origine in `f2/05-selezione/SELEZIONE.md`, K-010): non è ciò che dicono [martinez2014] e [lupu2020]; la frase giusta sarebbe «studi discordi»; stato proposto «smentita come scritta» (attribuzioni, 1).
+> - (b) I 95 ms «dall'esposizione all'applicazione» (§2.2, B8; §3.4; §4.1.3), da cui i «circa 155 ms» di R7 e il margine di K-015: sono nella fonte, ma misurano un ciclo completo con scheda grafica, schermo a 120 Hz e USB; «la somma di circa 155 ms è un conto giusto su un addendo che sovrastima»; R7 resta non risolta fino alla prova H12 (attribuzioni, 2; cambi di stato, 6). È la stessa cautela di [arch.] nel §2.2, B8.
+> - (c) LD19 (§3.2; §3.8, punti 1 e 2): la pagina scrive «≤1°», lo 0,8° è un valore derivato; la tenuta alla luce è 30 klx, non 60 (cifre, 2).
+> - (d) Femto Bolt (§3.8, punto 8): la pagina prodotto porta sia «Indoor» sia «Indoor/Semi-Outdoor» (cifre, 7).
+> - (e) Prezzi (§3.2): la pagina citata per la D455 dà 650 $, non 399–417; il prezzo del Livox Mid-360 non è verificato; «tutti i prezzi vanno ricontrollati a mano prima di scriverli» (cifre, 6).
+> - (f) Norme sul «detect and avoid» (§8.4): ED-275 è la norma del solo sistema anticollisione ACAS Xu, la norma generale è DO-365C; «35 s e oltre un chilometro» non sono in nessuna delle due pagine citate; per quell'ordine di grandezza l'elenco ha la voce `thipphavong2016`, che i file del dominio non citano (attribuzioni, 5).
+> - (g) «Diritto di salire al 51 %» (§8.6): nella pagina citata c'è «opzione per il controllo entro 24 mesi», non il 51 % (attribuzioni, 10).
+> - (h) ASTERIX (§8.3): l'edizione letta è la 1.18, in una trascrizione non ufficiale; la corrente è la 1.21 del 5 giugno 2025 (attribuzioni, 23).
+> - (i) Il 42 % di [iata-enhanced-gse-2022] (§8.1): vale se il 75 % della flotta passa ai mezzi evoluti; la condizione qui non era scritta (attribuzioni, 27).
+> - (j) ISO 13855, margine C = 0,85 m, e con esso i 2,80 m e 1,68 m calcolati in f9 (§8.3): senza una fonte letta; la norma è fra le voci «da non usare come sostegno finché non sono rilette» (§8.4 e §8.5 dell'elenco).
+> - (k) [mandaokar2026] (§8.9): «errori medi di posizione di al più 0,15, 0,93 e 0,87 m sui tre assi»; è una prestampa in revisione (attribuzioni, 8). Il §8.9 lo riporta già.
+> - (l) YOLO26 (§2.2, B6): i 38,9 ms sono misurati su una CPU da server (cifre, 3).
+> - (m) Audit, ipotesi 1 sui filtri della camera (§4.1.7: «letto solo il riassunto di ricerca»): per l'elenco ora è verificata sulla pagina [realsense-filtri-post]; ipotesi 11, «69°×42°» (§2.2, B1; §3.5): trovata nella pagina di confronto, con riserva sull'attribuzione della colonna (cambi di stato, 4).
+> - (n) [vogiatzoglou2024] (§8.4): è il contributo di un'autrice in un blog accademico, e «duplice uso» non è nel testo (attribuzioni, 12). [koschi2021] (§8.3): l'articolo è del 2021; il quadro di dominio cita un altro documento, non identificato (attribuzioni, 15).
+> - (o) Senza fonte, secondo il §8.4 dell'elenco: la velocità del pedone (1,2–1,4 m/s; 2,5 m/s al massimo), la larghezza del corpo di 40 cm, la quota del sensore di 1,2 m. Sono ipotesi degli autori, usate in tutto il cap. 2 e il cap. 4.
+>
+> **Lo scioglie** l'arbitro, dopo la verifica dell'elenco: ogni correzione accolta cambia la frase e diventa una riga del registro delle modifiche.
+
+**Discordanze minori fra le sezioni** (nessuna cambia uno stato).
+
+- **«265 su 552».** «Celle» nel §1.5, «casi» nel §4.1.1; nel file d'origine sono «coppie (fotogramma, cella del pedone)» (`f1/dfac83300259/PREVISIONI.md`, letto da [red.]).
+- **Link della Gemini 335.** Per il §2.2 (B1) nel file del curatore «il link manca»; la sezione sui sensori lo dà e scrive «curatore [g]» (appendice B). Nel file del curatore la riga dice «Orbbec, pagina prodotto» senza indirizzo (`f3/fonti/FONTI_VERIFICATE.md`, riga della Gemini 335, letta da [red.]).
+- **Orari di f4.** Il §9.2 scrive «14:30–14:38: dodici attacchi e misure» (orari dei file); il §4.1 dà i lanci dalle 14:23:48 alle 14:35.
+- **Stati in uscita.** Tre nei §1.1 e §2.2; cinque per traccia nel §8.9, che lo segnala.
+- **Radici cercate nella traccia della challenge.** Dieci per un ruolo, sette per l'arbitro di f7 (§8.1): cambia l'elenco, non l'esito.
+- **Chiavi dei riferimenti doppie.** Tre fonti avevano due chiavi in sezioni diverse: sono state unificate (appendice B).
+
+### 10.2 Discordanze fra file che toccano più capitoli
+
+1. **Durata dello stato «previsto».** Sei cifre in cinque file (da 0,40–0,53 s a 0,66–1,14 s): stanno tutte nel §2.2, B5 (discordanza K-211). Causa non verificata.
+2. **Area prevista ancora mostrata alla riemersione.** 0–6,2 % (`f4/H-012/05-correzioni/SOLUZIONE_V2.md`, §7, geometria del torneo) e 0,5–1,2 % (`f4/H-012/09-arbitro/VERDETTO.md`, §3, geometria della demo): in entrambi i casi tolta dalla promessa. Tutte le cifre, scena per scena: §4.4, punto 3.
+3. **Due frasi della versione 2 smentite dal verdetto.** «0,33 m, meno della fascia» (invariante 1): sono 0,72 m, cioè 0,288 s a 2,5 m/s. «Il pannello da 1 m regge senza C6»: C6 è obbligata (§2.3, invariante 1; §2.2, B3; §4.4, punti 1 e 2).
+4. **Ore di lavoro.** 54 ore-persona, 38 in fila (`f4/H-012/05-correzioni/SOLUZIONE_V2.md`; `f5/02-audit/AUDIT.md`), contro 59,5 (39–115) con l'integrazione e 26,8 in fila con corsie parallele (pianificatore di f9 **[prel.]**). Stime, mai misurate; il bilancio è nel §6.1.
+5. **Contratto e addendum.** «24–48 ore, 3–5 persone» e «niente prove oltre la classe 2» (`CONTRATTO.md`) sono superati dagli addendum 6 e 7.
+6. **Uncrewed.** «Caso d'uso principale» (secondo addendum) e «uno dei modi di portare il sensore» (terzo): vale il terzo. Il PDF usa le parole della traccia della challenge per il primo ambito solo dalla v0.4 (`f7-estensione/04-requisiti/CONSEGNA.md`, critica 6 **[prel.]**).
+7. **«Contratto» o «ordine».** L'utente parla di un contratto per veicoli uncrewed; le fonti di un ordine per «sistemi uncrewed», «tramite la controllata CTMAVIO» (`f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md`): nella pagina riaperta il 14 novembre da [req.] la controllata non è nominata (**non verificato** da [req.]; di più nei §8.6 e §8.9).
+
+**Le altre discordanze fra file stanno dove serve leggerle.** Nel nucleo, blocco per blocco (§2.2: B3, testo contro codice della regola «si muove» e «regge senza C6»; B5, la cifra «prima» di C4; B8, i ritardi del segnale di affidabilità; B9, la distanza del pannello; §2.4, le ore in fila e lo strato 2 «da tagliare»). Nelle prove: §4.4, tredici punti. Nei sensori: §3.8, nove punti. Nel dominio: §8.9, otto punti. Nel piano: §6.1 (38 contro 26,8 ore in fila; lo strato 2 fra i tagli) e §6.2, riga 6 (20 ms contro circa 161 ms per lo stadio dei pixel).
+
+---
+
+## Glossario
+
+Una parola per ogni cosa. Dove le sezioni d'origine o i file usano un'altra parola, è detto.
+
+| Termine | Che cosa vuol dire qui |
+|---|---|
+| **affidabilità persa** | il segnale con cui il sistema dice che ciò che mostra non è più affidabile (requisito R6). Tre cause: nessun fotogramma nuovo o tre identici; poche celle valide; sensore mosso (§2.2, B8) |
+| **anello cieco** | il suolo vicino che la camera non vede: a 1,2 m di quota e 15° d'inclinazione il suolo si vede solo da 1,24 m (§2.2, B1). In una sezione d'origine: «vuoto vicino» |
+| **area prevista** | lo strato 2. Nei file anche «regione», «cerchio», «ellisse» |
+| **braccio che deve fallire** | una variante della prova costruita per fallire; se non fallisce, la prova è cieca |
+| **buio** | il tempo in cui il soggetto dietro l'ostacolo non dà misure |
+| **camera stereo attiva** | camera di profondità con due camere a infrarossi e un proiettore di trama: la distanza viene dallo scarto fra le due immagini (§3.1) |
+| **cancello** | il file che chiude una fase legando i documenti alla loro impronta sha256 (§9.1) |
+| **cella** | un elemento della griglia polare: 1° × 0,1 m, fino a 3 m |
+| **coasting** | nei dati di sorveglianza del traffico: una traccia non più aggiornata, che resta con la sua età (§8.3) |
+| **continuità visiva** | l'obiettivo principale posto dall'utente con il quarto addendum: il movimento di ogni oggetto seguito resta visualizzabile anche quando non è visto, con una previsione efficace, una stima realistica della sua precisione e un'incertezza controllata (§1.4, §5.3) |
+| **corsia cieca** | in f1 i ruoli lavorano senza leggersi; un «canarino», una stringa in testa a ogni consegna, scopre le copie (§9.1) |
+| **cuneo** | l'ombra stimata dell'ostacolo dietro cui una traccia è entrata; allargato della fascia è lo strato 1 |
+| **curve di rumore** | nominale, pessimista, del torneo: il rumore di profondità ipotizzato a 2, 3 e 4 m (§2.2, B1; §4.0) |
+| **demo corretta (DC)** | la geometria riprovata con le correzioni insieme: pannello da 1 m a 1,9 m, attore a 2,3 m, ombra di 1,21 m (§4.0) |
+| **estensione** | una delle fasi f7–f10, aperte dopo il verdetto e ancora in corso |
+| **fascia** | i 0,40 m di cui l'ombra stimata viene allargata: 0,20 m d'errore d'ombra più mezzo corpo di 40 cm (§2.2, B5) |
+| **griglia (polare)** | il reticolo di celle, centrato sul sensore, su cui è costruita la mappa; si ricalcola a ogni fotogramma, non è una mappa memorizzata |
+| **identità ambigua** | uscita di B5 quando il riaggancio non è sicuro (più tracce pendenti, o rilevamento fuori dalla fascia dell'ombra d'ingresso) |
+| **IMU** | unità inerziale (giroscopio e accelerometro) |
+| **k\*** | il rapporto fra ore vere e ore stimate entro cui una tappa del piano si chiude con probabilità 80 % (§6.1) |
+| **libero** | stato di una cella: suolo visto alla quota attesa, e nessun ostacolo, in almeno uno degli ultimi 3 fotogrammi. f7 propone di dirlo «suolo visto libero» **[prel.]** |
+| **mappa** | l'uscita del blocco B2: per ogni cella della griglia uno di quattro stati (libero, occupato osservato, in ombra, non osservato). «Mappa voxel» e «mappa memorizzata» sono altre cose: le strutture 3D o persistenti valutate in f7 (§5.2). In una sezione d'origine: «griglia a quattro stati» |
+| **mobile** | l'etichetta che la regola «si muove» (B3) dà a un gruppo di celle occupate. In due sezioni d'origine: «in movimento» |
+| **non confermato** | uscita di B5 per una traccia in campo aperto senza misure: al più 3 fotogrammi, poi la traccia è chiusa |
+| **nucleo** | la soluzione versione 2 (ramo H-012), approvata come progetto di prototipo |
+| **ombra** | le celle oltre il primo ritorno, che il sensore non vede. «Ombra a −20 cm»: l'ombra che il sistema stima è più stretta della vera di 20 cm |
+| **ore-persona, ore in fila** | il lavoro totale; la durata della catena di blocchi che non si possono fare in parallelo |
+| **osservato, previsto, perso** | i tre stati di una traccia (B5). Osservato: c'è una misura nel ciclo. Previsto: non c'è, e si mostra un'area probabile. Perso: l'area non informa più; si dice sempre «può aver lasciato l'area» |
+| **passaggio** | una camminata simulata (un seme): l'unità che si conta. Anche «transito» |
+| **Pd** | la probabilità che il rilevatore veda il soggetto in un fotogramma |
+| **portatore del sensore** | ciò che regge il sensore: un supporto fisso o una piattaforma uncrewed ferma (§8.1) |
+| **posa** | dove sta e come è orientato il sensore, istante per istante (§3.6) |
+| **possibile presenza** | il messaggio dato sull'ombra in cui una traccia è entrata: «qui può esserci qualcuno», con la sua età. Finisce solo per riaggancio o perché le celle sono state viste libere. La porta lo strato 1 |
+| **preproposta esterna** | il documento `prepropostaEsterna.md` con dodici strategie S1–S12, valutato in f9 (§5.4) |
+| **profilo** | un modo d'uso del nucleo: monitoraggio; avviso per una persona non vedente ferma (§8.2) |
+| **prova χ²** | prova statistica che decide se la velocità stimata è diversa da zero: l'alternativa alla regola dello spostamento (K-007) |
+| **q** | il rumore di processo del filtro di Kalman (quanto il filtro ammette che la velocità cambi), in m²/s³; nel nucleo 0,2 |
+| **riaggancio** | alla riemersione, l'associazione di un rilevamento alla traccia che era entrata nell'ombra (regola corretta da C1) |
+| **riemersione** | il ritorno in vista del soggetto dopo l'occlusione. In alcune sezioni d'origine: «ricomparsa» |
+| **scambio muto** | identità sbagliata senza il segnale di «identità ambigua» |
+| **scene T, D, DC** | torneo, demo, demo corretta (§4.0) |
+| **σ** | scarto tipo del rumore |
+| **strato 1** | il cuneo d'ombra dell'ostacolo in cui la traccia è entrata, allargato della fascia: porta la «possibile presenza» (la garanzia). In una sezione d'origine: «strato di garanzia» |
+| **strato 2** | l'area prevista: il cerchio al 95 % del filtro ritagliato sul cuneo; dice «probabile qui» (l'informazione) |
+| **ToF** | sensore o camera a tempo di volo: misura la distanza dal tempo di andata e ritorno di un impulso di luce (§3.2) |
+| **torneo** | in f2: per ogni idea l'avversario esegue la prova più economica che la potrebbe smentire (§9.1) |
+| **traccia** | l'oggetto seguito nel tempo dal blocco B4: identità, posizione e velocità con la loro incertezza; «tentativa» o «confermata»; «pendente» se è entrata in un'ombra e non è ancora riagganciata. Unica eccezione: in «det/traccia²» (§4.1.1; §4.2, riga 1) è la traccia di una matrice |
+| **traccia della challenge** | il testo dell'hackathon (`regole_challenge.md`, radice del progetto): 7 frasi, 156 parole (§1.2). Nelle sezioni d'origine anche «la traccia» e «le regole» |
+| **triage** | il passo in cui l'arbitro assegna le sigle a ipotesi, fatti e contraddizioni |
+| **uncrewed** | senza equipaggio. Qui è un modo di portare il sensore, non l'ambito (§8.1) |
+| **versione 1, versione 2** | la soluzione prima e dopo i dodici attacchi di f4 (cap. 2) |
+
+## Registro delle modifiche
+
+Una riga per ogni aggiornamento, la più recente in fondo. Si scrive che cosa è cambiato e quale valutazione lo ha deciso; uno stato cambiato si scrive «da … a …».
+
+| Versione | Data e ora | Valutazione che la motiva | Che cosa è cambiato |
+|---|---|---|---|
+| 1 | 14 novembre 2026, 17:05 | chiusura delle fasi f1–f6 (verdetto dell'arbitro sul ramo H-012; f6 non vagliata dall'arbitro); estensioni f7–f10 in corso, senza verdetto alla fotografia delle 16:13–16:22 | prima stesura: unione delle sei sezioni di f11; chiavi dei riferimenti allineate all'elenco unico (`f11-documentazione/unione/RIFERIMENTI.md`); sei punti «da sciogliere» (§10.1) |
+| 2 | *(da scrivere)* | *attese, nell'ordine in cui arrivano: verdetto di f9 (comparso alle 16:35, non integrato), di f8, di f7, di f10; verifica dell'elenco dei riferimenti e sue correzioni (§10.1, riquadro 6); inventario dei sensori; prime misure sull'hardware* | *si veda il §5.7* |
+
+## Appendice A — File dello sciame che fanno da fonte a ciascun capitolo
+
+Per ogni capitolo: i file principali, poi l'elenco dei file letti dichiarato dall'autore della sezione d'origine (per intero, in parte, non letti). Ciò che un autore non ha letto non è coperto dal suo capitolo.
+
+**Cap. 1 (scopo, traccia della challenge, requisiti, vincoli), cap. 7 (decisioni dell'utente), cap. 9 (metodo e cronologia), §10.2** — sezione d'origine: `f11-documentazione/sez-a/SEZIONE.md`. File principali: `CONTRATTO.md`, `ADDENDUM_UTENTE.md`, `regole_challenge.md` (radice del progetto), `f4/H-012/05-correzioni/SOLUZIONE_V2.md`, `f4/H-012/09-arbitro/VERDETTO.md`, `f2/03-triage/TRIAGE.md`, `f2/05-selezione/SELEZIONE.md`, i cancelli `GATE_*.json`.
+
+**Per intero:** `ADDENDUM_UTENTE.md`; `CONTRATTO.md`; `regole_challenge.md` (radice); `f4/H-012/05-correzioni/SOLUZIONE_V2.md`; `f4/H-012/09-arbitro/VERDETTO.md`; `f2/03-triage/TRIAGE.md`; `f2/05-selezione/SELEZIONE.md`; `f1/b8262bfed263/CONSEGNA.md`; `sciame/PIPELINE.md` (radice); `proposta/VERSIONI.md` (radice); `GATE_f0.json`, `GATE_f3_H-012.json`, `GATE_f4_H-012.json`, `MANIFESTO.json`, `SIGILLI.jsonl`; `f7-estensione/CONTRATTO_ESTENSIONE.md`; `f8-continuita/CONTRATTO_CONTINUITA.md`; `f9-preproposta/CONTRATTO_PREPROPOSTA.md`; `f10-dati/CONTRATTO_DATI.md`; `f7-estensione/04-requisiti/CONSEGNA.md`; `f8-continuita/01-requisiti/CONSEGNA.md`; `f9-preproposta/11-pianificatore/CONSEGNA.md`.
+
+**In parte** (inizio, o righe cercate con `grep`): `GATE_f1.json`, `GATE_f2.json` (note), `FOTO.json`; `f3/H-012/02-validazione/VERIFICA.md` (§3); `f3/H-012/H-012.md`; `f3/H-012/03-metrologo/PIANO_MISURE.md`; `f3/fonti/FONTI_VERIFICATE.md`; `f4/H-012/03-validazione/MISURE_V2.md`; `f5/02-audit/AUDIT.md`; i quattro file di `f6-specializzazione/`; `f7-estensione/10-triage/TRIAGE.md`; `f8-continuita/10-triage/TRIAGE.md`; `f9-preproposta/07-lidar/CONSEGNA.md`.
+
+**Solo elencati** (`find`, `ls`): tutte le altre cartelle. **Non letti:** la bozza iniziale, `promptMare.txt`, `prepropostaEsterna.md`, i PDF, i simulatori, i file dei risultati, le altre consegne di f1 e delle estensioni. Comandi usati: `wc`, `grep`, `find`, `pdftotext`, `pandoc` (in una cartella temporanea), più i due comandi git dichiarati nell'appendice C.
+
+**Cap. 2 (architettura del nucleo)** — sezione d'origine: `f11-documentazione/sez-b/SEZIONE.md`. File principali: `f4/H-012/05-correzioni/SOLUZIONE_V2.md` (versione 2), `f3/H-012/01-scene-dinamiche/SOLUZIONE.md` (versione 1), `f4/H-012/09-arbitro/VERDETTO.md`, `f4/H-012/01-avversario/CONTROPROVE.md`, `f4/H-012/03-validazione/MISURE.md`, `MISURE_V2.md`, `MISURE_V2_bis.md`, `f5/02-audit/AUDIT.md`, `f3/H-012/02-validazione/VERIFICA.md`, `f3/H-012/03-metrologo/PIANO_MISURE.md`, `f3/fonti/FONTI_VERIFICATE.md`, `f2/05-selezione/SELEZIONE.md`; **[prel.]** `f7-estensione/10-triage/TRIAGE.md`, `f8-continuita/10-triage/TRIAGE.md`.
+
+- **Per intero:** `ADDENDUM_UTENTE.md`; `CONTRATTO.md`; i quattordici file che fanno da fonte al capitolo (soluzione versione 2 e versione 1, verdetto, controprove, le tre misure, audit, verifica, piano delle misure, fonti verificate, selezione, i triage di f7 e di f8: percorsi nell'elenco qui sopra); `f9-preproposta/01-architetto/CONSEGNA.md`; `f9-preproposta/11-pianificatore/CONSEGNA.md`.
+- **File grezzi ricontrollati** (le cifre citate tornano): `f4/H-012/01-avversario/risultati_a01.txt`, `_a03_correzione`, `_a04`, `_a05`, `_a09`, `_a10_correzione`, `_a11_correzione`; `f4/H-012/03-validazione/v2_PD.txt`, `f4/H-012/03-validazione/v2_SECOND.txt`, `f4/H-012/03-validazione/v2_WALLP.txt`, `f4/H-012/03-validazione/bis_FURTO.txt`, `f4/H-012/03-validazione/v2_C6.txt` (prime 20 righe). Per ricerca: `f4/H-012/01-avversario/risultati_a10.txt`, `f2/04-torneo/esito_attacchi_parte1.txt`.
+- **In parte:** `f3/H-012/H-012.md` (righe 1–60); `f2/03-triage/TRIAGE.md` (fatti F-001…F-008); `f6-specializzazione/` (tre intestazioni); `f9-preproposta/` (intestazioni delle consegne 02, 05–10, 12; di 02 anche le righe sulla latenza); `f10-dati/CONTRATTO_DATI.md` (inizio).
+- **Non letti:** f1; il torneo di f2 (citato attraverso `f3/H-012/02-validazione/VERIFICA.md` e `f2/05-selezione/SELEZIONE.md`: cifre di seconda mano); le consegne dei singoli ruoli di f7 e f8; il resto di f10.
+
+**Cap. 3 (sensori e hardware)** — sezione d'origine: `f11-documentazione/sez-d/SEZIONE.md`. File principali: `f1/985ccd9bca46/CONSEGNA.md` e `PREVISIONI.md` (esperto di LiDAR), `f2/04-torneo/TORNEO_parte1.md` con `esito_attacchi_parte1.txt` e `esito_attacchi2_parte1.txt`, `f3/fonti/FONTI_VERIFICATE.md`, `f5/02-audit/AUDIT.md`, `f6-specializzazione/02-slam/MOTO_PROPRIO.md` con `risultati.txt`, `f6-specializzazione/03-avversario/ATTACCO_SPECIALIZZAZIONE.md`; **[prel.]** `f9-preproposta/07-lidar/CONSEGNA.md`, `f10-dati/02-sensori/MODELLO_SENSORE.md`, `parametri_sensori.json`, `PREVISIONI.md`, `f10-dati/04-embedded/PREVISIONI.md`, `geometria_sensori.py`.
+
+**Per intero:** `ADDENDUM_UTENTE.md`; `f1/985ccd9bca46/CONSEGNA.md` e `PREVISIONI.md`; `f3/fonti/FONTI_VERIFICATE.md`; `f4/H-012/05-correzioni/SOLUZIONE_V2.md`; `f4/H-012/09-arbitro/VERDETTO.md`; `f5/02-audit/AUDIT.md`; `f6-specializzazione/01-esperto-dominio/SPECIALIZZAZIONE.md`; `f6-specializzazione/02-slam/MOTO_PROPRIO.md`; `f9-preproposta/07-lidar/CONSEGNA.md`; `f10-dati/CONTRATTO_DATI.md`; `f10-dati/01-ricercatore/DATI_PUBBLICI.md`; `f10-dati/02-sensori/MODELLO_SENSORE.md`, `parametri_sensori.json`, `PREVISIONI.md`, `scaricati/PROVENIENZA.md`; `f10-dati/03-infrastruttura/AMBIENTE.md`, `formato_sequenza.md`; `f10-dati/04-embedded/PREVISIONI.md`, `geometria_sensori.py`.
+
+**In parte** (ricerca per parole, o le prime righe): `f1/3fff79e9c3ea/FONTI.md`; le `CONSEGNA.md` di `f1/b8262bfed263`, `f1/c85dbcc51ea6`, `f1/dfac83300259`, `f1/e30f9e2dd4d7`; `f2/03-triage/TRIAGE.md`; `f2/04-torneo/TORNEO.md`, `TORNEO_parte1.md`, `esito_attacchi_parte1.txt`, `esito_attacchi2_parte1.txt`; `f2/05-selezione/SELEZIONE.md`; `f3/H-012/01-scene-dinamiche/SOLUZIONE.md`; `f3/H-012/02-validazione/VERIFICA.md`; `f3/H-012/03-metrologo/PIANO_MISURE.md`; `f4/H-012/01-avversario/risultati_a12.txt`; `f6-specializzazione/02-slam/risultati.txt`; `f6-specializzazione/03-avversario/ATTACCO_SPECIALIZZAZIONE.md`; `f9-preproposta/CONTRATTO_PREPROPOSTA.md`; `f9-preproposta/11-pianificatore/CONSEGNA.md` e `PREVISIONI.md`; `f10-dati/04-embedded/registra_sequenza.py`; `f10-dati/12-dati-veri/PREVISIONI.md`; nelle copie locali delle schede (`f9-preproposta/07-lidar/scaricati/`, `f10-dati/02-sensori/scaricati/`) solo ricerche di singole frasi.
+
+**Eseguiti, non letti riga per riga:** `f10-dati/02-sensori/controlla_parametri.py` e `f10-dati/04-embedded/geometria_sensori.py` (sola stampa, nessun file scritto).
+
+**Non letti:** le cartelle di f7 e f8; gli altri ruoli di f9; `CONTRATTO.md`; `regole_challenge.md`. Se contengono affermazioni sui sensori, qui mancano.
+
+**Cap. 4 (prove e risultati)** — sezione d'origine: `f11-documentazione/sez-c/SEZIONE.md`, con le riprove in `f11-documentazione/sez-c/riprove/`. File principali: le nove consegne `f1/*/CONSEGNA.md` con le loro `PREVISIONI.md`; `f2/04-torneo/TORNEO.md` e i file `risultati_*`; `f3/H-012/03-metrologo/PIANO_MISURE.md` e `conti_metrologo.txt`; `f4/H-012/01-avversario/CONTROPROVE.md` e `risultati_a*.txt`; `f4/H-012/03-validazione/MISURE.md`, `MISURE_V2.md`, `MISURE_V2_bis.md` con i file `out_*`, `v2_*`, `bis_*`; `f5/02-audit/AUDIT.md`; `f6-specializzazione/02-slam/MOTO_PROPRIO.md`; `f6-specializzazione/03-avversario/ATTACCO_SPECIALIZZAZIONE.md`; `f4/H-012/09-arbitro/VERDETTO.md`.
+
+**File letti per intero.** `ADDENDUM_UTENTE.md`; `CONTRATTO.md`; `GATE_f1.json`, `GATE_f2.json`, `GATE_f3_H-012.json`, `GATE_f4_H-012.json` (note); `SIGILLI.jsonl`; le nove `f1/*/CONSEGNA.md`; `f2/02-firme/*.md`; `f2/03-triage/TRIAGE.md`; `f2/04-torneo/TORNEO.md`; `f3/H-012/01-scene-dinamiche/PREVISIONI.md`; `f3/H-012/02-validazione/VERIFICA.md`; `f3/H-012/03-metrologo/PIANO_MISURE.md` e `conti_metrologo.txt`; `f4/H-012/01-avversario/CONTROPROVE.md`; `f4/H-012/03-validazione/MISURE.md`, `f4/H-012/03-validazione/MISURE_V2.md`, `f4/H-012/03-validazione/MISURE_V2_bis.md`, `rifai.sh`, `rifai_v2.sh`, `rifai_v2bis.sh`, `f4/H-012/03-validazione/v2_C6.txt`, `f4/H-012/03-validazione/v2_SECOND.txt`, `f4/H-012/03-validazione/v2_PD.txt`, `f4/H-012/03-validazione/v2_WALLP.txt`, `f4/H-012/03-validazione/v2_MOB.txt`, `f4/H-012/03-validazione/bis_FURTO.txt`; `f4/H-012/05-correzioni/SOLUZIONE_V2.md`; `f4/H-012/09-arbitro/VERDETTO.md`; `f5/02-audit/AUDIT.md` e `stato.md`; `f6-specializzazione/02-slam/MOTO_PROPRIO.md` e `PREVISIONI.md`; `f6-specializzazione/03-avversario/ATTACCO_SPECIALIZZAZIONE.md` e `PREVISIONI_in_testa.txt`.
+**Letti in parte.** `f2/05-selezione/SELEZIONE.md` (prime 80 righe); `f3/H-012/04-avversario/ATTACCO.md` (testa e attacchi 1–4); le `f1/*/PREVISIONI.md` (ore ed esiti, con `grep`); `f2/04-torneo/PREVISIONI_parte1…3.md` (ore); `f3/fonti/FONTI_VERIFICATE.md` e `f1/3fff79e9c3ea/FONTI.md` (righe delle fonti citate); `f4/H-012/01-avversario/risultati_a01.txt`, `f4/H-012/01-avversario/risultati_a12.txt`; `f4/H-012/03-validazione/v2_R8.txt`; `f10-dati/03-infrastruttura/esito_prove.txt`, `f10-dati/01-ricercatore/stato.md`; le teste dei due `10-triage/TRIAGE.md` di f7 e f8.
+**Scritti da [metr.].** `f11-documentazione/sez-c/SEZIONE.md`; `f11-documentazione/sez-c/riprove/PREVISIONI.md` e `R1.txt`…`R7.txt` (con i rispettivi `.err`, vuoti).
+
+**Cap. 5 (estensioni in corso) e cap. 6 (piano e rischi)** — sezione d'origine: `f11-documentazione/sez-f/SEZIONE.md`; per il §5.5 anche il §D.7 di `f11-documentazione/sez-d/SEZIONE.md`. File principali, tutti **[prel.]**: i quattro contratti (`f7-estensione/CONTRATTO_ESTENSIONE.md`, `f8-continuita/CONTRATTO_CONTINUITA.md`, `f9-preproposta/CONTRATTO_PREPROPOSTA.md`, `f10-dati/CONTRATTO_DATI.md`), i due triage (`f7-estensione/10-triage/TRIAGE.md`, `f8-continuita/10-triage/TRIAGE.md`), le dieci consegne di `f9-preproposta/`, i file di ricognizione di `f10-dati/01-ricercatore/` … `04-embedded/`; per il piano `f9-preproposta/11-pianificatore/CONSEGNA.md` e `f5/02-audit/AUDIT.md`.
+
+`ADDENDUM_UTENTE.md`; `MANIFESTO.json`; `f4/H-012/05-correzioni/SOLUZIONE_V2.md` (ricerca per blocchi e ore, non per intero); `f4/H-012/09-arbitro/VERDETTO.md`; `f5/02-audit/AUDIT.md`; `f3/H-012/03-metrologo/PIANO_MISURE.md` (sole righe su H0, H12, H13). f7: `CONTRATTO_ESTENSIONE.md`, `10-triage/TRIAGE.md`, `12-prestazioni/PREVISIONI.md`. f8: `CONTRATTO_CONTINUITA.md`, `10-triage/TRIAGE.md`, `11-misure/PREVISIONI.md` e `CONGELATO.txt`, `12-torneo/PREVISIONI.md`. f9: `CONTRATTO_PREPROPOSTA.md`; `11-pianificatore/CONSEGNA.md` per intero; l'inizio e le sezioni «verdetti» e «costo» delle altre nove consegne; `02-tempo-reale/CONSEGNA.md` §2–§3; `03-kalman/PREVISIONI.md` e `04-validazione/PREVISIONI.md` (inizio); `05-tracciamento/stato.md`. f10: `CONTRATTO_DATI.md`; `01-ricercatore/DATI_PUBBLICI.md`, `PREVISIONI.md`, `stato.md`; `02-sensori/PREVISIONI.md`, `MODELLO_SENSORE.md` (inizio), `scaricati/PROVENIENZA.md`; `03-infrastruttura/PREVISIONI.md`, `AMBIENTE.md` (inizio), `formato_sequenza.md` (inizio); `04-embedded/PREVISIONI.md`. **Non letti:** le consegne dei singoli ruoli di f7 e f8 (uso i triage), `f6-specializzazione/`, i file dei risultati grezzi, i PDF di `proposta/`. Le tabelle grezze di `f8-continuita/12-torneo/` e di `f9-preproposta/03-kalman/` e `04-validazione/` esistono ma non le cito: non hanno ancora una consegna che ne spieghi le colonne.
+
+**Cap. 8 (ambiti d'uso, profili e dominio)** — sezione d'origine: `f11-documentazione/sez-e/SEZIONE.md`, con `f11-documentazione/sez-e/PREVISIONI.md`. File principali: `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` e `SPECIALIZZAZIONE.md`, `f6-specializzazione/02-slam/MOTO_PROPRIO.md`, `f6-specializzazione/03-avversario/ATTACCO_SPECIALIZZAZIONE.md` con `risultati_spec.txt` e `risultati_spec2.txt`; **[prel.]** `f7-estensione/04-requisiti/CONSEGNA.md`, `f7-estensione/05-esperto-dominio/CONSEGNA.md`, `f7-estensione/10-triage/TRIAGE.md`, `f9-preproposta/06-esperto-dominio/CONSEGNA.md`.
+
+**Per intero:** `ADDENDUM_UTENTE.md`; `CONTRATTO.md`; `f4/H-012/05-correzioni/SOLUZIONE_V2.md`; `f4/H-012/09-arbitro/VERDETTO.md`; `f3/fonti/FONTI_VERIFICATE.md`; `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md`; `f6-specializzazione/01-esperto-dominio/SPECIALIZZAZIONE.md`; `f6-specializzazione/02-slam/MOTO_PROPRIO.md`; `f6-specializzazione/03-avversario/ATTACCO_SPECIALIZZAZIONE.md` con `risultati_spec.txt` e `risultati_spec2.txt`; `f7-estensione/04-requisiti/CONSEGNA.md`; `f7-estensione/05-esperto-dominio/CONSEGNA.md` con `risultati_griglia_densa.txt`; `f7-estensione/10-triage/TRIAGE.md`; `f9-preproposta/06-esperto-dominio/CONSEGNA.md` con `prove/risultati_p7.txt` e `prove/risultati_p8_p9_p10.txt`. Nella radice del progetto: `regole_challenge.md`; `proposta/VERSIONI.md`.
+
+**In parte:** `f5/02-audit/AUDIT.md` (ipotesi 10–12, §2, §3); `f2/05-selezione/SELEZIONE.md` (§2, §6); `f2/03-triage/TRIAGE.md` (K-008); `f7-estensione/05-esperto-dominio/risultati_osservabilita.txt`; `f8-continuita/07-ricercatore/CONSEGNA.md` (punti 5–6) e `FONTI.md` (§4–§5); `f8-continuita/01-requisiti/CONSEGNA.md` (riga dei tagli); `f9-preproposta/09-interfacce/CONSEGNA.md` (critiche 2–12); `f9-preproposta/11-pianificatore/CONSEGNA.md` (tagli); `f10-dati/CONTRATTO_DATI.md` (ambito); `proposta/proposta_sciame.tex` (righe 48, 90–97, 136–195, conteggi); `promptMare.txt` (solo conteggio).
+
+**Non letti:** misure e controprove di f4 (le cifre vengono da `f4/H-012/05-correzioni/SOLUZIONE_V2.md` e `f4/H-012/09-arbitro/VERDETTO.md`), f1, il torneo di f2, f3 salvo le fonti, gli altri ruoli di f7–f10, `prepropostaEsterna.md`, i PDF.
+
+**Cap. 10 (punti da sciogliere), sintesi, legenda, glossario** — scritti da [red.] sulle sei sezioni. File aperti da [red.] per controllare un punto: `ADDENDUM_UTENTE.md` (ottavo addendum); `f4/H-012/05-correzioni/SOLUZIONE_V2.md` e `f4/H-012/01-avversario/CONTROPROVE.md` (righe su C11 e C12); `f4/H-012/09-arbitro/VERDETTO.md` e `f10-dati/02-sensori/MODELLO_SENSORE.md` (righe su K-014); `f3/fonti/FONTI_VERIFICATE.md` (riga della Gemini 335, punti del §1); `f10-dati/01-ricercatore/DATI_PUBBLICI.md` (riga TUM); `f10-dati/04-embedded/geometria_sensori.py` (righe 4 e 13); `f1/dfac83300259/PREVISIONI.md` e `CONSEGNA.md` (righe con «552»); l'inizio di `f11-documentazione/rif-1/RIFERIMENTI_rif-1.md` … `rif-4/RIFERIMENTI_rif-4.md`; di `f11-documentazione/unione/RIFERIMENTI.md` il §0 (legenda, cambi di stato, correzioni), il §7 (tabella delle chiavi) e il §8, e `stato_riferimenti.md`; le prime righe di `f9-preproposta/13-verdetto/VERDETTO_PREPROPOSTA.md` e `PREVISIONI.md`, di `f10-dati/12-dati-veri/stato.md` e di `f8-continuita/12-torneo/TORNEO.md`; gli elenchi (`ls`) delle cartelle f7–f11.
+
+## Appendice B — Chiavi dei riferimenti usate in questo documento
+
+Le chiavi sono quelle **definitive** dell'elenco unico dei riferimenti (`f11-documentazione/unione/RIFERIMENTI.md`, 290 voci, chiuso alle 16:50; stesse chiavi in `riferimenti.bib`): la tabella del suo §7 dice a quale chiave definitiva corrisponde ciascuna delle 90 chiavi provvisorie delle sei sezioni, e [red.] l'ha applicata a tutto il testo. Una riga per chiave: il numero della voce e lo stato della verifica **secondo l'elenco** (con la sua nota, se c'è); che cos'è e come è stata letta **secondo le sezioni** (marche della legenda); il link; i capitoli che la citano; la chiave che aveva nelle sezioni. Dove i due giudizi non coincidono vale l'elenco, che è più recente, ma non è ancora verificato. I dati bibliografici completi stanno solo nell'elenco: dove una descrizione viene dal contesto o dall'indirizzo, è detto; nessun autore e nessun titolo è stato aggiunto da [red.]. Tre chiavi delle sezioni (`librealsense-filtri`, `librealsense-metadati`, `realsense-librealsense`) confluiscono nella voce di gruppo [librealsense]: nel testo il file è detto accanto alla chiave.
+
+| Chiave | N. | Stato nell'elenco | Che cos'è (dalle sezioni) | Link | Lettura secondo le sezioni | Cap. | Chiave nelle sezioni |
+|---|---|---|---|---|---|---|---|
+| [ahn2019] | 3 | verificata | Ahn, Chae, Noh, Nam, Hong, «Analysis and Noise Modeling of the Intel RealSense D435 for Mobile Robots», 16th International Conference on Ubiquitous Robots (UR), 2019, pp. 707–711 (dati bibliografici da `f10-dati/02-sensori/parametri_sensori.json`) | https://ucla.box.com/shared/static/gqxwr2vvqsf22oi9dqtn50hr0xkruzie.pdf (copia degli autori) | f10 [g] (`f10-dati/02-sensori/scaricati/ahn.txt`); non passato dal curatore | 3, 5 | uguale |
+| [astm-f3442-25] | 162 | dato diverso | norma ASTM F3442-25 (pagina del negozio dell'ente) | https://store.astm.org/f3442-25.html | [R] | 8 | `astm-f3442` |
+| [aviationweek-ispezioni-droni] | 260 | aperta dal ruolo | Aviation Week, articolo sulle ispezioni dei velivoli con droni (titolo: manca nelle sezioni) | https://aviationweek.com/mro/emerging-technologies/aircraft-inspections-drones-accelerate-toward-next-evolution | [A] | 8 | `aviationweek-ispezioni` |
+| [balch2019] | 5 | verificata | Balch, Martin, Ferson, «Satellite conjunction analysis and the false confidence theorem», Proc. R. Soc. A 475, 20180565 (2019) | https://arxiv.org/abs/1706.08565 | [A, A11] | 8 | uguale |
+| [bewley2016] | 8 | verificata | Bewley, Ge, Ott, Ramos, Upcroft, SORT, ICIP 2016 | https://arxiv.org/abs/1602.00763 | [C] | 2 | uguale |
+| [cao2023] | 11 | verificata | Cao, Pang, Weng, Khirodkar, Kitani, OC-SORT, CVPR 2023 | https://arxiv.org/abs/2203.14360 | [C] | 2 | uguale |
+| [codice-strada-reg-art162] | 164 | aperta dal ruolo: numero del D.P.R. a memoria, non verificato; letto su un sito divulgativo | D.P.R. 495/1992, art. 162, comma 5 (semafori acustici) | **manca** nel file che lo cita | NV: letto su un sito divulgativo | 8 | `dpr-495-1992` |
+| [colreg-regola7] | 165 | verificata | regolamento internazionale per prevenire gli abbordi in mare (COLREG), regola 7, su un sito di terzi | https://ialacolreg.com/en/colreg/rule-7 | [A11] | 8 | `imo-colreg7` |
+| [dnv-imo-codice-mass] | 166 | verificata: notizia tecnica di DNV, non il testo dell'IMO | codice MASS dell'IMO per le navi autonome (notizia di terzi) | https://www.dnv.com/news/2026/imo-mcs-111-new-mass-code-adopted/ | [R] | 8 | `imo-mass` |
+| [dxomark-rapporto-camera3d] | 262 | aperta dal ruolo | DXOMARK, rapporto campione su camere stereo | https://corp.dxomark.com/wp-content/uploads/2025/02/DXOMARK_Report_Sample_3Dcamera_stereos.pdf | f10 (numeri letti solo dai grafici) | 3 | `dxomark-stereo` |
+| [easa-amc-gm-2019-947] | 167 | verificata: allegato alla decisione ED 2025/018/R (contiene il rimando a SORA 2.5) | EASA, allegato alla decisione 2025/018/R (valutazione del rischio SORA 2.5) | https://www.easa.europa.eu/sites/default/files/dfu/annex_to_ed_decision_2025-018-r_1_2.pdf | [A] | 8 | `easa-sora25` |
+| [easa-faq-open-category] | 169 | dato diverso | EASA, domande frequenti sulla categoria aperta | https://www.easa.europa.eu/en/the-agency/faqs/open-category | [R] | 8 | `easa-categoria-aperta` |
+| [eurocae-ed-275] | 170 | dato diverso | norma EUROCAE ED-275 (pagina di un catalogo di norme) | https://standards.globalspec.com/std/14356966/eurocae-ed-275 | [R] | 8 | `eurocae-ed275` |
+| [eurocontrol-acas-guide] | 171 | verificata | EUROCONTROL, guida ACAS, edizione 5.0. | https://www.eurocontrol.int/sites/default/files/2025-09/eurocontrol-safety-acas-guide-5-0.pdf | [A]: PDF letto come testo dall'esperto di dominio di f9; da [pian.] solo il codice 200 | 5, 8 | `eurocontrol-acas`, `eurocontrol-acasguide` |
+| [eurocontrol-asterix-cat062] | 172 | dato diverso: edizione letta 1.18 (copia non ufficiale); corrente 1.21 | EUROCONTROL, ASTERIX categoria 062 (scambio di dati di sorveglianza): copia strutturata dell'edizione 1.18, **non** il documento ufficiale | https://zoranbosnjak.github.io/asterix-specs/specs/cat062/cats/cat1.18/definition.html ; pagina ufficiale, non aperta: https://www.eurocontrol.int/publication/cat062-eurocontrol-specification-surveillance-data-exchange-asterix-part-9-category-062 | [A, A11] | 8 | `eurocontrol-asterix062` |
+| [faa-ac-150-5220-24] | 173 | verificata: la voce porta la sigla della circolare FAA; la pagina letta è l'articolo «Clean Sweep» | Flight Safety Foundation, articolo sugli oggetti estranei sulle piste (titolo: manca nelle sezioni); fonte secondaria | https://flightsafety.org/asw-article/clean-sweep/ | [A] | 8 | `flightsafety-fod` |
+| [faa-aim-2-1-6] | 175 | verificata | FAA, Aeronautical Information Manual, punto 2-1-6 (luci di stato della pista), su un sito di terzi | https://www.angleofattack.com/aim/chapter-2/2-1-6/ | [A11] | 8 | `faa-aim-rwsl` |
+| [friburgo-rgbd-people] | 249 | verificata: voce dell'insieme di dati (i due articoli del 2011 dentro la voce) | L. Spinello, K. O. Arras, «People Detection in RGB-D Data», IROS 2011; pagina dell'insieme di dati | http://www2.informatik.uni-freiburg.de/~spinello/RGBD-dataset.html | pagina salvata dal ricercatore di f10; articolo non aperto | 5 | `spinello2011` |
+| [iata-enhanced-gse-2022] | 265 | verificata | IATA, comunicato del 6 dicembre 2022 sui mezzi di terra (titolo: manca nelle sezioni; data dall'indirizzo) | https://www.iata.org/en/pressroom/2022-releases/2022-12-06-04/ | [A11] | 8 | `iata-gse2022` |
+| [imo-msc192-79] | 179 | verificata | IMO, risoluzione MSC.192 sui radar navali (numero e anno dall'indirizzo) | https://law.resource.org/pub/us/cfr/ibr/inc/imo/imo.msc.192.2004.pdf | [A], da f8 **[prel.]** | 8 | `imo-msc192` |
+| [iso-10218-2] | 180 | solo riassunto di ricerca: voce creata all'unione; norma non letta da nessuno | norme ISO 10218-2:2025, ISO 13855, ISO/TS 15066 (a pagamento) | **manca** nei file | non lette; «confluita» [R] | 8 | uguale |
+| [iso-13855] | 181 | solo riassunto di ricerca | norme ISO 10218-2:2025, ISO 13855, ISO/TS 15066 (a pagamento) | **manca** nei file | non lette; «confluita» [R] | 8 | uguale |
+| [iso-3691-4] | 182 | verificata in parte | norma ISO 3691-4:2023 (pagina di un catalogo) | https://genorma.com/en/standards/en-iso-3691-4-2023 | [R] | 8 | uguale |
+| [iso-ts-15066] | 184 | non raggiungibile | norme ISO 10218-2:2025, ISO 13855, ISO/TS 15066 (a pagamento) | **manca** nei file | non lette; «confluita» [R] | 8 | uguale |
+| [it-legge-185-1990] | 185 | verificata in parte: il link citato è la pagina dell'autorità (`maeci-uama`) | legge 185/1990 (pagina dell'autorità nazionale UAMA) | https://www.esteri.it/it/ministero/struttura/uama/ | [R] | 8 | `legge-185-1990` |
+| [kayukawa2019] | 38 | verificata | Kayukawa e altri, «BBeep», CHI 2019 | https://wotipati.github.io/projects/BBeep/paper/CHI'19_BBeep_preprint.pdf | [A] (ricercatore di f8, **[prel.]**) | 8 | uguale |
+| [koschi2021] | 44 | dato diverso: l'articolo di rivista; il quadro di dominio (S33) cita invece `koschi-mediatum-1575368` | Koschi e Althoff, IEEE T-IV 6(2), 249–265, 2021, DOI 10.1109/TIV.2020.3017385 | https://mediatum.ub.tum.de/doc/1575368/1575368.pdf | [C] per i soli dati bibliografici | 8 | uguale |
+| [ldrobot-ld19-scheda] | 126 | aperta dal ruolo | LDROBOT, LD19 Datasheet V2.5 (copia di un rivenditore) | https://botland.com.pl/img/art/inne/21991_Karta%20katalogowa.pdf | f10 [g] | 3 | uguale |
+| [lee2026] | 50 | dato diverso | Lee, Jeong, Hong, Kim, «Physically Guided Visual Mass Estimation from a Single RGB Image», arXiv 2601.20303 | https://arxiv.org/abs/2601.20303 | [C] | 4 | uguale |
+| [librealsense] | 209 | verificata: voce di gruppo: file `doc/post-processing-filters.md`; la pagina in rete sullo stesso tema è `realsense-filtri-post`; voce di gruppo: file `doc/frame_metadata.md` e `rs_frame.h`; voce di gruppo: note della versione 2.59.1 | librealsense, `doc/post-processing-filters.md` · librealsense, `doc/frame_metadata.md` e `rs_frame.h` · librealsense, note della versione 2.59.1 | https://github.com/IntelRealSense/librealsense/blob/master/doc/post-processing-filters.md ; https://github.com/IntelRealSense/librealsense/blob/master/doc/frame_metadata.md ; https://github.com/realsenseai/librealsense/releases/tag/v2.59.1 | f10 [g] · testo grezzo letto dal ruolo embedded di f10 | 3, 5 | `librealsense-filtri`, `librealsense-metadati`, `realsense-librealsense` |
+| [livox-mid-360] | 127 | verificata | Livox, Mid-360, specifiche | https://www.livoxtech.com/mid-360/specs | aperta nel torneo di f2 (non dà principio di misura né prezzo); campo, portata e prezzo solo [R]; nel cap. 8 [A] | 3, 8 | `livox-mid360` |
+| [lupu2020] | 57 | dato diverso | Lupu e altri, Sensors 20(20):5821, 2020 | **manca** (non riportato in `f3/fonti/FONTI_VERIFICATE.md`) | [C], in riassunto | 8 | uguale |
+| [luxonis-tof] | 130 | verificata | Luxonis, «ToF Depth Perception» | https://docs.luxonis.com/hardware/platform/depth/ToF-depth | [C] [g] | 3 | uguale |
+| [mandaokar2026] | 61 | verificata | Mandaokar e Rinner, «RADAR Perception for Dynamic Obstacle Avoidance onboard small-scale Quadrotor UAVs», arXiv 2608.01855 (preprint) | https://arxiv.org/abs/2608.01855 | [A, A11] | 8 | uguale |
+| [maregroup-news] | 268 | verificata | pagina delle notizie della società che propone la sfida | https://www.maregroup.it/news/ | [A] | 8 | uguale |
+| [maregroup-ordine-uncrewed-2026] | 269 | verificata | comunicato della società: «Primo ordine da cliente estero da 1,7 milioni di euro per sistemi uncrewed», 21-10-2026 | https://www.maregroup.it/news/primo-ordine-estero-sistemi-uncrewed | aperta dall'esperto di dominio in f6; riaperta il 14 novembre da [req.] e da [dom.] con lo strumento che riassume: titolo, data e importo tornano; la controllata non è nominata | 1, 8 | `maregroup-ordine2026` |
+| [martinez2014] | 62 | dato diverso | Martinez e altri, ICCHP 2014, LNCS, pp. 128–135 | https://doi.org/10.1007/978-3-319-08599-9_20 | [C] | 8 | uguale |
+| [marvel2017] | 63 | verificata | Marvel e Norcross, «Implementing Speed and Separation Monitoring in Collaborative Robot Workcells», Robotics and Computer-Integrated Manufacturing 44, 144–155, DOI 10.1016/j.rcim.2016.08.001 (in linea 2016, fascicolo 2017) | https://pmc.ncbi.nlm.nih.gov/articles/PMC5117641 | [A, A11] | 8 | uguale |
+| [nuss2018] | 70 | verificata | articolo sulle griglie dinamiche, arXiv 1605.02406 (autori e titolo: manca nelle sezioni) | https://arxiv.org/abs/1605.02406 | [C] | 8 | uguale |
+| [orbbec-femto-bolt] | 134 | verificata | Orbbec, Femto Bolt: pagina prodotto e scheda PDF 0816-v01 | https://www.orbbec.com/products/tof-camera/femto-bolt/ | [C] [g] | 3 | `orbbec-femtobolt` |
+| [orbbec-femto-bolt-sincronia] | 135 | verificata | Orbbec, «Synchronize Multiple Femto Bolt Devices» | https://doc.orbbec.com/documentation/Orbbec%20Femto%20Bolt%20Documentation/Synchronize%20Multiple%20Femto%20Bolt%20Devices | [C] [g] | 3 | `orbbec-femtobolt-sincronia` |
+| [orbbec-gemini-330-scheda] | 136 | verificata | Orbbec, Gemini 330 Series Datasheet v1.6 (copia di un rivenditore) | https://download.kamami.pl/p1203693-Gemini-330-series-Datasheet-V1.6.pdf | f9 e f10, sulla copia locale [g] | 3 | `orbbec-gemini330-scheda` |
+| [orbbec-gemini-335] | 137 | verificata | Orbbec, Gemini 335, pagina prodotto | https://www.orbbec.com/products/stereo-vision-camera/gemini-335/ | [C] [g]; nel file del curatore l'indirizzo non è scritto (§10.1) | 2, 3 | `orbbec-gemini335` |
+| [orzechowski2018] | 72 | verificata | articolo sugli ostacoli nascosti ai bordi del campo visivo, arXiv 1807.01262 (autori e titolo: manca nelle sezioni) | https://arxiv.org/abs/1807.01262 | [C] | 8 | uguale |
+| [park2026] | 253 | dato diverso | Y. Park, M. Naduthodi, S. Kumar, «A Dataset and Evaluation for Complex 4D Markerless Human Motion Capture» (HUM4D), CVPR 2026, 4D World Models Workshop | https://arxiv.org/abs/2604.12765 ; https://parkyeeun23.github.io/HUM4D/ | pagina del progetto salvata dal ricercatore di f10; articolo non aperto | 5 | uguale |
+| [pipewire-conf] | 226 | verificata | PipeWire, pagina di manuale `pipewire.conf(5)` (quanto audio predefinito) | https://docs.pipewire.org/page_man_pipewire_conf_5.html | citata dal ruolo di validazione (`f3/H-012/02-validazione/VERIFICA.md`, §3c), apertura non dichiarata; riaperta da [arch.] [rias.]: frequenza 48000, quanto 1024 | 1, 2, 4 | uguale |
+| [px4-collision-prevention] | 227 | verificata | PX4 (autopilota aperto), documentazione sulla prevenzione delle collisioni (titolo: dall'indirizzo) | https://docs.px4.io/main/en/computer_vision/collision_prevention | [A, A11] | 8 | `px4-collisionprevention` |
+| [px4-obstacle-distance] | 229 | verificata | PX4, documentazione del messaggio `ObstacleDistance` (titolo: dall'indirizzo) | https://docs.px4.io/main/en/msg_docs/ObstacleDistance | [A11] | 8 | `px4-obstacledistance` |
+| [pyrealsense2-pypi] | 232 | aperta dal ruolo | PyPI, scheda del pacchetto `pyrealsense2` | https://pypi.org/pypi/pyrealsense2/json | testo grezzo letto dal ruolo embedded di f10 | 5 | `pypi-pyrealsense2` |
+| [qiu2023] | 78 | verificata | Qiu, Martínez-Sánchez, Arias, «Evaluation and comparison of different time of flight cameras for outdoor applications», ISPRS Annals X-1/W1-2023 | https://isprs-annals.copernicus.org/articles/X-1-W1-2023/17/2023/ | [C] [g] | 3 | uguale |
+| [realsense-alta-velocita-d435] | 140 | dato diverso | RealSense, «High-speed capture mode of the D435» (latenza media per frequenza; autori non indicati). | https://dev.realsenseai.com/docs/high-speed-capture-mode-of-intel-realsense-depth-camera-d435 | aperta dal ruolo di validazione in f3 (modo di lettura non trovato); non è nel file del curatore; riaperta da [arch.] [rias.]: tabella 4, 127 / 95 / 47 / 39 ms a 15 / 30 / 60 / 90 fps, modi 848×100 | 1, 2, 3, 4 | `realsense-altavelocita`, `realsense-highspeed` |
+| [realsense-bkm-taratura] | 141 | verificata: il PDF «BKMs»; la versione in rete è `realsense-taratura-profondita` | RealSense, «BKMs Tuning RealSense D4xx Cam» (PDF) | https://realsenseai.com/wp-content/uploads/2019/11/BKMs_Tuning_RealSense_D4xx_Cam.pdf | f10 [g] | 3 | `realsense-taratura` |
+| [realsense-confronto-camere] | 142 | verificata | RealSense, confronto delle camere | https://www.realsenseai.com/compare-depth-cameras/ | [C] [g] | 2, 3 | `realsense-confronto` |
+| [realsense-d400-scheda] | 144 | verificata | RealSense D400 Series Datasheet, rev. 023, marzo 2026 | https://www.realsenseai.com/wp-content/uploads/2026/03/RealSense-D400-Series-Datasheet-Mar-2026.pdf | f9 e f10, sulla copia locale [g] | 3 | uguale |
+| [realsense-file-di-esempio] | 255 | aperta dal ruolo | librealsense, registrazioni d'esempio | https://github.com/realsenseai/librealsense/blob/master/doc/sample-data.md | aperta dal ricercatore di f10 | 5 | `realsense-esempi` |
+| [realsense-filtri-post] | 233 | verificata | RealSense, «Post-processing filters» (pagina). | https://dev.realsenseai.com/docs/post-processing-filters/ | l'audit: solo [R]; riaperta da [arch.] [rias.]: persistenza predefinita «valido in 2 degli ultimi 4», riempimento dei buchi con un pixel vicino; da [pian.] solo il codice 200 | 2, 4, 6 | `realsense-filtri`, `realsense-postprocessing` |
+| [realsense-taratura-profondita] | 146 | verificata: la versione in rete; il PDF è `realsense-bkm-taratura` | RealSense, «Tuning depth cameras for best performance» (pagina; non è il PDF di [realsense-bkm-taratura]) | https://dev.realsenseai.com/docs/tuning-depth-cameras-for-best-performance | aperta dal ruolo di validazione (`f3/H-012/02-validazione/VERIFICA.md`, §4), formula non letta; non è nel file del curatore; riaperta da [arch.] [rias.]: le tre frasi citate ci sono, la formula è un'immagine | 2, 4 | `realsense-tuning` |
+| [roboflow-rf-detr] | 235 | verificata | deposito del rilevatore RF-DETR (Apache 2.0 per il modello N) | https://github.com/roboflow/rf-detr | [C] (`f3/fonti/FONTI_VERIFICATE.md`, punto 5) | 1, 2 | `roboflow-rfdetr` |
+| [rtca-do-365] | 188 | verificata in parte: le cifre «35 s e oltre un chilometro» non sono in questa fonte; per l'ordine di grandezza vedi `thipphavong2016` | norma RTCA DO-365 (pagina di un catalogo: DO-365C) | https://standards.globalspec.com/std/14562761/do-365c | [R] | 8 | `rtca-do365` |
+| [scholler2020] | 85 | verificata | Schöller, Aravantinos, Lay, Knoll, «What the Constant Velocity Model Can Teach Us About Pedestrian Motion Prediction», IEEE RA-L 5(2), 2020 | https://arxiv.org/abs/1903.07933 | [C] | 2, 4 | uguale |
+| [slamtec-rplidar-c1] | 152 | verificata: pagina delle specifiche del costruttore | Slamtec, RPLIDAR C1, specifiche | https://www.slamtec.com/en/C1/Spec | curatore [rias.]; f10 [g] | 3 | `slamtec-c1` |
+| [soldionline-ordine-uncrewed-2026] | 275 | verificata | SoldiOnline, notizia sull'ordine del 21-10-2026 | https://www.soldionline.it/notizie/azioni-italia/mare-group-primo-ordine-estero-sistemi-uncrewed | [A, A11] | 8 | `soldionline-ordine2026` |
+| [st-um3038] | 154 | verificata | STMicroelectronics, guida UM3038 Rev 2 al VL53L7CX (copia Pololu) | https://www.pololu.com/file/0J1993/um3038-a-guide-to-using-the-vl53l7cx-timeofflight-multizone-ranging-sensor-with-90-fov-stmicroelectronics.pdf | esperto di LiDAR, f9 [g] | 3 | uguale |
+| [st-vl53l5cx] | 155 | verificata | STMicroelectronics, scheda VL53L5CX, DS13754 Rev 2 (copia SparkFun) | https://cdn.sparkfun.com/assets/6/e/3/0/6/vl53l5cx-datasheet.pdf | [C] [g] | 3 | uguale |
+| [st-vl53l7cx] | 156 | verificata | STMicroelectronics, scheda tecnica VL53L7CX, DS13865 Rev 6, marzo 2023 (copia ospitata da Pololu; può non essere l'ultima revisione) | https://www.pololu.com/file/0J1992/vl53l7cx.pdf | [C] [g]; riaperta da [req.]: nel PDF ci sono «60° x 60° square field of view (FoV) (90° diagonal)» e «three sensors can cover 180° x 60° FoV»; copia locale in f9, [ricontr.] | 1, 2, 3, 4, 5 | uguale |
+| [st-vl53l8cx] | 157 | verificata | STMicroelectronics, scheda VL53L8CX, DS14161 Rev 7 (copia Pololu) | https://www.pololu.com/file/0J2029/vl53l8cx.pdf | [C] [g]; copia locale in f9 | 3 | uguale |
+| [teleborsa-commessa-rpas-2026] | 279 | verificata | Teleborsa, notizia del 05-06-2026 sulle prime commesse | https://www.teleborsa.it/News/2026/06/05/mare-group-prima-commessa-per-velivoli-a-pilotaggio-remoto-valore-superiore-a-1-milione-di-euro-53.html | [A] | 8 | `teleborsa-commesse2026` |
+| [teleborsa-ctmavio-2026] | 280 | verificata | Teleborsa, notizia del 24-07-2026 sull'accordo per CTMAVIO | https://www.teleborsa.it/News/2026/07/24/mare-group-acquisisce-ctmavio-e-rafforza-la-filiera-dei-droni-per-aerospazio-e-difesa-17.html | [A] | 8 | `teleborsa-ctmavio2026` |
+| [teleborsa-nido-2026] | 281 | dato diverso | Teleborsa, notizia del 09-06-2026 sull'ingresso in NIDO | https://www.teleborsa.it/News/2026/06/09/mare-group-entra-nel-capitale-di-nido-al-20percent-con-opzione-per-il-controllo-entro-24-mesi-5.html | [A, A11] | 8 | `teleborsa-nido2026` |
+| [teleborsa-propulsione-uav-2026] | 283 | verificata | Teleborsa, notizia del 28-07-2026 sull'accordo quadro | https://www.teleborsa.it/News/2026/07/28/mare-group-contratto-da-8-3-milioni-di-euro-per-unita-di-propulsione-uav-13.html | [R] | 8 | `teleborsa-kitmotore2026` |
+| [therobotreport-veo] | 284 | verificata: autrice e data confermate all'unione | Clara Vu, «Advanced vision and the future of robot safety in manufacturing», The Robot Report, 1° luglio 2020 (autrice del costruttore) | https://www.therobotreport.com/advanced-vision-future-robot-safety-manufacturing/ | [A, A11] | 8 | `vu2020` |
+| [thor] | 256 | verificata in parte: voce dell'insieme di dati THÖR (articolo associato dentro la voce) | A. Rudenko, T. P. Kucner, C. S. Swaminathan, R. T. Chadalavada, K. O. Arras, A. J. Lilienthal, «THOR - people tracks», Zenodo, 2019, doi 10.5281/zenodo.3382145 | https://zenodo.org/records/3382145 | scheda salvata in `f10-dati/01-ricercatore/pagine/zenodo_3382145.json` | 5 | `rudenko2019` |
+| [tum-rgbd] | 257 | verificata in parte | TUM RGB-D, pagina di scaricamento (articolo di riferimento: **manca** nei file letti) | https://cvg.cit.tum.de/data/datasets/rgbd-dataset/download | aperta dal ricercatore di f10; da [pian.] solo il codice 200 | 5 | uguale |
+| [ue-2017-745] | 189 | verificata | regolamento (UE) 2017/745 sui dispositivi medici, art. 2, punto 1 (copia non ufficiale) | https://www.legislation.gov.uk/eur/2017/745/article/2/2020-01-31 | [A, A11] | 8 | uguale |
+| [ue-2019-945] | 190 | verificata | regolamenti (UE) 2019/945 e 2019/947 sui droni | pagina d'ingresso: https://www.easa.europa.eu/domains/drones-air-mobility/rules-standards | [R] | 8 | uguale |
+| [ue-2019-947] | 191 | verificata in parte | regolamenti (UE) 2019/945 e 2019/947 sui droni | pagina d'ingresso: https://www.easa.europa.eu/domains/drones-air-mobility/rules-standards | [R] | 8 | uguale |
+| [ue-2021-664] | 192 | non raggiungibile | regolamento di esecuzione (UE) 2021/664 | https://eur-lex.europa.eu/eli/reg_impl/2021/664/2026-02-22/eng/pdf | [R] | 8 | uguale |
+| [ue-2021-821] | 193 | verificata in parte | regolamento (UE) 2021/821 sul duplice uso (pagina di sintesi) | https://eur-lex.europa.eu/EN/legal-content/summary/dual-use-export-controls.html | [R] | 8 | uguale |
+| [ue-2023-1230] | 194 | verificata in parte | regolamento (UE) 2023/1230 sulle macchine | https://eur-lex.europa.eu/eli/reg/2023/1230/corrigendum/2023-07-04/oj/eng | [R] | 8 | uguale |
+| [ultralytics-coco-yaml] | 242 | verificata: file di configurazione; l'articolo su COCO è `lin2014` | Ultralytics, elenco delle 80 classi COCO (`coco.yaml`) | https://raw.githubusercontent.com/ultralytics/ultralytics/main/ultralytics/cfg/datasets/coco.yaml | [A]: aperta dall'avversario del torneo (`f2/04-torneo/TORNEO.md`, parte 1) | 4 | `ultralytics-coco` |
+| [ultralytics-yolo26] | 244 | dato diverso | Ultralytics, documentazione del modello YOLO26 (AGPL-3.0) | https://docs.ultralytics.com/models/yolo26/ | [C] secondo [arch.]; per [req.] «citata in `f4/H-012/05-correzioni/SOLUZIONE_V2.md`, §8, e in `f2/05-selezione/SELEZIONE.md`» | 1, 2 | uguale |
+| [unitree-l2] | 160 | verificata | Unitree, L2 | https://www.unitree.com/L2 | esperto di LiDAR, f1; non controllata dal curatore | 3 | uguale |
+| [vogiatzoglou2024] | 285 | verificata: fonte secondaria; la primaria è `ue-2024-1689` | Verfassungsblog, contributo sull'eccezione di sicurezza nazionale nel regolamento sull'intelligenza artificiale | https://verfassungsblog.de/the-ai-act-national-security-exception/ | [R] | 8 | `verfassungsblog-aiact` |
+| [waveshare-rplidar-c1] | 161 | verificata: pagina del rivenditore (prezzo) | Waveshare, pagina del RPLIDAR C1 (prezzo) | https://www.waveshare.com/rplidar-c1.htm | esperto di LiDAR, f1 | 3 | `waveshare-c1` |
+| [websim-task-force-x-2026] | 287 | verificata | Websim, notizia del 10-07-2026 sulla Task Force X | https://www.websim.it/azioni/small-mid-cap/notizie/mare-group-scelta-dalla-nato-per-la-task-force-x/ | [A, A11] | 8 | `websim-taskforcex2026` |
+
+**Che cosa manca.** Fonti che servirebbero e non sono nei file: una norma o una guida sulla qualificazione di un ausilio per persone non vedenti come dispositivo medico (secondo addendum: «non verificata»); il regolamento dell'hackathon, con criteri, pesi e condizioni della demo. Non hanno né chiave né verifica: i prezzi (tutti, salvo quello della Femto Bolt), la OAK-D Pro W, la camera Arducam, i programmi di odometria elencati in `f6-specializzazione/02-slam/MOTO_PROPRIO.md`, §2. L'elenco dei riferimenti (suo §8.3) scioglie alcune di queste mancanze: dà il DOI di [lupu2020] (10.3390/s20205821), l'articolo di riferimento di [tum-rgbd] (IROS 2012, DOI 10.1109/IROS.2012.6385773, dentro la voce) e le voci dei programmi di odometria; restano senza una fonte letta le tre norme ISO, i prezzi e il regolamento dell'hackathon. Le correzioni che l'elenco propone alle frasi di questo documento sono nel §10.1, riquadro 6.
+
+## Appendice C — Provenienza delle sezioni e controlli dell'unione
+
+**Le sei sezioni d'origine** (cartella `f11-documentazione/`). Tutti gli autori condividono il modello linguistico e i file: nessuna sezione è una verifica indipendente delle cifre che cita.
+
+| Capitoli | Sezione | Autore | Quando | Che cosa ha fatto oltre a leggere | Scostamenti e regole violate che dichiara |
+|---|---|---|---|---|---|
+| 1, 7, 9, §10.2 | `sez-a/SEZIONE.md`, «Scopo, traccia, requisiti e vincoli» | `sciame-requisiti` [req.] | scritta fra le 16:10 e le 16:27; file com'erano alle 16:15 | conteggi con `grep` e `wc` sulla traccia della challenge (fatti dopo la lettura: ricontrolli, non previsioni); i conti delle ore del §1.4 (punto 3) e del cap. 7 (riga 2); due pagine aperte in rete | due comandi git in sola lettura (`git log`, `git status`) contro il «niente git»; lo strumento di lettura in rete ha salvato da solo un PDF fuori dalla cartella (`~/.claude/projects/…/tool-results/webfetch-1794669205571-3tdppa.pdf`), poi solo convertito con `pdftotext`; nessun cambio di stato proposto; corpo di sei pagine piene, composto con pandoc |
+| 2 | `sez-b/SEZIONE.md`, «Architettura del nucleo» | `sciame-architetto` [arch.] | dalle 16:10 alle 16:22 | dodici file grezzi di risultati ricontrollati (le cifre tornano); due conti [arch.]; quattro pagine riaperte con uno strumento che riassume; una critica nuova, non vagliata (altezza del pannello) | nessuna prova eseguita; 5,7 pagine a 6 200 caratteri l'una (35 300 caratteri) |
+| 3 | `sez-d/SEZIONE.md`, «Sensori e hardware» | `sciame-sensori` [sens.] | file alle 16:16 | rieseguiti `controlla_parametri.py` (0 errori) e `geometria_sensori.py` (sola stampa); frasi ritrovate nelle copie locali delle schede; per i 24 indirizzi solo la risposta (codice 200 o 206, ore 16:13) | un `git status` in sola lettura contro il «niente git»; una copia impaginata nella cartella temporanea per contare le pagine; nessuna prova nuova, quindi nessuna previsione |
+| 4 | `sez-c/SEZIONE.md`, «Prove eseguite e risultati numerici» | `sciame-metrologo` [metr.] | stato alle 16:15 | controllo di ripetibilità su sette script (previsione alle 16:12:36; regge); ventisei righe della tabella del §4.2 ritrovate con `grep` nei file grezzi | supera le sei pagine chieste (circa nove, a 6 200 caratteri la pagina); nessuna pagina riaperta in rete; non letti `f2/01-traduzione/SCHEDE.md`, `f6-specializzazione/01-esperto-dominio/` e le consegne di f7–f10; regole violate: nessuna che l'autore sappia |
+| 5, 6 | `sez-f/SEZIONE.md`, «Valutazioni in corso, piano e rischi» | pianificatore [pian.] (il file non nomina il ruolo: la sigla viene dalla proposta `pianificatore-f11-1`) | fotografia delle 16:13:24 | i conti [pian.] del bilancio e dell'ora d'arrivo dei sensori; una proposta non provata | nessuna pagina letta: per ogni link solo il codice 200 alle 16:13; non lette le consegne dei singoli ruoli di f7 e f8, `f6-specializzazione/`, i file grezzi |
+| 8 | `sez-e/SEZIONE.md`, «Ambiti d'uso, profili e dominio» | `sciame-esperto-dominio` [dom.] | dalle 16:16 | dodici previsioni sulle fonti, con gli esiti, in `sez-e/PREVISIONI.md`; pagine riaperte [A11]; parole ricontate nella traccia della challenge e nel sorgente della proposta | ha scritto anche `PREVISIONI.md` (un'ora approssimata in un titolo, corretta e dichiarata lì); due pagine consultate senza previsione, per i soli dati bibliografici; nessuna simulazione rifatta; non ha letto tutta la convocazione; corpo di circa 4670 parole (6,0 pagine a 775 parole), 10 pagine composte; tre cambi di stato proposti (in testa al cap. 8) |
+
+**Che cosa ha fatto l'unione** (`sciame-redattore` [red.], 14 novembre 2026, dalle 16:29).
+
+- **Composizione.** Le righe delle sezioni sono incluse da uno script (nella cartella temporanea della sessione, fuori dal progetto) che applica solo sostituzioni dichiarate, ciascuna con il numero atteso di occorrenze. Niente è stato riassunto.
+- **Tolto perché ripetuto fra le sezioni** (il punto resta dove è più pertinente, con un rimando): le sei legende e i sei elenchi di sigle (ora la legenda in testa); i sei elenchi dei file letti (appendice A); i sei elenchi delle chiavi e i link nel testo (appendice B); lo stato dei requisiti scritto due volte (unito nel §1.3); la tabella dei requisiti sulla posa scritta due volte (unita nel §3.6); lo stato di f10 scritto due volte (unito nel §5.5); le curve di rumore (§2.2, B1; restano nel §4.0 perché servono a leggere le prove); la durata del «previsto», discussa in quattro sezioni (ora nel §2.2, B5).
+- **Lasciato doppio di proposito:** le correzioni lette per componente (§2.2) e per prova (§4.1.4), perché l'utente chiede i dati numerici su ogni componente e l'inventario serve a chi rifà le prove; la tabella di riepilogo del §4.2; i risultati dell'attacco alla specializzazione (§4.1.8) e le correzioni che ne escono (§8.5); le discordanze di una riga.
+- **Termini uniformati** (glossario): traccia della challenge; mappa (al posto di «griglia a quattro stati»); strato 1 (al posto di «strato di garanzia»); area prevista (al posto di «regione»); riemersione (al posto di «ricomparsa»); «mobile» (al posto di «in movimento»); anello cieco (al posto di «vuoto vicino»); soggetto (al posto di «bersaglio» nelle simulazioni); camera stereo attiva. Le prime persone degli autori («da me», «conto mio») sono diventate le marche [req.], [arch.], [metr.], [sens.], [dom.], [pian.]; «oggi» è diventato «il 14 novembre».
+- **Marche uniformate:** [prel.] al posto di [PREL], «preliminare» e «non vagliato» (per f7–f10); nella tabella del §4.2 le lettere S, D, V, X, C, NR sono diventate [SIM], [DIM], [VER], [SMENT], [CONTO], [NR]; per le fonti, «(r)» è diventato [R] e «[r]» [rias.].
+- **Rimandi uniformati:** le sigle dei file usate da tre sezioni (per esempio V2, VER, AUD, `t/`, `a/`, `v/`) sono state sciolte nel percorso relativo alla cartella della convocazione; i rimandi fra paragrafi sono stati rinumerati.
+- **Chiavi dei riferimenti:** le 90 chiavi provvisorie delle sezioni (tre fonti ne avevano due) sono state sostituite con le chiavi definitive dell'elenco unico, secondo la tabella del suo §7 (appendice B).
+- **Aggiunto da [red.]** (sempre marcato o in un riquadro): la sintesi, la legenda, il glossario, i rimandi fra capitoli, i riquadri «da sciogliere», il riquadro «dopo la fotografia», la precisazione sulla regola nella riga R1 del §1.3, la nota sulla camera della sequenza TUM nel §5.5, i richiami in riga alle correzioni dell'elenco dei riferimenti (undici, del tipo «per l'elenco dei riferimenti …: §10.1, riquadro 6»).
+
+**Controlli dell'unione** (previsioni scritte alle 16:54:37 in `f11-documentazione/unione/stato.md`, prima dei controlli; condividono con l'unione l'autore, lo script e le sezioni: trovano perdite meccaniche, non errori di contenuto).
+
+- **P1, nessuna cifra persa: regge.** Nelle righe incluse ci sono 5906 occorrenze di 675 numeri distinti. Nel confronto riga per riga fra la riga d'origine e la riga composta, 24 righe perdono un numero, tutte per sostituzioni dichiarate: 3 righe sulla durata del «previsto» ridotte a un rimando (le cifre sono nel §2.2, B5); 1 riga del cap. 3 con le curve di rumore (ora nel §2.2, B1); 2 rimandi rinumerati; 15 righe del cap. 2 in cui è sparita la cifra di una sigla di file sciolta nel percorso («M1», «V1»); 3 righe in cui la cifra stava dentro una chiave provvisoria poi sostituita (per esempio «vu2020», «dpr-495-1992»: le chiavi vecchie sono nell'ultima colonna dell'appendice B). Nessun'altra perdita.
+- **P2, rimandi ai file: regge per i percorsi completi; scritta male per gli altri.** 209 nomi fra apici inversi controllati: 196 sono percorsi completi ed esistono tutti; 13 sono nomi senza cartella (la convenzione della legenda: stanno nella cartella del file citato subito prima). La previsione non distingueva i due casi, e alla lettera i 13 la smentirebbero; notato dopo: undici di quei nomi, cercati con `find`, stanno nella cartella attesa, e gli altri due (`CONSEGNA.md`, `PREVISIONI.md`) sono nomi generici presenti in ogni cartella di ruolo.
+- **P3, chiavi: regge.** 85 chiavi nel testo, 85 righe nell'appendice B, nessuna di troppo; tutte e 85 sono chiavi definitive della tabella del §7 dell'elenco dei riferimenti (la previsione era scritta sulle chiavi provvisorie: il controllo è stato rifatto dopo la sostituzione).
+- **P4, righe non incluse: regge.** Gli intervalli esclusi, riletti uno per uno, sono titoli, legende, sigle, elenchi dei file letti, elenchi delle chiavi, righe di soli link, e i blocchi uniti dichiarati qui sopra.
+- **Notato dopo, senza previsione:** nessuna sigla di file rimasta fra apici; nessun rimando con la vecchia numerazione (salvo «§D.7» nell'appendice A, che indica apposta la sezione d'origine); tutte le tabelle hanno un numero di colonne coerente; i link stanno solo nell'appendice B.
+
+**Scostamenti dell'unione e regole violate.** (1) **Un errore di [red.], senza effetti sul progetto.** La cartella temporanea della sessione è condivisa fra i ruoli: [red.] vi ha creato una sottocartella con lo stesso nome di quella del curatore che univa i riferimenti, senza controllare, e alle 16:45 il suo programma di composizione ha preso il posto di quello del curatore, che lo ha eseguito per errore (senza scrittura nel progetto) e ha poi spostato i propri file; lo racconta `f11-documentazione/unione/stato_riferimenti.md`. Nessun file della convocazione è stato toccato; [red.] se n'è accorto solo dopo le 17:00, leggendo quel file. (2) Lunghezza oltre le venti–trenta pagine indicative: la consegna vieta di riassumere e le sei sezioni sommano circa 35 000 parole. (3) Oltre alle sei sezioni, [red.] ha letto l'inizio delle quattro bozze dei riferimenti, alcune parti dell'elenco unico e le prime righe di quattro file comparsi dopo la fotografia: ne ha tratto le chiavi, l'appendice B e i riquadri che lo dichiarano. (4) Una prima stesura è stata scritta alle 16:59 con le chiavi provvisorie, quando l'elenco unico esisteva già da nove minuti: è stata sostituita da questa. (5) Le frasi fra «» riprese dalle sezioni non sono state ricontrollate sulle fonti; in rete non è stato aperto niente. (6) Nella cartella di consegna c'è anche `stato.md`, il file di stato di [red.], con le previsioni e gli esiti dei controlli.
