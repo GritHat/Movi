@@ -165,3 +165,18 @@ Testo dell'utente, per intero:
 - **Che cosa deve valutare lo sciame, in breve:** dove la classe e il profilo entrano nella catena (velocità massima per la fascia di guardia e per l'insieme di possibile presenza; modello di moto e regione di previsione; soglie d'avviso in funzione del profilo di chi porta il sensore); che cosa succede alla sicurezza con un'etichetta sbagliata o assente; che cosa del dominio provato (camera ferma, fino a 3 m) regge per classi veloci; come dichiararlo senza promettere ciò che non c'è.
 - **Nota di coerenza con ciò che lo sciame aveva stabilito:** «nessuna rete decide un'indicazione» e «l'etichetta sta a lato» vanno riconciliate con questo requisito, non cancellate in silenzio: la regola di sicurezza («ciò che non è osservato non è mai libero»; l'avviso si toglie solo guardando) non può dipendere da un'etichetta. Massa e accelerazione restano non stimabili dalle misure: con le classi entrano come **valori a priori della classe**, non come stime.
 - Resta il vincolo: solo osservazione, monitoraggio, ispezione, navigazione sicura e avviso.
+
+---
+
+# Addendum 11 (14-11-2026, sera): seconda fase — veicoli veloci, prototipo simulato, video
+
+Indicazioni dell'utente (riassunte dai suoi tre messaggi, che restano nella conversazione):
+
+- **Autori:** Ignazio Crocchiolo, Federico Dellini, Danilo Amalfitano, Emanuele Ciotola, Pierfrancesco Amendola. **Gruppo: SDMs. Progetto: MoVi.** Le 71 pagine dell'allegato vanno bene.
+- **Decisioni chiuse:** il classificatore è da supporre esistente e lasciato ai lavori futuri; qui è solo simulato, con etichette a mano. L'avviso resta acceso e solo lo sguardo lo toglie. Nessun sensore vero: inventario vuoto. L'archivio di Friburgo si ignora.
+- **Seconda fase di test, più rapida:** sensori più performanti, anche di altissima tecnologia, o del tutto diversi, per e su auto, treni e aerei, che permettano rilevamenti a velocità e distanze adeguate; sempre con hardware simulato dalle schede e dati pubblici (auto, treni, aerei, droni e altri mezzi volanti senza pilota). Dove i dati pubblici mancano: simulazione dalle schede, dichiarata.
+- **Il caso centrale diventa quello dei veicoli veloci, in particolare aerei e droni:** cambia l'impianto della presentazione e del video.
+- **Prototipo:** lo produce lo sciame, simulato, senza hardware, riusando tutto il codice scritto finora; usa i segnali dell'hardware virtuale, i dati pubblici, le schede dei sensori e i risultati delle prove; simula più condizioni e il sistema proposto, multisensore; può servire al video.
+- **Video:** poco meno di 3 minuti, 16:9 a 1080p, motion graphics; strumento a scelta dello specialista fra HyperFrames (installato), Remotion e Motion Canvas; prima versione con voce sintetica di qualità in inglese, con la possibilità di generare dopo un'alternativa in italiano; musica con licenza libera; logo del gruppo creato dallo sciame; niente slide. Linee guida nel file dell'utente `…/uploads/…/2f4fda74-Markdownlfes.md` (copiato in `f17-video/ISTRUZIONI_VIDEO_UTENTE.md`), da applicare dopo una passata convergente dello sciame con tre nuovi specialisti (pubblicità e marketing, videomaker, comunicazione), adattandole al nuovo caso centrale.
+- **Tempo:** tutto entro 10 ore d'orologio. Workflow con più agenti in parallelo autorizzati.
+- **Regolamento:** controllato dal coordinatore. Non ho trovato il testo dell'edizione 2026; quello dell'edizione speciale 2025 (stessi organizzatori) non ha regole sull'uso di strumenti automatici, chiede che il progetto sia originale e non violi diritti di terzi, e fissa per il video pitch un massimo di 4 minuti, pena l'esclusione.
