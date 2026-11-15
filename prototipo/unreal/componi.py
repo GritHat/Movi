@@ -2,7 +2,7 @@
 Uso: python componi.py <cartella dei fotogrammi con stato.jsonl> <cartella d'uscita>"""
 import json, os, sys
 from multiprocessing import Pool
-from PIL import Image, ImageDraw, ImageEnhance, ImageFont
+from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont
 
 QUI = os.path.dirname(os.path.abspath(__file__))
 INK, BLU, GRIGIO, VERDE, ROSSO, ARANCIO = (11, 27, 51), (29, 111, 232), (92, 104, 122), (14, 159, 110), (224, 60, 49), (245, 130, 32)
@@ -23,7 +23,10 @@ def pillola(d, x, y, testo, f, sfondo, colore, punto=None, pad=22):
 def uno(arg):
     src, dst, r = arg
     im = Image.open(src).convert("RGB")
+    if im.size != (1920, 1080):                    # resa a risoluzione maggiore, ridotta qui: bordi più puliti
+        im = im.resize((1920, 1080), Image.LANCZOS)
     im = ImageEnhance.Brightness(im).enhance(1.38)
+    im = im.point([min(255, int(255 * (v / 255.0) ** 0.88)) for v in range(256)] * 3)   # ombre più chiare, stile del video
     im = ImageEnhance.Color(im).enhance(1.12).convert("RGBA")
     o = Image.new("RGBA", im.size, (0, 0, 0, 0))
     d = ImageDraw.Draw(o)
@@ -66,7 +69,11 @@ def uno(arg):
     w = d.textlength(cap, font=f) + 80
     d.rounded_rectangle((960 - w / 2, 918, 960 + w / 2, 990), 20, fill=(255, 255, 255, 240))
     d.text((960 - w / 2 + 40, 931), cap, font=f, fill=INK)
-    d.text((110, 1030), "PROTOTIPO SIMULATO · SIMULAZIONE 3D CON MOTORE FISICO", font=B(20), fill=GRIGIO)
+    nota = "Il codice del prototipo MoVi gira in una simulazione su un vero motore fisico: Unreal Engine 5"
+    fn = B(24)
+    wn = d.textlength(nota, font=fn) + 64
+    d.rounded_rectangle((960 - wn / 2, 1012, 960 + wn / 2, 1060), 24, fill=INK + (235,))
+    d.text((960 - wn / 2 + 32, 1021), nota, font=fn, fill=(255, 255, 255))
     # scheda del filtro, in soggettiva
     if pov:
         X, Y, W, H = 110, 330, 480, 560
@@ -87,7 +94,11 @@ def uno(arg):
         d.text((X + 40, Y + 502), "CONFIDENZA", font=B(20), fill=GRIGIO)
         d.rounded_rectangle((X + 190, Y + 504, X + W - 40, Y + 524), 10, fill=(225, 231, 240))
         d.rounded_rectangle((X + 190, Y + 504, X + 190 + (W - 230) * max(0.04, r["conf"]), Y + 524), 10, fill=BLU)
-    Image.alpha_composite(im, o).convert("RGB").save(dst, quality=93)
+    ombra = Image.new("RGBA", im.size, (0, 0, 0, 0))
+    ombra.paste((11, 27, 51, 70), (0, 10), o.split()[3].point(lambda a: 255 if a > 200 else 0))
+    ombra = ombra.filter(ImageFilter.GaussianBlur(14))
+    im = Image.alpha_composite(im, ombra)
+    Image.alpha_composite(im, o).convert("RGB").save(dst, quality=96)
 
 
 if __name__ == "__main__":

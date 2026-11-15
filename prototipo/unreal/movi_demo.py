@@ -10,6 +10,7 @@ ues = unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem)
 les = unreal.get_editor_subsystem(unreal.LevelEditorSubsystem)
 GS = unreal.GameplayStatics
 FOTO = os.environ.get("MOVI_FOTO", "")          # cartella dei fotogrammi; vuota = non salva
+FPS = 30.0                                       # fotogrammi del filmato per secondo
 T_E, T_FINE = 3.0, 8.5                           # istante dell'urto e fine, in secondi di simulazione
 P_E = (2350.0, 60.0, 50.0)                       # sulla linea fra il portatore e il bersaglio                     # punto dell'urto
 VP = (500.0, 0.0, 0.0)                           # velocità del portatore
@@ -53,9 +54,10 @@ def prepara(w):
                                            "raggio", "testo_stato", "testo_avviso", "testo_tempo")}
     a["detriti"] = list(GS.get_all_actors_with_tag(w, "movi_detrito"))
     a["fumo"] = list(GS.get_all_actors_with_tag(w, "movi_fumo"))
+    a["fumo_m"] = [f.static_mesh_component.create_dynamic_material_instance(0) for f in a["fumo"]]
     a["fumo_v"] = [(random.uniform(-230, 230), random.uniform(-260, 260), random.uniform(-90, 170)) for _ in a["fumo"]]
     a["cattura"] = uno(w, "movi_cattura")
-    S["rt"] = unreal.RenderingLibrary.create_render_target2d(w, 1920, 1080, unreal.TextureRenderTargetFormat.RTF_RGBA8)
+    S["rt"] = unreal.RenderingLibrary.create_render_target2d(w, 2880, 1620, unreal.TextureRenderTargetFormat.RTF_RGBA8)
     a["cattura"].capture_component2d.set_editor_property("texture_target", S["rt"])
     S["a"] = a
     S["movi"] = movi_core.MoVi(list(bersaglio_vero(0.0)), [560.0, 0.0, 0.0])
@@ -72,8 +74,8 @@ def passo(dt_muro):
         prepara(w)
     a, t = S["a"], S["t"]
     k = scala_tempo(t)
-    GS.set_global_time_dilation(w, k)
-    dt = min(dt_muro, 0.05) * k
+    dt = k / FPS                                  # passo fisso: un fotogramma del filmato per passo, moto fluido
+    GS.set_global_time_dilation(w, max(0.0002, min(20.0, dt / max(dt_muro, 1e-3))))   # la fisica avanza dello stesso passo
     t += dt
     S["t"] = t
 
@@ -120,6 +122,11 @@ def passo(dt_muro):
         a["lampo"].set_actor_scale3d(V(*[1.0 + 30.0 * tau] * 3))
         if tau > 0.28:
             a["lampo"].set_actor_hidden_in_game(True)
+        dirada = max(0.0, min(1.0, (1.7 - tau) / 0.5))       # il fumo si dirada in fretta, prima che i sensori tornino
+        for f, mm in zip(a["fumo"], a["fumo_m"]):
+            mm.set_scalar_parameter_value("Opacita", 0.62 * dirada)
+            if dirada <= 0.0:
+                f.set_actor_hidden_in_game(True)
         for f, fv in zip(a["fumo"], a["fumo_v"]):
             c = [P_E[i] + fv[i] * min(tau, 1.6) + (430.0 * tau if i == 0 else 0.0) for i in range(3)]   # la nube resta davanti al portatore
             f.set_actor_location(V(*c), False, False)
@@ -128,7 +135,7 @@ def passo(dt_muro):
 
     # sensori simulati: il radar satura per i detriti vicini, la camera è accecata dal lampo e dal fumo
     radar_ok = not (0.0 <= tau < 1.7)
-    camera_ok = not (0.0 <= tau < 2.1) and not occluso(port, vero, centri, 400.0)
+    camera_ok = not (0.0 <= tau < 1.9) and not (tau < 1.7 and occluso(port, vero, centri, 400.0))
     misura = [vero[i] + random.gauss(0, 14.0) for i in range(3)] if (radar_ok or camera_ok) else None
     r = S["movi"].passo(t, dt, misura, radar_ok, camera_ok)
 
@@ -174,7 +181,7 @@ def passo(dt_muro):
                  "vicino_m": vicino / 100.0, "P": [[x.a, x.b, x.c] for x in tr.assi[:2]], "non_visto_da": r["non_visto_da"]}
 
     S["n"] += 1
-    if FOTO and S["n"] % 2 == 0:
+    if FOTO and S["n"] % 1 == 0:
         a["cattura"].capture_component2d.capture_scene()
         unreal.RenderingLibrary.export_render_target(w, S["rt"], FOTO, "f_%05d.png" % S["foto"])
         open(FOTO + "/stato.jsonl", "a").write(json.dumps(dict(S["riga"], f=S["foto"])) + "\n")
