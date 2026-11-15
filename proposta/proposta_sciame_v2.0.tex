@@ -1,0 +1,189 @@
+% MoVi (gruppo SDMs): documento di due pagine per la giuria, versione 2.0.
+% Composto da sciame-comunicazione dal v1.0 (proposta/proposta_sciame.tex, non toccato).
+% Fonti delle cifre: f15-lunga-portata/30-verdetto/VERDETTO_FASE2.md e 50-fase2b/20-verdetto/VERDETTO_2B.md;
+% la tabella con le fonti riga per riga sta in PROPOSTA.md, accanto a questo file.
+% Allineato a 60-fase2c/02-verdetto/VERDETTO_2C.md (verifica del 15-11-2026; copia di prima: proposta_sciame_v2.0_prima.tex).
+% Si compila con: xelatex proposta_sciame_v2.0.tex
+\documentclass[9pt,a4paper]{extarticle}
+\usepackage[a4paper,margin=1.25cm,top=1.0cm,bottom=1.0cm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Fira Sans}[Scale=0.93,BoldFont={Fira Sans SemiBold},ItalicFont={Fira Sans Italic}]
+\usepackage{polyglossia}\setmainlanguage{italian}
+\usepackage{xcolor,tikz,tabularx,booktabs,array,enumitem,microtype,ragged2e}
+\usetikzlibrary{positioning,arrows.meta,fit,calc}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{ink}{HTML}{16202B}
+\definecolor{muted}{HTML}{55606C}
+\definecolor{accent}{HTML}{0B5C8A}
+\definecolor{accentbg}{HTML}{E8F1F6}
+\definecolor{warnbg}{HTML}{FBF1E3}
+\definecolor{ok}{HTML}{1E7A4C}
+\definecolor{warn}{HTML}{A8620A}
+\definecolor{bad}{HTML}{A12B2B}
+\definecolor{traj}{HTML}{5B4B8A}
+\definecolor{rule}{HTML}{C9D1D9}
+\color{ink}
+
+\newcommand{\versione}{v2.0}
+\newcommand{\dataora}{15 novembre 2026}
+\newcommand{\statodoc}{seconda fase: veicoli veloci; con allegato tecnico}
+
+% Marche di stato: lettera + colore, leggibili anche in bianco e nero
+\newcommand{\chip}[2]{\tikz[baseline=(c.base)]\node[inner xsep=2.4pt,inner ysep=1.0pt,rounded corners=1.5pt,fill=#1,text=white,font=\fontsize{6.0}{6.0}\selectfont\bfseries](c){#2};}
+\newcommand{\Sv}{\chip{accent}{S}}   % sostenuto in simulazione dalle schede tecniche
+\newcommand{\Tv}{\chip{traj}{T}}     % su traiettorie pubbliche reali, occlusione simulata
+\newcommand{\Cv}{\chip{ok}{C}}       % per regola scritta, calcolo o costruzione
+\newcommand{\Xv}{\chip{bad}{X}}      % smentito: lo diciamo come limite
+\newcommand{\Pv}{\chip{warn}{P}}     % in progetto, non provato
+
+\setlength{\parindent}{0pt}\setlength{\parskip}{1.6pt}
+\setlist{leftmargin=1.05em,itemsep=0.4pt,topsep=1pt,parsep=0pt,partopsep=0pt}
+\newcommand{\sez}[1]{\vspace{2.2pt}{\color{accent}\bfseries\fontsize{9.6}{10.4}\selectfont #1}\par\vspace{-3.8pt}{\color{rule}\rule{\linewidth}{0.5pt}}\par\vspace{0.2pt}}
+\renewcommand{\arraystretch}{1.12}
+\newcolumntype{L}{>{\RaggedRight\arraybackslash}X}
+\newcommand{\nota}[1]{{\color{muted}\fontsize{7.7}{9.1}\selectfont #1}}
+\pagestyle{empty}
+\emergencystretch=1.5em
+
+\begin{document}
+\fontsize{8.7}{10.4}\selectfont
+
+% ---------------------------------------------------------------- testata
+\begin{minipage}[b]{0.79\linewidth}
+{\fontsize{16}{18}\selectfont\bfseries\color{accent} MoVi: una percezione che dichiara ciò che non ha osservato}\\[2pt]
+{\fontsize{9.2}{11}\selectfont \textbf{Monitoraggio di droni e aerei in un sito aerospaziale sorvegliato.} Sensori a lunga portata, eventi improvvisi, meteo: di ogni mezzo MoVi dice se lo vede, dove può essere quando non lo vede, e quando non lo sa.}\\[1pt]
+{\fontsize{8.2}{10}\selectfont\color{muted}\textbf{Gruppo SDMs:} Ignazio Crocchiolo, Federico Dellini, Danilo Amalfitano, Emanuele Ciotola, Pierfrancesco Amendola · The Big Hack 2026}
+\end{minipage}\hfill
+\begin{minipage}[b]{0.19\linewidth}\raggedleft
+{\bfseries\color{accent}\versione}\; · \;\dataora\\
+\nota{\statodoc}
+\end{minipage}
+
+\vspace{2pt}{\color{accent}\rule{\linewidth}{1.1pt}}\vspace{0.5pt}
+
+\nota{\Sv\ sostenuto in simulazione dalle schede tecniche \; · \; \Tv\ su traiettorie pubbliche reali, occlusione simulata \; · \; \Cv\ per regola scritta, calcolo o costruzione \; · \; \Xv\ smentito: lo diciamo come limite \; · \; \Pv\ in progetto, non provato. Le cifre sono passaggi simulati (k su n) con l'intervallo di Wilson al 95\,\%.}
+
+% ---------------------------------------------------------------- limiti
+\vspace{1pt}
+\colorbox{warnbg}{\parbox{\dimexpr\linewidth-2\fboxsep}{\vspace{0.5pt}\textbf{Limiti, da leggere per primi}
+\begin{itemize}
+\item \textbf{Nessun sensore fisico.} Tutto è simulato dalle schede tecniche pubbliche, o misurato su traiettorie pubbliche reali con occlusione simulata. Le probabilità di rilevamento, i falsi allarmi, le latenze e i 45 m/s e 25 m/s² del drone veloce sono ipotesi: in tutto, il 46\,\% dei campi delle schede. Nessuna norma di sicurezza è stata applicata.
+\item \textbf{Aerei in volo: fuori dal caso centrale.} Per loro (fino a 210 m/s) l'avviso non arriva in tempo all'operatore del sito, e MoVi lo scrive in ogni uscita. Lo stesso per i treni veloci.
+\item \textbf{Il «libero» dipende dalla mappa:} 0 «libero» sul drone in 171 passaggi solo con la mappa del sito dichiarata completa (ipotesi); con una mappa sbagliata è falso dietro l'edificio che vi manca (5 casi su 6) \Xv: il prototipo non la dichiara.
+\item L'avviso perde per qualche ciclo il drone che rallenta o si ferma: 12 passaggi su 200 \Xv.
+\item \textbf{Eventi improvvisi:} sono dedotti, entro 2 s in 51 passaggi su 60; zona dei detriti di circa 4,5 km, che non si riduce guardando; l'avviso non distingue chi è in pericolo; fiammata con innesco ottimista. Rullaggio e radar d'aeroporto: cifre delle regole precedenti, non rimisurate.
+\item Un solo drone multirotore e un solo aereo ad ala fissa reali nelle traiettorie pubbliche. Il classificatore non è realizzato: le etichette di classe sono messe a mano.
+\item MoVi osserva e avvisa: nessuna uscita è un comando, nessuna funzione d'ingaggio o di puntamento.
+\end{itemize}\vspace{0.5pt}}}
+
+% ---------------------------------------------------------------- 1
+\sez{1 · Il problema e l'idea}
+In un sito aerospaziale sorvegliato (piazzale, area di prova, varco di un hangar) girano droni e aerei in rullaggio. Un drone passa dietro un edificio; un aereo esce da dietro un hangar. Il rischio è che, per il sistema che osserva, in quel momento non ci siano più. MoVi tiene per ogni mezzo tre risposte: \textbf{lo vedo}; \textbf{non lo vedo, ma può essere in questa zona} (avviso di possibile presenza); \textbf{non lo so} (zona non verificata).
+
+\textbf{«In tempo»} vuol dire prima della distanza che serve a chi riceve l'avviso per reagire; un \textbf{passaggio} è una corsa simulata completa di un mezzo dietro l'ostacolo, con condizioni casuali diverse. \textbf{Due regole del nucleo.} L'avviso si spegne solo dopo aver guardato tutta la zona dove il mezzo può essere, oppure quando lo si rivede: non per il tempo, non per un'etichetta \Cv. «Libero» vale solo per le classi dichiarate e con la mappa degli ostacoli data; altrove l'uscita dice «zona non verificata per $\langle$classe$\rangle$» \Cv. Dove le abbiamo trovate in difetto, lo diciamo nei limiti.
+
+% ---------------------------------------------------------------- 2
+\sez{2 · Come funziona: più sensori, un nucleo}
+\begin{center}
+\begin{tikzpicture}[
+  b/.style={draw=accent,line width=0.6pt,rounded corners=2pt,fill=white,align=center,inner xsep=2pt,inner ysep=2.4pt,font=\fontsize{7.6}{8.9}\selectfont,minimum height=13.5mm,text width=32.5mm},
+  f/.style={-{Stealth[length=3.8pt]},line width=0.6pt,draw=ink},
+  node distance=3.2mm]
+\node[b](c0){\textbf{Configurazione}\\classi ammesse; limiti di velocità (drone 45, aereo 210 m/s); mappa; chi riceve};
+\node[b,right=of c0](s){\textbf{Sensori} (da scheda)\\radar per droni 360° · radar di superficie · LiDAR · camere · ADS-B · Remote ID};
+\node[b,right=of s](h){\textbf{Salute di ogni sensore}\\guasto, pioggia, fiammata: «non affidabile»};
+\node[b,right=of h](g){\textbf{Griglia per classe}\\«libero per $\langle$classi$\rangle$» · in ombra · non verificato};
+\node[b,right=of g](k){\textbf{Tracce e fusione}\\conferma, associazione, filtro di Kalman};
+\node[b,below=5.5mm of c0,fill=accentbg](c){\textbf{Mezzo nascosto}\\zona dove può essere; avviso che si spegne solo guardando};
+\node[b,right=of c](e){\textbf{Eventi improvvisi}\\collisione, fiammata, nebbia, fumo: dedotti};
+\node[b,right=of e](t){\textbf{Tempestività}\\per chi riceve; se non basta: «avviso non tempestivo»};
+\node[b,right=of t](u){\textbf{Uscita}\\console dell'operatore; registro «osservato» o «dedotto»};
+\node[b,right=of u,draw=muted,dashed](n){\textbf{Classificazione}\\supposta esistente, lavoro futuro; oggi etichette a mano};
+\foreach \a/\bb in {c0/s,s/h,h/g,g/k,c/e,e/t,t/u} \draw[f](\a)--(\bb);
+\draw[f](k.south)--++(0,-2.4mm)-|(c.north);
+\draw[f,draw=muted,dashed](n.west)--(u.east);
+\end{tikzpicture}
+\end{center}
+\vspace{-6pt}
+\nota{Tratteggio: l'etichetta di classe (oggi messa a mano) scrive un testo e sceglie le righe dei limiti, ma la zona usa l'inviluppo più largo del sito: nessuna etichetta riduce l'avviso. Un sensore dichiarato non affidabile non può dare «libero».}
+
+% ---------------------------------------------------------------- 3
+\sez{3 · Che cosa è sostenuto nel caso centrale}
+\begin{enumerate}[leftmargin=1.3em]
+\item \Sv\ \textbf{Drone dietro un edificio.} Un drone a 15–21 m/s è annunciato in tempo all'operatore (gli servono 806 m, la traccia è confermata a circa 950 m) in 200 passaggi su 200 [0,981; 1], e in altri 100 su 100 ripetuti con condizioni nuove (regole precedenti). Mai «libero» sul drone (0 su 171), con la mappa dichiarata completa. L'avviso lo contiene per tutta l'ombra in 188 su 200; nei 12 in cui il drone rallenta o si ferma l'avviso lo perde per qualche ciclo \Xv.
+\item \Sv\ \textbf{Aereo in rullaggio dietro un hangar} (radar di superficie, LiDAR, ADS-B): avviso in tempo in 200 su 200, mai fuori dall'avviso, mai «libero» sull'aereo. Col solo radar, in tempo in 50 su 200 [0,20; 0,31]: un sensore solo non basta.
+\item \Sv\Cv\ \textbf{Ciò che un sensore non può vedere.} Un radar d'aeroporto non vede un drone sotto la sua copertura: MoVi non lo chiama mai «libero» (0 su 200) e scrive «zona non verificata per i multirotori». I droni sotto i 250 g sono «zona non verificata».
+\item \Sv\ \textbf{Spegnere l'avviso.} La regola ingenua (guardare un punto) lo spegneva senza aver guardato tutta la zona in 564 passaggi su 2\,400 [0,218; 0,252]. Con la regola nel nucleo: 0 passaggi su 200 restano senza zona.
+\item \Sv\ \textbf{Limiti di velocità corretti} (casi costruiti). Fino a 45 m/s per i droni veloci (ipotesi senza fonte) e 210 m/s per gli aerei. Le passate correlate del radar non sommano la probabilità di vedere: il «libero» per un drone arriva a circa 0,9 km. Per gli aerei in volo servirebbero 3,4 km: «avviso non tempestivo», scritto in uscita.
+\item \Tv\ \textbf{Su dati reali.} Su 43 aerei (ADS-B pubblico), dopo 2–30 s senza vederli, la zona di previsione (non l'avviso) conteneva l'aereo in circa 9 casi su 10.
+\end{enumerate}
+
+% ---------------------------------------------------------------- 4
+\sez{4 · Eventi improvvisi e visibilità degradata}
+\begin{itemize}
+\item \Sv\ \textbf{Sensore accecato o caduto.} Con una fiammata, la pioggia o un guasto, le camere sono dichiarate non affidabili entro 3 cicli in 90 passaggi su 90. Col nucleo precedente, non rifatto: sensore caduto o accecato dichiarato in 460 casi su 460, entro 5,3 s.
+\item \Sv\ \textbf{Collisione fra droni.} MoVi deduce l'evento in 1,2–2,3 s (entro 2 s in 51 su 60 [0,74; 0,92]) e non chiama mai «libero» dove possono cadere i frammenti. Zona dei detriti di circa 4,5 km (mai oltre 5,3), che non si riduce guardando; l'avviso non distingue chi è in pericolo \Xv.
+\item \Sv\ \textbf{Nessun falso evento} con fumo e detriti in pista (0 su 60, e 0 su 30 ripetuti con condizioni nuove) né con due droni a 5 m che non si urtano (0 su 300). Con nebbia e pioggia MoVi accorcia la portata dichiarata e oltre non dà «libero» (conto e nucleo usano la stessa formula: non indipendente).
+\end{itemize}
+
+\pagebreak
+% ---------------------------------------------------------------- 5
+\sez{5 · Lo stesso nucleo a corto raggio}
+Con una camera di profondità ferma, fino a 3 m, lo stesso nucleo segue \textbf{una persona dietro un ostacolo}; nel secondo profilo dà un \textbf{avviso di presenza a una persona non vedente} (suoni brevi, mai provati con persone; non sostituisce bastone o cane guida). Su profondità simulata, con due correzioni, una persona nascosta non è mai rimasta senza avviso: 0 fotogrammi su 4\,324 \Sv. I 3 m bastano ad avvisare chi si avvicina fino a 1,44 m/s \Cv: è il motivo della seconda fase.
+
+% ---------------------------------------------------------------- 6
+\sez{6 · I requisiti della traccia, uno per uno}
+\begin{tabularx}{\linewidth}{@{}>{\bfseries\RaggedRight}p{3.5cm}>{\RaggedRight}p{5.4cm}L@{}}
+\toprule
+La traccia chiede & Che cosa fa MoVi & Stato \\
+\midrule
+Rilevare elementi mobili e ostacoli & Tracce confermate dalla fusione di più sensori; mappa degli ostacoli data & \Sv\ drone confermato a circa 950 m. \Xv\ falsi avvisi nel sito da 3,8 a 91 all'ora secondo la configurazione, fino a 1\,594 con le auto (nucleo precedente) \\[1.2pt]
+Gestire le interruzioni della visibilità; continuità & Zona e avviso per tutta l'ombra, si spengono solo guardando & \Sv\ 188/200 (drone), 200/200 (rullaggio). \Xv\ 12/200 col drone che rallenta \\[1.2pt]
+Distinguere l'osservato dall'incerto & «libero per $\langle$classi$\rangle$», «zona non verificata», registro «osservato» o «dedotto» & \Cv\ per costruzione. \Xv\ «libero» falso con la mappa sbagliata; 0/171 col pannello solo con la mappa dichiarata \\[1.2pt]
+Feedback chiari e tempestivi; latenza; efficienza & Tempestività calcolata per chi riceve; «avviso non tempestivo» se non arriva in tempo & \Sv\ droni e rullaggio in tempo; aerei in volo no, dichiarato. Calcolo per ciclo: mediana fino a 46 ms, 95° percentile fino a 340 ms (nucleo precedente, non rifatto) \\[1.2pt]
+Segnalare la perdita di affidabilità & Salute di ogni sensore; guasto, pioggia, fiammata & \Sv\ 90/90 entro 3 cicli; 460/460 entro 5,3 s (nucleo precedente) \\[1.2pt]
+Eventi improvvisi, meteo & Collisione, avaria con fiammata, nebbia, fumo & \Sv\ dedotti; \Xv\ entro 2 s solo in 51/60; zona dei detriti di km, non si riduce \\[1.2pt]
+Classificazione su più classi & Componente richiesto, supposto esistente, lavoro futuro & \Pv\ etichette a mano. \Cv\ il nome della classe non spegne l'avviso (228 cicli su 228, un passaggio, nucleo precedente) \\
+\bottomrule
+\end{tabularx}
+
+% ---------------------------------------------------------------- 7b
+\sez{7 · I sensori simulati, dalle schede pubbliche}
+{\fontsize{8.2}{9.8}\selectfont
+\begin{tabularx}{\linewidth}{@{}>{\bfseries\RaggedRight}p{3.5cm}>{\RaggedRight}p{4.6cm}L@{}}
+\toprule
+Sensore & Portata (scheda) & Che cosa dà, e che cosa no \\
+\midrule
+Radar per droni, 360° & 1,1–7,6 km secondo il drone & posizione e quota, un giro al secondo; la probabilità di vedere è un'ipotesi \\
+Radar di superficie & circa 5 km per 1 m² (ipotesi) & 360° a terra, senza quota: il rullaggio \\
+LiDAR a campo largo e tele & 210 m e 320 m al 10\,\% di riflettività & distanza precisa, campo stretto per il tele (14,5°) \\
+Camere visibile e termica & drone a 2 km in pratica (ipotesi) & direzione, nessuna distanza; accecate da fiammata e nebbia \\
+ADS-B e identificazione remota & orizzonte del ricevitore; circa 1 km & solo chi trasmette: un mezzo non cooperante non c'è \\
+\bottomrule
+\end{tabularx}\par}
+
+% ---------------------------------------------------------------- 7
+\sez{8 · Idee scartate, e la cifra che le ha scartate}
+\begin{itemize}
+\item \textbf{Un sensore solo per il rullaggio:} in tempo in 50 passaggi su 200 \Sv. \textbf{Radar di bordo con filtro Doppler:} perde il drone lento, in tempo in 149 su 200 [0,68; 0,80] \Sv.
+\item \textbf{Spegnere l'avviso guardando un punto:} 564 passaggi su 2\,400 senza zona \Sv. \textbf{Limite di 90 m/s per gli aerei:} l'avviso perdeva 8–11 aerei reali su 43 \Tv; ora 210 m/s.
+\item \textbf{Sommare le passate del radar come indipendenti:} mancate 0,263 contro 0,010 dichiarate \Sv. \textbf{Ricordare il «libero» in una mappa a cubetti} (corto raggio): 80\,505 falsi su 146\,901 \Sv.
+\end{itemize}
+
+% ---------------------------------------------------------------- 8
+\sez{9 · Il prototipo simulato}
+Un solo programma, a corto raggio e a lunga portata, con gli stessi comandi: legge sensori simulati dalle schede o traiettorie pubbliche, esegue il nucleo, scrive il registro, lo verifica contro le regole e ne fa il filmato con tre viste (scena vera, console dell'operatore, settori). Scene: drone, rullaggio, drone sotto la copertura, collisione, fiammata, nebbia, fumo, sensore spento. Le etichette di classe arrivano da file. La prova completa (\texttt{prova\_tutto.sh}) termina senza errori in 698 s; le 8 scene a lunga portata rifatte con le regole attuali danno 0 errori al controllo delle regole e 0 «libero» dentro l'avviso \Sv\ (stesso codice: non indipendente).
+
+\nota{\textbf{In una riga}, dalla cartella \texttt{prototipo/}: \texttt{sh prove/scene\_lunghe.sh lp\_A2} \; (esegue la scena del rullaggio, il tabellone con Wilson, il controllo delle regole e il filmato).}
+
+\sez{10 · Perché questo caso centrale}
+Il sito aerospaziale con droni e aerei in rullaggio è il caso più forte che resta vero: lì l'avviso arriva in tempo in simulazione. Con gli aerei in volo nell'inviluppo (210 m/s) non arriva in tempo, e lo mostriamo come limite: serve un sensore a portata maggiore.
+
+\sez{11 · Aperti, non promessi}
+Restringere la zona dei detriti guardando; tenere l'avviso sul drone che si ferma; convalidare la mappa con lo sfondo misurato; rimisurare con le regole attuali le altre scene; il classificatore vero; un sensore a portata maggiore per gli aerei in volo; prove su sensori fisici.
+
+\vspace{1pt}
+\nota{\textbf{Dove sono le prove.} Calcoli, schede dei sensori, prove e bibliografia nell'allegato tecnico.}
+
+\end{document}

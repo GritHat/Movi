@@ -1,8 +1,38 @@
-# Riferimenti del progetto — elenco unico, aggiornamento f12 (percezione-challenge)
+# Riferimenti del progetto — elenco unico, aggiornamento f18 (percezione-challenge, MoVi)
+
+**Aggiornamento f18** (`sciame-redattore`, passo `f18-documenti/04-riferimenti`, 15 novembre 2026): 393 voci, cioè le 332 dell'aggiornamento f12 più 61 nuove della seconda fase, da [333] a [393]; il riquadro in testa al §0 dice che cosa è cambiato. Il file BibTeX con le stesse chiavi è `riferimenti.bib`, accanto a questo file. Il capoverso che segue è dell'aggiornamento f12.
 
 **Aggiornamento f12** (curatore delle fonti, `sciame-fonti`, passo `f12-integrazione/51-riferimenti`, 14 novembre 2026): 332 voci, cioè le 291 della versione delle 17:36 più 41 nuove, con gli usi, gli stati e i conteggi aggiornati; il riquadro in testa al §0 dice che cosa è cambiato. Il file BibTeX con le stesse chiavi è `riferimenti.bib`, accanto a questo file (189 voci). Il resto di questo capoverso è della versione delle 17:36. — Curatore delle fonti (`sciame-fonti`), fase f11 (documentazione), **versione finale**: è l'elenco dell'unione dei quattro elenchi parziali (`f11-documentazione/unione/RIFERIMENTI.md`, chiuso alle 16:50) con le correzioni della verifica (`f11-documentazione/verifica-rif/VERIFICA_RIFERIMENTI.md`, chiusa alle 17:20) applicate. 14 novembre 2026; versione chiusa alle 17:36. I percorsi dei file dello sciame sono relativi a `.sciame/20261114-1301-percezione-challenge`. Il file BibTeX con le stesse chiavi è `f11-documentazione/finale/riferimenti.bib` (166 voci).
 
 ## 0. In testa
+
+> **CHE COSA È CAMBIATO IN QUESTA VERSIONE** (aggiornamento f18, passo `f18-documenti/04-riferimenti`, `sciame-redattore`, 15 novembre 2026; parte dall'aggiornamento f12, che resta in `documentazione/RIFERIMENTI.md` e non è stato toccato)
+>
+> 1. **Voci: da 332 a 393.** 61 fonti nuove della seconda fase (veicoli veloci, eventi, prototipo, video), numerate da [333] a [393] in coda al loro gruppo: 8 articoli e rapporti (gruppo 1, [333]–[340]), 7 schede di sensori a lunga portata (gruppo 2, [341]–[347]), 7 norme e documenti regolatori (gruppo 3, [348]–[354]), 7 programmi, modelli e font del video (gruppo 4, [355]–[361]), 11 insiemi di dati di aerei, droni, auto e treni (gruppo 5, [362]–[372]), 21 altre fonti, fra cui 10 pagine di Wikipedia, la musica del video e le tre pagine sul nome «MoVi» (gruppo 6, [373]–[393]). Le 332 voci di prima tengono chiave e numero (controllo per programma: 393 chiavi, 393 uniche, numeri da 1 a 393 senza buchi).
+> 2. **Da dove vengono.** `f15-lunga-portata/01-dati` (insiemi di dati, con licenza), `02-sensori` (schede), `03-scenari` (Wikipedia, EASA, FAA), `40-eventi/01-effetti` (propagazione, detriti, fumo), `f17-video/00-strumenti` (HyperFrames, GSAP, Kokoro, Piper, font, musica) e `f17-video/21-attacco` (omonimia del nome e del logo). In `04-moto`, `10-simulatore`, `11-prove`, `12-traiettorie`, `20-attacco`, `21-statistica`, `30-verdetto`, `50-fase2b` e in `f16-prototipo` non c'è nessun indirizzo, identificativo arXiv o DOI che non sia già in una voce (ricerca per programma, punto 7).
+> 3. **Stato delle 61 voci nuove: quello dichiarato dai rapporti che le citano.** **Nessuna è stata riaperta**: questo aggiornamento è fatto senza rete, per consegna. Perciò nessuna voce nuova è «verificata dal curatore»: 45 «aperte dal ruolo che la cita» (il ruolo dichiara di averle aperte il 15 novembre: schede, norme, insiemi di dati con la licenza letta nell'API o nella pagina, programmi installati e usati, pagine di Wikipedia), 9 «viste solo nel riassunto di un motore di ricerca» (lo stato S di `40-eventi/01-effetti`), 5 «non raggiungibili» (ARS 548 per un errore di certificato, FAA AC 90-48D per un 403, SKYbrary bloccata, l'esperimento nel fumo di Ladstädter troppo grande, l'articolo sul progetto SMART per un 403), 2 «non verificate» (Wojtanowski 2014, letta solo come citata in una rassegna; nuScenes mini, a memoria). Per le pagine degli scenari il rapporto avverte che sono state «lette attraverso un modello che le riassume»: è una lettura più debole, scritta nella voce.
+> 4. **Che cosa i rapporti dicono di diverso o di debole** (dettaglio nelle voci): le portate del radar 4D ARS 548 («300 m») vengono solo da fonti secondarie; le portate dell'EchoGuard sono in un'immagine, non lette; il 46 % dei campi dei sensori (57 su 124) è un'ipotesi senza fonte; i coefficienti della ITU-R P.838-3 sono letti in una libreria terza, non nella raccomandazione; i requisiti FAA sui detriti a terra vengono da un articolo, perché la circolare dà 403 (voce esistente [173]); la fonte del modello Swerling 1 usato da sensori e attacco **manca**; la scheda IRIS e il blog di Robin Radar ([384]) usano un lessico («counter-drone», «stop drones») fuori dall'ambito: le voci lo dicono, e le frasi da non dire di VERDETTO_FASE2, §6, lo escludono dai testi; GSAP non è open source e i termini della sua licenza non sono stati riletti; la musica di MacLeod chiede l'attribuzione.
+> 5. **Usi aggiunti a 5 voci esistenti** (riga «Usata per: (aggiornamento f18)»): `faa-ac-150-5220-24` [173], `ue-2019-947` [191], `wikipedia-tcas` [290], `wikipedia-stopping-sight-distance` [320], `wikipedia-emergency-brake-train` [322]. Nessuno stato di voce esistente è cambiato.
+> 6. **Conteggi rifatti** (tabella più sotto, «aggiornamento f18»): 204 / 58 / 23 / 66 / 15 / 10 / 17 = 393; all'aggiornamento f12 erano 204 / 58 / 23 / 21 / 6 / 8 / 12 = 332. Lo stesso programma, sul file dell'aggiornamento f12, ridà 332 con quei numeri.
+> 7. **Completezza** (programma mio, sui file di testo di `f15-lunga-portata`, `f16-prototipo` e `f17-video`, escluse le cartelle di materiale scaricato, gli ambienti Python e i moduli npm): 246 indirizzi distinti, 241 assenti dall'elenco f12. Di questi, 140 sono indirizzi dei pacchetti npm o dei loro finanziamenti in `hyperframes/cli/package-lock.json` (dipendenze di HyperFrames, non fonti: coperte dalla voce [355]); 32 vengono dalle copie del README e dell'elenco delle voci di Kokoro in `voce/fonti/` (con i loro rimandi, compresi due identificativi arXiv che nessun rapporto cita); gli altri 69 sono, modelli d'indirizzo delle API, l'anteprima locale e i testi delle licenze dei font. Ogni indirizzo che un rapporto usa come fonte ha ora una voce. Identificativi arXiv e DOI nei file dei rapporti: 6, tutti ora in una voce (2112.08936, 2305.03001 e i quattro DOI degli insiemi CMU e NGSIM). **Una fonte nominata solo a parole, senza indirizzo, può mancare**: la ricerca è per indirizzi e identificativi, più la lettura dei rapporti dei sensori, dei dati, degli effetti, degli scenari e degli strumenti del video.
+> 8. **File BibTeX** `riferimenti.bib`: 211 voci, cioè le 189 di prima più 22 nuove dei gruppi 1, 2 e 3 (la regola delle versioni precedenti: insiemi di dati, programmi e altre fonti stanno solo in questo file). Controllo con `bibtex` (stile plain, su una copia nella cartella temporanea della sessione): 0 errori, 1 avviso, quello atteso e già noto (`vovk2005` senza autore); 211 voci nel `.bbl`. Al primo passaggio gli avvisi erano 5, tutti miei (tre voci senza autore né chiave d'ordinamento, una senza titolo): corretti con il campo `key` e con `@misc`. Il campo `note` porta il numero della voce e lo stato dichiarato. Stato: **verificato** per la forma del file; non dice nulla sul contenuto delle fonti.
+> 9. **Per la seconda fase «verificata» non compare mai**, e neanche «validato»: le schede dicono che cosa dichiara il costruttore, non che il prototipo funzioni. Niente è provato su un sensore fisico; le etichette di classe sono a mano; il lavoro riguarda solo osservazione e avviso.
+>
+> **Regole violate e scostamenti di questo aggiornamento (miei).** Nessuna regola violata, che io sappia: ho scritto solo in `f18-documenti/` e nella cartella temporanea della sessione; niente git, niente sudo, niente rete, nessun file cancellato; un processo alla volta. **Scostamenti:** non ho riaperto le fonti (consegna: niente rete), quindi gli stati sono quelli dei rapporti e non sono indipendenti da chi cita; non ho riletto per intero i rapporti di `04-moto`, `10-simulatore`, `11-prove`, `12-traiettorie`, `20-attacco`, `21-statistica` e di `f16-prototipo`: su questi ho fatto solo la ricerca per programma di indirizzi e identificativi. Previsioni scritte prima, alle 03:03:58, in `f18-documenti/PREVISIONI.md`, con gli esiti. Indipendenza: condivido con i ruoli che citano il modello linguistico e i file; la parte indipendente sarebbe la rilettura delle fonti, che qui non c'è.
+>
+> **Conteggi (aggiornamento f18)**, ricontati sulle 393 voci di questo file da un programma mio.
+>
+> | Tipo | verificata | verificata in parte | dato diverso | aperta dal ruolo | solo riassunto di ricerca | non verificata | non raggiungibile | Totale |
+> |---|---|---|---|---|---|---|---|---|
+> | 1. Articoli scientifici e prestampe (con tesi, libri e rapporti) | 85 | 38 | 10 | 3 | 2 | 2 | 3 | 143 |
+> | 2. Schede tecniche e documenti dei costruttori | 26 | 1 | 3 | 10 | 5 | 4 | 7 | 56 |
+> | 3. Norme e documenti regolatori | 17 | 10 | 4 | 5 | 4 | 3 | 3 | 46 |
+> | 4. Documentazione di software e depositi di codice | 32 | 4 | 1 | 16 | 0 | 0 | 0 | 53 |
+> | 5. Insiemi di dati | 13 | 1 | 2 | 10 | 0 | 1 | 1 | 28 |
+> | 6. Comunicati e altre fonti | 31 | 4 | 3 | 22 | 4 | 0 | 3 | 67 |
+> | **Totale** | **204** | **58** | **23** | **66** | **15** | **10** | **17** | **393** |
+>
+> La tabella «Conteggi» più sotto è quella dell'aggiornamento f12, sulle 332 voci di allora.
 
 > **CHE COSA È CAMBIATO IN QUESTA VERSIONE** (aggiornamento f12, passo `f12-integrazione/51-riferimenti`, 14 novembre 2026, chiuso alle 19:36; parte dalla versione delle 17:36, che resta in `documentazione/RIFERIMENTI.md` e non è stata toccata)
 >
@@ -182,7 +212,7 @@ Il testo che segue, fino alla tabella dei conteggi esclusa, è quello della vers
 
 ## 1. Articoli scientifici e prestampe (con tesi, libri e rapporti)
 
-135 voci: da [1] a [115]; in coda, aggiunte nell'aggiornamento f12, da [292] a [311].
+135 voci: da [1] a [115]; in coda, aggiunte nell'aggiornamento f12, da [292] a [311]. **Aggiornamento f18:** 8 voci in più, in coda, da [333] a [340]; il gruppo ne ha ora 143.
 
 ### adamides2025 [1]
 Tipo: articolo scientifico (rassegna)
@@ -1781,9 +1811,97 @@ Note: voce aggiunta nell'aggiornamento f12. 14 persone senza disabilità, vedent
 
 ---
 
+### nadeem2010 [333]
+Tipo: articolo
+Autori: Nadeem; Leitgeb (nomi propri: non scritti nei file)
+Titolo: titolo non scritto nei file (articolo con le leggi di Kruse e di Kim, eq. 1–3)
+Sede e anno: Radioengineering 19(2), 2010
+Identificativo: manca
+Link: https://www.radioeng.cz/fulltexts/2010/10_02_223_227.pdf
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): secondo conti.py «aperta oggi, letta con pdftotext» (stato A del rapporto)
+Usata per: (aggiornamento f18) attenuazione ottica in nebbia (leggi di Kruse e di Kim); previsione P3: Kim, 905 nm, 0,5 km, 34,0 dB/km contro «circa 35» di [334] — f15-lunga-portata/40-eventi/01-effetti/conti.py (dizionario FONTI); f15-lunga-portata/40-eventi/01-effetti/EFFETTI_SUI_SENSORI.md
+Note: le pagine 223–227 si leggono solo nel nome del file del link: non riportate nel campo «Sede». Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### zhang2021-meteo [334]
+Tipo: prestampa (rassegna)
+Autori: Zhang e altri (elenco degli autori non scritto nei file)
+Titolo: Perception and Sensing for Autonomous Vehicles Under Adverse Weather Conditions: A Survey
+Sede e anno: prestampa arXiv; anno dedotto dall'identificativo (2112 = dicembre 2021)
+Identificativo: arXiv:2112.08936
+Link: https://arxiv.org/pdf/2112.08936
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): «aperta oggi, letta con pdftotext; rassegna: fonte secondaria rispetto alle misure che cita» (conti.py)
+Usata per: (aggiornamento f18) radar a 77 GHz con 25 mm/h di pioggia «circa 10 dB/km» (P2: 11,4 dB/km dalla P.838-3); LiDAR a 905 nm «circa 35 dB/km» a 0,5 km di visibilità (P3) — f15-lunga-portata/40-eventi/01-effetti/conti.py (dizionario FONTI); f15-lunga-portata/40-eventi/01-effetti/EFFETTI_SUI_SENSORI.md
+Note: fonte secondaria; cita Wojtanowski 2014 ([336]). Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### tagiew2023-osdar23 [335]
+Tipo: prestampa (insieme di dati ferroviario)
+Autori: Tagiew e altri
+Titolo: OSDaR23 (titolo completo non scritto nei file)
+Sede e anno: prestampa arXiv, v2; anno dedotto dall'identificativo (2023)
+Identificativo: arXiv:2305.03001v2
+Link: https://arxiv.org/html/2305.03001v2
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): «aperta oggi» (parametri_lunga_portata.json, chiave OSDAR23)
+Usata per: (aggiornamento f18) sensori di un treno (configurazione S2) — f15-lunga-portata/02-sensori/parametri_lunga_portata.json; f15-lunga-portata/02-sensori/SENSORI_LUNGA_PORTATA.md; l'insieme di dati (decine di GB) non è stato scaricato: «a memoria, non verificato oggi» — f15-lunga-portata/01-dati/PROVENIENZA.md, «Cercati e NON usati»
+Note: è la sola fonte aperta per la configurazione dei sensori ferroviari. Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### wojtanowski2014 [336]
+Tipo: articolo
+Autori: Wojtanowski e altri
+Titolo: titolo non scritto nei file
+Sede e anno: 2014 (sede non scritta nei file)
+Identificativo: manca
+Link: manca nei file
+Verifica: non verificata — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): letta solo come citata in [334] (stato S di conti.py: «citato in ZHANG»)
+Usata per: (aggiornamento f18) a 25 mm/h di pioggia il LiDAR a 905 nm arriva circa al doppio della portata del 1550 nm — f15-lunga-portata/40-eventi/01-effetti/conti.py (dizionario FONTI); f15-lunga-portata/40-eventi/01-effetti/EFFETTI_SUI_SENSORI.md
+Note: citazione di seconda mano. Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### llnl1983-incendi [337]
+Tipo: rapporto
+Autori: manca nei file
+Titolo: Electromagnetic Radiation Propagation in Large Fires
+Sede e anno: 1983
+Identificativo: manca
+Link: https://contrails.library.iit.edu/item/164237
+Verifica: vista solo nel riassunto di un motore di ricerca — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete) (stato S di conti.py)
+Usata per: (aggiornamento f18) nel fumo di un grande incendio visibilità a decine di piedi, attenuazione infrarossa dell'ordine di 1 per km, radar molto meno (EV-C, E2) — f15-lunga-portata/40-eventi/01-effetti/conti.py (dizionario FONTI); f15-lunga-portata/40-eventi/01-effetti/EFFETTI_SUI_SENSORI.md
+Note: l'ente autore non è scritto nei file (la sigla LLNL83 è solo il nome della chiave in conti.py). Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### pmc7916495-fod [338]
+Tipo: articolo (e risultati vicini)
+Autori: manca nei file
+Titolo: titolo non scritto nei file (studi sui detriti in pista a onde millimetriche)
+Sede e anno: PubMed Central
+Identificativo: PMC7916495
+Link: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7916495/
+Verifica: vista solo nel riassunto di un motore di ricerca — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete) (stato S di conti.py)
+Usata per: (aggiornamento f18) sfera metallica di 50 mm a circa 660 m a 93 GHz; sfera di 2 cm = −35 dBsm (P4 la ritrova per conto); cilindro da −20 dBsm fino a 35 m a 76,5 GHz (E4, EV-E) — f15-lunga-portata/40-eventi/01-effetti/conti.py (dizionario FONTI); f15-lunga-portata/40-eventi/01-effetti/EFFETTI_SUI_SENSORI.md
+Note: il riassunto mescola più studi: a quale appartenga ogni cifra non è verificato. Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### ladstaedter2023 [339]
+Tipo: esperimento a più sensori nel fumo
+Autori: Ladstädter e altri
+Titolo: titolo non scritto nei file
+Sede e anno: 2023
+Identificativo: manca
+Link: manca nei file
+Verifica: non raggiungibile — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): «file troppo grande», non aperto (EFFETTI_SUI_SENSORI.md, §1)
+Usata per: (aggiornamento f18) cercata per l'effetto del fumo su più sensori; non usata — f15-lunga-portata/40-eventi/01-effetti/conti.py (dizionario FONTI); f15-lunga-portata/40-eventi/01-effetti/EFFETTI_SUI_SENSORI.md
+Note: Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### smart-treni [340]
+Tipo: articolo sul progetto SMART (rilevamento ferroviario)
+Autori: manca nei file
+Titolo: manca nei file
+Sede e anno: manca
+Identificativo: manca
+Link: manca nei file
+Verifica: non raggiungibile — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): errore 403 (parametri_lunga_portata.json, nota alla riga 221; SENSORI_LUNGA_PORTATA.md, §1)
+Usata per: (aggiornamento f18) «rilevamento fino a ~1000 m con più camere», non usato come cifra — f15-lunga-portata/02-sensori/parametri_lunga_portata.json; f15-lunga-portata/02-sensori/SENSORI_LUNGA_PORTATA.md
+Note: non identificata: servono titolo e link. Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
 ## 2. Schede tecniche e documenti dei costruttori (con le pagine dei rivenditori)
 
-49 voci: da [116] a [161]; in coda, aggiunte nell'aggiornamento f12, da [312] a [314].
+49 voci: da [116] a [161]; in coda, aggiunte nell'aggiornamento f12, da [312] a [314]. **Aggiornamento f18:** 7 voci in più, in coda, da [341] a [347]; il gruppo ne ha ora 56.
 
 ### adorama-d455 [116]
 Tipo: pagina di costruttore o comunicato (rivenditore)
@@ -2401,9 +2519,86 @@ Note: voce aggiunta nell'aggiornamento f12. da riaprire con un navigatore. Per i
 
 ---
 
+### robin-iris [341]
+Tipo: scheda tecnica
+Autori: Robin Radar
+Titolo: IRIS product sheet
+Sede e anno: 04/2026
+Identificativo: manca
+Link: https://www.robinradar.com/hubfs/IRIS%20product%20sheet%20042026.pdf
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): «aperta oggi; copia in scaricati/» (materiale del costruttore, tutti i diritti riservati, da non ridistribuire)
+Usata per: (aggiornamento f18) radar per droni: portate 1,1–7,6 km secondo il drone, strumentata 5 o 12 km, 360° × 60°, 0,6 m, 0,6–0,75°, rivisita 1 s (A1; sens-P1 regge: 1,1–3,7 km per droni da 0,25 a 2,9 kg) — f15-lunga-portata/02-sensori/parametri_lunga_portata.json; f15-lunga-portata/02-sensori/SENSORI_LUNGA_PORTATA.md; f15-lunga-portata/40-eventi/01-effetti/conti.py (dizionario FONTI); f15-lunga-portata/40-eventi/01-effetti/EFFETTI_SUI_SENSORI.md (chiave IRIS)
+Note: la scheda dà portate per classe di drone, non la sezione radar: la scala con la sezione è un conto del ruolo. Rivisita 1 s contro «30 rpm»: K-604, non risolto. Il lessico della scheda («counter-drone», «drone threat») è fra le frasi da non dire (VERDETTO_FASE2, §6). Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### terma-scanter-5000 [342]
+Tipo: scheda tecnica
+Autori: Terma
+Titolo: SCANTER 5000 SMR (radar del movimento a terra)
+Sede e anno: dicembre 2021
+Identificativo: manca
+Link: https://www.terma.com/media/ndthpjic/terma_scanter5000_smr_a4_dec2021.pdf
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): «aperta oggi; copia in scaricati/»
+Usata per: (aggiornamento f18) radar di superficie per A2 (SCANTER 5502): 9,6 km in avvicinamento; 5 km per 1 m² (ipotesi del ruolo); 360° senza quota; cella di 3 m; rivisita 1 s — f15-lunga-portata/02-sensori/parametri_lunga_portata.json; f15-lunga-portata/02-sensori/SENSORI_LUNGA_PORTATA.md
+Note: materiale del costruttore, da non ridistribuire. Le celle di 3 × 15 m non vedono i detriti (EFFETTI_SUI_SENSORI.md). Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### hesai-at128 [343]
+Tipo: scheda tecnica (pagina del prodotto)
+Autori: Hesai
+Titolo: AT128
+Sede e anno: manca
+Identificativo: manca
+Link: https://www.hesaitech.com/product/at128/
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): «aperta oggi»
+Usata per: (aggiornamento f18) LiDAR a campo largo: 210 m al 10 %, 120° × 25,4°, 0,1° × 0,2° (A2, A4, S1, S2) — f15-lunga-portata/02-sensori/parametri_lunga_portata.json; f15-lunga-portata/02-sensori/SENSORI_LUNGA_PORTATA.md
+Note: precisione di 3 cm e rivisita 0,1 s sono ipotesi del ruolo. Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### livox-tele-15 [344]
+Tipo: scheda tecnica (pagina delle specifiche)
+Autori: Livox
+Titolo: Tele-15 specs
+Sede e anno: manca
+Identificativo: manca
+Link: https://www.livoxtech.com/tele-15/specs
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): «aperta oggi»
+Usata per: (aggiornamento f18) LiDAR tele: 320 m al 10 %, 500 m al 50 %, 14,5° × 16,2°, 2 cm, < 0,03°, falsi punti < 0,01 % (S2; smentita sens-P4) — f15-lunga-portata/02-sensori/parametri_lunga_portata.json; f15-lunga-portata/02-sensori/SENSORI_LUNGA_PORTATA.md; f15-lunga-portata/40-eventi/01-effetti/conti.py (dizionario FONTI); f15-lunga-portata/40-eventi/01-effetti/EFFETTI_SUI_SENSORI.md (chiave TELE15)
+Note: è l'unica scheda aperta che dichiara un tasso di falsi (punti). Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### echodyne-echoguard [345]
+Tipo: scheda tecnica (pagina del prodotto)
+Autori: Echodyne
+Titolo: EchoGuard
+Sede e anno: manca
+Identificativo: manca
+Link: https://www.echodyne.com/radar-systems/echoguard
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): «aperta oggi: solo accuratezze; le portate sono in un'immagine, non lette»
+Usata per: (aggiornamento f18) radar di bordo: accuratezze — f15-lunga-portata/02-sensori/parametri_lunga_portata.json; f15-lunga-portata/02-sensori/SENSORI_LUNGA_PORTATA.md
+Note: le portate citate nei file sono «ipotesi», da ricontrollare prima di citarle. Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### aumovio-ars-548 [346]
+Tipo: scheda tecnica
+Autori: Continental / AUMOVIO
+Titolo: ARS 548 RDI
+Sede e anno: 2025 (dal percorso del link)
+Identificativo: manca
+Link: https://engineering-solutions.aumovio.com/wp-content/uploads/2025/10/FS_ARS-548-RDI_EN.pdf
+Verifica: non raggiungibile — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): «NON apribile oggi (errore di certificato)»; «300 m» solo da riassunti di ricerca di fonti secondarie
+Usata per: (aggiornamento f18) radar 4D per veicoli (A4, S1, S2): 300 m; campo, errori e rivisita sono ipotesi — f15-lunga-portata/02-sensori/parametri_lunga_portata.json; f15-lunga-portata/02-sensori/SENSORI_LUNGA_PORTATA.md
+Note: sens-P5 (≥ 250 m e ≤ 2°): non risolta. Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### dji-aeroscope [347]
+Tipo: pagina del prodotto
+Autori: DJI
+Titolo: AeroScope
+Sede e anno: manca
+Identificativo: manca
+Link: https://www.dji.com/aeroscope
+Verifica: vista solo nel riassunto di un motore di ricerca — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): «NON aperta: solo riassunto di ricerca»
+Usata per: (aggiornamento f18) rilevamento a radiofrequenza dei droni DJI (sensore passivo) — f15-lunga-portata/02-sensori/parametri_lunga_portata.json; f15-lunga-portata/02-sensori/SENSORI_LUNGA_PORTATA.md
+Note: Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
 ## 3. Norme e documenti regolatori
 
-39 voci: da [162] a [199]; in coda, aggiunta nell'aggiornamento f12, [315].
+39 voci: da [162] a [199]; in coda, aggiunta nell'aggiornamento f12, [315]. **Aggiornamento f18:** 7 voci in più, in coda, da [348] a [354]; il gruppo ne ha ora 46.
 
 ### astm-f3442-25 [162]
 Tipo: norma o documento regolatorio
@@ -2554,6 +2749,7 @@ Link: https://flightsafety.org/asw-article/clean-sweep/
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (rif-4) [T]: nell'articolo compaiono «150/5220-24», una sfera, un cilindro, «1.7 in» e «4.3»; le misure esatte del cilindro (3 × 3,8 cm) non ricontrollate
 Usata per: oggetti estranei di riferimento sulle piste (sfera di 4,3 cm, cilindro di 3 × 3,8 cm), sotto i 7 cm di quota minima del nucleo — `f7-estensione/05-esperto-dominio/CONSEGNA.md` righe 37 e 80 (S13) **[f7–f10: non vagliato dall'arbitro]**
 Usata per: (aggiornamento f12) citata nei file scritti dopo le 17:36 o non coperti dall'elenco — `f12-integrazione/50-stato/STATO_V2_copia.md`. **[trovata con una ricerca automatica per chiave, indirizzo o nome; l'affermazione non è stata riletta riga per riga]**
+Usata per: (aggiornamento f18) requisiti dei detriti a terra (cilindro di 3,0 × 3,8 cm, sfera di 4,3 cm, 9 oggetti su 10, posizione entro 5 m, al più 1 falso allarme al giorno) come li riporta l'articolo della Flight Safety Foundation; la circolare «oggi risponde 403» — f15-lunga-portata/40-eventi/01-effetti/conti.py (chiave ASW), EFFETTI_SUI_SENSORI.md («A terra»). Stato S nel rapporto: solo riassunto di ricerca.
 Note: fonte secondaria; la circolare non è stata aperta. Nella sezione E la chiave provvisoria è [flightsafety-fod]: la pagina letta è l'articolo della Flight Safety Foundation, non la circolare. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### faa-ac-150-5220-25 [174]
@@ -2768,6 +2964,7 @@ Identificativo: regolamento di esecuzione (UE) 2019/947
 Link: manca nei file (citato tramite S28 e S24)
 Verifica: verificata dal curatore il 14-11-2026 in parte — (rif-3) per la sola esistenza e il ruolo [g] — l'intestazione di S24 è «AMC & GM to Regulation (EU) 2019/947 — Issue 1, Amendment 3» e la pagina dell'EASA dice che le regole per i droni civili stanno «in EU Regulations 2019/947 and 2019/945». Il testo del regolamento non è stato aperto.
 Usata per: quadro europeo sui droni — `f6-specializzazione/01-esperto-dominio/QUADRO_DOMINIO.md` §3 e §6 («le regole europee valgono per chi vola davvero»)
+Usata per: (aggiornamento f18) il testo consolidato su EUR-Lex (https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02019R0947-20220404) ha dato una pagina vuota: «non aperta» — f15-lunga-portata/03-scenari/SCENARI_E_REQUISITI.md, «Fonti».
 Note: nessuna cifra del progetto viene da qui. Il titolo italiano è una mia resa.
 
 ### ue-2021-664 [192]
@@ -2878,9 +3075,86 @@ Note: voce aggiunta nell'aggiornamento f12. è la regola di UN aeroporto (lo dic
 
 ---
 
+### cfr-14-91-227 [348]
+Tipo: norma (regolamento federale degli Stati Uniti)
+Autori: Federal Aviation Administration
+Titolo: 14 CFR 91.227, requisiti di prestazione dell'ADS-B Out
+Sede e anno: manca (testo su un sito di terzi)
+Identificativo: 14 CFR 91.227
+Link: https://www.law.cornell.edu/cfr/text/14/91.227
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): «aperta oggi»
+Usata per: (aggiornamento f18) ADS-B: errore di posizione < 92,6 m, di velocità < 10 m/s; «almeno 1 al secondo»; latenza ≤ 2 s (sens-P6 regge in parte) — f15-lunga-portata/02-sensori/parametri_lunga_portata.json; f15-lunga-portata/02-sensori/SENSORI_LUNGA_PORTATA.md
+Note: letta su law.cornell.edu, non sul sito del governo. Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### cfr-14-89-310 [349]
+Tipo: norma (regolamento federale degli Stati Uniti)
+Autori: Federal Aviation Administration
+Titolo: 14 CFR 89.310, requisiti dell'identificazione remota standard
+Sede e anno: manca (testo su un sito di terzi)
+Identificativo: 14 CFR 89.310
+Link: https://www.law.cornell.edu/cfr/text/14/89.310
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): «aperta oggi»
+Usata per: (aggiornamento f18) identificazione remota: 30,5 m (95 %), quota 45,7 m, ≤ 1 s, latenza ≤ 1 s; chi non coopera non compare — f15-lunga-portata/02-sensori/parametri_lunga_portata.json; f15-lunga-portata/02-sensori/SENSORI_LUNGA_PORTATA.md
+Note: Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### itu-r-p838-3 [350]
+Tipo: raccomandazione (letta attraverso una libreria)
+Autori: ITU-R; libreria itu-rpy
+Titolo: Raccomandazione ITU-R P.838-3 (attenuazione specifica della pioggia), coefficienti riportati dalla libreria itu-rpy
+Sede e anno: manca
+Identificativo: ITU-R P.838-3
+Link: https://itu-rpy.readthedocs.io/en/latest/_modules/itur/models/itu838.html
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): la pagina di itu-rpy «aperta oggi»; «la raccomandazione ITU non è stata aperta» (conti.py)
+Usata per: (aggiornamento f18) a 10 GHz k = 0,01217, α = 1,2571 (P1, controllo di trascrizione, non indipendente) — f15-lunga-portata/40-eventi/01-effetti/conti.py (dizionario FONTI); f15-lunga-portata/40-eventi/01-effetti/EFFETTI_SUI_SENSORI.md
+Note: la fonte letta è il codice di una libreria terza, non la raccomandazione. Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### itu-r-p840-9 [351]
+Tipo: raccomandazione
+Autori: ITU-R
+Titolo: Raccomandazione ITU-R P.840-9 (attenuazione di nubi e nebbia)
+Sede e anno: 08/2023 (dal nome del file)
+Identificativo: ITU-R P.840-9
+Link: https://www.itu.int/dms_pubrec/itu-r/rec/p/R-REC-P.840-9-202308-I!!PDF-E.pdf
+Verifica: vista solo nel riassunto di un motore di ricerca — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete)
+Usata per: (aggiornamento f18) acqua liquida 0,05 g/m³ a circa 300 m di visibilità, 0,5 g/m³ a circa 50 m (E3, EV-D) — f15-lunga-portata/40-eventi/01-effetti/conti.py (dizionario FONTI); f15-lunga-portata/40-eventi/01-effetti/EFFETTI_SUI_SENSORI.md
+Note: un valore di P.840 a 77 GHz non è stato trovato. Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### faa-ac-20-128a [352]
+Tipo: circolare
+Autori: Federal Aviation Administration
+Titolo: Advisory Circular 20-128A
+Sede e anno: manca
+Identificativo: AC 20-128A
+Link: https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_20-128A.pdf
+Verifica: vista solo nel riassunto di un motore di ricerca — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete)
+Usata per: (aggiornamento f18) 676 eventi di avaria non contenuta nella tabella storica; nessuna distribuzione dei frammenti trovata (E2) — f15-lunga-portata/40-eventi/01-effetti/conti.py (dizionario FONTI); f15-lunga-portata/40-eventi/01-effetti/EFFETTI_SUI_SENSORI.md
+Note: Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### faa-ac-90-48d [353]
+Tipo: circolare
+Autori: Federal Aviation Administration
+Titolo: Advisory Circular 90-48D, cambio 1 (vedere ed evitare)
+Sede e anno: manca
+Identificativo: AC 90-48D CHG 1
+Link: https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_90-48D_CHG_1.pdf
+Verifica: non raggiungibile — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): 403 (SCENARI_E_REQUISITI.md, «Non aperte»)
+Usata per: (aggiornamento f18) cercata per i tempi di «vedere ed evitare»; non usata — f15-lunga-portata/03-scenari/SCENARI_E_REQUISITI.md, «Fonti»
+Note: Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### easa-categoria-aperta [354]
+Tipo: pagina dell'autorità
+Autori: EASA
+Titolo: Open category — low risk — civil drones
+Sede e anno: manca
+Identificativo: manca
+Link: https://www.easa.europa.eu/en/domains/drones-air-mobility/operating-drone/open-category-low-risk-civil-drones
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): F12 di SCENARI_E_REQUISITI.md; «le pagine sono state lette attraverso un modello che le riassume»
+Usata per: (aggiornamento f18) categoria aperta dei droni (classi e limiti negli scenari) — f15-lunga-portata/03-scenari/SCENARI_E_REQUISITI.md, «Fonti»
+Note: è una pagina diversa da `easa-faq-open-category` [169]; i numeri vanno ricontrollati sul regolamento. Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
 ## 4. Documentazione di software e depositi di codice
 
-46 voci, da [200] a [245].
+46 voci, da [200] a [245]. **Aggiornamento f18:** 7 voci in più, in coda, da [355] a [361]; il gruppo ne ha ora 53.
 
 ### anybotics-grid-map [200]
 Tipo: deposito di codice
@@ -3424,9 +3698,86 @@ Note: fermo dal 2024.
 
 ---
 
+### hyperframes [355]
+Tipo: programma (interfaccia a riga di comando, npm)
+Autori: HeyGen
+Titolo: HyperFrames
+Sede e anno: versione 0.9.48
+Identificativo: pacchetto npm hyperframes 0.9.48
+Link: https://hyperframes.heygen.com
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): installato e usato; licenza Apache-2.0 (STRUMENTI.md, §1.1)
+Usata per: (aggiornamento f18) composizione e resa del video in motion graphics — f17-video/00-strumenti/STRUMENTI.md; f17-video/42-animatic/ANIMATIC_CON_VOCE.md
+Note: scarica da sé un Chrome headless 152 in ~/.cache (STRUMENTI.md, §1.1). Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### gsap [356]
+Tipo: libreria JavaScript (npm)
+Autori: GreenSock
+Titolo: GSAP
+Sede e anno: versione 3.15.0
+Identificativo: pacchetto npm gsap 3.15.0
+Link: https://gsap.com/standard-license
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): «Standard no charge license» di GreenSock, gratuita anche per uso commerciale, NON open source; marcata [fonte] e «non riletta ora» (STRUMENTI.md, §1.1 e §7)
+Usata per: (aggiornamento f18) animazioni delle composizioni HyperFrames — f17-video/00-strumenti/STRUMENTI.md
+Note: i termini esatti della licenza vanno riletti prima della pubblicazione. Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### kokoro-82m [357]
+Tipo: modello di sintesi vocale (pesi e voci)
+Autori: hexgrad
+Titolo: Kokoro-82M
+Sede e anno: v1.0
+Identificativo: manca
+Link: https://huggingface.co/hexgrad/Kokoro-82M
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): Apache-2.0 su pesi e voci; il README «dice: addestrato solo su audio permissivo o sintetico»; copia del README in f17-video/00-strumenti/voce/fonti/ (STRUMENTI.md, §3.5)
+Usata per: (aggiornamento f18) voce guida inglese, voce `bm_george` — f17-video/00-strumenti/STRUMENTI.md; f17-video/40-voce/VOCE_GUIDA.md
+Note: le voci scelte hanno voto C nelle fonti del modello (STRUMENTI.md, §3.6). Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### kokoro-onnx [358]
+Tipo: programma (esecuzione ONNX di Kokoro)
+Autori: thewh1teagle
+Titolo: kokoro-onnx
+Sede e anno: release model-files-v1.0
+Identificativo: manca
+Link: https://github.com/thewh1teagle/kokoro-onnx
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): MIT (STRUMENTI.md, §3.5)
+Usata per: (aggiornamento f18) esecuzione di Kokoro senza PyTorch — f17-video/00-strumenti/STRUMENTI.md
+Note: usa phonemizer ed espeak-ng (GPL-3.0: riguarda il programma, non l'audio prodotto). Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### piper-voci [359]
+Tipo: programma e voci di sintesi
+Autori: OHF-voice; rhasspy
+Titolo: piper-tts 1.8.0 e piper-voices (en_GB-cori-high)
+Sede e anno: manca
+Identificativo: manca
+Link: https://huggingface.co/rhasspy/piper-voices
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): piper-tts GPL-3.0-or-later; en_GB-cori-high da dati LibriVox, pubblico dominio (MODEL_CARD)
+Usata per: (aggiornamento f18) ripiego della voce inglese — f17-video/00-strumenti/STRUMENTI.md
+Note: alcune voci Piper non sono usabili in un video pubblico (CC BY-NC-SA, licenza Blizzard): elenco in STRUMENTI.md, §3.5. Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### font-inter [360]
+Tipo: carattere tipografico
+Autori: Rasmus Andersson (deposito rsms/inter)
+Titolo: Inter
+Sede e anno: 4.1
+Identificativo: manca
+Link: https://github.com/rsms/inter
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): SIL OFL 1.1 (testo della licenza copiato in prova/assets/fonts/Inter-LICENSE-OFL.txt)
+Usata per: (aggiornamento f18) testi del video — f17-video/00-strumenti/STRUMENTI.md
+Note: l'autore è dedotto dal nome del deposito, non scritto nei file. Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### font-jetbrains-mono [361]
+Tipo: carattere tipografico
+Autori: JetBrains
+Titolo: JetBrains Mono
+Sede e anno: 2.304
+Identificativo: manca
+Link: https://github.com/JetBrains/JetBrainsMono
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): SIL OFL 1.1 (JetBrainsMono-OFL.txt)
+Usata per: (aggiornamento f18) cifre e testo a spaziatura fissa del video — f17-video/00-strumenti/STRUMENTI.md
+Note: Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
 ## 5. Insiemi di dati
 
-17 voci: da [246] a [259] e, in coda, [291] (aggiunta nella versione finale); in coda, aggiunte nell'aggiornamento f12, da [316] a [317].
+17 voci: da [246] a [259] e, in coda, [291] (aggiunta nella versione finale); in coda, aggiunte nell'aggiornamento f12, da [316] a [317]. **Aggiornamento f18:** 11 voci in più, in coda, da [362] a [372]; il gruppo ne ha ora 28.
 
 ### bonn-rgbd-dynamic [246]
 Tipo: insieme di dati
@@ -3638,9 +3989,130 @@ Note: voce aggiunta nell'aggiornamento f12. dati non scaricati né chiesti. L'us
 
 ---
 
+### adsb-lol [362]
+Tipo: insieme di dati (servizio con API)
+Autori: adsb.lol
+Titolo: Interfaccia v2 «point» (cattura dal vivo attorno ad Atlanta, KATL, raggio 12 miglia nautiche)
+Sede e anno: 15-11-2026 (cattura di circa 13 minuti)
+Identificativo: manca
+Link: https://api.adsb.lol/v2/point/33.6407/-84.4277/12
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): licenza ODbL 1.0 «letta oggi nel README di github.com/adsblol/globe_history_2025»
+Usata per: (aggiornamento f18) aerei NON elaborati: 53 tratti (rullaggio 19, decollo 15, avvicinamento 9, sorvolo 6, elicottero 4), passo 3,1–5,1 s; 190 richieste — f15-lunga-portata/01-dati/PROVENIENZA.md; f15-lunga-portata/01-dati/DATI_PUBBLICI.md §1
+Note: 131 istantanee valide su 171 scritte; quota del campo (313 m) a memoria, non verificata. Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### zenodo-18916312 [363]
+Tipo: insieme di dati
+Autori: El Ouanbi; Amellal
+Titolo: Cleaned ADS-B Trajectories (LHR-ZRH 2025) for AI Training
+Sede e anno: Zenodo; origine OpenSky Network
+Identificativo: Zenodo 18916312
+Link: https://zenodo.org/records/18916312
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): «scheda e README aperti oggi dall'API di Zenodo»; CC BY 4.0 (campo license dell'API)
+Usata per: (aggiornamento f18) aerei di linea sotto 3000 m: 80 tratti (40 avvicinamento, 40 decollo), 1 Hz, già filtrati e interpolati a spline dalla fonte — f15-lunga-portata/01-dati/PROVENIENZA.md; f15-lunga-portata/01-dati/DATI_PUBBLICI.md §1; prove su 43 aerei — f15-lunga-portata/21-statistica/compara.json
+Note: l'interpolazione raddoppia la |a| p95 (2,69 contro 1,27 m/s²): artefatto plausibile, non risolto. Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### trajair [364]
+Tipo: insieme di dati
+Autori: Patrikar e altri
+Titolo: TrajAir: A General Aviation Trajectory Dataset
+Sede e anno: CMU KiltHub (figshare)
+Identificativo: DOI 10.1184/R1/14866251
+Link: https://kilthub.cmu.edu/articles/dataset/TrajAir_A_General_Aviation_Trajectory_Dataset/14866251
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): scheda aperta dall'API di figshare, README letto; CC BY 4.0
+Usata per: (aggiornamento f18) aviazione generale attorno a un aeroporto senza torre (Butler, KBTP): 60 tratti, 1 Hz — f15-lunga-portata/01-dati/PROVENIENZA.md; f15-lunga-portata/01-dati/DATI_PUBBLICI.md §1
+Note: asse x lungo la pista, non verso est. Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### cmu-drone-consegna [365]
+Tipo: insieme di dati
+Autori: Rodrigues e altri
+Titolo: Data Collected with Package Delivery Quadcopter Drone
+Sede e anno: CMU KiltHub (figshare)
+Identificativo: DOI 10.1184/R1/12683453
+Link: https://kilthub.cmu.edu/articles/dataset/Data_Collected_with_Package_Delivery_Quadcopter_Drone/12683453
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): scheda aperta, README letto; CC BY 4.0
+Usata per: (aggiornamento f18) multirotore DJI Matrice 100, GNSS/INS di bordo: 209 voli, 196 tratti; zona ≥ 9/10 fino a 10 s su 98 voli (VERDETTO_FASE2, §2) — f15-lunga-portata/01-dati/PROVENIENZA.md; f15-lunga-portata/01-dati/DATI_PUBBLICI.md §1
+Note: un solo esemplare: K-601 («122 droni» è sbagliato). Voli programmati a velocità fissa. Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### alfa [366]
+Tipo: insieme di dati
+Autori: Keipour; Mousaei; Scherer
+Titolo: ALFA: A Dataset for UAV Fault and Anomaly Detection
+Sede e anno: CMU KiltHub (figshare)
+Identificativo: DOI 10.1184/R1/12707963
+Link: https://kilthub.cmu.edu/articles/dataset/ALFA_A_Dataset_for_UAV_Fault_and_Anomaly_Detection/12707963
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): scheda aperta, README letto in parte; CC BY 4.0
+Usata per: (aggiornamento f18) ala fissa senza pilota (Carbon Z T-28): 47 sequenze, circa 4 Hz, molte con guasto indotto; zona ~6/10 a 10 s (16 voli) — f15-lunga-portata/01-dati/PROVENIENZA.md; f15-lunga-portata/01-dati/DATI_PUBBLICI.md §1
+Note: un solo esemplare. Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### ngsim-us101 [367]
+Tipo: insieme di dati
+Autori: US DOT, Federal Highway Administration
+Titolo: Next Generation Simulation (NGSIM) Vehicle Trajectories
+Sede e anno: data.transportation.gov
+Identificativo: DOI 10.21949/1504477 (citazione chiesta dalla fonte)
+Link: https://data.transportation.gov/d/8ect-6jqj
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): CC BY-SA 3.0 (campo license dei metadati, letto oggi)
+Usata per: (aggiornamento f18) auto viste dall'alto, US-101, 10 Hz: 157 tratti (auto 154, camion 2, moto 1); 30 auto in prova — f15-lunga-portata/01-dati/PROVENIENZA.md; f15-lunga-portata/01-dati/DATI_PUBBLICI.md §1
+Note: autostrada urbana congestionata: il profilo `auto_strada_urbana` di f14 è smentito per contesto (114/154 tratti oltre v_max). Diversa da `mercat2019` [64], che usa NGSIM in un articolo. Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### digitraffic-treni [368]
+Tipo: insieme di dati (servizio con API)
+Autori: Fintraffic
+Titolo: digitraffic, posizioni dei treni (rata.digitraffic.fi, train-locations, 12-11-2026)
+Sede e anno: 12-11-2026
+Identificativo: manca
+Link: https://www.digitraffic.fi/en/terms-of-service/
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): CC BY 4.0 «letta oggi»; attribuzione «Fonte: Fintraffic / digitraffic.fi, licenza CC 4.0 BY»
+Usata per: (aggiornamento f18) treni passeggeri finlandesi, GPS di bordo, passo mediano 3 s: 111 tratti; 19 treni in prova — f15-lunga-portata/01-dati/PROVENIENZA.md; f15-lunga-portata/01-dati/DATI_PUBBLICI.md §1
+Note: GPS sporco (51 096 doppioni su 261 721 record): K-605. Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### opensky-campioni [369]
+Tipo: insieme di dati (contenitore pubblico)
+Autori: OpenSky Network
+Titolo: data-samples (campioni di stato storici)
+Sede e anno: manca
+Identificativo: manca
+Link: s3.opensky-network.org/data-samples (scritto senza schema nei file)
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): elenco letto oggi, contiene solo states/placeholder.txt; l'archivio storico chiede un account
+Usata per: (aggiornamento f18) cercato, **non usato** — f15-lunga-portata/01-dati/PROVENIENZA.md; f15-lunga-portata/01-dati/DATI_PUBBLICI.md §1
+Note: OpenSky è l'origine di [363]. Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### zenodo-23548217 [370]
+Tipo: insieme di dati
+Autori: manca nei file
+Titolo: segmenti di spinta all'indietro etichettati (3167 partenze)
+Sede e anno: Zenodo
+Identificativo: Zenodo 23548217
+Link: manca nei file (solo l'identificativo)
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): le traiettorie non sono ridistribuite, servono credenziali OpenSky
+Usata per: (aggiornamento f18) cercato, **non usato**; resta l'unica fonte trovata per il moto a terra etichettato — f15-lunga-portata/01-dati/PROVENIENZA.md; f15-lunga-portata/01-dati/DATI_PUBBLICI.md §1
+Note: Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### zenodo-13896127 [371]
+Tipo: insieme di dati
+Autori: manca nei file
+Titolo: atterraggi e decolli di Nantes
+Sede e anno: Zenodo
+Identificativo: Zenodo 13896127
+Link: manca nei file (solo l'identificativo)
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): un solo file da 7,8 GB, oltre il tetto
+Usata per: (aggiornamento f18) cercato, **non usato** — f15-lunga-portata/01-dati/PROVENIENZA.md; f15-lunga-portata/01-dati/DATI_PUBBLICI.md §1
+Note: Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### nuscenes-mini [372]
+Tipo: insieme di dati
+Autori: manca nei file
+Titolo: nuScenes mini
+Sede e anno: manca
+Identificativo: manca
+Link: manca nei file
+Verifica: non verificata — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): «chiede registrazione, a memoria»; «non scaricati, non verificati oggi»
+Usata per: (aggiornamento f18) insiemi multisensore per auto: non usato — f15-lunga-portata/01-dati/PROVENIENZA.md; f15-lunga-portata/01-dati/DATI_PUBBLICI.md §1
+Note: Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
 ## 6. Comunicati e altre fonti (stampa, blog, forum, enciclopedie)
 
-46 voci: da [260] a [290]; in coda, aggiunte nell'aggiornamento f12, da [318] a [332].
+46 voci: da [260] a [290]; in coda, aggiunte nell'aggiornamento f12, da [318] a [332]. **Aggiornamento f18:** 21 voci in più, in coda, da [373] a [393]; il gruppo ne ha ora 67.
 
 ### aviationweek-ispezioni-droni [260]
 Tipo: pagina di costruttore o comunicato (articolo di rivista)
@@ -4002,6 +4474,7 @@ Identificativo: manca
 Link: https://en.wikipedia.org/wiki/Traffic_collision_avoidance_system
 Verifica: aperta dal ruolo che la cita — (rif-4) dal curatore solo [200]
 Usata per: a un TA non si manovra, a un RA si risponde subito — `f9-preproposta/09-interfacce/CONSEGNA.md` righe 31 e 80; `f9-preproposta/06-esperto-dominio/PREVISIONI.md` riga 27 **[f7–f10: non vagliato dall'arbitro]**
+Usata per: (aggiornamento f18) F4: 40 s e 25 s; volume protetto (letti i primi 100 000 caratteri, attraverso un modello che riassume) — f15-lunga-portata/03-scenari/SCENARI_E_REQUISITI.md, «Fonti».
 Note: fonte secondaria; la primaria è `eurocontrol-acas-guide`. Citata solo nelle estensioni f7–f10 o nei file esterni: NON ancora vagliata dall'arbitro.
 
 ### wikipedia-preferred-walking-speed [318]
@@ -4035,6 +4508,7 @@ Identificativo: —
 Link: https://en.wikipedia.org/wiki/Stopping_sight_distance
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (f12, 19:24) [g] sul testo sorgente: «2.5 s perception-reaction time and 3.4 m/s² (11.2 ft/s²) deceleration»; rimando a «NCHRP Report 400: Determination of Stopping Sight Distances». ‖ (attacco f14) riaperta, la cifra torna
 Usata per: frenata tipica dei veicoli stradali, 3,4 m/s² — `f14-classificazione/01-profili/PROFILI.md`, `f14-classificazione/01-profili/classi.json` (F4), `f14-classificazione/20-inclusione/BLOCCO_CLASSIFICAZIONE.md`, `f14-classificazione/10-attacco/ATTACCO_CLASSIFICAZIONE.md` **[f14, valutazione breve sulla classificazione: scritto dopo le 17:36; valori di «profilo di partenza»]**
+Usata per: (aggiornamento f18) F9: 2,5 s; 3,4 m/s² (distanza che serve al conducente, S1) — f15-lunga-portata/03-scenari/SCENARI_E_REQUISITI.md, «Fonti».
 Note: voce aggiunta nell'aggiornamento f12. fonte di terza mano; il rapporto NCHRP 400 non è stato aperto e non ha una voce.
 
 ### wikipedia-taxiing [321]
@@ -4057,6 +4531,7 @@ Identificativo: —
 Link: https://en.wikipedia.org/wiki/Emergency_brake_(train)
 Verifica: verificata dal curatore il 14-11-2026: pagina aperta e dato presente — (f12, 19:24) [g] sul testo sorgente: «Emergency-braking a train (without track brakes) will give about 1.5 m/s2 deceleration. The braking distance will be approximately 250 m at 100 km/h». ‖ (attacco f14) riaperta, la cifra torna
 Usata per: frenata d'emergenza delle classi «treno» e simili, circa 1,5 m/s² — `f14-classificazione/01-profili/PROFILI.md`, `f14-classificazione/01-profili/classi.json` (F7), `f14-classificazione/20-inclusione/BLOCCO_CLASSIFICAZIONE.md`, `f14-classificazione/10-attacco/ATTACCO_CLASSIFICAZIONE.md` **[f14, valutazione breve sulla classificazione: scritto dopo le 17:36; valori di «profilo di partenza»]**
+Usata per: (aggiornamento f18) F10: 1,5 m/s²; 250 m da 100 km/h, 600 m da 160 km/h (treno, S2; alta velocità per conto) — f15-lunga-portata/03-scenari/SCENARI_E_REQUISITI.md, «Fonti».
 Note: voce aggiunta nell'aggiornamento f12. fonte di terza mano. Treno e tram sono fuori dal dominio provato (portata 3 m).
 
 ### wikipedia-airbus-a320 [323]
@@ -4170,6 +4645,237 @@ Usata per: K = 1600 mm/s per chi cammina nella formula della distanza di separaz
 Note: voce aggiunta nell'aggiornamento f12. fonte secondaria e di parte. Il ruolo scrive la formula «S = K·T + C»: nell'edizione 2024 riassunta qui il secondo termine ha un altro nome. La norma resta non letta: C = 0,85 m NON è citabile (fascicolo f13, §II.4; `DISCORDANZE_DEI_FASCICOLI.md`).
 
 ---
+
+### wikipedia-johnson-criteria [373]
+Tipo: enciclopedia
+Autori: Wikipedia
+Titolo: Johnson's criteria
+Sede e anno: consultata il 15-11-2026
+Identificativo: manca
+Link: https://en.wikipedia.org/wiki/Johnson%27s_criteria
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): «aperta oggi; fonte secondaria» (parametri_lunga_portata.json, chiave JOHNSON)
+Usata per: (aggiornamento f18) criterio dei pixel per le camere (smentita sens-P3: 13 km per un drone di 0,3 m) — f15-lunga-portata/02-sensori/parametri_lunga_portata.json; f15-lunga-portata/02-sensori/SENSORI_LUNGA_PORTATA.md
+Note: fonte di terza mano: i numeri vanno ricontrollati sulle fonti primarie prima di citarli in un documento ufficiale. Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### wikipedia-dji-mavic-3 [374]
+Tipo: enciclopedia
+Autori: Wikipedia
+Titolo: DJI Mavic 3
+Sede e anno: consultata il 15-11-2026
+Identificativo: manca
+Link: https://en.wikipedia.org/wiki/DJI_Mavic_3
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): F1 di SCENARI_E_REQUISITI.md, «aperte il 15-11-2026»
+Usata per: (aggiornamento f18) F1: Mavic 3E, 75,6 km/h, salita 8 m/s, 0,915–1,05 kg — f15-lunga-portata/03-scenari/SCENARI_E_REQUISITI.md, «Fonti»
+Note: fonte di terza mano: i numeri vanno ricontrollati sulle fonti primarie prima di citarli in un documento ufficiale. Le pagine degli scenari «sono state lette attraverso un modello che le riassume: le citazioni non sono state ricontrollate sul testo grezzo». Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### wikipedia-aircraft-approach-category [375]
+Tipo: enciclopedia
+Autori: Wikipedia
+Titolo: Aircraft approach category
+Sede e anno: consultata il 15-11-2026
+Identificativo: manca
+Link: https://en.wikipedia.org/wiki/Aircraft_approach_category
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): F2 di SCENARI_E_REQUISITI.md, «aperte il 15-11-2026»
+Usata per: (aggiornamento f18) F2: categoria C = 121–141 nodi; Boeing 737-700 130 nodi — f15-lunga-portata/03-scenari/SCENARI_E_REQUISITI.md, «Fonti»
+Note: fonte di terza mano: i numeri vanno ricontrollati sulle fonti primarie prima di citarli in un documento ufficiale. Le pagine degli scenari «sono state lette attraverso un modello che le riassume: le citazioni non sono state ricontrollate sul testo grezzo». Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### wikipedia-ils [376]
+Tipo: enciclopedia
+Autori: Wikipedia
+Titolo: Instrument landing system
+Sede e anno: consultata il 15-11-2026
+Identificativo: manca
+Link: https://en.wikipedia.org/wiki/Instrument_landing_system
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): F3 di SCENARI_E_REQUISITI.md, «aperte il 15-11-2026»
+Usata per: (aggiornamento f18) F3: pendenza 3°; categoria I 60 m (letti i primi 100 000 caratteri) — f15-lunga-portata/03-scenari/SCENARI_E_REQUISITI.md, «Fonti»
+Note: fonte di terza mano: i numeri vanno ricontrollati sulle fonti primarie prima di citarli in un documento ufficiale. Le pagine degli scenari «sono state lette attraverso un modello che le riassume: le citazioni non sono state ricontrollate sul testo grezzo». Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### wikipedia-radar-tracker [377]
+Tipo: enciclopedia
+Autori: Wikipedia
+Titolo: Radar tracker
+Sede e anno: consultata il 15-11-2026
+Identificativo: manca
+Link: https://en.wikipedia.org/wiki/Radar_tracker
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): F5 di SCENARI_E_REQUISITI.md, «aperte il 15-11-2026»
+Usata per: (aggiornamento f18) F5 — f15-lunga-portata/03-scenari/SCENARI_E_REQUISITI.md, «Fonti»
+Note: fonte di terza mano: i numeri vanno ricontrollati sulle fonti primarie prima di citarli in un documento ufficiale. Le pagine degli scenari «sono state lette attraverso un modello che le riassume: le citazioni non sono state ricontrollate sul testo grezzo». Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### wikipedia-asde [378]
+Tipo: enciclopedia
+Autori: Wikipedia
+Titolo: Airport surface detection equipment
+Sede e anno: consultata il 15-11-2026
+Identificativo: manca
+Link: https://en.wikipedia.org/wiki/Airport_surface_detection_equipment
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): F6 di SCENARI_E_REQUISITI.md, «aperte il 15-11-2026»
+Usata per: (aggiornamento f18) F6: radar del movimento a terra (A2) — f15-lunga-portata/03-scenari/SCENARI_E_REQUISITI.md, «Fonti»
+Note: fonte di terza mano: i numeri vanno ricontrollati sulle fonti primarie prima di citarli in un documento ufficiale. Le pagine degli scenari «sono state lette attraverso un modello che le riassume: le citazioni non sono state ricontrollate sul testo grezzo». Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### wikipedia-runway-status-lights [379]
+Tipo: enciclopedia
+Autori: Wikipedia
+Titolo: Runway status lights
+Sede e anno: consultata il 15-11-2026
+Identificativo: manca
+Link: https://en.wikipedia.org/wiki/Runway_status_lights
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): F7 di SCENARI_E_REQUISITI.md, «aperte il 15-11-2026»
+Usata per: (aggiornamento f18) F7 — f15-lunga-portata/03-scenari/SCENARI_E_REQUISITI.md, «Fonti»
+Note: fonte di terza mano: i numeri vanno ricontrollati sulle fonti primarie prima di citarli in un documento ufficiale. Le pagine degli scenari «sono state lette attraverso un modello che le riassume: le citazioni non sono state ricontrollate sul testo grezzo». Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### wikipedia-separation-aeronautics [380]
+Tipo: enciclopedia
+Autori: Wikipedia
+Titolo: Separation (aeronautics)
+Sede e anno: consultata il 15-11-2026
+Identificativo: manca
+Link: https://en.wikipedia.org/wiki/Separation_(aeronautics)
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): F8 di SCENARI_E_REQUISITI.md, «aperte il 15-11-2026»
+Usata per: (aggiornamento f18) F8 — f15-lunga-portata/03-scenari/SCENARI_E_REQUISITI.md, «Fonti»
+Note: fonte di terza mano: i numeri vanno ricontrollati sulle fonti primarie prima di citarli in un documento ufficiale. Le pagine degli scenari «sono state lette attraverso un modello che le riassume: le citazioni non sono state ricontrollate sul testo grezzo». Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### wikipedia-remote-id [381]
+Tipo: enciclopedia
+Autori: Wikipedia
+Titolo: Remote ID
+Sede e anno: consultata il 15-11-2026
+Identificativo: manca
+Link: https://en.wikipedia.org/wiki/Remote_ID
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): F11 di SCENARI_E_REQUISITI.md, «aperte il 15-11-2026»
+Usata per: (aggiornamento f18) F11 — f15-lunga-portata/03-scenari/SCENARI_E_REQUISITI.md, «Fonti»
+Note: fonte di terza mano: i numeri vanno ricontrollati sulle fonti primarie prima di citarli in un documento ufficiale. Le pagine degli scenari «sono state lette attraverso un modello che le riassume: le citazioni non sono state ricontrollate sul testo grezzo». Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### wikipedia-u-space [382]
+Tipo: enciclopedia
+Autori: Wikipedia
+Titolo: U-space
+Sede e anno: consultata il 15-11-2026
+Identificativo: manca
+Link: https://en.wikipedia.org/wiki/U-space
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): F13 di SCENARI_E_REQUISITI.md, «aperte il 15-11-2026»
+Usata per: (aggiornamento f18) F13 — f15-lunga-portata/03-scenari/SCENARI_E_REQUISITI.md, «Fonti»
+Note: fonte di terza mano: i numeri vanno ricontrollati sulle fonti primarie prima di citarli in un documento ufficiale. Le pagine degli scenari «sono state lette attraverso un modello che le riassume: le citazioni non sono state ricontrollate sul testo grezzo». Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### skybrary-see-and-avoid [383]
+Tipo: articolo di un portale di sicurezza aerea
+Autori: SKYbrary
+Titolo: See and avoid
+Sede e anno: manca
+Identificativo: manca
+Link: https://skybrary.aero/articles/see-and-avoid
+Verifica: non raggiungibile — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): «blocco» (SCENARI_E_REQUISITI.md, «Non aperte»)
+Usata per: (aggiornamento f18) cercata per «vedere ed evitare»; non usata — f15-lunga-portata/03-scenari/SCENARI_E_REQUISITI.md, «Fonti»
+Note: Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### robinradar-10-tecnologie [384]
+Tipo: blog di un costruttore
+Autori: Robin Radar
+Titolo: 10 counter-drone technologies to detect and stop drones today
+Sede e anno: manca
+Identificativo: manca
+Link: https://www.robinradar.com/resources/10-counter-drone-technologies-to-detect-and-stop-drones-today
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): «aperta oggi; è un produttore di radar: di parte»
+Usata per: (aggiornamento f18) confronto delle tecnologie di rilevamento dei droni (acustico, radiofrequenza, radar, camere) — f15-lunga-portata/02-sensori/parametri_lunga_portata.json; f15-lunga-portata/02-sensori/SENSORI_LUNGA_PORTATA.md
+Note: fonte di parte; titolo e lessico («counter-drone», «stop drones») sono fuori dall'ambito del progetto e non vanno ripresi nei testi (VERDETTO_FASE2, §6). Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### migflug-rcs-droni [385]
+Tipo: blog
+Autori: Migflug
+Titolo: Why radar cannot detect small drones: RCS, micro-Doppler, birds (titolo dal link)
+Sede e anno: manca
+Identificativo: manca
+Link: https://migflug.com/afterburner/why-radar-cannot-detect-small-drones-rcs-micro-doppler-birds/
+Verifica: vista solo nel riassunto di un motore di ricerca — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete)
+Usata per: (aggiornamento f18) sezione radar di un Phantom 4: mediana 0,020 m² a 9 GHz, da 0,004 a 0,27 secondo l'angolo — f15-lunga-portata/40-eventi/01-effetti/conti.py (dizionario FONTI); f15-lunga-portata/40-eventi/01-effetti/EFFETTI_SUI_SENSORI.md
+Note: blog: la misura originale non è citata. Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### livescience-udri-2018 [386]
+Tipo: articolo di divulgazione
+Autori: Live Science
+Titolo: articolo sulla prova d'urto UDRI 2018 (drone contro un aereo; titolo dal link)
+Sede e anno: 2018
+Identificativo: manca
+Link: https://www.livescience.com/63828-drone-crashes-into-airplane.html
+Verifica: vista solo nel riassunto di un motore di ricerca — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete)
+Usata per: (aggiornamento f18) un quadricottero da 0,95 kg a 383 km/h contro un'ala «non si è frantumato» (E1) — f15-lunga-portata/40-eventi/01-effetti/conti.py (dizionario FONTI); f15-lunga-portata/40-eventi/01-effetti/EFFETTI_SUI_SENSORI.md
+Note: Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### assure-collisione-suolo [387]
+Tipo: pagina di un progetto di ricerca
+Autori: ASSURE (Mississippi State University)
+Titolo: UAS Ground Collision Severity Evaluation
+Sede e anno: manca
+Identificativo: manca
+Link: https://assure.msstate.edu/projects/uas-ground-collision-severity-evaluation-2/
+Verifica: vista solo nel riassunto di un motore di ricerca — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete)
+Usata per: (aggiornamento f18) un multirotore cade più piano di un detrito metallico di pari massa (E1) — f15-lunga-portata/40-eventi/01-effetti/conti.py (dizionario FONTI); f15-lunga-portata/40-eventi/01-effetti/EFFETTI_SUI_SENSORI.md
+Note: Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### faa-airporttech-fod-droni [388]
+Tipo: pagina di ricerca dell'autorità
+Autori: FAA Airport Technology R&D
+Titolo: Small unmanned aircraft-based foreign object debris detection on airport surfaces
+Sede e anno: manca
+Identificativo: manca
+Link: https://airporttech.tc.faa.gov/Products/Airport-Safety-Papers-Publications/Airport-Safety-Detail/small-unmanned-aircraft-based-foreign-object-debris-detection-on-airport-surfaces
+Verifica: vista solo nel riassunto di un motore di ricerca — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete)
+Usata per: (aggiornamento f18) un piccolo drone con camera rileva il 96 % degli oggetti della circolare (E4, EV-E) — f15-lunga-portata/40-eventi/01-effetti/conti.py (dizionario FONTI); f15-lunga-portata/40-eventi/01-effetti/EFFETTI_SUI_SENSORI.md
+Note: la relazione FAA sul radar mobile ha dato una pagina vuota (EFFETTI_SUI_SENSORI.md, §1). Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### incompetech-macleod [389]
+Tipo: musica con licenza libera
+Autori: Kevin MacLeod (incompetech.com)
+Titolo: «Dreams Become Real» e «Ossuary 5 - Rest»
+Sede e anno: manca
+Identificativo: manca
+Link: https://incompetech.com/music/royalty-free/licenses/
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): la pagina delle licenze dice «Creative Commons — Free. Requires that you credit the music» e rimanda a CC BY 4.0; BPM dal catalogo pieces.json; il generatore di crediti della pagina non è stato letto
+Usata per: (aggiornamento f18) musica candidata del video: «Dreams Become Real» (CC BY 4.0, attribuzione in un cartello); «Ossuary» escluso dal piano — f17-video/00-strumenti/STRUMENTI.md §4.1; f17-video/22-sintesi/PIANO_VIDEO.md
+Note: attribuzione standard: «"Dreams Become Real" Kevin MacLeod (incompetech.com). Licensed under Creative Commons: By Attribution 4.0 License». Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### fma-bartmann [390]
+Tipo: musica con licenza libera
+Autori: John Bartmann (Free Music Archive)
+Titolo: «above the clouds (master)»
+Sede e anno: manca
+Identificativo: manca
+Link: https://freemusicarchive.org/music/John_Bartmann/100-ambient-atmospheric-soundtracks-straylight-drones-collection/above-the-clouds-master
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): la pagina riporta «CC0 1.0 Universal»; Wikimedia Commons conferma con {{cc0}}
+Usata per: (aggiornamento f18) brano scaricato, **escluso dal piano** — f17-video/00-strumenti/STRUMENTI.md §4.1
+Note: assenza di voce non verificata («Instrumental: No», forse valore predefinito). Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### heliguy-freefly-movi-pro [391]
+Tipo: blog di un rivenditore
+Autori: heliguy
+Titolo: Freefly unveils the MōVI Pro (titolo dal link)
+Sede e anno: manca
+Identificativo: manca
+Link: https://www.heliguy.com/blogs/posts/freefly-unveils-the-movi-pro/
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): citata dall'attacco al video; come sia stata letta non è scritto
+Usata per: (aggiornamento f18) il nome «MoVi» collide con «MōVI» di Freefly Systems (stabilizzatori di camera, anche su drone) — f17-video/21-attacco/ATTACCO_VIDEO.md, punti 22–23
+Note: stato del marchio registrato non verificato: nessuna banca dati dei marchi interrogata. Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### bhphoto-freefly-movi [392]
+Tipo: pagina di un rivenditore
+Autori: B&H Explora
+Titolo: pagina 30652 (prodotti Freefly MōVI; titolo non scritto nei file)
+Sede e anno: manca
+Identificativo: manca
+Link: https://www.bhphotovideo.com/explora/node/30652
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): citata dall'attacco al video; come sia stata letta non è scritto
+Usata per: (aggiornamento f18) stesso uso di [391] — f17-video/21-attacco/ATTACCO_VIDEO.md, punti 22–23
+Note: Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+### whatthelogo-gojek-solv [393]
+Tipo: raccolta di loghi
+Autori: whatthelogo
+Titolo: Gojek Solv
+Sede e anno: manca
+Identificativo: manca
+Link: https://whatthelogo.com/logo/gojek-solv/214212
+Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): citata dall'attacco al video
+Usata per: (aggiornamento f18) il logo più vicino trovato al marchio MoVi (anello con un'apertura e un punto al centro): rischio basso, non verificato — f17-video/21-attacco/ATTACCO_VIDEO.md, punti 22–23
+Note: una sola ricerca; ricerca d'anteriorità non fatta. Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
 
 ## 7. Chiavi provvisorie usate nelle sezioni → chiave definitiva e numero
 

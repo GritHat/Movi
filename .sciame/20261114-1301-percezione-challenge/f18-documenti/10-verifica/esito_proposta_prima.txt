@@ -1,0 +1,18 @@
+INTERNI	\bv[123]\b	riga 3	meteo: di ogni mezzo MoVi dice se lo vede, dove può essere quando non lo vede, e quando non lo sa.                                            v2.0 · 1
+INTERNI	sciame	riga 143	Come è stato ottenuto. Uno sciame di agenti specialisti: proposte cieche, falsificazione, misure, attacchi, correzioni e riconti di un arbitro. Calcol
+INTERNI	arbitr	riga 143	Come è stato ottenuto. Uno sciame di agenti specialisti: proposte cieche, falsificazione, misure, attacchi, correzioni e riconti di un arbitro. Calcol
+INTERNI	agent[ie] 	riga 143	Come è stato ottenuto. Uno sciame di agenti specialisti: proposte cieche, falsificazione, misure, attacchi, correzioni e riconti di un arbitro. Calcol
+## INTERNI: 4
+NONDIRE	ingaggi	riga 24	• MoVi osserva e avvisa: nessuna uscita è un comando, nessuna funzione d’ingaggio o di puntamento.
+## NONDIRE: 1
+SUPERATE	163	riga 17	• Il «libero» può essere falso: con il secondo radar a pannello, nella configurazione del sito, 163 passaggi su 171 hanno istanti con «libero» sul
+SUPERATE	come fa oggi il prototipo	riga 18	drone X ; e un edificio che manca dalla mappa apre un «libero» falso se la mappa è dichiarata completa, come fa oggi il prototipo X .
+SUPERATE	copre il sito	riga 20	• Eventi improvvisi: sono dedotti, entro 2 s in 49 passaggi su 60; la zona dei detriti copre il sito e non si riduce; la fiammata è rilevata con un
+SUPERATE	49 su 60	riga 74	• S Collisione fra droni. MoVi deduce l’evento in 1,2–2,2 s (entro 2 s in 49 su 60 [0,70; 0,89]) e non chiama mai «libero» dove possono cadere i
+SUPERATE	2,2 s	riga 74	• S Collisione fra droni. MoVi deduce l’evento in 1,2–2,2 s (entro 2 s in 49 su 60 [0,70; 0,89]) e non chiama mai «libero» dove possono cadere i
+SUPERATE	oltre 10\s?km	riga 75	frammenti. Ma la zona dei detriti oggi è enorme (oltre 10 km in 36 su 60), non si riduce e non distingue chi è in pericolo X .
+SUPERATE	36 su 60	riga 75	frammenti. Ma la zona dei detriti oggi è enorme (oltre 10 km in 36 su 60), non si riduce e non distingue chi è in pericolo X .
+SUPERATE	enorme	riga 75	frammenti. Ma la zona dei detriti oggi è enorme (oltre 10 km in 36 su 60), non si riduce e non distingue chi è in pericolo X .
+SUPERATE	49/60	riga 102	Eventi improvvisi, meteo            Collisione, avaria con fiammata, nebbia,               S   dedotti; X entro 2 s solo in 49/60; zona dei detriti tr
+SUPERATE	665 s	riga 131	(prova_tutto.sh) termina senza errori in 665 s, e il controllo delle regole dà 0 errori sulle 20 scene S (stesso codice: non indipendente; il
+## SUPERATE: 10

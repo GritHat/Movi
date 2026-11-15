@@ -1,0 +1,8 @@
+lp_A1_v3 fatto in 46 s: errori: 0 | controprova: }
+lp_E1_v3 fatto in 21 s: errori: 0 | controprova: }
+lp_A1_ingenua_v3 fatto in 46 s: errori: 0 | controprova: }
+lp_A2_v3 fatto in 17 s: errori: 1 | controprova: }
+lp_A3_v3 fatto in 51 s: errori: 1 | controprova: }
+lp_E2_v3 fatto in 17 s: errori: 1 | controprova: }
+lp_E3_v3 fatto in 89 s: errori: 1 | controprova: }
+lp_E4_v3 fatto in 16 s: errori: 1 | controprova: }

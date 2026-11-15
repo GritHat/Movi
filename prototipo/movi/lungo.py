@@ -42,8 +42,21 @@ _M = {}
 # completa (il simulatore conosce gli ostacoli: ipotesi, scritta nell'intestazione); E1, E2, E4, E5 con lo strato
 # eventi_v2 (E3 non c'è: eventi_lp col nucleo v2).
 LP2 = riuso.percorso("lunga_portata_v2")
-NUCLEI = ("v1", "v2")
-NUCLEO_LP = os.environ.get("MOVI_NUCLEO_LP", "v2")
+# ---- nucleo v3 (fase 2c, sciame-tracciamento, 15-11-2026). AGGIUNTO, PREDEFINITO: v1 e v2 restano (--nucleo v1|v2).
+# v3 = riuso/lunga_portata_v3/ (movi_lp_v3.py: finestra W_c dalla v_max vera dell'inviluppo e ritenuta del ritorno;
+# eventi_v3.py: eta' della traccia d'origine, duplicati fusi, ispezione dell'impronta). MAPPA: col v3 la mappa NON e'
+# dichiarata completa per predefinito (MAPPA_CERTIFICATA_PREDEFINITA del nucleo resta False): nessuna cella 'libera'.
+# La si dichiara solo con la voce "mappa_certificata": true della sorgente o con MOVI_MAPPA_CERTIFICATA=1, ed e'
+# scritta nell'intestazione. Il v2 conserva il suo comportamento (mappa dichiarata completa), come prima.
+LP3 = riuso.percorso("lunga_portata_v3")
+NUCLEI = ("v1", "v2", "v3")
+NUCLEO_LP = os.environ.get("MOVI_NUCLEO_LP", "v3")
+MAPPA_V3 = {"certificata": os.environ.get("MOVI_MAPPA_CERTIFICATA", "0") == "1", "da": "MOVI_MAPPA_CERTIFICATA"}
+
+
+def _v2piu(n):
+    """v2 e v3 hanno gli stessi campi del registro e lo stesso strato eventi (in versioni diverse)."""
+    return n in ("v2", "v3")
 FAMIGLIA_V2 = {"A1": "sito_droni_rullaggio", "A2": "sito_droni_rullaggio"}
 EVENTI_V2 = ("E1", "E2", "E4", "E5")
 NUCLEO_DA_RIGA_DI_COMANDO = False
@@ -73,15 +86,31 @@ def moduli():
             import movi_lp_v2
             movi_lp_v2.MAPPA_CERTIFICATA_PREDEFINITA = True
             sys.modules["movi_lp_import"] = types.SimpleNamespace(nucleo=movi_lp_v2)
+        elif NUCLEO_LP == "v3":
+            import types
+            if LP3 not in sys.path:
+                sys.path.insert(0, LP3)
+            import movi_lp_v3
+            movi_lp_v3.MAPPA_CERTIFICATA_PREDEFINITA = bool(MAPPA_V3["certificata"])
+            sys.modules["movi_lp_import"] = types.SimpleNamespace(nucleo=movi_lp_v3)
         import prove_lp
         import sim_lp
         from movi_lp_import import nucleo as m
+        if NUCLEO_LP == "v3":
+            prove_lp.REG = m.carica_regole(os.path.join(LP3, "regole_lunga_portata_v3.json"))
+            prove_lp.FAMIGLIA.update(FAMIGLIA_V2)
         if NUCLEO_LP == "v2":
             prove_lp.REG = m.carica_regole(os.path.join(LP2, "regole_lunga_portata_v2.json"))
             prove_lp.FAMIGLIA.update(FAMIGLIA_V2)
         _M.update(prove=prove_lp, sim=sim_lp, m=m, nucleo=NUCLEO_LP)
     if "eventi" not in _M:
         import eventi_lp
+        if NUCLEO_LP == "v3":
+            eventi_lp.REG = _M["prove"].REG
+            os.environ.setdefault("EVENTI_NUCLEO", "prototipo")      # eventi_v3 prende il nucleo da eventi_lp (= v3)
+            import eventi_v3
+            eventi_v3.NUCLEO = "riuso/lunga_portata_v3/movi_lp_v3.py"
+            _M["eventi_v2"] = eventi_v3                             # stesso aggancio del registratore
         if NUCLEO_LP == "v2":
             eventi_lp.REG = _M["prove"].REG
             import eventi_v2
@@ -179,7 +208,7 @@ def _osservato(osv, base):
             if osv.piano and abs(t / osv.ogni_s - round(t / osv.ogni_s)) < 1e-6:
                 c0 = time.perf_counter()
                 ist["pianta"] = osv.pianta(self, t)
-                if moduli()["nucleo"] == "v2":
+                if _v2piu(moduli()["nucleo"]):
                     ist["libere_per_classe"] = osv.libere_per_classe(self, t)
                 osv.t_pianta += time.perf_counter() - c0
             osv.istanti[round(float(t), 2)] = ist           # E1–E5 chiamano uscite() due volte per ciclo: vale l'ultima
@@ -205,6 +234,8 @@ def esegui_passaggio(cfg):
     """Esegue il passaggio della configurazione e rende (R di prove_lp/eventi_lp, osservatore, dichiarazione)."""
     if cfg.sorgente.get("nucleo") and not _M and not NUCLEO_DA_RIGA_DI_COMANDO:
         scegli_nucleo(cfg.sorgente["nucleo"])              # la scena chiede un nucleo; --nucleo la scavalca
+    if "mappa_certificata" in cfg.sorgente and not _M:     # v3: dichiarazione esplicita della scena
+        MAPPA_V3.update(certificata=bool(cfg.sorgente["mappa_certificata"]), da="voce mappa_certificata della scena")
     M = moduli()
     P, S, m = M["prove"], M["sim"], M["m"]
     s = cfg.sorgente
@@ -230,11 +261,12 @@ def esegui_passaggio(cfg):
     try:
         if s.get("pubblica"):
             dich["registrazione_pubblica"] = _prepara_pubblica(P, S, scen, s["pubblica"], orig_gv)
-        if scen.startswith("E") and M["nucleo"] == "v2" and scen in EVENTI_V2:
+        if scen.startswith("E") and _v2piu(M["nucleo"]) and scen in EVENTI_V2:
             sep = s.get("separazione_m", 5.0 if scen == "E5" else None)
             idx = int(s.get("passaggio", 0))
             R = passaggio_eventi_v2(M, scen, conf, idx, sep, osv)
-            dich.update(passaggio=idx, chiamante="eventi_v2 (strato eventi della fase 2b, semi 20261116)",
+            dich.update(passaggio=idx, chiamante=("eventi_v3 (strato eventi della fase 2c" if M["nucleo"] == "v3" else
+                                                  "eventi_v2 (strato eventi della fase 2b") + ", semi 20261116)",
                         separazione_m=sep)
         elif scen.startswith("E"):
             E = M["eventi"]
@@ -386,7 +418,16 @@ class NucleoLungo(nucleo.Nucleo):
                                   "metriche_del_passaggio": {k: v for k, v in self.src.R.items() if k != "esemplare"},
                                   "durata_esecuzione_s": round(self.src.durata_s, 1),
                                   "durata_vista_in_pianta_s": round(self.src.osv.t_pianta, 1)}
-        if M["nucleo"] == "v2":
+        if M["nucleo"] == "v3":
+            esc = P.REG["scenari"][fam].get("classi_escluse", [])
+            testa["lunga_portata"].update(
+                nucleo="v3", nucleo_file="riuso/lunga_portata_v3/movi_lp_v3.py",
+                regole_file="riuso/lunga_portata_v3/regole_lunga_portata_v3.json",
+                provenienza="riuso/lunga_portata_v3/PROVENIENZA.md", classi_escluse=esc,
+                mappa_certificata=("dichiarata completa (" + MAPPA_V3["da"] + "; il simulatore conosce gli ostacoli: ipotesi)")
+                if MAPPA_V3["certificata"] else "NON dichiarata: nessuna cella può essere 'libera'",
+                tempestivita_conto=m.tempestivita(P.REG, fam), nota_famiglia=P.REG["scenari"][fam].get("nota"))
+        elif M["nucleo"] == "v2":
             esc = P.REG["scenari"][fam].get("classi_escluse", [])
             testa["lunga_portata"].update(
                 nucleo="v2", nucleo_file="riuso/lunga_portata_v2/movi_lp_v2.py",
@@ -417,6 +458,10 @@ class NucleoLungo(nucleo.Nucleo):
         if self._griglia is not None:
             b = np.bincount(np.asarray(self._griglia).ravel(), minlength=4)
             conteggi = {registro.STATI_CELLA[i]: int(b[i]) for i in range(4)}
+        elif _v2piu(self.src.dich.get("nucleo")) and self.src.dich.get("nucleo") == "v3":
+            # fase 2c (VERDETTO_2B par. 5): prima della prima pianta il visore mostra n×n celle «non osservato»
+            # (griglia_stati); i conteggi ora dicono la stessa cosa invece di essere vuoti
+            conteggi = {"non_osservato": int(np.asarray(self.griglia_stati()).size)}
         if aff == "persa":
             conteggi = {"non_osservato": int(sum(conteggi.values()))}
         per_sens = {g["sensore"]: {"conteggi": {registro.STATI_CELLA[STATO_LP_A_REG[i]]: int(g["conteggi"][i])
@@ -482,11 +527,15 @@ class NucleoLungo(nucleo.Nucleo):
                 "dichiarazioni": self.cfg.dichiarazioni(), "verita": verita, "sensori": sensori, "affidabilita": aff,
                 "celle": {"griglia": "pianta_lp", "conteggi": conteggi, "per_sensore": per_sens},
                 "settori": settori, "tracce": tracce, "avvisi": avvisi, "eventi": eventi, "tempo_ciclo_ms": None}
-        if self.src.dich.get("nucleo") == "v2":
+        if _v2piu(self.src.dich.get("nucleo")):
             campi_v2(self, riga, c, ist)
+        if self.src.dich.get("nucleo") == "v3":
+            _maschera_v3(self, riga)
         return riga
 
     def griglia_stati(self):
+        if getattr(self, "_mostrata", None) is not None:          # v3: la griglia mostrata è quella mascherata
+            return self._mostrata
         # collaudo (sciame-tester, 15-11-2026): prima della prima pianta (t < 2 s) la griglia intera è «non osservato»
         # della misura dichiarata nell'intestazione, non una griglia 1×1 (il registro la dava di 1 cella su n×n)
         if self._griglia is None:
@@ -494,6 +543,49 @@ class NucleoLungo(nucleo.Nucleo):
             n = piano[4] if piano else 1
             return np.zeros((n, n), np.int8)
         return np.asarray(self._griglia)
+
+
+# ============================================================================ v3: «libero» mai dentro un avviso
+def _dentro_forma(X, Y, f):
+    """Maschera dei punti (X, Y) dentro la forma del registro (cerchio o poligono)."""
+    if f["tipo"] == "cerchio":
+        return (X - f["centro"][0]) ** 2 + (Y - f["centro"][1]) ** 2 <= f["raggio_m"] ** 2
+    P = f["punti"]
+    c = np.zeros(X.shape, bool)
+    for i in range(len(P)):
+        x1, y1 = P[i][:2]
+        x2, y2 = P[i - 1][:2]
+        if y1 == y2:
+            continue
+        c ^= ((y1 > Y) != (y2 > Y)) & (X < (x2 - x1) * (Y - y1) / (y2 - y1) + x1)
+    return c
+
+
+def _maschera_v3(nuc, riga):
+    """v3 (fase 2c, VERDETTO_2B par. 5 e K-611): nella griglia MOSTRATA una cella «libero» il cui centro cade dentro un
+    avviso di possibile presenza o dentro volume e impronta dei detriti del fotogramma diventa «non_osservato». Motivo:
+    con passate correlate (n_eff = 1) una passata senza ritorno non esclude l'oggetto che l'avviso dice possibile lì.
+    Il nucleo non cambia: cambia ciò che il registro dichiara. Conteggi ricalcolati sulla griglia mostrata; quante
+    celle sono state tolte è scritto in celle.libere_tolte_dentro_avviso."""
+    from . import registro
+    g = np.asarray(nuc.griglia_stati() if getattr(nuc, "_griglia", None) is None else nuc._griglia).copy()
+    x0, x1, y0, y1, n = nuc.src.osv.piano
+    X, Y = np.meshgrid(np.linspace(x0, x1, n), np.linspace(y0, y1, n))
+    forme = [a["forma"] for a in riga.get("avvisi", [])]
+    d = riga.get("detriti") or {}
+    for k in ("volume", "impronta"):
+        v = d.get(k) or []
+        forme += v if isinstance(v, list) else [v]
+    lib = registro.STATI_CELLA.index("libero")
+    via = np.zeros(g.shape, bool)
+    for f in forme:
+        via |= _dentro_forma(X, Y, f) & (g == lib)
+    g[via] = registro.STATI_CELLA.index("non_osservato")
+    nuc._mostrata = g
+    if riga["celle"]["conteggi"] and riga.get("affidabilita") != "persa":
+        b = np.bincount(g.ravel(), minlength=4)
+        riga["celle"]["conteggi"] = {registro.STATI_CELLA[i]: int(b[i]) for i in range(4)}
+    riga["celle"]["libere_tolte_dentro_avviso"] = int(via.sum())
 
 
 # ============================================================================ nucleo v2: campi del registro e eventi

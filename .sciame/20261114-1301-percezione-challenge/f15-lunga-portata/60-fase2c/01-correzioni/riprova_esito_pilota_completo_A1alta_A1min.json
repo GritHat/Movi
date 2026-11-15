@@ -1,0 +1,131 @@
+{
+ "N": 28,
+ "processi": 7,
+ "nucleo": "60-fase2c/01-correzioni/movi_lp_v3.py",
+ "variante": "completo",
+ "mappa_env": "1",
+ "chiamante": "prudente",
+ "famiglie": {
+  "A1": "sito_droni_rullaggio",
+  "A2": "sito_droni_rullaggio",
+  "A3": "aeroporto_e_droni"
+ },
+ "inizio": "2026-11-15T03:07:52+0100",
+ "aggregati": {
+  "A1_alta": {
+   "tempestivi": [
+    28,
+    28,
+    [
+     0.879,
+     1.0
+    ]
+   ],
+   "con_ciclo_fuori_avviso": [
+    0,
+    28,
+    [
+     0.0,
+     0.121
+    ]
+   ],
+   "con_ciclo_senza_regione": [
+    0,
+    28,
+    [
+     0.0,
+     0.121
+    ]
+   ],
+   "con_libero_sull_oggetto": [
+    0,
+    28,
+    [
+     0.0,
+     0.121
+    ]
+   ],
+   "con_fase_nascosta": [
+    2,
+    28,
+    [
+     0.02,
+     0.226
+    ]
+   ],
+   "confermati": [
+    28,
+    28,
+    [
+     0.879,
+     1.0
+    ]
+   ],
+   "istanti_libero_sull_oggetto": [
+    0,
+    3192
+   ],
+   "falsi_confermati_mediana": 0,
+   "d_conf_mediana_m": 963.4387151312462,
+   "d_conf_p5_m": 949.0592309973626
+  },
+  "A1_min": {
+   "tempestivi": [
+    28,
+    28,
+    [
+     0.879,
+     1.0
+    ]
+   ],
+   "con_ciclo_fuori_avviso": [
+    2,
+    28,
+    [
+     0.02,
+     0.226
+    ]
+   ],
+   "con_ciclo_senza_regione": [
+    0,
+    28,
+    [
+     0.0,
+     0.121
+    ]
+   ],
+   "con_libero_sull_oggetto": [
+    0,
+    28,
+    [
+     0.0,
+     0.121
+    ]
+   ],
+   "con_fase_nascosta": [
+    28,
+    28,
+    [
+     0.879,
+     1.0
+    ]
+   ],
+   "confermati": [
+    28,
+    28,
+    [
+     0.879,
+     1.0
+    ]
+   ],
+   "istanti_libero_sull_oggetto": [
+    0,
+    3192
+   ],
+   "falsi_confermati_mediana": 0,
+   "d_conf_mediana_m": 945.8997391822193,
+   "d_conf_p5_m": 916.6403500888443
+  }
+ },
+ "durata_s": 39.1
+}

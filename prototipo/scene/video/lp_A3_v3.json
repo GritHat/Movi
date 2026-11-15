@@ -1,0 +1,31 @@
+{
+ "commento": "VIDEO v3 (fase 2c, sciame-tracciamento): come lp_A3.json, col nucleo v3; mappa DICHIARATA completa da questa scena (voce mappa_certificata: il simulatore conosce gli ostacoli, ipotesi). SIMULAZIONE dalle schede, nessun sensore fisico; etichette a mano. Prima: VIDEO (fase 2b, sciame-sviluppatore): drone sotto la copertura del radar d'aeroporto (solo radar d'aeroporto + ADS-B): «zona non verificata per droni»; nucleo v2. SIMULAZIONE dalle schede, nessun sensore fisico; etichette a mano.",
+ "modo": "lungo",
+ "scenario": "A3",
+ "sorgente": {
+  "tipo": "scena_lp",
+  "scenario": "A3",
+  "condizione": {
+   "configurazione": "min"
+  },
+  "piano": [
+   -1500,
+   2000,
+   -6000,
+   2500
+  ],
+  "celle_lato": 24,
+  "passaggio": 0,
+  "nucleo": "v3",
+  "chiamante": "prudente",
+  "mappa_certificata": true
+ },
+ "classi_ammesse": [],
+ "profilo_portatore": "stazione_fissa",
+ "profilo_ricevente": "operatore_di_sito",
+ "etichette": "../etichette/lunga_portata.json",
+ "interruttori": {},
+ "parametri": {},
+ "seme": 0,
+ "origine_dati": "simulati"
+}

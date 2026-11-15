@@ -17,8 +17,9 @@ def main(argv=None):
     e = s.add_parser("esegui"); e.add_argument("scena"); e.add_argument("--config", required=True)
     e.add_argument("--uscita", default=None); e.add_argument("--celle", action="store_true")
     e.add_argument("--ultimo", type=int, default=None)
-    e.add_argument("--nucleo", choices=("v1", "v2"), default=None,
-                   help="modo lungo: nucleo di f15 (v1) o della fase 2b (v2, predefinito; anche MOVI_NUCLEO_LP)")
+    e.add_argument("--nucleo", choices=("v1", "v2", "v3"), default=None,
+                   help="modo lungo: nucleo di f15 (v1), della fase 2b (v2) o della fase 2c (v3, predefinito; anche "
+                        "MOVI_NUCLEO_LP)")
     t = s.add_parser("tabellone"); t.add_argument("registri", nargs="+"); t.add_argument("--banco", default=None)
     m = s.add_parser("mostra"); m.add_argument("registro"); m.add_argument("--uscita", default=None)
     m.add_argument("--filmato", action="store_true"); m.add_argument("--ogni", type=int, default=1)

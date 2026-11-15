@@ -1,0 +1,504 @@
+{
+ "versione": "f15-50-fase2b-01-nucleo-v2",
+ "data": "2026-11-15",
+ "avvertenza": "Parametri delle regole di MoVi a lunga portata. Tutto e' simulazione, conto o valore di classe: NIENTE e' provato su un sensore fisico. Le etichette di classe sono assegnate a mano (classificatore supposto, lavori futuri). Solo osservazione, monitoraggio e avviso: nessuna funzione d'ingaggio, puntamento o contrasto.",
+ "legenda_fonti": {
+  "f14": "ripreso da f14-classificazione/01-profili/classi.json (li' con la sua fonte)",
+  "I": "ipotesi dichiarata, senza fonte aperta oggi",
+  "M": "a memoria, non verificato oggi",
+  "C": "conto, riprodotto da prove_movi_lp.py"
+ },
+ "principi": [
+  "cio' che non e' osservato non e' mai 'libero'",
+  "l'avviso di possibile presenza non si toglie se non guardando",
+  "nessuna etichetta di classe riduce un avviso: l'avviso usa l'inviluppo dello scenario",
+  "'libero' vale solo per le classi ammesse, con la mappa certificata e con le passate contate come correlate"
+ ],
+ "stati_cella": [
+  "libero",
+  "occupato",
+  "in_ombra",
+  "non_osservato"
+ ],
+ "parole_uscita": [
+  "vista",
+  "non vista da X s con zona",
+  "previsto ampio",
+  "possibile presenza",
+  "zona non verificata",
+  "affidabilita' persa",
+  "libero per <classi ammesse>",
+  "zona non verificata per <classe>",
+  "avviso non tempestivo per <ricevente>",
+  "ostacolo non in mappa"
+ ],
+ "libero": {
+  "pd_cumulata_min": 0.99,
+  "classe_di_riferimento": "OGNI classe ammessa dallo scenario, ciascuna con la sua sezione radar e la sua finestra: la cella e' libera solo se lo e' per tutte",
+  "n_passate_max": 5,
+  "t_cumulo_max_s": 5.0,
+  "condizione_cumulo": "le passate si cumulano solo entro t_cumulo = min(t_cumulo_max_s, lato_cella / v_max della classe), e si prende il minimo della Pd cumulata sulla cella e sulle 8 vicine: oltre, l'oggetto puo' aver cambiato cella fra una passata e l'altra",
+  "t_validita_s": "= t_cumulo: scaduta, la cella torna 'non_osservato'",
+  "ipotesi": "passate CORRELATE per bersaglio che non cambia aspetto: la Pd cumulata usa n_eff = 1 + (n-1)(1-rho), rho della classe (rho = 1 -> n_eff = 1). Pd dal modello della scheda, non misurata",
+  "fonti": {
+   "pd_cumulata_min": "I",
+   "n_passate_max": "I",
+   "t_cumulo_max_s": "I",
+   "rho_passate": "I (attacco X4: sezione radar tenuta per 5 passate; nessuna fonte sulla decorrelazione dei multirotori)"
+  },
+  "rho_passate_predefinito": 1.0,
+  "fusione_sensori": "si moltiplicano le mancate solo fra sensori di TIPO diverso; fra sensori dello stesso tipo si prende il migliore (aspetto forse correlato: I)",
+  "doppler": "un sensore con v_rad_min > 0 (filtro Doppler) non produce mai 'libero': ogni classe puo' avere velocita' radiale sotto soglia (volo stazionario, moto tangenziale); il suo mancato conta solo se |v_r| - 3 sigma_v > v_rad_min",
+  "alone_ritorno_k_sigma": 3.0,
+  "alone_nota": "ogni ritorno toglie il 'libero' alle celle entro k sigma (distanza, azimut, elevazione) del sensore, piu' la cella: il ritorno nella cella vicina non da' 'libero' sulla cella dell'oggetto"
+ },
+ "ombra": {
+  "regola": "cella in ombra se il segmento sensore-centro cella incrocia un ostacolo noto in pianta sotto la sua altezza, o se la maschera del terreno (orizzonte per azimut) la copre",
+  "fascia_di_guardia_m": 50.0,
+  "fonti": {
+   "fascia_di_guardia_m": "I"
+  }
+ },
+ "tracce": {
+  "porta_chi2_3gdl": 16.27,
+  "porta_nota": "quantile 0,999 del chi quadro a 3 gradi di liberta' (M: valore di tavola)",
+  "porta_dubbio_chi2_3gdl": 30.66,
+  "porta_dubbio_nota": "quantile 1 - 1e-6: una misura fra le due porte di una traccia confermata non apre subito una traccia nuova (misura dubbia); la apre se succede dubbie_per_aprire volte entro dubbie_finestra_s. Aggiunta DOPO la smentita di P4 e P5 (vedi PREVISIONI.md).",
+  "dubbie_per_aprire": 3,
+  "dubbie_finestra_s": 5.0,
+  "t_tentativa_s": 3.0,
+  "conferma_M_su_N": [
+   2,
+   3
+  ],
+  "chiusura": "solo 'non piu' rilevata': in vista e con Pd cumulata dei mancati rilevamenti >= pd_cumulata_min; mai per il solo silenzio della sorveglianza cooperativa; mai in ombra",
+  "fuori_sequenza_tolleranza_s": 0.5,
+  "ampio_se_raggio_su_raggiungibile": 0.8,
+  "k_sigma_insieme": 3.0,
+  "fonti": {
+   "conferma_M_su_N": "I",
+   "fuori_sequenza_tolleranza_s": "I",
+   "ampio_se_raggio_su_raggiungibile": "f12 (soglia 80 % del cuneo, riportata al raggiungibile)",
+   "k_sigma_insieme": "I"
+  }
+ },
+ "previsione": {
+  "livello": 0.9,
+  "orizzonti_s": [
+   1,
+   2,
+   5,
+   10,
+   30
+  ],
+  "taratura": "quantile conforme ceil((n+1)*livello)/n dell'errore |p(t+tau) - previsione a velocita' costante| su traiettorie della classe",
+  "stato_taratura": "SOLO traiettorie simulate (generatore di manovre limitate di movi_lp.py); su traiettorie pubbliche: non verificato"
+ },
+ "classi": {
+  "multirotore_piccolo": {
+   "v_max": 19.0,
+   "a_max": 6.9,
+   "a_lat": 6.9,
+   "dec_max": 6.9,
+   "vincolo": "libero_3d",
+   "rcs_m2": 0.01,
+   "modelli": [
+    "cv",
+    "ct+",
+    "ct-",
+    "cv_manovra"
+   ],
+   "q_cv": 0.5,
+   "q_manovra": 6.9,
+   "fonti": {
+    "v_max": "f14",
+    "a_max": "f14",
+    "rcs_m2": "I (ordine di grandezza usato in letteratura, M)",
+    "q": "I"
+   },
+   "rho_passate": 1.0
+  },
+  "drone_ala_fissa": {
+   "v_max": 40.0,
+   "a_max": 5.0,
+   "a_lat": 9.8,
+   "dec_max": 5.0,
+   "vincolo": "libero_3d",
+   "rcs_m2": 0.05,
+   "modelli": [
+    "cv",
+    "ct+",
+    "ct-"
+   ],
+   "q_cv": 0.3,
+   "q_manovra": 5.0,
+   "fonti": {
+    "tutti": "I"
+   },
+   "rho_passate": 1.0
+  },
+  "aereo_leggero": {
+   "v_max": 70.0,
+   "a_max": 3.0,
+   "a_lat": 5.7,
+   "dec_max": 3.0,
+   "vincolo": "libero_3d",
+   "rcs_m2": 2.0,
+   "modelli": [
+    "cv",
+    "ct+",
+    "ct-"
+   ],
+   "q_cv": 0.2,
+   "q_manovra": 3.0,
+   "fonti": {
+    "tutti": "I",
+    "a_lat": "C: g*tan(30 gradi)"
+   },
+   "rho_passate": 1.0
+  },
+  "elicottero": {
+   "v_max": 80.0,
+   "a_max": 5.0,
+   "a_lat": 5.7,
+   "dec_max": 5.0,
+   "vincolo": "libero_3d",
+   "rcs_m2": 3.0,
+   "modelli": [
+    "cv",
+    "ct+",
+    "ct-",
+    "cv_manovra"
+   ],
+   "q_cv": 0.3,
+   "q_manovra": 5.0,
+   "fonti": {
+    "tutti": "I"
+   },
+   "rho_passate": 1.0
+  },
+  "aereo_linea_avvicinamento": {
+   "v_max": 210.0,
+   "a_max": 3.0,
+   "a_lat": 4.6,
+   "dec_max": 3.0,
+   "vincolo": "libero_3d",
+   "rcs_m2": 20.0,
+   "modelli": [
+    "cv",
+    "ct+",
+    "ct-"
+   ],
+   "q_cv": 0.1,
+   "q_manovra": 3.0,
+   "fonti": {
+    "tutti": "I",
+    "a_lat": "C: g*tan(25 gradi)",
+    "v_max": "I (kalman-1; attacco X3)"
+   },
+   "nota_v2": "aerei in volo fino a 210 m/s (decollo e salita; kalman-1, attacco X2-X3). Il nome resta per compatibilita' con prove_lp.",
+   "rho_passate": 1.0
+  },
+  "aereo_rullaggio": {
+   "v_max": 15.4,
+   "a_max": 1.0,
+   "a_lat": 1.5,
+   "dec_max": 3.0,
+   "vincolo": "rete_se_nota_altrimenti_libero_2d",
+   "rcs_m2": 20.0,
+   "modelli": [
+    "cv",
+    "ct+",
+    "ct-"
+   ],
+   "q_cv": 0.1,
+   "q_manovra": 1.0,
+   "fonti": {
+    "v_max": "f14",
+    "a_max": "f14",
+    "dec_max": "f14",
+    "resto": "I"
+   },
+   "rho_passate": 1.0
+  },
+  "treno_alta_velocita": {
+   "v_max": 83.3,
+   "a_max": 0.5,
+   "a_lat": 0.0,
+   "dec_max": 1.5,
+   "v_retro_max": 8.3,
+   "vincolo": "binario",
+   "rcs_m2": 100.0,
+   "modelli": [
+    "cv_1d"
+   ],
+   "q_cv": 0.05,
+   "q_manovra": 1.5,
+   "fonti": {
+    "tutti": "I",
+    "v_max": "C: 300 km/h"
+   },
+   "rho_passate": 1.0
+  },
+  "treno_banchina": {
+   "v_max": 16.7,
+   "a_max": 1.0,
+   "a_lat": 0.0,
+   "dec_max": 1.5,
+   "v_retro_max": 8.3,
+   "vincolo": "binario",
+   "rcs_m2": 100.0,
+   "modelli": [
+    "cv_1d"
+   ],
+   "q_cv": 0.05,
+   "q_manovra": 1.5,
+   "fonti": {
+    "v_max": "f14",
+    "a_max": "f14",
+    "dec_max": "f14",
+    "resto": "I"
+   },
+   "rho_passate": 1.0
+  },
+  "auto_autostrada": {
+   "v_max": 36.1,
+   "a_max": 3.0,
+   "a_lat": 4.0,
+   "dec_max": 6.9,
+   "vincolo": "libero_2d_curvatura",
+   "rcs_m2": 10.0,
+   "modelli": [
+    "cv",
+    "ct+",
+    "ct-"
+   ],
+   "q_cv": 0.3,
+   "q_manovra": 6.9,
+   "fonti": {
+    "v_max": "C: 130 km/h",
+    "a_max": "f14",
+    "dec_max": "f14",
+    "resto": "I"
+   },
+   "rho_passate": 1.0
+  },
+  "auto_strada_urbana": {
+   "v_max": 13.9,
+   "a_max": 3.0,
+   "a_lat": 4.0,
+   "dec_max": 6.9,
+   "vincolo": "libero_2d_curvatura",
+   "rcs_m2": 10.0,
+   "modelli": [
+    "cv",
+    "ct+",
+    "ct-"
+   ],
+   "q_cv": 0.3,
+   "q_manovra": 6.9,
+   "fonti": {
+    "v_max": "f14",
+    "a_max": "f14",
+    "dec_max": "f14",
+    "resto": "I"
+   },
+   "rho_passate": 1.0
+  },
+  "multirotore_veloce": {
+   "v_max": 45.0,
+   "a_max": 25.0,
+   "a_lat": 25.0,
+   "dec_max": 25.0,
+   "vincolo": "libero_3d",
+   "rcs_m2": 0.01,
+   "modelli": [
+    "cv",
+    "ct+",
+    "ct-",
+    "cv_manovra"
+   ],
+   "q_cv": 0.5,
+   "q_manovra": 25.0,
+   "fonti": {
+    "tutti": "I (attacco X1: drone da corsa 20-25 m/s2, 45 m/s; nessuna fonte aperta oggi, da sostituire)"
+   },
+   "rho_passate": 1.0
+  }
+ },
+ "nota_curvatura": "auto: curvatura |kappa| <= a_lat / v^2; nel riferimento entra come velocita' angolare dei modelli di virata omega = a_lat / max(v, v_min). Per l'avviso NON si usa: l'insieme raggiungibile e' il disco (sovrastima).",
+ "scenari": {
+  "aeroporto_e_droni": {
+   "classi_ammesse": [
+    "multirotore_piccolo",
+    "multirotore_veloce",
+    "drone_ala_fissa",
+    "aereo_leggero",
+    "elicottero",
+    "aereo_linea_avvicinamento",
+    "aereo_rullaggio"
+   ],
+   "classi_escluse": [
+    "multirotore_C0"
+   ],
+   "nota": "aerei in volo nell'inviluppo (210 m/s): LIMITE DICHIARATO, l'avviso all'operatore di sito non e' tempestivo"
+  },
+  "ferrovia": {
+   "classi_ammesse": [
+    "treno_alta_velocita",
+    "treno_banchina",
+    "multirotore_piccolo",
+    "multirotore_veloce"
+   ],
+   "classi_escluse": [
+    "multirotore_C0",
+    "pedone"
+   ]
+  },
+  "strada": {
+   "classi_ammesse": [
+    "auto_autostrada",
+    "auto_strada_urbana"
+   ],
+   "classi_escluse": [
+    "pedone",
+    "due_ruote",
+    "multirotore_piccolo",
+    "multirotore_C0"
+   ],
+   "nota": "pedoni e due ruote ESCLUSI e dichiarati (attacco X6)"
+  },
+  "sito_droni_rullaggio": {
+   "classi_ammesse": [
+    "multirotore_piccolo",
+    "multirotore_veloce",
+    "drone_ala_fissa",
+    "aereo_rullaggio"
+   ],
+   "classi_escluse": [
+    "multirotore_C0",
+    "aereo_in_volo"
+   ],
+   "nota": "CASO CENTRALE (decisione del coordinatore): sito sorvegliato con droni e aerei in rullaggio; gli aerei in volo sono fuori e dichiarati"
+  }
+ },
+ "sensori_segnaposto": {
+  "avvertenza": "SEGNAPOSTO (I): da sostituire con le schede scelte dai ruoli dei sensori della fase f15. Servono solo a far girare le prove.",
+  "radar_sorveglianza": {
+   "tipo": "radar",
+   "r_rif_m": 5000.0,
+   "rcs_rif_m2": 1.0,
+   "pd_rif": 0.9,
+   "pfa": 1e-06,
+   "esponente": 4,
+   "r_max_m": 20000.0,
+   "periodo_s": 1.0,
+   "sigma_r_m": 10.0,
+   "sigma_az_rad": 0.01,
+   "sigma_el_rad": 0.02
+  },
+  "ottico_ir": {
+   "tipo": "ottico",
+   "r_rif_m": 2000.0,
+   "rcs_rif_m2": 0.01,
+   "pd_rif": 0.9,
+   "pfa": 0.0001,
+   "esponente": 2,
+   "r_max_m": 8000.0,
+   "periodo_s": 0.2,
+   "sigma_r_m": 30.0,
+   "sigma_az_rad": 0.0005,
+   "sigma_el_rad": 0.0005,
+   "nota": "per l'ottico 'rcs' sta per l'area apparente; la distanza viene da un telemetro o dalla triangolazione (I)"
+  },
+  "lidar_lunga_portata": {
+   "tipo": "lidar",
+   "r_rif_m": 250.0,
+   "rcs_rif_m2": 0.05,
+   "pd_rif": 0.9,
+   "pfa": 0.0001,
+   "esponente": 4,
+   "r_max_m": 500.0,
+   "periodo_s": 0.1,
+   "sigma_r_m": 0.05,
+   "sigma_az_rad": 0.002,
+   "sigma_el_rad": 0.002
+  },
+  "cooperativa": {
+   "tipo": "cooperativa",
+   "periodo_s": 0.5,
+   "sigma_pos_m": 30.0,
+   "sigma_vel_ms": 2.0,
+   "nota": "ADS-B (posizione circa 2 volte al secondo) e identificazione a distanza dei droni (circa 1 Hz): cadenze M, non verificate oggi. E' una misura in piu': non crea 'libero', e il suo silenzio non chiude una traccia."
+  }
+ },
+ "avviso": {
+  "formula_fermo": "d_avv = v_max_inviluppo * (tau_lat + T_r + T_man) + w",
+  "formula_in_moto": "d_avv = (v_ego + v_max_inv) * (tau_lat + T_r) + v_ego^2 / (2 a_fr) + v_max_inv * v_ego / a_fr + w",
+  "tempestivo_se": "portata a cui la classe piu' piccola e' rilevabile con pd_cumulata_min entro n_passate_max >= d_avv; altrimenti l'uscita dice 'avviso non tempestivo per <classe>' e la zona oltre resta 'non verificata'",
+  "tau_lat_s": 1.0,
+  "w_m": 50.0,
+  "profili_ricevente": {
+   "operatore_di_sito": {
+    "v_ego": 0.0,
+    "T_r": 5.0,
+    "T_man": 10.0,
+    "a_fr": null,
+    "nota": "fermo; T_man = tempo per sgombrare o fermare l'attivita'"
+   },
+   "pilota_in_rullaggio": {
+    "v_ego": 15.4,
+    "T_r": 2.5,
+    "T_man": 0.0,
+    "a_fr": 3.0
+   },
+   "pilota_remoto_di_drone": {
+    "v_ego": 19.0,
+    "T_r": 2.5,
+    "T_man": 0.0,
+    "a_fr": 6.9,
+    "T_collegamento": 0.5
+   },
+   "macchinista": {
+    "v_ego": 83.3,
+    "T_r": 2.5,
+    "T_man": 0.0,
+    "a_fr": 1.5
+   }
+  },
+  "fonti": {
+   "tutti": "I; T_r 2,5 s ripreso da f14 (AASHTO, guidatore lento); v_ego dai profili di classe"
+  }
+ },
+ "correzioni_v2": "Correzioni 1-5 del verdetto f15/30 (par. 4) e dell'attacco f15/20 (par. 4): inviluppo, passate correlate, mappa come ingresso di sicurezza, libero per classi, validazione-1 e 2 nel nucleo. Vedi NUCLEO_V2.md.",
+ "mappa": {
+  "regola": "la mappa degli ostacoli e del disturbo e' un ingresso di SICUREZZA. Una cella illuminata conta come guardata solo se la linea di vista e' certificata: (a) la cella e' in una zona di mappa dichiarata completa (rilievo con data), oppure (b) sul suo raggio era atteso un ritorno dello sfondo (terreno o struttura nota) oltre la cella, ed e' stato misurato alla distanza attesa entro la tolleranza. Ritorno dello sfondo atteso e mancante: raggio non certificato. Ritorno statico piu' vicino dell'atteso: ostacolo non in mappa, le celle oltre vanno 'in ombra' e si annota l'evento",
+  "certificata_predefinita": false,
+  "tolleranza_sfondo_m": 2.0,
+  "fonti": {
+   "tutti": "I"
+  }
+ },
+ "classi_escluse": {
+  "multirotore_C0": {
+   "rcs_m2": 0.00016,
+   "v_max": 19.0,
+   "nota": "drone sotto 250 g (attacco X6): fuori dal 'libero'"
+  },
+  "pedone": {
+   "rcs_m2": 0.5,
+   "v_max": 2.5,
+   "nota": "attacco X6"
+  },
+  "due_ruote": {
+   "rcs_m2": 2.0,
+   "v_max": 30.0,
+   "nota": "I"
+  },
+  "aereo_in_volo": {
+   "rcs_m2": 2.0,
+   "v_max": 210.0,
+   "nota": "nel sito sorvegliato: limite dichiarato (decisione del coordinatore)"
+  }
+ }
+}

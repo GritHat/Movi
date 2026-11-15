@@ -1,0 +1,5 @@
+INTERNI	\bv[123]\b	riga 3	meteo: di ogni mezzo MoVi dice se lo vede, dove può essere quando non lo vede, e quando non lo sa.                                            v2.0 · 1
+## INTERNI: 1
+NONDIRE	ingaggi	riga 24	• MoVi osserva e avvisa: nessuna uscita è un comando, nessuna funzione d’ingaggio o di puntamento.
+## NONDIRE: 1
+## SUPERATE: 0

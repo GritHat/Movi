@@ -1,0 +1,30 @@
+{
+ "commento": "VIDEO v3 (fase 2c, sciame-tracciamento): come lp_E2.json, col nucleo v3; mappa DICHIARATA completa da questa scena (voce mappa_certificata: il simulatore conosce gli ostacoli, ipotesi). SIMULAZIONE dalle schede, nessun sensore fisico; etichette a mano. Prima: VIDEO (fase 2b, sciame-sviluppatore): avaria con fiammata in corsa di decollo: camere non affidabili, radar resta, detriti in pista, avviso al mezzo; nucleo e strato eventi v2. SIMULAZIONE dalle schede, nessun sensore fisico; etichette a mano.",
+ "modo": "lungo",
+ "scenario": "E2",
+ "sorgente": {
+  "tipo": "scena_lp",
+  "scenario": "E2",
+  "condizione": {
+   "configurazione": "alta"
+  },
+  "piano": [
+   0,
+   1450,
+   -700,
+   750
+  ],
+  "celle_lato": 24,
+  "passaggio": 0,
+  "nucleo": "v3",
+  "mappa_certificata": true
+ },
+ "classi_ammesse": [],
+ "profilo_portatore": "stazione_fissa",
+ "profilo_ricevente": "operatore_di_sito",
+ "etichette": "../etichette/lunga_portata.json",
+ "interruttori": {},
+ "parametri": {},
+ "seme": 0,
+ "origine_dati": "simulati"
+}

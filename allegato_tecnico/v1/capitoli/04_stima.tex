@@ -1,0 +1,218 @@
+\section{Rilevamento, classificazione, associazione e stima dello stato}\label{sec:sti}
+
+Il capitolo descrive come i punti di profondità diventano gruppi, quando un gruppo è dichiarato «mobile», quale classe e quale profilo cinematico porta una traccia, e come un filtro di Kalman a velocità quasi costante \cite{kalman1960} ne stima posizione e velocità. Tutti i risultati vengono da dimostrazioni nel modello dichiarato \prova{D}, da calcoli \prova{C}, da simulazioni \prova{S} o da traiettorie pubbliche di pedoni \prova{P}; nessuno viene da un sensore fisico, e ciò che richiederebbe un sensore è marcato \prova{N}. Le frequenze portano la numerosità $N$ e l'intervallo di Wilson al 95\,\%.
+
+\begin{proposizione}[Ordine della catena]\label{prop:sti-ordine}
+Siano $Z_k$ i rilevamenti non etichettati del ciclo $k$ e, per ogni traccia $i$, un filtro con previsione $(\hat{\mathbf x}_i^-,P_i^-)=(F\hat{\mathbf x}_i,\,FP_iF^{\top}+Q)$ e aggiornamento funzione di $(\hat{\mathbf x}_i^-,P_i^-,\mathbf z)$ per una misura $\mathbf z$ attribuita a $i$. Ogni esecuzione corretta rispetta l'ordine parziale: rilevamento e previsione $\to$ associazione $\to$ aggiornamento $\to$ decisione. \prova{D}
+\end{proposizione}
+\begin{proof}
+L'aggiornamento richiede i rilevamenti e la corrispondenza fra tracce e misure; l'associazione usa la porta $\nu^{\top}S^{-1}\nu\le\gamma$, con $\nu=\mathbf z-H\hat{\mathbf x}_i^-$ e $S=HP_i^-H^{\top}+R$, quindi richiede la previsione; la decisione legge stato e covarianza aggiornati.
+\end{proof}
+La previsione precede dunque l'associazione, e l'aggiornamento consuma misure già associate: è lo schema degli inseguitori per rilevamento, con filtro di Kalman e assegnamento ungherese a valle del rilevatore \cite{bewley2016}.
+
+
+\subsection{Dai punti ai gruppi}\label{sec:sti-gruppi}
+
+\begin{definizione}[Cella occupata, gruppo, gruppo tagliato]\label{def:sti-gruppo}
+Una cella $(\varphi,\rho)$ della mappa polare ($1^\circ\times0{,}1\unita{m}$, $\rho\le3\unita{m}$) è «occupata osservata» se contiene almeno $n_{\min}=3$ punti di profondità con quota $y\in[0{,}07;\,2]\unita{m}$, anche se sta oltre la prima cella occupata del suo azimut (è la definizione del \S\ref{sec:map}). Un \emph{gruppo} è una componente connessa di celle occupate, con vicinanza a otto celle negli indici $(\varphi,\rho)$; il suo centro $\mathbf c$ è la media delle coordinate $(x,z)$ dei suoi punti. Un gruppo è \emph{tagliato} quando confina con celle in ombra di un gruppo più vicino alla camera o tocca il bordo del campo.
+\end{definizione}
+Il centro della parte visibile non è il centro dell'oggetto: un gruppo tagliato non aggiorna il filtro, non entra nella regola «mobile», non fa nascere tracce e non riceve etichette nuove.
+
+\paragraph{Rumore del centro.} Per una camera stereo $d=f\,b/\text{disparità}$, quindi un errore di disparità $\sigma_d$ dà
+\begin{equation}\label{eq:sti-sigmaz}
+\sigma_z(d)=\frac{d^2}{f\,b}\,\sigma_d,\qquad
+\sigma_t(d)=\frac{d\,\pi/180}{\sqrt{12}},\qquad
+R(d)=\sigma_z^2(d)\,\mathbf u_r\mathbf u_r^{\top}+\sigma_t^2(d)\,\mathbf u_t\mathbf u_t^{\top},
+\end{equation}
+con $\mathbf u_r$ versore dalla camera al centro, $\mathbf u_t$ il suo ortogonale sul suolo e $\sigma_t$ lo scarto tipo di un errore uniforme sulla cella di $1^\circ$. Con $\sigma_d=0{,}08\unita{px}$ e crescita quadratica con la distanza \cite{realsense-taratura-profondita}, e con i valori assunti $f=424\unita{px}$ e $b=0{,}05\unita{m}$, si ha $\sigma_z=1{,}51/3{,}40/6{,}04\unita{cm}$ a $2/3/4\unita{m}$ (curva \emph{nominale}) e $\sigma_t=1{,}01/1{,}51/2{,}02\unita{cm}$ \prova{C}. Come analisi di sensibilità si usano due curve più severe: $4\,(d/2)^2\unita{cm}$ (\emph{pessimista}: $4/9/16\unita{cm}$) e $5\,(d/2)^2\unita{cm}$ (\emph{severa}: $5/11{,}25/20\unita{cm}$). Il rumore del centro di un gruppo di $n$ punti sta fra $\sigma/\sqrt n$ (errori indipendenti) e $\sigma$ (errori del tutto correlati), se gli errori hanno uguale varianza e correlazioni non negative \prova{D}; il progetto adotta l'estremo prudente $\sigma_c=\sigma_z(d)$. Il valore reale di $\sigma_c$ è non verificato sperimentalmente \prova{N}: su profondità simulata dalle schede tecniche, per una persona ferma (20 semi), il rumore radiale mediano è $0{,}36/0{,}99/1{,}25\unita{cm}$ a $2/3/4\unita{m}$; l'unico dato da una sequenza pubblica reale \cite{depthtrack} (altro sensore della stessa famiglia, 288 fotogrammi, senza verità di riferimento) è $5{,}8$--$6{,}8\unita{cm}$ sotto $3\unita{m}$. I due valori stanno ai lati opposti della curva nominale.
+
+\subsection{La regola «mobile»}\label{sec:sti-mobile}
+
+\begin{definizione}\label{def:sti-mobile}
+Sia $\bar{\mathbf c}_k=(\mathbf c_k+\mathbf c_{k-1}+\mathbf c_{k-2})/3$ la media di $m=3$ centri consecutivi non tagliati. Al fotogramma $k$ si confronta $\bar{\mathbf c}_k$ con la media più vecchia disponibile $\bar{\mathbf c}_j$, con $m\le k-j\le1/\Delta$ (medie disgiunte, finestra fino a $1\unita{s}$). Il gruppo è «mobile» se, lungo l'asse radiale o lungo quello trasversale,
+\begin{equation}\label{eq:sti-soglia}
+|\bar c_k-\bar c_j|>k_s\,\sigma\,\sqrt{2/m},\qquad k_s=5,
+\end{equation}
+con $\sigma=\sigma_z(d)$ o $\sigma_t(d)$ alla maggiore delle distanze ai due capi.
+\end{definizione}
+
+\begin{proposizione}[Falso allarme e rilevamento]\label{prop:sti-mobile}
+Siano gli errori del centro gaussiani, indipendenti fra i fotogrammi, di scarto tipo $\sigma$ lungo un asse. (a) Per un oggetto fermo la differenza di due medie disgiunte di $m$ fotogrammi è $\mathcal N(0,\sigma_\delta^2)$ con $\sigma_\delta=\sigma\sqrt{2/m}$; la soglia \eqref{eq:sti-soglia} vale $k_s\sigma_\delta$ e la probabilità di falso allarme per prova e per asse è $P_{fa}=2\,[1-\Phi(k_s)]$. (b) Per un oggetto con componente di velocità $v$ lungo l'asse, nella finestra $T_w=(k-j)\Delta$ lo spostamento è $\delta=v\,T_w$ e
+\[P_{\mathrm{mob}}=\Phi\!\Big(\frac{\delta}{\sigma_\delta}-k_s\Big)+\Phi\!\Big(-\frac{\delta}{\sigma_\delta}-k_s\Big),\]
+quindi nella prova singola la velocità rilevata con probabilità $0{,}5$ è $v_{0,5}=k_s\sigma_\delta/T_w$ e quella rilevata con probabilità $0{,}9$ è $v_{0,9}=(k_s+1{,}2816)\,\sigma_\delta/T_w$. \prova{D}
+\end{proposizione}
+\begin{proof}
+Ogni media ha varianza $\sigma^2/m$; le due medie sono indipendenti perché disgiunte, quindi la differenza ha varianza $2\sigma^2/m$ e media $0$ (oggetto fermo) o $\delta$ (oggetto in moto). $P_{\mathrm{mob}}$ è la massa oltre $\pm k_s\sigma_\delta$; il secondo termine è trascurabile e $P_{\mathrm{mob}}=0{,}9$ quando $\delta/\sigma_\delta-k_s=1{,}2816$.
+\end{proof}
+Con $m=3$: $\sigma_\delta=0{,}8165\,\sigma$, soglia $4{,}08\,\sigma$ ($6{,}2\unita{cm}$ in radiale e $4{,}1\unita{cm}$ in trasversale a $2\unita{m}$, curva nominale), $P_{fa}=5{,}7\cdot10^{-7}$. Nel primo secondo di una traccia a $15\unita{Hz}$ le prove sono al più 13 per asse: per la disuguaglianza dell'unione la probabilità di almeno un'etichetta falsa è $\le2\cdot13\cdot5{,}7\cdot10^{-7}=1{,}5\cdot10^{-5}$. Con la finestra massima $T_w=13\Delta=0{,}867\unita{s}$, in radiale $v_{0,5}/v_{0,9}$ valgono $0{,}071/0{,}089\unita{m/s}$ a $2\unita{m}$ e $0{,}160/0{,}201$ a $3\unita{m}$ con la curva nominale, $0{,}424/0{,}533$ a $3\unita{m}$ con la pessimista e $0{,}530/0{,}666$ con la severa \prova{C}: un pedone a $0{,}5\unita{m/s}$ in avvicinamento da $3\unita{m}$ sta sopra la soglia con la prima, vicino con la seconda, sotto con la terza (Tabella~\ref{tab:sti-mobile}).
+
+\begin{table}[H]\centering\footnotesize
+\caption{Regola «mobile», oggetto a $0{,}5\unita{m/s}$: quota di tracce etichettate entro $1\unita{s}$. In simulazione, con modello ideale del sensore (centro puntiforme, rumore gaussiano indipendente e noto, $15\unita{Hz}$) \prova{S}. Da $2\unita{m}$: di traverso o in avvicinamento, tre curve di rumore; da $3\unita{m}$: in avvicinamento. Prova singola \prova{C}: probabilità che scatti la sola prova alla finestra massima $T_w=0{,}867\unita{s}$ (Proposizione~\ref{prop:sti-mobile}), con la soglia \eqref{eq:sti-soglia} alla distanza di partenza e lo scarto tipo alle distanze dei due capi della finestra ($2{,}97$ e $2{,}53\unita{m}$); con lo scarto tipo a $3\unita{m}$ a entrambi i capi si ottengono $0{,}815$ e $0{,}389$ per le curve pessimista e severa. Con la curva severa la prova singola sovrastima la simulazione, perché la regola usa la maggiore delle distanze \emph{misurate}, che il rumore gonfia. Le percentuali della prima colonna sono quelle stampate dalla simulazione; i conteggi sono dedotti.}\label{tab:sti-mobile}
+\begin{tabular}{lccc}
+\toprule
+Caso & Simulazione, $N=2000$ & Ricalcolo, $N=20\,000$ & Prova singola\\
+\midrule
+da 2 m, sei casi & 100\,\% in ciascuno ($\ge99{,}81\,\%$) & 100\,\% ($\ge99{,}98\,\%$) & 1,000\\
+da 3 m, curva nominale & 100\,\% & 100\,\% & 1,000\\
+da 3 m, curva pessimista & 85,85\,\% (84,3--87,3) & 86,2\,\% (85,7--86,7) & 0,853\\
+da 3 m, curva severa & 26,6\,\% (24,7--28,6) & 26,9\,\% (26,3--27,5) & 0,371\\
+fermo: tracce con etichetta falsa & 0 su 4000 in ciascuno ($\le0{,}10\,\%$) & 1 su 120\,000 & $\le1{,}5\cdot10^{-5}$\\
+\bottomrule
+\end{tabular}
+\end{table}
+\paragraph{Condizioni di validità.} (i) Rumore noto: se quello creduto è la metà del vero la soglia scende a $2{,}5\,\sigma_\delta$ e, in simulazione con modello ideale del sensore, il $10{,}9\,\%$ delle tracce ferme riceve un'etichetta falsa nel primo secondo ($N=20\,000$, curva pessimista, $2\unita{m}$) \prova{S}. (ii) Errori indipendenti fra i fotogrammi, senza valori aberranti. (iii) Il centro cambia solo per il rumore di misura, non perché cambia l'insieme delle celle del gruppo.
+
+\begin{controesempio}[Pixel misti e fusione dei gruppi]\label{ctr:sti-misti}
+Su profondità simulata dalle schede tecniche, con i \emph{pixel misti} ai bordi delle sagome (profondità intermedie fra l'oggetto vicino e lo sfondo), un pannello fermo dietro cui passa una persona è etichettato «mobile» in 79 passaggi su 90 (79,4--93,0\,\%) \prova{S}. Cade la condizione (iii): quando le sagome si toccano i pixel misti riempiono celle «ponte» e i due gruppi diventano uno (90 passaggi su 90); il centro del gruppo fuso si sposta di decine di centimetri contro una soglia di 4--6\,cm, e la regola legge come moto un cambio di segmentazione. Senza pixel misti la fusione passa da 10 casi su 10 a 1 su 10. L'entità dei pixel misti è un'ipotesi del modello del sensore: l'effetto è non verificato sperimentalmente \prova{N}.
+\end{controesempio}
+
+\paragraph{Una soglia di punti assoluta non rimedia.} Con $n_{\min}=40$ a $424\times240$ pixel le etichette false scendono a 5 passaggi su 90 (2,4--12,4\,\%), ma una scatola alta 15\,cm a $2\unita{m}$ è vista in 3 prove su 10 anziché 10 su 10; a $848\times480$ la stessa soglia dà la continuità dell'identità in 0 passaggi su 10, e 160 in 10 su 10 \prova{S}: i punti per cella scalano con $f_xf_y/d^2$ e con l'area della cella. Le celle ponte hanno 33--125 punti e quelle della scatola 13--43: nessuna soglia per cella le separa. Una soglia proporzionale ai pixel attesi applicata alle celle della mappa produce inoltre «libero» nell'ombra vera della scatola (98 e 91 celle$\cdot$fotogramma a 424 e 848 pixel di larghezza, contro 0 e 4 con la mappa invariata) \prova{S}: le soglie vanno poste sui gruppi, non sulle celle che decidono ombra e «libero» (\S\ref{sec:map}).
+
+\paragraph{Regola dei gruppi a celle forti.} Questa regola, le condizioni (c)--(e) del riaggancio (\S\ref{sec:sti-riaggancio}) e l'avviso per le tracce chiuse vicino a un'ombra (\S\ref{sec:occ-risultati}) non fanno parte della \emph{configurazione di riferimento} (gruppi per componenti connesse della Definizione~\ref{def:sti-gruppo}, riaggancio senza le condizioni (c)--(e)): si attivano all'avvio solo se le prove d'ingresso del \S\ref{sec:lim-salute} sono superate, e l'uscita dichiara quali sono attive. La mappa non cambia. Sia $n(c)$ il numero di punti della cella $c$ e $N_{\mathrm{att}}(\rho)=\max\{n_{\min},\lceil f_xf_y\,\Delta\varphi\,h_{\mathrm{rif}}/\rho\rceil\}$, con $h_{\mathrm{rif}}=0{,}05\unita{m}$ e $\Delta\varphi=1^\circ$ in radianti (20 punti a $2\unita{m}$ a 424 pixel di larghezza, 79 a 848). In ogni componente connessa $K$ di celle occupate sono \emph{forti} le celle con $n(c)\ge\eta\max_K n$ e $n(c)\ge N_{\mathrm{att}}(\rho_c)$, $\eta=0{,}30$; i gruppi sono le componenti connesse delle celle forti, e un gruppo a distanza $d_G$ è scartato se ha meno di $f_xf_y\,A_{\mathrm{rif}}/d_G^2$ punti, $A_{\mathrm{rif}}=0{,}004\unita{m^2}$. Le celle deboli restano «occupato» e fanno ombra. Il valore di $\eta$ è tarato su sequenze simulate; le cifre seguenti sono su altri semi. Su profondità simulata dalle schede tecniche, 424 e 848 pixel di larghezza \prova{S}: pannello «mobile» in 0 passaggi su 140 nel dominio dell'identità al ritorno, con rumore nominale (130 e 94 con i gruppi della Definizione~\ref{def:sti-gruppo}); fuori da quel dominio, in una replica con il soggetto sulla linea a $2{,}1\unita{m}$ dalla camera, in 7 passaggi su 10 a entrambe le risoluzioni (40--89\,\%): lo zero vale solo nel dominio; 0 tracce confermate sul suolo vuoto (9 sequenze; 137 e 206 con i gruppi per componenti connesse); scatola di 15\,cm a $2\unita{m}$ vista in 190 fotogrammi su 190 (19 sequenze, 3 delle quali al livello degradato del modello di rumore). \emph{Limiti di validità}: un cubo di 10\,cm a $2\unita{m}$ resta «occupato» ma non è mai un gruppo (0 fotogrammi su 60), e la scatola di 15\,cm a $2{,}8\unita{m}$ lo è in 45 su 60 (63--84\,\%): la taglia minima inseguibile è 15\,cm entro $2\unita{m}$. Al livello degradato del modello di rumore la regola non regge (105--106 tracce confermate su 3 pavimenti vuoti): l'avvio prevede perciò una prova d'ingresso (suolo vuoto, zero gruppi).
+
+\subsection{Classificazione e profili cinematici di classe}\label{sec:sti-classi}
+
+\begin{riquadro}{Stato dichiarato del componente}
+Il sistema \emph{richiede} un classificatore su più classi di oggetti in movimento. In questo lavoro il classificatore \emph{non è realizzato né valutato}: nessun modello è stato eseguito o addestrato. È simulato con etichette assegnate a mano nelle prove (da un copione della scena) e, per misurare la sensibilità del sistema, con errori iniettati da una matrice di confusione e da un ritardo dichiarati, a seme fisso. Nessuna classe diversa da «persona» è stata simulata nella catena completa. Un'etichetta non produce un «libero» né riduce un avviso acceso; può cambiare l'esito di un riaggancio, e quindi gli ingressi successivi (\S\ref{sec:occ-classe}).
+\end{riquadro}
+
+\paragraph{Interfaccia.} Per ogni traccia confermata il componente riceve i ritagli di profondità degli ultimi fotogrammi con la maschera del gruppo e la marca «tagliato», le dimensioni metriche, la storia della traccia e lo stato di visibilità. Restituisce, come campi della traccia: \emph{classe}; \emph{livello} (tipo, categoria, non classificato); \emph{fiducia}; \emph{origine} dell'etichetta (a mano; a mano con errori iniettati; modello); \emph{età}; \emph{smentita}. Con origine «a mano» la fiducia è «non applicabile»; l'origine «modello» qui non compare mai. Il componente è asincrono (1--2\,Hz o a evento) e il ciclo a $15\unita{Hz}$ non lo attende. L'etichetta è una proprietà della traccia: non entra nel costo d'associazione né nella porta di validazione; entra, attraverso la forma della regione di previsione, nella porta del riaggancio (\S\ref{sec:occ-classe}); in occlusione resta con la sua età; al riaggancio è «presunta», come l'identità (\S\ref{sec:sti-riaggancio}); con identità ambigua decade a «non classificato». Il componente scrive solo i campi dell'etichetta: non scrive celle, non rilascia avvisi, non abbassa livelli.
+
+\paragraph{Tassonomia con ripiego.} Sei categorie: persona; veicolo terrestre; veicolo ferroviario; aeromobile; oggetto mobile generico (carrello a mano, porta o barriera, carico sospeso, animale); non classificato. I tipi sono le righe della Tabella~\ref{tab:sti-profili}. Vale il tipo se la sua probabilità è almeno $0{,}7$ (ipotesi, da tarare); altrimenti la categoria, se la somma dei suoi tipi è almeno $0{,}7$; altrimenti «non classificato». Il profilo di una categoria è il caso peggiore dei suoi tipi; quello di «non classificato» è l'inviluppo dello \emph{scenario}, cioè delle classi ammesse nel sito, dichiarato all'avvio. Salire nella gerarchia può quindi solo allargare. È «non classificato» anche chi non ha etichetta, il gruppo tagliato e l'etichetta smentita.
+
+\begin{table}[!htb]\centering\footnotesize
+\caption{Profili cinematici a priori delle classi: valori iniziali di configurazione, non un riferimento. Origine dei valori: $^{a}$ letto in una fonte pubblica di terza mano, non riscontrato su una fonte primaria e per questo senza riferimento bibliografico; $^{b}$ valore non verificato su una fonte primaria; senza marca: ipotesi. Solo 9 velocità su 30 hanno una fonte consultata.}\label{tab:sti-profili}
+\begin{tabularx}{\linewidth}{@{}p{4.6cm}p{2.0cm}p{2.0cm}L@{}}
+\toprule
+Classe & $v$ tipica / massima (m/s) & acc. / frenata massime (m/s$^2$) & Gradi di libertà e modello di moto\\
+\midrule
+persona a piedi & 1,4$^{a}$ / 2,5$^{a}$ & 3,0 / 4,0 & 2, quasi olonomo; si ferma e inverte in un passo\\
+persona di corsa & 3,0 / 8,0 & 4,0 / 4,0 & come sopra\\
+bicicletta & 4,3$^{a}$ / 8,3 & 2,0 / 5,0 & non olonomo, raggio $\ge2$ m\\
+monopattino & 4,2 / 5,6$^{a}$ & 2,0 / 4,0 & non olonomo, raggio $\ge1{,}5$ m\\
+carrello elevatore & 2,2$^{b}$ / 4,5$^{b}$ & 1,5 / 2,5 & non olonomo, sterzo posteriore\\
+veicolo a guida automatica & 1,0 / 2,0$^{a}$ & 1,0$^{b}$ / 2,0 & uniciclo o omnidirezionale\\
+auto o furgone, area di lavoro & 2,8 / 8,3 & 3,0 / 6,9$^{a}$ & non olonomo, raggio $\approx5{,}5$ m$^{b}$\\
+auto o furgone, strada urbana & 8,3 / 13,9$^{a}$ & 3,0 / 6,9$^{a}$ & come sopra\\
+trattore di piazzale con rimorchi & 1,7$^{a}$ / 8,3$^{a}$ & 1,5 / 4,0 & articolato: i rimorchi tagliano la curva\\
+aereo in rullaggio & 9,0$^{a}$ / 15,4$^{b}$ & 1,0 / 3,0 & non olonomo, raggio $\ge20$ m; l'ala spazza oltre le ruote\\
+aereo al traino & 1,4$^{b}$ / 4,2$^{b}$ & 0,5 / 1,5 & articolato, grande raggio\\
+treno in arrivo in banchina & 11,0 / 16,7 & 1,0 / 1,5$^{a}$ & 1, sul binario\\
+tram a una fermata & 5,6 / 13,9 & 1,3 / 2,5$^{b}$ & 1, sul binario\\
+treno o carri in manovra & 4,2 / 8,3$^{b}$ & 0,5 / 1,5$^{a}$ & 1, sul binario; spesso spinto\\
+multirotore & 3,0$^{b}$ / 19,0$^{b}$ & 6,9$^{b}$ / 6,9$^{b}$ & 3 più l'imbardata; non rappresentato dalla mappa del suolo\\
+non classificato & inviluppo dello scenario & inviluppo & olonomo: il caso peggiore\\
+\bottomrule
+\end{tabularx}
+\end{table}
+Nella Tabella~\ref{tab:sti-profili} il massimo della persona a piedi è la media del passo massimo misurato, non un estremo. Treni e aerei non sono etichettabili da questo sensore: lunghezze di $200\unita{m}$ e $37{,}6\unita{m}$ contro una portata di $3\unita{m}$ danno sempre un gruppo tagliato; le loro righe servono alla configurazione dello scenario e al dominio per classe (\S\ref{sec:occ}).
+
+\paragraph{Controllo di coerenza cinematica.} Dal quarto ciclo con misura, un'etichetta è \emph{smentita} se in 4 degli ultimi 6 cicli vale una delle condizioni: (i) $|\hat{\mathbf v}|-2\sigma_v>\vmax(\text{classe})$; (ii) per le classi a un grado di libertà, distanza dalla linea configurata maggiore di $0{,}30\unita{m}+2\sigma_p$; (iii) per le classi non olonome, curvatura maggiore di $1{,}5$ volte la massima della classe, o inversione del verso in meno di $1\unita{s}$. Le soglie sono scelte, non tarate. Un'etichetta smentita decade a «non classificato», per quella traccia non torna, e la regione di previsione perde il livello dichiarato; l'insieme di possibile presenza e la fascia di guardia non si restringono. In simulazione, con modello ideale del sensore (4000 tracce per caso) \prova{S}: con l'etichetta giusta gli scatti falsi sono 0, 1 e 0 su 4000 per pedone, carrello e treno (un limite inferiore: le tracce rispettano per costruzione i limiti della classe); una «persona» a $6\unita{m/s}$ o a $3{,}5\unita{m/s}$ è smentita sempre, dopo $0{,}47\unita{s}$ (a $6\unita{m/s}$ sono $2{,}8\unita{m}$, quasi tutta la portata), e a $2{,}8\unita{m/s}$ nel $10{,}6\,\%$ dei casi; un carrello lento (1--$2{,}2\unita{m/s}$) etichettato «pedone» nel $4{,}1\,\%$, un pedone etichettato «carrello» nel $5{,}2\,\%$; un veicolo fermo etichettato «persona» in 0 casi su 2000. Il controllo toglie le etichette palesemente incompatibili con il moto osservato: non convalida un'etichetta e non è una barriera di sicurezza.
+
+\paragraph{Requisiti posti al classificatore.} Le soglie sono ipotesi di progetto \prova{N}. (1)~Classi: la tassonomia almeno a livello di categoria, con «non classificato» come uscita effettiva. (2)~Fiducia tarata: errore di taratura atteso $\le0{,}05$ per classe su dati dello stesso sito; senza taratura la fiducia non si mostra. (3)~Prima etichetta entro $0{,}5\unita{s}$ dalla conferma della traccia: la portata di $3\unita{m}$ si attraversa in $0{,}75\unita{s}$ a $4\unita{m/s}$ e in $0{,}21\unita{s}$ a $14\unita{m/s}$, e la conferma chiede $0{,}27\unita{s}$: per le classi veloci protegge lo scenario dichiarato, non l'etichetta. (4)~Errori asimmetrici: tollerati gli scambi fra profili uguali e da lento a veloce ($\le10\,\%$); la probabilità che la classe vera sia più veloce di un'etichetta lenta è $\le1\,\%$; mai da libero a vincolato. (5)~Un tipo mai visto esce «non classificato»; la quota di oggetti ignoti con un'etichetta sicura è $\le5\,\%$. (6)~Al più un cambio d'etichetta ogni $2\unita{s}$ per traccia; nessuna etichetta nuova su un gruppo tagliato. (7)~Valutazione con partizioni per sito e per sequenza, mai per fotogramma, su un sito mai visto, per classe e con intervalli.
+
+\subsection{Modello del moto e filtro}\label{sec:sti-filtro}
+
+Lo stato è $\mathbf x=[p_x,p_z,v_x,v_z]^{\top}$. Per asse, $\dot p=v$ e $\dot v=a(t)$, con $a$ rumore bianco di densità $q$ (m$^2$/s$^3$), indipendente fra gli assi. Campionando a passo $\Delta$:
+\begin{equation}\label{eq:sti-modello}
+F=\begin{bmatrix}I_2&\Delta I_2\\0&I_2\end{bmatrix},\quad
+Q=q\begin{bmatrix}\tfrac{\Delta^3}{3}I_2&\tfrac{\Delta^2}{2}I_2\\[2pt]\tfrac{\Delta^2}{2}I_2&\Delta I_2\end{bmatrix},\quad
+H=\begin{bmatrix}I_2&0\end{bmatrix},\quad R=R(d).
+\end{equation}
+Predizione: $\hat{\mathbf x}^-=F\hat{\mathbf x}$, $P^-=FPF^{\top}+Q$. Innovazione: $\nu=\mathbf z-H\hat{\mathbf x}^-$, $S=HP^-H^{\top}+R$. Correzione: $K=P^-H^{\top}S^{-1}$, $\hat{\mathbf x}=\hat{\mathbf x}^-+K\nu$, $P=(I-KH)P^-(I-KH)^{\top}+KRK^{\top}$ (forma di Joseph, che conserva simmetria e positività). La correzione usa solo gruppi non tagliati che cadono nella porta (\S\ref{sec:sti-porta}).
+
+\begin{proposizione}[Forma chiusa di $Q$ e crescita senza misure]\label{prop:sti-crescita}
+Per asse, con $A=\begin{bsmallmatrix}0&1\\0&0\end{bsmallmatrix}$ e $G=[0,1]^{\top}$: (a) $Q(\Delta)=\int_0^{\Delta}e^{As}G\,q\,G^{\top}e^{A^{\top}s}\,ds=q\begin{bsmallmatrix}\Delta^3/3&\Delta^2/2\\\Delta^2/2&\Delta\end{bsmallmatrix}$, e $Q(\Delta_1+\Delta_2)=F(\Delta_2)Q(\Delta_1)F(\Delta_2)^{\top}+Q(\Delta_2)$: la previsione non dipende dal numero di passi in cui è spezzata. (b) Se all'ultima correzione la covarianza per asse ha elementi $P_{pp},P_{pv},P_{vv}$, dopo un tempo $\tocc$ senza misure
+\begin{equation}\label{eq:sti-crescita}
+\sigma_p^2(\tocc)=P_{pp}+2\,\tocc\,P_{pv}+\tocc^2\,P_{vv}+\frac{q\,\tocc^3}{3}.
+\end{equation}
+\prova{D}
+\end{proposizione}
+\begin{proof}
+(a) $A^2=0$, quindi $e^{As}=I+As$ e $e^{As}G=[s,1]^{\top}$: l'integrando è $q\begin{bsmallmatrix}s^2&s\\s&1\end{bsmallmatrix}$ e si integra termine a termine. La seconda identità si verifica sostituendo. (b) Per (a), $P(\tocc)=F(\tocc)PF(\tocc)^{\top}+Q(\tocc)$, il cui elemento di posizione è la tesi.
+\end{proof}
+Con covarianza isotropa la regione al livello $\alpha$ è un cerchio centrato in $\hat{\mathbf p}$ di raggio $r_\alpha=\sigma_p\sqrt{-2\ln(1-\alpha)}$, perché $\chi^2_2$ ha funzione di ripartizione $1-e^{-x/2}$: $r_{0,50}=1{,}177\,\sigma_p$, $r_{0,90}=2{,}146\,\sigma_p$, $r_{0,95}=2{,}448\,\sigma_p$.
+
+\begin{table}[H]\centering\footnotesize
+\caption{$\sigma_p(\tocc)$ per asse, in metri, dalla covarianza stazionaria a $15\unita{Hz}$ con rumore di misura di 5\,cm (per $q=0{,}2$: $\sqrt{P_{pp}}=3{,}3\unita{cm}$, $\sqrt{P_{vv}}=0{,}205\unita{m/s}$) \prova{C}.}\label{tab:sti-crescita}
+\begin{tabular}{llcccc}
+\toprule
+$q$ (m$^2$/s$^3$) & & 0,5 s & 1 s & 2 s & 3 s\\
+\midrule
+0,2 & $\sigma_p$ & 0,156 & 0,344 & 0,848 & 1,485\\
+ & $r_{0,95}$ & 0,38 & 0,84 & 2,08 & 3,64\\
+0,1 & $\sigma_p$ & 0,121 & 0,257 & 0,618 & 1,072\\
+0,05 & $\sigma_p$ & 0,096 & 0,194 & 0,453 & 0,777\\
+\bottomrule
+\end{tabular}
+\end{table}
+Con $q=0{,}2$ il raggio al 95\,\% supera $1\unita{m}$ dopo $1{,}15\unita{s}$ e $2\unita{m}$ dopo $1{,}95\unita{s}$: oltre un paio di secondi la regione copre gran parte di un'ombra larga uno o due metri e smette di localizzare. L'accumulo dell'errore senza misure è il punto di partenza anche di metodi di inseguimento recenti \cite{cao2023}.
+
+\subsection{Massa e accelerazione non si stimano}\label{sec:sti-massa}
+
+\begin{proposizione}[Non identificabilità della massa]\label{prop:sti-massa}
+Nel modello del punto materiale $M\ddot p(t)=u(t)$, con forza $u$ ignota e misure di sola posizione $y_k=p(t_k)+n_k$, la massa $M$ non è identificabile: per ogni $\lambda>0$ le coppie $(M,u)$ e $(\lambda M,\lambda u)$ producono la stessa legge delle misure. \prova{D}
+\end{proposizione}
+\begin{proof}
+$\ddot p=u/M=(\lambda u)/(\lambda M)$: a parità di condizioni iniziali le due coppie danno la stessa traiettoria e quindi la stessa distribuzione di $(y_k)$. Con forza costante in una dimensione, $p(t)=p_0+v_0t+\tfrac{u}{2M}t^2$; il gradiente rispetto a $(u,M)$ è $\tfrac{t^2}{2}\,g$ con $g=(1/M,-u/M^2)^{\top}$, e l'informazione di Fisher $\sigma^{-2}\sum_k\tfrac{t_k^4}{4}\,gg^{\top}$ ha rango 1, con direzione nulla $(u,M)^{\top}$.
+\end{proof}
+Il calcolo in aritmetica razionale ($u=120\unita{N}$, $M=75\unita{kg}$, 30 misure a $15\unita{Hz}$) dà determinante esattamente 0 \prova{C}. Un sensore di profondità non misura forze: ciò che si osserva è l'ingombro.
+
+\paragraph{Accelerazione.} Con errori di posizione indipendenti di scarto tipo $\sigma_p$, la differenza seconda $\hat a_k=(p_{k+1}-2p_k+p_{k-1})/\Delta^2$ ha scarto tipo $\sigma_a=\sqrt6\,\sigma_p/\Delta^2$, poiché $\mathrm{Var}(\hat a_k)=(1+4+1)\,\sigma_p^2/\Delta^4$ \prova{D}. Con $\sigma_p=3\unita{cm}$ (valore assunto: è la curva nominale a circa $2{,}8\unita{m}$) si ha $\sigma_a=66{,}1\unita{m/s^2}$ a $30\unita{Hz}$, $16{,}5$ a $15\unita{Hz}$ e $7{,}3$ a $10\unita{Hz}$, contro un'accelerazione efficace di $0{,}67\unita{m/s^2}$ nel modello di pedone usato in simulazione \prova{C}. Il limite non è algebrico (lo stato $[p,v,a]$ con misura della sola posizione ha matrice di osservabilità di rango 3) ma di precisione: ai minimi quadrati, per scendere sotto $1\unita{m/s^2}$ serve circa mezzo secondo di accelerazione \emph{costante} ($\sigma_a=0{,}71\unita{m/s^2}$ su $0{,}5\unita{s}$ a $30\unita{Hz}$) \prova{C}. In simulazione, con modello ideale del sensore (un solo modello di pedone che manovra, $15\unita{Hz}$, rumore di 5\,cm, 1500 prove per caso) \prova{S}, un filtro ad accelerazione costante sbaglia l'accelerazione di $0{,}82\unita{m/s^2}$ contro $0{,}67$ di valore efficace vero e, dopo $2\unita{s}$ senza misure, sbaglia la posizione di $2{,}29\unita{m}$ contro $1{,}18\unita{m}$ del modello a velocità quasi costante: lo stato si ferma a posizione e velocità. \emph{Con le classi}, massa e accelerazione entrano come \emph{valori a priori della classe} (intervalli della Tabella~\ref{tab:sti-profili}), marcati come tali, mai come stime dalle misure. Per la massa una fonte è stata consultata per tre sole classi; per le altre il campo resta vuoto.
+
+\subsection{Associazione, porta di validazione e conferma}\label{sec:sti-porta}
+
+\paragraph{Porta e assegnamento.} Una misura $\mathbf z$ è candidata per una traccia se $\nu^{\top}S^{-1}\nu\le\gamma$. Se l'innovazione è gaussiana di covarianza $S$ la forma quadratica è $\chi^2_2$, e la misura vera cade in porta con probabilità $P_G$ per $\gamma=-2\ln(1-P_G)$: $\gamma=9{,}210$ al 99\,\%, valore adottato \prova{D}. L'area della porta, $\pi\gamma\sqrt{\det S}$, cresce con $\sigma_p^2$: senza misure si allarga, e rende possibili gli scambi d'identità (\S\ref{sec:sti-riaggancio}). Fra tracce e gruppi non tagliati si costruisce la matrice dei costi $c_{ij}=\nu_{ij}^{\top}S_i^{-1}\nu_{ij}$ se in porta, vietato altrimenti, e si sceglie l'assegnamento di costo totale minimo con il metodo ungherese \cite{kuhn1955}, prima per le tracce confermate e poi, sui gruppi rimasti, per quelle in attesa di conferma.
+
+\begin{proposizione}[Conferma]\label{prop:sti-conferma}
+Una traccia è confermata con 3 rilevamenti in 5 cicli consecutivi. Con rilevamenti indipendenti di probabilità $P_D$ per fotogramma, un oggetto visibile per $n\le5$ fotogrammi è confermato con probabilità $\Pr[\mathrm{Bin}(n,P_D)\ge3]$ e, dal primo rilevamento, la conferma arriva al ciclo $+j$ ($j=2,3,4$) con probabilità $(j-1)\,P_D^2\,(1-P_D)^{j-2}$. \prova{D}
+\end{proposizione}
+\begin{proof}
+Al ciclo $+j$ cade il terzo rilevamento, e fra i $j-1$ cicli precedenti ne cade esattamente uno.
+\end{proof}
+Con $P_D=0{,}9$ resta non confermato il $27{,}1\,\%$ degli oggetti visti per 3 fotogrammi, il $5{,}2\,\%$ con 4 e lo $0{,}9\,\%$ con 5: le proprietà enunciate per le tracce confermate valgono per chi è stato visto almeno 4 fotogrammi ($0{,}27\unita{s}$ a $15\unita{Hz}$). Il ritardo dal primo rilevamento è di $+2$ cicli ($0{,}133\unita{s}$) con probabilità $0{,}81$; media $0{,}147\unita{s}$ \prova{C}. La conferma protegge dai falsi indipendenti da un ciclo all'altro, non da un ritorno spurio che persiste nella stessa cella. Su profondità simulata dalle schede tecniche, con i gruppi della Definizione~\ref{def:sti-gruppo}, i ritorni spuri sul suolo a grande incidenza hanno prodotto da 7 a 66 tracce false per passaggio \prova{S}; la frequenza di falsi di un sensore reale è non verificata \prova{N}.
+
+\subsection{Il valore di \texorpdfstring{$q$}{q}}\label{sec:sti-q}
+
+\paragraph{Scelta.} In simulazione, con modello ideale del sensore (un solo modello di pedone: salti di velocità a istanti casuali con rilassamento, $15\unita{Hz}$, rumore assunto 5\,cm) \prova{S}, $q=0{,}2\unita{m^2/s^3}$ è il valore per cui la media dell'innovazione normalizzata è $1{,}95$ contro il valore atteso 2. Dopo un tratto senza misure il cerchio al 95\,\% contiene la posizione vera nello $0{,}936/0{,}917/0{,}903/0{,}920$ dei casi a $0{,}5/1/2/3\unita{s}$ (1500 prove per caso); con $q=0{,}01$ la copertura a $2\unita{s}$ scende a $0{,}42$.
+
+\paragraph{Confronto con traiettorie pubbliche di pedoni.} Si usano le traiettorie dell'insieme pubblico THÖR \cite{thor} (persone al chiuso, con posizioni di riferimento accurate): ricampionate a $15\unita{Hz}$, con rumore gaussiano aggiunto di 2\,cm, $1\unita{s}$ di filtro con misure e poi $3\unita{s}$ di sola previsione. Una registrazione dà 227 tratti di 9 persone (taratura), un'altra 219 tratti di 9 persone (prova). L'occlusione è artificiale: questi dati misurano solo il modello del moto, non il rilevamento, l'ombra o l'identità.
+
+\begin{table}[H]\centering\footnotesize
+\caption{Traiettorie pubbliche di pedoni, $N=219$ tratti di 9 persone \prova{P}: copertura della regione al 90\,\% (tratti contenuti; intervallo di Wilson, che tratta i tratti come indipendenti). $^{\ast}$ Riga calcolata dopo aver visto i risultati della registrazione di prova: non vale come verifica.}\label{tab:sti-thor}
+\begin{tabular}{lccccc}
+\toprule
+$q$ & a 1 s & a 2 s & a 3 s & $r_{0,95}$ a 1/2/3 s (m) & Errore mediano (m)\\
+\midrule
+0,2 & 0,977 (214; 0,948--0,990) & 1,000 (219; 0,983--1) & 1,000 (219; 0,983--1) & 0,75 / 1,96 / 3,49 & 0,21 / 0,49 / 0,81\\
+0,1$^{\ast}$ & 0,945 (207; 0,907--0,968) & 0,945 & 0,945 & 0,55 / 1,41 / 2,50 & ---\\
+0,05 & 0,795 (174; 0,736--0,843) & 0,804 (176; 0,746--0,851) & 0,831 (182; 0,776--0,875) & 0,41 / 1,02 / 1,80 & 0,19 / 0,44 / 0,72\\
+\bottomrule
+\end{tabular}
+\end{table}
+Una seconda elaborazione degli stessi dati (altro codice, altra estrazione del rumore) dà $0{,}982/0{,}995/1{,}000$ per $q=0{,}2$, $0{,}922/0{,}950/0{,}941$ per $0{,}1$ e $0{,}836/0{,}822/0{,}840$ per $0{,}05$, con errore mediano $0{,}22/0{,}44/0{,}73\unita{m}$ per $q=0{,}2$. I tratti di una stessa persona non sono indipendenti (per persona la copertura con $q=0{,}05$ va da $0{,}43$ a $1{,}00$; ricampionando le persone l'intervallo è $1{,}27$ volte quello sui tratti), e la stessa regola di scelta dà $q=0{,}05$ su una registrazione e $0{,}1$ sull'altra.
+
+\paragraph{Copertura attesa se il modello fosse esatto.} Se il moto vero seguisse il modello \eqref{eq:sti-modello} con lo stesso $q$ del filtro, con rumori e condizione iniziale gaussiani ed esatti, $P$ sarebbe la covarianza dell'errore, $\mathbf e^{\top}P^{-1}\mathbf e\sim\chi^2_2$, e la regione al livello $\alpha$ conterrebbe la posizione vera con probabilità esattamente $\alpha$ a ogni $\tocc$; su $N$ tratti indipendenti i contenuti sarebbero $\mathrm{Bin}(N,\alpha)$ \prova{D}. Con $N=219$ e $\alpha=0{,}90$ si attendono $197{,}1\pm4{,}4$ tratti (intervallo centrale al 95\,\%: da 188 a 205). Con $q=0{,}2$ se ne osservano 214: averne almeno tanti ha probabilità $8\cdot10^{-6}$ sotto il modello esatto, quindi $q=0{,}2$ \emph{copre troppo}, nel verso prudente. Con $q=0{,}05$ se ne osservano 174 (probabilità $2{,}5\cdot10^{-6}$): copre troppo poco. I 207 con $q=0{,}1$ stanno appena sopra l'intervallo (probabilità $0{,}012$); questa riga è stata calcolata dopo aver visto i risultati della registrazione di prova e non vale come verifica. Il valore calibrato sta fra $0{,}05$ e $0{,}1\unita{m^2/s^3}$; la densità che riproduce gli errori mediani osservati è $q_{\mathrm{eff}}=0{,}058/0{,}050/0{,}044$ a $1/2/3\unita{s}$ \prova{C}. Il sistema mantiene $q=0{,}2$ come scelta prudente, non come taratura: a $3\unita{s}$ il cerchio al 95\,\% ha un raggio di $3{,}5\unita{m}$ e informa poco.
+
+\subsection{Il cerchio di covarianza non è una dichiarazione di precisione in occlusione}\label{sec:sti-cerchio}
+
+In simulazione, con modello ideale del sensore (soggetto puntiforme, $15\unita{Hz}$, rumore di 5\,cm, comportamenti generati da più simulatori scritti indipendentemente, $q=0{,}2$) \prova{S}: al livello nominale 90\,\% il cerchio contiene il soggetto nello $0{,}88$--$0{,}96$ dei casi fino a $5\unita{s}$ ($N=6000$), ma al livello nominale 50\,\% contiene lo $0{,}63$--$0{,}85$. Per comportamento, al 90\,\%: chi prosegue $1{,}00$; chi si ferma $0{,}86$--$1{,}00$; chi svolta $0{,}72$--$0{,}90$; chi torna indietro, a $2\unita{s}$, da $0{,}29$ a $0{,}77$ secondo il simulatore. Il rapporto fra i quantili 90\,\% e 50\,\% dell'errore va da $1{,}8$ a $4{,}5$; per una gaussiana è $\sqrt{\ln10/\ln2}=1{,}82$. Se la regione viene mostrata solo finché copre meno di metà dell'ombra, a $2\unita{s}$ senza osservazione essa contiene chi prosegue nello $0{,}00$--$0{,}06$ dei passaggi (tre disposizioni, 400 passaggi ciascuna), perché a quel punto non viene più emessa.
+
+La spiegazione è nel modello: il filtro assume un'accelerazione bianca, con errore gaussiano a una sola scala, $\sqrt{q\tocc^3/3}$, mentre il moto vero in occlusione è una miscela di comportamenti. Chi prosegue ha un errore molto più piccolo di $r_\alpha$; chi si ferma o torna indietro ha un errore grande, lungo la traiettoria e dietro il punto previsto. Il valore quasi giusto al 90\,\% in media nasce da due errori di segno opposto, e nessun valore di $q$ lo corregge, perché il rapporto fra i quantili di una gaussiana è fisso. Di conseguenza il cerchio del filtro serve come porta di associazione e come centro della previsione; la precisione dichiarata durante l'occlusione è affidata alla regione $\Reg_\alpha(t)$ del \S\ref{sec:occ}, e va misurata per fascia di $\tocc$ e per comportamento (\S\ref{sec:val}).
+
+\emph{Consistenza del filtro.} Nella simulazione del pedone che manovra (rumore 5\,cm, $q=0{,}2$, da 10 a $30\unita{Hz}$) l'innovazione normalizzata $\nu^{\top}S^{-1}\nu$ ha media $1{,}93$--$1{,}97$ (attesa 2), l'errore normalizzato dello stato $3{,}29$--$3{,}41$ (attesa 4) e l'autocorrelazione dell'innovazione a ritardo 1 è $-0{,}02$ \prova{S}. Poiché $R(d)$ non è misurata (\S\ref{sec:sti-gruppi}), la consistenza con un sensore reale è non verificata sperimentalmente \prova{N}: la deciderebbe la stessa statistica su un bersaglio fermo e su uno in moto noto.
+
+\subsection{Riaggancio dell'identità alla ricomparsa}\label{sec:sti-riaggancio}
+
+\paragraph{Regola.} Una traccia confermata che entra in un'ombra $\Omb(t)$ diventa una \emph{traccia in previsione} in quell'ombra. Un nuovo gruppo ne riprende l'identità solo se: (a) cade entro una fascia dall'ombra d'ingresso; (b) dista più della fascia dal bordo della portata e non tocca il bordo del campo; (c) non è tagliato; (d) non è il gruppo dell'ostacolo (non dà il primo ritorno su un azimut dell'ombra); (e) entro la fascia non ha celle non osservate o in ombra estranee all'ombra d'ingresso e alla propria; (f) la traccia in previsione è una sola. Le condizioni (c)--(e) si attivano solo dopo le prove d'ingresso (\S\ref{sec:lim-salute}). Altrimenti l'uscita è «identità ambigua» e nasce una traccia nuova. La fascia vale $0{,}40\unita{m}$ nelle prove su 27 configurazioni e su profondità simulata, $0{,}75\unita{m}$ nelle prove d'insieme con modello ideale del sensore. Al riaggancio il filtro \emph{riparte dalla misura}, con covarianza di posizione $R+(\ell/2)^2I$ ($\ell$ larghezza del gruppo) e scarto tipo di velocità di $2{,}5\unita{m/s}$: su una scena costruita a mano con una sosta di $5\unita{s}$ lo scarto massimo dopo il riaggancio scende da $5{,}00\unita{m}$ a $0{,}17\unita{m}$ ($N=1$) \prova{S}. L'identità ripresa è dichiarata \emph{presunta}, e l'avviso di possibile presenza non dipende da essa: resta finché le celle non sono viste libere (\S\ref{sec:occ}).
+
+\paragraph{Risultati in simulazione, con modello ideale del sensore} (soggetto rigido, rumore gaussiano, bordo d'ombra noto entro $\pm20\unita{cm}$, sensore e ostacolo fermi) \prova{S}. Ricomparse legittime riagganciate, con $P_D=1$: 400 su 400 in ciascuna di 27 configurazioni (limite inferiore di Wilson $99{,}05\,\%$; il conteggio è dedotto dalla quota stampata); con $P_D=0{,}9$, dal $99{,}7$ al 100\,\%. Nelle prove d'insieme, per chi ricompare lungo il percorso: 10\,711 su 10\,757, 9228 su 9240 e 6772 su 6967 in tre disposizioni (limiti inferiori $0{,}994/0{,}998/0{,}968$); per chi svolta o esce lontano dal punto previsto, $0{,}72$--$0{,}80$. Secondo soggetto mai visto che entra dal bordo del campo: 0 riagganci sbagliati su 2400 ($\le0{,}16\,\%$).
+
+\paragraph{Risultati su profondità simulata dalle schede tecniche} \prova{S}. Con i gruppi della Definizione~\ref{def:sti-gruppo} e la regola senza le condizioni (c)--(e), la stessa identità senza riagganci spuri si ottiene in 0 passaggi su 90 (limite superiore $4{,}1\,\%$): la persona si fonde con il pannello (Controesempio~\ref{ctr:sti-misti}), un ritorno spurio allo spigolo dell'ostacolo viene riagganciato a soggetto ancora nascosto, e le tracce false sul suolo rendono falsa la condizione (f). Con $n_{\min}=40$ a $424\times240$ pixel: 41 passaggi su 45 (79,3--96,5\,\%), e 0 su 6 al rumore degradato. Con i gruppi a celle forti (\S\ref{sec:sti-mobile}), le condizioni (a)--(f) e la ripartenza dalla misura: stessa identità presunta in 176 passaggi su 180 (94,4--99,1\,\%) a 424 pixel di larghezza e in 174 su 180 (92,9--98,5\,\%) a 848, su semi non usati per la taratura, compresa una replica su altri semi (chi passa a $1{,}2$ e a $0{,}5\unita{m/s}$ e chi si ferma $3\unita{s}$ dietro il pannello); i riagganci a persona ancora nascosta scendono da 11 e 6 a 1 e 1 su 140 passaggi.
+
+\begin{riquadro}{Dominio e limiti di validità del riaggancio}
+\emph{Dominio in cui il tasso vale} (solo simulazione): rumore nominale; un adulto solo ($\ge1{,}2\unita{m}$) a $0{,}5$--$1{,}6\unita{m/s}$; pannello fermo fra $1{,}5$ e $1{,}8\unita{m}$; persona $0{,}5\unita{m}$ dietro il pannello ed entro $2{,}6\unita{m}$ dalla camera; profili di tre camere; 424--848 pixel di larghezza; posa nota entro meno di $0{,}5^\circ$.
+\emph{Fuori}: persona a $2{,}8\unita{m}$, 0 passaggi su 10; a $0{,}3\unita{m}$ dal pannello, 0 e 1 su 10; bambino di $1{,}0\unita{m}$, 2 su 10 (6--51\,\%); errore di posa di $+0{,}5^\circ$, 6 su 10 (31--83\,\%); rumore degradato, 0 su 10. Chi ricompare sul bordo del campo riceve un'identità nuova (10 su 10).
+\emph{Secondo soggetto nella stessa ombra.} Un soggetto mai visto che esce dall'ombra in cui ne è entrato un altro riceve l'identità del primo: 2400 casi su 2400 (limite inferiore $99{,}84\,\%$) e 193 su 193 con modello ideale del sensore; 19 su 20 (76--99\,\%) su profondità simulata. Il limite è strutturale: due oggetti che escono dalla stessa fascia non sono distinguibili per posizione. L'identità presunta significa «dalla stessa ombra è uscito un oggetto».
+\emph{Fuori dal dominio della regola}: più tracce in previsione, ostacolo mobile, bordo d'ombra errato oltre $-20\unita{cm}$. Su un sensore reale nessuna cifra è verificata \prova{N}.
+\end{riquadro}

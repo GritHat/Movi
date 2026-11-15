@@ -1,0 +1,31 @@
+riprova_passaggi_v3.jsonl alta n 200 nonC0 libero 0/171 [0.000; 0.022] tempestivi 200/200 [0.981; 1.000] fuori_avviso 0/200 [0.000; 0.019] fa per comp {'ferma': 0, 'indietro': 0, 'nominale': 0, 'rallenta': 0, 'vira': 0} nasc>0 22 falsi_conf med 0.0 libero_tot nonC0 19494
+riprova_passaggi_v3.jsonl min n 200 nonC0 libero 0/171 [0.000; 0.022] tempestivi 200/200 [0.981; 1.000] fuori_avviso 12/200 [0.035; 0.102] fa per comp {'ferma': 6, 'indietro': 0, 'nominale': 0, 'rallenta': 6, 'vira': 0} nasc>0 200 falsi_conf med 0.0 libero_tot nonC0 19494
+riprova_passaggi_v3.jsonl scen presenti [('A1', 'alta'), ('A1', 'min')]
+riprova_passaggi_v3_letterale.jsonl alta n 200 nonC0 libero 163/171 [0.910; 0.976] tempestivi 200/200 [0.981; 1.000] fuori_avviso 0/200 [0.000; 0.019] fa per comp {'ferma': 0, 'indietro': 0, 'nominale': 0, 'rallenta': 0, 'vira': 0} nasc>0 22 falsi_conf med 0.0 libero_tot nonC0 19494
+riprova_passaggi_v3_letterale.jsonl scen presenti [('A1', 'alta')]
+lavori [('E1', 'alta'), ('E2', 'alta'), ('E5', 'alta')] errori 0
+E1 n=60 evento 60/60 [0.940; 1.000] falsi 0/60 [0.000; 0.060] entro2s(0..2) 51/60 [0.739; 0.919] neg 0 rit min/med/max 1.20/1.80/2.30 Rres min/med/max 3093/4500/5262 >=10km 0; Rimp med 4265; ispezione tolse punti in 0/60; libero_su_fram>0 0
+E2 n=30 evento 30/30 [0.886; 1.000] falsi 0/30 [0.000; 0.114] entro2s(0..2) 30/30 [0.886; 1.000] neg 0 rit min/med/max 0.20/0.20/0.30 Rres min/med/max 3676/3723/4014 >=10km 0; Rimp med 3529; ispezione tolse punti in 0/30; libero_su_fram>0 0 tracce_avvisate med 96.0
+E5 n=30 evento 0/30 [0.000; 0.114] falsi 0/30 [0.000; 0.114]
+cp_X5b cert=predefinito in_pianta=False: stato0(libero) 0/6 valori [3, 3, 3, 3, 3, 3]
+cp_X5b cert=predefinito in_pianta=True: stato0(libero) 0/6 valori [2, 2, 2, 2, 2, 2]
+cp_X5b cert=True in_pianta=False: stato0(libero) 5/6 valori [0, 0, 0, 0, 0, 3]
+cp_X5b cert=True in_pianta=True: stato0(libero) 0/6 valori [2, 2, 2, 2, 2, 2]
+== lp_A1_ingenua_v3 | convalida: errori: 0 | controprova:   "primo_esempio": {} /  } / }
+== lp_A1_v3 | convalida: errori: 0 | controprova:   "primo_esempio": {} /  } / }
+== lp_A2_v3 | convalida: errori: 0 | controprova:   "primo_esempio": {} /  } / }
+== lp_A3_v3 | convalida: errori: 0 | controprova:   "primo_esempio": {} /  } / }
+== lp_E1_v3 | convalida: errori: 0 | controprova:   "primo_esempio": {} /  } / }
+== lp_E2_v3 | convalida: errori: 0 | controprova:   "primo_esempio": {} /  } / }
+== lp_E3_v3 | convalida: errori: 0 | controprova:   "primo_esempio": {} /  } / }
+== lp_E4_v3 | convalida: errori: 0 | controprova:   "primo_esempio": {} /  } / }
+lp_A1_ingenua_v3 fotogrammi 228 libero mostrate 11245 tolte 55 controprova {'lp_A1_ingenua_v3': {}} primo evento (23.0, '[{"t": 23.0, "tipo": "traccia_rivista", "come_lo_so": "osservato", "traccia": 3, "tolto_guardando": true}]')
+lp_A1_v3 fotogrammi 228 libero mostrate 11293 tolte 7 controprova {'lp_A1_v3': {}} primo evento (72.0, '[{"t": 72.0, "tipo": "traccia_rivista", "come_lo_so": "osservato", "traccia": 26, "tolto_guardando": true}]')
+lp_A2_v3 fotogrammi 179 libero mostrate 0 tolte 0 controprova {'lp_A2_v3': {}} primo evento (12.0, '[{"t": 12.0, "tipo": "traccia_rivista", "come_lo_so": "osservato", "traccia": 3, "tolto_guardando": true}]')
+lp_A3_v3 fotogrammi 272 libero mostrate 0 tolte 0 controprova {'lp_A3_v3': {}} primo evento (54.0, '[{"t": 54.0, "tipo": "traccia_rivista", "come_lo_so": "osservato", "traccia": 1, "tolto_guardando": true}]')
+lp_E1_v3 fotogrammi 63 libero mostrate 0 tolte 0 controprova {'lp_E1_v3': {}} primo evento (17.5, '[{"t": 17.5, "tipo": "avviso_detriti", "come_lo_so": "dedotto", "traccia": 1, "motivo": "il percorso previsto entra nell\'impronta dei detriti (EV-E)"}, {"t": 17.5, "tipo": "avviso_detriti", "come_lo_s')
+lp_E2_v3 fotogrammi 89 libero mostrate 0 tolte 0 controprova {'lp_E2_v3': {}} primo evento (16.0, '[{"t": 16.0, "tipo": "avviso_detriti", "come_lo_so": "dedotto", "traccia": 1, "motivo": "il percorso previsto entra nell\'impronta dei detriti (EV-E)"}, {"t": 16.0, "tipo": "avviso_detriti", "come_lo_s')
+lp_E3_v3 fotogrammi 319 libero mostrate 0 tolte 0 controprova {'lp_E3_v3': {}} primo evento (26.5, '[{"t": 26.5, "tipo": "traccia_rivista", "come_lo_so": "osservato", "traccia": 1, "tolto_guardando": true}]')
+lp_E4_v3 fotogrammi 99 libero mostrate 0 tolte 0 controprova {'lp_E4_v3': {}} primo evento (44.5, '[{"t": 44.5, "tipo": "traccia_rivista", "come_lo_so": "osservato", "traccia": 23, "tolto_guardando": true}]')
+E1 Counter({'contatto': 58, 'separazione': 2}) contatto entro 2s 50
+E2 Counter({'avaria o fiammata': 30}) contatto entro 2s 0

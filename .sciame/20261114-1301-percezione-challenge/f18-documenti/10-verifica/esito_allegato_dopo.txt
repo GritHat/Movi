@@ -1,0 +1,31 @@
+INTERNI	riprova	riga 2073	sono stati riprovati su dati indipendenti dalla scelta.
+INTERNI	\bH\d+\b	riga 2483	Per distinguere una copertura p0 da una p1 si usa la prova binomiale esatta a una coda: si rifiuta H0 : p = p0
+INTERNI	\bH\d+\b	riga 2492	H0 contro alternativa   primo n (soglia)   n stabile    osservato   Wilson 95 %   esatto 95 % (due code)
+INTERNI	\bH\d+\b	riga 2503	circa 200 da 0,95. «27 su 30» dice «fra 0,74 e 0,97»: non esclude 0,80. Con n = 30 la prova di H0 : p = 0,90
+INTERNI	\bnucleo v	riga 3044	Tabella 32: Memoria e tempo per fotogramma (media / 95° percentile, in ms) sul nucleo veloce; profondità sintetica, N = 300
+INTERNI	\bnucleo v	riga 3080	2–4 ms con un raggio su 16 e 45–67 ms con tutti i raggi a 5 cm (44,5 / 49,1 ms sul nucleo veloce; 65,2 / 67,4 ms
+INTERNI	\bnucleo v	riga 3090	nucleo lento). Con tutti i raggi a 5 cm (figura 7) la griglia densa occupa il 74 % del periodo sul nucleo veloce
+INTERNI	\bnucleo v	riga 3143	di bordo non è misurata; il solo cambio di tipo di nucleo vale 1,49 volte. (2) La catena completa nel linguaggio
+INTERNI	riprova	riga 3471	dentro in 13 su 13 [C]; non è stato riprovato sulla catena [N].
+INTERNI	agent[ie] 	riga 4043	miscela di modelli interagenti [49] (velocità quasi costante, virata coordinata a sinistra e a destra, manovra), con
+INTERNI	\bv[123]\b	riga 5102	[88] adsb.lol. adsb.lol – open ads-b data, api v2. servizio di dati aperti; licenza ODbL 1.0, s.d. URL https:
+INTERNI	\bv[123]\b	riga 5103	//api.adsb.lol/v2/point/33.6407/-84.4277/12. interrogato il 15 novembre 2026 attorno all’aeroporto
+INTERNI	\bv[123]\b	riga 5124	[94] Fintraffic. Digitraffic – rail traffic, train locations. interfaccia di dati aperti; licenza CC BY 4.0; fonte: Fintraffic / digitraffic.fi, 2026.
+## INTERNI: 13
+NONDIRE	ingaggi	riga 258	«affidabilità persa». Il sistema osserva e avvisa: nessuna uscita è un comando, e non vi sono funzioni d’ingaggio
+NONDIRE	si restring	riga 1525	di possibile presenza e la fascia di guardia non si restringono. In simulazione, con modello ideale del sensore
+NONDIRE	tempo reale	riga 2990	voxel, allocati alla prima scrittura, schema proposto per la fusione volumetrica in tempo reale su hardware
+NONDIRE	tempo reale	riga 3277	griglie dinamiche di occupazione sono state realizzate in tempo reale con un filtro a particelle in parallelo [44].
+NONDIRE	tempo reale	riga 3278	Le mappe volumetriche a distanza con segno funzionano in tempo reale su un solo nucleo di CPU [45] o su GPU
+NONDIRE	ingaggi	riga 3341	scena e avvisa; non ha funzioni d’ingaggio né di puntamento. Tutte le cifre sono dimostrazioni in un modello
+NONDIRE	ingaggi	riga 3860	osserva e avvisa un operatore: nessuna uscita è un comando, e non vi sono funzioni d’ingaggio, di puntamento
+NONDIRE	avvisa solo	riga 3908	Un sistema che avvisa solo quando rivede l’oggetto arriva tardi: l’avviso deve partire prima dell’occlusione e
+## NONDIRE: 8
+SUPERATE	163	riga 1161	Lettura a 0,20 m con veto delle celle occupate e quota verificata                                163 (179)               1,3 m
+SUPERATE	163	riga 3057	Octree                                     163 264–377 856     1 004 672–2 691 008    5,02 / 5,39   11,2 / 12,1   72,2 / 75,7    161 / 171
+SUPERATE	12,5 s	riga 3892	aereo in finale e drone        operatore di torre             4 + 10 + 12,5 s, più 10 s di riattaccata;       91 m/s     3,9 km
+SUPERATE	oltre 10\s?km	riga 4256	4,5 km), mai oltre 10 km (0 su 60 [0; 0,06]). La zona non si riduce guardando: l’ispezione non ha tolto punti
+SUPERATE	163	riga 4355	1. Il «libero» con il radar a pannello dipende dalla mappa. Nella configurazione del sito, con la regola precedente, una sola passata mancata apriva u
+SUPERATE	163	riga 5107	record 18916312; dati d’origine OpenSky Network; licenza CC BY 4.0, s.d. URL https://zenodo.org/records/
+SUPERATE	163	riga 5108	18916312. consultato il 15 novembre 2026.
+## SUPERATE: 7

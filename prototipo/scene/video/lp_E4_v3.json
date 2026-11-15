@@ -1,0 +1,30 @@
+{
+ "commento": "VIDEO v3 (fase 2c, sciame-tracciamento): come lp_E4.json, col nucleo v3; mappa DICHIARATA completa da questa scena (voce mappa_certificata: il simulatore conosce gli ostacoli, ipotesi). SIMULAZIONE dalle schede, nessun sensore fisico; etichette a mano. Prima: VIDEO (fase 2b, sciame-sviluppatore): drone che attraversa una colonna di fumo e ricompare; nucleo e strato eventi v2. SIMULAZIONE dalle schede, nessun sensore fisico; etichette a mano.",
+ "modo": "lungo",
+ "scenario": "E4",
+ "sorgente": {
+  "tipo": "scena_lp",
+  "scenario": "E4",
+  "condizione": {
+   "configurazione": "alta"
+  },
+  "piano": [
+   -50,
+   450,
+   -50,
+   450
+  ],
+  "celle_lato": 24,
+  "passaggio": 0,
+  "nucleo": "v3",
+  "mappa_certificata": true
+ },
+ "classi_ammesse": [],
+ "profilo_portatore": "stazione_fissa",
+ "profilo_ricevente": "pilota_remoto_di_drone",
+ "etichette": "../etichette/lunga_portata.json",
+ "interruttori": {},
+ "parametri": {},
+ "seme": 0,
+ "origine_dati": "simulati"
+}

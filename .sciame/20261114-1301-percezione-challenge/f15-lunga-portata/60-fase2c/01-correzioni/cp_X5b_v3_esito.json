@@ -1,0 +1,33 @@
+{
+"nucleo_prototipo": "v3",
+"file_nucleo": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/prototipo/riuso/lunga_portata_v3/movi_lp_v3.py",
+"MAPPA_CERTIFICATA_PREDEFINITA": false,
+"cert=predefinito d=75 in_pianta=False": 3,
+"cert=predefinito d=75 in_pianta=True": 2,
+"cert=predefinito d=125 in_pianta=False": 3,
+"cert=predefinito d=125 in_pianta=True": 2,
+"cert=predefinito d=175 in_pianta=False": 3,
+"cert=predefinito d=175 in_pianta=True": 2,
+"cert=predefinito d=275 in_pianta=False": 3,
+"cert=predefinito d=275 in_pianta=True": 2,
+"cert=predefinito d=475 in_pianta=False": 3,
+"cert=predefinito d=475 in_pianta=True": 2,
+"cert=predefinito d=975 in_pianta=False": 3,
+"cert=predefinito d=975 in_pianta=True": 2,
+"cert=True d=75 in_pianta=False": 0,
+"cert=True d=75 in_pianta=True": 2,
+"cert=True d=125 in_pianta=False": 0,
+"cert=True d=125 in_pianta=True": 2,
+"cert=True d=175 in_pianta=False": 0,
+"cert=True d=175 in_pianta=True": 2,
+"cert=True d=275 in_pianta=False": 0,
+"cert=True d=275 in_pianta=True": 2,
+"cert=True d=475 in_pianta=False": 0,
+"cert=True d=475 in_pianta=True": 2,
+"cert=True d=975 in_pianta=False": 3,
+"cert=True d=975 in_pianta=True": 2,
+"predefinito_non_in_pianta_liberi": [
+0,
+6
+]
+}

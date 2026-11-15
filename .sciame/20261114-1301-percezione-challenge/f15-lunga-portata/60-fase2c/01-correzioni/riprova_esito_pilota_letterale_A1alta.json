@@ -1,0 +1,74 @@
+{
+ "N": 28,
+ "processi": 7,
+ "nucleo": "60-fase2c/01-correzioni/movi_lp_v3.py",
+ "variante": "letterale",
+ "mappa_env": "1",
+ "chiamante": "prudente",
+ "famiglie": {
+  "A1": "sito_droni_rullaggio",
+  "A2": "sito_droni_rullaggio",
+  "A3": "aeroporto_e_droni"
+ },
+ "inizio": "2026-11-15T03:07:27+0100",
+ "aggregati": {
+  "A1_alta": {
+   "tempestivi": [
+    28,
+    28,
+    [
+     0.879,
+     1.0
+    ]
+   ],
+   "con_ciclo_fuori_avviso": [
+    0,
+    28,
+    [
+     0.0,
+     0.121
+    ]
+   ],
+   "con_ciclo_senza_regione": [
+    0,
+    28,
+    [
+     0.0,
+     0.121
+    ]
+   ],
+   "con_libero_sull_oggetto": [
+    27,
+    28,
+    [
+     0.823,
+     0.994
+    ]
+   ],
+   "con_fase_nascosta": [
+    2,
+    28,
+    [
+     0.02,
+     0.226
+    ]
+   ],
+   "confermati": [
+    28,
+    28,
+    [
+     0.879,
+     1.0
+    ]
+   ],
+   "istanti_libero_sull_oggetto": [
+    183,
+    3192
+   ],
+   "falsi_confermati_mediana": 0,
+   "d_conf_mediana_m": 963.4387151312462,
+   "d_conf_p5_m": 949.0592309973626
+  }
+ },
+ "durata_s": 17.4
+}

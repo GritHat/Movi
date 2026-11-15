@@ -1,0 +1,44 @@
+% Allegato tecnico. Si compila con: xelatex, bibtex, xelatex, xelatex.
+\input{preambolo}
+\newcommand{\autori}{Ignazio Crocchiolo, Federico Dellini, Danilo Amalfitano, Emanuele Ciotola, Pierfrancesco Amendola (gruppo SDMs)}
+\begin{document}
+\begin{titlepage}
+\centering
+\vspace*{4cm}
+{\LARGE\bfseries\color{accent} Percezione con incertezza dichiarata:\\[4pt] continuità visiva durante le occlusioni\\[4pt] e sicurezza delle indicazioni\par}
+\vspace{1.2cm}
+{\Large Allegato tecnico\par}
+\vspace{2.5cm}
+{\large Autori: \autori\par}
+\vspace{0.8cm}
+{\large novembre 2026\par}
+\vfill
+\end{titlepage}
+
+\section*{Sommario}
+\input{capitoli/00_sommario}
+
+\tableofcontents
+\clearpage
+\input{capitoli/00_simboli}
+\clearpage
+\input{capitoli/01_introduzione}
+\input{capitoli/02_geometria}
+\input{capitoli/03_mappa}
+\input{capitoli/04_stima}
+\input{capitoli/05_occlusione}
+\input{capitoli/06_valutazione}
+\input{capitoli/07_costo}
+\input{capitoli/08_limiti}
+\input{capitoli/09_conclusioni}
+\clearpage
+\appendix
+\input{capitoli/A_parametri}
+\input{capitoli/B_riproducibilita}
+\clearpage
+% Gli indirizzi lunghi della bibliografia possono andare a capo anche ai trattini.
+\begingroup\sloppy\def\UrlBreaks{\do\/\do\-\do\_\do\.}
+\bibliographystyle{unsrtnat}
+\bibliography{allegato}
+\endgroup
+\end{document}

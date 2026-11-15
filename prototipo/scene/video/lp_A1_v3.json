@@ -1,0 +1,31 @@
+{
+ "commento": "VIDEO v3 (fase 2c, sciame-tracciamento): come lp_A1.json, col nucleo v3; mappa DICHIARATA completa da questa scena (voce mappa_certificata: il simulatore conosce gli ostacoli, ipotesi). Passaggio scelto A CASO: numpy default_rng(20261115), seme dichiarato prima in 60-fase2c/01-correzioni/PREVISIONI.md. SIMULAZIONE dalle schede, nessun sensore fisico; etichette a mano. Prima: VIDEO (fase 2b, sciame-sviluppatore): drone (multirotore) verso il sito, passa dietro l'edificio; multisensore; nucleo v2, chiamata prudente. SIMULAZIONE dalle schede, nessun sensore fisico; etichette a mano.",
+ "modo": "lungo",
+ "scenario": "A1",
+ "sorgente": {
+  "tipo": "scena_lp",
+  "scenario": "A1",
+  "condizione": {
+   "configurazione": "alta"
+  },
+  "piano": [
+   -100,
+   800,
+   -100,
+   800
+  ],
+  "celle_lato": 24,
+  "passaggio": 90,
+  "nucleo": "v3",
+  "chiamante": "prudente",
+  "mappa_certificata": true
+ },
+ "classi_ammesse": [],
+ "profilo_portatore": "stazione_fissa",
+ "profilo_ricevente": "operatore_di_sito",
+ "etichette": "../etichette/lunga_portata.json",
+ "interruttori": {},
+ "parametri": {},
+ "seme": 0,
+ "origine_dati": "simulati"
+}

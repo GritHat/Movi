@@ -65,3 +65,36 @@ $T_r$, $v_e$, $a_f$ & tempo di reazione, velocità propria, frenata del portator
 \bottomrule
 \end{tabularx}
 \end{table}
+
+\paragraph{Parametri a lunga portata.} La tabella~\ref{tab:par-lunga} raccoglie i parametri del \S\ref{sec:lp}; i valori dei sensori stanno nella tabella~\ref{tab:lp-sensori}. Nessuno è tarato su un sensore fisico.
+
+\begin{table}[H]\centering\footnotesize
+\caption{Parametri del sistema a lunga portata: «libero» per classe, inseguimento, avviso, eventi.}\label{tab:par-lunga}
+\begin{tabularx}{\linewidth}{@{}p{1.25cm}Lp{3.5cm}Lp{1.2cm}@{}}
+\toprule
+Simbolo & Significato & Valore & Origine & Tipo\\
+\midrule
+--- & lato della cella polare & $100\unita{m}$ & radar di riferimento delle prove del «libero» & scelto\\
+$P_c$ & soglia del «libero» per classe & $0{,}99$ & ipotesi & scelto\\
+$W_c$ & finestra di cumulo delle passate & $\min(t_{\max},\ell/v_{\max,c})$, al più 5 passate & \S\ref{sec:lp-libero} & scelto\\
+$\rho_c$ & correlazione fra passate & 1 ($n_{\mathrm{eff}}=1$) & prudente (Proposizione~\ref{prop:lp-correlate}) & scelto\\
+$P_d$ & probabilità di rilevamento & Swerling~1; $P_d=0{,}5$ alla portata di scheda, $P_{fa}=10^{-6}$ & ipotesi di modello & stimato\\
+$\sigma$ & sezione radar del multirotore piccolo; del drone sotto $250\unita{g}$ & $0{,}01\unita{m^2}$; $1{,}6\cdot10^{-4}\unita{m^2}$ & ipotesi; il secondo da un conto sulla scheda & stimato\\
+--- & sfondo misurato per accertare la linea di vista & entro $2\unita{m}$ dall'atteso & \S\ref{sec:lp-libero} & scelto\\
+--- & porta di associazione; porta del dubbio & $d^2\le16{,}27$; $16{,}27<d^2\le30{,}66$, terza misura dubbia in $5\unita{s}$ apre & chi quadro con 3 gradi di libertà & scelto\\
+--- & conferma della traccia & 2 misure su 3; tentativa tolta dopo $3\unita{s}$ & \S\ref{sec:lp-inseguimento} & scelto\\
+--- & misure fuori sequenza & scartate se più vecchie di $0{,}5\unita{s}$ & \S\ref{sec:lp-inseguimento} & scelto\\
+$v_{\max}$, $a_{\max}$ & inviluppo del sito sorvegliato & multirotore veloce $45\unita{m/s}$, $25\unita{m/s^2}$ & ipotesi senza fonte & scelto\\
+$v_{\max}$ & inviluppo degli aerei in volo & $210\unita{m/s}$ & decolli reali fino a $205\unita{m/s}$ (\S\ref{sec:lp-traiettorie}) & stimato\\
+$w$ & fascia dell'insieme di possibile presenza & $50\unita{m}$ & ipotesi & scelto\\
+$\alpha$ & livello della zona prevista & $0{,}90$, orizzonti 1, 2, 5, 10, $30\unita{s}$ & quantile conforme su traiettorie & tarato\\
+--- & «previsto ampio» & zona oltre $0{,}8$ del raggio dell'avviso & \S\ref{sec:lp-presenza} & scelto\\
+$\tau_{\mathrm{lat}}$, $T_r$, $T_{\mathrm{man}}$ & latenza, reazione e messa in sicurezza dell'operatore di sito & $1$, $5$, $30\unita{s}$; margine $50\unita{m}$ & ipotesi & scelto\\
+--- & innesco di «separazione» & almeno 3 ritorni nuovi confermati entro $2\unita{s}$ & \S\ref{sec:lp-eventi} & scelto\\
+$\Delta v$, $W$, $W_z$ & velocità dei frammenti; vento orizzontale e verticale (collisione, valori nominali) & $40$, $10$, $1\unita{m/s}$ & ipotesi & scelto\\
+--- & frammento minimo & $5\unita{cm}$, $2\cdot10^{-4}\unita{m^2}$ & ipotesi & scelto\\
+--- & nube & 3 cicli, più $10\unita{m}$; tolta dopo $5\unita{s}$ di sfondo visibile & \S\ref{sec:lp-eventi} & scelto\\
+--- & abbagliamento & pixel saturi $>5\,\%$ (visibile), $>2\,\%$ (termica); ritorni LiDAR $-30\,\%$; fondo radar $+6\unita{dB}$; entro 3 cicli & ipotesi & scelto\\
+\bottomrule
+\end{tabularx}
+\end{table}

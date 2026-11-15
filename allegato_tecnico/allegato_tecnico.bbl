@@ -1,4 +1,4 @@
-\begin{thebibliography}{78}
+\begin{thebibliography}{94}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -695,5 +695,132 @@ RealSense.
 \newblock URL
   \url{https://dev.realsenseai.com/docs/high-speed-capture-mode-of-intel-realsense-depth-camera-d435}.
 \newblock Documentazione per sviluppatori, consultata il 14 novembre 2026.
+
+\bibitem[{Wikipedia}(s.d.{\natexlab{a}})]{wiki-stopping-sight}
+{Wikipedia}.
+\newblock {Stopping sight distance}.
+\newblock voce enciclopedica, fonte secondaria, s.d.{\natexlab{a}}.
+\newblock URL \url{https://en.wikipedia.org/wiki/Stopping_sight_distance}.
+\newblock consultata il 15 novembre 2026.
+
+\bibitem[{Robin Radar Systems}(2026)]{robin-iris}
+{Robin Radar Systems}.
+\newblock {IRIS} -- product sheet.
+\newblock scheda di prodotto, aprile 2026, 2026.
+\newblock URL
+  \url{https://www.robinradar.com/hubfs/IRIS%20product%20sheet%20042026.pdf}.
+\newblock consultata il 15 novembre 2026.
+
+\bibitem[{Terma}(2021)]{terma-scanter5000}
+{Terma}.
+\newblock {SCANTER 5000} surface movement radar.
+\newblock scheda di prodotto, dicembre 2021, 2021.
+\newblock URL
+  \url{https://www.terma.com/media/ndthpjic/terma_scanter5000_smr_a4_dec2021.pdf}.
+\newblock consultata il 15 novembre 2026.
+
+\bibitem[{Hesai Technology}(s.d.)]{hesai-at128}
+{Hesai Technology}.
+\newblock {AT128}.
+\newblock pagina del prodotto, s.d.
+\newblock URL \url{https://www.hesaitech.com/product/at128/}.
+\newblock consultata il 15 novembre 2026.
+
+\bibitem[{Livox}(s.d.)]{livox-tele15}
+{Livox}.
+\newblock {Tele-15} -- specs.
+\newblock pagina delle specifiche, s.d.
+\newblock URL \url{https://www.livoxtech.com/tele-15/specs}.
+\newblock consultata il 15 novembre 2026.
+
+\bibitem[{United States, Federal Aviation
+  Administration}(s.d.{\natexlab{a}})]{cfr-91-227}
+{United States, Federal Aviation Administration}.
+\newblock {14 CFR \S\,91.227 -- Automatic Dependent Surveillance-Broadcast
+  (ADS-B) Out equipment performance requirements}.
+\newblock Code of Federal Regulations, titolo 14, parte 91, s.d.{\natexlab{a}}.
+\newblock URL \url{https://www.law.cornell.edu/cfr/text/14/91.227}.
+\newblock consultato il 15 novembre 2026.
+
+\bibitem[{United States, Federal Aviation
+  Administration}(s.d.{\natexlab{b}})]{cfr-89-310}
+{United States, Federal Aviation Administration}.
+\newblock {14 CFR \S\,89.310 -- Minimum performance requirements for standard
+  remote identification unmanned aircraft}.
+\newblock Code of Federal Regulations, titolo 14, parte 89, s.d.{\natexlab{b}}.
+\newblock URL \url{https://www.law.cornell.edu/cfr/text/14/89.310}.
+\newblock consultato il 15 novembre 2026.
+
+\bibitem[{Echodyne}(s.d.)]{echodyne-echoguard}
+{Echodyne}.
+\newblock {EchoGuard}.
+\newblock pagina del prodotto; lette solo le accuratezze, s.d.
+\newblock URL \url{https://www.echodyne.com/radar-systems/echoguard}.
+\newblock consultata il 15 novembre 2026.
+
+\bibitem[{Wikipedia}(s.d.{\natexlab{b}})]{wiki-johnson}
+{Wikipedia}.
+\newblock {Johnson's criteria}.
+\newblock voce enciclopedica, fonte secondaria, s.d.{\natexlab{b}}.
+\newblock URL \url{https://en.wikipedia.org/wiki/Johnson%27s_criteria}.
+\newblock consultata il 15 novembre 2026.
+
+\bibitem[{adsb.lol}(s.d.)]{adsblol}
+{adsb.lol}.
+\newblock {adsb.lol} -- open ads-b data, api v2.
+\newblock servizio di dati aperti; licenza ODbL 1.0, s.d.
+\newblock URL \url{https://api.adsb.lol/v2/point/33.6407/-84.4277/12}.
+\newblock interrogato il 15 novembre 2026 attorno all'aeroporto di Atlanta.
+
+\bibitem[{El Ouanbi} and Amellal(s.d.)]{zenodo-lhr-zrh}
+{El Ouanbi} and Amellal.
+\newblock {Cleaned ADS-B Trajectories (LHR-ZRH 2025) for AI Training}.
+\newblock insieme di dati, Zenodo, record 18916312; dati d'origine OpenSky
+  Network; licenza CC BY 4.0, s.d.
+\newblock URL \url{https://zenodo.org/records/18916312}.
+\newblock consultato il 15 novembre 2026.
+
+\bibitem[Patrikar et~al.(s.d.)]{trajair}
+Patrikar et~al.
+\newblock {TrajAir: A General Aviation Trajectory Dataset}.
+\newblock insieme di dati, Carnegie Mellon University, KiltHub; licenza CC BY
+  4.0, s.d.
+\newblock URL
+  \url{https://kilthub.cmu.edu/articles/dataset/TrajAir_A_General_Aviation_Trajectory_Dataset/14866251}.
+\newblock consultato il 15 novembre 2026.
+
+\bibitem[Rodrigues et~al.(s.d.)]{cmu-drone}
+Rodrigues et~al.
+\newblock {Data Collected with Package Delivery Quadcopter Drone}.
+\newblock insieme di dati, Carnegie Mellon University, KiltHub; licenza CC BY
+  4.0, s.d.
+\newblock URL
+  \url{https://kilthub.cmu.edu/articles/dataset/Data_Collected_with_Package_Delivery_Quadcopter_Drone/12683453}.
+\newblock consultato il 15 novembre 2026.
+
+\bibitem[Keipour et~al.(s.d.)Keipour, Mousaei, and Scherer]{alfa}
+Keipour, Mousaei, and Scherer.
+\newblock {ALFA: A Dataset for UAV Fault and Anomaly Detection}.
+\newblock insieme di dati, Carnegie Mellon University, KiltHub; licenza CC BY
+  4.0, s.d.
+\newblock URL
+  \url{https://kilthub.cmu.edu/articles/dataset/ALFA_A_Dataset_for_UAV_Fault_and_Anomaly_Detection/12707963}.
+\newblock consultato il 15 novembre 2026.
+
+\bibitem[{United States Department of Transportation, Federal Highway
+  Administration}(s.d.)]{ngsim}
+{United States Department of Transportation, Federal Highway Administration}.
+\newblock {Next Generation Simulation (NGSIM) Vehicle Trajectories}.
+\newblock insieme di dati; licenza CC BY-SA 3.0, s.d.
+\newblock URL \url{https://data.transportation.gov/d/8ect-6jqj}.
+\newblock consultato il 15 novembre 2026, tratto US-101.
+
+\bibitem[{Fintraffic}(2026)]{digitraffic}
+{Fintraffic}.
+\newblock {Digitraffic} -- rail traffic, train locations.
+\newblock interfaccia di dati aperti; licenza CC BY 4.0; fonte: Fintraffic /
+  digitraffic.fi, 2026.
+\newblock URL \url{https://rata.digitraffic.fi/api/v1/train-locations/}.
+\newblock posizioni del 12 novembre 2026, consultate il 15 novembre 2026.
 
 \end{thebibliography}

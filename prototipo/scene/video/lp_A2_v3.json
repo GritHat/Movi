@@ -1,0 +1,31 @@
+{
+ "commento": "VIDEO v3 (fase 2c, sciame-tracciamento): come lp_A2.json, col nucleo v3; mappa DICHIARATA completa da questa scena (voce mappa_certificata: il simulatore conosce gli ostacoli, ipotesi). SIMULAZIONE dalle schede, nessun sensore fisico; etichette a mano. Prima: VIDEO (fase 2b, sciame-sviluppatore): aereo in rullaggio dietro l'hangar, mezzo di servizio e persona sul piazzale; nucleo v2, chiamata prudente. SIMULAZIONE dalle schede, nessun sensore fisico; etichette a mano.",
+ "modo": "lungo",
+ "scenario": "A2",
+ "sorgente": {
+  "tipo": "scena_lp",
+  "scenario": "A2",
+  "condizione": {
+   "configurazione": "alta"
+  },
+  "piano": [
+   -200,
+   400,
+   -150,
+   450
+  ],
+  "celle_lato": 24,
+  "passaggio": 93,
+  "nucleo": "v3",
+  "chiamante": "prudente",
+  "mappa_certificata": true
+ },
+ "classi_ammesse": [],
+ "profilo_portatore": "stazione_fissa",
+ "profilo_ricevente": "pilota_in_rullaggio",
+ "etichette": "../etichette/lunga_portata.json",
+ "interruttori": {},
+ "parametri": {},
+ "seme": 0,
+ "origine_dati": "simulati"
+}

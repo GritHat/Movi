@@ -1,0 +1,193 @@
+% Proposta per la challenge: documento di due pagine, composto dal coordinatore dello sciame.
+% Si compila con: xelatex proposta_sciame.tex
+\documentclass[9pt,a4paper]{extarticle}
+\usepackage[a4paper,margin=1.3cm,top=1.1cm,bottom=1.1cm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Fira Sans}[Scale=0.93,BoldFont={Fira Sans SemiBold},ItalicFont={Fira Sans Italic}]
+\usepackage{polyglossia}\setmainlanguage{italian}
+\usepackage{xcolor,tikz,tabularx,booktabs,array,enumitem,multicol,microtype,ragged2e}
+\usetikzlibrary{positioning,arrows.meta,fit,calc}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{ink}{HTML}{16202B}
+\definecolor{muted}{HTML}{55606C}
+\definecolor{accent}{HTML}{0B5C8A}
+\definecolor{accentbg}{HTML}{E8F1F6}
+\definecolor{warnbg}{HTML}{FBF1E3}
+\definecolor{ok}{HTML}{1E7A4C}
+\definecolor{warn}{HTML}{A8620A}
+\definecolor{todo}{HTML}{6B7280}
+\definecolor{rule}{HTML}{C9D1D9}
+\color{ink}
+
+\newcommand{\versione}{v1.0}
+\newcommand{\dataora}{14 novembre 2026, ore 20:25}
+\newcommand{\statodoc}{testo finale dopo la chiusura dello sciame e due letture; con allegato tecnico}
+
+% Marche di stato: leggibili anche in bianco e nero (lettera + colore)
+\newcommand{\chip}[2]{\tikz[baseline=(c.base)]\node[inner xsep=2.4pt,inner ysep=1.0pt,rounded corners=1.5pt,fill=#1,text=white,font=\fontsize{6.0}{6.0}\selectfont\bfseries](c){#2};}
+\newcommand{\Sv}{\chip{accent}{S}}   % provato in simulazione
+\newcommand{\Cv}{\chip{ok}{C}}       % per regola scritta, calcolo o scheda tecnica
+\newcommand{\Pv}{\chip{warn}{P}}     % in progetto, non provato
+
+\setlength{\parindent}{0pt}\setlength{\parskip}{1.8pt}
+\setlist{leftmargin=1.05em,itemsep=0.6pt,topsep=1pt,parsep=0pt,partopsep=0pt}
+\newcommand{\sez}[1]{\vspace{2.6pt}{\color{accent}\bfseries\fontsize{9.6}{10.4}\selectfont #1}\par\vspace{-3.8pt}{\color{rule}\rule{\linewidth}{0.5pt}}\par\vspace{0.2pt}}
+\renewcommand{\arraystretch}{1.03}
+\newcolumntype{L}{>{\RaggedRight\arraybackslash}X}
+\newcommand{\nota}[1]{{\color{muted}\fontsize{7.7}{9.1}\selectfont #1}}
+\pagestyle{empty}
+\emergencystretch=1.5em
+
+\begin{document}
+\fontsize{8.7}{10.5}\selectfont
+
+% ---------------------------------------------------------------- testata
+\begin{minipage}[b]{0.72\linewidth}
+{\fontsize{16}{18}\selectfont\bfseries\color{accent} Un prototipo che dichiara ciò che non ha osservato}\\[2pt]
+{\fontsize{9.2}{11}\selectfont \textbf{Monitoraggio di attività e oggetti in ambienti aerospaziali e industriali.} Un prototipo progettato per rilevare elementi mobili e ostacoli, gestire le interruzioni della visibilità, distinguere l'osservato dall'incerto e segnalare la perdita di affidabilità \Pv.}
+\end{minipage}\hfill
+\begin{minipage}[b]{0.26\linewidth}\raggedleft
+{\bfseries\color{accent}\versione}\; · \;\dataora\\
+\nota{\statodoc}
+\end{minipage}
+
+\vspace{2pt}{\color{accent}\rule{\linewidth}{1.1pt}}\vspace{0.5pt}
+
+\nota{\Sv\ provato in simulazione \; · \; \Cv\ per regola scritta, calcolo o scheda tecnica: non prova che il programma lo faccia \; · \; \Pv\ in progetto, non provato}
+
+% ---------------------------------------------------------------- limiti
+\vspace{1pt}
+\colorbox{warnbg}{\parbox{\dimexpr\linewidth-2\fboxsep}{\vspace{0.5pt}\textbf{Limiti, da leggere per primi}
+\begin{itemize}
+\item Nessun fotogramma di una nostra camera è passato da una prova. Tutto è provato al calcolatore, su profondità simulata dalle schede tecniche e su tracce pubbliche di persone, a sensore fermo, con una persona alla volta.
+\item È un progetto di prototipo: le parti sono provate una per una, l'insieme non è mai stato eseguito.
+\item Dominio: camera ferma a 1,2 m da terra, al chiuso, fino a 3 m; posa della camera nota (inclinazione entro 0,5°); un ostacolo fermo che nasconde la persona per intero.
+\item Non vede: il vetro e ciò che non rimanda segnale; il suolo a meno di 1,24 m davanti e di 1,7 m ai lati; la testa di una persona di 1,70 m a meno di 2,01 m; un ostacolo sospeso (sotto, il suolo risulta libero).
+\item Non provati: due persone nella stessa ombra, un ostacolo che si sposta, il sensore in moto, il sole, ogni classe diversa da «persona a piedi».
+\item Il classificatore è richiesto, non realizzato, non valutato: le etichette sono messe a mano.
+\item Difetto aperto: tolto l'ostacolo e rivisto il suolo, l'avviso non si spegne (10 prove su 10). Si toglie riavviando.
+\item Il sistema osserva e avvisa: nessuna uscita è un comando, nessuna funzione d'ingaggio o di puntamento. Nessuna norma di sicurezza letta né applicata. Per una persona non vedente è un avviso di presenza: non sostituisce bastone o cane guida.
+\end{itemize}\vspace{0.5pt}}}
+
+% ---------------------------------------------------------------- 1
+\sez{1 · L'idea}
+Una persona passa dietro un mezzo fermo: il rischio è che per la macchina che osserva non ci sia più. Di ogni cosa seguita il prototipo dice se \textbf{la vede}, se \textbf{non la vede ma indica una zona dove può essere}, o se \textbf{non lo sa} \Pv.
+
+\textbf{Obiettivo principale: la continuità visiva.} Finché l'ostacolo nasconde una persona già vista per almeno 4 fotogrammi, lo schermo mostra a ogni fotogramma un segno e una zona \Sv\ \nota{(su sensore ideale: 0 interruzioni su 23\,402 passaggi)} \Pv\ \nota{(nella prova più vicina a una camera: sezione 3)}.
+
+\textbf{Principio di sicurezza.} Ciò che non è osservato non è mai dichiarato libero, se l'inclinazione è nota entro 0,5° e l'ostacolo rimanda segnale \Cv. L'avviso di «possibile presenza» non si spegne per il tempo né per mano di chi guarda: dietro un ostacolo fermo resta acceso. Lo decidono regole scritte: nessun modello appreso può toglierlo \Cv.
+
+% ---------------------------------------------------------------- 2
+\sez{2 · Come funziona}
+\begin{center}
+\begin{tikzpicture}[
+  b/.style={draw=accent,line width=0.6pt,rounded corners=2pt,fill=white,align=center,inner xsep=2.2pt,inner ysep=2.6pt,font=\fontsize{6.5}{7.7}\selectfont,minimum height=10mm},
+  f/.style={-{Stealth[length=3.6pt]},line width=0.6pt,draw=ink},
+  node distance=2.2mm]
+\node[b](c0){\textbf{Configurazione}\\classi ammesse nel sito\\profilo di chi porta\\il sensore (oggi: fermo)};
+\node[b,right=of c0](s){\textbf{Sensore}\\camera di profondità\\frontale, ferma\\controllo all'avvio};
+\node[b,right=of s](g){\textbf{Mappa del suolo}\\libero · occupato\\in ombra\\non osservato};
+\node[b,right=of g](r){\textbf{Rilevamento}\\geometrico: gruppi,\\che cosa è mobile};
+\node[b,right=of r](k){\textbf{Inseguimento}\\associazione e\\filtro di Kalman};
+\node[b,right=of k,fill=accentbg](c){\textbf{Durante l'occlusione}\\zona prevista · avviso di\\possibile presenza\\riaggancio};
+\node[b,right=of c](d){\textbf{Regole}\\tabella scritta,\\nessun modello\\appreso};
+\node[b,right=of d](u){\textbf{Uscita}\\schermo · suoni\\brevi · registro\\degli eventi};
+\foreach \a/\bb in {c0/s,s/g,g/r,r/k,k/c,c/d,d/u} \draw[f](\a)--(\bb);
+\node[b,below=3.6mm of r,draw=muted,dashed,minimum height=6.2mm,text width=76mm](n){\textbf{Classificazione su più classi}: componente richiesto; oggi etichette a mano};
+\node[b,above=3.0mm of d,minimum height=5.6mm](h){\textbf{Salute del sensore}: «affidabilità persa»};
+\draw[f](h)--(d);
+\draw[f,draw=muted,dashed](k.south)--(k.south|-n.north);
+\draw[f,draw=muted,dashed]([yshift=1.2mm]n.east)-|(c.south);
+\draw[f,draw=muted,dashed]([yshift=-1.2mm]n.east)-|(u.south);
+\draw[f](g.north)|-([yshift=2.2mm]r.north)-|([xshift=-3mm]c.north);
+\end{tikzpicture}
+\end{center}
+\vspace{-5pt}
+\nota{Frecce tratteggiate: la classificazione scrive un testo sotto la traccia e può solo \emph{allargare} l'avviso (spento nel prototipo). La salute del sensore scavalca tutto. Dalla mappa all'occlusione: ombra e «libero» del fotogramma.}
+
+Una camera di profondità (misura la distanza di ogni punto) sta ferma, inclinata di 15° in basso. Ogni fotogramma diventa una mappa del suolo dall'alto, a celle di 1° × 0,1 m fino a 3 m, in quattro stati: libero, occupato, in ombra (dietro un ostacolo), non osservato. «Libero» si legge nel solo fotogramma corrente, senza memoria \Cv.
+
+Un filtro di Kalman, che stima posizione e velocità, segue i gruppi di celle occupate. Quando una persona seguita entra in un'ombra nascono la \textbf{zona prevista} e l'\textbf{avviso}, che copre l'ombra più una fascia di 0,40 m. La previsione può accendere l'avviso, mai spegnerlo \Cv. La zona con la cifra (sezione 3) viene da 400 percorsi di camminatori simulati, lo stesso generatore delle prove. Nelle 14 ore lo schermo mostra prima un disco, senza cifra; la zona con la cifra è un lavoro delle ultime 4 ore \Pv.
+
+\textbf{Classificazione.} Il sistema richiede un classificatore su più classi (persone, veicoli di tipo diverso, altri ostacoli mobili), ciascuna con velocità, accelerazione e gradi di libertà. Qui nessun modello è in esecuzione: le etichette le mettiamo a mano \Pv. Nessuna etichetta produce un «libero», toglie o restringe un avviso \Cv\ \nota{(sulla sola fascia: 0 violazioni su 20\,000 sequenze, mai sull'intero programma)}. Chi porta il sensore (oggi: fermo) ha un profilo fisso, dichiarato all'avvio: velocità, tempo di reazione, frenata \Pv.
+
+% ---------------------------------------------------------------- 3
+\sez{3 · La continuità visiva}
+\textbf{Che cosa si vede.} Persona visibile: disco pieno. Nascosta: anello vuoto e zona tratteggiata, con il tempo da cui non è vista. Oltre il limite della precisione dichiarata la zona diventa tutta l'ombra, «previsto ampio»: il segno non sparisce \Cv. Al ritorno: «ricomparso · identità presunta» \Pv.
+
+\textbf{La cifra e il suo dominio.} Su sensore ideale (la persona è un punto, con 5 cm di rumore), con un ostacolo largo 2 m, il bordo dell'ombra noto e la persona sul proprio percorso, finché resta nascosta è dentro la zona in \textbf{almeno 9 casi su 10 fino a 2 s} e in almeno 85 su 100 fino a 3 s \Sv. Con il pannello da 1 m della demo: almeno 87 su 100 a 1 s; poi lo schermo dice solo che è ancora dietro \Sv.
+
+\textbf{Dove cede.} Chi svolta o esce dal lato lontano: circa 6–8 casi su 10 a 2–3 s. Bordo dell'ombra stimato e non dato: 3–5 su 10 a 1 s \Sv; su una camera il bordo va stimato, e lì non diamo cifre. Chi parte da fermo, due persone, oltre 3 s: nessuna cifra, resta l'avviso \Cv. Persona persa di vista prima dell'ostacolo: l'avviso può non nascere (24 passaggi su 23\,402 con la regola che lo cura, che parte spenta; 928 senza) \Sv. \textbf{Su profondità simulata, la prova più vicina a una camera, la regola della zona non è ancora nel programma:} a persona nascosta il segno «previsto» manca in 2\,983 fotogrammi su 4\,552, circa due su tre \Sv. Prima prova da fare.
+
+% ---------------------------------------------------------------- 4
+\sez{4 · Che cosa è provato, e come}
+\begin{enumerate}[leftmargin=1.3em]
+\item \Sv\ «Suolo visto libero» non è mai uscito sopra un ostacolo (camera ideale, cioè profondità calcolata dalla geometria: 300 condizioni, 9\,000 fotogrammi, due volte). Con 1° d'errore d'inclinazione cede.
+\item \Sv\ Su profondità simulata, con due correzioni che partono spente (gruppi più selettivi; avviso che resta dopo il riaggancio), una persona nascosta entro 3 m non è mai rimasta senza avviso (0 fotogrammi su 4\,324; replica: 0). Con le regole di partenza, sugli stessi passaggi, resta senza avviso in 180 fotogrammi.
+\item \Sv\ Il numero di traccia al ritorno (a schermo «identità») è sempre «presunto»: coi parametri di partenza reggeva 0 volte su 90; con una correzione che parte spenta, 176 su 180 (94–99\,\%), solo per un adulto solo, a 0,5 m dal pannello, entro 2,6 m. Un'altra persona che esce dalla stessa ombra prende il numero (19 volte su 20); l'avviso resta.
+\item \Cv\ I 3 m di portata bastano ad avvisare in tempo chi si avvicina fino a 1,44 m/s, con 1 s di reazione (ipotesi): il passo normale sì; veicoli, treni e aerei no. Con un operatore remoto (1,8 s): 0,92 m/s. La fascia di 0,40 m copre chi è nascosto fino a 1,13 m/s.
+\end{enumerate}
+
+% ---------------------------------------------------------------- 5
+\sez{5 · Idee scartate, nostre ed esterne, e perché}
+\begin{itemize}
+\item \textbf{Tre sensori a tempo di volo per 360°.} Coprono 180° \Cv.
+\item \textbf{Stimare massa e accelerazione.} Da queste misure non si ricavano \Cv. Con le classi: solo intervalli a priori.
+\item \textbf{Catena filtro → rete → decisione.} Il filtro consuma misure, non le produce: rilevamento → associazione → aggiornamento del filtro → regole \Cv.
+\item \textbf{Mappa di volume a cubetti (voxel).} A sensore fermo non dà più del fotogramma corrente; le varianti che ricordano un «libero» sbagliano: 80\,505 falsi su 146\,901 \Sv.
+\item \textbf{Due ipotesi di moto con pesi.} Danno per ferma una persona che transita, nel 38–100\,\% dei transiti \Sv.
+\end{itemize}
+
+% ---------------------------------------------------------------- 6
+\sez{6 · I requisiti della traccia}
+\begin{tabularx}{\linewidth}{@{}>{\bfseries\RaggedRight}p{3.9cm}>{\RaggedRight}p{5.6cm}L@{}}
+\toprule
+La traccia chiede & Che cosa fa il prototipo & Stato \\
+\midrule
+Rilevare elementi mobili e ostacoli & Gruppi di celle occupate; «mobile» chi si sposta & \Sv\ scatola di 15 cm a 2 m: 10 su 10. Pannello fermo dato per mobile 79 volte su 90; 0 su 140 con una correzione che parte spenta, nel suo dominio \\
+Gestire le interruzioni della visibilità; continuità percettiva & Zona a ogni fotogramma; avviso sull'ombra & \Sv\ su sensore ideale; \Pv\ su profondità simulata \\
+Distinguere l'osservato dall'incerto & Disco pieno solo con una misura; zona tratteggiata con l'età; registro «osservato» o «dedotto» & \Cv\ regole di disegno; \Pv\ registro mai eseguito \\
+Feedback chiari e tempestivi; latenza; efficienza elaborativa & Un livello per settore: «attenzione», «zona non verificata», «suolo visto libero da 1,3 m a \emph{d} metri» & \Sv\ calcolo su un portatile, un solo filo: 6 ms per ciclo in media su scene simulate, 81 ms su una registrazione pubblica affollata; \Pv\ ritardo non misurato, nessuna prova con persone \\
+Segnalare la perdita di affidabilità & Controllo all'avvio; segnale se il sensore è coperto, urtato o fermo & \Sv\ segnale in 0,13 s (rumore ipotizzato); \Pv\ su una camera \\
+Sicurezza delle indicazioni & Mai «libero» il non osservato; l'avviso non si toglie se non guardando & \Cv\ a inclinazione nota entro 0,5° e se l'ostacolo rimanda segnale \\
+\bottomrule
+\end{tabularx}
+
+% ---------------------------------------------------------------- 7
+\sez{7 · Un nucleo, più profili}
+\begin{tabularx}{\linewidth}{@{}>{\bfseries\RaggedRight}p{2.7cm}LL@{}}
+\toprule
+ & Monitoraggio di un varco o di un'area di lavoro & Avviso di presenza per una persona non vedente ferma \\
+\midrule
+Dove sta il sensore & Stazione fissa, o veicolo terrestre senza equipaggio fermo \Pv\ \nota{(configurato, non provato)} & Treppiede accanto alla persona \\
+Uscita & Schermo e registro per l'operatore; messaggio per un autopilota: \Pv, mai generato & Segnali sonori di 0,3 s: \Pv, mai provati con persone \\
+Se l'affidabilità cade & Lo dichiara; i settori dicono «zona non verificata» & Segnale dedicato; la persona torna al bastone \\
+Non provato & Sensore in moto, oltre 3 m, esterni & Persona che cammina \\
+\bottomrule
+\end{tabularx}
+
+\vspace{1pt}\textbf{Identico nei due profili:} le tre risposte su ciò che è seguito, i quattro stati della cella, il principio di sicurezza \Pv.
+
+\begin{minipage}[t]{0.40\linewidth}
+\sez{8 · La demo}
+Cinque atti, cinque minuti: (1) pavimento vuoto; (2) una persona passa dietro il pannello e ricompare; (3) resta dietro e torna: l'avviso non si spegne; (4) una mano copre il sensore: «affidabilità persa»; (5) il tabellone: quante volte la persona nascosta era dentro la zona \Pv.
+
+Senza sensore, il caso più probabile: sequenze simulate e registrazioni, dichiarate sullo schermo. Con una camera: pannello alto 1,8 m e largo 1 m, un adulto a passo lento \Pv.
+\end{minipage}\hfill
+\begin{minipage}[t]{0.58\linewidth}
+\sez{9 · Il piano: 14 + 4 ore, cinque persone}
+\begin{itemize}
+\item \textbf{Ore 0–12.} Sei gradini, ognuno dietro un interruttore: «libero», avviso, zona, identità, stati, salute del sensore. All'ora 12 il programma si congela; lo schermo nomina ciò che manca \Pv.
+\item \textbf{Ore 5–6.} Se arriva una camera: posa, pavimento vuoto, pannello sul suolo segnato, 30 passaggi \Pv.
+\item \textbf{Ore 12–18.} Tabellone e prova generale entro l'ora 14; poi i gradini rimasti e le etichette a mano. Stime, non misure: i primi quattro gradini all'ora 14 con probabilità 0,82–0,99; tutti e sei, con tabellone e demo, 0,04–0,43 \Cv.
+\end{itemize}
+\end{minipage}
+
+\sez{10 · Dopo l'hackathon: aperti, non promessi}
+Sensore in moto, più persone per ombra, sensori laterali, un classificatore vero, prove con persone non vedenti.
+
+\vspace{1pt}
+\nota{\textbf{Come è stato ottenuto.} Uno sciame di agenti specialisti: proposte in corsie cieche, falsificazione, misure, attacchi e correzioni, sei verdetti di un arbitro e la chiusura. Relazione tecnica con dimostrazioni, calcoli e bibliografia nell'allegato tecnico; stato esteso del progetto e riferimenti in \texttt{documentazione/}.}
+
+\end{document}
