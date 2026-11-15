@@ -1,0 +1,36 @@
+Fast flight: drones on a collision course
+
+PLAN VIEW - playback x1.1 (accelerated)
+
+SEEN
+
+SEENT
+
+SEEN
+
+SEEN
+
+filled: where it can be after an event - no probability
+
+Simulated -
+
+P——"—200m
+
++ truth (simulation only, MoVi does not see it) ® seen © not seen: region where it can be
+
+SIMULATION
+
+state-of-the-art sensor parameters assumed - no physical sensor
+
+ALTITUDE VIEW (distance-height)
+
+t = 17.2 s : simulated run, log readout
+RADAR: reliable
+
+EO CAMERA: reliable
+
+THERMAL CAMERA: reliable
+
+PROXIMITY WARNING
+
+predicted close pass between two tracks

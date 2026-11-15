@@ -1,0 +1,2 @@
+Previsioni (scritte prima delle misure): durata EN e IT <=176.0 s; loudness integrata -14 +-1 LUFS, picco <= -1 dBTP; etichetta presente in ogni fotogramma ogni 2 s; 0 frasi vietate; 0 fotogrammi con elemento verde (>200 px verde saturo connesso).
+2026-11-15T07:37:08+01:00

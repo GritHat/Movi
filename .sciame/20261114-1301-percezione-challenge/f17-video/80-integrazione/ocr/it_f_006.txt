@@ -1,0 +1,34 @@
+Fast flight: drones on a collision course SIMULATION
+
+Simulated - state-of-the-art sensor parameters assumed - no physical sensor
+
+- ~ 1 ' i - - 7QY
+PLAN VIEW - playback xl.l\(accelekated) L - égg m ALTITUDE VIEW (distaﬁce-béight) ‘1‘:\
+1 , ! 1 E4 ’ s
+b = ENRN ke A ’ TN
+/ e S A
+! 3 SN
+g : /7’ R ‘: i
+v o @ B
+[ e\~ /U
+. -
+3 ‘ g,
+. G
+‘\ “ g
+. ‘~ 77
+N s Al
+b - i
+
+t = 26.0 s + simulated run, log readout
+
+RADAR: reliable
+EO CAMERA: reliable
+THERMAL CAMERA: reliable
+
+PROXIMITY WARNING
+predicted close pass between two tracks
+
+filled: where it can be after an event - no probability
++ truth (simulation only, MoVi does not see it) ® seen < not seen: region where it can be
+
+Quando la vista si perde, che cosa deve dire lo schermo?

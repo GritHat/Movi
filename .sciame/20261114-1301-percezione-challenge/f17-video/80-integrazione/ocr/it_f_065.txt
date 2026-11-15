@@ -1,0 +1,56 @@
+F7 - on board a moving drone: a collision nearby, radar blinded
+
+SIMULATION
+Simulated - state-of-the-art sensor parameters assumed - no physical sensor
+7 S 2 Py T = ¥
+LYIEW FROM THE CARRIER - plan, carfier frame (estimated pose}\~ playback x0.30 (slowed) ALTIHTODE VIEW (didtance-height) \
+|+ truth (simulation only, MoVi does not see it) ® seen < not seen: region where it can be ’:' 4'--~~:\s 1
+filled: where it can be after an event - no probability \\ ,’ \\‘\ ‘I
+R 7 N
+k. \ é > 'y | -
+R v \ v o N ]
+- ~. \ \ 7 1
+. S \ \ P
+y N ' \ L 4] 1
+4 K \ S ]
+. \ 3 - . 1
+2o B | 1 ol ,' i
+1 k. | ’ 1
+1 k) \ . 3
+p o 1 1
+5 1
+\ : ] ] t = 10.9 s - simulated run, log readout
+> TRACKED DRONE - SEEN -
+
+ftentityipiesuned Sdobb vt RADAR 360°: restored (declared)
+
+CAMERA: restored (declared)
+
+’
+N, CARRIER - MoVi on hoard
+. 7
+
+1
+5 L ’, " \d— confidence on the tracked drone (computed in the model)
+b, 1l e
+! 0.9
+ol e 1 EVENT: nearby event - position unknown
+_____ / conservative sphere r 439 m - never clear inside
+
+; WARNING to carrier: nearby event - position unknown
+
+conservative, not localised, not selective
+/] radar blinded up to 2 s - pessimistic model - fix under test
+CONSERVATIVE SPHERE - never clear inside flash and smoke: drawn for illustration flash trigger optimistic - identity presumed, doubtful
+
+fix under test : carrier warned before the first fragment, radar and cameras blinded: 59/59 [0.939; 1]
+
+with the fix: 'clear' on the tracked drone or a fragment 0/60 [0; 0.060]
+limit -
+
+« without 0/59 [0; 0.061] - same seeds - sim.
+- region kept 60/60 [0.940; 1] - sim.
+reacquisition within 2 s below the 51/60 threshold: ahead 49/60 [0.701; 8.894] - in a turn 40/60 [0.541; 0.773]
+
+Con una correzione in prova, MoVi avvisa subito il portatore, prima del
+primo frammento, in cinquantanove prove su cinquantanove, contro nessuna senza.

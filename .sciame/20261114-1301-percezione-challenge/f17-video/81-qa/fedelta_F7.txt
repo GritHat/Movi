@@ -1,0 +1,35 @@
+Confronto schermo (OCR, 1 fotogramma ogni 2 s) contro registro_F7r_c1_totale.jsonl
+en 108 t non letto
+en 110 t non letto
+en 112 t 3.9 | sfera None vs None | regione None vs 18.1 vista | C 1.0 | sensori aa | avviso False 
+en 114 t 4.8 | sfera None vs None | regione None vs 19.0 vista | C 1.0 | sensori aa | avviso False 
+en 116 t 5.8 | sfera None vs None | regione None vs 19.9 vista | C 1.0 | sensori aa | avviso False 
+en 118 t 6.5 | sfera 184 vs 184.1 | regione 39 vs 38.9 non_vista_regione | C 0.9995 | sensori nn | avviso True schermo WARNING
+en 120 t 7.2 | sfera 243 vs 242.6 | regione None vs 79.0 non_vista_regione | C 0.7553 | sensori nn | avviso True schermo WARNING
+en 122 t 8.0 | sfera 295 vs 295.2 | regione 139 vs 139.2 non_vista_regione | C 0.327 | sensori rn | avviso True schermo WARNING
+en 124 t 8.7 | sfera 335 vs 334.5 | regione 202 vs 201.9 non_vista_regione | C 0.1657 | sensori rd | avviso True schermo WARNING
+en 126 t non letto
+en 128 t non letto
+en 130 t non letto
+en 132 t non letto
+en 134 t non letto
+en 136 t non letto
+en 138 t non letto
+en 140 t non letto
+it 108 t non letto
+it 110 t 3.8 | sfera None vs None | regione None vs 18.1 vista | C 1.0 | sensori aa | avviso False 
+it 112 t 4.7 | sfera None vs None | regione None vs 18.8 vista | C 1.0 | sensori aa | avviso False 
+it 114 t 5.6 | sfera None vs None | regione None vs 19.7 vista | C 1.0 | sensori aa | avviso False 
+it 116 t non letto
+it 118 t non letto
+it 120 t 8.1 | sfera 301 vs 301.1 | regione 146 vs 146.0 non_vista_regione | C 0.327 | sensori rn | avviso True schermo WARNING
+it 122 t 8.9 | sfera 345 vs 345.0 | regione None vs 32.6 vista | C 1.0 | sensori rd | avviso True schermo WARNING
+it 124 t 9.7 | sfera 385 vs 384.6 | regione None vs 24.4 vista | C 1.0 | sensori rr | avviso True schermo WARNING
+it 126 t non letto
+it 128 t non letto
+it 130 t non letto
+it 132 t non letto
+it 134 t non letto
+it 136 t non letto
+it 138 t non letto
+it 140 t non letto

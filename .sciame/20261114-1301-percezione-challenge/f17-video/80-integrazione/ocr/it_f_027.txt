@@ -1,0 +1,32 @@
+F3 - fast drones colliding at 40 and 35 m/s SIMULATION
+
+Simulated - state-of-the-art sensor parameters assumed - no physical sensor
+
+PLAN VIEW - playback x2.2 (accelerated)
+
+—————200 m ALTITUDE VIEW (distance-height)
+
+I’--\~
+
+/ _ SEEN e
+
+: . e °
+<_.NOT SEEN - 0.3 s - region 63 m K 5
+
+t = 3.1 s - simulated run, log readout
+RADAR: reliable
+
+EO CAMERA: reliable
+
+THERMAL CAMERA: reliable
+
+PROXIMITY WARNING
+
+SEEN predicted close pass between two tracks
+
+f SEEN
+
+filled: where it can be after an event - no probability
++ truth (simulation only, MoVi does not see it) ® seen < not seen: region where it can be
+
+Due droni veloci si scontrano.

@@ -1,0 +1,19 @@
+SCHEMATIC - ESTIMATE
+
+limits from the verdicts - hardware figure is an estimate by analogy
+
+Limits, and what comes next
+
+LIMITS FROM PROTOTYPE TO DEPLOYED SYSTEM
+
+- everything simulated: no physical sensor, no hardware test
+- classes labelled by hand; classifier assumed
+
+- fast collision not yet declared as an event
+
+- site warning late for aircraft in flight
+
+- radar blinded: debris warning to the carrier not reliable
+
+I limiti: tutto & simulato, senza sensori
+fisici, e le classi sono etichettate a mano.

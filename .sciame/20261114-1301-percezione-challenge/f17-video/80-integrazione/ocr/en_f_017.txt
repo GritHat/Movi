@@ -1,0 +1,25 @@
+F1- aircraft on approach, non-cooperative drone S
+
+Simulated - state-of-the-art sensor parameters assumed - no physical sensor
+
+PLAN VIEW - playback x5.1 (accelerated) —_— 1 km ALTITUDE VIEW (distance-height)
+g0
+SEEN t = 78.9 s : simulated run, log readout
+—~on RADAR: reliable
+SEEN EO CAMERA: reliable
+
+NOT SEEN - 8.2 s - region 64 m THERMAL CAMERA: reliable
+
+PROXIMITY WARNING
+predicted close pass between two tracks
+
+not observed # clear:
+
+a region is kept, never 'clear'
+filled: where it can be after an event - no probability
++ truth (simulation only, MoVi does not see it) ® seen < not seen: region where it can be
+
+never 'clear' where the object or a fragment was - F6 0/200 [0; 0.019] - other cells 0/60 [0; 0.060] - sim.
+
+In six flight scenarios with the core, MoVi never
+said clear where an aircraft, a drone or a fragment was.

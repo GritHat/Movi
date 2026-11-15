@@ -1,0 +1,23 @@
+F4 - failure with low-energy debris, 135 m/s SIMULATION
+
+Simulated - state-of-the-art sensor parameters assumed - no physical sensor
+
+PLAN VIEW - playback x1.4 (accelerated) T ALTITUDE VIEW (distance-height)
+
+SEEN
+
+t = 30.7 s + simulated run, log readout
+RADAR: reliable
+
+EO CAMERA: RELIABILITY LOST
+
+THERMAL CAMERA: RELIABILITY LOST
+EVENT: FAILURE OR FLASH - INFERRED
+
+debris volume and footprint declared
+not verified: possible presence
+
+filled: where it can be after an event - no probability
++ truth (simulation only, MoVi does not see it) ® seen < not seen: region where it can be
+
+Un aereo va in avaria in volo a centotrentacinque metri al secondo.

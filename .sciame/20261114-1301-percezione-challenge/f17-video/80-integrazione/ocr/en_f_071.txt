@@ -1,0 +1,6 @@
+Also: the site with taxiing aircraft and drones, and other uses SIMULATION (site) - SCHEMATIC (short range)
+
+Simulated - state-of-the-art sensor parameters assumed - no physical sensor
+
+The same approach works on a site: a drone behind a
+building, warned in time in two hundred of two hundred runs.

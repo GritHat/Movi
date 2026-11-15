@@ -1,0 +1,42 @@
+F7 - on board a moving drone: a collision nearby, radar blinded AR AICON
+
+Simulated - state-of-the-art sensor parameters assumed - no physical sensor
+
+\ v
+VIEW FROM THE CARRIER - plan, carrier frame (estimated pose) - playback x0.31 (slowed) ALTITUDE VIEW (distance-height)
++ truth (simulation only, MoVi does not see it) ® seen < not seen: region where it can be ‘I
+filled: where it can be after an event - no probability “ I
+\
+\ > | A
+\ I
+\ 1
+\ 1
+) 1
+1 1
+1 i}
+!
+> 1 t = 13.1 s - simulated run, log readout
+I o.
+CARRIER - MoVi on bolRACKED DRONE - SEEN - identity presumed, doubtful RADAR 360°: restored (declared)
+1 CAMERA: restored (declared)
+: \' confidence on the tracked drone (computed in the model)
+1l ]
+il 0.9
+1 EVENT: nearby event - position unknown
+1 conservative sphere r 533 m - never clear inside
+1 5 ot
+I WARNING to carrier: nearby event - position unknown
+i conservative, not localised, not selective
+I, radar blinded up to 2 s - pessimistic model - fix under test
+CONSERVATIVE SPHERE - never clear inside flash and smoke: drawn for illustration flash trigger optimistic - identity presumed, doubtful
+
+fix under test - carrier warned before the first fragment, radar and cameras blinded: 59/59 [0.939; 1] - without 0/59 [0; 0.061]
+with the fix: 'clear' on the tracked drone or a fragment 0/60 [0; 0.060] - region kept 60/60 [0.940; 1] - sim.
+
+1limit - reacquisition within 2 s below the 51/60 threshold: ahead 49/60 [0.701; ©.894] - in a turn 40/60 [0.541; 0.773]
+
+limit - warning not localised: conservative sphere up to 565 m, median 8 s
+
+1limit - false warnings if the radar saturates for another cause: 11/200 [0.031; 0.096] - sim.
+
+- same seeds - sim.

@@ -1,0 +1,84 @@
+en contesti:
+    'clear' filled: where it can be
+    same seeds sim with the fix ‘clear' on the tracked drone or
+    seen: region where it can be never 'clear' where the object
+   - I DON'T KNOW not observed # clear I don't see it, but here
+   - I DON'T KNOW not observed # clear Or: 1 don't know.
+   4 conservative sphere r 335 m never clear inside A AR WARNIN
+   ame seeds sim. with the fix: 'clear' on the tracked drone or
+   arby event - position unknown never clear inside conservativ
+   c identity presumed, doubtful never clear insid%' - drawn fo
+   e seeds sim with the fix sim ‘clear' on the tracked drone or
+   e site warning is late aid, never a replacement for with t
+   eeds sim. sim. with the fix: 'clear' on the tracked drone or
+   een two tracks not observed # clear: a region is kept, never
+   for a blind person: a warning never 'clear' on the drone, th
+   here it can be not observed # clear
+   here it can be not observed # clear When the view is lost, w
+   limit: for aircraft in flight never 'clear' on the drone, th
+   n conservative sphere r 243 m never clear inside WARNING to 
+   n conservative sphere r 295 m never clear inside WARNING to 
+   n conservative sphere r 370 m never clear inside WARNING to 
+   n conservative sphere r 399 m never clear inside WARNING to 
+   n conservative sphere r 430 m never clear inside WARNING to 
+   n conservative sphere r 457 m never clear inside WARNING to 
+   n conservative sphere r 482 m never clear inside WARNING to 
+   n conservative sphere r 508 m never clear inside WARNING to 
+   n conservative sphere r 533 m never clear inside WARNING to 
+   nder test CONSERVATIVE SPHERE never clear insi&e flash and s
+   nder test CONSERVATIVE SPHERE never clear inside 4 flash and
+   nder test CONSERVATIVE SPHERE never clear inside flash and s
+   nder test CONSERVATIVE SPHERE never clear inside flash trigg
+   nder test CONSERVATIVE SPHERE never clear inside ¢sflash and
+   scenarios with the core, MoVi never said clear where an airc
+en 150-170 s (t, 'not reliable', 'fix under test'): [(150, False, False), (152, False, False), (154, False, False), (156, False, True), (158, False, True), (160, False, True), (162, False, True), (164, False, True), (166, False, True), (168, False, False), (170, False, False)]
+en 124 ['59/59']
+en 126 ['59/59', '49/60', '565', '11/200']
+en 128 ['59/59', '49/60', '565', '11/200']
+en 130 ['59/59', '49/60', '565', '11/200']
+en 132 ['59/59', '49/60', '565', '11/200']
+en 134 ['59/59', '49/60', '565', '11/200']
+en 136 ['59/59', '49/60', '565', '11/200']
+en 138 ['59/59', '49/60', '565', '11/200']
+it contesti:
+    'clear' filled: where it can be
+    same seeds sim with the fix ‘clear' on the tracked drone or
+    seen: region where it can be never 'clear' where the object
+   - I DON'T KNOW not observed # clear Oppure: non lo so.
+   = conservative sphere r 491 m never clear inside WARNING to 
+   ame seeds sim. with the fix: 'clear' on the tracked drone or
+   arby event - position unknown never clear inside conservativ
+   d in time: 200/200 [0.981; 1] never 'clear' on the drone, wi
+   e site warning is late aid, never a replacement for with t
+   eeds sim. sim. with the fix: 'clear' on the tracked drone or
+   een two tracks not observed # clear: a region is kept, never
+   for a blind person: a warning never 'clear' on the drone, th
+   here it can be not observed # clear Quando la vista si perde
+   limit: for aircraft in flight never 'clear' on the drone, th
+   lo con il nucleo, MoVi non ha mai detto libero dove c'era 
+   n conservative sphere r 250 m never clear inside WARNING to 
+   n conservative sphere r 301 m never clear inside WARNING to 
+   n conservative sphere r 345 m never clear inside WARNING to 
+   n conservative sphere r 385 m never clear inside WARNING to 
+   n conservative sphere r 412 m never clear inside WARNING to 
+   n conservative sphere r 439 m never clear inside WARNING to 
+   n conservative sphere r 465 m never clear inside WARNING to 
+   n conservative sphere r 516 m never clear inside WARNING to 
+   n conservative sphere r 541 m never clear inside WARNING to 
+   nder test CONSERVATIVE SPHERE never clear inside / flash and
+   nder test CONSERVATIVE SPHERE never clear inside /7 flash an
+   nder test CONSERVATIVE SPHERE never clear inside /flash and 
+   nder test CONSERVATIVE SPHERE never clear inside flash and s
+   nder test CONSERVATIVE SPHERE never clear inside flash trigg
+   nder test CONSERVATIVE SPHERE never clear inside ¢ flash and
+   simistic model fix under test never clear inside flash and s
+   t seen region where it can be never 'clear' where the object
+it 150-170 s (t, 'not reliable', 'fix under test'): [(150, False, False), (152, False, True), (154, False, True), (156, False, True), (158, False, True), (160, False, True), (162, False, True), (164, False, False), (166, False, False), (168, False, False)]
+it 124 ['59/59', '49/60', '565', '11/200']
+it 126 ['59/59', '49/60', '565', '11/200']
+it 128 ['59/59', '49/60', '565', '11/200']
+it 130 ['59/59', '49/60', '565', '11/200']
+it 132 ['59/59', '49/60', '565', '11/200']
+it 134 ['59/59', '49/60', '565', '11/200']
+it 136 ['59/59', '49/60', '565', '11/200']
+it 138 []

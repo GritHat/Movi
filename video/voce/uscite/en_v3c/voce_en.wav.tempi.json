@@ -1,0 +1,152 @@
+[
+ {
+  "inizio": 0.15,
+  "fine": 6.699,
+  "testo": "Fast aircraft and drones: a collision, an in-flight failure, a flash that blinds the cameras."
+ },
+ {
+  "inizio": 7.049,
+  "fine": 9.823,
+  "testo": "When the view is lost, what should the screen say?"
+ },
+ {
+  "inizio": 10.623,
+  "fine": 13.759,
+  "testo": "MoVi declares what it has not observed."
+ },
+ {
+  "inizio": 14.109,
+  "fine": 15.965,
+  "testo": "Three answers per track."
+ },
+ {
+  "inizio": 16.315,
+  "fine": 17.36,
+  "testo": "I see it."
+ },
+ {
+  "inizio": 17.71,
+  "fine": 20.483,
+  "testo": "I don't see it, but here is where it can be."
+ },
+ {
+  "inizio": 20.833,
+  "fine": 22.156,
+  "testo": "Or: I don't know."
+ },
+ {
+  "inizio": 22.956,
+  "fine": 30.081,
+  "testo": "In six flight scenarios with the core, MoVi never said clear where an aircraft, a drone or a fragment was."
+ },
+ {
+  "inizio": 30.881,
+  "fine": 35.98,
+  "testo": "An aircraft fails in flight at a hundred and thirty-five metres per second."
+ },
+ {
+  "inizio": 36.33,
+  "fine": 45.034,
+  "testo": "MoVi infers the event and declares the cameras unreliable within one second, in sixty of sixty simulated runs."
+ },
+ {
+  "inizio": 45.384,
+  "fine": 50.803,
+  "testo": "Low-energy debris stays inside the declared volume in fifty-eight of sixty."
+ },
+ {
+  "inizio": 51.603,
+  "fine": 53.608,
+  "testo": "Two fast drones collide."
+ },
+ {
+  "inizio": 53.958,
+  "fine": 59.803,
+  "testo": "MoVi warns of the close pass at least ten seconds ahead, in sixty of sixty runs."
+ },
+ {
+  "inizio": 60.153,
+  "fine": 68.431,
+  "testo": "The collision is not yet declared as an event, but the region is kept: the fragments stayed inside it in sixty of sixty runs."
+ },
+ {
+  "inizio": 69.231,
+  "fine": 72.111,
+  "testo": "A flash blinds every optical sensor."
+ },
+ {
+  "inizio": 72.461,
+  "fine": 77.431,
+  "testo": "Radar alone keeps a region for every track, and identity is presumed."
+ },
+ {
+  "inizio": 78.231,
+  "fine": 87.831,
+  "testo": "When continuity is lost, MoVi computes, in the motion model, how confidence falls, and grows the region to keep nine chances in ten."
+ },
+ {
+  "inizio": 88.181,
+  "fine": 99.125,
+  "testo": "On public flight tracks, with a simulated sensor, the region held the aircraft eighty-five to eighty-nine times in a hundred, below nine in ten, mostly one route."
+ },
+ {
+  "inizio": 99.475,
+  "fine": 102.654,
+  "testo": "In turns, seventy-three: a declared limit."
+ },
+ {
+  "inizio": 103.454,
+  "fine": 108.169,
+  "testo": "Now MoVi rides on a drone, keeping the track of a fast drone ahead."
+ },
+ {
+  "inizio": 108.519,
+  "fine": 112.273,
+  "testo": "Nearby, two drones collide: flash, smoke, debris."
+ },
+ {
+  "inizio": 112.623,
+  "fine": 115.631,
+  "testo": "Radar and cameras are blinded together."
+ },
+ {
+  "inizio": 115.981,
+  "fine": 125.581,
+  "testo": "With a fix under test, MoVi warns the carrier at once, before the first fragment, in fifty-nine of fifty-nine runs, against none without it."
+ },
+ {
+  "inizio": 125.931,
+  "fine": 129.174,
+  "testo": "A promising path: the warning does not say where."
+ },
+ {
+  "inizio": 129.974,
+  "fine": 137.249,
+  "testo": "The same approach works on a site: a drone behind a building, warned in time in two hundred of two hundred runs."
+ },
+ {
+  "inizio": 137.599,
+  "fine": 140.649,
+  "testo": "And at short range: people, cars, trains."
+ },
+ {
+  "inizio": 141.449,
+  "fine": 147.785,
+  "testo": "The limits: everything is simulated, with no physical sensor, and classes are labelled by hand."
+ },
+ {
+  "inizio": 148.135,
+  "fine": 155.325,
+  "testo": "Next: a contact rule for fast collisions, state-of-the-art sensors, dedicated hardware, field trials."
+ },
+ {
+  "inizio": 155.675,
+  "fine": 158.107,
+  "testo": "MoVi observes and warns."
+ },
+ {
+  "inizio": 158.457,
+  "fine": 159.929,
+  "testo": "By SDMs."
+ }
+]

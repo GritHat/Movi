@@ -1,0 +1,5 @@
+VERDE /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/consegna/MoVi_pitch_EN_v3c.mp4 fotogramma 43 t = 84 s 28 px
+/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/consegna/MoVi_pitch_EN_v3c.mp4 fotogrammi: 87 con verde: 1
+VERDE /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/consegna/MoVi_pitch_IT_v3c.mp4 fotogramma 38 t = 74 s 24 px
+VERDE /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/consegna/MoVi_pitch_IT_v3c.mp4 fotogramma 41 t = 80 s 40 px
+/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/consegna/MoVi_pitch_IT_v3c.mp4 fotogrammi: 85 con verde: 2

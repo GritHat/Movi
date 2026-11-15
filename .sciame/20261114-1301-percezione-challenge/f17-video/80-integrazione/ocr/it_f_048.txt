@@ -1,0 +1,41 @@
+SCHEMATIC + PUBLIC TRAJECTORIES
+
+curve computed in the model - points: public flight tracks, simulated sensor
+
+When continuity is lost: confidence over time
+PLAN VIEW - schematic: motion compressed, radii from the computed curve C(1): chance it is within 150 m of the prediction - computed
+
+1_\.
+
+T (s)
+0 10 20 30
+
+0.5
+
+i zone at last sighting - 150 m (for comparison)
+radius kept at 0.9, r0.9(t) in m - computed (min. progressive)
+
+,’——-~\\ 200
+4 3
+/ \
+1 \ 100
+....... [ 5 SBeostcesstusBoutabsBHeRsEEoEsss
+I\ y ) T (s)
+\ y 0 10 20 30
+N
+o _
+St " coverage of the 0.9 region - public flight tracks, simulated sensor
+19.2 s - region r0.9 = 113 m 1
+0.9
+[Er=gr=masgrassassaas {esssessesscsssasssdil
+0.8 0-8 0.89 0.89 0.89
+aircraft at 210 m/s, straight line: the most favourable case
+on real tracks the region is much larger (see points on the right) 2 @)
+02(T) = B2 + 20Bv-T + ov2-T2 + q-T3/3 + o_ref? - C(t) = 1 - exp(-r2/2¢2(t)) 5'65 10 20 30
+
+C-TAR 1-2 s: 0.89 (655/733) [0.87; 0.91] - cases correlated
+0.85-0.89 from 1 to 30 s - 21-30 s: 0.85 [0.81; 0.88]
+89.5% of cases from 4 flights of one route - Wilson 95 % per case
+
+Su traiettorie di volo pubbliche, con un sensore simulato, la regione ha contenuto I'aereo
+da ottantacinque a ottantanove volte su cento, sotto nove su dieci, soprattutto su una rotta.

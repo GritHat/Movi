@@ -1,0 +1,8 @@
+audio_MoVi_pitch_EN_v3c
+    I:         -14.0 LUFS
+    LRA:         2.8 LU
+    Peak:       -2.4 dBFS
+audio_MoVi_pitch_IT_v3c_v3c
+    I:         -14.0 LUFS
+    LRA:         3.9 LU
+    Peak:       -2.1 dBFS

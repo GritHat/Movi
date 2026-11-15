@@ -1,0 +1,35 @@
+SIMULATION
+
+Simulated - state-of-the-art sensor parameters assumed - no physical sensor
+
+F7 - on board a moving drone: a collision nearby, radar blinded
+
+>
+VIEW FROM THE CARRIER - plan, carrier frame (estimated pose) - playback x0.42 (slowed) / ALTITUDE VIEW (distance-he&ght)
++ truth (simulation only, MoVi does not see it) ® seen < not seen: region where it can be \
+filled: where it can be after an event - no probability \ o
+- N 1 N
+’
+’ | b}
+4 1 . /]
+' ] . 4
+7
+\
+~
+- NOT SEEN 0.6 s - region 38 m t = 6.4 s - simulated run, log readout
+o X
+A \\‘ RADAR 360°: UNRELIABLE - saturated
+|’ b p CAMERA: UNRELIABLE - saturated
+‘\ /' confidence on the tracked drone (computed in the model)
+\‘~-”
+0.9
+N EVENT: nearby event - position unknown
+b conservative sphere r 174 m - never clear inside
+N
+S WARNING to carrier: nearby event - position unknown
+~ conservative, not localised, not selective
+~
+e radar blinded up to 2 s - pessimistic model - fix under test
+CONSERVATIVE SPHERE - never clear inside flash and smoke: drawn for illustration flash trigger optimistic - identity presumed, doubtful
+
+Accanto, due droni si scontrano: lampo, fumo, detriti.

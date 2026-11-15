@@ -1,0 +1,3 @@
+SIMULATION
+
+Simulated - state-of-the-art sensor parameters assumed - no physical sensor

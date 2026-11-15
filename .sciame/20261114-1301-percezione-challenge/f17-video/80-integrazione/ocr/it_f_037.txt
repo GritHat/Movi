@@ -1,0 +1,53 @@
+F5 - a flash blinds every optical sensor
+
+PLAN VIEW - playback x0.89 (slowed) [ —— L
+a"’— ~\\\
+’ ‘\
+4 Y
+[' \\"——-‘~\~
+II oA \\\
+1 ,' ‘l Y
+[ ’ 3 3
+[ w. \
+1 o PP “\ |I ‘I
+\ SEEN 3
+‘\ 3 { ’
+. - SEEN 4
+X - A m 4
+< A X ool .
+Sso ~27\s NOT SEEN - 8.2 s - region 68 m
+~ Rz~
+: NOT SEEN - 0.2 s - region 224 m
+i o |
+\ 1
+\ iy
+h ’
+\ 4
+
+. 2
+filled: where it can be after an event -
++ truth (simulation only,-MeVi-does not see it) ® seen ©
+
+no probability
+not seen: region where it can be
+
+Simulated -
+
+SIMULATION
+
+state-of-the-art sensor parameters assumed - no physical sensor
+
+ALTITUDE VIEW (distance-height)
+
+t=39.2s -
+RADAR: reliable
+
+EO CAMERA: reliable
+THERMAL CAMERA: reliable
+PROXIMITY WARNING
+
+predicted close pass between two tracks
+
+simulated run, log readout
+
+Un lampo acceca tutti i sensori ottici.

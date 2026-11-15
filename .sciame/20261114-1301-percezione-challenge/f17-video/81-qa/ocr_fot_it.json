@@ -1,0 +1,670 @@
+{
+ "f001.png": {
+  "t_s": 0,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SIMULATION Simulated state-of-the-art sensor parameters assumed no physical sensor 7% M L Vi Fast flight: when continuity is lost"
+ },
+ "f002.png": {
+  "t_s": 2,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SIMULATION Fast flight: drones on a collision course Simulated state-of-the-art sensor parameters assumed no physical sensor PLAN VIEW playback x1.1 (accelerated) —————————200 m ALTITUDE VIEW (distance-height) SEEN —o e SEEN o SEEN t=17.2 s simulated run, log readout RADAR: reliable EO CAMERA: reliable THERMAL CAMERA: reliable PROXIMITY WARNING predicted close pass between two tracks filled: where it can be after an event no probability + truth (simulation only, MoVi does not see it) ® seen not seen: region where it can be"
+ },
+ "f003.png": {
+  "t_s": 4,
+  "verde_px": 4,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SIMULATION Fast flight: drones on a collision course Simulated state-of-the-art sensor parameters assumed no physical sensor PLAN VIEW playback x1.1 (accelerated) ——————200 m ALTITUDE VIEW (distance-height) - ’ éEEN Py \\ SEEN ' - N -- ~__ SEEN SEEN - i o 19.4 s simulated run, log readout RADAR: reliable EO CAMERA: reliable THERMAL CAMERA: reliable PROXIMITY WARNING predicted close pass between two tracks filled: where it can be after an event no probability + truth (simulation only, MoVi does not see it) ® seen not seen: region where it can be Aerei e droni veloci: una collisione, un'avaria in volo, un lampo che acceca le camere."
+ },
+ "f004.png": {
+  "t_s": 6,
+  "verde_px": 12,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SIMULATION Fast flight: drones on a collision course Simulated state-of-the-art sensor parameters assumed no physical sensor PLAN VIEW playback x1.1 (accelerated) PRGN ——————200 m ALTITUDE VIEW (distance-height) 110 -= Sy [ N 2l R F SEEN v ¥ ? e P W\\ [y N N SEEN [ e LR AR NOT SEEN - 0.2 s region 61 m R o NOT SEEN 0.6 s region 69 m t=21.6s simulated run, log readout RADAR: reliable EO CAMERA: reliable THERMAL CAMERA: reliable PROXIMITY WARNING predicted close pass between two tracks filled: where it can be after an event no probability + truth (simulation only, MoVi does not see it) ® seen not seen: region where it can be Aerei e droni veloci: una collisione, un'avaria in volo, un lampo che acceca le camere."
+ },
+ "f005.png": {
+  "t_s": 8,
+  "verde_px": 4,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SIMULATION Fast flight: drones on a collision course Simulated state-of-the-art sensor parameters assumed no physical sensor PLAN VIEW playback x1.1 (acceleratgd) L0 V! 200 m --9 1 ALTITUDE VIEW (distance-heigﬁt)-- - P P 9 i pd ~ PN - W g | ~® SEEN w4 3~ W \\3 \" .- D W . ~-- 7 u g il SEEN \\ . ed 7 7 R ) I an Ty By w - g ~<ST:INOT SEEN 0.3 s region 63 m W LN S - V2 >, NOT SEEN - 0.4 s region 76 m ~~_= t =23.85s simulated run, log readout RADAR: reliable EO CAMERA: reliable THERMAL CAMERA: reliable PROXIMITY WARNING predicted close pass between two tracks filled: where it can be after an event no probability + truth (simulation only, MoVi does not see it) ® seen not seen: region where it can be Aerei e droni veloci: una collisione, un'avaria in volo, un lampo che acceca le camere."
+ },
+ "f006.png": {
+  "t_s": 10,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SIMULATION Fast flight: drones on a collision course Simulated state-of-the-art sensor parameters assumed no physical sensor - PLAN VIEW - playback xl.l\\(accelekated) 200 m N N LY ALTITUDE VIEW (dissaﬁ;e;béféht) B W &y RN ! ’ Y W 7 s W A SEEN < B\\, A5 ANy l\"/ \\‘ 1 Y ¢ o @ il S L BN M SEEN \\\\I O, (IS JN N -—- 4 °® LY N 1 Y NN SEEN . P = o NS 10 NOT SEEN G.; s region 108 m 141 b7, -——= jor=t PR 7’7 NSl L7 rad _Ad ] =° t =26.0s simulated run, log readout RADAR: reliable EO CAMERA: reliable THERMAL CAMERA: reliable PROXIMITY WARNING predicted close pass between two tracks filled: where it can be after an event no probability + truth (simulation only, MoVi does not see it) ® seen not seen: region where it can be Quando la vista si perde, che cosa deve dire lo schermo?"
+ },
+ "f007.png": {
+  "t_s": 12,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SCHEMATIC Three answers per track"
+ },
+ "f008.png": {
+  "t_s": 14,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SCHEMATIC Three answers per track o I SEE IT MoVi dichiara ci6 che non ha osservato."
+ },
+ "f009.png": {
+  "t_s": 16,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "Three answers per track SCHEMATIC o I SEE IT be .= ~ 1 (o] 1 1 I DON'T SEE IT HERE IS WHERE IT CAN BE Y ~ - - Tre risposte per traccia."
+ },
+ "f010.png": {
+  "t_s": 18,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "Three answers per track SCHEMATIC o I SEE IT -’ e ~ 1 1 o 1 1 I DON'T SEE IT HERE IS WHERE IT CAN BE ~ - - Lo vedo."
+ },
+ "f011.png": {
+  "t_s": 20,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SCHEMATIC Three answers per track o I SEE IT e 1 1 I DON'T SEE IT HERE IS WHERE IT CAN BE - R I DON'T KNOW SENSNNRa Non lo vedo, ma ecco dove puo essere."
+ },
+ "f012.png": {
+  "t_s": 22,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [
+   "clear"
+  ],
+  "testo": "Three answers per track SCHEMATIC I SEE IT - I DON'T SEE IT HERE IS WHERE IT CAN BE - I DON'T KNOW not observed # clear Oppure: non lo so."
+ },
+ "f013.png": {
+  "t_s": 24,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [
+   "clear",
+   "libero",
+   "mai",
+   "never"
+  ],
+  "testo": "SIMULATION F1- aircraft on approach, non-cooperative drone Simulated state-of-the-art sensor parameters assumed no physical sensor PLAN VIEW playback x5.2 (accelerated) —_—— 1 km ALTITUDE VIEW (distance-height) SEEN SEEN t =49.8s simulated run, log readout RADAR: reliable EO CAMERA: reliable THERMAL CAMERA: reliable PROXIMITY WARNING predicted close pass between two tracks not observed # clear: a region is kept, never 'clear' filled: where it can be after an event no probability + truth (simulation only, MoVi does not see it) ® seen not seen: region where it can be In sei scenari di volo con il nucleo, MoVi non ha mai detto libero dove c'era un aereo, un drone o un frammento."
+ },
+ "f014.png": {
+  "t_s": 26,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [
+   "clear",
+   "libero",
+   "mai",
+   "never"
+  ],
+  "testo": "SIMULATION F1- aircraft on approach, non-cooperative drone Simulated state-of-the-art sensor parameters assumed no physical sensor PLAN VIEW playback x5.2 (accelerated) —_—— 1 km ALTITUDE VIEW (distance-height) SEEN SEEN t =60.1s simulated run, log readout RADAR: reliable EO CAMERA: reliable SEEN THERMAL CAMERA: reliable PROXIMITY WARNING predicted close pass between two tracks not observed # clear: a region is kept, never 'clear' filled: where it can be after an event no probability + truth (simulation only, MoVi does not see it) ® seen not seen: region where it can be never 'clear' where the object or a fragment was - Fé 0/200 [0; 0.019] - other cells 0/60 [0; 0.060] - sim. In sei scenari di volo con il nucleo, MoVi non ha mai detto libero dove c'era un aereo, un drone o un frammento."
+ },
+ "f015.png": {
+  "t_s": 28,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [
+   "clear",
+   "libero",
+   "mai",
+   "never"
+  ],
+  "testo": "SIMULATION F1- aircraft on approach, non-cooperative drone Simulated state-of-the-art sensor parameters assumed no physical sensor PLAN VIEW playback x5.2 (accelerated) —_——— 1 km ALTITUDE VIEW (distance-height) @& NOT SEEN - 0.3 s - region 62 m SEEN @) t =70.45s simulated run, log readout —e RADAR: reliable EO CAMERA: reliable SEEN THERMAL CAMERA: reliable PROXIMITY WARNING predicted close pass between two tracks not observed # clear: a region is kept, never 'clear' filled: where it can be after an event no probability + truth (simulation only, MoVi does not see it) ® seen not seen region where it can be never 'clear' where the object or a fragment was - Fé 0/200 [0; 0.019] - other cells 0/60 [0; 0.060] - sim. In sei scenari di volo con il nucleo, MoVi non ha mai detto libero dove c'era un aereo, un drone o un frammento."
+ },
+ "f016.png": {
+  "t_s": 30,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [
+   "clear",
+   "libero",
+   "mai",
+   "never"
+  ],
+  "testo": "SIMULATION F1- aircraft on approach, non-cooperative drone Simulated state-of-the-art sensor parameters assumed no physical sensor PLAN VIEW playback x5.2 (accelerated) —_——— 1 km ALTITUDE VIEW (distance-height) SEEN t =80.8s simulated run, log readout RADAR: reliable @ SEEN EO CAMERA: reliable SEEN THERMAL CAMERA: reliable PROXIMITY WARNING predicted close pass between two tracks not observed # clear: a region is kept, never 'clear' filled: where it can be after an event no probability + truth (simulation only, MoVi does not see it) ® seen not seen: region where it can be never 'clear' where the object or a fragment was - Fé 0/200 [0; 0.019] - other cells 0/60 [0; 0.060] - sim. In sei scenari di volo con il nucleo, MoVi non ha mai detto libero dove c'era un aereo, un drone o un frammento."
+ },
+ "f017.png": {
+  "t_s": 32,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SIMULATION F4 - failure with low-energy debris, 135 m/s Simulated state-of-the-art sensor parameters assumed no physical sensor PLAN VIEW playback x1.4 (accelerated) ———— 41 kn ALTITUDE VIEW (distance-height) SEEN t =27.8s simulated run, log readout RADAR: reliable EO CAMERA: reliable THERMAL CAMERA: reliable filled: where it can be after an event no probability + truth (simulation only, MoVi does not see it) ® seen not seen: region where it can be Un aereo va in avaria in volo a centotrentacinque metri al secondo."
+ },
+ "f018.png": {
+  "t_s": 34,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SIMULATION F4 - failure with low-energy debris, 135 m/s Simulated state-of-the-art sensor parameters assumed no physical sensor PLAN VIEW playback x1.4 (accelerated) ———— 41 kn ALTITUDE VIEW (distance-height) SEEN t =30.7s simulated run, log readout RADAR: reliable EO CAMERA: RELIABILITY LOST THERMAL CAMERA: RELIABILITY LOST EVENT: FAILURE OR FLASH - INFERRED debris volume and footprint declared not verified: possible presence filled: where it can be after an event no probability + truth (simulation only, MoVi does not see it) ® seen not seen: region where it can be Un aereo va in avaria in volo a centotrentacinque metri al secondo."
+ },
+ "f019.png": {
+  "t_s": 36,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SIMULATION F4 - failure with low-energy debris, 135 m/s Simulated state-of-the-art sensor parameters assumed no physical sensor PLAN VIEW playback x1.4 (accelerated) ———— 41 kn ALTITUDE VIEW (distance-height) SEEN t =33.6s simulated run, log readout RADAR: reliable EO CAMERA: RELIABILITY LOST THERMAL CAMERA: RELIABILITY LOST EVENT: FAILURE OR FLASH - INFERRED debris volume and footprint declared not verified: possible presence filled: where it can be after an event no probability + truth (simulation only, MoVi does not see it) ® seen not seen: region where it can be Un aereo va in avaria in volo a centotrentacinque metri al secondo."
+ },
+ "f020.png": {
+  "t_s": 38,
+  "verde_px": 16,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SIMULATION F4 - failure with low-energy debris, 135 m/s Simulated state-of-the-art sensor parameters assumed no physical sensor PLAN VIEW playback x1.4 (accelerated) ——— 41 kn ALTITUDE VIEW (distance-height) @ 3 -~ SEEN t =36.5s simulated run, log readout NOT SEEN - 0.2 s - region 76 m RADAR: reliable EO CAMERA: RELIABILITY LOST THERMAL CAMERA: RELIABILITY LOST EVENT: FAILURE OR FLASH - INFERRED debris volume and footprint declared not verified: possible presence filled: where it can be after an event no probability + truth (simulation only, MoVi does not see it) ® seen not seen: region where it can be event inferred, cameras declared unreliable within 1 s: 60/60 [0.940; 1] - optimistic trigger - sim. MoVi deduce I'evento e dichiara le camere non affidabili entro un secondo, in sessanta prove simulate su sessanta."
+ },
+ "f021.png": {
+  "t_s": 40,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SIMULATION F4 - failure with low-energy debris, 135 m/s Simulated state-of-the-art sensor parameters assumed no physical sensor PLAN VIEW playback x1.4 (accelerated) ———— 41 Kkn ALTITUDE VIEW (distance-height) A —@0) SEEN \\j%;NDT SEEN - 0.2 s - region 87 m t =39.45s simulated run, log readout RADAR: reliable EO CAMERA: RELIABILITY LOST THERMAL CAMERA: RELIABILITY LOST EVENT: FAILURE OR FLASH - INFERRED debris volume and footprint declared not verified: possible presence filled: where it can be after an event no probability + truth (simulation only, MoVi does not see it) ® seen not seen: region where it can be event inferred, cameras declared unreliable within 1 s: 60/60 [0.940; 1] - optimistic trigger - sim. MoVi deduce I'evento e dichiara le camere non affidabili entro un secondo, in sessanta prove simulate su sessanta."
+ },
+ "f022.png": {
+  "t_s": 42,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SIMULATION F4 - failure with low-energy debris, 135 m/s Simulated state-of-the-art sensor parameters assumed no physical sensor PLAN VIEW playback x1.4 (accelerated) ———— 41 Kkn ALTITUDE VIEW (distance-height) P - B ~ +7o= SEEN “, \\ \\ 1 [ “NOT SEEN - 0.6 s - region 134 m \\ t =423 s simulated run, log readout L NOT SéEN - 2.4 region 413 m ~ . RADAR: reliable ~ ~ e -~ > EO CAMERA: RELIABILITY LOST THERMAL CAMERA: RELIABILITY LOST EVENT: FAILURE OR FLASH - INFERRED debris volume and footprint declared not verified: possible presence filled: where it can be after an event no probability + truth (simulation only, MoVi does not see it) ® seen not seen: region where it can be event inferred, cameras declared unreliable within 1 s: 60/60 [0.940; 1] - optimistic trigger - sim. MoVi deduce I'evento e dichiara le camere non affidabili entro un secondo, in sessanta prove simulate su sessanta."
+ },
+ "f023.png": {
+  "t_s": 44,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SIMULATION F4 - failure with low-energy debris, 135 m/s Simulated state-of-the-art sensor parameters assumed no physical sensor PLAN VIEW ~ ~ ~ playback x1.4 (accelerated) ———— 41 Kkn ALTITUDE VIEW (distance-heigh?),‘ D —@0 SEEN -—- _ %EEN t =45.2 s simulated run, log readout NOT SEEN 5.3 s region 893 m RADAR: reliable EO CAMERA: RELIABILITY LOST THERMAL CAMERA: RELIABILITY LOST EVENT: FAILURE OR FLASH - INFERRED S debris volume and footprint declared not verified: possible presence filled: where it can be after an event no probability + truth (simulation only, MoVi does not see it) ® seen not seen: region where it can be event inferred, cameras declared unreliable within 1 s: 60/60 [0.940; 1] - optimistic trigger - sim. MoVi deduce I'evento e dichiara le camere non affidabili entro un secondo, in sessanta prove simulate su sessanta."
+ },
+ "f024.png": {
+  "t_s": 46,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SIMULATION F4 - failure with low-energy debris, 135 m/s Simulated state-of-the-art sensor parameters assumed no physical sensor e PLAN VIEW playback x1.4 (accelerated) _—”P______;;a—tt_ql km ALTITUDE VIEW (distance-hijgat) —g O AR rF T TR R TR R A AR AN RN RN NN N SEEN @ SEEN NOT SEEN - 8.2 s - region 1.4 km t =48.15s simulated run, log readout RADAR: reliable EO CAMERA: RELIABILITY LOST THERMAL CAMERA: RELIABILITY LOST EVENT: FAILURE OR FLASH . INFERRED debris volume and footprint declared not verified: possible presence filled: where it can be after an event no prubahil{;v - + truth (simulation only, MoVi does not see it) ® seen not se&ns —region-where it ;an be event inferred, cameras declared unreliable within 1 s: 60/60 [0.940; 1] - optimistic trigger - sim. low-energy debris inside the declared volume: 58/60 [0.886; 0.991] - sim. | detriti a bassa energia restano nel volume dichiarato in cinquantotto su sessanta."
+ },
+ "f025.png": {
+  "t_s": 48,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SIMULATION F4 - failure with low-energy debris, 135 m/s Simulated state-of-the-art sensor parameters assumed no physical sensor PLAN VIEW playback x1.4 (accelerated) ———— 41 Kkn ALTITUDE VIEW (distanceJheight) —@ © SEEN el SEEN NOT SEEN alloal @ region 2.0 km t =51.0s simulated run, log readout RADAR: reliable EO CAMERA: RELIABILITY LOST THERMAL CAMERA: RELIABILITY LOST EVENT: FAILURE OR FLASH - INFERRED debris volume and footprint declared not verified: possible presence filled: where it can be after an event no probability + truth (simulation only, MoVi does not see it) '@ seen not seen: region where it can be event inferred, cameras declared unreliable within 1 s: 60/60 [0.940; 1] - optimistic trigger - sim. low-energy debris inside the declared volume: 58/60 [0.886; 0.991] - sim. | detriti a bassa energia restano nel volume dichiarato in cinquantotto su sessanta."
+ },
+ "f026.png": {
+  "t_s": 50,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SIMULATION F4 - failure with low-energy debris, 135 m/s Simulated state-of-the-art sensor parameters assumed no physical sensor PLAN VIEW playback x1.4 (accelera;éd) ————J41 Kkn ALTITUDE VIEW (distaﬁce-height) —@) ° ,= SEEN e i N P2 NOT SEEN Q35S region 106 m NOT SEEN 14.0 s region 2.6 km t =53.95s simulated run, log readout RADAR: reliable EO CAMERA: RELIABILITY LOST THERMAL CAMERA: RELIABILITY LOST EVENT: FAILURE OR FLASH - INFERRED debris volume and footprint declared not verified: possible presence filled: where it can be after an event no probability + truth (simulation only, MoVi does not'see it) ® seen not seen: region where it can be event inferred, cameras declared unreliable within 1 s: 60/60 [0.940; 1] - optimistic trigger - sim. low-energy debris inside the declared volume: 58/60 [0.886; 0.991] - sim. | detriti a bassa energia restano nel volume dichiarato in cinquantotto su sessanta."
+ },
+ "f027.png": {
+  "t_s": 52,
+  "verde_px": 4,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SIMULATION F3 - fast drones colliding at 40 and 35 m/s Simulated state-of-the-art sensor parameters assumed no physical sensor PLAN VIEW playback x2.2 (accelerated) —————200 m ALTITUDE VIEW (distance-height) P - ~ @ St - v ' - N ’ @ ~- NOT SEEN - 0.3 s region 63 m o t = 3.1 s - simulated run, log readout RADAR: reliable EO CAMERA: reliable THERMAL CAMERA: reliable PROXIMITY WARNING SEEN predicted close pass between two tracks f SEEN filled: where it can be after an event no probability + truth (simulation only, MoVi does not see it) ® seen not seen: region where it can be Due droni veloci si scontrano."
+ },
+ "f028.png": {
+  "t_s": 54,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SIMULATION F3 - fast drones colliding at 40 and 35 m/s Simulated state-of-the-art sensor parameters assumed no physical sensor PLAN VIEW playback x2.2 (accelerated) —————200 m ALTITUDE VIEW (distance-height) SEEN —7® SeEN t=7.45s simulated run, log readout RADAR: reliable SEEN EO CAMERA: reliable THERMAL CAMERA: reliable I SEEN PROXIMITY WARNING predicted close pass between two tracks filled: where it can be after an event no probability + truth (simulation only, MoVi does not see it) ® seen not seen: region where it can be MoVi avvisa del passaggio ravvicinato almeno dieci secondi prima, in sessanta prove su sessanta."
+ },
+ "f029.png": {
+  "t_s": 56,
+  "verde_px": 4,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SIMULATION F3 - fast drones colliding at 40 and 35 m/s Simulated state-of-the-art sensor parameters assumed no physical sensor —————200 m PLAN VIEW - playback x2.2 (acﬁé{erated) ALTITUDE VIEW (di?%ance-height) 7 ’ SEEN 1 7‘—. SEEN r—@ o SEEN q i o o7 & simulated run, log readout T SEEN RADAR: reliable EO CAMERA: reliable THERMAL CAMERA: reliable PROXIMITY WARNING predicted close pass between two tracks filled: where it can be after an evs?nt no probability + truth (simulation only, MoVi does not s‘ee\\it) ® seen not seen: region where it can be proximity warning at least 10 s ahead: 60/60 [0.940; 1] - 10 s threshold set after - sim. MoVi avvisa del passaggio ravvicinato almeno dieci secondi prima, in sessanta prove su sessanta."
+ },
+ "f030.png": {
+  "t_s": 58,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SIMULATION F3 - fast drones colliding at 40 and 35 m/s Simulated state-of-the-art sensor parameters assumed no physical sensor PLAN VIEW playback x2.2 (accelerated) ———————200 m ALTITUDE VIEW (distance-height) SEEN ® SEEN —e e o SEEN g i = A6RINS simulated run, log readout RADAR: reliable EO CAMERA: reliable THERMAL CAMERA: reliable PROXIMITY WARNING predicted close pass between two tracks A \\ \\ . filled: where it can be after an event no probability +‘$ruth (simulation only, MoVi does not see it) ® seen not seen: region where it can be proximity warning at least 10 s ahead: 60/60 [0.940; 1] - 10 s threshold set after - sim. MoVi avvisa del passaggio ravvicinato almeno dieci secondi prima, in sessanta prove su sessanta."
+ },
+ "f031.png": {
+  "t_s": 60,
+  "verde_px": 4,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SIMULATION F3 - fast drones colliding at 40 and 35 m/s Simulated state-of-the-art sensor parameters assumed no physical sensor PLAN VIEW playback x2.2 (accelerated) ————————200 m ALTITUDE VIEW (distance-height) o~ P 1 1y SEEN Y ) —— 7 g ) ~ SEEN -— SEEN NOT SEEN :- 0.2 s region 59 m t =20.45s simulated run, log readout RADAR: reliable EO CAMERA: reliable THERMAL CAMERA: reliable PROXIMITY WARNING predicted close pass between two tracks filled: where it can be after an event no probability + truth (simulation only, MoVi does not see it) ® seen not seen: region where it can be proximity warning at least 10 s ahead: 60/60 [0.940; 1] - 10 s threshold set after - sim. MoVi avvisa del passaggio ravvicinato almeno dieci secondi prima, in sessanta prove su sessanta."
+ },
+ "f032.png": {
+  "t_s": 62,
+  "verde_px": 4,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SIMULATION F3 - fast drones colliding at 40 and 35 m/s Simulated state-of-the-art sensor parameters assumed no physical sensor 7 Ty = PLAN VIEW - playback x2.2 (acceﬂprate&’ Vi YLl o0 i U 29 1 =i \" ALTITUDE VIEW (distance:bei%&él’ » RN o \" P N AR R SEEN ,/ e Wy A A Y SEEN -~ Lo 0 +@' S S 1 S8 22 SEEN 11 N N Sse_-=2 = L * 8 an == \"2NOT SEEN 0.4 s - region 68 m 2/ R \\\\\\\\:--—'/ ST it t=24.7s simulated run, log readout RADAR: reliable EO CAMERA: reliable THERMAL CAMERA: reliable PROXIMITY WARNING predicted close pass between two tracks collision not yet declared as an event: region kept filled: where it can be after an event no probability + truth (simulation only, MoVi does not see it) ® seen not seen: region where it can be proximity warning at least 10 s ahead: 60/60 [0.940; 1] - 10 s threshold set after - sim. true position and fragments inside the region: 68/60 [0.940; 1] - 939/939 samples - sim. La collisione non & ancora dichiarata come evento, ma la regione resta: i frammenti vi sono rimasti in sessanta prove su sessanta."
+ },
+ "f033.png": {
+  "t_s": 64,
+  "verde_px": 12,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SIMULATION F3 - fast drones colliding at 40 and 35 m/s Simulated state-of-the-art sensor parameters assumed no physical sensor S ~ \\ 5| PLAN VIEW playb;Pk %2.2 (accelerated) ALTITgéE VIEWdeistance-height) /,.7.7\\4\\.; 200 m + ‘: SEEN | SEEN 7 ey SEEN ’ o.:o 4 +.—4. D ~== '\\ SEEN v ) t=29.0s simulated run, log readout P >= Siiays 2T Sax-—=z Ertd R RADAR: reliable EO CAMERA: reliable THERMAL CAMERA: reliable PROXIMITY WARNING predicted close pass between two tracks collision not yet declared as an event: region kept filled: where it can be after an event no probability + truth (simulation only, MoVi does not see it) ® seen not seen: region where it can be proximity warning at least 10 s ahead: 60/60 [0.940; 1] - 10 s threshold set after - sim. true position and fragments inside the region: 68/60 [0.940; 1] - 939/939 samples - sim. contact rule under test: 57/60 [0.863; 0.983] false events in a 39 m near miss (F5) 2/60 [0.009; 0.114] not adopted La collisione non & ancora dichiarata come evento, ma la regione resta: i frammenti vi sono rimasti in sessanta prove su sessanta."
+ },
+ "f034.png": {
+  "t_s": 66,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SIMULATION F3 - fast drones colliding at 40 and 35 m/s Simulated state-of-the-art sensor parameters assumed no physical sensor i §\\ P PLAN VIEW - playback x2.2 (accelerated? o™ N ZQO m . ALTITUDE VIEW (distance-hf&ght) '/ VA r Sal g ] LT 1 ® SEEN s ] } \\ - = Ao SEEN . . ’ F oS ~ ~-- ~o__SEEN _ NOT SEEN 0.8 s region 116 m & e N - ~-- b IR © 4 o t =33.3s simulated run, log readout RADAR: reliable EO CAMERA: reliable THERMAL CAMERA: reliable PROXIMITY WARNING predicted close pass between two tracks collision not yet declared as an event: ~ region kept filled: where it can be after an event no probability N + truth (simulation only, MoVi does not see it) ® seen not seen: ?Egign where %t can be proximity warning at least 10 s ahead: 60/60 [0.940; 1] - 10 s threshold set after - sim. true position and fragments inside the region: 68/60 [0.940; 1] - 939/939 samples - sim. contact rule under test: 57/60 [0.863; 0.983] false events in a 39 m near miss (F5) 2/60 [0.009; 0.114] not adopted La collisione non & ancora dichiarata come evento, ma la regione resta: i frammenti vi sono rimasti in sessanta prove su sessanta."
+ },
+ "f035.png": {
+  "t_s": 68,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SIMULATION F3 - fast drones colliding at 40 and 35 m/s Simulated state-of-the-art sensor parameters assumed no physical sensor A ~ - \\ ALTITUDE VIEW (distance-height) PLAN VIEW - playback x2.2 (accelerafgd) —————— 200 \\ 1t \\ 1 II e@ [ [} 1 W o \\ Y@ SEEN - e SEEN 1°N oy - 2l o7 e W - PY<5) [N o B SEEN [ L = - N <- e NOT SEEN - 923 s region 59 m Ay L= [ -—— ~o- o t =37.6s simulated run, log readout RADAR: reliable EO CAMERA: reliable THERMAL CAMERA: reliable PROXIMITY WARNING predicted close pass between two tracks collision not yet declared as an event: region kept filled: where it can be after an event no probability + truth (simulation only, MoVi does not see it) ® seen not seen: region where it can be proximity warning at least 10 s ahead: 60/60 [0.940; 1] - 10 s threshold set after - sim. true position and fragments inside the region: 68/60 [0.940; 1] - 939/939 samples - sim. contact rule under test: 57/60 [0.863; 0.983] false events in a 39 m near miss (F5) 2/60 [0.009; 0.114] not adopted La collisione non & ancora dichiarata come evento, ma la regione resta: i frammenti vi sono rimasti in sessanta prove su sessanta."
+ },
+ "f036.png": {
+  "t_s": 70,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SIMULATION Simulated state-of-the-art sensor parameters assumed no physical sensor"
+ },
+ "f037.png": {
+  "t_s": 72,
+  "verde_px": 16,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SIMULATION F5 - a flash blinds every optical sensor Simulated state-of-the-art sensor parameters assumed no physical sensor PLAN VIEW playback x0.89 (slowed) [E— Y, 1, ALTITUDE VIEW (distance-height) -~ i e e ) 71l \\- ~-x ) s g N s S-=r 70 -~ 2 S T SEEN t=39.2s simulated run, log readout e Y s SEEN RADAR: reliable il . EO CAMERA: reliable v NOT SEEN PR 0.2 s - region 68 m THERMAL CAMERA: reliable = NOT SEEN - 0.2 s region 224 m PROXIMITY WARNING predicted close pass between two tracks 2 ’ filled: where i} can be after an event no probability + truth (simulation only,-MeVi-does not see it) ® seen not seen: region where it can be Un lampo acceca tutti i sensori ottici."
+ },
+ "f038.png": {
+  "t_s": 74,
+  "verde_px": 24,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SIMULATION F5 - a flash blinds every optical sensor Simulated state-of-the-art sensor parameters assumed no physical sensor PLAN VIEW playback x0.89 (slowed) N ———————200 m \\ \" ALTITUDE VIEW (distan;é‘Qeight) . Y b ) Ay ~3V 1 \"wi )] I = 7 5t 0! < ~—=- 41 e ~ A P N RS Y ~———- 23~ ~ \\\\\\ ~ - Y ] 1 ” N Oy SEEN t =41.0s simulated run, log readout \\ ‘1 ,k4 RADAR: reliable N ‘¢-: EO CAMERA: RELIABILITY LOST N z - SEEI‘ i SEFN ] THERMAL CAMERA: RELIABILITY LOST ~ - - - Z-\" PROXIMITY WARNING - . —————- e -7 NOT SEEN’.- 9.3 s - region 84 m predicted close pass between two tracks ’ 7 ’ RADAR ONLY - identity PRESUMED ’ . filled: where it can be after an event no probability + truth (simulat}bn.gnly, MoVi dnis,nn? see it) @ seen not seen: region where it can be optics blinded: every track keeps a region - 60/60 [0.940; 1] - identity PRESUMED - sim. Il solo radar mantiene una regione per ogni traccia, e I'identita & presunta."
+ },
+ "f039.png": {
+  "t_s": 76,
+  "verde_px": 4,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SIMULATION F5 - a flash blinds every optical sensor Simulated state-of-the-art sensor parameters assumed no physical sensor PLAN VIEW playback x0.89 (slowed) ———————200 m ALTITUDE VIEW (distance-height)‘\\ & O - R T e o, ‘s 1 e ~-- e e ~—-- 4 - =i SEEN I SEEN N—— e t =42.85s simulated run, log readout RADAR: reliable SEEN EO CAMERA: RELIABILITY LOST - THERMAL CAMERA: RELIABILITY LOST SEEN PROXIMITY WARNING predicted close pass between two tracks RADAR ONLY - identity PRESUMED ~ o - - ~ = filled: where it can be after an event no probability + truth (simulation only, MoVi does not see it) ® seen not seen: region where it can be optics blinded: every track keeps a region - 60/60 [0.940; 1] : identity PRESUMED - sim. Il solo radar mantiene una regione per ogni traccia, e I'identita & presunta."
+ },
+ "f040.png": {
+  "t_s": 78,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SIMULATION F5 - a flash blinds every optical sensor Simulated state-of-the-art sensor parameters assumed no physical sensor 1 PLAN VIEW playback x0.89 (slowed) ALTITUDE VIEW (distance-height) :p—_—_—_—_—q 200 m [ Y ’ \"Sg‘\\ Y & ey 1 O O\\ N ‘s ~- ~ 7 F-- b A - 1 SEEN . /1 (o) t =44.6s simulated run, log readout N 'SEEN 4 — ) = - - RADAR: reliable . e == EO CAMERA: RELIABILITY LOST NOT %EEN + 0.2 s + region 67 m THERMAL CAMERA: RELIABILITY LOST PROXIMITY WARNING predicted close pass between two tracks ~ RADAR ONLY - identity PRESUMED e filled: where it can be after an event no pru;ahilitv + truth (simulation only, MoVi does not sgg,itj ® seen not seen: region where it can be optics blinded: every track keeps a region - 60/60 [0.940; 1] - identity PRESUMED - sim. Il solo radar mantiene una regione per ogni traccia, e I'identita & presunta."
+ },
+ "f041.png": {
+  "t_s": 80,
+  "verde_px": 40,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SCHEMATIC + PUBLIC TRAJECTORIES When continuity is lost: confidence over time curve computed in the model points: public flight tracks, simulated sensor PLAN VIEW schematic: motion compressed, radii from the computed curve C(1): chance it is within 150 m of the prediction - computed ie 0.5 T (s) 0 10 20 30 i zone at last sighting 150 m (for comparison) SO radius kept at 0.9, r0.9(t) in m - computed (min. progressive) 200 2, 100 B 0 £ 0 G £ £ ) BB 5 6 8 58 115 (8 B B 10 5 510 5 5 08 5.6 o) e 8 RS £ — MR ... last-séen oL T (s) 0 10 20 30 NOT éE‘EN ERORBRSEE re/gion re.9 = 35 m - coverage of the 0.9 region - public flight tracks, simulated sensor et |bsocococoooooooooonoooonooocooooonooooooooocESh 0.9 0.8 aircraft at 210 m/s, straight line: the most favourable case on real tracks the region is much larger (see points on the right) T (s) 0.6 02(t) = 002 + 200v-T + ov2-t? + q-Tt°/3 + o_ref? C(t) =1 - exp(-r2/2¢2(x)) 0 10 20 30 C-TAR 1-2 s: 0.89 (655/733) [0.87; 0.91] - cases correlated 0.85-0.89 from 1 to 30 s 21-30 s: 0.85 [0.81; 0.88] 89.5% of cases from 4 flights of one route Wilson 95 % per case"
+ },
+ "f042.png": {
+  "t_s": 82,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SCHEMATIC + PUBLIC TRAJECTORIES When continuity is lost: confidence over time curve computed in the model points: public flight tracks, simulated sensor PLAN VIEW schematic: motion compressed, radii from the computed curve C(1): chance it is within 150 m of the prediction - computed 1@ T (s) 0.5 0 10 20 30 i zone at last sighting 150 m (for comparison) SO radius kept at 0.9, r0.9(t) in m - computed (min. progressive) 200 Vil 100 B B0 (0 0 G £ (i ) B8 £ 0 8 58 1S (8 0 B 10 5 510 O i 8 516 o) i ) RS £ R 2 ) FEEEEE ® T (s) 1last séen ] 36 m 0 10 20 30 NOT égEN 5 BRSES re/gion re.9 = coverage of the 0.9 region - public flight tracks, simulated sensor e L sococooosoooooooooooconscoconocosooooooooostSh 0.9 0.8 aircraft at 210 m/s, straight line: the most favourable case on real tracks the region is much larger (see points on the right) T (s) 0.6 02(t) = 002 + 200v-T + ov2-t? + q-T°/3 + o_ref? C(t) =1 - exp(-r2/2¢2(t)) 0 10 20 30 C-TAR 1-2 s: 0.89 (655/733) [0.87; 0.91] - cases correlated 0.85-0.89 from 1 to 30 s 21-30 s: 0.85 [0.81; 0.88] 89.5% of cases from 4 flights of one route Wilson 95 % per case Quando la continuita si perde, MoVi calcola, nel modello del moto, come cala la confidenza, e fa crescere la regione per tenere nove probabilita su dieci."
+ },
+ "f043.png": {
+  "t_s": 84,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SCHEMATIC + PUBLIC TRAJECTORIES When continuity is lost: confidence over time curve computed in the model points: public flight tracks, simulated sensor PLAN VIEW schematic: motion compressed, radii from the computed curve C(1): chance it is within 150 m of the prediction - computed 1—e T (s) 0.5 0 10 20 30 i zone at last sighting 150 m (for comparison) SO radius kept at 0.9, r0.9(t) in m - computed (min. progressive) 200 4 s 100 B B0 (0 0 G £ (i ) B8 £ 0 8 58 1S (8 0 B 10 5 510 O i 8 516 o) i ) RS £ ___{_________4.0., ..... ' ' . —eo T (s) last \\s'!enl ] 0 10 20 30 NOT ég}—:u - 1.9s - re?ion r8.9 = 37 m - coverage of the 0.9 region - public flight tracks, simulated sensor e 0.9 FoQmmmmmmmmmmmm oo ooth 0.89 0.8 aircraft at 210 m/s, straight line: the most favourable case on real tracks the region is much larger (see points on the right) T (s) 0.6 02(t) = 002 + 200v-T + ov2-t? + q-T°/3 + o_ref? C(t) =1 - exp(-r2/2¢2(x)) 0 10 20 30 C-TAR 1-2 s: 0.89 (655/733) [0.87; 0.91] - cases correlated 0.85-0.89 from 1 to 30 s 21-30 s: 0.85 [0.81; 0.88] 89.5% of cases from 4 flights of one route Wilson 95 % per case Quando la continuita si perde, MoVi calcola, nel modello del moto, come cala la confidenza, e fa crescere la regione per tenere nove probabilita su dieci."
+ },
+ "f044.png": {
+  "t_s": 86,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SCHEMATIC + PUBLIC TRAJECTORIES When continuity is lost: confidence over time curve computed in the model points: public flight tracks, simulated sensor PLAN VIEW schematic: motion compressed, radii from the computed curve C(1): chance it is within 150 m of the prediction - computed 1 — T (s) 0.5 0 10 20 30 i zone at last sighting 150 m (for comparison) SO radius kept at 0.9, r0.9(t) in m - computed (min. progressive) 200 = 100 B B0 (0 0 G £ (i ) B8 £ 0 8 58 1S (8 0 B 10 5 510 O i 8 516 o) i ) RS £ - T (s) last seeho —d 10 20 30 NOT éggu ©4.4s - redion re.9 = 48 m - coverage of the 0.9 region - public flight tracks, simulated sensor e FoooocoooooooooooDSoooononooDooDoooooSSSh 0.9 [0~ 0.89 p.89 0.8 aircraft at 210 m/s, straight line: the most favourable case on real tracks the region is much larger (see points on the right) T (s) 0.6 02(t) = 002 + 200v-T + ov2-t? + q-T°/3 + o_ref? C(t) =1 - exp(-r2/2¢2(x)) 10 20 30 C-TAR 1-2 s: 0.89 (655/733) [0.87; 0.91] - cases correlated 0.85-0.89 from 1 to 30 s 21-30 s: 0.85 [0.81; 0.88] 89.5% of cases from 4 flights of one route Wilson 95 % per case Quando la continuita si perde, MoVi calcola, nel modello del moto, come cala la confidenza, e fa crescere la regione per tenere nove probabilita su dieci."
+ },
+ "f045.png": {
+  "t_s": 88,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SCHEMATIC + PUBLIC TRAJECTORIES When continuity is lost: confidence over time curve computed in the model points: public flight tracks, simulated sensor PLAN VIEW schematic: motion compressed, radii from the computed curve C(1): chance it is within 150 m of the prediction - computed 1_\\. T (s) 0.5 0 10 20 30 i zone at last sighting 150 m (for comparison) it radius kept at 0.9, r0.9(t) in m - computed (min. progressive) 200 s s 100 - ... 10 0 7 ) T 050 7 G 0 6 B 3 5 . 5 B8 0 5 8 5 B B 50 B 8 50 6 5 s B 8 T (s) last seen \\ . e ~: - 10 20 30 u‘b]: SEEN - 7.6 s‘ region r0.9 = 55 m < coverage of the 0.9 region - public flight tracks, simulated sensor Somonoe mooog SooooooooooooooooooooooooooonoSSL 0.9 F-0-- 0.89 0.89 0.89 0.8 aircraft at 210 m/s, straight line: the most favourable case on real tracks the region is much larger (see points on the right) T (s) 0.6 02(t) = 002 + 200v-T + ov2-t? + q-T°/3 + o_ref? C(t) = 1 - exp(-r2/2¢2(t)) 10 20 30 C-TAR 1-2 s: 0.89 (655/733) [0.87; 0.91] - cases correlated 0.85-0.89 from 1 to 30 s 21-30 s: 0.85 [0.81; 0.88] 89.5% of cases from 4 flights of one route Wilson 95 % per case Quando la continuita si perde, MoVi calcola, nel modello del moto, come cala la confidenza, e fa crescere la regione per tenere nove probabilita su dieci."
+ },
+ "f046.png": {
+  "t_s": 90,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SCHEMATIC + PUBLIC TRAJECTORIES When continuity is lost: confidence over time curve computed in the model points: public flight tracks, simulated sensor PLAN VIEW schematic: motion compressed, radii from the computed curve C(1): chance it is within 150 m of the prediction - computed 1—\\. T (s) 0.5 0 10 20 30 i zone at last sighting 150 m (for comparison) it radius kept at 0.9, r0.9(t) in m - computed (min. progressive) 200 e v d 100 7z o e et d [H i aomacad | T (s) last seen . ~—- 10 20 30 “.NOT SEEN -”;.1'.'3 s - region r8.9 = 76 m < “ - coverage of the 0.9 region - public flight tracks, simulated sensor SomonoR mooog Sooooocooo SooooooootoooooooooSSn 0.9 F-0-- 0.89 0.89 0.89 0.89 0.8 aircraft at 210 m/s, straight line: the most favourable case on real tracks the region is much larger (see points on the right) T (s) 0.6 02(t) = 002 + 200v-T + ov2-t? + q-T°/3 + o_ref? C(t) = 1 - exp(-r2/2¢2(t)) 10 20 30 C-TAR 1-2 s: 0.89 (655/733) [0.87; 0.91] - cases correlated 0.85-0.89 from 1 to 30 s 21-30 s: 0.85 [0.81; 0.88] 89.5% of cases from 4 flights of one route Wilson 95 % per case Quando la continuita si perde, MoVi calcola, nel modello del moto, come cala la confidenza, e fa crescere la regione per tenere nove probabilita su dieci."
+ },
+ "f047.png": {
+  "t_s": 92,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SCHEMATIC + PUBLIC TRAJECTORIES When continuity is lost: confidence over time curve computed in the model points: public flight tracks, simulated sensor PLAN VIEW schematic: motion compressed, radii from the computed curve C(1): chance it is within 150 m of the prediction - computed 1—\\. T (s) 0.5 0 10 20 30 i zone at last sighting 150 m (for comparison) it radius kept at 0.9, r0.9(t) in m - computed (min. progressive) 200 — — Vaccoassss 1 - - (N Bezzacd foessnaccsssannacconsanoaacosmasstaceans 100 _/ T (s) last seen 10 20 30 - NOT s;zu\"- 15.2 s - region r8.9 = 93 m coverage of the 0.9 region - public flight tracks, simulated sensor SsmonoR mooog Sooooocooo SoocooooootoooooooooBSn 0.9 F-0-- 0.89 0.89 0.89 0.89 0.8 aircraft at 210 m/s, straight line: the most favourable case on real tracks the region is much larger (see points on the right) T (s) 0.6 02(t) = 002 + 200v-T + ov2-t? + q-T°/3 + o_ref? C(t) =1 - exp(-r2/2¢2(t)) 10 20 30 C-TAR 1-2 s: 0.89 (655/733) [0.87; 0.91] - cases correlated 0.85-0.89 from 1 to 30 s 21-30 s: 0.85 [0.81; 0.88] 89.5% of cases from 4 flights of one route Wilson 95 % per case Su traiettorie di volo pubbliche, con un sensore simulato, la regione ha contenuto I'aereo da ottantacinque a ottantanove volte su cento, sotto nove su dieci, soprattutto su una rotta."
+ },
+ "f048.png": {
+  "t_s": 94,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SCHEMATIC + PUBLIC TRAJECTORIES When continuity is lost: confidence over time curve computed in the model points: public flight tracks, simulated sensor PLAN VIEW schematic: motion compressed, radii from the computed curve C(1): chance it is within 150 m of the prediction - computed 1—\\. T (s) 0.5 0 10 20 30 i zone at last sighting 150 m (for comparison) it radius kept at 0.9, r0.9(t) in m - computed (min. progressive) - 200 7z e e e ....... [ 5 SBeostcesstusBoutabsBHeRsEEoEsss en _/ T (s) last seen e 0 10 20 30 ~== coverage of the 0.9 region - public flight tracks, simulated sensor Somonod NOT SEEN 19.2 s - region r0.9 = 113 m mooog Sooooocooo SoocooooootoooooooooBSn 0.9 F-0-- 0.89 0.89 0.89 0.89 0.8 aircraft at 210 m/s, straight line: the most favourable case on real tracks the region is much larger (see points on the right) T (s) 0.6 02(t) = 002 + 200v-T + ov2-t? + q-T°/3 + o_ref? C(t) =1 - exp(-r2/2¢2(t)) 10 20 30 C-TAR 1-2 s: 0.89 (655/733) [0.87; 0.91] - cases correlated 0.85-0.89 from 1 to 30 s 21-30 s: 0.85 [0.81; 0.88] 89.5% of cases from 4 flights of one route Wilson 95 % per case Su traiettorie di volo pubbliche, con un sensore simulato, la regione ha contenuto I'aereo da ottantacinque a ottantanove volte su cento, sotto nove su dieci, soprattutto su una rotta."
+ },
+ "f049.png": {
+  "t_s": 96,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SCHEMATIC + PUBLIC TRAJECTORIES When continuity is lost: confidence over time curve computed in the model points: public flight tracks, simulated sensor PLAN VIEW schematic: motion compressed, radii from the computed curve C(1): chance it is within 150 m of the prediction - computed 1\\. T (s) 0.5 0 10 20 30 i zone at last sighting 150 m (for comparison) it . radius kept at 0.9, r0.9(t) in m - computed (min. progressive) 200 — et A, [ SE——— jecossascacessssnnascansans T (s) last seen e 0 10 20 30 - coverage of the 0.9 region - public flight tracks, simulated sensor Somono® NOT SEEN - 22.8 s - region r0.9 = 128 m mooog Sooooocooo SooooooootoooogoooobSn 0.9 F-0-- 0.89 0.89 0.89 0.89 0.8 aircraft at 210 m/s, straight line: the most favourable case turns 0.73 Or80ie é on real tracks the region is much larger (see points on the right) T (s) 0.6 02(t) = 002 + 200v-T + ov2-t? + q-T°/3 + o_ref? C(t) =1 - exp(-r2/2¢2(t)) 10 20 30 C-TAR 1-2 s: 0.89 (655/733) [0.87; 0.91] - cases correlated 0.85-0.89 from 1 to 30 s 21-30 s: 0.85 [0.81; 0.88] 89.5% of cases from 4 flights of one route Wilson 95 % per case Su traiettorie di volo pubbliche, con un sensore simulato, la regione ha contenuto I'aereo da ottantacinque a ottantanove volte su cento, sotto nove su dieci, soprattutto su una rotta."
+ },
+ "f050.png": {
+  "t_s": 98,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SCHEMATIC + PUBLIC TRAJECTORIES When continuity is lost: confidence over time curve computed in the model points: public flight tracks, simulated sensor PLAN VIEW schematic: motion compressed, radii from the computed curve C(1): chance it is within 150 m of the prediction - computed m—Trr—— T (s) 0.5 0 10 20 30 i zone at last sighting 150 m (for comparison) SOt —— radius kept at 0.9, r0.9(t) in m - computed (min. progressive) 200 100 i 1 o o e .............. i@ oo oo | T (s) last seen ] 0 10 20 30 ~ coverage of the 0.9 region - public flight tracks, simulated sensor Somonos e —oooq Sooooocooo coocooooooooooogEoooSSGe 0.9 NOT SEEN - 26.0 s - region r0.9 = 148 m t-o-- 0.89 p.89 0.89 0.89 0.8 aircraft at 210 m/s, straight line: the most favourable case turns 0.73 o8 é on real tracks the region is much larger (see points on the right) T (s) 0.6 02(t) = 002 + 200v-T + ov2-t? + q-T°/3 + o_ref? C(t) = 1 - exp(-r2/262(x)) 10 20 30 C-TAR 1-2 s: 0.89 (655/733) [0.87; 0.91] - cases correlated 0.85-0.89 from 1 to 30 s 21-30 s: 0.85 [0.81; 0.88] 89.5% of cases from 4 flights of one route Wilson 95 % per case Su traiettorie di volo pubbliche, con un sensore simulato, la regione ha contenuto I'aereo da ottantacinque a ottantanove volte su cento, sotto nove su dieci, soprattutto su una rotta."
+ },
+ "f051.png": {
+  "t_s": 100,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SCHEMATIC + PUBLIC TRAJECTORIES When continuity is lost: confidence over time curve computed in the model points: public flight tracks, simulated sensor PLAN VIEW schematic: motion compressed, radii from the computed curve C(1): chance it is within 150 m of the prediction - computed 1\\. T (s) 0.5 0 10 20 30 i zone at last sighting 150 m (for comparison) e SOt radius kept at 0.9, r0.9(t) in m - computed (min. progressive) 200 100 i 1 o o e ................ 1R O | — - - - < eo--a- T (s) last seen ] 0 10 20 30 coverage of the 0.9 region - public flight tracks, simulated sensor Somonos ~ ~———- - —oooq Sooooocooo coocooooooooooogEoooSSGe 0.9 NOT SEEN . 28.4 s region r0.9 = 165 m t-o-- 0.89 p.89 0.89 0.89 0.8 aircraft at 210 m/s, straight line: the most favourable case turns 0.73 o8 é on real tracks the region is much larger (see points on the right) T (s) 0.6 02(t) = 002 + 200v-T + ov2-t? + q-T°/3 + o_ref? C(t) = 1 - exp(-r2/262(x)) 10 20 30 C-TAR 1-2 s: 0.89 (655/733) [0.87; 0.91] - cases correlated 0.85-0.89 from 1 to 30 s 21-30 s: 0.85 [0.81; 0.88] 89.5% of cases from 4 flights of one route Wilson 95 % per case Su traiettorie di volo pubbliche, con un sensore simulato, la regione ha contenuto I'aereo da ottantacinque a ottantanove volte su cento, sotto nove su dieci, soprattutto su una rotta."
+ },
+ "f052.png": {
+  "t_s": 102,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SCHEMATIC + PUBLIC TRAJECTORIES When continuity is lost: confidence over time curve computed in the model points: public flight tracks, simulated sensor PLAN VIEW schematic: motion compressed, radii from the computed curve C(1): chance it is within 150 m of the prediction - computed al T (s) 0.5 i 0 10 20 30 i zone at last sighting 150 m (for comparison) SOt radius kept at 0.9, r0.9(t) in m - computed (min. progressive) 200 100 i 1 o o e . — = = = oo o @ - [ EECEEPEPEPES T (s) last seen ] 0 10 20 30 coverage of the 0.9 region - public flight tracks, simulated sensor Somonos ~ = —oooq Sooooocooo coocooooooooooogEoooSSGe 0.9 t-o-- NOT SEEN - 29.8 s - region r0.9 = 175 m 0.89 p.89 0.89 0.89 0.8 aircraft at 210 m/s, straight line: the most favourable case turns 0.73 o8 é on real tracks the region is much larger (see points on the right) T (s) 0.6 02(t) = 002 + 200v-T + ov2-t? + q-Tt°/3 + o_ref? C(t) =1 - exp(-r2/262(x)) 10 20 30 C-TAR 1-2 s: 0.89 (655/733) [0.87; 0.91] - cases correlated 0.85-0.89 from 1 to 30 s 21-30 s: 0.85 [0.81; 0.88] 89.5% of cases from 4 flights of one route Wilson 95 % per case Su traiettorie di volo pubbliche, con un sensore simulato, la regione ha contenuto I'aereo da ottantacinque a ottantanove volte su cento, sotto nove su dieci, soprattutto su una rotta."
+ },
+ "f053.png": {
+  "t_s": 104,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SCHEMATIC + PUBLIC TRAJECTORIES When continuity is lost: confidence over time curve computed in the model points: public flight tracks, simulated sensor PLAN VIEW schematic: motion compressed, radii from the computed curve C(1): chance it is within 150 m of the prediction - computed al 0.5 T (s) 0 10 20 30 -———— i zone at last sighting 150 m (for comparison) SOt radius kept at 0.9, r0.9(t) in m - computed (min. progressive) 200 100 i 1 o o e £ T o 7 o T e B e O forreneas last seen ] T (s) 0 10 20 30 coverage of the 0.9 region - public flight tracks, simulated sensor Somonos ~ o= - —oooq Sooooocooo coocooooooooooogEoooSSGe 0.9 [0~ NOT SEEN - 30.0 s - region r8.9 = 177 m 0.89 9.89 0.89 0.89 0.8 aircraft at 210 m/s, straight line: the most favourable case turns 0.73 o8 é on real tracks the region is much larger (see points on the right) T (s) 0.6 02(t) = 002 + 200v-T + ov2-t? + q-Tt°/3 + o_ref? c(t) = 1 - exp(-r2/2¢2(1)) 0 10 20 30 C-TAR 1-2 s: 0.89 (655/733) [0.87; 0.91] - cases correlated in turns: 0.73 (161/221) [0.67; 0.78] limit 0.85-0.89 from 1 to 30 s 21-30 s: 0.85 [0.81; 0.88] 89.5% of cases from 4 flights of one route Wilson 95 % per case In virata, settantatré: un limite dichiarato."
+ },
+ "f054.png": {
+  "t_s": 106,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SCHEMATIC + PUBLIC TRAJECTORIES When continuity is lost: confidence over time curve computed in the model points: public flight tracks, simulated sensor PLAN VIEW schematic: motion compressed, radii from the computed curve C(1): chance it is within 150 m of the prediction - computed al 0.5 T (s) 0 10 20 30 -———— i zone at last sighting 150 m (for comparison) oo radius kept at 0.9, r0.9(t) in m - computed (min. progressive) 200 100 B i o 0 o ) o765 £ 7 e £ o 7 e O forreneas last seen ] T (s) 0 10 20 30 coverage of the 0.9 region - public flight tracks, simulated sensor e ~ = - mooog Soooooooo soocooooootooooanoootEe 0.9 t-o-- NOT SEEN - 30.8 s - region r0.9 = 177 m 0.89 9.89 0.89 0.89 0.8 aircraft at 210 m/s, straight line: the most favourable case turns 0.73 Or80ie é on real tracks the region is much larger (see points on the right) T (s) 0.6 02(t) = 002 + 200v-T + ov2-t? + q-T°/3 + o_ref? c(t) = 1 - exp(-r2/2¢2(1)) 10 20 30 C-TAR 1-2 s: 0.89 (655/733) [0.87; 0.91] - cases correlated in turns: 0.73 (161/221) [0.67; 0.78] limit 0.85-0.89 from 1 to 30 s 21-30 s: 0.85 [0.81; 0.88] 89.5% of cases from 4 flights of one route Wilson 95 % per case In virata, settantatré: un limite dichiarato."
+ },
+ "f055.png": {
+  "t_s": 108,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SIMULATION F7 - on board a moving drone: a collision nearby, radar blinded Simulated state-of-the-art sensor parameters assumed no physical sensor VIEW FROM THE CARRIER plan, carrier frame (estimated pose) playback x0.45 (slowed) ALTITUDE VIEW (distance-height) + truth (simulation only, MoVi does not see it) ® seen not seen: region where it can be filled: where it can be after an event no probability > » @ » 4 TRACKED DRONE SEEN identity confirmed t=29s simulated run, log readout > RADAR 360°: reliable CARRIER MoVi on board & CAMERA: reliable confidence on the tracked drone (computed in the model) | [ 0.9 radar blinded up to 2 s pessimistic model fix under test flash trigger optimistic identity presumed, doubtful"
+ },
+ "f056.png": {
+  "t_s": 110,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SIMULATION F7 - on board a moving drone: a collision nearby, radar blinded Simulated state-of-the-art sensor parameters assumed no physical sensor VIEW FROM THE CARRIER plan, carrier frame (estimated pose) playback x0.45 (slowed) ALTITUDE VIEW (distance-height) + truth (simulation only, MoVi does not see it) ® seen not seen: region where it can be filled: where it can be after an event no probability >4 * a dL TRACKED DRONE SEEN identity confirmed t=3.8s simulated run, log readout > RADAR 360°: reliable CARRIER MoVi on board 9 CAMERA: reliable confidence on the tracked drone (computed in the model) | [ 0.9 radar blinded up to 2 s pessimistic model fix under test flash trigger optimistic identity presumed, doubtful Ora MoVi & a bordo di un drone e mantiene la traccia di un drone veloce piu avanti."
+ },
+ "f057.png": {
+  "t_s": 112,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SIMULATION F7 - on board a moving drone: a collision nearby, radar blinded Simulated state-of-the-art sensor parameters assumed no physical sensor VIEW FROM THE CARRIER plan, carrier frame (estimated pose) playback x0.45 (slowed) ALTITUDE VIEW (distance-height) + truth (simulation only, MoVi does not see it) ® seen not seen: region where it can be filled: where it can be after an event no probability > o » o« » TRACKED DRONE SEEN identity confirmed t=4.7s simulated run, log readout > RADAR 360°: reliable CARRIER MoVi on board CAMERA: reliable e confidence on the tracked drone (computed in the model) s [ 0.9 radar blinded up to 2 s pessimistic model fix under test flash trigger optimistic identity presumed, doubtful Ora MoVi & a bordo di un drone e mantiene la traccia di un drone veloce piu avanti."
+ },
+ "f058.png": {
+  "t_s": 114,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SIMULATION F7 - on board a moving drone: a collision nearby, radar blinded Simulated state-of-the-art sensor parameters assumed no physical sensor VIEW FROM THE CARRIER plan, carrier frame (estimated pose) playback x0.45 (slowed) ALTITUDE VIEW (distance-height) + truth (simulation only, MoVi does not see it) ® seen not seen: region where it can be filled: where it can be after an event no probability > o0 TRACKED DRONE SEEN identity confirmed * o t=5.6s simulated run, log readout > RADAR 360°: reliable CARRIER MoVi on board CAMERA: reliable > confidence on the tracked drone (computed in the model) | [ 0.9 radar blinded up to 2 s pessimistic model fix under test flash trigger optimistic identity presumed, doubtful Ora MoVi & a bordo di un drone e mantiene la traccia di un drone veloce piu avanti."
+ },
+ "f059.png": {
+  "t_s": 116,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [
+   "clear",
+   "never"
+  ],
+  "testo": "SIMULATION F7 - on board a moving drone: a collision nearby, radar blinded Simulated state-of-the-art sensor parameters assumed no physical sensor VIEW FROM THE CARRIER plan, carrier frame (estimated pose) - playback x0.42 (slowed) / ALTITUDE VIEW (distance-h;ight) + truth (simulation only, MoVi does not see it) ® seen not seen: region where it can be fil}ed:’where it can be after an event no probability PN s ~ z / ' / o ~ t=6.45s simulated run, log readout TRACKED DRONE NOT SEEN G.’6 s \\r‘eginn 38 m . 1 RADAR 360°: UNRELIABLE - saturated on board CAMERA: UNRELIABLE - saturated ® confidence on the tracked drone (computed in the model) - 0.9 EVENT: nearby event - position unknown never clear inside conservative sphere r 174 m WARNING to carrier: nearby event position unknown conservative, not localised, not selective ~ e - radar blinded up to 2 s pessimistic model fix under test CONSERVATIVE SPHERE never clear inside flash and smoke: drawn for illustration flash trigger optimistic identity presumed, doubtful Accanto, due droni si scontrano: lampo, fumo, detriti."
+ },
+ "f060.png": {
+  "t_s": 118,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [
+   "clear",
+   "never"
+  ],
+  "testo": "SIMULATION F7 - on board a moving drone: a collision nearby, radar blinded Simulated state-of-the-art sensor parameters assumed no physical sensor VIEW FROM THE CARRIER - plan, carrier ;name (estimated pose) - playback x0.42 (slowed) ALTITUDE VIEW (distance-height)\\\\ - + truth (simulation only, MoVi does not see it) ® seen not seen: region where it can be - - e ~ ~ o . PAS N filled: where it can be after an event no pﬁuyahilitv o = g s ———— - == P t=73s simulated run, log readout (o) 1 TRACKED FRDME NOT SEEN 1.5 s - region 82 n 1 RADAR 360°: UNRELIABLE - saturated * MoVi on bui;d CAMERA: UNRELIABLE - saturated b 4 . confidence on the tracked drone (computed in the model) ~——- —————— 3 | 0.9 EVENT: nearby event - position unknown conservative sphere r 250 m never clear inside o WARNING to carrier: nearby event position unknown conservative, not localised, not selective radar blinded up to 2 s pessimistic model fix under test CONSERVATIVE SPHERE never clear inside flash and smoke: drawn for illustration flash trigger optimistic identity presumed, doubtful - Accanto, due droni si scontrano: lampo, fumo, detriti."
+ },
+ "f061.png": {
+  "t_s": 120,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [
+   "clear",
+   "never"
+  ],
+  "testo": "SIMULATION F7 - on board a moving drone: a collision nearby, radar blinded Simulated state-of-the-art sensor parameters assumed no physical sensor N VIEW FROM THE CARRIER - plan, carrier frame (é;témated pose) - playback x0.42 (slowed) ALTITUDE VIEW (distance-height) + truth (simulation only, MoVi does not see it) ® seen not seen: region where it can be filled: where it can be after an event W no prubahilitx Iy n _————— 1 A TRACKED DRONE NOT SEEN 2.3 s region 146 m t=8.1s simulated run, log readout ig 1 RADAR 360°: restored (declared) TER MoVi on board CAMERA: UNRELIABLE - saturated 1 ) 'y I confidence on the tracked drone (computed in the model) L] | 0.9 EVENT: nearby event - position unknown conservative sphere r 301 m never clear inside WARNING to carrier: nearby event position unknown - conservative, not localised, not selective ~ - - y radar blinded up to 2 s pessimistic model fix under test CONSERVATIVE SPHERE never clear inside flash and smoke: d:a;m‘ For 1ﬂﬁ§t;a;ion flash trigger optimistic identity presumed, doubtful radar and cameras saturated together: both declared unreliable log readout Radar e camere si accecano insieme."
+ },
+ "f062.png": {
+  "t_s": 122,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [
+   "clear",
+   "never"
+  ],
+  "testo": "SIMULATION F7 - on board a moving drone: a collision nearby, radar blinded Simulated state-of-the-art sensor parameters assumed no physical sensor \\ VIEW FROM THE CARRIER - plan, carrier frame (estim;fad pose) - playback x0.42 (slowed) ALTITUDE VIEW (distance-height) + truth (simulation only, MoVi does not see it) ® seen not seen: region where it can be filled: where it can be after an event no probability \\ R . -~ i Q‘o) TRACKED DRONE SEEN identity presumed, doubtful e t=8.9s simulated run, log readout > RADAR 360°: restored (declared) ‘ARRIE;’ + MoVi on board CAMERA: degraded - possible smoke ~—= confidence on the tracked drone (computed in the model) 0.9 EVENT: nearby event - position unknown conservative sphere r 345 m never clear inside WARNING to carrier: nearby event position unknown conservative, not localised, not selective radar blinded up to 2 s pessimistic model fix under test CONSERVATIVE SPHERE never clear inside / flash and smoke: drawn for illustration flash trigger optimistic identity presumed, doubtful fix under test carrier warned before the first fragment, radar and cameras blinded: 59/59 [0.939; 1] without 0/59 [0; 0.061] same seeds sim. Con una correzione in prova, MoVi avvisa subito il portatore, prima del primo frammento, in cinquantanove prove su cinquantanove, contro nessuna senza."
+ },
+ "f063.png": {
+  "t_s": 124,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [
+   "clear",
+   "never"
+  ],
+  "testo": "SIMULATION F7 - on board a moving drone: a collision nearby, radar blinded Simulated state-of-the-art sensor parameters assumed no physical sensor VIEW FROM THE CARRIER - plan, carrier frame (estimated'bese) playback x0.30 (slowed) ALTITUDE VIEW (distance-height) \\ + truth (simulation only, MoVi does not see it) @ seen not seen: region where it can be filled: where it can be after an event no probability \\ e~ N » - fo , <~ S e~ 3 4 5 | TRACKED DRONE SEEN t=9.7s simulated run, log readout ’ A iqentity presumed, doubtful sl RADAR 360°: restored (declared) ~ . _ CARREER - MoVi on board [ 3 CAMERA: restored (declared) confidence on the tracked drone (computed in the model) s 0.9 EVENT: nearby event - position unknown conservative sphere r 385 m never clear inside WARNING to carrier: nearby event position unknown conservative, not localised, not selective radar blinded up to 2 s pessimistic model fix under test CONSERVATIVE SPHERE never clear inside ft;sh and smoke: drawn for illustration flash trigger optimistic identity presumed, doubtful , fix under test carrier warned before the first fragment, radar and cameras blinded: 59/59 [0.939; 1] without 0/59 [0; 0.061] same seeds sim. sim. with the fix: 'clear' on the tracked drone or a fragment 0/60 [0; 0.060] region kept 60/60 [0.940; 1] Con una correzione in prova, MoVi avvisa subito il portatore, prima del primo frammento, in cinquantanove prove su cinquantanove, contro nessuna senza."
+ },
+ "f064.png": {
+  "t_s": 126,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [
+   "clear",
+   "never"
+  ],
+  "testo": "SIMULATION F7 - on board a moving drone: a collision nearby, radar blinded Simulated state-of-the-art sensor parameters assumed no physical sensor VIEW FROM THE CARRIER - plan, carrier frame (estimated po;g) playback x0.30 (slowed) ALTITUDE VIEW (distance-height) not B + truth (simulation only, Hov? does not see it) ® seen seen:‘region where it can be filled: where it can be after an event no probability — Y > (Y * [N e P o,” o - 1 4 i = 10.3 s simulated run, log readout > ’ TRACKED DRONE SEEN identity presumed, doubtful RADAR 360°: restored (declared) \\MBR_IER_ ~,ﬂ'o,u’ on board 4 CAMERA: restored (declared) - - - k2 ~———-- = confidence on the tracked drone (computed in the model) s 0.9 EVENT: nearby event - position unknown conservative sphere r 412 m never clear inside WARNING to carrier: nearby event position unknown conservative, not localised, not selective radar blinded up to 2 s pessimistic model fix under test CONSERVATIVE SPHERE never clear inside flash trigger optimistic identity presumed, doubtful flafﬁland smoke: drawn for illustration fix under test carrier warned before the first fragment, radar and cameras blinded: 59/59 [0.939; 1] without 0/59 [0; 0.061] same seeds sim. sim. with the fix: 'clear' on the tracked drone or a fragment 0/60 [0; 0.060] region kept 60/60 [0.940; 1] Con una correzione in prova, MoVi avvisa subito il portatore, prima del primo frammento, in cinquantanove prove su cinquantanove, contro nessuna senza."
+ },
+ "f065.png": {
+  "t_s": 128,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [
+   "clear",
+   "never"
+  ],
+  "testo": "SIMULATION F7 - on board a moving drone: a collision nearby, radar blinded Simulated state-of-the-art sensor parameters assumed no physical sensor ——=——— - ,vaw FROM THE CARRIER - plan, ca;ﬁier frame (estimated pose}\\~ playback x0.30 (slowed) AI;'LHUDE VIEW (aﬁtin\\ce-height) not seen: region where it can be ——— ~ + truth (sinulation only, MoVi does not see it) @ seen R Y filled: where it can be after an event \\no probability Y - —— é > HEY \\ Xo -—- o - 1 i = 10.9 s simulated run, log readout TRACKED DRONE SEEN identfty presumed, doubtful RADAR 360°: restored (declared) CARRIER Movi an,bnetd CAMERA: restored (declared) e Seaa- confidence on the tracked drone (computed in the model) ] [ 0.9 — EVENT: nearby event - position unknown IS conservative sphere r 439 m never clear inside WARNING to carrier: nearby event position unknown conservative, not localised, not selective radar blinded up to 2 s pessimistic model fix under test CONSERVATIVE SPHERE never clear inside flash trigger optimistic identity presumed, doubtful flashhgéd smoke: drawn for illustration fix under test carrier warned before the first fragment, radar and cameras blinded: 59/59 [0.939; 1] without 0/59 [0; 0.061] same seeds sim. sim. with the fix: 'clear' on the tracked drone or a fragment 0/60 [0; 0.060] region kept 60/60 [0.940; 1] limit reacquisition within 2 s below the 51/60 threshold: ahead 49/60 [0.701; 0.894] in a turn 40/60 [0.541; 0.773] Con una correzione in prova, MoVi avvisa subito il portatore, prima del primo frammento, in cinquantanove prove su cinquantanove, contro nessuna senza."
+ },
+ "f066.png": {
+  "t_s": 130,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [
+   "clear",
+   "never"
+  ],
+  "testo": "SIMULATION F7 - on board a moving drone: a collision nearby, radar blinded Simulated state-of-the-art sensor parameters assumed no physical sensor m—— VIEW FROM THE CARRIER - plan, carrier frame (estimated pose) S‘playback x0.30 (slowed) ALTITUDE y}E‘W’(’diﬂa;&*ha\\i«;ht) not seen: region where it can be ’ + truth (simulation only, MoVi does no{ see it) @ seen filled: where it can be after an event '20 probability - i = 11.5 s simulated run, log readout > TRACKED DRONE SEEN identity presumed, doubtful RADAR 360°: restored (declared) CARRIER MoVi on board ’ CAMERA: restored (declared) -~ confidence on the tracked drone (computed in the model) s 0.9 Seoose EVENT: nearby event - position unknown conservative sphere r 465 m never clear inside WARNING to carrier: nearby event position unknown conservative, not localised, not selective radar blinded up to 2 s pessimistic model fix under test CONSERVATIVE SPHERE never clear inside drawn for illustration flash trigger optimistic identity presumed, doubtful flash aﬁqlsmoke: fix under test carrier warned before the first fragment, radar and cameras blinded: 59/59 [0.939; 1] without 0/59 [0; 0.061] same seeds sim. sim. with the fix: 'clear' on the tracked drone or a fragment 0/60 [0; 0.060] region kept 60/60 [0.940; 1] limit reacquisition within 2 s below the 51/60 threshold: ahead 49/60 [0.701; 0.894] in a turn 40/60 [0.541; 0.773] Con una correzione in prova, MoVi avvisa subito il portatore, prima del primo frammento, in cinquantanove prove su cinquantanove, contro nessuna senza."
+ },
+ "f067.png": {
+  "t_s": 132,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [
+   "clear",
+   "never"
+  ],
+  "testo": "SIMULATION F7 - on board a moving drone: a collision nearby, radar blinded Simulated state-of-the-art sensor parameters assumed no physical sensor 1 VIEW FROy/$ﬁE CARRIER - plan, carrier frame €;§t§mated pose) ;&ayback x0.30 (slowed) ALT}JﬁbE VIEW (distance-height;‘\\ + truth (simulation only, MoVi does not see it) ® seen not seen: regiéq where it can be 4 ’ filled: where it can be after an event no prubahilit( 1 [ i = - 12.1 s simulated run, log readout > TRACKED DRONE SEEN identity presumed, doubtful RADAR 360°: restored (declared) CARRIER MoVi on board CAMERA: restored (declared) N confidence on the tracked drone (computed in the model) O ) 0.9 EVENT: nearby event - position unknown conservative sphere r 491 m never clear inside ~- —————— o WARNING to carrier: nearby event position unknown conservative, not localised, not selective radar blinded up to 2 s pessimistic model fix under test CONSERVATIVE SPHERE never clear inside flash and §£oke: drawn for illustration flash trigger optimistic identity presumed, doubtful fix under test carrier warned before the first fragment, radar and cameras blinded: 59/59 [0.939; 1] without 0/59 [0; 0.061] same seeds sim. with the fix: 'clear' on the tracked drone or a fragment 0/60 [0; 0.060] region kept 60/60 [0.940; 1] sim. limit reacquisition within 2 s below the 51/60 threshold: ahead 49/60 [0.701; 0.894] in a turn 40/60 [0.541; 0.773] limit warning not localised: conservative sphere up to 565 m, median 8 s limit sim. false warnings if the radar saturates for another cause: 11/200 [0.031; 0.0896] Una strada promettente: I'avviso non dice dove."
+ },
+ "f068.png": {
+  "t_s": 134,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [
+   "clear",
+   "never"
+  ],
+  "testo": "SIMULATION F7 - on board a moving drone: a collision nearby, radar blinded Simulated state-of-the-art sensor parameters assumed no physical sensor \\ VIEW FROM THE CARRIER plan, carrier frame (estimated pose) - pl&yback x0.30 (slowed) ALTITUDE VIEW (distance-height) + truth (simulation only, MoVi does not see it) ® seen not seen: region where it can be \\ | filled: where it can be after an event no probability | > o - 3 = 12.7 s simulated run, log readout > SEEN identity presumed, doubtful RADAR 360°: restored (declared) CARRIER MoVi on boa B@CKED DRONE CAMERA: restored (declared) R confidence on the tracked drone (computed in the model) ) 0.9 EVENT: nearby event - position unknown conservative sphere r 516 m never clear inside WARNING to carrier: nearby event position unknown conservative, not localised, not selective radar blinded up to 2 s pessimistic model fix under test CONSERVATIVE SPHERE never clear inside flash and smyﬁe: drawn for illustration flash trigger optimistic identity presumed, doubtful fix under test carrier warned before the first fragment, radar and cameras blinded: 59/59 [0.939; 1] without 0/59 [0; 0.061] same seeds sim. sim. with the fix: 'clear' on the tracked drone or a fragment 0/60 [0; 0.060] region kept 60/60 [0.940; 1] limit reacquisition within 2 s below the 51/60 threshold: ahead 49/60 [0.701; 0.894] in a turn 40/60 [0.541; 0.773] limit warning not localised: conservative sphere up to 565 m, median 8 s limit false warnings if the radar saturates for another cause: 11/200 [0.031; 0.096] sim. Una strada promettente: I'avviso non dice dove."
+ },
+ "f069.png": {
+  "t_s": 136,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [
+   "clear",
+   "never"
+  ],
+  "testo": "SIMULATION F7 - on board a moving drone: a collision nearby, radar blinded Simulated state-of-the-art sensor parameters assumed no physical sensor \\ VIEW FROM THE CARRIER - plan, carrier frame (estimated pose) - pla&back x0.30 (slowed) ALTITUDE VIEW (distance-height) not + truth (simulation only, MoVi does not see it) ® seen seen: region where it can be filled: where it can be after an event no probability > 3 = - 13.3 s simulated run, log readout > SEEN RADAR 360°: restored (declared) CARRIER identity presumed, doubtful CAMERA: degraded - possible smoke confidence on the tracked drone (computed in the model) \\ ) 0.9 EVENT: nearby event - position unknown conservative sphere r 541 m never clear inside WARNING to carrier: nearby event position unknown conservative, not localised, not selective radar blinded up to 2 s pessimistic model fix under test CONSERVATIVE SPHERE never clear inside flash and smokfﬂ drawn for illustration flash trigger optimistic identity presumed, doubtful fix under test carrier warned before the first fragment, radar and cameras blinded: 59/59 [0.939; 1] without 0/59 [0; 0.061] same seeds sim. with the fix: 'clear' on the tracked drone or a fragment 0/60 [0; 0.060] region kept 60/60 [0.940; 1] sim. limit reacquisition within 2 s below the 51/60 threshold: ahead 49/60 [0.701; 0.894] in a turn 40/60 [0.541; 0.773] limit warning not localised: conservative sphere up to 565 m, median 8 s limit sim. false warnings if the radar saturates for another cause: 11/200 [0.031; 0.096]"
+ },
+ "f070.png": {
+  "t_s": 138,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [
+   "clear",
+   "never"
+  ],
+  "testo": "Also: the site with taxiing aircraft and drones, and other uses SIMULATION (site) - SCHEMATIC (short range) Simulated state-of-the-art sensor parameters assumed no physical sensor Site: drone behind a building drone at 15-21 m/s, hidden by a building, announced: warned in time: 200/200 [0.981; 1] never 'clear' on the drone, with the declared map (H2l 5 simulation Lo stesso approccio funziona in un sito: un drone dietro un edificio, avvisato in tempo in duecento prove su duecento."
+ },
+ "f071.png": {
+  "t_s": 140,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [
+   "clear",
+   "never"
+  ],
+  "testo": "Also: the site with taxiing aircraft and drones, and other uses SIMULATION (site) - SCHEMATIC (short range) Simulated state-of-the-art sensor parameters assumed no physical sensor Site: drone behind a building Site: taxiing aircraft drone at 15-21 m/s, hidden three fused sensors: by a building, announced: 200/200 [0.981; 1] warned in time: 200/200 [0.981; 1] limit: for aircraft in flight never 'clear' on the drone, the site warning is late with the declared map (2l 5 simulation LP-4 S simulation Lo stesso approccio funziona in un sito: un drone dietro un edificio, avvisato in tempo in duecento prove su duecento"
+ },
+ "f072.png": {
+  "t_s": 142,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [
+   "clear",
+   "never"
+  ],
+  "testo": "SIMULATION (site) - SCHEMATIC (short range) Also: the site with taxiing aircraft and drones, and other uses Simulated state-of-the-art sensor parameters assumed no physical sensor Site: drone behind a building Site: taxiing aircraft Short range, other uses drone at 15-21 m/s, hidden three fused sensors: people behind obstacles, by a building, announced: 200/200 [60.981; 1] cars, trains (simulation) warned in time: 200/200 [0.981; 1] limit: for aircraft in flight for a blind person: a warning never 'clear' on the drone, the site warning is late aid, never a replacement for with the declared map the cane or the guide dog LP-1 S simulation LP-4 5] simulation schematic no figures Lo stesso approccio funziona in un sito: un drone dietro un edificio, avvisato in tempo in duecento prove su duecento."
+ },
+ "f073.png": {
+  "t_s": 144,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [
+   "clear",
+   "never"
+  ],
+  "testo": "SIMULATION (site) - SCHEMATIC (short range) Also: the site with taxiing aircraft and drones, and other uses Simulated state-of-the-art sensor parameters assumed no physical sensor Site: drone behind a building Site: taxiing aircraft Short range, other uses drone at 15-21 m/s, hidden three fused sensors: people behind obstacles, by a building, announced: 200/200 [60.981; 1] cars, trains (simulation) warned in time: 200/200 [0.981; 1] limit: for aircraft in flight for a blind person: a warning never 'clear' on the drone, the site warning is late aid, never a replacement for with the declared map the cane or the guide dog LP-1 S simulation LP-4 5] simulation schematic no figures Lo stesso approccio funziona in un sito: un drone dietro un edificio, avvisato in tempo in duecento prove su duecento."
+ },
+ "f074.png": {
+  "t_s": 146,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [
+   "clear",
+   "never"
+  ],
+  "testo": "SIMULATION (site) - SCHEMATIC (short range) Also: the site with taxiing aircraft and drones, and other uses Simulated state-of-the-art sensor parameters assumed no physical sensor Site: drone behind a building Site: taxiing aircraft Short range, other uses drone at 15-21 m/s, hidden three fused sensors: people behind obstacles, by a building, announced: 200/200 [60.981; 1] cars, trains (simulation) warned in time: 200/200 [0.981; 1] limit: for aircraft in flight for a blind person: a warning never 'clear' on the drone, the site warning is late aid, never a replacement for with the declared map the cane or the guide dog LP-1 S simulation LP-4 5] simulation schematic no figures E a corto raggio: persone, auto, treni."
+ },
+ "f075.png": {
+  "t_s": 148,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [
+   "clear",
+   "never"
+  ],
+  "testo": "SIMULATION (site) - SCHEMATIC (short range) Also: the site with taxiing aircraft and drones, and other uses Simulated state-of-the-art sensor parameters assumed no physical sensor Site: drone behind a building Site: taxiing aircraft Short range, other uses drone at 15-21 m/s, hidden three fused sensors: people behind obstacles, by a building, announced: 200/200 [60.981; 1] cars, trains (simulation) warned in time: 200/200 [0.981; 1] limit: for aircraft in flight for a blind person: a warning never 'clear' on the drone, the site warning is late aid, never a replacement for with the declared map the cane or the guide dog LP-1 S simulation LP-4 5] simulation schematic no figures E a corto raggio: persone, auto, treni."
+ },
+ "f076.png": {
+  "t_s": 150,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SCHEMATIC - ESTIMATE Limits, and what comes next limits from the verdicts hardware figure is an estimate by analogy LIMITS FROM PROTOTYPE TO DEPLOYED SYSTEM - everything simulated: no physical sensor, no hardware test - classes labelled by hand; classifier assumed I limiti: tutto & simulato, senza sensori fisici, e le classi sono etichettate a mano."
+ },
+ "f077.png": {
+  "t_s": 152,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SCHEMATIC - ESTIMATE Limits, and what comes next limits from the verdicts hardware figure is an estimate by analogy LIMITS FROM PROTOTYPE TO DEPLOYED SYSTEM - everything simulated: no physical sensor, no hardware test classes labelled by hand; classifier assumed fast collision not yet declared as an event site warning late for aircraft in flight radar blinded: debris warning to the carrier not reliable I limiti: tutto & simulato, senza sensori fisici, e le classi sono etichettate a mano"
+ },
+ "f078.png": {
+  "t_s": 154,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SCHEMATIC - ESTIMATE Limits, and what comes next limits from the verdicts hardware figure is an estimate by analogy LIMITS FROM PROTOTYPE TO DEPLOYED SYSTEM - everything simulated: no physical sensor, no hardware test classes labelled by hand; classifier assumed fast collision not yet declared as an event site warning late for aircraft in flight radar blinded: debris warning to the carrier not reliable confidence lower in turns: 0.73 [0.67; 0.78] one geometry per scenario; no clustered clutter contact rule for fast collisions under test in simulation: not adopted I limiti: tutto & simulato, senza sensori fisici, e le classi sono etichettate a mano."
+ },
+ "f079.png": {
+  "t_s": 156,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SCHEMATIC . ESTIMATE Limits, and what comes next limits from the verdicts hardware figure is an estimate by analogy LIMITS FROM PROTOTYPE TO DEPLOYED SYSTEM everything simulated: no physical sensor, no hardware test classes labelled by hand; classifier assumed fast collision not yet declared as an event field trials on real sensors site warning late for aircraft in flight recordings with clutter and birds, more geometries radar blinded: debris warning to the carrier not reliable confidence lower in turns: 0.73 [0.67; 0.78] one geometry per scenario; no clustered clutter state-of-the-art sensors - dedicated hardware dedicated processing estimated 0.08-1.2 ms estimate by analogy, not a measurement; the sensor revisit dominates contact rule for fast collisions under test in simulation: not adopted Poi: una regola di contatto per le collisioni veloci, sensori allo stato dell'arte, hardware dedicato, prove sul campo."
+ },
+ "f080.png": {
+  "t_s": 158,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SCHEMATIC . ESTIMATE Limits, and what comes next limits from the verdicts hardware figure is an estimate by analogy LIMITS FROM PROTOTYPE TO DEPLOYED SYSTEM everything simulated: no physical sensor, no hardware test classes labelled by hand; classifier assumed fast collision not yet declared as an event field trials on real sensors site warning late for aircraft in flight recordings with clutter and birds, more geometries radar blinded: debris warning to the carrier not reliable confidence lower in turns: 0.73 [0.67; 0.78] one geometry per scenario; no clustered clutter state-of-the-art sensors - dedicated hardware dedicated processing estimated 0.08-1.2 ms estimate by analogy, not a measurement; the sensor revisit dominates contact rule for fast collisions under test in simulation: not adopted Poi: una regola di contatto per le collisioni veloci, sensori allo stato dell'arte, hardware dedicato, prove sul campo."
+ },
+ "f081.png": {
+  "t_s": 160,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SCHEMATIC . ESTIMATE Limits, and what comes next limits from the verdicts hardware figure is an estimate by analogy LIMITS FROM PROTOTYPE TO DEPLOYED SYSTEM everything simulated: no physical sensor, no hardware test classes labelled by hand; classifier assumed fast collision not yet declared as an event field trials on real sensors site warning late for aircraft in flight recordings with clutter and birds, more geometries radar blinded: debris warning to the carrier not reliable confidence lower in turns: 0.73 [0.67; 0.78] one geometry per scenario; no clustered clutter state-of-the-art sensors - dedicated hardware dedicated processing estimated 0.08-1.2 ms estimate by analogy, not a measurement; the sensor revisit dominates contact rule for fast collisions under test in simulation: not adopted Poi: una regola di contatto per le collisioni veloci, sensori allo stato dell'arte, hardware dedicato, prove sul campo."
+ },
+ "f082.png": {
+  "t_s": 162,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SCHEMATIC . ESTIMATE Limits, and what comes next limits from the verdicts hardware figure is an estimate by analogy LIMITS FROM PROTOTYPE TO DEPLOYED SYSTEM everything simulated: no physical sensor, no hardware test classes labelled by hand; classifier assumed fast collision not yet declared as an event field trials on real sensors site warning late for aircraft in flight recordings with clutter and birds, more geometries radar blinded: debris warning to the carrier not reliable confidence lower in turns: 0.73 [0.67; 0.78] one geometry per scenario; no clustered clutter state-of-the-art sensors - dedicated hardware dedicated processing estimated 0.08-1.2 ms estimate by analogy, not a measurement; the sensor revisit dominates contact rule for fast collisions under test in simulation: not adopted Poi: una regola di contatto per le collisioni veloci, sensori allo stato dell'arte, hardware dedicato, prove sul campo."
+ },
+ "f083.png": {
+  "t_s": 164,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SCHEMATIC 7 3l M: Q.’ Vi Seen, not seen, unknown: declared for every track Observes and warns no output is a command By SDMs - Ignazio Crocchiolo - Federico Dellini - Danilo Amalfitano - Emanuele Ciotola - Pierfrancesco Amendola The Big Hack 2026 - prototype built in one day - everything simulated, no physical sensor Synthetic voice (Kokoro-82M, Apache-2.0) - synthetic music made for this video - fonts Inter, JetBrains Mono (OFL) - animation GSAP 3.15 (standard license) MoVi osserva e avvisa."
+ },
+ "f084.png": {
+  "t_s": 166,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SCHEMATIC 7 3l M: Q.’ Vi Seen, not seen, unknown: declared for every track Observes and warns no output is a command By SDMs - Ignazio Crocchiolo - Federico Dellini - Danilo Amalfitano - Emanuele Ciotola - Pierfrancesco Amendola The Big Hack 2026 - prototype built in one day - everything simulated, no physical sensor Synthetic voice (Kokoro-82M, Apache-2.0) - synthetic music made for this video - fonts Inter, JetBrains Mono (OFL) - animation GSAP 3.15 (standard license) Di SDMs."
+ },
+ "f085.png": {
+  "t_s": 168,
+  "verde_px": 0,
+  "etichetta": true,
+  "parole": [],
+  "testo": "SCHEMATIC 7 3l M: Q.’ Vi Seen, not seen, unknown: declared for every track Observes and warns no output is a command By SDMs - Ignazio Crocchiolo - Federico Dellini - Danilo Amalfitano - Emanuele Ciotola - Pierfrancesco Amendola The Big Hack 2026 - prototype built in one day - everything simulated, no physical sensor Synthetic voice (Kokoro-82M, Apache-2.0) - synthetic music made for this video - fonts Inter, JetBrains Mono (OFL) - animation GSAP 3.15 (standard license)"
+ }
+}

@@ -1,0 +1,39 @@
+F3 - fast drones colliding at 40 and 35 m/s
+
+Simulated -
+
+PLAN VIEW - playback x2.2 (accelerated)
+
+P——"—200m
+
+SEEN
+—® SEEN
+
+SEEN
+
+T SEEN
+
+filled: where it can be after an event - no probability
++‘$ruth (simulation only, MoVi does not see it) ® seen < not seen: region where it can be
+
+SIMULATION
+
+state-of-the-art sensor parameters assumed - no physical sensor
+
+ALTITUDE VIEW (distance-height)
+
+t=16.15s -
+RADAR: reliable
+
+EO CAMERA: reliable
+THERMAL CAMERA: reliable
+
+PROXIMITY WARNING
+predicted close pass between two tracks
+
+simulated run, log readout
+
+proximity warning at least 10 s ahead: 60/60 [0.940; 1] - 10 s threshold set after - sim.
+
+MoVi avvisa del passaggio ravvicinato almeno
+dieci secondi prima, in sessanta prove su sessanta.

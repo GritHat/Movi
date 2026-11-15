@@ -1,0 +1,57 @@
+When continuity is lost: confidence over time
+PLAN VIEW
+
+schematic: motion compressed, radii from the computed curve
+
+i zone at last sighting
+
+curve computed in the model
+
+SCHEMATIC + PUBLIC TRAJECTORIES
+points: public flight tracks, simulated sensor
+C(1): chance it is within 150 m of the prediction - computed
+il
+0.5 T (s)
+0 10 20 30
+150 m (for comparison) st
+..... - ~
+Lo T, pr- N radius kept at 0.9, r0.9(t) in m - computed (min. progressive)
+. S N
+& . A \ 200
+B 3 , \
+/ ’ \
+; \ p \ 100
+' 0 1
+B e oo o o oo o
+\ last seen g \ 4 ]
+& K \ 3 ] 10 20 30
+. \
+. 5 \ 4
+R, et b i coverage of the 0.9 region - public flight tracks, simulated sensor
+ARREEETE . \\ ’/, 1
+e 0.9
+3 . R e rossssssomsooseaatith
+NOT SEEN - 30.0 s region r0.9 = 177 m 05| 089 0.9 D 0.89 ¢
+aircraft at 210 m/s, straight line: the most favourable case
+on real tracks the region is much larger (see points on the right)
+02(t) = 002 + 200v-T + ov2:-t2 + q-T3/3 + o_ref? . C(t) = 1 - exp(-r2/202(x)) B'éﬂ
+in turns: 0.73 (161/221) [0.67; 0.78] - limit
+
+0.85-0.89 from 1 to 30 s
+
+0,85
+turns 0.73 - limit ?
+10
+
+T (s)
+
+In turns, seventy-three: a declared limit.
+
+20
+C-TAR 1-2 s: 0.89 (655/733) [0.87; 0.91] - cases correlated
+21-30 s: 0.85 [0.81; 0.88]
+89.5% of cases from 4 flights of one route
+
+Wilson 95 % per case
+
+30

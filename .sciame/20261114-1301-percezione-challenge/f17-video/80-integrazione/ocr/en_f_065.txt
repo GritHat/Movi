@@ -1,0 +1,47 @@
+F7 - on board a moving drone: a collision nearby, radar blinded A AILON
+
+Simulated - state-of-the-art sensor parameters assumed - no physical sensor
+
+\ v
+VIEW FROM THE CARRIER - plan, carrier frame (estimated pose) - playback x8.31 (slowed) ALTITUDE VIEW (distance-height) \
++ truth (simulation only, MoVi does not see it) ® seen < not seen: region where it can be \
+filled: where it can be after an event - no probability ‘\ R ~ ‘l
+il TN \ 4 T
+. \
+4 N \ / oY | b (e
+g 3 \ i n .
+,/ \‘ \ |I o~-- ] 1
+! \ \ \ 1 1
+[ v \ \ /I 1
+1 ] \ !
+— - 1} < -
+{ o e : \ - _ il /
+\ 4 v 1 -
+\ ! o i / ! t = 10.0 s - simulated run, log readout
+\ ’P 4 TRACKED DRONE - SEEN - identity presumed, doubtful c r 109
+. CA\RRI'EK'Iﬂ'V' boand 1 RADAR 3608°: restored (declared)
+“s —’, o1 on hoar CAMERA: restored (declared)
+
+confidence on the tracked drone (computed in the model)
+
+)
+
+1
+1
+
+1} 0.9
+1 EVENT: nearby event - position unknown
+/ conservative sphere r 399 m - never clear inside
+/ WARNING to carrier: nearby event - position unknown
+/ conservative, not localised, not selective
+/
+/A radar blinded up to 2 s - pessimistic model - fix under test
+CONSERVATIVE SPHERE - never clear inside flash and smoke: drawn for illustration
+
+flash trigger optimistic - identity presumed, doubtful
+
+fix under test - carrier warned before the first fragment, radar and cameras blinded: 59/59 [0.939; 1] - without 0/59 [0; 0.861] - same seeds - sim.
+with the fix: 'clear' on the tracked drone or a fragment 0/60 [0; 0.060] - region kept 60/60 [0.940; 1] - sim.
+
+With a fix under test, MoVi warns the carrier at once, before the
+first fragment, in fifty-nine of fifty-nine runs, against none without it.

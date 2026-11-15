@@ -1,0 +1,59 @@
+SIMULATION
+
+Simulated - state-of-the-art sensor parameters assumed - no physical sensor
+
+F7 - on board a moving drone: a collision nearby, radar blinded
+
+VIEW FROM THE CARRIER - plan, carrier frame (estimé(ed pose) - playback x0.37 (slowed) ALTITUDE VIEW (distance-height) /\
++ truth (simulation only, MoVi does not see it) ® seen < not seen: region where it can be ,’ \
+filled: where it can be after an event - no probability \\ ’——"- | 4
+
+>
+_-
+N
+Y
+Y
+\
+\
+Y
+\
+!
+-
+
+\
+
+’ \
+IS
+
+1
+
+1
+
+t = 8.7 s - simulated run, log readout
+
+TRACKED DRONE - NOT SEEN 2.9 s - region 202 m
+1 RADAR 360°: restored (declared)
+
+» MoVi on board
+
+g
+1 I
+] ] 4 CAMERA: degraded - possible smoke
+1 o
+|l " confidence on the tracked drone (computed in the model)
+\ ] | |
+[ i 0.9
+1 oz
+\ 1 EVENT: nearby event - position unknown
+\ II conservative sphere r 335 m - never clear inside
+“ WARNING to carrier: nearby event - position unknown
+7 ‘\ conservative, not localised, not selective
+AN
+/7 \\ radar blinded up to 2 s - pessimistic model - fix under test
+CONSERVATIVE SPHERE - never clear inside /  flash and smoke: drawn for illustration flash trigger optimistic - identity presumed, doubtful
+ra .
+
+fix under test - carrier warned before the first fragment, radar and cameras blinded: 59/59 [0.939; 1] - without 0/59 [0; 0.061] - same seeds - sim.
+
+With a fix under test, MoVi warns the carrier at once, before the
+first fragment, in fifty-nine of fifty-nine runs, against none without it.

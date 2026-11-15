@@ -1,0 +1,86 @@
+{
+ "voce": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/voce/uscite/it_v3c_v3c/voce_it.wav",
+ "totale": 170.469,
+ "scene": [
+  {
+   "id": "s1",
+   "inizio": 0.0,
+   "durata": 12.759,
+   "voce_da": 3.0,
+   "voce_wav_da": 0.15,
+   "voce_wav_a": 9.309
+  },
+  {
+   "id": "s2",
+   "inizio": 12.759,
+   "durata": 11.079,
+   "voce_da": 0.5,
+   "voce_wav_da": 10.009,
+   "voce_wav_a": 19.788
+  },
+  {
+   "id": "s3",
+   "inizio": 23.838,
+   "durata": 8.519,
+   "voce_da": 0.5,
+   "voce_wav_da": 20.488,
+   "voce_wav_a": 27.507
+  },
+  {
+   "id": "s4",
+   "inizio": 32.357,
+   "durata": 19.362,
+   "voce_da": 0.5,
+   "voce_wav_da": 28.207,
+   "voce_wav_a": 46.269
+  },
+  {
+   "id": "s5",
+   "inizio": 51.719,
+   "durata": 19.278,
+   "voce_da": 0.5,
+   "voce_wav_da": 46.969,
+   "voce_wav_a": 64.947
+  },
+  {
+   "id": "s6",
+   "inizio": 70.997,
+   "durata": 9.528,
+   "voce_da": 0.5,
+   "voce_wav_da": 65.647,
+   "voce_wav_a": 73.675
+  },
+  {
+   "id": "s7",
+   "inizio": 80.525,
+   "durata": 27.636,
+   "voce_da": 0.8,
+   "voce_wav_da": 74.375,
+   "voce_wav_a": 100.011
+  },
+  {
+   "id": "s8",
+   "inizio": 108.161,
+   "durata": 29.26,
+   "voce_da": 1.5,
+   "voce_wav_da": 100.711,
+   "voce_wav_a": 125.871
+  },
+  {
+   "id": "s9",
+   "inizio": 137.421,
+   "durata": 12.145,
+   "voce_da": 0.5,
+   "voce_wav_da": 126.571,
+   "voce_wav_a": 137.416
+  },
+  {
+   "id": "s10",
+   "inizio": 149.566,
+   "durata": 20.903,
+   "voce_da": 0.5,
+   "voce_wav_da": 138.116,
+   "voce_wav_a": 155.119
+  }
+ ]
+}

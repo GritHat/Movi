@@ -1,0 +1,58 @@
+F7 - on board a moving drone: a collision nearby, radar blinded
+
+Simulated - state-of-the-art sensor parameters assumed
+
+SIMULATION
+- no physical sensor
+
+\
+VIEW FROM THE CARRIER - plan, carrier frame (estimated pose) - playhack x0.30 (slowed)
+
++ truth (simulation only, MoVi does not see it) ® seen ©
+
+ALTITUDE VIEW (distance-height)
+> not seen: region where it can be
+
+\
+i}
+
+1
+filled: where it can be after an event - no probability “ 1
+]
+\ > 1 A
+\ 1
+\ 1
+1
+\ il
+1
+1 ]
+1 .
+i
+> 1 t = 13.3 s - simulated run, log readout
+1
+CARRIER - MoVi on hoJRACKED DRONE - SEEN - identity presumed, doubtful RADAR 360°: restored (declared)
+] CAMERA: degraded - possible smoke
+" \ confidence on the tracked drone (computed in the model)
+Il S
+! 0.9
+1 EVENT: nearby event - position unknown
+! conservative sphere r 541 m - never clear inside
+!
+] WARNING to carrier: nearby event - position unknown
+1 conservative, not localised, not selective
+/
+
+/ radar blinded up to 2 s - pessimistic model - fix under test
+CONSERVATIVE SPHERE - never clear inside flash and smokg: drawn for illustration flash trigger optimistic - identity presumed, doubtful
+
+fix under test : carrier warned before the first fragment, radar and cameras blinded: 59/59 [0.939; 1]
+
+with the fix: 'clear' on the tracked drone or a fragment 0/60 [0; 0.060]
+limit -
+
+« without 0/59 [0; 0.061] - same seeds - sim.
+- region kept 60/60 [0.940; 1] - sim.
+
+reacquisition within 2 s below the 51/60 threshold: ahead 49/60 [0.701; 8.894] - in a turn 40/60 [0.541; 8.773]
+limit - warning not localised: conservative sphere up to 565 m, median 8 s
+1limit - false warnings if the radar saturates for another cause: 11/200 [0.031; 0.096] - sim.

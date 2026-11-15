@@ -1,0 +1,37 @@
+F1- aircraft on approach, non-cooperative drone
+
+Simulated -
+
+PLAN VIEW - playback x5.2 (accelerated)
+
+1 knm
+
+SEEN
+
+SEEN
+
+filled: where it can be after an event - no probability
++ truth (simulation only, MoVi does not see it) ® seen < not seen: region where it can be
+
+SIMULATION
+
+state-of-the-art sensor parameters assumed - no physical sensor
+
+ALTITUDE VIEW (distance-height)
+
+-@
+o
+t = 49.8 s : simulated run, log readout
+RADAR: reliable
+EO CAMERA: reliable
+
+THERMAL CAMERA: reliable
+
+PROXIMITY WARNING
+predicted close pass between two tracks
+
+not observed # clear:
+a region is kept, never 'clear'
+
+In sei scenari di volo con il nucleo, MoVi non ha mai
+detto libero dove c'era un aereo, un drone o un frammento.

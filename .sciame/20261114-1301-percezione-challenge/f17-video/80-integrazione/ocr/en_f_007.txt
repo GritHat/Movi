@@ -1,0 +1,36 @@
+Fast flight: drones on a collision course SIMULATION
+
+Simulated - state-of-the-art sensor parameters assumed - no physical sensor
+
+i e B = ~ i | 7 7 T
+PLAN VIEW - playback x1.1\((accelerated) ,:,' p_____:‘_____$gqg # 1., ALTITUDE VIEW (disfance-height) ares ‘\‘C\
+i " 4 \ 1 N ’ ’—— S~ .\
+\ 3 ',,: e ) \ u y J - \“\ "y
+v ’ ) "
+\ I Y B SEEN B 1/ U [ e A
+t 1 . 7 NI 4 ' 1, S y 1
+S PR SEEN /’ b I Il v & b \‘ 1 0
+SR r 1
+% N SEEN o,/ A ' 4 P T
+> R 5 : H ‘~4‘ 1 101
+X ‘C\ NOT SEEN - 1.1 s -+ region 144 m \ \ \ 3 = |
+. g S \ e b v . \ 4 e 4 P 1
+‘\ \ o _
+\ \ ol 'IIIII
+> \\ 7
+N g e /
+A \ g
+
+t = 27.6 s + simulated run, log readout
+RADAR: reliable
+
+EO CAMERA: reliable
+
+THERMAL CAMERA: reliable
+
+PROXIMITY WARNING
+
+predicted close pass between two tracks
+
+filled: where it can be after an event - no probability
++ truth (simulation only, MoVi does not see it) ® seen © not seen: region where it can be

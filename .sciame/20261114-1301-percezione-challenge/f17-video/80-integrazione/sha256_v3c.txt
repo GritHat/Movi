@@ -1,0 +1,2 @@
+212cffe058c1714a3def16fd1f764aec23148314f540314f557a337cea67d356  /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/consegna/MoVi_pitch_EN_v3c.mp4
+f0c4ab5aecc82345a22f1751da96c79f599233fcb343900951892208c0971d48  /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/consegna/MoVi_pitch_IT_v3c.mp4

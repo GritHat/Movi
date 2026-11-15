@@ -1,0 +1,18 @@
+F4 - failure with low-energy debris, 135 m/s UL ATILON
+
+Simulated - state-of-the-art sensor parameters assumed - no physical sensor
+
+PLAN VIEW - playback x1.3 (accelerated) S — 7 ALTITUDE VIEW (distance-height)
+
+SEEN
+
+t = 27.3 s : simulated run, log readout
+RADAR: reliable
+
+EO CAMERA: reliable
+
+THERMAL CAMERA: reliable
+
+filled: where it can be after an event - no probability
+
++ truth (simulation only, MoVi does not see it) ® seen © not seen: region where it can be

@@ -1,0 +1,12 @@
+SCHEMATIC - ESTIMATE
+
+limits from the verdicts - hardware figure is an estimate by analogy
+
+Limits, and what comes next
+
+LIMITS FROM PROTOTYPE TO DEPLOYED SYSTEM
+
+- everything simulated: no physical sensor, no hardware test
+
+The limits: everything is simulated, with no
+physical sensor, and classes are labelled by hand.

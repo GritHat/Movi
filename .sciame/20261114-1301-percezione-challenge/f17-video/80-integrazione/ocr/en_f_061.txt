@@ -1,0 +1,43 @@
+F7 - on board a moving drone: a collision nearby, radar blinded SalLCAION
+
+Simulated - state-of-the-art sensor parameters assumed - no physical sensor
+
+— -
+VIEW FROM THE CARRIER - plan, carrier frame (estimated pose) - playback x0.37 (slowed) ALTITUDE VIEW (distance-height)\
++ truth (simulation only, MoVi does not see it) ® seen < not seen: region where it can be ,4“~~’,—--~ \ ,—“‘\\
+. .
+filled: where it can be after an event - no probability l' \ \ /' ‘\
+N \ | \
+1 [l
+\\ 1 o 1 I 1 59 3
+\ / 1 \ '
+\ 5 p ] 4
+\ e . /
+\ T J b _d
+- \ / ~—c-
+P
+~ \ 7
+A 7
+Y \ -
+\ gy /2
+\ 1 B
+o ! TRACKED DRONE - NOT SEEN 1.4 s - region 79 m t =7.2 s - simulated run, log readout
+Bvi on bosta i . \ RADAR 360°: UNRELIABLE - saturated
++ MoVi on boar 3
+X 1 ,' o ] CAMERA: UNRELIABLE - saturated
+1
+1
+‘a’ II v " confidence on the tracked drone (computed in the model)
+e i k. ’ .| |
+/ \ 2 8.9
+.
+/ b ‘,’ EVENT: nearby event - position unknown
+2o - s : :
+// o conservative sphere r 243 m - never clear inside
+/ WARNING to carrier: nearby event - position unknown
+/’ conservative, not localised, not selective
+4
+. radar blinded up to 2 s - pessimistic model - fix under test
+CONSERVATIVE SPHERE - never clear inside flash and smoke: drawn for illustration flash trigger optimistic - identity presumed, doubtful
+
+Radar and cameras are blinded together.

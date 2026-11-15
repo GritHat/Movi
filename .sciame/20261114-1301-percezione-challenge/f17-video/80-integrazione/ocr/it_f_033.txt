@@ -1,0 +1,56 @@
+F3 - fast drones colliding at 40 and 35 m/s
+
+v v
+PLAN VIEW - playbafk %2.2 (accelerated)
+\
+
+filled: where it can be after an event -
++ truth (simulation only, MoVi does not see it) ® seen ©
+
+SIMULATION
+
+RADAR: reliable
+
+EO CAMERA: reliable
+
+THERMAL CAMERA: reliable
+
+PROXIMITY WARNING
+
+predicted close pass between two tracks
+collision not yet declared as an event:
+region kept
+
+no probability
+
+not seen: region where it can be
+
+proximity warning at least 10 s ahead: 60/60 [0.940; 1] - 10 s threshold set after - sim.
+true position and fragments inside the region: 68/60 [0.940; 1] - 939/939 samples - sim.
+
+contact rule under test: 57/60 [0.863; 0.983]
+
+- false events in a 39 m near miss (F5) 2/60 [0.009; 0.114] - not adopted
+
+La collisione non & ancora dichiarata come evento, ma la regione
+resta: i frammenti vi sono rimasti in sessanta prove su sessanta.
+
+Simulated - state-of-the-art sensor parameters assumed - no physical sensor
+i 7 7 P .
+|7.7._| 200 m ALTITUDE VIEW/(distance-height) A |
+& e j J y 5|
+v \ ’
+| SEEN / | 4
+To i | ! g ! -
+’ ’ : 1 o q & e~
+’ 1
+‘. .o SEeN [ : ' 1 e
+’ - v A
+1 A
+) \ A
+v \ \\ 'l
+3
+\ ‘\ \\ f’ ,I
+\ \ S,
+W A A
+t = 29.0 s : simulated run, log readout

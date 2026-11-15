@@ -1,0 +1,36 @@
+SIMULATION
+
+Simulated - state-of-the-art sensor parameters assumed - no physical sensor
+
+Fast flight: drones on a collision course
+
+- — T
+PLAN VIEW - playback x1.1 (dccelerated) PRSI NPy ALTITUDE VIEW (distangt-heidht)
+Z N 1! ”
+\ I ! ,' 'I
+\ W ] 4 ’
+\ T \ L
+\\ W 1 4
+\ 1
+N9 [ -
+SS NN [ 4 o Voo o
+Sq ‘\:\ NOT SEEN - 0.2 s - region 68 m b, \
+S~o_ SS3S-_NOT SEEN - 0.6 s - region 127 m K
+e A o,
+S £
+\\ §#
+
+t = 25.5 s + simulated run, log readout
+
+RADAR: reliable
+EO CAMERA: reliable
+THERMAL CAMERA: reliable
+
+PROXIMITY WARNING
+
+predicted close pass between two tracks
+
+filled: where it can be after an event - no probability
++ truth (simulation only, MoVi does not see it) ® seen < not seen: region where it can be
+
+When the view is lost, what should the screen say?

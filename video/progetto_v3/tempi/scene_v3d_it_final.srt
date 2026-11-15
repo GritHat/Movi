@@ -1,0 +1,120 @@
+1
+00:00:03,000 --> 00:00:08,967
+Aerei e droni veloci: una collisione, un'avaria in volo, un lampo che acceca le camere.
+
+2
+00:00:08,767 --> 00:00:12,409
+Quando la vista si perde, che cosa deve dire lo schermo?
+
+3
+00:00:13,259 --> 00:00:16,176
+MoVi dichiara ciò che non ha osservato.
+
+4
+00:00:15,976 --> 00:00:18,274
+Tre risposte per traccia.
+
+5
+00:00:18,074 --> 00:00:19,177
+Lo vedo.
+
+6
+00:00:18,977 --> 00:00:21,787
+Non lo vedo, ma ecco dove può essere.
+
+7
+00:00:21,587 --> 00:00:23,288
+Oppure: non lo so.
+
+8
+00:00:24,338 --> 00:00:31,607
+In sei scenari di volo con il nucleo, MoVi non ha mai detto libero dove c'era un aereo, un drone o un frammento.
+
+9
+00:00:32,857 --> 00:00:37,672
+Un aereo va in avaria in volo a centotrentacinque metri al secondo.
+
+10
+00:00:37,472 --> 00:00:45,381
+MoVi deduce l'evento e dichiara le camere non affidabili entro un secondo, in sessanta prove simulate su sessanta.
+
+11
+00:00:45,181 --> 00:00:51,169
+I detriti a bassa energia restano nel volume dichiarato in cinquantotto su sessanta.
+
+12
+00:00:52,219 --> 00:00:54,923
+Due droni veloci si scontrano.
+
+13
+00:00:54,723 --> 00:01:01,607
+MoVi avvisa del passaggio ravvicinato almeno dieci secondi prima, in sessanta prove su sessanta.
+
+14
+00:01:01,407 --> 00:01:10,447
+La collisione non è ancora dichiarata come evento, ma la regione resta: i frammenti vi sono rimasti in sessanta prove su sessanta.
+
+15
+00:01:11,497 --> 00:01:14,563
+Un lampo acceca tutti i sensori ottici.
+
+16
+00:01:14,363 --> 00:01:19,775
+Il solo radar mantiene una regione per ogni traccia, e l'identità è presunta.
+
+17
+00:01:21,325 --> 00:01:31,794
+Quando la continuità si perde, MoVi calcola, nel modello del moto, come cala la confidenza, e fa crescere la regione per tenere nove probabilità su dieci.
+
+18
+00:01:31,594 --> 00:01:44,047
+Su traiettorie di volo pubbliche, con un sensore simulato, la regione ha contenuto l'aereo da ottantacinque a ottantanove volte su cento, sotto nove su dieci, soprattutto su una rotta.
+
+19
+00:01:43,847 --> 00:01:47,211
+In virata, settantatré: un limite dichiarato.
+
+20
+00:01:49,661 --> 00:01:55,351
+Ora MoVi è a bordo di un drone e mantiene la traccia di un drone veloce più avanti.
+
+21
+00:01:55,151 --> 00:01:59,028
+Accanto, due droni si scontrano: lampo, fumo, detriti.
+
+22
+00:01:58,828 --> 00:02:01,659
+Radar e camere si accecano insieme.
+
+23
+00:02:01,459 --> 00:02:11,693
+Con una correzione in prova, MoVi avvisa subito il portatore, prima del primo frammento, in cinquantanove prove su cinquantanove, contro nessuna senza.
+
+24
+00:02:11,493 --> 00:02:15,071
+Una strada promettente: l'avviso non dice dove.
+
+25
+00:02:17,921 --> 00:02:26,193
+Lo stesso approccio funziona in un sito: un drone dietro un edificio, avvisato in tempo in duecento prove su duecento.
+
+26
+00:02:25,993 --> 00:02:29,016
+E a corto raggio: persone, auto, treni.
+
+27
+00:02:30,066 --> 00:02:35,905
+I limiti: tutto è simulato, senza sensori fisici, e le classi sono etichettate a mano.
+
+28
+00:02:35,705 --> 00:02:43,571
+Poi: una regola di contatto per le collisioni veloci, sensori allo stato dell'arte, hardware dedicato, prove sul campo.
+
+29
+00:02:43,371 --> 00:02:45,563
+MoVi osserva e avvisa.
+
+30
+00:02:45,363 --> 00:02:47,319
+Di SDMs.
+

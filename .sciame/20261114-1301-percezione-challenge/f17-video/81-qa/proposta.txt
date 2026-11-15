@@ -1,0 +1,164 @@
+MoVi: una percezione che dichiara ciò che non ha osservato
+Aerei e droni in volo veloce, con collisioni, detriti ed eventi improvvisi. Dove la vista si perde, MoVi non dice mai
+«libero»: dichiara dove l’oggetto può essere e quanto vale, secondo dopo secondo, quella regione.                                                   v3.1 · 15 novembre 2026
+Gruppo SDMs: Ignazio Crocchiolo, Federico Dellini, Danilo Amalfitano, Emanuele Ciotola, Pierfrancesco Amendola · The Big                               volo ad alta velocità; con
+Hack 2026                                                                                                                                                    documento tecnico
+
+
+ S solido · I incoraggiante: vicino al sicuro, con base matematica · L limite dichiarato · NP non provato. Stato di ogni cifra: sim simulato dalle schede; pub su
+traiettorie pubbliche con sensore simulato; calc calcolato; ip ipotesi; dim dimostrato nel modello. Le cifre sono passaggi simulati (k su n) con l’intervallo di Wilson al 95 %
+per passaggio, fra parentesi quadre.
+
+ Limiti, da leggere per primi
+ • Tutto è simulato: dalle schede tecniche, da un calcolo, o su traiettorie di volo pubbliche con un sensore simulato. Nessun sensore fisico, nessuna
+   prova su hardware; niente è validato. Le classi degli oggetti sono messe a mano (il classificatore si suppone esistente). Ogni scenario ha una sola
+   geometria nominale.
+ • La collisione veloce fra droni non è ancora dichiarata come evento L : il nucleo adottato la riconosce in 0 passaggi su 60 [0; 0,060]. MoVi la vede
+   arrivare e tiene la regione (§ 2); una regola nuova è in prova, non adottata (§ 4).
+ • A bordo di un drone, con il radar accecato dall’esplosione l’avviso al portatore crolla (0 su 59 nel caso peggiore) L ; una correzione in prova lo
+   riporta a 59 su 59 [0,939; 1], ma non localizza l’evento e dà 11 falsi avvisi su 200 [0,031; 0,096] se il radar satura per altra causa. L’innesco della
+   fiammata è ottimista (saturazione presa dalla finestra vera dell’evento).
+ • MoVi osserva, monitora e avvisa: nessuna uscita è un comando, nessuna funzione d’ingaggio, di puntamento o di contrasto.
+
+1 · L’idea: tre risposte, e mai «libero» su ciò che non si è visto
+
+Per ogni oggetto MoVi dà una di tre risposte: lo vedo; non lo vedo, ma è in questa regione; non lo so. «Libero» vale solo dove si è osservato. L’avviso
+di possibile presenza si spegne solo guardando tutta la zona, non per il tempo. Quando un sensore è saturato da una fiammata o accecato, MoVi lo
+dichiara «non affidabile», e da quel sensore non viene più nessun «libero».
+
+    Sensori (da scheda)
+                                                                 Tracce e fusione                                                                                 Uscita
+     radar a scansione            Salute dei sensori                                      Regione e confidenza               Eventi e detriti
+                                                                 Kalman a più re-                                                                         vedo / regione / non
+    10 Hz · radar rotan-         fiammata, fumo, ce-                                      C(τ ) che cala; insieme        avaria, collisione: de-
+                                                                 gimi (IMM), con-                                                                          so; registro «osser-
+    te · camere visibile        cità: «non affidabile»                                     di presenza a vmax           dotti; volume dei detriti
+                                                                ferma su più cicli                                                                         vato» o «dedotto»
+     e termica · ADS-B
+
+2 · Il caso centrale: volo ad alta velocità con eventi improvvisi
+
+Sei scenari simulati con sensori di classe attuale (radar a scansione elettronica e radar rotante): avaria con fiammata, due droni veloci in rotta di
+collisione, quasi collisioni, incroci veloci, ottici accecati, radar rotante. Ogni cifra è sim, 60 passaggi per cella (200 per gli incroci).
+•  S Mai «libero» dove c’era l’oggetto o un frammento, nei sei scenari: 0 su 200 [0; 0,019] negli incroci veloci, 0 su 60 [0; 0,060] nelle altre celle. Base:
+  «libero» solo ciò che è osservato; insieme di presenza a 210 m/s.
+• I Avaria in volo di un aereo a 135 m/s con fiammata: evento dedotto entro 1 s e camere dichiarate non affidabili in 60 su 60 [0,940; 1] (innesco
+  ottimista). I detriti a bassa energia restano tutti nel volume dichiarato in 58 su 60 [0,886; 0,991]. L’avviso arriva prima del primo frammento a terra
+  in 60 su 60 [0,940; 1]; il margine minimo per un operatore è di 0,25–0,45 s (risposta umana da FAA AC 90-48E: ip).
+• I Due droni veloci in rotta di collisione: avviso di prossimità almeno 10 s prima in 60 su 60 [0,940; 1] (soglia dei 10 s non scritta prima). S Dopo
+  l’urto il punto vero e i frammenti sono sempre rimasti nella regione dichiarata: 60 su 60 [0,940; 1], 939 campioni su 939 (inviluppo con |v| ≤ 210
+  m/s).
+• S Col nucleo adottato, nessun falso evento nelle quasi collisioni a 40 m e negli incroci veloci: 0 su 200 [0; 0,019], 0 su 60. S Ottici accecati per 2–4
+  s: ogni traccia conserva una regione, 60 su 60 [0,940; 1]; l’identità resta «presunta» L (scambio 0,47–0,63).
+• S Radar a scansione elettronica a 10 Hz: la regione non si perde mai, 60 su 60 e 200 su 200 [0,981; 1]. L Col radar rotante a 1 Hz l’aereo veloce perde
+  continuità, 39 su 60 [0,524; 0,758], e MoVi lo dichiara.
+3 · Quando la continuità si perde: la confidenza nel tempo, in forma chiusa
+
+Dal momento della perdita, a velocità quasi costante con rumore
+                                                                                Aerei, regione al         1–2 s                    21–30 s                    in virata
+gaussiano (dim nel modello, verificata numericamente; un regime,
+                                                                                90 % (pub)
+nel piano: la copertura in tabella è misurata in 3D, con miscela e
+ricalibrazione):                                                                prima della               0,71 [0,67; 0,74]        0,96 [0,94; 0,98]          0,905 (stima)
+                                                                                taratura
+                                                      3
+              σ 2 (τ ) = σ02 + 2σ0v τ + σv2 τ 2 + qτ3 + σrif
+                                                         2
+                                                                                dopo la taratura           I 0,89 [0,87; 0,91]      I 0,85 [0,81; 0,88]        L   0,73 [0,67; 0,78]
+                                                                                r0,9 mediano              39 m                     1106 m                     —
+                           2    2
+       C(τ ) = 1 − e−r /2σ (τ ) ,   r0,9 (τ ) = 2,146 σ(τ )                     Dopo la perdita la regione al 90 % ha contenuto l’aereo da 85 a 89 volte su 100 fra 1 e 30
+                          ∑                                                     s. I casi sono correlati (intervalli ottimisti) e vengono per nove decimi da quattro voli della
+Con più regimi di moto C = j µj Pj ; si mostra il minimo progres-
+                                                                                stessa rotta. In virata la copertura scende a 73 su 100, in accelerazione a 0,76 [0,67; 0,83]:
+sivo C̃(τ ) = mins≤τ C(s), che non risale mai. Fuori modello (urto,             limiti dichiarati. Taratura su metà dei mezzi, prova sull’altra metà. Per il drone seguito di § 4
+avaria) si mostra l’insieme di presenza r0 + vmax τ (210 m/s aerei,             (calc da ip): C scende da 1,00 a 0,62 a 2 s e a 0,09 a 5 s (radar frontale).
+45 m/s droni): un contenimento garantito se |v| ≤ vmax , non una
+probabilità.
+4 · MoVi a bordo di un drone: la traccia mantenuta attraverso una collisione vicina
+
+Il sensore viaggia su un drone che mantiene la traccia di un drone veloce più avanti. A 30–100 m due droni si scontrano: fiammata, fumo, 32 frammenti.
+sim, 60 passaggi per geometria (di lato, davanti, dietro, in virata), più 20 per cella su semi e geometrie nuovi.
+•  S La regione che contiene il drone seguito non si è mai persa: 60 su 60 [0,940; 1] in ogni geometria, col radar a 360°; 20 su 20 [0,839; 1] anche con
+  l’urto a 10–30 m (robustezza, 20 per cella). Mai «libero» sul drone seguito né su un frammento: 0 su 60 [0; 0,060] in ogni cella. Nessun frammento
+  attribuito al drone seguito senza dirlo: l’identità diventa «presunta, dubbia».
+• S Il volume dei detriti dichiarato ha contenuto tutti i frammenti simulati: 60 su 60 passaggi [0,940; 1] per geometria, radar a 360°, da 42 950 a 44 051
+  campioni per geometria, anche con frammenti più veloci del dichiarato (dim nel modello: resistenza dell’aria, vento nullo).
+• S Radar accecato fino a 2 s insieme alle camere (modello pessimista, ip): mai «libero» [0; 0,060], e il drone è rimasto nella regione in 59–60 passaggi
+  su 60 [0,911; 0,997 nel caso peggiore].
+• L Con il radar accecato l’avviso al portatore prima di un frammento entro 10 m crolla (davanti 27–28 su 52, caso totale 0 su 59 [0; 0,061]; con la
+  correzione in prova 59 su 59, vedi i limiti); col radar non disturbato arriva prima in tutti i casi simulati I . Con un radar solo frontale un urto di
+  lato o dietro non è visto (MoVi dice «non so»), e l’identità in virata scende a 43 su 60 [0,592; 0,815]. Il volume è prudente: l’avviso scatta anche
+  senza frammenti vicini. Con l’urto a 10–30 m davanti il margine dell’avviso è sotto 0,25 s in 7 casi su 20. Il ritardo dell’evento non è presentabile. Il
+  tracciatore usa in due punti la velocità vera del portatore. Nessun falso evento in 200 voli di controllo simulati senza clutter a grappoli [0; 0,019].
+5 · La collisione veloce: limite dichiarato, miglioria in prova
+
+ L La collisione veloce non è ancora dichiarata come evento. Una regola di contatto in prova (tracce risolte e mature, convergenza ≥ 10 m/s, fusione
+o sparizione, tracce nuove o Doppler fuori norma) la riconosce entro 2 s in 57 passaggi su 60 [0,863; 0,983] col radar a scansione elettronica, ma dà
+ancora falsi eventi in un quasi incrocio a 39 m, 2 su 60 [0,009; 0,114], e un evento prima dell’urto; col radar rotante scende a 34 su 60 [0,441; 0,684].
+Non è adottata. Si adotta solo con almeno 54 su 60 e zero falsi eventi su semi nuovi e almeno 10 geometrie. Per i droni lenti (8 m/s), con l’integratore
+stabile, l’evento arriva entro 2 s in 48 su 60 [0,682; 0,882], con 3 eventi aperti prima dell’urto L ; i frammenti restano nel volume in 60 su 60 [0,940; 1]
+ S.
+
+6 · Sensori allo stato dell’arte e calcolo dedicato: stime, non misure
+
+Componente                           Che cosa assumiamo (fonte)                                     Che cosa cambia
+
+Radar a scansione elettronica,       classe Echodyne EchoShield: tracce a 10 Hz (stam-              la regione dell’aereo veloce non si perde (§ 2)
+banda Ku                             pa, 2026), campo 120×80° (produttore); portate per
+                                     bersaglio non verificate
+Radar rotante                        un giro al secondo (1 Hz)                                      la continuità dell’aereo veloce si perde, ed è dichiarata
+Camere visibile e termica            termica «oltre 25 km» su bersaglio grande (dato del            accecate da fiammata e fumo: «non affidabili»
+                                     produttore)
+ADS-B, Remote ID                     ≥ 1 messaggio/s, latenza ≤ 2,0 s (14 CFR 91.227)               solo chi trasmette
+Calcolo dedicato (FPGA o ASIC)       CFAR su FPGA in 0,6 µs; distanza-Doppler 85× più               la leva è la rivisita del sensore: 10 Hz → 0,62 s, 40 Hz → 0,17 s al
+                                     rapida di un ARM; totale stimato 0,08–1,2 ms per               primo avviso (calc da ip)
+                                     aggiornamento (ip, per analogia)
+Analogia con i chip per modelli linguistici: circa 17 000 token/s contro circa 230 su una GPU H200 (dato dell’azienda, prove interne), valida solo per i carichi limitati dalla
+memoria. Per il passo di Kalman un FPGA è più lento in latenza (725 contro 250 ns) e circa 4,5 volte più rapido in portata (CERN). Verso un operatore umano la leva è la
+direzione dell’avviso: 5,4 s invece di 12,5 s (FAA AC 90-48E), 2005 m invece di 3312 m a 250 m/s (calc).
+7 · Lo stesso nucleo altrove: il sito con il rullaggio e il corto raggio
+
+•  S Sito aerospaziale sorvegliato. Un drone a 15–21 m/s dietro un edificio è annunciato in tempo in 200 su 200 [0,981; 1]; mai «libero» sul drone con
+  la mappa dichiarata, 0 su 171 [0; 0,022]. L’avviso si spegne solo guardando tutta la zona: 0 su 600 [0; 0,006]. Il drone che rallenta o si ferma resta
+  nell’avviso in 188 su 200 [0,898; 0,965] I .
+• S Aereo in rullaggio dietro un hangar: con tre sensori fusi l’avviso arriva in tempo in 200 su 200 [0,981; 1]; L col solo radar in 50 su 200 [0,195; 0,314].
+   L Per gli aerei in volo l’avviso al sito non è tempestivo: servono 3410 m (calc).
+• S Corto raggio, camera di profondità fino a 3 m: una persona nascosta non è mai rimasta senza avviso, 0 fotogrammi su 4 324 [0; 0,001]. Per una
+  persona non vedente è un aiuto d’avviso, mai provato con persone: non sostituisce il bastone né il cane guida.
+8 · I requisiti della traccia
+
+La traccia chiede                         Che cosa fa MoVi, e con quale forza
+
+Continuità durante le interruzioni        regione mantenuta dopo urto, cecità e collisione vicina: 59–60 su 60 per cella col radar a scansione elettronica o a
+                                          360° S ; col radar rotante a 1 Hz 39 su 60 L ; confidenza nel tempo in forma chiusa, tarata su traiettorie pubbliche con
+                                          sensore simulato I , in virata L
+Distinguere osservato e incerto           tre risposte; «libero» solo se osservato S ; registro «osservato» o «dedotto»
+Perdita di affidabilità                   sensori saturi o accecati dichiarati «non affidabili» S (innesco ottimista)
+Eventi improvvisi                         avaria dedotta entro 1 s I ; collisione veloce non dichiarata L ; volume dei detriti S
+Feedback tempestivi, latenza              avviso di prossimità ≥ 10 s prima I ; calcolo dedicato stimato, non misurato
+Classificazione su più classi             supposta esistente, oggi etichette a mano NP ; nessuna etichetta riduce un avviso
+
+9 · Da proposta a sistema attuato: che cosa manca, e come lo si prova
+
+Limite                                         Miglioria (che cosa e come)                                     Prova che la decide
+
+Collisione veloce non dichiarata               Doppler sulla cella unita, riagganci esclusi, radar             ≥ 54/60 con zero falsi eventi, ≥ 10 geometrie
+                                               vicino
+Confidenza in virata 0,73                      ricalibrazione condizionata a una manovra rilevata in           virata ≥ 0,85 (smentita se < 0,80)
+                                               modo causale; divisione per rotta
+Radar accecato: avviso al portatore            avviso «evento vicino non localizzato», in prova: 59/59,        avviso ≥ 0,9 con falsi ≤ 0,05
+                                               falsi 11/200; poi localizzarlo (direzione del lampo,
+                                               Doppler)
+Volume dei detriti prudente                    velocità di ogni frammento dal Doppler; grappoli                avvisi falsi ≤ 10 % con contenimento al 100 %
+                                               tracciati
+Velocità vera del portatore nel                velocità dalla navigazione inerziale                            stesse soglie di § 4
+tracciatore
+Innesco della fiammata ottimista               saturazione dall’istogramma della camera                        ≤ 1 ciclo su registrazioni vere
+Una geometria per scenario; clutter a          ≥ 10 geometrie; stormi, pioggia, chaff simulati                 stesse soglie
+grappoli
+Calcolo, sensori, classificatore               FPGA reale; sensore fisico; classificatore per classe;          ≤ 1,2 ms per aggiornamento; prove sul campo
+                                               prove sul campo
+Dove sono le prove. Formule e dimostrazioni nel modello, schede dei sensori, registri delle prove, intervalli e bibliografia nel documento tecnico. Il prototipo simulato
+produce i registri e il filmato con gli stessi comandi; il controllo delle regole sui registri usa lo stesso codice del nucleo (non indipendente).
+

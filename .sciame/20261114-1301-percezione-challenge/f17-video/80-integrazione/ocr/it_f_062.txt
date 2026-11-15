@@ -1,0 +1,44 @@
+F7 - on board a moving drone: a collision nearby, radar blinded A AILON
+
+Simulated - state-of-the-art sensor parameters assumed - no physical sensor
+
+v
+VIEW FROM THE CARRIER - plan, carrier frame (estimafﬁd pose) - playback x0.42 (slowed)
+
+ALTITUDE VIEW (distance-height) \
++ truth (simulation only, MoVi does not see it) ® seen < not seen: region where it can be ‘|
+filled: where it can be after an event - no probability \ SN 1
+< N 1
+\ g 1 1 o
+\ ) I
+\ o 44 ]
+\ i}
+o \
+. \‘ \ II
+h o ] .
+,’ TRACKED DRONE - SEEN - identity presumed, doubtful
+‘g"";-( 1 t = 8.9 s - simulated run, log readout
+.
+P 4 1 & RADAR 360°: restored (declared)
+T ? o on boar 1 A CAMERA: degraded - possible smoke
+-
+e // " confidence on the tracked drone (computed in the model)
+—
+1
+I 0.9
+1 EVENT: nearby event - position unknown
+II conservative sphere r 345 m - never clear inside
+/ WARNING to carrier: nearby event - position unknown
+/ conservative, not localised, not selective
+4
+
+radar blinded up to 2 s - pessimistic model - fix under test
+flash trigger optimistic - identity presumed, doubtful
+
+CONSERVATIVE SPHERE - never clear inside / flash and smoke: drawn for illustration
+7
+
+fix under test : carrier warned before the first fragment, radar and cameras blinded: 59/59 [0.939; 1] - without 0/59 [0; 0.861] - same seeds - sim.
+
+Con una correzione in prova, MoVi avvisa subito il portatore, prima del
+primo frammento, in cinquantanove prove su cinquantanove, contro nessuna senza.

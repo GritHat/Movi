@@ -1,0 +1,44 @@
+F3 - fast drones colliding at 40 and 35 m/s SIMULATION
+
+Simulated - state-of-the-art sensor parameters assumed - no physical sensor
+
+; Y 9 ~ T . P A2y
+PLAN VIEW - playback x2.3 d@cceler*ted) PR p__AT___ﬂ__a% 200 m ALTITUDE VIEW (distance-hgight) ‘Qi\
+’ ’
+' Y ’ R e ’ Van
+“ ‘} I’ q:l \| - ,1 1" A ’l 3 \‘\‘
+L ’ I - -
+o W \ w 7 SEEN, 7 f f SR
+" SEEN . [/ b | K, LA
+N N 9 1 10 ¥ E I 2 ! Al
+K e 'l N 0 ] ,O7TQ | RN
+g Sy o A { " & i N AN
+= i 1
+N R NOT SEEN - 8.2 s - region 69 m - S, ||
+5 ~o - - - — Slag 111
+Sew ~~\~._ NOT SEEN - 0.8 s - region 141 m ‘\ \ e /,/'/
+~ = = ’
+
+ST S e S S > X
+
+t = 25.7 s + simulated run, log readout
+RADAR: reliable
+
+EO CAMERA: reliable
+
+THERMAL CAMERA: reliable
+
+PROXIMITY WARNING
+
+predicted close pass between two tracks
+collision not yet declared as an event:
+region kept
+
+filled: where it can be after an event - no probability
++ truth (simulation only, MoVi does not see it) ® seen < not seen: region where it can be
+
+proximity warning at least 10 s ahead: 60/60 [0.940; 1] - 10 s threshold set after - sim.
+true position and fragments inside the region: 68/60 [0.940; 1] - 939/939 samples - sim.
+
+The collision is not yet declared as an event, but the region
+is kept: the fragments stayed inside it in sixty of sixty runs.

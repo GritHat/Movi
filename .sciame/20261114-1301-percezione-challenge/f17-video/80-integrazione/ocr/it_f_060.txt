@@ -1,0 +1,80 @@
+F7 - on board a moving drone: a collision nearby, radar blindeds_immted ]
+
+N
+VIEW FROM THE CARRIER - plan, carrier fnaTe (estimated pose) - playback x0.42 (slowed)
++ truth (simulation only, MoVi does not see it) ® seen < not seen: region where it can be
+
+filled: where it can be after an event - no pﬁubahilitv
+
+Y
+AY
+\
+\
+\
+pee— m— \
+Lo - e \
+y X \ T
+i \ ‘- i Y
+: o ] TRACKED DRONE - NOT SEEN 1.5 s - region 84 m
+i 3
+\ 1 1 \
+\ + MoVi on buird I : \
+: 1 b 1
+1 1
+1 \ 1
+! 9 p
+’ \ A
+/ h v
+4 S _ad
+> ~—e_ -
+/
+4
+4
+
+CONSERVATIVE SPHERE - never clear inside
+
+flash and smoke: drawn for illustration
+
+state-of-the-art sensor parameters assumed -
+
+SIMULATION
+
+no physical sensor
+
+ALTITUDE VIEW (distance-height)\\
+
+- - ~
+. pr i 4 S
+’ R \ ’ Y
+1 3 F Y
+1 \ ] i \
+\ o 1 1 ' Y !
+‘\ ,' 1 \ 1
+A} ’
+~ s ’ 1 .
+e e ] N y
+! e
+/A
+4
+
+t = 7.3 s - simulated run, log readout
+
+RADAR 360°: UNRELIABLE - saturated
+CAMERA: UNRELIABLE - saturated
+
+confidence on the tracked drone (computed in the model)
+———— 3
+
+a!v
+EVENT: nearby event - position unknown
+conservative sphere r 250 m - never clear inside
+WARNING to carrier: nearby event - position unknown
+conservative, not localised, not selective
+
+radar blinded up to 2 s -
+flash trigger optimistic -
+
+pessimistic model - fix under test
+identity presumed, doubtful
+
+Accanto, due droni si scontrano: lampo, fumo, detriti.

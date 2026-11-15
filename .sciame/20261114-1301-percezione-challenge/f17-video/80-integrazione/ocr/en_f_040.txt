@@ -1,0 +1,29 @@
+SIMULATION
+
+Simulated - state-of-the-art sensor parameters assumed - no physical sensor
+
+F5 - a flash blinds every optical sensor
+
+PLAN VIEW - playback x0.88 (slowed) S e ALTITUDE VIEW_(disxgnce-he:\lght)
+\ il ~o \
+AY
+
+t = 41.7 s - simulated run, log readout
+RADAR: reliable
+
+' k. By EO CAMERA: RELIABILITY LOST
+1 S SAle } .
+: \\ ~=-- NOT SEEN - 0.8 s - region 122 m THERMAL CAMERA: RELIABILITY LOST
+[} o ' PROXIMITY WARNING
+S \ .= NOT SEEN - 0.9 s - region 127 m predicted close pass between two tracks
+St \ A 7
+‘*-\\ ________ i 4 RADAR ONLY - identity PRESUMED
+. 4
+N ’
+
+filled: where it can be after an event - no probability
++ truth (simul}ti\on only, MoVi does no’bgee it) ® seen ¢ not seen: region where it can be
+
+optics blinded: every track keeps a region - 60/60 [0.940; 1] - identity PRESUMED - sim.
+
+Radar alone keeps a region for every track, and identity is presumed.

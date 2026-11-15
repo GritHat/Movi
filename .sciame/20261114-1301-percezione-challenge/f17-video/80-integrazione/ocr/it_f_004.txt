@@ -1,0 +1,24 @@
+Fast flight: drones on a collision course SIMULATION
+
+Simulated - state-of-the-art sensor parameters assumed - no physical sensor
+
+PLAN VIEW - playback x1.1 (accelerated) ¥ 2 il ‘:S“ ———200 m ALTITUDE VIEW (distance-height)
+
+NOT SEEN - 8.2 s - region 61 m
+NOT SEEN - 0.6 s - region 69 m
+
+t = 21.6 s + simulated run, log readout
+RADAR: reliable
+
+EO CAMERA: reliable
+
+THERMAL CAMERA: reliable
+
+PROXIMITY WARNING
+predicted close pass between two tracks
+
+filled: where it can be after an event - no probability
++ truth (simulation only, MoVi does not see it) ® seen < not seen: region where it can be
+
+Aerei e droni veloci: una collisione,
+un'avaria in volo, un lampo che acceca le camere.

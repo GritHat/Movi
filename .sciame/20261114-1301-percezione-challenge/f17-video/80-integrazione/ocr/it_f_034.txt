@@ -1,0 +1,55 @@
+SIMULATION
+
+Simulated - state-of-the-art sensor parameters assumed - no physical sensor
+
+F3 - fast drones colliding at 40 and 35 m/s
+
+l K [ !
+PLAN VIEW - playback x2.2 (accelerated) S 2 200 m ALTITUDE VIEW (distance-height)
+
+1 . N
+
+4 4 4 \\\\ L N “\. o /
+
+1 1 g
+
+j Y : @ seen i R
+1 L. ing | \ e
+h s sEEN " A i R )
+1 it 4 o
+1 —— SO SEEN | i 4 ﬂ‘?’
+1 L
+H NOT SEEN - 6.8 s - region 116 m H k. o S
+1 e _od
+1 ‘\ -
+
+1
+
+%
+
+1
+
+¥
+
+\
+
+\ t = 33.3 s : simulated run, log readout
+
+h: RADAR: reliable
+Y EO CAMERA: reliable
+k THERMAL CAMERA: reliable
+Y PROXIMITY WARNING
+&3 predicted close pass between two tracks
+~ ~ collision not yet declared as an event:
+N P s region kept
+
+filled: where it can be after an event - no probability %
+
++ truth (simulation only, MoVi does not see it) ® seen < not seen: ?Egign where it can be
+
+proximity warning at least 10 s ahead: 60/60 [0.940; 1] - 10 s threshold set after - sim.
+true position and fragments inside the region: 68/60 [0.940; 1] - 939/939 samples - sim.
+contact rule under test: 57/60 [0.863; 0.983] - false events in a 39 m near miss (F5) 2/60 [0.009; 0.114] - not adopted
+
+La collisione non & ancora dichiarata come evento, ma la regione
+resta: i frammenti vi sono rimasti in sessanta prove su sessanta.

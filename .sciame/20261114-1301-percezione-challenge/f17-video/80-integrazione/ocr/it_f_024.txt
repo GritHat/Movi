@@ -1,0 +1,43 @@
+SIMULATION
+
+F4 - failure with low-energy debris, 135 m/s . ;
+Simulated - state-of-the-art sensor parameters assumed - no physical sensor
+- .
+PLAN VIEW - playback x1.4 (accelerated) __——r’“é.\_. 1 km ALTITUDE VIEW (distance-hejfht) \\\
+- iy ’
+o MSL K Y
+. N
+# . !
+’ ~ [
+’ A 1
+Vit % i —@ O
+’ N 1
+’ \ 1
+& AT T T T T T T T T T A T T R N R T R N R R RN NN NN N
+7 \
+
+/ SEEN Y A
+i o ‘\ I,'
+n SEEN b .l
+i NOT SEEN - 8.2 s - region 1.4 km )
+
+1 t = 48.1 s - simulated run, log readout
+1
+1 RADAR: reliable
+
+i EO CAMERA: RELIABILITY LOST
+
+A ,  THERMAL CAMERA: RELIABILITY LOST
+% ,/ EVENT: FAILURE OR FLASH - INFERRED
+\\\ Pl debris volume and footprint declared
+‘\\ ’,’ not verified: possible presence
+~ .
+
+filled: where it can be after an event - no probability i
++ truth (simulation only, MoVi does not see it) ® seen ' not seént -region-where it can be
+event inferred, cameras declared unreliable within 1 s: 60/60 [0.940; 1] - optimistic trigger - sim.
+
+low-energy debris inside the declared volume: 58/60 [0.886; 0.991] - sim.
+
+| detriti a bassa energia restano nel
+volume dichiarato in cinquantotto su sessanta.

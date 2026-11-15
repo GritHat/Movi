@@ -1,0 +1,6 @@
+e6a7124d2c2247d39303db35bc014f9348bebde2f9fc10fd92eeef80dbb72146  /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/consegna/MoVi_pitch_EN_final.mp4
+50d0220eeeaff29667a684df4a0ceba0881c88e1b4340118996e1c7441cac33c  /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/consegna/MoVi_pitch_IT_final.mp4
+78ec95533ef5acf4e46af140aeb06afba46c78b2d10766651fe6f0cee60ae461  /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/consegna/MoVi_pitch_EN_final.srt
+5a24dd53f66507a1380721303d15e4f497596036ab7752ae77bf67eab1f2a722  /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/consegna/MoVi_pitch_IT_final_impressi.srt
+a542d2080ff55d6a1d1e0c9ec6de141465ae51c113341d542ba360cc278c004f  /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/consegna/MoVi_pitch_IT_final.srt
+927466696c3101fa322afdeec0661ff6d8b986c9349ddf8664cf7f95ceee1398  /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/consegna/MoVi_pitch_IT_sui_tempi_EN_final.srt

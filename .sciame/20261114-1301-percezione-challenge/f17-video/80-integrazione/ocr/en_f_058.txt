@@ -1,0 +1,26 @@
+SIMULATION
+
+Simulated - state-of-the-art sensor parameters assumed - no physical sensor
+
+F7 - on board a moving drone: a collision nearby, radar blinded
+
+VIEW FROM THE CARRIER - plan, carrier frame (estimated pose) - playback x0.47 (slowed) ALTITUDE VIEW (distance-height)
++ truth (simulation only, MoVi does not see it) ® seen < not seen: region where it can be
+filled: where it can be after an event - no probability
+
+s o N
+. * .
+> TRACKED DRONE - SEEN - identity confirmed t = 4.8 s - simulated run, log readout
+TR o G - RADAR 360°: reliable
+J TR on hoan o CAMERA: reliable
+
+confidence on the tracked drone (computed in the model)
+
+]
+
+0.9
+
+radar blinded up to 2 s - pessimistic model - fix under test
+flash trigger optimistic - identity presumed, doubtful
+
+Now MoVi rides on a drone, keeping the track of a fast drone ahead.

@@ -1,0 +1,6 @@
+Previsioni scritte prima di rendere (ora in ora_inizio.txt), v3d -> *_final:
+P1 durata EN = 174,379 s +-0,05 (stessa voce, stessi tempi); smentita: |diff| > 0,05 o > 176,0 s.
+P2 durata IT = 170,469 s +-0,05; smentita come sopra.
+P3 OCR 150-170 s EN: "not reliable" assente, "fix under test" presente; smentita: il contrario.
+P4 loudness -14,0 +-0,5 LUFS; verde: nessun fotogramma oltre 200 px; etichetta SIMULATION/SCHEMATIC su tutti i fotogrammi campionati (1 ogni 2 s); 0 frasi vietate.
+P5 F7: a 125-127 s EN sono a schermo insieme 59/59, 49/60, 565 m e 11/200; smentita: una manca all'OCR in tutti i fotogrammi 125-128 s.

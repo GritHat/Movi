@@ -1,0 +1,7 @@
+SIMULATION
+
+Simulated - state-of-the-art sensor parameters assumed - no physical sensor
+
+M::Vi
+
+Fast flight: when continuity is lost

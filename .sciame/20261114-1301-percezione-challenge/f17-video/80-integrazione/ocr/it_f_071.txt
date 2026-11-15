@@ -1,0 +1,20 @@
+SIMULATION (site) - SCHEMATIC (short range)
+
+Simulated - state-of-the-art sensor parameters assumed - no physical sensor
+
+Also: the site with taxiing aircraft and drones, and other uses
+
+Site: drone behind a building Site: taxiing aircraft
+drone at 15-21 m/s, hidden three fused sensors:
+by a building, announced: 200/200 [0.981; 1]
+
+warned in time: 200/200 [0.981; 1]
+limit: for aircraft in flight
+never 'clear' on the drone, the site warning is late
+
+with the declared map
+
+LP-1 - S - simulation LP-4 - S - simulation
+
+Lo stesso approccio funziona in un sito: un drone dietro
+un edificio, avvisato in tempo in duecento prove su duecento.
