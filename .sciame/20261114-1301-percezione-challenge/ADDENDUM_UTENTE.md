@@ -256,3 +256,15 @@ Il lavoro va in `f20-chiusura/05-scorta/SCORTA.md`. F7 entra nel verdetto finale
 **Addendum 17 (06:10).** L'utente: «Il video non deve in nessun caso superare i 176 secondi totali». Vincolo assoluto: durata fra 168 e 175 s, mai oltre 176,0 s (ffprobe).
 
 **Nota del coordinatore (F7, 06:16).** Il rapporto è in `f20-chiusura/05-scorta/SCORTA.md`. I registri validi sono **solo** `prototipo/uscite/video_volo/registro_F7_*_v2.jsonl`, elencati in `INDICE_F7_v2.md`. Quelli senza `_v2` sono la prima stesura, violano la regola 5 del validatore e non si usano.
+
+**Addendum 18 (06:36).** L'utente chiede perché in F7 il radar non è mai accecato. Risposta: è una semplificazione del modello, dichiarata «non provata», non un risultato. Si avvia la variante F7r col radar disturbato: `f20-chiusura/05-scorta/ACCECAMENTO_RADAR.md`, consegna verso le 07:10. Documenti e video devono usarne gli esiti se il file esiste quando li scrivono. Se F7r non regge, la scena F7 dice «radar assumed unaffected by the event».
+
+**Addendum 19 (circa 06:40).** L'utente: se F7r dà esito negativo, lo sciame propone e prova una correzione sui punti critici, con un tetto di 30 minuti extra compresa la verifica. Basta un miglioramento percettibile e significativo per presentare la strada come promettente e per mettere nel video lo scenario F7r invece di quello col radar non disturbato. La conclusione massima si sposta alle **10:45**. Non si riavviano i processi in corso: gli esiti di F7r e della correzione entrano con un passaggio d'integrazione finale su documenti e video.
+
+**Esito della correzione F7r (c1), circa 06:50.** Rapporti in `f20-chiusura/05-scorta/correzione_f7r/`: `CORREZIONE.md` e `verifica/VERIFICA.md`. È **percettibile e significativa** sull'avviso al portatore prima dei frammenti nella perdita totale: da 0/59 a 59/59 [0,939; 1], con confronto appaiato e McNemar p = 3,5·10⁻¹⁸. Le identità spurie non dichiarate scendono da 1 a 0.
+Limiti:
+- la riacquisizione entro 2 s migliora (davanti, att: da 42 a 49 su 60) ma resta sotto la soglia di 51/60;
+- l'avviso non localizza l'evento: è una sfera prudente fino a 565 m, accesa per una mediana di 8 s;
+- 11/200 falsi avvisi se il radar satura per un'altra causa.
+
+**Decisione (regola dell'utente, addendum 19):** nel video entra lo scenario F7r col radar disturbato e la correzione c1, presentato come «strada promettente», con i limiti dichiarati. Prende il posto della scena col radar non disturbato. Il registro è `prototipo/uscite/video_volo/registro_F7r_c1_*.jsonl`. Documento tecnico e proposta riportano F7, F7r e c1 con limiti e migliorie.

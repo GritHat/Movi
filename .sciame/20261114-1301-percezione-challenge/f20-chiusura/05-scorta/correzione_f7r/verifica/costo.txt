@@ -1,0 +1,7 @@
+passaggi con evento (att): 240
+durata volume non localizzato s: min 3.0 med 8.0 max 8.0
+raggio orizzontale finale m: min 345 med 565 max 565 ; volume sfera eq. med 7.57e+08 m3
+raggio a 1 s 219 m, 3 s 345 m, 8 s 565 m
+avviso acceso in passaggi senza frammento a 10 m: 71/71 (0.949, 1)
+avviso_t - avviso_nl_t (s): [0.0]
+evento localizzato dichiarato: 81 / 240

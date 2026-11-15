@@ -1,0 +1,5 @@
+uscite/video_volo/registro_F7r_c1_davanti.jsonl: 240 fotogrammi, 0 violazioni
+uscite/video_volo/registro_F7r_c1_F7c.jsonl: 240 fotogrammi, 0 violazioni
+uscite/video_volo/registro_F7r_c1_lato.jsonl: 240 fotogrammi, 0 violazioni
+uscite/video_volo/registro_F7r_c1_totale.jsonl: 240 fotogrammi, 0 violazioni
+uscite/video_volo/registro_F7r_c1_vira.jsonl: 240 fotogrammi, 0 violazioni

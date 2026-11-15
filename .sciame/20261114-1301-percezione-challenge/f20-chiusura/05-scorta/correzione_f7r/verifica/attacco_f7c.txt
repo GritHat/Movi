@@ -1,0 +1,2 @@
+naturale falsi eventi o avvisi 11/200 (0.031, 0.096); cont_ok 200; libero>0 0
+forzato falsi eventi o avvisi 11/200 (0.031, 0.096); cont_ok 200; libero>0 0

@@ -1,0 +1,10 @@
+davanti verita' uguale 60/60 | riacq<=2s orig@24 42/60 (0.575, 0.801)  c1@24 49/60 (0.701, 0.894)  migliora 8 peggiora 1  McNemar esatto p=0.0391 Fisher p=0.2003 | orig@22 41/60 Fisher(c1@24 vs orig@22) p=0.1393
+   avviso prima fr: orig@24 22/51 (0.305, 0.567)  c1@24 51/51 (0.93, 1.0)  McNemar p=3.73e-09  Fisher p=1.28e-11
+   spurie (riacq_spurie o assoc nd): orig@24 0/60 (0, 0.06) c1@24 0/60 (0, 0.06); id_ok orig@24 58 c1@24 60; cont_ok orig@24 60 c1 60
+vira verita' uguale 60/60 | riacq<=2s orig@24 35/60 (0.457, 0.699)  c1@24 40/60 (0.541, 0.773)  migliora 5 peggiora 0  McNemar esatto p=0.0625 Fisher p=0.4509 | orig@22 43/60 Fisher(c1@24 vs orig@22) p=0.6929
+   avviso prima fr: orig@24 28/58 (0.359, 0.608)  c1@24 58/58 (0.938, 1.0)  McNemar p=1.86e-09  Fisher p=1.10e-11
+   spurie (riacq_spurie o assoc nd): orig@24 1/60 (0.003, 0.089) c1@24 0/60 (0, 0.06); id_ok orig@24 49 c1@24 51; cont_ok orig@24 59 c1 60
+totale verita' uguale 60/60 | riacq<=2s orig@24 60/60 (0.94, 1)  c1@24 59/60 (0.911, 0.997)  migliora 0 peggiora 1  McNemar esatto p=1.0000 Fisher p=1.0000 | orig@22 59/60 Fisher(c1@24 vs orig@22) p=1.0000
+   avviso prima fr: orig@24 0/59 (0, 0.061)  c1@24 59/59 (0.939, 1.0)  McNemar p=3.47e-18  Fisher p=8.21e-35
+   spurie (riacq_spurie o assoc nd): orig@24 0/60 (0, 0.06) c1@24 0/60 (0, 0.06); id_ok orig@24 60 c1@24 60; cont_ok orig@24 60 c1 60
+totale avviso c1@24 59/59 vs orig@22 0/59 Fisher p=8.21e-35

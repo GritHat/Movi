@@ -1,0 +1,1 @@
+- A6 (2026-11-15T06:45:23+01:00): F7c con radar saturato 1,0 s per altra causa (d_rad=1) e bagliore della camera: falsi avvisi c1 > 0 e circa uguali alla frazione di bagliori che cadono in [5,5; 7,5] s (smentita: 0/200).

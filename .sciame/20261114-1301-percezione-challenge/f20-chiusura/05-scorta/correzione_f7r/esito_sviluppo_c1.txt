@@ -1,0 +1,1222 @@
+{
+"lato/att": {
+"continuita": [
+5,
+5,
+0.566,
+1.0
+],
+"identita": [
+5,
+5,
+0.566,
+1.0
+],
+"riacq_2s": [
+5,
+5,
+0.566,
+1.0
+],
+"riacq_radar_2s": [
+5,
+5,
+0.566,
+1.0
+],
+"riacq_radar_rit_max_s": 1.16,
+"riacq_spurie_non_dich_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"spurie_non_dichiarate_c1_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"riacq_dubbie_passaggi": [
+3,
+5,
+0.231,
+0.882
+],
+"avviso_prima_frammento": null,
+"falso_avviso_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"riacq_spurie_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"spuria_non_dich_o_riacq_spuria_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"riacq_cam_2s": [
+5,
+5,
+0.566,
+1.0
+],
+"libero_bersaglio_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"libero_frammento_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"assoc_non_dichiarate_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"assoc_dubbie_dichiarate_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"evento_dichiarato": [
+0,
+5,
+0.0,
+0.434
+],
+"falsi_eventi": [
+0,
+5,
+0.0,
+0.434
+],
+"ritardo_evento_s_max": null,
+"volume_campioni": [
+0,
+0
+],
+"volume_passaggi_tutti_dentro": [
+0,
+5,
+0.0,
+0.434
+],
+"intersecano": 0,
+"intersecano_con_avviso_prima": 0,
+"margine_avviso_s_min": null,
+"camera_affidabile_in_saturazione_cicli": 0,
+"cicli_fuori_regione_tot": 0
+},
+"lato/sda": {
+"continuita": [
+5,
+5,
+0.566,
+1.0
+],
+"identita": [
+5,
+5,
+0.566,
+1.0
+],
+"riacq_2s": [
+5,
+5,
+0.566,
+1.0
+],
+"riacq_radar_2s": [
+5,
+5,
+0.566,
+1.0
+],
+"riacq_radar_rit_max_s": 0.3,
+"riacq_spurie_non_dich_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"spurie_non_dichiarate_c1_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"riacq_dubbie_passaggi": [
+3,
+5,
+0.231,
+0.882
+],
+"avviso_prima_frammento": null,
+"falso_avviso_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"riacq_spurie_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"spuria_non_dich_o_riacq_spuria_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"riacq_cam_2s": [
+5,
+5,
+0.566,
+1.0
+],
+"libero_bersaglio_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"libero_frammento_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"assoc_non_dichiarate_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"assoc_dubbie_dichiarate_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"evento_dichiarato": [
+5,
+5,
+0.566,
+1.0
+],
+"falsi_eventi": [
+0,
+5,
+0.0,
+0.434
+],
+"ritardo_evento_s_max": 1.7000000000000002,
+"volume_campioni": [
+3492,
+3492
+],
+"volume_passaggi_tutti_dentro": [
+5,
+5,
+0.566,
+1.0
+],
+"intersecano": 0,
+"intersecano_con_avviso_prima": 0,
+"margine_avviso_s_min": null,
+"camera_affidabile_in_saturazione_cicli": 0,
+"cicli_fuori_regione_tot": 0
+},
+"davanti/att": {
+"continuita": [
+5,
+5,
+0.566,
+1.0
+],
+"identita": [
+5,
+5,
+0.566,
+1.0
+],
+"riacq_2s": [
+4,
+5,
+0.376,
+0.964
+],
+"riacq_radar_2s": [
+3,
+5,
+0.231,
+0.882
+],
+"riacq_radar_rit_max_s": 2.56,
+"riacq_spurie_non_dich_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"spurie_non_dichiarate_c1_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"riacq_dubbie_passaggi": [
+4,
+5,
+0.376,
+0.964
+],
+"avviso_prima_frammento": [
+5,
+5,
+0.566,
+1.0
+],
+"falso_avviso_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"riacq_spurie_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"spuria_non_dich_o_riacq_spuria_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"riacq_cam_2s": [
+5,
+5,
+0.566,
+1.0
+],
+"libero_bersaglio_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"libero_frammento_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"assoc_non_dichiarate_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"assoc_dubbie_dichiarate_passaggi": [
+1,
+5,
+0.036,
+0.624
+],
+"evento_dichiarato": [
+4,
+5,
+0.376,
+0.964
+],
+"falsi_eventi": [
+0,
+5,
+0.0,
+0.434
+],
+"ritardo_evento_s_max": 1.7999999999999998,
+"volume_campioni": [
+2979,
+2979
+],
+"volume_passaggi_tutti_dentro": [
+4,
+5,
+0.376,
+0.964
+],
+"intersecano": 5,
+"intersecano_con_avviso_prima": 5,
+"margine_avviso_s_min": 0.5,
+"camera_affidabile_in_saturazione_cicli": 0,
+"cicli_fuori_regione_tot": 0
+},
+"davanti/sda": {
+"continuita": [
+5,
+5,
+0.566,
+1.0
+],
+"identita": [
+5,
+5,
+0.566,
+1.0
+],
+"riacq_2s": [
+5,
+5,
+0.566,
+1.0
+],
+"riacq_radar_2s": [
+5,
+5,
+0.566,
+1.0
+],
+"riacq_radar_rit_max_s": 0.86,
+"riacq_spurie_non_dich_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"spurie_non_dichiarate_c1_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"riacq_dubbie_passaggi": [
+4,
+5,
+0.376,
+0.964
+],
+"avviso_prima_frammento": [
+5,
+5,
+0.566,
+1.0
+],
+"falso_avviso_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"riacq_spurie_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"spuria_non_dich_o_riacq_spuria_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"riacq_cam_2s": [
+5,
+5,
+0.566,
+1.0
+],
+"libero_bersaglio_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"libero_frammento_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"assoc_non_dichiarate_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"assoc_dubbie_dichiarate_passaggi": [
+1,
+5,
+0.036,
+0.624
+],
+"evento_dichiarato": [
+5,
+5,
+0.566,
+1.0
+],
+"falsi_eventi": [
+0,
+5,
+0.0,
+0.434
+],
+"ritardo_evento_s_max": 1.7999999999999998,
+"volume_campioni": [
+3565,
+3565
+],
+"volume_passaggi_tutti_dentro": [
+5,
+5,
+0.566,
+1.0
+],
+"intersecano": 5,
+"intersecano_con_avviso_prima": 5,
+"margine_avviso_s_min": 0.5,
+"camera_affidabile_in_saturazione_cicli": 0,
+"cicli_fuori_regione_tot": 0
+},
+"vira/att": {
+"continuita": [
+5,
+5,
+0.566,
+1.0
+],
+"identita": [
+4,
+5,
+0.376,
+0.964
+],
+"riacq_2s": [
+3,
+5,
+0.231,
+0.882
+],
+"riacq_radar_2s": [
+4,
+5,
+0.376,
+0.964
+],
+"riacq_radar_rit_max_s": 2.11,
+"riacq_spurie_non_dich_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"spurie_non_dichiarate_c1_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"riacq_dubbie_passaggi": [
+4,
+5,
+0.376,
+0.964
+],
+"avviso_prima_frammento": [
+5,
+5,
+0.566,
+1.0
+],
+"falso_avviso_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"riacq_spurie_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"spuria_non_dich_o_riacq_spuria_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"riacq_cam_2s": [
+4,
+5,
+0.376,
+0.964
+],
+"libero_bersaglio_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"libero_frammento_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"assoc_non_dichiarate_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"assoc_dubbie_dichiarate_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"evento_dichiarato": [
+2,
+5,
+0.118,
+0.769
+],
+"falsi_eventi": [
+0,
+5,
+0.0,
+0.434
+],
+"ritardo_evento_s_max": 1.2000000000000002,
+"volume_campioni": [
+1344,
+1344
+],
+"volume_passaggi_tutti_dentro": [
+2,
+5,
+0.118,
+0.769
+],
+"intersecano": 5,
+"intersecano_con_avviso_prima": 5,
+"margine_avviso_s_min": 0.5999999999999996,
+"camera_affidabile_in_saturazione_cicli": 0,
+"cicli_fuori_regione_tot": 0
+},
+"vira/sda": {
+"continuita": [
+5,
+5,
+0.566,
+1.0
+],
+"identita": [
+5,
+5,
+0.566,
+1.0
+],
+"riacq_2s": [
+4,
+5,
+0.376,
+0.964
+],
+"riacq_radar_2s": [
+5,
+5,
+0.566,
+1.0
+],
+"riacq_radar_rit_max_s": 1.93,
+"riacq_spurie_non_dich_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"spurie_non_dichiarate_c1_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"riacq_dubbie_passaggi": [
+4,
+5,
+0.376,
+0.964
+],
+"avviso_prima_frammento": [
+5,
+5,
+0.566,
+1.0
+],
+"falso_avviso_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"riacq_spurie_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"spuria_non_dich_o_riacq_spuria_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"riacq_cam_2s": [
+4,
+5,
+0.376,
+0.964
+],
+"libero_bersaglio_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"libero_frammento_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"assoc_non_dichiarate_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"assoc_dubbie_dichiarate_passaggi": [
+1,
+5,
+0.036,
+0.624
+],
+"evento_dichiarato": [
+5,
+5,
+0.566,
+1.0
+],
+"falsi_eventi": [
+0,
+5,
+0.0,
+0.434
+],
+"ritardo_evento_s_max": 1.9000000000000004,
+"volume_campioni": [
+3368,
+3368
+],
+"volume_passaggi_tutti_dentro": [
+5,
+5,
+0.566,
+1.0
+],
+"intersecano": 5,
+"intersecano_con_avviso_prima": 5,
+"margine_avviso_s_min": 0.5999999999999996,
+"camera_affidabile_in_saturazione_cicli": 0,
+"cicli_fuori_regione_tot": 0
+},
+"totale/att": {
+"continuita": [
+5,
+5,
+0.566,
+1.0
+],
+"identita": [
+5,
+5,
+0.566,
+1.0
+],
+"riacq_2s": [
+5,
+5,
+0.566,
+1.0
+],
+"riacq_radar_2s": [
+5,
+5,
+0.566,
+1.0
+],
+"riacq_radar_rit_max_s": 1.6,
+"riacq_spurie_non_dich_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"spurie_non_dichiarate_c1_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"riacq_dubbie_passaggi": [
+5,
+5,
+0.566,
+1.0
+],
+"avviso_prima_frammento": [
+4,
+5,
+0.376,
+0.964
+],
+"falso_avviso_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"riacq_spurie_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"spuria_non_dich_o_riacq_spuria_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"riacq_cam_2s": [
+5,
+5,
+0.566,
+1.0
+],
+"libero_bersaglio_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"libero_frammento_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"assoc_non_dichiarate_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"assoc_dubbie_dichiarate_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"evento_dichiarato": [
+0,
+5,
+0.0,
+0.434
+],
+"falsi_eventi": [
+0,
+5,
+0.0,
+0.434
+],
+"ritardo_evento_s_max": null,
+"volume_campioni": [
+0,
+0
+],
+"volume_passaggi_tutti_dentro": [
+0,
+5,
+0.0,
+0.434
+],
+"intersecano": 4,
+"intersecano_con_avviso_prima": 4,
+"margine_avviso_s_min": 0.5,
+"camera_affidabile_in_saturazione_cicli": 0,
+"cicli_fuori_regione_tot": 0
+},
+"totale/sda": {
+"continuita": [
+5,
+5,
+0.566,
+1.0
+],
+"identita": [
+5,
+5,
+0.566,
+1.0
+],
+"riacq_2s": [
+5,
+5,
+0.566,
+1.0
+],
+"riacq_radar_2s": [
+5,
+5,
+0.566,
+1.0
+],
+"riacq_radar_rit_max_s": 0.9,
+"riacq_spurie_non_dich_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"spurie_non_dichiarate_c1_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"riacq_dubbie_passaggi": [
+5,
+5,
+0.566,
+1.0
+],
+"avviso_prima_frammento": [
+4,
+5,
+0.376,
+0.964
+],
+"falso_avviso_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"riacq_spurie_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"spuria_non_dich_o_riacq_spuria_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"riacq_cam_2s": [
+5,
+5,
+0.566,
+1.0
+],
+"libero_bersaglio_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"libero_frammento_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"assoc_non_dichiarate_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"assoc_dubbie_dichiarate_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"evento_dichiarato": [
+5,
+5,
+0.566,
+1.0
+],
+"falsi_eventi": [
+0,
+5,
+0.0,
+0.434
+],
+"ritardo_evento_s_max": 2.0,
+"volume_campioni": [
+3135,
+3135
+],
+"volume_passaggi_tutti_dentro": [
+5,
+5,
+0.566,
+1.0
+],
+"intersecano": 4,
+"intersecano_con_avviso_prima": 4,
+"margine_avviso_s_min": 0.5,
+"camera_affidabile_in_saturazione_cicli": 0,
+"cicli_fuori_regione_tot": 0
+},
+"F7c/att": {
+"continuita": [
+5,
+5,
+0.566,
+1.0
+],
+"identita": [
+5,
+5,
+0.566,
+1.0
+],
+"riacq_2s": null,
+"riacq_radar_2s": null,
+"riacq_radar_rit_max_s": null,
+"riacq_spurie_non_dich_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"spurie_non_dichiarate_c1_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"riacq_dubbie_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"avviso_prima_frammento": null,
+"falso_avviso_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"riacq_spurie_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"spuria_non_dich_o_riacq_spuria_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"riacq_cam_2s": null,
+"libero_bersaglio_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"libero_frammento_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"assoc_non_dichiarate_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"assoc_dubbie_dichiarate_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"evento_dichiarato": [
+0,
+5,
+0.0,
+0.434
+],
+"falsi_eventi": [
+0,
+5,
+0.0,
+0.434
+],
+"ritardo_evento_s_max": null,
+"volume_campioni": [
+0,
+0
+],
+"volume_passaggi_tutti_dentro": [
+0,
+5,
+0.0,
+0.434
+],
+"intersecano": 0,
+"intersecano_con_avviso_prima": 0,
+"margine_avviso_s_min": null,
+"camera_affidabile_in_saturazione_cicli": 0,
+"cicli_fuori_regione_tot": 0
+},
+"F7c/sda": {
+"continuita": [
+5,
+5,
+0.566,
+1.0
+],
+"identita": [
+5,
+5,
+0.566,
+1.0
+],
+"riacq_2s": null,
+"riacq_radar_2s": null,
+"riacq_radar_rit_max_s": null,
+"riacq_spurie_non_dich_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"spurie_non_dichiarate_c1_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"riacq_dubbie_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"avviso_prima_frammento": null,
+"falso_avviso_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"riacq_spurie_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"spuria_non_dich_o_riacq_spuria_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"riacq_cam_2s": null,
+"libero_bersaglio_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"libero_frammento_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"assoc_non_dichiarate_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"assoc_dubbie_dichiarate_passaggi": [
+0,
+5,
+0.0,
+0.434
+],
+"evento_dichiarato": [
+0,
+5,
+0.0,
+0.434
+],
+"falsi_eventi": [
+0,
+5,
+0.0,
+0.434
+],
+"ritardo_evento_s_max": null,
+"volume_campioni": [
+0,
+0
+],
+"volume_passaggi_tutti_dentro": [
+0,
+5,
+0.0,
+0.434
+],
+"intersecano": 0,
+"intersecano_con_avviso_prima": 0,
+"margine_avviso_s_min": null,
+"camera_affidabile_in_saturazione_cicli": 0,
+"cicli_fuori_regione_tot": 0
+}
+}
