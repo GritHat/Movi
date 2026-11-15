@@ -1,0 +1,327 @@
+{
+ "_meta": {
+  "titolo": "Parametri dei sensori per il volo veloce e degli acceleratori (MoVi, f19-volo/02-sensori-hw)",
+  "data": "2026-11-15",
+  "avvertenza": "Nessun sensore fisico, nessuna misura su hardware. Le fonti segnate NON APERTA vengono da riassunti di un motore di ricerca: vanno aperte prima di citarle nel documento tecnico.",
+  "formato_campo": "[valore, unita', fonte] come in f15-lunga-portata/02-sensori/parametri_lunga_portata.json",
+  "ambito": "Solo osservazione, monitoraggio e avviso."
+ },
+ "fonti": {
+  "ECHOSHIELD": "Echodyne EchoShield, scheda tecnica e brochure (https://www.echodyne.com/media/1prhocdl/ts-echoshield-echodyne.pdf; brochure gov 5my2): valori da riassunto di ricerca del 15-11-2026; i due PDF provati restituiscono 404: NON APERTA",
+  "DRONEDJ2610": "DroneDJ, 1-10-2026, https://dronedj.com/2026/10/01/echodyne-radar-counter-drone-mesa/ (10 Hz, <0,5 gradi): da riassunto di ricerca, NON APERTA",
+  "ASR11": "ASR-11: https://en.wikipedia.org/wiki/ASR-11 e Lincoln Lab (4,8 s come requisito; 12,5 giri/min): da riassunto di ricerca, NON APERTA",
+  "CFR91227": "14 CFR 91.227, https://www.law.cornell.edu/cfr/text/14/91.227 (aperta nella fase 02-sensori): >=1 messaggio/s, latenza totale <=2,0 s di cui <=0,6 non compensati",
+  "ICAO_ADSB": "ICAO NACC, Overview ADS-B Out, https://www2023.icao.int/NACC/Documents/Meetings/2021/ADSB/P01-OverviewADSBOut-ENG.pdf (posizione in volo 2/s, DO-260B): da riassunto di ricerca, NON APERTA",
+  "CFR89310": "14 CFR 89.310 (Remote ID), https://www.law.cornell.edu/cfr/text/14/89.310 (aperta nella fase 02-sensori)",
+  "CM202A": "CACI CM202A, https://www.caci.com/sites/default/files/2020-10/cm202a_cm202a_datasheet_3-2-0_1.pdf (MWIR, 150 gradi/s, campo 21,7-1,7 gradi): da riassunto di ricerca; PDF 404: NON APERTA",
+  "SUPIR": "Ophir SupIR 50-1350 mm f/5.5, https://www.unmannedsystemstechnology.com/company/ophir-optronics/supir-50-1350mm-f-5-5/ (>25 km, DeltaT 2 gradi C): da riassunto di ricerca, NON APERTA",
+  "TELE15": "Livox Tele-15 (dal file f15-lunga-portata/02-sensori)",
+  "HEISE_TAALAS": "heise online, 21-02-2026, https://heise.de/-11185112 (APERTA OGGI): Taalas HC1 ~17 000 token/s (Llama 3.1 8B); H200 ~230; Cerebras ~1936, SambaNova 916, Groq 609 (Artificial Analysis)",
+  "CEREBRAS24": "Cerebras, Introducing Cerebras Inference, https://www.cerebras.ai/blog/introducing-cerebras-inference-ai-at-instant-speed (APERTA OGGI): 1800 token/s Llama3.1 8B, '20x' contro GPU",
+  "CERN_KF": "S. Summers, CHEP 2018, Kalman Filter track reconstruction on FPGAs, https://indico.cern.ch/event/587955/contributions/2935753/attachments/1684108/2707286/ssummers_chep_kffpga.pdf (APERTA OGGI, testo estratto): 181 cicli a 250 MHz ~725 ns contro ~250 ns su CPU; 'So far, no speedup!'",
+  "CFAR_PREPRINT": "preprint 2026 su preprints.org (CFAR su FPGA, 10 cicli a 100 MHz, 370 us; GPU 4,5-6x su CPU): da riassunto di ricerca, NON APERTA",
+  "AC9048": "FAA AC 90-48D CHG 1 (2016), tabella 1: 0,1+1,0+5,0+4,0+0,4+2,0 = 12,5 s; https://www.dover.af.mil/Portals/22/AC_90-48D_CHG_1.pdf restituisce 403: da riassunto di ricerca, NON APERTA; edizione vigente AC 90-48E (2022)"
+ },
+ "sensori": {
+  "radar_aesa_traccia_droni": {
+   "famiglia": "radar a scansione elettronica (metamateriali, banda Ku 15,4-16,6 GHz)",
+   "esemplare": "Echodyne EchoShield",
+   "campo_az_el_deg": [
+    [
+     130,
+     90
+    ],
+    "gradi",
+    "ECHOSHIELD"
+   ],
+   "portata_strumentata_m": [
+    30000,
+    "m (dipende dalla missione)",
+    "ECHOSHIELD"
+   ],
+   "portata_traccia_tipica_m": [
+    {
+     "Cessna": 2500,
+     "Matrice 600": 1400,
+     "Phantom 4": 1000
+    },
+    "m, tipica non massima",
+    "ECHOSHIELD"
+   ],
+   "rivisita_s": [
+    0.1,
+    "s (traccia a 10 Hz)",
+    "ECHOSHIELD"
+   ],
+   "accuratezza_ang_deg": [
+    0.5,
+    "gradi, meglio di, az e el",
+    "ECHOSHIELD"
+   ],
+   "tracce_max": [
+    1000,
+    ">1000",
+    "ECHOSHIELD"
+   ],
+   "latenza_s": [
+    0.02,
+    "s, CPI + elaborazione interna",
+    "ipotesi"
+   ],
+   "pd_in_portata": [
+    0.9,
+    "",
+    "ipotesi"
+   ],
+   "conferma": [
+    "3 su 5 rivisite = 0,3-0,5 s",
+    "",
+    "ipotesi"
+   ],
+   "non_osservato": [
+    "fuori dal campo 130x90 gradi (un pannello)",
+    "oltre la portata per la RCS del bersaglio",
+    "dietro ostacoli e detriti densi (ombra)",
+    "fra due rivisite (0,1 s)",
+    "nei primi 0,3-0,5 s di una traccia nuova"
+   ],
+   "limiti": "portate tipiche di brochure del produttore (di parte); pioggia forte in banda Ku riduce la portata (non quantificato)"
+  },
+  "radar_aesa_multifunzione_ipotetico": {
+   "famiglia": "AESA multifunzione con rivisita programmata sul bersaglio",
+   "esemplare": "nessuno: classe ipotetica",
+   "rivisita_s": [
+    0.025,
+    "s (40 Hz sul bersaglio tracciato; ricerca a rotazione lenta)",
+    "ipotesi"
+   ],
+   "portata_traccia_m": [
+    5000,
+    "m su aereo leggero",
+    "ipotesi"
+   ],
+   "conferma": [
+    "3 su 5 a 40 Hz = 75-125 ms",
+    "",
+    "ipotesi"
+   ],
+   "non_osservato": [
+    "settori in ricerca fra due passate",
+    "bersagli non ancora in traccia"
+   ],
+   "limiti": "il tempo di fascio dato a un bersaglio si toglie agli altri: con molti bersagli (detriti) la rivisita per ciascuno cala"
+  },
+  "radar_aeroportuale_asr": {
+   "famiglia": "radar primario di avvicinamento (banda S 2,7-2,9 GHz)",
+   "esemplare": "ASR-11",
+   "portata_m": [
+    111000,
+    "m (60 NM)",
+    "ASR11"
+   ],
+   "rivisita_s": [
+    4.8,
+    "s (12,5 giri/min)",
+    "ASR11"
+   ],
+   "conferma": [
+    "2 su 3 giri = 9,6-14,4 s",
+    "",
+    "ipotesi"
+   ],
+   "non_osservato": [
+    "fra due giri: 4,8 s, cioe' 1,2 km a 250 m/s",
+    "a bassa quota vicino al suolo (ombra, filtri del clutter)",
+    "droni piccoli (RCS sotto la soglia: ipotesi)"
+   ]
+  },
+  "ads_b_1090es": {
+   "famiglia": "sorveglianza cooperativa",
+   "esemplare": "ADS-B Out 1090ES",
+   "periodo_s": [
+    0.5,
+    "s (posizione in volo 2/s, DO-260B); minimo di legge 1 s",
+    "ICAO_ADSB"
+   ],
+   "latenza_s": [
+    2.0,
+    "s al piu', 0,6 non compensati",
+    "CFR91227"
+   ],
+   "non_osservato": [
+    "chi non trasmette (droni, avarie, transponder spento)",
+    "detriti",
+    "dopo un evento che danneggia l'avionica: ultimo dato vecchio"
+   ]
+  },
+  "identificazione_remota": {
+   "famiglia": "cooperativa, droni",
+   "periodo_s": [
+    1.0,
+    "s",
+    "CFR89310"
+   ],
+   "non_osservato": [
+    "droni non conformi",
+    "detriti"
+   ]
+  },
+  "multilaterazione": {
+   "famiglia": "cooperativa (tempi d'arrivo su >=4 ricevitori)",
+   "periodo_s": [
+    1.0,
+    "s",
+    "ipotesi"
+   ],
+   "sigma_posizione_m": [
+    30,
+    "m",
+    "ipotesi"
+   ],
+   "latenza_s": [
+    0.5,
+    "s",
+    "ipotesi"
+   ],
+   "non_osservato": [
+    "chi non trasmette"
+   ]
+  },
+  "eo_ir_brandeggio_veloce": {
+   "famiglia": "torretta EO/MWIR stabilizzata",
+   "esemplare": "CACI CM202A (torretta) + classe Ophir SupIR (ottica)",
+   "velocita_brandeggio_deg_s": [
+    150,
+    "gradi/s",
+    "CM202A"
+   ],
+   "campo_deg": [
+    [
+     21.7,
+     1.7
+    ],
+    "gradi (largo, stretto)",
+    "CM202A"
+   ],
+   "portata_rilevamento_m": [
+    25000,
+    "m, >, con DeltaT 2 gradi C (condizioni del produttore)",
+    "SUPIR"
+   ],
+   "frequenza_hz": [
+    30,
+    "Hz",
+    "ipotesi"
+   ],
+   "latenza_s": [
+    0.05,
+    "s (esposizione + codifica)",
+    "ipotesi"
+   ],
+   "non_osservato": [
+    "fuori dal campo stretto (1,7 gradi = 74 m a 2,5 km)",
+    "nella nebbia, nel fumo e nella fiammata (accecamento del MWIR)",
+    "durante il brandeggio (mosso)"
+   ]
+  },
+  "lidar_lunga_portata": {
+   "famiglia": "lidar a campo stretto",
+   "esemplare": "Livox Tele-15",
+   "portata_max_m": [
+    500,
+    "m @ 50 %",
+    "TELE15"
+   ],
+   "frequenza_hz": [
+    10,
+    "Hz",
+    "TELE15"
+   ],
+   "non_osservato": [
+    "oltre 320-500 m",
+    "nel fumo e nella nebbia"
+   ],
+   "limiti": "inutile per aerei in volo veloce: 500 m a 250 m/s sono 2 s"
+  },
+  "radiofrequenza_passivo": {
+   "famiglia": "rivelazione dei collegamenti di comando e video dei droni",
+   "periodo_s": [
+    0.5,
+    "s",
+    "ipotesi"
+   ],
+   "sigma_az_deg": [
+    3,
+    "gradi",
+    "ipotesi"
+   ],
+   "non_osservato": [
+    "droni autonomi silenziosi",
+    "detriti",
+    "aerei"
+   ]
+  }
+ },
+ "acceleratori_analogia": {
+  "chip_llm_dedicati": {
+   "Taalas_HC1_token_s": [
+    17000,
+    "token/s per utente, dato del produttore",
+    "HEISE_TAALAS"
+   ],
+   "H200_token_s": [
+    230,
+    "",
+    "HEISE_TAALAS"
+   ],
+   "Cerebras_token_s": [
+    1936,
+    "Artificial Analysis",
+    "HEISE_TAALAS"
+   ],
+   "rapporto_HC1_su_H200": [
+    74,
+    "conto 17000/230",
+    "conto"
+   ],
+   "rapporto_Cerebras_su_H200": [
+    8.4,
+    "conto 1936/230",
+    "conto"
+   ],
+   "perche": "decodifica limitata dalla memoria: i pesi sul chip (SRAM o cablati) tolgono il viaggio alla memoria esterna"
+  },
+  "kalman_fpga": {
+   "latenza_passo_fpga_ns": [
+    725,
+    "181 cicli a 250 MHz",
+    "CERN_KF"
+   ],
+   "latenza_passo_cpu_ns": [
+    250,
+    "",
+    "CERN_KF"
+   ],
+   "rapporto": [
+    0.34,
+    "FPGA piu' LENTA per un passo",
+    "conto"
+   ]
+  },
+  "cfar_fpga": {
+   "latenza_cfar_cicli": [
+    10,
+    "a 100 MHz",
+    "CFAR_PREPRINT"
+   ],
+   "gpu_su_cpu": [
+    [
+     4.5,
+     6.0
+    ],
+    "",
+    "CFAR_PREPRINT"
+   ]
+  }
+ }
+}

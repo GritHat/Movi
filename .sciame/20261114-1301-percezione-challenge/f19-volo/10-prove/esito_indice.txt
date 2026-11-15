@@ -1,0 +1,61 @@
+# Registri per fotogramma degli scenari di volo F1-F6 (per il video)
+
+Stato: **simulato** (nessun sensore fisico, etichette a mano). Configurazione «sda» (sensori allo stato dell'arte, latenze dell'elaborazione dedicata STIMATE per analogia, non misurate). Passaggio idx 0, seme dichiarato prima in f19-volo/10-prove/PREVISIONI.md. Regole degli eventi v3 con l inviluppo di 210 m/s anche nell insieme di presenza del nucleo (configurazione v3i, correzione a posteriori). Un fotogramma ogni 0,1 s. Campi nuovi per riga: `tracce[].confidenza_C` (probabilità che l'oggetto sia nella porta di raggio `porta_m` intorno alla previsione), `r99_m`, `insieme_presenza_r_m`, `non_vista_da_s`, `evento` (tipo, volume V con raggio in pianta e quote, impronta con campioni ispezionati), `affidabilita_sensori`, `verita` (solo per il montaggio: il sistema non la vede), `avviso_prossimita` [t, tra quanti s, distanza minima prevista].
+Convalida: `python -I -B prototipo/prove/convalida_volo.py prototipo/uscite/video_volo/registro_F*.jsonl`.
+
+## F1 — aereo in avvicinamento e drone non cooperante (quasi collisione a 41 m)
+
+File: `registro_F1.jsonl` (919 fotogrammi, da 0.1 a 91.9 s).
+
+- 47.2 s: avviso di prossimità (distanza minima prevista 53 m fra 33 s)
+- perdita di continuità, traccia 19 (drone1): da 40.5 a 91.2 s; C = 1.00 a τ 0.2 s → 0.62 a τ 1.8 s → 1.00 a τ 0.2 s; r99 = 25 → 114 → 6 m; insieme di presenza = 75 → 196 → 59 m
+- perdita di continuità, traccia 27 (aereo1): da 51.4 a 91.9 s; C = 0.13 a τ 0.2 s → 1.00 a τ 0.3 s → 1.00 a τ 0.2 s; r99 = 1013 → 2 → 1 m; insieme di presenza = 987 → 72 → 69 m
+- perdita di continuità, traccia 1 (aereo1): da 0.8 a 91.2 s; C = 1.00 a τ 0.2 s → 1.00 a τ 0.2 s → 1.00 a τ 0.2 s; r99 = 3 → 1 → 1 m; insieme di presenza = 70 → 63 → 63 m
+
+Riassunto del passaggio: `{"evento": null, "ritardo_evento_s": null, "falso_evento": false, "avviso_prossimita": [47.2, 33.43, 53.0], "t_primo_frammento_a_terra": null, "affidabilita_persa": [], "salute_cicli": {}}`
+
+## F2 — salita nella cella di pioggia, aereo leggero non cooperante
+
+File: `registro_F2.jsonl` (749 fotogrammi, da 0.1 a 74.9 s).
+
+- 3.4 s: avviso di prossimità (distanza minima prevista 56 m fra 61 s)
+- perdita di continuità, traccia 5 (aereo1): da 0.6 a 74.9 s; C = 0.31 a τ 0.2 s → 0.00 a τ 37.4 s → 0.00 a τ 74.5 s; r99 = 425 → 3356 → 5155 m; insieme di presenza = 452 → 7902 → 15693 m
+- perdita di continuità, traccia 7 (aereo1): da 0.8 a 74.9 s; C = 0.31 a τ 0.2 s → 0.00 a τ 34.4 s → 0.00 a τ 71.2 s; r99 = 421 → 2723 → 7391 m; insieme di presenza = 459 → 7489 → 15238 m
+- perdita di continuità, traccia 29 (aereo1): da 6.0 a 74.9 s; C = 0.35 a τ 0.2 s → 0.00 a τ 32.1 s → 0.00 a τ 66.5 s; r99 = 374 → 2663 → 6962 m; insieme di presenza = 418 → 7023 → 14247 m
+
+Riassunto del passaggio: `{"evento": null, "ritardo_evento_s": null, "falso_evento": false, "avviso_prossimita": [3.4, 61.47, 55.5], "t_primo_frammento_a_terra": null, "affidabilita_persa": [], "salute_cicli": {}}`
+
+## F3 — collisione fra due droni veloci (40 e 35 m/s): frammenti, caduta
+
+File: `registro_F3.jsonl` (449 fotogrammi, da 0.1 a 44.9 s).
+
+- 0.4 s: avviso di prossimità (distanza minima prevista 98 m fra 16 s)
+- perdita di continuità, traccia 2 (droneB): da 0.8 a 44.9 s; C = 1.00 a τ 0.2 s → 0.06 a τ 10.3 s → 0.00 a τ 24.6 s; r99 = 3 → 452 → 1090 m; insieme di presenza = 61 → 844 → 3156 m
+- perdita di continuità, traccia 6 (droneB): da 8.4 a 32.1 s; C = 0.18 a τ 0.2 s → 1.00 a τ 0.6 s → 0.04 a τ 11.3 s; r99 = 443 → 21 → 494 m; insieme di presenza = 455 → 87 → 950 m
+- perdita di continuità, traccia 14 (droneA): da 24.9 a 44.9 s; C = 0.95 a τ 0.2 s → 0.95 a τ 0.3 s → 0.16 a τ 5.1 s; r99 = 52 → 49 → 238 m; insieme di presenza = 106 → 104 → 459 m
+
+Riassunto del passaggio: `{"evento": null, "ritardo_evento_s": null, "falso_evento": false, "avviso_prossimita": [0.4, 15.79, 98.1], "t_primo_frammento_a_terra": 23.599999999999994, "affidabilita_persa": [], "salute_cicli": {}}`
+
+## F4 — avaria non contenuta di un aereo a 135 m/s: fiammata, fumo, frammenti
+
+File: `registro_F4.jsonl` (599 fotogrammi, da 0.1 a 59.9 s).
+
+- 30.3 s: «evento: avaria o fiammata (dedotto)», si apre il volume V e l'impronta (R = 6757 m); «possibile presenza di detriti nel volume e nell'impronta: zona non verificata»
+- 30.4 s: «affidabilità persa: camera_eo_ottica_lunga#1»
+- 30.4 s: «affidabilità persa: camera_termica_ottica_lunga#2»
+- perdita di continuità, traccia 19 (aereo1): da 35.4 a 59.8 s; C = 0.15 a τ 0.2 s → 1.00 a τ 0.2 s → 1.00 a τ 0.3 s; r99 = 888 → 8 → 23 m; insieme di presenza = 888 → 87 → 113 m
+
+Riassunto del passaggio: `{"evento": {"t_b": 30.2, "t_a": 29.9569, "tipo": "avaria o fiammata", "origine": [1], "stato": "dedotto", "R_imp_m": 6757.4, "striscia": false, "Tc_s": 240.0, "ispezionati": [0, 1152], "R_residuo_m": 7128.9}, "ritardo_evento_s": 0.2, "falso_evento": false, "avviso_prossimita": null, "t_primo_frammento_a_terra": 40.35000000000001, "affidabilita_persa": ["camera_eo_ottica_lunga#1", "camera_termica_ottica_lunga#2"], "salute_cicli": {"camera_eo_ottica_lunga#1": 3, "camera_termica_ottica_lunga#2": 3}}`
+
+## F5 — evento impulsivo: tutti gli ottici ciechi 3 s, resta solo il radar
+
+File: `registro_F5.jsonl` (519 fotogrammi, da 0.1 a 51.9 s).
+
+- 0.7 s: avviso di prossimità (distanza minima prevista 62 m fra 54 s)
+- 39.3 s: «affidabilità persa: camera_termica_ottica_lunga#2»
+- 39.4 s: «affidabilità persa: camera_eo_ottica_lunga#1»
+- perdita di continuità, traccia 3 (droneY): da 0.4 a 51.9 s; C = 1.00 a τ 0.2 s → 0.00 a τ 26.0 s → 0.00 a τ 51.7 s; r99 = 10 → 497 → 903 m; insieme di presenza = 63 → 3958 → 9355 m
+- perdita di continuità, traccia 1 (droneY): da 0.3 a 51.9 s; C = 1.00 a τ 0.2 s → 0.01 a τ 25.8 s → 0.00 a τ 51.5 s; r99 = 5 → 300 → 614 m; insieme di presenza = 58 → 2959 → 8350 m
+- perdita di continuità, traccia 4 (droneY): da 0.5 a 51.9 s; C = 1.00 a τ 0.2 s → 0.00 a τ 25.9 s → 0.00 a τ 51.6 s; r99 = 10 → 493 → 901 m; insieme di presenza = 63 → 3951 → 9348 m
+
+Riassunto del passaggi

@@ -1,0 +1,65 @@
+{
+ "_nota": "v9 (montaggio finale, 2026-11-15): testi per i registri veri _v3 e il VERDETTO_2C. '@CHIAVE' = testo 'en' di cifre.json. Accanto a schermo_en.json, che non cambia.",
+ "onesta.dev": "SCHEMATIC",
+ "s1.titolo": "1 · A GUARDED SITE",
+ "s1.richiesta": "aerospace monitoring · moving elements · timely feedback",
+ "domain.s1": "run A1 n. 90, random, seed declared · site map declared complete (assumption)",
+ "s2.testa": "Behind a building: for every track, one of three answers",
+ "domain.s2": "drone behind a building: schematic, not a run",
+ "s3.titolo": "3 · SENSORS",
+ "domain.s3": "layout from the run A1 header · arcs not to scale",
+ "s4.titolo": "4 · DENSE FOG",
+ "s4.richiesta": "weather · declared range · loss of reliability",
+ "domain.s4": "run E3, dense fog · ranges from the run's declared-range field",
+ "s4.cerchio": "{classe}: {d} m declared · nominal {nom} m",
+ "s4.nebbia_tag": "DENSE FOG · WHOLE RUN",
+ "s5.titolo": "5 · TWO DRONES COLLIDE",
+ "domain.s5": "run E1 n. 30, random · own fragment model",
+ "s5.tag_zona": "DEBRIS ZONE · SCHEMATIC",
+ "impronta_r": "FOOTPRINT · radius {km} km · UNVERIFIED",
+ "volume_r": "POSSIBLE DEBRIS · radius {m} m · grows, does not shrink",
+ "s6.titolo": "6 · ENGINE FAILURE ON TAKE-OFF",
+ "domain.s6": "run E2 · flash trigger assumed, optimistic",
+ "s6.tag_zona": "DEBRIS AND VEHICLE WARNING · SCHEMATIC",
+ "s6.camere": "@E2-C",
+ "s6.avviso_mezzo": "@E2-AVV",
+ "v6.camera": "EO CAMERA · SCHEMATIC IMAGE",
+ "v7.s7.righe": [
+  "s7.l1",
+  "v7.s7.l46",
+  "s7.l2",
+  "v7.s7.lvolo",
+  "v9.s7.lferma",
+  "v9.s7.lmappa"
+ ],
+ "v9.s7.lferma": "@L-FERMA",
+ "v9.s7.lmappa": "@L-MAPPA",
+ "v7.s7.contatori": [
+  "s7.c_a1",
+  "s7.c_a4",
+  "s7.c_v2"
+ ],
+ "v7.s7.regge": "What holds, in simulation:",
+ "eventi": {
+  "contatto": "CONTACT",
+  "separazione": "SEPARATION",
+  "avaria_o_fiammata": "ENGINE FAILURE OR FLASH"
+ },
+ "classi": {
+  "multirotore": "small multirotor",
+  "multirotore_piccolo": "small drone",
+  "aereo_leggero": "light aircraft",
+  "all": "all classes"
+ },
+ "cause": {
+  "fumo": "SMOKE",
+  "nebbia": "FOG",
+  "fiammata": "flash",
+  "guasto simulato (iniettato)": "injected fault",
+  "nebbia_fitta": "dense fog",
+  "pioggia_forte": "heavy rain",
+  "quadri saturi o nube opaca (EV-B, EV-C)": "saturated frames or opaque cloud",
+  "dichiarata dal controllo di salute di prove_lp/eventi_lp": "health check",
+  "controllo di salute (silenzio, saturazione, fondo)": "health check"
+ }
+}

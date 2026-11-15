@@ -1,0 +1,2 @@
+{'tipo': 'riassunto', 'fotogrammi': 228, 'dentro_la_zona': {'k': 6, 'n': 6}, 'dentro_l_avviso': {'k': 6, 'n': 10}, 'tempo_ciclo_ms': {'mediana': 0.0, 'p95': 0.0}}
+esito 0

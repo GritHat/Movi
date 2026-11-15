@@ -1,0 +1,160 @@
+<frozen site>:101: RuntimeWarning: Unexpected value in sys.prefix, expected /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f10-dati/ambiente/venv, got /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f19-volo/03-confidenza/../../f10-dati/ambiente/venv
+<frozen site>:101: RuntimeWarning: Unexpected value in sys.exec_prefix, expected /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f10-dati/ambiente/venv, got /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f19-volo/03-confidenza/../../f10-dati/ambiente/venv
+{
+ "P1_scarto_max_forma_chiusa_2D": 1.4247278801171603e-08,
+ "P1_scarto_max_forma_chiusa_3D": 7.620080146211836e-08,
+ "P1_tutti_dentro_99_9": true,
+ "P1_z_max": 2.113104446510757,
+ "P2_scarto_max_tC_s": 1.0658141036401503e-14,
+ "jacobiana_virata_scarto_max": 0.0007909059534227936,
+ "esempio_curva_imm": {
+  "tipo": "curva_confidenza",
+  "versione": "stima_v4",
+  "tau_s": [
+   0.001,
+   1.0,
+   2.0,
+   5.0,
+   10.0,
+   15.0,
+   20.0,
+   30.0
+  ],
+  "C": [
+   1.0,
+   1.0,
+   1.0,
+   1.2e-05,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "regione": {
+   "dims": [
+    0,
+    1
+   ],
+   "c": [
+    2456.3212681114956,
+    1623.0045521660022
+   ],
+   "A": [
+    [
+     90000.0,
+     0.0
+    ],
+    [
+     0.0,
+     90000.0
+    ]
+   ]
+  },
+  "raggio_livello_m": {
+   "0.9": [
+    10.894,
+    15.558,
+    22.332,
+    55.515,
+    153.2,
+    303.043,
+    502.61,
+    1039.449
+   ],
+   "0.5": [
+    5.914,
+    8.195,
+    11.297,
+    26.08,
+    71.986,
+    145.789,
+    247.119,
+    527.719
+   ]
+  },
+  "t_C_s": {
+   "0.9": 5.0,
+   "0.5": 5.0
+  },
+  "pesi_regimi_ultimo": {
+   "cv": 0.3227,
+   "ct": 0.3562,
+   "ca": 0.3211
+  },
+  "stato": "calcolato nel modello dichiarato (gaussiano o miscela IMM); non misurato su hardware"
+ },
+ "esempio_curva_cv": {
+  "tipo": "curva_confidenza",
+  "versione": "stima_v4",
+  "tau_s": [
+   0.001,
+   1.0,
+   2.0,
+   5.0,
+   10.0,
+   15.0,
+   20.0,
+   30.0
+  ],
+  "C": [
+   1.0,
+   1.0,
+   1.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "regione": {
+   "dims": [
+    0,
+    1
+   ],
+   "c": [
+    2467.881055677071,
+    1615.546804519967
+   ],
+   "A": [
+    [
+     90000.0,
+     0.0
+    ],
+    [
+     0.0,
+     90000.0
+    ]
+   ]
+  },
+  "raggio_livello_m": {
+   "0.9": [
+    10.224,
+    13.233,
+    16.923,
+    30.927,
+    61.207,
+    98.109,
+    140.516,
+    239.396
+   ],
+   "0.5": [
+    5.61,
+    7.26,
+    9.285,
+    16.968,
+    33.582,
+    53.829,
+    77.096,
+    131.348
+   ]
+  },
+  "t_C_s": {
+   "0.9": 5.0,
+   "0.5": 5.0
+  },
+  "pesi_regimi_ultimo": {
+   "cv": 1.0
+  },
+  "stato": "calcolato nel modello dichiarato (gaussiano o miscela IMM); non misurato su hardware"
+ }
+}

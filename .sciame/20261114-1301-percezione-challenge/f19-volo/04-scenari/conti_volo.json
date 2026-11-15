@@ -1,0 +1,358 @@
+{
+ "avvertenza": "CONTO e controllo Monte Carlo dello stesso modello (non indipendente dal modello)",
+ "casi": {
+  "aereo_radar_solo": {
+   "parametri": {
+    "s0_m": 15.0,
+    "sv0_m_s": 2.0,
+    "q_m2_s3": 9.0,
+    "g_m": 50.0,
+    "r0_inv_m": 51.0,
+    "dv_inv_m_s": 6.0,
+    "a_max_m_s2": 3.0,
+    "fonte": "I: s0 da sigma_az 0,75 gradi a 2-3 km filtrata; q = a_max^2 x 1 s; g = porta di riassociazione; r0_inv = 3,4 s0 >= r99(0)"
+   },
+   "tabella": [
+    {
+     "tau_s": 0.0,
+     "C_forma_chiusa": 0.9889,
+     "C_montecarlo": 0.9889,
+     "r99_m": 50.5,
+     "r_inviluppo_m": 51.0
+    },
+    {
+     "tau_s": 0.5,
+     "C_forma_chiusa": 0.9885,
+     "C_montecarlo": 0.9884,
+     "r99_m": 50.7,
+     "r_inviluppo_m": 54.4
+    },
+    {
+     "tau_s": 1.0,
+     "C_forma_chiusa": 0.987,
+     "C_montecarlo": 0.9869,
+     "r99_m": 51.3,
+     "r_inviluppo_m": 58.5
+    },
+    {
+     "tau_s": 2.0,
+     "C_forma_chiusa": 0.976,
+     "C_montecarlo": 0.976,
+     "r99_m": 54.8,
+     "r_inviluppo_m": 69.0
+    },
+    {
+     "tau_s": 3.0,
+     "C_forma_chiusa": 0.9374,
+     "C_montecarlo": 0.9368,
+     "r99_m": 62.3,
+     "r_inviluppo_m": 82.5
+    },
+    {
+     "tau_s": 4.0,
+     "C_forma_chiusa": 0.8421,
+     "C_montecarlo": 0.8412,
+     "r99_m": 73.9,
+     "r_inviluppo_m": 99.0
+    },
+    {
+     "tau_s": 5.0,
+     "C_forma_chiusa": 0.6884,
+     "C_montecarlo": 0.6867,
+     "r99_m": 89.1,
+     "r_inviluppo_m": 118.5
+    },
+    {
+     "tau_s": 8.0,
+     "C_forma_chiusa": 0.2564,
+     "C_montecarlo": null,
+     "r99_m": 151.3,
+     "r_inviluppo_m": 195.0
+    },
+    {
+     "tau_s": 10.0,
+     "C_forma_chiusa": 0.1244,
+     "C_montecarlo": null,
+     "r99_m": 202.8,
+     "r_inviluppo_m": 261.0
+    }
+   ],
+   "scarto_max_mc": 0.0017,
+   "t_C_0_9_s": 3.48,
+   "t_C_0_5_s": 6.105
+  },
+  "drone_veloce": {
+   "parametri": {
+    "s0_m": 10.0,
+    "sv0_m_s": 3.0,
+    "q_m2_s3": 47.6,
+    "g_m": 30.0,
+    "r0_inv_m": 34.0,
+    "dv_inv_m_s": 9.0,
+    "a_max_m_s2": 6.9,
+    "fonte": "I: a_max 6,9 della classe multirotore di f15-04"
+   },
+   "tabella": [
+    {
+     "tau_s": 0.0,
+     "C_forma_chiusa": 0.9707,
+     "C_montecarlo": 0.9707,
+     "r99_m": 33.7,
+     "r_inviluppo_m": 34.0
+    },
+    {
+     "tau_s": 0.5,
+     "C_forma_chiusa": 0.9654,
+     "C_montecarlo": 0.9652,
+     "r99_m": 34.4,
+     "r_inviluppo_m": 39.4
+    },
+    {
+     "tau_s": 1.0,
+     "C_forma_chiusa": 0.9344,
+     "C_montecarlo": 0.9341,
+     "r99_m": 37.6,
+     "r_inviluppo_m": 46.5
+    },
+    {
+     "tau_s": 2.0,
+     "C_forma_chiusa": 0.6691,
+     "C_montecarlo": 0.6686,
+     "r99_m": 54.6,
+     "r_inviluppo_m": 65.8
+    },
+    {
+     "tau_s": 3.0,
+     "C_forma_chiusa": 0.3124,
+     "C_montecarlo": 0.3111,
+     "r99_m": 83.1,
+     "r_inviluppo_m": 92.1
+    },
+    {
+     "tau_s": 4.0,
+     "C_forma_chiusa": 0.1302,
+     "C_montecarlo": 0.13,
+     "r99_m": 119.5,
+     "r_inviluppo_m": 125.2
+    },
+    {
+     "tau_s": 5.0,
+     "C_forma_chiusa": 0.0577,
+     "C_montecarlo": 0.0575,
+     "r99_m": 161.8,
+     "r_inviluppo_m": 165.2
+    },
+    {
+     "tau_s": 8.0,
+     "C_forma_chiusa": 0.0084,
+     "C_montecarlo": null,
+     "r99_m": 316.0,
+     "r_inviluppo_m": 326.8
+    },
+    {
+     "tau_s": 10.0,
+     "C_forma_chiusa": 0.0032,
+     "C_montecarlo": null,
+     "r99_m": 437.4,
+     "r_inviluppo_m": 469.0
+    }
+   ],
+   "scarto_max_mc": 0.0013,
+   "t_C_0_9_s": 1.239,
+   "t_C_0_5_s": 2.429
+  },
+  "mezzo_danneggiato": {
+   "parametri": {
+    "s0_m": 10.0,
+    "sv0_m_s": 10.0,
+    "q_m2_s3": 100.0,
+    "g_m": 30.0,
+    "r0_inv_m": 34.0,
+    "dv_inv_m_s": 30.0,
+    "a_max_m_s2": 10.0,
+    "fonte": "I: dopo l'evento il moto e' fuori dal modello della classe"
+   },
+   "tabella": [
+    {
+     "tau_s": 0.0,
+     "C_forma_chiusa": 0.9707,
+     "C_montecarlo": 0.9707,
+     "r99_m": 33.7,
+     "r_inviluppo_m": 34.0
+    },
+    {
+     "tau_s": 0.5,
+     "C_forma_chiusa": 0.9271,
+     "C_montecarlo": 0.9264,
+     "r99_m": 38.3,
+     "r_inviluppo_m": 50.2
+    },
+    {
+     "tau_s": 1.0,
+     "C_forma_chiusa": 0.7227,
+     "C_montecarlo": 0.7227,
+     "r99_m": 51.5,
+     "r_inviluppo_m": 69.0
+    },
+    {
+     "tau_s": 2.0,
+     "C_forma_chiusa": 0.2407,
+     "C_montecarlo": 0.2407,
+     "r99_m": 93.3,
+     "r_inviluppo_m": 114.0
+    },
+    {
+     "tau_s": 3.0,
+     "C_forma_chiusa": 0.0754,
+     "C_montecarlo": 0.075,
+     "r99_m": 146.8,
+     "r_inviluppo_m": 169.0
+    },
+    {
+     "tau_s": 4.0,
+     "C_forma_chiusa": 0.0282,
+     "C_montecarlo": 0.0278,
+     "r99_m": 208.5,
+     "r_inviluppo_m": 234.0
+    },
+    {
+     "tau_s": 5.0,
+     "C_forma_chiusa": 0.0124,
+     "C_montecarlo": 0.0123,
+     "r99_m": 277.1,
+     "r_inviluppo_m": 309.0
+    },
+    {
+     "tau_s": 8.0,
+     "C_forma_chiusa": 0.002,
+     "C_montecarlo": null,
+     "r99_m": 517.1,
+     "r_inviluppo_m": 594.0
+    },
+    {
+     "tau_s": 10.0,
+     "C_forma_chiusa": 0.0008,
+     "C_montecarlo": null,
+     "r99_m": 702.0,
+     "r_inviluppo_m": 834.0
+    }
+   ],
+   "scarto_max_mc": 0.0007,
+   "t_C_0_9_s": 0.605,
+   "t_C_0_5_s": 1.385
+  }
+ },
+ "scambio_F5": {
+  "parametri": {
+   "s0_m": 10.0,
+   "sv0_m_s": 3.0,
+   "q_m2_s3": 47.6,
+   "sigma_mis_m": 33.0,
+   "durate_s": [
+    1.0,
+    2.0,
+    3.0,
+    4.0
+   ],
+   "distanze_m": [
+    39.0,
+    80.0,
+    166.0
+   ],
+   "fonte": "I; sigma_mis = 0,0131 rad x 2500 m (sigma_az di radar_sorveglianza_droni, C)"
+  },
+  "tabella": [
+   {
+    "T_s": 1.0,
+    "d_m": 39.0,
+    "sigma_m": 34.84,
+    "p_scambio": 0.2143,
+    "confidenza_identita": 0.7857
+   },
+   {
+    "T_s": 1.0,
+    "d_m": 80.0,
+    "sigma_m": 34.84,
+    "p_scambio": 0.0522,
+    "confidenza_identita": 0.9478
+   },
+   {
+    "T_s": 1.0,
+    "d_m": 166.0,
+    "sigma_m": 34.84,
+    "p_scambio": 0.0004,
+    "confidenza_identita": 0.9996
+   },
+   {
+    "T_s": 2.0,
+    "d_m": 39.0,
+    "sigma_m": 36.77,
+    "p_scambio": 0.2266,
+    "confidenza_identita": 0.7734
+   },
+   {
+    "T_s": 2.0,
+    "d_m": 80.0,
+    "sigma_m": 36.77,
+    "p_scambio": 0.062,
+    "confidenza_identita": 0.938
+   },
+   {
+    "T_s": 2.0,
+    "d_m": 166.0,
+    "sigma_m": 36.77,
+    "p_scambio": 0.0007,
+    "confidenza_identita": 0.9993
+   },
+   {
+    "T_s": 3.0,
+    "d_m": 39.0,
+    "sigma_m": 41.21,
+    "p_scambio": 0.2517,
+    "confidenza_identita": 0.7483
+   },
+   {
+    "T_s": 3.0,
+    "d_m": 80.0,
+    "sigma_m": 41.21,
+    "p_scambio": 0.0849,
+    "confidenza_identita": 0.9151
+   },
+   {
+    "T_s": 3.0,
+    "d_m": 166.0,
+    "sigma_m": 41.21,
+    "p_scambio": 0.0022,
+    "confidenza_identita": 0.9978
+   },
+   {
+    "T_s": 4.0,
+    "d_m": 39.0,
+    "sigma_m": 48.46,
+    "p_scambio": 0.2847,
+    "confidenza_identita": 0.7153
+   },
+   {
+    "T_s": 4.0,
+    "d_m": 80.0,
+    "sigma_m": 48.46,
+    "p_scambio": 0.1215,
+    "confidenza_identita": 0.8785
+   },
+   {
+    "T_s": 4.0,
+    "d_m": 166.0,
+    "sigma_m": 48.46,
+    "p_scambio": 0.0077,
+    "confidenza_identita": 0.9923
+   }
+  ],
+  "controllo_mc": {
+   "s": 10.0,
+   "d": 15.0,
+   "forma_chiusa": 0.1444,
+   "mc": 0.1444,
+   "n": 400000
+  }
+ }
+}

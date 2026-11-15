@@ -1,0 +1,17 @@
+A fixed-wing drone at speed. An aircraft climbing out. Two drones collide. A flash, smoke, and every camera goes blind. What should the screen say now?
+
+MoVi declares what it has not observed. Three answers per track. I see it. I don't see it: here is where it can be. Or: I don't know. What it has not observed, it marks unverified, never empty.
+
+Radar, LiDAR, visible and thermal cameras, and what aircraft broadcast. All modelled from public data sheets, seen from above and from the side, each with its blind spots.
+
+Two drones collide at speed. MoVi infers the contact from the tracks and new radar returns: in fifty-one of sixty simulated collisions, within two seconds. A debris zone opens, about four and a half kilometres in radius, never called empty.
+
+An engine fails in the climb: a flash, then smoke. The cameras go blind, and MoVi says so within three cycles, in every simulated run. In the model, the radar alone still holds the aircraft.
+
+Now continuity is lost. MoVi keeps the track, shows where the aircraft can be, and how far to trust that zone, second by second. Computed, then checked on public flight trajectories: after [CIFRA-C1] seconds, confidence is [CIFRA-C2]. Below the line: I don't know.
+
+On a laptop, our processing takes [CIFRA-L1] per cycle. Chips built for one job, like those now serving language models far faster than GPUs, suggest [CIFRA-L2]: an estimate. Sensor and operator still dominate the delay.
+
+Slower cases too: drones and taxiing aircraft, warned in time in two hundred of two hundred simulated runs each; people at short range; a warning aid for a blind person.
+
+The limits. Everything is simulated: no physical sensor, classes labelled by hand. Debris zones do not shrink by looking. For aircraft in flight, the warning still comes too late. Next: state-of-the-art sensors, dedicated hardware, field trials. MoVi. It observes and warns. By SDMs.

@@ -1,0 +1,31 @@
+{
+ "commento": "MONTAGGIO FINALE (sciame-videomaker, 2026-11-15): copia di lp_A1_v3.json con passaggio 8 = primo passaggio A1 'alta' con fase nascosta (nasc_tot>0) in ordine di seme fra quelli della riprova 2c (riprova_passaggi_v3.jsonl). Mappa dichiarata completa (ipotesi del simulatore). SIMULAZIONE dalle schede, nessun sensore fisico; etichette a mano.",
+ "modo": "lungo",
+ "scenario": "A1",
+ "sorgente": {
+  "tipo": "scena_lp",
+  "scenario": "A1",
+  "condizione": {
+   "configurazione": "alta"
+  },
+  "piano": [
+   -100,
+   800,
+   -100,
+   800
+  ],
+  "celle_lato": 24,
+  "passaggio": 8,
+  "nucleo": "v3",
+  "chiamante": "prudente",
+  "mappa_certificata": true
+ },
+ "classi_ammesse": [],
+ "profilo_portatore": "stazione_fissa",
+ "profilo_ricevente": "operatore_di_sito",
+ "etichette": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/prototipo/etichette/lunga_portata.json",
+ "interruttori": {},
+ "parametri": {},
+ "seme": 0,
+ "origine_dati": "simulati"
+}

@@ -1,0 +1,1819 @@
+{
+ "v3i/F1/att": {
+  "n": 60,
+  "libero_sul_vero_passaggi": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "falso_evento": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "continuita_senza_buchi": [
+   39,
+   60,
+   0.65,
+   0.524,
+   0.758
+  ],
+  "prossimita_anticipo_ge20": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "prossimita_anticipo_ge10": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ]
+ },
+ "v3i/F1/sda": {
+  "n": 60,
+  "libero_sul_vero_passaggi": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "falso_evento": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "continuita_senza_buchi": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "prossimita_anticipo_ge20": [
+   56,
+   60,
+   0.9333,
+   0.841,
+   0.974
+  ],
+  "prossimita_anticipo_ge10": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ]
+ },
+ "v3i/F2/att": {
+  "n": 60,
+  "libero_sul_vero_passaggi": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "falso_evento": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "continuita_senza_buchi": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ]
+ },
+ "v3i/F2/sda": {
+  "n": 60,
+  "libero_sul_vero_passaggi": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "falso_evento": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "continuita_senza_buchi": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ]
+ },
+ "v3i/F3/att": {
+  "n": 60,
+  "libero_sul_vero_passaggi": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "falso_evento": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "continuita_senza_buchi": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "evento_entro_1s": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "evento_entro_2s": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "evento_entro_3s": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "ritardo_min_max": [
+   null,
+   null
+  ],
+  "libero_su_frammento": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "prossimita_anticipo_ge20": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "prossimita_anticipo_ge10": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ]
+ },
+ "v3i/F3/sda": {
+  "n": 60,
+  "libero_sul_vero_passaggi": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "falso_evento": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "continuita_senza_buchi": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "evento_entro_1s": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "evento_entro_2s": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "evento_entro_3s": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "ritardo_min_max": [
+   null,
+   null
+  ],
+  "libero_su_frammento": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "prossimita_anticipo_ge20": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "prossimita_anticipo_ge10": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ]
+ },
+ "v3i/F4/att": {
+  "n": 60,
+  "libero_sul_vero_passaggi": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "falso_evento": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "continuita_senza_buchi": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "evento_entro_1s": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "evento_entro_2s": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "evento_entro_3s": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "ritardo_min_max": [
+   0.2,
+   0.4
+  ],
+  "libero_su_frammento": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "passaggi_tutti_frammenti_in_V": [
+   58,
+   60,
+   0.9667,
+   0.886,
+   0.991
+  ],
+  "frazione_peggiore_in_V": 0.9625,
+  "tempestivo_operatore": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "margine_operatore_min": 0.25,
+  "margine_bordo_min": 5.7,
+  "affidabilita_persa_entro3": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ]
+ },
+ "v3i/F4/sda": {
+  "n": 60,
+  "libero_sul_vero_passaggi": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "falso_evento": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "continuita_senza_buchi": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "evento_entro_1s": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "evento_entro_2s": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "evento_entro_3s": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "ritardo_min_max": [
+   0.1,
+   0.2
+  ],
+  "libero_su_frammento": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "passaggi_tutti_frammenti_in_V": [
+   58,
+   60,
+   0.9667,
+   0.886,
+   0.991
+  ],
+  "frazione_peggiore_in_V": 0.7359,
+  "tempestivo_operatore": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "margine_operatore_min": 0.45,
+  "margine_bordo_min": 5.9,
+  "affidabilita_persa_entro3": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ]
+ },
+ "v3i/F5/att": {
+  "n": 60,
+  "libero_sul_vero_passaggi": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "falso_evento": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "continuita_senza_buchi": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ]
+ },
+ "v3i/F5/sda": {
+  "n": 60,
+  "libero_sul_vero_passaggi": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "falso_evento": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "continuita_senza_buchi": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ]
+ },
+ "v3i/F6/att": {
+  "n": 200,
+  "libero_sul_vero_passaggi": [
+   0,
+   200,
+   0.0,
+   0.0,
+   0.019
+  ],
+  "falso_evento": [
+   0,
+   200,
+   0.0,
+   0.0,
+   0.019
+  ],
+  "continuita_senza_buchi": [
+   186,
+   200,
+   0.93,
+   0.886,
+   0.958
+  ]
+ },
+ "v3i/F6/sda": {
+  "n": 200,
+  "libero_sul_vero_passaggi": [
+   0,
+   200,
+   0.0,
+   0.0,
+   0.019
+  ],
+  "falso_evento": [
+   0,
+   200,
+   0.0,
+   0.0,
+   0.019
+  ],
+  "continuita_senza_buchi": [
+   200,
+   200,
+   1.0,
+   0.981,
+   1.0
+  ]
+ },
+ "v3b/F1/att": {
+  "n": 60,
+  "libero_sul_vero_passaggi": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "falso_evento": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "continuita_senza_buchi": [
+   39,
+   60,
+   0.65,
+   0.524,
+   0.758
+  ],
+  "prossimita_anticipo_ge20": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "prossimita_anticipo_ge10": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ]
+ },
+ "v3b/F1/sda": {
+  "n": 60,
+  "libero_sul_vero_passaggi": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "falso_evento": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "continuita_senza_buchi": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "prossimita_anticipo_ge20": [
+   56,
+   60,
+   0.9333,
+   0.841,
+   0.974
+  ],
+  "prossimita_anticipo_ge10": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ]
+ },
+ "v3b/F2/att": {
+  "n": 60,
+  "libero_sul_vero_passaggi": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "falso_evento": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "continuita_senza_buchi": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ]
+ },
+ "v3b/F2/sda": {
+  "n": 60,
+  "libero_sul_vero_passaggi": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "falso_evento": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "continuita_senza_buchi": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ]
+ },
+ "v3b/F3/att": {
+  "n": 60,
+  "libero_sul_vero_passaggi": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "falso_evento": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "continuita_senza_buchi": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "evento_entro_1s": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "evento_entro_2s": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "evento_entro_3s": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "ritardo_min_max": [
+   null,
+   null
+  ],
+  "libero_su_frammento": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "prossimita_anticipo_ge20": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "prossimita_anticipo_ge10": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ]
+ },
+ "v3b/F3/sda": {
+  "n": 60,
+  "libero_sul_vero_passaggi": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "falso_evento": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "continuita_senza_buchi": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "evento_entro_1s": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "evento_entro_2s": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "evento_entro_3s": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "ritardo_min_max": [
+   null,
+   null
+  ],
+  "libero_su_frammento": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "prossimita_anticipo_ge20": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "prossimita_anticipo_ge10": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ]
+ },
+ "v3b/F4/att": {
+  "n": 60,
+  "libero_sul_vero_passaggi": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "falso_evento": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "continuita_senza_buchi": [
+   13,
+   60,
+   0.2167,
+   0.131,
+   0.336
+  ],
+  "evento_entro_1s": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "evento_entro_2s": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "evento_entro_3s": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "ritardo_min_max": [
+   0.2,
+   0.4
+  ],
+  "libero_su_frammento": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "passaggi_tutti_frammenti_in_V": [
+   58,
+   60,
+   0.9667,
+   0.886,
+   0.991
+  ],
+  "frazione_peggiore_in_V": 0.9625,
+  "tempestivo_operatore": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "margine_operatore_min": 0.25,
+  "margine_bordo_min": 5.7,
+  "affidabilita_persa_entro3": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ]
+ },
+ "v3b/F4/sda": {
+  "n": 60,
+  "libero_sul_vero_passaggi": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "falso_evento": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "continuita_senza_buchi": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "evento_entro_1s": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "evento_entro_2s": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "evento_entro_3s": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "ritardo_min_max": [
+   0.1,
+   0.2
+  ],
+  "libero_su_frammento": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "passaggi_tutti_frammenti_in_V": [
+   58,
+   60,
+   0.9667,
+   0.886,
+   0.991
+  ],
+  "frazione_peggiore_in_V": 0.7359,
+  "tempestivo_operatore": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "margine_operatore_min": 0.45,
+  "margine_bordo_min": 5.9,
+  "affidabilita_persa_entro3": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ]
+ },
+ "v3b/F5/att": {
+  "n": 60,
+  "libero_sul_vero_passaggi": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "falso_evento": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "continuita_senza_buchi": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ]
+ },
+ "v3b/F5/sda": {
+  "n": 60,
+  "libero_sul_vero_passaggi": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "falso_evento": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "continuita_senza_buchi": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ]
+ },
+ "v3b/F6/att": {
+  "n": 200,
+  "libero_sul_vero_passaggi": [
+   0,
+   200,
+   0.0,
+   0.0,
+   0.019
+  ],
+  "falso_evento": [
+   0,
+   200,
+   0.0,
+   0.0,
+   0.019
+  ],
+  "continuita_senza_buchi": [
+   126,
+   200,
+   0.63,
+   0.561,
+   0.694
+  ]
+ },
+ "v3b/F6/sda": {
+  "n": 200,
+  "libero_sul_vero_passaggi": [
+   0,
+   200,
+   0.0,
+   0.0,
+   0.019
+  ],
+  "falso_evento": [
+   0,
+   200,
+   0.0,
+   0.0,
+   0.019
+  ],
+  "continuita_senza_buchi": [
+   200,
+   200,
+   1.0,
+   0.981,
+   1.0
+  ]
+ },
+ "v4/F1/att": {
+  "n": 60,
+  "libero_sul_vero_passaggi": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "falso_evento": [
+   57,
+   60,
+   0.95,
+   0.863,
+   0.983
+  ],
+  "continuita_senza_buchi": [
+   39,
+   60,
+   0.65,
+   0.524,
+   0.758
+  ],
+  "prossimita_anticipo_ge20": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "prossimita_anticipo_ge10": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ]
+ },
+ "v4/F1/sda": {
+  "n": 60,
+  "libero_sul_vero_passaggi": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "falso_evento": [
+   28,
+   60,
+   0.4667,
+   0.346,
+   0.591
+  ],
+  "continuita_senza_buchi": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "prossimita_anticipo_ge20": [
+   56,
+   60,
+   0.9333,
+   0.841,
+   0.974
+  ],
+  "prossimita_anticipo_ge10": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ]
+ },
+ "v4/F2/att": {
+  "n": 60,
+  "libero_sul_vero_passaggi": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "falso_evento": [
+   57,
+   60,
+   0.95,
+   0.863,
+   0.983
+  ],
+  "continuita_senza_buchi": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ]
+ },
+ "v4/F2/sda": {
+  "n": 60,
+  "libero_sul_vero_passaggi": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "falso_evento": [
+   49,
+   60,
+   0.8167,
+   0.701,
+   0.894
+  ],
+  "continuita_senza_buchi": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ]
+ },
+ "v4/F3/att": {
+  "n": 60,
+  "libero_sul_vero_passaggi": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "falso_evento": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "continuita_senza_buchi": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "evento_entro_1s": [
+   37,
+   60,
+   0.6167,
+   0.49,
+   0.729
+  ],
+  "evento_entro_2s": [
+   59,
+   60,
+   0.9833,
+   0.911,
+   0.997
+  ],
+  "evento_entro_3s": [
+   59,
+   60,
+   0.9833,
+   0.911,
+   0.997
+  ],
+  "ritardo_min_max": [
+   -17.1,
+   20.6
+  ],
+  "libero_su_frammento": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "passaggi_tutti_frammenti_in_V": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "frazione_peggiore_in_V": 1.0,
+  "prossimita_anticipo_ge20": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "prossimita_anticipo_ge10": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ]
+ },
+ "v4/F3/sda": {
+  "n": 60,
+  "libero_sul_vero_passaggi": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "falso_evento": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "continuita_senza_buchi": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "evento_entro_1s": [
+   57,
+   60,
+   0.95,
+   0.863,
+   0.983
+  ],
+  "evento_entro_2s": [
+   59,
+   60,
+   0.9833,
+   0.911,
+   0.997
+  ],
+  "evento_entro_3s": [
+   59,
+   60,
+   0.9833,
+   0.911,
+   0.997
+  ],
+  "ritardo_min_max": [
+   -19.5,
+   21.9
+  ],
+  "libero_su_frammento": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "passaggi_tutti_frammenti_in_V": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "frazione_peggiore_in_V": 1.0,
+  "prossimita_anticipo_ge20": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "prossimita_anticipo_ge10": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ]
+ },
+ "v4/F4/att": {
+  "n": 60,
+  "libero_sul_vero_passaggi": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "falso_evento": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "continuita_senza_buchi": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "evento_entro_1s": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "evento_entro_2s": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "evento_entro_3s": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "ritardo_min_max": [
+   -27.8,
+   0.3
+  ],
+  "libero_su_frammento": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "passaggi_tutti_frammenti_in_V": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "frazione_peggiore_in_V": 1.0,
+  "tempestivo_operatore": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "margine_operatore_min": 0.85,
+  "margine_bordo_min": 6.3,
+  "affidabilita_persa_entro3": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ]
+ },
+ "v4/F4/sda": {
+  "n": 60,
+  "libero_sul_vero_passaggi": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "falso_evento": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "continuita_senza_buchi": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "evento_entro_1s": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "evento_entro_2s": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "evento_entro_3s": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "ritardo_min_max": [
+   -29.7,
+   0.2
+  ],
+  "libero_su_frammento": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "passaggi_tutti_frammenti_in_V": [
+   58,
+   60,
+   0.9667,
+   0.886,
+   0.991
+  ],
+  "frazione_peggiore_in_V": 0.7073,
+  "tempestivo_operatore": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "margine_operatore_min": 1.0,
+  "margine_bordo_min": 6.45,
+  "affidabilita_persa_entro3": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ]
+ },
+ "v4/F5/att": {
+  "n": 60,
+  "libero_sul_vero_passaggi": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "falso_evento": [
+   52,
+   60,
+   0.8667,
+   0.758,
+   0.931
+  ],
+  "continuita_senza_buchi": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ]
+ },
+ "v4/F5/sda": {
+  "n": 60,
+  "libero_sul_vero_passaggi": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "falso_evento": [
+   48,
+   60,
+   0.8,
+   0.682,
+   0.882
+  ],
+  "continuita_senza_buchi": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ]
+ },
+ "v4/F6/att": {
+  "n": 200,
+  "libero_sul_vero_passaggi": [
+   0,
+   200,
+   0.0,
+   0.0,
+   0.019
+  ],
+  "falso_evento": [
+   198,
+   200,
+   0.99,
+   0.964,
+   0.997
+  ],
+  "continuita_senza_buchi": [
+   189,
+   200,
+   0.945,
+   0.904,
+   0.969
+  ]
+ },
+ "v4/F6/sda": {
+  "n": 200,
+  "libero_sul_vero_passaggi": [
+   0,
+   200,
+   0.0,
+   0.0,
+   0.019
+  ],
+  "falso_evento": [
+   158,
+   200,
+   0.79,
+   0.728,
+   0.841
+  ],
+  "continuita_senza_buchi": [
+   200,
+   200,
+   1.0,
+   0.981,
+   1.0
+  ]
+ },
+ "E1_v3": {
+  "1.0": [
+   0,
+   60,
+   0.0,
+   -0.0,
+   0.06
+  ],
+  "1.5": [
+   23,
+   60,
+   0.3833,
+   0.271,
+   0.51
+  ],
+  "2.0": [
+   51,
+   60,
+   0.85,
+   0.739,
+   0.919
+  ],
+  "2.5": [
+   60,
+   60,
+   1.0,
+   0.94,
+   1.0
+  ],
+  "max": 2.3
+ },
+ "reale/aerei_veloci/cv/1-2s": [
+  528,
+  733,
+  0.7203,
+  0.687,
+  0.752
+ ],
+ "reale/aerei_veloci/cv/3-5s": [
+  355,
+  416,
+  0.8534,
+  0.816,
+  0.884
+ ],
+ "reale/aerei_veloci/cv/6-10s": [
+  336,
+  385,
+  0.8727,
+  0.836,
+  0.902
+ ],
+ "reale/aerei_veloci/cv/11-20s": [
+  318,
+  374,
+  0.8503,
+  0.811,
+  0.883
+ ],
+ "reale/aerei_veloci/cv/21-30s": [
+  294,
+  360,
+  0.8167,
+  0.773,
+  0.853
+ ],
+ "reale/aerei_veloci/imm/1-2s": [
+  518,
+  733,
+  0.7067,
+  0.673,
+  0.738
+ ],
+ "reale/aerei_veloci/imm/3-5s": [
+  382,
+  416,
+  0.9183,
+  0.888,
+  0.941
+ ],
+ "reale/aerei_veloci/imm/6-10s": [
+  366,
+  385,
+  0.9506,
+  0.924,
+  0.968
+ ],
+ "reale/aerei_veloci/imm/11-20s": [
+  366,
+  374,
+  0.9786,
+  0.958,
+  0.989
+ ],
+ "reale/aerei_veloci/imm/21-30s": [
+  347,
+  360,
+  0.9639,
+  0.939,
+  0.979
+ ],
+ "reale/droni_ala_fissa/cv/1-2s": [
+  362,
+  435,
+  0.8322,
+  0.794,
+  0.864
+ ],
+ "reale/droni_ala_fissa/cv/3-5s": [
+  160,
+  212,
+  0.7547,
+  0.693,
+  0.808
+ ],
+ "reale/droni_ala_fissa/cv/6-10s": [
+  138,
+  195,
+  0.7077,
+  0.64,
+  0.767
+ ],
+ "reale/droni_ala_fissa/cv/11-20s": [
+  130,
+  160,
+  0.8125,
+  0.745,
+  0.865
+ ],
+ "reale/droni_ala_fissa/cv/21-30s": [
+  118,
+  130,
+  0.9077,
+  0.846,
+  0.946
+ ],
+ "reale/droni_ala_fissa/imm/1-2s": [
+  395,
+  435,
+  0.908,
+  0.877,
+  0.932
+ ],
+ "reale/droni_ala_fissa/imm/3-5s": [
+  196,
+  212,
+  0.9245,
+  0.881,
+  0.953
+ ],
+ "reale/droni_ala_fissa/imm/6-10s": [
+  187,
+  195,
+  0.959,
+  0.921,
+  0.979
+ ],
+ "reale/droni_ala_fissa/imm/11-20s": [
+  160,
+  160,
+  1.0,
+  0.977,
+  1.0
+ ],
+ "reale/droni_ala_fissa/imm/21-30s": [
+  130,
+  130,
+  1.0,
+  0.971,
+  1.0
+ ],
+ "reale/multirotori/cv/1-2s": [
+  1393,
+  1555,
+  0.8958,
+  0.88,
+  0.91
+ ],
+ "reale/multirotori/cv/3-5s": [
+  679,
+  758,
+  0.8958,
+  0.872,
+  0.916
+ ],
+ "reale/multirotori/cv/6-10s": [
+  663,
+  745,
+  0.8899,
+  0.865,
+  0.91
+ ],
+ "reale/multirotori/cv/11-20s": [
+  593,
+  692,
+  0.8569,
+  0.829,
+  0.881
+ ],
+ "reale/multirotori/cv/21-30s": [
+  584,
+  643,
+  0.9082,
+  0.883,
+  0.928
+ ],
+ "reale/multirotori/imm/1-2s": [
+  1480,
+  1555,
+  0.9518,
+  0.94,
+  0.961
+ ],
+ "reale/multirotori/imm/3-5s": [
+  752,
+  758,
+  0.9921,
+  0.983,
+  0.996
+ ],
+ "reale/multirotori/imm/6-10s": [
+  744,
+  745,
+  0.9987,
+  0.992,
+  1.0
+ ],
+ "reale/multirotori/imm/11-20s": [
+  692,
+  692,
+  1.0,
+  0.994,
+  1.0
+ ],
+ "reale/multirotori/imm/21-30s": [
+  643,
+  643,
+  1.0,
+  0.994,
+  1.0
+ ]
+}

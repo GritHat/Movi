@@ -1,0 +1,17 @@
+Un drone ad ala fissa, veloce. Un aereo in salita dopo il decollo. Due droni si scontrano. Una fiammata, il fumo, e ogni camera diventa cieca. Che cosa deve dire lo schermo, adesso?
+
+MoVi dichiara ciò che non ha osservato. Tre risposte per ogni traccia. Lo vedo. Non lo vedo: ecco dove può essere. Oppure: non lo so. Ciò che non ha osservato lo segna non verificato, mai vuoto.
+
+Radar, LiDAR, camere visibili e termiche, e ciò che trasmettono gli aerei. Tutto modellato dalle schede tecniche pubbliche, visto dall'alto e di lato, ciascuno con i suoi punti ciechi.
+
+Due droni si scontrano in velocità. MoVi deduce il contatto dalle tracce e dai nuovi ritorni radar: in cinquantuno collisioni simulate su sessanta, entro due secondi. Si apre una zona dei detriti di circa quattro chilometri e mezzo di raggio, mai detta vuota.
+
+Un motore ha un'avaria in salita: una fiammata, poi il fumo. Le camere diventano cieche, e MoVi lo dice entro tre cicli, in ogni prova simulata. Nel modello, il solo radar tiene ancora l'aereo.
+
+Ora la continuità si perde. MoVi tiene la traccia, mostra dove l'aereo può essere e quanto fidarsi di quella zona, secondo per secondo. Calcolata, poi verificata su traiettorie di volo pubbliche: dopo [CIFRA-C1] secondi, la confidenza è [CIFRA-C2]. Sotto la linea: non lo so.
+
+Su un portatile, la nostra elaborazione richiede [CIFRA-L1] per ciclo. I chip costruiti per un solo compito, come quelli che oggi servono i modelli linguistici molto più in fretta delle GPU, fanno stimare [CIFRA-L2]: una stima. Il ritardo resta dominato da sensore e operatore.
+
+Anche i casi più lenti: droni e aerei in rullaggio, avvisati in tempo in duecento prove simulate su duecento, per ciascuno; persone a corto raggio; un aiuto di avviso per una persona non vedente.
+
+I limiti. È tutto simulato: nessun sensore fisico, classi etichettate a mano. Le zone dei detriti non si restringono guardando. Per gli aerei in volo, l'avviso arriva ancora troppo tardi. Poi: sensori allo stato dell'arte, hardware dedicato, prove sul campo. MoVi. Osserva e avvisa. Di SDMs.

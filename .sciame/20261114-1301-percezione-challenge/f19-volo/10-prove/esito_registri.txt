@@ -1,0 +1,6 @@
+F1 919 fotogrammi None (47.2, 33.43, 53.0)
+F2 749 fotogrammi None (3.4, 61.47, 55.5)
+F3 449 fotogrammi None (0.4, 15.79, 98.1)
+F4 599 fotogrammi 0.2 None
+F5 519 fotogrammi None (0.7, 54.39, 61.8)
+F6 399 fotogrammi None None

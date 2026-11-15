@@ -196,3 +196,29 @@ Lettura del coordinatore: il file di istruzioni del video non è vincolante alla
 Testo dell'utente: «Per qualunque scelta da fare durante la notte ti do l'autorizzazione a prenderla autonomamente, e questo include tutto tranne l'eliminazione dei files che invece non deve essere fatta in nessun caso».
 
 Lettura del coordinatore: decido da solo e annoto ogni scelta. Nessun file si cancella: le versioni nuove vanno in file nuovi o accanto a una copia della precedente. Gli agenti ricevono il divieto nelle consegne.
+
+---
+
+# Decisione del coordinatore (15-11-2026, 01:55), sotto l'autorizzazione notturna: K-603
+
+L'arbitro della seconda fase lascia all'utente se il caso centrale si dice «sito sorvegliato da droni» (tempestivo in simulazione) o «aeroporto con gli aerei in volo nell'inviluppo» (con v_max 210 m/s non tempestivo). Decido: **caso centrale = un sito aerospaziale sorvegliato (piazzale, area di prova, varco di un hangar) con droni e aerei in rullaggio**, dove l'avviso è tempestivo in simulazione (A1, A2); gli **aerei in volo** e i treni veloci si mostrano come limite dichiarato («non ancora tempestivo: serve un sensore a portata maggiore»), con l'inviluppo corretto a 210 m/s. Motivo: è la forma più forte che resta vera, ed è coerente con «aerei e droni» chiesto dall'utente.
+
+Fase 2b (in corso): le correzioni obbligate dell'attacco nel nucleo (nuova versione accanto alla vecchia), la rilevazione degli eventi E1–E2, e la riprova di A1, A2, E1, E2 nel prototipo.
+
+Violazioni del divieto di cancellare segnalate dagli agenti: il ruolo dei sensori ha cancellato due file scaricati per errore (non è verificato se prima o dopo il divieto); il collaudatore ha cancellato con `rm -f` un collegamento simbolico creato da lui un attimo prima (il file d'origine è intatto). Nelle consegne successive il divieto è ripetuto in testa.
+
+---
+
+# Addendum 14 (15-11-2026, notte): risultati incoraggianti, volo ad alta velocità come caso centrale, perdita di confidenza, hardware dedicato
+
+Testo dell'utente, per intero:
+
+«Essendo presentazione e video basati su un prototipo, anche dati incoraggianti come 51/60 nel caso di collisioni sono considerati buoni e possono essere inclusi nel video, basta che opportunamente documentati nel documento tecnico con l'indicazione che non copriamo ancora tutti i casi (poco realistico con 1 giorno di tempo) ma che tuttavia già con i test svolti nel poco tempo che abbiamo avuto ci sono stati riscontri molto positivi e incoraggianti. Non serve usare solo dati e risultati ottenuti con il 100% di confidenza ma è sufficiente che siano supportati da una solida base matematica e che siano abbastanza vicini a un risultato sicuro, con l'indicazione nel documento tecnico che spieghi i limiti e la necessità di migliorare alcune cose (se possibile quali e come) in maniera chiara. Rivaluta in maniera rapida tutto quanto stabilito e ottenuto nei test sia degli oggetti lenti/nucleo vicino sia in quelli ad alta velocità con droni e aerei (in questi si più preciso nella rivalutazione e, tramite opportune modifiche, includi anche gli scenari di volo ad alta velocità sia per aerei che droni con condizioni di collisione, detriti e e eventi improvvisi altamente impulsivi, per i quali indica nel documento tecnico gli attuali limiti e aree di miglioramento necessarie per passare da una proposta a un sistema effettivamente attuato. Conduci, parallelamente, con lo sciame un opportuna revisione dei risultati sui casi in questione, apporta le modifiche necessarie per migliorare ulteriormente la stima, e nei casi dove la continuità si perde offrire una stima esatta della perdita di confidenza nel tempo, e rendili il caso centrale mostrato nel video di presentazione accompagnati da una breve sezione sul caso attualmente scelto come centrale su aerei e droni in rullaggio e altri casi di applicazione del sistema. Se necessario utilizza strumenti e sensori nello stato dell'arte e stima la velocità di elaborazione di unità di elaborazione di altissimo livello, esistenti o, eventualmente, costruite appositamente per ottimizzare via hardware le prestazioni, garantendo tempi di risposta nettamente inferiori con previsioni in tempo utile, basandoti sulle tempistiche e indici di miglioramento ottenuti da sviluppi analoghi di hardware dedicato anche per compiti differenti ma che presentino simile ottimizzazione hardware tagliando i tempi, come ad esempio i recentissimi chip per modelli linguistici che riescono a produrre token a velocità alcuni ordini di grandezza superiori rispetto ad hardware generico.)»
+
+## Come lo legge il coordinatore
+
+- **Criterio di presentazione:** un risultato si può presentare come «incoraggiante» se ha una base matematica solida (modello dichiarato, derivazione o stima con intervallo) ed è vicino al risultato sicuro (per esempio 51/60 con il suo intervallo), PURCHÉ nel documento tecnico ci siano il limite, il dominio e che cosa migliorare e come. Le frasi restano vere: «in 51 prove simulate su 60», non «sempre». Resta vietato presentare come provato su hardware ciò che è simulato.
+- **Caso centrale nuovo:** volo ad alta velocità di aerei e droni, con collisione, detriti ed eventi improvvisi altamente impulsivi. Il sito con droni e aerei in rullaggio diventa una sezione breve, con gli altri usi (corto raggio, persona non vedente).
+- **Perdita di continuità:** dove la continuità si perde, una stima esatta (in forma chiusa o con il suo metodo di calcolo e la sua verifica) della confidenza in funzione del tempo.
+- **Stato dell'arte e hardware dedicato:** sensori allo stato dell'arte e stime di tempi di elaborazione con unità dedicate (esistenti o progettate apposta), per analogia documentata con acceleratori dedicati (per esempio i chip per modelli linguistici); sono stime, dichiarate come tali.
+- Il montaggio finale del video in corso è stato fermato (i suoi file restano) e riparte sul caso nuovo.

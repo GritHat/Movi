@@ -1,0 +1,534 @@
+{
+ "aerei_veloci/cv/accelerazione/1-2s": [
+  3,
+  6,
+  0.5,
+  0.188,
+  0.812
+ ],
+ "aerei_veloci/cv/accelerazione/3-5s": [
+  12,
+  17,
+  0.706,
+  0.469,
+  0.867
+ ],
+ "aerei_veloci/cv/accelerazione/6-10s": [
+  14,
+  18,
+  0.778,
+  0.548,
+  0.91
+ ],
+ "aerei_veloci/cv/accelerazione/11-20s": [
+  23,
+  25,
+  0.92,
+  0.75,
+  0.978
+ ],
+ "aerei_veloci/cv/accelerazione/21-30s": [
+  36,
+  38,
+  0.947,
+  0.827,
+  0.985
+ ],
+ "aerei_veloci/cv/rettilineo/1-2s": [
+  525,
+  727,
+  0.722,
+  0.688,
+  0.753
+ ],
+ "aerei_veloci/cv/rettilineo/3-5s": [
+  341,
+  397,
+  0.859,
+  0.821,
+  0.89
+ ],
+ "aerei_veloci/cv/rettilineo/6-10s": [
+  313,
+  330,
+  0.948,
+  0.919,
+  0.968
+ ],
+ "aerei_veloci/cv/rettilineo/11-20s": [
+  273,
+  278,
+  0.982,
+  0.959,
+  0.992
+ ],
+ "aerei_veloci/cv/rettilineo/21-30s": [
+  215,
+  217,
+  0.991,
+  0.967,
+  0.997
+ ],
+ "aerei_veloci/cv/virata/6-10s": [
+  9,
+  37,
+  0.243,
+  0.134,
+  0.401
+ ],
+ "aerei_veloci/cv/virata/11-20s": [
+  22,
+  71,
+  0.31,
+  0.214,
+  0.425
+ ],
+ "aerei_veloci/cv/virata/21-30s": [
+  43,
+  105,
+  0.41,
+  0.32,
+  0.505
+ ],
+ "aerei_veloci/imm/accelerazione/1-2s": [
+  2,
+  6,
+  0.333,
+  0.097,
+  0.7
+ ],
+ "aerei_veloci/imm/accelerazione/3-5s": [
+  14,
+  17,
+  0.824,
+  0.59,
+  0.938
+ ],
+ "aerei_veloci/imm/accelerazione/6-10s": [
+  15,
+  18,
+  0.833,
+  0.608,
+  0.942
+ ],
+ "aerei_veloci/imm/accelerazione/11-20s": [
+  22,
+  25,
+  0.88,
+  0.7,
+  0.958
+ ],
+ "aerei_veloci/imm/accelerazione/21-30s": [
+  35,
+  38,
+  0.921,
+  0.792,
+  0.973
+ ],
+ "aerei_veloci/imm/rettilineo/1-2s": [
+  516,
+  727,
+  0.71,
+  0.676,
+  0.742
+ ],
+ "aerei_veloci/imm/rettilineo/3-5s": [
+  367,
+  397,
+  0.924,
+  0.894,
+  0.947
+ ],
+ "aerei_veloci/imm/rettilineo/6-10s": [
+  322,
+  330,
+  0.976,
+  0.953,
+  0.988
+ ],
+ "aerei_veloci/imm/rettilineo/11-20s": [
+  276,
+  278,
+  0.993,
+  0.974,
+  0.998
+ ],
+ "aerei_veloci/imm/rettilineo/21-30s": [
+  216,
+  217,
+  0.995,
+  0.974,
+  0.999
+ ],
+ "aerei_veloci/imm/virata/6-10s": [
+  29,
+  37,
+  0.784,
+  0.628,
+  0.886
+ ],
+ "aerei_veloci/imm/virata/11-20s": [
+  68,
+  71,
+  0.958,
+  0.883,
+  0.986
+ ],
+ "aerei_veloci/imm/virata/21-30s": [
+  96,
+  105,
+  0.914,
+  0.845,
+  0.954
+ ],
+ "droni_ala_fissa/cv/accelerazione/1-2s": [
+  6,
+  6,
+  1.0,
+  0.61,
+  1.0
+ ],
+ "droni_ala_fissa/cv/rettilineo/1-2s": [
+  235,
+  260,
+  0.904,
+  0.862,
+  0.934
+ ],
+ "droni_ala_fissa/cv/rettilineo/3-5s": [
+  66,
+  72,
+  0.917,
+  0.83,
+  0.961
+ ],
+ "droni_ala_fissa/cv/rettilineo/6-10s": [
+  33,
+  36,
+  0.917,
+  0.782,
+  0.971
+ ],
+ "droni_ala_fissa/cv/rettilineo/11-20s": [
+  5,
+  5,
+  1.0,
+  0.566,
+  1.0
+ ],
+ "droni_ala_fissa/cv/virata/1-2s": [
+  121,
+  169,
+  0.716,
+  0.644,
+  0.779
+ ],
+ "droni_ala_fissa/cv/virata/3-5s": [
+  93,
+  139,
+  0.669,
+  0.587,
+  0.742
+ ],
+ "droni_ala_fissa/cv/virata/6-10s": [
+  102,
+  156,
+  0.654,
+  0.576,
+  0.724
+ ],
+ "droni_ala_fissa/cv/virata/11-20s": [
+  125,
+  155,
+  0.806,
+  0.737,
+  0.861
+ ],
+ "droni_ala_fissa/cv/virata/21-30s": [
+  118,
+  130,
+  0.908,
+  0.846,
+  0.946
+ ],
+ "droni_ala_fissa/imm/accelerazione/1-2s": [
+  6,
+  6,
+  1.0,
+  0.61,
+  1.0
+ ],
+ "droni_ala_fissa/imm/rettilineo/1-2s": [
+  248,
+  260,
+  0.954,
+  0.921,
+  0.973
+ ],
+ "droni_ala_fissa/imm/rettilineo/3-5s": [
+  72,
+  72,
+  1.0,
+  0.949,
+  1.0
+ ],
+ "droni_ala_fissa/imm/rettilineo/6-10s": [
+  36,
+  36,
+  1.0,
+  0.904,
+  1.0
+ ],
+ "droni_ala_fissa/imm/rettilineo/11-20s": [
+  5,
+  5,
+  1.0,
+  0.566,
+  1.0
+ ],
+ "droni_ala_fissa/imm/virata/1-2s": [
+  141,
+  169,
+  0.834,
+  0.771,
+  0.883
+ ],
+ "droni_ala_fissa/imm/virata/3-5s": [
+  123,
+  139,
+  0.885,
+  0.821,
+  0.928
+ ],
+ "droni_ala_fissa/imm/virata/6-10s": [
+  148,
+  156,
+  0.949,
+  0.902,
+  0.974
+ ],
+ "droni_ala_fissa/imm/virata/11-20s": [
+  155,
+  155,
+  1.0,
+  0.976,
+  1.0
+ ],
+ "droni_ala_fissa/imm/virata/21-30s": [
+  130,
+  130,
+  1.0,
+  0.971,
+  1.0
+ ],
+ "multirotori/cv/accelerazione/1-2s": [
+  153,
+  173,
+  0.884,
+  0.828,
+  0.924
+ ],
+ "multirotori/cv/accelerazione/3-5s": [
+  83,
+  105,
+  0.79,
+  0.703,
+  0.857
+ ],
+ "multirotori/cv/accelerazione/6-10s": [
+  123,
+  143,
+  0.86,
+  0.794,
+  0.908
+ ],
+ "multirotori/cv/accelerazione/11-20s": [
+  113,
+  127,
+  0.89,
+  0.823,
+  0.933
+ ],
+ "multirotori/cv/accelerazione/21-30s": [
+  108,
+  109,
+  0.991,
+  0.95,
+  0.998
+ ],
+ "multirotori/cv/rettilineo/1-2s": [
+  1186,
+  1315,
+  0.902,
+  0.885,
+  0.917
+ ],
+ "multirotori/cv/rettilineo/3-5s": [
+  513,
+  550,
+  0.933,
+  0.909,
+  0.951
+ ],
+ "multirotori/cv/rettilineo/6-10s": [
+  424,
+  442,
+  0.959,
+  0.937,
+  0.974
+ ],
+ "multirotori/cv/rettilineo/11-20s": [
+  269,
+  273,
+  0.985,
+  0.963,
+  0.994
+ ],
+ "multirotori/cv/rettilineo/21-30s": [
+  146,
+  148,
+  0.986,
+  0.952,
+  0.996
+ ],
+ "multirotori/cv/virata/1-2s": [
+  54,
+  67,
+  0.806,
+  0.696,
+  0.883
+ ],
+ "multirotori/cv/virata/3-5s": [
+  83,
+  103,
+  0.806,
+  0.719,
+  0.871
+ ],
+ "multirotori/cv/virata/6-10s": [
+  116,
+  160,
+  0.725,
+  0.651,
+  0.788
+ ],
+ "multirotori/cv/virata/11-20s": [
+  211,
+  292,
+  0.723,
+  0.669,
+  0.771
+ ],
+ "multirotori/cv/virata/21-30s": [
+  330,
+  386,
+  0.855,
+  0.816,
+  0.887
+ ],
+ "multirotori/imm/accelerazione/1-2s": [
+  169,
+  173,
+  0.977,
+  0.942,
+  0.991
+ ],
+ "multirotori/imm/accelerazione/3-5s": [
+  102,
+  105,
+  0.971,
+  0.919,
+  0.99
+ ],
+ "multirotori/imm/accelerazione/6-10s": [
+  143,
+  143,
+  1.0,
+  0.974,
+  1.0
+ ],
+ "multirotori/imm/accelerazione/11-20s": [
+  127,
+  127,
+  1.0,
+  0.971,
+  1.0
+ ],
+ "multirotori/imm/accelerazione/21-30s": [
+  109,
+  109,
+  1.0,
+  0.966,
+  1.0
+ ],
+ "multirotori/imm/rettilineo/1-2s": [
+  1248,
+  1315,
+  0.949,
+  0.936,
+  0.96
+ ],
+ "multirotori/imm/rettilineo/3-5s": [
+  548,
+  550,
+  0.996,
+  0.987,
+  0.999
+ ],
+ "multirotori/imm/rettilineo/6-10s": [
+  442,
+  442,
+  1.0,
+  0.991,
+  1.0
+ ],
+ "multirotori/imm/rettilineo/11-20s": [
+  273,
+  273,
+  1.0,
+  0.986,
+  1.0
+ ],
+ "multirotori/imm/rettilineo/21-30s": [
+  148,
+  148,
+  1.0,
+  0.975,
+  1.0
+ ],
+ "multirotori/imm/virata/1-2s": [
+  63,
+  67,
+  0.94,
+  0.856,
+  0.977
+ ],
+ "multirotori/imm/virata/3-5s": [
+  102,
+  103,
+  0.99,
+  0.947,
+  0.998
+ ],
+ "multirotori/imm/virata/6-10s": [
+  159,
+  160,
+  0.994,
+  0.965,
+  0.999
+ ],
+ "multirotori/imm/virata/11-20s": [
+  292,
+  292,
+  1.0,
+  0.987,
+  1.0
+ ],
+ "multirotori/imm/virata/21-30s": [
+  386,
+  386,
+  1.0,
+  0.99,
+  1.0
+ ]
+}

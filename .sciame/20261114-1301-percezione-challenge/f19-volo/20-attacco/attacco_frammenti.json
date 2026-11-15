@@ -1,0 +1,109 @@
+[
+ {
+  "variante": "V1_F3_bordo_dv120_vento15",
+  "campioni_dentro": [
+   108600,
+   108600,
+   1.0,
+   0.99996,
+   1.0
+  ],
+  "frammenti_sempre_dentro": [
+   600,
+   600,
+   1.0,
+   0.9936,
+   1.0
+  ],
+  "passaggi_tutti_dentro": [
+   10,
+   10,
+   0.722,
+   1.0
+  ],
+  "pezzi_disco_sempre_dentro": null,
+  "a_terra_fuori_impronta": 0,
+  "R_imp_m": 5144.3
+ },
+ {
+  "variante": "V2_F3_bordo_vc_errata8",
+  "campioni_dentro": [
+   108600,
+   108600,
+   1.0,
+   0.99996,
+   1.0
+  ],
+  "frammenti_sempre_dentro": [
+   600,
+   600,
+   1.0,
+   0.9936,
+   1.0
+  ],
+  "passaggi_tutti_dentro": [
+   10,
+   10,
+   0.722,
+   1.0
+  ],
+  "pezzi_disco_sempre_dentro": null,
+  "a_terra_fuori_impronta": 0,
+  "R_imp_m": 5164.8
+ },
+ {
+  "variante": "V3_F4_non_contenuta_5pc_disco250",
+  "campioni_dentro": [
+   180760,
+   181000,
+   0.99867,
+   0.9985,
+   0.99883
+  ],
+  "frammenti_sempre_dentro": [
+   965,
+   1000,
+   0.965,
+   0.9517,
+   0.9747
+  ],
+  "passaggi_tutti_dentro": [
+   0,
+   10,
+   0.0,
+   0.278
+  ],
+  "pezzi_disco_sempre_dentro": [
+   15,
+   50
+  ],
+  "a_terra_fuori_impronta": 0,
+  "R_imp_m": 6794.1
+ },
+ {
+  "variante": "V4_F4_aereo210_bordo_dv100",
+  "campioni_dentro": [
+   181000,
+   181000,
+   1.0,
+   0.99998,
+   1.0
+  ],
+  "frammenti_sempre_dentro": [
+   1000,
+   1000,
+   1.0,
+   0.9962,
+   1.0
+  ],
+  "passaggi_tutti_dentro": [
+   10,
+   10,
+   0.722,
+   1.0
+  ],
+  "pezzi_disco_sempre_dentro": null,
+  "a_terra_fuori_impronta": 0,
+  "R_imp_m": 8650.3
+ }
+]

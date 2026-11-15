@@ -1,0 +1,9 @@
+{
+ "uscita": {
+  "fotogrammi": 228,
+  "conteggi": {
+   "libero_per_classi_con_griglia_non_affidabile": 44
+  },
+  "primo_esempio": {}
+ }
+}

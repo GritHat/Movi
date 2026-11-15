@@ -1,0 +1,419 @@
+{
+ "_meta": {
+  "stato": "stime (calcolato da ipotesi, fonti e misure del prototipo); nessuna misura su hardware",
+  "formula_tempestivita": "d_min = v_avvicinamento * (L_primo_avviso + t_risposta + t_ritardo_mezzo); v_avvicinamento = v del bersaglio verso un punto fermo; frontale fra due mezzi: somma delle velocita'"
+ },
+ "stadi": [
+  {
+   "stadio": "eta_della_misura (attesa della rivisita)",
+   "ms": {
+    "cpu": [
+     0,
+     100
+    ],
+    "gpu": [
+     0,
+     100
+    ],
+    "dedicato": [
+     0,
+     100
+    ]
+   },
+   "origine": "fonte:ECHOSHIELD 10 Hz -> fino a 100 ms; a 40 Hz fino a 25 ms (ipotesi)"
+  },
+  {
+   "stadio": "acquisizione (integrazione coerente, CPI)",
+   "ms": {
+    "cpu": [
+     5,
+     20
+    ],
+    "gpu": [
+     5,
+     20
+    ],
+    "dedicato": [
+     5,
+     20
+    ]
+   },
+   "origine": "ipotesi: tempo di permanenza del fascio; indipendente dal calcolo"
+  },
+  {
+   "stadio": "trasferimento dati grezzi",
+   "ms": {
+    "cpu": [
+     0.5,
+     2
+    ],
+    "gpu": [
+     0.6,
+     2.5
+    ],
+    "dedicato": [
+     0.001,
+     0.01
+    ]
+   },
+   "origine": "ipotesi: Ethernet 10 Gb/s verso CPU, + PCIe per la GPU; in linea su FPGA"
+  },
+  {
+   "stadio": "elaborazione segnale (formazione fasci, FFT distanza-Doppler, CFAR)",
+   "ms": {
+    "cpu": [
+     5,
+     20
+    ],
+    "gpu": [
+     1,
+     3
+    ],
+    "dedicato": [
+     0.05,
+     0.5
+    ]
+   },
+   "origine": "ipotesi CPU; GPU con lancio dei nuclei; FPGA in flusso (CFAR 10 cicli a 100 MHz: fonte:CFAR_FPGA_PREPRINT, riassunto non aperto)"
+  },
+  {
+   "stadio": "rilevamento ed estrazione dei plot",
+   "ms": {
+    "cpu": [
+     0.5,
+     2
+    ],
+    "gpu": [
+     0.2,
+     1
+    ],
+    "dedicato": [
+     0.01,
+     0.1
+    ]
+   },
+   "origine": "ipotesi"
+  },
+  {
+   "stadio": "associazione + filtro a piu' regimi + previsione e regione + regole",
+   "ms": {
+    "cpu": [
+     0.09,
+     55
+    ],
+    "gpu": [
+     0.05,
+     5
+    ],
+    "dedicato": [
+     0.01,
+     0.5
+    ]
+   },
+   "origine": "misura_prototipo: Python, mediana 0,09-11 ms, p95 peggiore 55 ms (11-prove, modo interfaccia); GPU/dedicato = codice compilato e deterministico (ipotesi fattore 10-100 sul Python); FPGA non piu' veloce della CPU per un passo (725 ns contro 250 ns: fonte:CERN_KF_FPGA), guadagno solo in determinismo"
+  },
+  {
+   "stadio": "uscita: verso macchina (bus)",
+   "ms": {
+    "cpu": [
+     0.1,
+     1
+    ],
+    "gpu": [
+     0.1,
+     1
+    ],
+    "dedicato": [
+     0.01,
+     0.1
+    ]
+   },
+   "origine": "ipotesi"
+  },
+  {
+   "stadio": "uscita: verso operatore (schermo 60 Hz + rete)",
+   "ms": {
+    "cpu": [
+     17,
+     50
+    ],
+    "gpu": [
+     17,
+     50
+    ],
+    "dedicato": [
+     17,
+     50
+    ]
+   },
+   "origine": "ipotesi: un quadro a 60 Hz piu' composizione; non dipende dal calcolo"
+  }
+ ],
+ "conferma_traccia_ms": {
+  "10Hz_3su5": [
+   300,
+   500
+  ],
+  "40Hz_3su5": [
+   75,
+   125
+  ],
+  "ASR_4.8s_2su3": [
+   9600,
+   14400
+  ],
+  "ADSB_1Hz": [
+   0,
+   2000
+  ]
+ },
+ "totali": {
+  "cpu|riv100ms|macchina": {
+   "per_aggiornamento_ms": [
+    11.19,
+    200.0
+   ],
+   "primo_avviso_ms (con conferma)": [
+    311.2,
+    700.0
+   ],
+   "quota_calcolo_nel_peggiore": 0.395
+  },
+  "cpu|riv100ms|operatore": {
+   "per_aggiornamento_ms": [
+    28.09,
+    249.0
+   ],
+   "primo_avviso_ms (con conferma)": [
+    328.1,
+    749.0
+   ],
+   "quota_calcolo_nel_peggiore": 0.317
+  },
+  "gpu|riv100ms|macchina": {
+   "per_aggiornamento_ms": [
+    6.95,
+    132.5
+   ],
+   "primo_avviso_ms (con conferma)": [
+    306.9,
+    632.5
+   ],
+   "quota_calcolo_nel_peggiore": 0.087
+  },
+  "gpu|riv100ms|operatore": {
+   "per_aggiornamento_ms": [
+    23.85,
+    181.5
+   ],
+   "primo_avviso_ms (con conferma)": [
+    323.9,
+    681.5
+   ],
+   "quota_calcolo_nel_peggiore": 0.063
+  },
+  "dedicato|riv100ms|macchina": {
+   "per_aggiornamento_ms": [
+    5.08,
+    121.21
+   ],
+   "primo_avviso_ms (con conferma)": [
+    305.1,
+    621.2
+   ],
+   "quota_calcolo_nel_peggiore": 0.009
+  },
+  "dedicato|riv100ms|operatore": {
+   "per_aggiornamento_ms": [
+    22.07,
+    171.11
+   ],
+   "primo_avviso_ms (con conferma)": [
+    322.1,
+    671.1
+   ],
+   "quota_calcolo_nel_peggiore": 0.006
+  },
+  "cpu|riv25ms|macchina": {
+   "per_aggiornamento_ms": [
+    11.19,
+    125.0
+   ],
+   "primo_avviso_ms (con conferma)": [
+    86.2,
+    250.0
+   ],
+   "quota_calcolo_nel_peggiore": 0.632
+  },
+  "cpu|riv25ms|operatore": {
+   "per_aggiornamento_ms": [
+    28.09,
+    174.0
+   ],
+   "primo_avviso_ms (con conferma)": [
+    103.1,
+    299.0
+   ],
+   "quota_calcolo_nel_peggiore": 0.454
+  },
+  "gpu|riv25ms|macchina": {
+   "per_aggiornamento_ms": [
+    6.95,
+    57.5
+   ],
+   "primo_avviso_ms (con conferma)": [
+    82.0,
+    182.5
+   ],
+   "quota_calcolo_nel_peggiore": 0.2
+  },
+  "gpu|riv25ms|operatore": {
+   "per_aggiornamento_ms": [
+    23.85,
+    106.5
+   ],
+   "primo_avviso_ms (con conferma)": [
+    98.8,
+    231.5
+   ],
+   "quota_calcolo_nel_peggiore": 0.108
+  },
+  "dedicato|riv25ms|macchina": {
+   "per_aggiornamento_ms": [
+    5.08,
+    46.21
+   ],
+   "primo_avviso_ms (con conferma)": [
+    80.1,
+    171.2
+   ],
+   "quota_calcolo_nel_peggiore": 0.024
+  },
+  "dedicato|riv25ms|operatore": {
+   "per_aggiornamento_ms": [
+    22.07,
+    96.11
+   ],
+   "primo_avviso_ms (con conferma)": [
+    97.1,
+    221.1
+   ],
+   "quota_calcolo_nel_peggiore": 0.012
+  }
+ },
+ "cpu_modo_prudente_peggiore_per_aggiornamento_ms": 534.0,
+ "latenze_primo_avviso_s": {
+  "cpu_10Hz": 0.749,
+  "dedicato_10Hz": 0.6212000000000001,
+  "dedicato_40Hz": 0.1712,
+  "cpu_prudente_10Hz": 1.034
+ },
+ "risposte_s": {
+  "umano_senza_ausilio_AC90-48": 12.5,
+  "umano_con_avviso_che_da_direzione": 5.4,
+  "umano_addestrato_procedura_fissa": 1.5,
+  "macchina": 0.0
+ },
+ "ritardo_mezzo_s": {
+  "aereo": 2.0,
+  "drone": 0.5
+ },
+ "tempestivita": [
+  {
+   "mezzo": "aereo",
+   "v_m_s": 70,
+   "umano_senza_ausilio_AC90-48@cpu_10Hz_m": 1067,
+   "umano_con_avviso_che_da_direzione@cpu_10Hz_m": 570,
+   "umano_con_avviso_che_da_direzione@dedicato_10Hz_m": 561,
+   "umano_addestrato_procedura_fissa@dedicato_10Hz_m": 288,
+   "macchina@cpu_10Hz_m": 192,
+   "macchina@dedicato_10Hz_m": 183,
+   "macchina@dedicato_40Hz_m": 152,
+   "quota_catena_dedicata_su_umano_addestrato": 0.151
+  },
+  {
+   "mezzo": "aereo",
+   "v_m_s": 120,
+   "umano_senza_ausilio_AC90-48@cpu_10Hz_m": 1830,
+   "umano_con_avviso_che_da_direzione@cpu_10Hz_m": 978,
+   "umano_con_avviso_che_da_direzione@dedicato_10Hz_m": 963,
+   "umano_addestrato_procedura_fissa@dedicato_10Hz_m": 495,
+   "macchina@cpu_10Hz_m": 330,
+   "macchina@dedicato_10Hz_m": 315,
+   "macchina@dedicato_40Hz_m": 261,
+   "quota_catena_dedicata_su_umano_addestrato": 0.151
+  },
+  {
+   "mezzo": "aereo",
+   "v_m_s": 180,
+   "umano_senza_ausilio_AC90-48@cpu_10Hz_m": 2745,
+   "umano_con_avviso_che_da_direzione@cpu_10Hz_m": 1467,
+   "umano_con_avviso_che_da_direzione@dedicato_10Hz_m": 1444,
+   "umano_addestrato_procedura_fissa@dedicato_10Hz_m": 742,
+   "macchina@cpu_10Hz_m": 495,
+   "macchina@dedicato_10Hz_m": 472,
+   "macchina@dedicato_40Hz_m": 391,
+   "quota_catena_dedicata_su_umano_addestrato": 0.151
+  },
+  {
+   "mezzo": "aereo",
+   "v_m_s": 250,
+   "umano_senza_ausilio_AC90-48@cpu_10Hz_m": 3812,
+   "umano_con_avviso_che_da_direzione@cpu_10Hz_m": 2037,
+   "umano_con_avviso_che_da_direzione@dedicato_10Hz_m": 2005,
+   "umano_addestrato_procedura_fissa@dedicato_10Hz_m": 1030,
+   "macchina@cpu_10Hz_m": 687,
+   "macchina@dedicato_10Hz_m": 655,
+   "macchina@dedicato_40Hz_m": 543,
+   "quota_catena_dedicata_su_umano_addestrato": 0.151
+  },
+  {
+   "mezzo": "drone",
+   "v_m_s": 20,
+   "umano_senza_ausilio_AC90-48@cpu_10Hz_m": 275,
+   "umano_con_avviso_che_da_direzione@cpu_10Hz_m": 133,
+   "umano_con_avviso_che_da_direzione@dedicato_10Hz_m": 130,
+   "umano_addestrato_procedura_fissa@dedicato_10Hz_m": 52,
+   "macchina@cpu_10Hz_m": 25,
+   "macchina@dedicato_10Hz_m": 22,
+   "macchina@dedicato_40Hz_m": 13,
+   "quota_catena_dedicata_su_umano_addestrato": 0.237
+  },
+  {
+   "mezzo": "drone",
+   "v_m_s": 45,
+   "umano_senza_ausilio_AC90-48@cpu_10Hz_m": 619,
+   "umano_con_avviso_che_da_direzione@cpu_10Hz_m": 299,
+   "umano_con_avviso_che_da_direzione@dedicato_10Hz_m": 293,
+   "umano_addestrato_procedura_fissa@dedicato_10Hz_m": 118,
+   "macchina@cpu_10Hz_m": 56,
+   "macchina@dedicato_10Hz_m": 50,
+   "macchina@dedicato_40Hz_m": 30,
+   "quota_catena_dedicata_su_umano_addestrato": 0.237
+  },
+  {
+   "mezzo": "drone",
+   "v_m_s": 70,
+   "umano_senza_ausilio_AC90-48@cpu_10Hz_m": 962,
+   "umano_con_avviso_che_da_direzione@cpu_10Hz_m": 465,
+   "umano_con_avviso_che_da_direzione@dedicato_10Hz_m": 456,
+   "umano_addestrato_procedura_fissa@dedicato_10Hz_m": 183,
+   "macchina@cpu_10Hz_m": 87,
+   "macchina@dedicato_10Hz_m": 78,
+   "macchina@dedicato_40Hz_m": 47,
+   "quota_catena_dedicata_su_umano_addestrato": 0.237
+  },
+  {
+   "mezzo": "drone",
+   "v_m_s": 90,
+   "umano_senza_ausilio_AC90-48@cpu_10Hz_m": 1237,
+   "umano_con_avviso_che_da_direzione@cpu_10Hz_m": 598,
+   "umano_con_avviso_che_da_direzione@dedicato_10Hz_m": 587,
+   "umano_addestrato_procedura_fissa@dedicato_10Hz_m": 236,
+   "macchina@cpu_10Hz_m": 112,
+   "macchina@dedicato_10Hz_m": 101,
+   "macchina@dedicato_40Hz_m": 60,
+   "quota_catena_dedicata_su_umano_addestrato": 0.237
+  }
+ ]
+}

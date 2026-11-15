@@ -1,0 +1,152 @@
+{
+ "versione": "f19-volo-04-scenari-0.1",
+ "data": "2026-11-15",
+ "avvertenza": "Scenari di VOLO nominali e parametrici, scritti a mano: non sono dati registrati ne' ricostruzioni di fatti reali. Tutto e' simulazione o conto. Etichette di classe a mano. Ambito: solo osservazione, monitoraggio e avviso; gli incidenti in volo sono eventi da osservare e segnalare. Nessuna funzione d'ingaggio, puntamento, contrasto o neutralizzazione.",
+ "riferimento": "locale in metri, x est, y nord, z quota sul suolo; soglia pista in [0,0,0], pista lungo +x (come f15-40-eventi/02-regole/scenari_eventi.json)",
+ "formato_traiettoria": "come 03-scenari: 'punti' [x,y,z] in linea retta alla velocita' 'v' del tratto, partenza a 't0'; fermo sull'ultimo punto",
+ "formato_eventi": "come scenari_eventi.json, piu' i tipi NUOVI di eventi_volo.py: 'perdita_ottici_totale' {durata_s} (tutte le camere cieche); 'nubi_quota': cilindri {centro[x,y,z_centro], raggio_m, spessore_m, crescita_m_s, crescita_z_m_s, deriva[3], t_ini, t_fine, opaca_per}; nei parametri di collisione/avaria: 'vc_medio' (velocita' iniziale dei frammenti = velocita' del mezzo), 'vc_tracce' (velocita' delle tracce d'origine, per V(tau)), 'inviluppo' (profilo prudente di regole_eventi.json)",
+ "tipi_sensore": "chiavi di ../../f15-lunga-portata/02-sensori/parametri_lunga_portata.json. SEGNAPOSTO: f19-volo/02-sensori-hw era vuota alle 04:36; 'radar_schiera_attiva_volo' e' da sostituire con la scheda di quel ruolo; fino ad allora si simula con radar_sorveglianza_droni (banda X, 360 gradi, 1 s)",
+ "stato_valori": "I = ipotesi; C = conto (eventi_volo.py, frammenti.py); P = procedura pubblica nota (fonte indicata, link NON riaperto in questa sessione: non verificato); D = dati pubblici di f15-01-dati/traiettorie (ADS-B)",
+ "sceneggiatura": "le righe 't' sono tempi di scenario; 'entro' e' il ritardo massimo ammesso (soglia scritta PRIMA di qualunque prova, PREVISIONI.md); 'C(tau)' e' la curva di confidenza di eventi_volo.confidenza con i parametri del blocco 'confidenza'",
+ "confidenza": {
+  "modello": "errore di posizione predetto gaussiano isotropo, per asse sigma^2(tau) = s0^2 + sv0^2 tau^2 + q tau^3/3 (velocita' costante + rumore bianco d'accelerazione); C(tau) = F_chi2_3(g^2/sigma^2(tau)); zona al 99 %: r99 = 3,368 sigma; zona garantita (non probabilistica, se |a| <= a_max): r_inv = r0 + dv tau + a_max tau^2/2. Tutti i parametri: I",
+  "casi": {
+   "aereo_radar_solo": {"s0_m": 15.0, "sv0_m_s": 2.0, "q_m2_s3": 9.0, "g_m": 50.0, "r0_inv_m": 51.0, "dv_inv_m_s": 6.0, "a_max_m_s2": 3.0, "fonte": "I: s0 da sigma_az 0,75 gradi a 2-3 km filtrata; q = a_max^2 x 1 s; g = porta di riassociazione; r0_inv = 3,4 s0 >= r99(0)"},
+   "drone_veloce": {"s0_m": 10.0, "sv0_m_s": 3.0, "q_m2_s3": 47.6, "g_m": 30.0, "r0_inv_m": 34.0, "dv_inv_m_s": 9.0, "a_max_m_s2": 6.9, "fonte": "I: a_max 6,9 della classe multirotore di f15-04"},
+   "mezzo_danneggiato": {"s0_m": 10.0, "sv0_m_s": 10.0, "q_m2_s3": 100.0, "g_m": 30.0, "r0_inv_m": 34.0, "dv_inv_m_s": 30.0, "a_max_m_s2": 10.0, "fonte": "I: dopo l'evento il moto e' fuori dal modello della classe"}
+  },
+  "scambio_F5": {"s0_m": 10.0, "sv0_m_s": 3.0, "q_m2_s3": 47.6, "sigma_mis_m": 33.0, "durate_s": [1.0, 2.0, 3.0, 4.0], "distanze_m": [39.0, 80.0, 166.0], "fonte": "I; sigma_mis = 0,0131 rad x 2500 m (sigma_az di radar_sorveglianza_droni, C)"}
+ },
+ "scenari": [
+  {
+   "id": "F1", "nome": "Aereo in avvicinamento finale (75 m/s, sentiero di 3 gradi) e drone non cooperante che attraversa il sentiero", "centrale": true,
+   "geometria_fonti": {"sentiero_3_gradi": "P: ICAO Annex 10 / Doc 8168 (PANS-OPS), sentiero nominale di 3 gradi, altezza sulla soglia circa 15 m (50 ft)", "velocita": "P: Doc 8168, categorie d'avvicinamento C (121-140 kt, 62-72 m/s) e D (141-165 kt, 73-85 m/s); D: avvicinamenti ADS-B in f15-01-dati/traiettorie/aerei", "drone": "I: multirotore veloce 20 m/s a 172 m, senza identificazione remota"},
+   "sensori": [{"id": "s_radar", "tipo": "radar_sorveglianza_droni", "segnaposto_per": "radar_schiera_attiva_volo", "pos": [-1000, -800, 10]}, {"id": "s_eo", "tipo": "camera_eo_ottica_lunga", "pos": [-1000, -800, 12], "nota": "puntata dal radar (I)"}, {"id": "s_ir", "tipo": "camera_termica_ottica_lunga", "pos": [-1000, -800, 12]}, {"id": "s_adsb", "tipo": "ads_b", "pos": [-1000, -800, 12]}],
+   "ostacoli": [], "terreno": "piano, z = 0 (I)",
+   "aree": [{"id": "sentiero", "tipo": "tubo", "asse": [[-9000, 0, 487], [0, 0, 15]], "raggio_m": 150, "nota": "I: tubo di protezione per l'avviso, non una superficie regolamentare"}],
+   "oggetti": [
+    {"id": "aereo1", "classe": "aereo_volo", "tipo": "aereo di linea a corridoio singolo, cooperante (ADS-B)", "etichetta": "a mano", "t0": 0, "punti": [[-9000, 0, 487], [0, 0, 15], [600, 0, 0]], "v": [75.0, 65.0], "v_max": 90.0, "a_max": 3.0, "ingombro": [37.6, 35.8, 11.8], "cooperante": true, "nota": "z = 15 + |x| tan 3 gradi (C); x = -3000 (z = 172) a t = 80,0; soglia a t = 120,0 (C)"},
+    {"id": "drone1", "classe": "multirotore", "tipo": "multirotore veloce non cooperante", "etichetta": "a mano", "t0": 0, "punti": [[-3000, 1560, 172], [-3000, -1500, 172]], "v": [20.0], "v_max": 25.0, "a_max": 6.9, "ingombro": [0.5, 0.5, 0.2], "nota": "attraversa y = 0 a t = 78,0 (C); distanza minima 3D 40,8 m a t = 80,0 (C, eventi: campionamento a 0,01 s): quasi collisione senza contatto"}
+   ],
+   "eventi": [],
+   "avviso": {"a_chi": "controllore (torre) e operatore di sito", "bersaglio": "intrusione nel tubo del sentiero", "profilo": "d_avv per il drone: v_max 25 x (1 + 5 + 10) + 50 = 450 m (C, formula operatore_di_sito di f15-04)"},
+   "sceneggiatura_attesa": [
+    {"t": [0, 78], "uscita": "aereo1: 'vista' (radar + EO + termica), ADS-B concorde ma non conta come osservazione; drone1: 'vista' dal radar entro la portata utile per rcs 0,01 (3100 m della scheda IRIS: il punto d'incrocio e' a 2165 m dal radar, C)"},
+    {"t": ["quando la zona di presenza di drone1 tocca il tubo", 78], "entro": "1 ciclo radar (1 s)", "uscita": "'intrusione possibile nel sentiero': avviso alla torre con il tempo all'incrocio (t_x = 78 - t) e la distanza dall'aereo; nessun ordine, solo segnalazione"},
+    {"t": [78, 82], "uscita": "drone1 dentro e poi fuori dal tubo: l'avviso resta finche' la zona di presenza di drone1 non e' tutta fuori dal tubo E osservata (mai spento dal solo tempo)"},
+    {"t": [79, 81], "uscita": "la coppia puo' scendere sotto la soglia di contatto (0,35 + 3 (sigma1 + sigma2) dell'ordine di 60-90 m contro 40,8 m): 'candidato di contatto' e 'tracce vicine'; NON e' un evento senza ritorni nuovi o traccia persa (stress per i falsi eventi)"},
+    {"t": [82, 120], "uscita": "nessun evento; le due tracce di nuovo separate, identita' presunta"}
+   ],
+   "misure": {"tempestivita_s": "anticipo dell'avviso sull'incrocio >= 20 s (I: tempo utile alla torre)", "continuita": "drone1 'vista' o 'non vista da X s' con zona in ogni ciclo, 0 cicli senza dichiarazione", "falsi_eventi": "0", "libero_nel_tubo_dove_non_osservato": "0"}
+  },
+  {
+   "id": "F2", "nome": "Aereo in salita dopo il decollo (90 -> 125 m/s) che entra in una cella di pioggia forte; un aereo leggero non cooperante e' nella zona", "centrale": true,
+   "geometria_fonti": {"salita": "P: V2 + 10/20 kt dopo il decollo, poi accelerazione verso 250 kt (129 m/s) sotto 10000 ft (14 CFR 91.117); D: decolli ADS-B in f15-01-dati; pendenza 6 gradi circa: I", "pioggia": "I: cella di 1,5 km di raggio, da 0 a 1600 m; fattori di portata prudenti di f15-40-01 meteo_pioggia_forte (radar 0,70, EO 0,26, termica 0,29)"},
+   "sensori": [{"id": "s_radar", "tipo": "radar_sorveglianza_droni", "segnaposto_per": "radar_schiera_attiva_volo", "pos": [3500, -1500, 10]}, {"id": "s_eo", "tipo": "camera_eo_ottica_lunga", "pos": [3500, -1500, 12]}, {"id": "s_ir", "tipo": "camera_termica_ottica_lunga", "pos": [3500, -1500, 12]}, {"id": "s_adsb", "tipo": "ads_b", "pos": [3500, -1500, 12]}],
+   "ostacoli": [], "terreno": "piano (I)",
+   "oggetti": [
+    {"id": "aereo1", "classe": "aereo_volo", "tipo": "aereo di linea cooperante", "etichetta": "a mano", "t0": 0, "punti": [[2500, 0, 0], [9000, 0, 700], [16000, 0, 1400]], "v": [90.0, 125.0], "v_max": 130.0, "a_max": 3.0, "ingombro": [37.6, 35.8, 11.8], "cooperante": true, "nota": "a x = 9000 a t = 72,6 (C); entra nella cella (x = 6500) a t = 44,7 circa (C)"},
+    {"id": "leggero2", "classe": "aereo_leggero", "tipo": "aereo leggero senza trasmettitore", "etichetta": "a mano", "t0": 0, "punti": [[8000, 4000, 600], [8000, -4000, 600]], "v": [50.0], "v_max": 70.0, "a_max": 3.0, "ingombro": [8, 11, 2.7], "nota": "attraversa la cella da t = 50 a t = 110 (C); a 1,5-2 km dall'aereo"}
+   ],
+   "eventi": [{"t": 0.0, "tipo": "nube", "parametri": {"nube_quota": "pioggia1", "fonte": "I"}}],
+   "nubi_quota": [{"id": "pioggia1", "tipo": "pioggia_forte", "centro": [8000, 0, 800], "raggio_m": 1500, "spessore_m": 1600, "crescita_m_s": 0.0, "deriva": [0, -3, 0], "t_ini": 0.0, "t_fine": 300.0, "opaca_per": ["camera_eo_ottica_lunga", "camera_termica_ottica_lunga", "lidar_tele"], "fattore_radar_dentro": 0.70, "nota": "il radar attraversa con portata ridotta (fattore prudente 0,70 da 01-effetti); gli ottici NON vedono dentro ne' dietro (prudente)"}],
+   "avviso": {"a_chi": "controllore", "bersaglio": "leggero2 entro 1,5 km dalla rotta di salita"},
+   "sceneggiatura_attesa": [
+    {"t": 0, "uscita": "'portata utile ridotta' per sensore e classe nella cella: radar 0,70 della portata in aria limpida (prudente); EO e termica: 'non osservato (pioggia)' dentro e dietro la cella"},
+    {"t": [44.7, 120], "uscita": "aereo1: 'vista (solo radar)', 'ridondanza assente' dichiarata; EO e IR non contano"},
+    {"t": [50, 110], "uscita": "leggero2 (rcs 2 m2): se il radar lo rileva a ogni giro resta 'vista'; nei giri mancati 'non vista da tau s' con la zona r99(tau) e C(tau) del caso aereo_radar_solo; MAI 'non piu' rilevato'; l'avviso di vicinanza resta finche' la zona di presenza interseca 1,5 km attorno alla rotta"},
+    {"t": [0, 300], "uscita": "nessuna cella 'libero' dentro la cella di pioggia oltre la portata utile ridotta per rcs 2 m2"}
+   ],
+   "misure": {"portata_utile_dichiarata": "uguale al conto entro il 5 %", "tracce_perse_senza_avviso": "0", "confidenza_prevista_contro_osservata": "quota di cicli 'non vista' con il vero dentro r99: atteso 0,99, smentita se il Wilson superiore < 0,97", "falsi_eventi": "0"}
+  },
+  {
+   "id": "F3", "nome": "Due droni veloci (40 e 35 m/s) collidono a 120 m di quota: frammenti, un drone cade, l'altro prosegue danneggiato", "centrale": true,
+   "geometria_fonti": {"velocita": "I: droni ad ala fissa o multirotori da corsa 30-45 m/s; D: tracce di droni in f15-01-dati/traiettorie/droni per gli ordini di grandezza", "quota": "I: 120 m (limite tipico della categoria aperta UE, Reg. 2019/947: P, non riaperto)"},
+   "sensori": [{"id": "s_radar", "tipo": "radar_sorveglianza_droni", "segnaposto_per": "radar_schiera_attiva_volo", "pos": [-1500, -1500, 10]}, {"id": "s_eo", "tipo": "camera_eo_ottica_lunga", "pos": [-1500, -1500, 12], "nota": "puntata dal radar sulla coppia (I)"}, {"id": "s_ir", "tipo": "camera_termica_ottica_lunga", "pos": [-1500, -1500, 12]}],
+   "ostacoli": [], "terreno": "piano (I)",
+   "aree": [{"id": "strada", "poligono": [[-2000, 300], [3000, 300], [3000, 320], [-2000, 320]], "nota": "I: zona abitata o strada sotto la rotta"}],
+   "oggetti": [
+    {"id": "droneA", "classe": "drone_veloce", "tipo": "drone veloce", "etichetta": "a mano", "t0": 0, "punti": [[-800, 0, 120], [0, 0, 120], [500, 75, 90]], "v": [40.0, 25.0], "v_max": 45.0, "a_max": 10.0, "ingombro": [0.8, 1.2, 0.2], "nota": "urto a t = 20,0 (C); dopo: danneggiato, 25 m/s in discesa, moto fuori dal modello"},
+    {"id": "droneB", "classe": "drone_veloce", "tipo": "drone veloce", "etichetta": "a mano", "t0": 0, "punti": [[0, -700, 120], [0, 0, 120]], "v": [35.0], "v_max": 45.0, "a_max": 10.0, "ingombro": [0.8, 1.2, 0.2], "dopo_evento": {"moto": "balistico", "v_t_m_s": 15.0}}
+   ],
+   "eventi": [
+    {"t": 20.0, "tipo": "collisione", "parametri": {"oggetti": ["droneA", "droneB"], "p": [0, 0, 120], "vc_medio": [20.0, 17.5, 0.0], "vc_tracce": [[40.0, 0, 0], [0, 35.0, 0]], "r0_m": 10.0, "n_frammenti": 60, "v_t_m_s": [3, 40], "dv_max_m_s": 40, "vento": [4, 2, 0], "inviluppo": "collisione_multirotori", "fonte": "I (dv e v_t come E1; vc NUOVO: i frammenti partono con la velocita' dei droni)"}}
+   ],
+   "avviso": {"a_chi": "operatore e chi sta sulla strada", "bersaglio": "impronta dei detriti", "nota": "primo frammento senza resistenza a terra in sqrt(2 x 120 / 9,81) = 4,9 s (C): avviso entro 2 s"},
+   "sceneggiatura_attesa": [
+    {"t": [0, 19.2], "uscita": "A e B 'vista'; nessun evento"},
+    {"t": [19.2, 20.0], "uscita": "coppia sotto la soglia di risoluzione: 'tracce non risolte', identita' presunta; NON e' un evento"},
+    {"t": 20.0, "verita": "collisione"},
+    {"t": [20.0, 22.0], "entro": "2,0 s (2 giri del radar)", "uscita": "'evento: contatto (dedotto)'; si apre V(tau) con la pianta allungata lungo vc delle due tracce; 'possibile presenza di detriti' nel volume e nell'impronta; avviso alla strada se l'impronta la tocca; A e B 'previsto', classe sospesa"},
+    {"t": [20.0, 60], "uscita": "droneA: 'vista, identita' presunta' quando riassociato; nei giri mancati 'non vista da tau s' con r99(tau) e C(tau) del caso mezzo_danneggiato (C scende sotto 0,5 in circa 1,6 s: vedi conti_volo.json)"},
+    {"t": [24.9, 30], "uscita": "droneB a terra: 'non vista da X s' con zona a terra dentro l'impronta; MAI 'non piu' rilevato'"},
+    {"t": [20.0, "T_c"], "uscita": "V(tau) e impronta mai ristrette; 0 celle 'libero' dentro"},
+    {"t": ["T_c", 120], "uscita": "a terra 'zona non verificata: possibili detriti; la scioglie un'ispezione a vista'"}
+   ],
+   "misure": {"ritardo_evento_s": "<= 2,0 (soglia; E1 aveva 51/60 [0,739; 0,919])", "quota_frammenti_dentro_V": ">= 0,99 (P4)", "frammenti_a_terra_fuori_impronta": "0", "libero_dentro_volume": "0", "tracce_perse_senza_avviso": "0", "confidenza_prevista_contro_osservata": "come F2"}
+  },
+  {
+   "id": "F4", "nome": "Avaria non contenuta di un motore in volo (135 m/s, 450 m): fiammata che acceca gli ottici, fumo, frammenti in caduta, l'aereo prosegue in assetto anomalo", "centrale": true,
+   "geometria_fonti": {"velocita_quota": "P/D: 250 kt (129 m/s) sotto 10000 ft (14 CFR 91.117); 120-150 m/s a 300-600 m dopo il decollo (D: decolli ADS-B in f15-01-dati)", "evento": "I: valori di f15-40-01 fiammata_lampo e fumo_nube (ipotesi)"},
+   "sensori": [{"id": "s_radar", "tipo": "radar_sorveglianza_droni", "segnaposto_per": "radar_schiera_attiva_volo", "pos": [2000, -2500, 15]}, {"id": "s_eo", "tipo": "camera_eo_ottica_lunga", "pos": [2000, -2500, 17], "nota": "segue l'aereo (I)"}, {"id": "s_ir", "tipo": "camera_termica_ottica_lunga", "pos": [2000, -2500, 17]}, {"id": "s_adsb", "tipo": "ads_b", "pos": [2000, -2500, 17]}],
+   "ostacoli": [], "terreno": "piano (I)",
+   "oggetti": [
+    {"id": "aereo1", "classe": "aereo_volo", "tipo": "aereo di linea cooperante", "etichetta": "a mano", "t0": 0, "punti": [[0, 0, 450], [4050, 0, 450], [9000, 800, 380]], "v": [135.0, 120.0], "v_max": 150.0, "a_max": 3.0, "ingombro": [37.6, 35.8, 11.8], "cooperante": true, "nota": "evento a t = 30,0 in x = 4050 (C); dopo: virata e discesa lenta, moto fuori dal modello della classe"}
+   ],
+   "eventi": [
+    {"t": 30.0, "tipo": "avaria_motore", "parametri": {"oggetto": "aereo1", "p": [4050, 0, 450], "vc_medio": [135.0, 0, 0], "vc_tracce": [[135.0, 0, 0]], "r0_m": 30.0, "n_frammenti": 100, "v_t_m_s": [5, 80], "dv_max_m_s": 60, "vento": [0, 5, 0], "inviluppo": "avaria_motore_a_terra", "fonte": "I (dv, v_t come E2; vc NUOVO = velocita' dell'aereo)"}},
+    {"t": 30.0, "tipo": "fiammata", "parametri": {"durata_sorgente_s": 3.0, "satura": ["camera_eo_ottica_lunga", "camera_termica_ottica_lunga"], "cieca_eo_fino_a_t": 35.0, "cieca_termica_fino_a_t": 43.0, "fonte": "come E2 (01-effetti, prudente: ipotesi)"}},
+    {"t": 30.5, "tipo": "nube", "parametri": {"nube_quota": "fumo1", "fonte": "I"}}
+   ],
+   "nubi_quota": [{"id": "fumo1", "tipo": "fumo", "centro": [4050, 0, 450], "raggio_m": 20, "crescita_m_s": 1.0, "raggio_max_m": 60, "spessore_m": 40, "crescita_z_m_s": 1.0, "spessore_max_m": 120, "deriva": [0, 5, -0.5], "t_ini": 30.5, "t_fine": 200.0, "opaca_per": ["camera_eo_ottica_lunga", "camera_termica_ottica_lunga", "lidar_tele"], "nota": "scia staccata dal punto dell'evento (I); la scia lungo la rotta non e' modellata (limite)"}],
+   "avviso": {"a_chi": "controllore e servizi a terra", "bersaglio": "impronta dei detriti lungo la rotta e l'aereo stesso"},
+   "sceneggiatura_attesa": [
+    {"t": [0, 30], "uscita": "aereo1 'vista' (radar, EO, IR, ADS-B concordi)"},
+    {"t": 30.0, "verita": "avaria con fiammata"},
+    {"t": [30.0, 30.6], "entro": "3 quadri delle camere (0,6 s)", "uscita": "'affidabilita' persa: s_eo, s_ir (abbagliamento)'; aereo1 'vista (solo radar)'"},
+    {"t": [30.0, 32.0], "entro": "2,0 s", "uscita": "'evento: separazione (dedotto)' (ritorni nuovi dietro l'aereo); V(tau) allungato lungo +x; impronta prudente di chilometri: 'possibile presenza di detriti'"},
+    {"t": [30.0, 200], "uscita": "aereo1: 'vista (radar)', classe sospesa, 'previsto ampio' (caso mezzo_danneggiato per i giri mancati); ADS-B non chiude nulla"},
+    {"t": [35.0, 44.0], "uscita": "EO torna 'affidabile' non prima di t = 36 (10 quadri buoni), IR non prima di t = 44; le celle ripartono da 'non_osservato'"},
+    {"t": ["T_c", 200], "uscita": "a terra 'zona non verificata: possibili detriti' sull'impronta; resta accesa fino all'ispezione"}
+   ],
+   "misure": {"cicli_per_affidabilita_persa": "<= 3", "ritardo_evento_s": "<= 2,0", "quota_frammenti_dentro_V": ">= 0,99 (P4)", "frammenti_a_terra_fuori_impronta": "0", "libero_dentro_volume": "0", "tracce_perse_senza_avviso": "0"}
+  },
+  {
+   "id": "F5", "nome": "Evento impulsivo (lampo e nube): tutti gli ottici ciechi per 2-4 s mentre un aereo (80 m/s) e un drone veloce (45 m/s) si incrociano a 39 m; resta solo il radar", "centrale": true,
+   "geometria_fonti": {"tutto": "I"},
+   "sensori": [{"id": "s_radar", "tipo": "radar_sorveglianza_droni", "segnaposto_per": "radar_schiera_attiva_volo", "pos": [-1500, -2000, 10]}, {"id": "s_eo", "tipo": "camera_eo_ottica_lunga", "pos": [-1500, -2000, 12]}, {"id": "s_ir", "tipo": "camera_termica_ottica_lunga", "pos": [-1500, -2000, 12]}],
+   "ostacoli": [], "terreno": "piano (I)",
+   "oggetti": [
+    {"id": "aereoX", "classe": "aereo_leggero", "tipo": "aereo leggero veloce", "etichetta": "a mano", "t0": 0, "punti": [[-3200, 0, 300], [3200, 0, 300]], "v": [80.0], "v_max": 90.0, "a_max": 3.0, "ingombro": [8, 11, 2.7], "nota": "all'incrocio (0,0) a t = 40,0 (C)"},
+    {"id": "droneY", "classe": "drone_veloce", "tipo": "drone veloce", "etichetta": "a mano", "t0": 0, "punti": [[0, -1845, 300], [0, 2000, 300]], "v": [45.0], "v_max": 45.0, "a_max": 10.0, "ingombro": [0.8, 1.2, 0.2], "nota": "all'incrocio a t = 41,0 (C); distanza minima 39,2 m a t = 40,24 (C)"}
+   ],
+   "eventi": [
+    {"t": 39.0, "tipo": "perdita_ottici_totale", "parametri": {"durata_s": 3.0, "varianti_durata_s": [2.0, 3.0, 4.0], "causa": "lampo e nube (I)", "fonte": "I; nominale di 01-effetti fiammata_lampo: sorgente 0,5-3 s + rientro 0,5-2 s"}},
+    {"t": 39.2, "tipo": "nube", "parametri": {"nube_quota": "nube5", "fonte": "I"}}
+   ],
+   "nubi_quota": [{"id": "nube5", "tipo": "fumo", "centro": [60, 20, 300], "raggio_m": 40, "crescita_m_s": 10.0, "raggio_max_m": 120, "spessore_m": 60, "crescita_z_m_s": 5.0, "spessore_max_m": 150, "deriva": [0, 0, 0], "t_ini": 39.2, "t_fine": 43.0, "opaca_per": ["camera_eo_ottica_lunga", "camera_termica_ottica_lunga", "lidar_tele"]}],
+   "avviso": {"a_chi": "operatore", "bersaglio": "la coppia"},
+   "sceneggiatura_attesa": [
+    {"t": [0, 39], "uscita": "aereoX e droneY 'vista' (radar + ottici)"},
+    {"t": [39.0, 39.6], "entro": "3 quadri", "uscita": "'affidabilita' persa: tutti gli ottici'; 'ridondanza assente: solo radar'"},
+    {"t": [39.0, 42.0], "uscita": "le due tracce restano 'vista (radar)' finche' sono risolte; se il radar le fonde (stessa cella di risoluzione) entrambe passano a 'non vista da tau s' con zona r99(tau) (caso drone_veloce per droneY, aereo_radar_solo per aereoX) e C(tau) dichiarata; identita' 'presunta' con confidenza 1 - p_scambio (conti_volo.json); NESSUN evento di contatto (manca la frammentazione)"},
+    {"t": [42.0, 45.0], "uscita": "ottici di nuovo affidabili dopo 10 quadri buoni; riassociazione: identita' 'presunta' (mai 'certa'); l'avviso sulla coppia si spegne solo guardando tutta la zona"}
+   ],
+   "misure": {"tracce_perse_senza_avviso": "0", "falsi_eventi": "0", "confidenza_prevista_contro_osservata": "per ogni ciclo 'non vista': vero dentro r99 nella quota 0,99 +- Wilson", "scambi_d_identita_osservati_contro_previsti": "frequenza di scambio dentro il Wilson del p_scambio previsto", "identita": "mai 'certa' dopo la cecita'"}
+  },
+  {
+   "id": "F6", "nome": "CONTROLLO: due aerei che si incrociano a distanza di sicurezza (300 m in quota, 1,5 km in pianta), nessun evento", "centrale": true, "controllo": true,
+   "geometria_fonti": {"separazione": "I (1000 ft verticali, ordine di grandezza delle separazioni standard: P, non riaperto)"},
+   "sensori": [{"id": "s_radar", "tipo": "radar_sorveglianza_droni", "segnaposto_per": "radar_schiera_attiva_volo", "pos": [0, -2500, 10]}, {"id": "s_eo", "tipo": "camera_eo_ottica_lunga", "pos": [0, -2500, 12]}, {"id": "s_ir", "tipo": "camera_termica_ottica_lunga", "pos": [0, -2500, 12]}, {"id": "s_adsb", "tipo": "ads_b", "pos": [0, -2500, 12]}],
+   "ostacoli": [], "terreno": "piano (I)",
+   "oggetti": [
+    {"id": "aereo1", "classe": "aereo_volo", "tipo": "aereo cooperante", "etichetta": "a mano", "t0": 0, "punti": [[-6000, 0, 600], [6000, 0, 600]], "v": [120.0], "v_max": 130.0, "a_max": 3.0, "ingombro": [37.6, 35.8, 11.8], "cooperante": true},
+    {"id": "aereo2", "classe": "aereo_volo", "tipo": "aereo cooperante", "etichetta": "a mano", "t0": 0, "punti": [[1500, -5000, 900], [1500, 5000, 900]], "v": [100.0], "v_max": 130.0, "a_max": 3.0, "ingombro": [37.6, 35.8, 11.8], "cooperante": true}
+   ],
+   "eventi": [],
+   "avviso": {"a_chi": "nessuno", "bersaglio": "nessuno"},
+   "sceneggiatura_attesa": [{"t": [0, 100], "uscita": "due tracce 'vista', mai 'non risolte', nessun evento, nessun volume, nessuna impronta"}],
+   "misure": {"falsi_eventi": "0 su N ripetizioni con il rumore della scheda (con N = 300: limite superiore Wilson 95 % 1,3 %)", "tracce_non_risolte": "0"}
+  }
+ ]
+}

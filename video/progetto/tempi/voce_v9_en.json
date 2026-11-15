@@ -1,0 +1,59 @@
+{
+ "voce": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/voce/uscite/en_v6_finale/voce_en.wav",
+ "scene": [
+  {
+   "id": "s1",
+   "inizio": 0.0,
+   "durata": 13.5,
+   "voce_da": 0.15
+  },
+  {
+   "id": "s2",
+   "inizio": 13.5,
+   "durata": 23.5,
+   "voce_da": 0.4
+  },
+  {
+   "id": "s3",
+   "inizio": 37.0,
+   "durata": 14.0,
+   "voce_da": 0.4
+  },
+  {
+   "id": "s4",
+   "inizio": 51.0,
+   "durata": 18.5,
+   "voce_da": 0.4
+  },
+  {
+   "id": "s5",
+   "inizio": 69.5,
+   "durata": 20.5,
+   "voce_da": 0.4
+  },
+  {
+   "id": "s6",
+   "inizio": 90.0,
+   "durata": 23.81,
+   "voce_da": 0.4
+  },
+  {
+   "id": "s7",
+   "inizio": 113.81,
+   "durata": 35.5,
+   "voce_da": 0.4
+  },
+  {
+   "id": "s8",
+   "inizio": 149.31,
+   "durata": 10.0,
+   "voce_da": 0.4
+  },
+  {
+   "id": "s9",
+   "inizio": 159.31,
+   "durata": 13.56,
+   "voce_da": 0.6
+  }
+ ]
+}

@@ -1,0 +1,56 @@
+{
+ "F3": {
+  "frammenti": 600,
+  "campioni": 72600,
+  "dentro_V": 70982,
+  "quota": 0.97771,
+  "wilson95": [
+   0.97661,
+   0.97876
+  ],
+  "impronta_raggio_m": 5144.3,
+  "vt_che_decide": 3000.0,
+  "a_terra_fuori_impronta": 13,
+  "caduta_s_min_med_max": [
+   0.2,
+   11.7,
+   40.3
+  ],
+  "parametri_inviluppo": {
+   "dv": 120.0,
+   "W": 15.0,
+   "Wz": 2.0,
+   "v_t_min": 3.0,
+   "k_tc": 1.5,
+   "r_rimbalzo": 20.0
+  },
+  "nota": "campioni non indipendenti (stesso frammento in istanti diversi): Wilson per campione e' ottimista; vedi a_terra_fuori"
+ },
+ "F4": {
+  "frammenti": 1000,
+  "campioni": 121000,
+  "dentro_V": 114336,
+  "quota": 0.94493,
+  "wilson95": [
+   0.94363,
+   0.9462
+  ],
+  "impronta_raggio_m": 6794.1,
+  "vt_che_decide": 5000.0,
+  "a_terra_fuori_impronta": 53,
+  "caduta_s_min_med_max": [
+   0.2,
+   19.4,
+   60.0
+  ],
+  "parametri_inviluppo": {
+   "dv": 100.0,
+   "W": 15.0,
+   "Wz": 2.0,
+   "v_t_min": 5.0,
+   "k_tc": 1.5,
+   "r_rimbalzo": 20.0
+  },
+  "nota": "campioni non indipendenti (stesso frammento in istanti diversi): Wilson per campione e' ottimista; vedi a_terra_fuori"
+ }
+}

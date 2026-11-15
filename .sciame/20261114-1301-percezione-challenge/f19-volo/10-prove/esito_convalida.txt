@@ -1,0 +1,37 @@
+/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/prototipo/uscite/video_volo/registro_F1.jsonl: 919 fotogrammi, 0 violazioni
+/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/prototipo/uscite/video_volo/registro_F2.jsonl: 749 fotogrammi, 34 violazioni
+   t=2.3 traccia 1: C cresce durante la perdita (0.9956 -> 0.9982)
+   t=2.7 traccia 4: C cresce durante la perdita (0.9955 -> 0.9981)
+   t=2.8 traccia 4: C cresce durante la perdita (0.9981 -> 0.9992)
+   t=2.9 traccia 1: C cresce durante la perdita (0.9958 -> 0.9973)
+   t=3.2 traccia 15: C cresce durante la perdita (0.9944 -> 0.9981)
+   t=3.3 traccia 10: C cresce durante la perdita (0.9950 -> 0.9979)
+   t=3.3 traccia 15: C cresce durante la perdita (0.9981 -> 0.9994)
+   t=3.4 traccia 10: C cresce durante la perdita (0.9979 -> 0.9992)
+   t=3.8 traccia 4: C cresce durante la perdita (0.9952 -> 0.9965)
+   t=4.5 traccia 10: C cresce durante la perdita (0.9958 -> 0.9969)
+/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/prototipo/uscite/video_volo/registro_F3.jsonl: 449 fotogrammi, 16 violazioni
+   t=19.2 traccia 6: C cresce durante la perdita (0.9974 -> 1.0000)
+   t=19.7 traccia 6: C cresce durante la perdita (0.9972 -> 0.9996)
+   t=21.2 traccia 2: C cresce durante la perdita (0.9972 -> 0.9996)
+   t=21.4 traccia 6: C cresce durante la perdita (0.9950 -> 0.9990)
+   t=21.6 traccia 4: C cresce durante la perdita (0.9983 -> 0.9998)
+   t=22.0 traccia 14: C cresce durante la perdita (0.9982 -> 0.9997)
+   t=22.6 traccia 14: C cresce durante la perdita (0.9965 -> 0.9984)
+   t=25.1 traccia 1: C cresce durante la perdita (0.9958 -> 0.9979)
+   t=25.2 traccia 1: C cresce durante la perdita (0.9979 -> 0.9991)
+   t=31.5 traccia 3: C cresce durante la perdita (0.9974 -> 0.9986)
+/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/prototipo/uscite/video_volo/registro_F4.jsonl: 599 fotogrammi, 0 violazioni
+/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/prototipo/uscite/video_volo/registro_F5.jsonl: 519 fotogrammi, 26 violazioni
+   t=1.0 traccia 1: C cresce durante la perdita (0.9946 -> 0.9988)
+   t=1.2 traccia 1: C cresce durante la perdita (0.9943 -> 0.9981)
+   t=1.3 traccia 1: C cresce durante la perdita (0.9981 -> 0.9994)
+   t=1.9 traccia 7: C cresce durante la perdita (0.9939 -> 0.9979)
+   t=2.0 traccia 7: C cresce durante la perdita (0.9979 -> 0.9992)
+   t=2.0 traccia 12: C cresce durante la perdita (0.9969 -> 0.9990)
+   t=2.2 traccia 12: C cresce durante la perdita (0.9944 -> 0.9982)
+   t=2.3 traccia 12: C cresce durante la perdita (0.9982 -> 0.9994)
+   t=6.2 traccia 10: C cresce durante la perdita (0.9953 -> 0.9998)
+   t=13.8 traccia 6: C cresce durante la perdita (0.9936 -> 0.9990)
+/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/prototipo/uscite/video_volo/registro_F6.jsonl: 399 fotogrammi, 0 violazioni
+2026-11-15T05:25:08+01:00
