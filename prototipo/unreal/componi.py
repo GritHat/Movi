@@ -69,7 +69,7 @@ def uno(arg):
     d.text((110, 1030), "PROTOTIPO SIMULATO · SIMULAZIONE 3D CON MOTORE FISICO", font=B(20), fill=GRIGIO)
     # scheda del filtro, in soggettiva
     if pov:
-        X, Y, W, H = 1330, 210, 480, 620
+        X, Y, W, H = 110, 330, 480, 560
         d.rounded_rectangle((X, Y, X + W, Y + H), 36, fill=(255, 255, 255, 245))
         d.rounded_rectangle((X, Y, X + W, Y + 14), 7, fill=BLU)
         d.text((X + 40, Y + 44), "Stima", font=B(46), fill=INK)
@@ -81,13 +81,12 @@ def uno(arg):
         for i in range(4):
             for j in range(4):
                 v = min(1.0, abs(P[i][j]) / ((rif[i] * rif[j]) ** 0.5))
-                c = tuple(int(225 - (225 - k) * (0.12 + 0.88 * v)) if k < 225 else k for k in BLU)
-                c = tuple(int(232 + (BLU[n] - 232) * (0.10 + 0.90 * v)) for n in range(3))
-                d.rounded_rectangle((X + 100 + j * 72, Y + 200 + i * 72, X + 160 + j * 72, Y + 260 + i * 72), 12, fill=c)
-        d.text((X + 40, Y + 500), "matrice d'incertezza del filtro", font=M(22), fill=GRIGIO)
-        d.text((X + 40, Y + 540), "CONFIDENZA", font=B(20), fill=GRIGIO)
-        d.rounded_rectangle((X + 40, Y + 572, X + W - 40, Y + 592), 10, fill=(225, 231, 240))
-        d.rounded_rectangle((X + 40, Y + 572, X + 40 + (W - 80) * max(0.04, r["conf"]), Y + 592), 10, fill=BLU)
+                col = tuple(int(232 + (BLU[n] - 232) * (0.10 + 0.90 * v)) for n in range(3))
+                d.rounded_rectangle((X + 112 + j * 66, Y + 196 + i * 66, X + 168 + j * 66, Y + 252 + i * 66), 11, fill=col)
+        d.text((X + 40, Y + 468), "matrice d'incertezza del filtro", font=M(22), fill=GRIGIO)
+        d.text((X + 40, Y + 502), "CONFIDENZA", font=B(20), fill=GRIGIO)
+        d.rounded_rectangle((X + 190, Y + 504, X + W - 40, Y + 524), 10, fill=(225, 231, 240))
+        d.rounded_rectangle((X + 190, Y + 504, X + 190 + (W - 230) * max(0.04, r["conf"]), Y + 524), 10, fill=BLU)
     Image.alpha_composite(im, o).convert("RGB").save(dst, quality=93)
 
 

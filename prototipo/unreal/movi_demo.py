@@ -11,9 +11,9 @@ les = unreal.get_editor_subsystem(unreal.LevelEditorSubsystem)
 GS = unreal.GameplayStatics
 FOTO = os.environ.get("MOVI_FOTO", "")          # cartella dei fotogrammi; vuota = non salva
 T_E, T_FINE = 3.0, 8.5                           # istante dell'urto e fine, in secondi di simulazione
-P_E = (1950.0, -800.0, 60.0)                     # punto dell'urto
+P_E = (2350.0, 60.0, 50.0)                       # sulla linea fra il portatore e il bersaglio                     # punto dell'urto
 VP = (500.0, 0.0, 0.0)                           # velocità del portatore
-VA, VB = (90.0, 340.0, 0.0), (430.0, -150.0, 0.0)
+VA, VB = (250.0, 420.0, 0.0), (250.0, -420.0, 0.0)
 CAM = (-1000.0, 1500.0, 650.0)
 
 S = {"t": 0.0, "w": None, "a": None, "movi": None, "evento": False, "n": 0, "foto": 0, "h": None, "attesa": 0.0}
@@ -53,7 +53,7 @@ def prepara(w):
                                            "raggio", "testo_stato", "testo_avviso", "testo_tempo")}
     a["detriti"] = list(GS.get_all_actors_with_tag(w, "movi_detrito"))
     a["fumo"] = list(GS.get_all_actors_with_tag(w, "movi_fumo"))
-    a["fumo_v"] = [(random.uniform(-90, 90), random.uniform(-90, 90), random.uniform(20, 110)) for _ in a["fumo"]]
+    a["fumo_v"] = [(random.uniform(-230, 230), random.uniform(-260, 260), random.uniform(-90, 170)) for _ in a["fumo"]]
     a["cattura"] = uno(w, "movi_cattura")
     S["rt"] = unreal.RenderingLibrary.create_render_target2d(w, 1920, 1080, unreal.TextureRenderTargetFormat.RTF_RGBA8)
     a["cattura"].capture_component2d.set_editor_property("texture_target", S["rt"])
@@ -121,14 +121,14 @@ def passo(dt_muro):
         if tau > 0.28:
             a["lampo"].set_actor_hidden_in_game(True)
         for f, fv in zip(a["fumo"], a["fumo_v"]):
-            c = [P_E[i] + fv[i] * tau + (VA[i] + VB[i]) / 2 * min(tau, 1.5) * 0.4 for i in range(3)]
+            c = [P_E[i] + fv[i] * min(tau, 1.6) + (430.0 * tau if i == 0 else 0.0) for i in range(3)]   # la nube resta davanti al portatore
             f.set_actor_location(V(*c), False, False)
-            f.set_actor_scale3d(V(*[min(3.2, 0.6 + 3.5 * tau)] * 3))
+            f.set_actor_scale3d(V(*[min(7.5, 0.8 + 7.0 * tau)] * 3))
             centri.append(c)
 
     # sensori simulati: il radar satura per i detriti vicini, la camera è accecata dal lampo e dal fumo
     radar_ok = not (0.0 <= tau < 1.7)
-    camera_ok = not (0.0 <= tau < 2.1) and not occluso(port, vero, centri, 230.0)
+    camera_ok = not (0.0 <= tau < 2.1) and not occluso(port, vero, centri, 400.0)
     misura = [vero[i] + random.gauss(0, 14.0) for i in range(3)] if (radar_ok or camera_ok) else None
     r = S["movi"].passo(t, dt, misura, radar_ok, camera_ok)
 
@@ -156,12 +156,12 @@ def passo(dt_muro):
         cam = (port[0] + 150.0, port[1], port[2] + 70.0)
         dd = [r["pos"][i] - cam[i] for i in range(3)]
         LL = math.sqrt(sum(x * x for x in dd))
-        rot = R(0, math.degrees(math.asin(dd[2] / LL)), math.degrees(math.atan2(dd[1], dd[0])) - 14.0)
+        rot = R(0, math.degrees(math.asin(dd[2] / LL)), math.degrees(math.atan2(dd[1], dd[0])) - 9.0)
     else:
-        ang = math.radians(118.0 - 16.0 * t)                 # l'angolo cambia nel tempo: orbita
-        raggio_cam = 1750.0
-        cam = (port[0] + raggio_cam * math.cos(ang) + 500.0, port[1] + raggio_cam * math.sin(ang), port[2] + 520.0 + 40.0 * t)
-        mira = (port[0] + 800.0, port[1] - 150.0, port[2] + 40.0)
+        ang = math.radians(112.0 - 7.0 * t)                  # l'angolo cambia nel tempo: orbita
+        raggio_cam = 2500.0
+        cam = (port[0] + 1000.0 + raggio_cam * math.cos(ang), port[1] + raggio_cam * math.sin(ang), port[2] + 700.0 + 30.0 * t)
+        mira = (port[0] + 1000.0, port[1] + 60.0, port[2] - 120.0)   # a metà fra il portatore e il bersaglio
         dd = [mira[i] - cam[i] for i in range(3)]
         LL = math.sqrt(sum(x * x for x in dd))
         rot = R(0, math.degrees(math.asin(dd[2] / LL)), math.degrees(math.atan2(dd[1], dd[0])))

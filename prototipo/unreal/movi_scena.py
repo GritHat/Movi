@@ -75,7 +75,7 @@ SUOLO = istanza("MI_Suolo", (0.72, 0.80, 0.78)); CIELO = istanza("MI_Cielo", (0.
 BIANCO = istanza("MI_Bianco", (1, 1, 1)); ARANCIO = istanza("MI_Arancio", (1.0, 0.45, 0.05))
 V_REGIONE = istanza("MI_VeloRegione", (0.10, 0.35, 1.0), 0.28)
 V_AVVISO = istanza("MI_VeloAvviso", (1.0, 0.45, 0.05), 0.16)
-V_FUMO = istanza("MI_VeloFumo", (0.30, 0.33, 0.38), 0.5)
+V_FUMO = istanza("MI_VeloFumo", (0.30, 0.33, 0.38), 0.62)
 V_LAMPO = istanza("MI_VeloLampo", (1.0, 0.85, 0.35), 0.9)
 
 FORME = {k: unreal.load_asset("/Engine/BasicShapes/" + k) for k in ("Cube", "Sphere", "Cylinder", "Cone", "Plane")}
@@ -131,8 +131,8 @@ sole.light_component.set_cast_shadows(False)
 
 drone("Portatore", (0, 0, 0), BLU, "movi_portatore")
 drone("Bersaglio", (1600, 150, 80), NAVY, "movi_bersaglio")
-drone("DroneA", (1500, -1700, 60), GRIGIO, "movi_dronea")
-drone("DroneB", (-300, -1500, 60), GRIGIO, "movi_droneb")
+drone("DroneA", (1600, -1200, 50), GRIGIO, "movi_dronea")
+drone("DroneB", (1600, 1320, 50), GRIGIO, "movi_droneb")
 
 # detriti: fermi e nascosti nel punto dell'urto, la fisica li prende all'evento
 random.seed(7)
@@ -141,12 +141,13 @@ for i in range(36):
     pezzo("Detrito%02d" % i, "Cube", (1000 + 600 * (i % 6), -6000 + 600 * (i // 6), 5000),
           (s, s * random.uniform(0.5, 1.5), s * random.uniform(0.4, 1.0)), ROSSO if i < 3 else NAVY, "movi_detrito",
           rot=(random.uniform(0, 90), random.uniform(0, 90), 0), fisica=True, nascosto=True)
-for i in range(7):
-    pezzo("Fumo%d" % i, "Sphere", (1950, -800, 60), 0.3, V_FUMO, "movi_fumo", nascosto=True)
-pezzo("Lampo", "Sphere", (1950, -800, 60), 0.5, V_LAMPO, "movi_lampo", nascosto=True)
+for i in range(12):
+    pezzo("Fumo%d" % i, "Sphere", (2350, 60, 50), 0.3, V_FUMO, "movi_fumo", nascosto=True)
+pezzo("Lampo", "Sphere", (2350, 60, 50), 0.5, V_LAMPO, "movi_lampo", nascosto=True)
 
 # zone di MoVi
-pezzo("RegioneBersaglio", "Sphere", (1600, 150, 80), 0.6, V_REGIONE, "movi_regione")
+_reg = pezzo("RegioneBersaglio", "Sphere", (1600, 150, 80), 0.6, V_REGIONE, "movi_regione")
+_reg.static_mesh_component.set_editor_property("translucency_sort_priority", 10)   # la regione si vede anche attraverso il fumo
 pezzo("SferaAvviso", "Sphere", (0, 0, 0), 1.0, V_AVVISO, "movi_avviso", nascosto=True)
 pezzo("RaggioSensore", "Cube", (800, 75, 40), (16, 0.03, 0.03), V_REGIONE, "movi_raggio")
 
