@@ -16,12 +16,12 @@ da archivi pubblici. Non c'è nessuna prova su hardware. Limiti e risultati sono
 
 | Cartella o file | Contenuto |
 |---|---|
-| `proposta/proposta_sciame.pdf` | proposta di due pagine (storia delle versioni in `VERSIONI.md`) |
 | `allegato_tecnico/allegato_tecnico.pdf` | documento tecnico: dimostrazioni, prove, limiti, bibliografia |
 | `documentazione/` | stato del progetto, riferimenti (`RIFERIMENTI.md`, `riferimenti.bib`) |
 | `prototipo/` | prototipo simulato in Python (`README.md` proprio, con tutti i comandi) |
+| `prototipo/unreal/` | dimostrazione 3D in Unreal Engine 5.8 con motore fisico |
 | `video/` | marchio, script della voce, progetto del video pitch |
-| `sciame.sh`, `sciame/`, `.claude/` | lo sciame di agenti per Claude Code usato per analisi e verifiche |
+| `sciame.sh` | lo sciame di agenti per Claude Code usato per analisi e verifiche (un solo file: installa e avvia) |
 | `.sciame/` | registro di lavoro dello sciame: prove, codice delle simulazioni, verdetti |
 | `setup.sh`, `requirements.txt` | setup automatico dell'ambiente |
 
@@ -78,17 +78,17 @@ Le uscite vanno in `prototipo/uscite/`, che non è nel repository: si rigenera.
     bash sciame/sciame.sh classica "richiesta"    # convoca lo sciame; anche: singolo, completa, auto
     bash sciame/sciame.sh ruoli                   # elenco dei ruoli e dei profili
 
-La guida completa è nell'intestazione di `sciame.sh` e in `sciame/README.md`.
+La guida completa è nell'intestazione di `sciame.sh`. Le cartelle `sciame/` e `.claude/agents/` non sono nel
+repository: le crea `bash sciame.sh installa`.
 
 ## Documenti: come ricompilarli
 
 Serve una distribuzione LaTeX con `xelatex` e `bibtex`.
 
     cd allegato_tecnico && xelatex allegato_tecnico && bibtex allegato_tecnico && xelatex allegato_tecnico && xelatex allegato_tecnico
-    cd proposta && xelatex proposta_sciame
 
 ## Che cosa non è nel repository
 
 Il `.gitignore` lascia fuori il materiale temporaneo (ambienti, file ausiliari di LaTeX, uscite delle simulazioni,
-dati scaricati, audio e video) e le versioni superate dei documenti. Resta solo la versione corrente di proposta,
-documento tecnico, stato e riferimenti.
+dati scaricati, audio e video) e le versioni superate dei documenti. Resta solo la versione corrente di documento
+tecnico, stato e riferimenti.

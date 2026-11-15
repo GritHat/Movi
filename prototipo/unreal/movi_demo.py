@@ -1,7 +1,7 @@
 """Dimostrazione MoVi in Unreal: avvia la simulazione (fisica Chaos), muove i droni, fa avvenire la collisione
 e collega il nucleo MoVi (movi_core) ai «sensori» della scena. Il tempo rallenta all'evento e la scala è a schermo.
 Tutto è simulato: nessun sensore fisico."""
-import math, os, random, importlib, unreal
+import json, math, os, random, importlib, unreal
 import movi_core
 importlib.reload(movi_core)
 
@@ -54,6 +54,9 @@ def prepara(w):
     a["detriti"] = list(GS.get_all_actors_with_tag(w, "movi_detrito"))
     a["fumo"] = list(GS.get_all_actors_with_tag(w, "movi_fumo"))
     a["fumo_v"] = [(random.uniform(-90, 90), random.uniform(-90, 90), random.uniform(20, 110)) for _ in a["fumo"]]
+    a["cattura"] = uno(w, "movi_cattura")
+    S["rt"] = unreal.RenderingLibrary.create_render_target2d(w, 1920, 1080, unreal.TextureRenderTargetFormat.RTF_RGBA8)
+    a["cattura"].capture_component2d.set_editor_property("texture_target", S["rt"])
     S["a"] = a
     S["movi"] = movi_core.MoVi(list(bersaglio_vero(0.0)), [560.0, 0.0, 0.0])
 
@@ -92,8 +95,8 @@ def passo(dt_muro):
         for i, d in enumerate(a["detriti"]):
             c = d.static_mesh_component
             d.set_actor_hidden_in_game(False)
-            d.set_actor_location(V(P_E[0] + random.uniform(-90, 90), P_E[1] + random.uniform(-90, 90),
-                                   P_E[2] + random.uniform(-90, 90)), False, True)
+            d.set_actor_location(V(P_E[0] + random.uniform(-260, 260), P_E[1] + random.uniform(-260, 260),
+                                   P_E[2] + random.uniform(-260, 260)), False, True)
             c.set_enable_gravity(True)
             c.wake_all_rigid_bodies()
             u = [random.gauss(0, 1) for _ in range(3)]
@@ -133,10 +136,8 @@ def passo(dt_muro):
     visto = r["stato"] == "visto"
     a["regione"].set_actor_location(V(*r["pos"]), False, False)
     a["regione"].set_actor_scale3d(V(*[max(2.4, r["raggio"] / 50.0)] * 3))
-    a["testo_stato"].set_actor_location(V(r["pos"][0], r["pos"][1], r["pos"][2] + 150 + max(120.0, r["raggio"])), False, False)
-    a["testo_stato"].text_render.set_text(
-        "VISTO" if visto else "NON VISTO · È QUI DENTRO · confidenza %d %%" % round(100 * r["confidenza"]))
-    a["testo_stato"].text_render.set_text_render_color(unreal.Color(200, 60, 10, 255) if visto else unreal.Color(255, 110, 10, 255))
+    for kk in ("testo_stato", "testo_avviso", "testo_tempo"):
+        a[kk].text_render.set_text("")
     m = [(port[i] + r["pos"][i]) / 2 for i in range(3)]
     d = [r["pos"][i] - port[i] for i in range(3)]
     L = math.sqrt(sum(x * x for x in d))
@@ -149,18 +150,34 @@ def passo(dt_muro):
     a["avviso"].set_actor_location(V(*port), False, False)
     a["avviso"].set_actor_scale3d(V(*[min(11.0, 3.0 + 9.0 * max(tau, 0.0))] * 3))
     vicino = min([math.dist(port, (lambda p: (p.x, p.y, p.z))(x.get_actor_location())) for x in a["detriti"]] or [9e9])
-    a["testo_avviso"].set_actor_location(V(port[0], port[1], port[2] + 330), False, False)
-    a["testo_avviso"].text_render.set_text(
-        ("AVVISO INVIATO · evento vicino · radar %s · camera %s" % (r["radar"], r["camera"])) if avviso else
-        ("sensori ripristinati · bersaglio ripreso" if tau > 2.8 else ""))
-    a["testo_tempo"].set_actor_location(V(port[0], port[1], port[2] - 170), False, False)
-    a["testo_tempo"].text_render.set_text(("tempo x%.2f" % k).replace(".", ",") +
-                                          ("   frammento più vicino %d m" % round(vicino / 100) if 0 <= tau < 2.8 else ""))
-    ues.set_level_viewport_camera_info(V(port[0] + CAM[0], port[1] + CAM[1], CAM[2]), R(0, -16, -45))
+    # camera: gira attorno al drone per mostrare la scena in 3D; durante l'accecamento passa in soggettiva
+    pov = 0.75 <= tau < 2.75
+    if pov:
+        cam = (port[0] + 150.0, port[1], port[2] + 70.0)
+        dd = [r["pos"][i] - cam[i] for i in range(3)]
+        LL = math.sqrt(sum(x * x for x in dd))
+        rot = R(0, math.degrees(math.asin(dd[2] / LL)), math.degrees(math.atan2(dd[1], dd[0])) - 14.0)
+    else:
+        ang = math.radians(118.0 - 16.0 * t)                 # l'angolo cambia nel tempo: orbita
+        raggio_cam = 1750.0
+        cam = (port[0] + raggio_cam * math.cos(ang) + 500.0, port[1] + raggio_cam * math.sin(ang), port[2] + 520.0 + 40.0 * t)
+        mira = (port[0] + 800.0, port[1] - 150.0, port[2] + 40.0)
+        dd = [mira[i] - cam[i] for i in range(3)]
+        LL = math.sqrt(sum(x * x for x in dd))
+        rot = R(0, math.degrees(math.asin(dd[2] / LL)), math.degrees(math.atan2(dd[1], dd[0])))
+    ues.set_level_viewport_camera_info(V(*cam), rot)
+    a["cattura"].set_actor_location_and_rotation(V(*cam), rot, False, True)
+    a["avviso"].set_actor_hidden_in_game((not avviso) or pov)
+    tr = S["movi"].traccia
+    S["riga"] = {"t": round(t, 3), "tau": round(tau, 3), "k": k, "pov": pov, "stato": r["stato"], "conf": r["confidenza"],
+                 "raggio": r["raggio"], "avviso": bool(avviso), "radar": r["radar"], "camera": r["camera"],
+                 "vicino_m": vicino / 100.0, "P": [[x.a, x.b, x.c] for x in tr.assi[:2]], "non_visto_da": r["non_visto_da"]}
 
     S["n"] += 1
-    if FOTO and S["n"] % 1 == 0:
-        unreal.AutomationLibrary.take_high_res_screenshot(1280, 720, "%s/f_%05d.png" % (FOTO, S["foto"]))
+    if FOTO and S["n"] % 2 == 0:
+        a["cattura"].capture_component2d.capture_scene()
+        unreal.RenderingLibrary.export_render_target(w, S["rt"], FOTO, "f_%05d.png" % S["foto"])
+        open(FOTO + "/stato.jsonl", "a").write(json.dumps(dict(S["riga"], f=S["foto"])) + "\n")
         S["foto"] += 1
     if t >= T_FINE:
         unreal.unregister_slate_post_tick_callback(S["h"]); S["h"] = None

@@ -67,3 +67,11 @@ video/voce/*
 !video/voce/*.sh
 !video/voce/*.txt
 !video/voce/*.md
+
+# ---------- tolti dal repository su richiesta (restano in locale) ----------
+/.claude/agents/
+/bozza_iniziale/
+/proposta/
+/sciame/
+/promptMare.txt
+/prepropostaEsterna.md
