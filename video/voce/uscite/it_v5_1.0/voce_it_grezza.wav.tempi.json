@@ -1,0 +1,222 @@
+[
+ {
+  "inizio": 0.15,
+  "fine": 1.366,
+  "testo": "Un piazzale."
+ },
+ {
+  "inizio": 1.416,
+  "fine": 2.355,
+  "testo": "Un hangar."
+ },
+ {
+  "inizio": 2.405,
+  "fine": 4.303,
+  "testo": "Due droni d'ispezione."
+ },
+ {
+  "inizio": 4.353,
+  "fine": 6.231,
+  "testo": "Un aereo in rullaggio."
+ },
+ {
+  "inizio": 6.281,
+  "fine": 8.606,
+  "testo": "Un drone scivola dietro l'hangar."
+ },
+ {
+  "inizio": 8.656,
+  "fine": 11.237,
+  "testo": "Che cosa deve dire lo schermo, adesso?"
+ },
+ {
+  "inizio": 11.687,
+  "fine": 15.314,
+  "testo": "Per ogni oggetto seguito, Movi dà una di tre risposte."
+ },
+ {
+  "inizio": 15.364,
+  "fine": 16.217,
+  "testo": "Lo vedo."
+ },
+ {
+  "inizio": 16.267,
+  "fine": 18.614,
+  "testo": "Non lo vedo: ecco dove può essere."
+ },
+ {
+  "inizio": 18.664,
+  "fine": 20.115,
+  "testo": "Oppure: non lo so."
+ },
+ {
+  "inizio": 20.165,
+  "fine": 23.962,
+  "testo": "Ciò che non ha osservato lo segna non verificato, mai vuoto."
+ },
+ {
+  "inizio": 24.012,
+  "fine": 29.751,
+  "testo": "Un avviso di possibile presenza resta acceso finché un sensore non torna a guardare."
+ },
+ {
+  "inizio": 30.201,
+  "fine": 35.47,
+  "testo": "Radar, lidar, camere visibili e termiche, e ciò che trasmettono aerei e droni."
+ },
+ {
+  "inizio": 35.52,
+  "fine": 38.72,
+  "testo": "Tutto simulato dalle schede tecniche pubbliche."
+ },
+ {
+  "inizio": 38.77,
+  "fine": 42.29,
+  "testo": "Ogni sensore ha i suoi punti ciechi, e Movi li disegna."
+ },
+ {
+  "inizio": 42.74,
+  "fine": 44.809,
+  "testo": "Nebbia, poi pioggia forte."
+ },
+ {
+  "inizio": 44.859,
+  "fine": 50.278,
+  "testo": "Per calcolo, la portata delle camere crolla, e Movi lo dichiara, sensore per sensore."
+ },
+ {
+  "inizio": 50.328,
+  "fine": 53.208,
+  "testo": "Resta solo il radar: ridondanza assente."
+ },
+ {
+  "inizio": 53.258,
+  "fine": 60.746,
+  "testo": "Se cade anche il radar, un guasto che introduciamo noi, l'affidabilità è persa: gli avvisi arriverebbero troppo tardi."
+ },
+ {
+  "inizio": 61.196,
+  "fine": 63.308,
+  "testo": "Due droni volano vicini."
+ },
+ {
+  "inizio": 63.358,
+  "fine": 66.771,
+  "testo": "Troppo vicini per separarli: tracce non risolte."
+ },
+ {
+  "inizio": 66.821,
+  "fine": 68.891,
+  "testo": "Evento: contatto, dedotto."
+ },
+ {
+  "inizio": 68.941,
+  "fine": 73.463,
+  "testo": "Si apre un volume di possibili detriti, che non si restringe mai da solo."
+ },
+ {
+  "inizio": 73.513,
+  "fine": 81.151,
+  "testo": "Il nostro punto debole: in simulazione, il contatto è stato dichiarato entro due secondi in un passaggio su sedici."
+ },
+ {
+  "inizio": 81.601,
+  "fine": 84.993,
+  "testo": "Un motore ha un'avaria in rullaggio, con una fiammata."
+ },
+ {
+  "inizio": 85.043,
+  "fine": 91.528,
+  "testo": "La fiammata acceca le camere: Movi le dichiara non affidabili, in trentadue passaggi su trentadue."
+ },
+ {
+  "inizio": 91.578,
+  "fine": 94.821,
+  "testo": "Nel modello, il solo radar vede ancora l'aereo."
+ },
+ {
+  "inizio": 94.871,
+  "fine": 97.089,
+  "testo": "Dietro il fumo: non osservato."
+ },
+ {
+  "inizio": 97.539,
+  "fine": 99.033,
+  "testo": "Prima, i limiti."
+ },
+ {
+  "inizio": 99.083,
+  "fine": 102.176,
+  "testo": "Tutto è simulato dalle schede tecniche pubbliche."
+ },
+ {
+  "inizio": 102.226,
+  "fine": 104.85,
+  "testo": "Quasi metà dei valori sono ipotesi."
+ },
+ {
+  "inizio": 104.9,
+  "fine": 106.884,
+  "testo": "Nessun sensore fisico."
+ },
+ {
+  "inizio": 106.934,
+  "fine": 109.515,
+  "testo": "Le classi sono etichettate a mano."
+ },
+ {
+  "inizio": 109.565,
+  "fine": 113.043,
+  "testo": "Le regole degli eventi non sono ancora nel prototipo."
+ },
+ {
+  "inizio": 113.093,
+  "fine": 116.847,
+  "testo": "Per gli aerei in volo, l'avviso non arriva ancora in tempo."
+ },
+ {
+  "inizio": 116.897,
+  "fine": 119.244,
+  "testo": "Ritardo totale: non misurato."
+ },
+ {
+  "inizio": 119.294,
+  "fine": 128.169,
+  "testo": "Che cosa regge, in simulazione: un drone nascosto dietro un edificio è stato annunciato in tempo in duecento passaggi su duecento."
+ },
+ {
+  "inizio": 128.219,
+  "fine": 131.931,
+  "testo": "Zero passaggi su seicento hanno perso quell'avviso."
+ },
+ {
+  "inizio": 132.381,
+  "fine": 141.277,
+  "testo": "Il nucleo viene dalla nostra versione a corto raggio: una persona dietro un ostacolo, una camera di profondità, le stesse tre risposte."
+ },
+ {
+  "inizio": 141.727,
+  "fine": 142.356,
+  "testo": "Movi."
+ },
+ {
+  "inizio": 142.406,
+  "fine": 145.905,
+  "testo": "Visto, non visto, non so: dichiarato per ogni traccia."
+ },
+ {
+  "inizio": 145.955,
+  "fine": 147.619,
+  "testo": "Osserva e avvisa."
+ },
+ {
+  "inizio": 147.669,
+  "fine": 149.802,
+  "testo": "Nessuna uscita è un comando."
+ },
+ {
+  "inizio": 149.852,
+  "fine": 152.348,
+  "testo": "Un progetto di esse di emme esse."
+ }
+]

@@ -1,0 +1,266 @@
+[
+ {
+  "inizio": 0.15,
+  "fine": 1.217,
+  "testo": "An apron.",
+  "scena": 1
+ },
+ {
+  "inizio": 1.567,
+  "fine": 2.548,
+  "testo": "A hangar.",
+  "scena": 1
+ },
+ {
+  "inizio": 2.898,
+  "fine": 4.669,
+  "testo": "Two inspection drones.",
+  "scena": 1
+ },
+ {
+  "inizio": 5.019,
+  "fine": 6.789,
+  "testo": "An aircraft taxiing.",
+  "scena": 1
+ },
+ {
+  "inizio": 7.139,
+  "fine": 9.529,
+  "testo": "One drone slips behind the hangar.",
+  "scena": 1
+ },
+ {
+  "inizio": 9.879,
+  "fine": 11.457,
+  "testo": "What should the screen say?",
+  "scena": 1
+ },
+ {
+  "inizio": 12.257,
+  "fine": 15.863,
+  "testo": "MoVi gives every tracked object one of three answers.",
+  "scena": 2
+ },
+ {
+  "inizio": 16.213,
+  "fine": 17.258,
+  "testo": "I see it.",
+  "scena": 2
+ },
+ {
+  "inizio": 17.608,
+  "fine": 20.147,
+  "testo": "I don't see it: here is where it can be.",
+  "scena": 2
+ },
+ {
+  "inizio": 20.497,
+  "fine": 21.819,
+  "testo": "Or: I don't know.",
+  "scena": 2
+ },
+ {
+  "inizio": 22.169,
+  "fine": 26.265,
+  "testo": "What it has not observed, it marks unverified, never empty.",
+  "scena": 2
+ },
+ {
+  "inizio": 26.615,
+  "fine": 30.839,
+  "testo": "A possible-presence warning stays on until a sensor looks again.",
+  "scena": 2
+ },
+ {
+  "inizio": 31.639,
+  "fine": 37.442,
+  "testo": "Radar, LiDAR, visible and thermal cameras, and what aircraft and drones broadcast.",
+  "scena": 3
+ },
+ {
+  "inizio": 37.792,
+  "fine": 40.501,
+  "testo": "All simulated from public data sheets.",
+  "scena": 3
+ },
+ {
+  "inizio": 40.851,
+  "fine": 44.35,
+  "testo": "Each sensor has blind spots, and MoVi draws them.",
+  "scena": 3
+ },
+ {
+  "inizio": 45.15,
+  "fine": 46.899,
+  "testo": "Fog, then heavy rain.",
+  "scena": 4
+ },
+ {
+  "inizio": 47.249,
+  "fine": 52.54,
+  "testo": "By calculation, the cameras' reach collapses, and MoVi declares it, per sensor.",
+  "scena": 4
+ },
+ {
+  "inizio": 52.89,
+  "fine": 55.919,
+  "testo": "Only the radar is left: no redundancy.",
+  "scena": 4
+ },
+ {
+  "inizio": 56.269,
+  "fine": 63.16,
+  "testo": "If the radar also fails, a fault we inject, reliability is lost: warnings would come too late.",
+  "scena": 4
+ },
+ {
+  "inizio": 63.96,
+  "fine": 65.923,
+  "testo": "Two drones fly close.",
+  "scena": 5
+ },
+ {
+  "inizio": 66.273,
+  "fine": 69.217,
+  "testo": "Too close to separate: unresolved tracks.",
+  "scena": 5
+ },
+ {
+  "inizio": 69.567,
+  "fine": 71.785,
+  "testo": "Event: contact, inferred.",
+  "scena": 5
+ },
+ {
+  "inizio": 72.135,
+  "fine": 76.146,
+  "testo": "A possible-debris volume opens, and never shrinks on its own.",
+  "scena": 5
+ },
+ {
+  "inizio": 76.496,
+  "fine": 83.6,
+  "testo": "Our weak point: in simulation, contact was declared within two seconds in one run out of sixteen.",
+  "scena": 5
+ },
+ {
+  "inizio": 84.4,
+  "fine": 88.283,
+  "testo": "An engine fails while the aircraft taxis, with a flash.",
+  "scena": 6
+ },
+ {
+  "inizio": 88.633,
+  "fine": 95.395,
+  "testo": "The flash blinds the cameras: MoVi marks them unreliable, in thirty-two runs out of thirty-two.",
+  "scena": 6
+ },
+ {
+  "inizio": 95.745,
+  "fine": 99.159,
+  "testo": "In the model, the radar alone still sees the aircraft.",
+  "scena": 6
+ },
+ {
+  "inizio": 99.509,
+  "fine": 101.834,
+  "testo": "Behind the smoke: not observed.",
+  "scena": 6
+ },
+ {
+  "inizio": 102.634,
+  "fine": 103.999,
+  "testo": "First, the limits.",
+  "scena": 7
+ },
+ {
+  "inizio": 104.349,
+  "fine": 107.592,
+  "testo": "Everything is simulated from public data sheets.",
+  "scena": 7
+ },
+ {
+  "inizio": 107.942,
+  "fine": 110.651,
+  "testo": "Almost half the values are assumed.",
+  "scena": 7
+ },
+ {
+  "inizio": 111.001,
+  "fine": 112.601,
+  "testo": "No physical sensor.",
+  "scena": 7
+ },
+ {
+  "inizio": 112.951,
+  "fine": 115.213,
+  "testo": "Classes are labelled by hand.",
+  "scena": 7
+ },
+ {
+  "inizio": 115.563,
+  "fine": 118.613,
+  "testo": "Event rules are not yet in the prototype.",
+  "scena": 7
+ },
+ {
+  "inizio": 118.963,
+  "fine": 122.547,
+  "testo": "For aircraft in flight, warnings are not yet in time.",
+  "scena": 7
+ },
+ {
+  "inizio": 122.897,
+  "fine": 124.945,
+  "testo": "Total delay: not measured.",
+  "scena": 7
+ },
+ {
+  "inizio": 125.295,
+  "fine": 133.807,
+  "testo": "What holds, in simulation: a drone hidden behind a building was announced in time in two hundred passes out of two hundred.",
+  "scena": 7
+ },
+ {
+  "inizio": 134.157,
+  "fine": 137.805,
+  "testo": "Zero passes out of six hundred lost that warning.",
+  "scena": 7
+ },
+ {
+  "inizio": 138.605,
+  "fine": 146.157,
+  "testo": "The core comes from our short-range version: a person behind an obstacle, a depth camera, the same three answers.",
+  "scena": 8
+ },
+ {
+  "inizio": 146.957,
+  "fine": 147.832,
+  "testo": "MoVi.",
+  "scena": 9
+ },
+ {
+  "inizio": 148.182,
+  "fine": 151.723,
+  "testo": "Seen, not seen, unknown: declared for every track.",
+  "scena": 9
+ },
+ {
+  "inizio": 152.073,
+  "fine": 154.143,
+  "testo": "It observes and warns.",
+  "scena": 9
+ },
+ {
+  "inizio": 154.493,
+  "fine": 156.626,
+  "testo": "No output is a command.",
+  "scena": 9
+ },
+ {
+  "inizio": 156.976,
+  "fine": 158.917,
+  "testo": "By SDMs.",
+  "scena": 9
+ }
+]

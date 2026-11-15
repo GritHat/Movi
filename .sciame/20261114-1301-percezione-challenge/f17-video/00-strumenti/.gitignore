@@ -1,0 +1,7 @@
+hyperframes/browser/
+hyperframes/cli/node_modules/
+hyperframes/scaricati/
+voce/modelli/
+voce/venv/
+voce/ambiente/
+**/node_modules/

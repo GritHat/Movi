@@ -4,3 +4,5 @@ progetto/.hyperframes/
 progetto/renders/
 rendering/controllo_*/
 progetto/dati_sviluppo/
+voce/*.wav
+voce/**/*.wav

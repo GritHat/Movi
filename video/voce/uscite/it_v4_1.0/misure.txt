@@ -1,0 +1,30 @@
+{"lingua": "it", "parole": 359, "scene": 9, "parole_per_scena": [23, 48, 30, 42, 49, 38, 85, 22, 22], "cifre_usate": ["E1-X", "E2-C", "L-46", "STATO-1", "L-VOLO", "A1", "CIFRA-V2"]}
+{"uscita": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/voce/uscite/it_v4_1.0/voce_it_grezza.wav", "voce": "im_nicola", "picco_grezzo": 0.881, "durata_s": 169.062, "caricamento_s": 0.63, "generazione_s": 94.03, "rtf": 0.556}
+voce_it.wav | pcm_s16le,48000,1 | 169.06 s | 128 p/min | picco -3.000097 dBFS | RMS -21.182737 dB | -21.2 LUFS | saturi 0 | DC -0.000270 | testa 0.199146 s | coda 0.45 s | pausa interna max 1.26 s | silenzi>0,6 s: 35
+silenzio>1s: [Parsed_silencedetect_0 @ 0x7fadb4003c40] silence_start: 12.551375
+silenzio>1s: [Parsed_silencedetect_0 @ 0x7fadb4003c40] silence_end: 13.634042 | silence_duration: 1.082667
+silenzio>1s: [Parsed_silencedetect_0 @ 0x7fadb4003c40] silence_start: 32.739479
+silenzio>1s: [Parsed_silencedetect_0 @ 0x7fadb4003c40] silence_end: 33.992479 | silence_duration: 1.253
+silenzio>1s: [Parsed_silencedetect_0 @ 0x7fadb4003c40] silence_start: 46.248625
+silenzio>1s: [Parsed_silencedetect_0 @ 0x7fadb4003c40] silence_end: 47.44875 | silence_duration: 1.200125
+silenzio>1s: [Parsed_silencedetect_0 @ 0x7fadb4003c40] silence_start: 65.947229
+silenzio>1s: [Parsed_silencedetect_0 @ 0x7fadb4003c40] silence_end: 67.167333 | silence_duration: 1.220104
+silenzio>1s: [Parsed_silencedetect_0 @ 0x7fadb4003c40] silence_start: 88.502917
+silenzio>1s: [Parsed_silencedetect_0 @ 0x7fadb4003c40] silence_end: 89.762875 | silence_duration: 1.259958
+silenzio>1s: [Parsed_silencedetect_0 @ 0x7fadb4003c40] silence_start: 106.224896
+silenzio>1s: [Parsed_silencedetect_0 @ 0x7fadb4003c40] silence_end: 107.438771 | silence_duration: 1.213875
+silenzio>1s: [Parsed_silencedetect_0 @ 0x7fadb4003c40] silence_start: 146.378271
+silenzio>1s: [Parsed_silencedetect_0 @ 0x7fadb4003c40] silence_end: 147.481021 | silence_duration: 1.10275
+silenzio>1s: [Parsed_silencedetect_0 @ 0x7fadb4003c40] silence_start: 155.934333
+silenzio>1s: [Parsed_silencedetect_0 @ 0x7fadb4003c40] silence_end: 157.137833 | silence_duration: 1.2035
+scena | piano s | voce s | scena s | parole | parole/min
+1 | 12.0 | 12.59 | 13.59 | 23 | 110  <-- sfora il piano
+2 | 27.0 | 19.56 | 27.00 | 48 | 147
+3 | 16.0 | 12.69 | 16.00 | 30 | 142
+4 | 21.0 | 18.91 | 21.00 | 42 | 133
+5 | 22.0 | 21.77 | 22.77 | 49 | 135  <-- sfora il piano
+6 | 20.0 | 16.86 | 20.00 | 38 | 135
+7 | 30.0 | 39.27 | 40.27 | 85 | 130  <-- sfora il piano
+8 | 11.0 | 8.90 | 11.00 | 22 | 148
+9 | 13.0 | 11.82 | 13.00 | 22 | 112
+TOTALE montaggio (max(piano, 0,4+voce+0,6)): 184.63 s

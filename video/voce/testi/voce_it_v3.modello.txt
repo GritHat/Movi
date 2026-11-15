@@ -1,0 +1,17 @@
+Un piazzale. Un hangar. Due droni d'ispezione. Un aereo in rullaggio. Un drone scivola dietro l'hangar. Che cosa deve dire lo schermo, adesso?
+
+Per ogni oggetto seguito, MoVi dà una di tre risposte. Lo vedo. Non lo vedo: ecco dove può essere. Oppure: non lo so. Ciò che non ha osservato lo segna non verificato, mai vuoto. Un avviso di possibile presenza resta acceso finché un sensore non torna a guardare.
+
+Radar, LiDAR, camere visibili e termiche, e ciò che trasmettono aerei e droni. Tutto simulato dalle schede tecniche pubbliche. Ogni sensore ha i suoi punti ciechi, e MoVi li disegna.
+
+Nebbia, poi pioggia forte. Per calcolo, la portata delle camere crolla, e MoVi lo dichiara, sensore per sensore. Resta solo il radar: ridondanza assente. Se cade anche il radar, un guasto che introduciamo noi, l'affidabilità è persa: gli avvisi arriverebbero troppo tardi.
+
+Due droni volano vicini. Troppo vicini per separarli: tracce non risolte. Evento: contatto, dedotto. Si apre un volume di possibili detriti, che non si restringe mai da solo. {{E1-X}}
+
+Un motore ha un'avaria in rullaggio, con una fiammata. {{E2-C}} Nel modello, il solo radar vede ancora l'aereo. Dietro il fumo: non osservato.
+
+Prima, i limiti. Tutto è simulato dalle schede tecniche pubbliche. {{L-46}} Nessun sensore fisico. Le classi sono etichettate a mano. {{STATO-1}} {{L-VOLO}} Ritardo totale: non misurato. {{A1}} {{CIFRA-V2}}
+
+Il nucleo viene dalla nostra versione a corto raggio: una persona dietro un ostacolo, una camera di profondità, le stesse tre risposte.
+
+MoVi. Visto, non visto, non so: dichiarato per ogni traccia. Osserva e avvisa. Nessuna uscita è un comando. Un progetto di SDMs.

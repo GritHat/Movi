@@ -1,0 +1,222 @@
+[
+ {
+  "inizio": 0.15,
+  "fine": 1.217,
+  "testo": "An apron."
+ },
+ {
+  "inizio": 1.567,
+  "fine": 2.548,
+  "testo": "A hangar."
+ },
+ {
+  "inizio": 2.898,
+  "fine": 4.669,
+  "testo": "Two inspection drones."
+ },
+ {
+  "inizio": 5.019,
+  "fine": 6.789,
+  "testo": "An aircraft taxiing."
+ },
+ {
+  "inizio": 7.139,
+  "fine": 9.529,
+  "testo": "One drone slips behind the hangar."
+ },
+ {
+  "inizio": 9.879,
+  "fine": 11.457,
+  "testo": "What should the screen say?"
+ },
+ {
+  "inizio": 12.257,
+  "fine": 15.863,
+  "testo": "Mowvee gives every tracked object one of three answers."
+ },
+ {
+  "inizio": 16.213,
+  "fine": 17.258,
+  "testo": "I see it."
+ },
+ {
+  "inizio": 17.608,
+  "fine": 20.147,
+  "testo": "I don't see it: here is where it can be."
+ },
+ {
+  "inizio": 20.497,
+  "fine": 21.819,
+  "testo": "Or: I don't know."
+ },
+ {
+  "inizio": 22.169,
+  "fine": 26.265,
+  "testo": "What it has not observed, it marks unverified, never empty."
+ },
+ {
+  "inizio": 26.615,
+  "fine": 30.839,
+  "testo": "A possible-presence warning stays on until a sensor looks again."
+ },
+ {
+  "inizio": 31.639,
+  "fine": 37.442,
+  "testo": "Radar, LiDAR, visible and thermal cameras, and what aircraft and drones broadcast."
+ },
+ {
+  "inizio": 37.792,
+  "fine": 40.501,
+  "testo": "All simulated from public data sheets."
+ },
+ {
+  "inizio": 40.851,
+  "fine": 44.35,
+  "testo": "Each sensor has blind spots, and Mowvee draws them."
+ },
+ {
+  "inizio": 45.15,
+  "fine": 46.899,
+  "testo": "Fog, then heavy rain."
+ },
+ {
+  "inizio": 47.249,
+  "fine": 52.54,
+  "testo": "By calculation, the cameras' reach collapses, and Mowvee declares it, per sensor."
+ },
+ {
+  "inizio": 52.89,
+  "fine": 55.919,
+  "testo": "Only the radar is left: no redundancy."
+ },
+ {
+  "inizio": 56.269,
+  "fine": 63.16,
+  "testo": "If the radar also fails, a fault we inject, reliability is lost: warnings would come too late."
+ },
+ {
+  "inizio": 63.96,
+  "fine": 65.923,
+  "testo": "Two drones fly close."
+ },
+ {
+  "inizio": 66.273,
+  "fine": 69.217,
+  "testo": "Too close to separate: unresolved tracks."
+ },
+ {
+  "inizio": 69.567,
+  "fine": 71.785,
+  "testo": "Event: contact, inferred."
+ },
+ {
+  "inizio": 72.135,
+  "fine": 76.146,
+  "testo": "A possible-debris volume opens, and never shrinks on its own."
+ },
+ {
+  "inizio": 76.496,
+  "fine": 83.6,
+  "testo": "Our weak point: in simulation, contact was declared within two seconds in one run out of sixteen."
+ },
+ {
+  "inizio": 84.4,
+  "fine": 87.643,
+  "testo": "An engine fails during taxi, with a flash."
+ },
+ {
+  "inizio": 87.993,
+  "fine": 94.755,
+  "testo": "The flash blinds the cameras: Mowvee marks them unreliable, in thirty-two runs out of thirty-two."
+ },
+ {
+  "inizio": 95.105,
+  "fine": 98.519,
+  "testo": "In the model, the radar alone still sees the aircraft."
+ },
+ {
+  "inizio": 98.869,
+  "fine": 101.194,
+  "testo": "Behind the smoke: not observed."
+ },
+ {
+  "inizio": 101.994,
+  "fine": 103.359,
+  "testo": "First, the limits."
+ },
+ {
+  "inizio": 103.709,
+  "fine": 106.952,
+  "testo": "Everything is simulated from public data sheets."
+ },
+ {
+  "inizio": 107.302,
+  "fine": 110.011,
+  "testo": "Almost half the values are assumed."
+ },
+ {
+  "inizio": 110.361,
+  "fine": 111.961,
+  "testo": "No physical sensor."
+ },
+ {
+  "inizio": 112.311,
+  "fine": 114.573,
+  "testo": "Classes are labelled by hand."
+ },
+ {
+  "inizio": 114.923,
+  "fine": 117.973,
+  "testo": "Event rules are not yet in the prototype."
+ },
+ {
+  "inizio": 118.323,
+  "fine": 121.907,
+  "testo": "For aircraft in flight, warnings are not yet in time."
+ },
+ {
+  "inizio": 122.257,
+  "fine": 124.305,
+  "testo": "Total delay: not measured."
+ },
+ {
+  "inizio": 124.655,
+  "fine": 133.167,
+  "testo": "What holds, in simulation: a drone hidden behind a building was announced in time in two hundred passes out of two hundred."
+ },
+ {
+  "inizio": 133.517,
+  "fine": 137.165,
+  "testo": "Zero passes out of six hundred lost that warning."
+ },
+ {
+  "inizio": 137.965,
+  "fine": 145.517,
+  "testo": "The core comes from our short-range version: a person behind an obstacle, a depth camera, the same three answers."
+ },
+ {
+  "inizio": 146.317,
+  "fine": 147.192,
+  "testo": "Mowvee."
+ },
+ {
+  "inizio": 147.542,
+  "fine": 151.083,
+  "testo": "Seen, not seen, unknown: declared for every track."
+ },
+ {
+  "inizio": 151.433,
+  "fine": 153.503,
+  "testo": "It observes and warns."
+ },
+ {
+  "inizio": 153.853,
+  "fine": 155.986,
+  "testo": "No output is a command."
+ },
+ {
+  "inizio": 156.336,
+  "fine": 158.619,
+  "testo": "A project by S D M S."
+ }
+]
