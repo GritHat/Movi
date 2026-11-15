@@ -1,0 +1,1 @@
+I sensori si attivano: radar, camera, infrarosso. Un solo nucleo ascolta.

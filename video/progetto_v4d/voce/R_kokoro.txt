@@ -1,0 +1,1 @@
+Sotto c'è una catena a cinque strati: sensori, fusione, stima a più modelli, mappa a stati, avviso. Pronta per hardware dedicato.

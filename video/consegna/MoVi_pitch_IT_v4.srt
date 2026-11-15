@@ -1,0 +1,236 @@
+1
+00:00:00,250 --> 00:00:02,430
+Un drone entra in una nuvola.
+
+2
+00:00:02,470 --> 00:00:04,790
+Per molti sistemi, non c’è più.
+
+3
+00:00:04,830 --> 00:00:07,780
+Ma ciò che smetti di vedere è ancora lì.
+
+4
+00:00:08,120 --> 00:00:10,180
+MoVi è un sistema di percezione
+
+5
+00:00:10,220 --> 00:00:12,160
+per veicoli senza equipaggio.
+
+6
+00:00:12,200 --> 00:00:14,690
+Tiene traccia di ciò che non vede più:
+
+7
+00:00:14,730 --> 00:00:16,610
+una regione dove può essere,
+
+8
+00:00:16,650 --> 00:00:19,140
+con una confidenza che cala nel tempo.
+
+9
+00:00:19,480 --> 00:00:23,080
+Dove non ha guardato, MoVi non dice mai «libero».
+
+10
+00:00:23,120 --> 00:00:25,040
+Dice: presenza possibile.
+
+11
+00:00:25,480 --> 00:00:28,150
+Primo caso: volo ad alta velocità.
+
+12
+00:00:28,190 --> 00:00:30,930
+Un’avaria improvvisa, una fiammata.
+
+13
+00:00:31,270 --> 00:00:32,840
+Rallentiamo il tempo.
+
+14
+00:00:32,880 --> 00:00:35,650
+In sessanta prove simulate su sessanta,
+
+15
+00:00:35,690 --> 00:00:38,530
+MoVi dichiara l’evento entro un secondo,
+
+16
+00:00:38,570 --> 00:00:41,410
+e che le camere non sono più affidabili.
+
+17
+00:00:41,750 --> 00:00:45,040
+E non dice mai «libero» dove c’è un frammento.
+
+18
+00:00:45,750 --> 00:00:49,940
+Secondo caso. Un drone segue un oggetto veloce.
+
+19
+00:00:50,290 --> 00:00:52,540
+Accanto, due droni si scontrano:
+
+20
+00:00:52,580 --> 00:00:54,110
+fuoco, fumo, detriti.
+
+21
+00:00:54,450 --> 00:00:56,190
+I sensori si attivano:
+
+22
+00:00:56,230 --> 00:00:58,240
+radar, camera, infrarosso.
+
+23
+00:00:58,280 --> 00:01:00,090
+Un solo nucleo ascolta.
+
+24
+00:01:00,430 --> 00:01:03,020
+Guardiamo con gli occhi del drone.
+
+25
+00:01:03,360 --> 00:01:06,390
+La fusione: tre sensori, un solo quadro.
+
+26
+00:01:07,660 --> 00:01:09,940
+La stima, con un filtro di Kalman,
+
+27
+00:01:09,980 --> 00:01:12,440
+prevede dove può essere il bersaglio.
+
+28
+00:01:12,780 --> 00:01:14,770
+Il fumo acceca i sensori.
+
+29
+00:01:14,810 --> 00:01:18,680
+La confidenza cala, secondo una formula dimostrata.
+
+30
+00:01:19,020 --> 00:01:21,260
+Ogni punto ha uno stato: lo vedo;
+
+31
+00:01:21,300 --> 00:01:23,550
+non lo vedo, ma è qui; non lo so.
+
+32
+00:01:23,890 --> 00:01:26,650
+Il drone viene avvisato subito.
+
+33
+00:01:28,290 --> 00:01:31,980
+Poi i sensori tornano, e MoVi ritrova il bersaglio.
+
+34
+00:01:32,590 --> 00:01:34,970
+Con l’ultima correzione, in prova,
+
+35
+00:01:35,010 --> 00:01:37,910
+l’avviso arriva prima del primo frammento.
+
+36
+00:01:38,240 --> 00:01:41,550
+Cinquantanove prove simulate su cinquantanove.
+
+37
+00:01:41,590 --> 00:01:44,010
+E la regione del bersaglio resta,
+
+38
+00:01:44,050 --> 00:01:45,650
+sessanta su sessanta.
+
+39
+00:01:46,000 --> 00:01:48,420
+Sotto, una catena a cinque strati:
+
+40
+00:01:48,460 --> 00:01:51,740
+sensori, fusione, stima, mappa a stati, avviso.
+
+41
+00:01:51,780 --> 00:01:53,860
+Pronta per hardware dedicato.
+
+42
+00:01:54,200 --> 00:01:56,870
+Dietro c’è una ricerca bibliografica,
+
+43
+00:01:56,910 --> 00:01:58,830
+matematica e sperimentale:
+
+44
+00:01:58,870 --> 00:02:02,680
+oltre quattrocento riferimenti, e un documento tecnico
+
+45
+00:02:02,720 --> 00:02:06,470
+di oltre cento pagine, con dimostrazioni e risultati.
+
+46
+00:02:06,810 --> 00:02:08,270
+Può salvare vite.
+
+47
+00:02:08,310 --> 00:02:11,810
+Una persona non vedente, avvisata dell’auto.
+
+48
+00:02:12,150 --> 00:02:16,040
+Un braccio robotico che si ferma prima dell’operatore.
+
+49
+00:02:16,380 --> 00:02:18,310
+Un muletto automatico che sa
+
+50
+00:02:18,350 --> 00:02:20,290
+di chi è dietro lo scaffale.
+
+51
+00:02:20,630 --> 00:02:24,070
+Un’auto che ricorda il pedone dietro il furgone.
+
+52
+00:02:24,410 --> 00:02:28,000
+Una pattuglia che non perde di vista l’auto che segue.
+
+53
+00:02:28,330 --> 00:02:30,810
+Un satellite che trova il frammento
+
+54
+00:02:30,850 --> 00:02:32,660
+pericoloso fra i detriti.
+
+55
+00:02:33,010 --> 00:02:36,130
+Un drone veloce, nel fumo e nel maltempo.
+
+56
+00:02:36,510 --> 00:02:38,460
+Una nave nella nebbia.
+
+57
+00:02:38,500 --> 00:02:40,920
+Sono applicazioni possibili.
+
+58
+00:02:41,250 --> 00:02:44,670
+MoVi tiene traccia di ciò che smette di vedere.
+
+59
+00:02:44,710 --> 00:02:48,340
+Del gruppo SDMs, per The Big Hack duemilaventisei.
+

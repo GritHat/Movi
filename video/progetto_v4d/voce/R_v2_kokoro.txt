@@ -1,0 +1,1 @@
+Sotto, una catena a cinque strati: sensori, fusione, stima, mappa a stati, avviso. Pronta per hardware dedicato.

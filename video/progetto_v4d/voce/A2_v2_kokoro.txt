@@ -1,0 +1,1 @@
+Movi è un sistema di percezione per veicoli senza equipaggio. Tiene traccia di ciò che non vede più: una regione dove può essere, con una confidenza che cala nel tempo.

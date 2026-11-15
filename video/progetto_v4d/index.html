@@ -1,0 +1,337 @@
+<!doctype html>
+<!-- MoVi pitch v4, CAMPIONE di stile (62 s). Stile chiaro, illustrazioni vettoriali. Tutto ciò che si vede è un'illustrazione; le cifre vengono da video/consegna/MoVi_registro_cifre_final.md -->
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1920, height=1080">
+<title>MoVi v4 sample</title>
+<style>
+  @font-face { font-family: "InterLocale"; src: url("assets/fonts/InterVariable.woff2") format("woff2"); font-weight: 100 900; }
+  html, body { margin: 0; padding: 0; background: #F7FAFE; width: 1920px; height: 1080px; overflow: hidden; }
+  svg { display: block; font-family: "InterLocale", sans-serif; }
+  text { font-family: "InterLocale", sans-serif; }
+</style>
+<script src="assets/vendor/gsap.min.js"></script>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="169.74" data-width="1920" data-height="1080" data-fps="30">
+<div id="tela" class="clip" data-start="0" data-duration="169.74">
+<svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#CFE4FB"/><stop offset="1" stop-color="#F7FAFE"/></linearGradient>
+  <linearGradient id="space" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E9E6FB"/><stop offset="1" stop-color="#F7FAFE"/></linearGradient>
+  <radialGradient id="reg"><stop offset="0" stop-color="#1F6FEB" stop-opacity=".30"/><stop offset="1" stop-color="#1F6FEB" stop-opacity=".10"/></radialGradient>
+  <filter id="sh" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#0B1F3A" flood-opacity=".14"/></filter>
+  <filter id="bl"><feGaussianBlur stdDeviation="6"/></filter>
+</defs>
+<rect width="1920" height="1080" fill="#F7FAFE"/>
+<g id="stage"></g>
+<text x="60" y="1048" font-size="22" font-weight="500" fill="#5B6B82" letter-spacing="1.5">PROTOTIPO SIMULATO · ILLUSTRAZIONE</text>
+</svg>
+</div>
+</div>
+<script>
+const INK="#0B1F3A", BLUE="#1F6FEB", TEAL="#00A389", AMB="#FF8A1F", RED="#E5484D", GREY="#5B6B82";
+let seed=7; const rnd=()=>{seed=(seed*1664525+1013904223)%4294967296;return seed/4294967296;};
+const drone=(c)=>`<g fill="${c}"><rect x="-46" y="-14" width="92" height="30" rx="14"/><rect x="-82" y="-12" width="164" height="8" rx="4"/><rect x="-82" y="-26" width="7" height="18" rx="3"/><rect x="75" y="-26" width="7" height="18" rx="3"/><ellipse cx="-78" cy="-28" rx="36" ry="4.5" opacity=".5"/><ellipse cx="78" cy="-28" rx="36" ry="4.5" opacity=".5"/><rect x="-30" y="14" width="5" height="14" rx="2"/><rect x="25" y="14" width="5" height="14" rx="2"/><circle cx="24" cy="1" r="7" fill="#fff"/></g>`;
+const jet=(c)=>`<g fill="${c}"><path d="M-95,0 L-30,-13 L60,-9 L105,0 L60,9 L-30,13 Z"/><path d="M-5,-6 L-60,-58 L-34,-58 L40,-6 Z"/><path d="M-5,6 L-60,58 L-34,58 L40,6 Z"/><path d="M-95,0 L-112,-26 L-96,-26 L-70,-4 Z"/><path d="M-95,0 L-112,26 L-96,26 L-70,4 Z"/></g>`;
+const cloud=(id,x,y,s)=>`<g id="${id}" transform="translate(${x},${y}) scale(${s})"><g fill="#fff" filter="url(#sh)"><ellipse cx="0" cy="0" rx="210" ry="70"/><circle cx="-90" cy="-45" r="70"/><circle cx="10" cy="-80" r="95"/><circle cx="110" cy="-40" r="65"/></g></g>`;
+const pill=(id,x,y,w,txt,c)=>`<g id="${id}" transform="translate(${x},${y})"><rect width="${w}" height="74" rx="37" fill="#fff" filter="url(#sh)"/><circle cx="38" cy="37" r="11" fill="${c}"/><text x="64" y="48" font-size="30" font-weight="600" fill="${INK}">${txt}</text></g>`;
+const person=(c)=>`<g fill="${c}"><circle cx="0" cy="-88" r="17"/><rect x="-17" y="-66" width="34" height="62" rx="14"/><rect x="-15" y="-12" width="12" height="52" rx="6"/><rect x="3" y="-12" width="12" height="52" rx="6"/></g>`;
+const car=(c)=>`<g><path fill="${c}" d="M-130,10 Q-130,-22 -96,-26 L-62,-62 Q-54,-70 -40,-70 L48,-70 Q62,-70 72,-60 L100,-28 Q134,-22 134,6 L134,22 Q134,30 126,30 L-122,30 Q-130,30 -130,22 Z"/><path fill="#DCEBFB" d="M-52,-58 L-8,-58 L-8,-28 L-80,-28 Z M4,-58 L46,-58 Q54,-58 60,-52 L82,-28 L4,-28 Z"/><circle cx="-78" cy="32" r="24" fill="${INK}"/><circle cx="82" cy="32" r="24" fill="${INK}"/><circle cx="-78" cy="32" r="10" fill="#fff"/><circle cx="82" cy="32" r="10" fill="#fff"/></g>`;
+const region=(id,x,y,rx,ry)=>`<g id="${id}" transform="translate(${x},${y})"><ellipse rx="${rx}" ry="${ry}" fill="url(#reg)"/><ellipse rx="${rx}" ry="${ry}" fill="none" stroke="${BLUE}" stroke-width="5" stroke-dasharray="18 12"/></g>`;
+const chip=(id,x,y,txt,c,w)=>`<g id="${id}" transform="translate(${x},${y})"><rect width="${w}" height="60" rx="14" fill="${c}"/><text x="${w/2}" y="41" text-anchor="middle" font-size="28" font-weight="700" fill="#fff" letter-spacing=".5">${txt}</text></g>`;
+const caps=[]; const cap=(t0,t1,txt)=>{return "";caps.push([t0,t1]);return `<text id="cap${caps.length-1}" x="960" y="975" text-anchor="middle" font-size="42" font-weight="600" fill="${INK}">${txt}</text>`;};
+const head=(id,x,y,l1,l2,size)=>`<g id="${id}"><text x="${x}" y="${y}" font-size="${size}" font-weight="800" fill="${INK}" letter-spacing="-2">${l1}</text><text x="${x}" y="${y+size*1.1}" font-size="${size}" font-weight="800" fill="${BLUE}" letter-spacing="-2">${l2}</text></g>`;
+
+const D=169.74,T2=7.87,TK=19.23,TF=25.23,TF2=31.02,TF3=41.5,TH=45.5,TC=50.04,TZ=54.2,TP=60.18,S0=0,ST=0,TW=92.34,TS=97.99,TR=105.75,TI=113.95,TE=161.0;
+const TU=[126.56, 131.9, 136.13, 140.38, 144.16, 148.08, 152.76, 156.26];
+const TS2=TU[0],TS1=TU[3],TS3=TU[5];
+const SUBS=[[0.25, 2.43, "Un drone entra in una nuvola."], [2.47, 4.79, "Per molti sistemi, non c’è più."], [4.83, 7.78, "Ma ciò che smetti di vedere è ancora lì."], [8.12, 10.18, "MoVi è un sistema di percezione"], [10.22, 12.16, "per veicoli senza equipaggio."], [12.2, 14.69, "Tiene traccia di ciò che non vede più:"], [14.73, 16.61, "una regione dove può essere,"], [16.65, 19.14, "con una confidenza che cala nel tempo."], [19.48, 23.08, "Dove non ha guardato, MoVi non dice mai «libero»."], [23.12, 25.04, "Dice: presenza possibile."], [25.48, 28.15, "Primo caso: volo ad alta velocità."], [28.19, 30.93, "Un’avaria improvvisa, una fiammata."], [31.27, 32.84, "Rallentiamo il tempo."], [32.88, 35.65, "In sessanta prove simulate su sessanta,"], [35.69, 38.53, "MoVi dichiara l’evento entro un secondo,"], [38.57, 41.41, "e che le camere non sono più affidabili."], [41.75, 45.04, "E non dice mai «libero» dove c’è un frammento."], [45.75, 49.94, "Secondo caso. Un drone segue un oggetto veloce."], [50.29, 52.54, "Accanto, due droni si scontrano:"], [52.58, 54.11, "fuoco, fumo, detriti."], [54.45, 56.19, "I sensori si attivano:"], [56.23, 58.24, "radar, camera, infrarosso."], [58.28, 60.09, "Un solo nucleo ascolta."], [60.43, 63.02, "Guardiamo con gli occhi del drone."], [63.36, 66.39, "La fusione: tre sensori, un solo quadro."], [67.66, 69.94, "La stima, con un filtro di Kalman,"], [69.98, 72.44, "prevede dove può essere il bersaglio."], [72.78, 74.77, "Il fumo acceca i sensori."], [74.81, 78.68, "La confidenza cala, secondo una formula dimostrata."], [79.02, 81.26, "Ogni punto ha uno stato: lo vedo;"], [81.3, 83.55, "non lo vedo, ma è qui; non lo so."], [83.89, 86.65, "Il drone viene avvisato subito."], [88.29, 91.98, "Poi i sensori tornano, e MoVi ritrova il bersaglio."], [92.59, 94.97, "Con l’ultima correzione, in prova,"], [95.01, 97.91, "l’avviso arriva prima del primo frammento."], [98.24, 101.55, "Cinquantanove prove simulate su cinquantanove."], [101.59, 104.01, "E la regione del bersaglio resta,"], [104.05, 105.65, "sessanta su sessanta."], [106.0, 108.42, "Sotto, una catena a cinque strati:"], [108.46, 111.74, "sensori, fusione, stima, mappa a stati, avviso."], [111.78, 113.86, "Pronta per hardware dedicato."], [114.2, 116.87, "Dietro c’è una ricerca bibliografica,"], [116.91, 118.83, "matematica e sperimentale:"], [118.87, 122.68, "oltre quattrocento riferimenti, e un documento tecnico"], [122.72, 126.47, "di oltre cento pagine, con dimostrazioni e risultati."], [126.81, 128.27, "Può salvare vite."], [128.31, 131.81, "Una persona non vedente, avvisata dell’auto."], [132.15, 136.04, "Un braccio robotico che si ferma prima dell’operatore."], [136.38, 138.31, "Un muletto automatico che sa"], [138.35, 140.29, "di chi è dietro lo scaffale."], [140.63, 144.07, "Un’auto che ricorda il pedone dietro il furgone."], [144.41, 148.0, "Una pattuglia che non perde di vista l’auto che segue."], [148.33, 150.81, "Un satellite che trova il frammento"], [150.85, 152.66, "pericoloso fra i detriti."], [153.01, 156.13, "Un drone veloce, nel fumo e nel maltempo."], [156.51, 158.46, "Una nave nella nebbia."], [158.5, 160.92, "Sono applicazioni possibili."], [161.25, 164.67, "MoVi tiene traccia di ciò che smette di vedere."], [164.71, 168.34, "Del gruppo SDMs, per The Big Hack duemilaventisei."]];
+const c=[63.11, 67.41, 72.53, 78.77, 83.64, 88.04, 92.34];
+let H="";
+// ---------- cielo comune (0-36)
+H+=`<g id="gSky"><rect width="1920" height="1080" fill="url(#sky)"/>${cloud("cl1",300,300,0.7)}${cloud("cl2",1500,820,0.9)}${cloud("cl3",2300,220,0.6)}</g>`;
+// ---------- A aggancio + B idea (0-14)
+H+=`<g id="gA"><g id="aDrone">${drone(INK)}</g>${region("aReg",1180,560,150,110)}${cloud("aCloud",2500,600,1.5)}
+${head("aHead",120,220,"Ciò che smetti di vedere","è ancora lì.",104)}
+${head("bHead",120,200,"MoVi tiene traccia","di ciò che non vede più.",84)}
+<text id="aRegT" x="1180" y="890" text-anchor="middle" font-size="34" font-weight="700" fill="${BLUE}">può essere ovunque qui dentro</text>
+${pill("p1",120,440,520,"Dichiara dove può essere",BLUE)}${pill("p2",120,540,560,"La confidenza cala nel tempo",TEAL)}${pill("p3",120,640,640,"Mai «libero» senza aver guardato",AMB)}
+${cap(0.4,4.8,"Un drone entra in una nuvola. Molti sistemi lo dimenticano.")}${cap(5.4,9.6,"MoVi osserva e avvisa, con onestà.")}</g>`;
+// ---------- K cono del sensore con l'ombra (TK-TH)
+H+=`<g id="gK"><defs><pattern id="hatch" width="18" height="18" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="18" height="18" fill="#FFEBD6"/><rect width="7" height="18" fill="#FFC993"/></pattern></defs>
+<rect width="1920" height="1080" fill="#F2F7FD"/>${head("kHead",120,140,"Dove non ha guardato,","MoVi non dice mai «libero».",72)}
+<g id="kCone"><path d="M300,620 L1760,150 L1760,1090 Z" fill="${BLUE}" fill-opacity=".12"/><path d="M300,620 L1760,150 M300,620 L1760,1090" stroke="${BLUE}" stroke-width="4" stroke-dasharray="18 12" fill="none"/></g>
+<path id="kSh" d="M800,500 L1760,236 L1760,912 L800,720 Z" fill="url(#hatch)" stroke="${AMB}" stroke-width="4"/>
+<g id="kB" transform="translate(900,610)"><rect x="-100" y="-110" width="200" height="220" rx="14" fill="#9FB3C8" filter="url(#sh)"/><rect x="-70" y="-80" width="140" height="160" rx="8" fill="#B9C8D8"/></g>
+<g transform="translate(300,620)">${drone(BLUE)}<text y="70" text-anchor="middle" font-size="26" font-weight="800" fill="${INK}" letter-spacing="2">SENSORE</text></g>
+${chip("kSeen",560,330,"VISTO",TEAL,150)}
+<g id="kTag" transform="translate(1090,580)"><rect width="610" height="64" rx="14" fill="#fff" filter="url(#sh)"/><text x="305" y="43" text-anchor="middle" font-size="28" font-weight="700" fill="${INK}">presenza possibile · non visto da 6,8 s</text></g>
+</g>`;
+// ---------- H scena eroe, campo largo (TH-TZ e TW-TR)
+const tbadge=(id,x,y)=>`<g ${id?`id="${id}"`:""} transform="translate(${x},${y})"><rect width="370" height="92" rx="46" fill="${INK}"/><circle cx="50" cy="46" r="20" fill="none" stroke="#fff" stroke-width="5"/><path d="M50,34 L50,46 L59,52" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round"/><text x="88" y="60" font-size="40" font-weight="800" fill="#fff">tempo ×0,05</text></g>`;
+let smoke="",deb="",fire="";
+for(let i=0;i<16;i++){const a=rnd()*6.28,r=60+rnd()*330;smoke+=`<circle class="smk" data-x="${(Math.cos(a)*r*1.25).toFixed(0)}" data-y="${(Math.sin(a)*r*0.7).toFixed(0)}" data-s="${(1.2+rnd()*1.6).toFixed(2)}" r="95" fill="${i%3?'#8D99AB':'#6B778A'}"/>`;}
+for(let i=0;i<9;i++){const a=rnd()*6.28,r=30+rnd()*120;fire+=`<circle class="fir" data-x="${(Math.cos(a)*r).toFixed(0)}" data-y="${(Math.sin(a)*r).toFixed(0)}" r="${(50+rnd()*50).toFixed(0)}" fill="${i%2?'#FFB020':'#FF6A1A'}"/>`;}
+for(let i=0;i<18;i++){const a=i/18*6.28+rnd()*0.3,r=380+rnd()*420;deb+=`<path class="deb" data-x="${(Math.cos(a)*r).toFixed(0)}" data-y="${(Math.sin(a)*r*0.75).toFixed(0)}" data-r="${(rnd()*500-250).toFixed(0)}" d="M-14,-8 L12,-12 L16,6 L-6,13 Z" fill="${INK}"/>`;}
+H+=`<g id="gH"><g id="spd">${[0,1,2,3,4,5,6].map(i=>`<rect x="${200+i*260}" y="${140+((i*197)%700)}" width="${180+i*20}" height="6" rx="3" fill="#fff" opacity=".9"/>`).join("")}</g>
+<line id="sight" x1="560" y1="740" x2="1390" y2="340" stroke="${BLUE}" stroke-width="5" stroke-dasharray="4 18" stroke-linecap="round"/>
+<g id="hJet" transform="translate(1440,320)">${jet(INK)}</g>
+<g id="d1">${drone("#34506F")}</g><g id="d2">${drone("#34506F")}</g>
+<g id="boom" transform="translate(1000,540)"><g id="debs">${deb}</g><g id="fires">${fire}</g><g id="smokes" opacity=".93">${smoke}</g><circle id="flash" r="120" fill="#fff"/></g>
+${region("hReg",1440,320,170,120)}
+<text id="hRegT" x="1440" y="105" text-anchor="middle" font-size="36" font-weight="700" fill="${BLUE}">MoVi: il bersaglio è qui dentro</text>
+<g id="frag"><path d="M-22,-12 L18,-18 L24,10 L-10,20 Z" fill="${RED}"/></g>
+<g id="hCar" transform="translate(480,780)"><circle id="ringS" r="112" fill="${AMB}" fill-opacity=".14" stroke="${AMB}" stroke-width="9"/><circle id="ring" r="120" fill="none" stroke="${AMB}" stroke-width="18"/>${drone(BLUE)}</g>
+${chip("cCam",120,90,"CAMERE  ·  ACCECATE",GREY,400)}${chip("cRad",540,90,"RADAR  ·  ACCECATO",GREY,360)}
+${chip("cWarn",200,570,"AVVISO INVIATO",AMB,300)}
+${tbadge("tscale",50,915)}
+<g id="hStats"><rect width="1920" height="1080" fill="#F7FAFE" opacity=".94"/>
+ <text x="960" y="170" text-anchor="middle" font-size="34" font-weight="700" fill="${GREY}" letter-spacing="3">SENSORI ACCECATI DALL’ESPLOSIONE · PROVE SIMULATE</text>
+ <g id="st1"><text x="520" y="470" text-anchor="middle" font-size="230" font-weight="800" fill="${BLUE}" letter-spacing="-6">59<tspan fill="${INK}" font-size="120"> su 59</tspan></text><text x="520" y="560" text-anchor="middle" font-size="38" font-weight="600" fill="${INK}">drone avvisato prima del primo frammento</text><text x="520" y="612" text-anchor="middle" font-size="28" font-weight="600" fill="${TEAL}">risultato promettente · correzione in prova</text></g>
+ <g id="st2"><text x="1400" y="470" text-anchor="middle" font-size="230" font-weight="800" fill="${BLUE}" letter-spacing="-6">60<tspan fill="${INK}" font-size="120"> su 60</tspan></text><text x="1400" y="560" text-anchor="middle" font-size="38" font-weight="600" fill="${INK}">regione del bersaglio mantenuta nel fumo</text><text x="1400" y="612" text-anchor="middle" font-size="28" font-weight="600" fill="${TEAL}">mai «libero» dove c’era il drone o un frammento</text></g></g>
+${cap(TH+.3,TC-.3,"Un drone segue un oggetto veloce.")}${cap(TC+.4,TZ-.3,"Accanto, due droni si scontrano. Il tempo rallenta.")}${cap(TW+.5,TS-.3,"Avvisato prima che passi il primo frammento.")}${cap(TS+.5,TR-.3,"Non chiama mai «libero» ciò che non ha osservato.")}</g>`;
+// ---------- Z primo piano: i sensori si attivano (TZ-TP)
+const icons=[`<circle cx="0" cy="18" r="6" fill="${INK}"/><path d="M-15,6 A19,19 0 0 1 15,6"/><path d="M-28,-5 A36,36 0 0 1 28,-5"/>`,`<rect x="-28" y="-16" width="56" height="38" rx="8"/><circle r="11" cy="3"/><rect x="-10" y="-25" width="20" height="9" rx="3"/>`,`<path d="M-18,24 q-11,-12 0,-24 q11,-12 0,-24"/><path d="M0,24 q-11,-12 0,-24 q11,-12 0,-24"/><path d="M18,24 q-11,-12 0,-24 q11,-12 0,-24"/>`];
+const names=["RADAR","CAMERA","INFRAROSSO"];
+H+=`<g id="gZ"><rect width="1920" height="1080" fill="#F2F7FD"/>${head("zHead",120,140,"I sensori si attivano.","Un solo nucleo ascolta.",72)}
+<g transform="translate(330,600) scale(2.4)">${drone(BLUE)}</g>
+${[0,1,2].map(i=>{const y=360+i*240;return `<path class="flow" id="fa${i}" d="M520,600 C660,600 660,${y} 776,${y}" fill="none" stroke="${BLUE}" stroke-width="6" stroke-dasharray="14 14" stroke-linecap="round"/><path class="flow" id="fb${i}" d="M904,${y} C1090,${y} 1090,600 1232,600" fill="none" stroke="${BLUE}" stroke-width="6" stroke-dasharray="14 14" stroke-linecap="round"/><g id="sn${i}" transform="translate(840,${y})"><circle r="64" fill="#fff" filter="url(#sh)"/><g fill="none" stroke="${INK}" stroke-width="6" stroke-linecap="round">${icons[i]}</g><text y="104" text-anchor="middle" font-size="26" font-weight="800" fill="${INK}" letter-spacing="2">${names[i]}</text></g>`;}).join("")}
+<g id="core" transform="translate(1390,600)"><circle r="156" fill="${INK}"/><circle id="coreRing" r="126" fill="none" stroke="#fff" stroke-width="5" stroke-dasharray="10 12" opacity=".6"/><text y="8" text-anchor="middle" font-size="64" font-weight="800" fill="#fff">MoVi</text><text y="54" text-anchor="middle" font-size="30" font-weight="600" fill="#BFD6F6">nucleo</text></g>
+${tbadge("",50,915)}</g>`;
+// ---------- P soggettiva: i componenti uno alla volta (TP-TW)
+const spill=(i,x,txt)=>`<g id="sp${i}" transform="translate(${x},172)"><rect width="150" height="50" rx="25" fill="#fff" filter="url(#sh)"/><circle class="sdot" cx="26" cy="25" r="9" fill="${TEAL}"/><text x="46" y="33" font-size="22" font-weight="700" fill="${INK}">${txt}</text></g>`;
+const tagS=(id,x,y,w,txt,cc)=>`<g id="${id}" transform="translate(${x},${y})"><rect width="${w}" height="46" rx="10" fill="${cc}"/><text x="${w/2}" y="32" text-anchor="middle" font-size="22" font-weight="700" fill="#fff" letter-spacing="1">${txt}</text></g>`;
+const mat=(id)=>{let m=`<g id="${id}">`;for(let i=0;i<4;i++)for(let j=0;j<4;j++){const o=i==j?.95:(Math.abs(i-j)==1?.36:.14);m+=`<rect class="mc" data-o="${o}" x="${-136+j*70}" y="${-136+i*70}" width="62" height="62" rx="12" fill="${BLUE}"/>`;}return m+`</g><text y="186" text-anchor="middle" font-size="22" font-weight="600" fill="${GREY}">matrice d’incertezza · illustrativa</text>`;};
+const cardP=(i,title,sub,line,g)=>`<g id="pc${i}" transform="translate(1340,190)"><rect width="520" height="620" rx="36" fill="#fff" filter="url(#sh)"/><rect width="520" height="14" rx="7" fill="${BLUE}"/><text x="40" y="62" font-size="24" font-weight="700" fill="${GREY}" letter-spacing="3">${i} / 6</text><text x="40" y="122" font-size="48" font-weight="800" fill="${INK}" letter-spacing="-1">${title}</text><text x="40" y="160" font-size="24" font-weight="600" fill="${GREY}">${sub}</text><text x="40" y="216" font-size="30" font-weight="700" fill="${BLUE}">${line}</text><g transform="translate(260,410)">${g}</g></g>`;
+const g1=`<g stroke="${GREY}" stroke-width="4" fill="none"><path d="M-150,-90 C-60,-90 -40,0 60,0"/><path d="M-150,0 L60,0"/><path d="M-150,90 C-60,90 -40,0 60,0"/></g><circle cx="-150" cy="-90" r="24" fill="${BLUE}"/><circle cx="-150" cy="0" r="24" fill="${TEAL}"/><circle cx="-150" cy="90" r="24" fill="${AMB}"/><circle cx="110" cy="0" r="62" fill="${INK}"/><circle cx="110" cy="0" r="40" fill="none" stroke="#fff" stroke-width="4" stroke-dasharray="8 9"/>`;
+const g4=[[TEAL,["Lo vedo"],""],[BLUE,["Non lo vedo,","ma è qui"],"d"],["#8D99AB",["Non lo so"],""]].map((a,i)=>`<rect x="-215" y="${-125+i*105}" width="76" height="60" rx="12" fill="${a[0]}" ${a[2]?`fill-opacity=".25" stroke="${BLUE}" stroke-width="4" stroke-dasharray="10 7"`:""}/>`+a[1].map((t,j)=>`<text x="-118" y="${-85+i*105+(a[1].length>1?j*36-18:0)}" font-size="30" font-weight="700" fill="${INK}">${t}</text>`).join("")).join("");
+const g5=`<text y="30" text-anchor="middle" font-size="150" font-weight="800" fill="${BLUE}" letter-spacing="-4">59<tspan font-size="70" fill="${INK}"> su 59</tspan></text><text y="92" text-anchor="middle" font-size="28" font-weight="700" fill="${INK}">prove simulate</text><text y="132" text-anchor="middle" font-size="24" font-weight="600" fill="${TEAL}">correzione in prova</text>`;
+const g6=`<circle id="r6" r="140" fill="url(#reg)" stroke="${BLUE}" stroke-width="5" stroke-dasharray="18 12"/><circle r="16" fill="${INK}"/>`;
+const psm=[[-90,-20,80],[-20,-70,90],[60,-40,85],[110,20,75],[40,60,90],[-50,60,80],[0,0,100],[-120,40,60]];
+H+=`<g id="gP"><rect width="1920" height="1080" fill="url(#sky)"/><path d="M0,770 L1920,700 L1920,1080 L0,1080 Z" fill="#DCE9E4"/><path d="M0,770 L1920,700" stroke="#B9CFC7" stroke-width="3"/>
+${cloud("pcl",1080,300,0.4)}
+<g id="pTgt" transform="translate(760,450)" fill="${INK}"><rect x="-78" y="-4" width="156" height="8" rx="4"/><ellipse rx="20" ry="17"/><rect x="-4" y="-46" width="8" height="36" rx="3"/><rect x="-30" y="-46" width="60" height="6" rx="3"/></g>
+<g id="pSm" transform="translate(250,500)"><circle cx="-10" cy="20" r="80" fill="#FF6A1A"/><circle cx="50" cy="-10" r="70" fill="#FFB020"/>${psm.map((p,i)=>`<circle cx="${p[0]}" cy="${p[1]}" r="${p[2]}" fill="${i%3?'#8D99AB':'#6B778A'}"/>`).join("")}${[[-170,-90],[150,-110],[190,80],[-150,120],[20,-170]].map(p=>`<path transform="translate(${p[0]},${p[1]})" d="M-14,-8 L12,-12 L16,6 L-6,13 Z" fill="${INK}"/>`).join("")}</g>
+${region("pReg",760,450,95,65)}
+${tagS("pTag",880,366,165,"BERSAGLIO",INK)}
+<g id="pFrag"><path d="M-22,-12 L18,-18 L24,10 L-10,20 Z" fill="${RED}"/></g>
+<path d="M80,210 L80,150 L140,150 M1220,150 L1280,150 L1280,210 M80,800 L80,860 L140,860 M1220,860 L1280,860 L1280,800" fill="none" stroke="${INK}" stroke-width="5" opacity=".4" stroke-linecap="round"/>
+<rect id="pWarn" x="80" y="150" width="1200" height="710" rx="24" fill="none" stroke="${AMB}" stroke-width="18"/>
+<text x="84" y="124" font-size="24" font-weight="700" fill="${GREY}" letter-spacing="3">VISTA DAL DRONE CHE PORTA MOVI</text>
+${spill(0,110,"RADAR")}${spill(1,275,"CAMERA")}${spill(2,440,"IR")}${tagS("pBl",606,174,150,"ACCECATI",RED)}
+<g id="pConf" transform="translate(110,780)"><text font-size="22" font-weight="700" fill="${GREY}" letter-spacing="3">CONFIDENZA</text><rect y="14" width="420" height="26" rx="13" fill="#fff" stroke="#C9D6E4" stroke-width="2"/><rect id="pBar" y="14" width="420" height="26" rx="13" fill="${BLUE}"/></g>
+<g id="pCurve" transform="translate(650,590) scale(1.5)"><rect width="400" height="190" rx="22" fill="#fff" filter="url(#sh)"/><path d="M30,24 L30,112 L370,112" fill="none" stroke="#C9D6E4" stroke-width="3" stroke-linecap="round"/><path id="pCv" d="M30,34 C130,36 170,100 370,106" fill="none" stroke="${BLUE}" stroke-width="6" stroke-linecap="round"/><text x="30" y="142" font-size="19" font-weight="600" fill="${GREY}">C(τ) = 1 − e<tspan dy="-8" font-size="14">−r²/2σ²(τ)</tspan></text><text x="30" y="172" font-size="21" font-weight="700" fill="${BLUE}">formula dimostrata, non a occhio</text></g>
+${tagS("t1",1050,330,110,"VISTO",TEAL)}${tagS("t2",555,232,410,"NON VISTO · UNA REGIONE",BLUE)}${tagS("t3",430,650,170,"IGNOTO","#5B6B82")}
+${chip("pChip",920,772,"AVVISO INVIATO",AMB,300)}
+${cardP(1,"Fusione","radar · camera · infrarosso","tre sensori, un solo quadro",g1)}${cardP(2,"Stima","filtro di Kalman","prevede dove può essere",mat("m2"))}${cardP(3,"Sensori accecati","l’incertezza cresce","la confidenza cala, con onestà",mat("m3"))}${cardP(4,"Mappa a stati","ogni punto ha uno stato","non dice mai «libero»",g4)}${cardP(5,"Avviso","al veicolo che lo porta","avvisa subito",g5)}${cardP(6,"Riaggancio","i sensori tornano","lo ritrova",g6)}
+${tbadge("",50,915)}${cap(TP+.4,S0+3.6,"Con gli occhi del drone che porta MoVi.")}</g>`;
+// ---------- R architettura (TR-TI)
+const blk=(i,t1,t2,sub,cc)=>`<g id="ab${i}" transform="translate(${60+i*366},390)"><rect width="336" height="300" rx="32" fill="#fff" filter="url(#sh)"/><rect width="336" height="16" rx="8" fill="${cc}"/><text x="168" y="${t2?118:142}" text-anchor="middle" font-size="42" font-weight="800" fill="${INK}">${t1}</text>${t2?`<text x="168" y="166" text-anchor="middle" font-size="42" font-weight="800" fill="${INK}">${t2}</text>`:""}<text x="168" y="236" text-anchor="middle" font-size="27" font-weight="600" fill="${GREY}">${sub}</text></g>`+(i<4?`<path id="aa${i}" d="M${60+i*366+340},540 l22,0 m-10,-10 l10,10 l-10,10" stroke="${BLUE}" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`:"");
+H+=`<g id="gR"><rect width="1920" height="1080" fill="#F7FAFE"/>${head("rHead",120,150,"Come funziona:","una catena, cinque strati.",72)}
+${blk(0,"Sensori","","radar · camera · IR",BLUE)}${blk(1,"Fusione","","un solo quadro",TEAL)}${blk(2,"Stimatore","a più modelli","IMM Kalman",BLUE)}${blk(3,"Mappa a stati","","tre stati",TEAL)}${blk(4,"Avviso","","al veicolo, subito",AMB)}
+${pill("rHw",600,780,720,"Pronto per hardware dedicato, per progetto",TEAL)}</g>`;
+// ---------- I infografica (36-46)
+const card=(id,x,big,l1,l2,c)=>`<g id="${id}" transform="translate(${x},330)"><rect width="410" height="440" rx="36" fill="#fff" filter="url(#sh)"/><rect width="410" height="14" rx="7" fill="${c}"/><text x="205" y="190" text-anchor="middle" font-size="96" font-weight="800" fill="${c}" letter-spacing="-3">${big}</text><text x="205" y="290" text-anchor="middle" font-size="28" font-weight="700" fill="${INK}">${l1}</text><text x="205" y="340" text-anchor="middle" font-size="26" font-weight="500" fill="${GREY}">${l2}</text></g>`;
+H+=`<g id="gI"><rect width="1920" height="1080" fill="#F7FAFE"/>${head("iHead",120,150,"Costruito sulle prove,","non sulle promesse.",76)}
+${card("k1",110,"100+","pagine di relazione tecnica","dimostrazioni e risultati",BLUE)}${card("k2",540,"400+","riferimenti studiati","letteratura · matematica · prove",TEAL)}${card("k3",970,"60/60","avaria dichiarata","entro 1 secondo · simulato",AMB)}${card("k4",1400,"200/200","avvisato in tempo","lunga portata · simulato",INK)}
+<g id="kg" transform="translate(1016,712)">${Array.from({length:60},(_,i)=>`<rect x="${(i%20)*16}" y="${Math.floor(i/20)*16}" width="12" height="12" rx="3" fill="${AMB}"/>`).join("")}</g>
+<text id="kgT" x="1175" y="822" text-anchor="middle" font-size="26" font-weight="700" fill="${INK}">ogni quadratino è una prova simulata</text>
+<g id="kRD"><rect x="510" y="872" width="900" height="64" rx="32" fill="#fff" stroke="${BLUE}" stroke-width="3"/><text x="960" y="914" text-anchor="middle" font-size="30" font-weight="700" fill="${INK}">+ indagine sui progetti di R&amp;D del committente</text></g>
+${cap(TI+.4,TI+5.6,"Ogni numero viene dalla relazione tecnica.")}</g>`;
+// ---------- S scenari (46-58)
+const tag=`<g transform="translate(120,90)"><rect width="470" height="60" rx="30" fill="${INK}"/><text x="235" y="41" text-anchor="middle" font-size="26" font-weight="700" fill="#fff" letter-spacing="3">APPLICAZIONE POSSIBILE</text></g>`;
+H+=`<g id="gS1"><rect width="1920" height="1080" fill="#F2F7FD"/><rect y="700" width="1920" height="250" fill="#DDE6F0"/><g fill="#fff">${[0,1,2,3,4,5,6,7].map(i=>`<rect x="${60+i*250}" y="818" width="130" height="12" rx="6"/>`).join("")}</g>
+${tag}${head("s1Head",120,270,"Il pedone dietro","il furgone in sosta.",76)}
+${region("s1Reg",1330,640,150,150)}<g id="s1Ped" transform="translate(1330,650)">${person(TEAL)}</g>
+<g transform="translate(1130,600)"><rect x="-190" y="-170" width="380" height="250" rx="26" fill="#9FB3C8"/><rect x="-170" y="-150" width="120" height="90" rx="12" fill="#DCEBFB"/><circle cx="-110" cy="84" r="32" fill="${INK}"/><circle cx="110" cy="84" r="32" fill="${INK}"/></g>
+<g id="s1Car">${car(BLUE)}<g id="s1W" transform="translate(0,-130)"><circle r="40" fill="${AMB}"/><text y="18" text-anchor="middle" font-size="54" font-weight="800" fill="#fff">!</text></g></g></g>`;
+H+=`<g id="gS2"><rect width="1920" height="1080" fill="#F2FBF8"/><rect y="760" width="1920" height="220" fill="#DDE6F0"/><g fill="#fff">${[0,1,2,3,4,5].map(i=>`<rect x="${1010+i*74}" y="770" width="44" height="200" rx="6"/>`).join("")}</g>
+<rect x="1420" y="250" width="500" height="510" fill="#C9D6E4"/><g fill="#fff">${[0,1,2,3,4,5].map(i=>`<rect x="${1480+(i%3)*130}" y="${320+Math.floor(i/3)*170}" width="80" height="100" rx="8"/>`).join("")}</g>
+${tag}${head("s2Head",120,270,"Una persona non vedente","avvisata dell’auto che arriva.",72)}
+${region("s2Reg",1560,860,190,90)}<g id="s2Car" transform="translate(2100,850) scale(-1,1)">${car("#34506F")}</g>
+<g id="s2P" transform="translate(900,800)">${person(INK)}<line x1="14" y1="-40" x2="90" y2="42" stroke="${INK}" stroke-width="7" stroke-linecap="round"/><circle id="s2R" cx="0" cy="-40" r="60" fill="none" stroke="${AMB}" stroke-width="9"/></g></g>`;
+let sdeb="";for(let i=0;i<26;i++){sdeb+=`<path transform="translate(${(1050+rnd()*700).toFixed(0)},${(300+rnd()*520).toFixed(0)}) rotate(${(rnd()*360).toFixed(0)}) scale(${(0.6+rnd()*1.2).toFixed(2)})" d="M-14,-8 L12,-12 L16,6 L-6,13 Z" fill="#9AA5B8"/>`;}
+H+=`<g id="gS3"><rect width="1920" height="1080" fill="url(#space)"/><circle cx="260" cy="1500" r="760" fill="#CFE4FB"/><circle cx="260" cy="1500" r="700" fill="#B5D3F5"/>
+${tag}${head("s3Head",120,270,"Un satellite che trova","il frammento fra i detriti.",68)}
+<g id="s3Deb">${sdeb}</g>${region("s3Reg",1380,560,120,120)}<path id="s3F" transform="translate(1380,560)" d="M-22,-12 L18,-18 L24,10 L-10,20 Z" fill="${RED}"/>
+<g id="s3Sat" transform="translate(640,640) rotate(-12)"><rect x="-60" y="-45" width="120" height="90" rx="14" fill="${INK}"/><rect x="-250" y="-34" width="170" height="68" rx="8" fill="${BLUE}"/><rect x="80" y="-34" width="170" height="68" rx="8" fill="${BLUE}"/><rect x="-80" y="-5" width="20" height="10" fill="${INK}"/><rect x="60" y="-5" width="20" height="10" fill="${INK}"/><circle cx="0" cy="-66" r="22" fill="none" stroke="${INK}" stroke-width="8"/><circle id="s3R" r="90" fill="none" stroke="${AMB}" stroke-width="9"/></g></g>`;
+// ---------- F caso 1: volo ad alta velocità (TF-TH)
+const badge=(id,x,y)=>`<g id="${id}" transform="translate(${x},${y})"><circle r="40" fill="${AMB}"/><text y="18" text-anchor="middle" font-size="54" font-weight="800" fill="#fff">!</text></g>`;
+const lanes=`<g fill="#fff">${[0,1,2,3,4,5,6,7].map(i=>`<rect x="${60+i*250}" y="864" width="130" height="12" rx="6"/>`).join("")}</g>`;
+H+=`<g id="gF"><rect width="1920" height="1080" fill="url(#sky)"/>${cloud("fc1",1500,900,0.8)}${cloud("fc2",330,930,0.6)}
+<g id="fSpd">${[0,1,2,3,4,5].map(i=>`<rect x="${i*330}" y="${250+((i*173)%520)}" width="${200+i*20}" height="6" rx="3" fill="#fff" opacity=".9"/>`).join("")}</g>
+${head("fHead",120,150,"Primo caso: volo veloce.","Un’avaria improvvisa.",72)}
+<g transform="translate(560,610)">${[[0,0,70],[-70,-14,80],[-150,-30,92],[-240,-40,100],[-330,-60,108],[-420,-70,112],[-110,30,70],[-290,10,90],[-470,-20,100]].map((p,i)=>`<circle class="fsk" cx="${p[0]}" cy="${p[1]}" r="${p[2]}" fill="${i%3?'#8D99AB':'#6B778A'}"/>`).join("")}</g>
+<g id="fDeb">${[[-260,150,160],[-380,-190,-200],[-120,230,90],[-520,60,240]].map(p=>`<path class="fdb" data-x="${600+p[0]}" data-y="${610+p[1]}" data-r="${p[2]}" d="M-14,-8 L12,-12 L16,6 L-6,13 Z" fill="${INK}"/>`).join("")}</g>
+<g id="fJet" transform="translate(760,540) scale(2.3)">${jet(INK)}</g>
+<g transform="translate(610,610)">${[[0,0,62,'#FF6A1A'],[-50,-10,52,'#FFB020'],[30,16,40,'#FFB020'],[-20,26,44,'#FF6A1A']].map(p=>`<circle class="ffr" cx="${p[0]}" cy="${p[1]}" r="${p[2]}" fill="${p[3]}"/>`).join("")}</g>
+<circle id="fFlash" cx="610" cy="610" r="120" fill="#fff"/>
+${region("fReg",300,830,120,90)}
+<g id="fRed"><path d="M-22,-12 L18,-18 L24,10 L-10,20 Z" fill="${RED}"/></g>
+${chip("fTag",130,690,"MAI «LIBERO» QUI",BLUE,340)}
+<g id="fCard" transform="translate(1290,270)"><rect width="540" height="420" rx="36" fill="#fff" filter="url(#sh)"/><rect width="540" height="14" rx="7" fill="${BLUE}"/><text x="40" y="66" font-size="24" font-weight="700" fill="${GREY}" letter-spacing="3">CASO 1 · VOLO VELOCE</text><text x="270" y="230" text-anchor="middle" font-size="150" font-weight="800" fill="${BLUE}" letter-spacing="-4">60<tspan font-size="70" fill="${INK}"> su 60</tspan></text><text x="270" y="310" text-anchor="middle" font-size="32" font-weight="700" fill="${INK}">evento dichiarato entro 1 s</text><text x="270" y="360" text-anchor="middle" font-size="26" font-weight="600" fill="${TEAL}">prove simulate</text></g>
+${chip("fCam",1290,730,"CAMERE  ·  NON AFFIDABILI",GREY,540)}
+${tbadge("fBadge",50,915)}</g>`;
+// ---------- casi d'uso nuovi
+H+=`<g id="gS4"><rect width="1920" height="1080" fill="#F2F7FD"/><rect y="820" width="1920" height="260" fill="#DDE6F0"/>
+${tag}${head("s4Head",120,270,"Un braccio robotico","che si ferma prima dell’operatore.",68)}
+${region("s4Reg",1500,720,150,180)}<g transform="translate(1500,780)">${person(TEAL)}</g>
+<g transform="translate(1040,820)"><g transform="rotate(-25)"><rect x="-24" y="-310" width="48" height="320" rx="24" fill="${BLUE}"/><g transform="translate(0,-300)"><g id="s4B"><rect x="-19" y="-250" width="38" height="262" rx="19" fill="#34506F"/><path d="M-32,-250 L-32,-292 L-15,-292 L-15,-264 L15,-264 L15,-292 L32,-292 L32,-250 Z" fill="${INK}"/></g><circle r="30" fill="${INK}"/></g></g><circle r="38" cy="-10" fill="${INK}"/><rect x="-110" y="-30" width="220" height="50" rx="12" fill="${INK}"/></g>
+${badge("s4W",1250,560)}</g>`;
+H+=`<g id="gS5"><rect width="1920" height="1080" fill="#F2FBF8"/><rect y="820" width="1920" height="260" fill="#DDE6F0"/>
+${tag}${head("s5Head",120,270,"Un muletto automatico","che sa di chi è dietro lo scaffale.",68)}
+<g transform="translate(1450,780)">${person(TEAL)}</g>
+<g transform="translate(1300,820)"><rect x="-160" y="-440" width="320" height="440" rx="8" fill="#9FB3C8"/>${[0,1,2].map(i=>`<rect x="-140" y="${-420+i*145}" width="280" height="120" rx="6" fill="#DCE6F0"/><rect x="-120" y="${-380+i*145}" width="90" height="80" rx="6" fill="#C2A77A"/><rect x="-10" y="${-360+i*145}" width="110" height="60" rx="6" fill="#D4BC92"/>`).join("")}</g>
+${region("s5Reg",1450,720,140,180)}
+<g id="s5F"><rect x="-150" y="-140" width="215" height="105" rx="18" fill="${BLUE}"/><path d="M-120,-140 L-104,-240 L8,-240 L30,-140" stroke="${INK}" stroke-width="12" fill="none" stroke-linejoin="round"/><rect x="72" y="-270" width="16" height="270" fill="${INK}"/><rect x="72" y="-44" width="135" height="13" rx="4" fill="${INK}"/><circle cx="-100" cy="-32" r="34" fill="${INK}"/><circle cx="26" cy="-32" r="34" fill="${INK}"/><circle cx="-100" cy="-32" r="13" fill="#fff"/><circle cx="26" cy="-32" r="13" fill="#fff"/>${badge("s5W",-40,-320)}</g></g>`;
+H+=`<g id="gS6"><rect width="1920" height="1080" fill="#F2F7FD"/><rect y="760" width="1920" height="220" fill="#DDE6F0"/>${lanes}
+${tag}${head("s6Head",120,270,"Una pattuglia","che non perde l’auto dietro l’angolo.",68)}
+<g id="s6C" transform="translate(1000,850)">${car("#34506F")}</g>
+<rect x="1240" y="400" width="560" height="540" fill="#C9D6E4"/><g fill="#fff">${[0,1,2,3,4,5,6,7].map(i=>`<rect x="${1300+(i%4)*120}" y="${460+Math.floor(i/4)*170}" width="76" height="100" rx="8"/>`).join("")}</g>
+${region("s6Reg",1520,860,210,95)}
+<g id="s6P">${car(BLUE)}<rect x="-34" y="-86" width="68" height="16" rx="7" fill="${TEAL}"/>${badge("s6W",0,-150)}</g></g>`;
+H+=`<g id="gS7"><rect width="1920" height="1080" fill="url(#sky)"/>
+<g stroke="#9DB7D6" stroke-width="4" stroke-linecap="round">${Array.from({length:44},(_,i)=>{const x=(i*97)%1900,y=(i*211)%860+110;return `<path d="M${x},${y} l-14,44"/>`;}).join("")}</g>
+${tag}${head("s7Head",120,270,"Un drone veloce","che trova l’ostacolo nel fumo.",68)}
+<rect x="1380" y="400" width="46" height="680" fill="#34506F"/><rect x="1296" y="480" width="214" height="20" rx="8" fill="#34506F"/>
+<g>${[[1250,660,150],[1400,580,170],[1540,680,150],[1400,780,170],[1150,760,120],[1620,540,110]].map((p,i)=>`<circle cx="${p[0]}" cy="${p[1]}" r="${p[2]}" fill="${i%2?'#8D99AB':'#6B778A'}" opacity=".95"/>`).join("")}</g>
+${region("s7Reg",1400,650,140,210)}
+<g id="s7D">${drone(BLUE)}${badge("s7W",0,-100)}</g></g>`;
+H+=`<g id="gS8"><rect width="1920" height="1080" fill="#F2F7FD"/><rect y="720" width="1920" height="360" fill="#CFE4FB"/>
+${tag}${head("s8Head",120,270,"Una nave","che non perde la barca nella nebbia.",68)}
+<g transform="translate(1460,720)"><path d="M-80,-4 L80,-4 L58,36 L-58,36 Z" fill="#34506F"/><path d="M0,-110 L0,-10 L66,-20 Z" fill="#fff" stroke="#34506F" stroke-width="6" stroke-linejoin="round"/></g>
+${cloud("s8f1",1380,760,1.5)}${cloud("s8f2",1680,660,1.0)}
+${region("s8Reg",1460,700,180,115)}
+<g id="s8S"><path d="M-270,-10 L250,-10 L196,76 L-226,76 Z" fill="${BLUE}"/><rect x="-160" y="-84" width="210" height="76" rx="8" fill="${INK}"/><rect x="-100" y="-136" width="84" height="54" rx="6" fill="#34506F"/>${badge("s8W",0,-210)}</g></g>`;
+// ---------- chiusura (58-62)
+H+=`<g id="gEnd"><rect width="1920" height="1080" fill="#F7FAFE"/><image id="eLogo" href="assets/marchio/movi_wordmark_mono_scuro.svg" x="660" y="250" width="600" height="250"/>
+<text id="eT1" x="960" y="610" text-anchor="middle" font-size="56" font-weight="700" fill="${INK}">Tiene traccia di ciò che smette di vedere.</text>
+<g id="eT2"><image href="assets/marchio/sdms_logo_mono_scuro.svg" x="810" y="690" width="300" height="110"/><text x="960" y="880" text-anchor="middle" font-size="32" font-weight="600" fill="${GREY}" letter-spacing="2">THE BIG HACK 2026 · RITORNO AL FUTURO REMOTO · CITTÀ DELLA SCIENZA</text></g></g>`;
+document.getElementById("stage").innerHTML=H;
+{const st=document.getElementById("stage");["gSky","gA","gK","gF","gH","gZ","gP","gR","gI","gS2","gS4","gS5","gS1","gS6","gS3","gS7","gS8","gEnd"].forEach(id=>st.appendChild(document.getElementById(id)));
+let sh="";SUBS.forEach((u,i)=>{const w=u[2].length*17.5+60;sh+=`<g id="sb${i}"><rect x="${960-w/2}" y="950" width="${w}" height="60" rx="14" fill="#fff" fill-opacity=".92"/><text x="960" y="991" text-anchor="middle" font-size="34" font-weight="600" fill="${INK}">${u[2]}</text></g>`;});
+st.insertAdjacentHTML("beforeend",`<g id="gSub">${sh}</g>`);}
+// ================= linea del tempo
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+const O="50% 50%";
+const scene=(id,t0,t1,fade)=>{if(t0>0){gsap.set(id,{autoAlpha:0});tl.to(id,{autoAlpha:1,duration:.5},t0);}if(t1<D){if(fade)tl.to(id,{autoAlpha:0,duration:.5},t1);else tl.set(id,{autoAlpha:0},t1+.5);}};
+const fin=(id,t,d=.6)=>tl.fromTo(id,{autoAlpha:0},{autoAlpha:1,duration:d},t);
+const pop=(id,t)=>tl.fromTo(id,{autoAlpha:0,scale:.3,transformOrigin:O},{autoAlpha:1,scale:1,duration:.6,ease:"back.out(2)"},t);
+const hide=(id,t)=>tl.to(id,{autoAlpha:0,duration:.4},t);
+caps.forEach(([a,b],i)=>{tl.fromTo("#cap"+i,{autoAlpha:0},{autoAlpha:1,duration:.4},a);tl.to("#cap"+i,{autoAlpha:0,duration:.3},b);});
+scene("#gSky",0,TR);scene("#gA",0,TK);scene("#gK",TK,TF);scene("#gF",TF,TH,1);scene("#gH",TH,TR);scene("#gZ",TZ,TP);scene("#gP",TP,TW,1);scene("#gR",TR,TI);scene("#gI",TI,TU[0]);
+["#gS2","#gS4","#gS5","#gS1","#gS6","#gS3","#gS7","#gS8"].forEach((id,k)=>scene(id,TU[k],k<7?TU[k+1]:TE));scene("#gEnd",TE,D);
+SUBS.forEach((u,k)=>{gsap.set("#sb"+k,{autoAlpha:0});tl.set("#sb"+k,{autoAlpha:1},u[0]);tl.set("#sb"+k,{autoAlpha:0},u[1]);});
+tl.to("#cl1",{x:"-=500",duration:TR,ease:"none"},0).to("#cl2",{x:"-=700",duration:TR,ease:"none"},0).to("#cl3",{x:"-=900",duration:TR,ease:"none"},0);
+// A
+tl.fromTo("#aDrone",{x:-200,y:640},{x:1180,y:560,duration:2.6,ease:"power2.out"},0);
+tl.to("#aDrone",{y:"+=14",duration:1,yoyo:true,repeat:26,ease:"sine.inOut"},2.6);
+tl.fromTo("#aCloud",{x:2500,y:600},{x:1200,y:610,duration:2.2,ease:"power2.out"},1.2);
+fin("#aHead",3.2); hide("#aHead",T2-.3);
+tl.fromTo("#aReg",{autoAlpha:0,scale:.4,transformOrigin:O},{autoAlpha:1,scale:1.6,duration:1,ease:"power2.out"},T2+3); tl.to("#aReg",{scale:2.5,duration:Math.max(1,TK-T2-4),ease:"none"},T2+4);
+fin("#bHead",T2+.2); fin("#aRegT",T2+4); fin("#p1",T2+4.5); fin("#p2",T2+6.5); fin("#p3",T2+8.5);
+// H campo largo
+tl.fromTo("#spd",{x:1900},{x:-2200,duration:3.5,ease:"none"},TC-3.5); hide("#spd",TC-.1);
+gsap.set("#flash,#frag,#ring,#pFrag,#pWarn",{autoAlpha:0});
+tl.fromTo("#d1",{x:1900,y:980},{x:1040,y:560,duration:3.5,ease:"power1.in"},TC-3.5);
+tl.fromTo("#d2",{x:200,y:120},{x:960,y:520,duration:3.5,ease:"power1.in"},TC-3.5);
+tl.to("#hCar",{y:"+=16",duration:1.1,yoyo:true,repeat:75,ease:"sine.inOut"},TH);
+gsap.set("#tscale",{autoAlpha:0});tl.set("#tscale",{autoAlpha:0},0);tl.fromTo("#tscale",{autoAlpha:0},{autoAlpha:1,duration:.4,immediateRender:false},TC-.1);
+tl.fromTo("#flash",{scale:.2,autoAlpha:1,transformOrigin:O},{scale:5,autoAlpha:0,duration:1.2,ease:"power2.out",immediateRender:false},TC);
+tl.to("#d1",{x:"+=90",y:"+=120",rotation:70,autoAlpha:0,transformOrigin:O,duration:3},TC).to("#d2",{x:"-=90",y:"+=140",rotation:-80,autoAlpha:0,transformOrigin:O,duration:3},TC);
+document.querySelectorAll(".fir").forEach((e,i)=>{gsap.set(e,{scale:0,transformOrigin:O});tl.to(e,{x:+e.dataset.x,y:+e.dataset.y,scale:1.5,duration:2.2,ease:"power2.out"},TC+i*.06).to(e,{autoAlpha:0,scale:2,duration:3},TC+2.4);});
+document.querySelectorAll(".smk").forEach((e,i)=>{gsap.set(e,{scale:0,transformOrigin:O});tl.to(e,{x:+e.dataset.x,y:+e.dataset.y,scale:+e.dataset.s,duration:7,ease:"power2.out"},TC+.3+i*.1);});
+document.querySelectorAll(".deb").forEach((e)=>{gsap.set(e,{autoAlpha:0});tl.set(e,{autoAlpha:1},TC+.1).to(e,{x:+e.dataset.x,y:+e.dataset.y,rotation:+e.dataset.r,transformOrigin:O,duration:62,ease:"power1.out"},TC+.1);});
+tl.to("#smokes",{x:160,y:-60,duration:30,ease:"none"},TC+1);
+tl.to("#sight",{stroke:"#9AA5B8",autoAlpha:.35,duration:1},TC+1.5);
+tl.to("#hJet",{autoAlpha:0,duration:1.5},TC+1.8);
+pop("#cCam",TW+.2); pop("#cRad",TW+.4);
+tl.fromTo("#hReg",{autoAlpha:0,scale:.6,transformOrigin:O},{autoAlpha:1,scale:1.35,duration:.8,ease:"back.out(1.6)"},TW+.3); fin("#hRegT",TW+.5);
+tl.fromTo("#frag",{x:850,y:600,rotation:0,scale:1.8,autoAlpha:1,transformOrigin:O},{x:340,y:756,rotation:220,duration:3.6,ease:"none",immediateRender:false},TW+.2);
+pop("#cWarn",TW+.8); fin("#ringS",TW+.8,.3);
+tl.fromTo("#ring",{scale:.7,autoAlpha:1,transformOrigin:O},{scale:1.7,autoAlpha:0,duration:1,repeat:2,ease:"power1.out",immediateRender:false},TW+.8);
+fin("#hStats",TS); fin("#st1",TS+.3); fin("#st2",TS+1.3);
+// Z
+fin("#zHead",TZ+.3);
+[0,1,2].forEach(i=>{pop("#sn"+i,TZ+.8+i*.6);fin("#fa"+i,TZ+.9+i*.6);fin("#fb"+i,TZ+2.7+i*.2);});
+pop("#core",TZ+2.6);
+tl.to(".flow",{strokeDashoffset:-168,duration:TP-TZ+.5,ease:"none"},TZ);
+tl.to("#coreRing",{rotation:90,transformOrigin:O,duration:TP-TZ+.5,ease:"none"},TZ);
+// P
+[0,1,2].forEach(i=>pop("#sp"+i,TP+.6+i*.3));
+for(let i=1;i<=6;i++){fin("#pc"+i,c[i-1],.5); if(i<6)tl.to("#pc"+i,{autoAlpha:0,duration:.3},c[i]-.3);}
+tl.to("#pTgt",{y:"+=8",duration:1.2,yoyo:true,repeat:40,ease:"sine.inOut"},TP);
+pop("#pTag",c[0]+.6);
+tl.fromTo("#pReg",{autoAlpha:0,scale:.5,transformOrigin:O},{autoAlpha:1,scale:1,duration:.9,ease:"back.out(1.6)"},c[1]+1.2);
+tl.fromTo("#m2 .mc",{opacity:0},{opacity:(i,e)=>+e.dataset.o,duration:.4,stagger:.08},c[1]+.4);
+gsap.set("#pBar",{scaleX:.92,transformOrigin:"0% 50%"}); fin("#pConf",c[1]+1.4);
+gsap.set("#m3 .mc",{opacity:(i,e)=>+e.dataset.o});
+tl.to("#m3 .mc",{opacity:(i,e)=>Math.min(1,+e.dataset.o+.5),duration:3.4,ease:"none"},c[2]+.4);
+tl.fromTo("#m3",{scale:.8,transformOrigin:O},{scale:1.08,duration:3.4,ease:"none"},c[2]+.4);
+tl.to("#pSm",{x:730,y:470,scale:1.35,transformOrigin:O,duration:3.2,ease:"power1.inOut"},c[2]+.2);
+hide("#pTag",c[2]+1); tl.to("#pTgt",{autoAlpha:0,duration:1.4},c[2]+1.4);
+tl.to(".sdot",{fill:RED,duration:.5},c[2]+1.6); pop("#pBl",c[2]+1.7);
+tl.to("#pReg",{scale:2.2,duration:3.4,ease:"none"},c[2]+.6);
+tl.to("#pBar",{scaleX:.42,duration:3.6,ease:"none"},c[2]+.4);
+pop("#t1",c[3]+.5); pop("#t2",c[3]+1.2); pop("#t3",c[3]+1.9); hide("#t1,#t2,#t3",c[4]-.3);
+tl.fromTo("#pWarn",{autoAlpha:0},{autoAlpha:1,duration:.5,repeat:4,yoyo:true,immediateRender:false},c[4]+.2);
+pop("#pChip",c[4]+.4);
+tl.fromTo("#pFrag",{x:700,y:480,scale:.6,rotation:0,autoAlpha:1,transformOrigin:O},{x:250,y:790,scale:3.2,rotation:160,duration:3.4,ease:"power1.in",immediateRender:false},c[4]+.4);
+hide("#pFrag",c[4]+3.8); hide("#pWarn",c[5]+.2); hide("#pChip",c[5]+.2);
+tl.to("#pSm",{autoAlpha:.12,x:520,duration:2.6},c[5]+.3);
+tl.to(".sdot",{fill:TEAL,duration:.5},c[5]+1); hide("#pBl",c[5]+1);
+tl.to("#pTgt",{autoAlpha:1,duration:1},c[5]+1.2);
+tl.to("#pReg",{scale:.9,duration:2.6,ease:"power1.inOut"},c[5]+1);
+tl.to("#pBar",{scaleX:.9,duration:2.6,ease:"power1.inOut"},c[5]+1);
+tl.fromTo("#r6",{scale:1,transformOrigin:O},{scale:.3,duration:2.6,ease:"power1.inOut"},c[5]+1);
+// K
+fin("#kHead",TK+.3); fin("#kCone",TK+.7); pop("#kSeen",TK+1.4); pop("#kB",TK+1.8); fin("#kSh",TK+2.5,.9); pop("#kTag",TK+3.2);
+// curva e griglia
+fin("#pCurve",c[2]+.8); hide("#pCurve",c[3]-.3);
+tl.fromTo("#kg rect",{autoAlpha:0},{autoAlpha:1,duration:.2,stagger:.03},TI+2); fin("#kgT",TI+2.4);
+// R
+fin("#rHead",TR+.3); [0,1,2,3,4].forEach(i=>{pop("#ab"+i,TR+.6+i*.5); if(i<4)fin("#aa"+i,TR+.9+i*.5);}); fin("#rHw",TR+3.3);
+// I
+fin("#iHead",TI+.3); ["#k1","#k2","#k3","#k4"].forEach((k,i)=>fin(k,TI+.7+i*.5));
+// S1
+fin("#s1Head",TS1+.2); tl.fromTo("#s1Car",{x:-200,y:860},{x:640,y:860,duration:1.8,ease:"power2.out"},TS1+.1);
+tl.fromTo("#s1Reg",{autoAlpha:0,scale:.5,transformOrigin:O},{autoAlpha:1,scale:1.15,duration:.8,ease:"back.out(1.6)"},TS1+.8);
+pop("#s1W",TS1+1.3); tl.to("#s1Ped",{y:"+=110",duration:1.4,ease:"power1.inOut"},TS1+1.3);
+// S2
+fin("#s2Head",TS2+.2); tl.to("#s2Car",{x:1700,duration:1.8,ease:"power2.out"},TS2+.1);
+tl.fromTo("#s2Reg",{autoAlpha:0,scale:.5,transformOrigin:O},{autoAlpha:1,scale:1.1,duration:.8,ease:"back.out(1.6)"},TS2+.7);
+tl.fromTo("#s2R",{scale:.5,autoAlpha:1,transformOrigin:O},{scale:1.7,autoAlpha:0,duration:.8,repeat:1,ease:"power1.out"},TS2+1);
+// S3
+fin("#s3Head",TS3+.2); tl.to("#s3Deb",{x:-70,y:20,duration:2.8,ease:"none"},TS3); tl.to("#s3F",{x:"-=120",y:"+=20",rotation:140,transformOrigin:O,duration:2.8,ease:"none"},TS3);
+tl.fromTo("#s3Reg",{autoAlpha:0,scale:.5,transformOrigin:O},{autoAlpha:1,scale:1.3,duration:.9,ease:"back.out(1.6)"},TS3+.7); tl.to("#s3Reg",{x:"-=70",duration:2,ease:"none"},TS3+.8);
+tl.fromTo("#s3R",{scale:.5,autoAlpha:1,transformOrigin:O},{scale:1.8,autoAlpha:0,duration:.8,repeat:1,ease:"power1.out"},TS3+1);
+// F caso 1
+{const FX=TF2-1.5;
+tl.fromTo("#fSpd",{x:1900},{x:-2400,duration:FX-TF+.6,ease:"none"},TF); hide("#fSpd",FX+.3);
+tl.to("#fJet",{y:"+=12",duration:1.3,yoyo:true,repeat:24,ease:"sine.inOut"},TF);
+fin("#fHead",TF+.3); hide("#fHead",TF2+.3);
+gsap.set("#fFlash,#fRed",{autoAlpha:0});
+tl.fromTo("#fFlash",{scale:.2,autoAlpha:1,transformOrigin:O},{scale:4.5,autoAlpha:0,duration:1.2,ease:"power2.out",immediateRender:false},FX);
+document.querySelectorAll(".ffr").forEach((e,i)=>{gsap.set(e,{scale:0,transformOrigin:O});tl.to(e,{scale:1,duration:.8,ease:"back.out(2)"},FX+i*.08);tl.to(e,{scale:1.18,duration:1.1,yoyo:true,repeat:16,ease:"sine.inOut"},FX+1+i*.2);});
+document.querySelectorAll(".fsk").forEach((e,i)=>{gsap.set(e,{scale:0,transformOrigin:O});tl.to(e,{scale:1,duration:5,ease:"power2.out"},FX+.3+i*.3);});
+document.querySelectorAll(".fdb").forEach((e)=>{gsap.set(e,{autoAlpha:0,x:610,y:610});tl.set(e,{autoAlpha:1},FX+.1).to(e,{x:+e.dataset.x,y:+e.dataset.y,rotation:+e.dataset.r,transformOrigin:O,duration:16,ease:"power1.out"},FX+.1);});
+tl.fromTo("#fRed",{x:610,y:610,scale:1.8,rotation:0,autoAlpha:1,transformOrigin:O},{x:300,y:830,rotation:200,duration:TF3-FX+.6,ease:"power1.out",immediateRender:false},FX+.1);
+pop("#fBadge",TF2); pop("#fCard",TF2+1.8); pop("#fCam",TF2+(TF3-TF2)*.62);
+tl.fromTo("#fReg",{autoAlpha:0,scale:.5,transformOrigin:O},{autoAlpha:1,scale:1.2,duration:.8,ease:"back.out(1.6)"},TF3+.5); pop("#fTag",TF3+1);}
+// casi d'uso nuovi
+{const uc=(n,t,mover,x0,x1,y)=>{fin("#s"+n+"Head",t+.2); if(mover)tl.fromTo(mover,{x:x0,y:y},{x:x1,y:y,duration:1.8,ease:"power2.out"},t+.1); tl.fromTo("#s"+n+"Reg",{autoAlpha:0,scale:.5,transformOrigin:O},{autoAlpha:1,scale:1.1,duration:.8,ease:"back.out(1.6)"},t+.8); pop("#s"+n+"W",t+1.4);};
+uc(4,TU[1],null); tl.fromTo("#s4B",{rotation:35,svgOrigin:"0 0"},{rotation:100,svgOrigin:"0 0",duration:1.4,ease:"power2.out"},TU[1]+.1);
+uc(5,TU[2],"#s5F",-260,800,820);
+uc(6,TU[4],"#s6P",-200,640,850); tl.fromTo("#s6C",{x:1000,y:850},{x:1520,y:850,duration:1.5,ease:"power1.inOut"},TU[4]+.1);
+uc(7,TU[6],"#s7D",-200,780,650);
+uc(8,TU[7],"#s8S",-320,620,720);}
+// fine
+pop("#eLogo",TE+.3); fin("#eT1",TE+.8); fin("#eT2",TE+1.3);
+tl.to({}, {duration:0.01}, D-.01);
+window.__timelines["main"] = tl;
+</script>
+</body>
+</html>

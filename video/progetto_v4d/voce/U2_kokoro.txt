@@ -1,0 +1,1 @@
+Un braccio robotico che si ferma prima dell'operatore.

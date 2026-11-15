@@ -1,0 +1,508 @@
+{
+ "durata": 169.74,
+ "ritardo_voce": 0.25,
+ "wav": {
+  "A1": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/progetto_v4d/voce/A1.wav",
+  "A2": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/progetto_v4d/voce/A2_v2.wav",
+  "K": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/progetto_v4d/voce/K.wav",
+  "F1": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/progetto_v4d/voce/F1.wav",
+  "F2": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/progetto_v4d/voce/F2_v2.wav",
+  "F3": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/progetto_v4d/voce/F3.wav",
+  "H1": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/progetto_v4d/voce/H1.wav",
+  "H2": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/progetto_v4d/voce/H2.wav",
+  "Z": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/progetto_v4d/voce/Z.wav",
+  "P0": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/progetto_v4d/voce/P0.wav",
+  "P1": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/progetto_v4d/voce/P1.wav",
+  "P2": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/progetto_v4d/voce/P2.wav",
+  "P3": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/progetto_v4d/voce/P3_v2.wav",
+  "P4": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/progetto_v4d/voce/P4.wav",
+  "P5": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/progetto_v4d/voce/P5.wav",
+  "P6": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/progetto_v4d/voce/P6.wav",
+  "W": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/progetto_v4d/voce/W_v2.wav",
+  "S": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/progetto_v4d/voce/S_v2.wav",
+  "R": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/progetto_v4d/voce/R_v2.wav",
+  "I": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/progetto_v4d/voce/I_v2.wav",
+  "U1": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/progetto_v4d/voce/U1_v2.wav",
+  "U2": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/progetto_v4d/voce/U2.wav",
+  "U3": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/progetto_v4d/voce/U3.wav",
+  "U4": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/progetto_v4d/voce/U4.wav",
+  "U5": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/progetto_v4d/voce/U5.wav",
+  "U6": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/progetto_v4d/voce/U6.wav",
+  "U7": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/progetto_v4d/voce/U7.wav",
+  "U8": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/progetto_v4d/voce/U8.wav",
+  "E": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/progetto_v4d/voce/E.wav"
+ },
+ "clip": [
+  [
+   "A1",
+   0.0,
+   7.57,
+   "Un drone entra in una nuvola. Per molti sistemi, non c’è più. Ma ciò che smetti di vedere è ancora lì."
+  ],
+  [
+   "A2",
+   7.87,
+   11.06,
+   "MoVi è un sistema di percezione per veicoli senza equipaggio. Tiene traccia di ciò che non vede più: una regione dove può essere, con una confidenza che cala nel tempo."
+  ],
+  [
+   "K",
+   19.23,
+   5.6,
+   "Dove non ha guardato, MoVi non dice mai «libero». Dice: presenza possibile."
+  ],
+  [
+   "F1",
+   25.23,
+   5.49,
+   "Primo caso: volo ad alta velocità. Un’avaria improvvisa, una fiammata."
+  ],
+  [
+   "F2",
+   31.02,
+   10.18,
+   "Rallentiamo il tempo. In sessanta prove simulate su sessanta, MoVi dichiara l’evento entro un secondo, e che le camere non sono più affidabili."
+  ],
+  [
+   "F3",
+   41.5,
+   3.33,
+   "E non dice mai «libero» dove c’è un frammento."
+  ],
+  [
+   "H1",
+   45.5,
+   4.23,
+   "Secondo caso. Un drone segue un oggetto veloce."
+  ],
+  [
+   "H2",
+   50.04,
+   3.86,
+   "Accanto, due droni si scontrano: fuoco, fumo, detriti."
+  ],
+  [
+   "Z",
+   54.2,
+   5.68,
+   "I sensori si attivano: radar, camera, infrarosso. Un solo nucleo ascolta."
+  ],
+  [
+   "P0",
+   60.18,
+   2.63,
+   "Guardiamo con gli occhi del drone."
+  ],
+  [
+   "P1",
+   63.11,
+   3.07,
+   "La fusione: tre sensori, un solo quadro."
+  ],
+  [
+   "P2",
+   67.41,
+   4.82,
+   "La stima, con un filtro di Kalman, prevede dove può essere il bersaglio."
+  ],
+  [
+   "P3",
+   72.53,
+   5.94,
+   "Il fumo acceca i sensori. La confidenza cala, secondo una formula dimostrata."
+  ],
+  [
+   "P4",
+   78.77,
+   4.57,
+   "Ogni punto ha uno stato: lo vedo; non lo vedo, ma è qui; non lo so."
+  ],
+  [
+   "P5",
+   83.64,
+   2.8,
+   "Il drone viene avvisato subito."
+  ],
+  [
+   "P6",
+   88.04,
+   3.73,
+   "Poi i sensori tornano, e MoVi ritrova il bersaglio."
+  ],
+  [
+   "W",
+   92.34,
+   5.36,
+   "Con l’ultima correzione, in prova, l’avviso arriva prima del primo frammento."
+  ],
+  [
+   "S",
+   97.99,
+   7.45,
+   "Cinquantanove prove simulate su cinquantanove. E la regione del bersaglio resta, sessanta su sessanta."
+  ],
+  [
+   "R",
+   105.75,
+   7.9,
+   "Sotto, una catena a cinque strati: sensori, fusione, stima, mappa a stati, avviso. Pronta per hardware dedicato."
+  ],
+  [
+   "I",
+   113.95,
+   12.31,
+   "Dietro c’è una ricerca bibliografica, matematica e sperimentale: oltre quattrocento riferimenti, e un documento tecnico di oltre cento pagine, con dimostrazioni e risultati."
+  ],
+  [
+   "U1",
+   126.56,
+   5.04,
+   "Può salvare vite. Una persona non vedente, avvisata dell’auto."
+  ],
+  [
+   "U2",
+   131.9,
+   3.93,
+   "Un braccio robotico che si ferma prima dell’operatore."
+  ],
+  [
+   "U3",
+   136.13,
+   3.95,
+   "Un muletto automatico che sa di chi è dietro lo scaffale."
+  ],
+  [
+   "U4",
+   140.38,
+   3.48,
+   "Un’auto che ricorda il pedone dietro il furgone."
+  ],
+  [
+   "U5",
+   144.16,
+   3.63,
+   "Una pattuglia che non perde di vista l’auto che segue."
+  ],
+  [
+   "U6",
+   148.08,
+   4.37,
+   "Un satellite che trova il frammento pericoloso fra i detriti."
+  ],
+  [
+   "U7",
+   152.76,
+   3.16,
+   "Un drone veloce, nel fumo e nel maltempo."
+  ],
+  [
+   "U8",
+   156.26,
+   4.45,
+   "Una nave nella nebbia. Sono applicazioni possibili."
+  ],
+  [
+   "E",
+   161.0,
+   7.13,
+   "MoVi tiene traccia di ciò che smette di vedere. Del gruppo SDMs, per The Big Hack duemilaventisei."
+  ]
+ ],
+ "sottotitoli": [
+  [
+   0.25,
+   2.43,
+   "Un drone entra in una nuvola."
+  ],
+  [
+   2.47,
+   4.79,
+   "Per molti sistemi, non c’è più."
+  ],
+  [
+   4.83,
+   7.78,
+   "Ma ciò che smetti di vedere è ancora lì."
+  ],
+  [
+   8.12,
+   10.18,
+   "MoVi è un sistema di percezione"
+  ],
+  [
+   10.22,
+   12.16,
+   "per veicoli senza equipaggio."
+  ],
+  [
+   12.2,
+   14.69,
+   "Tiene traccia di ciò che non vede più:"
+  ],
+  [
+   14.73,
+   16.61,
+   "una regione dove può essere,"
+  ],
+  [
+   16.65,
+   19.14,
+   "con una confidenza che cala nel tempo."
+  ],
+  [
+   19.48,
+   23.08,
+   "Dove non ha guardato, MoVi non dice mai «libero»."
+  ],
+  [
+   23.12,
+   25.04,
+   "Dice: presenza possibile."
+  ],
+  [
+   25.48,
+   28.15,
+   "Primo caso: volo ad alta velocità."
+  ],
+  [
+   28.19,
+   30.93,
+   "Un’avaria improvvisa, una fiammata."
+  ],
+  [
+   31.27,
+   32.84,
+   "Rallentiamo il tempo."
+  ],
+  [
+   32.88,
+   35.65,
+   "In sessanta prove simulate su sessanta,"
+  ],
+  [
+   35.69,
+   38.53,
+   "MoVi dichiara l’evento entro un secondo,"
+  ],
+  [
+   38.57,
+   41.41,
+   "e che le camere non sono più affidabili."
+  ],
+  [
+   41.75,
+   45.04,
+   "E non dice mai «libero» dove c’è un frammento."
+  ],
+  [
+   45.75,
+   49.94,
+   "Secondo caso. Un drone segue un oggetto veloce."
+  ],
+  [
+   50.29,
+   52.54,
+   "Accanto, due droni si scontrano:"
+  ],
+  [
+   52.58,
+   54.11,
+   "fuoco, fumo, detriti."
+  ],
+  [
+   54.45,
+   56.19,
+   "I sensori si attivano:"
+  ],
+  [
+   56.23,
+   58.24,
+   "radar, camera, infrarosso."
+  ],
+  [
+   58.28,
+   60.09,
+   "Un solo nucleo ascolta."
+  ],
+  [
+   60.43,
+   63.02,
+   "Guardiamo con gli occhi del drone."
+  ],
+  [
+   63.36,
+   66.39,
+   "La fusione: tre sensori, un solo quadro."
+  ],
+  [
+   67.66,
+   69.94,
+   "La stima, con un filtro di Kalman,"
+  ],
+  [
+   69.98,
+   72.44,
+   "prevede dove può essere il bersaglio."
+  ],
+  [
+   72.78,
+   74.77,
+   "Il fumo acceca i sensori."
+  ],
+  [
+   74.81,
+   78.68,
+   "La confidenza cala, secondo una formula dimostrata."
+  ],
+  [
+   79.02,
+   81.26,
+   "Ogni punto ha uno stato: lo vedo;"
+  ],
+  [
+   81.3,
+   83.55,
+   "non lo vedo, ma è qui; non lo so."
+  ],
+  [
+   83.89,
+   86.65,
+   "Il drone viene avvisato subito."
+  ],
+  [
+   88.29,
+   91.98,
+   "Poi i sensori tornano, e MoVi ritrova il bersaglio."
+  ],
+  [
+   92.59,
+   94.97,
+   "Con l’ultima correzione, in prova,"
+  ],
+  [
+   95.01,
+   97.91,
+   "l’avviso arriva prima del primo frammento."
+  ],
+  [
+   98.24,
+   101.55,
+   "Cinquantanove prove simulate su cinquantanove."
+  ],
+  [
+   101.59,
+   104.01,
+   "E la regione del bersaglio resta,"
+  ],
+  [
+   104.05,
+   105.65,
+   "sessanta su sessanta."
+  ],
+  [
+   106.0,
+   108.42,
+   "Sotto, una catena a cinque strati:"
+  ],
+  [
+   108.46,
+   111.74,
+   "sensori, fusione, stima, mappa a stati, avviso."
+  ],
+  [
+   111.78,
+   113.86,
+   "Pronta per hardware dedicato."
+  ],
+  [
+   114.2,
+   116.87,
+   "Dietro c’è una ricerca bibliografica,"
+  ],
+  [
+   116.91,
+   118.83,
+   "matematica e sperimentale:"
+  ],
+  [
+   118.87,
+   122.68,
+   "oltre quattrocento riferimenti, e un documento tecnico"
+  ],
+  [
+   122.72,
+   126.47,
+   "di oltre cento pagine, con dimostrazioni e risultati."
+  ],
+  [
+   126.81,
+   128.27,
+   "Può salvare vite."
+  ],
+  [
+   128.31,
+   131.81,
+   "Una persona non vedente, avvisata dell’auto."
+  ],
+  [
+   132.15,
+   136.04,
+   "Un braccio robotico che si ferma prima dell’operatore."
+  ],
+  [
+   136.38,
+   138.31,
+   "Un muletto automatico che sa"
+  ],
+  [
+   138.35,
+   140.29,
+   "di chi è dietro lo scaffale."
+  ],
+  [
+   140.63,
+   144.07,
+   "Un’auto che ricorda il pedone dietro il furgone."
+  ],
+  [
+   144.41,
+   148.0,
+   "Una pattuglia che non perde di vista l’auto che segue."
+  ],
+  [
+   148.33,
+   150.81,
+   "Un satellite che trova il frammento"
+  ],
+  [
+   150.85,
+   152.66,
+   "pericoloso fra i detriti."
+  ],
+  [
+   153.01,
+   156.13,
+   "Un drone veloce, nel fumo e nel maltempo."
+  ],
+  [
+   156.51,
+   158.46,
+   "Una nave nella nebbia."
+  ],
+  [
+   158.5,
+   160.92,
+   "Sono applicazioni possibili."
+  ],
+  [
+   161.25,
+   164.67,
+   "MoVi tiene traccia di ciò che smette di vedere."
+  ],
+  [
+   164.71,
+   168.34,
+   "Del gruppo SDMs, per The Big Hack duemilaventisei."
+  ]
+ ]
+}

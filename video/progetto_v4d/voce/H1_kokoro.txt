@@ -1,0 +1,1 @@
+Secondo caso. Un drone segue un oggetto veloce.
