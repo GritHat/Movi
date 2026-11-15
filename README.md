@@ -17,7 +17,7 @@ da archivi pubblici. Non c'è nessuna prova su hardware. Limiti e risultati sono
 | Cartella o file | Contenuto |
 |---|---|
 | `allegato_tecnico/allegato_tecnico.pdf` | documento tecnico: dimostrazioni, prove, limiti, bibliografia |
-| `documentazione/` | stato del progetto, riferimenti (`RIFERIMENTI.md`, `riferimenti.bib`) |
+| `documentazione/` | stato del progetto, riferimenti (`RIFERIMENTI.md`, `riferimenti.bib`), diagrammi UML (`UML.md`) |
 | `prototipo/` | prototipo simulato in Python (`README.md` proprio, con tutti i comandi) |
 | `prototipo/unreal/` | dimostrazione 3D in Unreal Engine 5.8 con motore fisico |
 | `video/` | marchio, script della voce, progetto del video pitch |
