@@ -1,0 +1,29 @@
+{
+ "commento": "scena d'esempio a lunga portata: Aereo in avvicinamento finale e drone che scende sotto la copertura. SIMULAZIONE dalle schede (riuso/lunga_portata), nessun sensore fisico; etichette a mano.",
+ "modo": "lungo",
+ "scenario": "A3",
+ "sorgente": {
+  "tipo": "scena_lp",
+  "scenario": "A3",
+  "condizione": {
+   "configurazione": "alta",
+   "cooperante": true
+  },
+  "piano": [
+   -1500,
+   2000,
+   -6000,
+   2500
+  ],
+  "celle_lato": 24,
+  "passaggio": 0
+ },
+ "classi_ammesse": [],
+ "profilo_portatore": "stazione_fissa",
+ "profilo_ricevente": "operatore_di_sito",
+ "etichette": "../etichette/lunga_portata.json",
+ "interruttori": {},
+ "parametri": {},
+ "seme": 0,
+ "origine_dati": "simulati"
+}

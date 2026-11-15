@@ -1,0 +1,117 @@
+aerei q x 0.25 log-area media 12.407
+aerei q x 0.5 log-area media 12.209
+aerei q x 1 log-area media 12.011
+aerei q x 2 log-area media 11.836
+aerei q x 4 log-area media 11.728
+aerei q x 8 log-area media 11.72
+aerei fattore q scelto 8 casi di prova 3901 NIS medio 7.28
+droni q x 0.25 log-area media 10.658
+droni q x 0.5 log-area media 10.809
+droni q x 1 log-area media 10.945
+droni q x 2 log-area media 11.149
+droni q x 4 log-area media 11.54
+droni q x 8 log-area media 12.194
+droni fattore q scelto 0.25 casi di prova 5517 NIS medio 3.08
+auto q x 0.25 log-area media 8.051
+auto q x 0.5 log-area media 7.926
+auto q x 1 log-area media 7.815
+auto q x 2 log-area media 7.825
+auto q x 4 log-area media 8.037
+auto q x 8 log-area media 8.508
+auto fattore q scelto 1 casi di prova 2974 NIS medio 3.3
+treni q x 0.25 log-area media 13.914
+treni q x 0.5 log-area media 13.374
+treni q x 1 log-area media 13.168
+treni q x 2 log-area media 13.233
+treni q x 4 log-area media 13.308
+treni q x 8 log-area media 13.335
+treni fattore q scelto 1 casi di prova 2460 NIS medio 142449.1
+secondi 65.2
+== copertura della zona 0,90 sulla metà di PROVA (Wilson 95 %; 'cons' = Wilson con n = tratti, k in proporzione)
+
+# aerei tratti prova 97 fattore q 8 NIS medio 7.28 (n 30306), quota > 7,81: 0.238
+D | n casi | tratti | tau med | err med | err p90 | dentro | cons | raggio med | area med km2 | fuori avviso | ampio
+ 2 |   803 |  95 |   2.0 |     18.6 |     39.8 | 745/803=0.928 [0.908; 0.944] | [0.856; 0.964] |    43.9 | 0.0061 | 223/803=0.278 [0.248; 0.310] | 0
+ 5 |   842 |  97 |   5.0 |     30.4 |     72.0 | 768/842=0.912 [0.891; 0.929] | [0.833; 0.950] |    70.6 | 0.0157 | 293/842=0.348 [0.317; 0.381] | 0
+10 |   812 |  97 |  10.0 |     54.3 |    172.6 | 744/812=0.916 [0.895; 0.933] | [0.846; 0.958] |   170.4 | 0.0912 | 317/812=0.390 [0.357; 0.424] | 0
+20 |   741 |  97 |  20.0 |    120.4 |    616.8 | 658/741=0.888 [0.863; 0.909] | [0.808; 0.935] |   557.0 | 0.9748 | 258/741=0.348 [0.315; 0.383] | 0
+30 |   703 |  96 |  30.0 |    218.2 |   1193.6 | 636/703=0.905 [0.881; 0.924] | [0.831; 0.950] |  1109.0 | 3.8639 | 286/703=0.407 [0.371; 0.444] | 0
+frase: k su 10 fino a t: {2: 8, 5: 8, 10: 8, 20: 8, 30: 8}
+per tipo di tratto (tutte le durate; e solo D <= 10 s):
+  rettilineo    tutte 2454/2582=0.950 [0.941; 0.958]   D<=10 1729/1855=0.932 [0.920; 0.943]  err med D<=10 30.2
+  virata        tutte 376/547=0.687 [0.647; 0.725]   D<=10 137/185=0.741 [0.673; 0.798]  err med D<=10 82.4
+  accelerazione tutte 322/343=0.939 [0.908; 0.960]   D<=10 152/166=0.916 [0.863; 0.949]  err med D<=10 44.3
+  arresto       tutte 399/429=0.930 [0.902; 0.951]   D<=10 239/251=0.952 [0.918; 0.972]  err med D<=10 16.6
+per mezzo a D = 10 s; e rapporto err/(v0 tau) mediano a 5 s:
+  aereo_aviazione_generale_circuito    248/259=0.958 [0.926; 0.976] tratti 27 err med 54.2 m; rapporto 5 s 0.221
+  aereo_avvicinamento                  197/218=0.904 [0.857; 0.936] tratti 23 err med 49.5 m; rapporto 5 s 0.065
+  aereo_decollo                        203/236=0.860 [0.810; 0.899] tratti 27 err med 73.4 m; rapporto 5 s 0.074
+  aereo_rullaggio                      67/68=0.985 [0.921; 0.997] tratti 15 err med 35.2 m; rapporto 5 s 0.640
+  aereo_sorvolo                        23/23=1.000 [0.857; 1.000] tratti 4 err med 36.7 m; rapporto 5 s 0.016
+  elicottero                           6/8=0.750 [0.409; 0.929] tratti 1 err med 101.8 m; rapporto 5 s 0.117
+
+# droni tratti prova 122 fattore q 0.25 NIS medio 3.08 (n 19565), quota > 7,81: 0.058
+D | n casi | tratti | tau med | err med | err p90 | dentro | cons | raggio med | area med km2 | fuori avviso | ampio
+ 2 |  1203 | 122 |   2.1 |     14.9 |     37.2 | 1169/1203=0.972 [0.961; 0.980] | [0.930; 0.992] |    43.5 | 0.0059 | 1/1203=0.001 [0.000; 0.005] | 0
+ 5 |  1175 | 122 |   5.1 |     22.5 |     61.7 | 1123/1175=0.956 [0.942; 0.966] | [0.908; 0.982] |    57.3 | 0.0103 | 0/1175=0.000 [0.000; 0.003] | 0
+10 |  1137 | 122 |  10.0 |     38.4 |    122.6 | 1051/1137=0.924 [0.908; 0.938] | [0.866; 0.961] |   106.5 | 0.0356 | 0/1137=0.000 [0.000; 0.003] | 0
+20 |  1042 | 120 |  20.1 |     82.6 |    286.6 | 959/1042=0.920 [0.902; 0.935] | [0.853; 0.954] |   238.9 | 0.1793 | 0/1042=0.000 [0.000; 0.004] | 0
+30 |   960 | 120 |  30.0 |    134.3 |    415.6 | 875/960=0.911 [0.892; 0.928] | [0.843; 0.948] |   354.6 | 0.3950 | 0/960=0.000 [0.000; 0.004] | 0
+frase: k su 10 fino a t: {2: 9, 5: 9, 10: 8, 20: 8, 30: 8}
+per tipo di tratto (tutte le durate; e solo D <= 10 s):
+  rettilineo    tutte 1526/1558=0.979 [0.971; 0.985]   D<=10 1363/1395=0.977 [0.968; 0.984]  err med D<=10 20.6
+  virata        tutte 442/680=0.650 [0.613; 0.685]   D<=10 279/390=0.715 [0.669; 0.758]  err med D<=10 63.9
+  accelerazione tutte 235/240=0.979 [0.952; 0.991]   D<=10 212/217=0.977 [0.947; 0.990]  err med D<=10 33.7
+  arresto       tutte 2974/3039=0.979 [0.973; 0.983]   D<=10 1489/1513=0.984 [0.977; 0.989]  err med D<=10 18.8
+per mezzo a D = 10 s; e rapporto err/(v0 tau) mediano a 5 s:
+  ala_fissa_senza_pilota               120/183=0.656 [0.584; 0.721] tratti 21 err med 109.8 m; rapporto 5 s 0.567
+  multirotore                          931/954=0.976 [0.964; 0.984] tratti 101 err med 32.8 m; rapporto 5 s 1.106
+  con guasto (ALFA failure) D=5: 153/195=0.785 [0.722; 0.837] (tratti 21)
+  con guasto (ALFA failure) D=10: 120/183=0.656 [0.584; 0.721] (tratti 21)
+
+# auto tratti prova 79 fattore q 1 NIS medio 3.30 (n 46644), quota > 7,81: 0.070
+D | n casi | tratti | tau med | err med | err p90 | dentro | cons | raggio med | area med km2 | fuori avviso | ampio
+ 2 |   766 |  79 |   2.0 |      2.6 |      6.4 | 721/766=0.941 [0.922; 0.956] | [0.860; 0.973] |     7.7 | 0.0002 | 0/766=0.000 [0.000; 0.005] | 0
+ 5 |   710 |  79 |   5.0 |      7.1 |     15.9 | 653/710=0.920 [0.897; 0.938] | [0.844; 0.965] |    18.4 | 0.0011 | 0/710=0.000 [0.000; 0.005] | 0
+10 |   657 |  79 |  10.0 |     17.6 |     35.4 | 604/657=0.919 [0.896; 0.938] | [0.844; 0.965] |    38.2 | 0.0046 | 0/657=0.000 [0.000; 0.006] | 0
+20 |   489 |  79 |  20.0 |     43.6 |     89.7 | 439/489=0.898 [0.868; 0.922] | [0.813; 0.948] |    87.3 | 0.0240 | 0/489=0.000 [0.000; 0.008] | 0
+30 |   352 |  78 |  30.0 |     75.2 |    133.0 | 336/352=0.955 [0.927; 0.972] | [0.875; 0.980] |   155.2 | 0.0757 | 0/352=0.000 [0.000; 0.011] | 0
+frase: k su 10 fino a t: {2: 8, 5: 8, 10: 8, 20: 8, 30: 8}
+per tipo di tratto (tutte le durate; e solo D <= 10 s):
+  rettilineo    tutte 1666/1721=0.968 [0.959; 0.975]   D<=10 1461/1515=0.964 [0.954; 0.973]  err med D<=10 4.3
+  virata        tutte 6/7=0.857 [0.487; 0.974]   D<=10 2/3=0.667 [0.208; 0.939]  err med D<=10 9.0
+  accelerazione tutte 1074/1234=0.870 [0.850; 0.888]   D<=10 513/609=0.842 [0.811; 0.869]  err med D<=10 14.7
+  arresto       tutte 7/12=0.583 [0.320; 0.807]   D<=10 2/6=0.333 [0.097; 0.700]  err med D<=10 27.0
+per mezzo a D = 10 s; e rapporto err/(v0 tau) mediano a 5 s:
+  auto                                 598/651=0.919 [0.895; 0.937] tratti 78 err med 17.5 m; rapporto 5 s 0.139
+  camion                               6/6=1.000 [0.610; 1.000] tratti 1 err med 19.9 m; rapporto 5 s 0.109
+
+# treni tratti prova 56 fattore q 1 NIS medio 142449.10 (n 9002), quota > 7,81: 0.765
+D | n casi | tratti | tau med | err med | err p90 | dentro | cons | raggio med | area med km2 | fuori avviso | ampio
+ 2 |   372 |  56 |   3.0 |     40.3 |    193.0 | 311/372=0.836 [0.795; 0.870] | [0.722; 0.913] |   134.3 | 0.0567 | 75/372=0.202 [0.164; 0.245] | 290
+ 5 |   538 |  56 |   6.0 |     67.1 |    306.0 | 476/538=0.885 [0.855; 0.909] | [0.785; 0.950] |   276.7 | 0.2406 | 45/538=0.084 [0.063; 0.110] | 363
+10 |   529 |  56 |  11.0 |    106.2 |    436.0 | 464/529=0.877 [0.846; 0.902] | [0.764; 0.938] |   388.4 | 0.4739 | 8/529=0.015 [0.008; 0.030] | 74
+20 |   516 |  56 |  21.0 |    175.2 |    666.3 | 465/516=0.901 [0.872; 0.924] | [0.785; 0.950] |   668.1 | 1.4021 | 0/516=0.000 [0.000; 0.007] | 0
+30 |   505 |  56 |  31.0 |    291.5 |   1034.3 | 442/505=0.875 [0.844; 0.901] | [0.764; 0.938] |   943.8 | 2.7985 | 0/505=0.000 [0.000; 0.008] | 0
+frase: k su 10 fino a t: {2: 7, 5: 7, 10: 7, 20: 7, 30: 7}
+per tipo di tratto (tutte le durate; e solo D <= 10 s):
+  rettilineo    tutte 1008/1186=0.850 [0.828; 0.869]   D<=10 712/833=0.855 [0.829; 0.877]  err med D<=10 98.3
+  virata        tutte 128/153=0.837 [0.770; 0.887]   D<=10 15/17=0.882 [0.657; 0.967]  err med D<=10 211.9
+  accelerazione tutte 424/522=0.812 [0.777; 0.843]   D<=10 201/266=0.756 [0.701; 0.803]  err med D<=10 127.4
+  arresto       tutte 598/599=0.998 [0.991; 1.000]   D<=10 323/323=1.000 [0.988; 1.000]  err med D<=10 0.7
+per mezzo a D = 10 s; e rapporto err/(v0 tau) mediano a 5 s:
+  treno                                464/529=0.877 [0.846; 0.902] tratti 56 err med 106.2 m; rapporto 5 s 0.810
+
+== profili: quota di tratti (TUTTI) con velocita' massima oltre v_max; p99 di |dv/dt| (dal modulo della velocita' dei dati)
+aereo_aviazione_generale_circuito    tratti  60 | v max mediana 59.3, massima 137.7 | oltre v_max aereo_leggero (70.0): 5/60=0.083 [0.036; 0.181] | a p99 mediana 6.67, max 19.38, oltre a_max 3.0: 55
+aereo_avvicinamento                  tratti  49 | v max mediana 157.9, massima 195.3 | oltre v_max aereo_linea_avvicinamento (90.0): 48/49=0.980 [0.893; 0.996] | a p99 mediana 9.58, max 14.48, oltre a_max 3.0: 40
+aereo_decollo                        tratti  55 | v max mediana 165.9, massima 204.6 | oltre v_max aereo_linea_avvicinamento (90.0): 55/55=1.000 [0.935; 1.000] | a p99 mediana 12.07, max 16.33, oltre a_max 3.0: 50
+aereo_rullaggio                      tratti  19 | v max mediana 10.7, massima 16.0 | oltre v_max aereo_rullaggio (15.4): 2/19=0.105 [0.029; 0.314] | a p99 mediana 0.36, max 1.42, oltre a_max 1.0: 1 | f14 aereo_rullaggio v_max 15.4: 2/19=0.105 [0.029; 0.314]
+aereo_sorvolo                        tratti   6 | v max mediana 241.7, massima 247.6 | oltre v_max aereo_linea_avvicinamento (90.0): 6/6=1.000 [0.610; 1.000] | a p99 mediana 2.17, max 3.14, oltre a_max 3.0: 1
+ala_fissa_senza_pilota               tratti  47 | v max mediana 22.2, massima 28.2 | oltre v_max drone_ala_fissa (40.0): 0/47=0.000 [0.000; 0.076] | a p99 mediana 2.52, max 4.43, oltre a_max 5.0: 0
+auto                                 tratti 154 | v max mediana 16.9, massima 27.8 | oltre v_max auto_autostrada (36.1): 0/154=0.000 [0.000; 0.024] | a p99 mediana 2.46, max 13.86, oltre a_max 3.0: 27 | f14 auto_strada_urbana v_max 13.9: 114/154=0.740 [0.666; 0.803]
+camion                               tratti   2 | v max mediana 19.8, massima 20.8 | oltre v_max auto_autostrada (36.1): 0/2=0.000 [0.000; 0.658] | a p99 mediana 5.83, max 9.18, oltre a_max 3.0: 1
+elicottero                           tratti   4 | v max mediana 58.3, massima 64.9 | oltre v_max elicottero (80.0): 0/4=0.000 [0.000; 0.490] | a p99 mediana 2.00, max 3.57, oltre a_max 5.0: 0
+moto                                 tratti   1 | v max mediana 17.0, massima 17.0 | oltre v_max auto_autostrada (36.1): 0/1=0.000 [0.000; 0.793] | a p99 mediana 2.91, max 2.91, oltre a_max 3.0: 0
+multirotore                          tratti 196 | v max mediana 9.5, massima 14.2 | oltre v_max multirotore_piccolo (19.0): 0/196=0.000 [0.000; 0.019] | a p99 mediana 6.50, max 16.08, oltre a_max 6.9: 88 | f14 multirotore_lento v_max 19.0: 0/196=0.000 [0.000; 0.019]
+treno                                tratti 111 | v max mediana 37.6, massima 73.9 | oltre v_max treno_alta_velocita (83.3): 0/111=0.000 [0.000; 0.033] | a p99 mediana 2.29, max 5.00, oltre a_max 0.5: 108 | f14 treno_banchina v_max 16.7: 95/111=0.856 [0.779; 0.909]

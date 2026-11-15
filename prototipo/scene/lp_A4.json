@@ -1,0 +1,29 @@
+{
+ "commento": "scena d'esempio a lunga portata: Mezzo senza pilota che porta il sensore (volo stazionario): SOLO ANALISI. SIMULAZIONE dalle schede (riuso/lunga_portata), nessun sensore fisico; etichette a mano.",
+ "modo": "lungo",
+ "scenario": "A4",
+ "sorgente": {
+  "tipo": "scena_lp",
+  "scenario": "A4",
+  "condizione": {
+   "configurazione": "alta",
+   "cooperante": true
+  },
+  "piano": [
+   -100,
+   300,
+   -100,
+   300
+  ],
+  "celle_lato": 24,
+  "passaggio": 0
+ },
+ "classi_ammesse": [],
+ "profilo_portatore": "stazione_fissa",
+ "profilo_ricevente": "pilota_remoto_di_drone",
+ "etichette": "../etichette/lunga_portata.json",
+ "interruttori": {},
+ "parametri": {},
+ "seme": 0,
+ "origine_dati": "simulati"
+}

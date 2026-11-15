@@ -1,0 +1,2677 @@
+{
+ "_meta": {
+  "titolo": "Effetti di meteo, fumo, fiammata e detriti sui sensori simulati (MoVi, f15, 40-eventi/01-effetti)",
+  "data": "2026-11-15 (orologio della macchina)",
+  "generato_da": "conti.py (timeout 60 python3 -I conti.py)",
+  "avvertenza": "Tutto e' conto, scheda o ipotesi: nessun sensore fisico, niente e' validato.",
+  "formato_campo": "[valore, unita', fonte]; dove il valore e' una coppia e' [nominale, prudente]. fonte = chiave di 'fonti', 'conto' o 'ipotesi'.",
+  "stato_fonti": "A = pagina aperta e letta oggi; S = riassunto del motore di ricerca, pagina non aperta (fonte secondaria); ipotesi = nessuna fonte aperta",
+  "nomi_sensori": "quelli di 02-sensori/parametri_lunga_portata.json, piu' tre ipotetici per confronto (lidar_1550_ipotetico, camera_termica_onda_media, radar_banda_S_ipotetico)",
+  "principi": [
+   "cio' che non e' osservato non e' mai 'libero'",
+   "l'avviso non si toglie se non guardando",
+   "nessuna etichetta riduce un avviso",
+   "un effetto puo' solo TOGLIERE osservazione o accendere avvisi: mai dichiarare libero un volume"
+  ],
+  "ambito": "Solo osservazione, monitoraggio e avviso. Nessuna funzione di ingaggio, puntamento o contrasto.",
+  "uso_nel_simulatore": "meteo: moltiplica la portata del sensore per fattore_portata (o ricalcola con 'modelli'); fumo e fiammata: volumi e intervalli in cui le celle del sensore tornano 'non osservato'; fiammata: chiama affidabilita_persa(t, sensore) di movi_lp.py per la durata di cecita' e ripristina solo dopo aver riguardato; detriti: oggetti nuovi con sezione radar e dimensione, piu' un volume di 'possibile presenza'"
+ },
+ "fonti": {
+  "NADEEM": "A - Nadeem, Leitgeb, Radioengineering 19(2), 2010, eq. 1-3 (leggi di Kruse e di Kim), https://www.radioeng.cz/fulltexts/2010/10_02_223_227.pdf (aperta oggi, letta con pdftotext)",
+  "ZHANG": "A - Zhang et al., Perception and Sensing for Autonomous Vehicles Under Adverse Weather Conditions: A Survey, https://arxiv.org/pdf/2112.08936 (aperta oggi, letta con pdftotext; rassegna: fonte secondaria rispetto alle misure che cita)",
+  "P838": "A - ITU-R P.838-3 nei coefficienti riportati da itu-rpy, https://itu-rpy.readthedocs.io/en/latest/_modules/itur/models/itu838.html (aperta oggi; la raccomandazione ITU non e' stata aperta)",
+  "P840": "S - ITU-R P.840-9, https://www.itu.int/dms_pubrec/itu-r/rec/p/R-REC-P.840-9-202308-I!!PDF-E.pdf (riassunto di ricerca: acqua liquida 0.05 g/m3 a ~300 m di visibilita', 0.5 g/m3 a ~50 m)",
+  "WOJT_S": "S - Wojtanowski et al. 2014, citato in ZHANG: a 25 mm/h il 905 nm arriva circa al doppio del 1550 nm",
+  "ASW": "S - Flight Safety Foundation, AeroSafety World, 'Clean Sweep', https://flightsafety.org/asw-article/clean-sweep/ (riassunto di ricerca dei requisiti FAA AC 150/5220-24; la circolare, https://www.faa.gov/documentLibrary/media/Advisory_Circular/150_5220_24.pdf, oggi risponde 403)",
+  "FODRIC": "S - studi FOD a onde millimetriche, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7916495/ e risultati vicini (riassunto di ricerca: sfera metallica di 50 mm a ~660 m a 93 GHz; sfera di 2 cm = -35 dBsm; cilindro da -20 dBsm fino a 35 m a 76.5 GHz)",
+  "FAA_SUAS": "S - FAA Airport Technology R&D, FOD con piccoli droni, https://airporttech.tc.faa.gov/Products/Airport-Safety-Papers-Publications/Airport-Safety-Detail/small-unmanned-aircraft-based-foreign-object-debris-detection-on-airport-surfaces (riassunto di ricerca: 96 % di rilevamento)",
+  "RCS_BLOG": "S - https://migflug.com/afterburner/why-radar-cannot-detect-small-drones-rcs-micro-doppler-birds/ (riassunto di ricerca, blog: Phantom 4 mediana 0.020 m2 a 9 GHz, da 0.004 a 0.27 secondo l'angolo)",
+  "UDRI": "S - prova UDRI 2018, https://www.livescience.com/63828-drone-crashes-into-airplane.html (riassunto di ricerca: un quadricottero da 0.95 kg a 383 km/h contro un'ala 'non si e' frantumato')",
+  "ASSURE": "S - ASSURE, UAS Ground Collision Severity, https://assure.msstate.edu/projects/uas-ground-collision-severity-evaluation-2/ (riassunto di ricerca: un multirotore cade piu' piano di un detrito metallico di pari massa)",
+  "AC20128": "S - FAA AC 20-128A, https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_20-128A.pdf (riassunto di ricerca: 676 eventi non contenuti nella tabella storica; nessuna distribuzione dei frammenti trovata)",
+  "LLNL83": "S - 'Electromagnetic Radiation Propagation in Large Fires' (1983), https://contrails.library.iit.edu/item/164237 (riassunto di ricerca: visibilita' a decine di piedi, attenuazione IR dell'ordine di 1 per km, radar molto meno)",
+  "BOLO_S": "S - brevetti e articoli sui microbolometri (riassunto di ricerca: dinamica progettata fino a ~200 gradi; immagine ferma < 0.5 s al cambio di guadagno; impronta residua che decade)",
+  "TELE15": "A (da 02-sensori) - Livox Tele-15, https://www.livoxtech.com/tele-15/specs",
+  "IRIS": "A (da 02-sensori) - Robin Radar IRIS, scheda 04/2026",
+  "P02": "parametri_lunga_portata.json di 02-sensori (stesso ruolo, stessa notte)"
+ },
+ "modelli": {
+  "ottico_visibilita": "gamma[dB/km] = (17/V[km]) * (lambda/550 nm)^(-q); q di Kim: 1.6 (V>50), 1.3 (6-50), 0.16V+0.34 (1-6), V-0.5 (0.5-1), 0 (V<0.5). Fonte NADEEM. Prudente: q = 0 sempre. Per 4 e 10 um e' un'estrapolazione (ipotesi).",
+  "radar_pioggia": "gamma[dB/km] = k * R[mm/h]^alfa, k e alfa di ITU-R P.838-3 (P838), polarizzazione orizzontale",
+  "radar_nebbia": "gamma = Kl * M; M da P840; Kl = 0.01 / 0.09 / 4 (dB/km)/(g/m3) a 3 / 9.4 / 77 GHz: ipotesi a memoria",
+  "ottico_pioggia": "gamma = 1.076 * R^0.67 dB/km (Carbonneau): ipotesi a memoria, non aperta; prudente a 1550 nm: doppia (WOJT_S)",
+  "portata_attiva": "R^n * 10^(2*gamma*R/10000) = R0^n con R in m; n = 2 LiDAR su bersaglio esteso, n = 4 radar e LiDAR su bersaglio piu' piccolo del fascio",
+  "portata_camera": "R = 10*log10(C0/Cth)/gamma, col tetto della portata in aria limpida; EO: C0 0.5|0.3, Cth 0.02|0.05 (ipotesi); termica: trasmissione minima 0.1|0.3 (ipotesi)",
+  "pioggia_falsi_ritorni_radar": "sigma = eta * volume della cella; eta = pi^5*0.93*Z/lambda^4, Z = 200 R^1.6 (Marshall-Palmer): ipotesi da manuale, solo banda S e X",
+  "fumo": "trasmissione = exp(-tau) per le camere (sola andata), exp(-2 tau) per LiDAR; tau(lambda) = tau_vis * 550/lambda (fuliggine fine: ipotesi) | prudente: 1 fino a 1550 nm, 0.5 a 4 um, 0.2 a 10 um",
+  "frammento_radar": "sigma = pi*(d/2)^2 (sfera metallica, regime ottico) | prudente -10 dB; R = 3100 m * (sigma/0.01)^(1/4) (IRIS, ipotesi di 02-sensori sul riferimento)",
+  "frammento_lidar": "sotto il fascio: R = (rho/rho_ref * d^2 * R_ref^2 / (theta_h*theta_v))^(1/4), Tele-15: 320 m al 10 %, fascio 0.02 x 0.12 gradi (TELE15)",
+  "frammento_camera": "R = d / (n * IFOV): n = 2 | 8 pixel; IFOV 11.5 urad (EO), 120 urad (termica) da 02-sensori"
+ },
+ "attenuazione_specifica": {
+  "radar_3.0_GHz": {
+   "k": 0.000139,
+   "alfa": 1.232,
+   "pioggia_4_25_50_mmh": [
+    0.000767,
+    0.00734,
+    0.0172
+   ],
+   "nebbia_M_0.05_0.5": [
+    0.0005,
+    0.005
+   ]
+  },
+  "radar_9.4_GHz": {
+   "k": 0.009254,
+   "alfa": 1.29,
+   "pioggia_4_25_50_mmh": [
+    0.0553,
+    0.589,
+    1.44
+   ],
+   "nebbia_M_0.05_0.5": [
+    0.0045,
+    0.045
+   ]
+  },
+  "radar_77.0_GHz": {
+   "k": 1.132,
+   "alfa": 0.7177,
+   "pioggia_4_25_50_mmh": [
+    3.06,
+    11.4,
+    18.8
+   ],
+   "nebbia_M_0.05_0.5": [
+    0.2,
+    2.0
+   ]
+  },
+  "ottico_550_nm_Kim_V_10_4_1_0.3_0.05_km": [
+   1.7,
+   4.25,
+   17.0,
+   56.6,
+   340.0
+  ],
+  "ottico_905_nm_Kim_V_10_4_1_0.3_0.05_km": [
+   0.889,
+   2.61,
+   13.2,
+   56.6,
+   340.0
+  ],
+  "ottico_1550_nm_Kim_V_10_4_1_0.3_0.05_km": [
+   0.442,
+   1.54,
+   10.1,
+   56.6,
+   340.0
+  ],
+  "ottico_4000_nm_Kim_V_10_4_1_0.3_0.05_km": [
+   0.129,
+   0.608,
+   6.3,
+   56.6,
+   340.0
+  ],
+  "ottico_10000_nm_Kim_V_10_4_1_0.3_0.05_km": [
+   0.0391,
+   0.248,
+   3.98,
+   56.6,
+   340.0
+  ]
+ },
+ "effetti": {
+  "meteo_sereno": {
+   "tipo": "meteo",
+   "parametri": {
+    "nominale": {
+     "V": 20.0,
+     "Rr": 0,
+     "M": 0
+    },
+    "prudente": {
+     "V": 10.0,
+     "Rr": 0,
+     "M": 0
+    },
+    "fonte": "ipotesi"
+   },
+   "per_sensore": {
+    "lidar_tele": {
+     "gamma_db_km": [
+      [
+       0.445,
+       1.7
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       310,
+       286
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       0.97,
+       0.89
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "lidar_1550_ipotetico": {
+     "gamma_db_km": [
+      [
+       0.221,
+       1.7
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       315,
+       286
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       0.98,
+       0.89
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "camera_eo_ottica_lunga": {
+     "gamma_db_km": [
+      [
+       0.849,
+       1.7
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       2000,
+       2000
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       1.0,
+       1.0
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "camera_termica_onda_media": {
+     "gamma_db_km": [
+      [
+       0.0644,
+       1.7
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       1200,
+       1200
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       1.0,
+       1.0
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "camera_termica_ottica_lunga": {
+     "gamma_db_km": [
+      [
+       0.0196,
+       1.7
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       1200,
+       1200
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       1.0,
+       1.0
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "radar_4d_auto": {
+     "gamma_db_km": [
+      [
+       0,
+       0
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       300,
+       300
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       1.0,
+       1.0
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "radar_sorveglianza_droni": {
+     "gamma_db_km": [
+      [
+       0,
+       0
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       3100,
+       3100
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       1.0,
+       1.0
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "radar_banda_S_ipotetico": {
+     "gamma_db_km": [
+      [
+       0,
+       0
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       10000,
+       10000
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       1.0,
+       1.0
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    }
+   }
+  },
+  "meteo_foschia": {
+   "tipo": "meteo",
+   "parametri": {
+    "nominale": {
+     "V": 4.0,
+     "Rr": 0,
+     "M": 0
+    },
+    "prudente": {
+     "V": 2.0,
+     "Rr": 0,
+     "M": 0
+    },
+    "fonte": "ipotesi"
+   },
+   "per_sensore": {
+    "lidar_tele": {
+     "gamma_db_km": [
+      [
+       2.61,
+       8.49
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       272,
+       212
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       0.85,
+       0.66
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "lidar_1550_ipotetico": {
+     "gamma_db_km": [
+      [
+       1.54,
+       8.49
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       289,
+       212
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       0.9,
+       0.66
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "camera_eo_ottica_lunga": {
+     "gamma_db_km": [
+      [
+       4.25,
+       8.49
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       2000,
+       916
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       1.0,
+       0.46
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "camera_termica_onda_media": {
+     "gamma_db_km": [
+      [
+       0.608,
+       8.49
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       1200,
+       616
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       1.0,
+       0.51
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "camera_termica_ottica_lunga": {
+     "gamma_db_km": [
+      [
+       0.248,
+       8.49
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       1200,
+       616
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       1.0,
+       0.51
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "radar_4d_auto": {
+     "gamma_db_km": [
+      [
+       0,
+       0
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       300,
+       300
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       1.0,
+       1.0
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "radar_sorveglianza_droni": {
+     "gamma_db_km": [
+      [
+       0,
+       0
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       3100,
+       3100
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       1.0,
+       1.0
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "radar_banda_S_ipotetico": {
+     "gamma_db_km": [
+      [
+       0,
+       0
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       10000,
+       10000
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       1.0,
+       1.0
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    }
+   }
+  },
+  "meteo_nebbia": {
+   "tipo": "meteo",
+   "parametri": {
+    "nominale": {
+     "V": 0.3,
+     "Rr": 0,
+     "M": 0.05
+    },
+    "prudente": {
+     "V": 0.2,
+     "Rr": 0,
+     "M": 0.1
+    },
+    "fonte": "P840 (0.05 g/m3 a ~300 m)"
+   },
+   "per_sensore": {
+    "lidar_tele": {
+     "gamma_db_km": [
+      [
+       56.6,
+       84.9
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       94,
+       75
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       0.29,
+       0.23
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "lidar_1550_ipotetico": {
+     "gamma_db_km": [
+      [
+       56.6,
+       84.9
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       94,
+       75
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       0.29,
+       0.23
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "camera_eo_ottica_lunga": {
+     "gamma_db_km": [
+      [
+       56.6,
+       84.9
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       247,
+       92
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       0.12,
+       0.046
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "camera_termica_onda_media": {
+     "gamma_db_km": [
+      [
+       56.6,
+       84.9
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       177,
+       62
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       0.15,
+       0.051
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "camera_termica_ottica_lunga": {
+     "gamma_db_km": [
+      [
+       56.6,
+       84.9
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       177,
+       62
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       0.15,
+       0.051
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "radar_4d_auto": {
+     "gamma_db_km": [
+      [
+       0.2,
+       0.4
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       298,
+       296
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       0.99,
+       0.99
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "radar_sorveglianza_droni": {
+     "gamma_db_km": [
+      [
+       0.0045,
+       0.009
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       3095,
+       3090
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       1.0,
+       1.0
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "radar_banda_S_ipotetico": {
+     "gamma_db_km": [
+      [
+       0.0005,
+       0.001
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       9994,
+       9989
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       1.0,
+       1.0
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    }
+   },
+   "falsi_ritorni": {
+    "lidar_ritorni_dalla_nebbia": [
+     [
+      0.01,
+      0.05
+     ],
+     "frazione dei raggi con un falso ritorno vicino (< 20 m)",
+     "ipotesi"
+    ],
+    "nota": [
+     "sotto 10 m di visibilita' il LiDAR e' bloccato quasi del tutto",
+     "",
+     "ZHANG"
+    ]
+   }
+  },
+  "meteo_nebbia_fitta": {
+   "tipo": "meteo",
+   "parametri": {
+    "nominale": {
+     "V": 0.1,
+     "Rr": 0,
+     "M": 0.25
+    },
+    "prudente": {
+     "V": 0.05,
+     "Rr": 0,
+     "M": 0.5
+    },
+    "fonte": "P840 (0.5 g/m3 a ~50 m)"
+   },
+   "per_sensore": {
+    "lidar_tele": {
+     "gamma_db_km": [
+      [
+       170.0,
+       340.0
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       48,
+       30
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       0.15,
+       0.094
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "lidar_1550_ipotetico": {
+     "gamma_db_km": [
+      [
+       170.0,
+       340.0
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       48,
+       30
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       0.15,
+       0.094
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "camera_eo_ottica_lunga": {
+     "gamma_db_km": [
+      [
+       170.0,
+       340.0
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       82,
+       23
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       0.041,
+       0.011
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "camera_termica_onda_media": {
+     "gamma_db_km": [
+      [
+       170.0,
+       340.0
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       59,
+       15
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       0.049,
+       0.013
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "camera_termica_ottica_lunga": {
+     "gamma_db_km": [
+      [
+       170.0,
+       340.0
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       59,
+       15
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       0.049,
+       0.013
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "radar_4d_auto": {
+     "gamma_db_km": [
+      [
+       1.0,
+       2.0
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       290,
+       281
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       0.97,
+       0.94
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "radar_sorveglianza_droni": {
+     "gamma_db_km": [
+      [
+       0.0225,
+       0.045
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       3075,
+       3051
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       0.99,
+       0.98
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "radar_banda_S_ipotetico": {
+     "gamma_db_km": [
+      [
+       0.0025,
+       0.005
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       9971,
+       9943
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       1.0,
+       0.99
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    }
+   }
+  },
+  "meteo_pioggia_forte": {
+   "tipo": "meteo",
+   "parametri": {
+    "nominale": {
+     "V": null,
+     "Rr": 25,
+     "M": 0
+    },
+    "prudente": {
+     "V": null,
+     "Rr": 50,
+     "M": 0
+    },
+    "fonte": "ipotesi (25 mm/h forte, 50 mm/h violenta: ZHANG)"
+   },
+   "per_sensore": {
+    "lidar_tele": {
+     "gamma_db_km": [
+      [
+       9.3,
+       14.8
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       206,
+       176
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       0.64,
+       0.55
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "lidar_1550_ipotetico": {
+     "gamma_db_km": [
+      [
+       9.3,
+       29.6
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       206,
+       131
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       0.64,
+       0.41
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "camera_eo_ottica_lunga": {
+     "gamma_db_km": [
+      [
+       9.3,
+       14.8
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       1503,
+       526
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       0.75,
+       0.26
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "camera_termica_onda_media": {
+     "gamma_db_km": [
+      [
+       9.3,
+       14.8
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       1075,
+       353
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       0.9,
+       0.29
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "camera_termica_ottica_lunga": {
+     "gamma_db_km": [
+      [
+       9.3,
+       14.8
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       1075,
+       353
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       0.9,
+       0.29
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "radar_4d_auto": {
+     "gamma_db_km": [
+      [
+       11.4,
+       18.8
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       224,
+       196
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       0.75,
+       0.65
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "radar_sorveglianza_droni": {
+     "gamma_db_km": [
+      [
+       0.589,
+       1.44
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       2599,
+       2165
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       0.84,
+       0.7
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "radar_banda_S_ipotetico": {
+     "gamma_db_km": [
+      [
+       0.00734,
+       0.0172
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       9917,
+       9807
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       0.99,
+       0.98
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    }
+   },
+   "falsi_ritorni": {
+    "radar_banda_X_pioggia_in_cella_m2": [
+     {
+      "4_mmh_1000_m": 0.00363,
+      "4_mmh_3000_m": 0.0327,
+      "25_mmh_1000_m": 0.0681,
+      "25_mmh_3000_m": 0.613,
+      "50_mmh_1000_m": 0.206,
+      "50_mmh_3000_m": 1.86
+     },
+     "m2 per cella (fascio 1 x 10 gradi e cella di 3 m: ipotesi)",
+     "conto"
+    ],
+    "cancellazione_doppler_db": [
+     [
+      25,
+      15
+     ],
+     "dB (nominale, prudente)",
+     "ipotesi"
+    ],
+    "lidar_punti_falsi_frazione": [
+     [
+      0.001,
+      0.01
+     ],
+     "frazione dei punti entro 30 m (gocce e spruzzi)",
+     "ipotesi"
+    ],
+    "nota": [
+     "a 25 mm/h e 1 km la pioggia in cella vale alcune volte un multirotore piccolo: senza filtro Doppler il bersaglio e' sommerso; i 'fantasmi' da spruzzi sul LiDAR sono riportati da ZHANG",
+     "",
+     "ZHANG"
+    ]
+   }
+  },
+  "meteo_neve": {
+   "tipo": "meteo",
+   "parametri": {
+    "nominale": {
+     "V": 0.5,
+     "Rr": 0,
+     "M": 0,
+     "neve77": 3.0
+    },
+    "prudente": {
+     "V": 0.1,
+     "Rr": 0,
+     "M": 0,
+     "neve77": 6.0
+    },
+    "fonte": "ZHANG: neve a 10 mm/h, visibilita' < 0.1 km, ~6 dB/km a 77 GHz; il nominale e' ipotesi"
+   },
+   "per_sensore": {
+    "lidar_tele": {
+     "gamma_db_km": [
+      [
+       34.0,
+       170.0
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       123,
+       48
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       0.38,
+       0.15
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "lidar_1550_ipotetico": {
+     "gamma_db_km": [
+      [
+       34.0,
+       170.0
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       123,
+       48
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       0.38,
+       0.15
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "camera_eo_ottica_lunga": {
+     "gamma_db_km": [
+      [
+       34.0,
+       170.0
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       411,
+       46
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       0.21,
+       0.023
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "camera_termica_onda_media": {
+     "gamma_db_km": [
+      [
+       34.0,
+       170.0
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       294,
+       31
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       0.25,
+       0.026
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "camera_termica_ottica_lunga": {
+     "gamma_db_km": [
+      [
+       34.0,
+       170.0
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       294,
+       31
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       0.25,
+       0.026
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "radar_4d_auto": {
+     "gamma_db_km": [
+      [
+       3.0,
+       6.0
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       273,
+       252
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       0.91,
+       0.84
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "radar_sorveglianza_droni": {
+     "gamma_db_km": [
+      [
+       0.0447,
+       0.0894
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       3052,
+       3006
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       0.98,
+       0.97
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    },
+    "radar_banda_S_ipotetico": {
+     "gamma_db_km": [
+      [
+       0.00455,
+       0.00911
+      ],
+      "dB/km (nominale, prudente)",
+      "conto"
+     ],
+     "portata_m": [
+      [
+       9948,
+       9897
+      ],
+      "m (nominale, prudente)",
+      "conto"
+     ],
+     "fattore_portata": [
+      [
+       0.99,
+       0.99
+      ],
+      "frazione dell'aria limpida",
+      "conto"
+     ]
+    }
+   },
+   "falsi_ritorni": {
+    "lidar_fiocchi": [
+     [
+      0.005,
+      0.03
+     ],
+     "frazione dei punti (fiocchi come punti isolati, tolti con un filtro di vicinato)",
+     "ipotesi"
+    ],
+    "nota": [
+     "i fiocchi causano falsi rilevamenti del LiDAR e bloccano la linea di vista",
+     "",
+     "ZHANG"
+    ]
+   }
+  },
+  "fumo_nube": {
+   "tipo": "evento: nube di fumo o polvere dopo un incendio o un'esplosione",
+   "tau_visibile_lungo_la_corda": [
+    [
+     5.0,
+     10.0
+    ],
+    "profondita' ottica, sola andata (nominale, prudente)",
+    "ipotesi"
+   ],
+   "rapporto_tau_per_lunghezza_d_onda": [
+    {
+     "nominale": {
+      "550": 1.0,
+      "905": 0.608,
+      "1550": 0.355,
+      "4000": 0.138,
+      "10000": 0.055
+     },
+     "prudente": {
+      "550": 1.0,
+      "905": 1.0,
+      "1550": 1.0,
+      "4000": 0.5,
+      "10000": 0.2
+     }
+    },
+    "tau(lambda)/tau(550 nm)",
+    "ipotesi"
+   ],
+   "raggio_m": [
+    {
+     "due_multirotori_piccoli": [
+      3,
+      10
+     ],
+     "avaria_motore_aereo": [
+      20,
+      50
+     ]
+    },
+    "m (nominale, prudente)",
+    "ipotesi"
+   ],
+   "durata_s": [
+    {
+     "due_multirotori_piccoli": [
+      20,
+      120
+     ],
+     "avaria_motore_aereo": [
+      60,
+      300
+     ]
+    },
+    "s (nominale, prudente); con vento v la nube si sposta di v*t e si allunga",
+    "ipotesi"
+   ],
+   "scia_m": [
+    {
+     "avaria_motore_aereo": [
+      300,
+      1000
+     ]
+    },
+    "m di scia dietro il velivolo in volo",
+    "ipotesi"
+   ],
+   "evidenza": [
+    "nei grandi incendi la visibilita' scende a decine di piedi; l'infrarosso e' attenuato dell'ordine di 1 per km, il radar molto meno",
+    "",
+    "LLNL83"
+   ],
+   "per_sensore": {
+    "lidar_tele": {
+     "nominale": {
+      "tau": 3.04,
+      "trasmissione": 0.00229,
+      "fattore_portata": 0.0479,
+      "osservato_dietro": false
+     },
+     "prudente": {
+      "tau": 10.0,
+      "trasmissione": 2.06e-09,
+      "fattore_portata": 4.54e-05,
+      "osservato_dietro": false
+     },
+     "fonte": "conto su ipotesi"
+    },
+    "lidar_1550_ipotetico": {
+     "nominale": {
+      "tau": 1.77,
+      "trasmissione": 0.0288,
+      "fattore_portata": 0.17,
+      "osservato_dietro": false
+     },
+     "prudente": {
+      "tau": 10.0,
+      "trasmissione": 2.06e-09,
+      "fattore_portata": 4.54e-05,
+      "osservato_dietro": false
+     },
+     "fonte": "conto su ipotesi"
+    },
+    "camera_eo_ottica_lunga": {
+     "nominale": {
+      "tau": 5.0,
+      "trasmissione": 0.00674,
+      "fattore_portata": null,
+      "osservato_dietro": false
+     },
+     "prudente": {
+      "tau": 10.0,
+      "trasmissione": 4.54e-05,
+      "fattore_portata": null,
+      "osservato_dietro": false
+     },
+     "fonte": "conto su ipotesi"
+    },
+    "camera_termica_onda_media": {
+     "nominale": {
+      "tau": 0.69,
+      "trasmissione": 0.503,
+      "fattore_portata": null,
+      "osservato_dietro": true
+     },
+     "prudente": {
+      "tau": 5.0,
+      "trasmissione": 0.00674,
+      "fattore_portata": null,
+      "osservato_dietro": false
+     },
+     "fonte": "conto su ipotesi"
+    },
+    "camera_termica_ottica_lunga": {
+     "nominale": {
+      "tau": 0.28,
+      "trasmissione": 0.76,
+      "fattore_portata": null,
+      "osservato_dietro": true
+     },
+     "prudente": {
+      "tau": 2.0,
+      "trasmissione": 0.135,
+      "fattore_portata": null,
+      "osservato_dietro": false
+     },
+     "fonte": "conto su ipotesi"
+    },
+    "radar_4d_auto": {
+     "nominale": {
+      "tau": 0,
+      "trasmissione": 1.0,
+      "fattore_portata": 1.0,
+      "osservato_dietro": true
+     },
+     "prudente": {
+      "tau": 0,
+      "trasmissione": 1.0,
+      "fattore_portata": 1.0,
+      "osservato_dietro": true
+     },
+     "fonte": "conto su ipotesi"
+    },
+    "radar_sorveglianza_droni": {
+     "nominale": {
+      "tau": 0,
+      "trasmissione": 1.0,
+      "fattore_portata": 1.0,
+      "osservato_dietro": true
+     },
+     "prudente": {
+      "tau": 0,
+      "trasmissione": 1.0,
+      "fattore_portata": 1.0,
+      "osservato_dietro": true
+     },
+     "fonte": "conto su ipotesi"
+    },
+    "radar_banda_S_ipotetico": {
+     "nominale": {
+      "tau": 0,
+      "trasmissione": 1.0,
+      "fattore_portata": 1.0,
+      "osservato_dietro": true
+     },
+     "prudente": {
+      "tau": 0,
+      "trasmissione": 1.0,
+      "fattore_portata": 1.0,
+      "osservato_dietro": true
+     },
+     "fonte": "conto su ipotesi"
+    }
+   },
+   "regola": "il volume della nube e il cono d'ombra dietro di essa sono 'non osservato' per ogni sensore con osservato_dietro = false; il fronte della nube da' al LiDAR ritorni veri di 'qualcosa' (non un falso allarme: un volume opaco)"
+  },
+  "fiammata_lampo": {
+   "tipo": "evento impulsivo: fiammata, lampo, palla di fuoco",
+   "durata_sorgente_s": [
+    {
+     "batteria_al_litio_di_un_drone": [
+      2,
+      10
+     ],
+     "fiammata_di_un_motore": [
+      0.5,
+      3
+     ]
+    },
+    "s (nominale, prudente)",
+    "ipotesi"
+   ],
+   "camera_eo_ottica_lunga": {
+    "cecita_s": [
+     [
+      0.5,
+      2.0
+     ],
+     "s oltre la durata della sorgente: tempo di rientro dell'esposizione automatica",
+     "ipotesi"
+    ],
+    "frazione_pixel_saturi": [
+     [
+      0.2,
+      1.0
+     ],
+     "frazione del quadro (campo di 2.7 gradi: la fiammata lo riempie)",
+     "ipotesi"
+    ],
+    "alone_raggio_volte_sorgente": [
+     [
+      2,
+      5
+     ],
+     "volte il raggio apparente della sorgente",
+     "ipotesi"
+    ],
+    "evidenza": [
+     "una luce troppo forte porta la visibilita' di una camera quasi a zero; i riflessi rendono difficile la scelta dell'esposizione",
+     "",
+     "ZHANG"
+    ]
+   },
+   "camera_termica_ottica_lunga": {
+    "cecita_s": [
+     [
+      1.0,
+      10.0
+     ],
+     "s oltre la sorgente: saturazione, cambio di guadagno (immagine ferma < 0.5 s), impronta residua",
+     "ipotesi (ordini di grandezza da BOLO_S)"
+    ],
+    "saturazione": [
+     "una fiamma supera la dinamica progettata (~200 gradi): pixel saturi nella regione calda; il resto del quadro resta leggibile se il guadagno non cambia",
+     "",
+     "BOLO_S"
+    ],
+    "frazione_pixel_saturi": [
+     [
+      0.05,
+      0.5
+     ],
+     "frazione del quadro",
+     "ipotesi"
+    ]
+   },
+   "lidar_tele": {
+    "cecita_s": [
+     [
+      0.0,
+      1.0
+     ],
+     "s: solo finche' la sorgente e' nel campo",
+     "ipotesi"
+    ],
+    "effetto": [
+     "area nera (nessun ritorno) attorno a una sorgente molto intensa: provato a 200 klx",
+     "",
+     "ZHANG"
+    ],
+    "cono_cieco_deg": [
+     [
+      1,
+      5
+     ],
+     "gradi attorno alla direzione della sorgente",
+     "ipotesi"
+    ],
+    "falsi_punti_frazione": [
+     [
+      0.0001,
+      0.001
+     ],
+     "< 0.01 % a 100 klx di luce ambiente (TELE15); con la fiamma nel campo: ipotesi",
+     "TELE15 / ipotesi"
+    ]
+   },
+   "radar": {
+    "effetto": [
+     "nessun effetto MODELLATO: non ho una fonte aperta ne' per l'assenza di effetto ne' per l'attenuazione da plasma di una fiamma; non verificato",
+     "",
+     "non verificato"
+    ],
+    "cecita_s": [
+     [
+      0.0,
+      0.0
+     ],
+     "s (nominale); prudente: da decidere con una fonte",
+     "ipotesi"
+    ]
+   },
+   "ads_b_identificazione_remota": {
+    "effetto": [
+     "la radio non e' toccata dal lampo, ma il mezzo danneggiato puo' smettere di trasmettere: il silenzio non e' un'osservazione",
+     "",
+     "P02"
+    ]
+   },
+   "regola": "durante sorgente + cecita' il sensore dichiara affidabilita' persa (movi_lp.affidabilita_persa): tutte le sue celle tornano 'non osservato' e gli avvisi restano accesi; si ripristina solo quando le statistiche rientrano E il sensore ha riguardato"
+  },
+  "salute_sensore": {
+   "tipo": "come un sensore si accorge di essere accecato o degradato (statistiche d'immagine; soglie: ipotesi)",
+   "camera_eo": {
+    "pixel_saturi": [
+     0.05,
+     "frazione di pixel al fondo scala oltre la quale il quadro e' 'abbagliato'",
+     "ipotesi"
+    ],
+    "salto_media": [
+     0.5,
+     "variazione relativa del livello medio fra due quadri oltre la quale c'e' un 'lampo'",
+     "ipotesi"
+    ],
+    "contrasto_perso": [
+     0.5,
+     "caduta relativa dell'energia dei bordi (varianza del laplaciano) rispetto alla media mobile di 10 s: nebbia, fumo, lente bagnata",
+     "ipotesi"
+    ],
+    "quadri_buoni_per_rientrare": [
+     10,
+     "quadri consecutivi entro le soglie (1 s a 10 Hz)",
+     "ipotesi"
+    ]
+   },
+   "camera_termica": {
+    "pixel_saturi": [
+     0.02,
+     "frazione al fondo scala",
+     "ipotesi"
+    ],
+    "contrasto_perso": [
+     0.5,
+     "caduta relativa della deviazione standard della scena",
+     "ipotesi"
+    ]
+   },
+   "lidar": {
+    "caduta_ritorni": [
+     0.3,
+     "caduta relativa del numero di ritorni oltre 50 m rispetto alla media mobile",
+     "ipotesi"
+    ],
+    "ritorni_vicini": [
+     0.02,
+     "frazione dei raggi con ritorno sotto 20 m senza oggetto seguito: nebbia, pioggia, fumo",
+     "ipotesi"
+    ]
+   },
+   "radar": {
+    "rumore_di_fondo_db": [
+     6,
+     "dB di aumento del fondo (pioggia) oltre il quale la portata dichiarata si accorcia",
+     "ipotesi"
+    ]
+   },
+   "regola": "la salute e' una misura del sensore su se' stesso: quando scatta, il sensore ACCORCIA la portata che dichiara (o la azzera); non allunga mai. Indipendenza: le soglie usano gli stessi dati che il sensore produce, quindi non vedono un guasto che lascia l'immagine plausibile"
+  },
+  "detriti_in_volo": {
+   "tipo": "evento: frammenti dopo una collisione fra due multirotori piccoli o dopo un'avaria di motore",
+   "collisione_due_multirotori": {
+    "corpi_principali": [
+     [
+      2,
+      2
+     ],
+     "oggetti di ~30 cm che cadono quasi interi",
+     "ipotesi (UDRI: il drone 'non si e' frantumato' nemmeno a 383 km/h)"
+    ],
+    "frammenti_5_15_cm": [
+     [
+      8,
+      40
+     ],
+     "numero: eliche, bracci, carrello, batteria, camera (2 droni x 4 eliche, 4 bracci...)",
+     "ipotesi"
+    ],
+    "frammenti_sotto_5_cm": [
+     [
+      20,
+      200
+     ],
+     "numero: schegge di elica e di guscio: sotto la soglia di ogni sensore oltre ~100 m",
+     "ipotesi"
+    ],
+    "velocita_relativa_ms": [
+     [
+      10,
+      40
+     ],
+     "m/s",
+     "ipotesi"
+    ]
+   },
+   "avaria_motore": {
+    "frammenti": [
+     [
+      10,
+      100
+     ],
+     "numero di pezzi fra 5 e 50 cm (palette, pannelli della gondola)",
+     "ipotesi (AC20128: 676 eventi non contenuti in tabella, nessuna distribuzione trovata)"
+    ],
+    "angolo_di_dispersione_deg": [
+     [
+      15,
+      30
+     ],
+     "gradi avanti e dietro il piano di rotazione (i valori di AC 20-128A non sono stati aperti)",
+     "ipotesi"
+    ]
+   },
+   "rilevabilita": {
+    "5_cm": {
+     "sezione_radar_m2": [
+      [
+       0.00196,
+       0.000196
+      ],
+      "m2 (metallo: sfera ottica; plastica o carbonio: -10 dB, ipotesi)",
+      "conto"
+     ],
+     "radar_sorveglianza_droni_m": [
+      [
+       2064,
+       1160
+      ],
+      "m (nominale metallo, prudente -10 dB); Pd 0.5 (ipotesi di 02-sensori)",
+      "conto"
+     ],
+     "lidar_tele_m": [
+      [
+       137,
+       115
+      ],
+      "m (riflettivita' 10 %, prudente 5 %)",
+      "conto"
+     ],
+     "camera_eo_ottica_lunga_m": [
+      [
+       2174,
+       543
+      ],
+      "m (2 pixel: limite geometrico; prudente 8 pixel); solo se gia' puntata, di giorno",
+      "conto"
+     ],
+     "camera_termica_ottica_lunga_m": [
+      [
+       208,
+       0
+      ],
+      "m (2 pixel, se il frammento e' caldo; prudente: freddo, nessun contrasto)",
+      "conto"
+     ]
+    },
+    "10_cm": {
+     "sezione_radar_m2": [
+      [
+       0.00785,
+       0.000785
+      ],
+      "m2 (metallo: sfera ottica; plastica o carbonio: -10 dB, ipotesi)",
+      "conto"
+     ],
+     "radar_sorveglianza_droni_m": [
+      [
+       2918,
+       1641
+      ],
+      "m (nominale metallo, prudente -10 dB); Pd 0.5 (ipotesi di 02-sensori)",
+      "conto"
+     ],
+     "lidar_tele_m": [
+      [
+       193,
+       163
+      ],
+      "m (riflettivita' 10 %, prudente 5 %)",
+      "conto"
+     ],
+     "camera_eo_ottica_lunga_m": [
+      [
+       4348,
+       1087
+      ],
+      "m (2 pixel: limite geometrico; prudente 8 pixel); solo se gia' puntata, di giorno",
+      "conto"
+     ],
+     "camera_termica_ottica_lunga_m": [
+      [
+       417,
+       0
+      ],
+      "m (2 pixel, se il frammento e' caldo; prudente: freddo, nessun contrasto)",
+      "conto"
+     ]
+    },
+    "30_cm": {
+     "sezione_radar_m2": [
+      [
+       0.0707,
+       0.00707
+      ],
+      "m2 (metallo: sfera ottica; plastica o carbonio: -10 dB, ipotesi)",
+      "conto"
+     ],
+     "radar_sorveglianza_droni_m": [
+      [
+       5055,
+       2842
+      ],
+      "m (nominale metallo, prudente -10 dB); Pd 0.5 (ipotesi di 02-sensori)",
+      "conto"
+     ],
+     "lidar_tele_m": [
+      [
+       320,
+       226
+      ],
+      "m (riflettivita' 10 %, prudente 5 %)",
+      "conto"
+     ],
+     "camera_eo_ottica_lunga_m": [
+      [
+       13043,
+       3261
+      ],
+      "m (2 pixel: limite geometrico; prudente 8 pixel); solo se gia' puntata, di giorno",
+      "conto"
+     ],
+     "camera_termica_ottica_lunga_m": [
+      [
+       1250,
+       0
+      ],
+      "m (2 pixel, se il frammento e' caldo; prudente: freddo, nessun contrasto)",
+      "conto"
+     ]
+    }
+   },
+   "caduta_da_100_m": {
+    "corpo_drone_1kg": {
+     "v_terminale_ms": 23.1,
+     "t_caduta_da_100m_s": 5.95,
+     "deriva_vento_10ms_m": 59.5
+    },
+    "batteria_0.25kg": {
+     "v_terminale_ms": 25.8,
+     "t_caduta_da_100m_s": 5.66,
+     "deriva_vento_10ms_m": 56.6
+    },
+    "braccio_con_motore_0.08kg": {
+     "v_terminale_ms": 14.6,
+     "t_caduta_da_100m_s": 7.88,
+     "deriva_vento_10ms_m": 78.8
+    },
+    "frammento_elica_5g": {
+     "v_terminale_ms": 5.78,
+     "t_caduta_da_100m_s": 17.7,
+     "deriva_vento_10ms_m": 177.0
+    },
+    "fonte": "conto su ipotesi; ASSURE (S): un multirotore cade piu' piano di un detrito metallico di pari massa"
+   },
+   "sezione_radar_drone_intero_m2": [
+    [
+     0.02,
+     0.004
+    ],
+    "m2 (mediana a 9 GHz, minimo secondo l'angolo)",
+    "RCS_BLOG"
+   ],
+   "regola": "al momento dell'evento le due tracce diventano un volume di 'possibile presenza' che cresce con (velocita' relativa + vento) * t e scende fino al suolo; i frammenti sotto soglia NON sono osservati: il volume resta in avviso finche' non lo si riguarda, e l'area a terra sotto di esso resta 'possibili detriti' fino all'ispezione"
+  },
+  "detriti_a_terra_FOD": {
+   "tipo": "detriti su pista o piazzale: sistemi esistenti e prestazioni DICHIARATE (non provate qui)",
+   "requisito_faa": {
+    "oggetto_minimo": [
+     [
+      3.0,
+      3.8
+     ],
+     "cm (cilindro metallico non verniciato, alto 1.2 in, diametro 1.5 in)",
+     "ASW"
+    ],
+    "sfera": [
+     4.3,
+     "cm (bianca, grigia o nera, come una palla da golf, 1.7 in)",
+     "ASW"
+    ],
+    "oggetti_rilevati": [
+     "almeno 9 su 10 del gruppo di prova (asfalto, pezzo di luce di pista, gomma di pneumatico, chiave da 20 cm, striscia metallica, dado di ruota...)",
+     "",
+     "ASW"
+    ],
+    "accuratezza_posizione_m": [
+     5,
+     "m (16 piedi)",
+     "ASW"
+    ],
+    "falsi_allarmi_al_giorno": [
+     [
+      1,
+      3
+     ],
+     "con conferma visiva, senza",
+     "ASW"
+    ],
+    "portata_radar_fisso_m": [
+     1000,
+     "m per il cilindro (radar fisso a onde millimetriche)",
+     "ASW"
+    ]
+   },
+   "sistemi": {
+    "radar_fisso_94_GHz_con_camera": [
+     "Tarsier (QinetiQ): moduli a ~94 GHz piu' una camera per l'identificazione",
+     "",
+     "FODRIC"
+    ],
+    "radar_mobile_su_veicolo": [
+     "FOD Finder: la relazione FAA lo dice soddisfacente di notte, di giorno, con pioggia, foschia, nebbia e neve",
+     "",
+     "ASW"
+    ],
+    "ibrido_radar_e_camera_sulle_luci_di_bordo": [
+     "FODetect (Xsight)",
+     "",
+     "ipotesi (a memoria, non aperta)"
+    ],
+    "solo_elettro_ottico": [
+     "iFerret (Stratech)",
+     "",
+     "ipotesi (a memoria, non aperta)"
+    ],
+    "piccolo_drone_con_camera": [
+     0.96,
+     "frazione rilevata degli oggetti della circolare",
+     "FAA_SUAS"
+    ]
+   },
+   "ricerca": {
+    "sfera_50_mm_a_93_GHz_m": [
+     660,
+     "m (prova in aeroporto)",
+     "FODRIC"
+    ],
+    "cilindro_-20_dBsm_a_76.5_GHz_m": [
+     35,
+     "m",
+     "FODRIC"
+    ]
+   },
+   "con_i_sensori_di_02": {
+    "radar_movimento_a_terra": [
+     "cella di 3 m x 15 m a 3 km e soglia attorno a 1 m2: NON vede i detriti (02-sensori lo dichiara fra i non osservati)",
+     "",
+     "P02"
+    ],
+    "lidar_tele_m": [
+     [
+      137,
+      115
+     ],
+     "m per un frammento di 5 cm, ma a incidenza radente sulla pavimentazione la separazione dal suolo e' il limite vero",
+     "conto / ipotesi"
+    ]
+   },
+   "regola": "dopo un evento sopra o vicino a una pista, la striscia sotto il volume di caduta resta 'possibili detriti' finche' un sensore capace (radar a onde millimetriche, camera, ispezione) non l'ha guardata: il radar del movimento a terra non basta a toglierlo"
+  }
+ },
+ "matrice_osservato_non_osservato": {
+  "lidar_tele": {
+   "sereno": {
+    "fattore_portata": [
+     0.97,
+     0.89
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "osservato"
+   },
+   "foschia": {
+    "fattore_portata": [
+     0.85,
+     0.66
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "degradato"
+   },
+   "nebbia": {
+    "fattore_portata": [
+     0.29,
+     0.23
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "degradato (solo nominale)"
+   },
+   "nebbia_fitta": {
+    "fattore_portata": [
+     0.15,
+     0.094
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "degradato (solo nominale)"
+   },
+   "pioggia_forte": {
+    "fattore_portata": [
+     0.64,
+     0.55
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "degradato"
+   },
+   "neve": {
+    "fattore_portata": [
+     0.38,
+     0.15
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "degradato"
+   },
+   "fumo_dietro_la_nube": "non osservato",
+   "fiammata": "non osservato nel cono attorno alla sorgente; il resto osservato"
+  },
+  "lidar_1550_ipotetico": {
+   "sereno": {
+    "fattore_portata": [
+     0.98,
+     0.89
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "osservato"
+   },
+   "foschia": {
+    "fattore_portata": [
+     0.9,
+     0.66
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "degradato"
+   },
+   "nebbia": {
+    "fattore_portata": [
+     0.29,
+     0.23
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "degradato (solo nominale)"
+   },
+   "nebbia_fitta": {
+    "fattore_portata": [
+     0.15,
+     0.094
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "degradato (solo nominale)"
+   },
+   "pioggia_forte": {
+    "fattore_portata": [
+     0.64,
+     0.41
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "degradato"
+   },
+   "neve": {
+    "fattore_portata": [
+     0.38,
+     0.15
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "degradato"
+   },
+   "fumo_dietro_la_nube": "non osservato",
+   "fiammata": "non osservato nel cono attorno alla sorgente; il resto osservato"
+  },
+  "camera_eo_ottica_lunga": {
+   "sereno": {
+    "fattore_portata": [
+     1.0,
+     1.0
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "osservato"
+   },
+   "foschia": {
+    "fattore_portata": [
+     1.0,
+     0.46
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "degradato"
+   },
+   "nebbia": {
+    "fattore_portata": [
+     0.12,
+     0.046
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "degradato (solo nominale)"
+   },
+   "nebbia_fitta": {
+    "fattore_portata": [
+     0.041,
+     0.011
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "non osservato"
+   },
+   "pioggia_forte": {
+    "fattore_portata": [
+     0.75,
+     0.26
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "degradato"
+   },
+   "neve": {
+    "fattore_portata": [
+     0.21,
+     0.023
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "degradato (solo nominale)"
+   },
+   "fumo_dietro_la_nube": "non osservato",
+   "fiammata": "non osservato per sorgente + cecita' (affidabilita' persa)"
+  },
+  "camera_termica_onda_media": {
+   "sereno": {
+    "fattore_portata": [
+     1.0,
+     1.0
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "osservato"
+   },
+   "foschia": {
+    "fattore_portata": [
+     1.0,
+     0.51
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "degradato"
+   },
+   "nebbia": {
+    "fattore_portata": [
+     0.15,
+     0.051
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "degradato (solo nominale)"
+   },
+   "nebbia_fitta": {
+    "fattore_portata": [
+     0.049,
+     0.013
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "non osservato"
+   },
+   "pioggia_forte": {
+    "fattore_portata": [
+     0.9,
+     0.29
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "degradato"
+   },
+   "neve": {
+    "fattore_portata": [
+     0.25,
+     0.026
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "degradato (solo nominale)"
+   },
+   "fumo_dietro_la_nube": "osservato solo nel caso nominale",
+   "fiammata": "non osservato per sorgente + cecita' (affidabilita' persa)"
+  },
+  "camera_termica_ottica_lunga": {
+   "sereno": {
+    "fattore_portata": [
+     1.0,
+     1.0
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "osservato"
+   },
+   "foschia": {
+    "fattore_portata": [
+     1.0,
+     0.51
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "degradato"
+   },
+   "nebbia": {
+    "fattore_portata": [
+     0.15,
+     0.051
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "degradato (solo nominale)"
+   },
+   "nebbia_fitta": {
+    "fattore_portata": [
+     0.049,
+     0.013
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "non osservato"
+   },
+   "pioggia_forte": {
+    "fattore_portata": [
+     0.9,
+     0.29
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "degradato"
+   },
+   "neve": {
+    "fattore_portata": [
+     0.25,
+     0.026
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "degradato (solo nominale)"
+   },
+   "fumo_dietro_la_nube": "osservato solo nel caso nominale",
+   "fiammata": "non osservato per sorgente + cecita' (affidabilita' persa)"
+  },
+  "radar_4d_auto": {
+   "sereno": {
+    "fattore_portata": [
+     1.0,
+     1.0
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "osservato"
+   },
+   "foschia": {
+    "fattore_portata": [
+     1.0,
+     1.0
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "osservato"
+   },
+   "nebbia": {
+    "fattore_portata": [
+     0.99,
+     0.99
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "osservato"
+   },
+   "nebbia_fitta": {
+    "fattore_portata": [
+     0.97,
+     0.94
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "osservato"
+   },
+   "pioggia_forte": {
+    "fattore_portata": [
+     0.75,
+     0.65
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "degradato"
+   },
+   "neve": {
+    "fattore_portata": [
+     0.91,
+     0.84
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "osservato"
+   },
+   "fumo_dietro_la_nube": "osservato",
+   "fiammata": "osservato (nessun effetto modellato: non verificato)"
+  },
+  "radar_sorveglianza_droni": {
+   "sereno": {
+    "fattore_portata": [
+     1.0,
+     1.0
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "osservato"
+   },
+   "foschia": {
+    "fattore_portata": [
+     1.0,
+     1.0
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "osservato"
+   },
+   "nebbia": {
+    "fattore_portata": [
+     1.0,
+     1.0
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "osservato"
+   },
+   "nebbia_fitta": {
+    "fattore_portata": [
+     0.99,
+     0.98
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "osservato"
+   },
+   "pioggia_forte": {
+    "fattore_portata": [
+     0.84,
+     0.7
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "degradato"
+   },
+   "neve": {
+    "fattore_portata": [
+     0.98,
+     0.97
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "osservato"
+   },
+   "fumo_dietro_la_nube": "osservato",
+   "fiammata": "osservato (nessun effetto modellato: non verificato)"
+  },
+  "radar_banda_S_ipotetico": {
+   "sereno": {
+    "fattore_portata": [
+     1.0,
+     1.0
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "osservato"
+   },
+   "foschia": {
+    "fattore_portata": [
+     1.0,
+     1.0
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "osservato"
+   },
+   "nebbia": {
+    "fattore_portata": [
+     1.0,
+     1.0
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "osservato"
+   },
+   "nebbia_fitta": {
+    "fattore_portata": [
+     1.0,
+     0.99
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "osservato"
+   },
+   "pioggia_forte": {
+    "fattore_portata": [
+     0.99,
+     0.98
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "osservato"
+   },
+   "neve": {
+    "fattore_portata": [
+     0.99,
+     0.99
+    ],
+    "stato_oltre_la_portata_ridotta": "non osservato",
+    "stato_sintetico": "osservato"
+   },
+   "fumo_dietro_la_nube": "osservato",
+   "fiammata": "osservato (nessun effetto modellato: non verificato)"
+  },
+  "ads_b / identificazione_remota": {
+   "meteo": "invariato (solo chi trasmette)",
+   "fumo_dietro_la_nube": "invariato",
+   "fiammata": "invariato",
+   "dopo_un_danno": "il trasmettitore puo' tacere: nessuna osservazione, l'avviso resta",
+   "fonte": "P02; ZHANG per la banda L in pioggia"
+  }
+ },
+ "combinazioni_che_reggono": {
+  "nebbia_e_nebbia_fitta": "radar (X o S) per esistenza, distanza e velocita' radiale; cooperativi per l'identita'. Camere e LiDAR: solo entro poche decine o centinaia di metri. Nessuna classificazione visiva.",
+  "pioggia_forte": "radar in banda S o X con filtro Doppler (portata X ridotta, vedi fattore); camere a portata ridotta; 77 GHz solo vicino.",
+  "neve": "radar X o S; termica a corto raggio; LiDAR con filtro dei fiocchi.",
+  "fumo": "radar attraverso la nube; termica a onda lunga nel caso nominale (non nel prudente); EO e LiDAR vedono solo il fronte della nube.",
+  "fiammata": "radar (non verificato) e cooperativi durante la cecita'; LiDAR fuori dal cono della sorgente; camere dopo il rientro.",
+  "detriti_in_volo": "radar per i pezzi >= 5-10 cm entro 1-2 km, per i pochi secondi di caduta; camera EO puntata dal radar per confermare; sotto 5 cm niente: resta il volume d'avviso.",
+  "detriti_a_terra": "radar a onde millimetriche dedicato o camera/ispezione: nessuno dei sensori a lunga portata di 02-sensori basta.",
+  "sintesi": "nessun sensore regge in tutte le condizioni; radar + una camera (EO o termica) + cooperativi lascia almeno 'esistenza e posizione' in ogni evento, ma l'identita' e i frammenti piccoli si perdono: li' il sistema deve dire 'non osservato'."
+ }
+}

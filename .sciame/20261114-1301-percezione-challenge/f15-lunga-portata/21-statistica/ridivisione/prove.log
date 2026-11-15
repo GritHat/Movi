@@ -1,0 +1,29 @@
+aerei q x 0.25 log-area media 12.467
+aerei q x 0.5 log-area media 12.289
+aerei q x 1 log-area media 12.093
+aerei q x 2 log-area media 11.924
+aerei q x 4 log-area media 11.813
+aerei q x 8 log-area media 11.805
+aerei fattore q scelto 8 casi di prova 3516 NIS medio 6.11
+droni q x 0.25 log-area media 10.609
+droni q x 0.5 log-area media 10.774
+droni q x 1 log-area media 10.873
+droni q x 2 log-area media 11.138
+droni q x 4 log-area media 11.531
+droni q x 8 log-area media 12.211
+droni fattore q scelto 0.25 casi di prova 5527 NIS medio 3.11
+auto q x 0.25 log-area media 7.92
+auto q x 0.5 log-area media 7.807
+auto q x 1 log-area media 7.753
+auto q x 2 log-area media 7.786
+auto q x 4 log-area media 8.029
+auto q x 8 log-area media 8.516
+auto fattore q scelto 1 casi di prova 2977 NIS medio 3.35
+treni q x 0.25 log-area media 14.039
+treni q x 0.5 log-area media 13.579
+treni q x 1 log-area media 13.349
+treni q x 2 log-area media 13.385
+treni q x 4 log-area media 13.394
+treni q x 8 log-area media 13.422
+treni fattore q scelto 1 casi di prova 2507 NIS medio 137238.05
+secondi 79.5

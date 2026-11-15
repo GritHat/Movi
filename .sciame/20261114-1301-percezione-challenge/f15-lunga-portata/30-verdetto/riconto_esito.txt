@@ -1,0 +1,63 @@
+== interfaccia: n per riga 200
+A1/min   tempestivo 200/200 (0.981, 1) | passaggi con ciclo senza regione 64/200 (0.259, 0.388) | cicli fuori avviso 1894/5676 | d_conf [949.1, 927.6] rich 806 | libero su oggetto multirotore 0/19494; multirotore_C0 0/3306 | scambi 0/200 | errori 0
+A1/alta  tempestivo 200/200 (0.981, 1) | passaggi con ciclo senza regione 9/200 (0.024, 0.083) | cicli fuori avviso 59/206 | d_conf [963.2, 945.8] rich 806 | libero su oggetto multirotore 436/19494; multirotore_C0 340/3306 | scambi 0/200 | errori 0
+A2/min   tempestivo 50/200 (0.195, 0.314) | passaggi con ciclo senza regione 14/200 (0.042, 0.114) | cicli fuori avviso 794/2368 | d_conf [124.9, 49.1] rich 147 | libero su oggetto aereo_rullaggio 0/18000; persona_a_piedi 0/18000; mezzo_piazzale 0/15600 | scambi 87/200 | errori 0
+A2/alta  tempestivo 200/200 (0.981, 1) | passaggi con ciclo senza regione 24/200 (0.082, 0.172) | cicli fuori avviso 518/678 | d_conf [303.0, 299.4] rich 147 | libero su oggetto aereo_rullaggio 0/18000; persona_a_piedi 0/18000; mezzo_piazzale 0/15600 | scambi 200/200 | errori 0
+A3/min   tempestivo 0/200 (0.0, 0.019) | passaggi con ciclo senza regione 67/200 (0.273, 0.403) | cicli fuori avviso 13644/28063 | d_conf None rich 3932 | libero su oggetto aereo_avvicinamento 0/27200; multirotore 0/27200 | scambi 0/200 | errori 0
+A3/alta  tempestivo 0/200 (0.0, 0.019) | passaggi con ciclo senza regione 1/200 (0.001, 0.028) | cicli fuori avviso 158/23800 | d_conf [3431.7, 3390.9] rich 3932 | libero su oggetto aereo_avvicinamento 0/27200; multirotore 0/27200 | scambi 0/200 | errori 0
+A4/min   tempestivo 100/200 (0.431, 0.569) | passaggi con ciclo senza regione 3/200 (0.005, 0.043) | cicli fuori avviso 1023/6675 | d_conf [208.7, 106.4] rich 126 | libero su oggetto multirotore 0/9576; multirotore_C0 0/1624 | scambi 0/200 | errori 0
+A4/alta  tempestivo 149/200 (0.68, 0.8) | passaggi con ciclo senza regione 18/200 (0.058, 0.138) | cicli fuori avviso 223/2108 | d_conf [206.9, 104.8] rich 126 | libero su oggetto multirotore 0/9576; multirotore_C0 0/1624 | scambi 0/200 | errori 0
+S1/min   tempestivo 200/200 (0.981, 1) | passaggi con ciclo senza regione 148/200 (0.675, 0.796) | cicli fuori avviso 7061/11210 | d_conf [105.7, 104.7] rich 67 | libero su oggetto auto_strada_urbana 23/7800 | scambi 0/200 | errori 0
+S1/alta  tempestivo 200/200 (0.981, 1) | passaggi con ciclo senza regione 126/200 (0.561, 0.694) | cicli fuori avviso 5671/7528 | d_conf [105.1, 93.3] rich 67 | libero su oggetto auto_strada_urbana 30/7800 | scambi 0/200 | errori 0
+S2/min   tempestivo 186/200 (0.886, 0.958) | passaggi con ciclo senza regione 28/200 (0.099, 0.195) | cicli fuori avviso 1917/17531 | d_conf [493.4, 489.8] rich 261 | libero su oggetto treno_banchina 0/13400 | scambi 0/200 | errori 0
+S2/alta  tempestivo 186/200 (0.886, 0.958) | passaggi con ciclo senza regione 62/200 (0.25, 0.377) | cicli fuori avviso 1116/13075 | d_conf [493.4, 486.6] rich 261 | libero su oggetto treno_banchina 0/13400 | scambi 0/200 | errori 0
+   totale passaggi con ciclo senza regione: 564/2400 (0.218, 0.252)
+== prudente: n per riga 50
+A1/min   tempestivo 50/50 (0.929, 1) | passaggi con ciclo senza regione 0/50 (0.0, 0.071) | cicli fuori avviso 10/1417 | d_conf [948.3, 921.4] rich 806 | libero su oggetto multirotore 0/4902; multirotore_C0 0/798 | scambi 0/50 | errori 0
+A1/alta  tempestivo 50/50 (0.929, 1) | passaggi con ciclo senza regione 0/50 (0.0, 0.071) | cicli fuori avviso 0/50 | d_conf [963.2, 951.6] rich 806 | libero su oggetto multirotore 119/4902; multirotore_C0 159/798 | scambi 0/50 | errori 0
+A2/min   tempestivo 10/50 (0.112, 0.33) | passaggi con ciclo senza regione 0/50 (0.0, 0.071) | cicli fuori avviso 0/590 | d_conf [92.5, 51.0] rich 147 | libero su oggetto aereo_rullaggio 0/4500; persona_a_piedi 0/4500; mezzo_piazzale 0/3900 | scambi 26/50 | errori 0
+A2/alta  tempestivo 50/50 (0.929, 1) | passaggi con ciclo senza regione 0/50 (0.0, 0.071) | cicli fuori avviso 0/173 | d_conf [302.6, 298.9] rich 147 | libero su oggetto aereo_rullaggio 0/4500; persona_a_piedi 0/4500; mezzo_piazzale 0/3900 | scambi 49/50 | errori 0
+A3/min   tempestivo 0/50 (0.0, 0.071) | passaggi con ciclo senza regione 0/50 (0.0, 0.071) | cicli fuori avviso 0/6963 | d_conf None rich 3932 | libero su oggetto aereo_avvicinamento 0/6800; multirotore 0/6800 | scambi 0/50 | errori 0
+A3/alta  tempestivo 0/50 (0.0, 0.071) | passaggi con ciclo senza regione 0/50 (0.0, 0.071) | cicli fuori avviso 0/5950 | d_conf [3431.7, 3374.7] rich 3932 | libero su oggetto aereo_avvicinamento 0/6800; multirotore 0/6800 | scambi 5/50 | errori 0
+A4/min   tempestivo 32/50 (0.501, 0.759) | passaggi con ciclo senza regione 0/50 (0.0, 0.071) | cicli fuori avviso 134/2025 | d_conf [227.0, 149.1] rich 126 | libero su oggetto multirotore 0/2408; multirotore_C0 0/392 | scambi 0/50 | errori 0
+A4/alta  tempestivo 43/50 (0.738, 0.93) | passaggi con ciclo senza regione 0/50 (0.0, 0.071) | cicli fuori avviso 2/573 | d_conf [210.7, 124.8] rich 126 | libero su oggetto multirotore 0/2408; multirotore_C0 0/392 | scambi 0/50 | errori 0
+S1/min   tempestivo 50/50 (0.929, 1) | passaggi con ciclo senza regione 0/50 (0.0, 0.071) | cicli fuori avviso 141/2801 | d_conf [105.8, 104.7] rich 67 | libero su oggetto auto_strada_urbana 20/1950 | scambi 0/50 | errori 0
+S1/alta  tempestivo 50/50 (0.929, 1) | passaggi con ciclo senza regione 0/50 (0.0, 0.071) | cicli fuori avviso 75/1885 | d_conf [105.8, 104.7] rich 67 | libero su oggetto auto_strada_urbana 13/1950 | scambi 0/50 | errori 0
+S2/min   tempestivo 44/50 (0.762, 0.944) | passaggi con ciclo senza regione 0/50 (0.0, 0.071) | cicli fuori avviso 52/4160 | d_conf [494.1, 489.6] rich 261 | libero su oggetto treno_banchina 0/3350 | scambi 0/50 | errori 0
+S2/alta  tempestivo 44/50 (0.762, 0.944) | passaggi con ciclo senza regione 0/50 (0.0, 0.071) | cicli fuori avviso 24/3015 | d_conf [493.6, 489.4] rich 261 | libero su oggetto treno_banchina 0/3350 | scambi 0/50 | errori 0
+   totale passaggi con ciclo senza regione: 0/600 (0.0, 0.006)
+== eventi
+E1/min   n 16 dichiarato 11/16 entro2s 1/16 (0.011, 0.283) falsi 0/16 (0, 0.194) fuori_avviso 0 tracce_perse_senza_avviso 0 libero_su_oggetto [0, 2112] salute_dichiarata 0 frammenti_dentro_V 35960/36660 (0.979, 0.982)
+E1/alta  n 16 dichiarato 0/16 entro2s 0/16 (0, 0.194) falsi 0/16 (0, 0.194) fuori_avviso 0 tracce_perse_senza_avviso 0 libero_su_oggetto [0, 2112] salute_dichiarata 0
+E2/min   n 16 dichiarato 0/16 entro2s 0/16 (0, 0.194) falsi 0/16 (0, 0.194) fuori_avviso 0 tracce_perse_senza_avviso 0 libero_su_oggetto [0, 2208] salute_dichiarata 0
+E2/alta  n 16 dichiarato 0/16 entro2s 0/16 (0, 0.194) falsi 0/16 (0, 0.194) fuori_avviso 0 tracce_perse_senza_avviso 0 libero_su_oggetto [0, 2208] salute_dichiarata 32
+E3/min   n 60 dichiarato 0/60 entro2s 0/60 (0, 0.06) falsi 0/60 (0, 0.06) fuori_avviso 0 tracce_perse_senza_avviso 0 libero_su_oggetto [0, 9540] salute_dichiarata 0
+E3/alta  n 60 dichiarato 0/60 entro2s 0/60 (0, 0.06) falsi 0/60 (0, 0.06) fuori_avviso 0 tracce_perse_senza_avviso 0 libero_su_oggetto [0, 9540] salute_dichiarata 0
+E4/min   n 60 dichiarato 0/60 entro2s 0/60 (0, 0.06) falsi 0/60 (0, 0.06) fuori_avviso 0 tracce_perse_senza_avviso 0 libero_su_oggetto [0, 0] salute_dichiarata 0
+E4/alta  n 60 dichiarato 5/60 entro2s 0/60 (0, 0.06) falsi 5/60 (0.036, 0.181) fuori_avviso 0 tracce_perse_senza_avviso 0 libero_su_oggetto [0, 2940] salute_dichiarata 0
+E5/alta/sep5.0 n 300 dichiarato 1/300 entro2s 0/300 (0.0, 0.013) falsi 1/300 (0.001, 0.019) fuori_avviso 0 tracce_perse_senza_avviso 0 libero_su_oggetto [0, 26400] salute_dichiarata 0
+E5/alta/sep2.0 n 60 dichiarato 0/60 entro2s 0/60 (0, 0.06) falsi 0/60 (0, 0.06) fuori_avviso 0 tracce_perse_senza_avviso 0 libero_su_oggetto [0, 5280] salute_dichiarata 0
+E5/alta/sep1.0 n 60 dichiarato 2/60 entro2s 0/60 (0, 0.06) falsi 2/60 (0.009, 0.114) fuori_avviso 0 tracce_perse_senza_avviso 0 libero_su_oggetto [0, 5280] salute_dichiarata 0
+E5/alta/sep0.5 n 60 dichiarato 0/60 entro2s 0/60 (0, 0.06) falsi 0/60 (0, 0.06) fuori_avviso 0 tracce_perse_senza_avviso 0 libero_su_oggetto [0, 5280] salute_dichiarata 0
+== traiettorie, divisione per mezzo (compara.json)
+aerei  D=  2 dentro 685/722 = 0.949 mezzi 41 boot [0.92, 0.98] wilson_mezzi [0.86, 0.99] fuori avviso 105/722 (mezzi con caso 8/41)
+aerei  D=  5 dentro 723/767 = 0.943 mezzi 43 boot [0.92, 0.97] wilson_mezzi [0.85, 0.99] fuori avviso 160/767 (mezzi con caso 10/43)
+aerei  D= 10 dentro 681/730 = 0.933 mezzi 43 boot [0.9, 0.96] wilson_mezzi [0.85, 0.99] fuori avviso 167/730 (mezzi con caso 11/43)
+aerei  D= 20 dentro 616/667 = 0.924 mezzi 43 boot [0.89, 0.97] wilson_mezzi [0.83, 0.98] fuori avviso 145/667 (mezzi con caso 11/43)
+aerei  D= 30 dentro 585/630 = 0.929 mezzi 43 boot [0.87, 0.99] wilson_mezzi [0.88, 1.0] fuori avviso 144/630 (mezzi con caso 9/43)
+droni  D=  2 dentro 1170/1214 = 0.964 mezzi 114 boot [0.94, 0.98] wilson_mezzi [0.93, 0.99] fuori avviso 1/1214 (mezzi con caso 1/114)
+droni  D=  5 dentro 1115/1177 = 0.947 mezzi 114 boot [0.92, 0.97] wilson_mezzi [0.91, 0.98] fuori avviso 0/1177 (mezzi con caso 0/114)
+droni  D= 10 dentro 1014/1136 = 0.893 mezzi 114 boot [0.86, 0.93] wilson_mezzi [0.84, 0.95] fuori avviso 0/1136 (mezzi con caso 0/114)
+droni  D= 20 dentro 956/1051 = 0.910 mezzi 113 boot [0.87, 0.94] wilson_mezzi [0.86, 0.96] fuori avviso 0/1051 (mezzi con caso 0/113)
+droni  D= 30 dentro 874/949 = 0.921 mezzi 112 boot [0.89, 0.95] wilson_mezzi [0.87, 0.97] fuori avviso 0/949 (mezzi con caso 0/112)
+auto   D=  2 dentro 707/764 = 0.925 mezzi 30 boot [0.9, 0.95] wilson_mezzi [0.78, 0.98] fuori avviso 0/764 (mezzi con caso 0/30)
+auto   D=  5 dentro 645/725 = 0.890 mezzi 30 boot [0.86, 0.92] wilson_mezzi [0.73, 0.96] fuori avviso 0/725 (mezzi con caso 0/30)
+auto   D= 10 dentro 564/650 = 0.868 mezzi 30 boot [0.84, 0.9] wilson_mezzi [0.71, 0.95] fuori avviso 0/650 (mezzi con caso 0/30)
+auto   D= 20 dentro 454/500 = 0.908 mezzi 30 boot [0.87, 0.94] wilson_mezzi [0.76, 0.97] fuori avviso 0/500 (mezzi con caso 0/30)
+auto   D= 30 dentro 289/338 = 0.855 mezzi 30 boot [0.82, 0.9] wilson_mezzi [0.68, 0.94] fuori avviso 0/338 (mezzi con caso 0/30)
+treni  D=  2 dentro 369/405 = 0.911 mezzi 19 boot [0.86, 0.95] wilson_mezzi [0.71, 0.98] fuori avviso 61/405 (mezzi con caso 18/19)
+treni  D=  5 dentro 492/537 = 0.916 mezzi 19 boot [0.89, 0.94] wilson_mezzi [0.71, 0.98] fuori avviso 41/537 (mezzi con caso 16/19)
+treni  D= 10 dentro 475/538 = 0.883 mezzi 19 boot [0.84, 0.92] wilson_mezzi [0.67, 0.96] fuori avviso 10/538 (mezzi con caso 5/19)
+treni  D= 20 dentro 477/522 = 0.914 mezzi 19 boot [0.89, 0.94] wilson_mezzi [0.71, 0.98] fuori avviso 1/522 (mezzi con caso 1/19)
+treni  D= 30 dentro 456/505 = 0.903 mezzi 19 boot [0.87, 0.93] wilson_mezzi [0.7, 0.97] fuori avviso 0/505 (mezzi con caso 0/19)
+== attacchi: chiavi {'X1': 'list', 'X2': 'list', 'X3': ['attuale_90', 'corretto_210', 'portata_libero_multirotore_5_passate_m', 'portata_libero_multirotore_1_passata_m', 'finestra_W_aereo_210_cella100_s'], 'X4': ['distanza_m', 'SNR_medio', 'Pd_swerling1_formula', 'Pd_media_montecarlo', 'mancate_1_indipendenti', 'mancate_1_correlate'], 'X5': ['edificio_non_in_pianta', 'edificio_in_pianta', 'auto_dietro_edificio_non_in_pianta_strada'], 'X6': ['strada_pedone_0.5m2', 'strada_drone_0.01m2', 'aeroporto_drone_C0_1.6e-4m2']}

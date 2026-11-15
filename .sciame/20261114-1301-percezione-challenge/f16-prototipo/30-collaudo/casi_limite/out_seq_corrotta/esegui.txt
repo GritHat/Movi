@@ -1,0 +1,35 @@
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import os, runpy, sys; sys.path.insert(0, os.environ["MOVI_RADICE"]); sys.argv[0] = "movi"; runpy.run_module("movi", run_name="__main__", alter_sys=True)
+                                                                                                ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen runpy>", line 231, in run_module
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/prototipo/movi/__main__.py", line 58, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/prototipo/movi/__main__.py", line 32, in main
+    print(esegui.principale(a.scena, a.config, a.uscita or "uscite/" + a.scena.replace("/", "_"), a.celle,
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                            a.ultimo))
+                            ^^^^^^^^^
+  File "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/prototipo/movi/esegui.py", line 23, in principale
+    for fot in sorgente:
+               ^^^^^^^^
+  File "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/prototipo/movi/sorgenti.py", line 69, in __iter__
+    for indice, t, prof in self._s:
+                           ^^^^^^^
+  File "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/prototipo/riuso/catena/sorgente.py", line 64, in __iter__
+    prof = np.load(os.path.join(self.cartella, "profondita", f"{i:06d}.npy"), allow_pickle=False)
+  File "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f10-dati/ambiente/venv/lib/python3.14/site-packages/numpy/lib/_npyio_impl.py", line 483, in load
+    return format.read_array(fid, allow_pickle=allow_pickle,
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                             pickle_kwargs=pickle_kwargs,
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                             max_header_size=max_header_size)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f10-dati/ambiente/venv/lib/python3.14/site-packages/numpy/lib/_format_impl.py", line 876, in read_array
+    raise ValueError(
+    ...<4 lines>...
+    )
+ValueError: Failed to read all data for array. Expected (240, 424) = 101760 elements, could only read 936 elements. (file seems not fully written?)

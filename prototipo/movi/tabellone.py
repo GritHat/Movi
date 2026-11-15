@@ -64,6 +64,9 @@ def principale(registri, banco=None):
     """Stampa il tabellone di uno o più registri e scrive la riga «riassunto» accanto (<registro>.tabellone.json)."""
     for percorso in registri:
         righe = list(registro.leggi(percorso))
+        if righe and righe[0].get("modo") == "lungo":
+            _lungo(percorso, righe)
+            continue
         conti = dentro_la_zona(righe)
         errori = registro.valida_sequenza(righe)
         conti["avvisi_tolti_senza_guardare"] = sum("tolto senza guardare" in e for _, e in errori)
@@ -76,3 +79,23 @@ def principale(registri, banco=None):
             json.dump(dict(conti, tipo="riassunto"), f, ensure_ascii=False, indent=1)
     if banco:
         print(banco_c(banco))
+
+
+def _lungo(percorso, righe):
+    """Modo lungo: i conti cumulati da movi.esegui (zona dichiarata e avviso sull'oggetto nascosto), i principi, e le
+    misure del passaggio come le calcola il codice di f15 (intestazione, «metriche_del_passaggio»)."""
+    fin = righe[-1] if righe[-1].get("tipo") == "riassunto" else {}
+    errori = registro.valida_sequenza(righe)
+    m = righe[0]["lunga_portata"]["metriche_del_passaggio"]
+    conti = {"dentro_la_zona": _w(**fin.get("dentro_la_zona", {"k": 0, "n": 0})),
+             "dentro_l_avviso": _w(**fin.get("dentro_l_avviso", {"k": 0, "n": 0})),
+             "senza_guardare": sum("senza guardare" in e for _, e in errori),
+             "f15": {k: m.get(k) for k in ("tempestivo", "d_conf_m", "nasc_tot", "nasc_fuori_avviso", "nasc_senza_regione",
+                                           "fuori_avviso", "tracce_perse_senza_avviso", "falsi_confermati",
+                                           "ritardo_salute_s", "ritardo_evento_s", "falso_evento") if k in m}}
+    z, a = conti["dentro_la_zona"], conti["dentro_l_avviso"]
+    print(f"{percorso}: dentro la zona: {z['k']} su {z['n']} (Wilson 95 %: {z['wilson95']}) · dentro l'avviso: "
+          f"{a['k']} su {a['n']} (Wilson 95 %: {a['wilson95']}) · tolti/chiusi senza guardare: {conti['senza_guardare']}"
+          f" · misure di f15 sul passaggio: {conti['f15']}")
+    with open(percorso + ".tabellone.json", "w", encoding="utf-8") as f:
+        json.dump(dict(conti, tipo="riassunto"), f, ensure_ascii=False, indent=1, default=float)

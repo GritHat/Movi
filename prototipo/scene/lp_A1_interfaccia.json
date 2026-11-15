@@ -1,0 +1,29 @@
+{
+ "commento": "scena d'esempio a lunga portata: Multirotore piccolo verso un sito, passa dietro un edificio. SIMULAZIONE dalle schede (riuso/lunga_portata), nessun sensore fisico; etichette a mano.",
+ "modo": "lungo",
+ "scenario": "A1",
+ "sorgente": {
+  "tipo": "scena_lp",
+  "scenario": "A1",
+  "condizione": {
+   "configurazione": "min",
+   "comportamento": "nominale"
+  },
+  "piano": [
+   -100,
+   800,
+   -100,
+   800
+  ],
+  "celle_lato": 24,
+  "chiamante": "interfaccia"
+ },
+ "classi_ammesse": [],
+ "profilo_portatore": "stazione_fissa",
+ "profilo_ricevente": "operatore_di_sito",
+ "etichette": "../etichette/lunga_portata.json",
+ "interruttori": {},
+ "parametri": {},
+ "seme": 0,
+ "origine_dati": "simulati"
+}

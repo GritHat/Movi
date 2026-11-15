@@ -1,0 +1,54 @@
+Wilson ricalcolati sui JSON di 11-prove: 562 terne; scarti > 0,002: 0
+semi: {'flussi': 3600, 'prime_estrazioni_distinte': 3600, 'corr_max_abs_fra_flussi_64_estrazioni': 0.6146827906573579, 'quota_corr_oltre_soglia_95': 0.05142647649038313, 'verita_distinte_per_riga': "200 per scenario, condivise fra min e alta (spawn_key cfg=0): 1200 verita' per 2400 passaggi", 'prudente': 'spawn_key non contiene il chiamante: i 50 passaggi prudenti hanno gli stessi semi dei passaggi 0-49 del modo interfaccia (stesso campione, sottoinsieme appaiato)'}
+correzioni: {
+ "prudente: 0 passaggi con ciclo senza regione, 12 righe x 50": {
+  "per_riga_sup_95": 0.058155079116972264,
+  "per_riga_sup_bonf12": 0.10381891126655929,
+  "unito_600_sup_95": 0.004980443380361299
+ },
+ "P1 alta 200/200 in A1, A2, S1 (3 righe)": {
+  "per_riga_inf_95": 0.9851329607687279,
+  "per_riga_inf_bonf3": 0.9797364002740757
+ },
+ "identita 0/200 in 5 scenari x 2": {
+  "per_riga_sup_95": 0.014867039231272083,
+  "per_riga_sup_bonf10": 0.02614376298352128
+ },
+ "perdita sensore 460/460": {
+  "inf_95_unilat": 0.9935086986531791,
+  "wilson": [
+   0.9917181641536291,
+   0.9999999999999999
+  ]
+ }
+}
+
+== aerei {'tratti_prova': 97, 'tratti_taratura': 96, 'scene_in_entrambe': 0, 'unita1_prova': 77, 'unita1_in_entrambe': 32, 'unita2_prova': 52, 'unita2_in_entrambe': 15, 'unita2_elenco_se_poche': None}
+ D= 2 casi  803 k/n 0.928 W[0.908; 0.944] | u1 G= 75 W[0.861; 0.975] B[0.904; 0.950] fuori 42/75 | u2 G= 50 W[0.877; 0.992] B[0.902; 0.959] fuori 19/50
+ D= 5 casi  842 k/n 0.912 W[0.891; 0.929] | u1 G= 77 W[0.833; 0.960] B[0.885; 0.938] fuori 44/77 | u2 G= 52 W[0.836; 0.977] B[0.886; 0.942] fuori 19/52
+ D=10 casi  812 k/n 0.916 W[0.895; 0.933] | u1 G= 77 W[0.844; 0.966] B[0.893; 0.938] fuori 45/77 | u2 G= 52 W[0.846; 0.981] B[0.891; 0.943] fuori 20/52
+ D=20 casi  741 k/n 0.888 W[0.863; 0.909] | u1 G= 77 W[0.808; 0.946] B[0.856; 0.918] fuori 44/77 | u2 G= 52 W[0.828; 0.974] B[0.846; 0.932] fuori 19/52
+ D=30 casi  703 k/n 0.905 W[0.881; 0.924] | u1 G= 76 W[0.836; 0.962] B[0.874; 0.931] fuori 45/76 | u2 G= 51 W[0.865; 0.988] B[0.875; 0.946] fuori 20/51
+
+== droni {'tratti_prova': 122, 'tratti_taratura': 121, 'scene_in_entrambe': 0, 'unita1_prova': 118, 'unita1_in_entrambe': 7, 'unita2_prova': 2, 'unita2_in_entrambe': 2, 'unita2_elenco_se_poche': ['M100', 'T28']}
+ D= 2 casi 1203 k/n 0.972 W[0.961; 0.980] | u1 G=118 W[0.932; 0.993] B[0.956; 0.985] fuori 1/118 | u2 G=  2 W[0.298; 0.998] Bn/d fuori 1/2
+ D= 5 casi 1175 k/n 0.956 W[0.942; 0.966] | u1 G=118 W[0.912; 0.985] B[0.931; 0.976] fuori 0/118 | u2 G=  2 W[0.271; 0.994] Bn/d fuori 0/2
+ D=10 casi 1137 k/n 0.924 W[0.908; 0.938] | u1 G=118 W[0.875; 0.967] B[0.894; 0.953] fuori 0/118 | u2 G=  2 W[0.231; 0.985] Bn/d fuori 0/2
+ D=20 casi 1042 k/n 0.920 W[0.902; 0.935] | u1 G=117 W[0.859; 0.959] B[0.884; 0.952] fuori 0/117 | u2 G=  2 W[0.206; 0.976] Bn/d fuori 0/2
+ D=30 casi  960 k/n 0.911 W[0.892; 0.928] | u1 G=117 W[0.842; 0.948] B[0.876; 0.945] fuori 0/117 | u2 G=  2 W[0.193; 0.971] Bn/d fuori 0/2
+
+== auto {'tratti_prova': 79, 'tratti_taratura': 78, 'scene_in_entrambe': 0, 'unita1_prova': 51, 'unita1_in_entrambe': 37, 'unita2_prova': 51, 'unita2_in_entrambe': 37, 'unita2_elenco_se_poche': None}
+ D= 2 casi  766 k/n 0.941 W[0.922; 0.956] | u1 G= 51 W[0.841; 0.980] B[0.918; 0.962] fuori 0/51 | u2 G= 51 W[0.841; 0.980] B[0.918; 0.962] fuori 0/51
+ D= 5 casi  710 k/n 0.920 W[0.897; 0.938] | u1 G= 51 W[0.815; 0.969] B[0.900; 0.940] fuori 0/51 | u2 G= 51 W[0.815; 0.969] B[0.899; 0.939] fuori 0/51
+ D=10 casi  657 k/n 0.919 W[0.896; 0.938] | u1 G= 51 W[0.812; 0.968] B[0.895; 0.942] fuori 0/51 | u2 G= 51 W[0.812; 0.968] B[0.893; 0.942] fuori 0/51
+ D=20 casi  489 k/n 0.898 W[0.868; 0.922] | u1 G= 51 W[0.800; 0.962] B[0.866; 0.927] fuori 0/51 | u2 G= 51 W[0.800; 0.962] B[0.867; 0.930] fuori 0/51
+ D=30 casi  352 k/n 0.955 W[0.927; 0.972] | u1 G= 50 W[0.866; 0.989] B[0.930; 0.977] fuori 0/50 | u2 G= 50 W[0.866; 0.989] B[0.927; 0.977] fuori 0/50
+
+== treni {'tratti_prova': 56, 'tratti_taratura': 55, 'scene_in_entrambe': 0, 'unita1_prova': 33, 'unita1_in_entrambe': 29, 'unita2_prova': 33, 'unita2_in_entrambe': 29, 'unita2_elenco_se_poche': None}
+ D= 2 casi  372 k/n 0.836 W[0.795; 0.870] | u1 G= 33 W[0.643; 0.906] B[0.776; 0.889] fuori 24/33 | u2 G= 33 W[0.643; 0.906] B[0.774; 0.888] fuori 24/33
+ D= 5 casi  538 k/n 0.885 W[0.855; 0.909] | u1 G= 33 W[0.735; 0.956] B[0.844; 0.920] fuori 20/33 | u2 G= 33 W[0.735; 0.956] B[0.844; 0.922] fuori 20/33
+ D=10 casi  529 k/n 0.877 W[0.846; 0.902] | u1 G= 33 W[0.716; 0.947] B[0.843; 0.907] fuori 6/33 | u2 G= 33 W[0.716; 0.947] B[0.842; 0.908] fuori 6/33
+ D=20 casi  516 k/n 0.901 W[0.872; 0.924] | u1 G= 33 W[0.754; 0.964] B[0.867; 0.932] fuori 0/33 | u2 G= 33 W[0.754; 0.964] B[0.866; 0.933] fuori 0/33
+ D=30 casi  505 k/n 0.875 W[0.844; 0.901] | u1 G= 33 W[0.709; 0.943] B[0.838; 0.907] fuori 0/33 | u2 G= 33 W[0.709; 0.943] B[0.839; 0.907] fuori 0/33
+droni multirotore D=10 casi 954 voli 101 media per volo 0.976 Wilson n=voli (np.float64(0.9247703764843798), np.float64(0.9927525722277488))
+droni ala_fissa_senza_pilota D=10 casi 183 voli 17 media per volo 0.689 Wilson n=voli (np.float64(0.45286435782725154), np.float64(0.8562568880638532))

@@ -1,0 +1,256 @@
+{
+ "X1": [
+  {
+   "a": 20.0,
+   "tau": 0.5,
+   "raggio_avviso_m": 57.3,
+   "distanza_vera_m": 2.5,
+   "fuori": false
+  },
+  {
+   "a": 20.0,
+   "tau": 1,
+   "raggio_avviso_m": 60.4,
+   "distanza_vera_m": 10.0,
+   "fuori": false
+  },
+  {
+   "a": 20.0,
+   "tau": 2,
+   "raggio_avviso_m": 71.6,
+   "distanza_vera_m": 40.0,
+   "fuori": false
+  },
+  {
+   "a": 20.0,
+   "tau": 3,
+   "raggio_avviso_m": 89.8,
+   "distanza_vera_m": 84.4,
+   "fuori": false
+  },
+  {
+   "a": 20.0,
+   "tau": 5,
+   "raggio_avviso_m": 146.8,
+   "distanza_vera_m": 174.4,
+   "fuori": true
+  },
+  {
+   "a": 20.0,
+   "tau": 8,
+   "raggio_avviso_m": 284.0,
+   "distanza_vera_m": 309.4,
+   "fuori": true
+  },
+  {
+   "a": 20.0,
+   "tau": 10,
+   "raggio_avviso_m": 410.0,
+   "distanza_vera_m": 399.4,
+   "fuori": false
+  },
+  {
+   "a": 20.0,
+   "tau": 15,
+   "raggio_avviso_m": 830.7,
+   "distanza_vera_m": 624.4,
+   "fuori": false
+  },
+  {
+   "a": 20.0,
+   "tau": 30,
+   "raggio_avviso_m": 2180.7,
+   "distanza_vera_m": 1299.4,
+   "fuori": false
+  },
+  {
+   "a": 25.0,
+   "tau": 0.5,
+   "raggio_avviso_m": 57.3,
+   "distanza_vera_m": 3.1,
+   "fuori": false
+  },
+  {
+   "a": 25.0,
+   "tau": 1,
+   "raggio_avviso_m": 60.4,
+   "distanza_vera_m": 12.5,
+   "fuori": false
+  },
+  {
+   "a": 25.0,
+   "tau": 2,
+   "raggio_avviso_m": 71.6,
+   "distanza_vera_m": 49.5,
+   "fuori": false
+  },
+  {
+   "a": 25.0,
+   "tau": 3,
+   "raggio_avviso_m": 89.8,
+   "distanza_vera_m": 94.5,
+   "fuori": true
+  },
+  {
+   "a": 25.0,
+   "tau": 5,
+   "raggio_avviso_m": 146.8,
+   "distanza_vera_m": 184.5,
+   "fuori": true
+  },
+  {
+   "a": 25.0,
+   "tau": 8,
+   "raggio_avviso_m": 284.0,
+   "distanza_vera_m": 319.5,
+   "fuori": true
+  },
+  {
+   "a": 25.0,
+   "tau": 10,
+   "raggio_avviso_m": 410.0,
+   "distanza_vera_m": 409.5,
+   "fuori": false
+  },
+  {
+   "a": 25.0,
+   "tau": 15,
+   "raggio_avviso_m": 830.7,
+   "distanza_vera_m": 634.5,
+   "fuori": false
+  },
+  {
+   "a": 25.0,
+   "tau": 30,
+   "raggio_avviso_m": 2180.7,
+   "distanza_vera_m": 1309.5,
+   "fuori": false
+  }
+ ],
+ "X2": [
+  {
+   "v": 160.0,
+   "tau": 1,
+   "raggio_avviso_m": 162.5,
+   "distanza_vera_m": 160.0,
+   "fuori": false
+  },
+  {
+   "v": 160.0,
+   "tau": 2,
+   "raggio_avviso_m": 252.5,
+   "distanza_vera_m": 320.0,
+   "fuori": true
+  },
+  {
+   "v": 160.0,
+   "tau": 5,
+   "raggio_avviso_m": 522.5,
+   "distanza_vera_m": 800.0,
+   "fuori": true
+  },
+  {
+   "v": 160.0,
+   "tau": 10,
+   "raggio_avviso_m": 972.5,
+   "distanza_vera_m": 1600.0,
+   "fuori": true
+  },
+  {
+   "v": 160.0,
+   "tau": 30,
+   "raggio_avviso_m": 2772.5,
+   "distanza_vera_m": 4800.0,
+   "fuori": true
+  },
+  {
+   "v": 205.0,
+   "tau": 1,
+   "raggio_avviso_m": 162.5,
+   "distanza_vera_m": 205.0,
+   "fuori": true
+  },
+  {
+   "v": 205.0,
+   "tau": 2,
+   "raggio_avviso_m": 252.5,
+   "distanza_vera_m": 410.0,
+   "fuori": true
+  },
+  {
+   "v": 205.0,
+   "tau": 5,
+   "raggio_avviso_m": 522.5,
+   "distanza_vera_m": 1025.0,
+   "fuori": true
+  },
+  {
+   "v": 205.0,
+   "tau": 10,
+   "raggio_avviso_m": 972.5,
+   "distanza_vera_m": 2050.0,
+   "fuori": true
+  },
+  {
+   "v": 205.0,
+   "tau": 30,
+   "raggio_avviso_m": 2772.5,
+   "distanza_vera_m": 6150.0,
+   "fuori": true
+  }
+ ],
+ "X3": {
+  "attuale_90": {
+   "operatore_di_sito": 1490,
+   "pilota_in_rullaggio": 920,
+   "pilota_remoto_di_drone": 760
+  },
+  "corretto_210": {
+   "operatore_di_sito": 3410,
+   "pilota_in_rullaggio": 1956,
+   "pilota_remoto_di_drone": 1570
+  },
+  "portata_libero_multirotore_5_passate_m": 2360,
+  "portata_libero_multirotore_1_passata_m": 877,
+  "finestra_W_aereo_210_cella100_s": 0.47619047619047616
+ },
+ "X4": {
+  "distanza_m": 2360,
+  "SNR_medio": 26.21,
+  "Pd_swerling1_formula": 0.6019,
+  "Pd_media_montecarlo": 0.6024,
+  "mancate_1_indipendenti": 0.3981,
+  "mancate_1_correlate": 0.3976,
+  "mancate_2_indipendenti": 0.1585,
+  "mancate_2_correlate": 0.3321,
+  "mancate_3_indipendenti": 0.0631,
+  "mancate_3_correlate": 0.2994,
+  "mancate_5_indipendenti": 0.01,
+  "mancate_5_correlate": 0.2631
+ },
+ "X5": {
+  "edificio_non_in_pianta": "libero",
+  "edificio_in_pianta": "in_ombra",
+  "auto_dietro_edificio_non_in_pianta_strada": "libero"
+ },
+ "X6": {
+  "strada_pedone_0.5m2": {
+   "celle_libere": 39240,
+   "libere_ma_non_verificate_per_intruso": 16920,
+   "distanza_min_m": 6250.0,
+   "pd_cum_min_intruso_su_libere": 0.12830802176090494
+  },
+  "strada_drone_0.01m2": {
+   "celle_libere": 39240,
+   "libere_ma_non_verificate_per_intruso": 35280,
+   "distanza_min_m": 850.0,
+   "pd_cum_min_intruso_su_libere": 1.0476504796019803e-05
+  },
+  "aeroporto_drone_C0_1.6e-4m2": {
+   "celle_libere": 2880,
+   "libere_ma_non_verificate_per_intruso": 2160,
+   "distanza_min_m": 250.0,
+   "pd_cum_min_intruso_su_libere": 0.5869357277809931
+  }
+ }
+}

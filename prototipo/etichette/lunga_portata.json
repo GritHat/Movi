@@ -1,0 +1,14 @@
+{
+ "commento": "Etichette di classe A MANO per il modo lungo. Il codice riusato (prove_lp.CLASSE, eventi_lp.CLASSE) le assegna dalla verità simulata, oggetto per oggetto, con questa tabella: è il classificatore assente simulato. Cambiano SOLO il modello della regione di previsione (la zona), mai l'avviso (inviluppo dello scenario). Con la condizione «etichette: nessuna» le misure arrivano senza classe.",
+ "tabella_da_prove_lp": {
+  "multirotore": "multirotore_piccolo",
+  "aereo_rullaggio": "aereo_rullaggio",
+  "aereo_avvicinamento": "aereo_linea_avvicinamento",
+  "auto_strada_urbana": "auto_strada_urbana",
+  "treno_banchina": "treno_banchina",
+  "aereo_leggero": "aereo_leggero",
+  "mezzo_piazzale": null,
+  "persona_a_piedi": null
+ },
+ "regole": []
+}

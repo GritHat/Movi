@@ -39,7 +39,11 @@ def main(argv=None):
             mostra.principale(a.registro, a.uscita or a.registro + ".viste", a.filmato, a.ogni)
         elif a.comando == "convalida":
             from . import registro
-            errori = registro.valida_sequenza(registro.leggi(a.registro))
+            righe = list(registro.leggi(a.registro))
+            errori = registro.valida_sequenza(righe)
+            # collaudo (sciame-tester, 15-11-2026): un registro interrotto (esecuzione caduta) non ha il riassunto
+            if not righe or righe[-1].get("tipo") != "riassunto":
+                errori.append((max(len(righe) - 1, 0), "registro interrotto: manca la riga di riassunto in fondo"))
             for n, x in errori[:50]:
                 print(f"riga {n}: {x}")
             print(f"errori: {len(errori)}")

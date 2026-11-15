@@ -1,0 +1,29 @@
+{
+ "commento": "scena d'esempio a lunga portata: Auto nascosta da un camion a un incrocio. SIMULAZIONE dalle schede (riuso/lunga_portata), nessun sensore fisico; etichette a mano.",
+ "modo": "lungo",
+ "scenario": "S1",
+ "sorgente": {
+  "tipo": "scena_lp",
+  "scenario": "S1",
+  "condizione": {
+   "configurazione": "alta",
+   "cooperante": true
+  },
+  "piano": [
+   -70,
+   110,
+   -40,
+   140
+  ],
+  "celle_lato": 24,
+  "passaggio": 0
+ },
+ "classi_ammesse": [],
+ "profilo_portatore": "stazione_fissa",
+ "profilo_ricevente": "operatore_di_sito",
+ "etichette": "../etichette/lunga_portata.json",
+ "interruttori": {},
+ "parametri": {},
+ "seme": 0,
+ "origine_dati": "simulati"
+}

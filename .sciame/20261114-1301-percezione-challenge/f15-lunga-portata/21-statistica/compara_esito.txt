@@ -1,0 +1,24 @@
+aerei  D= 2  scena 0.928 [0.908;0.944] n=803 | mezzo 0.949 [0.930;0.963] n=722 mezzi=41 Wm[0.862;0.993] boot[0.923;0.981] | fuori 105/722=0.145, mezzi con fuori 8/41  diff +0.021
+aerei  D= 5  scena 0.912 [0.891;0.929] n=842 | mezzo 0.943 [0.924;0.957] n=767 mezzi=43 Wm[0.845;0.987] boot[0.918;0.972] | fuori 160/767=0.209, mezzi con fuori 10/43  diff +0.031
+aerei  D=10  scena 0.916 [0.895;0.933] n=812 | mezzo 0.933 [0.912;0.949] n=730 mezzi=43 Wm[0.847;0.988] boot[0.901;0.963] | fuori 167/730=0.229, mezzi con fuori 11/43  diff +0.017
+aerei  D=20  scena 0.888 [0.863;0.909] n=741 | mezzo 0.924 [0.901;0.941] n=667 mezzi=43 Wm[0.832;0.983] boot[0.886;0.968] | fuori 145/667=0.217, mezzi con fuori 11/43  diff +0.036
+aerei  D=30  scena 0.905 [0.881;0.924] n=703 | mezzo 0.929 [0.906;0.946] n=630 mezzi=43 Wm[0.880;0.996] boot[0.875;0.991] | fuori 144/630=0.229, mezzi con fuori 9/43  diff +0.024
+droni  D= 2  scena 0.972 [0.961;0.980] n=1203 | mezzo 0.964 [0.952;0.973] n=1214 mezzi=114 Wm[0.927;0.991] boot[0.944;0.982] | fuori 1/1214=0.001, mezzi con fuori 1/114  diff -0.008
+droni  D= 5  scena 0.956 [0.942;0.966] n=1175 | mezzo 0.947 [0.933;0.959] n=1177 mezzi=114 Wm[0.906;0.983] boot[0.919;0.970] | fuori 0/1177=0.000, mezzi con fuori 0/114  diff -0.008
+droni  D=10  scena 0.924 [0.908;0.938] n=1137 | mezzo 0.893 [0.873;0.909] n=1136 mezzi=114 Wm[0.845;0.951] boot[0.855;0.928] | fuori 0/1136=0.000, mezzi con fuori 0/114  diff -0.032
+droni  D=20  scena 0.920 [0.902;0.935] n=1042 | mezzo 0.910 [0.891;0.925] n=1051 mezzi=113 Wm[0.859;0.959] boot[0.874;0.943] | fuori 0/1051=0.000, mezzi con fuori 0/113  diff -0.011
+droni  D=30  scena 0.911 [0.892;0.928] n=960 | mezzo 0.921 [0.902;0.936] n=949 mezzi=112 Wm[0.873;0.967] boot[0.886;0.953] | fuori 0/949=0.000, mezzi con fuori 0/112  diff +0.010
+   multirotore D=5 0.994 n=946 voli=98 Wvoli[0.951;0.999] boot[0.988;0.998]
+   multirotore D=10 0.959 n=922 voli=98 Wvoli[0.899;0.984] boot[0.946;0.971]
+   ala_fissa_senza_pilota D=5 0.758 n=231 voli=16 Wvoli[0.503;0.897] boot[0.681;0.822]
+   ala_fissa_senza_pilota D=10 0.607 n=214 voli=16 Wvoli[0.380;0.810] boot[0.505;0.699]
+auto   D= 2  scena 0.941 [0.922;0.956] n=766 | mezzo 0.925 [0.905;0.942] n=764 mezzi=30 Wm[0.777;0.978] boot[0.899;0.947] | fuori 0/764=0.000, mezzi con fuori 0/30  diff -0.016
+auto   D= 5  scena 0.920 [0.897;0.938] n=710 | mezzo 0.890 [0.865;0.910] n=725 mezzi=30 Wm[0.725;0.957] boot[0.860;0.916] | fuori 0/725=0.000, mezzi con fuori 0/30  diff -0.030
+auto   D=10  scena 0.919 [0.896;0.938] n=657 | mezzo 0.868 [0.839;0.892] n=650 mezzi=30 Wm[0.707;0.949] boot[0.835;0.899] | fuori 0/650=0.000, mezzi con fuori 0/30  diff -0.052
+auto   D=20  scena 0.898 [0.868;0.922] n=489 | mezzo 0.908 [0.879;0.930] n=500 mezzi=30 Wm[0.758;0.971] boot[0.874;0.941] | fuori 0/500=0.000, mezzi con fuori 0/30  diff +0.010
+auto   D=30  scena 0.955 [0.927;0.972] n=352 | mezzo 0.855 [0.814;0.889] n=338 mezzi=30 Wm[0.680;0.935] boot[0.815;0.899] | fuori 0/338=0.000, mezzi con fuori 0/30  diff -0.100
+treni  D= 2  scena 0.836 [0.795;0.870] n=372 | mezzo 0.911 [0.879;0.935] n=405 mezzi=19 Wm[0.706;0.978] boot[0.865;0.950] | fuori 61/405=0.151, mezzi con fuori 18/19  diff +0.075
+treni  D= 5  scena 0.885 [0.855;0.909] n=538 | mezzo 0.916 [0.890;0.937] n=537 mezzi=19 Wm[0.713;0.980] boot[0.886;0.940] | fuori 41/537=0.076, mezzi con fuori 16/19  diff +0.031
+treni  D=10  scena 0.877 [0.846;0.902] n=529 | mezzo 0.883 [0.853;0.907] n=538 mezzi=19 Wm[0.671;0.965] boot[0.840;0.924] | fuori 10/538=0.019, mezzi con fuori 5/19  diff +0.006
+treni  D=20  scena 0.901 [0.872;0.924] n=516 | mezzo 0.914 [0.887;0.935] n=522 mezzi=19 Wm[0.710;0.979] boot[0.889;0.939] | fuori 1/522=0.002, mezzi con fuori 1/19  diff +0.013
+treni  D=30  scena 0.875 [0.844;0.901] n=505 | mezzo 0.903 [0.874;0.926] n=505 mezzi=19 Wm[0.696;0.974] boot[0.870;0.932] | fuori 0/505=0.000, mezzi con fuori 0/19  diff +0.028

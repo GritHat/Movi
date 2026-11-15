@@ -1,0 +1,40 @@
+{
+ "nome": "atl_ab38a1",
+ "formato": "f15-comune-0.1",
+ "oggetti": [
+  {
+   "id": "atl_ab38a1",
+   "classe": "aerei",
+   "tipo": "aereo_avvicinamento",
+   "etichetta": "assegnata a mano dal convertitore (dalla fonte), nessun classificatore"
+  }
+ ],
+ "riferimento": {
+  "sistema": "locale in metri, x est, y nord, z quota",
+  "origine": "Atlanta KATL: lat 33.6407, lon -84.4277; z=0 a 313 m s.l.m. (quota del campo A MEMORIA, non verificata); a terra z=0 per costruzione"
+ },
+ "sensori": [
+  {
+   "id": "rif",
+   "posizione": [
+    0,
+    0,
+    0
+   ],
+   "nota": "SEGNAPOSTO: nessun sensore e' definito qui; vis_rif=1 ovunque. I ruoli degli scenari mettono sensori e ostacoli e ricalcolano la visibilita'."
+  }
+ ],
+ "ostacoli": [],
+ "finestra_velocita_s": 5.0,
+ "velocita": "derivate dalle posizioni (differenza centrata sulla finestra), non misurate",
+ "campioni": 67,
+ "durata_s": 338.2999999523163,
+ "passo_mediano_s": 3.049999952316284,
+ "fonte": "adsb.lol, API v2/point, cattura dal vivo (vedi PROVENIENZA.md)",
+ "licenza": "ODbL 1.0",
+ "tempo_iniziale_unix": 1794697740.7,
+ "categoria_emettitore": "A3",
+ "tipo_aeromobile": "B739",
+ "frazione_a_terra": 0.0,
+ "nota": "posizione ADS-B trasmessa dall'aereo (GNSS di bordo), quota geometrica se c'e' altrimenti barometrica; tempo = ora della risposta meno seen_pos"
+}

@@ -1,0 +1,441 @@
+{
+ "V1_pd": {
+  "radar_sorveglianza_droni": [
+   {
+    "r_m": 930,
+    "pd_modello": 0.9941,
+    "k": 1991,
+    "n": 2000,
+    "wilson95": [
+     0.9915,
+     0.9976
+    ]
+   },
+   {
+    "r_m": 1860,
+    "pd_modello": 0.9103,
+    "k": 1837,
+    "n": 2000,
+    "wilson95": [
+     0.9057,
+     0.9297
+    ]
+   },
+   {
+    "r_m": 2790,
+    "pd_modello": 0.6293,
+    "k": 1241,
+    "n": 2000,
+    "wilson95": [
+     0.599,
+     0.6415
+    ]
+   },
+   {
+    "r_m": 3100,
+    "pd_modello": 0.4997,
+    "k": 968,
+    "n": 2000,
+    "wilson95": [
+     0.4621,
+     0.5059
+    ]
+   },
+   {
+    "r_m": 3720,
+    "pd_modello": 0.2554,
+    "k": 529,
+    "n": 2000,
+    "wilson95": [
+     0.2456,
+     0.2843
+    ]
+   },
+   {
+    "r_m": 4650,
+    "pd_modello": 0.0541,
+    "k": 103,
+    "n": 2000,
+    "wilson95": [
+     0.0426,
+     0.0621
+    ]
+   }
+  ],
+  "radar_movimento_a_terra": [
+   {
+    "r_m": 1500,
+    "pd_modello": 0.9991,
+    "k": 1997,
+    "n": 2000,
+    "wilson95": [
+     0.9956,
+     0.9995
+    ]
+   },
+   {
+    "r_m": 3000,
+    "pd_modello": 0.9863,
+    "k": 1980,
+    "n": 2000,
+    "wilson95": [
+     0.9846,
+     0.9935
+    ]
+   },
+   {
+    "r_m": 4500,
+    "pd_modello": 0.933,
+    "k": 1863,
+    "n": 2000,
+    "wilson95": [
+     0.9196,
+     0.9418
+    ]
+   },
+   {
+    "r_m": 5000,
+    "pd_modello": 0.8999,
+    "k": 1809,
+    "n": 2000,
+    "wilson95": [
+     0.8908,
+     0.9166
+    ]
+   },
+   {
+    "r_m": 6000,
+    "pd_modello": 0.805,
+    "k": 1631,
+    "n": 2000,
+    "wilson95": [
+     0.7979,
+     0.8319
+    ]
+   },
+   {
+    "r_m": 7500,
+    "pd_modello": 0.5959,
+    "k": 1179,
+    "n": 2000,
+    "wilson95": [
+     0.5678,
+     0.6109
+    ]
+   }
+  ],
+  "radar_4d_auto": [
+   {
+    "r_m": 90,
+    "pd_modello": 0.9991,
+    "k": 1997,
+    "n": 2000,
+    "wilson95": [
+     0.9956,
+     0.9995
+    ]
+   },
+   {
+    "r_m": 180,
+    "pd_modello": 0.9863,
+    "k": 1980,
+    "n": 2000,
+    "wilson95": [
+     0.9846,
+     0.9935
+    ]
+   },
+   {
+    "r_m": 270,
+    "pd_modello": 0.933,
+    "k": 1863,
+    "n": 2000,
+    "wilson95": [
+     0.9196,
+     0.9418
+    ]
+   },
+   {
+    "r_m": 300,
+    "pd_modello": 0.9003,
+    "k": 1810,
+    "n": 2000,
+    "wilson95": [
+     0.8914,
+     0.9171
+    ]
+   },
+   {
+    "r_m": 300,
+    "pd_modello": 0.9003,
+    "k": 1810,
+    "n": 2000,
+    "wilson95": [
+     0.8914,
+     0.9171
+    ]
+   },
+   {
+    "r_m": 300,
+    "pd_modello": 0.9003,
+    "k": 1790,
+    "n": 2000,
+    "wilson95": [
+     0.8808,
+     0.9077
+    ]
+   }
+  ],
+  "lidar_auto_campo_largo": [
+   {
+    "r_m": 45,
+    "pd_modello": 0.9991,
+    "k": 1997,
+    "n": 2000,
+    "wilson95": [
+     0.9956,
+     0.9995
+    ]
+   },
+   {
+    "r_m": 90,
+    "pd_modello": 0.9863,
+    "k": 1980,
+    "n": 2000,
+    "wilson95": [
+     0.9846,
+     0.9935
+    ]
+   },
+   {
+    "r_m": 135,
+    "pd_modello": 0.9329,
+    "k": 1863,
+    "n": 2000,
+    "wilson95": [
+     0.9196,
+     0.9418
+    ]
+   },
+   {
+    "r_m": 150,
+    "pd_modello": 0.8999,
+    "k": 1809,
+    "n": 2000,
+    "wilson95": [
+     0.8908,
+     0.9166
+    ]
+   },
+   {
+    "r_m": 180,
+    "pd_modello": 0.8057,
+    "k": 1631,
+    "n": 2000,
+    "wilson95": [
+     0.7979,
+     0.8319
+    ]
+   },
+   {
+    "r_m": 210,
+    "pd_modello": 0.6765,
+    "k": 1353,
+    "n": 2000,
+    "wilson95": [
+     0.6557,
+     0.6966
+    ]
+   }
+  ],
+  "lidar_tele": [
+   {
+    "r_m": 69,
+    "pd_modello": 0.9991,
+    "k": 1997,
+    "n": 2000,
+    "wilson95": [
+     0.9956,
+     0.9995
+    ]
+   },
+   {
+    "r_m": 138,
+    "pd_modello": 0.9863,
+    "k": 1980,
+    "n": 2000,
+    "wilson95": [
+     0.9846,
+     0.9935
+    ]
+   },
+   {
+    "r_m": 207,
+    "pd_modello": 0.9329,
+    "k": 1863,
+    "n": 2000,
+    "wilson95": [
+     0.9196,
+     0.9418
+    ]
+   },
+   {
+    "r_m": 230,
+    "pd_modello": 0.8999,
+    "k": 1809,
+    "n": 2000,
+    "wilson95": [
+     0.8908,
+     0.9166
+    ]
+   },
+   {
+    "r_m": 276,
+    "pd_modello": 0.8057,
+    "k": 1631,
+    "n": 2000,
+    "wilson95": [
+     0.7979,
+     0.8319
+    ]
+   },
+   {
+    "r_m": 345,
+    "pd_modello": 0.6004,
+    "k": 1188,
+    "n": 2000,
+    "wilson95": [
+     0.5723,
+     0.6153
+    ]
+   }
+  ],
+  "fasce_dentro_wilson": [
+   30,
+   30
+  ]
+ },
+ "V2_rumore": {
+  "radar_sorveglianza_droni": {
+   "sigma_r_dich": 0.6,
+   "sigma_r_ott": 0.6075,
+   "sigma_az_dich_rad": 0.013089969389957472,
+   "sigma_az_ott_rad": 0.013129,
+   "rapporto_r": 1.013,
+   "rapporto_az": 1.003
+  },
+  "radar_movimento_a_terra": {
+   "sigma_r_dich": 7.5,
+   "sigma_r_ott": 7.5637,
+   "sigma_az_dich_rad": 0.002530727415391778,
+   "sigma_az_ott_rad": 0.002537,
+   "rapporto_r": 1.008,
+   "rapporto_az": 1.003
+  },
+  "radar_4d_auto": {
+   "sigma_r_dich": 0.15,
+   "sigma_r_ott": 0.1506,
+   "sigma_az_dich_rad": 0.005235987755982988,
+   "sigma_az_ott_rad": 0.005192,
+   "rapporto_r": 1.004,
+   "rapporto_az": 0.992
+  },
+  "lidar_auto_campo_largo": {
+   "sigma_r_dich": 0.03,
+   "sigma_r_ott": 0.0302,
+   "sigma_az_dich_rad": 0.0008726646259971648,
+   "sigma_az_ott_rad": 0.000869,
+   "rapporto_r": 1.005,
+   "rapporto_az": 0.996
+  },
+  "lidar_tele": {
+   "sigma_r_dich": 0.02,
+   "sigma_r_ott": 0.02,
+   "sigma_az_dich_rad": 0.0005235987755982988,
+   "sigma_az_ott_rad": 0.000524,
+   "rapporto_r": 1.002,
+   "rapporto_az": 1.0
+  }
+ },
+ "V3_falsi": {
+  "radar_sorveglianza_droni": {
+   "lambda_modello": 0.5,
+   "media_ottenuta": 0.5016,
+   "n_passate": 20000,
+   "intervallo95": [
+    0.4902,
+    0.5098
+   ],
+   "dentro": true
+  },
+  "radar_movimento_a_terra": {
+   "lambda_modello": 0.5,
+   "media_ottenuta": 0.4938,
+   "n_passate": 20000,
+   "intervallo95": [
+    0.4902,
+    0.5098
+   ],
+   "dentro": true
+  },
+  "radar_4d_auto": {
+   "lambda_modello": 1.0,
+   "media_ottenuta": 1.0033,
+   "n_passate": 20000,
+   "intervallo95": [
+    0.9861,
+    1.0139
+   ],
+   "dentro": true
+  },
+  "lidar_auto_campo_largo": {
+   "lambda_modello": 0.1,
+   "media_ottenuta": 0.0997,
+   "n_passate": 20000,
+   "intervallo95": [
+    0.0956,
+    0.1044
+   ],
+   "dentro": true
+  },
+  "lidar_tele": {
+   "lambda_modello": 0.1,
+   "media_ottenuta": 0.0987,
+   "n_passate": 20000,
+   "intervallo95": [
+    0.0956,
+    0.1044
+   ],
+   "dentro": true
+  }
+ },
+ "V4_geometria": {
+  "rilevamenti_vietati": {
+   "dietro_ostacolo": 0,
+   "oltre_orizzonte": 0,
+   "sotto_quota_minima": 0,
+   "fuori_campo": 0
+  },
+  "prove_per_caso": 500
+ },
+ "V5_cooperativi": {
+  "presente": {
+   "messaggi": 903,
+   "passate": 1001,
+   "quota": 0.9021,
+   "attesa": 0.9
+  },
+  "assente": {
+   "messaggi": 0,
+   "passate": 1001,
+   "quota": 0.0,
+   "attesa": 0.0
+  },
+  "intermittente": {
+   "messaggi": 443,
+   "passate": 1001,
+   "quota": 0.4426,
+   "attesa": 0.45
+  }
+ }
+}

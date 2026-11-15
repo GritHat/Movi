@@ -1,0 +1,28 @@
+{
+ "commento": "scena d'esempio a lunga portata: Avaria non contenuta di un motore in corsa di decollo: fiammata, fumo, detriti in pista, un mezzo di servizio si avvicina. SIMULAZIONE dalle schede (riuso/lunga_portata), nessun sensore fisico; etichette a mano.",
+ "modo": "lungo",
+ "scenario": "E2",
+ "sorgente": {
+  "tipo": "scena_lp",
+  "scenario": "E2",
+  "condizione": {
+   "configurazione": "alta"
+  },
+  "piano": [
+   0,
+   1450,
+   -700,
+   750
+  ],
+  "celle_lato": 24,
+  "passaggio": 0
+ },
+ "classi_ammesse": [],
+ "profilo_portatore": "stazione_fissa",
+ "profilo_ricevente": "operatore_di_sito",
+ "etichette": "../etichette/lunga_portata.json",
+ "interruttori": {},
+ "parametri": {},
+ "seme": 0,
+ "origine_dati": "simulati"
+}

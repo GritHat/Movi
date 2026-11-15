@@ -1,0 +1,803 @@
+{
+ "versione": "f15-03-scenari-0.1",
+ "data": "2026-11-15",
+ "avvertenza": "Scenari NOMINALI e parametrici, scritti a mano dall'esperto di dominio: non sono dati registrati. Tutto e' simulazione o conto; niente e' provato su un sensore fisico. Etichette di classe assegnate a mano (classificatore supposto, non realizzato). Ambito: solo osservazione, monitoraggio e avviso.",
+ "riferimento": "locale in metri, x est, y nord, z quota sul suolo; origine alla base del sensore principale",
+ "formato_traiettoria": "oggetto: 'punti' [x,y,z] percorsi in linea retta alla velocita' 'v' (m/s) del tratto, partenza a 't0' (s); fermo sull'ultimo punto. Chi genera verita.csv puo' raccordare con a_max.",
+ "origine_dati": "sintetico (scritto a mano)",
+ "licenza": "del progetto; nessun dato di terzi dentro questo file",
+ "stato_valori": "F = fonte aperta il 14/15-11-2026; C = classi.json di f14; I = ipotesi; M = a memoria, non verificato (vedi 'note' e SCENARI_E_REQUISITI.md)",
+ "insieme_raggiungibile": {
+  "persona_a_piedi": {
+   "forma": "disco 2D",
+   "r_inviluppo_m": {
+    "5": 12,
+    "10": 25,
+    "30": 75
+   },
+   "r_dinamico_m": {
+    "5": 12,
+    "10": 25,
+    "30": 75
+   }
+  },
+  "mezzo_piazzale": {
+   "forma": "disco 2D (articolato)",
+   "r_inviluppo_m": {
+    "5": 42,
+    "10": 83,
+    "30": 249
+   },
+   "r_dinamico_m": {
+    "5": 27,
+    "10": 68,
+    "30": 234
+   }
+  },
+  "aereo_rullaggio": {
+   "forma": "corridoio lungo la via di rullaggio",
+   "r_inviluppo_m": {
+    "5": 77,
+    "10": 154,
+    "30": 462
+   },
+   "r_dinamico_m": {
+    "5": 58,
+    "10": 134,
+    "30": 442
+   }
+  },
+  "auto_strada_urbana": {
+   "forma": "corsie",
+   "r_inviluppo_m": {
+    "5": 70,
+    "10": 139,
+    "30": 417
+   },
+   "r_dinamico_m": {
+    "5": 64,
+    "10": 134,
+    "30": 412
+   }
+  },
+  "treno (linea, 160 km/h)": {
+   "forma": "segmento 1D sul binario",
+   "r_inviluppo_m": {
+    "5": 222,
+    "10": 444,
+    "30": 1332
+   },
+   "r_dinamico_m": {
+    "5": 222,
+    "10": 444,
+    "30": 1332
+   }
+  },
+  "multirotore piccolo": {
+   "forma": "sfera 3D (salita 8 m/s)",
+   "r_inviluppo_m": {
+    "5": 105,
+    "10": 210,
+    "30": 630
+   },
+   "r_dinamico_m": {
+    "5": 102,
+    "10": 207,
+    "30": 627
+   }
+  },
+  "aereo in finale (cat. C)": {
+   "forma": "tubo lungo il sentiero",
+   "r_inviluppo_m": {
+    "5": 363,
+    "10": 725,
+    "30": 2176
+   },
+   "r_dinamico_m": {
+    "5": 359,
+    "10": 722,
+    "30": 2173
+   }
+  }
+ },
+ "scenari": [
+  {
+   "id": "A1",
+   "nome": "Multirotore piccolo verso un sito, passa dietro un edificio",
+   "centrale": true,
+   "sensori": [
+    {
+     "id": "s_sito",
+     "tipo": "da scegliere in 02-sensori (radar di sorveglianza a corto raggio + ottico)",
+     "pos": [
+      0,
+      0,
+      10
+     ]
+    }
+   ],
+   "ostacoli": [
+    {
+     "id": "edificio",
+     "poligono": [
+      [
+       150,
+       280
+      ],
+      [
+       230,
+       280
+      ],
+      [
+       230,
+       320
+      ],
+      [
+       150,
+       320
+      ]
+     ],
+     "altezza": 15
+    }
+   ],
+   "oggetti": [
+    {
+     "id": "drone1",
+     "classe": "multirotore",
+     "tipo": "multirotore piccolo (< 1,1 kg, tipo Mavic 3E)",
+     "etichetta": "a mano",
+     "t0": 0,
+     "punti": [
+      [
+       700,
+       700,
+       60
+      ],
+      [
+       300,
+       340,
+       12
+      ],
+      [
+       100,
+       340,
+       12
+      ],
+      [
+       0,
+       60,
+       10
+      ]
+     ],
+     "v": [
+      15,
+      15,
+      15
+     ],
+     "v_max": 21.0,
+     "a_max": 6.9,
+     "ingombro": [
+      0.35,
+      0.28,
+      0.11
+     ],
+     "durata_s": 69.2,
+     "occlusioni_s": [
+      [
+       37.4,
+       45.4
+      ]
+     ],
+     "dist_ingresso_m": 440,
+     "dist_uscita_m": 375
+    }
+   ],
+   "avviso": {
+    "a_chi": "operatore di sito (piazzale o varco dell'hangar)",
+    "bersaglio": "drone1",
+    "v_rel": 21.0,
+    "latenza": 1.0,
+    "reazione": 5.0,
+    "t_azione": 30.0,
+    "spazio_manovra": null,
+    "margine": 50.0,
+    "note": "v_rel = v_max del multirotore (F: 75,6 km/h); latenza 1 s (I: un giro di aggiornamento a 1 Hz); reazione 5 s (I); 30 s per mettere in sicurezza l'area, sospendere un'operazione o avvertire (I); margine 50 m (I)",
+    "d_richiesta_m": 806,
+    "spazio_manovra_m": 630.0
+   }
+  },
+  {
+   "id": "A2",
+   "nome": "Aereo in rullaggio dietro un hangar, mezzo di servizio e persona sul piazzale",
+   "centrale": true,
+   "sensori": [
+    {
+     "id": "s_torre",
+     "tipo": "da scegliere in 02-sensori (radar di superficie o lidar a lunga portata, su palo)",
+     "pos": [
+      0,
+      0,
+      25
+     ]
+    }
+   ],
+   "ostacoli": [
+    {
+     "id": "hangar",
+     "poligono": [
+      [
+       100,
+       150
+      ],
+      [
+       160,
+       150
+      ],
+      [
+       160,
+       210
+      ],
+      [
+       100,
+       210
+      ]
+     ],
+     "altezza": 18
+    }
+   ],
+   "oggetti": [
+    {
+     "id": "aereo1",
+     "classe": "aereo_rullaggio",
+     "tipo": "aereo di linea a corridoio singolo in rullaggio",
+     "etichetta": "a mano",
+     "t0": 0,
+     "punti": [
+      [
+       350,
+       260,
+       3
+      ],
+      [
+       -100,
+       260,
+       3
+      ]
+     ],
+     "v": [
+      9.0
+     ],
+     "v_max": 15.4,
+     "a_max": 1.0,
+     "ingombro": [
+      37.6,
+      35.8,
+      11.8
+     ],
+     "durata_s": 50.0,
+     "occlusioni_s": [
+      [
+       8.1,
+       25.2
+      ]
+     ],
+     "dist_ingresso_m": 381,
+     "dist_uscita_m": 289
+    },
+    {
+     "id": "mezzo1",
+     "classe": "mezzo_piazzale",
+     "tipo": "veicolo di servizio",
+     "etichetta": "a mano",
+     "t0": 13.0,
+     "punti": [
+      [
+       60,
+       100,
+       1
+      ],
+      [
+       60,
+       300,
+       1
+      ]
+     ],
+     "v": [
+      8.3
+     ],
+     "v_max": 8.3,
+     "a_max": 1.5,
+     "ingombro": [
+      5,
+      2,
+      2
+     ],
+     "durata_s": 37.1,
+     "occlusioni_s": []
+    },
+    {
+     "id": "persona1",
+     "classe": "persona_a_piedi",
+     "tipo": "operatore a piedi",
+     "etichetta": "a mano",
+     "t0": 0,
+     "punti": [
+      [
+       40,
+       200,
+       0.9
+      ],
+      [
+       40,
+       255,
+       0.9
+      ]
+     ],
+     "v": [
+      1.4
+     ],
+     "v_max": 2.5,
+     "a_max": 3.0,
+     "ingombro": [
+      0.5,
+      0.5,
+      1.8
+     ],
+     "durata_s": 39.3,
+     "occlusioni_s": []
+    }
+   ],
+   "avviso": {
+    "a_chi": "conducente del mezzo e operatore di sito (avviso diretto); in alternativa operatore di torre via radio",
+    "bersaglio": "aereo1",
+    "v_rel": 17.3,
+    "latenza": 1.0,
+    "reazione": 2.5,
+    "t_azione": null,
+    "spazio_manovra": 63.46333333333334,
+    "margine": 23.0,
+    "note": "v_rel = rullaggio tipico 9,0 (C, F6) + mezzo 8,3 (C); reazione 2,5 s (F: AASHTO, presa in prestito dalla strada: I per il piazzale); frenata 1,0 e 1,5 m/s^2 (C); margine = mezza apertura alare 18 m (M) + 5 m (I)",
+    "variante": {
+     "nome": "via operatore di torre",
+     "reazione": 10.0,
+     "nota": "vedere, decidere, parlare in radio, ricevere: 10 s (I)",
+     "d_richiesta_m": 277
+    },
+    "d_richiesta_m": 147,
+    "spazio_manovra_m": 63.5
+   }
+  },
+  {
+   "id": "A3",
+   "nome": "Aereo in avvicinamento finale e drone che scende sotto la copertura",
+   "centrale": true,
+   "sensori": [
+    {
+     "id": "s_radar",
+     "tipo": "da scegliere in 02-sensori (radar di sorveglianza; cooperativi: ADS-B per l'aereo, identificazione remota per il drone)",
+     "pos": [
+      0,
+      0,
+      10
+     ]
+    }
+   ],
+   "ostacoli": [
+    {
+     "id": "fascia_alberi_edifici",
+     "poligono": [
+      [
+       50,
+       -1200
+      ],
+      [
+       450,
+       -1200
+      ],
+      [
+       450,
+       -1100
+      ],
+      [
+       50,
+       -1100
+      ]
+     ],
+     "altezza": 25
+    }
+   ],
+   "oggetti": [
+    {
+     "id": "aereo2",
+     "classe": "aereo_avvicinamento",
+     "tipo": "aereo di linea, categoria di avvicinamento C, sentiero a 3 gradi",
+     "etichetta": "a mano",
+     "t0": 0,
+     "punti": [
+      [
+       200,
+       -6000,
+       314.44667569824725
+      ],
+      [
+       200,
+       0,
+       0
+      ]
+     ],
+     "v": [
+      70.0
+     ],
+     "v_max": 72.536604,
+     "a_max": 1.0,
+     "ingombro": [
+      37.6,
+      35.8,
+      11.8
+     ],
+     "durata_s": 85.8,
+     "occlusioni_s": []
+    },
+    {
+     "id": "drone2",
+     "classe": "multirotore",
+     "tipo": "multirotore piccolo",
+     "etichetta": "a mano",
+     "t0": 0,
+     "punti": [
+      [
+       350,
+       -2500,
+       120
+      ],
+      [
+       250,
+       -2500,
+       30
+      ],
+      [
+       200,
+       -2500,
+       30
+      ]
+     ],
+     "v": [
+      10,
+      10
+     ],
+     "v_max": 21.0,
+     "a_max": 6.9,
+     "ingombro": [
+      0.35,
+      0.28,
+      0.11
+     ],
+     "durata_s": 18.5,
+     "occlusioni_s": [
+      [
+       11.4,
+       18.5
+      ]
+     ],
+     "dist_ingresso_m": 2514,
+     "dist_uscita_m": 2508
+    }
+   ],
+   "avviso": {
+    "a_chi": "operatore di torre, che avverte l'equipaggio (riattaccata); mai un comando automatico",
+    "bersaglio": "drone2",
+    "v_rel": 91.0,
+    "latenza": 4.0,
+    "reazione": 22.5,
+    "t_azione": 10.0,
+    "spazio_manovra": null,
+    "margine": 610.0,
+    "note": "v_rel = 70 m/s (F: categoria C 121-141 nodi) + 21 m/s; latenza 4 s (M: un giro d'antenna di un radar d'aeroporto); operatore 10 s (I) + equipaggio 12,5 s (M: FAA AC 90-48, pagina non aperta: 403); 10 s perche' la riattaccata separi in quota (I); margine 610 m = 2000 piedi (M: 'well clear' ASTM F3442, non aperto)",
+    "d_richiesta_m": 3932,
+    "spazio_manovra_m": 910.0
+   }
+  },
+  {
+   "id": "A4",
+   "nome": "Mezzo senza pilota che porta il sensore (volo stazionario): SOLO ANALISI",
+   "centrale": true,
+   "solo_analisi": true,
+   "sensori": [
+    {
+     "id": "s_bordo",
+     "tipo": "da scegliere in 02-sensori (sensore di bordo: radar a onde millimetriche, lidar, ottico)",
+     "pos": [
+      0,
+      0,
+      30
+     ],
+     "portatore": "multirotore in volo stazionario, posa supposta nota"
+    }
+   ],
+   "ostacoli": [
+    {
+     "id": "torre_edificio",
+     "poligono": [
+      [
+       60,
+       40
+      ],
+      [
+       90,
+       40
+      ],
+      [
+       90,
+       80
+      ],
+      [
+       60,
+       80
+      ]
+     ],
+     "altezza": 45
+    }
+   ],
+   "oggetti": [
+    {
+     "id": "drone3",
+     "classe": "multirotore",
+     "tipo": "multirotore piccolo",
+     "etichetta": "a mano",
+     "t0": 0,
+     "punti": [
+      [
+       300,
+       20,
+       35
+      ],
+      [
+       -50,
+       120,
+       30
+      ]
+     ],
+     "v": [
+      15
+     ],
+     "v_max": 21.0,
+     "a_max": 6.9,
+     "ingombro": [
+      0.35,
+      0.28,
+      0.11
+     ],
+     "durata_s": 24.3,
+     "occlusioni_s": [
+      [
+       10.8,
+       16.3
+      ]
+     ],
+     "dist_ingresso_m": 158,
+     "dist_uscita_m": 109
+    }
+   ],
+   "avviso": {
+    "a_chi": "pilota remoto",
+    "bersaglio": "drone3",
+    "v_rel": 21.0,
+    "latenza": 0.5,
+    "reazione": 3.0,
+    "t_azione": 2.0,
+    "spazio_manovra": null,
+    "margine": 10.0,
+    "note": "portatore fermo: v_rel = 21 m/s; collegamento 0,5 s (I); pilota remoto 3 s (I); scarto laterale di 10 m con 5 m/s^2: 2 s (I); margine 10 m (I)",
+    "variante": {
+     "nome": "sistema di bordo (solo avviso e arresto, I)",
+     "reazione": 0.2,
+     "latenza": 0.2,
+     "nota": "0,2 + 0,2 s (I)",
+     "d_richiesta_m": 60
+    },
+    "d_richiesta_m": 126,
+    "spazio_manovra_m": 42.0
+   }
+  },
+  {
+   "id": "S1",
+   "nome": "Auto nascosta da un camion a un incrocio",
+   "centrale": false,
+   "sensori": [
+    {
+     "id": "s_palo",
+     "tipo": "da scegliere in 02-sensori (radar a 77 GHz o lidar su palo)",
+     "pos": [
+      0,
+      0,
+      6
+     ]
+    }
+   ],
+   "ostacoli": [
+    {
+     "id": "camion_fermo",
+     "poligono": [
+      [
+       8,
+       4
+      ],
+      [
+       24.5,
+       4
+      ],
+      [
+       24.5,
+       6.6
+      ],
+      [
+       8,
+       6.6
+      ]
+     ],
+     "altezza": 4
+    }
+   ],
+   "oggetti": [
+    {
+     "id": "auto1",
+     "classe": "auto_strada_urbana",
+     "tipo": "auto",
+     "etichetta": "a mano",
+     "t0": 0,
+     "punti": [
+      [
+       120,
+       9,
+       0.75
+      ],
+      [
+       -30,
+       9,
+       0.75
+      ]
+     ],
+     "v": [
+      13.9
+     ],
+     "v_max": 13.9,
+     "a_max": 3.0,
+     "ingombro": [
+      4.5,
+      1.8,
+      1.5
+     ],
+     "durata_s": 10.8,
+     "occlusioni_s": [
+      [
+       4.7,
+       7.9
+      ]
+     ],
+     "dist_ingresso_m": 56,
+     "dist_uscita_m": 15
+    }
+   ],
+   "avviso": {
+    "a_chi": "conducente dell'altro veicolo (o sistema di bordo)",
+    "bersaglio": "auto1",
+    "v_rel": 13.9,
+    "latenza": 0.1,
+    "reazione": 2.5,
+    "t_azione": null,
+    "spazio_manovra": 28.413235294117648,
+    "margine": 2.0,
+    "note": "50 km/h (C); reazione 2,5 s e 3,4 m/s^2 (F: AASHTO, Stopping sight distance); latenza 0,1 s (I); margine 2 m (I)",
+    "variante": {
+     "nome": "sistema di bordo",
+     "reazione": 0.5,
+     "spazio_manovra": 14.00072463768116,
+     "nota": "0,5 s (I); 6,9 m/s^2 (C)",
+     "d_richiesta_m": 24
+    },
+    "d_richiesta_m": 67,
+    "spazio_manovra_m": 28.4
+   }
+  },
+  {
+   "id": "S2",
+   "nome": "Treno dietro un convoglio fermo in stazione (a) o in galleria (b)",
+   "centrale": false,
+   "sensori": [
+    {
+     "id": "s_banchina",
+     "tipo": "da scegliere in 02-sensori (radar o lidar a fine banchina)",
+     "pos": [
+      0,
+      0,
+      5
+     ]
+    }
+   ],
+   "ostacoli": [
+    {
+     "id": "convoglio_fermo",
+     "poligono": [
+      [
+       20,
+       6
+      ],
+      [
+       220,
+       6
+      ],
+      [
+       220,
+       9
+      ],
+      [
+       20,
+       9
+      ]
+     ],
+     "altezza": 4.3
+    }
+   ],
+   "oggetti": [
+    {
+     "id": "treno1",
+     "classe": "treno_banchina",
+     "tipo": "treno in ingresso",
+     "etichetta": "a mano",
+     "t0": 0,
+     "punti": [
+      [
+       600,
+       12,
+       2
+      ],
+      [
+       50,
+       12,
+       2
+      ]
+     ],
+     "v": [
+      16.7
+     ],
+     "v_max": 16.7,
+     "a_max": 1.0,
+     "ingombro": [
+      200,
+      3,
+      4.3
+     ],
+     "durata_s": 32.9,
+     "occlusioni_s": [
+      [
+       9.6,
+       32.9
+      ]
+     ],
+     "dist_ingresso_m": 440,
+     "dist_uscita_m": 52
+    }
+   ],
+   "avviso": {
+    "a_chi": "personale di stazione e macchinista",
+    "bersaglio": "treno1",
+    "v_rel": 16.7,
+    "latenza": 1.0,
+    "reazione": 3.0,
+    "t_azione": null,
+    "spazio_manovra": 174.30624999999998,
+    "margine": 20.0,
+    "note": "60 km/h e frenata di servizio 0,8 m/s^2 (C); reazione 3 s (I); latenza 1 s (I); margine 20 m (I)",
+    "variante": {
+     "nome": "b: piena linea a 160 km/h verso una galleria, frenata d'emergenza",
+     "v_rel": 44.4,
+     "spazio_manovra": 600.0,
+     "nota": "600 m da 160 km/h in emergenza (F: Emergency brake (train))",
+     "d_richiesta_m": 798
+    },
+    "d_richiesta_m": 261,
+    "spazio_manovra_m": 174.3
+   }
+  }
+ ]
+}

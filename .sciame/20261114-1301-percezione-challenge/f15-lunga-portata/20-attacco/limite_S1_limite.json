@@ -1,0 +1,681 @@
+{
+ "scenario": "S1",
+ "variante": "limite",
+ "N": 30,
+ "chiamante": "prudente",
+ "falsi_4D": 1.0,
+ "falsi_IRIS": 0.5,
+ "rcs_drone_vero": 0.01,
+ "errori": 0,
+ "durata_s": 63.2,
+ "agg": {
+  "S1/min": {
+   "n_passaggi": 30,
+   "errori": 0,
+   "esempio_errore": null,
+   "tempestivo": [
+    30,
+    30,
+    1.0,
+    0.8865,
+    1.0
+   ],
+   "confermato": [
+    30,
+    30,
+    1.0,
+    0.8865,
+    1.0
+   ],
+   "d_conf_m_mediana_p5": [
+    105.1,
+    104.7
+   ],
+   "d_ril_m_mediana_p5": [
+    117.2,
+    115.8
+   ],
+   "d_richiesta_m": 67,
+   "cicli_nascosti": 1697,
+   "cicli_nascosti_senza_regione": [
+    0,
+    1697,
+    0.0,
+    0.0,
+    0.0023
+   ],
+   "passaggi_con_ciclo_senza_regione": [
+    0,
+    30,
+    0.0,
+    0.0,
+    0.1135
+   ],
+   "cicli_nascosti_fuori_avviso": [
+    152,
+    1697,
+    0.0896,
+    0.0769,
+    0.1041
+   ],
+   "precisione": {
+    "nominale": {
+     "2": {
+      "dentro": [
+       5,
+       22,
+       0.2273,
+       0.1012,
+       0.4344
+      ],
+      "senza_zona": 0
+     },
+     "5": {
+      "dentro": [
+       5,
+       19,
+       0.2632,
+       0.1181,
+       0.4879
+      ],
+      "senza_zona": 0
+     },
+     "10": {
+      "dentro": [
+       0,
+       3,
+       0.0,
+       0.0,
+       0.5615
+      ],
+      "senza_zona": 0
+     },
+     "20": {
+      "dentro": [
+       0,
+       0,
+       null,
+       null,
+       null
+      ],
+      "senza_zona": 0
+     }
+    },
+    "rallenta": {
+     "2": {
+      "dentro": [
+       5,
+       15,
+       0.3333,
+       0.1518,
+       0.5829
+      ],
+      "senza_zona": 2
+     },
+     "5": {
+      "dentro": [
+       3,
+       19,
+       0.1579,
+       0.0552,
+       0.3757
+      ],
+      "senza_zona": 2
+     },
+     "10": {
+      "dentro": [
+       0,
+       3,
+       0.0,
+       0.0,
+       0.5615
+      ],
+      "senza_zona": 0
+     },
+     "20": {
+      "dentro": [
+       0,
+       0,
+       null,
+       null,
+       null
+      ],
+      "senza_zona": 0
+     }
+    },
+    "ferma": {
+     "2": {
+      "dentro": [
+       1,
+       26,
+       0.0385,
+       0.0068,
+       0.1889
+      ],
+      "senza_zona": 0
+     },
+     "5": {
+      "dentro": [
+       3,
+       17,
+       0.1765,
+       0.0619,
+       0.4103
+      ],
+      "senza_zona": 0
+     },
+     "10": {
+      "dentro": [
+       0,
+       1,
+       0.0,
+       0.0,
+       0.7935
+      ],
+      "senza_zona": 0
+     },
+     "20": {
+      "dentro": [
+       0,
+       0,
+       null,
+       null,
+       null
+      ],
+      "senza_zona": 0
+     }
+    },
+    "vira": {
+     "2": {
+      "dentro": [
+       1,
+       11,
+       0.0909,
+       0.0162,
+       0.3774
+      ],
+      "senza_zona": 5
+     },
+     "5": {
+      "dentro": [
+       1,
+       10,
+       0.1,
+       0.0179,
+       0.4042
+      ],
+      "senza_zona": 9
+     },
+     "10": {
+      "dentro": [
+       0,
+       1,
+       0.0,
+       0.0,
+       0.7935
+      ],
+      "senza_zona": 2
+     },
+     "20": {
+      "dentro": [
+       0,
+       0,
+       null,
+       null,
+       null
+      ],
+      "senza_zona": 0
+     }
+    },
+    "indietro": {
+     "2": {
+      "dentro": [
+       0,
+       4,
+       0.0,
+       0.0,
+       0.4899
+      ],
+      "senza_zona": 2
+     },
+     "5": {
+      "dentro": [
+       0,
+       1,
+       0.0,
+       0.0,
+       0.7935
+      ],
+      "senza_zona": 4
+     },
+     "10": {
+      "dentro": [
+       0,
+       0,
+       null,
+       null,
+       null
+      ],
+      "senza_zona": 0
+     },
+     "20": {
+      "dentro": [
+       0,
+       0,
+       null,
+       null,
+       null
+      ],
+      "senza_zona": 0
+     }
+    }
+   },
+   "libero_su_oggetto": {
+    "auto_strada_urbana": [
+     21,
+     1170,
+     0.0179,
+     0.0118,
+     0.0273
+    ]
+   },
+   "falsi_avvisi": {
+    "n": 919,
+    "ore": 0.325,
+    "per_ora": 2827.692,
+    "sup95_per_ora": 3016.669
+   },
+   "scambi": [
+    0,
+    30,
+    0.0,
+    0.0,
+    0.1135
+   ],
+   "stessa_identita_al_ritorno": [
+    7,
+    12,
+    0.5833,
+    0.3195,
+    0.8067
+   ],
+   "salute": {
+    "pioggia_forte": {
+     "n": 3,
+     "dichiarata": 3,
+     "ritardo_s_max": 0.61
+    },
+    "spento": {
+     "n": 3,
+     "dichiarata": 3,
+     "ritardo_s_max": 0.84
+    }
+   },
+   "costo_ciclo_ms": {
+    "mediana": 22.07,
+    "p95_peggiore": 60.92
+   },
+   "per_cooperazione": {
+    "presente": [
+     10,
+     10,
+     1.0,
+     0.7225,
+     1.0
+    ],
+    "assente": [
+     10,
+     10,
+     1.0,
+     0.7225,
+     1.0
+    ],
+    "intermittente": [
+     10,
+     10,
+     1.0,
+     0.7225,
+     1.0
+    ]
+   },
+   "C0_tempestivo": [
+    0,
+    0,
+    null,
+    0.0,
+    1.0
+   ]
+  },
+  "S1/alta": {
+   "n_passaggi": 30,
+   "errori": 0,
+   "esempio_errore": null,
+   "tempestivo": [
+    30,
+    30,
+    1.0,
+    0.8865,
+    1.0
+   ],
+   "confermato": [
+    30,
+    30,
+    1.0,
+    0.8865,
+    1.0
+   ],
+   "d_conf_m_mediana_p5": [
+    105.1,
+    104.7
+   ],
+   "d_ril_m_mediana_p5": [
+    118.6,
+    117.2
+   ],
+   "d_richiesta_m": 67,
+   "cicli_nascosti": 1152,
+   "cicli_nascosti_senza_regione": [
+    0,
+    1152,
+    0.0,
+    0.0,
+    0.0033
+   ],
+   "passaggi_con_ciclo_senza_regione": [
+    0,
+    30,
+    0.0,
+    0.0,
+    0.1135
+   ],
+   "cicli_nascosti_fuori_avviso": [
+    91,
+    1152,
+    0.079,
+    0.0648,
+    0.096
+   ],
+   "precisione": {
+    "nominale": {
+     "2": {
+      "dentro": [
+       4,
+       15,
+       0.2667,
+       0.109,
+       0.5195
+      ],
+      "senza_zona": 5
+     },
+     "5": {
+      "dentro": [
+       6,
+       14,
+       0.4286,
+       0.2138,
+       0.6741
+      ],
+      "senza_zona": 0
+     },
+     "10": {
+      "dentro": [
+       0,
+       2,
+       0.0,
+       0.0,
+       0.6576
+      ],
+      "senza_zona": 0
+     },
+     "20": {
+      "dentro": [
+       0,
+       0,
+       null,
+       null,
+       null
+      ],
+      "senza_zona": 0
+     }
+    },
+    "rallenta": {
+     "2": {
+      "dentro": [
+       2,
+       11,
+       0.1818,
+       0.0514,
+       0.477
+      ],
+      "senza_zona": 3
+     },
+     "5": {
+      "dentro": [
+       9,
+       10,
+       0.9,
+       0.5958,
+       0.9821
+      ],
+      "senza_zona": 3
+     },
+     "10": {
+      "dentro": [
+       0,
+       0,
+       null,
+       null,
+       null
+      ],
+      "senza_zona": 0
+     },
+     "20": {
+      "dentro": [
+       0,
+       0,
+       null,
+       null,
+       null
+      ],
+      "senza_zona": 0
+     }
+    },
+    "ferma": {
+     "2": {
+      "dentro": [
+       3,
+       9,
+       0.3333,
+       0.1206,
+       0.6458
+      ],
+      "senza_zona": 0
+     },
+     "5": {
+      "dentro": [
+       6,
+       7,
+       0.8571,
+       0.4869,
+       0.9743
+      ],
+      "senza_zona": 1
+     },
+     "10": {
+      "dentro": [
+       0,
+       0,
+       null,
+       null,
+       null
+      ],
+      "senza_zona": 0
+     },
+     "20": {
+      "dentro": [
+       0,
+       0,
+       null,
+       null,
+       null
+      ],
+      "senza_zona": 0
+     }
+    },
+    "vira": {
+     "2": {
+      "dentro": [
+       0,
+       11,
+       0.0,
+       0.0,
+       0.2588
+      ],
+      "senza_zona": 3
+     },
+     "5": {
+      "dentro": [
+       1,
+       12,
+       0.0833,
+       0.0149,
+       0.3539
+      ],
+      "senza_zona": 3
+     },
+     "10": {
+      "dentro": [
+       0,
+       4,
+       0.0,
+       0.0,
+       0.4899
+      ],
+      "senza_zona": 0
+     },
+     "20": {
+      "dentro": [
+       0,
+       0,
+       null,
+       null,
+       null
+      ],
+      "senza_zona": 0
+     }
+    },
+    "indietro": {
+     "2": {
+      "dentro": [
+       0,
+       0,
+       null,
+       null,
+       null
+      ],
+      "senza_zona": 0
+     },
+     "5": {
+      "dentro": [
+       0,
+       0,
+       null,
+       null,
+       null
+      ],
+      "senza_zona": 0
+     },
+     "10": {
+      "dentro": [
+       0,
+       0,
+       null,
+       null,
+       null
+      ],
+      "senza_zona": 0
+     },
+     "20": {
+      "dentro": [
+       0,
+       0,
+       null,
+       null,
+       null
+      ],
+      "senza_zona": 0
+     }
+    }
+   },
+   "libero_su_oggetto": {
+    "auto_strada_urbana": [
+     1,
+     1170,
+     0.0009,
+     0.0002,
+     0.0048
+    ]
+   },
+   "falsi_avvisi": {
+    "n": 2225,
+    "ore": 0.325,
+    "per_ora": 6846.154,
+    "sup95_per_ora": 7136.779
+   },
+   "scambi": [
+    0,
+    30,
+    0.0,
+    0.0,
+    0.1135
+   ],
+   "stessa_identita_al_ritorno": null,
+   "salute": {
+    "pioggia_forte": {
+     "n": 3,
+     "dichiarata": 3,
+     "ritardo_s_max": 0.59
+    },
+    "spento": {
+     "n": 3,
+     "dichiarata": 3,
+     "ritardo_s_max": 0.84
+    }
+   },
+   "costo_ciclo_ms": {
+    "mediana": 120.33,
+    "p95_peggiore": 360.74
+   },
+   "per_cooperazione": {
+    "presente": [
+     10,
+     10,
+     1.0,
+     0.7225,
+     1.0
+    ],
+    "assente": [
+     10,
+     10,
+     1.0,
+     0.7225,
+     1.0
+    ],
+    "intermittente": [
+     10,
+     10,
+     1.0,
+     0.7225,
+     1.0
+    ]
+   },
+   "C0_tempestivo": [
+    0,
+    0,
+    null,
+    0.0,
+    1.0
+   ]
+  }
+ }
+}

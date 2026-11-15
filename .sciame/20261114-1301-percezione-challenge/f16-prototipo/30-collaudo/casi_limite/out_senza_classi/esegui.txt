@@ -1,0 +1,25 @@
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import os, runpy, sys; sys.path.insert(0, os.environ["MOVI_RADICE"]); sys.argv[0] = "movi"; runpy.run_module("movi", run_name="__main__", alter_sys=True)
+                                                                                                ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen runpy>", line 231, in run_module
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/prototipo/movi/__main__.py", line 58, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/prototipo/movi/__main__.py", line 32, in main
+    print(esegui.principale(a.scena, a.config, a.uscita or "uscite/" + a.scena.replace("/", "_"), a.celle,
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                            a.ultimo))
+                            ^^^^^^^^^
+  File "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/prototipo/movi/esegui.py", line 13, in principale
+    nuc = nucleo.crea(cfg, sorgente.meta)
+  File "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/prototipo/movi/nucleo.py", line 32, in crea
+    return NucleoCorto(cfg, meta)
+  File "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/prototipo/movi/corto.py", line 131, in __init__
+    self.etichette = E.carica(cfg.etichette, cfg.classi_ammesse)
+                     ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/prototipo/movi/etichette.py", line 24, in carica
+    raise ValueError(f"etichetta «{r['classe']}» non ammessa dallo scenario (classi ammesse: {classi_ammesse})")
+ValueError: etichetta «persona_a_piedi» non ammessa dallo scenario (classi ammesse: [])

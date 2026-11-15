@@ -1,0 +1,89 @@
+{
+  "larghezza": 424,
+  "altezza": 240,
+  "fx": 212.0,
+  "fy": 212.0,
+  "cx": 211.75,
+  "cy": 119.75,
+  "posa": {
+    "altezza_m": 1.2,
+    "inclinazione_gradi": 15.0
+  },
+  "fps": 15.0,
+  "sensore": "simulato: realsense_d435i, livello nominale, 848x480 campionato a 424x240",
+  "origine": "f10-dati/11-simulatore/genera.py --nome d435i_nom__pannello_a12__s00 (simsens.py 1.0 (14 novembre 2026); modello f10-dati/02-sensori/parametri_sensori.json)",
+  "licenza": "nessun vincolo (dati generati)",
+  "simulazione": {
+    "versione": "1.0 (14 novembre 2026)",
+    "nome": "d435i_nom__pannello_a12__s00",
+    "gruppo": "a12",
+    "profilo": "realsense_d435i",
+    "livello": "nominale",
+    "scena": "pannello",
+    "argomenti": {},
+    "filtri_costruttore": false,
+    "seme_rumore": 692698938,
+    "eventi": {},
+    "percorsi": [
+      {
+        "caso": "a12",
+        "passaggio": 0,
+        "verso": "sinistra->destra",
+        "velocita_crociera_ms": 1.1112,
+        "z_linea_m": 2.3095
+      }
+    ],
+    "parametri_sensore": {
+      "sigla": "d435i",
+      "nome_json": "realsense_d435i",
+      "livello": "nominale",
+      "scala": 0.5,
+      "larghezza": 424,
+      "altezza": 240,
+      "fx": 212.0,
+      "fy": 212.0,
+      "cx": 211.75,
+      "cy": 119.75,
+      "base_m": 0.05,
+      "z_min_m": 0.195,
+      "z_max_m": 10.0,
+      "fps_sensore": 30,
+      "k": 0.003774,
+      "sottopixel_px": 0.0400044,
+      "sottopixel_px_848": 0.08,
+      "quota_temporale": 0.6,
+      "quota_fissa": 0.8,
+      "correlazione_px": 2.5,
+      "passo_disparita_px": 0.015625,
+      "unita_m": 0.001,
+      "bordo_jitter_px": 0.75,
+      "bordo_jitter_m": null,
+      "bordo_ingrossamento_px": 1,
+      "bordo_misti_px": 1.5,
+      "p_pixel_misto": 0.5,
+      "p_buco_bordo": 0.3,
+      "margine_banda_px": 0.0,
+      "incidenza_soglia_gradi": 60.0,
+      "p_buco_incidenza_75": 0.05,
+      "persistenza_buco": 0.7,
+      "p_buco_materiale": [
+        0.005,
+        0.05,
+        0.3,
+        0.1,
+        1.0
+      ],
+      "fattore_materiale": [
+        1.0,
+        1.5,
+        2.5,
+        2.0,
+        1.0
+      ],
+      "p_falso_riflesso": 0.2,
+      "esposizione_s": 0.008,
+      "fattore_incidenza_oltre_soglia_limite": 5.0
+    },
+    "nota": "tempi = istanti di metà esposizione, regolari; nessun fotogramma perso; la base stereo è lungo +x (imager destro a destra del sinistro)"
+  }
+}

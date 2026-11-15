@@ -1,0 +1,28 @@
+{
+ "commento": "scena d'esempio a lunga portata: Multirotore piccolo verso un sito, passa dietro un edificio. SIMULAZIONE dalle schede (riuso/lunga_portata), nessun sensore fisico; etichette a mano.",
+ "modo": "lungo",
+ "scenario": "A1",
+ "sorgente": {
+  "tipo": "scena_lp",
+  "scenario": "A1",
+  "condizione": {
+   "configurazione": "min",
+   "perdita_sensore": true
+  },
+  "piano": [
+   -100,
+   800,
+   -100,
+   800
+  ],
+  "celle_lato": 24
+ },
+ "classi_ammesse": [],
+ "profilo_portatore": "stazione_fissa",
+ "profilo_ricevente": "operatore_di_sito",
+ "etichette": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/prototipo/etichette/lunga_portata.json",
+ "interruttori": {},
+ "parametri": {},
+ "seme": 0,
+ "origine_dati": "simulati"
+}

@@ -1,0 +1,36 @@
+{
+ "nome": "trajair_166_10636784_0",
+ "formato": "f15-comune-0.1",
+ "oggetti": [
+  {
+   "id": "trajair_166_10636784_0",
+   "classe": "aerei",
+   "tipo": "aereo_aviazione_generale_circuito",
+   "etichetta": "assegnata a mano dal convertitore (dalla fonte), nessun classificatore"
+  }
+ ],
+ "riferimento": {
+  "sistema": "locale in metri, x est, y nord, z quota",
+  "origine": "fine pista dell'aeroporto di Butler (KBTP), asse x allineato alla pista: NON e' est/nord (riferimento della fonte, lasciato com'e')"
+ },
+ "sensori": [
+  {
+   "id": "rif",
+   "posizione": [
+    0,
+    0,
+    0
+   ],
+   "nota": "SEGNAPOSTO: nessun sensore e' definito qui; vis_rif=1 ovunque. I ruoli degli scenari mettono sensori e ostacoli e ricalcolano la visibilita'."
+  }
+ ],
+ "ostacoli": [],
+ "finestra_velocita_s": 5.0,
+ "velocita": "derivate dalle posizioni (differenza centrata sulla finestra), non misurate",
+ "campioni": 247,
+ "durata_s": 246.0,
+ "passo_mediano_s": 1.0,
+ "fonte": "Patrikar et al., TrajAir: A General Aviation Trajectory Dataset, CMU KiltHub, doi:10.1184/R1/14866251 (7days1, processed_data)",
+ "licenza": "CC BY 4.0",
+ "nota": "tracciati ADS-B gia' elaborati dagli autori (interpolati a 1 Hz); avvicinamento, decollo e circuito non sono distinti dalla fonte"
+}

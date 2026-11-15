@@ -1,0 +1,37 @@
+{
+ "nome": "fi_treno1_0",
+ "formato": "f15-comune-0.1",
+ "oggetti": [
+  {
+   "id": "fi_treno1_0",
+   "classe": "treni",
+   "tipo": "treno",
+   "etichetta": "assegnata a mano dal convertitore (dalla fonte), nessun classificatore"
+  }
+ ],
+ "riferimento": {
+  "sistema": "locale in metri, x est, y nord, z quota",
+  "origine": "primo punto del tratto: lat 60.173312, lon 24.941408; quota non disponibile (z=0)"
+ },
+ "sensori": [
+  {
+   "id": "rif",
+   "posizione": [
+    0,
+    0,
+    0
+   ],
+   "nota": "SEGNAPOSTO: nessun sensore e' definito qui; vis_rif=1 ovunque. I ruoli degli scenari mettono sensori e ostacoli e ricalcolano la visibilita'."
+  }
+ ],
+ "ostacoli": [],
+ "finestra_velocita_s": 15.0,
+ "velocita": "derivate dalle posizioni (differenza centrata sulla finestra), non misurate",
+ "campioni": 224,
+ "durata_s": 597.0,
+ "passo_mediano_s": 3.0,
+ "fonte": "Fintraffic / digitraffic.fi, train-locations del 2026-11-12, treno n. 1",
+ "licenza": "CC BY 4.0",
+ "tempo_iniziale_unix": 1794458893.0,
+ "nota": "posizione dal GPS di bordo; e' la verita' migliore disponibile"
+}

@@ -165,6 +165,9 @@ def principale(percorso, uscita, filmato=False, ogni=1, fps=15):
     import cv2
     righe = registro.leggi(percorso)
     testa = next(righe)
+    if testa.get("modo") == "lungo":
+        from . import mostra_lungo
+        return mostra_lungo.principale(testa, righe, uscita, filmato, ogni, fps)
     tavola = _Tavola(testa["griglie"]["polare_corto"])
     os.makedirs(uscita, exist_ok=True)
     video, n = None, 0

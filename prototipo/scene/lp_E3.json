@@ -1,0 +1,28 @@
+{
+ "commento": "scena d'esempio a lunga portata: Aereo leggero non cooperante (a) e multirotore (b) in avvicinamento con nebbia fitta (a) o pioggia forte (b). SIMULAZIONE dalle schede (riuso/lunga_portata), nessun sensore fisico; etichette a mano.",
+ "modo": "lungo",
+ "scenario": "E3",
+ "sorgente": {
+  "tipo": "scena_lp",
+  "scenario": "E3",
+  "condizione": {
+   "configurazione": "alta"
+  },
+  "piano": [
+   -5000,
+   500,
+   -2700,
+   2700
+  ],
+  "celle_lato": 24,
+  "passaggio": 0
+ },
+ "classi_ammesse": [],
+ "profilo_portatore": "stazione_fissa",
+ "profilo_ricevente": "operatore_di_sito",
+ "etichette": "../etichette/lunga_portata.json",
+ "interruttori": {},
+ "parametri": {},
+ "seme": 0,
+ "origine_dati": "simulati"
+}

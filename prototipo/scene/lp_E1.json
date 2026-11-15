@@ -1,0 +1,28 @@
+{
+ "commento": "scena d'esempio a lunga portata: Due multirotori in ispezione collidono a 80 m di quota vicino a un piazzale. SIMULAZIONE dalle schede (riuso/lunga_portata), nessun sensore fisico; etichette a mano.",
+ "modo": "lungo",
+ "scenario": "E1",
+ "sorgente": {
+  "tipo": "scena_lp",
+  "scenario": "E1",
+  "condizione": {
+   "configurazione": "alta"
+  },
+  "piano": [
+   -50,
+   300,
+   -50,
+   300
+  ],
+  "celle_lato": 24,
+  "passaggio": 0
+ },
+ "classi_ammesse": [],
+ "profilo_portatore": "stazione_fissa",
+ "profilo_ricevente": "operatore_di_sito",
+ "etichette": "../etichette/lunga_portata.json",
+ "interruttori": {},
+ "parametri": {},
+ "seme": 0,
+ "origine_dati": "simulati"
+}

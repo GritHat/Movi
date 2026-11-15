@@ -1,0 +1,993 @@
+{
+ "wilson_sim": {
+  "triple": 562,
+  "scarti_oltre_0_002": 0,
+  "esempi": []
+ },
+ "semi": {
+  "flussi": 3600,
+  "prime_estrazioni_distinte": 3600,
+  "corr_max_abs_fra_flussi_64_estrazioni": 0.6146827906573579,
+  "quota_corr_oltre_soglia_95": 0.05142647649038313,
+  "verita_distinte_per_riga": "200 per scenario, condivise fra min e alta (spawn_key cfg=0): 1200 verita' per 2400 passaggi",
+  "prudente": "spawn_key non contiene il chiamante: i 50 passaggi prudenti hanno gli stessi semi dei passaggi 0-49 del modo interfaccia (stesso campione, sottoinsieme appaiato)"
+ },
+ "correzioni": {
+  "prudente: 0 passaggi con ciclo senza regione, 12 righe x 50": {
+   "per_riga_sup_95": 0.058155079116972264,
+   "per_riga_sup_bonf12": 0.10381891126655929,
+   "unito_600_sup_95": 0.004980443380361299
+  },
+  "P1 alta 200/200 in A1, A2, S1 (3 righe)": {
+   "per_riga_inf_95": 0.9851329607687279,
+   "per_riga_inf_bonf3": 0.9797364002740757
+  },
+  "identita 0/200 in 5 scenari x 2": {
+   "per_riga_sup_95": 0.014867039231272083,
+   "per_riga_sup_bonf10": 0.02614376298352128
+  },
+  "perdita sensore 460/460": {
+   "inf_95_unilat": 0.9935086986531791,
+   "wilson": [
+    0.9917181641536291,
+    0.9999999999999999
+   ]
+  }
+ },
+ "traiettorie": {
+  "aerei": {
+   "tratti_prova": 97,
+   "tratti_taratura": 96,
+   "scene_in_entrambe": 0,
+   "unita1_prova": 77,
+   "unita1_in_entrambe": 32,
+   "unita2_prova": 52,
+   "unita2_in_entrambe": 15,
+   "unita2_elenco_se_poche": null,
+   "per_D": {
+    "2": {
+     "casi": 803,
+     "dentro": 745,
+     "wilson_casi": [
+      0.9077564388766799,
+      0.9437119536922167
+     ],
+     "fuori_avv": 223,
+     "u1": {
+      "unita": 75,
+      "media_per_unita": 0.9395282651072125,
+      "wilson_n_unita": [
+       0.8613072634939376,
+       0.974918254808838
+      ],
+      "bootstrap_grappoli": [
+       0.903598064938082,
+       0.9501933261118132
+      ],
+      "unita_con_fuori_avviso": 42,
+      "wilson_unita_fuori": [
+       0.4474677138145549,
+       0.6666854250875085
+      ],
+      "min_cop_unita": 0.6
+     },
+     "u2": {
+      "unita": 50,
+      "media_per_unita": 0.9681301849075463,
+      "wilson_n_unita": [
+       0.8771374623909506,
+       0.9923229778741248
+      ],
+      "bootstrap_grappoli": [
+       0.9015666401695813,
+       0.9592618767177071
+      ],
+      "unita_con_fuori_avviso": 19,
+      "wilson_unita_fuori": [
+       0.25862789310193596,
+       0.5184955306900703
+      ],
+      "min_cop_unita": 0.6666666666666666
+     }
+    },
+    "5": {
+     "casi": 842,
+     "dentro": 768,
+     "wilson_casi": [
+      0.8910703642015202,
+      0.9294143646596099
+     ],
+     "fuori_avv": 293,
+     "u1": {
+      "unita": 77,
+      "media_per_unita": 0.9159673889904639,
+      "wilson_n_unita": [
+       0.8325754435236783,
+       0.9598271038699044
+      ],
+      "bootstrap_grappoli": [
+       0.8851650547631466,
+       0.937584803256445
+      ],
+      "unita_con_fuori_avviso": 44,
+      "wilson_unita_fuori": [
+       0.46010532061427006,
+       0.6759634757739535
+      ],
+      "min_cop_unita": 0.3333333333333333
+     },
+     "u2": {
+      "unita": 52,
+      "media_per_unita": 0.9369320114200919,
+      "wilson_n_unita": [
+       0.8363874820802369,
+       0.9773614805605767
+      ],
+      "bootstrap_grappoli": [
+       0.8859048969278438,
+       0.9419475509184057
+      ],
+      "unita_con_fuori_avviso": 19,
+      "wilson_unita_fuori": [
+       0.24800699873813392,
+       0.501283218679829
+      ],
+      "min_cop_unita": 0.3333333333333333
+     }
+    },
+    "10": {
+     "casi": 812,
+     "dentro": 744,
+     "wilson_casi": [
+      0.8951876727476463,
+      0.9334046875586856
+     ],
+     "fuori_avv": 317,
+     "u1": {
+      "unita": 77,
+      "media_per_unita": 0.9248699643436485,
+      "wilson_n_unita": [
+       0.8437756074820328,
+       0.965586017894436
+      ],
+      "bootstrap_grappoli": [
+       0.8929470266659312,
+       0.9381446690179056
+      ],
+      "unita_con_fuori_avviso": 45,
+      "wilson_unita_fuori": [
+       0.47290042397200527,
+       0.6879081535777135
+      ],
+      "min_cop_unita": 0.5
+     },
+     "u2": {
+      "unita": 52,
+      "media_per_unita": 0.9439702671493002,
+      "wilson_n_unita": [
+       0.8458175775349595,
+       0.981039541864223
+      ],
+      "bootstrap_grappoli": [
+       0.8912026029924165,
+       0.9430285311889509
+      ],
+      "unita_con_fuori_avviso": 20,
+      "wilson_unita_fuori": [
+       0.26470463780216213,
+       0.5204012628418061
+      ],
+      "min_cop_unita": 0.5
+     }
+    },
+    "20": {
+     "casi": 741,
+     "dentro": 658,
+     "wilson_casi": [
+      0.8632509106608915,
+      0.9087254518128037
+     ],
+     "fuori_avv": 258,
+     "u1": {
+      "unita": 77,
+      "media_per_unita": 0.8955763179447389,
+      "wilson_n_unita": [
+       0.8075171381188696,
+       0.9460411703550932
+      ],
+      "bootstrap_grappoli": [
+       0.8556381337960285,
+       0.9180604935092919
+      ],
+      "unita_con_fuori_avviso": 44,
+      "wilson_unita_fuori": [
+       0.46010532061427006,
+       0.6759634757739535
+      ],
+      "min_cop_unita": 0.375
+     },
+     "u2": {
+      "unita": 52,
+      "media_per_unita": 0.9308098081646973,
+      "wilson_n_unita": [
+       0.8283123746769626,
+       0.9740345015569486
+      ],
+      "bootstrap_grappoli": [
+       0.8455932675224582,
+       0.9319424591259335
+      ],
+      "unita_con_fuori_avviso": 19,
+      "wilson_unita_fuori": [
+       0.24800699873813392,
+       0.501283218679829
+      ],
+      "min_cop_unita": 0.6444444444444445
+     }
+    },
+    "30": {
+     "casi": 703,
+     "dentro": 636,
+     "wilson_casi": [
+      0.8807363392105868,
+      0.9242532279680687
+     ],
+     "fuori_avv": 286,
+     "u1": {
+      "unita": 76,
+      "media_per_unita": 0.9191058511680353,
+      "wilson_n_unita": [
+       0.8358232343930542,
+       0.9620590979000764
+      ],
+      "bootstrap_grappoli": [
+       0.8738116088328076,
+       0.9312687572917085
+      ],
+      "unita_con_fuori_avviso": 45,
+      "wilson_unita_fuori": [
+       0.4797855251743951,
+       0.6955619723136058
+      ],
+      "min_cop_unita": 0.3333333333333333
+     },
+     "u2": {
+      "unita": 51,
+      "media_per_unita": 0.9588468840032414,
+      "wilson_n_unita": [
+       0.8650861647115882,
+       0.9883262567440934
+      ],
+      "bootstrap_grappoli": [
+       0.8745518632372207,
+       0.9457403178449924
+      ],
+      "unita_con_fuori_avviso": 20,
+      "wilson_unita_fuori": [
+       0.27027340981759806,
+       0.5291484101605165
+      ],
+      "min_cop_unita": 0.75
+     }
+    }
+   }
+  },
+  "droni": {
+   "tratti_prova": 122,
+   "tratti_taratura": 121,
+   "scene_in_entrambe": 0,
+   "unita1_prova": 118,
+   "unita1_in_entrambe": 7,
+   "unita2_prova": 2,
+   "unita2_in_entrambe": 2,
+   "unita2_elenco_se_poche": [
+    "M100",
+    "T28"
+   ],
+   "per_D": {
+    "2": {
+     "casi": 1203,
+     "dentro": 1169,
+     "wilson_casi": [
+      0.9607661059389802,
+      0.9797053965142944
+     ],
+     "fuori_avv": 1,
+     "u1": {
+      "unita": 118,
+      "media_per_unita": 0.9776414907324811,
+      "wilson_n_unita": [
+       0.9323176423792466,
+       0.9928468533836691
+      ],
+      "bootstrap_grappoli": [
+       0.9562066934942309,
+       0.9847205116399528
+      ],
+      "unita_con_fuori_avviso": 1,
+      "wilson_unita_fuori": [
+       0.0014975405219652578,
+       0.04644557241540204
+      ],
+      "min_cop_unita": 0.7
+     },
+     "u2": {
+      "unita": 2,
+      "media_per_unita": 0.9322705057999175,
+      "wilson_n_unita": [
+       0.29823982833476925,
+       0.9977619199056141
+      ],
+      "bootstrap_grappoli": null,
+      "unita_con_fuori_avviso": 1,
+      "wilson_unita_fuori": [
+       0.09453120573423074,
+       0.9054687942657693
+      ],
+      "min_cop_unita": 0.8725490196078431
+     }
+    },
+    "5": {
+     "casi": 1175,
+     "dentro": 1123,
+     "wilson_casi": [
+      0.9424258356621369,
+      0.9660932802768478
+     ],
+     "fuori_avv": 0,
+     "u1": {
+      "unita": 118,
+      "media_per_unita": 0.9627862027951234,
+      "wilson_n_unita": [
+       0.9115549014374754,
+       0.9848357435594565
+      ],
+      "bootstrap_grappoli": [
+       0.9314014776277597,
+       0.9761707193515705
+      ],
+      "unita_con_fuori_avviso": 0,
+      "wilson_unita_fuori": [
+       0.0,
+       0.03152833902249433
+      ],
+      "min_cop_unita": 0.4444444444444444
+     },
+     "u2": {
+      "unita": 2,
+      "media_per_unita": 0.8872056514913658,
+      "wilson_n_unita": [
+       0.27111934298050877,
+       0.9940237751184424
+      ],
+      "bootstrap_grappoli": null,
+      "unita_con_fuori_avviso": 0,
+      "wilson_unita_fuori": [
+       0.0,
+       0.6576197724933469
+      ],
+      "min_cop_unita": 0.7846153846153846
+     }
+    },
+    "10": {
+     "casi": 1137,
+     "dentro": 1051,
+     "wilson_casi": [
+      0.9075235050712207,
+      0.9383433702416171
+     ],
+     "fuori_avv": 0,
+     "u1": {
+      "unita": 118,
+      "media_per_unita": 0.9349024667851084,
+      "wilson_n_unita": [
+       0.8752905840779708,
+       0.967090844663206
+      ],
+      "bootstrap_grappoli": [
+       0.8939214776022867,
+       0.9526796267681916
+      ],
+      "unita_con_fuori_avviso": 0,
+      "wilson_unita_fuori": [
+       0.0,
+       0.03152833902249433
+      ],
+      "min_cop_unita": 0.29411764705882354
+     },
+     "u2": {
+      "unita": 2,
+      "media_per_unita": 0.8158143451214901,
+      "wilson_n_unita": [
+       0.23136848391856113,
+       0.9848886907465598
+      ],
+      "bootstrap_grappoli": null,
+      "unita_con_fuori_avviso": 0,
+      "wilson_unita_fuori": [
+       0.0,
+       0.6576197724933469
+      ],
+      "min_cop_unita": 0.6557377049180327
+     }
+    },
+    "20": {
+     "casi": 1042,
+     "dentro": 959,
+     "wilson_casi": [
+      0.9023195349324798,
+      0.9352835191554604
+     ],
+     "fuori_avv": 0,
+     "u1": {
+      "unita": 117,
+      "media_per_unita": 0.9224596391263059,
+      "wilson_n_unita": [
+       0.8594903592541712,
+       0.958569572496889
+      ],
+      "bootstrap_grappoli": [
+       0.8843912675869539,
+       0.9523366925416497
+      ],
+      "unita_con_fuori_avviso": 0,
+      "wilson_unita_fuori": [
+       0.0,
+       0.03178924566273338
+      ],
+      "min_cop_unita": 0.25
+     },
+     "u2": {
+      "unita": 2,
+      "media_per_unita": 0.7656564792271132,
+      "wilson_n_unita": [
+       0.20557918240345413,
+       0.9763318691893368
+      ],
+      "bootstrap_grappoli": null,
+      "unita_con_fuori_avviso": 0,
+      "wilson_unita_fuori": [
+       0.0,
+       0.6576197724933469
+      ],
+      "min_cop_unita": 0.5524475524475524
+     }
+    },
+    "30": {
+     "casi": 960,
+     "dentro": 875,
+     "wilson_casi": [
+      0.891809189427061,
+      0.9278276842208133
+     ],
+     "fuori_avv": 0,
+     "u1": {
+      "unita": 117,
+      "media_per_unita": 0.9084452584452586,
+      "wilson_n_unita": [
+       0.8424273412837036,
+       0.9484948422858237
+      ],
+      "bootstrap_grappoli": [
+       0.8762102171263598,
+       0.9445622011754693
+      ],
+      "unita_con_fuori_avviso": 0,
+      "wilson_unita_fuori": [
+       0.0,
+       0.03178924566273338
+      ],
+      "min_cop_unita": 0.0
+     },
+     "u2": {
+      "unita": 2,
+      "media_per_unita": 0.7406850961538461,
+      "wilson_n_unita": [
+       0.1933533668409279,
+       0.9714582691163012
+      ],
+      "bootstrap_grappoli": null,
+      "unita_con_fuori_avviso": 0,
+      "wilson_unita_fuori": [
+       0.0,
+       0.6576197724933469
+      ],
+      "min_cop_unita": 0.5078125
+     }
+    }
+   },
+   "sottotipo_multirotore": {
+    "casi": 954,
+    "voli": 101,
+    "media_per_volo": 0.9762101210121014,
+    "wilson_n_voli": [
+     0.9247703764843798,
+     0.9927525722277488
+    ]
+   },
+   "sottotipo_ala_fissa_senza_pilota": {
+    "casi": 183,
+    "voli": 17,
+    "media_per_volo": 0.6894864034365036,
+    "wilson_n_voli": [
+     0.45286435782725154,
+     0.8562568880638532
+    ]
+   }
+  },
+  "auto": {
+   "tratti_prova": 79,
+   "tratti_taratura": 78,
+   "scene_in_entrambe": 0,
+   "unita1_prova": 51,
+   "unita1_in_entrambe": 37,
+   "unita2_prova": 51,
+   "unita2_in_entrambe": 37,
+   "unita2_elenco_se_poche": null,
+   "per_D": {
+    "2": {
+     "casi": 766,
+     "dentro": 721,
+     "wilson_casi": [
+      0.9222952675442584,
+      0.9558076096839332
+     ],
+     "fuori_avv": 0,
+     "u1": {
+      "unita": 51,
+      "media_per_unita": 0.9415022135761612,
+      "wilson_n_unita": [
+       0.8411915022394499,
+       0.9799614494354131
+      ],
+      "bootstrap_grappoli": [
+       0.918178092399404,
+       0.9623377981850786
+      ],
+      "unita_con_fuori_avviso": 0,
+      "wilson_unita_fuori": [
+       0.0,
+       0.07004661989853143
+      ],
+      "min_cop_unita": 0.7
+     },
+     "u2": {
+      "unita": 51,
+      "media_per_unita": 0.9415022135761612,
+      "wilson_n_unita": [
+       0.8411915022394499,
+       0.9799614494354131
+      ],
+      "bootstrap_grappoli": [
+       0.9184419321088119,
+       0.9617350423776068
+      ],
+      "unita_con_fuori_avviso": 0,
+      "wilson_unita_fuori": [
+       0.0,
+       0.07004661989853143
+      ],
+      "min_cop_unita": 0.7
+     }
+    },
+    "5": {
+     "casi": 710,
+     "dentro": 653,
+     "wilson_casi": [
+      0.8973986165432329,
+      0.9375206678937135
+     ],
+     "fuori_avv": 0,
+     "u1": {
+      "unita": 51,
+      "media_per_unita": 0.9216135743369702,
+      "wilson_n_unita": [
+       0.815058359569591,
+       0.9691035775330634
+      ],
+      "bootstrap_grappoli": [
+       0.8995626438449545,
+       0.9398393174918873
+      ],
+      "unita_con_fuori_avviso": 0,
+      "wilson_unita_fuori": [
+       0.0,
+       0.07004661989853143
+      ],
+      "min_cop_unita": 0.5555555555555556
+     },
+     "u2": {
+      "unita": 51,
+      "media_per_unita": 0.9216135743369702,
+      "wilson_n_unita": [
+       0.815058359569591,
+       0.9691035775330634
+      ],
+      "bootstrap_grappoli": [
+       0.8986225957173456,
+       0.9394813770071545
+      ],
+      "unita_con_fuori_avviso": 0,
+      "wilson_unita_fuori": [
+       0.0,
+       0.07004661989853143
+      ],
+      "min_cop_unita": 0.5555555555555556
+     }
+    },
+    "10": {
+     "casi": 657,
+     "dentro": 604,
+     "wilson_casi": [
+      0.8959871180582937,
+      0.9377983423504526
+     ],
+     "fuori_avv": 0,
+     "u1": {
+      "unita": 51,
+      "media_per_unita": 0.9190620285226676,
+      "wilson_n_unita": [
+       0.8117837683268608,
+       0.9676325314668047
+      ],
+      "bootstrap_grappoli": [
+       0.8949781389209701,
+       0.9420329483695652
+      ],
+      "unita_con_fuori_avviso": 0,
+      "wilson_unita_fuori": [
+       0.0,
+       0.07004661989853143
+      ],
+      "min_cop_unita": 0.5555555555555556
+     },
+     "u2": {
+      "unita": 51,
+      "media_per_unita": 0.9190620285226676,
+      "wilson_n_unita": [
+       0.8117837683268608,
+       0.9676325314668047
+      ],
+      "bootstrap_grappoli": [
+       0.8932704520095909,
+       0.9424164881577884
+      ],
+      "unita_con_fuori_avviso": 0,
+      "wilson_unita_fuori": [
+       0.0,
+       0.07004661989853143
+      ],
+      "min_cop_unita": 0.5555555555555556
+     }
+    },
+    "20": {
+     "casi": 489,
+     "dentro": 439,
+     "wilson_casi": [
+      0.8677224609720476,
+      0.9215780190054824
+     ],
+     "fuori_avv": 0,
+     "u1": {
+      "unita": 51,
+      "media_per_unita": 0.9099352021269704,
+      "wilson_n_unita": [
+       0.8001955283556705,
+       0.9622457253254393
+      ],
+      "bootstrap_grappoli": [
+       0.8663472466276763,
+       0.9270658900962715
+      ],
+      "unita_con_fuori_avviso": 0,
+      "wilson_unita_fuori": [
+       0.0,
+       0.07004661989853143
+      ],
+      "min_cop_unita": 0.5555555555555556
+     },
+     "u2": {
+      "unita": 51,
+      "media_per_unita": 0.9099352021269704,
+      "wilson_n_unita": [
+       0.8001955283556705,
+       0.9622457253254393
+      ],
+      "bootstrap_grappoli": [
+       0.8673896900559621,
+       0.9297946718355571
+      ],
+      "unita_con_fuori_avviso": 0,
+      "wilson_unita_fuori": [
+       0.0,
+       0.07004661989853143
+      ],
+      "min_cop_unita": 0.5555555555555556
+     }
+    },
+    "30": {
+     "casi": 352,
+     "dentro": 336,
+     "wilson_casi": [
+      0.9274466628052314,
+      0.9718302260107108
+     ],
+     "fuori_avv": 0,
+     "u1": {
+      "unita": 50,
+      "media_per_unita": 0.9605250305250306,
+      "wilson_n_unita": [
+       0.8661463696745868,
+       0.9891889808379191
+      ],
+      "bootstrap_grappoli": [
+       0.929571723821188,
+       0.9770822479812451
+      ],
+      "unita_con_fuori_avviso": 0,
+      "wilson_unita_fuori": [
+       6.938893903907228e-18,
+       0.07134759913335872
+      ],
+      "min_cop_unita": 0.6666666666666666
+     },
+     "u2": {
+      "unita": 50,
+      "media_per_unita": 0.9605250305250306,
+      "wilson_n_unita": [
+       0.8661463696745868,
+       0.9891889808379191
+      ],
+      "bootstrap_grappoli": [
+       0.9274906198226294,
+       0.9773301532028457
+      ],
+      "unita_con_fuori_avviso": 0,
+      "wilson_unita_fuori": [
+       6.938893903907228e-18,
+       0.07134759913335872
+      ],
+      "min_cop_unita": 0.6666666666666666
+     }
+    }
+   }
+  },
+  "treni": {
+   "tratti_prova": 56,
+   "tratti_taratura": 55,
+   "scene_in_entrambe": 0,
+   "unita1_prova": 33,
+   "unita1_in_entrambe": 29,
+   "unita2_prova": 33,
+   "unita2_in_entrambe": 29,
+   "unita2_elenco_se_poche": null,
+   "per_D": {
+    "2": {
+     "casi": 372,
+     "dentro": 311,
+     "wilson_casi": [
+      0.7949973958409239,
+      0.8701766932136571
+     ],
+     "fuori_avv": 75,
+     "u1": {
+      "unita": 33,
+      "media_per_unita": 0.8064933267337746,
+      "wilson_n_unita": [
+       0.6430290508082912,
+       0.9060414858086407
+      ],
+      "bootstrap_grappoli": [
+       0.7763449438034316,
+       0.8894933209132709
+      ],
+      "unita_con_fuori_avviso": 24,
+      "wilson_unita_fuori": [
+       0.5578244099712737,
+       0.8493255911457935
+      ],
+      "min_cop_unita": 0.0
+     },
+     "u2": {
+      "unita": 33,
+      "media_per_unita": 0.8064933267337746,
+      "wilson_n_unita": [
+       0.6430290508082912,
+       0.9060414858086407
+      ],
+      "bootstrap_grappoli": [
+       0.7737347887728063,
+       0.887702535106085
+      ],
+      "unita_con_fuori_avviso": 24,
+      "wilson_unita_fuori": [
+       0.5578244099712737,
+       0.8493255911457935
+      ],
+      "min_cop_unita": 0.0
+     }
+    },
+    "5": {
+     "casi": 538,
+     "dentro": 476,
+     "wilson_casi": [
+      0.8550063694432738,
+      0.9090547655260984
+     ],
+     "fuori_avv": 45,
+     "u1": {
+      "unita": 33,
+      "media_per_unita": 0.8857242374483753,
+      "wilson_n_unita": [
+       0.7351803315561605,
+       0.9558292127589776
+      ],
+      "bootstrap_grappoli": [
+       0.8444013435485568,
+       0.9196456128747795
+      ],
+      "unita_con_fuori_avviso": 20,
+      "wilson_unita_fuori": [
+       0.43683440819940234,
+       0.7531689256552291
+      ],
+      "min_cop_unita": 0.5789473684210527
+     },
+     "u2": {
+      "unita": 33,
+      "media_per_unita": 0.8857242374483753,
+      "wilson_n_unita": [
+       0.7351803315561605,
+       0.9558292127589776
+      ],
+      "bootstrap_grappoli": [
+       0.8442622950819673,
+       0.9218510657193606
+      ],
+      "unita_con_fuori_avviso": 20,
+      "wilson_unita_fuori": [
+       0.43683440819940234,
+       0.7531689256552291
+      ],
+      "min_cop_unita": 0.5789473684210527
+     }
+    },
+    "10": {
+     "casi": 529,
+     "dentro": 464,
+     "wilson_casi": [
+      0.8464008923944129,
+      0.9024147138143883
+     ],
+     "fuori_avv": 8,
+     "u1": {
+      "unita": 33,
+      "media_per_unita": 0.87019956307882,
+      "wilson_n_unita": [
+       0.7164140086932672,
+       0.946783702399482
+      ],
+      "bootstrap_grappoli": [
+       0.8427615078905738,
+       0.9069818352136194
+      ],
+      "unita_con_fuori_avviso": 6,
+      "wilson_unita_fuori": [
+       0.08610768208940667,
+       0.3438823163466992
+      ],
+      "min_cop_unita": 0.3333333333333333
+     },
+     "u2": {
+      "unita": 33,
+      "media_per_unita": 0.87019956307882,
+      "wilson_n_unita": [
+       0.7164140086932672,
+       0.946783702399482
+      ],
+      "bootstrap_grappoli": [
+       0.8419889892715979,
+       0.9079487604354693
+      ],
+      "unita_con_fuori_avviso": 6,
+      "wilson_unita_fuori": [
+       0.08610768208940667,
+       0.3438823163466992
+      ],
+      "min_cop_unita": 0.3333333333333333
+     }
+    },
+    "20": {
+     "casi": 516,
+     "dentro": 465,
+     "wilson_casi": [
+      0.8723724776481302,
+      0.9240241794003387
+     ],
+     "fuori_avv": 0,
+     "u1": {
+      "unita": 33,
+      "media_per_unita": 0.9011773591236956,
+      "wilson_n_unita": [
+       0.7542953839989649,
+       0.964397809748596
+      ],
+      "bootstrap_grappoli": [
+       0.8666575091575092,
+       0.9320388349514563
+      ],
+      "unita_con_fuori_avviso": 0,
+      "wilson_unita_fuori": [
+       0.0,
+       0.10426999754245206
+      ],
+      "min_cop_unita": 0.6
+     },
+     "u2": {
+      "unita": 33,
+      "media_per_unita": 0.9011773591236956,
+      "wilson_n_unita": [
+       0.7542953839989649,
+       0.964397809748596
+      ],
+      "bootstrap_grappoli": [
+       0.8663087850179354,
+       0.9329421562689278
+      ],
+      "unita_con_fuori_avviso": 0,
+      "wilson_unita_fuori": [
+       0.0,
+       0.10426999754245206
+      ],
+      "min_cop_unita": 0.6
+     }
+    },
+    "30": {
+     "casi": 505,
+     "dentro": 442,
+     "wilson_casi": [
+      0.8435642956486611,
+      0.9012649501411405
+     ],
+     "fuori_avv": 0,
+     "u1": {
+      "unita": 33,
+      "media_per_unita": 0.8642686218150615,
+      "wilson_n_unita": [
+       0.7093487527396104,
+       0.9432239142876148
+      ],
+      "bootstrap_grappoli": [
+       0.8380928571428572,
+       0.9066029900332225
+      ],
+      "unita_con_fuori_avviso": 0,
+      "wilson_unita_fuori": [
+       0.0,
+       0.10426999754245206
+      ],
+      "min_cop_unita": 0.3333333333333333
+     },
+     "u2": {
+      "unita": 33,
+      "media_per_unita": 0.8642686218150615,
+      "wilson_n_unita": [
+       0.7093487527396104,
+       0.9432239142876148
+      ],
+      "bootstrap_grappoli": [
+       0.838907072479417,
+       0.9066666666666666
+      ],
+      "unita_con_fuori_avviso": 0,
+      "wilson_unita_fuori": [
+       0.0,
+       0.10426999754245206
+      ],
+      "min_cop_unita": 0.3333333333333333
+     }
+    }
+   }
+  }
+ }
+}

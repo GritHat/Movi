@@ -1,0 +1,2 @@
+{'tipo': 'riassunto', 'fotogrammi': 228, 'dentro_la_zona': {'k': 9, 'n': 9}, 'dentro_l_avviso': {'k': 9, 'n': 12}, 'tempo_ciclo_ms': {'mediana': 0.0, 'p95': 0.0}}
+timeout 300 sh movi.sh esegui lp_singolo_perso --config  --uscita  --celle  23,96s user 0,45s system 112% cpu 21,653 total

@@ -1,5 +1,5 @@
 {
- "commento": "Scene d'esempio da consegnare. Le scene lp_* sono lette da f15-lunga-portata/03-scenari/scenari.json alle 00:05 del 15-11-2026 (file ancora in lavorazione: rileggere).",
+ "commento": "Scene d'esempio. Le lp_* (modo lungo) usano riuso/lunga_portata (copia di f15, 15-11-2026): A1–A4, S1, S2 da scenari.json, E1–E5 da scenari_eventi.json, lp_pub_drone da una traiettoria pubblica.",
  "scene": [
   {
    "nome": "pavimento_vuoto",
@@ -40,43 +40,141 @@
    "nome": "lp_A1",
    "modo": "lungo",
    "config": "scene/lp_A1.json",
-   "stato": "da costruire",
-   "mostra": "Multirotore piccolo verso un sito, passa dietro un edificio [CASO CENTRALE]"
+   "stato": "pronta",
+   "mostra": "Multirotore piccolo verso un sito, passa dietro un edificio — multisensore, passaggio 0 (esemplare di f15), chiamante prudente"
   },
   {
    "nome": "lp_A2",
    "modo": "lungo",
    "config": "scene/lp_A2.json",
-   "stato": "da costruire",
-   "mostra": "Aereo in rullaggio dietro un hangar, mezzo di servizio e persona sul piazzale [CASO CENTRALE]"
+   "stato": "pronta",
+   "mostra": "Aereo in rullaggio dietro un hangar, mezzo di servizio e persona sul piazzale — multisensore, passaggio 0 (esemplare di f15), chiamante prudente"
   },
   {
    "nome": "lp_A3",
    "modo": "lungo",
    "config": "scene/lp_A3.json",
-   "stato": "da costruire",
-   "mostra": "Aereo in avvicinamento finale e drone che scende sotto la copertura [CASO CENTRALE]"
+   "stato": "pronta",
+   "mostra": "Aereo in avvicinamento finale e drone che scende sotto la copertura — multisensore, passaggio 0 (esemplare di f15), chiamante prudente"
   },
   {
    "nome": "lp_A4",
    "modo": "lungo",
    "config": "scene/lp_A4.json",
-   "stato": "da costruire",
-   "mostra": "Mezzo senza pilota che porta il sensore (volo stazionario): SOLO ANALISI [CASO CENTRALE] [solo analisi]"
+   "stato": "pronta",
+   "mostra": "Mezzo senza pilota che porta il sensore (volo stazionario): SOLO ANALISI — multisensore, passaggio 0 (esemplare di f15), chiamante prudente"
   },
   {
    "nome": "lp_S1",
    "modo": "lungo",
    "config": "scene/lp_S1.json",
-   "stato": "da costruire",
-   "mostra": "Auto nascosta da un camion a un incrocio"
+   "stato": "pronta",
+   "mostra": "Auto nascosta da un camion a un incrocio — multisensore, passaggio 0 (esemplare di f15), chiamante prudente"
   },
   {
    "nome": "lp_S2",
    "modo": "lungo",
    "config": "scene/lp_S2.json",
-   "stato": "da costruire",
-   "mostra": "Treno dietro un convoglio fermo in stazione (a) o in galleria (b)"
+   "stato": "pronta",
+   "mostra": "Treno dietro un convoglio fermo in stazione (a) o in galleria (b) — multisensore, passaggio 0 (esemplare di f15), chiamante prudente"
+  },
+  {
+   "nome": "lp_E1",
+   "modo": "lungo",
+   "config": "scene/lp_E1.json",
+   "stato": "pronta",
+   "mostra": "Due multirotori in ispezione collidono a 80 m di quota vicino a un piazzale — passaggio 0 (esemplare di f15)"
+  },
+  {
+   "nome": "lp_E2",
+   "modo": "lungo",
+   "config": "scene/lp_E2.json",
+   "stato": "pronta",
+   "mostra": "Avaria non contenuta di un motore in corsa di decollo: fiammata, fumo, detriti in pista, un mezzo di servizio si avvicina — passaggio 0 (esemplare di f15)"
+  },
+  {
+   "nome": "lp_E3",
+   "modo": "lungo",
+   "config": "scene/lp_E3.json",
+   "stato": "pronta",
+   "mostra": "Aereo leggero non cooperante (a) e multirotore (b) in avvicinamento con nebbia fitta (a) o pioggia forte (b) — passaggio 0 (esemplare di f15)"
+  },
+  {
+   "nome": "lp_E4",
+   "modo": "lungo",
+   "config": "scene/lp_E4.json",
+   "stato": "pronta",
+   "mostra": "Multirotore che attraversa una colonna di fumo e ricompare — passaggio 0 (esemplare di f15)"
+  },
+  {
+   "nome": "lp_E5",
+   "modo": "lungo",
+   "config": "scene/lp_E5.json",
+   "stato": "pronta",
+   "mostra": "CONTROLLO: come E1 ma passaggio ravvicinato senza collisione (5 m di separazione in quota) — passaggio 0 (esemplare di f15)"
+  },
+  {
+   "nome": "lp_A1_sensore_singolo",
+   "modo": "lungo",
+   "config": "scene/lp_A1_sensore_singolo.json",
+   "stato": "pronta",
+   "mostra": "A1 col solo radar per droni (configurazione «min»)"
+  },
+  {
+   "nome": "lp_A1_non_cooperante",
+   "modo": "lungo",
+   "config": "scene/lp_A1_non_cooperante.json",
+   "stato": "pronta",
+   "mostra": "A1 senza Remote ID dal drone (mezzo non cooperante)"
+  },
+  {
+   "nome": "lp_A1_perdita_sensore",
+   "modo": "lungo",
+   "config": "scene/lp_A1_perdita_sensore.json",
+   "stato": "pronta",
+   "mostra": "A1: il radar principale si spegne per 15 s; la traccia retta solo da lui passa a «previsto ampio»"
+  },
+  {
+   "nome": "lp_A1_pioggia",
+   "modo": "lungo",
+   "config": "scene/lp_A1_pioggia.json",
+   "stato": "pronta",
+   "mostra": "A1: pioggia forte sul radar (fondo +8 dB, portata ×0,7), dichiarata dal controllo di salute"
+  },
+  {
+   "nome": "lp_A1_drone_piccolo",
+   "modo": "lungo",
+   "config": "scene/lp_A1_drone_piccolo.json",
+   "stato": "pronta",
+   "mostra": "A1 col drone C0 (1,6·10⁻⁴ m²)"
+  },
+  {
+   "nome": "lp_A1_interfaccia",
+   "modo": "lungo",
+   "config": "scene/lp_A1_interfaccia.json",
+   "stato": "pronta",
+   "mostra": "A1 col solo radar e il chiamante «interfaccia» di f15 (mancato() sul punto previsto): la convalida segnala gli avvisi tolti senza guardare (P2 di PROVE)"
+  },
+  {
+   "nome": "lp_A1_senza_etichette",
+   "modo": "lungo",
+   "config": "scene/lp_A1_senza_etichette.json",
+   "stato": "pronta",
+   "mostra": "A1 senza etichette di classe: l'avviso resta quello dell'inviluppo"
+  },
+  {
+   "nome": "lp_pub_drone",
+   "modo": "lungo",
+   "config": "scene/lp_pub_drone.json",
+   "stato": "pronta",
+   "mostra": "REGISTRAZIONE PUBBLICA: volo vero di un multirotore (CMU, CC BY 4.0) con un ostacolo VIRTUALE; rilevazioni simulate"
+  },
+  {
+   "nome": "lp_S1_interfaccia",
+   "modo": "lungo",
+   "config": "scene/lp_S1_interfaccia.json",
+   "stato": "pronta",
+   "mostra": "S1 col solo radar 4D e il chiamante «interfaccia»: confronto con il prudente"
   }
  ]
 }

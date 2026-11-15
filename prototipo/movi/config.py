@@ -34,6 +34,7 @@ class Configurazione:
     sorgente: dict = dataclasses.field(default_factory=dict)   # {"tipo": "sequenza"|"simulata"|"pubblica"|"scena_lp", …}
     classi_ammesse: list = dataclasses.field(default_factory=lambda: ["persona_a_piedi"])
     profilo_portatore: str = "stazione_fissa"
+    profilo_ricevente: str = ""                # modo lungo: chi riceve l'avviso (regole_lunga_portata.json, avviso)
     etichette: str = ""                        # file JSON delle etichette a mano ("" = nessuna etichetta)
     interruttori: dict = dataclasses.field(default_factory=dict)
     parametri: dict = dataclasses.field(default_factory=dict)  # scavalcano parametri.Parametri (corto) o quelli di movi_lp
@@ -56,9 +57,13 @@ class Configurazione:
         """Ciò che il prototipo dichiara SEMPRE (in ogni riga del registro e in ogni immagine)."""
         regole = self.regole()
         return {"dati": self.origine_dati, "hardware": "nessun sensore fisico",
-                "etichette": "a mano" if self.etichette else "assenti",
+                # collaudo (sciame-tester, 15-11-2026): con la condizione «etichette: nessuna» del modo lungo il nucleo
+                # non assegna classi (lungo.py riga 160), quindi la dichiarazione è «assenti» anche se il file c'è
+                "etichette": "a mano" if self.etichette and ((self.sorgente or {}).get("condizione") or {})
+                .get("etichette", "a_mano") != "nessuna" else "assenti",
                 "classificatore": "non realizzato (lavori futuri)",
                 "scenario": self.scenario, "profilo_portatore": self.profilo_portatore,
+                **({"profilo_ricevente": self.profilo_ricevente} if self.profilo_ricevente else {}),
                 "regole_accese": sorted(n for n, v in regole.items() if v),
                 "regole_spente": sorted(n for n, v in regole.items() if not v),
                 "config": self.impronta()}

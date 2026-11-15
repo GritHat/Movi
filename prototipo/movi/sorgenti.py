@@ -116,12 +116,11 @@ class SorgenteSimulata(Sorgente):
         return self._verita.get(indice)
 
 
-class SorgenteLungaPortata(Sorgente):
-    """Una scena di scenari.json (f15-lunga-portata/03-scenari) passata nel simulatore di sensori a lunga portata.
-    Rende, per fotogramma, le misure di OGNI sensore e il suo stato di salute simulato."""
-
-    def __init__(self, scenari_json, nome_scena, seme=0):
-        raise NotImplementedError("passo 2: dipende da movi_lp.py e dal simulatore a lunga portata")
+def SorgenteLungaPortata(cfg):
+    """Una scena a lunga portata (A1–A4, S1, S2 di scenari.json; E1–E5 di scenari_eventi.json; o una registrazione
+    pubblica di moto con occlusione virtuale): vedi movi.lungo.SorgenteLungaPortata."""
+    from .lungo import SorgenteLungaPortata as S
+    return S(cfg)
 
 
 def apri(cfg, base=None):
@@ -137,5 +136,5 @@ def apri(cfg, base=None):
     if tipo == "simulata":
         return SorgenteSimulata(s["nome"], s.get("larghezza", 424))
     if tipo == "scena_lp":
-        return SorgenteLungaPortata(s.get("scenari"), s.get("nome"), cfg.seme)
+        return SorgenteLungaPortata(cfg)
     raise ValueError(f"tipo di sorgente sconosciuto: {tipo}")

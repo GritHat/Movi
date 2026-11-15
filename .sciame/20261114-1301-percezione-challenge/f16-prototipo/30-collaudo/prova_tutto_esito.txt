@@ -1,0 +1,28 @@
+00_impronte_riuso                            ok
+01_prove_catena                              ok
+02_banco_c                                   ok
+03_importa                                   ok
+04_registro_corto                            ok
+05_convalida                                 ok
+06_principi                                  ok
+07_lunga_esemplari                           ok
+08_lunga_etichette                           ok
+09_scene_lunghe                              FALLITO (1): uscite/09_scene_lunghe.txt
+scena_pavimento_vuoto_esegui                 ok
+scena_pavimento_vuoto_tabellone              ok
+scena_pavimento_vuoto_mostra                 ok
+scena_passa_dietro_e_ricompare_esegui        ok
+scena_passa_dietro_e_ricompare_tabellone     ok
+scena_passa_dietro_e_ricompare_mostra        ok
+scena_resta_dietro_esegui                    ok
+scena_resta_dietro_tabellone                 ok
+scena_resta_dietro_mostra                    ok
+scena_mano_sul_sensore_esegui                ok
+scena_mano_sul_sensore_tabellone             ok
+scena_mano_sul_sensore_mostra                ok
+scena_due_persone_esegui                     ok
+scena_due_persone_tabellone                  ok
+scena_due_persone_mostra                     ok
+tempo: 532 s; esito: 1 (0 = nessun fallimento; «non ancora costruito» non è un fallimento)
+uscita 1
+2026-11-15T01:48:35+01:00

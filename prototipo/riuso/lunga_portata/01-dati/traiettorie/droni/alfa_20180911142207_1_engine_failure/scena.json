@@ -1,0 +1,38 @@
+{
+ "nome": "alfa_20180911142207_1_engine_failure",
+ "formato": "f15-comune-0.1",
+ "oggetti": [
+  {
+   "id": "alfa_20180911142207_1_engine_failure",
+   "classe": "droni",
+   "tipo": "ala_fissa_senza_pilota",
+   "etichetta": "assegnata a mano dal convertitore (dalla fonte), nessun classificatore"
+  }
+ ],
+ "riferimento": {
+  "sistema": "locale in metri, x est, y nord, z quota",
+  "origine": "primo punto della sequenza: lat 40.591521, lon -79.898067, quota 385.3 m"
+ },
+ "sensori": [
+  {
+   "id": "rif",
+   "posizione": [
+    0,
+    0,
+    0
+   ],
+   "nota": "SEGNAPOSTO: nessun sensore e' definito qui; vis_rif=1 ovunque. I ruoli degli scenari mettono sensori e ostacoli e ricalcolano la visibilita'."
+  }
+ ],
+ "ostacoli": [],
+ "finestra_velocita_s": 2.0,
+ "velocita": "derivate dalle posizioni (differenza centrata sulla finestra), non misurate",
+ "campioni": 467,
+ "durata_s": 114.02413368225098,
+ "passo_mediano_s": 0.2452155351638794,
+ "fonte": "Keipour, Mousaei, Scherer, ALFA: A Dataset for UAV Fault and Anomaly Detection, CMU KiltHub, doi:10.1184/R1/12707963 (processed.zip, mavros/global_position/global)",
+ "licenza": "CC BY 4.0",
+ "sequenza": "carbonZ_2018-09-11-14-22-07_1_engine_failure",
+ "guasto_indotto_nella_sequenza": "1_engine_failure",
+ "nota": "posizione dal GNSS dell'autopilota di bordo; molte sequenze contengono un guasto indotto (motore, timone, alettoni, equilibratore): il moto dopo il guasto non e' quello nominale"
+}

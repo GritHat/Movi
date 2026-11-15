@@ -1,0 +1,27 @@
+# PROVENIENZA dei dati scaricati (sciame-dati, f15/01-dati)
+
+Tutto scaricato per https, senza credenziali, nella notte fra il 14 e il 15 novembre 2026 (orologio della macchina: dalle 00:01 alle 00:16 circa del 15), in `scaricati/` (748 MB in tutto contro un tetto di 6 GB). Dati non fidati: letti solo con `csv`, `json`, `zipfile`, `numpy.loadtxt`; niente eseguito dal loro interno. Nelle richieste nessun nome di persona né dettaglio del progetto (intestazione generica `ricerca-traiettorie/1.0` dove il servizio la chiede). «Aperta oggi» = pagina o API interrogata in questa sessione.
+
+| cartella | fonte e pagina | licenza (dove letta) | file, dimensione, sha256 (prime 16 cifre) | usata per |
+|---|---|---|---|---|
+| `aerei_adsblol_live/` | adsb.lol, API `https://api.adsb.lol/v2/point/33.6407/-84.4277/12` (raggio 12 miglia nautiche attorno ad Atlanta KATL), una richiesta ogni 3-4 s per circa 13 min. Aperta oggi. | ODbL 1.0 (letta oggi nel README di `github.com/adsblol/globe_history_2025`: «made available under the Open Database License») | 190 richieste, istantanee JSON da circa 16 kB; alcune vuote per tempo scaduto (conteggio nel rapporto) | aerei: rullaggio, decollo, avvicinamento NON elaborati |
+| `aerei_zenodo/` | El Ouanbi e Amellal, «Cleaned ADS-B Trajectories (LHR-ZRH 2025) for AI Training», https://zenodo.org/records/18916312 (origine: OpenSky Network). Scheda e README aperti oggi dall'API di Zenodo. | CC BY 4.0 (campo `license` dell'API) | `CSV.zip`, 364 138 875 byte, f929a7a1bfbfef67; 2465 voli, usati i primi 40 | aerei di linea sotto 3000 m; GIA' filtrati e interpolati a 1 Hz dalla fonte |
+| `aerei_trajair/` | Patrikar et al., «TrajAir: A General Aviation Trajectory Dataset», https://kilthub.cmu.edu/articles/dataset/TrajAir_A_General_Aviation_Trajectory_Dataset/14866251. Scheda aperta oggi dall'API di figshare; README letto. | CC BY 4.0 (API) | `7days1.zip`, 37 MB, d058adbbc19393bd | aviazione generale attorno a un aeroporto senza torre (Butler, KBTP), 1 Hz |
+| `droni_cmu/` | Rodrigues et al., «Data Collected with Package Delivery Quadcopter Drone», https://kilthub.cmu.edu/articles/dataset/Data_Collected_with_Package_Delivery_Quadcopter_Drone/12683453. Scheda aperta oggi; README letto. | CC BY 4.0 (API) | `flights.zip`, 41 274 360 byte, 98f65a1ab54a8b61; 209 voli | multirotore DJI Matrice 100, GNSS/INS di bordo, circa 5-10 Hz |
+| `droni_alfa/` | Keipour, Mousaei, Scherer, «ALFA: A Dataset for UAV Fault and Anomaly Detection», https://kilthub.cmu.edu/articles/dataset/ALFA_A_Dataset_for_UAV_Fault_and_Anomaly_Detection/12707963. Scheda aperta oggi; README letto in parte. | CC BY 4.0 (API) | `processed.zip`, 271 996 798 byte, 02562756b9428aa2; 47 sequenze | ala fissa senza pilota (Carbon Z T-28), GNSS dell'autopilota, circa 4 Hz; molte sequenze con guasto indotto |
+| `auto_ngsim/` | US DOT FHWA, «Next Generation Simulation (NGSIM) Vehicle Trajectories», https://data.transportation.gov/d/8ect-6jqj, interrogazione `location='us-101' AND vehicle_id<60`, limite 200 000 righe. Aperta oggi. | CC BY-SA 3.0 (campo `license` dei metadati, letto oggi). Citazione chiesta: doi:10.21949/1504477 | `us101.csv`, 16 159 823 byte, 47e7e9d2ce205cfb; 91 807 righe | auto viste dall'alto (telecamere su un edificio), 10 Hz |
+| `treni_digitraffic/` | Fintraffic, `https://rata.digitraffic.fi/api/v1/train-locations/2026-11-12/<n>` per n dispari da 1 a 119. Aperta oggi. | CC BY 4.0 (letta oggi in https://www.digitraffic.fi/en/terms-of-service/). Attribuzione: «Fonte: Fintraffic / digitraffic.fi, licenza CC 4.0 BY» | 60 risposte JSON, 50 MB; 37 non vuote | treni passeggeri finlandesi, GPS di bordo, passo mediano 3 s |
+
+## Cercati e NON usati
+
+- **OpenSky Network, campioni di stato storici**: il contenitore pubblico `s3.opensky-network.org/data-samples` oggi contiene solo `states/placeholder.txt` (elenco letto oggi); l'archivio storico chiede un account. Non usato.
+- **Zenodo 23548217** (segmenti di spinta all'indietro etichettati, 3167 partenze): le traiettorie NON sono ridistribuite, servono credenziali OpenSky. Solo etichette: non usato. Resta l'unica fonte trovata per il moto a terra etichettato.
+- **Zenodo 13896127** (Nantes, atterraggi e decolli): un solo file da 7,8 GB, oltre il tetto. Non usato.
+- **Insiemi multisensore** (radar/LiDAR per auto: nuScenes mini, chiede registrazione, a memoria; ferroviario: OSDaR23, decine di GB, a memoria; rilevamento di droni ottico/acustico): **non scaricati, non verificati oggi**. In questa cartella NON ci sono rilevazioni reali di sensori: solo traiettorie.
+
+## Trasformazioni (tutte in `convertitori/converti.py`, rifacibili)
+
+1. Latitudine e longitudine in metri locali con proiezione equirettangolare su sfera (R = 6 371 008,8 m): errore sotto lo 0,5 % su decine di km (stima, non verificata). TrajAir e NGSIM hanno già coordinate piane della fonte (TrajAir: asse x lungo la pista, NON est).
+2. Velocità di `verita.csv` DERIVATE dalle posizioni con differenza centrata su finestra dichiarata in `scena.json` (auto e multirotori 1 s, ala fissa 2 s, aerei 5 s, rullaggio 10 s, treni 15 s).
+3. Scarti contati e stampati dal convertitore: doppioni di orario e salti del GPS dei treni, voli di drone fermi o illeggibili, tracce di aereo corte o ferme. Nessun dato della cartella `scaricati/` è modificato.
+4. `vis_rif` vale 1 ovunque: è un segnaposto. Sensori, ostacoli e visibilità li mettono i ruoli degli scenari.

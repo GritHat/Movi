@@ -1,0 +1,21 @@
+{
+ "dentro_la_zona": {
+  "k": 2,
+  "n": 2,
+  "wilson95": [
+   0.3424,
+   1.0
+  ]
+ },
+ "nascosti_senza_avviso": {
+  "k": 0,
+  "n": 2,
+  "wilson95": [
+   0.0,
+   0.6576
+  ]
+ },
+ "avvisi_tolti_senza_guardare": 0,
+ "righe_non_valide": 0,
+ "tipo": "riassunto"
+}

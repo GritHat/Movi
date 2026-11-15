@@ -1,0 +1,4 @@
+aerei mezzi 189 con pezzi in taratura E in prova 2
+auto mezzi 59 con pezzi in taratura E in prova 37
+droni mezzi 227 con pezzi in taratura E in prova 7
+treni mezzi 37 con pezzi in taratura E in prova 29

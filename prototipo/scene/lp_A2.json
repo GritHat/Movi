@@ -1,0 +1,29 @@
+{
+ "commento": "scena d'esempio a lunga portata: Aereo in rullaggio dietro un hangar, mezzo di servizio e persona sul piazzale. SIMULAZIONE dalle schede (riuso/lunga_portata), nessun sensore fisico; etichette a mano.",
+ "modo": "lungo",
+ "scenario": "A2",
+ "sorgente": {
+  "tipo": "scena_lp",
+  "scenario": "A2",
+  "condizione": {
+   "configurazione": "alta",
+   "cooperante": true
+  },
+  "piano": [
+   -200,
+   400,
+   -150,
+   450
+  ],
+  "celle_lato": 24,
+  "passaggio": 0
+ },
+ "classi_ammesse": [],
+ "profilo_portatore": "stazione_fissa",
+ "profilo_ricevente": "pilota_in_rullaggio",
+ "etichette": "../etichette/lunga_portata.json",
+ "interruttori": {},
+ "parametri": {},
+ "seme": 0,
+ "origine_dati": "simulati"
+}

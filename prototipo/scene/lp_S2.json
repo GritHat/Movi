@@ -1,0 +1,29 @@
+{
+ "commento": "scena d'esempio a lunga portata: Treno dietro un convoglio fermo in stazione (a) o in galleria (b). SIMULAZIONE dalle schede (riuso/lunga_portata), nessun sensore fisico; etichette a mano.",
+ "modo": "lungo",
+ "scenario": "S2",
+ "sorgente": {
+  "tipo": "scena_lp",
+  "scenario": "S2",
+  "condizione": {
+   "configurazione": "alta",
+   "cooperante": true
+  },
+  "piano": [
+   -50,
+   600,
+   -300,
+   350
+  ],
+  "celle_lato": 24,
+  "passaggio": 0
+ },
+ "classi_ammesse": [],
+ "profilo_portatore": "stazione_fissa",
+ "profilo_ricevente": "macchinista",
+ "etichette": "../etichette/lunga_portata.json",
+ "interruttori": {},
+ "parametri": {},
+ "seme": 0,
+ "origine_dati": "simulati"
+}

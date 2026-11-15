@@ -1,0 +1,653 @@
+{
+ "avvertenza": "SIMULAZIONE; strato eventi scritto da me dalle regole di regole_eventi.json (non indipendente)",
+ "durata_s": 955.0,
+ "n_E3_E4": 60,
+ "n_E1_E2": 16,
+ "n_E5_5m": 300,
+ "n_E5_altre": 60,
+ "risultati": {
+  "E1/min": {
+   "n": 16,
+   "errori": 0,
+   "esempio_errore": null,
+   "evento_dichiarato": [
+    0.4440393186673406,
+    0.8583556494803894,
+    11,
+    16
+   ],
+   "entro_2s": [
+    1,
+    16,
+    0.011119057308331216,
+    0.2832926836802987
+   ],
+   "ritardo_s_mediana_max": [
+    3.0,
+    5.0
+   ],
+   "falsi_eventi": [
+    0,
+    16,
+    0.0,
+    0.19361341827271994
+   ],
+   "frammenti_dentro_V": [
+    35960,
+    36660,
+    0.9794534362372708,
+    0.9822570245672512
+   ],
+   "libero_in_impronta_senza_strato_eventi": [
+    0,
+    9728
+   ],
+   "cicli_nascosti": 0,
+   "tracce_perse_senza_avviso": 0,
+   "fuori_avviso": 0,
+   "libero_su_oggetto": [
+    0,
+    2112
+   ],
+   "libero_oltre_portata_utile": [
+    0,
+    0
+   ],
+   "salute_cicli_max": null,
+   "salute_dichiarata": 0
+  },
+  "E1/alta": {
+   "n": 16,
+   "errori": 0,
+   "esempio_errore": null,
+   "evento_dichiarato": [
+    0.0,
+    0.19361341827271994,
+    0,
+    16
+   ],
+   "entro_2s": [
+    0,
+    16,
+    0.0,
+    0.19361341827271994
+   ],
+   "ritardo_s_mediana_max": null,
+   "falsi_eventi": [
+    0,
+    16,
+    0.0,
+    0.19361341827271994
+   ],
+   "frammenti_dentro_V": [
+    0,
+    0,
+    null,
+    null
+   ],
+   "libero_in_impronta_senza_strato_eventi": [
+    0,
+    0
+   ],
+   "cicli_nascosti": 0,
+   "tracce_perse_senza_avviso": 0,
+   "fuori_avviso": 0,
+   "libero_su_oggetto": [
+    0,
+    2112
+   ],
+   "libero_oltre_portata_utile": [
+    0,
+    0
+   ],
+   "salute_cicli_max": null,
+   "salute_dichiarata": 0
+  },
+  "E2/min": {
+   "n": 16,
+   "errori": 0,
+   "esempio_errore": null,
+   "evento_dichiarato": [
+    0.0,
+    0.19361341827271994,
+    0,
+    16
+   ],
+   "entro_2s": [
+    0,
+    16,
+    0.0,
+    0.19361341827271994
+   ],
+   "ritardo_s_mediana_max": null,
+   "falsi_eventi": [
+    0,
+    16,
+    0.0,
+    0.19361341827271994
+   ],
+   "frammenti_dentro_V": [
+    0,
+    0,
+    null,
+    null
+   ],
+   "libero_in_impronta_senza_strato_eventi": [
+    0,
+    0
+   ],
+   "cicli_nascosti": 0,
+   "tracce_perse_senza_avviso": 0,
+   "fuori_avviso": 0,
+   "libero_su_oggetto": [
+    0,
+    2208
+   ],
+   "libero_oltre_portata_utile": [
+    0,
+    0
+   ],
+   "salute_cicli_max": null,
+   "salute_dichiarata": 0
+  },
+  "E2/alta": {
+   "n": 16,
+   "errori": 0,
+   "esempio_errore": null,
+   "evento_dichiarato": [
+    0.0,
+    0.19361341827271994,
+    0,
+    16
+   ],
+   "entro_2s": [
+    0,
+    16,
+    0.0,
+    0.19361341827271994
+   ],
+   "ritardo_s_mediana_max": null,
+   "falsi_eventi": [
+    0,
+    16,
+    0.0,
+    0.19361341827271994
+   ],
+   "frammenti_dentro_V": [
+    0,
+    0,
+    null,
+    null
+   ],
+   "libero_in_impronta_senza_strato_eventi": [
+    0,
+    0
+   ],
+   "cicli_nascosti": 0,
+   "tracce_perse_senza_avviso": 0,
+   "fuori_avviso": 0,
+   "libero_su_oggetto": [
+    0,
+    2208
+   ],
+   "libero_oltre_portata_utile": [
+    0,
+    0
+   ],
+   "salute_cicli_max": 3,
+   "salute_dichiarata": 32
+  },
+  "E3/min": {
+   "n": 60,
+   "errori": 0,
+   "esempio_errore": null,
+   "evento_dichiarato": [
+    0.0,
+    0.060173930477932895,
+    0,
+    60
+   ],
+   "entro_2s": [
+    0,
+    60,
+    0.0,
+    0.060173930477932895
+   ],
+   "ritardo_s_mediana_max": null,
+   "falsi_eventi": [
+    0,
+    60,
+    0.0,
+    0.060173930477932895
+   ],
+   "frammenti_dentro_V": [
+    0,
+    0,
+    null,
+    null
+   ],
+   "libero_in_impronta_senza_strato_eventi": [
+    0,
+    0
+   ],
+   "cicli_nascosti": 1080,
+   "tracce_perse_senza_avviso": 0,
+   "fuori_avviso": 0,
+   "libero_su_oggetto": [
+    0,
+    9540
+   ],
+   "libero_oltre_portata_utile": [
+    0,
+    415640160
+   ],
+   "salute_cicli_max": null,
+   "salute_dichiarata": 0,
+   "portata_utile_esempio": {
+    "a": {
+     "multirotore_piccolo": {
+      "conto_m": 2800.6,
+      "nucleo_m": 2800.6,
+      "d_avv_m": 354.0
+     },
+     "aereo_leggero": {
+      "conto_m": 10532.0,
+      "nucleo_m": 10532.0,
+      "d_avv_m": 1490.0
+     }
+    },
+    "b": {
+     "multirotore_piccolo": {
+      "conto_m": 2000.4,
+      "nucleo_m": 2000.4,
+      "d_avv_m": 354.0
+     },
+     "aereo_leggero": {
+      "conto_m": 7522.9,
+      "nucleo_m": 7522.9,
+      "d_avv_m": 1490.0
+     }
+    },
+    "c": {
+     "multirotore_piccolo": {
+      "conto_m": 2800.6,
+      "nucleo_m": 2800.6,
+      "d_avv_m": 354.0
+     },
+     "aereo_leggero": {
+      "conto_m": 10532.0,
+      "nucleo_m": 10532.0,
+      "d_avv_m": 1490.0
+     }
+    }
+   }
+  },
+  "E3/alta": {
+   "n": 60,
+   "errori": 0,
+   "esempio_errore": null,
+   "evento_dichiarato": [
+    0.0,
+    0.060173930477932895,
+    0,
+    60
+   ],
+   "entro_2s": [
+    0,
+    60,
+    0.0,
+    0.060173930477932895
+   ],
+   "ritardo_s_mediana_max": null,
+   "falsi_eventi": [
+    0,
+    60,
+    0.0,
+    0.060173930477932895
+   ],
+   "frammenti_dentro_V": [
+    0,
+    0,
+    null,
+    null
+   ],
+   "libero_in_impronta_senza_strato_eventi": [
+    0,
+    0
+   ],
+   "cicli_nascosti": 0,
+   "tracce_perse_senza_avviso": 0,
+   "fuori_avviso": 0,
+   "libero_su_oggetto": [
+    0,
+    9540
+   ],
+   "libero_oltre_portata_utile": [
+    0,
+    415640160
+   ],
+   "salute_cicli_max": null,
+   "salute_dichiarata": 0,
+   "portata_utile_esempio": {
+    "a": {
+     "multirotore_piccolo": {
+      "conto_m": 2800.6,
+      "nucleo_m": 2800.6,
+      "d_avv_m": 354.0
+     },
+     "aereo_leggero": {
+      "conto_m": 10532.0,
+      "nucleo_m": 10532.0,
+      "d_avv_m": 1490.0
+     }
+    },
+    "b": {
+     "multirotore_piccolo": {
+      "conto_m": 2000.4,
+      "nucleo_m": 2000.4,
+      "d_avv_m": 354.0
+     },
+     "aereo_leggero": {
+      "conto_m": 7522.9,
+      "nucleo_m": 7522.9,
+      "d_avv_m": 1490.0
+     }
+    },
+    "c": {
+     "multirotore_piccolo": {
+      "conto_m": 2800.6,
+      "nucleo_m": 2800.6,
+      "d_avv_m": 354.0
+     },
+     "aereo_leggero": {
+      "conto_m": 10532.0,
+      "nucleo_m": 10532.0,
+      "d_avv_m": 1490.0
+     }
+    }
+   }
+  },
+  "E4/min": {
+   "n": 60,
+   "errori": 0,
+   "esempio_errore": null,
+   "evento_dichiarato": [
+    0.0,
+    0.060173930477932895,
+    0,
+    60
+   ],
+   "entro_2s": [
+    0,
+    60,
+    0.0,
+    0.060173930477932895
+   ],
+   "ritardo_s_mediana_max": null,
+   "falsi_eventi": [
+    0,
+    60,
+    0.0,
+    0.060173930477932895
+   ],
+   "frammenti_dentro_V": [
+    0,
+    0,
+    null,
+    null
+   ],
+   "libero_in_impronta_senza_strato_eventi": [
+    0,
+    0
+   ],
+   "cicli_nascosti": 900,
+   "tracce_perse_senza_avviso": 0,
+   "fuori_avviso": 0,
+   "libero_su_oggetto": [
+    0,
+    0
+   ],
+   "libero_oltre_portata_utile": [
+    0,
+    0
+   ],
+   "salute_cicli_max": null,
+   "salute_dichiarata": 0
+  },
+  "E4/alta": {
+   "n": 60,
+   "errori": 0,
+   "esempio_errore": null,
+   "evento_dichiarato": [
+    0.0361199240504859,
+    0.18069168468112481,
+    5,
+    60
+   ],
+   "entro_2s": [
+    0,
+    60,
+    0.0,
+    0.060173930477932895
+   ],
+   "ritardo_s_mediana_max": null,
+   "falsi_eventi": [
+    5,
+    60,
+    0.0361199240504859,
+    0.18069168468112481
+   ],
+   "frammenti_dentro_V": [
+    0,
+    0,
+    null,
+    null
+   ],
+   "libero_in_impronta_senza_strato_eventi": [
+    0,
+    0
+   ],
+   "cicli_nascosti": 480,
+   "tracce_perse_senza_avviso": 0,
+   "fuori_avviso": 0,
+   "libero_su_oggetto": [
+    0,
+    2940
+   ],
+   "libero_oltre_portata_utile": [
+    0,
+    0
+   ],
+   "salute_cicli_max": null,
+   "salute_dichiarata": 0
+  },
+  "E5/alta/sep5.0": {
+   "n": 300,
+   "errori": 0,
+   "esempio_errore": null,
+   "evento_dichiarato": [
+    0.0005886425761407378,
+    0.018637164554943353,
+    1,
+    300
+   ],
+   "entro_2s": [
+    0,
+    300,
+    0.0,
+    0.012643429997735661
+   ],
+   "ritardo_s_mediana_max": null,
+   "falsi_eventi": [
+    1,
+    300,
+    0.0005886425761407378,
+    0.018637164554943353
+   ],
+   "frammenti_dentro_V": [
+    0,
+    0,
+    null,
+    null
+   ],
+   "libero_in_impronta_senza_strato_eventi": [
+    0,
+    0
+   ],
+   "cicli_nascosti": 0,
+   "tracce_perse_senza_avviso": 0,
+   "fuori_avviso": 0,
+   "libero_su_oggetto": [
+    0,
+    26400
+   ],
+   "libero_oltre_portata_utile": [
+    0,
+    0
+   ],
+   "salute_cicli_max": null,
+   "salute_dichiarata": 0
+  },
+  "E5/alta/sep2.0": {
+   "n": 60,
+   "errori": 0,
+   "esempio_errore": null,
+   "evento_dichiarato": [
+    0.0,
+    0.060173930477932895,
+    0,
+    60
+   ],
+   "entro_2s": [
+    0,
+    60,
+    0.0,
+    0.060173930477932895
+   ],
+   "ritardo_s_mediana_max": null,
+   "falsi_eventi": [
+    0,
+    60,
+    0.0,
+    0.060173930477932895
+   ],
+   "frammenti_dentro_V": [
+    0,
+    0,
+    null,
+    null
+   ],
+   "libero_in_impronta_senza_strato_eventi": [
+    0,
+    0
+   ],
+   "cicli_nascosti": 0,
+   "tracce_perse_senza_avviso": 0,
+   "fuori_avviso": 0,
+   "libero_su_oggetto": [
+    0,
+    5280
+   ],
+   "libero_oltre_portata_utile": [
+    0,
+    0
+   ],
+   "salute_cicli_max": null,
+   "salute_dichiarata": 0
+  },
+  "E5/alta/sep1.0": {
+   "n": 60,
+   "errori": 0,
+   "esempio_errore": null,
+   "evento_dichiarato": [
+    0.009189126490150246,
+    0.11363987528925378,
+    2,
+    60
+   ],
+   "entro_2s": [
+    0,
+    60,
+    0.0,
+    0.060173930477932895
+   ],
+   "ritardo_s_mediana_max": null,
+   "falsi_eventi": [
+    2,
+    60,
+    0.009189126490150246,
+    0.11363987528925378
+   ],
+   "frammenti_dentro_V": [
+    0,
+    0,
+    null,
+    null
+   ],
+   "libero_in_impronta_senza_strato_eventi": [
+    0,
+    0
+   ],
+   "cicli_nascosti": 0,
+   "tracce_perse_senza_avviso": 0,
+   "fuori_avviso": 0,
+   "libero_su_oggetto": [
+    0,
+    5280
+   ],
+   "libero_oltre_portata_utile": [
+    0,
+    0
+   ],
+   "salute_cicli_max": null,
+   "salute_dichiarata": 0
+  },
+  "E5/alta/sep0.5": {
+   "n": 60,
+   "errori": 0,
+   "esempio_errore": null,
+   "evento_dichiarato": [
+    0.0,
+    0.060173930477932895,
+    0,
+    60
+   ],
+   "entro_2s": [
+    0,
+    60,
+    0.0,
+    0.060173930477932895
+   ],
+   "ritardo_s_mediana_max": null,
+   "falsi_eventi": [
+    0,
+    60,
+    0.0,
+    0.060173930477932895
+   ],
+   "frammenti_dentro_V": [
+    0,
+    0,
+    null,
+    null
+   ],
+   "libero_in_impronta_senza_strato_eventi": [
+    0,
+    0
+   ],
+   "cicli_nascosti": 0,
+   "tracce_perse_senza_avviso": 0,
+   "fuori_avviso": 0,
+   "libero_su_oggetto": [
+    0,
+    5280
+   ],
+   "libero_oltre_portata_utile": [
+    0,
+    0
+   ],
+   "salute_cicli_max": null,
+   "salute_dichiarata": 0
+  }
+ }
+}

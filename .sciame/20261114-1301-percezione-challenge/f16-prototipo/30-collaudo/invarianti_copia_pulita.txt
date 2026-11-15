@@ -1,0 +1,120 @@
+== due_persone/registro.jsonl: 49 righe, 47 fotogrammi, errori di forma 0
+   misura: nascosto seguito dentro un avviso 11/11 (Wilson 95% 0.741-1.000)
+   misure: {'viste': 68, 'viste_lontane_dal_vero': 37, 'nascosti_seguiti': 11, 'nascosti_dentro_avviso': 11}
+== lp_A1_drone_piccolo/registro.jsonl: 230 righe, 228 fotogrammi, errori di forma 2
+   forma riga 1: rle di 1 celle, griglia di 576
+   forma riga 2: rle di 1 celle, griglia di 576
+   misure: {'viste': 256, 'viste_lontane_dal_vero': 27}
+== lp_A1_interfaccia/registro.jsonl: 230 righe, 228 fotogrammi, errori di forma 2
+   forma riga 1: rle di 1 celle, griglia di 576
+   forma riga 2: rle di 1 celle, griglia di 576
+   I2a_nascosto_seguito_senza_alcun_avviso: 16  es. indice 76 t=39.0: drone1
+   I2b_nascosto_senza_regione_ne_previsto_ampio: 16  es. indice 76 t=39.0: drone1
+   I4c_vista_mentre_l_oggetto_vero_e_nascosto: 2  es. indice 76 t=39.0: traccia 1 vista vicino a ['drone1'] nascosto
+   misura: nascosto seguito dentro un avviso 0/16 (Wilson 95% 0.000-0.194)
+   misure: {'viste': 206, 'nascosti_seguiti': 16}
+== lp_A1_non_cooperante/registro.jsonl: 230 righe, 228 fotogrammi, errori di forma 2
+   forma riga 1: rle di 1 celle, griglia di 576
+   forma riga 2: rle di 1 celle, griglia di 576
+   I1a_cella_libera_su_oggetto_vero: 133  es. indice 38 t=20.0: drone1 in cella 350 «libero»
+   misure: {'viste': 273, 'viste_lontane_dal_vero': 42}
+== lp_A1_perdita_sensore/registro.jsonl: 230 righe, 228 fotogrammi, errori di forma 2
+   forma riga 1: rle di 1 celle, griglia di 576
+   forma riga 2: rle di 1 celle, griglia di 576
+   misure: {'viste': 249, 'transizioni_persa': 1, 'ritorni_sensore': 1, 'viste_lontane_dal_vero': 18}
+== lp_A1_pioggia/registro.jsonl: 230 righe, 228 fotogrammi, errori di forma 2
+   forma riga 1: rle di 1 celle, griglia di 576
+   forma riga 2: rle di 1 celle, griglia di 576
+   misura: nascosto seguito dentro un avviso 8/8 (Wilson 95% 0.676-1.000)
+   misure: {'viste': 258, 'transizioni_persa': 1, 'ritorni_sensore': 1, 'viste_lontane_dal_vero': 32, 'nascosti_seguiti': 8, 'nascosti_dentro_avviso': 8}
+== lp_A1/registro.jsonl: 230 righe, 228 fotogrammi, errori di forma 2
+   forma riga 1: rle di 1 celle, griglia di 576
+   forma riga 2: rle di 1 celle, griglia di 576
+   misure: {'viste': 268, 'viste_lontane_dal_vero': 36}
+== lp_A1_sensore_singolo/registro.jsonl: 230 righe, 228 fotogrammi, errori di forma 2
+   forma riga 1: rle di 1 celle, griglia di 576
+   forma riga 2: rle di 1 celle, griglia di 576
+   I2a_nascosto_seguito_senza_alcun_avviso: 2  es. indice 76 t=39.0: drone1
+   I2b_nascosto_senza_regione_ne_previsto_ampio: 2  es. indice 76 t=39.0: drone1
+   I4c_vista_mentre_l_oggetto_vero_e_nascosto: 2  es. indice 76 t=39.0: traccia 1 vista vicino a ['drone1'] nascosto
+   misura: nascosto seguito dentro un avviso 14/16 (Wilson 95% 0.640-0.965)
+   misure: {'viste': 208, 'nascosti_seguiti': 16, 'nascosti_dentro_avviso': 14}
+== lp_A1_senza_etichette/registro.jsonl: 230 righe, 228 fotogrammi, errori di forma 2
+   forma riga 1: rle di 1 celle, griglia di 576
+   forma riga 2: rle di 1 celle, griglia di 576
+   misure: {'viste': 268, 'viste_lontane_dal_vero': 36}
+== lp_A2/registro.jsonl: 181 righe, 179 fotogrammi, errori di forma 2
+   forma riga 1: rle di 1 celle, griglia di 576
+   forma riga 2: rle di 1 celle, griglia di 576
+   misure: {'viste': 347, 'viste_lontane_dal_vero': 18}
+== lp_A3/registro.jsonl: 274 righe, 272 fotogrammi, errori di forma 2
+   forma riga 1: rle di 1 celle, griglia di 576
+   forma riga 2: rle di 1 celle, griglia di 576
+   I4c_vista_mentre_l_oggetto_vero_e_nascosto: 125  es. indice 153 t=77.5: traccia 2 vista vicino a ['aereo2'] nascosto
+   misura: nascosto seguito dentro un avviso 119/119 (Wilson 95% 0.969-1.000)
+   misure: {'viste': 1021, 'viste_lontane_dal_vero': 4, 'nascosti_seguiti': 119, 'nascosti_dentro_avviso': 119}
+== lp_A4/registro.jsonl: 114 righe, 112 fotogrammi, errori di forma 2
+   forma riga 1: rle di 1 celle, griglia di 576
+   forma riga 2: rle di 1 celle, griglia di 576
+   I4c_vista_mentre_l_oggetto_vero_e_nascosto: 14  es. indice 23 t=12.5: traccia 13 vista vicino a ['drone3'] nascosto
+   misura: nascosto seguito dentro un avviso 13/13 (Wilson 95% 0.772-1.000)
+   misure: {'viste_lontane_dal_vero': 236, 'viste': 323, 'nascosti_seguiti': 13, 'nascosti_dentro_avviso': 13}
+== lp_E1/registro.jsonl: 91 righe, 89 fotogrammi, errori di forma 3
+   forma riga 1: rle di 1 celle, griglia di 576
+   forma riga 2: rle di 1 celle, griglia di 576
+   forma riga 3: rle di 1 celle, griglia di 576
+   misure: {'viste': 4122, 'viste_lontane_dal_vero': 37}
+== lp_E2/registro.jsonl: 141 righe, 139 fotogrammi, errori di forma 3
+   forma riga 1: rle di 1 celle, griglia di 576
+   forma riga 2: rle di 1 celle, griglia di 576
+   forma riga 3: rle di 1 celle, griglia di 576
+   I4b_vista_con_i_suoi_sensori_persi: 5617  es. indice 32 t=16.5: traccia 1
+   I7a_sensore_perso_senza_evento: 2  es. indice 32 t=16.5: camera_eo_ottica_lunga#1
+   misure: {'viste': 6778, 'viste_lontane_dal_vero': 5789, 'transizioni_persa': 2}
+== lp_E3/registro.jsonl: 321 righe, 319 fotogrammi, errori di forma 3
+   forma riga 1: rle di 1 celle, griglia di 576
+   forma riga 2: rle di 1 celle, griglia di 576
+   forma riga 3: rle di 1 celle, griglia di 576
+   misure: {'viste': 355}
+== lp_E4/registro.jsonl: 101 righe, 99 fotogrammi, errori di forma 3
+   forma riga 1: rle di 1 celle, griglia di 576
+   forma riga 2: rle di 1 celle, griglia di 576
+   forma riga 3: rle di 1 celle, griglia di 576
+   misure: {'viste': 153}
+== lp_E5/registro.jsonl: 91 righe, 89 fotogrammi, errori di forma 3
+   forma riga 1: rle di 1 celle, griglia di 576
+   forma riga 2: rle di 1 celle, griglia di 576
+   forma riga 3: rle di 1 celle, griglia di 576
+   misure: {'viste': 192}
+== lp_pub_drone/registro.jsonl: 456 righe, 454 fotogrammi, errori di forma 2
+   forma riga 1: rle di 1 celle, griglia di 576
+   forma riga 2: rle di 1 celle, griglia di 576
+   misure: {'viste_lontane_dal_vero': 88, 'viste': 88}
+== lp_S1_interfaccia/registro.jsonl: 79 righe, 77 fotogrammi, errori di forma 2
+   forma riga 1: rle di 1 celle, griglia di 576
+   forma riga 2: rle di 1 celle, griglia di 576
+   I4c_vista_mentre_l_oggetto_vero_e_nascosto: 11  es. indice 25 t=13.5: traccia 16 vista vicino a ['auto1'] nascosto
+   misura: nascosto seguito dentro un avviso 69/69 (Wilson 95% 0.947-1.000)
+   misure: {'viste': 76, 'nascosti_seguiti': 69, 'nascosti_dentro_avviso': 69, 'viste_lontane_dal_vero': 52}
+== lp_S1/registro.jsonl: 79 righe, 77 fotogrammi, errori di forma 2
+   forma riga 1: rle di 1 celle, griglia di 576
+   forma riga 2: rle di 1 celle, griglia di 576
+   I4c_vista_mentre_l_oggetto_vero_e_nascosto: 91  es. indice 15 t=8.5: traccia 11 vista vicino a ['auto1'] nascosto
+   misura: nascosto seguito dentro un avviso 62/62 (Wilson 95% 0.942-1.000)
+   misure: {'viste': 299, 'viste_lontane_dal_vero': 128, 'nascosti_seguiti': 62, 'nascosti_dentro_avviso': 62}
+== lp_S2/registro.jsonl: 136 righe, 134 fotogrammi, errori di forma 2
+   forma riga 1: rle di 1 celle, griglia di 576
+   forma riga 2: rle di 1 celle, griglia di 576
+   I4c_vista_mentre_l_oggetto_vero_e_nascosto: 45  es. indice 23 t=12.5: traccia 14 vista vicino a ['treno1'] nascosto
+   misura: nascosto seguito dentro un avviso 76/76 (Wilson 95% 0.952-1.000)
+   misure: {'viste_lontane_dal_vero': 182, 'viste': 331, 'nascosti_seguiti': 76, 'nascosti_dentro_avviso': 76}
+== mano_sul_sensore/registro.jsonl: 47 righe, 45 fotogrammi, errori di forma 0
+   misure: {'viste_lontane_dal_vero': 25, 'viste': 49, 'transizioni_persa': 1, 'fotogrammi_persa': 16, 'ritorni_sensore': 1}
+== passa_dietro_e_ricompare/registro.jsonl: 49 righe, 47 fotogrammi, errori di forma 0
+   misura: nascosto seguito dentro un avviso 11/11 (Wilson 95% 0.741-1.000)
+   misure: {'viste': 68, 'viste_lontane_dal_vero': 37, 'nascosti_seguiti': 11, 'nascosti_dentro_avviso': 11}
+== pavimento_vuoto/registro.jsonl: 32 righe, 30 fotogrammi, errori di forma 0
+   misure: {}
+== resta_dietro/registro.jsonl: 82 righe, 80 fotogrammi, errori di forma 0
+   misura: nascosto seguito dentro un avviso 30/65 (Wilson 95% 0.346-0.581)
+   misure: {'viste': 91, 'viste_lontane_dal_vero': 57, 'nascosti_seguiti': 65, 'nascosti_dentro_avviso': 30}

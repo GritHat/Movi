@@ -1,0 +1,36 @@
+{
+ "nome": "cmu_m100_volo91",
+ "formato": "f15-comune-0.1",
+ "oggetti": [
+  {
+   "id": "cmu_m100_volo91",
+   "classe": "droni",
+   "tipo": "multirotore",
+   "etichetta": "assegnata a mano dal convertitore (dalla fonte), nessun classificatore"
+  }
+ ],
+ "riferimento": {
+  "sistema": "locale in metri, x est, y nord, z quota",
+  "origine": "primo punto del volo: lat 40.458992, lon -79.782775, quota 266.3 m s.l.m."
+ },
+ "sensori": [
+  {
+   "id": "rif",
+   "posizione": [
+    0,
+    0,
+    0
+   ],
+   "nota": "SEGNAPOSTO: nessun sensore e' definito qui; vis_rif=1 ovunque. I ruoli degli scenari mettono sensori e ostacoli e ricalcolano la visibilita'."
+  }
+ ],
+ "ostacoli": [],
+ "finestra_velocita_s": 1.0,
+ "velocita": "derivate dalle posizioni (differenza centrata sulla finestra), non misurate",
+ "campioni": 1185,
+ "durata_s": 177.39,
+ "passo_mediano_s": 0.12000000000000455,
+ "fonte": "Rodrigues et al., Data Collected with Package Delivery Quadcopter Drone, CMU KiltHub, doi:10.1184/R1/12683453",
+ "licenza": "CC BY 4.0",
+ "nota": "posizione dal GNSS/INS di bordo (3DM-GX5-45, +-2 m orizz., +-5 m vert. secondo il README): e' la verita' migliore disponibile, non una verita' esterna"
+}

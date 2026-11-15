@@ -1,0 +1,1 @@
+{'tipo': 'riassunto', 'fotogrammi': 47, 'dentro_la_zona': {'k': 11, 'n': 11}, 'tempo_ciclo_ms': {'mediana': 8.953, 'p95': 10.297}}

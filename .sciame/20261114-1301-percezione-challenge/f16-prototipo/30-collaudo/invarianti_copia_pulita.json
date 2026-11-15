@@ -1,0 +1,620 @@
+{
+ "due_persone/registro.jsonl": {
+  "righe": 49,
+  "fotogrammi": 47,
+  "forma": 0,
+  "esempi_forma": [],
+  "violazioni": {},
+  "esempi": {},
+  "misure": {
+   "viste": 68,
+   "viste_lontane_dal_vero": 37,
+   "nascosti_seguiti": 11,
+   "nascosti_dentro_avviso": 11
+  }
+ },
+ "lp_A1_drone_piccolo/registro.jsonl": {
+  "righe": 230,
+  "fotogrammi": 228,
+  "forma": 2,
+  "esempi_forma": [
+   [
+    1,
+    "rle di 1 celle, griglia di 576"
+   ],
+   [
+    2,
+    "rle di 1 celle, griglia di 576"
+   ]
+  ],
+  "violazioni": {},
+  "esempi": {},
+  "misure": {
+   "viste": 256,
+   "viste_lontane_dal_vero": 27
+  }
+ },
+ "lp_A1_interfaccia/registro.jsonl": {
+  "righe": 230,
+  "fotogrammi": 228,
+  "forma": 2,
+  "esempi_forma": [
+   [
+    1,
+    "rle di 1 celle, griglia di 576"
+   ],
+   [
+    2,
+    "rle di 1 celle, griglia di 576"
+   ]
+  ],
+  "violazioni": {
+   "I2a_nascosto_seguito_senza_alcun_avviso": 16,
+   "I2b_nascosto_senza_regione_ne_previsto_ampio": 16,
+   "I4c_vista_mentre_l_oggetto_vero_e_nascosto": 2
+  },
+  "esempi": {
+   "I2a_nascosto_seguito_senza_alcun_avviso": [
+    "indice 76 t=39.0: drone1",
+    "indice 77 t=39.5: drone1",
+    "indice 78 t=40.0: drone1"
+   ],
+   "I2b_nascosto_senza_regione_ne_previsto_ampio": [
+    "indice 76 t=39.0: drone1",
+    "indice 77 t=39.5: drone1",
+    "indice 78 t=40.0: drone1"
+   ],
+   "I4c_vista_mentre_l_oggetto_vero_e_nascosto": [
+    "indice 76 t=39.0: traccia 1 vista vicino a ['drone1'] nascosto",
+    "indice 77 t=39.5: traccia 1 vista vicino a ['drone1'] nascosto"
+   ]
+  },
+  "misure": {
+   "viste": 206,
+   "nascosti_seguiti": 16
+  }
+ },
+ "lp_A1_non_cooperante/registro.jsonl": {
+  "righe": 230,
+  "fotogrammi": 228,
+  "forma": 2,
+  "esempi_forma": [
+   [
+    1,
+    "rle di 1 celle, griglia di 576"
+   ],
+   [
+    2,
+    "rle di 1 celle, griglia di 576"
+   ]
+  ],
+  "violazioni": {
+   "I1a_cella_libera_su_oggetto_vero": 133
+  },
+  "esempi": {
+   "I1a_cella_libera_su_oggetto_vero": [
+    "indice 38 t=20.0: drone1 in cella 350 «libero»",
+    "indice 39 t=20.5: drone1 in cella 350 «libero»",
+    "indice 45 t=23.5: drone1 in cella 325 «libero»"
+   ]
+  },
+  "misure": {
+   "viste": 273,
+   "viste_lontane_dal_vero": 42
+  }
+ },
+ "lp_A1_perdita_sensore/registro.jsonl": {
+  "righe": 230,
+  "fotogrammi": 228,
+  "forma": 2,
+  "esempi_forma": [
+   [
+    1,
+    "rle di 1 celle, griglia di 576"
+   ],
+   [
+    2,
+    "rle di 1 celle, griglia di 576"
+   ]
+  ],
+  "violazioni": {},
+  "esempi": {},
+  "misure": {
+   "viste": 249,
+   "transizioni_persa": 1,
+   "ritorni_sensore": 1,
+   "viste_lontane_dal_vero": 18
+  }
+ },
+ "lp_A1_pioggia/registro.jsonl": {
+  "righe": 230,
+  "fotogrammi": 228,
+  "forma": 2,
+  "esempi_forma": [
+   [
+    1,
+    "rle di 1 celle, griglia di 576"
+   ],
+   [
+    2,
+    "rle di 1 celle, griglia di 576"
+   ]
+  ],
+  "violazioni": {},
+  "esempi": {},
+  "misure": {
+   "viste": 258,
+   "transizioni_persa": 1,
+   "ritorni_sensore": 1,
+   "viste_lontane_dal_vero": 32,
+   "nascosti_seguiti": 8,
+   "nascosti_dentro_avviso": 8
+  }
+ },
+ "lp_A1/registro.jsonl": {
+  "righe": 230,
+  "fotogrammi": 228,
+  "forma": 2,
+  "esempi_forma": [
+   [
+    1,
+    "rle di 1 celle, griglia di 576"
+   ],
+   [
+    2,
+    "rle di 1 celle, griglia di 576"
+   ]
+  ],
+  "violazioni": {},
+  "esempi": {},
+  "misure": {
+   "viste": 268,
+   "viste_lontane_dal_vero": 36
+  }
+ },
+ "lp_A1_sensore_singolo/registro.jsonl": {
+  "righe": 230,
+  "fotogrammi": 228,
+  "forma": 2,
+  "esempi_forma": [
+   [
+    1,
+    "rle di 1 celle, griglia di 576"
+   ],
+   [
+    2,
+    "rle di 1 celle, griglia di 576"
+   ]
+  ],
+  "violazioni": {
+   "I2a_nascosto_seguito_senza_alcun_avviso": 2,
+   "I2b_nascosto_senza_regione_ne_previsto_ampio": 2,
+   "I4c_vista_mentre_l_oggetto_vero_e_nascosto": 2
+  },
+  "esempi": {
+   "I2a_nascosto_seguito_senza_alcun_avviso": [
+    "indice 76 t=39.0: drone1",
+    "indice 77 t=39.5: drone1"
+   ],
+   "I2b_nascosto_senza_regione_ne_previsto_ampio": [
+    "indice 76 t=39.0: drone1",
+    "indice 77 t=39.5: drone1"
+   ],
+   "I4c_vista_mentre_l_oggetto_vero_e_nascosto": [
+    "indice 76 t=39.0: traccia 1 vista vicino a ['drone1'] nascosto",
+    "indice 77 t=39.5: traccia 1 vista vicino a ['drone1'] nascosto"
+   ]
+  },
+  "misure": {
+   "viste": 208,
+   "nascosti_seguiti": 16,
+   "nascosti_dentro_avviso": 14
+  }
+ },
+ "lp_A1_senza_etichette/registro.jsonl": {
+  "righe": 230,
+  "fotogrammi": 228,
+  "forma": 2,
+  "esempi_forma": [
+   [
+    1,
+    "rle di 1 celle, griglia di 576"
+   ],
+   [
+    2,
+    "rle di 1 celle, griglia di 576"
+   ]
+  ],
+  "violazioni": {},
+  "esempi": {},
+  "misure": {
+   "viste": 268,
+   "viste_lontane_dal_vero": 36
+  }
+ },
+ "lp_A2/registro.jsonl": {
+  "righe": 181,
+  "fotogrammi": 179,
+  "forma": 2,
+  "esempi_forma": [
+   [
+    1,
+    "rle di 1 celle, griglia di 576"
+   ],
+   [
+    2,
+    "rle di 1 celle, griglia di 576"
+   ]
+  ],
+  "violazioni": {},
+  "esempi": {},
+  "misure": {
+   "viste": 347,
+   "viste_lontane_dal_vero": 18
+  }
+ },
+ "lp_A3/registro.jsonl": {
+  "righe": 274,
+  "fotogrammi": 272,
+  "forma": 2,
+  "esempi_forma": [
+   [
+    1,
+    "rle di 1 celle, griglia di 576"
+   ],
+   [
+    2,
+    "rle di 1 celle, griglia di 576"
+   ]
+  ],
+  "violazioni": {
+   "I4c_vista_mentre_l_oggetto_vero_e_nascosto": 125
+  },
+  "esempi": {
+   "I4c_vista_mentre_l_oggetto_vero_e_nascosto": [
+    "indice 153 t=77.5: traccia 2 vista vicino a ['aereo2'] nascosto",
+    "indice 153 t=77.5: traccia 39 vista vicino a ['aereo2'] nascosto",
+    "indice 154 t=78.0: traccia 2 vista vicino a ['aereo2'] nascosto"
+   ]
+  },
+  "misure": {
+   "viste": 1021,
+   "viste_lontane_dal_vero": 4,
+   "nascosti_seguiti": 119,
+   "nascosti_dentro_avviso": 119
+  }
+ },
+ "lp_A4/registro.jsonl": {
+  "righe": 114,
+  "fotogrammi": 112,
+  "forma": 2,
+  "esempi_forma": [
+   [
+    1,
+    "rle di 1 celle, griglia di 576"
+   ],
+   [
+    2,
+    "rle di 1 celle, griglia di 576"
+   ]
+  ],
+  "violazioni": {
+   "I4c_vista_mentre_l_oggetto_vero_e_nascosto": 14
+  },
+  "esempi": {
+   "I4c_vista_mentre_l_oggetto_vero_e_nascosto": [
+    "indice 23 t=12.5: traccia 13 vista vicino a ['drone3'] nascosto",
+    "indice 23 t=12.5: traccia 15 vista vicino a ['drone3'] nascosto",
+    "indice 24 t=13.0: traccia 13 vista vicino a ['drone3'] nascosto"
+   ]
+  },
+  "misure": {
+   "viste_lontane_dal_vero": 236,
+   "viste": 323,
+   "nascosti_seguiti": 13,
+   "nascosti_dentro_avviso": 13
+  }
+ },
+ "lp_E1/registro.jsonl": {
+  "righe": 91,
+  "fotogrammi": 89,
+  "forma": 3,
+  "esempi_forma": [
+   [
+    1,
+    "rle di 1 celle, griglia di 576"
+   ],
+   [
+    2,
+    "rle di 1 celle, griglia di 576"
+   ],
+   [
+    3,
+    "rle di 1 celle, griglia di 576"
+   ]
+  ],
+  "violazioni": {},
+  "esempi": {},
+  "misure": {
+   "viste": 4122,
+   "viste_lontane_dal_vero": 37
+  }
+ },
+ "lp_E2/registro.jsonl": {
+  "righe": 141,
+  "fotogrammi": 139,
+  "forma": 3,
+  "esempi_forma": [
+   [
+    1,
+    "rle di 1 celle, griglia di 576"
+   ],
+   [
+    2,
+    "rle di 1 celle, griglia di 576"
+   ],
+   [
+    3,
+    "rle di 1 celle, griglia di 576"
+   ]
+  ],
+  "violazioni": {
+   "I4b_vista_con_i_suoi_sensori_persi": 5617,
+   "I7a_sensore_perso_senza_evento": 2
+  },
+  "esempi": {
+   "I4b_vista_con_i_suoi_sensori_persi": [
+    "indice 32 t=16.5: traccia 1",
+    "indice 32 t=16.5: traccia 2",
+    "indice 32 t=16.5: traccia 3"
+   ],
+   "I7a_sensore_perso_senza_evento": [
+    "indice 32 t=16.5: camera_eo_ottica_lunga#1",
+    "indice 32 t=16.5: camera_termica_ottica_lunga#2"
+   ]
+  },
+  "misure": {
+   "viste": 6778,
+   "viste_lontane_dal_vero": 5789,
+   "transizioni_persa": 2
+  }
+ },
+ "lp_E3/registro.jsonl": {
+  "righe": 321,
+  "fotogrammi": 319,
+  "forma": 3,
+  "esempi_forma": [
+   [
+    1,
+    "rle di 1 celle, griglia di 576"
+   ],
+   [
+    2,
+    "rle di 1 celle, griglia di 576"
+   ],
+   [
+    3,
+    "rle di 1 celle, griglia di 576"
+   ]
+  ],
+  "violazioni": {},
+  "esempi": {},
+  "misure": {
+   "viste": 355
+  }
+ },
+ "lp_E4/registro.jsonl": {
+  "righe": 101,
+  "fotogrammi": 99,
+  "forma": 3,
+  "esempi_forma": [
+   [
+    1,
+    "rle di 1 celle, griglia di 576"
+   ],
+   [
+    2,
+    "rle di 1 celle, griglia di 576"
+   ],
+   [
+    3,
+    "rle di 1 celle, griglia di 576"
+   ]
+  ],
+  "violazioni": {},
+  "esempi": {},
+  "misure": {
+   "viste": 153
+  }
+ },
+ "lp_E5/registro.jsonl": {
+  "righe": 91,
+  "fotogrammi": 89,
+  "forma": 3,
+  "esempi_forma": [
+   [
+    1,
+    "rle di 1 celle, griglia di 576"
+   ],
+   [
+    2,
+    "rle di 1 celle, griglia di 576"
+   ],
+   [
+    3,
+    "rle di 1 celle, griglia di 576"
+   ]
+  ],
+  "violazioni": {},
+  "esempi": {},
+  "misure": {
+   "viste": 192
+  }
+ },
+ "lp_pub_drone/registro.jsonl": {
+  "righe": 456,
+  "fotogrammi": 454,
+  "forma": 2,
+  "esempi_forma": [
+   [
+    1,
+    "rle di 1 celle, griglia di 576"
+   ],
+   [
+    2,
+    "rle di 1 celle, griglia di 576"
+   ]
+  ],
+  "violazioni": {},
+  "esempi": {},
+  "misure": {
+   "viste_lontane_dal_vero": 88,
+   "viste": 88
+  }
+ },
+ "lp_S1_interfaccia/registro.jsonl": {
+  "righe": 79,
+  "fotogrammi": 77,
+  "forma": 2,
+  "esempi_forma": [
+   [
+    1,
+    "rle di 1 celle, griglia di 576"
+   ],
+   [
+    2,
+    "rle di 1 celle, griglia di 576"
+   ]
+  ],
+  "violazioni": {
+   "I4c_vista_mentre_l_oggetto_vero_e_nascosto": 11
+  },
+  "esempi": {
+   "I4c_vista_mentre_l_oggetto_vero_e_nascosto": [
+    "indice 25 t=13.5: traccia 16 vista vicino a ['auto1'] nascosto",
+    "indice 26 t=14.0: traccia 16 vista vicino a ['auto1'] nascosto",
+    "indice 27 t=14.5: traccia 16 vista vicino a ['auto1'] nascosto"
+   ]
+  },
+  "misure": {
+   "viste": 76,
+   "nascosti_seguiti": 69,
+   "nascosti_dentro_avviso": 69,
+   "viste_lontane_dal_vero": 52
+  }
+ },
+ "lp_S1/registro.jsonl": {
+  "righe": 79,
+  "fotogrammi": 77,
+  "forma": 2,
+  "esempi_forma": [
+   [
+    1,
+    "rle di 1 celle, griglia di 576"
+   ],
+   [
+    2,
+    "rle di 1 celle, griglia di 576"
+   ]
+  ],
+  "violazioni": {
+   "I4c_vista_mentre_l_oggetto_vero_e_nascosto": 91
+  },
+  "esempi": {
+   "I4c_vista_mentre_l_oggetto_vero_e_nascosto": [
+    "indice 15 t=8.5: traccia 11 vista vicino a ['auto1'] nascosto",
+    "indice 15 t=8.5: traccia 19 vista vicino a ['auto1'] nascosto",
+    "indice 15 t=8.5: traccia 20 vista vicino a ['auto1'] nascosto"
+   ]
+  },
+  "misure": {
+   "viste": 299,
+   "viste_lontane_dal_vero": 128,
+   "nascosti_seguiti": 62,
+   "nascosti_dentro_avviso": 62
+  }
+ },
+ "lp_S2/registro.jsonl": {
+  "righe": 136,
+  "fotogrammi": 134,
+  "forma": 2,
+  "esempi_forma": [
+   [
+    1,
+    "rle di 1 celle, griglia di 576"
+   ],
+   [
+    2,
+    "rle di 1 celle, griglia di 576"
+   ]
+  ],
+  "violazioni": {
+   "I4c_vista_mentre_l_oggetto_vero_e_nascosto": 45
+  },
+  "esempi": {
+   "I4c_vista_mentre_l_oggetto_vero_e_nascosto": [
+    "indice 23 t=12.5: traccia 14 vista vicino a ['treno1'] nascosto",
+    "indice 24 t=13.0: traccia 14 vista vicino a ['treno1'] nascosto",
+    "indice 25 t=13.5: traccia 14 vista vicino a ['treno1'] nascosto"
+   ]
+  },
+  "misure": {
+   "viste_lontane_dal_vero": 182,
+   "viste": 331,
+   "nascosti_seguiti": 76,
+   "nascosti_dentro_avviso": 76
+  }
+ },
+ "mano_sul_sensore/registro.jsonl": {
+  "righe": 47,
+  "fotogrammi": 45,
+  "forma": 0,
+  "esempi_forma": [],
+  "violazioni": {},
+  "esempi": {},
+  "misure": {
+   "viste_lontane_dal_vero": 25,
+   "viste": 49,
+   "transizioni_persa": 1,
+   "fotogrammi_persa": 16,
+   "ritorni_sensore": 1
+  }
+ },
+ "passa_dietro_e_ricompare/registro.jsonl": {
+  "righe": 49,
+  "fotogrammi": 47,
+  "forma": 0,
+  "esempi_forma": [],
+  "violazioni": {},
+  "esempi": {},
+  "misure": {
+   "viste": 68,
+   "viste_lontane_dal_vero": 37,
+   "nascosti_seguiti": 11,
+   "nascosti_dentro_avviso": 11
+  }
+ },
+ "pavimento_vuoto/registro.jsonl": {
+  "righe": 32,
+  "fotogrammi": 30,
+  "forma": 0,
+  "esempi_forma": [],
+  "violazioni": {},
+  "esempi": {},
+  "misure": {}
+ },
+ "resta_dietro/registro.jsonl": {
+  "righe": 82,
+  "fotogrammi": 80,
+  "forma": 0,
+  "esempi_forma": [],
+  "violazioni": {},
+  "esempi": {},
+  "misure": {
+   "viste": 91,
+   "viste_lontane_dal_vero": 57,
+   "nascosti_seguiti": 65,
+   "nascosti_dentro_avviso": 30
+  }
+ }
+}

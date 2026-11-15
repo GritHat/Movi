@@ -1,0 +1,28 @@
+{
+ "commento": "scena d'esempio a lunga portata: CONTROLLO: come E1 ma passaggio ravvicinato senza collisione (5 m di separazione in quota). SIMULAZIONE dalle schede (riuso/lunga_portata), nessun sensore fisico; etichette a mano.",
+ "modo": "lungo",
+ "scenario": "E5",
+ "sorgente": {
+  "tipo": "scena_lp",
+  "scenario": "E5",
+  "condizione": {
+   "configurazione": "alta"
+  },
+  "piano": [
+   -100,
+   400,
+   -50,
+   400
+  ],
+  "celle_lato": 24,
+  "passaggio": 0
+ },
+ "classi_ammesse": [],
+ "profilo_portatore": "stazione_fissa",
+ "profilo_ricevente": "operatore_di_sito",
+ "etichette": "../etichette/lunga_portata.json",
+ "interruttori": {},
+ "parametri": {},
+ "seme": 0,
+ "origine_dati": "simulati"
+}
