@@ -1,0 +1,17 @@
+aerei_veloci fq 0.25 srif 0.0 n 1914 scarto 0.0876
+aerei_veloci fq 0.25 srif 10.0 n 1914 scarto 0.0482
+aerei_veloci fq 0.25 srif 20.0 n 1914 scarto 0.023
+aerei_veloci fq 0.25 srif 40.0 n 1914 scarto 0.0411
+aerei_veloci fq 0.25 srif 80.0 n 1914 scarto 0.0438
+aerei_veloci fq 1.0 srif 0.0 n 1914 scarto 0.0747
+aerei_veloci fq 1.0 srif 10.0 n 1914 scarto 0.0419
+aerei_veloci fq 1.0 srif 20.0 n 1914 scarto 0.0244
+aerei_veloci fq 1.0 srif 40.0 n 1914 scarto 0.0418
+aerei_veloci fq 1.0 srif 80.0 n 1914 scarto 0.0479
+aerei_veloci fq 4.0 srif 0.0 n 1914 scarto 0.0722
+aerei_veloci fq 4.0 srif 10.0 n 1914 scarto 0.0436
+aerei_veloci fq 4.0 srif 20.0 n 1914 scarto 0.033
+aerei_veloci fq 4.0 srif 40.0 n 1914 scarto 0.0513
+aerei_veloci fq 4.0 srif 80.0 n 1914 scarto 0.0586
+scelta 0.25 20.0 {'1-2': 0.7881733408117215, '1-2|cv': 0.6075064086822433, '1-2|ct': 0.8118774198098493, '1-2|cal': 0.9538108186045384, '3-5': 0.9060040053480581, '3-5|cv': 0.7495715699383085, '3-5|ct': 0.8349686873705567, '3-5|cal': 0.9973099015484939, '6-10': 0.9743442592868071, '6-10|cv': 0.7543775631428564, '6-10|ct': 0.8389451625838291, '6-10|cal': 0.9980772870800182, '11-20': 0.8948879717790665, '11-20|cv': 0.829831726991789, '11-20|ct': 0.8812658557520465, '11-20|cal': 0.9610331202317186, '21-30': 0.9177972876846281, '21-30|cv': 0.806528089563815, '21-30|ct': 0.9656903516765933, '21-30|cal': 0.9819485272229714} 34.7
+fine 83.6

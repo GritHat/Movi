@@ -1,0 +1,55 @@
+{
+  "_nota": "UNICO file delle cifre del video (revisione visiva v6, 2026-11-15). Voce, schermo e sottotitoli leggono da qui: strumenti/monta_v6.py sostituisce i segnaposto [CIFRA-…]/[STATO-…] dei testi a schermo e scrive testi/voce_{en,it}_cifre.txt dalla voce v2. Una cifra si usa SOLO se 'stato' è 'sostenuto' o 'verificato' e 'en'/'it' non sono null; altrimenti il segnaposto resta magenta (bozza) e monta_v6.py --finale rifiuta. Il cambio finale della fase 2b è una modifica a QUESTO file. Le 'candidate' sono note per chi decide: NON vanno a schermo.",
+  "fonte_verdetto": ".sciame/20261114-1301-percezione-challenge/f15-lunga-portata/30-verdetto/VERDETTO_FASE2.md",
+  "cifre": {
+    "STATO-1": {
+      "en": null, "it": null, "stato": "non risolto",
+      "fonte": "verdetto §6 n. 10 (stesso codice ripete le prove, 17/17) non dice che la catena intera sensori→regole EV→uscite sia stata eseguita sugli eventi",
+      "candidata": "resta «not yet run» (piano §3.2)"
+    },
+    "CIFRA-V2": {
+      "en": null, "it": null, "stato": "da decidere",
+      "fonte": "verdetto §6 n. 5",
+      "candidata": "«0 of 600 simulated passes lost the warning» · in simulation · regola «guarda tutta la zona» · S, dominio: lp_A1/lp_A1_interfaccia. NON è la misura E1–E4 chiesta dal piano §3.2: serve il sì di chi decide"
+    },
+    "CIFRA-V1": {
+      "en": null, "it": null, "stato": "smentito",
+      "fonte": "verdetto §7 n. 4: collisione e detriti (E1, E2) smentiti; §8 «niente cifre di E1 come successo»",
+      "candidata": "nessuna: la riga si toglie"
+    },
+    "CIFRA-V3": {
+      "en": null, "it": null, "stato": "smentito",
+      "fonte": "verdetto §6 n. 12 e §7 n. 4",
+      "candidata": "nessuna: la riga si toglie"
+    },
+    "CIFRA-S2": {
+      "en": null, "it": null, "stato": "non nel verdetto",
+      "fonte": "verdetto §6 «da non dire»: «rileva droni a 3, 7,6 o 13 km»",
+      "candidata": "nessuna: la riga si toglie (piano §3.2)"
+    },
+    "CIFRA-S3": {
+      "en": null, "it": null, "stato": "non nel verdetto",
+      "fonte": "verdetto §6 n. 8 dà la proprietà (portata accorciata, 0 «libero» oltre), non la portata in metri",
+      "candidata": "nessuna"
+    },
+    "CIFRA-S3b": {
+      "en": null, "it": null, "stato": "non nel verdetto",
+      "fonte": "come CIFRA-S3",
+      "candidata": "nessuna"
+    },
+    "CIFRA-S7": {
+      "en": null, "it": null, "stato": "non nel verdetto",
+      "fonte": "verdetto: nessuna misura del tempo per ciclo del modo lungo",
+      "candidata": "nessuna"
+    },
+    "k": {"en": null, "it": null, "stato": "da decidere", "fonte": "vedi CIFRA-V2"},
+    "n": {"en": null, "it": null, "stato": "da decidere", "fonte": "vedi CIFRA-V2"}
+  },
+  "affermazioni_disponibili": {
+    "_nota": "Dal verdetto §6, per chi riscrive la scena 7 nella fase 2b. Non usate dalla v6.",
+    "A5": {"en": "Warning cleared only after the whole zone is looked at: 0 of 600 simulated passes lost it", "it": "L'avviso si spegne solo guardando tutta la zona: 0 passaggi su 600 simulati lo hanno perso", "stato": "sostenuto (S)", "fonte": "VERDETTO_FASE2.md §6 n. 5"},
+    "A7": {"en": "Sensor down or blinded by rain: declared in 460 of 460 simulated cases, within 5.3 s", "it": "Sensore caduto o accecato dalla pioggia: dichiarato in 460 casi simulati su 460, entro 5,3 s", "stato": "sostenuto (S)", "fonte": "VERDETTO_FASE2.md §6 n. 7"},
+    "A8b": {"en": "Flash blinding the cameras: declared within 3 cycles, 32 of 32 · in simulation", "it": "Fiammata che acceca le camere: dichiarata entro 3 cicli, 32 su 32 · in simulazione", "stato": "sostenuto (S), non indipendente", "fonte": "VERDETTO_FASE2.md §6 n. 8"},
+    "A12": {"en": "Collision declared within 2 s in 1 of 16 passes; debris warning to the vehicle never started (0 of 32)", "it": "Collisione dichiarata entro 2 s in 1 passaggio su 16; avviso dei detriti al mezzo mai partito (0 su 32)", "stato": "limite (X)", "fonte": "VERDETTO_FASE2.md §6 n. 12"}
+  }
+}

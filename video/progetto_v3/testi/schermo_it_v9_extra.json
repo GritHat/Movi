@@ -1,0 +1,65 @@
+{
+ "_nota": "v9 (montaggio finale): come schermo_en_v9_extra.json, in italiano.",
+ "onesta.dev": "SCHEMATICO",
+ "s1.titolo": "1 · UN SITO SORVEGLIATO",
+ "s1.richiesta": "monitoraggio aerospaziale · elementi mobili · avvisi tempestivi",
+ "domain.s1": "passaggio A1 n. 90, a caso, seme dichiarato · mappa del sito dichiarata completa (ipotesi)",
+ "s2.testa": "Dietro un edificio: per ogni traccia, una di tre risposte",
+ "domain.s2": "drone dietro un edificio: schema, non un passaggio",
+ "s3.titolo": "3 · SENSORI",
+ "domain.s3": "disposizione dall'intestazione del passaggio A1 · archi non in scala",
+ "s4.titolo": "4 · NEBBIA FITTA",
+ "s4.richiesta": "meteo · portata dichiarata · perdita di affidabilità",
+ "domain.s4": "passaggio E3, nebbia fitta · portate dal campo «portata dichiarata»",
+ "s4.cerchio": "{classe}: {d} m dichiarati · nominali {nom} m",
+ "s4.nebbia_tag": "NEBBIA FITTA · TUTTO IL PASSAGGIO",
+ "s5.titolo": "5 · DUE DRONI SI URTANO",
+ "domain.s5": "passaggio E1 n. 30, a caso · modello dei frammenti nostro",
+ "s5.tag_zona": "ZONA DEI DETRITI · SCHEMATICA",
+ "impronta_r": "IMPRONTA · raggio {km} km · NON VERIFICATA",
+ "volume_r": "POSSIBILI DETRITI · raggio {m} m · cresce, non si riduce",
+ "s6.titolo": "6 · AVARIA IN DECOLLO",
+ "domain.s6": "passaggio E2 · innesco della fiammata ipotizzato, ottimista",
+ "s6.tag_zona": "DETRITI E AVVISO AL MEZZO · SCHEMATICI",
+ "s6.camere": "@E2-C",
+ "s6.avviso_mezzo": "@E2-AVV",
+ "v6.camera": "CAMERA EO · IMMAGINE SCHEMATICA",
+ "v7.s7.righe": [
+  "s7.l1",
+  "v7.s7.l46",
+  "s7.l2",
+  "v7.s7.lvolo",
+  "v9.s7.lferma",
+  "v9.s7.lmappa"
+ ],
+ "v9.s7.lferma": "@L-FERMA",
+ "v9.s7.lmappa": "@L-MAPPA",
+ "v7.s7.contatori": [
+  "s7.c_a1",
+  "s7.c_a4",
+  "s7.c_v2"
+ ],
+ "v7.s7.regge": "Che cosa regge, in simulazione:",
+ "eventi": {
+  "contatto": "CONTATTO",
+  "separazione": "SEPARAZIONE",
+  "avaria_o_fiammata": "AVARIA O FIAMMATA"
+ },
+ "classi": {
+  "multirotore": "multirotore piccolo",
+  "multirotore_piccolo": "drone piccolo",
+  "aereo_leggero": "aereo leggero",
+  "all": "tutte le classi"
+ },
+ "cause": {
+  "fumo": "FUMO",
+  "nebbia": "NEBBIA",
+  "fiammata": "fiammata",
+  "guasto simulato (iniettato)": "guasto introdotto",
+  "nebbia_fitta": "nebbia fitta",
+  "pioggia_forte": "pioggia forte",
+  "quadri saturi o nube opaca (EV-B, EV-C)": "quadri saturi o nube opaca",
+  "dichiarata dal controllo di salute di prove_lp/eventi_lp": "controllo di salute",
+  "controllo di salute (silenzio, saturazione, fondo)": "controllo di salute"
+ }
+}

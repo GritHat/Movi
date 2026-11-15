@@ -1,0 +1,50 @@
+\section{Limiti attuali e aree di miglioramento: da proposta a sistema attuato}\label{sec:ps}
+
+Questo capitolo dice, per ogni limite trovato, che cosa manca per passare dalla proposta a un sistema attuato: la miglioria (che cosa e come) e la prova che la decide, con la soglia fissata prima della prova e il risultato che la smentirebbe. Nessuna delle migliorie è ancora provata su un sensore fisico o su hardware dedicato.
+
+\paragraph{Che cosa si può dire dei risultati.} Il prototipo è stato costruito e provato in un giorno. Le prove svolte non coprono tutti i casi, e non potrebbero: una geometria per scenario, sensori simulati dalle schede, etichette a mano. Dentro questi limiti, però, i risultati sono incoraggianti: il principio di sicurezza (nessun «libero» sull'oggetto o sui frammenti, con la mappa dichiarata) regge in tutte le celle simulate del volo veloce, l'insieme di presenza ha contenuto il vero anche dopo l'urto e l'avaria, e la regione al $90\,\%$ del filtro ha contenuto aerei reali da 92 a 98 volte su 100 fra $3$ e $30\unita{s}$ dopo la perdita. Ogni cifra di questo documento ha il suo intervallo e il suo livello di prova; quelle sotto la soglia sono riportate come limiti.
+
+\subsection{Tabella dei limiti e delle migliorie}\label{sec:ps-tabella}
+
+\begin{table}[H]\centering\footnotesize
+\caption{Limiti, migliorie e prove che le decidono. Le latenze sono stime da ipotesi; nessuna è misurata.}\label{tab:ps-migliorie}
+\begin{tabularx}{\linewidth}{@{}>{\RaggedRight\arraybackslash}p{3.3cm}L>{\RaggedRight\arraybackslash}p{4.4cm}@{}}
+\toprule
+Limite & Miglioria: che cosa e come & Prova che la decide (soglia)\\
+\midrule
+collisione veloce fra droni non dichiarata come evento: $0/60$ $[0;\,0{,}060]$ & regola di contatto su tracce \emph{risolte e non doppie} (velocità relativa $>10\unita{m/s}$ per almeno 3 aggiornamenti prima del contatto), più un cambio di velocità sostenuto misurato con il Doppler; radar a scansione elettronica più vicino ai frammenti & F3 entro $2\unita{s}$ $\ge0{,}85$ \emph{con} F6 $0/200$; smentita da un falso evento in F6 o da F3 $<0{,}75$\\
+confidenza ottimista a 1--$2\unita{s}$ ($0{,}71$) e in manovra & termine $\sigma_{\mathrm{rif}}^2$ nella varianza, stimato sulla taratura dai residui a $\tau\approx0$; regime di accelerazione longitudinale nel filtro a più regimi; ricalibrazione isotonica per tipo di moto & 1--$2\unita{s}$ in $[0{,}85;\,0{,}95]$; in accelerazione $\ge0{,}85$; scarto medio $<0{,}05$ (smentita $>0{,}10$)\\
+confidenza del nucleo mal tarata con il radar a $1\unita{Hz}$ (controllo: $1/78$) & covarianza gonfiata dal fattore tarato ($q\times4$); confidenza sulla miscela con pesi fissati durante la perdita, oppure il minimo progressivo $\tilde C$ (\S\ref{sec:vo-c-imm}), non crescente per costruzione & F1 e F6 in A con $C\ge0{,}9$: osservata $\ge0{,}80$ per passaggio; 0 violazioni di monotonia\\
+avaria non contenuta: $0/10$ $[0;\,0{,}278]$ & profilo dei frammenti con $\Delta v\ge300\unita{m/s}$; impronta $\ge10\unita{km}$; Doppler sui frammenti per restringerla & $60/60$ passaggi con tutti i frammenti dentro $V$\\
+innesco della fiammata ottimista (saturazione presa dal punto vero) & saturazione rilevata dal segnale della camera & ritardo $\le1\unita{s}$ in almeno $0{,}9$ dei casi su registrazioni vere\\
+identità dopo la cecità: scambio $0{,}47$--$0{,}63$ & attributi per riassociare (Doppler, sezione radar, firma termica); identità «presunta» senza cifra & scambio $\le0{,}2$\\
+continuità con il radar rotante a $1\unita{Hz}$ & radar a scansione elettronica a $10\unita{Hz}$ (scheda non aperta); schiera attiva a $40\unita{Hz}$ (ipotesi, nessun esemplare con scheda) & già simulato in B: $60/60$; manca la misura sul sensore\\
+una geometria per scenario; nessun disturbo & geometrie variate; registrazioni con uccelli e disturbo; inviluppo per classe (droni da corsa oltre $45\unita{m/s}$) & stesse soglie su almeno 10 geometrie\\
+tempestività verso l'umano & avviso con la direzione: $5{,}4\unita{s}$ invece di $12{,}5\unita{s}$ (fonte non aperta); distanza minima per un aereo a $250\unita{m/s}$: $2005\unita{m}$ invece di $3312\unita{m}$ senza ausilio & prova con operatori\\
+latenza del calcolo & codice compilato: guadagno di circa $80\unita{ms}$, non dovuto all'FPGA. FPGA o ASIC per segnale e CFAR: elaborazione stimata $0{,}05$--$0{,}5\unita{ms}$ invece di $5$--$20$; calcolo dedicato totale $0{,}08$--$1{,}2\unita{ms}$. Ipotesi per analogia con gli acceleratori per modelli linguistici, valida solo per i carichi limitati dalla memoria; per il passo di Kalman l'FPGA risulta più lento della CPU; l'ASIC «analogo» è un'ipotesi di progetto, non esiste & misura su FPGA reale: massimo per aggiornamento $\le1{,}2\unita{ms}$\\
+primo avviso verso una macchina & la leva è la rivisita: dedicato a $10\unita{Hz}$ $0{,}62\unita{s}$, a $40\unita{Hz}$ $0{,}17\unita{s}$ (calcolato da ipotesi); l'hardware accorcia di circa $80\unita{ms}$ & misura dalla cattura all'avviso sul sensore\\
+mappa, classificatore, sensore fisico & mappa verificata con il LiDAR; classificatore per classe; prove sul campo & tutte le soglie precedenti\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+%% MIGLIORIA-F3: quando la prova della regola di contatto è conclusa, aggiornare la prima riga.
+%% Esito A (regge): colonna «Limite» → «collisione veloce: dedotta entro 2 s in N/60 [Wilson] con 0/200 falsi eventi (simulato)»; la riga passa da limite a miglioria provata in simulazione; resta da provare il Doppler su sensore.
+%% Esito B (smentita): aggiungere «provata: N/60 [Wilson], falsi eventi M/200; soglia non raggiunta»; la miglioria successiva è il sensore (radar più vicino, Doppler sui frammenti).
+%% MIGLIORIA-TARATURA: quando la taratura è conclusa, aggiornare la seconda riga.
+%% Esito A (regge): «a 1–2 s la copertura passa da 0,71 a X [Wilson] (dati pubblici, sensore simulato)».
+%% Esito B (smentita): «taratura provata, X [Wilson]: soglia non raggiunta; prossima prova con una verità di bordo».
+
+\subsection{Piano a tappe}\label{sec:ps-piano}
+
+Ogni tappa riusa le soglie della tabella~\ref{tab:ps-migliorie} e aggiunge una sola fonte di realtà alla volta, in modo che un fallimento si possa attribuire.
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Simulazione estesa.} Geometrie variate (almeno 10 per scenario), disturbo e uccelli simulati, la regola di contatto su tracce risolte, la taratura della confidenza, i frammenti di un'avaria non contenuta, la ripetizione della collisione fra multirotori con l'integratore stabile. Uscita: le stesse classi della tabella~\ref{tab:vo-risultati}, con le soglie fissate prima. Non richiede hardware.
+\item \textbf{Banco con registrazioni.} Il nucleo, compilato, gira su registrazioni vere di radar e camere (archivi pubblici o di terzi, con licenza), senza modificarle. Si misurano mediana, 99° percentile e massimo della latenza di calcolo, l'innesco della fiammata dal segnale della camera, la confidenza contro una verità di bordo più pulita dell'ADS-B, i falsi eventi con il disturbo reale.
+\item \textbf{Sensore su banco.} Un radar a scansione elettronica e una camera, fermi, su oggetti noti (droni in volo controllato in un'area autorizzata): rivisita, portata sull'oggetto piccolo, sezione radar dei frammenti simulati con oggetti di prova, latenza dalla cattura all'avviso. Qui si misura per la prima volta la colonna «dedicato» della tabella~\ref{tab:vo-latenza}, su FPGA.
+\item \textbf{Campo.} Prove in un sito autorizzato con traffico vero, con operatori: tempestività verso l'umano, falsi avvisi all'ora, mappa verificata con il LiDAR, classificatore per classe. Solo dopo questa tappa una cifra del sistema si potrebbe dire misurata su un sensore.
+\end{enumerate}
+
+\subsection{Che cosa resta fuori}\label{sec:ps-fuori}
+
+Il sistema resta un sistema di osservazione e di avviso: non decide manovre, non comanda mezzi, non ha funzioni d'ingaggio o di contrasto. Non sostituisce le procedure di separazione del traffico aereo né i sistemi anticollisione di bordo. Le prove descritte in questo documento non danno alcuna base per un uso operativo senza le tappe 2--4 del piano.

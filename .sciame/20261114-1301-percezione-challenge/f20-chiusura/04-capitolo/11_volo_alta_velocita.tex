@@ -1,0 +1,350 @@
+\section{Volo ad alta velocità: collisioni, detriti ed eventi impulsivi}\label{sec:vo}
+
+Il capitolo~\ref{sec:lp} ha portato i principi del sistema da $3\unita{m}$ a qualche chilometro, su un sito sorvegliato con droni e aerei in rullaggio. Questo capitolo tratta il caso più difficile: aerei e droni \emph{in volo}, da $20$ a $210\unita{m/s}$, con eventi improvvisi e fortemente impulsivi (una collisione fra droni veloci, l'avaria di un motore con fiammata e detriti, una cella di pioggia, l'accecamento di tutti i sensori ottici). Le domande sono tre: se le regole di sicurezza restano vere a queste velocità; quanto in fretta si perde la confidenza sulla posizione di un oggetto che non si vede più; che cosa possono dare sensori e calcolo allo stato dell'arte.
+
+\begin{riquadro}{Natura delle prove di questo capitolo}
+Tutto ciò che segue è \emph{simulazione dalle schede tecniche}, \emph{calcolo} o \emph{traiettorie pubbliche con un sensore simulato}. Nessuna prova usa un sensore fisico o un'unità di calcolo dedicata; le latenze dell'elaborazione dedicata sono stime per analogia, non misure. Le etichette di classe sono assegnate a mano: il classificatore è un componente richiesto e supposto esistente (\S\ref{sec:sti}). Il sistema osserva e avvisa: nessuna uscita è un comando, e non vi sono funzioni d'ingaggio, di puntamento o di contrasto. Le cifre sono per \emph{passaggio} (una ripetizione completa di uno scenario con semi diversi), con l'intervallo di Wilson al $95\,\%$ \cite{wilson1927}; dove si contano \emph{campioni} (cicli dentro un passaggio) i campioni sono correlati e l'intervallo è ottimista, e lo si scrive. Livelli di prova: \prova{D} dimostrato nel modello dichiarato, \prova{C} calcolato, \prova{S} simulato, \prova{P} su dati pubblici con sensore simulato, \prova{N} non verificato; «ipotesi» è scritto per esteso.
+\end{riquadro}
+
+\subsection{Gli scenari}\label{sec:vo-scenari}
+
+Sei scenari nominali (tabella~\ref{tab:vo-scenari}) coprono l'avvicinamento, la salita in meteo avverso, la collisione, l'avaria, la cecità degli ottici e un controllo senza eventi. Ogni scenario è \emph{una} geometria: i passaggi variano soltanto i semi del rumore, dei mancati rilevamenti e dei frammenti. Le procedure di volo usate per fissare velocità e quote (sentiero di $3^\circ$, $250\unita{kt}$ sotto $10\,000\unita{ft}$) sono riprese da conoscenza generale e non sono state riaperte \prova{N}.
+
+\begin{table}[H]\centering\footnotesize
+\caption{Scenari di volo. Geometria: (C) calcolata, (i) ipotesi.}\label{tab:vo-scenari}
+\begin{tabularx}{\linewidth}{@{}p{0.6cm}>{\RaggedRight\arraybackslash}p{6.4cm}>{\RaggedRight\arraybackslash}p{3.2cm}L@{}}
+\toprule
+& Geometria & Eventi & Che cosa mette alla prova\\
+\midrule
+F1 & aereo sul sentiero di $3^\circ$ a $75\unita{m/s}$; drone non cooperante a $20\unita{m/s}$ che lo attraversa; distanza minima $40{,}8\unita{m}$ a $t=80{,}0\unita{s}$ (C) & nessuno: quasi collisione & avviso di prossimità con anticipo; nessun falso evento\\
+F2 & aereo in salita da $90$ a $125\unita{m/s}$ dentro una cella di pioggia in quota (raggio $1{,}5\unita{km}$, da $0$ a $1600\unita{m}$); aereo leggero non cooperante & nube in quota; portata ridotta (radar $\times0{,}70$, visibile $\times0{,}26$, termica $\times0{,}29$, fattori prudenti) & portata dichiarata, «ridondanza assente», regione che cresce fra due giri\\
+F3 & due droni a $40$ e $35\unita{m/s}$ si urtano a $120\unita{m}$ di quota a $t=20\unita{s}$; uno cade, l'altro prosegue danneggiato a $25\unita{m/s}$ & collisione con frammenti (sezione radar $2\cdot10^{-4}\unita{m^2}$, i) & evento entro $2\unita{s}$; volume dei detriti; nessun «libero» dentro\\
+F4 & aereo a $135\unita{m/s}$ e $450\unita{m}$; avaria a $t=30\unita{s}$, poi virata e discesa & fiammata (visibile cieco $5\unita{s}$, termica $13\unita{s}$), fumo, detriti a \emph{bassa energia} ($\Delta v\le100\unita{m/s}$, i) & affidabilità persa entro 3 cicli; evento entro $1\unita{s}$; impronta a terra\\
+F5 & aereo a $80\unita{m/s}$ e drone a $45\unita{m/s}$ che si incrociano a $300\unita{m}$; distanza minima $39{,}2\unita{m}$ (C) & perdita totale degli ottici per 2, 3 o $4\unita{s}$, più una nube & solo radar; continuità e identità\\
+F6 & controllo: due aerei a $120$ e $100\unita{m/s}$, separati di $300\unita{m}$ in quota e $1{,}5\unita{km}$ in pianta & nessuno & falsi eventi\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\paragraph{Configurazioni.} Ogni scenario è simulato in due configurazioni. Nella configurazione~A il radar è il radar per droni del capitolo~\ref{sec:lp} (rotante, $1\unita{Hz}$), con camere nel visibile e termiche, e l'elaborazione è quella del prototipo su CPU ($80\unita{ms}$ aggiunti alla latenza di scheda). Nella configurazione~B il radar è a scansione elettronica a $10\unita{Hz}$ in traccia, di una classe commerciale la cui scheda non è stata aperta \citep{DA_VERIFICARE:echodyne-echoshield}; quattro pannelli e la portata di riferimento di $1400\unita{m}$ per $0{,}01\unita{m^2}$ sono ipotesi; le camere vanno a $10\unita{Hz}$ e l'elaborazione dedicata aggiunge $1{,}2\unita{ms}$ (stima, \S\ref{sec:vo-hw}). Nelle due configurazioni cambiano \emph{insieme} il sensore e il calcolo: una differenza fra A e B non si può attribuire al calcolo. L'ADS-B è spento in tutte le prove (ipotesi prudente: dopo un evento l'oggetto colpito smette di trasmettere o trasmette un dato vecchio). In ciascuna cella si simulano 60 passaggi (F6: 200; F5: 20 per ciascuna durata di cecità).
+
+\paragraph{Frammenti.} I frammenti partono con la velocità del mezzo più un incremento $u$ con $|u|\le\Delta v$, e cadono con resistenza aerodinamica e vento. Una prima versione del simulatore integrava la resistenza con il metodo di Eulero esplicito, che è instabile quando $g|v|\,\Delta t/v_t^2>2$ ($v_t$ velocità limite): con $|v|\approx195\unita{m/s}$, $v_t\approx6\unita{m/s}$ e $\Delta t=0{,}05\unita{s}$ il prodotto vale circa $2{,}6$, e alcuni frammenti finivano a centinaia di chilometri già dopo $0{,}5\unita{s}$. Le prove di questo capitolo usano un'integrazione semi-implicita della resistenza, stabile per ogni passo \prova{S}. Lo stesso difetto è presente nel simulatore degli eventi a bassa velocità del capitolo~\ref{sec:lp}: lì sposta il frammento più lontano della collisione fra multirotori da $130$ a $154\unita{m}$; se sposti anche il conteggio di 51 su 60 è in corso di verifica.
+%% MIGLIORIA-E1: esito della ripetizione della collisione fra multirotori con l'integratore stabile.
+%% Esito A (variazione < 3 passaggi su 60): «Con l'integratore stabile la collisione fra multirotori è dedotta entro 2 s in N su 60 [Wilson]: il conteggio non cambia in modo apprezzabile.»
+%% Esito B (variazione >= 3 su 60): «Con l'integratore stabile il conteggio passa da 51 a N su 60 [Wilson]; le cifre del capitolo sulla lunga portata vanno lette con questa correzione.»
+
+\subsection{Il nucleo: l'inviluppo a 210 m/s anche nell'insieme di presenza}\label{sec:vo-nucleo}
+
+Il nucleo è quello del capitolo~\ref{sec:lp}: «libero» per classe con passate correlate, inseguimento a più modelli, insieme di possibile presenza dall'inviluppo dello scenario, spegnimento dell'avviso solo guardando tutta la zona, eventi dedotti da separazione o contatto, volume dei detriti. Il cielo non ha sfondo: il «libero» vale solo con la mappa dichiarata (\S\ref{sec:lp-libero}).
+
+\paragraph{Una miglioria trovata dalle prove.} Nelle prime prove di volo l'insieme di possibile presenza del nucleo era calcolato con la velocità massima \emph{delle classi} ($90\unita{m/s}$), mentre l'inviluppo di $210\unita{m/s}$ per gli aerei in volo, deciso dopo le traiettorie pubbliche (\S\ref{sec:lp-traiettorie}), era applicato solo allo strato degli eventi. Con aerei a $120$--$135\unita{m/s}$ l'oggetto vero usciva dalla regione dichiarata, in violazione dell'ipotesi della proposizione~\ref{prop:lp-contenimento} ($|v|\le\vmax$). La correzione è un cambiamento di un solo parametro, ma il suo effetto è grande \prova{S}:
+\begin{itemize}
+\item avaria (F4), configurazione A: passaggi senza alcun ciclo privo di regione da $13/60$ $[0{,}13;\,0{,}34]$ a $60/60$ $[0{,}940;\,1]$; quota dei cicli di perdita con il vero dentro la regione da $0{,}144$ a $1{,}000$ ($1072/1072$ campioni dopo l'avaria);
+\item controllo (F6), configurazione A: da $126/200$ a $186/200$ $[0{,}886;\,0{,}958]$ passaggi senza buchi; vero dentro la regione da $0{,}272$ a $0{,}984$ $[0{,}966;\,0{,}993]$ (campioni, intervallo ottimista).
+\end{itemize}
+La versione corretta del nucleo è quella usata in tutto il capitolo; la precedente è conservata per confronto. Il caso illustra un fatto formale: una dimostrazione di contenimento (\S\ref{sec:vo-presenza}) vale solo se il parametro usato nel codice è quello dell'enunciato. La violazione non era nella prova ma nel collegamento fra la prova e il programma.
+
+\subsection{Il volume dei detriti in volo}\label{sec:vo-detriti}
+
+Il volume $V(\tau)$ è quello della proposizione~\ref{prop:lp-detriti}: l'unione dei segmenti percorsi alle velocità delle tracce d'origine, ingrossata di $W\tau+(\Delta v+W)\tau^*+r_0$, fra due estremi di quota. In volo la velocità d'origine $v_c$ è grande (fino a $210\unita{m/s}$), e la pianta si allunga lungo la rotta. La proposizione è \prova{D} nel modello del punto materiale con resistenza isotropa, vento costante entro $W$ e $W_z$, incremento iniziale entro $\Delta v$; vale per $\tau\le\tau^*$.
+
+\paragraph{Prove.} Con l'integratore stabile \prova{S}:
+\begin{itemize}
+\item F3: $600/600$ frammenti dentro $V(\tau)$ per tutta la caduta $[0{,}9936;\,1]$; anche con $|u|=120\unita{m/s}$ sul bordo dei parametri e vento a $15\unita{m/s}$, e con una velocità d'origine dichiarata sbagliata di $8\unita{m/s}$ ($600/600$, 10 passaggi per variante);
+\item F4 nel nucleo completo: passaggi con tutti i frammenti dentro $V$: $58/60$ $[0{,}886;\,0{,}991]$ in ciascuna configurazione; nei due passaggi peggiori i frammenti dentro sono il $96\,\%$ (A) e il $74\,\%$ (B); al bordo dei parametri (aereo a $210\unita{m/s}$, $\Delta v=100\unita{m/s}$, vento $15\unita{m/s}$): $1000/1000$ $[0{,}9962;\,1]$, con un'impronta di $8{,}65\unita{km}$;
+\item impronta a terra: mediana $6{,}9\unita{km}$ (A) e $6{,}8\unita{km}$ (B) in F4; $5{,}1\unita{km}$ in F3 \prova{C}.
+\end{itemize}
+Il simulatore dei frammenti condivide il modello fisico con la proposizione: la prova vede gli errori di conto e di codice, non quelli del modello. L'impronta è prudente e grande: per renderla utile serve misurare la velocità dei frammenti (Doppler) invece di prenderla a priori (\S\ref{sec:ps-tabella}).
+
+\paragraph{Che cosa il volume non contiene.} Un'avaria \emph{non contenuta} libera pezzi di disco a centinaia di metri al secondo, fuori dal $\Delta v$ dichiarato. Con il $5\,\%$ dei frammenti come pezzi di disco a $250\unita{m/s}$ e velocità limite di $80\unita{m/s}$ (ipotesi), $965/1000$ frammenti restano dentro $V$, ma i pezzi di disco solo $15/50$, e i passaggi con tutti i frammenti dentro sono $0/10$ $[0;\,0{,}278]$ \prova{S}. A terra nessuno cade fuori dall'impronta di $6{,}8\unita{km}$; in aria il volume non li contiene. Per questo F4 è un'\emph{avaria con detriti a bassa energia}, e l'avaria non contenuta è un caso non provato.
+
+\subsection{Risultati}\label{sec:vo-risultati}
+
+La tabella~\ref{tab:vo-risultati} raccoglie i risultati delle prove simulate, con quattro classi:
+\begin{itemize}
+\item \textbf{solido}: limite inferiore di Wilson $\ge0{,}90$, oppure 0 su $N$ con limite superiore $\le0{,}06$;
+\item \textbf{incoraggiante}: stima $\ge0{,}80$, limite inferiore $\ge0{,}70$, e una base matematica dichiarata;
+\item \textbf{limite}: il sistema non fa ciò che dovrebbe, e lo si scrive;
+\item \textbf{non provato}: nessuna prova sostiene l'enunciato.
+\end{itemize}
+Le classi si riferiscono alla simulazione dalle schede, con etichette a mano e nessun sensore fisico.
+
+\begin{table}[H]\centering\footnotesize
+\caption{Volo ad alta velocità: risultati simulati per passaggio, con l'intervallo di Wilson al $95\,\%$ \prova{S}. A: radar rotante a $1\unita{Hz}$ ed elaborazione su CPU; B: radar a scansione elettronica a $10\unita{Hz}$ ed elaborazione dedicata stimata.}\label{tab:vo-risultati}
+\begin{tabularx}{\linewidth}{@{}>{\RaggedRight\arraybackslash}p{5.3cm}>{\RaggedRight\arraybackslash}p{2.0cm}>{\RaggedRight\arraybackslash}p{4.2cm}L@{}}
+\toprule
+Enunciato & Classe & Conteggio e intervallo & Base\\
+\midrule
+In nessuno dei sei scenari una cella è dichiarata «libera» sul punto vero dell'oggetto o su un frammento (con la mappa dichiarata) & solido & F6: $0/200$ $[0;\,0{,}019]$; altre 11 celle: $0/60$ $[0;\,0{,}060]$ & per costruzione: «libero» solo ciò che si osserva, insieme di presenza a $210\unita{m/s}$\\
+Avaria di un aereo a $135\unita{m/s}$ con fiammata: evento dedotto in $0{,}1$--$0{,}4\unita{s}$, camere dichiarate non affidabili entro 3 cicli & incoraggiante (innesco ottimista) & $60/60$ $[0{,}940;\,1]$ in A e in B & separazione di tracce e salute del sensore; la saturazione è presa dal punto vero\\
+Detriti a bassa energia dentro il volume dichiarato & incoraggiante & $58/60$ $[0{,}886;\,0{,}991]$; nei peggiori $96\,\%$ (A) e $74\,\%$ (B) dei frammenti & proposizione~\ref{prop:lp-detriti}; al bordo $1000/1000$ $[0{,}9962;\,1]$\\
+Avviso prima del primo frammento a terra: margine di almeno $5{,}7\unita{s}$ per un sistema di bordo e di almeno $0{,}25\unita{s}$ per un operatore & incoraggiante & $60/60$ $[0{,}940;\,1]$ & $d=v\,(L+t_{\mathrm{risp}}+t_{\mathrm{mezzo}})$; $5{,}4\unita{s}$ di risposta umana (ipotesi)\\
+Due droni veloci in rotta di collisione: avviso di prossimità fra $18$ e $20\unita{s}$ prima dell'urto (mediane A e B) & incoraggiante (soglia di $10\unita{s}$ fissata dopo) & $60/60$ $[0{,}940;\,1]$, almeno $10\unita{s}$ & punto di massimo avvicinamento a velocità costante, sotto $150\unita{m}$\\
+Dopo la collisione veloce, punto vero e frammenti dentro la regione dichiarata & solido come copertura & $60/60$ passaggi $[0{,}940;\,1]$; $939/939$ campioni (B) & proposizione~\ref{prop:vo-presenza}\\
+Quasi collisioni a $40\unita{m}$ e incroci veloci: nessun falso evento & solido & F6: $0/200$ $[0;\,0{,}019]$; F1, F5: $0/60$ $[0;\,0{,}060]$ & conferma su più cicli\\
+Con il radar a $10\unita{Hz}$ (B) la regione non si perde in nessun ciclo & solido in B & $60/60$ e $200/200$ $[0{,}981;\,1]$; scheda non aperta & rivisita più breve della crescita dell'inviluppo\\
+Con il radar rotante a $1\unita{Hz}$ (A) l'aereo veloce perde continuità, e il sistema lo dichiara & limite & F1: $39/60$ $[0{,}524;\,0{,}758]$; F6: $186/200$ $[0{,}886;\,0{,}958]$ & --\\
+Ottici ciechi per $2$--$4\unita{s}$: ogni traccia conserva una regione; l'identità no & solido (regione); limite (identità) & $60/60$ $[0{,}940;\,1]$; scambio $28/60=0{,}47$ $[0{,}35;\,0{,}59]$ (A), $38/60=0{,}63$ $[0{,}51;\,0{,}74]$ (B) & identità dichiarata «presunta»\\
+Collisione \emph{veloce} dichiarata come evento & limite & $0/60$ $[0;\,0{,}060]$ in A e in B & --\\
+Avaria non contenuta (pezzi di disco a $250\unita{m/s}$) & non provato & $0/10$ $[0;\,0{,}278]$ passaggi con tutti i frammenti dentro & --\\
+Collisione fra droni \emph{lenti} ($8$ e $6{,}7\unita{m/s}$, capitolo~\ref{sec:lp}): evento in $1{,}2$--$2{,}3\unita{s}$ & incoraggiante & entro $2\unita{s}$: $51/60$ $[0{,}739;\,0{,}919]$; entro $2{,}5\unita{s}$: $60/60$ (soglia notata dopo) & fusione e separazione di tracce su più cicli\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\paragraph{Perché la collisione veloce non è dichiarata.} In F3 i ritorni dei frammenti, con una sezione radar di $2\cdot10^{-4}\unita{m^2}$ (ipotesi) a circa $2{,}1\unita{km}$, non superano la soglia di rilevamento; l'innesco di «separazione» non scatta. L'innesco di «contatto» richiede un indizio fra ritorni nuovi, residui fuori porta o una traccia non più rilevata in vista, e nelle due configurazioni non si combina entro $2\unita{s}$. Il sistema mostra invece l'avviso di prossimità prima dell'urto, la perdita delle tracce, le regioni che crescono e le tracce nuove non associate: la collisione non è riconosciuta come evento, ma la regione è mantenuta. Il risultato della collisione fra multirotori lenti ($51/60$) non si trasferisce al volo veloce.
+%% MIGLIORIA-F3: esito della prova della regola di contatto su tracce risolte (tabella del capitolo 12, prima riga).
+%% Esito A (regge: F3 entro 2 s >= 0,85 e F6 0/200): «Con una regola di contatto su tracce risolte e non doppie (velocità relativa > 10 m/s per almeno 3 aggiornamenti) e un cambio di velocità sostenuto, la collisione veloce è dedotta entro 2 s in N su 60 passaggi [Wilson], senza falsi eventi nel controllo (0/200 [0; 0,019]) \prova{S}. La soglia (0,85, con 0 falsi eventi) era fissata prima della prova.» In tabella: classe incoraggiante o solido secondo il limite inferiore.
+%% Esito B (smentita: un falso evento in F6 oppure F3 < 0,75): «La regola di contatto su tracce risolte è stata provata: F3 entro 2 s in N su 60 [Wilson], falsi eventi in F6 M su 200 [Wilson]. La soglia fissata prima non è raggiunta: la collisione veloce resta un limite dichiarato, e la miglioria passa al sensore (radar più vicino ai frammenti, Doppler).»
+%% Esito C (fra 0,75 e 0,85 senza falsi eventi): «non risolto»: si riporta il conteggio, la classe resta limite.
+
+\paragraph{Lettura per il caso centrale.} Ciò che regge nelle simulazioni di volo è il principio di sicurezza (nessun «libero» sull'oggetto o sui frammenti), il contenimento della regione con l'inviluppo corretto, la gestione della perdita dei sensori, l'avaria con detriti a bassa energia e l'avviso di prossimità. Ciò che non regge ancora è il riconoscimento della collisione veloce come evento, l'identità dopo la cecità e la continuità con un radar rotante. Sono risultati ottenuti su una geometria per scenario: non coprono la varietà dei casi reali.
+
+\subsection{Un controesempio istruttivo: la regola «impulso»}\label{sec:vo-impulso}
+
+Per riconoscere la collisione veloce è stata provata una regola più semplice: si dichiara un evento quando due tracce vicine mostrano un cambio brusco di velocità relativa, senza chiedere i ritorni dei frammenti.
+
+\begin{controesempio}[Una regola sensibile non è una regola corretta]\label{ce:vo-impulso}
+Con la regola «impulso» la collisione veloce è dedotta entro $2\unita{s}$ in $59/60$ passaggi $[0{,}911;\,0{,}997]$. Nello scenario di controllo, dove non c'è alcuna collisione, la stessa regola apre un falso evento in $198/200$ passaggi (A) e $158/200$ (B), e in F1 in $57/60$; in F3 l'evento si apre in mediana $10\unita{s}$ \emph{prima} dell'urto \prova{S}.
+\end{controesempio}
+Il meccanismo è chiaro. Un radar che vede lo stesso aereo da due pannelli, o una traccia vecchia non ancora chiusa, produce due tracce dello stesso oggetto. Quando una delle due è corretta o abbandonata, la velocità relativa della coppia cambia di colpo: il predicato «impulso fra due tracce vicine» è vero senza che vi sia contatto. La regola confonde una proprietà dell'\emph{inseguitore} (le tracce doppie) con una proprietà del \emph{mondo} (l'urto). Il controesempio fissa due criteri per ogni regola d'evento: si giudica sulla coppia (sensibilità, falsi eventi nel controllo), e il predicato deve essere falso per due tracce dello stesso oggetto. La regola proposta al capitolo~\ref{sec:ps} chiede tracce \emph{risolte e non doppie} per almeno 3 aggiornamenti prima del contatto proprio per questo. La regola «impulso» è respinta.
+
+\subsection{Perdita di confidenza nel tempo}\label{sec:vo-confidenza}
+
+Quando un oggetto non è più osservato, il sistema deve dire quanto sa ancora della sua posizione, in funzione del tempo $\tau$ trascorso dall'ultima misura. Si danno due risposte di natura diversa: una \emph{probabilità} nel modello di moto (\S\ref{sec:vo-c-modello}--\ref{sec:vo-c-imm}) e un \emph{contenimento} fuori dal modello (\S\ref{sec:vo-presenza}). La prima è utile ma vale solo se il modello è giusto; il secondo vale sotto ipotesi più deboli e dà una regione molto più grande.
+
+\subsubsection{Varianza di posizione nel moto a velocità quasi costante}\label{sec:vo-c-modello}
+
+\begin{ipotesi}[Moto e stima all'ultimo aggiornamento]\label{ip:vo-cv}
+Su ciascun asse lo stato $x=(p,v)$ segue $\dot p=v$, $\dot v=w(t)$, con $w$ rumore bianco gaussiano di densità spettrale $q$ ($\mathrm{m^2/s^3}$), indipendente dallo stato. All'istante dell'ultimo aggiornamento ($\tau=0$) l'errore di stima è gaussiano, a media nulla, con covarianza
+\[P_0=\begin{pmatrix}\sigma_0^2 & \sigma_{0v}\\ \sigma_{0v} & \sigma_v^2\end{pmatrix},\]
+dove $\sigma_{0v}$ è la \emph{covarianza} fra errore di posizione e di velocità (può essere negativa). Dopo $\tau=0$ non arriva alcuna misura.
+\end{ipotesi}
+
+\begin{proposizione}[Varianza di posizione]\label{prop:vo-sigma}
+Sotto l'ipotesi~\ref{ip:vo-cv} l'errore di posizione al tempo $\tau\ge0$ è gaussiano a media nulla con varianza
+\begin{equation}\label{eq:vo-sigma}
+\sigma^2(\tau)=\sigma_0^2+2\sigma_{0v}\,\tau+\sigma_v^2\,\tau^2+\frac{q\,\tau^3}{3}.
+\end{equation}
+\end{proposizione}
+\begin{proof}
+Il sistema è lineare: $\dot x=Ax+Bw$ con $A=\bigl(\begin{smallmatrix}0&1\\0&0\end{smallmatrix}\bigr)$, $B=(0,1)^\top$. La matrice di transizione è $\Phi(\tau)=e^{A\tau}=\bigl(\begin{smallmatrix}1&\tau\\0&1\end{smallmatrix}\bigr)$, perché $A^2=0$. La soluzione è $x(\tau)=\Phi(\tau)x(0)+\int_0^\tau\Phi(\tau-s)Bw(s)\,ds$. L'errore di previsione $e(\tau)=x(\tau)-\Phi(\tau)\hat x(0)$ è la somma di $\Phi(\tau)e(0)$ e dell'integrale stocastico, indipendenti per ipotesi; è quindi gaussiano a media nulla, con covarianza
+\[P(\tau)=\Phi(\tau)P_0\Phi(\tau)^\top+Q(\tau),\qquad Q(\tau)=q\int_0^\tau\Phi(s)BB^\top\Phi(s)^\top ds=q\begin{pmatrix}\tau^3/3&\tau^2/2\\ \tau^2/2&\tau\end{pmatrix},\]
+poiché $\Phi(s)B=(s,1)^\top$ e $\int_0^\tau s^2ds=\tau^3/3$. L'elemento $(1,1)$ di $\Phi P_0\Phi^\top$ è $(1,\tau)P_0(1,\tau)^\top=\sigma_0^2+2\sigma_{0v}\tau+\sigma_v^2\tau^2$; sommando $q\tau^3/3$ si ha la \eqref{eq:vo-sigma}.
+\end{proof}
+È la forma continua del modello a velocità quasi costante \cite{barshalom2001}. Nel filtro discreto la stessa $Q(\tau)$ è quella della discretizzazione esatta, quindi la \eqref{eq:vo-sigma} vale anche ai passi del filtro.
+
+\begin{lemma}[Convessità]\label{lem:vo-convessa}
+$\sigma^2(\tau)$ è convessa su $[0,\infty)$; se $\sigma_{0v}\ge0$ è anche non decrescente.
+\end{lemma}
+\begin{proof}
+$\tfrac{d^2}{d\tau^2}\sigma^2=2\sigma_v^2+2q\tau\ge0$ per $\tau\ge0$. Inoltre $\tfrac{d}{d\tau}\sigma^2=2\sigma_{0v}+2\sigma_v^2\tau+q\tau^2\ge0$ se $\sigma_{0v}\ge0$.
+\end{proof}
+
+\subsubsection{Confidenza su un disco e su una sfera}\label{sec:vo-c-chiusa}
+
+\begin{ipotesi}[Isotropia]\label{ip:vo-iso}
+In $d$ dimensioni ($d=2$ o $3$) gli assi sono indipendenti e hanno la stessa $\sigma^2(\tau)$: $P_0$ e $q$ uguali per asse, nessuna covarianza fra assi. La regione è il disco ($d=2$) o la sfera ($d=3$) di raggio $r$ centrata sulla previsione $m(\tau)$.
+\end{ipotesi}
+
+\begin{proposizione}[Confidenza in forma chiusa]\label{prop:vo-c}
+Sotto le ipotesi~\ref{ip:vo-cv} e~\ref{ip:vo-iso}, la probabilità che l'oggetto stia nella regione al tempo $\tau$ è, con $k(\tau)=r/\sigma(\tau)$,
+\begin{align}
+C_2(\tau)&=1-\exp\!\Bigl(-\frac{r^2}{2\sigma^2(\tau)}\Bigr),\label{eq:vo-c2}\\
+C_3(\tau)&=\operatorname{erf}\!\Bigl(\frac{k}{\sqrt2}\Bigr)-\sqrt{\frac{2}{\pi}}\;k\,e^{-k^2/2}.\label{eq:vo-c3}
+\end{align}
+\end{proposizione}
+\begin{proof}
+Per la proposizione~\ref{prop:vo-sigma} e l'isotropia, $e(\tau)/\sigma(\tau)$ ha componenti normali standard indipendenti, e $S=|e|^2/\sigma^2$ segue un chi quadro con $d$ gradi di libertà. Allora $C=\Pr(S\le k^2)$. Per $d=2$ la densità di $S$ è $\tfrac12e^{-s/2}$, e $\int_0^{k^2}\tfrac12e^{-s/2}ds=1-e^{-k^2/2}$. Per $d=3$, passando al raggio $\rho=\sqrt S$, la densità è $\sqrt{2/\pi}\,\rho^2e^{-\rho^2/2}$; integrando per parti,
+$\int_0^k\sqrt{2/\pi}\,\rho^2e^{-\rho^2/2}d\rho=\sqrt{2/\pi}\bigl[-\rho e^{-\rho^2/2}\bigr]_0^k+\sqrt{2/\pi}\int_0^ke^{-\rho^2/2}d\rho$, che è la \eqref{eq:vo-c3}.
+\end{proof}
+
+\paragraph{La regione che cresce.} Sia $k_\alpha$ il quantile della distribuzione del raggio al livello $\alpha$: $k_\alpha=\sqrt{-2\ln(1-\alpha)}$ in due dimensioni ($k_{0,9}=2{,}146$, $k_{0,5}=1{,}177$); in tre dimensioni la radice di $C_3=\alpha$, trovata per bisezione ($k_{0,9}=2{,}500$) \prova{C}. La regione di raggio
+\begin{equation}\label{eq:vo-ralpha}
+r_\alpha(\tau)=k_\alpha\,\sigma(\tau)
+\end{equation}
+tiene la confidenza al livello $\alpha$ per ogni $\tau$, per la proposizione~\ref{prop:vo-c}; per $\tau$ grande cresce come $k_\alpha\sqrt{q/3}\,\tau^{3/2}$. È la forma da mostrare quando l'oggetto non è più visto: invece di una cifra che cala, una regione che si allarga a livello fissato.
+
+\subsubsection{Il tempo di soglia}\label{sec:vo-tc}
+
+Per una regione di raggio $r$ fissato, il tempo di soglia $t_C$ è l'ultimo istante in cui la confidenza è almeno $\alpha$.
+
+\begin{proposizione}[Esistenza e unicità del tempo di soglia]\label{prop:vo-tc}
+Sotto le ipotesi~\ref{ip:vo-cv} e~\ref{ip:vo-iso}, con $q>0$, sia
+\[f(t)=\frac q3t^3+\sigma_v^2t^2+2\sigma_{0v}t+\sigma_0^2-\Bigl(\frac r{k_\alpha}\Bigr)^2 .\]
+\begin{enumerate}[label=(\roman*)]
+\item $C(\tau)\ge\alpha$ se e solo se $f(\tau)\le0$.
+\item Se $\sigma_0<r/k_\alpha$, la cubica $f$ ha una e una sola radice positiva $t_C$, e $C(\tau)\ge\alpha$ per $\tau\in[0,t_C]$, $C(\tau)<\alpha$ per $\tau>t_C$.
+\item Se $\sigma_0\ge r/k_\alpha$ e $\sigma_{0v}\ge0$, allora $C(\tau)<\alpha$ per ogni $\tau>0$ e si pone $t_C=0$. Se invece $\sigma_{0v}<0$, l'insieme $\{\tau>0:C(\tau)\ge\alpha\}$ è vuoto oppure un intervallo $[t_-,t_+]$ delimitato dalle due radici positive di $f$.
+\end{enumerate}
+\end{proposizione}
+\begin{proof}
+(i) $C$ è funzione strettamente crescente di $k^2=r^2/\sigma^2$ nelle \eqref{eq:vo-c2} e \eqref{eq:vo-c3} (è una funzione di ripartizione con densità positiva), quindi $C\ge\alpha$ equivale a $k\ge k_\alpha$, cioè a $\sigma^2(\tau)\le(r/k_\alpha)^2$, cioè a $f(\tau)\le0$.
+(ii) $f$ è continua, $f(0)=\sigma_0^2-(r/k_\alpha)^2<0$ e $f(t)\to+\infty$ perché $q>0$: per il teorema dei valori intermedi esiste una radice positiva. Per il lemma~\ref{lem:vo-convessa} $f$ è convessa. Se vi fossero due radici $0<t_1<t_2$, scrivendo $t_1=\lambda\cdot0+(1-\lambda)t_2$ con $\lambda\in(0,1)$ la convessità darebbe $0=f(t_1)\le\lambda f(0)+(1-\lambda)f(t_2)=\lambda f(0)<0$, assurdo. Dunque la radice è unica; $f<0$ su $[0,t_C)$ e, per continuità e $f\to+\infty$, $f>0$ su $(t_C,\infty)$; si conclude con (i).
+(iii) Se $\sigma_{0v}\ge0$ la $f$ è non decrescente (lemma~\ref{lem:vo-convessa}) e $f'(t)\ge qt^2>0$ per $t>0$, quindi $f(\tau)>f(0)\ge0$. Se $\sigma_{0v}<0$, l'insieme di sottolivello $\{f\le0\}$ di una funzione convessa è convesso, quindi un intervallo; con $f(0)\ge0$ i suoi estremi positivi, se esistono, sono radici di $f$, e una cubica ha al più tre radici reali.
+\end{proof}
+
+La radice si calcola con la formula di Cardano o, più stabilmente, con il metodo di Newton partendo da un $t$ con $f(t)>0$: per la convessità le iterate decrescono in modo monotono verso $t_C$. Nel prototipo la radice dalla cubica coincide con quella per bisezione entro $10^{-14}\unita{s}$ \prova{C}. Un controllo a campione su $40\,000$ casi casuali ($\sigma_0$ da $1$ a $50\unita{m}$, correlazione fra $-0{,}99$ e $0{,}99$, $q$ da $10^{-2}$ a $10^2$, $d=2$ e $3$) conferma la (ii) in $26\,870$ casi su $26\,870$ con $f(0)<0$; nei casi con $f(0)\ge0$ si hanno zero radici positive ($11\,169$) oppure due ($1961$, tutti con $\sigma_{0v}<0$), come dice la (iii) \prova{C}. La (iii) corregge una semplificazione: «$t_C=0$ se $\sigma_0\ge r/k_\alpha$» è vero solo con $\sigma_{0v}\ge0$.
+
+\paragraph{Un esempio calcolato.} Per un aereo con $\sigma_0=7{,}5\unita{m}$, $\sigma_v=2\unita{m/s}$, $\sigma_{0v}=0$ e $q=4\unita{m^2/s^3}$ (valori di ipotesi, a scopo illustrativo), e una regione di $100\unita{m}$, il tempo di soglia al $90\,\%$ è $10{,}7\unita{s}$ sul disco e $9{,}6\unita{s}$ sulla sfera; la regione che tiene il $90\,\%$ ha raggio $17$, $39$, $91$, $238$ e $427\unita{m}$ a $1$, $5$, $10$, $20$ e $30\unita{s}$ (disco) \prova{C}. Lo stesso aereo, fuori dal modello, sta nell'insieme di presenza di raggio $r_0+210\,\tau$, cioè $2{,}1\unita{km}$ a $10\unita{s}$: la differenza di un ordine di grandezza è il prezzo della garanzia (\S\ref{sec:vo-presenza}).
+
+\subsubsection{Il caso anisotropo}\label{sec:vo-c-aniso}
+
+Per un aereo la covarianza è lunga lungo la rotta e stretta di traverso, e l'ipotesi~\ref{ip:vo-iso} non vale. Sia la posizione $x\sim\mathcal N(m,\Sigma)$ e la regione l'ellissoide $E=\{x:(x-c)^\top A^{-1}(x-c)\le1\}$, con $A=LL^\top$. Con $z=L^{-1}(x-c)$ la regione diventa la palla unitaria e $z\sim\mathcal N(L^{-1}(m-c),\,L^{-1}\Sigma L^{-\top})$. Diagonalizzando $L^{-1}\Sigma L^{-\top}=U\operatorname{diag}(\lambda)U^\top$ e ponendo $\mu=U^\top L^{-1}(m-c)$,
+\begin{equation}\label{eq:vo-aniso}
+C=\Pr\Bigl(\sum_{i=1}^d\lambda_i\bigl(y_i+\mu_i/\sqrt{\lambda_i}\bigr)^2\le1\Bigr),\qquad y_i\sim\mathcal N(0,1)\ \text{indipendenti},
+\end{equation}
+perché la rotazione $U$ lascia invariata la palla. È la funzione di ripartizione di un chi quadro generalizzato non centrato, per la quale esistono l'integrale di Imhof \citep{DA_VERIFICARE:imhof1961} e la serie di Ruben \citep{DA_VERIFICARE:ruben1962}. Nel prototipo la si calcola per riduzione esatta a integrali annidati: in due dimensioni
+\[C=\int_{-1}^{1}\frac{1}{\sqrt{\lambda_1}}\,\varphi\!\Bigl(\frac{z_1-\mu_1}{\sqrt{\lambda_1}}\Bigr)\Bigl[\Phi\Bigl(\frac{h-\mu_2}{\sqrt{\lambda_2}}\Bigr)-\Phi\Bigl(\frac{-h-\mu_2}{\sqrt{\lambda_2}}\Bigr)\Bigr]dz_1,\qquad h=\sqrt{1-z_1^2},\]
+con $\mu_i$ qui nelle coordinate $z$ ruotate; in tre dimensioni con un secondo integrale sulla corda $\sqrt{h^2-z_2^2}$. Con la sostituzione $z_1=\sin\theta$ l'integranda diventa liscia, e la quadratura di Gauss--Legendre a 64 nodi dà un errore dominato da quello della funzione d'errore ($<1{,}2\cdot10^{-7}$ relativo). La regione può essere fissa nel mondo (la zona dichiarata alla perdita, $c$ costante) o seguire la previsione ($c=m(\tau)$). L'approssimazione con un $\sigma$ equivalente $\sqrt{\lambda_1\lambda_2}$ non è usata: sbaglia proprio quando $\lambda_1/\lambda_2$ è grande.
+
+\paragraph{Verifica numerica.} Contro le forme chiuse \eqref{eq:vo-c2}--\eqref{eq:vo-c3} lo scarto massimo è $1{,}4\cdot10^{-8}$ in due dimensioni e $7{,}6\cdot10^{-8}$ in tre, su 20 coppie $(\sigma,r)$ per dimensione; contro un Monte Carlo di $10^6$ campioni su 20 casi anisotropi e fuori centro, tutti i casi cadono nell'intervallo al $99{,}9\,\%$ ($|z|\le2{,}11$) \prova{C}. Il controllo vede gli errori di codice e di algebra; condivide con il calcolo il modello gaussiano.
+
+\subsubsection{Più regimi di moto}\label{sec:vo-c-imm}
+
+Il filtro del sistema è una miscela di modelli interagenti \cite{barshalom2001} con tre regimi: velocità quasi costante, virata coordinata con tasso stimato (linearizzata), accelerazione di Wiener. Durante la perdita ogni regime $j$ evolve con la sua previsione gaussiana $\mathcal N(m_j(\tau),\Sigma_j(\tau))$, e i pesi con la catena di Markov dei regimi, $\mu(\tau+h)=\Pi(h)^\top\mu(\tau)$.
+
+\begin{proposizione}[Confidenza della miscela]\label{prop:vo-imm}
+Se la densità della posizione è la miscela $\sum_j\mu_j(\tau)\,\mathcal N(m_j(\tau),\Sigma_j(\tau))$, allora per ogni regione misurabile $E$
+\[C(\tau)=\sum_j\mu_j(\tau)\,P_j(\tau),\qquad P_j(\tau)=\Pr\nolimits_{\mathcal N(m_j,\Sigma_j)}(x\in E),\]
+e ogni $P_j$ si calcola con la \eqref{eq:vo-aniso}.
+\end{proposizione}
+\begin{proof}
+È la formula della probabilità totale, condizionando sul regime.
+\end{proof}
+La formula è esatta \emph{per la miscela}; la miscela approssima la densità vera, per la fusione dei momenti nell'interazione e per la linearizzazione della virata \prova{D}. Due conseguenze. Per $\tau$ molto maggiore del tempo di soggiorno nei regimi i pesi tendono alla distribuzione stazionaria della catena e la regione si allarga per effetto del regime più disperso: è la causa della prudenza misurata oltre $10\unita{s}$. E $C$ della miscela non è necessariamente monotona: se il peso passa verso un regime meno disperso, $C$ può crescere senza alcuna misura. Nei registri simulati si osservano 76 piccole violazioni della regola «la confidenza non cresce durante la perdita» \prova{S}. Una correzione che si dimostra in una riga è dichiarare $\tilde C(\tau)=\min_{0\le s\le\tau}C(s)$: è non crescente per costruzione e non supera mai $C$, quindi non è mai più ottimista del modello; non corregge la taratura, che resta da provare (\S\ref{sec:ps-tabella}).
+
+\subsubsection{Fuori dal modello: l'insieme di presenza}\label{sec:vo-presenza}
+
+Dopo un urto, un'avaria o una manovra non modellata la covarianza del filtro non descrive più l'errore: nel simulato, dopo la collisione veloce, la confidenza prevista era $0{,}976$ e il vero stava nella regione in $14/24$ passaggi, $0{,}583$ $[0{,}388;\,0{,}755]$ \prova{S}. Lì il sistema mostra un'altra grandezza, che non è una probabilità.
+
+\begin{proposizione}[Contenimento garantito]\label{prop:vo-presenza}
+Siano $\hat p_0$ la posizione stimata all'ultima misura e $r_0\ge0$. Se
+\begin{enumerate}[label=(\alph*)]
+\item la posizione vera all'ultima misura soddisfa $|p(0)-\hat p_0|\le r_0$, e
+\item la velocità vera rispetto al riferimento fisso soddisfa $|v(s)|\le\vmax$ per ogni $s\in[0,\tau]$,
+\end{enumerate}
+allora $|p(\tau)-\hat p_0|\le r(\tau)=r_0+\vmax\,\tau$. Se inoltre $|a|\le a_{\max}$ e $|v(0)-\hat v_0|\le3\sigma_v$, vale la stima più stretta della proposizione~\ref{prop:lp-contenimento}.
+\end{proposizione}
+\begin{proof}
+$|p(\tau)-\hat p_0|\le|p(0)-\hat p_0|+\bigl|\int_0^\tau v(s)\,ds\bigr|\le r_0+\int_0^\tau|v(s)|\,ds\le r_0+\vmax\tau$, per la disuguaglianza triangolare e quella dell'integrale.
+\end{proof}
+Il contenimento vale per ogni traiettoria che rispetti (a) e (b), comunque manovri: non serve alcun modello di moto. Le sue ipotesi vanno però dichiarate con precisione, perché sono esse a portare la garanzia:
+\begin{itemize}
+\item (b) è un'ipotesi sulla classe, non una misura: $\vmax=210\unita{m/s}$ per gli aerei in volo, dai dati pubblici (\S\ref{sec:lp-traiettorie}), e $45\unita{m/s}$ per i droni (ipotesi senza fonte). Un drone da corsa più veloce di $45\unita{m/s}$ esce dalla regione;
+\item (a) non è garantita: l'errore iniziale è limitato solo in probabilità. Nel sistema $r_0=3{,}4\,\sigma_0$ più un margine; la garanzia è quindi condizionata all'evento (a), la cui probabilità sotto l'ipotesi~\ref{ip:vo-cv} si calcola con la proposizione~\ref{prop:vo-c};
+\item (b) usa il riferimento fisso: per i frammenti, trascinati dal vento, vale invece il volume $V(\tau)$ della proposizione~\ref{prop:lp-detriti};
+\item come in ogni dimostrazione di questo tipo, il parametro nel codice deve essere quello dell'enunciato (\S\ref{sec:vo-nucleo}).
+\end{itemize}
+Nel simulato l'insieme ha contenuto il vero in tutti i campioni dopo l'urto ($939/939$, F3, B) e dopo l'avaria ($1072/1072$, F4, A) \prova{S}: è un controllo del codice e dei parametri, non una frequenza, perché le traiettorie simulate rispettano l'inviluppo per costruzione.
+
+\subsubsection{Verifica su traiettorie reali}\label{sec:vo-adsb}
+
+La formula è stata messa alla prova su traiettorie pubbliche (gli archivi della tabella~\ref{tab:lp-dati}): aerei con velocità mediana oltre $60\unita{m/s}$ (104 sequenze, 31 aeromobili; 16 aerei nella metà di prova), droni ad ala fissa (47 sequenze) e un multirotore (196 voli). Il rumore del sensore è simulato (aerei: $7{,}5\unita{m}$ isotropi a $1\unita{Hz}$; droni: il radar per droni a $1{,}5\unita{km}$). Le occlusioni sono virtuali, di 1--$30\unita{s}$, 8 istanti a caso per sequenza e per durata. Taratura e prova sono divise per mezzo; il fattore di scala di $q$ è scelto sulla taratura. La prova usa la trasformata integrale di probabilità: per ogni caso $u=C$ della sfera centrata sulla previsione con raggio pari all'errore vero; la verità sta nella regione al livello $\alpha$ se e solo se $u\le\alpha$. La tabella~\ref{tab:vo-adsb} dà la copertura della regione al $90\,\%$ del filtro a più regimi.
+
+\begin{table}[H]\centering\footnotesize
+\caption{Copertura osservata della regione al $90\,\%$ del filtro a più regimi sulla metà di prova, per durata dell'occlusione \prova{P}. Wilson per caso: i casi di uno stesso mezzo sono correlati e l'intervallo è ottimista. Sono limiti le celle con il limite inferiore sotto $0{,}70$ o la stima sotto $0{,}80$.}\label{tab:vo-adsb}
+\begin{tabularx}{\linewidth}{@{}>{\RaggedRight\arraybackslash}p{4.0cm}LLLLL@{}}
+\toprule
+Mezzi & 1--$2\unita{s}$ & 3--$5\unita{s}$ & 6--$10\unita{s}$ & 11--$20\unita{s}$ & 21--$30\unita{s}$\\
+\midrule
+aerei, 16 mezzi & $0{,}71$ $[0{,}67;\,0{,}74]$ (limite) & $0{,}92$ $[0{,}89;\,0{,}94]$ & $0{,}95$ $[0{,}92;\,0{,}97]$ & $0{,}98$ $[0{,}96;\,0{,}99]$ & $0{,}96$ $[0{,}94;\,0{,}98]$\\
+aerei in virata & -- & -- & $29/37=0{,}78$ $[0{,}63;\,0{,}89]$ (limite) & $68/71=0{,}96$ & $96/105=0{,}91$ $[0{,}85;\,0{,}95]$\\
+aerei in accelerazione & $2/6$ (limite) & $14/17$ & $15/18$ & $22/25$ & $35/38$\\
+droni ad ala fissa (forse un solo velivolo) & $0{,}91$ $[0{,}88;\,0{,}93]$ & $0{,}92$ & $0{,}96$ & $1{,}00$ & $1{,}00$\\
+multirotore (un esemplare) & $0{,}95$ $[0{,}94;\,0{,}96]$ & $0{,}99$ & $1{,}00$ & $1{,}00$ & $1{,}00$\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\paragraph{Lettura.} Su 16 aerei reali, fra $3$ e $30\unita{s}$ dopo la perdita, la regione al $90\,\%$ ha contenuto l'aereo da 92 a 98 volte su 100 \prova{P}: un risultato incoraggiante, calcolato nel modello e verificato su traiettorie ADS-B con un sensore simulato. Oltre i $10\unita{s}$ il filtro è prudente: la regione è più larga del necessario. I limiti sono tre.
+\begin{enumerate}[label=\arabic*.]
+\item \emph{A 1--$2\unita{s}$ la regione è ottimista} ($0{,}71$ invece di $0{,}90$), e lo è anche il filtro a velocità costante ($0{,}72$). La causa più probabile è la verità stessa: le posizioni ADS-B hanno un rumore e un'età variabili, con un campionamento irregolare di 1--$4\unita{s}$, che la \eqref{eq:vo-sigma} non contiene. Non è risolto.
+\item \emph{In virata a 6--$10\unita{s}$} la copertura è $0{,}78$, con il limite superiore sotto $0{,}90$; il filtro a velocità costante, per confronto, scende a $0{,}24$ $[0{,}13;\,0{,}40]$.
+\item \emph{In accelerazione longitudinale forte} (corsa di decollo) il filtro non ha il regime adatto: in un caso a $10\unita{s}$ dichiara un raggio di $144\unita{m}$ contro un errore vero di $801\unita{m}$. Al livello del $50\,\%$, a 1--$2\unita{s}$, la copertura è $0{,}36$ $[0{,}33;\,0{,}40]$: la curva sbaglia la forma, non solo un livello.
+\end{enumerate}
+Nel nucleo simulato la confidenza della covarianza è vicina all'osservato nelle fasce alte nel solo scenario in salita (F2, A: prevista $0{,}95$--$0{,}99$, osservata $56/60$ passaggi $[0{,}841;\,0{,}974]$) e con il radar a $10\unita{Hz}$; nel controllo con il radar a $1\unita{Hz}$ una confidenza dichiarata di almeno $0{,}9$ è stata osservata in $1/78$ campioni, e nelle fasce medie la confidenza è ottimista di $0{,}1$--$0{,}3$ \prova{S}. Per questo la cifra della confidenza del nucleo non è mostrata come una probabilità tarata; e la zona costruita con il quantile $0{,}99$ della sola covarianza, che ha contenuto il vero in una frazione da $0{,}003$ a $0{,}91$ dei cicli, non è usata. Si mostrano la regione $r_{0,9}(\tau)$ con la sua copertura osservata per tipo di moto e, fuori dal modello, l'insieme di presenza.
+%% MIGLIORIA-TARATURA: esito della taratura della covarianza (sigma_rif nella varianza, regime di accelerazione longitudinale, ricalibrazione isotonica per tipo di moto).
+%% Esito A (regge: copertura a 1-2 s in [0,85; 0,95], in accelerazione >= 0,85, scarto medio < 0,05): «Aggiungendo alla varianza un termine $\sigma_{\mathrm{rif}}^2$ stimato sulla metà di taratura [e il regime di accelerazione], la copertura al 90 % a 1--2 s passa da 0,71 a X [Wilson], e lo scarto medio dal livello dichiarato scende a Y \prova{P}. La soglia era fissata prima.» Le celle «limite» della tabella si aggiornano.
+%% Esito B (smentita: scarto > 0,10 o 1-2 s sotto 0,80): «La taratura proposta non basta: a 1--2 s la copertura resta X [Wilson]. Il limite resta dichiarato; la prova successiva è una verità più pulita (registrazioni di bordo) al posto dell'ADS-B.»
+%% Esito C (fra le due soglie): «non risolto», con le cifre.
+
+\subsection{Sensori allo stato dell'arte e calcolo dedicato}\label{sec:vo-hw}
+
+\paragraph{Sensori.} Per il volo veloce contano la rivisita e la portata sull'oggetto più piccolo. La tabella~\ref{tab:vo-sensori} riassume le classi di sensore considerate. Le schede commerciali non sono state aperte, salvo dove è detto: i valori sono da leggere come ordini di grandezza dichiarati dai produttori, da verificare prima di ogni uso.
+
+\begin{table}[H]\centering\footnotesize
+\caption{Classi di sensore per il volo veloce. (i): ipotesi; (n): fonte non aperta.}\label{tab:vo-sensori}
+\begin{tabularx}{\linewidth}{@{}>{\RaggedRight\arraybackslash}p{4.0cm}>{\RaggedRight\arraybackslash}p{1.8cm}>{\RaggedRight\arraybackslash}p{3.8cm}L@{}}
+\toprule
+Sensore & Rivisita & Portata & Che cosa non vede\\
+\midrule
+radar a scansione elettronica in banda Ku \citep{DA_VERIFICARE:echodyne-echoshield} (n) & $0{,}1\unita{s}$ in traccia & velivolo leggero $2{,}5\unita{km}$, drone medio $1{,}4\unita{km}$, drone piccolo $1{,}0\unita{km}$ & fuori dal pannello ($130^\circ\times90^\circ$); i primi $0{,}3$--$0{,}5\unita{s}$ di una traccia nuova\\
+radar a schiera attiva multifunzione (i: nessun esemplare con scheda) & $0{,}025\unita{s}$ sull'oggetto & $5\unita{km}$ su un velivolo leggero (i) & i settori in ricerca; con molti frammenti la rivisita di ciascuno cala\\
+radar di avvicinamento in banda S \citep{DA_VERIFICARE:asr11} (n) & $4{,}8\unita{s}$ & $111\unita{km}$ & $1{,}2\unita{km}$ di percorso fra due giri a $250\unita{m/s}$; bassa quota; droni piccoli\\
+ADS-B \cite{cfr-91-227} & $\le1\unita{s}$; latenza $\le2\unita{s}$ & portata radio & chi non trasmette; i detriti; l'avionica danneggiata\\
+identificazione remota \cite{cfr-89-310} & $1\unita{s}$ & portata radio & droni non conformi; detriti\\
+torretta nel visibile e nell'infrarosso medio \citep{DA_VERIFICARE:torretta-eo-mwir} (n) & $30\unita{Hz}$ & oltre $25\unita{km}$ alle condizioni del produttore & fuori dal campo stretto ($1{,}7^\circ$); fumo, nebbia, fiammata\\
+LiDAR a campo stretto \cite{livox-tele15} & $0{,}1\unita{s}$ & $500\unita{m}$ al $50\,\%$ di riflettività & oltre $500\unita{m}$; fumo\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+In un evento impulsivo i sensori cooperativi perdono proprio l'oggetto colpito, gli ottici si accecano nella fiammata, e resta il radar, che deve seguire molti più oggetti. Con una schiera attiva il costo è la rivisita: il tempo di fascio dato a ciascun oggetto cala con il numero dei frammenti.
+
+\paragraph{Bilancio della latenza.} La tabella~\ref{tab:vo-latenza} dà il ritardo dalla cattura all'avviso, per stadio, nel caso peggiore. L'unica misura è quella del prototipo in Python su CPU; tutto il resto è stimato da ipotesi \prova{C}.
+
+\begin{table}[H]\centering\footnotesize
+\caption{Latenza per stadio in millisecondi, caso peggiore, traccia a $10\unita{Hz}$ (fra parentesi a $40\unita{Hz}$, ipotesi). Nessuna cifra della colonna dedicata è misurata.}\label{tab:vo-latenza}
+\begin{tabularx}{\linewidth}{@{}>{\RaggedRight\arraybackslash}p{5.4cm}>{\RaggedRight\arraybackslash}p{2.4cm}>{\RaggedRight\arraybackslash}p{1.9cm}>{\RaggedRight\arraybackslash}p{2.6cm}L@{}}
+\toprule
+Stadio & CPU & GPU & FPGA o ASIC & Origine\\
+\midrule
+età della misura (attesa della rivisita) & 0--100 (0--25) & uguale & uguale & sensore\\
+integrazione coerente & 5--20 & 5--20 & 5--20 & sensore (i)\\
+trasferimento dei dati grezzi & 0,5--2 & 0,6--2,5 & 0,001--0,01 & i\\
+elaborazione del segnale (fasci, FFT, CFAR) & 5--20 & 1--3 & 0,05--0,5 & i\\
+estrazione dei punti & 0,5--2 & 0,2--1 & 0,01--0,1 & i\\
+associazione, filtro, regione, regole & 0,09--55 & 0,05--5 & 0,01--0,5 & CPU: misura del prototipo; resto i\\
+uscita verso una macchina & 0,1--1 & uguale & 0,01--0,1 & i\\
+\midrule
+per aggiornamento, verso una macchina & 11--200 (11--125) & 7--133 (7--58) & 5--121 (5--46) & C\\
+conferma di una traccia nuova (3 rivisite su 5) & +300--500 (+75--125) & uguale & uguale & sensore (i)\\
+primo avviso, verso una macchina & 311--700 (86--250) & 307--633 (82--183) & 305--621 (80--171) & C\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+La somma dei soli stadi di calcolo della colonna dedicata va da $0{,}08$ a $1{,}2\unita{ms}$ \prova{C}, da ipotesi: non è inferiore al millisecondo in ogni caso, e non è misurata. Con la traccia a $10\unita{Hz}$, l'hardware dedicato porta il primo avviso verso una macchina da $0{,}70$ a $0{,}62\unita{s}$; portare la rivisita da $10$ a $40\unita{Hz}$ lo porta da $0{,}62$ a $0{,}17\unita{s}$ \prova{C}. I circa $80\unita{ms}$ guadagnati sul calcolo vengono in gran parte dal passaggio dal Python a codice compilato, che darebbe anche una CPU generica. \emph{La leva vera è la rivisita del sensore, non il calcolo.} Fa eccezione la modalità prudente del prototipo (95° percentile di $340\unita{ms}$, misurato): lì il codice compilato o un FPGA servono a tenere il calcolo entro un massimo garantito.
+
+\paragraph{L'analogia con gli acceleratori per modelli linguistici (ipotesi).} Gli acceleratori dedicati alla generazione di testo dichiarano guadagni grandi rispetto alle GPU generiche: circa 17\,000 contro circa 230 \emph{token} al secondo per utente su un modello da 8 miliardi di parametri, cioè circa $74$ volte, per un chip con i pesi cablati \citep{DA_VERIFICARE:heise-taalas-hc1}; circa $8{,}4$ volte per un processore a scala di fetta \citep{DA_VERIFICARE:cerebras-blog-llama}. Sono dati dei produttori. Il guadagno nasce da un fatto preciso: la generazione è \emph{limitata dalla memoria}, e portare i pesi sul chip elimina il trasferimento dalla memoria esterna. L'analogia si trasferisce quindi solo ai carichi con la stessa struttura:
+\begin{itemize}
+\item \emph{vale}, come ipotesi, per l'elaborazione del segnale radar, un flusso di dati grezzi limitato dalla banda: su un FPGA in linea con il convertitore i dati non passano dalla memoria del calcolatore. Il fattore usato è $40$ volte nel caso peggiore rispetto alla CPU (da $20$ a $0{,}5\unita{ms}$), con un intervallo plausibile di $10$--$100$ volte;
+\item \emph{non vale} per il filtro e l'associazione: pochi oggetti, stato piccolo, calcolo dominato dai tempi di contorno. Una misura pubblica su FPGA dà un passo del filtro di Kalman in circa $725\unita{ns}$ contro circa $250\unita{ns}$ su CPU, cioè nessun guadagno \citep{DA_VERIFICARE:cern-kalman-fpga}. Qui l'hardware dedicato dà il \emph{determinismo} (il 99° percentile coincide con il massimo), non la velocità.
+\end{itemize}
+Un circuito integrato dedicato a tutta la catena, analogo al chip con i pesi cablati, è un'ipotesi di progetto: non esiste e non è stato provato. Anche se esistesse, toglierebbe al più i circa $75\unita{ms}$ di calcolo; la rivisita e la conferma resterebbero dove sono.
+
+\paragraph{Quando l'avviso è tempestivo.} La distanza minima è $d=v\,(L+t_{\mathrm{risp}}+t_{\mathrm{mezzo}})$, con $L$ il primo avviso, $t_{\mathrm{risp}}$ la risposta di chi riceve e $t_{\mathrm{mezzo}}$ il ritardo del mezzo. Per un umano senza ausilio si usa il totale di $12{,}5\unita{s}$ di una tabella della FAA sul «vedere ed evitare» \citep{faa-ac-90-48d}, fonte non aperta, che \emph{comprende già} il ritardo dell'aereo; per un umano avvisato con la direzione $5{,}4\unita{s}$, dalla stessa tabella, più $2{,}0\unita{s}$ di ritardo dell'aereo ($0{,}5\unita{s}$ per un drone, ipotesi). Ne segue \prova{C}:
+\begin{itemize}
+\item aereo a $250\unita{m/s}$: umano senza ausilio $250\cdot(0{,}75+12{,}5)=3312\unita{m}$; umano avvisato con la direzione $250\cdot(0{,}62+5{,}4+2{,}0)=2005\unita{m}$; verso una macchina, con elaborazione dedicata e rivisita a $40\unita{Hz}$, $250\cdot(0{,}17+2{,}0)=543\unita{m}$;
+\item drone a $90\unita{m/s}$: umano senza ausilio $90\cdot(0{,}75+12{,}5-2{,}0+0{,}5)=1058\unita{m}$.
+\end{itemize}
+A $250\unita{m/s}$ la differenza fra un umano senza ausilio e una macchina vale circa $2{,}8\unita{km}$; l'hardware dedicato, nella stessa colonna, ne toglie qualche decina di metri. Le distanze non contano la geometria della manovra: sono un limite inferiore del bisogno. Con un radar a scansione elettronica che traccia un velivolo leggero a $2{,}5\unita{km}$ (scheda non aperta), l'avviso sarebbe tempestivo per una macchina e al limite per un umano avvisato con la direzione; per un umano senza ausilio no.
+
+\subsection{Il sito con droni e aerei in rullaggio, e gli altri usi}\label{sec:vo-altri}
+
+Il sito sorvegliato del capitolo~\ref{sec:lp} resta il caso in cui l'avviso è tempestivo in simulazione \prova{S}: il drone a 15--$21\unita{m/s}$ dietro un edificio è annunciato in tempo in $200/200$ passaggi $[0{,}981;\,1]$ per ciascuna delle due serie, e in $100/100$ $[0{,}963;\,1]$ con semi nuovi; il drone non è dichiarato «libero», con la mappa dichiarata, in $0/171$ $[0;\,0{,}022]$; il drone che rallenta o si ferma resta nell'avviso in $188/200$ $[0{,}898;\,0{,}965]$ (incoraggiante); l'aereo in rullaggio è avvisato in tempo con tre sensori fusi in $200/200$ $[0{,}981;\,1]$, e con il solo radar in $50/200$ $[0{,}195;\,0{,}314]$ (limite); l'avviso si spegne solo guardando tutta la zona, con $0/600$ $[0;\,0{,}006]$ spegnimenti senza aver guardato. Per gli aerei in volo l'avviso \emph{al sito} non è tempestivo: servono $3410\unita{m}$ \prova{C}, e il sistema lo scrive. Sui 43 aerei reali la zona dichiarata li conteneva dopo 2--$30\unita{s}$ in circa $0{,}93$--$0{,}95$ dei casi \prova{P}, con un inviluppo di $90\unita{m/s}$, non rimisurato a $210$. A corto raggio, con la camera di profondità ferma, valgono i risultati dei capitoli~\ref{sec:map}--\ref{sec:val}: la proposizione di sicurezza del «libero», dimostrata sotto le sue condizioni (posa entro $0{,}5^\circ$, ostacolo che rimanda il segnale) \prova{D}; una persona nascosta senza zona sullo schermo in $0$ passaggi su $23\,402$ $[0;\,0{,}0002]$, con sensore ideale \prova{S}; su profondità simulata la persona nascosta fuori dall'avviso in $0$ fotogrammi su $4324$ $[0;\,0{,}001]$ \prova{S}. Gli altri usi (un veicolo senza equipaggio, una persona che usa il sistema come ausilio) condividono lo stesso nucleo, con un profilo deterministico di chi porta il sensore.
+
+\subsection{Condizioni di validità}\label{sec:vo-validita}
+
+\begin{riquadro}{Condizioni di validità degli enunciati e delle cifre in volo}
+\begin{enumerate}[label=\arabic*.,itemsep=1pt]
+\item \textbf{Simulazione dalle schede:} probabilità di rilevamento, sezioni radar dei frammenti ($2\cdot10^{-4}\unita{m^2}$), falsi ritorni, latenze e la classe del radar a scansione elettronica sono ipotesi o valori di schede non aperte.
+\item \textbf{Una geometria nominale per scenario,} senza disturbo strutturato, uccelli, riflessioni multiple; ADS-B spento.
+\item \textbf{Inviluppo dichiarato:} aerei fino a $210\unita{m/s}$, droni fino a $45\unita{m/s}$ (ipotesi); oltre, l'insieme di presenza non contiene l'oggetto.
+\item \textbf{Frammenti a bassa energia} ($\Delta v\le100$--$120\unita{m/s}$), punto materiale con resistenza isotropa; l'avaria non contenuta non è coperta.
+\item \textbf{Confidenza} dimostrata nel modello a velocità quasi costante gaussiano, approssimata per la miscela, verificata su traiettorie pubbliche con un sensore simulato e con i limiti a 1--$2\unita{s}$ e in manovra; fuori dal modello vale solo l'insieme di presenza.
+\item \textbf{Calcolo dedicato:} tutte le latenze dell'FPGA o dell'ASIC sono stime per analogia; nessuna misura su hardware.
+\item \textbf{Etichette a mano;} il classificatore è supposto esistente e non è realizzato.
+\end{enumerate}
+\end{riquadro}

@@ -1,0 +1,17 @@
+droni_ala_fissa fq 0.25 srif 0.0 n 774 scarto 0.1574
+droni_ala_fissa fq 0.25 srif 10.0 n 774 scarto 0.1451
+droni_ala_fissa fq 0.25 srif 20.0 n 774 scarto 0.1311
+droni_ala_fissa fq 0.25 srif 40.0 n 774 scarto 0.1211
+droni_ala_fissa fq 0.25 srif 80.0 n 774 scarto 0.0909
+droni_ala_fissa fq 1.0 srif 0.0 n 774 scarto 0.0914
+droni_ala_fissa fq 1.0 srif 10.0 n 774 scarto 0.075
+droni_ala_fissa fq 1.0 srif 20.0 n 774 scarto 0.0763
+droni_ala_fissa fq 1.0 srif 40.0 n 774 scarto 0.0682
+droni_ala_fissa fq 1.0 srif 80.0 n 774 scarto 0.0527
+droni_ala_fissa fq 4.0 srif 0.0 n 774 scarto 0.0472
+droni_ala_fissa fq 4.0 srif 10.0 n 774 scarto 0.0471
+droni_ala_fissa fq 4.0 srif 20.0 n 774 scarto 0.0542
+droni_ala_fissa fq 4.0 srif 40.0 n 774 scarto 0.0672
+droni_ala_fissa fq 4.0 srif 80.0 n 774 scarto 0.0826
+scelta 4.0 10.0 {'1-2': 0.8506836644233493, '1-2|cv': 0.7991109819713477, '1-2|ct': 0.8338791101973352, '1-2|cal': 0.9619870667583396, '3-5': 0.9088743667352321, '3-5|cv': 0.9197505253817607, '3-5|ct': 0.9099173036432084, '6-10': 0.9093667220617652, '6-10|cv': 0.8849892732243667, '11-20': 0.8537637397755456, '11-20|cv': 0.8494551394312335, '21-30': 0.8233710320389054, '21-30|cv': 0.8234788502792538} 6.8
+fine 22.1

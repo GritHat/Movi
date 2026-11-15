@@ -1,0 +1,140 @@
+1
+00:00:03,000 --> 00:00:05,597
+Fast aircraft and drones.
+
+2
+00:00:05,697 --> 00:00:10,640
+A collision, an engine failure, a flash that blinds every camera.
+
+3
+00:00:10,740 --> 00:00:13,763
+When the view is lost, what should the screen say?
+
+4
+00:00:14,613 --> 00:00:17,999
+MoVi declares what it has not observed.
+
+5
+00:00:18,099 --> 00:00:20,205
+Three answers per track.
+
+6
+00:00:20,305 --> 00:00:21,601
+I see it.
+
+7
+00:00:21,701 --> 00:00:24,724
+I don't see it, but here is where it can be.
+
+8
+00:00:24,824 --> 00:00:26,397
+Or: I don't know.
+
+9
+00:00:27,447 --> 00:00:31,643
+An aircraft on approach, and a drone that broadcasts nothing.
+
+10
+00:00:31,743 --> 00:00:38,564
+In six flight scenarios, MoVi never said clear where an aircraft, a drone or a fragment was.
+
+11
+00:00:39,414 --> 00:00:44,208
+An engine fails at a hundred and thirty-five metres per second.
+
+12
+00:00:44,308 --> 00:00:46,307
+A flash, then smoke.
+
+13
+00:00:46,407 --> 00:00:55,724
+MoVi infers the event and declares both cameras unreliable within three cycles, in sixty of sixty simulated runs.
+
+14
+00:00:55,824 --> 00:01:01,493
+Low-energy debris stays inside the declared volume in fifty-eight of sixty.
+
+15
+00:01:02,343 --> 00:01:06,710
+Two drones close at forty and thirty-five metres per second.
+
+16
+00:01:06,810 --> 00:01:11,071
+MoVi warns of the close pass at least ten seconds ahead.
+
+17
+00:01:11,171 --> 00:01:21,127
+After the impact, the collision is not yet recognised as an event, but the region is kept: in every simulated run, the fragments stayed inside it.
+
+18
+00:01:21,977 --> 00:01:26,323
+A flash blinds every optical sensor for three seconds.
+
+19
+00:01:26,423 --> 00:01:29,980
+Radar alone keeps a region for every track.
+
+20
+00:01:30,830 --> 00:01:33,341
+Now continuity is lost.
+
+21
+00:01:33,441 --> 00:01:38,577
+In the motion model, the confidence is computed exactly, in closed form.
+
+22
+00:01:38,677 --> 00:01:44,495
+A fixed zone loses it in seconds, so the region grows to keep nine chances in ten.
+
+23
+00:01:44,595 --> 00:01:54,530
+On sixteen real aircraft tracks, with a simulated sensor, it held them ninety-two to ninety-eight times in a hundred, from three to thirty seconds.
+
+24
+00:01:54,630 --> 00:01:59,040
+At one to two seconds, only seventy-one: a declared limit.
+
+25
+00:02:00,290 --> 00:02:02,268
+Dedicated hardware?
+
+26
+00:02:02,368 --> 00:02:11,685
+Chips built for one job, like those now serving language models, suggest processing in about a millisecond: an estimate by analogy.
+
+27
+00:02:11,785 --> 00:02:15,469
+The sensor's revisit still dominates the delay.
+
+28
+00:02:16,519 --> 00:02:23,895
+The same core works on a site: a drone behind a building, warned in time in two hundred of two hundred runs.
+
+29
+00:02:23,995 --> 00:02:27,295
+And at short range: people, cars, trains.
+
+30
+00:02:28,345 --> 00:02:29,577
+The limits.
+
+31
+00:02:29,677 --> 00:02:35,623
+Everything is simulated, with no physical sensor, and classes are labelled by hand.
+
+32
+00:02:35,723 --> 00:02:45,359
+From prototype to deployed system: a contact rule for fast collisions, state-of-the-art sensors, dedicated hardware, field trials.
+
+33
+00:02:45,459 --> 00:02:46,712
+MoVi.
+
+34
+00:02:46,812 --> 00:02:49,131
+It observes and warns.
+
+35
+00:02:49,231 --> 00:02:50,953
+By SDMs.
+

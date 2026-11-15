@@ -236,3 +236,19 @@ Prese con l'autorizzazione notturna (tutto tranne cancellare file):
   - proposta v3.0, stato del progetto v5;
   - video v3 sul volo veloce (`video/progetto_v3`, copia del progetto);
   - controllo e correzioni entro le 09:40.
+
+## Addendum 15 (15-11-2026, circa 05:50): il sensore a bordo di un terzo drone
+
+L'utente, testualmente: «nello scenario di collisione veloce puoi anche considerare l'estensione in cui due droni vicini collidono e lasciano detriti, fiammate, esplosioni, ecc... E il sistema è montato su un terzo drone che viaggia vicino e deve mantenere traccia di un oggetto in movimento rapido (es. un altro drone o oggetto veloce più avanti che deve seguire) nonostante l'evento improvviso altamente impulsivo appena avvenuto nella sua prossimità con eventuali detriti, fumo ecc...»
+
+**Scenario F7 «scorta».**
+- MoVi è montato su un drone in moto (il portatore, con profilo deterministico).
+- Il drone segue un oggetto veloce più avanti.
+- Accanto, due droni collidono, con detriti, fiammata, esplosione e fumo.
+- MoVi deve mantenere la traccia dell'oggetto seguito, o dichiarare la regione e la confidenza che cala.
+- MoVi deve dichiarare il volume dei detriti vicino al proprio percorso.
+- Non deve mai dichiarare «libero» dove ci sono frammenti.
+
+Il lavoro va in `f20-chiusura/05-scorta/SCORTA.md`. F7 entra nel verdetto finale, nel documento tecnico, nella proposta e nel video come parte del caso centrale, con le stesse regole d'onestà. Solo osservazione e avviso: «seguire» vuol dire mantenere la traccia, non inseguire né intercettare.
+
+**Addendum 16 (circa 05:58).** L'utente vuole lo scenario F7 «scorta» nel video, perché «particolarmente di interesse e convincente». La scena va subito dopo il volo ad alta velocità principale e subito prima della sezione sul rullaggio e sugli altri usi.

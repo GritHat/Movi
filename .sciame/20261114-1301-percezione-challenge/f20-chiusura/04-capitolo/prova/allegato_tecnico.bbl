@@ -1,0 +1,57 @@
+\begin{thebibliography}{6}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Wilson(1927)]{wilson1927}
+Edwin~B. Wilson.
+\newblock {Probable Inference, the Law of Succession, and Statistical
+  Inference}.
+\newblock \emph{Journal of the American Statistical Association}, 22\penalty0
+  (158):\penalty0 209--212, 1927.
+\newblock \doi{10.1080/01621459.1927.10502953}.
+
+\bibitem[Bar-Shalom et~al.(2001)Bar-Shalom, Li, and Kirubarajan]{barshalom2001}
+Yaakov Bar-Shalom, X.-Rong Li, and Thiagalingam Kirubarajan.
+\newblock \emph{{Estimation with Applications to Tracking and Navigation:
+  Theory, Algorithms and Software}}.
+\newblock Wiley, 2001.
+\newblock ISBN 9780471416555.
+\newblock \doi{10.1002/0471221279}.
+
+\bibitem[{United States, Federal Aviation
+  Administration}(s.d.{\natexlab{a}})]{cfr-91-227}
+{United States, Federal Aviation Administration}.
+\newblock {14 CFR \S\,91.227 -- Automatic Dependent Surveillance-Broadcast
+  (ADS-B) Out equipment performance requirements}.
+\newblock Code of Federal Regulations, titolo 14, parte 91, s.d.{\natexlab{a}}.
+\newblock URL \url{https://www.law.cornell.edu/cfr/text/14/91.227}.
+\newblock consultato il 15 novembre 2026.
+
+\bibitem[{United States, Federal Aviation
+  Administration}(s.d.{\natexlab{b}})]{cfr-89-310}
+{United States, Federal Aviation Administration}.
+\newblock {14 CFR \S\,89.310 -- Minimum performance requirements for standard
+  remote identification unmanned aircraft}.
+\newblock Code of Federal Regulations, titolo 14, parte 89, s.d.{\natexlab{b}}.
+\newblock URL \url{https://www.law.cornell.edu/cfr/text/14/89.310}.
+\newblock consultato il 15 novembre 2026.
+
+\bibitem[{Livox}(s.d.)]{livox-tele15}
+{Livox}.
+\newblock {Tele-15} -- specs.
+\newblock pagina delle specifiche, s.d.
+\newblock URL \url{https://www.livoxtech.com/tele-15/specs}.
+\newblock consultata il 15 novembre 2026.
+
+\bibitem[{Federal Aviation Administration}()]{faa-ac-90-48d}
+{Federal Aviation Administration}.
+\newblock {Advisory Circular 90-48D, Change 1}.
+\newblock URL
+  \url{https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_90-48D_CHG_1.pdf}.
+\newblock [353] Stato di verifica: non raggiungibile (dichiarato dal rapporto
+  che la cita, 15-11-2026; non riaperta dal curatore). Seconda fase.
+
+\end{thebibliography}

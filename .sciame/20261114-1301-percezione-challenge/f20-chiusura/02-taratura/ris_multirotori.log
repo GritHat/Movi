@@ -1,0 +1,17 @@
+multirotori fq 0.25 srif 0.0 n 4377 scarto 0.0553
+multirotori fq 0.25 srif 10.0 n 4377 scarto 0.0665
+multirotori fq 0.25 srif 20.0 n 4377 scarto 0.076
+multirotori fq 0.25 srif 40.0 n 4377 scarto 0.0899
+multirotori fq 0.25 srif 80.0 n 4377 scarto 0.0985
+multirotori fq 1.0 srif 0.0 n 4377 scarto 0.0825
+multirotori fq 1.0 srif 10.0 n 4377 scarto 0.0902
+multirotori fq 1.0 srif 20.0 n 4377 scarto 0.0943
+multirotori fq 1.0 srif 40.0 n 4377 scarto 0.0985
+multirotori fq 1.0 srif 80.0 n 4377 scarto 0.0991
+multirotori fq 4.0 srif 0.0 n 4377 scarto 0.0916
+multirotori fq 4.0 srif 10.0 n 4377 scarto 0.0971
+multirotori fq 4.0 srif 20.0 n 4377 scarto 0.0995
+multirotori fq 4.0 srif 40.0 n 4377 scarto 0.0997
+multirotori fq 4.0 srif 80.0 n 4377 scarto 0.1
+scelta 0.25 0.0 {'1-2': 0.8325176598120537, '1-2|cv': 0.8391733650307847, '1-2|ct': 0.8292162764258427, '1-2|ca': 0.8118874989139171, '1-2|cal': 0.8099909746271289, '3-5': 0.7873657390523774, '3-5|cv': 0.8318583021123056, '3-5|ct': 0.7687617825031159, '6-10': 0.8456727235819781, '6-10|cv': 0.8655916006858192, '6-10|ct': 0.8118173113648424, '6-10|cal': 0.6453176115514855, '11-20': 0.8772766607242732, '11-20|cv': 0.8879349284329338, '11-20|ct': 0.8785438770346785, '11-20|cal': 0.5520867332556916, '21-30': 0.8697830362890594, '21-30|cv': 0.8778724469733474, '21-30|ct': 0.8648055420103524, '21-30|cal': 0.5164409451505976} 33.4
+fine 113.8

@@ -1,0 +1,430 @@
+{
+ "errori": [],
+ "F1/att": {
+  "n": 60,
+  "idx": [
+   1000,
+   1059
+  ],
+  "falsi_eventi": [
+   1,
+   60,
+   0.003,
+   0.089
+  ],
+  "libero_sul_vero_passaggi": [
+   0,
+   60,
+   0.0,
+   0.06
+  ],
+  "inneschi": {
+   "null": 59,
+   "cambio di velocita' sostenuto (Doppler)": 1
+  },
+  "tipi_evento": {
+   "nessuno": 59,
+   "collisione/frammentazione in volo (conta": 1
+  }
+ },
+ "F1/sda": {
+  "n": 60,
+  "idx": [
+   1000,
+   1059
+  ],
+  "falsi_eventi": [
+   0,
+   60,
+   0.0,
+   0.06
+  ],
+  "libero_sul_vero_passaggi": [
+   0,
+   60,
+   0.0,
+   0.06
+  ],
+  "inneschi": {
+   "null": 60
+  },
+  "tipi_evento": {
+   "nessuno": 60
+  }
+ },
+ "F3/att": {
+  "n": 60,
+  "idx": [
+   1000,
+   1059
+  ],
+  "falsi_eventi": [
+   0,
+   60,
+   0.0,
+   0.06
+  ],
+  "libero_sul_vero_passaggi": [
+   0,
+   60,
+   0.0,
+   0.06
+  ],
+  "inneschi": {
+   "tracce nuove vicino al punto": 49,
+   "null": 5,
+   "cambio di velocita' sostenuto (Doppler)": 6
+  },
+  "tipi_evento": {
+   "collisione/frammentazione in volo (conta": 55,
+   "nessuno": 5
+  },
+  "entro_1.0_s": [
+   2,
+   60,
+   0.009,
+   0.114
+  ],
+  "entro_2.0_s": [
+   34,
+   60,
+   0.441,
+   0.684
+  ],
+  "entro_2.5_s": [
+   48,
+   60,
+   0.682,
+   0.882
+  ],
+  "entro_3.0_s": [
+   51,
+   60,
+   0.739,
+   0.919
+  ],
+  "prima_dell_urto": [
+   1,
+   60,
+   0.003,
+   0.089
+  ],
+  "mai": [
+   5,
+   60,
+   0.036,
+   0.181
+  ],
+  "ritardo_min_med_max": [
+   -0.7,
+   1.8,
+   4.2
+  ]
+ },
+ "F3/sda": {
+  "n": 60,
+  "idx": [
+   1000,
+   1059
+  ],
+  "falsi_eventi": [
+   0,
+   60,
+   0.0,
+   0.06
+  ],
+  "libero_sul_vero_passaggi": [
+   0,
+   60,
+   0.0,
+   0.06
+  ],
+  "inneschi": {
+   "tracce nuove vicino al punto": 48,
+   "cambio di velocita' sostenuto (Doppler)": 12
+  },
+  "tipi_evento": {
+   "collisione/frammentazione in volo (conta": 60
+  },
+  "entro_1.0_s": [
+   22,
+   60,
+   0.256,
+   0.493
+  ],
+  "entro_2.0_s": [
+   57,
+   60,
+   0.863,
+   0.983
+  ],
+  "entro_2.5_s": [
+   59,
+   60,
+   0.911,
+   0.997
+  ],
+  "entro_3.0_s": [
+   59,
+   60,
+   0.911,
+   0.997
+  ],
+  "prima_dell_urto": [
+   1,
+   60,
+   0.003,
+   0.089
+  ],
+  "mai": [
+   0,
+   60,
+   0.0,
+   0.06
+  ],
+  "ritardo_min_med_max": [
+   -6.3,
+   1.2,
+   2.2
+  ]
+ },
+ "F4/att": {
+  "n": 60,
+  "idx": [
+   1000,
+   1059
+  ],
+  "falsi_eventi": [
+   0,
+   60,
+   0.0,
+   0.06
+  ],
+  "libero_sul_vero_passaggi": [
+   0,
+   60,
+   0.0,
+   0.06
+  ],
+  "inneschi": {
+   "null": 60
+  },
+  "tipi_evento": {
+   "avaria o fiammata": 60
+  },
+  "entro_1.0_s": [
+   60,
+   60,
+   0.94,
+   1.0
+  ],
+  "entro_2.0_s": [
+   60,
+   60,
+   0.94,
+   1.0
+  ],
+  "entro_2.5_s": [
+   60,
+   60,
+   0.94,
+   1.0
+  ],
+  "entro_3.0_s": [
+   60,
+   60,
+   0.94,
+   1.0
+  ],
+  "prima_dell_urto": [
+   0,
+   60,
+   0.0,
+   0.06
+  ],
+  "mai": [
+   0,
+   60,
+   0.0,
+   0.06
+  ],
+  "ritardo_min_med_max": [
+   0.2,
+   0.3,
+   0.4
+  ],
+  "margine_operatore_min": 0.3
+ },
+ "F4/sda": {
+  "n": 60,
+  "idx": [
+   1000,
+   1059
+  ],
+  "falsi_eventi": [
+   0,
+   60,
+   0.0,
+   0.06
+  ],
+  "libero_sul_vero_passaggi": [
+   0,
+   60,
+   0.0,
+   0.06
+  ],
+  "inneschi": {
+   "null": 60
+  },
+  "tipi_evento": {
+   "avaria o fiammata": 60
+  },
+  "entro_1.0_s": [
+   60,
+   60,
+   0.94,
+   1.0
+  ],
+  "entro_2.0_s": [
+   60,
+   60,
+   0.94,
+   1.0
+  ],
+  "entro_2.5_s": [
+   60,
+   60,
+   0.94,
+   1.0
+  ],
+  "entro_3.0_s": [
+   60,
+   60,
+   0.94,
+   1.0
+  ],
+  "prima_dell_urto": [
+   0,
+   60,
+   0.0,
+   0.06
+  ],
+  "mai": [
+   0,
+   60,
+   0.0,
+   0.06
+  ],
+  "ritardo_min_med_max": [
+   0.1,
+   0.1,
+   0.2
+  ],
+  "margine_operatore_min": 0.4
+ },
+ "F5/att": {
+  "n": 60,
+  "idx": [
+   1000,
+   1059
+  ],
+  "falsi_eventi": [
+   2,
+   60,
+   0.009,
+   0.114
+  ],
+  "libero_sul_vero_passaggi": [
+   0,
+   60,
+   0.0,
+   0.06
+  ],
+  "inneschi": {
+   "null": 58,
+   "tracce nuove vicino al punto": 1,
+   "cambio di velocita' sostenuto (Doppler)": 1
+  },
+  "tipi_evento": {
+   "nessuno": 58,
+   "collisione/frammentazione in volo (conta": 2
+  }
+ },
+ "F5/sda": {
+  "n": 60,
+  "idx": [
+   1000,
+   1059
+  ],
+  "falsi_eventi": [
+   2,
+   60,
+   0.009,
+   0.114
+  ],
+  "libero_sul_vero_passaggi": [
+   0,
+   60,
+   0.0,
+   0.06
+  ],
+  "inneschi": {
+   "null": 58,
+   "cambio di velocita' sostenuto (Doppler)": 2
+  },
+  "tipi_evento": {
+   "nessuno": 58,
+   "collisione/frammentazione in volo (conta": 2
+  }
+ },
+ "F6/att": {
+  "n": 200,
+  "idx": [
+   1000,
+   1199
+  ],
+  "falsi_eventi": [
+   0,
+   200,
+   0.0,
+   0.019
+  ],
+  "libero_sul_vero_passaggi": [
+   0,
+   200,
+   0.0,
+   0.019
+  ],
+  "inneschi": {
+   "null": 200
+  },
+  "tipi_evento": {
+   "nessuno": 200
+  }
+ },
+ "F6/sda": {
+  "n": 200,
+  "idx": [
+   1000,
+   1199
+  ],
+  "falsi_eventi": [
+   0,
+   200,
+   0.0,
+   0.019
+  ],
+  "libero_sul_vero_passaggi": [
+   0,
+   200,
+   0.0,
+   0.019
+  ],
+  "inneschi": {
+   "null": 200
+  },
+  "tipi_evento": {
+   "nessuno": 200
+  }
+ }
+}

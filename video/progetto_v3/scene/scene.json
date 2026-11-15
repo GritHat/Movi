@@ -1,0 +1,38 @@
+{
+  "nota": "Scaletta del PIANO_VIDEO.md §2 (172 s). Durate di partenza; rimonta.py le riscrive in tempi/scene_tempi.json dalla voce misurata. 'segmenti': quale registro disegna quale tratto della scena (t_reg = tempo del registro all'inizio del tratto, velocita = secondi di registro per secondo di video; velocita != 1 fa stampare a FasceOnesta 'xN · time compressed').",
+  "fps": 30,
+  "lingua": "en",
+  "registri": {
+    "R1":  {"file": "dati_sviluppo/R1.SVILUPPO.jsonl",  "stato": "sviluppo", "sostituire_con": "lp_V1_piazzale (R1, piano §7)"},
+    "R3a": {"file": "dati_sviluppo/R3a.SVILUPPO.jsonl", "stato": "sviluppo", "sostituire_con": "E3(a) nebbia (R3a)"},
+    "R3b": {"file": "dati_sviluppo/R3b.SVILUPPO.jsonl", "stato": "sviluppo", "sostituire_con": "E3(b) pioggia (R3b)"},
+    "R3c": {"file": "dati_sviluppo/R3c.SVILUPPO.jsonl", "stato": "sviluppo", "sostituire_con": "E3(a)+(c) guasto radar (R3c)"},
+    "R1E": {"file": "dati_sviluppo/R1E.SVILUPPO.jsonl", "stato": "sviluppo", "sostituire_con": "E1 con EV-A, EV-E (R1E)"},
+    "R2E": {"file": "dati_sviluppo/R2E.SVILUPPO.jsonl", "stato": "sviluppo", "sostituire_con": "E2 con EV-A, B, C, E (R2E)"},
+    "Rc":  {"file": "../../prototipo/uscite/resta_dietro/registro.jsonl", "stato": "provvisorio", "sostituire_con": "Rc congelato dal verdetto", "etichetta_sensore": "SIMULATED DEPTH CAMERA"}
+  },
+  "scene": [
+    {"n": 1, "id": "s1", "durata": 12, "tipo": "dati", "vista": [-70, -20, 190, 200],
+     "segmenti": [{"da": 0, "a": 12, "registro": "R1", "t_reg": 0, "velocita": 1}],
+     "dominio": "domain.s1"},
+    {"n": 2, "id": "s2", "durata": 27, "tipo": "schema"},
+    {"n": 3, "id": "s3", "durata": 16, "tipo": "schema", "vista": [-70, -20, 190, 200], "intest_da": "R1"},
+    {"n": 4, "id": "s4", "durata": 21, "tipo": "dati", "vista": [-4600, -2600, 3000, 2900],
+     "segmenti": [{"da": 0, "a": 7, "registro": "R3a", "t_reg": 4, "velocita": 1},
+                  {"da": 7, "a": 11, "registro": "R3b", "t_reg": 3, "velocita": 1},
+                  {"da": 11, "a": 21, "registro": "R3c", "t_reg": 97, "velocita": 1}],
+     "dominio": "domain.s4"},
+    {"n": 5, "id": "s5", "durata": 22, "tipo": "dati", "vista": [-30, 120, 330, 420],
+     "segmenti": [{"da": 0, "a": 14, "registro": "R1E", "t_reg": 8, "velocita": 1},
+                  {"da": 14, "a": 22, "registro": "R1E", "t_reg": 22, "velocita": 4}],
+     "dominio": "domain.s5"},
+    {"n": 6, "id": "s6", "durata": 20, "tipo": "dati", "vista": [150, -470, 1450, 170],
+     "segmenti": [{"da": 0, "a": 20, "registro": "R2E", "t_reg": 13, "velocita": 1}],
+     "dominio": "domain.s6"},
+    {"n": 7, "id": "s7", "durata": 30, "tipo": "schema"},
+    {"n": 8, "id": "s8", "durata": 11, "tipo": "dati", "vista": [-3.2, -0.3, 3.2, 3.4],
+     "segmenti": [{"da": 1.5, "a": 6.8, "registro": "Rc", "t_reg": 0, "velocita": 1}],
+     "tieni_ultimo_fino_a": 11, "dominio": "domain.s8"},
+    {"n": 9, "id": "s9", "durata": 13, "tipo": "titoli"}
+  ]
+}

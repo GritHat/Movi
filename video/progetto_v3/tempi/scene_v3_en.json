@@ -1,0 +1,86 @@
+{
+ "voce": "../voce/uscite/en_v9_volo_v3/voce_en.wav",
+ "totale": 171.903,
+ "scene": [
+  {
+   "id": "s1",
+   "inizio": 0.0,
+   "durata": 14.113,
+   "voce_da": 3.0,
+   "voce_wav_da": 0.15,
+   "voce_wav_a": 10.663
+  },
+  {
+   "id": "s2",
+   "inizio": 14.113,
+   "durata": 12.834,
+   "voce_da": 0.5,
+   "voce_wav_da": 11.463,
+   "voce_wav_a": 22.997
+  },
+  {
+   "id": "s3",
+   "inizio": 26.947,
+   "durata": 11.967,
+   "voce_da": 0.5,
+   "voce_wav_da": 23.797,
+   "voce_wav_a": 34.664
+  },
+  {
+   "id": "s4",
+   "inizio": 38.914,
+   "durata": 22.929,
+   "voce_da": 0.5,
+   "voce_wav_da": 35.464,
+   "voce_wav_a": 57.293
+  },
+  {
+   "id": "s5",
+   "inizio": 61.843,
+   "durata": 19.634,
+   "voce_da": 0.5,
+   "voce_wav_da": 58.093,
+   "voce_wav_a": 76.627
+  },
+  {
+   "id": "s6",
+   "inizio": 81.477,
+   "durata": 8.853,
+   "voce_da": 0.5,
+   "voce_wav_da": 77.427,
+   "voce_wav_a": 85.18
+  },
+  {
+   "id": "s7",
+   "inizio": 90.33,
+   "durata": 29.46,
+   "voce_da": 0.5,
+   "voce_wav_da": 85.98,
+   "voce_wav_a": 113.94
+  },
+  {
+   "id": "s8",
+   "inizio": 119.79,
+   "durata": 16.229,
+   "voce_da": 0.5,
+   "voce_wav_da": 114.74,
+   "voce_wav_a": 129.669
+  },
+  {
+   "id": "s9",
+   "inizio": 136.019,
+   "durata": 11.826,
+   "voce_da": 0.5,
+   "voce_wav_da": 130.469,
+   "voce_wav_a": 140.995
+  },
+  {
+   "id": "s10",
+   "inizio": 147.845,
+   "durata": 24.058,
+   "voce_da": 0.5,
+   "voce_wav_da": 141.795,
+   "voce_wav_a": 164.153
+  }
+ ]
+}

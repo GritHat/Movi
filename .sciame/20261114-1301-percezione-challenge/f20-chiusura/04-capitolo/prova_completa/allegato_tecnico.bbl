@@ -1,0 +1,834 @@
+\begin{thebibliography}{95}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Cao et~al.(2023)Cao, Pang, Weng, Khirodkar, and Kitani]{cao2023}
+Jinkun Cao, Jiangmiao Pang, Xinshuo Weng, Rawal Khirodkar, and Kris Kitani.
+\newblock {Observation-Centric SORT: Rethinking SORT for Robust Multi-Object
+  Tracking}.
+\newblock In \emph{IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition (CVPR)}, pages 9686--9696, 2023.
+\newblock \doi{10.1109/CVPR52729.2023.00934}.
+\newblock URL \url{https://arxiv.org/abs/2203.14360}.
+
+\bibitem[Kalman(1960)]{kalman1960}
+R.~E. Kalman.
+\newblock {A New Approach to Linear Filtering and Prediction Problems}.
+\newblock \emph{Journal of Basic Engineering}, 82\penalty0 (1):\penalty0
+  35--45, 1960.
+\newblock \doi{10.1115/1.3662552}.
+\newblock URL \url{https://doi.org/10.1115/1.3662552}.
+
+\bibitem[Wilson(1927)]{wilson1927}
+Edwin~B. Wilson.
+\newblock {Probable Inference, the Law of Succession, and Statistical
+  Inference}.
+\newblock \emph{Journal of the American Statistical Association}, 22\penalty0
+  (158):\penalty0 209--212, 1927.
+\newblock \doi{10.1080/01621459.1927.10502953}.
+
+\bibitem[Vu(2020)]{therobotreport-veo}
+Clara Vu.
+\newblock {Advanced vision and the future of robot safety in manufacturing}.
+\newblock The Robot Report, July 2020.
+\newblock URL
+  \url{https://www.therobotreport.com/advanced-vision-future-robot-safety-manufacturing/}.
+\newblock consultato il 14 novembre 2026.
+
+\bibitem[Orzechowski et~al.(2018)Orzechowski, Meyer, and
+  Lauer]{orzechowski2018}
+Piotr~Franciszek Orzechowski, Annika Meyer, and Martin Lauer.
+\newblock {Tackling Occlusions \& Limited Sensor Range with Set-based Safety
+  Verification}.
+\newblock In \emph{21st International Conference on Intelligent Transportation
+  Systems (ITSC)}, pages 1729--1736, 2018.
+\newblock \doi{10.1109/ITSC.2018.8569332}.
+\newblock URL \url{https://arxiv.org/pdf/1807.01262}.
+
+\bibitem[Rudenko et~al.(2020)Rudenko, Kucner, Swaminathan, Chadalavada, Arras,
+  and Lilienthal]{thor}
+Andrey Rudenko, Tomasz~P. Kucner, Chittaranjan~S. Swaminathan, Ravi~T.
+  Chadalavada, Kai~O. Arras, and Achim~J. Lilienthal.
+\newblock {TH\"OR: Human-Robot Navigation Data Collection and Accurate Motion
+  Trajectories Dataset}.
+\newblock \emph{IEEE Robotics and Automation Letters}, 5\penalty0 (2):\penalty0
+  676--682, 2020.
+\newblock \doi{10.1109/LRA.2020.2965416}.
+\newblock URL \url{https://zenodo.org/records/3382145}.
+\newblock Dati: \emph{THOR -- people tracks}, Zenodo, 2019, DOI
+  10.5281/zenodo.3382145, licenza CC BY 4.0, consultati il 14 novembre 2026.
+
+\bibitem[{RealSense}(s.d.{\natexlab{a}})]{realsense-d455}
+{RealSense}.
+\newblock {RealSense Depth Camera D455 / D455f}.
+\newblock pagina del prodotto, s.d.{\natexlab{a}}.
+\newblock URL
+  \url{https://realsenseai.com/products/real-sense-depth-camera-d455f/}.
+\newblock consultata il 14 novembre 2026.
+
+\bibitem[{RealSense}(s.d.{\natexlab{b}})]{realsense-confronto-camere}
+{RealSense}.
+\newblock {Compare Depth Cameras}.
+\newblock tabella di confronto delle camere della serie D400,
+  s.d.{\natexlab{b}}.
+\newblock URL \url{https://www.realsenseai.com/compare-depth-cameras/}.
+\newblock consultata il 14 novembre 2026.
+
+\bibitem[{Orbbec}(s.d.)]{orbbec-gemini-335}
+{Orbbec}.
+\newblock {Gemini 335}.
+\newblock pagina del prodotto, s.d.
+\newblock URL
+  \url{https://www.orbbec.com/products/stereo-vision-camera/gemini-335/}.
+\newblock consultata il 14 novembre 2026.
+
+\bibitem[RealSense({\natexlab{a}})]{realsense-taratura-profondita}
+RealSense.
+\newblock \emph{{Tuning depth cameras for best performance}}.
+\newblock RealSense, s.d.{\natexlab{a}}.
+\newblock URL
+  \url{https://dev.realsenseai.com/docs/tuning-depth-cameras-for-best-performance}.
+\newblock Documentazione per sviluppatori, consultata il 14 novembre 2026.
+
+\bibitem[Ahn et~al.(2019)Ahn, Chae, Noh, Nam, and Hong]{ahn2019}
+Min~Sung Ahn, Hosik Chae, Donghun Noh, Hyunwoo Nam, and Dennis Hong.
+\newblock {Analysis and Noise Modeling of the Intel RealSense D435 for Mobile
+  Robots}.
+\newblock In \emph{16th International Conference on Ubiquitous Robots (UR)},
+  pages 707--711, 2019.
+\newblock \doi{10.1109/URAI.2019.8768489}.
+\newblock URL
+  \url{https://ucla.box.com/shared/static/gqxwr2vvqsf22oi9dqtn50hr0xkruzie.pdf}.
+
+\bibitem[RealSense({\natexlab{b}})]{realsense-filtri-post}
+RealSense.
+\newblock \emph{{Post-processing filters}}.
+\newblock RealSense, s.d.{\natexlab{b}}.
+\newblock URL \url{https://dev.realsenseai.com/docs/post-processing-filters/}.
+\newblock Documentazione per sviluppatori, consultata il 14 novembre 2026.
+
+\bibitem[{Int}(2019)]{realsense-bkm-taratura}
+\emph{{BKMs for Tuning Intel RealSense D4xx Cameras}}.
+\newblock {Intel RealSense}, 2019.
+\newblock URL
+  \url{https://realsenseai.com/wp-content/uploads/2019/11/BKMs_Tuning_RealSense_D4xx_Cam.pdf}.
+\newblock consultato il 14 novembre 2026.
+
+\bibitem[{RealSense Help Center}(2020)]{realsense-d400-accuratezza}
+{RealSense Help Center}.
+\newblock {Depth accuracy for Intel RealSense D400 Series Cameras}.
+\newblock articolo di assistenza n. 360059129453, 2020.
+\newblock URL
+  \url{https://support.realsenseai.com/hc/en-us/articles/360059129453-Depth-accuracy-for-Intel-RealSense-D400-Series-Cameras}.
+\newblock consultato il 14 novembre 2026.
+
+\bibitem[{STM}(2023{\natexlab{a}})]{st-vl53l7cx}
+\emph{{VL53L7CX -- Time-of-Flight 8x8 multizone ranging sensor with 90$^\circ$
+  FoV}}.
+\newblock {STMicroelectronics}, 2023{\natexlab{a}}.
+\newblock URL \url{https://www.pololu.com/file/0J1992/vl53l7cx.pdf}.
+\newblock consultato il 14 novembre 2026.
+
+\bibitem[{STM}(2023{\natexlab{b}})]{st-vl53l8cx}
+\emph{{VL53L8CX -- Low-power high-performance 8x8 multizone Time-of-Flight
+  sensor}}.
+\newblock {STMicroelectronics}, 2023{\natexlab{b}}.
+\newblock URL \url{https://www.pololu.com/file/0J2029/vl53l8cx.pdf}.
+\newblock consultato il 14 novembre 2026.
+
+\bibitem[{STM}(2022)]{st-um3038}
+\emph{{UM3038 -- A guide to using the VL53L7CX Time-of-Flight multizone ranging
+  sensor with 90$^\circ$ FoV}}.
+\newblock {STMicroelectronics}, 2022.
+\newblock URL
+  \url{https://www.pololu.com/file/0J1993/um3038-a-guide-to-using-the-vl53l7cx-timeofflight-multizone-ranging-sensor-with-90-fov-stmicroelectronics.pdf}.
+\newblock consultato il 14 novembre 2026.
+
+\bibitem[{Slamtec}(s.d.)]{slamtec-rplidar-c1}
+{Slamtec}.
+\newblock {RPLIDAR C1}.
+\newblock pagina del prodotto e delle specifiche, s.d.
+\newblock URL \url{https://www.slamtec.com/en/c1/spec}.
+\newblock consultata il 14 novembre 2026.
+
+\bibitem[{LDROBOT}(s.d.)]{ldrobot-ld19}
+{LDROBOT}.
+\newblock {DTOF LIDAR LD19}.
+\newblock specifiche riportate nella documentazione del distributore Waveshare,
+  s.d.
+\newblock URL \url{https://www.waveshare.com/wiki/DTOF_LIDAR_LD19}.
+\newblock consultata il 14 novembre 2026.
+
+\bibitem[Sturm et~al.(2012)Sturm, Engelhard, Endres, Burgard, and
+  Cremers]{tum-rgbd}
+J{\"u}rgen Sturm, Nikolas Engelhard, Felix Endres, Wolfram Burgard, and Daniel
+  Cremers.
+\newblock {A Benchmark for the Evaluation of RGB-D SLAM Systems}.
+\newblock In \emph{IEEE/RSJ International Conference on Intelligent Robots and
+  Systems (IROS)}, pages 573--580, 2012.
+\newblock \doi{10.1109/IROS.2012.6385773}.
+\newblock URL \url{https://cvg.cit.tum.de/data/datasets/rgbd-dataset}.
+\newblock Dati: licenza CC BY 4.0, consultati il 14 novembre 2026.
+
+\bibitem[Wurm and Hornung(s.d.)]{octomap}
+Kai~M. Wurm and Armin Hornung.
+\newblock {OctoMap: An Efficient Probabilistic 3D Mapping Framework Based on
+  Octrees}.
+\newblock sito e sorgente del programma, s.d.
+\newblock URL \url{https://octomap.github.io/}.
+\newblock consultato il 14 novembre 2026.
+
+\bibitem[Bewley et~al.(2016)Bewley, Ge, Ott, Ramos, and Upcroft]{bewley2016}
+Alex Bewley, Zongyuan Ge, Lionel Ott, Fabio Ramos, and Ben Upcroft.
+\newblock {Simple Online and Realtime Tracking}.
+\newblock In \emph{IEEE International Conference on Image Processing (ICIP)},
+  pages 3464--3468, 2016.
+\newblock \doi{10.1109/ICIP.2016.7533003}.
+\newblock URL \url{https://arxiv.org/abs/1602.00763}.
+
+\bibitem[Yan et~al.(2021)Yan, Yang, K{\"a}pyl{\"a}, Zheng, Leonardis, and
+  K{\"a}m{\"a}r{\"a}inen]{depthtrack}
+Song Yan, Jinyu Yang, Jani K{\"a}pyl{\"a}, Feng Zheng, Ale{\v{s}} Leonardis,
+  and Joni-Kristian K{\"a}m{\"a}r{\"a}inen.
+\newblock {DepthTrack: Unveiling the Power of RGBD Tracking}.
+\newblock In \emph{IEEE/CVF International Conference on Computer Vision
+  (ICCV)}, pages 10705--10713, 2021.
+\newblock \doi{10.1109/ICCV48922.2021.01055}.
+\newblock URL \url{https://zenodo.org/records/5792146}.
+\newblock Dati: \emph{DepthTrack Test Set}, Zenodo, 2021, DOI
+  10.5281/zenodo.5792146, licenza CC BY 4.0, consultati il 14 novembre 2026.
+
+\bibitem[Kuhn(1955)]{kuhn1955}
+H.~W. Kuhn.
+\newblock {The Hungarian method for the assignment problem}.
+\newblock \emph{Naval Research Logistics Quarterly}, 2\penalty0
+  (1--2):\penalty0 83--97, 1955.
+\newblock \doi{10.1002/nav.3800020109}.
+\newblock URL \url{https://doi.org/10.1002/nav.3800020109}.
+
+\bibitem[Khurana et~al.(2021)Khurana, Dave, and Ramanan]{khurana2021}
+Tarasha Khurana, Achal Dave, and Deva Ramanan.
+\newblock {Detecting Invisible People}.
+\newblock In \emph{IEEE/CVF International Conference on Computer Vision
+  (ICCV)}, pages 3154--3164, 2021.
+\newblock \doi{10.1109/ICCV48922.2021.00316}.
+\newblock URL \url{https://arxiv.org/abs/2012.08419}.
+
+\bibitem[Koschi and Althoff(2021)]{koschi2021}
+Markus Koschi and Matthias Althoff.
+\newblock {Set-Based Prediction of Traffic Participants Considering Occlusions
+  and Traffic Rules}.
+\newblock \emph{IEEE Transactions on Intelligent Vehicles}, 6\penalty0
+  (2):\penalty0 249--265, 2021.
+\newblock \doi{10.1109/TIV.2020.3017385}.
+
+\bibitem[Koch(2007)]{koch2007}
+Wolfgang Koch.
+\newblock {On exploiting 'negative' sensor evidence for target tracking and
+  sensor data fusion}.
+\newblock \emph{Information Fusion}, 8\penalty0 (1):\penalty0 28--39, 2007.
+\newblock \doi{10.1016/j.inffus.2005.09.002}.
+\newblock URL \url{https://dblp.org/rec/journals/inffus/Koch07}.
+
+\bibitem[Wyffels and Campbell(2015)]{wyffels2015}
+Kevin Wyffels and Mark Campbell.
+\newblock {Negative Information for Occlusion Reasoning in Dynamic Extended
+  Multiobject Tracking}.
+\newblock \emph{IEEE Transactions on Robotics}, 31\penalty0 (2):\penalty0
+  425--442, 2015.
+\newblock \doi{10.1109/TRO.2015.2409413}.
+\newblock URL \url{https://doi.org/10.1109/TRO.2015.2409413}.
+
+\bibitem[Angelopoulos and Bates(2021)]{angelopoulos2021}
+Anastasios~N. Angelopoulos and Stephen Bates.
+\newblock {A Gentle Introduction to Conformal Prediction and Distribution-Free
+  Uncertainty Quantification}.
+\newblock prestampa arXiv:2107.07511, 2021.
+\newblock URL \url{https://arxiv.org/abs/2107.07511}.
+
+\bibitem[Barber et~al.(2021)Barber, Cand{\`e}s, Ramdas, and
+  Tibshirani]{barber2019}
+Rina~Foygel Barber, Emmanuel~J. Cand{\`e}s, Aaditya Ramdas, and Ryan~J.
+  Tibshirani.
+\newblock {The Limits of Distribution-Free Conditional Predictive Inference}.
+\newblock \emph{Information and Inference: A Journal of the IMA}, 10\penalty0
+  (2):\penalty0 455--482, 2021.
+\newblock \doi{10.1093/imaiai/iaaa017}.
+
+\bibitem[Brown et~al.(2001)Brown, Cai, and DasGupta]{brown2001}
+Lawrence~D. Brown, T.~Tony Cai, and Anirban DasGupta.
+\newblock {Interval Estimation for a Binomial Proportion}.
+\newblock \emph{Statistical Science}, 16\penalty0 (2):\penalty0 101--133, 2001.
+\newblock \doi{10.1214/ss/1009213286}.
+
+\bibitem[Clopper and Pearson(1934)]{clopper1934}
+C.~J. Clopper and E.~S. Pearson.
+\newblock {The Use of Confidence or Fiducial Limits Illustrated in the Case of
+  the Binomial}.
+\newblock \emph{Biometrika}, 26\penalty0 (4):\penalty0 404--413, 1934.
+\newblock \doi{10.1093/biomet/26.4.404}.
+\newblock URL \url{https://doi.org/10.1093/biomet/26.4.404}.
+
+\bibitem[Nießner et~al.(2013)Nießner, Zollhöfer, Izadi, and
+  Stamminger]{niessner2013}
+Matthias Nießner, Michael Zollhöfer, Shahram Izadi, and Marc Stamminger.
+\newblock {Real-time 3D Reconstruction at Scale using Voxel Hashing}.
+\newblock \emph{ACM Transactions on Graphics}, 32\penalty0 (6):\penalty0 1--11,
+  2013.
+\newblock \doi{10.1145/2508363.2508374}.
+\newblock URL \url{https://niessnerlab.org/projects/niessner2013hashing.html}.
+
+\bibitem[Schöller et~al.(2020)Schöller, Aravantinos, Lay, and
+  Knoll]{scholler2020}
+Christoph Schöller, Vincent Aravantinos, Florian Lay, and Alois Knoll.
+\newblock {What the Constant Velocity Model Can Teach Us About Pedestrian
+  Motion Prediction}.
+\newblock \emph{IEEE Robotics and Automation Letters}, 5\penalty0 (2):\penalty0
+  1696--1703, 2020.
+\newblock \doi{10.1109/LRA.2020.2969925}.
+\newblock URL \url{https://arxiv.org/abs/1903.07933}.
+
+\bibitem[{Cheraghi Pouria} et~al.(2026){Cheraghi Pouria}, Golchoubian, and
+  Driggs-Campbell]{cheraghipouria2026}
+Fatemeh {Cheraghi Pouria}, Mahsa Golchoubian, and Katherine Driggs-Campbell.
+\newblock {Rethinking Gaussian Trajectory Predictors: Calibrated Uncertainty
+  for Safe Planning}.
+\newblock prestampa arXiv:2603.10407, 2026.
+\newblock URL \url{https://arxiv.org/abs/2603.10407}.
+
+\bibitem[Pellegrini et~al.(2009)Pellegrini, Ess, Schindler, and {Van
+  Gool}]{pellegrini2009}
+S.~Pellegrini, A.~Ess, K.~Schindler, and L.~{Van Gool}.
+\newblock {You'll never walk alone: Modeling social behavior for multi-target
+  tracking}.
+\newblock In \emph{IEEE 12th International Conference on Computer Vision
+  (ICCV)}, pages 261--268, 2009.
+\newblock \doi{10.1109/ICCV.2009.5459260}.
+\newblock URL \url{https://doi.org/10.1109/ICCV.2009.5459260}.
+
+\bibitem[Lerner et~al.(2007)Lerner, Chrysanthou, and Lischinski]{lerner2007}
+A.~Lerner, Y.~Chrysanthou, and D.~Lischinski.
+\newblock {Crowds by Example}.
+\newblock \emph{Computer Graphics Forum}, 26\penalty0 (3):\penalty0 655--664,
+  2007.
+\newblock \doi{10.1111/j.1467-8659.2007.01089.x}.
+\newblock URL \url{https://doi.org/10.1111/j.1467-8659.2007.01089.x}.
+
+\bibitem[{STM}(2021)]{st-um2884}
+\emph{{UM2884 -- A guide to using the VL53L5CX multizone Time-of-Flight ranging
+  sensor with wide field of view Ultra Lite Driver (ULD)}}.
+\newblock {STMicroelectronics}, 2021.
+\newblock URL
+  \url{https://core-electronics.com.au/attachments/localcontent/um2884-a-guide_75701dc7b2e.pdf}.
+\newblock consultato il 14 novembre 2026.
+
+\bibitem[Qiu et~al.(2023)Qiu, Martínez-Sánchez, and Arias]{qiu2023}
+Z.~Qiu, J.~Martínez-Sánchez, and P.~Arias.
+\newblock {Evaluation and comparison of different time of flight cameras for
+  outdoor applications}.
+\newblock \emph{ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial
+  Information Sciences}, X-1/W1-2023:\penalty0 17--23, 2023.
+\newblock \doi{10.5194/isprs-annals-X-1-W1-2023-17-2023}.
+\newblock URL
+  \url{https://isprs-annals.copernicus.org/articles/X-1-W1-2023/17/2023/}.
+
+\bibitem[Elfes(1989)]{elfes1989}
+A.~Elfes.
+\newblock {Using Occupancy Grids for Mobile Robot Perception and Navigation}.
+\newblock \emph{Computer}, 22\penalty0 (6):\penalty0 46--57, 1989.
+\newblock \doi{10.1109/2.30720}.
+
+\bibitem[Hornung et~al.(2013)Hornung, Wurm, Bennewitz, Stachniss, and
+  Burgard]{hornung2013}
+Armin Hornung, Kai~M. Wurm, Maren Bennewitz, Cyrill Stachniss, and Wolfram
+  Burgard.
+\newblock {OctoMap: an efficient probabilistic 3D mapping framework based on
+  octrees}.
+\newblock \emph{Autonomous Robots}, 34\penalty0 (3):\penalty0 189--206, 2013.
+\newblock \doi{10.1007/s10514-012-9321-0}.
+\newblock URL
+  \url{https://www.hrl.uni-bonn.de/papers/hornung13auro-preprint.pdf}.
+
+\bibitem[Duberg and Jensfelt(2020)]{duberg2020}
+Daniel Duberg and Patric Jensfelt.
+\newblock {UFOMap: An Efficient Probabilistic 3D Mapping Framework That
+  Embraces the Unknown}.
+\newblock \emph{IEEE Robotics and Automation Letters}, 5\penalty0 (4):\penalty0
+  6411--6418, 2020.
+\newblock \doi{10.1109/LRA.2020.3013861}.
+\newblock URL \url{https://arxiv.org/abs/2003.04749}.
+
+\bibitem[Moras et~al.(2011)Moras, Cherfaoui, and Bonnifait]{moras2011}
+Julien Moras, Véronique Cherfaoui, and Philippe Bonnifait.
+\newblock {Credibilist Occupancy Grids for Vehicle Perception in Dynamic
+  Environments}.
+\newblock In \emph{IEEE International Conference on Robotics and Automation
+  (ICRA)}, pages 84--89, 2011.
+\newblock \doi{10.1109/ICRA.2011.5980298}.
+\newblock URL \url{https://hal.archives-ouvertes.fr/hal-00615303}.
+
+\bibitem[Nuss et~al.(2018)Nuss, Reuter, Thom, Yuan, Krehl, Maile, Gern, and
+  Dietmayer]{nuss2018}
+Dominik Nuss, Stephan Reuter, Markus Thom, Ting Yuan, Gunther Krehl, Michael
+  Maile, Axel Gern, and Klaus Dietmayer.
+\newblock {A random finite set approach for dynamic occupancy grid maps with
+  real-time application}.
+\newblock \emph{The International Journal of Robotics Research}, 37\penalty0
+  (8):\penalty0 841--866, 2018.
+\newblock \doi{10.1177/0278364918775523}.
+\newblock URL \url{https://arxiv.org/abs/1605.02406}.
+
+\bibitem[Oleynikova et~al.(2017)Oleynikova, Taylor, Fehr, Nieto, and
+  Siegwart]{oleynikova2017}
+Helen Oleynikova, Zachary Taylor, Marius Fehr, Juan Nieto, and Roland Siegwart.
+\newblock {Voxblox: Incremental 3D Euclidean Signed Distance Fields for
+  On-Board MAV Planning}.
+\newblock In \emph{IEEE/RSJ International Conference on Intelligent Robots and
+  Systems (IROS)}, pages 1366--1373, 2017.
+\newblock \doi{10.1109/IROS.2017.8202315}.
+\newblock URL \url{https://arxiv.org/abs/1611.03631}.
+
+\bibitem[Millane et~al.(2024)Millane, Oleynikova, Wirbel, Steiner, Ramasamy,
+  Tingdahl, and Siegwart]{millane2024}
+Alexander Millane, Helen Oleynikova, Emilie Wirbel, Remo Steiner, Vikram
+  Ramasamy, David Tingdahl, and Roland Siegwart.
+\newblock {nvblox: GPU-Accelerated Incremental Signed Distance Field Mapping}.
+\newblock In \emph{2024 IEEE International Conference on Robotics and
+  Automation (ICRA)}, pages 2698--2705, 2024.
+\newblock \doi{10.1109/ICRA57147.2024.10611532}.
+\newblock URL \url{https://arxiv.org/abs/2311.00626}.
+
+\bibitem[Usenko et~al.(2017)Usenko, von Stumberg, Pangercic, and
+  Cremers]{usenko2017}
+Vladyslav Usenko, Lukas von Stumberg, Andrej Pangercic, and Daniel Cremers.
+\newblock {Real-Time Trajectory Replanning for MAVs using Uniform B-splines and
+  a 3D Circular Buffer}.
+\newblock In \emph{IEEE/RSJ International Conference on Intelligent Robots and
+  Systems (IROS)}, pages 215--222, 2017.
+\newblock \doi{10.1109/IROS.2017.8202160}.
+\newblock URL \url{https://arxiv.org/abs/1703.01416}.
+
+\bibitem[Weng et~al.(2020)Weng, Wang, Held, and Kitani]{weng2020}
+Xinshuo Weng, Jianren Wang, David Held, and Kris Kitani.
+\newblock {3D Multi-Object Tracking: A Baseline and New Evaluation Metrics}.
+\newblock In \emph{IEEE/RSJ International Conference on Intelligent Robots and
+  Systems (IROS)}, pages 10359--10366, 2020.
+\newblock \doi{10.1109/IROS45743.2020.9341164}.
+
+\bibitem[Bar-Shalom et~al.(2001)Bar-Shalom, Li, and Kirubarajan]{barshalom2001}
+Yaakov Bar-Shalom, X.-Rong Li, and Thiagalingam Kirubarajan.
+\newblock \emph{{Estimation with Applications to Tracking and Navigation:
+  Theory, Algorithms and Software}}.
+\newblock Wiley, 2001.
+\newblock ISBN 9780471416555.
+\newblock \doi{10.1002/0471221279}.
+
+\bibitem[Zhang et~al.(2022)Zhang, Sun, Jiang, Yu, Weng, Yuan, Luo, Liu, and
+  Wang]{zhang2022}
+Yifu Zhang, Peize Sun, Yi~Jiang, Dongdong Yu, Fucheng Weng, Zehuan Yuan, Ping
+  Luo, Wenyu Liu, and Xinggang Wang.
+\newblock {ByteTrack: Multi-Object Tracking by Associating Every Detection
+  Box}.
+\newblock In \emph{Computer Vision -- ECCV 2022, Lecture Notes in Computer
+  Science, Springer}, pages 1--21, 2022.
+\newblock \doi{10.1007/978-3-031-20047-2_1}.
+\newblock URL \url{https://arxiv.org/abs/2110.06864}.
+
+\bibitem[Aharon et~al.(2022)Aharon, Orfaig, and Bobrovsky]{aharon2022}
+Nir Aharon, Roy Orfaig, and Ben-Zion Bobrovsky.
+\newblock {BoT-SORT: Robust Associations Multi-Pedestrian Tracking}.
+\newblock prestampa arXiv, 2022.
+\newblock URL \url{https://arxiv.org/abs/2206.14651}.
+
+\bibitem[Pang et~al.(2023)Pang, Li, and Wang]{pang2021}
+Ziqi Pang, Zhichao Li, and Naiyan Wang.
+\newblock {SimpleTrack: Understanding and Rethinking 3D Multi-object Tracking}.
+\newblock In \emph{Computer Vision -- ECCV 2022 Workshops, Lecture Notes in
+  Computer Science, Springer}, pages 680--696, 2023.
+\newblock \doi{10.1007/978-3-031-25056-9_43}.
+\newblock URL \url{https://arxiv.org/abs/2111.09621}.
+
+\bibitem[Tokmakov et~al.(2021)Tokmakov, Li, Burgard, and Gaidon]{tokmakov2021}
+Pavel Tokmakov, Jie Li, Wolfram Burgard, and Adrien Gaidon.
+\newblock {Learning to Track with Object Permanence}.
+\newblock In \emph{IEEE/CVF International Conference on Computer Vision
+  (ICCV)}, pages 10840--10849, 2021.
+\newblock \doi{10.1109/ICCV48922.2021.01068}.
+\newblock URL \url{https://arxiv.org/abs/2103.14258}.
+
+\bibitem[Hsieh et~al.(2023)Hsieh, Chen, Dave, Khurana, and Ramanan]{hsieh2023}
+Cheng-Yen Hsieh, Kaihua Chen, Achal Dave, Tarasha Khurana, and Deva Ramanan.
+\newblock {TAO-Amodal: A Benchmark for Tracking Any Object Amodally}.
+\newblock prestampa arXiv:2312.12433, 2023.
+\newblock URL \url{https://arxiv.org/abs/2312.12433}.
+
+\bibitem[{Van Hoorick} et~al.(2023){Van Hoorick}, Tokmakov, Stent, Li, and
+  Vondrick]{vanhoorick2023}
+Basile {Van Hoorick}, Pavel Tokmakov, Simon Stent, Jie Li, and Carl Vondrick.
+\newblock {Tracking Through Containers and Occluders in the Wild}.
+\newblock In \emph{IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition (CVPR)}, pages 13802--13812, 2023.
+\newblock \doi{10.1109/CVPR52729.2023.01326}.
+\newblock URL \url{https://arxiv.org/abs/2305.03052}.
+
+\bibitem[Krejčí et~al.(2026)Krejčí, Kost, Xia, Svensson, and
+  Straka]{krejci2026}
+Jan Krejčí, Oliver Kost, Yuxuan Xia, Lennart Svensson, and Ondřej Straka.
+\newblock {Occlusion-Aware Multiobject Tracking via Expected Probability of
+  Detection}.
+\newblock \emph{IEEE Transactions on Aerospace and Electronic Systems},
+  62:\penalty0 8211--8228, 2026.
+\newblock \doi{10.1109/TAES.2026.3676431}.
+\newblock URL \url{https://arxiv.org/abs/2511.20239}.
+
+\bibitem[Guibas et~al.(1999)Guibas, Latombe, LaValle, Lin, and
+  Motwani]{guibas1997}
+Leonidas~J. Guibas, Jean-Claude Latombe, Steven~M. LaValle, David Lin, and
+  Rajeev Motwani.
+\newblock {A Visibility-Based Pursuit-Evasion Problem}.
+\newblock \emph{International Journal of Computational Geometry \&
+  Applications}, 9\penalty0 (4--5):\penalty0 471--493, 1999.
+\newblock \doi{10.1142/S0218195999000273}.
+\newblock Versione di rivista; prima versione negli atti di un convegno del
+  1997, DOI 10.1007/3-540-63307-3\_45.
+
+\bibitem[Scholl and Pylyshyn(1999)]{scholl1999}
+Brian~J. Scholl and Zenon~W. Pylyshyn.
+\newblock {Tracking Multiple Items Through Occlusion: Clues to Visual
+  Objecthood}.
+\newblock \emph{Cognitive Psychology}, 38\penalty0 (2):\penalty0 259--290,
+  1999.
+\newblock \doi{10.1006/cogp.1998.0698}.
+\newblock URL \url{https://doi.org/10.1006/cogp.1998.0698}.
+
+\bibitem[Kress et~al.(2023)Kress, Jeske, Zernetsch, Doll, and Sick]{kress2021}
+Viktor Kress, Fabian Jeske, Stefan Zernetsch, Konrad Doll, and Bernhard Sick.
+\newblock {Pose and Semantic Map Based Probabilistic Forecast of Vulnerable
+  Road Users' Trajectories}.
+\newblock \emph{IEEE Transactions on Intelligent Vehicles}, 8\penalty0
+  (3):\penalty0 2592--2603, 2023.
+\newblock \doi{10.1109/TIV.2022.3149624}.
+\newblock URL \url{https://arxiv.org/abs/2106.02598}.
+
+\bibitem[Gneiting and Raftery(2007)]{gneiting2007}
+Tilmann Gneiting and Adrian~E. Raftery.
+\newblock {Strictly Proper Scoring Rules, Prediction, and Estimation}.
+\newblock \emph{Journal of the American Statistical Association}, 102\penalty0
+  (477):\penalty0 359--378, 2007.
+\newblock \doi{10.1198/016214506000001437}.
+\newblock URL
+  \url{https://sites.stat.washington.edu/raftery/Research/PDF/Gneiting2007jasa.pdf}.
+
+\bibitem[Uhlemann et~al.(2024)Uhlemann, Fent, and Lienkamp]{uhlemann2024}
+Nico Uhlemann, Felix Fent, and Markus Lienkamp.
+\newblock {Evaluating Pedestrian Trajectory Prediction Methods with Respect to
+  Autonomous Driving}.
+\newblock \emph{IEEE Transactions on Intelligent Transportation Systems},
+  25\penalty0 (10):\penalty0 13937--13946, 2024.
+\newblock \doi{10.1109/TITS.2024.3386195}.
+\newblock URL \url{https://arxiv.org/abs/2308.05194}.
+
+\bibitem[Lindemann et~al.(2023)Lindemann, Cleaveland, Shim, and
+  Pappas]{lindemann2023}
+Lars Lindemann, Matthew Cleaveland, Gihyun Shim, and George~J. Pappas.
+\newblock {Safe Planning in Dynamic Environments Using Conformal Prediction}.
+\newblock \emph{IEEE Robotics and Automation Letters}, 8\penalty0 (8):\penalty0
+  5116--5123, 2023.
+\newblock \doi{10.1109/LRA.2023.3292071}.
+\newblock URL \url{https://arxiv.org/abs/2210.10254}.
+
+\bibitem[Cleaveland et~al.(2024)Cleaveland, Lee, Pappas, and
+  Lindemann]{cleaveland2024}
+Matthew Cleaveland, Insup Lee, George~J. Pappas, and Lars Lindemann.
+\newblock {Conformal Prediction Regions for Time Series Using Linear
+  Complementarity Programming}.
+\newblock \emph{Proceedings of the AAAI Conference on Artificial Intelligence},
+  38\penalty0 (19):\penalty0 20984--20992, 2024.
+\newblock \doi{10.1609/aaai.v38i19.30089}.
+\newblock URL \url{https://arxiv.org/abs/2304.01075}.
+
+\bibitem[Gibbs and Cand{\`e}s(2021)]{gibbs2021}
+Isaac Gibbs and Emmanuel Cand{\`e}s.
+\newblock {Adaptive Conformal Inference Under Distribution Shift}.
+\newblock In \emph{Advances in Neural Information Processing Systems 34
+  (NeurIPS 2021)}, 2021.
+\newblock URL
+  \url{https://proceedings.neurips.cc/paper/2021/hash/0d441de75945e5acbc865406fc9a2559-Abstract.html}.
+
+\bibitem[Dixit et~al.(2023)Dixit, Lindemann, Wei, Cleaveland, Pappas, and
+  Burdick]{dixit2022}
+Anushri Dixit, Lars Lindemann, Skylar Wei, Matthew Cleaveland, George~J.
+  Pappas, and Joel~W. Burdick.
+\newblock {Adaptive Conformal Prediction for Motion Planning among Dynamic
+  Agents}.
+\newblock In \emph{Learning for Dynamics and Control Conference (L4DC),
+  Proceedings of Machine Learning Research}, volume 211, pages 300--314, 2023.
+\newblock URL \url{https://arxiv.org/abs/2212.00278}.
+
+\bibitem[Balch et~al.(2019)Balch, Martin, and Ferson]{balch2019}
+Michael~S. Balch, Ryan Martin, and Scott Ferson.
+\newblock {Satellite conjunction analysis and the false confidence theorem}.
+\newblock \emph{Proceedings of the Royal Society A}, 475\penalty0
+  (2227):\penalty0 20180565, 2019.
+\newblock \doi{10.1098/rspa.2018.0565}.
+\newblock URL \url{https://arxiv.org/abs/1706.08565}.
+
+\bibitem[Marvel and Norcross(2017)]{marvel2017}
+Jeremy~A. Marvel and Rick Norcross.
+\newblock {Implementing Speed and Separation Monitoring in Collaborative Robot
+  Workcells}.
+\newblock \emph{Robotics and Computer-Integrated Manufacturing}, 44:\penalty0
+  144--155, 2017.
+\newblock \doi{10.1016/j.rcim.2016.08.001}.
+\newblock URL \url{https://pmc.ncbi.nlm.nih.gov/articles/PMC5117641}.
+
+\bibitem[Denenberg et~al.(2023)Denenberg, Vu, Sobalvarro, Persits, Kriveshko,
+  Simon, Moel, Foy, and Bronder]{us-brevetto-11846916}
+Scott Denenberg, Clara Vu, Patrick Sobalvarro, Lev Persits, Ilya~A. Kriveshko,
+  Elliot Simon, Alberto Moel, Patrick~J. Foy, and Justin Bronder.
+\newblock {System architecture for safety applications}.
+\newblock brevetto degli Stati Uniti US 11846916 B2, depositato il 22-11-2022,
+  concesso il 19-12-2023, 2023.
+\newblock URL
+  \url{https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/11846916}.
+\newblock consultato il 14 novembre 2026.
+
+\bibitem[{United States, Federal Railroad
+  Administration}(s.d.)]{us-49cfr-236-205}
+{United States, Federal Railroad Administration}.
+\newblock {49 CFR \S\,236.205 -- Signal control circuits; requirements}.
+\newblock Code of Federal Regulations, titolo 49, parte 236; 33 FR 19684
+  (1968), modificato da 49 FR 3385 (1984), s.d.
+\newblock URL \url{https://www.customsmobile.com/regulations/49/236.205}.
+\newblock consultato il 14 novembre 2026.
+
+\bibitem[Xu et~al.(2023)Xu, Kennedy, Zhao, Zhang, and {Van Schyndel}]{xu2023}
+Peijie Xu, Gerard~A. Kennedy, Fei-Yi Zhao, Wen-Jing Zhang, and Ron {Van
+  Schyndel}.
+\newblock {Wearable Obstacle Avoidance Electronic Travel Aids for Blind and
+  Visually Impaired Individuals: A Systematic Review}.
+\newblock \emph{IEEE Access}, 11:\penalty0 66587--66613, 2023.
+\newblock \doi{10.1109/ACCESS.2023.3285396}.
+\newblock URL \url{https://doaj.org/article/69f50f5aa56e4c9fb3f54d8d3d05cf83}.
+
+\bibitem[Romlay et~al.(2021)Romlay, Toha, Ibrahim, and Venkat]{romlay2021}
+Muhammad Rabani~Mohd Romlay, Siti~Fauziah Toha, Azhar~Mohd Ibrahim, and Ibrahim
+  Venkat.
+\newblock {Methodologies and evaluation of electronic travel aids for the
+  visually impaired people: a review}.
+\newblock \emph{Bulletin of Electrical Engineering and Informatics},
+  10\penalty0 (3):\penalty0 1747--1758, 2021.
+\newblock \doi{10.11591/eei.v10i3.3055}.
+\newblock URL \url{https://beei.org/index.php/EEI/article/view/3055}.
+
+\bibitem[Kayukawa et~al.(2019)Kayukawa, Higuchi, Guerreiro, Morishima, Sato,
+  Kitani, and Asakawa]{kayukawa2019}
+Seita Kayukawa, Keita Higuchi, João Guerreiro, Shigeo Morishima, Yoichi Sato,
+  Kris Kitani, and Chieko Asakawa.
+\newblock {BBeep: A Sonic Collision Avoidance System for Blind Travellers and
+  Nearby Pedestrians}.
+\newblock In \emph{CHI Conference on Human Factors in Computing Systems (CHI
+  2019)}, pages 1--12, 2019.
+\newblock \doi{10.1145/3290605.3300282}.
+\newblock URL
+  \url{https://wotipati.github.io/projects/BBeep/paper/CHI'19_BBeep_preprint.pdf}.
+
+\bibitem[{Dos Santos} et~al.(2025){Dos Santos}, Loureiro, Machado, Frizera, and
+  Medola]{dossantos2025}
+A.~D.~P. {Dos Santos}, M.~Loureiro, F.~Machado, A.~Frizera, and F.~O. Medola.
+\newblock {NavWear: design and evaluation of a wearable device for obstacle
+  detection for blind and visually impaired people}.
+\newblock \emph{Disability and Rehabilitation: Assistive Technology},
+  20\penalty0 (6):\penalty0 1800--1814, 2025.
+\newblock \doi{10.1080/17483107.2025.2477681}.
+\newblock URL \url{https://pubmed.ncbi.nlm.nih.gov/40100749/}.
+
+\bibitem[Kozlov et~al.(2026)Kozlov, Trandofilov, Gazaryan, Tokmurziyev,
+  {Altamirano Cabrera}, and Tsetserukou]{kozlov2026}
+Timofei Kozlov, Artem Trandofilov, Georgii Gazaryan, Issatay Tokmurziyev,
+  Miguel {Altamirano Cabrera}, and Dzmitry Tsetserukou.
+\newblock {GuideTouch: An Obstacle Avoidance Device with Tactile Feedback for
+  Visually Impaired}.
+\newblock prestampa arXiv:2601.13813, 2026.
+\newblock URL \url{https://arxiv.org/abs/2601.13813}.
+
+\bibitem[Martinez et~al.(2014)Martinez, Constantinescu, Schauerte, Koester, and
+  Stiefelhagen]{martinez2014}
+Manuel Martinez, Angela Constantinescu, Boris Schauerte, Daniel Koester, and
+  Rainer Stiefelhagen.
+\newblock {Cognitive Evaluation of Haptic and Audio Feedback in Short Range
+  Navigation Tasks}.
+\newblock In \emph{Computers Helping People with Special Needs (ICCHP 2014),
+  Lecture Notes in Computer Science, Springer}, pages 128--135, 2014.
+\newblock \doi{10.1007/978-3-319-08599-9_20}.
+\newblock URL \url{https://doi.org/10.1007/978-3-319-08599-9_20}.
+
+\bibitem[Lupu et~al.(2020)Lupu, Mitruț, Stan, Ungureanu, Kalimeri, and
+  Moldoveanu]{lupu2020}
+Robert-Gabriel Lupu, Oana Mitruț, Andrei Stan, Florina Ungureanu, Kyriaki
+  Kalimeri, and Alin Moldoveanu.
+\newblock {Cognitive and Affective Assessment of Navigation and Mobility Tasks
+  for the Visually Impaired via Electroencephalography and Behavioral Signals}.
+\newblock \emph{Sensors}, 20\penalty0 (20):\penalty0 5821, 2020.
+\newblock \doi{10.3390/s20205821}.
+\newblock URL \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7602506/}.
+
+\bibitem[Giudice et~al.(2008)Giudice, Marston, Klatzky, Loomis, and
+  Golledge]{giudice2008}
+Nicholas~A. Giudice, James~R. Marston, Roberta~L. Klatzky, Jack~M. Loomis, and
+  Reginald~G. Golledge.
+\newblock {Environmental learning without vision: Effects of cognitive load on
+  interface design}.
+\newblock In \emph{Proceedings of the 9th International Conference on Low
+  Vision (Vision 2008), Montr\'eal}, 2008.
+\newblock URL
+  \url{https://umaine.edu/vemi/publication/environmental-learning-without-vision-effects-cognitive-load-interface-design}.
+\newblock consultato il 14 novembre 2026.
+
+\bibitem[RealSense({\natexlab{c}})]{realsense-alta-velocita-d435}
+RealSense.
+\newblock \emph{{High-speed capture mode of RealSense Depth Camera D435}}.
+\newblock RealSense, s.d.{\natexlab{c}}.
+\newblock URL
+  \url{https://dev.realsenseai.com/docs/high-speed-capture-mode-of-intel-realsense-depth-camera-d435}.
+\newblock Documentazione per sviluppatori, consultata il 14 novembre 2026.
+
+\bibitem[{Wikipedia}(s.d.{\natexlab{a}})]{wiki-stopping-sight}
+{Wikipedia}.
+\newblock {Stopping sight distance}.
+\newblock voce enciclopedica, fonte secondaria, s.d.{\natexlab{a}}.
+\newblock URL \url{https://en.wikipedia.org/wiki/Stopping_sight_distance}.
+\newblock consultata il 15 novembre 2026.
+
+\bibitem[{Robin Radar Systems}(2026)]{robin-iris}
+{Robin Radar Systems}.
+\newblock {IRIS} -- product sheet.
+\newblock scheda di prodotto, aprile 2026, 2026.
+\newblock URL
+  \url{https://www.robinradar.com/hubfs/IRIS%20product%20sheet%20042026.pdf}.
+\newblock consultata il 15 novembre 2026.
+
+\bibitem[{Terma}(2021)]{terma-scanter5000}
+{Terma}.
+\newblock {SCANTER 5000} surface movement radar.
+\newblock scheda di prodotto, dicembre 2021, 2021.
+\newblock URL
+  \url{https://www.terma.com/media/ndthpjic/terma_scanter5000_smr_a4_dec2021.pdf}.
+\newblock consultata il 15 novembre 2026.
+
+\bibitem[{Hesai Technology}(s.d.)]{hesai-at128}
+{Hesai Technology}.
+\newblock {AT128}.
+\newblock pagina del prodotto, s.d.
+\newblock URL \url{https://www.hesaitech.com/product/at128/}.
+\newblock consultata il 15 novembre 2026.
+
+\bibitem[{Livox}(s.d.)]{livox-tele15}
+{Livox}.
+\newblock {Tele-15} -- specs.
+\newblock pagina delle specifiche, s.d.
+\newblock URL \url{https://www.livoxtech.com/tele-15/specs}.
+\newblock consultata il 15 novembre 2026.
+
+\bibitem[{United States, Federal Aviation
+  Administration}(s.d.{\natexlab{a}})]{cfr-91-227}
+{United States, Federal Aviation Administration}.
+\newblock {14 CFR \S\,91.227 -- Automatic Dependent Surveillance-Broadcast
+  (ADS-B) Out equipment performance requirements}.
+\newblock Code of Federal Regulations, titolo 14, parte 91, s.d.{\natexlab{a}}.
+\newblock URL \url{https://www.law.cornell.edu/cfr/text/14/91.227}.
+\newblock consultato il 15 novembre 2026.
+
+\bibitem[{United States, Federal Aviation
+  Administration}(s.d.{\natexlab{b}})]{cfr-89-310}
+{United States, Federal Aviation Administration}.
+\newblock {14 CFR \S\,89.310 -- Minimum performance requirements for standard
+  remote identification unmanned aircraft}.
+\newblock Code of Federal Regulations, titolo 14, parte 89, s.d.{\natexlab{b}}.
+\newblock URL \url{https://www.law.cornell.edu/cfr/text/14/89.310}.
+\newblock consultato il 15 novembre 2026.
+
+\bibitem[{Echodyne}(s.d.)]{echodyne-echoguard}
+{Echodyne}.
+\newblock {EchoGuard}.
+\newblock pagina del prodotto; lette solo le accuratezze, s.d.
+\newblock URL \url{https://www.echodyne.com/radar-systems/echoguard}.
+\newblock consultata il 15 novembre 2026.
+
+\bibitem[{Wikipedia}(s.d.{\natexlab{b}})]{wiki-johnson}
+{Wikipedia}.
+\newblock {Johnson's criteria}.
+\newblock voce enciclopedica, fonte secondaria, s.d.{\natexlab{b}}.
+\newblock URL \url{https://en.wikipedia.org/wiki/Johnson%27s_criteria}.
+\newblock consultata il 15 novembre 2026.
+
+\bibitem[{adsb.lol}(s.d.)]{adsblol}
+{adsb.lol}.
+\newblock {adsb.lol} -- open ads-b data, api v2.
+\newblock servizio di dati aperti; licenza ODbL 1.0, s.d.
+\newblock URL \url{https://api.adsb.lol/v2/point/33.6407/-84.4277/12}.
+\newblock interrogato il 15 novembre 2026 attorno all'aeroporto di Atlanta.
+
+\bibitem[{El Ouanbi} and Amellal(s.d.)]{zenodo-lhr-zrh}
+{El Ouanbi} and Amellal.
+\newblock {Cleaned ADS-B Trajectories (LHR-ZRH 2025) for AI Training}.
+\newblock insieme di dati, Zenodo, record 18916312; dati d'origine OpenSky
+  Network; licenza CC BY 4.0, s.d.
+\newblock URL \url{https://zenodo.org/records/18916312}.
+\newblock consultato il 15 novembre 2026.
+
+\bibitem[Patrikar et~al.(s.d.)]{trajair}
+Patrikar et~al.
+\newblock {TrajAir: A General Aviation Trajectory Dataset}.
+\newblock insieme di dati, Carnegie Mellon University, KiltHub; licenza CC BY
+  4.0, s.d.
+\newblock URL
+  \url{https://kilthub.cmu.edu/articles/dataset/TrajAir_A_General_Aviation_Trajectory_Dataset/14866251}.
+\newblock consultato il 15 novembre 2026.
+
+\bibitem[Rodrigues et~al.(s.d.)]{cmu-drone}
+Rodrigues et~al.
+\newblock {Data Collected with Package Delivery Quadcopter Drone}.
+\newblock insieme di dati, Carnegie Mellon University, KiltHub; licenza CC BY
+  4.0, s.d.
+\newblock URL
+  \url{https://kilthub.cmu.edu/articles/dataset/Data_Collected_with_Package_Delivery_Quadcopter_Drone/12683453}.
+\newblock consultato il 15 novembre 2026.
+
+\bibitem[Keipour et~al.(s.d.)Keipour, Mousaei, and Scherer]{alfa}
+Keipour, Mousaei, and Scherer.
+\newblock {ALFA: A Dataset for UAV Fault and Anomaly Detection}.
+\newblock insieme di dati, Carnegie Mellon University, KiltHub; licenza CC BY
+  4.0, s.d.
+\newblock URL
+  \url{https://kilthub.cmu.edu/articles/dataset/ALFA_A_Dataset_for_UAV_Fault_and_Anomaly_Detection/12707963}.
+\newblock consultato il 15 novembre 2026.
+
+\bibitem[{United States Department of Transportation, Federal Highway
+  Administration}(s.d.)]{ngsim}
+{United States Department of Transportation, Federal Highway Administration}.
+\newblock {Next Generation Simulation (NGSIM) Vehicle Trajectories}.
+\newblock insieme di dati; licenza CC BY-SA 3.0, s.d.
+\newblock URL \url{https://data.transportation.gov/d/8ect-6jqj}.
+\newblock consultato il 15 novembre 2026, tratto US-101.
+
+\bibitem[{Fintraffic}(2026)]{digitraffic}
+{Fintraffic}.
+\newblock {Digitraffic} -- rail traffic, train locations.
+\newblock interfaccia di dati aperti; licenza CC BY 4.0; fonte: Fintraffic /
+  digitraffic.fi, 2026.
+\newblock URL \url{https://rata.digitraffic.fi/api/v1/train-locations/}.
+\newblock posizioni del 12 novembre 2026, consultate il 15 novembre 2026.
+
+\bibitem[{Federal Aviation Administration}()]{faa-ac-90-48d}
+{Federal Aviation Administration}.
+\newblock {Advisory Circular 90-48D, Change 1}.
+\newblock URL
+  \url{https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_90-48D_CHG_1.pdf}.
+\newblock [353] Stato di verifica: non raggiungibile (dichiarato dal rapporto
+  che la cita, 15-11-2026; non riaperta dal curatore). Seconda fase.
+
+\end{thebibliography}
