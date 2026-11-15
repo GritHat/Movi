@@ -222,3 +222,17 @@ Testo dell'utente, per intero:
 - **Perdita di continuità:** dove la continuità si perde, una stima esatta (in forma chiusa o con il suo metodo di calcolo e la sua verifica) della confidenza in funzione del tempo.
 - **Stato dell'arte e hardware dedicato:** sensori allo stato dell'arte e stime di tempi di elaborazione con unità dedicate (esistenti o progettate apposta), per analogia documentata con acceleratori dedicati (per esempio i chip per modelli linguistici); sono stime, dichiarate come tali.
 - Il montaggio finale del video in corso è stato fermato (i suoi file restano) e riparte sul caso nuovo.
+
+## Decisioni autonome del coordinatore dopo il verdetto della fase 3 (15-11-2026, 05:45)
+
+Prese con l'autorizzazione notturna (tutto tranne cancellare file):
+- **D1.** Si prova la regola di contatto per dichiarare la collisione veloce fra droni (F3 dà 0/60 nel verdetto della fase 3). Soglie scritte prima: F3 entro 2 s ≥ 51/60 con F6 0/200 falsi eventi. Il caso centrale si presenta in ogni caso: la collisione veloce va come risultato o come limite dichiarato, secondo l'esito.
+- **D2.** Il nucleo corretto v3i (insieme di presenza a 210 m/s) diventa il nucleo v4, in un file nuovo; la v3 resta.
+- **D3.** E1 si rifà con l'integratore stabile dei frammenti (K-709).
+- **D4.** La taratura della confidenza nel tempo va fatta su metà dei mezzi ADS-B e verificata sull'altra metà.
+- **D5.** Si aprono le fonti segnate «non aperta» prima di citarle.
+- **D6.** Ultima tornata (workflow «sciame-fase4-chiusura»):
+  - documento tecnico v3, con la v2 copiata in `allegato_tecnico/v2/`;
+  - proposta v3.0, stato del progetto v5;
+  - video v3 sul volo veloce (`video/progetto_v3`, copia del progetto);
+  - controllo e correzioni entro le 09:40.
