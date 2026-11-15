@@ -6,3 +6,8 @@ rendering/controllo_*/
 progetto/dati_sviluppo/
 voce/*.wav
 voce/**/*.wav
+progetto_v3/node_modules/
+progetto_v3/.hyperframes/
+progetto_v3/renders/
+progetto_v3/dati_sviluppo/
+consegna/*.mp4
