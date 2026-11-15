@@ -1,0 +1,226 @@
+1
+00:00:00,150 --> 00:00:01,467
+Un piazzale.
+
+2
+00:00:01,521 --> 00:00:02,538
+Un hangar.
+
+3
+00:00:02,592 --> 00:00:04,648
+Due droni d'ispezione.
+
+4
+00:00:04,702 --> 00:00:06,736
+Un aereo in rullaggio.
+
+5
+00:00:06,790 --> 00:00:09,308
+Un drone scivola dietro l'hangar.
+
+6
+00:00:09,362 --> 00:00:12,157
+Che cosa deve dire lo schermo, adesso?
+
+7
+00:00:13,900 --> 00:00:17,691
+Per ogni oggetto seguito, MoVi dà una di
+tre risposte.
+
+8
+00:00:17,743 --> 00:00:18,635
+Lo vedo.
+
+9
+00:00:18,687 --> 00:00:21,140
+Non lo vedo: ecco dove può essere.
+
+10
+00:00:21,192 --> 00:00:22,709
+Oppure: non lo so.
+
+11
+00:00:22,761 --> 00:00:26,729
+Ciò che non ha osservato lo segna non
+verificato, mai vuoto.
+
+12
+00:00:26,782 --> 00:00:32,130
+Un avviso di possibile presenza resta
+acceso finché un sensore non torna a
+
+13
+00:00:32,130 --> 00:00:32,780
+guardare.
+
+14
+00:00:37,400 --> 00:00:42,564
+Radar, LiDAR, camere visibili e termiche,
+e ciò che trasmettono aerei e droni.
+
+15
+00:00:42,613 --> 00:00:45,750
+Tutto simulato dalle schede tecniche
+pubbliche.
+
+16
+00:00:45,799 --> 00:00:49,249
+Ogni sensore ha i suoi punti ciechi, e
+MoVi li disegna.
+
+17
+00:00:51,900 --> 00:00:53,618
+Nebbia, poi pioggia forte.
+
+18
+00:00:53,659 --> 00:00:57,731
+Per calcolo, la portata delle camere
+crolla, e MoVi lo dichiara, sensore per
+
+19
+00:00:57,731 --> 00:00:58,159
+sensore.
+
+20
+00:00:58,201 --> 00:01:00,592
+Resta solo il radar: ridondanza assente.
+
+21
+00:01:00,633 --> 00:01:04,832
+Se cade anche il radar, un guasto che
+introduciamo noi, l'affidabilità è persa:
+
+22
+00:01:04,832 --> 00:01:06,851
+gli avvisi arriverebbero troppo tardi.
+
+23
+00:01:10,400 --> 00:01:12,096
+Due droni volano vicini.
+
+24
+00:01:12,136 --> 00:01:14,877
+Troppo vicini per separarli: tracce non
+risolte.
+
+25
+00:01:14,917 --> 00:01:16,580
+Evento: contatto, dedotto.
+
+26
+00:01:16,620 --> 00:01:20,252
+Si apre un volume di possibili detriti,
+che non si restringe mai da solo.
+
+27
+00:01:20,292 --> 00:01:24,597
+Il nostro punto debole: in simulazione, il
+contatto è stato dichiarato entro due
+
+28
+00:01:24,597 --> 00:01:26,426
+secondi in un passaggio su sedici.
+
+29
+00:01:30,900 --> 00:01:35,157
+Un motore ha un'avaria in rullaggio, con
+una fiammata.
+
+30
+00:01:35,220 --> 00:01:41,513
+La fiammata acceca le camere: MoVi le
+dichiara non affidabili, in trentadue
+
+31
+00:01:41,513 --> 00:01:43,359
+passaggi su trentadue.
+
+32
+00:01:43,422 --> 00:01:47,492
+Nel modello, il solo radar vede ancora
+l'aereo.
+
+33
+00:01:47,555 --> 00:01:50,339
+Dietro il fumo: non osservato.
+
+34
+00:01:52,400 --> 00:01:53,803
+Prima, i limiti.
+
+35
+00:01:53,850 --> 00:01:56,756
+Tutto è simulato dalle schede tecniche
+pubbliche.
+
+36
+00:01:56,803 --> 00:01:59,268
+Quasi metà dei valori sono ipotesi.
+
+37
+00:01:59,315 --> 00:02:01,179
+Nessun sensore fisico.
+
+38
+00:02:01,226 --> 00:02:03,650
+Le classi sono etichettate a mano.
+
+39
+00:02:03,697 --> 00:02:06,965
+Le regole degli eventi non sono ancora nel
+prototipo.
+
+40
+00:02:07,011 --> 00:02:10,538
+Per gli aerei in volo, l'avviso non arriva
+ancora in tempo.
+
+41
+00:02:10,585 --> 00:02:12,790
+Ritardo totale: non misurato.
+
+42
+00:02:12,837 --> 00:02:17,749
+Che cosa regge, in simulazione: un drone
+nascosto dietro un edificio è stato
+
+43
+00:02:17,749 --> 00:02:21,174
+annunciato in tempo in duecento passaggi
+su duecento.
+
+44
+00:02:21,221 --> 00:02:24,708
+Zero passaggi su seicento hanno perso
+quell'avviso.
+
+45
+00:02:28,900 --> 00:02:33,127
+Il nucleo viene dalla nostra versione a
+corto raggio: una persona dietro un
+
+46
+00:02:33,127 --> 00:02:36,452
+ostacolo, una camera di profondità, le
+stesse tre risposte.
+
+47
+00:02:39,100 --> 00:02:39,808
+MoVi.
+
+48
+00:02:39,865 --> 00:02:43,805
+Visto, non visto, non so: dichiarato per
+ogni traccia.
+
+49
+00:02:43,861 --> 00:02:45,735
+Osserva e avvisa.
+
+50
+00:02:45,791 --> 00:02:48,193
+Nessuna uscita è un comando.
+
+51
+00:02:48,249 --> 00:02:51,060
+Un progetto di SDMs.

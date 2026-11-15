@@ -1,0 +1,19 @@
+Aerei e droni veloci. Una collisione, un'avaria al motore, una fiammata che acceca ogni camera. Quando la vista si perde, che cosa deve dire lo schermo?
+
+MoVi dichiara ciò che non ha osservato. Tre risposte per ogni traccia. Lo vedo. Non lo vedo, ma ecco dove può essere. Oppure: non lo so.
+
+Un aereo in avvicinamento, e un drone che non trasmette nulla. In sei scenari di volo, MoVi non ha mai detto libero dove c'era un aereo, un drone o un frammento.
+
+Un motore ha un'avaria a centotrentacinque metri al secondo. Una fiammata, poi il fumo. MoVi deduce l'evento e dichiara non affidabili le due camere entro tre cicli, in sessanta prove simulate su sessanta. I detriti a bassa energia restano nel volume dichiarato in cinquantotto su sessanta.
+
+Due droni si avvicinano a quaranta e trentacinque metri al secondo. MoVi avvisa del passaggio ravvicinato almeno dieci secondi prima. Dopo l'urto, la collisione non è ancora riconosciuta come evento, ma la regione resta: in ogni prova simulata, i frammenti ci sono rimasti dentro.
+
+Una fiammata acceca tutti i sensori ottici per tre secondi. Il solo radar tiene una regione per ogni traccia.
+
+Ora la continuità si perde. Nel modello di moto, la confidenza si calcola esattamente, in forma chiusa. Una zona fissa la perde in pochi secondi, così la regione cresce per tenere nove probabilità su dieci. Su sedici aerei reali, con un sensore simulato, li ha contenuti da novantadue a novantotto volte su cento, fra tre e trenta secondi. Fra uno e due secondi, solo settantuno: un limite dichiarato.
+
+Hardware dedicato? I chip costruiti per un solo compito, come quelli che oggi servono i modelli linguistici, fanno stimare un'elaborazione in circa un millisecondo: una stima per analogia. Il ritardo resta dominato dalla rivisita del sensore.
+
+Lo stesso nucleo funziona su un sito: un drone dietro un edificio, avvisato in tempo in duecento prove su duecento. E a corto raggio: persone, auto, treni.
+
+I limiti. È tutto simulato, senza sensori fisici, e le classi sono etichettate a mano. Da prototipo a sistema attuato: una regola di contatto per le collisioni veloci, sensori allo stato dell'arte, hardware dedicato, prove sul campo. MoVi. Osserva e avvisa. Di SDMs.

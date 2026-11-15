@@ -11,3 +11,7 @@ progetto_v3/.hyperframes/
 progetto_v3/renders/
 progetto_v3/dati_sviluppo/
 consegna/*.mp4
+rendering/**/*.wav
+rendering/**/*.mp4
+**/*.wav
+**/*.mp4

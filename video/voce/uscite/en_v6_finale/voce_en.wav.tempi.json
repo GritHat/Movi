@@ -1,0 +1,212 @@
+[
+ {
+  "inizio": 0.15,
+  "fine": 1.963,
+  "testo": "A guarded aerospace site.",
+  "scena": 1
+ },
+ {
+  "inizio": 2.313,
+  "fine": 8.799,
+  "testo": "A drone heads for it, confirmed about nine hundred and fifty metres out: in time for the operator.",
+  "scena": 1
+ },
+ {
+  "inizio": 9.149,
+  "fine": 12.157,
+  "testo": "What should the screen say when no sensor sees it?",
+  "scena": 1
+ },
+ {
+  "inizio": 12.957,
+  "fine": 16.093,
+  "testo": "MoVi gives every track one of three answers.",
+  "scena": 2
+ },
+ {
+  "inizio": 16.443,
+  "fine": 17.488,
+  "testo": "I see it.",
+  "scena": 2
+ },
+ {
+  "inizio": 17.838,
+  "fine": 20.377,
+  "testo": "I don't see it: here is where it can be.",
+  "scena": 2
+ },
+ {
+  "inizio": 20.727,
+  "fine": 22.049,
+  "testo": "Or: I don't know.",
+  "scena": 2
+ },
+ {
+  "inizio": 22.399,
+  "fine": 25.023,
+  "testo": "It says empty only where it has looked.",
+  "scena": 2
+ },
+ {
+  "inizio": 25.373,
+  "fine": 31.837,
+  "testo": "A possible-presence warning stays on until the whole zone is looked at, or the object is seen again.",
+  "scena": 2
+ },
+ {
+  "inizio": 32.637,
+  "fine": 39.976,
+  "testo": "Radar, LiDAR, cameras, and what aircraft and drones broadcast: all simulated from public data sheets.",
+  "scena": 3
+ },
+ {
+  "inizio": 40.326,
+  "fine": 44.486,
+  "testo": "Where a sensor cannot see a drone, the zone stays unverified.",
+  "scena": 3
+ },
+ {
+  "inizio": 45.286,
+  "fine": 46.331,
+  "testo": "Dense fog.",
+  "scena": 4
+ },
+ {
+  "inizio": 46.681,
+  "fine": 49.241,
+  "testo": "MoVi declares each sensor's reach.",
+  "scena": 4
+ },
+ {
+  "inizio": 49.591,
+  "fine": 60.237,
+  "testo": "For a small drone, the radar's range drops from one thousand and sixty-two to one thousand and forty-one metres: a small change, and not an independent check.",
+  "scena": 4
+ },
+ {
+  "inizio": 61.037,
+  "fine": 62.722,
+  "testo": "Two drones collide.",
+  "scena": 5
+ },
+ {
+  "inizio": 63.072,
+  "fine": 70.155,
+  "testo": "MoVi infers contact two point two seconds later; within two seconds in fifty-one runs of sixty.",
+  "scena": 5
+ },
+ {
+  "inizio": 70.505,
+  "fine": 72.361,
+  "testo": "A debris zone opens.",
+  "scena": 5
+ },
+ {
+  "inizio": 72.711,
+  "fine": 77.063,
+  "testo": "It grows, does not shrink by looking, and cannot tell who is at risk.",
+  "scena": 5
+ },
+ {
+  "inizio": 77.863,
+  "fine": 81.404,
+  "testo": "An engine fails on the take-off run, with a flash.",
+  "scena": 6
+ },
+ {
+  "inizio": 81.754,
+  "fine": 88.645,
+  "testo": "MoVi declares the blinded cameras unreliable, within three cycles in every simulated run.",
+  "scena": 6
+ },
+ {
+  "inizio": 88.995,
+  "fine": 95.779,
+  "testo": "Only the radar is left: in this run it loses the aircraft for seconds at a time, and MoVi says so.",
+  "scena": 6
+ },
+ {
+  "inizio": 96.129,
+  "fine": 100.673,
+  "testo": "The debris warning does not discriminate: about ninety-six tracks.",
+  "scena": 6
+ },
+ {
+  "inizio": 101.473,
+  "fine": 102.838,
+  "testo": "First, the limits.",
+  "scena": 7
+ },
+ {
+  "inizio": 103.188,
+  "fine": 107.348,
+  "testo": "All simulated from public data sheets: no physical sensor.",
+  "scena": 7
+ },
+ {
+  "inizio": 107.698,
+  "fine": 110.407,
+  "testo": "Almost half the values are assumed.",
+  "scena": 7
+ },
+ {
+  "inizio": 110.757,
+  "fine": 113.019,
+  "testo": "Classes are labelled by hand.",
+  "scena": 7
+ },
+ {
+  "inizio": 113.369,
+  "fine": 116.526,
+  "testo": "For aircraft in flight, warnings come too late.",
+  "scena": 7
+ },
+ {
+  "inizio": 116.876,
+  "fine": 121.633,
+  "testo": "A drone that stops can slip out of the warning: twelve runs of two hundred.",
+  "scena": 7
+ },
+ {
+  "inizio": 121.983,
+  "fine": 133.781,
+  "testo": "What holds, in simulation: a drone on the site was announced in time in two hundred runs of two hundred, and its position never declared empty, with the site map declared complete.",
+  "scena": 7
+ },
+ {
+  "inizio": 134.581,
+  "fine": 142.133,
+  "testo": "The core comes from our short-range version: a person behind an obstacle, a depth camera, the same three answers.",
+  "scena": 8
+ },
+ {
+  "inizio": 142.933,
+  "fine": 143.807,
+  "testo": "MoVi.",
+  "scena": 9
+ },
+ {
+  "inizio": 144.157,
+  "fine": 147.699,
+  "testo": "Seen, not seen, unknown: declared for every track.",
+  "scena": 9
+ },
+ {
+  "inizio": 148.049,
+  "fine": 150.118,
+  "testo": "It observes and warns.",
+  "scena": 9
+ },
+ {
+  "inizio": 150.468,
+  "fine": 152.601,
+  "testo": "No output is a command.",
+  "scena": 9
+ },
+ {
+  "inizio": 152.951,
+  "fine": 154.893,
+  "testo": "By SDMs.",
+  "scena": 9
+ }
+]

@@ -1,0 +1,61 @@
+SIMULATION
+
+F7 - on board a moving drone: a collision nearby
+
+Simulated
+
+state-of-the-art sensor parameters assumed
+
+no physical sensor
+
+VIEW FROM THE CARRIER
+
+plan, carrier frame (estimated pose) - playback x0.27 (slowed)
+
+ALTITUDE VIEW (distance-height)
+
+1@
+
+b
+
+TRACKED DRONE
+
+NOT SEEN 0.6 s
+
+region 25 m
+
+o
+
+t=6.5s
+
+simulated run, log readout
+
+--
+
+RADAR 360°:
+
+UNRELIABLE -
+
+saturated
+
+i on board
+
+CAMERA: UNRELIABLE - saturated
+
+confidence on the tracked drone (computed in the model)
+
+0.9
+
+radar blinded up to 2 s
+
+pessimistic model
+
+flash and smoke:
+
+drawn for illustration
+
+flash trigger optimistic
+
+identity presumed, doubtful
+
+Nearby, two drones collide: flash, smoke, debris.

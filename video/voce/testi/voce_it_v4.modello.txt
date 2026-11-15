@@ -1,0 +1,17 @@
+Un sito aerospaziale sorvegliato. {{A1-CONF}} Che cosa deve dire lo schermo quando nessun sensore lo vede?
+
+MoVi dà a ogni traccia una di tre risposte. Lo vedo. Non lo vedo: ecco dove può essere. Oppure: non lo so. Dice vuoto solo dove ha guardato. L'avviso di possibile presenza resta acceso finché non si guarda tutta la zona, o non si rivede l'oggetto.
+
+Radar, LiDAR, camere, e ciò che trasmettono aerei e droni: tutto simulato dalle schede tecniche pubbliche. Dove un sensore non può vedere un drone, la zona resta non verificata.
+
+Nebbia fitta. MoVi dichiara la portata di ogni sensore. {{E3-PORTATA}}
+
+Due droni si urtano. {{E1-RIT}} {{E1-ZONA}}
+
+Un motore ha un'avaria in corsa di decollo, con una fiammata. {{E2-C}} Resta solo il radar: in questo passaggio perde l'aereo per alcuni secondi alla volta, e MoVi lo dice. {{E2-AVV}}
+
+Prima, i limiti. Tutto simulato dalle schede pubbliche: nessun sensore fisico. {{L-46}} Le classi sono etichettate a mano. {{L-VOLO}} {{L-FERMA}} {{A1}}
+
+Il nucleo viene dalla nostra versione a corto raggio: una persona dietro un ostacolo, una camera di profondità, le stesse tre risposte.
+
+MoVi. Visto, non visto, non so: dichiarato per ogni traccia. Osserva e avvisa. Nessuna uscita è un comando. Di SDMs.

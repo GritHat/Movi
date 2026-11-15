@@ -1,0 +1,147 @@
+SIMULATION
+
+F5 - a flash blinds every optical sensor
+
+Simulated
+
+state-of-the-art sensor parameters assumed
+
+no physical sensor
+
+PLAN VIEW
+
+playback x0.88 (slowed)
+
+——————200 m
+
+ALTITUDE VIEW (distance-height)
+
+——
+
+i
+
+5
+
+T
+
+b
+
+/4
+
+!
+
+!
+
+! yy
+
+'O
+
+V!
+
+—o—d@ut
+
+W\
+
+W=
+
+vyeey
+
+i
+
+Ry
+
+e
+
+S.o -
+
+.
+
+.-
+
+-
+
+N/
+
+FN
+
+4
+
+R
+
+Ly
+
+SEEN
+
+il
+
+o ¢
+
+[« 104
+
+t =38.2s
+
+simulated run, log readout
+
+b [
+
+SEEN
+
+I
+
+RADAR:
+
+reliable
+
+13N
+
+N
+
+s
+
+<
+
+SEEN
+
+EO CAMERA:
+
+reliable
+
+Lt
+
+s
+
+b
+
+K
+
+71
+
+THERMAL CAMERA:
+
+reliable
+
+"~
+
+e
+
+.
+
+—-———
+
+e
+
+e
+
+PROXIMITY WARNING
+
+* SEEN
+
+predicted close pass between two tracks
+
++ truth (simulation only, MoVi does not see it) ® seen
+
+not seen:
+
+region where it can be
+
+A flash blinds every optical sensor.

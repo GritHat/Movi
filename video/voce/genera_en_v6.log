@@ -1,0 +1,17 @@
+{"lingua": "en", "parole": 350, "scene": 9, "parole_per_scena": [32, 51, 26, 34, 37, 53, 78, 19, 20], "cifre_usate": ["A1-CONF", "E3-PORTATA", "E1-RIT", "E1-ZONA", "E2-C", "E2-AVV", "L-46", "L-VOLO", "L-FERMA", "A1"]}
+{"uscita": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/voce/uscite/en_v6_finale/voce_en_grezza.wav", "voce": "bm_george", "picco_grezzo": 0.66, "durata_s": 155.043, "caricamento_s": 0.58, "generazione_s": 47.59, "rtf": 0.307}
+voce_en.wav | pcm_s16le,48000,1 | 155.04 s | 135 p/min | picco -3.000097 dBFS | RMS -20.714379 dB | -21.0 LUFS | saturi 0 | DC -0.000505 | testa 0.189542 s | coda 0.26 s | pausa interna max 0.94 s | silenzi>0,6 s: 8
+silenzi > 1,0 s: nessuno
+scena | piano s | voce s | scena s | parole | parole/min
+1 | 13.0 | 12.01 | 13.01 | 32 | 160  <-- sfora il piano
+2 | 23.0 | 18.88 | 23.00 | 51 | 162
+3 | 13.0 | 11.85 | 13.00 | 26 | 132
+4 | 17.0 | 14.95 | 17.00 | 34 | 136
+5 | 18.0 | 16.03 | 18.00 | 37 | 139
+6 | 20.0 | 22.81 | 23.81 | 53 | 139  <-- sfora il piano
+7 | 36.0 | 32.31 | 36.00 | 78 | 145
+8 | 10.0 | 7.55 | 10.00 | 19 | 151
+9 | 13.0 | 11.96 | 13.00 | 20 | 100
+TOTALE montaggio (max(piano, 0,4+voce+0,6)): 166.82 s
+uscita: /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/video/voce/uscite/en_v6_finale
+esito 0

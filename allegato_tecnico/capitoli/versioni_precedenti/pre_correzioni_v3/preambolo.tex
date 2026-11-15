@@ -1,0 +1,45 @@
+% Preambolo comune dell'allegato tecnico. Si compila con XeLaTeX + BibTeX.
+\documentclass[10pt,a4paper]{article}
+\usepackage[a4paper,margin=2.2cm]{geometry}
+\usepackage{fontspec}
+\setmainfont{Fira Sans}[Scale=0.95,BoldFont={Fira Sans SemiBold},ItalicFont={Fira Sans Italic}]
+\setmonofont{DejaVu Sans Mono}[Scale=0.82]
+\usepackage{polyglossia}\setmainlanguage{italian}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{xcolor,tikz,booktabs,tabularx,array,enumitem,microtype,ragged2e,caption,float,longtable}
+\usetikzlibrary{positioning,arrows.meta,calc,angles,quotes,patterns,decorations.pathreplacing}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[hidelinks]{hyperref}
+\definecolor{accent}{HTML}{0B5C8A}
+\definecolor{muted}{HTML}{55606C}
+\definecolor{boxbg}{HTML}{EEF3F7}
+\setlength{\parindent}{0pt}\setlength{\parskip}{4pt}
+\setlist{leftmargin=1.4em,itemsep=1.5pt,topsep=2pt}
+\captionsetup{font=small,labelfont=bf}
+\newcolumntype{L}{>{\RaggedRight\arraybackslash}X}
+% Ambienti numerati per capitolo (sezione)
+\theoremstyle{plain}
+\newtheorem{proposizione}{Proposizione}[section]
+\newtheorem{lemma}[proposizione]{Lemma}
+\newtheorem{corollario}[proposizione]{Corollario}
+\theoremstyle{definition}
+\newtheorem{definizione}[proposizione]{Definizione}
+\newtheorem{ipotesi}[proposizione]{Ipotesi}
+\newtheorem{controesempio}[proposizione]{Controesempio}
+\theoremstyle{remark}
+\newtheorem{osservazione}[proposizione]{Osservazione}
+% Livello di prova di un risultato: \prova{D} dimostrato, {C} calcolo, {S} simulazione, {P} dati pubblici, {N} non verificato sperimentalmente
+\newcommand{\prova}[1]{\textsf{\footnotesize\color{accent}[#1]}}
+% Riquadro per condizioni di validità e limiti
+\usepackage{framed}\colorlet{shadecolor}{boxbg}
+\newenvironment{riquadro}[1]{\begin{shaded}\textbf{#1}\par\smallskip}{\end{shaded}}
+% Notazione comune
+\newcommand{\Reali}{\mathbb{R}}
+\newcommand{\vmax}{v_{\max}}
+\newcommand{\tocc}{\tau_{\mathrm{occ}}}
+\newcommand{\Oss}{\mathcal{O}}      % insieme osservato libero
+\newcommand{\Omb}{\Omega}           % ombra
+\newcommand{\Pres}{\Pi}             % possibile presenza
+\newcommand{\Reg}{\mathcal{R}}      % regione di previsione
+\newcommand{\unita}[1]{\,\mathrm{#1}}
+\DeclareMathOperator{\dilata}{dil}

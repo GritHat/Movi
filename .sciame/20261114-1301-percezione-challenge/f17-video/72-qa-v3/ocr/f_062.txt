@@ -1,0 +1,103 @@
+SIMULATION
+
+F7 - on board a moving drone: a collision nearby
+
+Simulated
+
+state-of-the-art sensor parameters assumed
+
+no physical sensor
+
+VIEW FROM THE CARRIER
+
+plan, carrier frame (estimated pose) - playback x0.27 (slowed)
+
+Y
+
+jALTITUDE VIEW (distance-h;ieht)
+
+-
+
+b
+
+~
+
+..
+
+et
+
+s
+
+.
+
+\ TRACKED DR&NE NOT SEEN 1.7 s‘ _reginn 87 m
+
+~
+
+~
+
+t=7.6s
+
+simulated run, log readout
+
+RADAR 360°: restored (declared)
+
+MoVi on board
+
+CAMERA: UNRELIABLE - saturated
+
+confidence on the tracked drone (computed in the model)
+
+S~ea--
+
+N
+
+|
+
+0.9
+
+EVENT: nearby collision - inferred
+
+debris volume declared, never clear inside
+
+warning: path enters debris volume
+
+conservative
+
+with the radar blinded it can be late
+
+-
+
+—
+
+-
+
+radar blinded up to 2 s
+
+pessimistic model
+
+DEBRIS VOLUME declared
+
+never clear inside
+
+flash and smoke:
+
+drawn for illustration
+
+flash trigger optimistic
+
+identity presumed, doubtful
+
+F7-CAM
+
+cameras unreliable at every saturated instant
+
+false events 0/200 [0; 0.019] (control without clustered clutter)
+
+F7-voL
+
+in the model
+
+debris volume contained every simulated fragment sample: 60/60 [0.940; 1] per cell
+
+The cameras are declared unreliable.

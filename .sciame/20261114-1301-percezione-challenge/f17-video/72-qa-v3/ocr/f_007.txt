@@ -1,0 +1,161 @@
+SIMULATION
+
+Two fast drones, then contact
+
+Simulated
+
+state-of-the-art sensor parameters assumed
+
+no physical sensor
+
+AN
+
+PLAN VIEW - playback éﬂ.l (acc:Ierated)
+
+o
+
+AN
+
+By
+
+W
+
+——————200,m
+
+ALTITUDE VIEW (dlié;antjff]eight)
+
+AN
+
+W
+
+SEEN —®
+
+.
+
+———
+
+“
+
+i
+
+(Y
+
+"
+
+A%
+
+e
+
+n
+
+Y
+
+Sy
+
+W
+
+SEEN -/
+
+A
+
+1\,
+
+TN
+
+(%Y
+
+b
+
+1 4]
+
+N
+
+%Y
+
+’
+
+~@ ‘i‘-.
+
+non
+
+N
+
+SEEN
+
+<4
+
+e
+
+N
+
+N
+
+200
+
+9
+
+-
+
+e
+
+-—
+
+11
+
+NOT SEEN
+
+0.3As ¢ region 71 m
+
+e
+
+Py
+
+,
+
+2.7,
+
+417
+
+o
+
+~TeZ -
+
+P,
+
+o
+
+T
+
+A
+
+20
+
+“.
+
+il
+
+t =26.6s
+
+simulated run, log readout
+
+RADAR:
+
+reliable
+
+EO CAMERA:
+
+reliable
+
+THERMAL CAMERA:
+
+reliable
+
+PROXIMITY WARNING
+
+predicted close pass between two tracks
+
++ truth (simulation only, MoVi does not see it) ® seen
+
+not seen: region where it can be
+
+When the view is lost, what should the screen say?

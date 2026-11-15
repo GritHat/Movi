@@ -1,4 +1,4 @@
-\begin{thebibliography}{94}
+\begin{thebibliography}{112}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -61,23 +61,23 @@ Andrey Rudenko, Tomasz~P. Kucner, Chittaranjan~S. Swaminathan, Ravi~T.
 \newblock Dati: \emph{THOR -- people tracks}, Zenodo, 2019, DOI
   10.5281/zenodo.3382145, licenza CC BY 4.0, consultati il 14 novembre 2026.
 
-\bibitem[{RealSense}(s.d.{\natexlab{a}})]{realsense-d455}
+\bibitem[{RealSense}(s.d{\natexlab{a}})]{realsense-d455}
 {RealSense}.
 \newblock {RealSense Depth Camera D455 / D455f}.
-\newblock pagina del prodotto, s.d.{\natexlab{a}}.
+\newblock pagina del prodotto, s.d{\natexlab{a}}.
 \newblock URL
   \url{https://realsenseai.com/products/real-sense-depth-camera-d455f/}.
 \newblock consultata il 14 novembre 2026.
 
-\bibitem[{RealSense}(s.d.{\natexlab{b}})]{realsense-confronto-camere}
+\bibitem[{RealSense}(s.d{\natexlab{b}})]{realsense-confronto-camere}
 {RealSense}.
 \newblock {Compare Depth Cameras}.
 \newblock tabella di confronto delle camere della serie D400,
-  s.d.{\natexlab{b}}.
+  s.d{\natexlab{b}}.
 \newblock URL \url{https://www.realsenseai.com/compare-depth-cameras/}.
 \newblock consultata il 14 novembre 2026.
 
-\bibitem[{Orbbec}(s.d.)]{orbbec-gemini-335}
+\bibitem[{Orbbec}(s.d)]{orbbec-gemini-335}
 {Orbbec}.
 \newblock {Gemini 335}.
 \newblock pagina del prodotto, s.d.
@@ -88,7 +88,7 @@ Andrey Rudenko, Tomasz~P. Kucner, Chittaranjan~S. Swaminathan, Ravi~T.
 \bibitem[RealSense({\natexlab{a}})]{realsense-taratura-profondita}
 RealSense.
 \newblock \emph{{Tuning depth cameras for best performance}}.
-\newblock RealSense, s.d.{\natexlab{a}}.
+\newblock RealSense, s.d{\natexlab{a}}.
 \newblock URL
   \url{https://dev.realsenseai.com/docs/tuning-depth-cameras-for-best-performance}.
 \newblock Documentazione per sviluppatori, consultata il 14 novembre 2026.
@@ -106,7 +106,7 @@ Min~Sung Ahn, Hosik Chae, Donghun Noh, Hyunwoo Nam, and Dennis Hong.
 \bibitem[RealSense({\natexlab{b}})]{realsense-filtri-post}
 RealSense.
 \newblock \emph{{Post-processing filters}}.
-\newblock RealSense, s.d.{\natexlab{b}}.
+\newblock RealSense, s.d{\natexlab{b}}.
 \newblock URL \url{https://dev.realsenseai.com/docs/post-processing-filters/}.
 \newblock Documentazione per sviluppatori, consultata il 14 novembre 2026.
 
@@ -147,14 +147,14 @@ RealSense.
   \url{https://www.pololu.com/file/0J1993/um3038-a-guide-to-using-the-vl53l7cx-timeofflight-multizone-ranging-sensor-with-90-fov-stmicroelectronics.pdf}.
 \newblock consultato il 14 novembre 2026.
 
-\bibitem[{Slamtec}(s.d.)]{slamtec-rplidar-c1}
+\bibitem[{Slamtec}(s.d)]{slamtec-rplidar-c1}
 {Slamtec}.
 \newblock {RPLIDAR C1}.
 \newblock pagina del prodotto e delle specifiche, s.d.
 \newblock URL \url{https://www.slamtec.com/en/c1/spec}.
 \newblock consultata il 14 novembre 2026.
 
-\bibitem[{LDROBOT}(s.d.)]{ldrobot-ld19}
+\bibitem[{LDROBOT}(s.d)]{ldrobot-ld19}
 {LDROBOT}.
 \newblock {DTOF LIDAR LD19}.
 \newblock specifiche riportate nella documentazione del distributore Waveshare,
@@ -173,7 +173,7 @@ J{\"u}rgen Sturm, Nikolas Engelhard, Felix Endres, Wolfram Burgard, and Daniel
 \newblock URL \url{https://cvg.cit.tum.de/data/datasets/rgbd-dataset}.
 \newblock Dati: licenza CC BY 4.0, consultati il 14 novembre 2026.
 
-\bibitem[Wurm and Hornung(s.d.)]{octomap}
+\bibitem[Wurm and Hornung(s.d)]{octomap}
 Kai~M. Wurm and Armin Hornung.
 \newblock {OctoMap: An Efficient Probabilistic 3D Mapping Framework Based on
   Octrees}.
@@ -597,7 +597,7 @@ Scott Denenberg, Clara Vu, Patrick Sobalvarro, Lev Persits, Ilya~A. Kriveshko,
 \newblock consultato il 14 novembre 2026.
 
 \bibitem[{United States, Federal Railroad
-  Administration}(s.d.)]{us-49cfr-236-205}
+  Administration}(s.d)]{us-49cfr-236-205}
 {United States, Federal Railroad Administration}.
 \newblock {49 CFR \S\,236.205 -- Signal control circuits; requirements}.
 \newblock Code of Federal Regulations, titolo 49, parte 236; 33 FR 19684
@@ -691,15 +691,15 @@ Nicholas~A. Giudice, James~R. Marston, Roberta~L. Klatzky, Jack~M. Loomis, and
 \bibitem[RealSense({\natexlab{c}})]{realsense-alta-velocita-d435}
 RealSense.
 \newblock \emph{{High-speed capture mode of RealSense Depth Camera D435}}.
-\newblock RealSense, s.d.{\natexlab{c}}.
+\newblock RealSense, s.d{\natexlab{c}}.
 \newblock URL
   \url{https://dev.realsenseai.com/docs/high-speed-capture-mode-of-intel-realsense-depth-camera-d435}.
 \newblock Documentazione per sviluppatori, consultata il 14 novembre 2026.
 
-\bibitem[{Wikipedia}(s.d.{\natexlab{a}})]{wiki-stopping-sight}
+\bibitem[{Wikipedia}(s.d{\natexlab{a}})]{wiki-stopping-sight}
 {Wikipedia}.
 \newblock {Stopping sight distance}.
-\newblock voce enciclopedica, fonte secondaria, s.d.{\natexlab{a}}.
+\newblock voce enciclopedica, fonte secondaria, s.d{\natexlab{a}}.
 \newblock URL \url{https://en.wikipedia.org/wiki/Stopping_sight_distance}.
 \newblock consultata il 15 novembre 2026.
 
@@ -719,14 +719,14 @@ RealSense.
   \url{https://www.terma.com/media/ndthpjic/terma_scanter5000_smr_a4_dec2021.pdf}.
 \newblock consultata il 15 novembre 2026.
 
-\bibitem[{Hesai Technology}(s.d.)]{hesai-at128}
+\bibitem[{Hesai Technology}(s.d)]{hesai-at128}
 {Hesai Technology}.
 \newblock {AT128}.
 \newblock pagina del prodotto, s.d.
 \newblock URL \url{https://www.hesaitech.com/product/at128/}.
 \newblock consultata il 15 novembre 2026.
 
-\bibitem[{Livox}(s.d.)]{livox-tele15}
+\bibitem[{Livox}(s.d)]{livox-tele15}
 {Livox}.
 \newblock {Tele-15} -- specs.
 \newblock pagina delle specifiche, s.d.
@@ -734,45 +734,45 @@ RealSense.
 \newblock consultata il 15 novembre 2026.
 
 \bibitem[{United States, Federal Aviation
-  Administration}(s.d.{\natexlab{a}})]{cfr-91-227}
+  Administration}(s.d{\natexlab{a}})]{cfr-91-227}
 {United States, Federal Aviation Administration}.
 \newblock {14 CFR \S\,91.227 -- Automatic Dependent Surveillance-Broadcast
   (ADS-B) Out equipment performance requirements}.
-\newblock Code of Federal Regulations, titolo 14, parte 91, s.d.{\natexlab{a}}.
+\newblock Code of Federal Regulations, titolo 14, parte 91, s.d{\natexlab{a}}.
 \newblock URL \url{https://www.law.cornell.edu/cfr/text/14/91.227}.
 \newblock consultato il 15 novembre 2026.
 
 \bibitem[{United States, Federal Aviation
-  Administration}(s.d.{\natexlab{b}})]{cfr-89-310}
+  Administration}(s.d{\natexlab{b}})]{cfr-89-310}
 {United States, Federal Aviation Administration}.
 \newblock {14 CFR \S\,89.310 -- Minimum performance requirements for standard
   remote identification unmanned aircraft}.
-\newblock Code of Federal Regulations, titolo 14, parte 89, s.d.{\natexlab{b}}.
+\newblock Code of Federal Regulations, titolo 14, parte 89, s.d{\natexlab{b}}.
 \newblock URL \url{https://www.law.cornell.edu/cfr/text/14/89.310}.
 \newblock consultato il 15 novembre 2026.
 
-\bibitem[{Echodyne}(s.d.)]{echodyne-echoguard}
+\bibitem[{Echodyne}(s.d)]{echodyne-echoguard}
 {Echodyne}.
 \newblock {EchoGuard}.
-\newblock pagina del prodotto; lette solo le accuratezze, s.d.
+\newblock pagina del prodotto, s.d.
 \newblock URL \url{https://www.echodyne.com/radar-systems/echoguard}.
 \newblock consultata il 15 novembre 2026.
 
-\bibitem[{Wikipedia}(s.d.{\natexlab{b}})]{wiki-johnson}
+\bibitem[{Wikipedia}(s.d{\natexlab{b}})]{wiki-johnson}
 {Wikipedia}.
 \newblock {Johnson's criteria}.
-\newblock voce enciclopedica, fonte secondaria, s.d.{\natexlab{b}}.
+\newblock voce enciclopedica, fonte secondaria, s.d{\natexlab{b}}.
 \newblock URL \url{https://en.wikipedia.org/wiki/Johnson%27s_criteria}.
 \newblock consultata il 15 novembre 2026.
 
-\bibitem[{adsb.lol}(s.d.)]{adsblol}
+\bibitem[{adsb.lol}(s.d)]{adsblol}
 {adsb.lol}.
 \newblock {adsb.lol} -- open ads-b data, api v2.
 \newblock servizio di dati aperti; licenza ODbL 1.0, s.d.
 \newblock URL \url{https://api.adsb.lol/v2/point/33.6407/-84.4277/12}.
 \newblock interrogato il 15 novembre 2026 attorno all'aeroporto di Atlanta.
 
-\bibitem[{El Ouanbi} and Amellal(s.d.)]{zenodo-lhr-zrh}
+\bibitem[{El Ouanbi} and Amellal(s.d)]{zenodo-lhr-zrh}
 {El Ouanbi} and Amellal.
 \newblock {Cleaned ADS-B Trajectories (LHR-ZRH 2025) for AI Training}.
 \newblock insieme di dati, Zenodo, record 18916312; dati d'origine OpenSky
@@ -780,7 +780,7 @@ RealSense.
 \newblock URL \url{https://zenodo.org/records/18916312}.
 \newblock consultato il 15 novembre 2026.
 
-\bibitem[Patrikar et~al.(s.d.)]{trajair}
+\bibitem[Patrikar et~al.(s.d)]{trajair}
 Patrikar et~al.
 \newblock {TrajAir: A General Aviation Trajectory Dataset}.
 \newblock insieme di dati, Carnegie Mellon University, KiltHub; licenza CC BY
@@ -789,7 +789,7 @@ Patrikar et~al.
   \url{https://kilthub.cmu.edu/articles/dataset/TrajAir_A_General_Aviation_Trajectory_Dataset/14866251}.
 \newblock consultato il 15 novembre 2026.
 
-\bibitem[Rodrigues et~al.(s.d.)]{cmu-drone}
+\bibitem[Rodrigues et~al.(s.d)]{cmu-drone}
 Rodrigues et~al.
 \newblock {Data Collected with Package Delivery Quadcopter Drone}.
 \newblock insieme di dati, Carnegie Mellon University, KiltHub; licenza CC BY
@@ -798,7 +798,7 @@ Rodrigues et~al.
   \url{https://kilthub.cmu.edu/articles/dataset/Data_Collected_with_Package_Delivery_Quadcopter_Drone/12683453}.
 \newblock consultato il 15 novembre 2026.
 
-\bibitem[Keipour et~al.(s.d.)Keipour, Mousaei, and Scherer]{alfa}
+\bibitem[Keipour et~al.(s.d)Keipour, Mousaei, and Scherer]{alfa}
 Keipour, Mousaei, and Scherer.
 \newblock {ALFA: A Dataset for UAV Fault and Anomaly Detection}.
 \newblock insieme di dati, Carnegie Mellon University, KiltHub; licenza CC BY
@@ -808,7 +808,7 @@ Keipour, Mousaei, and Scherer.
 \newblock consultato il 15 novembre 2026.
 
 \bibitem[{United States Department of Transportation, Federal Highway
-  Administration}(s.d.)]{ngsim}
+  Administration}(s.d)]{ngsim}
 {United States Department of Transportation, Federal Highway Administration}.
 \newblock {Next Generation Simulation (NGSIM) Vehicle Trajectories}.
 \newblock insieme di dati; licenza CC BY-SA 3.0, s.d.
@@ -822,5 +822,167 @@ Keipour, Mousaei, and Scherer.
   digitraffic.fi, 2026.
 \newblock URL \url{https://rata.digitraffic.fi/api/v1/train-locations/}.
 \newblock posizioni del 12 novembre 2026, consultate il 15 novembre 2026.
+
+\bibitem[Singh(2026)]{dronedj2026-echodyne}
+Ishveena Singh.
+\newblock {US military taps Echodyne radars for a \$250 million counter-drone
+  deal}.
+\newblock DroneDJ, October 2026.
+\newblock URL
+  \url{https://dronedj.com/2026/10/01/echodyne-radar-counter-drone-mesa/}.
+\newblock Fonte secondaria (giornalistica), consultata il 15-11-2026.
+
+\bibitem[{Echodyne}(2024)]{echodyne-tradegov-2024}
+{Echodyne}.
+\newblock {Echodyne EchoShield (scheda per trade.gov)}, 2024.
+\newblock URL
+  \url{https://www.trade.gov/sites/default/files/2024-08/ECHODYNE.pdf}.
+\newblock Dato del produttore, consultato il 15-11-2026. Non riporta la
+  rivisita né le portate per bersaglio.
+
+\bibitem[{Echodyne}()]{echodyne-echoshield-news}
+{Echodyne}.
+\newblock {Medium-range tactical radar built for every domain}.
+\newblock URL
+  \url{https://www.echodyne.com/newsroom/medium-range-tactical-radar-built-for-every-domain}.
+\newblock Dato del produttore, consultato il 15-11-2026; pagina senza data. Non
+  riporta portata né rivisita.
+
+\bibitem[{Federal Aviation Administration}(2022)]{faa-ac-90-48e}
+{Federal Aviation Administration}.
+\newblock {Advisory Circular 90-48E: Pilots' Role in Collision Avoidance},
+  October 2022.
+\newblock URL
+  \url{https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_90-48E.pdf}.
+\newblock Datata 20-10-2022; sostituisce la AC 90-48D CHG 1. Consultata il
+  15-11-2026.
+
+\bibitem[Blom and Bar-Shalom(1988)]{blom1988}
+Henk A.~P. Blom and Yaakov Bar-Shalom.
+\newblock {The interacting multiple model algorithm for systems with Markovian
+  switching coefficients}.
+\newblock \emph{IEEE Transactions on Automatic Control}, 33\penalty0
+  (8):\penalty0 780--783, 1988.
+\newblock \doi{10.1109/9.1299}.
+\newblock Metadati verificati il 15-11-2026; testo intero non consultato. Fonte
+  primaria dell'interazione IMM.
+
+\bibitem[Mazor et~al.(1998)Mazor, Averbuch, Bar-Shalom, and Dayan]{mazor1998}
+E.~Mazor, A.~Averbuch, Y.~Bar-Shalom, and J.~Dayan.
+\newblock {Interacting multiple model methods in target tracking: a survey}.
+\newblock \emph{IEEE Transactions on Aerospace and Electronic Systems},
+  34\penalty0 (1):\penalty0 103--123, 1998.
+\newblock \doi{10.1109/7.640267}.
+\newblock Metadati verificati il 15-11-2026; testo intero non consultato.
+
+\bibitem[Li and Jilkov(2003)]{li2003}
+X.~Rong Li and Vesselin~P. Jilkov.
+\newblock {Survey of maneuvering target tracking. Part I: Dynamic models}.
+\newblock \emph{IEEE Transactions on Aerospace and Electronic Systems},
+  39\penalty0 (4):\penalty0 1333--1364, 2003.
+\newblock \doi{10.1109/TAES.2003.1261132}.
+\newblock Metadati verificati il 15-11-2026; testo intero non consultato.
+  Riferimento per i modelli CV, CA e di virata coordinata.
+
+\bibitem[Sch{\"a}fer et~al.(2014)Sch{\"a}fer, Strohmeier, Lenders, Martinovic,
+  and Wilhelm]{schafer2014}
+Matthias Sch{\"a}fer, Martin Strohmeier, Vincent Lenders, Ivan Martinovic, and
+  Matthias Wilhelm.
+\newblock {Bringing up OpenSky: A Large-scale ADS-B Sensor Network for
+  Research}.
+\newblock In \emph{Proceedings of the 13th International Symposium on
+  Information Processing in Sensor Networks (IPSN-14)}, pages 83--94, 2014.
+\newblock \doi{10.1109/IPSN.2014.6846743}.
+\newblock URL
+  \url{https://opensky-network.org/files/publications/ipsn2014.pdf}.
+\newblock Consultato il 15-11-2026. Riferimento chiesto da OpenSky per l'uso
+  dei dati.
+
+\bibitem[Mphale et~al.(2007)Mphale, Letsholathebe, and Heron]{mphale2007}
+K.~M. Mphale, D.~Letsholathebe, and M.~L. Heron.
+\newblock {Effective complex permittivity of a weakly ionized vegetation litter
+  fire at microwave frequencies}.
+\newblock \emph{Journal of Physics D: Applied Physics}, 40\penalty0
+  (21):\penalty0 6651--6656, 2007.
+\newblock \doi{10.1088/0022-3727/40/21/026}.
+\newblock Riassunto consultato il 15-11-2026; testo intero non consultato. Il
+  trasferimento a fiamme di idrocarburi o di batterie è un'ipotesi.
+
+\bibitem[Coluccia et~al.(2020)Coluccia, Parisi, and Fascista]{coluccia2020}
+Angelo Coluccia, Gianluca Parisi, and Alessio Fascista.
+\newblock {Detection and Classification of Multirotor Drones in Radar Sensor
+  Networks: A Review}.
+\newblock \emph{Sensors}, 20\penalty0 (15):\penalty0 4172, 2020.
+\newblock \doi{10.3390/s20154172}.
+\newblock Metadati e riassunto consultati il 15-11-2026; testo intero non
+  consultato.
+
+\bibitem[Stone and Anderson(1989)]{stone1989}
+M.~L. Stone and J.~R. Anderson.
+\newblock {Advances in Primary-Radar Technology}.
+\newblock \emph{The Lincoln Laboratory Journal}, 2\penalty0 (3):\penalty0
+  363--380, 1989.
+\newblock URL
+  \url{https://archive.ll.mit.edu/publications/journal/pdf/vol02_no3/2.3.3.advancesprimaryradar.pdf}.
+\newblock Riguarda i radar primari d'aeroporto in generale. Consultata il
+  15-11-2026.
+
+\bibitem[{Wikipedia}()]{wikipedia-asr11}
+{Wikipedia}.
+\newblock {ASR-11}.
+\newblock URL \url{https://en.wikipedia.org/wiki/ASR-11}.
+\newblock Fonte secondaria, consultata il 15-11-2026. Il periodo di 4,8 s è
+  calcolato da 12,5 giri al minuto.
+
+\bibitem[{Ophir (MKS Instruments)}()]{ophir-supir-50-1350}
+{Ophir (MKS Instruments)}.
+\newblock {Ophir SupIR 50-1350mm f/5.5 Motorized Continuous Zoom Lens}.
+\newblock Photonics Online.
+\newblock URL
+  \url{https://www.photonicsonline.com/doc/ophir-supir-mm-f-motorized-continuous-zoom-lens-0001}.
+\newblock Dato del produttore, consultato il 15-11-2026; pagina senza data.
+
+\bibitem[Zota(2026)]{heise2026-taalas}
+Volker Zota.
+\newblock {AI inference cast in silicon: Taalas announces HC1 chip}.
+\newblock heise online, February 2026.
+\newblock URL \url{https://heise.de/-11185112}.
+\newblock Fonte giornalistica, consultata il 15-11-2026; le cifre dell'azienda
+  vengono da prove interne, non da misure indipendenti.
+
+\bibitem[Wang(2024)]{cerebras2024-inference}
+James Wang.
+\newblock {Introducing Cerebras Inference: AI at Instant Speed}.
+\newblock Cerebras blog, August 2024.
+\newblock URL
+  \url{https://www.cerebras.ai/blog/introducing-cerebras-inference-ai-at-instant-speed}.
+\newblock Dato del produttore, consultato il 15-11-2026.
+
+\bibitem[Sim et~al.(2023)Sim, Heo, Jung, Lee, and Jung]{sim2023}
+Yunseong Sim, Jinmoo Heo, Yongchul Jung, Seongjoo Lee, and Yunho Jung.
+\newblock {FPGA Implementation of Efficient CFAR Algorithm for Radar Systems}.
+\newblock \emph{Sensors}, 23\penalty0 (2):\penalty0 954, 2023.
+\newblock \doi{10.3390/s23020954}.
+\newblock Metadati e riassunto consultati il 15-11-2026; testo intero non
+  consultato.
+
+\bibitem[Choi et~al.(2021)Choi, Jeong, Lee, Lee, and Jung]{choi2021}
+Yeongung Choi, Dongmin Jeong, Myeongjin Lee, Wookyung Lee, and Yunho Jung.
+\newblock {FPGA Implementation of the Range-Doppler Algorithm for Real-Time
+  Synthetic Aperture Radar Imaging}.
+\newblock \emph{Electronics}, 10\penalty0 (17):\penalty0 2133, 2021.
+\newblock \doi{10.3390/electronics10172133}.
+\newblock Metadati e riassunto consultati il 15-11-2026; testo intero non
+  consultato. Radar ad apertura sintetica: analogia, non misura del caso in
+  esame.
+
+\bibitem[Summers(2018)]{summers2018}
+Sioni Summers.
+\newblock {Kalman Filter track reconstruction on FPGAs for acceleration of the
+  High Level Trigger of the CMS experiment at the HL-LHC}.
+\newblock In \emph{CHEP 2018 (diapositive)}, 2018.
+\newblock URL
+  \url{https://indico.cern.ch/event/587955/contributions/2935753/attachments/1684108/2707286/ssummers_chep_kffpga.pdf}.
+\newblock Consultata il 15-11-2026.
 
 \end{thebibliography}

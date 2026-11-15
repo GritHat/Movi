@@ -1,0 +1,129 @@
+SCHEMATIC + PUBLIC TRAJECTORIES
+
+When continuity is lost: confidence over time
+
+curve computed in the model
+
+points: public flight tracks, simulated sensor
+
+PLAN VIEW
+
+schematic: motion
+
+compressed, radii from the computed curve
+
+C(1): chance it is within 150 m of the prediction - computed
+
+1\.
+
+T (s)
+
+0.5
+
+0
+
+10
+
+20
+
+30
+
+fixed zone at loss
+
+156 m
+
+-
+
+oo
+
+radius kept at 0.9, r0.9(t) in m - computed (min. progressive)
+
+200
+
+100
+
+— htocssooss {Jocooo oo on gooddas (T
+
+O R EERERE
+
+T (s)
+
+last seen
+
+e
+
+0
+
+10
+
+20
+
+30
+
+coverage of the 0.9 region - public flight tracks, simulated sensor
+
+SemonoR
+
+~
+
+-
+
+~———-
+
+rooog
+
+Soooooooo
+
+cooooooooooooogEoooSSGe
+
+0.9
+
+NOT SEEN
+
+28.6 s - region r0.9 = 166 m
+
+t-o--
+
+0.89 9.89
+
+0.89
+
+0.89
+
+0.8
+
+aircraft at 210 m/s, straight line: the most favourable case
+
+turns 0.73 Orfiie é
+
+on real tracks the region is much larger (see points on the right)
+
+T (s)
+
+0.6
+
+02(t) = 002 + 200v-T + ov2-t? + q-T°/3 + o_ref?
+
+C(t) = 1 - exp(-r2/2¢2(t))
+
+10
+
+20
+
+30
+
+C-TAR 1-2 s: 0.89 (655/733) [0.87; 0.91]
+
+cases correlated
+
+0.85-0.89 from 1 to 30 s
+
+21-30 s: 0.85 [0.81; 0.88]
+
+89.5% of cases from 4 flights of one route
+
+Wilson 95 % per case
+
+On public flight tracks, with a simulated sensor, the region held the
+
+aircraft eighty-five to eighty-nine times in a hundred, from one to thirty seconds.

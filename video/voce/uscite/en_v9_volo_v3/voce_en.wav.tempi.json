@@ -1,0 +1,177 @@
+[
+ {
+  "inizio": 0.15,
+  "fine": 2.497,
+  "testo": "Fast aircraft and drones."
+ },
+ {
+  "inizio": 2.847,
+  "fine": 7.54,
+  "testo": "A collision, an engine failure, a flash that blinds every camera."
+ },
+ {
+  "inizio": 7.89,
+  "fine": 10.663,
+  "testo": "When the view is lost, what should the screen say?"
+ },
+ {
+  "inizio": 11.463,
+  "fine": 14.599,
+  "testo": "MoVi declares what it has not observed."
+ },
+ {
+  "inizio": 14.949,
+  "fine": 16.805,
+  "testo": "Three answers per track."
+ },
+ {
+  "inizio": 17.155,
+  "fine": 18.201,
+  "testo": "I see it."
+ },
+ {
+  "inizio": 18.551,
+  "fine": 21.324,
+  "testo": "I don't see it, but here is where it can be."
+ },
+ {
+  "inizio": 21.674,
+  "fine": 22.997,
+  "testo": "Or: I don't know."
+ },
+ {
+  "inizio": 23.797,
+  "fine": 27.743,
+  "testo": "An aircraft on approach, and a drone that broadcasts nothing."
+ },
+ {
+  "inizio": 28.093,
+  "fine": 34.664,
+  "testo": "In six flight scenarios, MoVi never said clear where an aircraft, a drone or a fragment was."
+ },
+ {
+  "inizio": 35.464,
+  "fine": 40.008,
+  "testo": "An engine fails at a hundred and thirty-five metres per second."
+ },
+ {
+  "inizio": 40.358,
+  "fine": 42.107,
+  "testo": "A flash, then smoke."
+ },
+ {
+  "inizio": 42.457,
+  "fine": 51.524,
+  "testo": "MoVi infers the event and declares both cameras unreliable within three cycles, in sixty of sixty simulated runs."
+ },
+ {
+  "inizio": 51.874,
+  "fine": 57.293,
+  "testo": "Low-energy debris stays inside the declared volume in fifty-eight of sixty."
+ },
+ {
+  "inizio": 58.093,
+  "fine": 62.21,
+  "testo": "Two drones close at forty and thirty-five metres per second."
+ },
+ {
+  "inizio": 62.56,
+  "fine": 66.571,
+  "testo": "MoVi warns of the close pass at least ten seconds ahead."
+ },
+ {
+  "inizio": 66.921,
+  "fine": 76.627,
+  "testo": "After the impact, the collision is not yet recognised as an event, but the region is kept: in every simulated run, the fragments stayed inside it."
+ },
+ {
+  "inizio": 77.427,
+  "fine": 81.523,
+  "testo": "A flash blinds every optical sensor for three seconds."
+ },
+ {
+  "inizio": 81.873,
+  "fine": 85.18,
+  "testo": "Radar alone keeps a region for every track."
+ },
+ {
+  "inizio": 85.98,
+  "fine": 88.241,
+  "testo": "Now continuity is lost."
+ },
+ {
+  "inizio": 88.591,
+  "fine": 93.477,
+  "testo": "In the motion model, the confidence is computed exactly, in closed form."
+ },
+ {
+  "inizio": 93.827,
+  "fine": 99.395,
+  "testo": "A fixed zone loses it in seconds, so the region grows to keep nine chances in ten."
+ },
+ {
+  "inizio": 99.745,
+  "fine": 109.43,
+  "testo": "On sixteen real aircraft tracks, with a simulated sensor, it held them ninety-two to ninety-eight times in a hundred, from three to thirty seconds."
+ },
+ {
+  "inizio": 109.78,
+  "fine": 113.94,
+  "testo": "At one to two seconds, only seventy-one: a declared limit."
+ },
+ {
+  "inizio": 114.74,
+  "fine": 116.468,
+  "testo": "Dedicated hardware?"
+ },
+ {
+  "inizio": 116.818,
+  "fine": 125.885,
+  "testo": "Chips built for one job, like those now serving language models, suggest processing in about a millisecond: an estimate by analogy."
+ },
+ {
+  "inizio": 126.235,
+  "fine": 129.669,
+  "testo": "The sensor's revisit still dominates the delay."
+ },
+ {
+  "inizio": 130.469,
+  "fine": 137.595,
+  "testo": "The same core works on a site: a drone behind a building, warned in time in two hundred of two hundred runs."
+ },
+ {
+  "inizio": 137.945,
+  "fine": 140.995,
+  "testo": "And at short range: people, cars, trains."
+ },
+ {
+  "inizio": 141.795,
+  "fine": 142.777,
+  "testo": "The limits."
+ },
+ {
+  "inizio": 143.127,
+  "fine": 148.823,
+  "testo": "Everything is simulated, with no physical sensor, and classes are labelled by hand."
+ },
+ {
+  "inizio": 149.173,
+  "fine": 158.559,
+  "testo": "From prototype to deployed system: a contact rule for fast collisions, state-of-the-art sensors, dedicated hardware, field trials."
+ },
+ {
+  "inizio": 158.909,
+  "fine": 159.912,
+  "testo": "MoVi."
+ },
+ {
+  "inizio": 160.262,
+  "fine": 162.331,
+  "testo": "It observes and warns."
+ },
+ {
+  "inizio": 162.681,
+  "fine": 164.153,
+  "testo": "By SDMs."
+ }
+]

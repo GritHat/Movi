@@ -1,0 +1,46 @@
+== v4c valutazione errori 0
+F1/att n=60 idx 1000-1059 unici 60 | falsi 1/60 [0.003; 0.089] | libero_vero 0/60 [0.000; 0.060]
+F1/sda n=60 idx 1000-1059 unici 60 | falsi 0/60 [0.000; 0.060] | libero_vero 0/60 [0.000; 0.060]
+F3/att n=60 idx 1000-1059 unici 60 | falsi 0/60 [0.000; 0.060] | libero_vero 0/60 [0.000; 0.060] | <=1s 2/60 [0.009; 0.114] | 0..2s 34/60 [0.441; 0.684] | 0..2.5s 48/60 [0.682; 0.882] | prima 1/60 [0.003; 0.089] | mai 5/60 [0.036; 0.181]
+F3/sda n=60 idx 1000-1059 unici 60 | falsi 0/60 [0.000; 0.060] | libero_vero 0/60 [0.000; 0.060] | <=1s 22/60 [0.256; 0.493] | 0..2s 57/60 [0.863; 0.983] | 0..2.5s 59/60 [0.911; 0.997] | prima 1/60 [0.003; 0.089] | mai 0/60 [0.000; 0.060]
+F4/att n=60 idx 1000-1059 unici 60 | falsi 0/60 [0.000; 0.060] | libero_vero 0/60 [0.000; 0.060] | <=1s 60/60 [0.940; 1.000] | 0..2s 60/60 [0.940; 1.000] | 0..2.5s 60/60 [0.940; 1.000] | prima 0/60 [0.000; 0.060] | mai 0/60 [0.000; 0.060]
+F4/sda n=60 idx 1000-1059 unici 60 | falsi 0/60 [0.000; 0.060] | libero_vero 0/60 [0.000; 0.060] | <=1s 60/60 [0.940; 1.000] | 0..2s 60/60 [0.940; 1.000] | 0..2.5s 60/60 [0.940; 1.000] | prima 0/60 [0.000; 0.060] | mai 0/60 [0.000; 0.060]
+F5/att n=60 idx 1000-1059 unici 60 | falsi 2/60 [0.009; 0.114] | libero_vero 0/60 [0.000; 0.060]
+F5/sda n=60 idx 1000-1059 unici 60 | falsi 2/60 [0.009; 0.114] | libero_vero 0/60 [0.000; 0.060]
+F6/att n=200 idx 1000-1199 unici 200 | falsi 0/200 [0.000; 0.019] | libero_vero 0/200 [0.000; 0.019]
+F6/sda n=200 idx 1000-1199 unici 200 | falsi 0/200 [0.000; 0.019] | libero_vero 0/200 [0.000; 0.019]
+== v3i (fase 3) errori 0
+F1/att n=60 idx 0-59 unici 60 | falsi 0/60 [0.000; 0.060] | libero_vero 0/60 [0.000; 0.060]
+F1/sda n=60 idx 0-59 unici 60 | falsi 0/60 [0.000; 0.060] | libero_vero 0/60 [0.000; 0.060]
+F2/att n=60 idx 0-59 unici 60 | falsi 0/60 [0.000; 0.060] | libero_vero 0/60 [0.000; 0.060]
+F2/sda n=60 idx 0-59 unici 60 | falsi 0/60 [0.000; 0.060] | libero_vero 0/60 [0.000; 0.060]
+F3/att n=60 idx 0-59 unici 60 | falsi 0/60 [0.000; 0.060] | libero_vero 0/60 [0.000; 0.060] | <=1s 0/60 [0.000; 0.060] | 0..2s 0/60 [0.000; 0.060] | 0..2.5s 0/60 [0.000; 0.060] | prima 0/60 [0.000; 0.060] | mai 60/60 [0.940; 1.000]
+F3/sda n=60 idx 0-59 unici 60 | falsi 0/60 [0.000; 0.060] | libero_vero 0/60 [0.000; 0.060] | <=1s 0/60 [0.000; 0.060] | 0..2s 0/60 [0.000; 0.060] | 0..2.5s 0/60 [0.000; 0.060] | prima 0/60 [0.000; 0.060] | mai 60/60 [0.940; 1.000]
+F4/att n=60 idx 0-59 unici 60 | falsi 0/60 [0.000; 0.060] | libero_vero 0/60 [0.000; 0.060] | <=1s 60/60 [0.940; 1.000] | 0..2s 60/60 [0.940; 1.000] | 0..2.5s 60/60 [0.940; 1.000] | prima 0/60 [0.000; 0.060] | mai 0/60 [0.000; 0.060]
+F4/sda n=60 idx 0-59 unici 60 | falsi 0/60 [0.000; 0.060] | libero_vero 0/60 [0.000; 0.060] | <=1s 60/60 [0.940; 1.000] | 0..2s 60/60 [0.940; 1.000] | 0..2.5s 60/60 [0.940; 1.000] | prima 0/60 [0.000; 0.060] | mai 0/60 [0.000; 0.060]
+F5/att n=60 idx 0-59 unici 60 | falsi 0/60 [0.000; 0.060] | libero_vero 0/60 [0.000; 0.060]
+F5/sda n=60 idx 0-59 unici 60 | falsi 0/60 [0.000; 0.060] | libero_vero 0/60 [0.000; 0.060]
+F6/att n=200 idx 0-199 unici 200 | falsi 0/200 [0.000; 0.019] | libero_vero 0/200 [0.000; 0.019]
+F6/sda n=200 idx 0-199 unici 200 | falsi 0/200 [0.000; 0.019] | libero_vero 0/200 [0.000; 0.019]
+== E1 stabile
+n 60 idx unici 60 | 0..2 s 48/60 [0.682; 0.882] | <=2 s (con negativi) 51/60 [0.739; 0.919] | prima 3/60 [0.017; 0.137] [-11.5, -11.0, -11.0] | 0..2.5 57/60 [0.863; 0.983] | mai 0/60 [0.000; 0.060] | V tutti dentro 60/60 [0.940; 1.000] campioni 109500 109500
+== E1 f15/2c (Eulero)
+n 60 | 0..2 51/60 [0.739; 0.919] | prima 0/60 [0.000; 0.060] | V tutti dentro 48/60 [0.682; 0.882]
+== F7 valutazione
+F7c/att n=200 idx unici 200 | cont 200/200 [0.981; 1.000] | id 200/200 [0.981; 1.000] | libero_b 0/200 [0.000; 0.019] | libero_fr 0/200 [0.000; 0.019] | assoc_non_dich 0/200 [0.000; 0.019] | dubbie 0/200 [0.000; 0.019] | evento 0/200 [0.000; 0.019] | falsi 0/200 [0.000; 0.019] | riacq2 0/200 [0.000; 0.019] | riacqcam2 0/200 [0.000; 0.019] | camsat 0 | vol 0/0 tutti 0/200 [0.000; 0.019] | inters 0 avvisati_prima 0 | avviso_senza_inters 0/200 [0.000; 0.019] | errfine_max 19.9
+F7c/sda n=200 idx unici 200 | cont 200/200 [0.981; 1.000] | id 200/200 [0.981; 1.000] | libero_b 0/200 [0.000; 0.019] | libero_fr 0/200 [0.000; 0.019] | assoc_non_dich 0/200 [0.000; 0.019] | dubbie 0/200 [0.000; 0.019] | evento 0/200 [0.000; 0.019] | falsi 0/200 [0.000; 0.019] | riacq2 0/200 [0.000; 0.019] | riacqcam2 0/200 [0.000; 0.019] | camsat 0 | vol 0/0 tutti 0/200 [0.000; 0.019] | inters 0 avvisati_prima 0 | avviso_senza_inters 0/200 [0.000; 0.019] | errfine_max 7.0
+davanti/att n=60 idx unici 60 | cont 59/60 [0.911; 0.997] | id 60/60 [0.940; 1.000] | libero_b 0/60 [0.000; 0.060] | libero_fr 0/60 [0.000; 0.060] | assoc_non_dich 0/60 [0.000; 0.060] | dubbie 20/60 [0.227; 0.459] | evento 60/60 [0.940; 1.000] | falsi 0/60 [0.000; 0.060] | riacq2 60/60 [0.940; 1.000] | riacqcam2 57/60 [0.863; 0.983] | camsat 0 | vol 43681/43681 tutti 60/60 [0.940; 1.000] | inters 56 avvisati_prima 56 | avviso_senza_inters 4/4 [0.510; 1.000] | errfine_max 13.0
+    ritardo evento min/max 0.0 0.0 | margine avviso min 0.4
+davanti/sda n=60 idx unici 60 | cont 60/60 [0.940; 1.000] | id 60/60 [0.940; 1.000] | libero_b 0/60 [0.000; 0.060] | libero_fr 0/60 [0.000; 0.060] | assoc_non_dich 0/60 [0.000; 0.060] | dubbie 20/60 [0.227; 0.459] | evento 60/60 [0.940; 1.000] | falsi 0/60 [0.000; 0.060] | riacq2 60/60 [0.940; 1.000] | riacqcam2 57/60 [0.863; 0.983] | camsat 0 | vol 43681/43681 tutti 60/60 [0.940; 1.000] | inters 56 avvisati_prima 56 | avviso_senza_inters 4/4 [0.510; 1.000] | errfine_max 5.2
+    ritardo evento min/max 0.0 0.0 | margine avviso min 0.4
+dietro/att n=60 idx unici 60 | cont 60/60 [0.940; 1.000] | id 60/60 [0.940; 1.000] | libero_b 0/60 [0.000; 0.060] | libero_fr 0/60 [0.000; 0.060] | assoc_non_dich 0/60 [0.000; 0.060] | dubbie 0/60 [0.000; 0.060] | evento 0/60 [0.000; 0.060] | falsi 0/60 [0.000; 0.060] | riacq2 60/60 [0.940; 1.000] | riacqcam2 60/60 [0.940; 1.000] | camsat 0 | vol 0/0 tutti 0/60 [0.000; 0.060] | inters 0 avvisati_prima 0 | avviso_senza_inters 0/60 [0.000; 0.060] | errfine_max 14.2
+dietro/sda n=60 idx unici 60 | cont 60/60 [0.940; 1.000] | id 60/60 [0.940; 1.000] | libero_b 0/60 [0.000; 0.060] | libero_fr 0/60 [0.000; 0.060] | assoc_non_dich 0/60 [0.000; 0.060] | dubbie 0/60 [0.000; 0.060] | evento 60/60 [0.940; 1.000] | falsi 0/60 [0.000; 0.060] | riacq2 60/60 [0.940; 1.000] | riacqcam2 60/60 [0.940; 1.000] | camsat 0 | vol 43600/43600 tutti 60/60 [0.940; 1.000] | inters 0 avvisati_prima 0 | avviso_senza_inters 60/60 [0.940; 1.000] | errfine_max 5.7
+    ritardo evento min/max 0.0 0.0 | margine avviso min None
+lato/att n=60 idx unici 60 | cont 60/60 [0.940; 1.000] | id 60/60 [0.940; 1.000] | libero_b 0/60 [0.000; 0.060] | libero_fr 0/60 [0.000; 0.060] | assoc_non_dich 0/60 [0.000; 0.060] | dubbie 0/60 [0.000; 0.060] | evento 1/60 [0.003; 0.089] | falsi 0/60 [0.000; 0.060] | riacq2 60/60 [0.940; 1.000] | riacqcam2 60/60 [0.940; 1.000] | camsat 0 | vol 757/757 tutti 1/60 [0.003; 0.089] | inters 0 avvisati_prima 0 | avviso_senza_inters 1/60 [0.003; 0.089] | errfine_max 13.1
+    ritardo evento min/max 0.0 0.0 | margine avviso min None
+lato/sda n=60 idx unici 60 | cont 60/60 [0.940; 1.000] | id 60/60 [0.940; 1.000] | libero_b 0/60 [0.000; 0.060] | libero_fr 0/60 [0.000; 0.060] | assoc_non_dich 0/60 [0.000; 0.060] | dubbie 3/60 [0.017; 0.137] | evento 60/60 [0.940; 1.000] | falsi 0/60 [0.000; 0.060] | riacq2 60/60 [0.940; 1.000] | riacqcam2 60/60 [0.940; 1.000] | camsat 0 | vol 44051/44051 tutti 60/60 [0.940; 1.000] | inters 0 avvisati_prima 0 | avviso_senza_inters 60/60 [0.940; 1.000] | errfine_max 7.3
+    ritardo evento min/max 0.0 0.0 | margine avviso min None
+vira/att n=60 idx unici 60 | cont 60/60 [0.940; 1.000] | id 43/60 [0.592; 0.815] | libero_b 0/60 [0.000; 0.060] | libero_fr 0/60 [0.000; 0.060] | assoc_non_dich 0/60 [0.000; 0.060] | dubbie 23/60 [0.271; 0.510] | evento 60/60 [0.940; 1.000] | falsi 0/60 [0.000; 0.060] | riacq2 60/60 [0.940; 1.000] | riacqcam2 56/60 [0.841; 0.974] | camsat 0 | vol 42950/42950 tutti 60/60 [0.940; 1.000] | inters 54 avvisati_prima 54 | avviso_senza_inters 6/6 [0.610; 1.000] | errfine_max 83.3
+    ritardo evento min/max 0.0 0.0 | margine avviso min 0.4
+vira/sda n=60 idx unici 60 | cont 60/60 [0.940; 1.000] | id 60/60 [0.940; 1.000] | libero_b 0/60 [0.000; 0.060] | libero_fr 0/60 [0.000; 0.060] | assoc_non_dich 0/60 [0.000; 0.060] | dubbie 25/60 [0.301; 0.543] | evento 60/60 [0.940; 1.000] | falsi 0/60 [0.000; 0.060] | riacq2 60/60 [0.940; 1.000] | riacqcam2 56/60 [0.841; 0.974] | camsat 0 | vol 42950/42950 tutti 60/60 [0.940; 1.000] | inters 54 avvisati_prima 54 | avviso_senza_inters 6/6 [0.610; 1.000] | errfine_max 7.8
+    ritardo evento min/max 0.0 0.0 | margine avviso min 0.4

@@ -1,5 +1,11 @@
 # Stato del progetto — percezione-challenge
 
+**Versione 5 (fasi 3 e 4: volo ad alta velocità; chiusura) — 2026-11-15** (ora d'inizio da `date -Is`: 06:34:56+01:00) · stessa convocazione · passo `f20-chiusura/31-proposta/` · a cura di `sciame-comunicazione`. Integra il quattordicesimo addendum e i successivi fino al diciannovesimo, le decisioni autonome D1–D6 del coordinatore, la fase 3 (`f19-volo/`, verdetto `f19-volo/30-verdetto/VERDETTO_VOLO.md`) e la fase 4 (`f20-chiusura/`, verdetto finale `f20-chiusura/20-verdetto/VERDETTO_FINALE.md`, con la variante F7r). **Il caso centrale diventa il volo ad alta velocità di aerei e droni con collisioni, detriti ed eventi improvvisi**; il sito con il rullaggio e il corto raggio diventano altri usi. Tutto il nuovo è nel **cap. 12**, che prevale sui capitoli precedenti dove differisce. La versione 4 resta intera in `documentazione/STATO_PROGETTO_v4.md`; il suo testo resta anche qui sotto, non riscritto.
+
+> **Niente delle fasi 3 e 4 è provato su un sensore fisico o su hardware.** Cifre simulate dalle schede, calcolate, o su traiettorie pubbliche con un sensore simulato; classi messe a mano; solo osservazione, monitoraggio e avviso; niente è «validato». La collisione veloce fra droni resta un **limite dichiarato** (regola di contatto provata, non adottata). Il video non deve superare i **176 s** (addendum 17).
+
+*Testa della versione 4, superata dalla testa qui sopra per il caso centrale e le fasi integrate; resta vera per ciò che dice della versione 4:*
+
 **Versione 4 (seconda fase: veicoli veloci) — 2026-11-15** (ora d'inizio da `date -Is`: 03:03:44+01:00) · stessa convocazione · passo `f18-documenti/03-stato/` · a cura di `sciame-redattore`. Integra ciò che è stato chiuso dopo la versione 3: l'undicesimo, il dodicesimo e il tredicesimo addendum dell'utente e la decisione K-603 del coordinatore (`ADDENDUM_UTENTE.md`); la seconda fase sui veicoli veloci (`f15-lunga-portata/`), con il verdetto dell'arbitro (`f15-lunga-portata/30-verdetto/VERDETTO_FASE2.md`, 01:39–01:50); il prototipo simulato (`f16-prototipo/`, codice nella cartella `prototipo/` della radice del progetto); la fase 2b delle correzioni, con il suo verdetto (`f15-lunga-portata/50-fase2b/20-verdetto/VERDETTO_2B.md`, dalle 02:59); il video in produzione (`f17-video/`); i tre specialisti nuovi; le violazioni del divieto di cancellare che gli agenti hanno segnalato. **La fase 2c delle correzioni rapide (`f15-lunga-portata/60-fase2c/`) alla chiusura di questa versione non ha un verdetto**: le frasi che può cambiare portano il commento `<!-- % 2C -->` (alla versione 4.1 sostituito da note «superata»: §11.14) (§11.0). La versione 3 (2026-11-14T19:39:17+01:00) resta in `documentazione/STATO_PROGETTO.md` (radice del progetto), non toccata; il suo testo resta anche qui sotto, intero, con i riquadri «Versione 4» in testa ai paragrafi che cambiano. La seconda fase è tutta nel **cap. 11**, nuovo. Che cosa questa versione ha cambiato: `f18-documenti/03-stato/STATO.md`.
 
 > **Niente della seconda fase è provato su un sensore fisico.** Ogni cifra viene da una simulazione dalle schede tecniche (13 sensori, 124 campi con fonte, di cui 57 «ipotesi», il 46 %: tutte le probabilità di rilevamento, i falsi allarmi, le latenze e i costi), da un conto, o da traiettorie pubbliche reali con rumore e occlusione simulati (`f15-lunga-portata/02-sensori/SENSORI_LUNGA_PORTATA.md`, §1; VERDETTO_FASE2, in testa). Le etichette di classe sono messe a mano: il classificatore si suppone esistente ed è lasciato ai lavori futuri (undicesimo addendum). Il lavoro riguarda solo osservazione e avviso: nessuna funzione d'ingaggio o di contrasto. Niente è «validato».
@@ -134,6 +140,7 @@ In due tabelle del cap. 8 compare anche «progetto, mai simulato»: descritto, m
 - **9. Metodo dello sciame e cronologia** — 9.1 il metodo · 9.2 la cronologia delle decisioni
 - **10. Punti da sciogliere** — 10.1 dove le sezioni non concordano · 10.2 discordanze fra file che toccano più capitoli · 10.3 stato dei punti dopo le valutazioni chiuse
 - **11. La seconda fase: veicoli veloci, sensori a lunga portata, eventi, prototipo, video (versione 4)** — 11.0 come leggere · 11.1 addendum 11–13 e decisione K-603 · 11.2 componenti · 11.3 sensori · 11.4 traiettorie pubbliche · 11.5 prove per classe · 11.6 i tre principi alla nuova scala · 11.7 eventi improvvisi · 11.8 prototipo e scene · 11.9 video e specialisti nuovi · 11.10 da dire e da non dire · 11.11 regole violate · 11.12 aperti · 11.13 contraddizioni K-601…K-613
+- **12. Le fasi 3 e 4: volo ad alta velocità, confidenza nel tempo, scorta a bordo di un drone, chiusura (versione 5)** — 12.0 come leggere · 12.1 addendum 14–19 e decisioni D1–D6 · 12.2 fase 3 · 12.3 fase 4 · 12.4 risultati presentabili · 12.5 confidenza nel tempo · 12.6 limiti e strada verso il sistema attuato · 12.7 da dire e da non dire · 12.8 documenti e video · 12.9 regole violate · 12.10 aperto
 - **Glossario** · **Registro delle modifiche** · **Appendice A** (file dello sciame che fanno da fonte a ciascun capitolo) · **Appendice B** (chiavi dei riferimenti; fonti nuove da registrare) · **Appendice C** (provenienza delle sezioni e controlli)
 
 ---
@@ -2319,6 +2326,99 @@ Fonte: `f15-lunga-portata/60-fase2c/02-verdetto/VERDETTO_2C.md` (arbitro, 03:32�
 
 **Aperti (VERDETTO_2C § 6):** D1, rigenerare A1 col v3 fra i 22 passaggi con fase nascosta, seme scritto prima; K-614; rimisurare col v3 A2, A3, A4 e la controprova di A1 (n = 100) e il prezzo della ritenuta (previsione: mediana ≤ 1, smentita se ≥ 3); la validazione-3 della mappa nel simulatore e cp_X5b con la mappa dichiarata; K-606; ispezione dell'impronta con T_c per punto; correzioni 6–8.
 
+## 12. Le fasi 3 e 4: volo ad alta velocità, confidenza nel tempo, scorta a bordo di un drone, chiusura (versione 5)
+
+> **Niente delle fasi 3 e 4 è provato su un sensore fisico o su hardware.** Ogni cifra è simulata dalle schede (*sim*), calcolata (*calc*), su traiettorie pubbliche con un sensore simulato (*pub*), un'ipotesi (*ip*) o dimostrata nel modello (*dim*). Le classi degli oggetti sono messe a mano. Solo osservazione, monitoraggio e avviso. Niente è «validato». Il Wilson al 95 % è per passaggio; dove si dice «casi», i casi sono correlati dentro un mezzo e l'intervallo è ottimista. **Fonte di tutte le cifre di questo capitolo:** `f20-chiusura/20-verdetto/VERDETTO_FINALE.md` (dalle 06:25, con F7r integrato alle 06:34); dove una cifra della fase 3 è stata cambiata dalla fase 4, vale quella della fase 4.
+
+### 12.0 Come leggere questo capitolo
+
+Il capitolo 11 resta vero per ciò che dice della seconda fase; ciò che le fasi 3 e 4 cambiano sta qui. In particolare: il **caso centrale** non è più il sito con il rullaggio (K-603, §11.1) ma il **volo ad alta velocità di aerei e droni con collisioni, detriti ed eventi improvvisi** (addendum 14); il sito con il rullaggio e il corto raggio diventano una sezione breve. Il «51 su 60» della collisione fra droni lenti (cap. 11) non si dice più senza la nota sull'integratore (§12.4). Classi: **S** solido (limite inferiore ≥ 0,90, o 0/N con limite superiore ≤ 0,06); **I** incoraggiante (stima ≥ 0,80, limite inferiore ≥ 0,70, con base matematica); **L** limite dichiarato; **NP** non provato.
+
+### 12.1 Che cosa ha chiesto l'utente, e che cosa ha deciso il coordinatore
+
+| Quando | Chi | Che cosa | Fonte |
+|---|---|---|---|
+| 15-11, notte | utente, addendum 14 | risultati incoraggianti ammessi se con base matematica, intervallo, limiti e migliorie (quali e come) nel documento tecnico; caso centrale il volo ad alta velocità con collisioni, detriti ed eventi impulsivi; stima esatta della perdita di confidenza nel tempo; sensori allo stato dell'arte e hardware dedicato stimato per analogia (chip per modelli linguistici); sito con rullaggio e altri usi in una sezione breve | `ADDENDUM_UTENTE.md`, addendum 14 |
+| 05:45 | coordinatore, sotto l'autorizzazione notturna (addendum 13: tutto tranne cancellare file) | **D1** provare la regola di contatto per la collisione veloce (soglie scritte prima: F3 entro 2 s ≥ 51/60 con F6 0/200), presentando il caso centrale in ogni caso; **D2** il nucleo corretto v3i diventa il nucleo v4, in un file nuovo, la v3 resta; **D3** E1 rifatto con l'integratore stabile (K-709); **D4** taratura della confidenza su metà dei mezzi ADS-B e verifica sull'altra metà; **D5** aprire le fonti «non aperte» prima di citarle; **D6** ultima tornata: documento tecnico v3 (v2 copiata in `allegato_tecnico/v2/`), proposta v3.0, stato v5, video v3 (`video/progetto_v3`) | idem, «Decisioni autonome» |
+| circa 05:50 e 05:58 | utente, addendum 15 e 16 | scenario **F7 «scorta»**: MoVi a bordo di un terzo drone che mantiene la traccia di un oggetto veloce nonostante una collisione vicina con esplosione, fumo e detriti; nel video subito dopo il volo veloce e prima del rullaggio | idem |
+| 06:10 | utente, addendum 17 | **il video non supera in nessun caso i 176 s** (obiettivo 168–175 s, misura con ffprobe sul file finale) | idem |
+| 06:16 | coordinatore | registri F7 validi solo `prototipo/uscite/video_volo/registro_F7_*_v2.jsonl` (quelli senza `_v2` violano la regola 5 del validatore) | idem |
+| 06:36 e circa 06:40 | utente, addendum 18 e 19 | variante **F7r** col radar accecato; se non regge, una correzione con un tetto di 30 minuti; conclusione massima spostata alle 10:45 | idem |
+
+### 12.2 La fase 3 (`f19-volo/`, verdetto `f19-volo/30-verdetto/VERDETTO_VOLO.md`, dalle 05:30)
+
+- **Componenti:** rivalutazione rapida di tutto (`01-rivalutazione/RIVALUTAZIONE.md`); sensori allo stato dell'arte e calcolo dedicato (`02-sensori-hw/SENSORI_E_HARDWARE.md`, `latenza.json`, `parametri_volo.json`); confidenza nel tempo in forma chiusa con IMM e verifica su ADS-B (`03-confidenza/PERDITA_DI_CONFIDENZA.md`, `stima_v4.py`); scenari F1–F6 (`04-scenari/SCENARI_VOLO.md`, `eventi_volo.py`, `scenari_volo.json`); prove col nucleo corretto v3i (`10-prove/PROVE_VOLO.md`, `passaggi_volo_v3i.jsonl`); attacco (`20-attacco/ATTACCO_VOLO.md`); controllo statistico (`21-statistica/CONTROLLO_VOLO.md`); registri per il video (`prototipo/uscite/video_volo/`, `INDICE.md`).
+- **Fatti principali:** F-701, l'insieme di presenza del nucleo v3 usava 90 m/s invece di 210: con la correzione v3i F4/att passa da 13/60 a 60/60 e F6/att da 126/200 a 186/200 (*sim*); F-702, la collisione **veloce** fra droni (40 e 35 m/s) non è dichiarata come evento, 0/60 [0; 0,060], e il 51/60 di E1 non si trasferisce al volo veloce; F-703, la regola «impulso» dà F3 59/60 ma falsi eventi in F6 198/200: respinta.
+- **Contraddizioni risolte:** K-703 (F4 si chiama «avaria con detriti a bassa energia»; l'avaria non contenuta è NP, 0/10 [0; 0,278]); K-705 (scambio d'identità 0,47–0,63, si toglie «confidenza d'identità 0,79»); K-706 (umano senza ausilio 3312 m e 1058 m, non 3812 e 1237); K-707 (calcolo dedicato 0,08–1,2 ms, *ip*: «sotto 1 ms» è falso); K-708 (il guadagno in sda non è attribuibile all'hardware). K-709 (integratore di Eulero instabile) è passato alla fase 4 (D3).
+
+### 12.3 La fase 4 (`f20-chiusura/`, verdetto finale `f20-chiusura/20-verdetto/VERDETTO_FINALE.md`)
+
+| Passo | Cartella | Esito (dal verdetto finale) |
+|---|---|---|
+| D1, regola di contatto v4c | `01-contatto/` (`CONTATTO.md`, `prove_volo_v4.py`) | **F-801:** provata, **non adottata**. sda 57/60 [0,863; 0,983], ma F5 2/60 [0,009; 0,114] falsi eventi e 1/60 prima dell'urto; att 34/60 [0,441; 0,684]. F3 resta **L** |
+| D2, nucleo v4 | `01-contatto/prove_volo_v4.py` | **F-802:** con `VOLO_REGOLA=v3i` è il nucleo della fase 3; la v3 resta intatta |
+| D3, E1 con l'integratore stabile | `01-contatto/e1_stabile.py`, `e1_stabile_*.jsonl` | **F-803:** volume 60/60 [0,940; 1] (era 48/60); evento entro 2 s 48/60 [0,682; 0,882] più 3/60 [0,017; 0,137] eventi aperti circa 11 s prima dell'urto: V-13 da I a **L** per l'evento, **S** per il volume. Il rifacimento cambia anche il rumore delle camere, quindi non isola l'integratore |
+| D4, taratura della confidenza | `02-taratura/TARATURA.md` | **F-804:** aerei, fascia 1–2 s da 0,71 a **0,89 [0,87; 0,91]** (I); virata 0,73 [0,67; 0,78] (L); l'89,5 % dei casi viene da 4 numeri di volo di una sola rotta |
+| D5, fonti aperte | `03-fonti/FONTI_APERTE.md`, `nuove.bib` | 17 voci nuove ([394]–[410] in `documentazione/RIFERIMENTI.md`, § 6bis); correzioni di frase (AC 90-48E, EchoShield 120×80°, CERN, Taalas, CFAR) |
+| capitoli del documento tecnico | `04-capitolo/` (`11_volo_alta_velocita.tex`, `12_da_proposta_a_sistema.tex`) | da integrare nel documento tecnico v3 (verdetto finale § 9) |
+| F7 «scorta» | `05-scorta/SCORTA.md`, `scorta_f7.py`, `passaggi_valutazione.jsonl` | **F-805:** S col radar a 360° per continuità, «mai libero», contenimento dei detriti, nessun falso evento nel controllo; L in quattro punti (§12.4). **F-806:** ritardo dell'evento 0,0 s = artefatto, non presentabile. **F-807:** il tracciatore usa la velocità vera del portatore in due punti. **F-808:** controllo senza clutter a grappoli |
+| F7r, radar accecato | `05-scorta/ACCECAMENTO_RADAR.md`, `scorta_f7r.py` | **F-809:** «libero» 0/60 e continuità 59–60/60 reggono; l'avviso al portatore crolla (totale 0/59 [0; 0,061]); S-6 condizionata a «radar non disturbato». La cartella `05-scorta/correzione_f7r/` (addendum 19) era in corso e **non è considerata** dal verdetto né qui |
+| attacco finale | `10-attacco/ATTACCO_FINALE.md`; `20-verdetto/attacco_f7.py` | PA-1…PA-9 nel verdetto finale § 1: reggono PA-1…PA-7; PA-8 smentita a favore del sistema (frammenti a 100 m/s tutti contenuti); PA-9 smentita, limite della prova |
+
+**Contraddizioni nuove:** K-801 (F7c resta S con la frase «senza clutter a grappoli»); K-802 (si dice «12 aerei e 4 numeri di volo», non «16 aerei»; fascia 21–30 s 0,845 [0,806; 0,878]); K-803 (entro 2,5 s, con ritardi ≥ 0, 57/60, non 60/60); K-804 (il gonfiamento sta in σ_rif², non in q); K-805 (CERN: FPGA più lento solo in latenza); K-806 (la voce v3 del video va riscritta).
+
+### 12.4 I risultati presentabili (sintesi; tavola intera nel verdetto finale § 2)
+
+**Volo ad alta velocità (caso centrale), *sim*, 60 passaggi per cella (200 per F6):**
+- **S** V-1: mai «libero» dove c'era l'oggetto o un frammento, nei sei scenari: F6 0/200 [0; 0,019], le altre celle 0/60 [0; 0,060], anche col nucleo v4.
+- **I** V-2: avaria a 135 m/s con fiammata, evento dedotto entro 1 s e camere non affidabili, 60/60 [0,940; 1] (innesco ottimista). **I** V-3: detriti a bassa energia nel volume, 58/60 [0,886; 0,991]. **I** V-4: avviso prima del primo frammento a terra, 60/60; margine minimo per un operatore 0,25–0,45 s (*ip* sulla risposta umana).
+- **I** V-5: avviso di prossimità almeno 10 s prima, 60/60 [0,940; 1]. **S** V-6: dopo la collisione veloce il punto vero e i frammenti nella regione, 60/60, 939/939 campioni.
+- **S** V-7: nessun falso evento nelle quasi collisioni a 40 m e negli incroci (0/200, 0/60). **S** V-8: radar a scansione elettronica a 10 Hz, regione mai persa (60/60 e 200/200 [0,981; 1]). **L** V-9: radar rotante a 1 Hz, 39/60 [0,524; 0,758]. **S/L** V-10: ottici accecati 2–4 s, regione 60/60; identità «presunta», scambio 0,47–0,63.
+- **L** V-11: collisione veloce non dichiarata; regola di contatto in prova 57/60, non adottata. **NP** V-12: avaria non contenuta, 0/10. **L/S** V-13: droni lenti, evento 48/60 con 3 precoci; volume 60/60.
+
+**F7 «scorta», *sim*:** **S** S-1 regione del drone seguito mai persa, 60/60 [0,940; 1] in ogni geometria col radar a 360°, 20/20 [0,839; 1] anche con l'urto a 10–30 m; **S** S-2 mai «libero» sul drone seguito né su un frammento, 0/60 in ogni cella (in parte per costruzione); **S** S-3 nessun frammento attribuito al drone seguito senza dirlo; **S** S-4 volume dei detriti con tutti i campioni dentro (*dim* nel modello, vento nullo); **S** S-5 camere non affidabili in ogni ciclo saturo, F7c 0/200 senza clutter a grappoli; **I/L** S-6 avviso al portatore prima dei frammenti col radar non disturbato, crolla col radar accecato; **S** S-6r radar accecato fino a 2 s con le camere: mai «libero», continuità 59–60/60; **L** S-7 volume prudente, avviso non discriminante; **L** S-8 radar solo frontale: urto di lato o dietro non visto, identità in virata 43/60 [0,592; 0,815]; **L** S-9 margine sotto 0,25 s in 7 casi su 20 con l'urto a 10–30 m davanti; S-10 ritardo dell'evento non presentabile.
+
+**Sito e altri usi (invariati dalla seconda fase):** LP-1 200/200 [0,981; 1]; LP-2 0/171 [0; 0,022] con la mappa dichiarata; LP-3 188/200 [0,898; 0,965]; LP-4/5 rullaggio 200/200 con tre sensori, 50/200 [0,195; 0,314] col solo radar; LP-6 aerei in volo, avviso al sito non tempestivo (3410 m, *calc*); LP-11 0/600 [0; 0,006]; corto raggio CR-6 0/4324 [0; 0,001].
+
+### 12.5 La confidenza nel tempo
+
+σ²(τ) = σ0² + 2σ0v·τ + σv²·τ² + q·τ³/3 + σ_rif²; C(τ) = 1 − exp(−r²/2σ²(τ)); r_0,9(τ) = 2,146·σ(τ) (*dim* nel modello a velocità quasi costante con rumore gaussiano, verificata numericamente). Con più regimi C = Σ μ_j P_j, mostrata come minimo progressivo C̃(τ) = min_{s≤τ} C(s), monotona per costruzione (la C grezza ha 45 violazioni su 1440 passi); poi ricalibrazione isotonica sulla metà di taratura. Fuori modello (urto, avaria) si mostra l'insieme di presenza r0 + v_max·τ (210 m/s aerei, 45 m/s droni): contenimento garantito se |v| ≤ v_max e |p(0) − p̂0| ≤ r0, non una probabilità.
+
+| Aerei, regione al 90 %, metà di prova (*pub*, casi correlati) | 1–2 s | 3–5 s | 6–10 s | 11–20 s | 21–30 s | in virata | in accelerazione |
+|---|---|---|---|---|---|---|---|
+| prima (IMM della fase 3) | 0,71 [0,67; 0,74] | 0,92 | 0,95 | 0,98 | 0,96 | 0,905 | 0,841 |
+| dopo la taratura | 655/733 = 0,89 [0,87; 0,91] | 0,89 [0,86; 0,92] | 0,89 [0,86; 0,92] | 0,89 [0,86; 0,92] | 0,85 [0,81; 0,88] | **0,73 [0,67; 0,78] L** | **0,76 [0,67; 0,83] L** |
+
+F7, bersaglio a perdita totale (*calc* da *ip*): C da 1,00 a 0,62 a 2 s e a 0,09 a 5 s; t(C < 0,9) = 1,35 s. Da non mostrare: la C del nucleo in att, la zona «al 99 %», la C numerica dei registri F2, F3, F5, «tarata» senza condizione, «16 aerei».
+
+### 12.6 Limiti e strada verso il sistema attuato
+
+La tabella intera è nel verdetto finale § 5 e nel capitolo `04-capitolo/12_da_proposta_a_sistema.tex`. Applicate in simulazione: inviluppo a 210 m/s (nucleo v4), integratore semi-implicito, taratura della confidenza (peggiora la virata), radar a 360° in F7, variante F7r. Non fatte, ciascuna con la sua soglia: regola di contatto adottabile (F3/sda ≥ 54/60 con F5, F1, F6 a 0 su semi nuovi e ≥ 10 geometrie); ricalibrazione condizionata alla manovra (virata ≥ 0,85, smentita se < 0,80); avviso «evento vicino non localizzato» col radar accecato (avviso ≥ 0,9, falsi ≤ 0,05); Doppler sui frammenti per un volume meno prudente (falsi ≤ 10 % con contenimento al 100 %); velocità del portatore dalla navigazione inerziale (F-807); clutter a grappoli; ≥ 10 geometrie per scenario; innesco della fiammata dall'istogramma; FPGA reale (≤ 1,2 ms per aggiornamento); sensore fisico, classificatore, prove sul campo.
+
+**Sensori e calcolo (stime):** radar a scansione elettronica in banda Ku, classe EchoShield, 10 Hz (stampa 2026), campo 120×80° (produttore), portate per bersaglio non verificate; calcolo dedicato 0,08–1,2 ms per aggiornamento (*ip*, per analogia: CFAR su FPGA 0,6 µs, distanza-Doppler 85× su ARM; chip per modelli linguistici circa 17 000 contro 230 token/s, dato dell'azienda); la leva è la rivisita del sensore (10 Hz → 0,62 s, 40 Hz → 0,17 s al primo avviso, *calc* da *ip*); verso l'umano la direzione dell'avviso (5,4 s invece di 12,5 s, FAA AC 90-48E).
+
+### 12.7 Da dire e da non dire
+
+Le frasi per la giuria, in italiano e in inglese, sono quelle delle tavole del verdetto finale § 2; le frasi vietate sono nel § 7. Le più importanti: non «MoVi rileva la collisione in volo»; non «entro 2 s in 51 su 60» senza la nota sull'integratore; non «confidenza 99 %» né «16 aerei reali»; in F7 non «segue», «insegue» o «intercetta» ma «mantiene la traccia»; non «dichiara l'evento in 0 s»; non «avvisa sempre dei detriti» col radar accecato; non «validato», «testato su sensori», «detect and avoid», «in tempo reale».
+
+### 12.8 Documenti e video della fase 4
+
+- **Proposta v3.0** (`proposta/proposta_sciame.tex` e `.pdf`, copia `proposta_sciame_v3.0.pdf`; la v2.0 resta in `proposta_sciame_v2.0.*`): due pagine (pdfinfo), cifre solo dal verdetto finale; riga in `proposta/VERSIONI.md`. Rapporto: `f20-chiusura/31-proposta/PROPOSTA_V3.md`.
+- **Riferimenti:** 410 voci (`documentazione/RIFERIMENTI.md`, § 6bis) e 228 voci BibTeX (`riferimenti.bib`, bibtex: 0 errori, 1 avviso già noto); la versione f18 resta in `RIFERIMENTI_v4.md` e `riferimenti_v4.bib`.
+- **Documento tecnico v3:** da comporre secondo il verdetto finale § 9 (non verificato da questo passo).
+- **Video v3** (`video/progetto_v3`): vincolo assoluto dell'utente, **non oltre 176,0 s** misurati con ffprobe sul file finale, obiettivo 168–175 s; la bozza v3 fa 171,903 s su 10 scene (dato del verdetto, non rimisurato qui); la scena F7 va dopo il volo veloce e prima del sito; le voci s5, s7 e F7 sono nel verdetto finale § 8. Durata del file finale: **non verificata** da questo passo.
+
+### 12.9 Regole violate segnalate nelle fasi 3 e 4
+
+- `sciame-fonti` (f20/03-fonti) dichiara un possibile aggiramento: dopo un 403 di WebFetch ha scaricato quattro documenti pubblici con `curl` e un User-Agent da browser; un tentativo successivo è stato negato dal sistema dei permessi.
+- L'arbitro del verdetto finale e questo passo non dichiarano violazioni (niente cancellazioni, git o sudo).
+
+### 12.10 Che cosa resta aperto (dal verdetto finale § 10)
+
+F3 con i sensori a circa 570 m in sda (parziale, 7/7); F5 ed F6 a 40–150 m (non provati); la C del nucleo v4 sui registri; l'attacco a F7 con portatore in manovra, vento, clutter a grappoli, più di 20 passaggi per variante; l'esito di `05-scorta/correzione_f7r/` (addendum 19), non integrato; `latenza.json` e il bootstrap per mezzo non ricontati dall'arbitro.
+
+---
+
 ## Glossario
 
 Una parola per ogni cosa. Dove le sezioni d'origine o i file usano un'altra parola, è detto.
@@ -2423,6 +2523,7 @@ Una riga per ogni aggiornamento, la più recente in fondo. Si scrive che cosa è
 | 4 (g) | idem | elenco dei riferimenti aggiornato (`f18-documenti/04-riferimenti/RIFERIMENTI_aggiornato.md` (con `riferimenti.bib`; le note sul cambio in `RIFERIMENTI.md`), 393 voci) | appendice B: riquadro «Versione 4» con le chiavi nuove; sintesi, testa, indice, §5.7 aggiornati. **Fase 2c: senza verdetto alla chiusura**; frasi marcate `<!-- % 2C -->` (alla versione 4.1 sostituito da note «superata»: §11.14) |
 | 5 | *(da scrivere)* | *attese: verdetto della fase 2c; K-613; rifacimento di `lp_A1` e `lp_E1`; video finale; le attese della riga 4 non avvenute (§5.7)* | *si veda il §5.7* — superata dalla riga 5 (a)* |
 | 5 (a) | 2026-11-15, verifica dei documenti | VERDETTO_2C (`f15-lunga-portata/60-fase2c/02-verdetto/`) | riquadro «Versione 4.1» nella sintesi; i 17 commenti `% 2C` sostituiti da note «superata» con le cifre del v3; §11.14 nuovo. Da «smentito» a «sostenuto dai dati, con la mappa dichiarata completa» il «libero» di A1 (0/171); E1 da 49/60 a 51/60 (resta smentito), impronta da smentita a sostenuta; K-613 chiusa; K-614 nuovo |
+| 5 (b), titolo «Versione 5» | 15 novembre 2026, dalle 06:35 (la riga 5 (a) è la versione 4.1) | addendum 14–19 dell'utente; decisioni D1–D6 del coordinatore; verdetto della fase 3 (`f19-volo/30-verdetto/VERDETTO_VOLO.md`, 05:30) e verdetto finale (`f20-chiusura/20-verdetto/VERDETTO_FINALE.md`, 06:25–06:34) | testa nuova; cap. 12 nuovo; caso centrale da «sito con droni e aerei in rullaggio» a «volo ad alta velocità di aerei e droni con collisioni, detriti ed eventi improvvisi»; collisione fra droni lenti da «entro 2 s in 51 su 60» a «48 su 60 con l'integratore stabile, più 3 prima dell'urto» (L); confidenza a 1–2 s da 0,71 a 0,89 [0,87; 0,91] dopo la taratura, virata 0,73 (L); collisione veloce: limite dichiarato, regola v4c non adottata; scenario F7 «scorta» e F7r; riferimenti da 393 a 410 voci |
 
 ## Appendice A — File dello sciame che fanno da fonte a ciascun capitolo
 

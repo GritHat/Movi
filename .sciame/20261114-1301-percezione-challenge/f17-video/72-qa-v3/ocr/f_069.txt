@@ -1,0 +1,103 @@
+SIMULATION
+
+F7 - on board a moving drone: a collision nearby
+
+Simulated
+
+state-of-the-art sensor parameters assumed
+
+no physical sensor
+
+¥
+
+ALTITUDE VIEW (distance-height)
+
+\
+
+VIEW FROM THE CARRIER - plan, carrier frame (;stimated pose) - playback x0.33 (slowed)
+
+SEEN
+
+identity presumed
+
+.
+
+TRACK%D DRONE
+
+-
+
+¥
+
+3
+
+=
+
+11.9 s
+
+simulated run, log readout
+
+oo o
+
+RADAR 360°: restored (declared)
+
+CARRIER
+
+&ovi on board
+
+CAMERA: restored (declared)
+
+confidence on the tracked drone (computed in the model)
+
+OO )
+
+0.9
+
+EVENT: nearby collision - inferred
+
+debris volume declared, never clear inside
+
+warning: path enters debris volume
+
+conservative
+
+with the radar blinded it can be late
+
+4
+
+radar blinded up to 2 s
+
+pessimistic model
+
+DEBRIS VOLUME declared
+
+never clear inside
+
+flash and smoke:
+
+drawn for illustration
+
+flash trigger optimistic
+
+identity presumed, doubtful
+
+F7-CONT - region kept on the tracked drone: 60/60 per geometry [0.940; 1] x4 - 360-degree radar, not blinded - sim.
+
+F7-LIBERO - 'clear' on the tracked drone or a fragment: 0/60 [0; 0.060] every cell - sim.
+
+F7R
+
+radar blinded up to 2 s with the cameras: 'clear' 0/60 [0; 0.060] every cell
+
+region kept 59-60/60, worst 59/60 [0.911; 0.997]
+
+7,
+
+limit
+
+forward-only radar: side/behind collision seen 1/60 and 8/68
+
+identity in a turn 43/60 [0.592; 0.815]
+
+Even with the radar blinded for up to two
+
+seconds, MoVi never called a fragment clear.

@@ -36,6 +36,22 @@ $\dilata(A,r)$ & dilatazione dell'insieme $A$ di raggio $r$\\
 $T_r$, $v_e$, $a_f$ & tempo di reazione, velocità propria e decelerazione di frenata di chi porta il sensore\\
 $N$ & numerosità di una prova\\
 $\ell^-$ & estremo inferiore dell'intervallo di Wilson al 95\,\%\\
+\midrule
+\multicolumn{2}{@{}l}{\emph{Volo ad alta velocità (\S\ref{sec:vo})}}\\
+$\tau$ (\S\ref{sec:vo}) & tempo dall'ultima misura (non la latenza)\\
+$\sigma_0$, $\sigma_v$, $\sigma_{0v}$ & scarto tipo di posizione e di velocità all'ultima misura, e loro covarianza\\
+$\sigma^2(\tau)$ & varianza di posizione a $\tau$ secondi dall'ultima misura, \eqref{eq:vo-sigma}\\
+$\sigma_{\mathrm{rif}}$ & scarto tipo della verità di riferimento aggiunto nella taratura, \eqref{eq:vo-sigma-rif}\\
+$C(\tau)$, $\tilde C(\tau)$ & confidenza che l'oggetto stia nella regione; suo minimo progressivo\\
+$k_\alpha$, $r_\alpha(\tau)$ & quantile del raggio al livello $\alpha$; raggio della regione che tiene il livello $\alpha$\\
+$t_C$ & tempo di soglia: ultimo istante con $C\ge\alpha$\\
+$\mu_j$, $P_j$ & peso e probabilità della regione per il regime di moto $j$\\
+$r_0$, $r(\tau)$ & raggio iniziale e raggio dell'insieme di presenza $r_0+\vmax\tau$\\
+$V(\tau)$, $\Delta v$, $v_t$ & volume dei detriti; incremento massimo di velocità dei frammenti; velocità limite\\
+$L(\tau)$ & cammino massimo di un frammento con la resistenza (proposizione~\ref{prop:vo-cammino})\\
+$\sigma_{v_r}$ & scarto tipo della velocità radiale (Doppler)\\
+F1--F7, F7c, F7r & scenari di volo; controllo dello scenario «scorta»; sua variante con il radar accecato\\
+A, B & configurazioni: radar rotante a $1\unita{Hz}$ o a scansione elettronica a $10\unita{Hz}$ (F1--F6); radar di bordo frontale o a $360^\circ$ (F7)\\
 \bottomrule
 \end{tabularx}
 
@@ -54,6 +70,10 @@ regione di previsione & regione emessa a ogni ciclo per una traccia entrata nell
 «previsto ampio» & stato della regione quando il livello non è dichiarabile: la regione resta, senza punto e senza livello\\
 identità presunta & identità riassegnata alla ricomparsa: è un'ipotesi, e l'avviso non ne dipende\\
 affidabilità persa & segnale emesso quando il sensore non è in salute; la mappa è dichiarata «non osservato»\\
+portatore & il mezzo che porta il sensore; nello scenario «scorta» un drone in volo\\
+mantenere la traccia & tenere per un oggetto una traccia o una regione dichiarata; non vuol dire inseguirlo\\
+insieme di presenza (in volo) & regione $r_0+\vmax\tau$ garantita per ogni moto entro l'inviluppo; non è una probabilità\\
+solido, incoraggiante, limite & classi dei risultati: limite inferiore $\ge0{,}90$ (o $0/N$ con limite superiore $\le0{,}06$); stima $\ge0{,}80$ con limite inferiore $\ge0{,}70$ e una base matematica; il sistema non fa ciò che dovrebbe\\
 \bottomrule
 \end{tabularx}}
 

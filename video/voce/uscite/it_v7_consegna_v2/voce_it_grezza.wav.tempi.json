@@ -1,0 +1,177 @@
+[
+ {
+  "inizio": 0.15,
+  "fine": 2.838,
+  "testo": "Un sito aerospaziale sorvegliato."
+ },
+ {
+  "inizio": 2.888,
+  "fine": 8.947,
+  "testo": "Un drone si avvicina, confermato a circa novecentocinquanta metri: in tempo per l'operatore."
+ },
+ {
+  "inizio": 8.997,
+  "fine": 12.837,
+  "testo": "Che cosa deve dire lo schermo quando nessun sensore lo vede?"
+ },
+ {
+  "inizio": 13.287,
+  "fine": 16.337,
+  "testo": "Movi dà a ogni traccia una di tre risposte."
+ },
+ {
+  "inizio": 16.387,
+  "fine": 17.241,
+  "testo": "Lo vedo."
+ },
+ {
+  "inizio": 17.291,
+  "fine": 19.637,
+  "testo": "Non lo vedo: ecco dove può essere."
+ },
+ {
+  "inizio": 19.687,
+  "fine": 21.138,
+  "testo": "Oppure: non lo so."
+ },
+ {
+  "inizio": 21.188,
+  "fine": 26.265,
+  "testo": "In simulazione, dice vuoto solo dove ha guardato, se la mappa del sito è giusta."
+ },
+ {
+  "inizio": 26.315,
+  "fine": 33.398,
+  "testo": "L'avviso di possibile presenza resta acceso finché non si controlla tutta la zona, o non si rivede l'oggetto."
+ },
+ {
+  "inizio": 33.848,
+  "fine": 40.781,
+  "testo": "Radar, lidar, camere, e ciò che trasmettono aerei e droni: tutto simulato dalle schede tecniche pubbliche."
+ },
+ {
+  "inizio": 40.831,
+  "fine": 45.589,
+  "testo": "Dove un sensore non può vedere un drone, la zona resta non verificata."
+ },
+ {
+  "inizio": 46.039,
+  "fine": 47.255,
+  "testo": "Nebbia fitta."
+ },
+ {
+  "inizio": 47.305,
+  "fine": 50.121,
+  "testo": "Movi dichiara la portata di ogni sensore."
+ },
+ {
+  "inizio": 50.171,
+  "fine": 58.725,
+  "testo": "Per un drone piccolo, il radar passa da millesessantadue a millequarantuno metri: un cambio piccolo, non un controllo indipendente."
+ },
+ {
+  "inizio": 59.175,
+  "fine": 60.989,
+  "testo": "Due droni si urtano."
+ },
+ {
+  "inizio": 61.039,
+  "fine": 68.356,
+  "testo": "Movi deduce l'evento due secondi e due decimi dopo; entro due secondi in cinquantuno passaggi su sessanta."
+ },
+ {
+  "inizio": 68.406,
+  "fine": 70.582,
+  "testo": "Si apre una zona dei detriti."
+ },
+ {
+  "inizio": 70.632,
+  "fine": 74.643,
+  "testo": "Cresce, non si riduce guardando, e non distingue chi è in pericolo."
+ },
+ {
+  "inizio": 75.093,
+  "fine": 78.378,
+  "testo": "Un motore ha un'avaria al decollo, con una fiammata."
+ },
+ {
+  "inizio": 78.428,
+  "fine": 84.743,
+  "testo": "Movi dichiara non affidabili le camere accecate, entro tre cicli in tutti i passaggi simulati."
+ },
+ {
+  "inizio": 84.793,
+  "fine": 88.867,
+  "testo": "Resta solo il radar: qui a tratti perde l'aereo, e Movi lo dice."
+ },
+ {
+  "inizio": 88.917,
+  "fine": 93.845,
+  "testo": "L'avviso dei detriti non distingue: circa novantasei tracce per passaggio."
+ },
+ {
+  "inizio": 94.295,
+  "fine": 95.789,
+  "testo": "Prima, i limiti."
+ },
+ {
+  "inizio": 95.839,
+  "fine": 98.719,
+  "testo": "Nessun sensore fisico: tutto simulato."
+ },
+ {
+  "inizio": 98.769,
+  "fine": 101.393,
+  "testo": "Quasi metà dei valori sono ipotesi."
+ },
+ {
+  "inizio": 101.443,
+  "fine": 104.024,
+  "testo": "Le classi sono etichettate a mano."
+ },
+ {
+  "inizio": 104.074,
+  "fine": 107.039,
+  "testo": "Per gli aerei in volo, l'avviso arriva tardi."
+ },
+ {
+  "inizio": 107.089,
+  "fine": 112.273,
+  "testo": "Un drone che si ferma può uscire dall'avviso: dodici passaggi su duecento."
+ },
+ {
+  "inizio": 112.323,
+  "fine": 124.846,
+  "testo": "Che cosa regge, in simulazione: un drone sul sito è stato annunciato in tempo in tutti i duecento passaggi, la sua posizione mai dichiarata vuota, con la mappa del sito dichiarata completa."
+ },
+ {
+  "inizio": 125.296,
+  "fine": 134.256,
+  "testo": "Lo stesso nucleo, dalla nostra versione a corto raggio: una persona dietro un ostacolo, una camera di profondità, le stesse tre risposte."
+ },
+ {
+  "inizio": 134.706,
+  "fine": 135.335,
+  "testo": "Movi."
+ },
+ {
+  "inizio": 135.385,
+  "fine": 138.884,
+  "testo": "Visto, non visto, non so: dichiarato per ogni traccia."
+ },
+ {
+  "inizio": 138.934,
+  "fine": 140.598,
+  "testo": "Osserva e avvisa."
+ },
+ {
+  "inizio": 140.648,
+  "fine": 142.781,
+  "testo": "Nessuna uscita è un comando."
+ },
+ {
+  "inizio": 142.831,
+  "fine": 144.645,
+  "testo": "Di esse di emme esse."
+ }
+]

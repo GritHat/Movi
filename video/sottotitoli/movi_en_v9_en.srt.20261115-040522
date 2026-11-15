@@ -1,0 +1,196 @@
+1
+00:00:00,150 --> 00:00:01,963
+A guarded aerospace site.
+
+2
+00:00:02,313 --> 00:00:07,930
+A drone heads for it, confirmed about nine
+hundred and fifty metres out: in time for
+
+3
+00:00:07,930 --> 00:00:08,799
+the operator.
+
+4
+00:00:09,149 --> 00:00:12,157
+What should the screen say when no sensor
+sees it?
+
+5
+00:00:13,900 --> 00:00:17,036
+MoVi gives every track one of three
+answers.
+
+6
+00:00:17,386 --> 00:00:18,431
+I see it.
+
+7
+00:00:18,781 --> 00:00:21,320
+I don't see it: here is where it can be.
+
+8
+00:00:21,670 --> 00:00:22,992
+Or: I don't know.
+
+9
+00:00:23,342 --> 00:00:25,966
+It says empty only where it has looked.
+
+10
+00:00:26,316 --> 00:00:31,866
+A possible-presence warning stays on until
+the whole zone is looked at, or the object
+
+11
+00:00:31,866 --> 00:00:32,780
+is seen again.
+
+12
+00:00:37,400 --> 00:00:43,345
+Radar, LiDAR, cameras, and what aircraft
+and drones broadcast: all simulated from
+
+13
+00:00:43,345 --> 00:00:44,739
+public data sheets.
+
+14
+00:00:45,089 --> 00:00:49,249
+Where a sensor cannot see a drone, the
+zone stays unverified.
+
+15
+00:00:51,900 --> 00:00:52,945
+Dense fog.
+
+16
+00:00:53,295 --> 00:00:55,855
+MoVi declares each sensor's reach.
+
+17
+00:00:56,205 --> 00:01:01,698
+For a small drone, the radar's range drops
+from one thousand and sixty-two to one
+
+18
+00:01:01,698 --> 00:01:06,851
+thousand and forty-one metres: a small
+change, and not an independent check.
+
+19
+00:01:10,400 --> 00:01:12,085
+Two drones collide.
+
+20
+00:01:12,435 --> 00:01:18,463
+MoVi infers contact two point two seconds
+later; within two seconds in fifty-one
+
+21
+00:01:18,463 --> 00:01:19,518
+runs of sixty.
+
+22
+00:01:19,868 --> 00:01:21,724
+A debris zone opens.
+
+23
+00:01:22,074 --> 00:01:26,426
+It grows, does not shrink by looking, and
+cannot tell who is at risk.
+
+24
+00:01:30,900 --> 00:01:34,441
+An engine fails on the take-off run, with
+a flash.
+
+25
+00:01:34,791 --> 00:01:40,586
+MoVi declares the blinded cameras
+unreliable, within three cycles in every
+
+26
+00:01:40,586 --> 00:01:41,682
+simulated run.
+
+27
+00:01:42,032 --> 00:01:45,445
+In the model, the radar alone still sees
+the aircraft.
+
+28
+00:01:45,795 --> 00:01:50,339
+The debris warning does not discriminate:
+about ninety-six tracks.
+
+29
+00:01:52,400 --> 00:01:53,765
+First, the limits.
+
+30
+00:01:54,115 --> 00:01:58,275
+All simulated from public data sheets: no
+physical sensor.
+
+31
+00:01:58,625 --> 00:02:01,335
+Almost half the values are assumed.
+
+32
+00:02:01,685 --> 00:02:03,946
+Classes are labelled by hand.
+
+33
+00:02:04,296 --> 00:02:07,453
+For aircraft in flight, warnings come too
+late.
+
+34
+00:02:07,803 --> 00:02:12,561
+A drone that stops can slip out of the
+warning: twelve runs of two hundred.
+
+35
+00:02:12,911 --> 00:02:18,412
+What holds, in simulation: a drone on the
+site was announced in time in two hundred
+
+36
+00:02:18,412 --> 00:02:23,515
+runs of two hundred, and its position
+never declared empty, with the site map
+
+37
+00:02:23,515 --> 00:02:24,708
+declared complete.
+
+38
+00:02:28,900 --> 00:02:33,957
+The core comes from our short-range
+version: a person behind an obstacle, a
+
+39
+00:02:33,957 --> 00:02:36,452
+depth camera, the same three answers.
+
+40
+00:02:39,100 --> 00:02:39,975
+MoVi.
+
+41
+00:02:40,325 --> 00:02:43,866
+Seen, not seen, unknown: declared for
+every track.
+
+42
+00:02:44,216 --> 00:02:46,285
+It observes and warns.
+
+43
+00:02:46,635 --> 00:02:48,769
+No output is a command.
+
+44
+00:02:49,119 --> 00:02:51,060
+By SDMs.

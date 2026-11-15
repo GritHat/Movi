@@ -1,0 +1,201 @@
+1
+00:00:00,150 --> 00:00:02,694
+Un sito aerospaziale sorvegliato.
+
+2
+00:00:02,741 --> 00:00:07,719
+Un drone si avvicina, confermato a circa
+novecentocinquanta metri: in tempo per
+
+3
+00:00:07,719 --> 00:00:08,475
+l'operatore.
+
+4
+00:00:08,523 --> 00:00:12,157
+Che cosa deve dire lo schermo quando
+nessun sensore lo vede?
+
+5
+00:00:13,900 --> 00:00:17,242
+MoVi dà a ogni traccia una di tre
+risposte.
+
+6
+00:00:17,297 --> 00:00:18,232
+Lo vedo.
+
+7
+00:00:18,287 --> 00:00:20,858
+Non lo vedo: ecco dove può essere.
+
+8
+00:00:20,912 --> 00:00:22,502
+Oppure: non lo so.
+
+9
+00:00:22,557 --> 00:00:25,315
+Dice vuoto solo dove ha guardato.
+
+10
+00:00:25,370 --> 00:00:30,945
+L'avviso di possibile presenza resta
+acceso finché non si guarda tutta la zona,
+
+11
+00:00:30,945 --> 00:00:32,780
+o non si rivede l'oggetto.
+
+12
+00:00:37,400 --> 00:00:42,264
+Radar, LiDAR, camere, e ciò che
+trasmettono aerei e droni: tutto simulato
+
+13
+00:00:42,264 --> 00:00:44,397
+dalle schede tecniche pubbliche.
+
+14
+00:00:44,447 --> 00:00:49,249
+Dove un sensore non può vedere un drone,
+la zona resta non verificata.
+
+15
+00:00:51,400 --> 00:00:52,795
+Nebbia fitta.
+
+16
+00:00:52,853 --> 00:00:56,085
+MoVi dichiara la portata di ogni sensore.
+
+17
+00:00:56,142 --> 00:01:02,313
+Per un drone piccolo, il radar passa da
+millesessantadue a millequarantuno metri:
+
+18
+00:01:02,313 --> 00:01:06,351
+un cambio piccolo, e non è un controllo
+indipendente.
+
+19
+00:01:09,900 --> 00:01:11,768
+Due droni si urtano.
+
+20
+00:01:11,820 --> 00:01:17,117
+MoVi deduce il contatto due secondi e due
+decimi dopo; entro due secondi in
+
+21
+00:01:17,117 --> 00:01:19,448
+cinquantuno passaggi su sessanta.
+
+22
+00:01:19,500 --> 00:01:21,742
+Si apre una zona dei detriti.
+
+23
+00:01:21,794 --> 00:01:25,926
+Cresce, non si riduce guardando, e non
+distingue chi è in pericolo.
+
+24
+00:01:30,400 --> 00:01:34,514
+Un motore ha un'avaria in corsa di
+decollo, con una fiammata.
+
+25
+00:01:34,568 --> 00:01:40,147
+MoVi dichiara non affidabili le camere
+accecate, entro tre cicli in tutti i
+
+26
+00:01:40,147 --> 00:01:41,486
+passaggi simulati.
+
+27
+00:01:41,541 --> 00:01:47,155
+Resta solo il radar: in questo passaggio
+perde l'aereo per alcuni secondi alla
+
+28
+00:01:47,155 --> 00:01:48,738
+volta, e MoVi lo dice.
+
+29
+00:01:48,793 --> 00:01:53,210
+L'avviso dei detriti non distingue: circa
+novantasei tracce.
+
+30
+00:01:54,210 --> 00:01:55,705
+Prima, i limiti.
+
+31
+00:01:55,755 --> 00:01:59,769
+Tutto simulato dalle schede pubbliche:
+nessun sensore fisico.
+
+32
+00:01:59,819 --> 00:02:02,445
+Quasi metà dei valori sono ipotesi.
+
+33
+00:02:02,495 --> 00:02:05,080
+Le classi sono etichettate a mano.
+
+34
+00:02:05,130 --> 00:02:08,097
+Per gli aerei in volo, l'avviso arriva
+tardi.
+
+35
+00:02:08,148 --> 00:02:13,336
+Un drone che si ferma può uscire
+dall'avviso: dodici passaggi su duecento.
+
+36
+00:02:13,386 --> 00:02:18,829
+Che cosa regge, in simulazione: un drone
+sul sito è stato annunciato in tempo in
+
+37
+00:02:18,829 --> 00:02:24,137
+duecento passaggi su duecento, e la sua
+posizione mai dichiarata vuota, con la
+
+38
+00:02:24,137 --> 00:02:26,518
+mappa del sito dichiarata completa.
+
+39
+00:02:29,710 --> 00:02:33,937
+Il nucleo viene dalla nostra versione a
+corto raggio: una persona dietro un
+
+40
+00:02:33,937 --> 00:02:37,262
+ostacolo, una camera di profondità, le
+stesse tre risposte.
+
+41
+00:02:39,910 --> 00:02:40,667
+MoVi.
+
+42
+00:02:40,727 --> 00:02:44,938
+Visto, non visto, non so: dichiarato per
+ogni traccia.
+
+43
+00:02:44,998 --> 00:02:47,000
+Osserva e avvisa.
+
+44
+00:02:47,060 --> 00:02:49,627
+Nessuna uscita è un comando.
+
+45
+00:02:49,687 --> 00:02:51,870
+Di SDMs.

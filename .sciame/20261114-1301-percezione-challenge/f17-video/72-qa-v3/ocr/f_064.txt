@@ -1,0 +1,83 @@
+SIMULATION
+
+F7 - on board a moving drone: a collision nearby
+
+Simulated
+
+state-of-the-art sensor parameters assumed
+
+no physical sensor
+
+~
+
+’VIEW FROM THE CARRIER
+
+playback x0.33 (slowed)
+
+height)
+
+plan, Ehrq}er frame (estimated pose)
+
+ALTITUDE VIEW :,E(:ﬁ:s:fan
+
+-‘1Eh". A
+
+SEEN
+
+identity presumed
+
+| TRACKED DRONE
+
+[
+
+t=8.7s
+
+simulated run, log readout
+
+o pc
+
+RADAR 360°: restored (declared)
+
+° o
+
+e
+
+tll;;fii.{? “s MoV on board
+
+CAMERA: UNRELIABLE - saturated
+
+confidence on the tracked drone (computed in the model)
+
+]
+
+0.9
+
+EVENT: nearby collision - inferred
+
+debris volume declared, never clear inside
+
+warning: path enters debris volume
+
+conservative
+
+with the radar blinded it can be late
+
+radar blinded up to 2 s
+
+pessimistic model
+
+DEBRIS VOLUME declared never cEfaK’inside
+
+flash and smoke:
+
+drawn for illustration
+
+flash trigger optimistic
+
+identity presumed, doubtful
+
+F7-CONT - region kept on the tracked drone: 60/60 per geometry [0.940; 1] x4 - 360-degree radar, not blinded - sim.
+
+In sixty of sixty simulated runs, the tracked drone
+
+stayed inside its region, and no fragment was ever called clear.

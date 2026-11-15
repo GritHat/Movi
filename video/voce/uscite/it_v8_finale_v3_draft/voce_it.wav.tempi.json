@@ -1,0 +1,152 @@
+[
+ {
+  "inizio": 0.15,
+  "fine": 5.355,
+  "testo": "Aerei e droni veloci: una collisione, un'avaria, un lampo che acceca le camere."
+ },
+ {
+  "inizio": 5.405,
+  "fine": 8.797,
+  "testo": "Quando la vista si perde, che cosa deve dire lo schermo?"
+ },
+ {
+  "inizio": 9.497,
+  "fine": 12.164,
+  "testo": "MoVi dichiara ciò che non ha osservato."
+ },
+ {
+  "inizio": 12.214,
+  "fine": 14.262,
+  "testo": "Tre risposte per traccia."
+ },
+ {
+  "inizio": 14.312,
+  "fine": 15.165,
+  "testo": "Lo vedo."
+ },
+ {
+  "inizio": 15.215,
+  "fine": 17.775,
+  "testo": "Non lo vedo, ma ecco dove può essere."
+ },
+ {
+  "inizio": 17.825,
+  "fine": 19.276,
+  "testo": "Oppure: non lo so."
+ },
+ {
+  "inizio": 19.976,
+  "fine": 26.035,
+  "testo": "In sei scenari di volo, MoVi non ha mai detto libero dove c'era un aereo, un drone o un frammento."
+ },
+ {
+  "inizio": 26.735,
+  "fine": 30.895,
+  "testo": "Un motore va in avaria a centotrentacinque metri al secondo."
+ },
+ {
+  "inizio": 30.945,
+  "fine": 38.603,
+  "testo": "MoVi deduce l'evento e dichiara le camere non affidabili entro un secondo, in sessanta prove simulate su sessanta."
+ },
+ {
+  "inizio": 38.653,
+  "fine": 44.392,
+  "testo": "I detriti a bassa energia restano nel volume dichiarato in cinquantotto su sessanta."
+ },
+ {
+  "inizio": 45.092,
+  "fine": 47.545,
+  "testo": "Due droni veloci si scontrano."
+ },
+ {
+  "inizio": 47.595,
+  "fine": 54.23,
+  "testo": "MoVi avvisa del passaggio ravvicinato almeno dieci secondi prima, in sessanta prove su sessanta."
+ },
+ {
+  "inizio": 54.28,
+  "fine": 62.493,
+  "testo": "La collisione non è ancora dichiarata come evento, ma la regione resta: i frammenti vi sono rimasti in ogni prova simulata."
+ },
+ {
+  "inizio": 63.193,
+  "fine": 66.009,
+  "testo": "Un lampo acceca tutti i sensori ottici."
+ },
+ {
+  "inizio": 66.059,
+  "fine": 71.222,
+  "testo": "Il solo radar mantiene una regione per ogni traccia, e l'identità è presunta."
+ },
+ {
+  "inizio": 71.922,
+  "fine": 82.141,
+  "testo": "Quando la continuità si perde, MoVi calcola, nel modello del moto, come cala la confidenza, e fa crescere la regione per tenere nove probabilità su dieci."
+ },
+ {
+  "inizio": 82.191,
+  "fine": 93.007,
+  "testo": "Su traiettorie di volo pubbliche, con un sensore simulato, la regione ha contenuto l'aereo da ottantacinque a ottantanove volte su cento, fra uno e trenta secondi."
+ },
+ {
+  "inizio": 93.057,
+  "fine": 96.171,
+  "testo": "In virata, settantatré: un limite dichiarato."
+ },
+ {
+  "inizio": 96.871,
+  "fine": 102.311,
+  "testo": "Ora MoVi è a bordo di un drone e mantiene la traccia di un drone veloce più avanti."
+ },
+ {
+  "inizio": 102.361,
+  "fine": 105.988,
+  "testo": "Accanto, due droni si scontrano: lampo, fumo, detriti."
+ },
+ {
+  "inizio": 106.038,
+  "fine": 108.918,
+  "testo": "Le camere sono dichiarate non affidabili."
+ },
+ {
+  "inizio": 108.968,
+  "fine": 117.693,
+  "testo": "In sessanta prove simulate su sessanta, il drone seguito è rimasto nella sua regione, e nessun frammento è stato detto libero."
+ },
+ {
+  "inizio": 117.743,
+  "fine": 123.333,
+  "testo": "Anche con il radar accecato fino a due secondi, MoVi non ha mai detto libero un frammento."
+ },
+ {
+  "inizio": 124.033,
+  "fine": 132.118,
+  "testo": "Lo stesso nucleo funziona in un sito: un drone dietro un edificio, avvisato in tempo in duecento prove su duecento."
+ },
+ {
+  "inizio": 132.168,
+  "fine": 134.941,
+  "testo": "E a corto raggio: persone, auto, treni."
+ },
+ {
+  "inizio": 135.641,
+  "fine": 141.231,
+  "testo": "I limiti: tutto è simulato, senza sensori fisici, e le classi sono etichettate a mano."
+ },
+ {
+  "inizio": 141.281,
+  "fine": 148.897,
+  "testo": "Poi: una regola di contatto per le collisioni veloci, sensori allo stato dell'arte, hardware dedicato, prove sul campo."
+ },
+ {
+  "inizio": 148.947,
+  "fine": 150.888,
+  "testo": "MoVi osserva e avvisa."
+ },
+ {
+  "inizio": 150.938,
+  "fine": 152.645,
+  "testo": "Di SDMs."
+ }
+]

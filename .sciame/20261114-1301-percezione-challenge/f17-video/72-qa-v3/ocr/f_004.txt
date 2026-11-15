@@ -1,0 +1,61 @@
+SIMULATION
+
+Two fast drones, then contact
+
+Simulated
+
+state-of-the-art sensor parameters assumed
+
+no physical sensor
+
+PLAN VIEW
+
+playback x1.1 (accelerated)
+
+——————200 m
+
+ALTITUDE VIEW (distance-height)
+
+4 ’SEIEN
+
+iy
+
+® )
+
+SEEN
+
+~-
+
+"SEEN
+
+SEEN
+
+i
+
+=20.3 s
+
+simulated run, log readout
+
+RADAR:
+
+reliable
+
+EO CAMERA:
+
+reliable
+
+THERMAL CAMERA:
+
+reliable
+
+PROXIMITY WARNING
+
+predicted close pass between two tracks
+
++ truth (simulation only, MoVi does not see it) ® seen
+
+not seen: region where it can be
+
+Fast aircraft and drones: a collision, an
+
+engine failure, a flash that blinds the cameras.

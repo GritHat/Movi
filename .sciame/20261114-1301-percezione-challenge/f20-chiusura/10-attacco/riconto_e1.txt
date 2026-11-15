@@ -1,0 +1,7 @@
+n 60 idx unici 60
+0<=rit<=2 48/60 [0.682; 0.882]
+rit<0 3/60 [0.017; 0.137] [-11.5, -11.0, -11.0]
+0<=rit<=2.5 57/60 [0.863; 0.983]
+mai 0/60 [0.000; 0.060]
+tutti dentro V 60/60 [0.940; 1.000]
+tipi precoci ['separazione', 'separazione', 'separazione']

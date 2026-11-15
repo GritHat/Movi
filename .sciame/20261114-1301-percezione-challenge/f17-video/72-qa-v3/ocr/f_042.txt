@@ -1,0 +1,109 @@
+SIMULATION
+
+F5 - a flash blinds every optical sensor
+
+Simulated
+
+state-of-the-art sensor parameters assumed
+
+no physical sensor
+
+PLAN VIEW
+
+playback x0.88 (slowed)
+
+P—-—-%—-—-ﬂ 200 m
+
+ALTITUDE VIEW (distance-height)
+
+[0
+
+e
+
+S
+
+N
+
+5
+
+e
+
+s
+
+[vaed
+
+-
+
+[} T
+
+A
+
+&
+
+5 o~=7
+
+N
+
+7
+
+’
+
+G NoT SEEN - 8.2 s - region 65 m
+
+4
+
+s
+
+—
+
+1,
+
+1t
+
+£
+
+() 5
+
++=7 SEEN
+
+t =45.3 s
+
+simulated run, log readout
+
+]
+
+\
+
+”
+
+RADAR:
+
+reliable
+
+gEEN
+
+Sa
+
+’
+
+-
+
+EO CAMERA: RELIABILITY LOST
+
+NOT SEEN,' 0.2 s - region 68 m
+
+THERMAL CAMERA: RELIABILITY LOST
+
+PROXIMITY WARNING
+
+predicted close pass between two tracks
+
+RADAR ONLY - identity PRESUMED
+
++ truth (simulation only, MoVi does not see it) @ ﬁeeﬁ’
+
+not seen: region where it can be
+
+V-10 - optics blinded: every track keeps a region - 60/60 [0.940; 1] - identity PRESUMED - sim.
+
+Radar alone keeps a region for every track, and identity is presumed.

@@ -1,0 +1,39 @@
+SCHEMATIC - ESTIMATE
+
+Limits, and what comes next
+
+limits from the verdicts
+
+hardware figure is an estimate by analogy
+
+LIMITS
+
+FROM PROTOTYPE TO DEPLOYED SYSTEM
+
+- everything simulated: no physical sensor, no hardware test
+
+classes labelled by hand; classifier assumed
+
+fast collision not yet declared as an event
+
+field trials on real sensors
+
+site warning late for aircraft in flight
+
+radar blinded: debris warning to the carrier not reliable
+
+confidence lower in turns: 0.73 [0.67; 0.78]
+
+one geometry per scenario; no clustered clutter
+
+state-of-the-art sensors - dedicated hardware
+
+dedicated processing estimated 0.08-1.2 ms
+
+estimate by analogy, not a measurement;
+
+the sensor revisit dominates
+
+contact rule for fast collisions
+
+under test in simulation: not adopted

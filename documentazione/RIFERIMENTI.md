@@ -1,3 +1,11 @@
+# Riferimenti del progetto — elenco unico, aggiornamento f20 (percezione-challenge, MoVi)
+
+**Aggiornamento f20** (`sciame-comunicazione`, passo `f20-chiusura/31-proposta`, 15 novembre 2026): 410 voci, cioè le 393 dell'aggiornamento f18 più le 17 fonti aperte della fase 4, da [394] a [410], nella sezione nuova § 6bis. Le voci di prima tengono chiave, numero e testo; alle voci [348], [349] e [353] è aggiunta una riga «Nota (f20)». Le correzioni di frase vengono da `f20-chiusura/03-fonti/FONTI_APERTE.md` § 2 e dal § 6 del verdetto finale (`f20-chiusura/20-verdetto/VERDETTO_FINALE.md`). La versione f18 resta intera in `RIFERIMENTI_v4.md` e `riferimenti_v4.bib`. Il capoverso che segue è dell'aggiornamento f18.
+
+> **Che cosa cambia nelle frasi (f20).** Si cita la AC 90-48E (2022), non la 90-48D cancellata (stessa Tabella 1). EchoShield: campo 120×80° (non 130×90°); le portate 2,5, 1,4 e 1,0 km sono «non verificate», forse dell'EchoGuard. CERN: l'FPGA è più lento della CPU solo in latenza (725 contro 250 ns), circa 4,5× in portata. Taalas: «circa 17 000 token/s, dato dell'azienda»; «14 357» si toglie. Il preprint sul CFAR si toglie, al suo posto `sim2023` e `choi2021`. ADS-B: ≥ 1 messaggio/s e latenza ≤ 2,0 s; «0,5 s» non verificato. Restano «scheda non aperta» il CM202A e il ΔT della SupIR. `imhof1961` e `ruben1962` non sono in questo elenco: nei testi vanno tolte o segnate «non verificata». Nessuna voce nuova dice «validato»; niente è provato su un sensore fisico.
+
+*Testata dell'aggiornamento f18:*
+
 # Riferimenti del progetto — elenco unico, aggiornamento f18 (percezione-challenge, MoVi)
 
 **Aggiornamento f18** (`sciame-redattore`, passo `f18-documenti/04-riferimenti`, 15 novembre 2026): 393 voci, cioè le 332 dell'aggiornamento f12 più 61 nuove della seconda fase, da [333] a [393]; il riquadro in testa al §0 dice che cosa è cambiato. Il file BibTeX con le stesse chiavi è `riferimenti.bib`, accanto a questo file. Il capoverso che segue è dell'aggiornamento f12.
@@ -3085,6 +3093,7 @@ Link: https://www.law.cornell.edu/cfr/text/14/91.227
 Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): «aperta oggi»
 Usata per: (aggiornamento f18) ADS-B: errore di posizione < 92,6 m, di velocità < 10 m/s; «almeno 1 al secondo»; latenza ≤ 2 s (sens-P6 regge in parte) — f15-lunga-portata/02-sensori/parametri_lunga_portata.json; f15-lunga-portata/02-sensori/SENSORI_LUNGA_PORTATA.md
 Note: letta su law.cornell.edu, non sul sito del governo. Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+Nota (f20): riaperta da `sciame-fonti` il 15-11-2026; passi citati: «no later than 2.0 seconds», «at least once per second while airborne» (FONTI_APERTE § 1, n. 8).
 
 ### cfr-14-89-310 [349]
 Tipo: norma (regolamento federale degli Stati Uniti)
@@ -3096,6 +3105,7 @@ Link: https://www.law.cornell.edu/cfr/text/14/89.310
 Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): «aperta oggi»
 Usata per: (aggiornamento f18) identificazione remota: 30,5 m (95 %), quota 45,7 m, ≤ 1 s, latenza ≤ 1 s; chi non coopera non compare — f15-lunga-portata/02-sensori/parametri_lunga_portata.json; f15-lunga-portata/02-sensori/SENSORI_LUNGA_PORTATA.md
 Note: Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+Nota (f20): riaperta da `sciame-fonti` il 15-11-2026; passi citati: (h)(5) «at least 1 message per second», (h)(4) latenza «no later than 1.0 seconds» (FONTI_APERTE § 1, n. 10).
 
 ### itu-r-p838-3 [350]
 Tipo: raccomandazione (letta attraverso una libreria)
@@ -3140,6 +3150,7 @@ Link: https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_90-48D_CHG_
 Verifica: non raggiungibile — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): 403 (SCENARI_E_REQUISITI.md, «Non aperte»)
 Usata per: (aggiornamento f18) cercata per i tempi di «vedere ed evitare»; non usata — f15-lunga-portata/03-scenari/SCENARI_E_REQUISITI.md, «Fonti»
 Note: Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+Nota (f20): aperta da `sciame-fonti` il 15-11-2026; cancellata dalla AC 90-48E del 20-10-2022 (`faa-ac-90-48e` [394]), che ha la stessa Tabella 1: si cita la 90-48E.
 
 ### easa-categoria-aperta [354]
 Tipo: pagina dell'autorità
@@ -4876,6 +4887,197 @@ Link: https://whatthelogo.com/logo/gojek-solv/214212
 Verifica: aperta dal ruolo che la cita — (f18, 15-11-2026) stato dichiarato dal rapporto che la cita; non riaperta dal curatore (aggiornamento senza rete): citata dall'attacco al video
 Usata per: (aggiornamento f18) il logo più vicino trovato al marchio MoVi (anello con un'apertura e un punto al centro): rischio basso, non verificato — f17-video/21-attacco/ATTACCO_VIDEO.md, punti 22–23
 Note: una sola ricerca; ricerca d'anteriorità non fatta. Seconda fase (f15–f17): l'arbitro ha vagliato gli enunciati in VERDETTO_FASE2 e VERDETTO_2B, non ogni riga d'uso di una fonte.
+
+## 6bis. Fonti aperte della fase 4 (aggiornamento f20)
+
+Voci da [394] a [410], dalla lista del § 4 di `f20-chiusura/03-fonti/FONTI_APERTE.md` (curatore `sciame-fonti`, 15-11-2026, 05:37–05:50); le note vengono da `f20-chiusura/03-fonti/nuove.bib`. Stanno in una sezione propria, non nei gruppi 1–6, per non rinumerare niente. Tipo per gruppo: articoli [395], [404]–[410] (gruppo 1); schede [397], [398], [400] (gruppo 2); norme [394] (gruppo 3); stampa, blog e Wikipedia [396], [399], [401]–[403] (gruppo 6). `wikipedia-asr11` è secondaria: si cita solo accanto a `stone1989`.
+
+### faa-ac-90-48e [394]
+Tipo: circolare
+Autori: FAA
+Titolo: AC 90-48E, Pilots' Role in Collision Avoidance
+Sede e anno: FAA, 2022
+Identificativo: AC 90-48E
+Link: https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_90-48E.pdf
+Verifica: aperta, Tabella 1 letta — (f20, 15-11-2026) aperta da `sciame-fonti` in `f20-chiusura/03-fonti/FONTI_APERTE.md`; «metadati» = solo autori, sede, anno e pagine da Crossref; «riassunto» = solo il riassunto
+Usata per: (aggiornamento f20) tempi di reazione umani (12,5 s e 5,4 s, Tabella 1) nel verdetto finale § 5 e § 6, nella proposta v3.0 § 2 e § 6
+Note: Aperta e letta dal curatore il 15-11-2026 (PDF, testo estratto). Datata 20-10-2022; cancella la AC 90-48D CHG 1. Tabella 1 identica alla 90-48D: 0,1 + 1,0 + 5,0 + 4,0 + 0,4 + 2,0 = 12,5 s, "TOTAL Time Before Aircraft Begins to Move". Fonte della tabella: TSB Canada A99P0168, dati del U.S. Naval Aviation Safety Center.
+
+### stone1989 [395]
+Tipo: articolo
+Autori: Stone, Anderson
+Titolo: Advances in Primary-Radar Technology
+Sede e anno: Lincoln Lab. J. 2(3), 1989
+Identificativo: manca
+Link: https://archive.ll.mit.edu/publications/journal/pdf/vol02_no3/2.3.3.advancesprimaryradar.pdf
+Verifica: aperta — (f20, 15-11-2026) aperta da `sciame-fonti` in `f20-chiusura/03-fonti/FONTI_APERTE.md`; «metadati» = solo autori, sede, anno e pagine da Crossref; «riassunto» = solo il riassunto
+Usata per: (aggiornamento f20) rivisita di 4,8 s dei radar primari d'aeroporto (SENSORI_E_HARDWARE § 1)
+Note: Aperta e letta dal curatore il 15-11-2026. Tabella 1 "Surveillance Requirements for MTD-Based Airport Primary Radars": "Maximum range = 60 nmi", "Update rate = 4.8 s". Riguarda l'ASR-9 e i radar primari d'aeroporto in generale, non l'ASR-11 in particolare. Pagina finale (380) non verificata.
+
+### wikipedia-asr11 [396]
+Tipo: pagina
+Autori: Wikipedia
+Titolo: ASR-11
+Sede e anno: —
+Identificativo: manca
+Link: https://en.wikipedia.org/wiki/ASR-11
+Verifica: aperta (secondaria) — (f20, 15-11-2026) aperta da `sciame-fonti` in `f20-chiusura/03-fonti/FONTI_APERTE.md`; «metadati» = solo autori, sede, anno e pagine da Crossref; «riassunto» = solo il riassunto
+Usata per: (aggiornamento f20) ASR-11, solo accanto a stone1989 (fonte secondaria)
+Note: Fonte secondaria. Aperta dal curatore il 15-11-2026: "Primary: 60 NM (110 km; 69 mi)", "12.5 RPM", "S band", "2.7-2.9 GHz". Il periodo di 4,8 s e' calcolato (60/12,5); la pagina non lo scrive.
+
+### echodyne-tradegov-2024 [397]
+Tipo: scheda
+Autori: Echodyne
+Titolo: EchoShield
+Sede e anno: trade.gov, 2024
+Identificativo: manca
+Link: https://www.trade.gov/sites/default/files/2024-08/ECHODYNE.pdf
+Verifica: aperta (produttore) — (f20, 15-11-2026) aperta da `sciame-fonti` in `f20-chiusura/03-fonti/FONTI_APERTE.md`; «metadati» = solo autori, sede, anno e pagine da Crossref; «riassunto» = solo il riassunto
+Usata per: (aggiornamento f20) banda Ku dell'EchoShield (verdetto finale § 6)
+Note: Dato del produttore. Aperta dal curatore il 15-11-2026: "Ku-band (15.7-16.6 GHz)", "tracks ~1,000 objects", "<0.5 deg of angular tracking accuracy in both azimuth and elevation". Non contiene ne' la rivisita in Hz ne' le portate per bersaglio.
+
+### echodyne-echoshield-news [398]
+Tipo: pagina
+Autori: Echodyne
+Titolo: Medium-range tactical radar…
+Sede e anno: 2025 (data non in pagina)
+Identificativo: manca
+Link: https://www.echodyne.com/newsroom/medium-range-tactical-radar-built-for-every-domain
+Verifica: aperta (produttore) — (f20, 15-11-2026) aperta da `sciame-fonti` in `f20-chiusura/03-fonti/FONTI_APERTE.md`; «metadati» = solo autori, sede, anno e pagine da Crossref; «riassunto» = solo il riassunto
+Usata per: (aggiornamento f20) campo 120×80° dell'EchoShield (verdetto finale § 5 e § 6; proposta v3.0 § 6)
+Note: Dato del produttore. Aperta dal curatore il 15-11-2026: "Wide field of view: 120 deg azimuth x 80 deg elevation". Senza data in pagina (risultato di ricerca: 11-5-2025). Nessuna cifra di portata ne' di rivisita.
+
+### dronedj2026-echodyne [399]
+Tipo: articolo di stampa
+Autori: I. Singh
+Titolo: US military taps Echodyne radars…
+Sede e anno: DroneDJ, 1-10-2026
+Identificativo: manca
+Link: https://dronedj.com/2026/10/01/echodyne-radar-counter-drone-mesa/
+Verifica: aperta (secondaria) — (f20, 15-11-2026) aperta da `sciame-fonti` in `f20-chiusura/03-fonti/FONTI_APERTE.md`; «metadati» = solo autori, sede, anno e pagine da Crossref; «riassunto» = solo il riassunto
+Usata per: (aggiornamento f20) 10 Hz dell'EchoShield (verdetto finale V-8, § 6; proposta v3.0 § 6)
+Note: Fonte secondaria (giornalistica). Aperta dal curatore il 15-11-2026: EchoShield "provides persistent tracks with a 10 Hz update rate"; accuratezza angolare sotto 0,5 gradi.
+
+### ophir-supir-50-1350 [400]
+Tipo: scheda
+Autori: Ophir
+Titolo: SupIR 50-1350mm f/5.5
+Sede e anno: Photonics Online
+Identificativo: manca
+Link: https://www.photonicsonline.com/doc/ophir-supir-mm-f-motorized-continuous-zoom-lens-0001
+Verifica: aperta (produttore) — (f20, 15-11-2026) aperta da `sciame-fonti` in `f20-chiusura/03-fonti/FONTI_APERTE.md`; «metadati» = solo autori, sede, anno e pagine da Crossref; «riassunto» = solo il riassunto
+Usata per: (aggiornamento f20) «oltre 25 km», dato del produttore su bersaglio grande (verdetto finale § 6; proposta v3.0 § 6)
+Note: Dato del produttore. Aperta dal curatore il 15-11-2026: "excellent detection range of more than 25 km"; "Focal Length: WFOV-50mm, NFOV-1350mm"; "F/#: 5.5". Il Delta T di 2 gradi C NON e' nella pagina. Senza data.
+
+### heise2026-taalas [401]
+Tipo: articolo di stampa
+Autori: V. Zota
+Titolo: AI inference cast in silicon…
+Sede e anno: heise online, 21-02-2026
+Identificativo: manca
+Link: https://heise.de/-11185112
+Verifica: aperta — (f20, 15-11-2026) aperta da `sciame-fonti` in `f20-chiusura/03-fonti/FONTI_APERTE.md`; «metadati» = solo autori, sede, anno e pagine da Crossref; «riassunto» = solo il riassunto
+Usata per: (aggiornamento f20) circa 17 000 token/s, dato dell'azienda; H200 circa 230 (verdetto finale § 5; proposta v3.0 § 6)
+Note: Aperta dal curatore il 15-11-2026 (21-02-2026). "17,000 tokens per second per user" (dato dell'azienda, Llama 3.1 8B); H200 "around 230 tokens per second" (dati Nvidia); Cerebras circa 1936 (Artificial Analysis); SambaNova 916, Groq 609. "The benchmarks come from in-house tests; independent measurements by third parties are not yet available." Nel test di heise sul chatbot: "almost 16,000 tokens per second". Formato a 3 bit con parametri a 6 bit, con perdita di qualita'.
+
+### cerebras2024-inference [402]
+Tipo: blog
+Autori: J. Wang
+Titolo: Introducing Cerebras Inference
+Sede e anno: Cerebras, 27-08-2024
+Identificativo: manca
+Link: https://www.cerebras.ai/blog/introducing-cerebras-inference-ai-at-instant-speed
+Verifica: aperta (produttore) — (f20, 15-11-2026) aperta da `sciame-fonti` in `f20-chiusura/03-fonti/FONTI_APERTE.md`; «metadati» = solo autori, sede, anno e pagine da Crossref; «riassunto» = solo il riassunto
+Usata per: (aggiornamento f20) analogia dei chip dedicati (verdetto finale § 5)
+Note: Dato del produttore. Aperta dal curatore il 15-11-2026 (27-08-2024): "1,800 tokens per second for Llama3.1 8B", "20x faster than NVIDIA GPU-based hyperscale clouds".
+
+### summers2018 [403]
+Tipo: diapositive
+Autori: S. Summers
+Titolo: Kalman Filter track reconstruction on FPGAs…
+Sede e anno: CHEP 2018
+Identificativo: manca
+Link: https://indico.cern.ch/event/587955/contributions/2935753/attachments/1684108/2707286/ssummers_chep_kffpga.pdf
+Verifica: aperta — (f20, 15-11-2026) aperta da `sciame-fonti` in `f20-chiusura/03-fonti/FONTI_APERTE.md`; «metadati» = solo autori, sede, anno e pagine da Crossref; «riassunto» = solo il riassunto
+Usata per: (aggiornamento f20) passo di Kalman su FPGA: 725 contro 250 ns in latenza, circa 4,5× in portata (verdetto finale K-805, § 6; proposta v3.0 § 6)
+Note: Aperta e letta dal curatore il 15-11-2026. "Latency is 181 clock cycles at 250MHz: ~725ns", "~250ns measured on CPU", "But fully pipelined: new state & hit enters on each clock cycle"; throughput CPU 3.9 MHz contro FPGA 17.4 MHz; "So far, no speedup!"; "FPGA achieves ~4.5x rate increase", "Limited at 3 GB/s PCIe bandwidth", "Long initial latency costly - 0.5 ms". Diapositive, non articolo con revisione.
+
+### sim2023 [404]
+Tipo: articolo
+Autori: Sim e altri
+Titolo: FPGA Implementation of Efficient CFAR…
+Sede e anno: Sensors 23(2):954, 2023
+Identificativo: 10.3390/s23020954
+Link: https://doi.org/10.3390/s23020954
+Verifica: riassunto (Crossref) — (f20, 15-11-2026) aperta da `sciame-fonti` in `f20-chiusura/03-fonti/FONTI_APERTE.md`; «metadati» = solo autori, sede, anno e pagine da Crossref; «riassunto» = solo il riassunto
+Usata per: (aggiornamento f20) CFAR su FPGA in 0,6 µs (verdetto finale § 5; proposta v3.0 § 6)
+Note: Metadati e riassunto da Crossref, letti dal curatore il 15-11-2026: "the implementation used 8260 LUTs and 3823 registers and took 0.6 us to operate". Testo intero non aperto (PMC chiede un controllo del browser).
+
+### choi2021 [405]
+Tipo: articolo
+Autori: Choi e altri
+Titolo: FPGA Implementation of the Range-Doppler Algorithm…
+Sede e anno: Electronics 10(17):2133, 2021
+Identificativo: 10.3390/electronics10172133
+Link: https://doi.org/10.3390/electronics10172133
+Verifica: riassunto (Crossref) — (f20, 15-11-2026) aperta da `sciame-fonti` in `f20-chiusura/03-fonti/FONTI_APERTE.md`; «metadati» = solo autori, sede, anno e pagine da Crossref; «riassunto» = solo il riassunto
+Usata per: (aggiornamento f20) distanza-Doppler su FPGA 85× più rapida di un ARM (verdetto finale § 5; proposta v3.0 § 6)
+Note: Metadati e riassunto da Crossref, letti dal curatore il 15-11-2026: rispetto a un ARM Cortex-A53, "we observed a 85-fold speedup for a 2048 x 2048 pixel image". Radar ad apertura sintetica, non radar di sorveglianza: analogia, non misura del caso MoVi.
+
+### blom1988 [406]
+Tipo: articolo
+Autori: Blom, Bar-Shalom
+Titolo: The interacting multiple model algorithm…
+Sede e anno: IEEE TAC 33(8):780–783, 1988
+Identificativo: 10.1109/9.1299
+Link: https://doi.org/10.1109/9.1299
+Verifica: metadati — (f20, 15-11-2026) aperta da `sciame-fonti` in `f20-chiusura/03-fonti/FONTI_APERTE.md`; «metadati» = solo autori, sede, anno e pagine da Crossref; «riassunto» = solo il riassunto
+Usata per: (aggiornamento f20) IMM (PERDITA_DI_CONFIDENZA § 2; verdetto finale § 4)
+Note: Metadati Crossref verificati dal curatore il 15-11-2026. Testo non aperto (IEEE Xplore non restituisce contenuto). Fonte primaria dell'interazione IMM.
+
+### mazor1998 [407]
+Tipo: articolo
+Autori: Mazor e altri
+Titolo: Interacting multiple model methods in target tracking: a survey
+Sede e anno: IEEE TAES 34(1):103–123, 1998
+Identificativo: 10.1109/7.640267
+Link: https://doi.org/10.1109/7.640267
+Verifica: metadati — (f20, 15-11-2026) aperta da `sciame-fonti` in `f20-chiusura/03-fonti/FONTI_APERTE.md`; «metadati» = solo autori, sede, anno e pagine da Crossref; «riassunto» = solo il riassunto
+Usata per: (aggiornamento f20) IMM, rassegna (PERDITA_DI_CONFIDENZA § 2)
+Note: Metadati Crossref verificati dal curatore il 15-11-2026. Testo non aperto.
+
+### li2003 [408]
+Tipo: articolo
+Autori: Li, Jilkov
+Titolo: Survey of maneuvering target tracking. Part I
+Sede e anno: IEEE TAES 39(4):1333–1364, 2003
+Identificativo: 10.1109/TAES.2003.1261132
+Link: https://doi.org/10.1109/TAES.2003.1261132
+Verifica: metadati — (f20, 15-11-2026) aperta da `sciame-fonti` in `f20-chiusura/03-fonti/FONTI_APERTE.md`; «metadati» = solo autori, sede, anno e pagine da Crossref; «riassunto» = solo il riassunto
+Usata per: (aggiornamento f20) bersagli manovranti (PERDITA_DI_CONFIDENZA § 2)
+Note: Metadati Crossref verificati dal curatore il 15-11-2026 (il titolo su Crossref ha un refuso, "targettracking"). Testo non aperto. Riferimento per i modelli CV, CA e di virata coordinata.
+
+### schafer2014 [409]
+Tipo: atti
+Autori: Schäfer e altri
+Titolo: Bringing up OpenSky…
+Sede e anno: IPSN-14, pp. 83–94, 2014
+Identificativo: 10.1109/IPSN.2014.6846743
+Link: https://opensky-network.org/files/publications/ipsn2014.pdf
+Verifica: aperta — (f20, 15-11-2026) aperta da `sciame-fonti` in `f20-chiusura/03-fonti/FONTI_APERTE.md`; «metadati» = solo autori, sede, anno e pagine da Crossref; «riassunto» = solo il riassunto
+Usata per: (aggiornamento f20) traiettorie ADS-B di OpenSky usate per la taratura della confidenza (verdetto finale § 4)
+Note: Aperta e letta dal curatore il 15-11-2026 (prima pagina). "OpenSky is based on off-the-shelf ADS-B sensors distributed to volunteers throughout Central Europe. It covers 720,000 km2". Riferimento chiesto da OpenSky per l'uso dei dati.
+
+### coluccia2020 [410]
+Tipo: articolo
+Autori: Coluccia, Parisi, Fascista
+Titolo: Detection and Classification of Multirotor Drones in Radar Sensor Networks: A Review
+Sede e anno: Sensors 20(15):4172, 2020
+Identificativo: 10.3390/s20154172
+Link: https://doi.org/10.3390/s20154172
+Verifica: riassunto (Crossref) — (f20, 15-11-2026) aperta da `sciame-fonti` in `f20-chiusura/03-fonti/FONTI_APERTE.md`; «metadati» = solo autori, sede, anno e pagine da Crossref; «riassunto» = solo il riassunto
+Usata per: (aggiornamento f20) rilevamento radar dei droni, rassegna (caso centrale)
+Note: Metadati e riassunto da Crossref, letti dal curatore il 15-11-2026: rassegna su rilevamento, verifica e classificazione dei droni con reti di sensori, con il radar FMCW al centro. Testo intero non aperto (MDPI 403).
 
 ## 7. Chiavi provvisorie usate nelle sezioni → chiave definitiva e numero
 

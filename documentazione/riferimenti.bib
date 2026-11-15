@@ -2256,3 +2256,187 @@
   url = {https://www.easa.europa.eu/en/domains/drones-air-mobility/operating-drone/open-category-low-risk-civil-drones},
   note = {[354] Stato di verifica: aperta dal ruolo che la cita (dichiarato dal rapporto che la cita, 15-11-2026; non riaperta dal curatore). Seconda fase.}
 }
+
+% ===== Aggiornamento f20 (15-11-2026): 17 voci da f20-chiusura/03-fonti/nuove.bib, [394]-[410] =====
+% Voci nuove per documentazione/riferimenti.bib, preparate da sciame-fonti (f20-chiusura/03-fonti), 15-11-2026.
+% Chiavi controllate contro le 211 voci di riferimenti.bib: nessun duplicato.
+% Ogni nota dice che cosa e' stato aperto e che cosa no. "Metadati Crossref" = autori, titolo, sede, anno, pagine
+% letti da api.crossref.org; il testo dell'articolo NON e' stato aperto, salvo dove e' scritto.
+
+% ---------- Tempi di reazione del pilota ----------
+@misc{faa-ac-90-48e,
+  author = {{Federal Aviation Administration}},
+  title = {{Advisory Circular 90-48E: Pilots' Role in Collision Avoidance}},
+  year = {2022},
+  month = oct,
+  url = {https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_90-48E.pdf},
+  note = {Aperta e letta dal curatore il 15-11-2026 (PDF, testo estratto). Datata 20-10-2022; cancella la AC 90-48D CHG 1. Tabella 1 identica alla 90-48D: 0,1 + 1,0 + 5,0 + 4,0 + 0,4 + 2,0 = 12,5 s, "TOTAL Time Before Aircraft Begins to Move". Fonte della tabella: TSB Canada A99P0168, dati del U.S. Naval Aviation Safety Center.}
+}
+
+% ---------- Sensori ----------
+@article{stone1989,
+  author = {Stone, M. L. and Anderson, J. R.},
+  title = {{Advances in Primary-Radar Technology}},
+  journal = {The Lincoln Laboratory Journal},
+  volume = {2},
+  number = {3},
+  pages = {363--380},
+  year = {1989},
+  url = {https://archive.ll.mit.edu/publications/journal/pdf/vol02_no3/2.3.3.advancesprimaryradar.pdf},
+  note = {Aperta e letta dal curatore il 15-11-2026. Tabella 1 "Surveillance Requirements for MTD-Based Airport Primary Radars": "Maximum range = 60 nmi", "Update rate = 4.8 s". Riguarda l'ASR-9 e i radar primari d'aeroporto in generale, non l'ASR-11 in particolare. Pagina finale (380) non verificata.}
+}
+
+@misc{wikipedia-asr11,
+  author = {{Wikipedia}},
+  title = {{ASR-11}},
+  url = {https://en.wikipedia.org/wiki/ASR-11},
+  note = {Fonte secondaria. Aperta dal curatore il 15-11-2026: "Primary: 60 NM (110 km; 69 mi)", "12.5 RPM", "S band", "2.7-2.9 GHz". Il periodo di 4,8 s e' calcolato (60/12,5); la pagina non lo scrive.}
+}
+
+@misc{echodyne-tradegov-2024,
+  author = {{Echodyne}},
+  title = {{Echodyne EchoShield (scheda per trade.gov)}},
+  year = {2024},
+  url = {https://www.trade.gov/sites/default/files/2024-08/ECHODYNE.pdf},
+  note = {Dato del produttore. Aperta dal curatore il 15-11-2026: "Ku-band (15.7-16.6 GHz)", "tracks ~1,000 objects", "<0.5 deg of angular tracking accuracy in both azimuth and elevation". Non contiene ne' la rivisita in Hz ne' le portate per bersaglio.}
+}
+
+@misc{echodyne-echoshield-news,
+  author = {{Echodyne}},
+  title = {{Medium-range tactical radar built for every domain}},
+  url = {https://www.echodyne.com/newsroom/medium-range-tactical-radar-built-for-every-domain},
+  note = {Dato del produttore. Aperta dal curatore il 15-11-2026: "Wide field of view: 120 deg azimuth x 80 deg elevation". Senza data in pagina (risultato di ricerca: 11-5-2025). Nessuna cifra di portata ne' di rivisita.}
+}
+
+@misc{dronedj2026-echodyne,
+  author = {Singh, Ishveena},
+  title = {{US military taps Echodyne radars for a \$250 million counter-drone deal}},
+  howpublished = {DroneDJ},
+  year = {2026},
+  month = oct,
+  url = {https://dronedj.com/2026/10/01/echodyne-radar-counter-drone-mesa/},
+  note = {Fonte secondaria (giornalistica). Aperta dal curatore il 15-11-2026: EchoShield "provides persistent tracks with a 10 Hz update rate"; accuratezza angolare sotto 0,5 gradi.}
+}
+
+@misc{ophir-supir-50-1350,
+  author = {{Ophir (MKS Instruments)}},
+  title = {{Ophir SupIR 50-1350mm f/5.5 Motorized Continuous Zoom Lens}},
+  howpublished = {Photonics Online},
+  url = {https://www.photonicsonline.com/doc/ophir-supir-mm-f-motorized-continuous-zoom-lens-0001},
+  note = {Dato del produttore. Aperta dal curatore il 15-11-2026: "excellent detection range of more than 25 km"; "Focal Length: WFOV-50mm, NFOV-1350mm"; "F/#: 5.5". Il Delta T di 2 gradi C NON e' nella pagina. Senza data.}
+}
+
+% ---------- Hardware dedicato ----------
+@misc{heise2026-taalas,
+  author = {Zota, Volker},
+  title = {{AI inference cast in silicon: Taalas announces HC1 chip}},
+  howpublished = {heise online},
+  year = {2026},
+  month = feb,
+  url = {https://heise.de/-11185112},
+  note = {Aperta dal curatore il 15-11-2026 (21-02-2026). "17,000 tokens per second per user" (dato dell'azienda, Llama 3.1 8B); H200 "around 230 tokens per second" (dati Nvidia); Cerebras circa 1936 (Artificial Analysis); SambaNova 916, Groq 609. "The benchmarks come from in-house tests; independent measurements by third parties are not yet available." Nel test di heise sul chatbot: "almost 16,000 tokens per second". Formato a 3 bit con parametri a 6 bit, con perdita di qualita'.}
+}
+
+@misc{cerebras2024-inference,
+  author = {Wang, James},
+  title = {{Introducing Cerebras Inference: AI at Instant Speed}},
+  howpublished = {Cerebras blog},
+  year = {2024},
+  month = aug,
+  url = {https://www.cerebras.ai/blog/introducing-cerebras-inference-ai-at-instant-speed},
+  note = {Dato del produttore. Aperta dal curatore il 15-11-2026 (27-08-2024): "1,800 tokens per second for Llama3.1 8B", "20x faster than NVIDIA GPU-based hyperscale clouds".}
+}
+
+@inproceedings{summers2018,
+  author = {Summers, Sioni},
+  title = {{Kalman Filter track reconstruction on FPGAs for acceleration of the High Level Trigger of the CMS experiment at the HL-LHC}},
+  booktitle = {CHEP 2018 (diapositive)},
+  year = {2018},
+  url = {https://indico.cern.ch/event/587955/contributions/2935753/attachments/1684108/2707286/ssummers_chep_kffpga.pdf},
+  note = {Aperta e letta dal curatore il 15-11-2026. "Latency is 181 clock cycles at 250MHz: ~725ns", "~250ns measured on CPU", "But fully pipelined: new state & hit enters on each clock cycle"; throughput CPU 3.9 MHz contro FPGA 17.4 MHz; "So far, no speedup!"; "FPGA achieves ~4.5x rate increase", "Limited at 3 GB/s PCIe bandwidth", "Long initial latency costly - 0.5 ms". Diapositive, non articolo con revisione.}
+}
+
+@article{sim2023,
+  author = {Sim, Yunseong and Heo, Jinmoo and Jung, Yongchul and Lee, Seongjoo and Jung, Yunho},
+  title = {{FPGA Implementation of Efficient CFAR Algorithm for Radar Systems}},
+  journal = {Sensors},
+  volume = {23},
+  number = {2},
+  pages = {954},
+  year = {2023},
+  doi = {10.3390/s23020954},
+  note = {Metadati e riassunto da Crossref, letti dal curatore il 15-11-2026: "the implementation used 8260 LUTs and 3823 registers and took 0.6 us to operate". Testo intero non aperto (PMC chiede un controllo del browser).}
+}
+
+@article{choi2021,
+  author = {Choi, Yeongung and Jeong, Dongmin and Lee, Myeongjin and Lee, Wookyung and Jung, Yunho},
+  title = {{FPGA Implementation of the Range-Doppler Algorithm for Real-Time Synthetic Aperture Radar Imaging}},
+  journal = {Electronics},
+  volume = {10},
+  number = {17},
+  pages = {2133},
+  year = {2021},
+  doi = {10.3390/electronics10172133},
+  note = {Metadati e riassunto da Crossref, letti dal curatore il 15-11-2026: rispetto a un ARM Cortex-A53, "we observed a 85-fold speedup for a 2048 x 2048 pixel image". Radar ad apertura sintetica, non radar di sorveglianza: analogia, non misura del caso MoVi.}
+}
+
+% ---------- IMM e bersagli manovranti ----------
+@article{blom1988,
+  author = {Blom, Henk A. P. and Bar-Shalom, Yaakov},
+  title = {{The interacting multiple model algorithm for systems with Markovian switching coefficients}},
+  journal = {IEEE Transactions on Automatic Control},
+  volume = {33},
+  number = {8},
+  pages = {780--783},
+  year = {1988},
+  doi = {10.1109/9.1299},
+  note = {Metadati Crossref verificati dal curatore il 15-11-2026. Testo non aperto (IEEE Xplore non restituisce contenuto). Fonte primaria dell'interazione IMM.}
+}
+
+@article{mazor1998,
+  author = {Mazor, E. and Averbuch, A. and Bar-Shalom, Y. and Dayan, J.},
+  title = {{Interacting multiple model methods in target tracking: a survey}},
+  journal = {IEEE Transactions on Aerospace and Electronic Systems},
+  volume = {34},
+  number = {1},
+  pages = {103--123},
+  year = {1998},
+  doi = {10.1109/7.640267},
+  note = {Metadati Crossref verificati dal curatore il 15-11-2026. Testo non aperto.}
+}
+
+@article{li2003,
+  author = {Li, X. Rong and Jilkov, Vesselin P.},
+  title = {{Survey of maneuvering target tracking. Part I: Dynamic models}},
+  journal = {IEEE Transactions on Aerospace and Electronic Systems},
+  volume = {39},
+  number = {4},
+  pages = {1333--1364},
+  year = {2003},
+  doi = {10.1109/TAES.2003.1261132},
+  note = {Metadati Crossref verificati dal curatore il 15-11-2026 (il titolo su Crossref ha un refuso, "targettracking"). Testo non aperto. Riferimento per i modelli CV, CA e di virata coordinata.}
+}
+
+% ---------- ADS-B e rilevamento radar dei droni ----------
+@inproceedings{schafer2014,
+  author = {Sch{\"a}fer, Matthias and Strohmeier, Martin and Lenders, Vincent and Martinovic, Ivan and Wilhelm, Matthias},
+  title = {{Bringing up OpenSky: A Large-scale ADS-B Sensor Network for Research}},
+  booktitle = {Proceedings of the 13th International Symposium on Information Processing in Sensor Networks (IPSN-14)},
+  pages = {83--94},
+  year = {2014},
+  doi = {10.1109/IPSN.2014.6846743},
+  url = {https://opensky-network.org/files/publications/ipsn2014.pdf},
+  note = {Aperta e letta dal curatore il 15-11-2026 (prima pagina). "OpenSky is based on off-the-shelf ADS-B sensors distributed to volunteers throughout Central Europe. It covers 720,000 km2". Riferimento chiesto da OpenSky per l'uso dei dati.}
+}
+
+@article{coluccia2020,
+  author = {Coluccia, Angelo and Parisi, Gianluca and Fascista, Alessio},
+  title = {{Detection and Classification of Multirotor Drones in Radar Sensor Networks: A Review}},
+  journal = {Sensors},
+  volume = {20},
+  number = {15},
+  pages = {4172},
+  year = {2020},
+  doi = {10.3390/s20154172},
+  note = {Metadati e riassunto da Crossref, letti dal curatore il 15-11-2026: rassegna su rilevamento, verifica e classificazione dei droni con reti di sensori, con il radar FMCW al centro. Testo intero non aperto (MDPI 403).}
+}

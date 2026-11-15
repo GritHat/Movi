@@ -1,0 +1,19 @@
+Fast aircraft and drones: a collision, an in-flight failure, a flash that blinds the cameras. When the view is lost, what should the screen say?
+
+MoVi declares what it has not observed. Three answers per track. I see it. I don't see it, but here is where it can be. Or: I don't know.
+
+In six flight scenarios, MoVi never said clear where an aircraft, a drone or a fragment was.
+
+An aircraft fails in flight at a hundred and thirty-five metres per second. MoVi infers the event and declares the cameras unreliable within one second, in sixty of sixty simulated runs. Low-energy debris stays inside the declared volume in fifty-eight of sixty.
+
+Two fast drones collide. MoVi warns of the close pass at least ten seconds ahead, in sixty of sixty runs. The collision is not yet declared as an event, but the region is kept: the fragments stayed inside it in sixty of sixty runs.
+
+A flash blinds every optical sensor. Radar alone keeps a region for every track, and identity is presumed.
+
+When continuity is lost, MoVi computes, in the motion model, how confidence falls, and grows the region to keep nine chances in ten. On public flight tracks, with a simulated sensor, the region held the aircraft eighty-five to eighty-nine times in a hundred, a little under target, mostly one route. In turns, seventy-three: a declared limit.
+
+Now MoVi rides on a drone, keeping the track of a fast drone ahead. Nearby, two drones collide: flash, smoke, debris. The cameras are declared unreliable. With the radar undisturbed, the tracked drone stayed inside its region in sixty of sixty simulated runs. With the radar blinded for up to two seconds: at least fifty-nine of sixty, and never a fragment called clear.
+
+The same approach works on a site: a drone behind a building, warned in time in two hundred of two hundred runs. And at short range: people, cars, trains.
+
+The limits: everything is simulated, with no physical sensor, and classes are labelled by hand. Next: a contact rule for fast collisions, state-of-the-art sensors, dedicated hardware, field trials. MoVi observes and warns. By SDMs.

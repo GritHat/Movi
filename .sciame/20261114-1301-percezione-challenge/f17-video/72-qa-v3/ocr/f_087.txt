@@ -1,0 +1,21 @@
+SCHEMATIC
+
+7 3l
+
+M.
+
+Q.’
+
+Vi
+
+Seen, not seen, unknown: declared for every track
+
+Observes and warns
+
+no output is a command
+
+By SDMs - Ignazio Crocchiolo - Federico Dellini - Danilo Amalfitano - Emanuele Ciotola - Pierfrancesco Amendola
+
+The Big Hack 2026 - prototype built in one day - everything simulated, no physical sensor
+
+Synthetic voice (Kokoro-82M, Apache-2.0) - synthetic music made for this video - fonts Inter, JetBrains Mono (OFL)

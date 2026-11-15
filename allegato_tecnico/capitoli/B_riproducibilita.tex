@@ -28,3 +28,26 @@ sh movi.sh mostra uscite/lp\_A1/registro.jsonl --filmato --uscita uscite/lp\_A1/
 sh prova\_tutto.sh
 \end{quote}
 Il primo comando simula la scena del drone dietro un edificio e scrive il registro; il secondo dà le quote «dentro la zona» e «dentro l'avviso» con l'intervallo di Wilson; il terzo controlla sul registro i principi (nessun avviso tolto senza guardare); il quarto disegna la pianta e la console dell'operatore. Le scene si chiamano per scenario (drone dietro un edificio, rullaggio, drone sotto la copertura, sensori a bordo di un drone, incrocio, stazione) e per evento (collisione, avaria, fumo e nebbia, drone nel fumo, passaggio ravvicinato). L'esecuzione di tutte le prove e le scene ha dato esito senza errori in $698\unita{s}$. Durate indicative sul calcolatore indicato: circa 35 minuti per le prove simulate per passaggio di tutti gli scenari; $66\unita{s}$ per le prove su traiettorie pubbliche; $88\unita{s}$ per il simulatore dei frammenti con $10\,000$ frammenti per caso; $34{,}5\unita{s}$ per le prove del modello di moto e del «libero». Il costo per ciclo nelle prove simulate è al più $11\unita{ms}$ in mediana con la regola di spegnimento semplice, e arriva a $46\unita{ms}$ in mediana e $340\unita{ms}$ al 95º percentile con quella prudente: non sono tempi di una scheda di bordo. I dati pubblici di traiettoria (tabella~\ref{tab:lp-dati}) si scaricano senza credenziali; le schede dei sensori sono materiale dei costruttori e non sono ridistribuite. Le geometrie complete degli scenari, i semi e i programmi sono nel progetto: dal solo testo si rifanno le distanze d'avviso, le portate del radar per sezione, il «libero» con $n_{\mathrm{eff}}=1$ e gli intervalli di Wilson.
+
+\sloppy\paragraph{Prove del volo ad alta velocità.} Le prove del \S\ref{sec:vo} sono programmi in Python con una libreria numerica, sullo stesso calcolatore, con semi fissi; sviluppo e valutazione usano semi disgiunti, e i parametri sono fissati prima della valutazione. Le uscite si scrivono in file nuovi e non sovrascrivono quelle precedenti. I programmi, nella cartella di lavoro delle prove del progetto, sono:
+\begin{itemize}
+\item \texttt{eventi\_volo.py} e \texttt{scenari\_volo.json}: gli scenari F1--F6 e il simulatore dei frammenti con l'integratore semi-implicito;
+\item \texttt{prove\_volo.py} e \texttt{analizza\_volo.py}: il nucleo con l'inviluppo a $210\unita{m/s}$ (variabile \texttt{VOLO\_REGOLA=v3i}) e il conteggio per passaggio con gli intervalli di Wilson;
+\item \texttt{prove\_volo\_v4.py} e \texttt{analizza\_volo\_v4.py}: lo stesso nucleo con la regola di contatto in prova; con \texttt{VOLO\_REGOLA=v3i} si ritrova il nucleo adottato; \texttt{e1\_stabile.py}: la collisione fra multirotori con l'integratore stabile;
+\item \texttt{stima\_v4.py} e \texttt{prove\_reali.py}: la confidenza nel tempo e la sua verifica su traiettorie pubbliche; \texttt{stima\_v5.py} e \texttt{prove\_v5.py}: la taratura, con la divisione per mezzo;
+\item \texttt{scorta\_f7.py}, \texttt{scorta\_f7r.py} e \texttt{curva\_f7.py}: lo scenario «scorta», la variante con il radar accecato e la curva della confidenza del drone seguito; \texttt{scorta\_f7r\_c1.py}: la correzione c1 (avviso immediato «evento vicino non localizzato»), con il confronto appaiato su semi nuovi;
+\item \texttt{unicita\_v2.py} e \texttt{esempio\_confidenza.py}: il controllo a campione dell'unicità del tempo di soglia su $40\,000$ casi e l'esempio calcolato del \S\ref{sec:vo-tc};
+\item \texttt{prototipo/prove/convalida\_volo.py}: il controllo dei principi sui registri delle scene di volo (nessun «libero» sul non osservato, nessun avviso tolto senza guardare, nessun sensore perso che torni affidabile da solo).
+\end{itemize}
+I comandi principali, con un tempo massimo esplicito e al più 8 processi:
+\begin{quote}\small\ttfamily
+VOLO\_REGOLA=v3i VOLO\_USCITA=passaggi\_volo\_v3i.jsonl \\\quad timeout 1500 python -I -B prove\_volo.py 60 200 7\\
+python -I -B analizza\_volo.py passaggi\_volo\_v3i.jsonl risultati\_volo\_v3i.json\\
+timeout 1500 python -I -B prove\_volo\_v4.py 60 200 7\\
+python -I -B e1\_stabile.py <modo> 60\\
+python -I -B prove\_v5.py <classe> <uscita>\\
+python -I -B scorta\_f7.py valutazione 8\\
+python -I -B scorta\_f7r.py valutazione 6\\
+VOLO\_REGOLA=v3i timeout 600 python -I -B prove\_volo.py --registro prototipo/uscite/video\_volo
+\end{quote}
+Il primo comando rifà i sei scenari con il nucleo adottato (60 passaggi per cella, 200 per il controllo, 7 processi di lavoro); il secondo conta i passaggi; il terzo rifà le stesse celle con la regola di contatto in prova; gli altri rifanno la collisione fra multirotori, la taratura per classe di mezzo, lo scenario «scorta», la sua variante con il radar accecato e i registri delle scene. Il tempo di calcolo è di 1--8 secondi per passaggio, su CPU, in Python: non è una misura di latenza. Dal solo testo si rifanno la varianza \eqref{eq:vo-sigma}, la confidenza \eqref{eq:vo-c2}, i quantili $k_{0,9}=2{,}146$ (disco) e $2{,}500$ (sfera), il tempo di soglia dell'esempio calcolato, il cammino massimo $L(\tau)$, le distanze d'avviso $d=v\,(L+t_{\mathrm{risp}}+t_{\mathrm{mezzo}})$ e gli intervalli di Wilson.

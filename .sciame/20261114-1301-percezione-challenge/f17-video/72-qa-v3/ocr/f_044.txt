@@ -1,0 +1,113 @@
+SCHEMATIC + PUBLIC TRAJECTORIES
+
+When continuity is lost: confidence over time
+
+curve computed in the model
+
+points: public flight tracks, simulated sensor
+
+PLAN VIEW
+
+schematic: motion compressed, radii from the computed curve
+
+C(1): chance it is within 150 m of the prediction - computed
+
+1o
+
+T (s)
+
+0.5
+
+0
+
+10
+
+20
+
+30
+
+fixed zone at loss
+
+156 m
+
+Soimon
+
+radius kept at 0.9, r0.9(t) in m - computed (min. progressive)
+
+200
+
+e
+
+100
+
+T o 5 0 7 s 1 5 58 70 R 50 1 560 5.0 35 . 5 6 0 8 A 25 B 2
+
+—_— 190}
+
+o
+
+T (s)
+
+last™seén
+
+]
+
+36 m
+
+0
+
+10
+
+20
+
+30
+
+NOT éF,‘EN 0
+
+G0 & o re"qion re.9 =
+
+coverage of the 0.9 region - public flight tracks, simulated sensor
+
+Gz
+
+|becmacooooooonoananaoooananaoooooanaooooonactib
+
+0.9
+
+0.8
+
+aircraft at 210 m/s, straight line: the most favourable case
+
+on real tracks the region is much larger (see points on the right)
+
+T (s)
+
+0.6
+
+02(t) = 002 + 200v-T + ov2-t? + q-Tt°/3 + o_ref?
+
+C(t) = 1 - exp(-r2/202(t))
+
+0
+
+10
+
+20
+
+30
+
+C-TAR 1-2 s: 0.89 (655/733) [0.87; 0.91]
+
+cases correlated
+
+0.85-0.89 from 1 to 30 s
+
+21-30 s: 0.85 [0.81; 0.88]
+
+89.5% of cases from 4 flights of one route
+
+Wilson 95 % per case
+
+When continuity is lost, MoVi computes, in the motion model, how
+
+confidence falls, and grows the region to keep nine chances in ten.
