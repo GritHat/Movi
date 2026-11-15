@@ -5,36 +5,36 @@
    "nome": "pavimento_vuoto",
    "modo": "corto",
    "config": "scene/pavimento_vuoto.json",
-   "stato": "pronta la sequenza",
+   "stato": "pronta",
    "mostra": "nessuna traccia, nessun avviso; il suolo è «visto libero fino a d» solo dove è stato visto"
   },
   {
    "nome": "passa_dietro_e_ricompare",
    "modo": "corto",
    "config": "scene/passa_dietro_e_ricompare.json",
-   "stato": "pronta la sequenza",
-   "mostra": "vista -> non vista da X s con regione di previsione e avviso acceso -> ricomparsa, identità presunta"
+   "stato": "pronta",
+   "mostra": "vista -> non vista con regione di previsione (celle al 90 %) e avviso acceso -> «previsto ampio» -> al ritorno nasce una traccia nuova (riaggancio raro: vedi CORTO_RAGGIO.md); l'avviso resta finché le celle non sono viste libere"
   },
   {
    "nome": "resta_dietro",
    "modo": "corto",
    "config": "scene/resta_dietro.json",
-   "stato": "pronta la sequenza",
+   "stato": "pronta",
    "mostra": "la persona si ferma dietro il pannello: l'avviso di possibile presenza NON si spegne; la traccia passa a «previsto ampio»"
   },
   {
    "nome": "mano_sul_sensore",
    "modo": "corto",
    "config": "scene/mano_sul_sensore.json",
-   "stato": "pronta la sequenza",
+   "stato": "pronta",
    "mostra": "salute del sensore: affidabilità persa da 1,0 a 2,2 s; griglia tutta «non osservato»; settori «affidabilita_persa»"
   },
   {
    "nome": "due_persone",
    "modo": "corto",
    "config": "scene/due_persone.json",
-   "stato": "da generare",
-   "mostra": "due persone, una nasconde l'altra: due tracce, identità «presunta» al ritorno, mai «certa»"
+   "stato": "pronta",
+   "mostra": "una persona ferma a destra dietro la linea, l'altra le passa davanti: due tracce, avviso per chi è coperto"
   },
   {
    "nome": "lp_A1",

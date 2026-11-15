@@ -1,0 +1,17 @@
+[
+ {
+  "inizio": 0.15,
+  "fine": 4.033,
+  "testo": "The sensor array scans the road 30 times per second."
+ },
+ {
+  "inizio": 4.383,
+  "fine": 12.639,
+  "testo": "At 120 metres, a vehicle travelling at 90 kilometres per hour is detected in under 50 milliseconds."
+ },
+ {
+  "inizio": 12.989,
+  "fine": 19.346,
+  "testo": "Four cameras and 2 radar units then fuse their measurements into a single, continuous track."
+ }
+]

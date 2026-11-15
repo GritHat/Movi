@@ -1,0 +1,1 @@
+The sensor array scans the road 30 times per second. At 120 metres, a vehicle travelling at 90 kilometres per hour is detected in under 50 milliseconds. Four cameras and 2 radar units then fuse their measurements into a single, continuous track.

@@ -6,7 +6,7 @@ Ambito: osservazione, monitoraggio, ispezione, navigazione sicura e avviso. Ness
 
 Forma del pacchetto: vedi README.md e ARCHITETTURA.md (f16-prototipo/01-architettura)."""
 
-VERSIONE = "0.1-scheletro"
+VERSIONE = "0.2-corto"
 
 # I tre principi: nessun modulo, interruttore o etichetta li può scavalcare (li controlla registro.valida_riga).
 PRINCIPI = (

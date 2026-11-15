@@ -10,9 +10,12 @@ pubblici. Le etichette di classe sono assegnate a mano da file: il classificator
 Niente qui è provato su hardware. Ambito: osservazione, monitoraggio, ispezione, navigazione sicura e avviso;
 nessuna uscita è un comando.
 
-**Stato: SCHELETRO** (15 novembre 2026). Funzionano: la copia del codice riusato con le sue prove, la configurazione,
-il formato del registro con la sua convalida, l'adattatore catena -> registro, la riga di comando. Il resto ha le
-firme e le docstring e risponde «non ancora costruito» (codice d'uscita 4).
+**Stato: MODO CORTO COSTRUITO** (15 novembre 2026, `sciame-sviluppatore`). Funzionano: la catena riusata con le
+correzioni di f12, la salute del sensore col controllo all'avvio, la regola del «libero» (PR4, dietro interruttore),
+il predittore della zona (porto SEMPLIFICATO di sd-1, dietro interruttore, non ancora confrontato col banco in C),
+i livelli per settore, gli eventi «osservato»/«dedotto», le etichette a mano, il tabellone «dentro la zona: k su n»,
+le tre viste e il filmato. Il modo lungo (`lungo.py`, `SorgenteLungaPortata`) risponde ancora «non ancora costruito»
+(codice 4). Misure e limiti: `.sciame/20261114-1301-percezione-challenge/f16-prototipo/10-corto-raggio/CORTO_RAGGIO.md`.
 
 ## Comandi
 
@@ -25,7 +28,10 @@ Da questa cartella. `sh movi.sh …` equivale a `python -m movi …` con l'inter
     sh movi.sh tabellone uscite/<scena>/registro.jsonl           # «dentro la zona: k su n», con Wilson al 95 %
     sh movi.sh mostra uscite/<scena>/registro.jsonl [--filmato]  # tre viste: scena vera, console, settori
     sh movi.sh convalida uscite/<scena>/registro.jsonl           # forma e principi
-    sh prova_tutto.sh                                            # prove + tutte le scene (scheletro: 20–27 s)
+    sh prova_tutto.sh                                            # prove + tutte le scene con filmato
+    PY=… ; $PY -I -B prove/prova_principi.py [rapida]           # principi, salute, etichette, tempo per ciclo
+    $PY -I -B prove/misura_corto.py zona_libero b 100 x.json     # un passaggio nuovo del simulatore, misurato
+    $PY -I -B prove/riassumi_misure.py uscite/misure             # somma con Wilson al 95 %
 
 ## Struttura
 

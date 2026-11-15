@@ -1,0 +1,195 @@
+
+=== braccio zona_libero: 150 passaggi ===
+-- tutti (150 passaggi, 10416 fotogrammi)
+  P1 cicli nascosti dopo l'ingresso senza regione né avviso: 0 su 5820 (0.0 %, Wilson 95 %: 0.0–0.1 %)
+  P2 fotogrammi nascosti senza avviso: 2 su 5822 (0.0 %, Wilson 95 %: 0.0–0.1 %)
+     ritardo dell'avviso (cicli dal primo nascosto): max 2; passaggi con avviso 150 su 150 con persona nascosta
+  P3 celle «libero» nell'ombra vera interna: 0 su 3062304 celle·fotogramma; di bordo: 0
+  P4 a 1 s: mostrato 117 su 118 (99.2 %, Wilson 95 %: 95.4–99.9 %); entro 3 m 117 su 118 (99.2 %, Wilson 95 %: 95.4–99.9 %); P4b stretta 0 su 1 (0.0 %, Wilson 95 %: 0.0–79.3 %)
+  P4 a 2 s: mostrato 59 su 84 (70.2 %, Wilson 95 %: 59.8–79.0 %); entro 3 m 59 su 59 (100.0 %, Wilson 95 %: 93.9–100.0 %); P4b stretta 0 su 1 (0.0 %, Wilson 95 %: 0.0–79.3 %)
+  P4 a 3 s: mostrato 30 su 60 (50.0 %, Wilson 95 %: 37.7–62.3 %); entro 3 m 30 su 30 (100.0 %, Wilson 95 %: 88.6–100.0 %); P4b stretta 0 su 1 (0.0 %, Wilson 95 %: 0.0–79.3 %)
+  P7 avvisi tolti senza guardare: 0; righe non valide: 0
+  tempo per ciclo (6 processi insieme, NON vale per P6): mediana 9.9 ms, p95 11.6 ms
+-- a12 (30 passaggi, 1307 fotogrammi)
+  P1 cicli nascosti dopo l'ingresso senza regione né avviso: 0 su 309 (0.0 %, Wilson 95 %: 0.0–1.2 %)
+  P2 fotogrammi nascosti senza avviso: 0 su 309 (0.0 %, Wilson 95 %: 0.0–1.2 %)
+     ritardo dell'avviso (cicli dal primo nascosto): max 0; passaggi con avviso 30 su 30 con persona nascosta
+  P3 celle «libero» nell'ombra vera interna: 0 su 384258 celle·fotogramma; di bordo: 0
+  P4 a 1 s: mostrato 0 su 0; entro 3 m 0 su 0; P4b stretta 0 su 0
+  P4 a 2 s: mostrato 0 su 0; entro 3 m 0 su 0; P4b stretta 0 su 0
+  P4 a 3 s: mostrato 0 su 0; entro 3 m 0 su 0; P4b stretta 0 su 0
+  P5 ritorni con riaggancio «presunta»: 2 su 30 (6.7 %, Wilson 95 %: 1.8–21.3 %); riagganci «certa»: 0; nascite dopo l'ingresso (media): 1.57
+  P7 avvisi tolti senza guardare: 0; righe non valide: 0
+  tempo per ciclo (6 processi insieme, NON vale per P6): mediana 9.9 ms, p95 13.0 ms
+-- a05 (30 passaggi, 2165 fotogrammi)
+  P1 cicli nascosti dopo l'ingresso senza regione né avviso: 0 su 735 (0.0 %, Wilson 95 %: 0.0–0.5 %)
+  P2 fotogrammi nascosti senza avviso: 2 su 737 (0.3 %, Wilson 95 %: 0.1–1.0 %)
+     ritardo dell'avviso (cicli dal primo nascosto): max 2; passaggi con avviso 30 su 30 con persona nascosta
+  P3 celle «libero» nell'ombra vera interna: 0 su 636510 celle·fotogramma; di bordo: 0
+  P4 a 1 s: mostrato 27 su 28 (96.4 %, Wilson 95 %: 82.3–99.4 %); entro 3 m 27 su 28 (96.4 %, Wilson 95 %: 82.3–99.4 %); P4b stretta 0 su 0
+  P4 a 2 s: mostrato 0 su 0; entro 3 m 0 su 0; P4b stretta 0 su 0
+  P4 a 3 s: mostrato 0 su 0; entro 3 m 0 su 0; P4b stretta 0 su 0
+  P5 ritorni con riaggancio «presunta»: 6 su 30 (20.0 %, Wilson 95 %: 9.5–37.3 %); riagganci «certa»: 0; nascite dopo l'ingresso (media): 1.90
+  P7 avvisi tolti senza guardare: 0; righe non valide: 0
+  tempo per ciclo (6 processi insieme, NON vale per P6): mediana 9.9 ms, p95 14.5 ms
+-- b (30 passaggi, 2700 fotogrammi)
+  P1 cicli nascosti dopo l'ingresso senza regione né avviso: 0 su 1904 (0.0 %, Wilson 95 %: 0.0–0.2 %)
+  P2 fotogrammi nascosti senza avviso: 0 su 1904 (0.0 %, Wilson 95 %: 0.0–0.2 %)
+     ritardo dell'avviso (cicli dal primo nascosto): max 0; passaggi con avviso 30 su 30 con persona nascosta
+  P3 celle «libero» nell'ombra vera interna: 0 su 793800 celle·fotogramma; di bordo: 0
+  P4 a 1 s: mostrato 30 su 30 (100.0 %, Wilson 95 %: 88.6–100.0 %); entro 3 m 30 su 30 (100.0 %, Wilson 95 %: 88.6–100.0 %); P4b stretta 0 su 0
+  P4 a 2 s: mostrato 30 su 30 (100.0 %, Wilson 95 %: 88.6–100.0 %); entro 3 m 30 su 30 (100.0 %, Wilson 95 %: 88.6–100.0 %); P4b stretta 0 su 0
+  P4 a 3 s: mostrato 30 su 30 (100.0 %, Wilson 95 %: 88.6–100.0 %); entro 3 m 30 su 30 (100.0 %, Wilson 95 %: 88.6–100.0 %); P4b stretta 0 su 0
+  P5 ritorni con riaggancio «presunta»: 3 su 30 (10.0 %, Wilson 95 %: 3.5–25.6 %); riagganci «certa»: 0; nascite dopo l'ingresso (media): 2.37
+  P7 avvisi tolti senza guardare: 0; righe non valide: 0
+  tempo per ciclo (6 processi insieme, NON vale per P6): mediana 9.9 ms, p95 11.2 ms
+-- c (30 passaggi, 1899 fotogrammi)
+  P1 cicli nascosti dopo l'ingresso senza regione né avviso: 0 su 991 (0.0 %, Wilson 95 %: 0.0–0.4 %)
+  P2 fotogrammi nascosti senza avviso: 0 su 991 (0.0 %, Wilson 95 %: 0.0–0.4 %)
+     ritardo dell'avviso (cicli dal primo nascosto): max 0; passaggi con avviso 30 su 30 con persona nascosta
+  P3 celle «libero» nell'ombra vera interna: 0 su 558306 celle·fotogramma; di bordo: 0
+  P4 a 1 s: mostrato 30 su 30 (100.0 %, Wilson 95 %: 88.6–100.0 %); entro 3 m 30 su 30 (100.0 %, Wilson 95 %: 88.6–100.0 %); P4b stretta 0 su 0
+  P4 a 2 s: mostrato 24 su 24 (100.0 %, Wilson 95 %: 86.2–100.0 %); entro 3 m 24 su 24 (100.0 %, Wilson 95 %: 86.2–100.0 %); P4b stretta 0 su 0
+  P4 a 3 s: mostrato 0 su 0; entro 3 m 0 su 0; P4b stretta 0 su 0
+  P7 avvisi tolti senza guardare: 0; righe non valide: 0
+  tempo per ciclo (6 processi insieme, NON vale per P6): mediana 9.9 ms, p95 11.4 ms
+-- d (30 passaggi, 2345 fotogrammi)
+  P1 cicli nascosti dopo l'ingresso senza regione né avviso: 0 su 1881 (0.0 %, Wilson 95 %: 0.0–0.2 %)
+  P2 fotogrammi nascosti senza avviso: 0 su 1881 (0.0 %, Wilson 95 %: 0.0–0.2 %)
+     ritardo dell'avviso (cicli dal primo nascosto): max 0; passaggi con avviso 30 su 30 con persona nascosta
+  P3 celle «libero» nell'ombra vera interna: 0 su 689430 celle·fotogramma; di bordo: 0
+  P4 a 1 s: mostrato 30 su 30 (100.0 %, Wilson 95 %: 88.6–100.0 %); entro 3 m 30 su 30 (100.0 %, Wilson 95 %: 88.6–100.0 %); P4b stretta 0 su 1 (0.0 %, Wilson 95 %: 0.0–79.3 %)
+  P4 a 2 s: mostrato 5 su 30 (16.7 %, Wilson 95 %: 7.3–33.6 %); entro 3 m 5 su 5 (100.0 %, Wilson 95 %: 56.6–100.0 %); P4b stretta 0 su 1 (0.0 %, Wilson 95 %: 0.0–79.3 %)
+  P4 a 3 s: mostrato 0 su 30 (0.0 %, Wilson 95 %: 0.0–11.4 %); entro 3 m 0 su 0; P4b stretta 0 su 1 (0.0 %, Wilson 95 %: 0.0–79.3 %)
+  P7 avvisi tolti senza guardare: 0; righe non valide: 0
+  tempo per ciclo (6 processi insieme, NON vale per P6): mediana 9.7 ms, p95 12.0 ms
+
+=== braccio zona: 150 passaggi ===
+-- tutti (150 passaggi, 10416 fotogrammi)
+  P1 cicli nascosti dopo l'ingresso senza regione né avviso: 0 su 5820 (0.0 %, Wilson 95 %: 0.0–0.1 %)
+  P2 fotogrammi nascosti senza avviso: 2 su 5822 (0.0 %, Wilson 95 %: 0.0–0.1 %)
+     ritardo dell'avviso (cicli dal primo nascosto): max 2; passaggi con avviso 150 su 150 con persona nascosta
+  P3 celle «libero» nell'ombra vera interna: 0 su 3062304 celle·fotogramma; di bordo: 0
+  P4 a 1 s: mostrato 117 su 118 (99.2 %, Wilson 95 %: 95.4–99.9 %); entro 3 m 117 su 118 (99.2 %, Wilson 95 %: 95.4–99.9 %); P4b stretta 0 su 1 (0.0 %, Wilson 95 %: 0.0–79.3 %)
+  P4 a 2 s: mostrato 59 su 84 (70.2 %, Wilson 95 %: 59.8–79.0 %); entro 3 m 59 su 59 (100.0 %, Wilson 95 %: 93.9–100.0 %); P4b stretta 0 su 1 (0.0 %, Wilson 95 %: 0.0–79.3 %)
+  P4 a 3 s: mostrato 30 su 60 (50.0 %, Wilson 95 %: 37.7–62.3 %); entro 3 m 30 su 30 (100.0 %, Wilson 95 %: 88.6–100.0 %); P4b stretta 0 su 1 (0.0 %, Wilson 95 %: 0.0–79.3 %)
+  P7 avvisi tolti senza guardare: 0; righe non valide: 0
+  tempo per ciclo (6 processi insieme, NON vale per P6): mediana 5.8 ms, p95 7.3 ms
+-- a12 (30 passaggi, 1307 fotogrammi)
+  P1 cicli nascosti dopo l'ingresso senza regione né avviso: 0 su 309 (0.0 %, Wilson 95 %: 0.0–1.2 %)
+  P2 fotogrammi nascosti senza avviso: 0 su 309 (0.0 %, Wilson 95 %: 0.0–1.2 %)
+     ritardo dell'avviso (cicli dal primo nascosto): max 0; passaggi con avviso 30 su 30 con persona nascosta
+  P3 celle «libero» nell'ombra vera interna: 0 su 384258 celle·fotogramma; di bordo: 0
+  P4 a 1 s: mostrato 0 su 0; entro 3 m 0 su 0; P4b stretta 0 su 0
+  P4 a 2 s: mostrato 0 su 0; entro 3 m 0 su 0; P4b stretta 0 su 0
+  P4 a 3 s: mostrato 0 su 0; entro 3 m 0 su 0; P4b stretta 0 su 0
+  P5 ritorni con riaggancio «presunta»: 2 su 30 (6.7 %, Wilson 95 %: 1.8–21.3 %); riagganci «certa»: 0; nascite dopo l'ingresso (media): 1.57
+  P7 avvisi tolti senza guardare: 0; righe non valide: 0
+  tempo per ciclo (6 processi insieme, NON vale per P6): mediana 5.7 ms, p95 9.5 ms
+-- a05 (30 passaggi, 2165 fotogrammi)
+  P1 cicli nascosti dopo l'ingresso senza regione né avviso: 0 su 735 (0.0 %, Wilson 95 %: 0.0–0.5 %)
+  P2 fotogrammi nascosti senza avviso: 2 su 737 (0.3 %, Wilson 95 %: 0.1–1.0 %)
+     ritardo dell'avviso (cicli dal primo nascosto): max 2; passaggi con avviso 30 su 30 con persona nascosta
+  P3 celle «libero» nell'ombra vera interna: 0 su 636510 celle·fotogramma; di bordo: 0
+  P4 a 1 s: mostrato 27 su 28 (96.4 %, Wilson 95 %: 82.3–99.4 %); entro 3 m 27 su 28 (96.4 %, Wilson 95 %: 82.3–99.4 %); P4b stretta 0 su 0
+  P4 a 2 s: mostrato 0 su 0; entro 3 m 0 su 0; P4b stretta 0 su 0
+  P4 a 3 s: mostrato 0 su 0; entro 3 m 0 su 0; P4b stretta 0 su 0
+  P5 ritorni con riaggancio «presunta»: 6 su 30 (20.0 %, Wilson 95 %: 9.5–37.3 %); riagganci «certa»: 0; nascite dopo l'ingresso (media): 1.90
+  P7 avvisi tolti senza guardare: 0; righe non valide: 0
+  tempo per ciclo (6 processi insieme, NON vale per P6): mediana 5.8 ms, p95 10.6 ms
+-- b (30 passaggi, 2700 fotogrammi)
+  P1 cicli nascosti dopo l'ingresso senza regione né avviso: 0 su 1904 (0.0 %, Wilson 95 %: 0.0–0.2 %)
+  P2 fotogrammi nascosti senza avviso: 0 su 1904 (0.0 %, Wilson 95 %: 0.0–0.2 %)
+     ritardo dell'avviso (cicli dal primo nascosto): max 0; passaggi con avviso 30 su 30 con persona nascosta
+  P3 celle «libero» nell'ombra vera interna: 0 su 793800 celle·fotogramma; di bordo: 0
+  P4 a 1 s: mostrato 30 su 30 (100.0 %, Wilson 95 %: 88.6–100.0 %); entro 3 m 30 su 30 (100.0 %, Wilson 95 %: 88.6–100.0 %); P4b stretta 0 su 0
+  P4 a 2 s: mostrato 30 su 30 (100.0 %, Wilson 95 %: 88.6–100.0 %); entro 3 m 30 su 30 (100.0 %, Wilson 95 %: 88.6–100.0 %); P4b stretta 0 su 0
+  P4 a 3 s: mostrato 30 su 30 (100.0 %, Wilson 95 %: 88.6–100.0 %); entro 3 m 30 su 30 (100.0 %, Wilson 95 %: 88.6–100.0 %); P4b stretta 0 su 0
+  P5 ritorni con riaggancio «presunta»: 3 su 30 (10.0 %, Wilson 95 %: 3.5–25.6 %); riagganci «certa»: 0; nascite dopo l'ingresso (media): 2.37
+  P7 avvisi tolti senza guardare: 0; righe non valide: 0
+  tempo per ciclo (6 processi insieme, NON vale per P6): mediana 5.8 ms, p95 6.6 ms
+-- c (30 passaggi, 1899 fotogrammi)
+  P1 cicli nascosti dopo l'ingresso senza regione né avviso: 0 su 991 (0.0 %, Wilson 95 %: 0.0–0.4 %)
+  P2 fotogrammi nascosti senza avviso: 0 su 991 (0.0 %, Wilson 95 %: 0.0–0.4 %)
+     ritardo dell'avviso (cicli dal primo nascosto): max 0; passaggi con avviso 30 su 30 con persona nascosta
+  P3 celle «libero» nell'ombra vera interna: 0 su 558306 celle·fotogramma; di bordo: 0
+  P4 a 1 s: mostrato 30 su 30 (100.0 %, Wilson 95 %: 88.6–100.0 %); entro 3 m 30 su 30 (100.0 %, Wilson 95 %: 88.6–100.0 %); P4b stretta 0 su 0
+  P4 a 2 s: mostrato 24 su 24 (100.0 %, Wilson 95 %: 86.2–100.0 %); entro 3 m 24 su 24 (100.0 %, Wilson 95 %: 86.2–100.0 %); P4b stretta 0 su 0
+  P4 a 3 s: mostrato 0 su 0; entro 3 m 0 su 0; P4b stretta 0 su 0
+  P7 avvisi tolti senza guardare: 0; righe non valide: 0
+  tempo per ciclo (6 processi insieme, NON vale per P6): mediana 5.8 ms, p95 7.2 ms
+-- d (30 passaggi, 2345 fotogrammi)
+  P1 cicli nascosti dopo l'ingresso senza regione né avviso: 0 su 1881 (0.0 %, Wilson 95 %: 0.0–0.2 %)
+  P2 fotogrammi nascosti senza avviso: 0 su 1881 (0.0 %, Wilson 95 %: 0.0–0.2 %)
+     ritardo dell'avviso (cicli dal primo nascosto): max 0; passaggi con avviso 30 su 30 con persona nascosta
+  P3 celle «libero» nell'ombra vera interna: 0 su 689430 celle·fotogramma; di bordo: 0
+  P4 a 1 s: mostrato 30 su 30 (100.0 %, Wilson 95 %: 88.6–100.0 %); entro 3 m 30 su 30 (100.0 %, Wilson 95 %: 88.6–100.0 %); P4b stretta 0 su 1 (0.0 %, Wilson 95 %: 0.0–79.3 %)
+  P4 a 2 s: mostrato 5 su 30 (16.7 %, Wilson 95 %: 7.3–33.6 %); entro 3 m 5 su 5 (100.0 %, Wilson 95 %: 56.6–100.0 %); P4b stretta 0 su 1 (0.0 %, Wilson 95 %: 0.0–79.3 %)
+  P4 a 3 s: mostrato 0 su 30 (0.0 %, Wilson 95 %: 0.0–11.4 %); entro 3 m 0 su 0; P4b stretta 0 su 1 (0.0 %, Wilson 95 %: 0.0–79.3 %)
+  P7 avvisi tolti senza guardare: 0; righe non valide: 0
+  tempo per ciclo (6 processi insieme, NON vale per P6): mediana 5.7 ms, p95 7.4 ms
+
+=== braccio base: 150 passaggi ===
+-- tutti (150 passaggi, 10416 fotogrammi)
+  P1 cicli nascosti dopo l'ingresso senza regione né avviso: 0 su 5820 (0.0 %, Wilson 95 %: 0.0–0.1 %)
+  P2 fotogrammi nascosti senza avviso: 2 su 5822 (0.0 %, Wilson 95 %: 0.0–0.1 %)
+     ritardo dell'avviso (cicli dal primo nascosto): max 2; passaggi con avviso 150 su 150 con persona nascosta
+  P3 celle «libero» nell'ombra vera interna: 0 su 3062304 celle·fotogramma; di bordo: 0
+  P4 a 1 s: mostrato 117 su 118 (99.2 %, Wilson 95 %: 95.4–99.9 %); entro 3 m 117 su 118 (99.2 %, Wilson 95 %: 95.4–99.9 %); P4b stretta 0 su 1 (0.0 %, Wilson 95 %: 0.0–79.3 %)
+  P4 a 2 s: mostrato 59 su 84 (70.2 %, Wilson 95 %: 59.8–79.0 %); entro 3 m 59 su 59 (100.0 %, Wilson 95 %: 93.9–100.0 %); P4b stretta 0 su 1 (0.0 %, Wilson 95 %: 0.0–79.3 %)
+  P4 a 3 s: mostrato 30 su 60 (50.0 %, Wilson 95 %: 37.7–62.3 %); entro 3 m 30 su 30 (100.0 %, Wilson 95 %: 88.6–100.0 %); P4b stretta 0 su 1 (0.0 %, Wilson 95 %: 0.0–79.3 %)
+  P7 avvisi tolti senza guardare: 0; righe non valide: 0
+  tempo per ciclo (6 processi insieme, NON vale per P6): mediana 4.4 ms, p95 5.4 ms
+-- a12 (30 passaggi, 1307 fotogrammi)
+  P1 cicli nascosti dopo l'ingresso senza regione né avviso: 0 su 309 (0.0 %, Wilson 95 %: 0.0–1.2 %)
+  P2 fotogrammi nascosti senza avviso: 0 su 309 (0.0 %, Wilson 95 %: 0.0–1.2 %)
+     ritardo dell'avviso (cicli dal primo nascosto): max 0; passaggi con avviso 30 su 30 con persona nascosta
+  P3 celle «libero» nell'ombra vera interna: 0 su 384258 celle·fotogramma; di bordo: 0
+  P4 a 1 s: mostrato 0 su 0; entro 3 m 0 su 0; P4b stretta 0 su 0
+  P4 a 2 s: mostrato 0 su 0; entro 3 m 0 su 0; P4b stretta 0 su 0
+  P4 a 3 s: mostrato 0 su 0; entro 3 m 0 su 0; P4b stretta 0 su 0
+  P5 ritorni con riaggancio «presunta»: 2 su 30 (6.7 %, Wilson 95 %: 1.8–21.3 %); riagganci «certa»: 0; nascite dopo l'ingresso (media): 1.57
+  P7 avvisi tolti senza guardare: 0; righe non valide: 0
+  tempo per ciclo (6 processi insieme, NON vale per P6): mediana 4.6 ms, p95 6.8 ms
+-- a05 (30 passaggi, 2165 fotogrammi)
+  P1 cicli nascosti dopo l'ingresso senza regione né avviso: 0 su 735 (0.0 %, Wilson 95 %: 0.0–0.5 %)
+  P2 fotogrammi nascosti senza avviso: 2 su 737 (0.3 %, Wilson 95 %: 0.1–1.0 %)
+     ritardo dell'avviso (cicli dal primo nascosto): max 2; passaggi con avviso 30 su 30 con persona nascosta
+  P3 celle «libero» nell'ombra vera interna: 0 su 636510 celle·fotogramma; di bordo: 0
+  P4 a 1 s: mostrato 27 su 28 (96.4 %, Wilson 95 %: 82.3–99.4 %); entro 3 m 27 su 28 (96.4 %, Wilson 95 %: 82.3–99.4 %); P4b stretta 0 su 0
+  P4 a 2 s: mostrato 0 su 0; entro 3 m 0 su 0; P4b stretta 0 su 0
+  P4 a 3 s: mostrato 0 su 0; entro 3 m 0 su 0; P4b stretta 0 su 0
+  P5 ritorni con riaggancio «presunta»: 6 su 30 (20.0 %, Wilson 95 %: 9.5–37.3 %); riagganci «certa»: 0; nascite dopo l'ingresso (media): 1.90
+  P7 avvisi tolti senza guardare: 0; righe non valide: 0
+  tempo per ciclo (6 processi insieme, NON vale per P6): mediana 4.5 ms, p95 9.3 ms
+-- b (30 passaggi, 2700 fotogrammi)
+  P1 cicli nascosti dopo l'ingresso senza regione né avviso: 0 su 1904 (0.0 %, Wilson 95 %: 0.0–0.2 %)
+  P2 fotogrammi nascosti senza avviso: 0 su 1904 (0.0 %, Wilson 95 %: 0.0–0.2 %)
+     ritardo dell'avviso (cicli dal primo nascosto): max 0; passaggi con avviso 30 su 30 con persona nascosta
+  P3 celle «libero» nell'ombra vera interna: 0 su 793800 celle·fotogramma; di bordo: 0
+  P4 a 1 s: mostrato 30 su 30 (100.0 %, Wilson 95 %: 88.6–100.0 %); entro 3 m 30 su 30 (100.0 %, Wilson 95 %: 88.6–100.0 %); P4b stretta 0 su 0
+  P4 a 2 s: mostrato 30 su 30 (100.0 %, Wilson 95 %: 88.6–100.0 %); entro 3 m 30 su 30 (100.0 %, Wilson 95 %: 88.6–100.0 %); P4b stretta 0 su 0
+  P4 a 3 s: mostrato 30 su 30 (100.0 %, Wilson 95 %: 88.6–100.0 %); entro 3 m 30 su 30 (100.0 %, Wilson 95 %: 88.6–100.0 %); P4b stretta 0 su 0
+  P5 ritorni con riaggancio «presunta»: 3 su 30 (10.0 %, Wilson 95 %: 3.5–25.6 %); riagganci «certa»: 0; nascite dopo l'ingresso (media): 2.37
+  P7 avvisi tolti senza guardare: 0; righe non valide: 0
+  tempo per ciclo (6 processi insieme, NON vale per P6): mediana 4.4 ms, p95 5.2 ms
+-- c (30 passaggi, 1899 fotogrammi)
+  P1 cicli nascosti dopo l'ingresso senza regione né avviso: 0 su 991 (0.0 %, Wilson 95 %: 0.0–0.4 %)
+  P2 fotogrammi nascosti senza avviso: 0 su 991 (0.0 %, Wilson 95 %: 0.0–0.4 %)
+     ritardo dell'avviso (cicli dal primo nascosto): max 0; passaggi con avviso 30 su 30 con persona nascosta
+  P3 celle «libero» nell'ombra vera interna: 0 su 558306 celle·fotogramma; di bordo: 0
+  P4 a 1 s: mostrato 30 su 30 (100.0 %, Wilson 95 %: 88.6–100.0 %); entro 3 m 30 su 30 (100.0 %, Wilson 95 %: 88.6–100.0 %); P4b stretta 0 su 0
+  P4 a 2 s: mostrato 24 su 24 (100.0 %, Wilson 95 %: 86.2–100.0 %); entro 3 m 24 su 24 (100.0 %, Wilson 95 %: 86.2–100.0 %); P4b stretta 0 su 0
+  P4 a 3 s: mostrato 0 su 0; entro 3 m 0 su 0; P4b stretta 0 su 0
+  P7 avvisi tolti senza guardare: 0; righe non valide: 0
+  tempo per ciclo (6 processi insieme, NON vale per P6): mediana 4.4 ms, p95 5.3 ms
+-- d (30 passaggi, 2345 fotogrammi)
+  P1 cicli nascosti dopo l'ingresso senza regione né avviso: 0 su 1881 (0.0 %, Wilson 95 %: 0.0–0.2 %)
+  P2 fotogrammi nascosti senza avviso: 0 su 1881 (0.0 %, Wilson 95 %: 0.0–0.2 %)
+     ritardo dell'avviso (cicli dal primo nascosto): max 0; passaggi con avviso 30 su 30 con persona nascosta
+  P3 celle «libero» nell'ombra vera interna: 0 su 689430 celle·fotogramma; di bordo: 0
+  P4 a 1 s: mostrato 30 su 30 (100.0 %, Wilson 95 %: 88.6–100.0 %); entro 3 m 30 su 30 (100.0 %, Wilson 95 %: 88.6–100.0 %); P4b stretta 0 su 1 (0.0 %, Wilson 95 %: 0.0–79.3 %)
+  P4 a 2 s: mostrato 5 su 30 (16.7 %, Wilson 95 %: 7.3–33.6 %); entro 3 m 5 su 5 (100.0 %, Wilson 95 %: 56.6–100.0 %); P4b stretta 0 su 1 (0.0 %, Wilson 95 %: 0.0–79.3 %)
+  P4 a 3 s: mostrato 0 su 30 (0.0 %, Wilson 95 %: 0.0–11.4 %); entro 3 m 0 su 0; P4b stretta 0 su 1 (0.0 %, Wilson 95 %: 0.0–79.3 %)
+  P7 avvisi tolti senza guardare: 0; righe non valide: 0
+  tempo per ciclo (6 processi insieme, NON vale per P6): mediana 4.3 ms, p95 5.1 ms

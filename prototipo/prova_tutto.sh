@@ -19,11 +19,13 @@ passo 02_banco_c sh -c 'cd riuso/c && gcc -O2 -Wall -Wno-misleading-indentation 
 passo 03_importa timeout 60 "$PY" -I -B -c 'import importlib, sys; sys.path.insert(0, "."); [importlib.import_module("movi." + m) for m in "config corto esegui etichette eventi_registro livelli lungo mostra nucleo predittore_zona registro riuso scene sorgenti tabellone __main__".split()]'
 passo 04_registro_corto timeout 120 "$PY" -I -B prove/prova_registro.py "$SEQ/d435i_nom__pannello_a12__s00" uscite/registro_prova.jsonl
 passo 05_convalida timeout 60 sh movi.sh convalida uscite/registro_prova.jsonl
+# 2b. principi e nucleo corto: pavimento vuoto, sensore coperto, etichette, controlli fra righe, tempo (versione rapida)
+passo 06_principi timeout 900 "$PY" -I -B prove/prova_principi.py rapida
 # 3. tutte le scene d'esempio: esegui, tabellone, mostra (le parti non ancora costruite escono con 4 e non contano)
 for s in $(sh movi.sh scene | awk '{print $1}'); do
   passo "scena_${s}_esegui" timeout 120 sh movi.sh esegui "$s" --config "scene/$s.json" --uscita "uscite/$s" --celle
   [ -f "uscite/$s/registro.jsonl" ] && passo "scena_${s}_tabellone" timeout 60 sh movi.sh tabellone "uscite/$s/registro.jsonl"
-  [ -f "uscite/$s/registro.jsonl" ] && passo "scena_${s}_mostra" timeout 120 sh movi.sh mostra "uscite/$s/registro.jsonl" --ogni 5
+  [ -f "uscite/$s/registro.jsonl" ] && passo "scena_${s}_mostra" timeout 300 sh movi.sh mostra "uscite/$s/registro.jsonl" --filmato --uscita "uscite/$s/viste"
 done
 echo "tempo: $(( $(date +%s) - T0 )) s; esito: $ESITO (0 = nessun fallimento; «non ancora costruito» non è un fallimento)"
 exit $ESITO

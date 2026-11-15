@@ -119,13 +119,21 @@ def valida_riga(riga):
 def valida_sequenza(righe):
     """Controlli fra righe: (1) la prima è l'intestazione; (2) un avviso di possibile presenza non sparisce se non
     in un fotogramma con un evento «osservato» che lo giustifica o con celle rilasciate perché viste (campo
-    `tolto_guardando` nell'evento). Restituisce [(indice della riga, errore), …]. DA COMPLETARE (passo 1) per (2)."""
-    errori, prima = [], True
+    `tolto_guardando` nell'evento). Restituisce [(indice della riga, errore), …]."""
+    errori, prima, accesi = [], True, set()
     for n, riga in enumerate(righe):
         if prima and riga.get("tipo") != "intestazione":
             errori.append((n, "la prima riga non è l'intestazione"))
         prima = False
         errori.extend((n, x) for x in valida_riga(riga))
+        if riga.get("tipo") != "fotogramma":
+            continue
+        ora = {a["id_traccia"] for a in riga.get("avvisi", [])}
+        guardati = {ev.get("traccia") for ev in riga.get("eventi", [])
+                    if ev.get("tolto_guardando") and ev.get("come_lo_so") == "osservato"}
+        for i in sorted(accesi - ora - guardati):
+            errori.append((n, f"PRINCIPIO: avviso della traccia {i} tolto senza guardare"))
+        accesi = ora
     return errori
 
 

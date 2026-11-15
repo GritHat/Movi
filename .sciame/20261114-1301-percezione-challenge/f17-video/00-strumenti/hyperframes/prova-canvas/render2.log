@@ -1,0 +1,133 @@
+
+◆  Rendering prova-canvas → /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f17-video/00-strumenti/hyperframes/prova-canvas/renders/canvas2.mp4
+   30fps · draft · auto workers (24 cores usable)
+   GPU: browser GPU (auto-detect)
+
+Checking browser...
+Browser: env
+[INFO] [Render] Pipeline started {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","platform":"linux","arch":"x64","nodeVersion":"v26.13.1","fps":{"num":30,"den":1},"format":"mp4","quality":"draft","browserGpuMode":"auto","forceScreenshot":false,"protocolTimeout":300000,"browserTimeout":120000,"pageNavigationTimeout":60000,"playerReadyTimeout":45000}
+[INFO] [Render:trace] {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","phase":"pipeline","status":"checkpoint","elapsedMs":68,"message":"started","format":"mp4","quality":"draft","browserGpuMode":"auto","forceScreenshot":false,"protocolTimeoutMs":300000,"pageNavigationTimeoutMs":60000,"playerReadyTimeoutMs":45000,"requestedWorkers":"auto"}
+[INFO] [Render:trace] {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","phase":"compile","status":"start","elapsedMs":122,"needsAlpha":false}
+  █░░░░░░░░░░░░░░░░░░░░░░░░  5%  Compiling composition
+@hf-progress {"code":"compile","pct":5}
+[INFO] Compiled composition metadata {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","entryFile":"index.html","staticDuration":3,"width":1920,"height":1080,"videoCount":0,"audioCount":0,"renderModeHints":{"recommendScreenshot":false,"reasons":[]}}
+[INFO] [Render:trace] {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","phase":"compile","status":"end","elapsedMs":259,"durationMs":137,"needsAlpha":false}
+[INFO] [Render:trace] {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","phase":"compile","status":"checkpoint","elapsedMs":260,"message":"composition metadata resolved","width":1920,"height":1080,"videoCount":0,"audioCount":0,"imageCount":0,"deviceScaleFactor":1,"forceScreenshot":false,"compositionHash":"51f9f7fb25cefd2f"}
+[INFO] [Render:trace] {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","phase":"browser_probe","status":"start","elapsedMs":260,"forceScreenshot":false,"stagePhase":"calibrating"}
+[INFO] [Render:trace] {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","phase":"browser_probe","status":"end","elapsedMs":400,"durationMs":140,"forceScreenshot":false,"stagePhase":"calibrating"}
+[INFO] [Render:trace] {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","phase":"browser_probe","status":"checkpoint","elapsedMs":407,"message":"duration resolved","durationSeconds":3,"totalFrames":90,"compositionHash":"51f9f7fb25cefd2f","beginFrameStalled":false}
+[INFO] [Render:trace] {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","phase":"video_extract","status":"start","elapsedMs":407,"videoCount":0}
+  ██░░░░░░░░░░░░░░░░░░░░░░░  10%  Extracting video frames
+@hf-progress {"code":"extract_video","pct":10}
+[INFO] [Render:trace] {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","phase":"video_extract","status":"end","elapsedMs":413,"durationMs":5,"videoCount":0}
+[INFO] [Render:trace] {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","phase":"video_extract","status":"checkpoint","elapsedMs":419,"message":"frames resolved","videoCount":0,"extractedVideoCount":0,"totalFramesExtracted":0,"maxFramesPerVideo":0,"avgFramesPerExtractedVideo":null,"vfrPreflightCount":null,"vfrPreflightMs":null,"cacheHits":null,"cacheMisses":null,"transientRetries":null,"minVideoFrameCoverageRatio":null,"authoredTimedClipCount":2}
+[INFO] [Render] No HDR sources detected, rendering SDR {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b"}
+[INFO] [Render:trace] {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","phase":"hdr_detection","status":"checkpoint","elapsedMs":423,"message":"resolved","requestedHdrMode":"auto","effectiveHdr":"sdr","nativeHdrVideoCount":0,"nativeHdrImageCount":0}
+[INFO] [Render:trace] {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","phase":"audio_process","status":"start","elapsedMs":423,"audioCount":0}
+[INFO] [Render:trace] {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","phase":"file_server","status":"start","elapsedMs":424,"reused":false}
+  █████░░░░░░░░░░░░░░░░░░░░  20%  Processing audio tracks
+@hf-progress {"code":"process_audio","pct":20}
+[INFO] [Render:trace] {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","phase":"audio_process","status":"end","elapsedMs":466,"durationMs":43,"audioCount":0}
+  ██████░░░░░░░░░░░░░░░░░░░  25%  Starting frame capture
+@hf-progress {"code":"start_browsers","pct":25}
+[INFO] [Render:trace] {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","phase":"file_server","status":"end","elapsedMs":476,"durationMs":52}
+  ██████░░░░░░░░░░░░░░░░░░░  25%  Checking browser GPU
+@hf-progress {"code":"start_browsers","pct":25}
+[hyperframes] browserGpuMode probe → hardware (WebGL renderer vendor="Google Inc. (AMD)" renderer="ANGLE (AMD, AMD Radeon 890M Graphics (radeonsi strix1 ACO), OpenGL ES 3.2)")
+  ██████░░░░░░░░░░░░░░░░░░░  25%  Starting frame capture
+@hf-progress {"code":"start_browsers","pct":25}
+[INFO] [Render:trace] {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","phase":"capture_calibration","status":"start","elapsedMs":8202,"stagePhase":"calibrating","forceScreenshot":false,"totalFrames":90,"framesCompleted":0,"captureMode":"beginframe","captureOperation":"beginFrame"}
+[INFO] [Render] Calibration config {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","protocolTimeout":30000,"parentProtocolTimeout":300000,"forceScreenshot":false,"totalFrames":90}
+[INFO] Launching browser for capture calibration... {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b"}
+  ██████░░░░░░░░░░░░░░░░░░░  25%  Measuring capture speed
+@hf-progress {"code":"start_browsers","pct":25}
+[INFO] Initializing calibration session... {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b"}
+[INFO] Calibration session ready, capturing test frames... {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b"}
+[INFO] Calibration: capturing test frame 1/5... {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b"}
+[INFO] Calibration: capturing test frame 2/5... {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b"}
+[INFO] Calibration: capturing test frame 3/5... {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b"}
+[INFO] Calibration: capturing test frame 4/5... {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b"}
+[INFO] Calibration: capturing test frame 5/5... {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b"}
+[INFO] Calibration complete, estimated cost: 206ms/frame (p95) {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b"}
+[INFO] [Render:trace] {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","phase":"capture_calibration","status":"end","elapsedMs":9785,"durationMs":1583,"stagePhase":"calibrating","forceScreenshot":false,"totalFrames":90,"framesCompleted":0,"captureMode":"beginframe","captureOperation":"beginFrame"}
+[INFO] [Render:trace] {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","phase":"capture_calibration","status":"checkpoint","elapsedMs":9785,"message":"resolved","forceScreenshot":false,"multiplier":1,"p95Ms":206,"medianMs":54}
+[INFO] [Render:trace] {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","phase":"worker_resolution","status":"checkpoint","elapsedMs":9787,"message":"resolved","workerCount":3}
+[INFO] [Render] Parallel beginframe capture will stream to the encoder (interleaved, 3 workers) instead of the disk path. Set HF_CAPTURE_PARALLEL_STREAM=false to disable. {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b"}
+[INFO] [Render:trace] {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","phase":"worker_resolution","status":"checkpoint","elapsedMs":9787,"message":"parallel beginframe capture routed to streaming"}
+[INFO] streaming-encode gate {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","enabled":true,"reason":"parallel_forced","configFlag":true,"durationCapEnabled":false,"outputFormat":"mp4","workerCount":3,"durationSeconds":3,"maxDurationSeconds":240}
+[INFO] [Render:trace] {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","phase":"capture_strategy","status":"checkpoint","elapsedMs":9788,"message":"resolved","workerCount":3,"forceScreenshot":false,"captureBeyondViewport":null,"useStreamingEncode":true,"useLayeredComposite":false,"usePageSideCompositing":false,"hasHdrContent":false,"hasShaderTransitions":false,"isPngSequence":false}
+  ██████░░░░░░░░░░░░░░░░░░░  25%  Starting frame capture
+@hf-progress {"code":"start_browsers","pct":25}
+[INFO] [Render:trace] {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","phase":"capture_streaming","status":"start","elapsedMs":9789,"stagePhase":"capturing","workerCount":3,"forceScreenshot":false,"totalFrames":90,"framesCompleted":0,"captureMode":"beginframe","captureOperation":"beginFrame"}
+[INFO] [Render] Parallel capture worker phase {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","workerId":0,"phase":"browser_launch","browserExecutable":"/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f17-video/00-strumenti/hyperframes/browser/chrome-headless-shell/linux-152.0.7977.30/chrome-headless-shell-linux64/chrome-headless-shell","browserVersion":"unknown","canvasDrawElement":"unknown","gpuBackend":"unknown"}
+[INFO] [Render] Parallel capture worker phase {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","workerId":1,"phase":"browser_launch","browserExecutable":"/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f17-video/00-strumenti/hyperframes/browser/chrome-headless-shell/linux-152.0.7977.30/chrome-headless-shell-linux64/chrome-headless-shell","browserVersion":"unknown","canvasDrawElement":"unknown","gpuBackend":"unknown"}
+[INFO] [Render] Parallel capture worker phase {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","workerId":2,"phase":"browser_launch","browserExecutable":"/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f17-video/00-strumenti/hyperframes/browser/chrome-headless-shell/linux-152.0.7977.30/chrome-headless-shell-linux64/chrome-headless-shell","browserVersion":"unknown","canvasDrawElement":"unknown","gpuBackend":"unknown"}
+  ██████░░░░░░░░░░░░░░░░░░░  25%  Starting browsers (0/3 ready)
+@hf-progress {"code":"start_browsers","done":0,"total":3,"pct":25}
+[BrowserManager] HeadlessExperimental.beginFrame probe timed out after 2001ms: beginFrame probe timeout during warm-up beginFrame; retrying once with a longer budget.
+[BrowserManager] HeadlessExperimental.beginFrame probe timed out after 2440ms: beginFrame probe timeout during warm-up beginFrame; retrying once with a longer budget.
+[BrowserManager] HeadlessExperimental.beginFrame probe timed out after 2450ms: beginFrame probe timeout during screenshot beginFrame attempt 3; probe page cleanup timed out; retrying once with a longer budget.
+[INFO] [Render] Parallel capture worker phase {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","workerId":0,"phase":"browser_probe","browserExecutable":"/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f17-video/00-strumenti/hyperframes/browser/chrome-headless-shell/linux-152.0.7977.30/chrome-headless-shell-linux64/chrome-headless-shell","browserVersion":"unknown","canvasDrawElement":"unknown","gpuBackend":"unknown"}
+[INFO] [Render] Parallel capture worker phase {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","workerId":0,"phase":"session_init","browserExecutable":"/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f17-video/00-strumenti/hyperframes/browser/chrome-headless-shell/linux-152.0.7977.30/chrome-headless-shell-linux64/chrome-headless-shell","browserVersion":"HeadlessChrome/152.0.7977.30","canvasDrawElement":"unknown","gpuBackend":"unknown"}
+[INFO] [Render] Parallel capture worker phase {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","workerId":1,"phase":"browser_probe","browserExecutable":"/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f17-video/00-strumenti/hyperframes/browser/chrome-headless-shell/linux-152.0.7977.30/chrome-headless-shell-linux64/chrome-headless-shell","browserVersion":"unknown","canvasDrawElement":"unknown","gpuBackend":"unknown"}
+[INFO] [Render] Parallel capture worker phase {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","workerId":1,"phase":"session_init","browserExecutable":"/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f17-video/00-strumenti/hyperframes/browser/chrome-headless-shell/linux-152.0.7977.30/chrome-headless-shell-linux64/chrome-headless-shell","browserVersion":"HeadlessChrome/152.0.7977.30","canvasDrawElement":"unknown","gpuBackend":"unknown"}
+[INFO] [Render] Parallel capture worker phase {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","workerId":2,"phase":"browser_probe","browserExecutable":"/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f17-video/00-strumenti/hyperframes/browser/chrome-headless-shell/linux-152.0.7977.30/chrome-headless-shell-linux64/chrome-headless-shell","browserVersion":"unknown","canvasDrawElement":"unknown","gpuBackend":"unknown"}
+[INFO] [Render] Parallel capture worker phase {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","workerId":2,"phase":"session_init","browserExecutable":"/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f17-video/00-strumenti/hyperframes/browser/chrome-headless-shell/linux-152.0.7977.30/chrome-headless-shell-linux64/chrome-headless-shell","browserVersion":"HeadlessChrome/152.0.7977.30","canvasDrawElement":"unknown","gpuBackend":"unknown"}
+[INFO] [Render] Parallel capture worker phase {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","workerId":1,"phase":"frame_capture","frameIndex":1,"browserExecutable":"/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f17-video/00-strumenti/hyperframes/browser/chrome-headless-shell/linux-152.0.7977.30/chrome-headless-shell-linux64/chrome-headless-shell","browserVersion":"HeadlessChrome/152.0.7977.30","canvasDrawElement":false,"gpuBackend":"unknown"}
+  ██████░░░░░░░░░░░░░░░░░░░  25%  Starting browsers (1/3 ready)
+@hf-progress {"code":"start_browsers","done":1,"total":3,"pct":25}
+[INFO] [Render] Parallel capture worker phase {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","workerId":0,"phase":"frame_capture","frameIndex":0,"browserExecutable":"/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f17-video/00-strumenti/hyperframes/browser/chrome-headless-shell/linux-152.0.7977.30/chrome-headless-shell-linux64/chrome-headless-shell","browserVersion":"HeadlessChrome/152.0.7977.30","canvasDrawElement":false,"gpuBackend":"unknown"}
+  ██████░░░░░░░░░░░░░░░░░░░  26%  Streaming frame 1/90 (3 workers)
+@hf-progress {"code":"capture","done":1,"total":90,"pct":26}
+[INFO] [Render] Parallel capture worker phase {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","workerId":2,"phase":"frame_capture","frameIndex":2,"browserExecutable":"/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f17-video/00-strumenti/hyperframes/browser/chrome-headless-shell/linux-152.0.7977.30/chrome-headless-shell-linux64/chrome-headless-shell","browserVersion":"HeadlessChrome/152.0.7977.30","canvasDrawElement":false,"gpuBackend":"unknown"}
+  ████████░░░░░░░░░░░░░░░░░  35%  Streaming frame 16/90 (3 workers)
+@hf-progress {"code":"capture","done":16,"total":90,"pct":35}
+  ████████████░░░░░░░░░░░░░  49%  Streaming frame 39/90 (3 workers)
+@hf-progress {"code":"capture","done":39,"total":90,"pct":49}
+  █████████████░░░░░░░░░░░░  54%  Streaming frame 48/90 (3 workers)
+@hf-progress {"code":"capture","done":48,"total":90,"pct":54}
+  ███████████████░░░░░░░░░░  60%  Streaming frame 57/90 (3 workers)
+@hf-progress {"code":"capture","done":57,"total":90,"pct":60}
+  ███████████████░░░░░░░░░░  62%  Streaming frame 60/90 (3 workers)
+@hf-progress {"code":"capture","done":60,"total":90,"pct":62}
+  ████████████████░░░░░░░░░  64%  Streaming frame 63/90 (3 workers)
+@hf-progress {"code":"capture","done":63,"total":90,"pct":64}
+  ████████████████░░░░░░░░░  64%  Streaming frame 64/90 (3 workers)
+@hf-progress {"code":"capture","done":64,"total":90,"pct":64}
+  ████████████████░░░░░░░░░  65%  Streaming frame 66/90 (3 workers)
+@hf-progress {"code":"capture","done":66,"total":90,"pct":65}
+  ████████████████░░░░░░░░░  66%  Streaming frame 67/90 (3 workers)
+@hf-progress {"code":"capture","done":67,"total":90,"pct":66}
+  █████████████████░░░░░░░░  71%  Streaming frame 76/90 (3 workers)
+@hf-progress {"code":"capture","done":76,"total":90,"pct":71}
+  ██████████████████░░░░░░░  73%  Streaming frame 78/90 (3 workers)
+@hf-progress {"code":"capture","done":78,"total":90,"pct":73}
+  ██████████████████░░░░░░░  73%  Streaming frame 79/90 (3 workers)
+@hf-progress {"code":"capture","done":79,"total":90,"pct":73}
+  ██████████████████░░░░░░░  74%  Streaming frame 80/90 (3 workers)
+@hf-progress {"code":"capture","done":80,"total":90,"pct":74}
+  ██████████████████░░░░░░░  75%  Streaming frame 81/90 (3 workers)
+@hf-progress {"code":"capture","done":81,"total":90,"pct":75}
+  ████████████████████░░░░░  80%  Streaming frame 90/90 (3 workers)
+@hf-progress {"code":"capture","done":90,"total":90,"pct":80}
+  ████████████████████░░░░░  80%  Encoding frame 0/90
+@hf-progress {"code":"encode","done":0,"total":90,"pct":80}
+  █████████████████████░░░░  84%  Encoding frame 37/90
+@hf-progress {"code":"encode","done":37,"total":90,"pct":84}
+  ██████████████████████░░░  90%  Encoding frame 90/90
+@hf-progress {"code":"encode","done":90,"total":90,"pct":90}
+[INFO] [Render:trace] {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","phase":"capture_streaming","status":"end","elapsedMs":25193,"durationMs":15404,"stagePhase":"capturing","workerCount":3,"forceScreenshot":false,"totalFrames":90,"framesCompleted":90,"captureMode":"beginframe","captureOperation":"encode"}
+[INFO] [Render:trace] {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","phase":"assemble","status":"start","elapsedMs":25194,"stagePhase":"capturing","hasAudio":false,"workerCount":3,"forceScreenshot":false,"totalFrames":90,"framesCompleted":90,"captureMode":"beginframe","captureOperation":"encode"}
+  ██████████████████████░░░  90%  Assembling final video
+@hf-progress {"code":"assemble","done":0,"total":3,"pct":90}
+  ████████████████████████░  99%  Assembling final video
+@hf-progress {"code":"assemble","done":3,"total":3,"pct":99}
+[INFO] [Render:trace] {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","phase":"assemble","status":"end","elapsedMs":25254,"durationMs":60,"stagePhase":"capturing","hasAudio":false,"workerCount":3,"forceScreenshot":false,"totalFrames":90,"framesCompleted":90,"captureMode":"beginframe","captureOperation":"encode"}
+[INFO] [Render:trace] {"renderJobId":"53548fc9-9144-40dc-8450-88e36e23cc1b","phase":"pipeline","status":"checkpoint","elapsedMs":25314,"message":"artifact validated","totalElapsedMs":25314}
+  █████████████████████████  100%  Render complete
+
+◇  /home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f17-video/00-strumenti/hyperframes/prova-canvas/renders/canvas2.mp4
+   420.4 KB · 3.0s video · rendered in 25.3s
+   beginframe capture · hardware gpu · compile 0.3s · extract 0.0s · audio 0.0s · probe 0.1s · setup 9.4s · capture 15.4s · encode (during capture) 15.4s · assemble 0.1s
+   Keep editing by chatting with Framey in the HyperFrames desktop app → https://hyperframes.studio/studio/download?os=linux&src=cli
+@hf-result {"version":1,"operation":"render","reference_background":{"kind":"solid","rgb":[11,15,20]}}

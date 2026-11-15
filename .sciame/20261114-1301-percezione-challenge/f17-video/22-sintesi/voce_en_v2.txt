@@ -1,0 +1,17 @@
+An apron. A hangar. Two inspection drones. An aircraft taxiing. One drone slips behind the hangar. What should the screen say now?
+
+MoVi declares what it has not observed. For every tracked object, one of three answers. I see it. I don't see it: here is where it can be. Or: I don't know. What it has not observed, it marks unverified, never empty. A possible-presence warning stays on until a sensor looks again.
+
+Radar, LiDAR, visible and thermal cameras, and what aircraft and drones broadcast. All simulated from public data sheets. Each sensor has blind spots, and MoVi draws them.
+
+Fog, then heavy rain. By calculation, the cameras' reach collapses, and MoVi declares it, per sensor. Only the radar is left: no redundancy. If the radar also fails, a fault we inject, reliability is lost: warnings would come too late.
+
+Two drones fly close. Too close to separate: unresolved tracks. Then they touch. Event: contact, inferred. A possible-debris volume opens, and never shrinks on its own. The operator is warned: a person is underneath. The ground stays unverified until inspected.
+
+An engine fails on the take-off run, with a flash. The flash blinds the cameras: MoVi marks them unreliable. In the model, the radar alone still sees the aircraft. Behind the smoke: not observed. Downstream: possible debris, unverified.
+
+First, the limits. Everything you saw is simulated from public data sheets: no physical sensor. Object classes are labelled by hand. [STATO-1] The full chain has not yet run end to end. Total delay is not measured. What holds: written rules decide, not a trained model. [CIFRA-V2] In simulation, hidden objects left without a warning: [k] of [n].
+
+The core comes from our short-range version: a person behind an obstacle, a depth camera, the same three answers.
+
+MoVi. Seen, not seen, unknown: declared for every track. It observes and warns. No output is a command. By SDMs.

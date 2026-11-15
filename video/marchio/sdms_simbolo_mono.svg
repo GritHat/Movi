@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 136 84" width="136" height="84" role="img" aria-labelledby="t d">
+<title id="t">SDMs, simbolo</title>
+<desc id="d">Un disco pieno (ciò che si vede) e, accanto, una zona tratteggiata con un anello vuoto (ciò che non si vede, ma resta segnato).</desc>
+<circle cx="32.00" cy="42.00" r="22.00" fill="#FFFFFF"/>
+<circle cx="96.00" cy="42.00" r="32.00" fill="none" stroke="#FFFFFF" stroke-width="6.00" stroke-dasharray="15.080 10.053" stroke-dashoffset="7.540" stroke-linecap="butt"/>
+<circle cx="96.00" cy="42.00" r="9.50" fill="none" stroke="#FFFFFF" stroke-width="5.00"/>
+</svg>

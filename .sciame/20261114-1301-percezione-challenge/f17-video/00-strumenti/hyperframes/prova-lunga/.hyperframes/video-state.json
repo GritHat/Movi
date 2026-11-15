@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "historyId": "57964159-6838-434d-b4a1-cfaf096f8f01",
+  "currentRevision": null,
+  "pendingChanges": false,
+  "files": {
+    "assets/data/stati.js": {
+      "hash": "b30a5152193255b4f3b1eaeddba9c42f0ae4cfaeff5df86ef41809d12e5737d7",
+      "content": "/home/fede/.cache/hyperframes/history/57964159-6838-434d-b4a1-cfaf096f8f01/blobs/b3/b30a5152193255b4f3b1eaeddba9c42f0ae4cfaeff5df86ef41809d12e5737d7"
+    },
+    "assets/data/stati.json": {
+      "hash": "8af8a4a1d0680626ee63e71c3498c913176b4546de16e56ee1fde46a44e59913",
+      "content": "/home/fede/.cache/hyperframes/history/57964159-6838-434d-b4a1-cfaf096f8f01/blobs/8a/8af8a4a1d0680626ee63e71c3498c913176b4546de16e56ee1fde46a44e59913"
+    },
+    "assets/fonts/Inter-LICENSE-OFL.txt": {
+      "hash": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a",
+      "content": "/home/fede/.cache/hyperframes/history/57964159-6838-434d-b4a1-cfaf096f8f01/blobs/26/262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a"
+    },
+    "assets/fonts/Inter-Regular.ttf": {
+      "hash": "40d692fce188e4471e2b3cba937be967878f631ad3ebbbdcd587687c7ebe0c82",
+      "content": "/home/fede/.cache/hyperframes/history/57964159-6838-434d-b4a1-cfaf096f8f01/blobs/40/40d692fce188e4471e2b3cba937be967878f631ad3ebbbdcd587687c7ebe0c82"
+    },
+    "assets/fonts/Inter-SemiBold.ttf": {
+      "hash": "78a843fade9d4612a5567302fb595b56976eb5fcebf4fea5a5912d638bafcde3",
+      "content": "/home/fede/.cache/hyperframes/history/57964159-6838-434d-b4a1-cfaf096f8f01/blobs/78/78a843fade9d4612a5567302fb595b56976eb5fcebf4fea5a5912d638bafcde3"
+    },
+    "assets/fonts/InterVariable.woff2": {
+      "hash": "693b77d4f32ee9b8bfc995589b5fad5e99adf2832738661f5402f9978429a8e3",
+      "content": "/home/fede/.cache/hyperframes/history/57964159-6838-434d-b4a1-cfaf096f8f01/blobs/69/693b77d4f32ee9b8bfc995589b5fad5e99adf2832738661f5402f9978429a8e3"
+    },
+    "assets/fonts/JetBrainsMono-Bold.woff2": {
+      "hash": "c503cc5ec5f8b2c7666b7ecda1adf44bd45f2e6579b2eba0fc292150416588a2",
+      "content": "/home/fede/.cache/hyperframes/history/57964159-6838-434d-b4a1-cfaf096f8f01/blobs/c5/c503cc5ec5f8b2c7666b7ecda1adf44bd45f2e6579b2eba0fc292150416588a2"
+    },
+    "assets/fonts/JetBrainsMono-OFL.txt": {
+      "hash": "30f0c136e3c88e422d0791acd97238870f9054a9729bc34cf2ff0d4ed8cac4ad",
+      "content": "/home/fede/.cache/hyperframes/history/57964159-6838-434d-b4a1-cfaf096f8f01/blobs/30/30f0c136e3c88e422d0791acd97238870f9054a9729bc34cf2ff0d4ed8cac4ad"
+    },
+    "assets/fonts/JetBrainsMono-Regular.woff2": {
+      "hash": "a9cb1cd82332b23a47e3a1239d25d13c86d16c4220695e34b243effa999f45f2",
+      "content": "/home/fede/.cache/hyperframes/history/57964159-6838-434d-b4a1-cfaf096f8f01/blobs/a9/a9cb1cd82332b23a47e3a1239d25d13c86d16c4220695e34b243effa999f45f2"
+    },
+    "assets/vendor/gsap.min.js": {
+      "hash": "92bb9a96476f983d212a2bc4f54c889039c1696dd4461d40a736860938570fbb",
+      "content": "/home/fede/.cache/hyperframes/history/57964159-6838-434d-b4a1-cfaf096f8f01/blobs/92/92bb9a96476f983d212a2bc4f54c889039c1696dd4461d40a736860938570fbb"
+    },
+    "hyperframes.json": {
+      "hash": "53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50",
+      "content": "/home/fede/.cache/hyperframes/history/57964159-6838-434d-b4a1-cfaf096f8f01/blobs/53/53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50"
+    },
+    "index.html": {
+      "hash": "d28acaaa4d96dde0150d99da87698679f004372d2c85f8f12b39f9c1339ae31c",
+      "content": "/home/fede/.cache/hyperframes/history/57964159-6838-434d-b4a1-cfaf096f8f01/blobs/d2/d28acaaa4d96dde0150d99da87698679f004372d2c85f8f12b39f9c1339ae31c"
+    },
+    "meta.json": {
+      "hash": "e52f825e4c5de5492aca09a007b8d1c5837aa23d6d4e918c443d6df404a7a035",
+      "content": "/home/fede/.cache/hyperframes/history/57964159-6838-434d-b4a1-cfaf096f8f01/blobs/e5/e52f825e4c5de5492aca09a007b8d1c5837aa23d6d4e918c443d6df404a7a035"
+    },
+    "render.log": {
+      "hash": "642a05290cd8207a84ea4bfa468bfa80d20352e1cf2b6362aad124623a80bbd9",
+      "content": "/home/fede/.cache/hyperframes/history/57964159-6838-434d-b4a1-cfaf096f8f01/blobs/64/642a05290cd8207a84ea4bfa468bfa80d20352e1cf2b6362aad124623a80bbd9"
+    },
+    "assets/audio/tono.wav": {
+      "hash": "51ebdd30bddb1b2446f26300f1c5903409873b9a7801ac7e7c489d401ea521ed",
+      "content": "/home/fede/.cache/hyperframes/history/57964159-6838-434d-b4a1-cfaf096f8f01/blobs/51/51ebdd30bddb1b2446f26300f1c5903409873b9a7801ac7e7c489d401ea521ed"
+    }
+  },
+  "revisions": {},
+  "checks": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "snapshots": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "renders": {
+    "latest": {
+      "id": "5f27173f-d55c-4b62-8389-8e8fe1423908",
+      "completedAt": 1794697649910,
+      "output": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f17-video/00-strumenti/hyperframes/prova-lunga/renders/lunga.mp4",
+      "status": "completed",
+      "revision": null
+    },
+    "retainedRevisions": []
+  },
+  "pendingArtifactCleanup": []
+}

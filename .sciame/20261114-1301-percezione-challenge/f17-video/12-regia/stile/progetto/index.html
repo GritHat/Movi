@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="assets/vendor/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "InterLocale"; src: url("assets/fonts/InterVariable.woff2") format("woff2"); font-weight: 100 900; font-style: normal; }
+      @font-face { font-family: "JBMonoLocale"; src: url("assets/fonts/JetBrainsMono-Regular.woff2") format("woff2"); font-weight: 400; }
+      @font-face { font-family: "JBMonoLocale"; src: url("assets/fonts/JetBrainsMono-Bold.woff2") format("woff2"); font-weight: 700; }
+      :root {
+        --fondo: #0B0F17; --pannello: #121826; --bordo: #24344A; --ink: #E8EDF2; --ink2: #AEB8C5; --grigio: #8A97A8;
+        --visto: #3DD6E8; --previsto: #F5A524; --presenza: #C7841A; --persa: #FF6B6B; --nube: #6B7686; --copertura: #4A5A70;
+        --coop: #A99CFF;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: var(--fondo); }
+      #root { position: relative; width: 1920px; height: 1080px; background: var(--fondo); font-family: "InterLocale", sans-serif; color: var(--ink); }
+      .quadro { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+      .quadro svg { position: absolute; left: 0; top: 0; }
+      text { font-family: "JBMonoLocale", monospace; }
+      .t-inter { font-family: "InterLocale", sans-serif; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="3" data-width="1920" data-height="1080" data-fps="30">
+      <div id="qA" class="clip quadro" data-start="0" data-duration="1" data-track-index="1"><div id="qA-in"></div></div>
+      <div id="qB" class="clip quadro" data-start="1" data-duration="1" data-track-index="2"><div id="qB-in"></div></div>
+      <div id="qC" class="clip quadro" data-start="2" data-duration="1" data-track-index="3"><div id="qC-in"></div></div>
+    </div>
+    <script>
+      // Fotogrammi di stile, statici. Valori SCHEMATICI (non dal registro): lo dice la fascia d'onestà.
+      // Nessun Math.random: i frammenti usano un generatore con seme fisso.
+      let seme = 20261115;
+      function rnd() { seme = (seme * 1103515245 + 12345) % 2147483648; return seme / 2147483648; }
+      const C = { fondo:"#0B0F17", pann:"#121826", bordo:"#24344A", ink:"#E8EDF2", ink2:"#AEB8C5", grigio:"#8A97A8",
+        visto:"#3DD6E8", prev:"#F5A524", pres:"#C7841A", persa:"#FF6B6B", nube:"#6B7686", cop:"#4A5A70", coop:"#A99CFF" };
+
+      const DEFS = `<defs>
+        <pattern id="puntini" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="7" cy="7" r="1.6" fill="${C.grigio}"/></pattern>
+        <pattern id="puntiniNube" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.3" fill="${C.nube}"/><circle cx="8" cy="8" r="1.3" fill="${C.nube}"/></pattern>
+        <pattern id="righePres" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="16" stroke="${C.pres}" stroke-width="3"/></pattern>
+        <pattern id="righePrev" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="12" stroke="${C.prev}" stroke-width="2" opacity="0.55"/></pattern>
+        <pattern id="righePersa" width="18" height="18" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="18" stroke="${C.persa}" stroke-width="2" opacity="0.5"/></pattern>
+      </defs>`;
+
+      function t(x, y, s, o = {}) {
+        const size = o.size || 28, w = o.w || 700, fill = o.fill || C.ink, anchor = o.anchor || "start", fam = o.inter ? ' class="t-inter"' : "";
+        return `<text${fam} x="${x}" y="${y}" font-size="${size}" font-weight="${w}" fill="${fill}" text-anchor="${anchor}">${s}</text>`;
+      }
+      function etichetta(x, y, s, col, o = {}) { // etichetta di stato: riquadro scuro + testo maiuscolo
+        const size = o.size || 28, w = s.length * size * 0.6 + 20, h = size + 14;
+        const xx = o.anchor === "end" ? x - w : x;
+        return `<rect x="${xx}" y="${y - size - 2}" width="${w}" height="${h}" fill="${C.fondo}" fill-opacity="0.92" stroke="${col}" stroke-width="2"/>` + t(xx + 10, y + 2, s, { size, fill: col });
+      }
+      // Segni delle tracce
+      const visto = (x, y, r = 11) => `<circle cx="${x}" cy="${y}" r="${r}" fill="${C.visto}"/>`;
+      const anello = (x, y, r = 11, col = C.prev) => `<circle cx="${x}" cy="${y}" r="${r}" fill="${C.fondo}" stroke="${col}" stroke-width="4"/>`;
+      const regione = (x, y, rx, ry, col = C.prev) => `<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" fill="${col}" fill-opacity="0.18" stroke="${col}" stroke-width="3" stroke-dasharray="12 9"/>`;
+      // Glifi dei sensori: forma, non colore
+      function sensore(x, y, tipo, salute) {
+        const col = salute === "persa" ? C.persa : C.ink;
+        const g = { radar: `<circle cx="${x}" cy="${y}" r="12" fill="none" stroke="${col}" stroke-width="3"/><circle cx="${x}" cy="${y}" r="4" fill="${col}"/>`,
+          eo: `<polygon points="${x},${y - 13} ${x + 12},${y + 9} ${x - 12},${y + 9}" fill="none" stroke="${col}" stroke-width="3"/>`,
+          ir: `<polygon points="${x},${y - 13} ${x + 12},${y + 9} ${x - 12},${y + 9}" fill="${col}" fill-opacity="0.5" stroke="${col}" stroke-width="3"/>`,
+          coop: `<rect x="${x - 10}" y="${y - 10}" width="20" height="20" fill="none" stroke="${C.coop}" stroke-width="3"/>` };
+        let s = g[tipo];
+        if (salute === "persa") s += `<line x1="${x - 16}" y1="${y + 16}" x2="${x + 16}" y2="${y - 16}" stroke="${C.persa}" stroke-width="3"/>`;
+        return s;
+      }
+      // Fasce fisse
+      function fasce(scena, traccia, dominio, onesta) {
+        return `<rect x="0" y="0" width="1920" height="124" fill="${C.fondo}"/>` +
+          t(96, 78, scena, { size: 38, w: 700, inter: true }) +
+          t(96, 112, traccia, { size: 22, w: 400, fill: C.ink2 }) +
+          `<rect x="1124" y="54" width="700" height="56" fill="${C.fondo}" stroke="${C.ink2}" stroke-width="2"/>` +
+          t(1144, 91, onesta, { size: 22, w: 700, fill: C.ink }) +
+          t(96, 896, dominio, { size: 22, w: 400, fill: C.ink2 }) +
+          t(1824, 896, "STYLE FRAME · values schematic, not from the log", { size: 22, w: 400, fill: C.ink2, anchor: "end" });
+      }
+      function sottotitolo(r1, r2) {
+        return `<rect x="0" y="940" width="1920" height="140" fill="${C.fondo}" fill-opacity="0.8"/>` +
+          t(960, 996, r1, { size: 40, w: 600, inter: true, anchor: "middle" }) + (r2 ? t(960, 1046, r2, { size: 40, w: 600, inter: true, anchor: "middle" }) : "");
+      }
+      function pannello(x, y, w, h, titolo) {
+        return `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${C.pann}" stroke="${C.bordo}" stroke-width="2"/>` +
+          t(x + 18, y + 34, titolo, { size: 22, w: 700, fill: C.ink2 });
+      }
+      function scala(x, y, px, testo) {
+        return `<line x1="${x}" y1="${y}" x2="${x + px}" y2="${y}" stroke="${C.ink2}" stroke-width="2"/><line x1="${x}" y1="${y - 6}" x2="${x}" y2="${y + 6}" stroke="${C.ink2}" stroke-width="2"/><line x1="${x + px}" y1="${y - 6}" x2="${x + px}" y2="${y + 6}" stroke="${C.ink2}" stroke-width="2"/>` + t(x + px + 10, y + 7, testo, { size: 20, w: 400, fill: C.ink2 });
+      }
+      function riga(x, y, segno, testo, col, sotto) {
+        return segno + t(x + 34, y + 9, testo, { size: 26, fill: col }) + (sotto ? t(x + 34, y + 40, sotto, { size: 20, w: 400, fill: C.ink2 }) : "");
+      }
+      function banda(x, y, w, nome, stato, causa) {
+        if (stato === "persa") return `<rect x="${x}" y="${y}" width="${w}" height="56" fill="${C.persa}"/>` + t(x + 14, y + 25, nome + " · RELIABILITY LOST", { size: 22, fill: C.fondo }) + t(x + 14, y + 49, causa, { size: 20, w: 400, fill: C.fondo });
+        if (stato === "ridotta") return `<rect x="${x}" y="${y}" width="${w}" height="56" fill="${C.fondo}" stroke="${C.prev}" stroke-width="2" stroke-dasharray="8 6"/>` + t(x + 14, y + 25, nome + " · RANGE REDUCED", { size: 22, fill: C.prev }) + t(x + 14, y + 49, causa, { size: 20, w: 400, fill: C.ink2 });
+        return `<rect x="${x}" y="${y}" width="${w}" height="56" fill="${C.fondo}" stroke="${C.ink2}" stroke-width="2"/>` + t(x + 14, y + 25, nome + " · IN SERVICE", { size: 22, fill: C.ink }) + t(x + 14, y + 49, causa, { size: 20, w: 400, fill: C.ink2 });
+      }
+      let PFX = "a";
+      const CLIP = () => `<clipPath id="${PFX}cv"><rect x="600" y="140" width="784" height="700"/></clipPath><clipPath id="${PFX}ct"><rect x="96" y="140" width="480" height="700"/></clipPath>`;
+      const svg = (inner) => `<svg width="1920" height="1080" viewBox="0 0 1920 1080"><defs>${CLIP()}</defs>${DEFS.replace(/id="(\w+)"/g, `id="${PFX}$1"`)}${inner.replace(/url\(#(\w+)\)/g, `url(#${PFX}$1)`)}</svg>`;
+
+      // ---------- A · Collisione fra droni (E1) ----------
+      function quadroA() {
+        let s = "";
+        // verita' (sinistra): piazzale, due sagome a contatto, frammenti come punti
+        s += pannello(96, 140, 480, 700, "SCENE · SIMULATED TRUTH"); s += `<g clip-path="url(#ct)">`;
+        s += `<rect x="150" y="520" width="370" height="260" fill="none" stroke="${C.grigio}" stroke-width="2" stroke-dasharray="4 6"/>` + t(160, 506, "apron", { size: 20, w: 400, fill: C.grigio });
+        const drone = (x, y, r) => `<g transform="translate(${x},${y}) rotate(${r})" fill="none" stroke="${C.grigio}" stroke-width="3"><line x1="-18" y1="-18" x2="18" y2="18"/><line x1="-18" y1="18" x2="18" y2="-18"/><circle cx="-18" cy="-18" r="8"/><circle cx="18" cy="18" r="8"/><circle cx="-18" cy="18" r="8"/><circle cx="18" cy="-18" r="8"/></g>`;
+        s += drone(300, 360, 8) + drone(342, 382, -20);
+        seme = 7; for (let i = 0; i < 60; i++) { const a = rnd() * 6.283, d = 20 + rnd() * 120; s += `<rect x="${(322 + Math.cos(a) * d).toFixed(1)}" y="${(372 + Math.sin(a) * d * 0.9 + d * 0.5).toFixed(1)}" width="4" height="4" fill="${C.grigio}"/>`; }
+        s += `<circle cx="330" cy="660" r="10" fill="${C.grigio}"/>` + t(348, 667, "person", { size: 20, w: 400, fill: C.grigio });
+        s += t(116, 822, "two multirotors touch at 80 m", { size: 20, w: 400, fill: C.ink2 });
+
+        // vista del sistema (centro): pianta con radar e coperture
+        s += `</g>`; s += pannello(600, 140, 784, 700, "AS MoVi DECLARES IT · PLAN VIEW"); s += `<g clip-path="url(#cv)">`;
+        s += `<circle cx="660" cy="800" r="560" fill="none" stroke="${C.cop}" stroke-width="2"/>` + t(1180, 800, "radar coverage", { size: 20, w: 400, fill: C.cop });
+        s += sensore(660, 800, "radar") + sensore(690, 800, "eo") + sensore(720, 800, "ir");
+        // impronta finale (disco) e volume dei detriti che cresce
+        s += `<circle cx="1000" cy="430" r="250" fill="none" stroke="${C.pres}" stroke-width="3" stroke-dasharray="4 10"/>`;
+        s += `<circle cx="1000" cy="430" r="150" fill="url(#righePres)" fill-opacity="0.6" stroke="${C.pres}" stroke-width="4"/>`;
+        seme = 11; for (let i = 0; i < 40; i++) { const a = rnd() * 6.283, d = rnd() * 140; s += `<circle cx="${(1000 + Math.cos(a) * d).toFixed(1)}" cy="${(430 + Math.sin(a) * d).toFixed(1)}" r="3" fill="${C.ink}"/>`; }
+        // anelli del raggio passato (crescita guidata dai dati)
+        s += `<circle cx="1000" cy="430" r="62" fill="none" stroke="${C.pres}" stroke-width="1.5" opacity="0.7"/><circle cx="1000" cy="430" r="110" fill="none" stroke="${C.pres}" stroke-width="1.5" opacity="0.7"/>`;
+        // tracce d'origine: previste, identita' presunta
+        s += regione(1080, 360, 60, 40) + anello(1080, 360) + t(1146, 352, "A?", { size: 26, fill: C.prev });
+        s += regione(960, 480, 44, 44) + anello(960, 480) + t(918, 520, "B?", { size: 26, fill: C.prev });
+        // persona dentro l'impronta: vista + avviso
+        s += visto(1150, 590) + t(1168, 598, "P1", { size: 26, fill: C.visto });
+        s += etichetta(640, 220, "EVENT: CONTACT (INFERRED)", C.pres);
+        s += etichetta(640, 272, "POSSIBLE DEBRIS", C.pres);
+        s += t(640, 312, "volume grows each cycle, never shrinks", { size: 20, w: 400, fill: C.ink2 });
+        s += etichetta(1366, 680, "P1 · INSIDE DEBRIS FOOTPRINT", C.pres, { anchor: "end", size: 26 });
+        s += scala(640, 818, 100, "100 m (schematic)");
+
+        // console (destra)
+        s += `</g>`; s += pannello(1408, 140, 416, 700, "OPERATOR CONSOLE · TRACKS");
+        s += banda(1426, 190, 380, "RADAR", "ok", "drone surveillance class");
+        s += banda(1426, 256, 380, "EO CAMERA", "ok", "cued by radar");
+        s += banda(1426, 322, 380, "THERMAL", "ok", "");
+        s += riga(1430, 432, anello(1440, 432, 10), "A · PREDICTED", C.prev, "identity presumed");
+        s += riga(1430, 512, anello(1440, 512, 10), "B · NOT SEEN 2.4 s", C.prev, "zone kept, never \"gone\"");
+        s += riga(1430, 592, visto(1440, 592, 10), "P1 · SEEN", C.visto, "person · label by hand");
+        s += `<rect x="1430" y="640" width="372" height="2" fill="${C.bordo}"/>`;
+        s += t(1430, 680, "t 15.0  contact · INFERRED", { size: 22, fill: C.pres });
+        s += t(1430, 712, "t 17.2  warning to P1", { size: 22, fill: C.pres });
+        s += t(1430, 744, "delay [CIFRA: E1 ritardo]", { size: 22, w: 400, fill: C.ink2 });
+
+        s += fasce("Drones collide · debris", "Track: detect moving elements; distinguish observed from uncertain", "Simulation · scenario E1 written by hand · labels by hand", "SIMULATION · SENSORS MODELLED FROM DATASHEETS");
+        s += sottotitolo("Two drones touch. The system does not see the impact:", "it infers it, and the debris volume only grows.");
+        return svg(s);
+      }
+
+      // ---------- B · Fiammata, il radar resta (E2) ----------
+      function quadroB() {
+        let s = "";
+        s += pannello(96, 140, 480, 700, "SCENE · SIMULATED TRUTH"); s += `<g clip-path="url(#ct)">`;
+        s += `<rect x="120" y="440" width="432" height="90" fill="none" stroke="${C.grigio}" stroke-width="2"/>` + t(130, 556, "runway", { size: 20, w: 400, fill: C.grigio });
+        // aereo schematico (sagoma piana, nessun marchio)
+        s += `<g transform="translate(300,485)" fill="${C.grigio}"><rect x="-46" y="-6" width="92" height="12"/><polygon points="-8,-6 8,-6 2,-52 -2,-52"/><polygon points="-8,6 8,6 2,52 -2,52"/><polygon points="-46,-4 -56,-18 -50,-4"/></g>`;
+        // lampo schematico: forma piatta, nessun bagliore, nessun gradiente
+        s += `<polygon points="304,447 316,420 322,446 346,432 330,454 352,466 326,468 336,494 314,476 302,500 298,474 276,486 288,464 266,452 292,452" fill="${C.ink}"/>`;
+        s += t(360, 420, "flash (3 s)", { size: 20, w: 400, fill: C.ink2 });
+        // fumo: macchia grigia piatta
+        s += `<ellipse cx="420" cy="420" rx="120" ry="60" fill="${C.nube}" fill-opacity="0.55"/>` + t(470, 380, "smoke", { size: 20, w: 400, fill: C.ink2 });
+        seme = 23; for (let i = 0; i < 50; i++) s += `<rect x="${(320 + rnd() * 220).toFixed(1)}" y="${(450 + rnd() * 70).toFixed(1)}" width="4" height="4" fill="${C.grigio}"/>`;
+        s += `<rect x="470" y="620" width="34" height="20" fill="none" stroke="${C.grigio}" stroke-width="3"/>` + t(400, 670, "service vehicle", { size: 20, w: 400, fill: C.grigio });
+        s += t(116, 822, "engine failure on take-off roll", { size: 20, w: 400, fill: C.ink2 });
+
+        s += `</g>`; s += pannello(600, 140, 784, 700, "AS MoVi DECLARES IT · PLAN VIEW"); s += `<g clip-path="url(#cv)">`;
+        // pista
+        s += `<rect x="620" y="420" width="744" height="70" fill="none" stroke="${C.grigio}" stroke-width="2"/>`;
+        // coperture: radar di superficie resta (contorno pieno); EO e IR perse (contorno corallo a righe, nessun contributo)
+        s += `<path d="M 1300 780 L 640 260 A 840 840 0 0 1 1360 200 Z" fill="none" stroke="${C.cop}" stroke-width="2"/>`;
+        s += `<path d="M 1300 780 L 760 380 L 980 330 Z" fill="url(#righePersa)" stroke="${C.persa}" stroke-width="2" stroke-dasharray="10 8"/>`;
+        s += sensore(1300, 780, "radar") + sensore(1270, 780, "eo", "persa") + sensore(1240, 780, "ir", "persa") + sensore(1330, 780, "coop");
+        // zona non verificata a valle, possibili detriti (impronta + pista a valle)
+        s += `<rect x="900" y="420" width="464" height="70" fill="url(#puntini)" stroke="${C.grigio}" stroke-width="3"/>`;
+        s += `<circle cx="900" cy="455" r="120" fill="url(#righePres)" fill-opacity="0.45" stroke="${C.pres}" stroke-width="3" stroke-dasharray="4 10"/>`;
+        // nube: non osservata per EO/IR
+        s += `<ellipse cx="1020" cy="420" rx="120" ry="58" fill="url(#puntiniNube)" stroke="${C.nube}" stroke-width="3" stroke-dasharray="6 6"/>`;
+        // aereo: visto dal solo radar
+        s += visto(1080, 455, 12) + t(1062, 520, "AC1", { size: 26, fill: C.visto });
+        // mezzo di servizio: avviso sul percorso
+        s += visto(1090, 650, 10) + `<line x1="1090" y1="640" x2="1090" y2="494" stroke="${C.pres}" stroke-width="3" stroke-dasharray="10 8"/>`;
+        s += etichetta(640, 220, "UNVERIFIED ZONE · POSSIBLE DEBRIS", C.grigio, { size: 26 });
+        s += etichetta(640, 272, "NOT OBSERVED · SMOKE (EO, IR)", C.nube, { size: 26 });
+        s += etichetta(1110, 640, "V1 · UNVERIFIED ZONE ON PATH", C.pres, { size: 24 });
+        s += etichetta(640, 600, "AC1 · SEEN (RADAR ONLY)", C.visto, { size: 26 });
+        s += scala(640, 818, 100, "200 m (schematic)");
+
+        s += `</g>`; s += pannello(1408, 140, 416, 700, "OPERATOR CONSOLE · SENSORS");
+        s += banda(1426, 190, 380, "EO CAMERA", "persa", "flash saturation · t 15.7");
+        s += banda(1426, 256, 380, "THERMAL", "persa", "flash saturation · t 15.7");
+        s += banda(1426, 322, 380, "SURFACE RADAR", "ok", "holds AC1, V1");
+        s += banda(1426, 388, 380, "ADS-B", "ok", "cooperative: AC1 only");
+        s += riga(1430, 500, visto(1440, 500, 10), "AC1 · SEEN (RADAR)", C.visto, "identity from ADS-B");
+        s += riga(1430, 580, visto(1440, 580, 10), "V1 · SEEN", C.visto, "warning: zone on path");
+        s += `<rect x="1430" y="628" width="372" height="2" fill="${C.bordo}"/>`;
+        s += t(1430, 668, "t 15.7 separation · INFERRED", { size: 22, fill: C.pres });
+        s += t(1430, 700, "cycles [CIFRA: E2]", { size: 22, w: 400, fill: C.ink2 });
+        s += t(1430, 732, "flash effect on radar:", { size: 20, w: 400, fill: C.ink2 });
+        s += t(1430, 758, "NOT VERIFIED", { size: 22, fill: C.ink2 });
+
+        s += fasce("Engine failure · flash and smoke", "Track: signal loss of reliability; handle visibility interruptions", "Simulation · scenario E2 written by hand · no real event reconstructed", "SIMULATION · SENSORS MODELLED FROM DATASHEETS");
+        s += sottotitolo("The flash blinds both cameras: reliability lost.", "The radar still holds the aircraft.");
+        return svg(s);
+      }
+
+      // ---------- C · Nebbia: la copertura ottica si ritrae (E3a) ----------
+      function quadroC() {
+        let s = "";
+        s += pannello(96, 140, 480, 700, "SCENE · SIMULATED TRUTH"); s += `<g clip-path="url(#ct)">`;
+        s += `<rect x="114" y="180" width="444" height="640" fill="${C.nube}" fill-opacity="0.45"/>`;
+        s += `<g transform="translate(330,400)" fill="${C.grigio}"><rect x="-4" y="-40" width="8" height="80"/><rect x="-44" y="-6" width="88" height="10"/><rect x="-16" y="32" width="32" height="6"/></g>`;
+        s += t(380, 380, "light aircraft,", { size: 20, w: 400, fill: C.ink }) + t(380, 404, "no transponder", { size: 20, w: 400, fill: C.ink });
+        s += `<rect x="200" y="660" width="260" height="40" fill="none" stroke="${C.grigio}" stroke-width="2"/>` + t(210, 730, "runway", { size: 20, w: 400, fill: C.grigio });
+        s += t(116, 822, "dense fog on a 3° approach", { size: 20, w: 400, fill: C.ink2 });
+
+        s += `</g>`; s += pannello(600, 140, 784, 700, "AS MoVi DECLARES IT · PLAN VIEW"); s += `<g clip-path="url(#cv)">`;
+        const sx = 1300, sy = 640;
+        // portata di scheda (fantasma, tratteggio grigio) e portata utile (piena): l'ottico si ritrae
+        s += `<path d="M ${sx} ${sy} L ${sx - 520} ${sy - 300} A 600 600 0 0 1 ${sx - 300} ${sy - 520} Z" fill="none" stroke="${C.grigio}" stroke-width="2" stroke-dasharray="3 9"/>`;
+        s += t(sx - 560, sy - 560, "EO datasheet range", { size: 20, w: 400, fill: C.grigio });
+        s += `<path d="M ${sx} ${sy} L ${sx - 22} ${sy - 13} A 26 26 0 0 1 ${sx - 13} ${sy - 22} Z" fill="${C.prev}" stroke="${C.prev}" stroke-width="2"/>`;
+        s += `<line x1="${sx - 26}" y1="${sy - 26}" x2="${sx - 120}" y2="${sy - 120}" stroke="${C.prev}" stroke-width="2"/>` + t(sx - 300, sy - 128, "EO useful: 23 m", { size: 22, fill: C.prev });
+        // fuori dalla portata utile ottica: non osservato (puntini) per EO/IR
+        s += `<path d="M ${sx} ${sy} L ${sx - 520} ${sy - 300} A 600 600 0 0 1 ${sx - 300} ${sy - 520} Z" fill="url(#puntiniNube)" fill-opacity="0.8"/>`;
+        // radar: copertura intera
+        s += `<circle cx="${sx}" cy="${sy}" r="640" fill="none" stroke="${C.cop}" stroke-width="2"/>` + t(640, 800, "radar coverage", { size: 20, w: 400, fill: C.cop });
+        s += sensore(sx, sy, "radar") + sensore(sx - 30, sy + 30, "eo") + sensore(sx, sy + 30, "ir") + sensore(sx + 30, sy + 30, "coop");
+        // traccia: vista dal solo radar
+        s += visto(880, 420, 12) + t(840, 466, "LA1", { size: 26, fill: C.visto });
+        s += `<rect x="1150" y="680" width="210" height="26" fill="none" stroke="${C.grigio}" stroke-width="2"/>`;
+        s += etichetta(640, 220, "USEFUL RANGE REDUCED · EO, THERMAL", C.prev, { size: 26 });
+        s += etichetta(640, 272, "NOT OBSERVED · FOG (EO, IR)", C.nube, { size: 26 });
+        s += etichetta(640, 560, "LA1 · SEEN (RADAR ONLY)", C.visto, { size: 26 });
+        s += etichetta(1366, 790, "NO REDUNDANCY", C.prev, { anchor: "end", size: 26 });
+        s += scala(900, 818, 100, "500 m (schematic)");
+
+        s += `</g>`; s += pannello(1408, 140, 416, 700, "OPERATOR CONSOLE · SENSORS");
+        s += banda(1426, 190, 380, "RADAR", "ok", "carries every track alone");
+        s += banda(1426, 256, 380, "EO CAMERA", "ridotta", "fog · useful 23 m (calc.)");
+        s += banda(1426, 322, 380, "THERMAL", "ridotta", "fog · useful 15 m (calc.)");
+        s += banda(1426, 388, 380, "ADS-B", "ok", "silence ≠ observation");
+        s += riga(1430, 500, visto(1440, 500, 10), "LA1 · SEEN (RADAR)", C.visto, "label by hand");
+        s += `<rect x="1430" y="548" width="372" height="2" fill="${C.bordo}"/>`;
+        s += t(1430, 590, "if the radar drops:", { size: 22, w: 400, fill: C.ink2 });
+        s += t(1430, 624, "WARNING NOT TIMELY", { size: 26, fill: C.persa });
+        s += t(1430, 652, "for every class (calc.)", { size: 20, w: 400, fill: C.ink2 });
+        s += t(1430, 700, "range [CIFRA: E3 ±5 %]", { size: 22, w: 400, fill: C.ink2 });
+
+        s += fasce("Fog · the optical sensors pull back", "Track: declare loss of reliability when needed", "Simulation · scenario E3a · ranges by calculation from datasheets", "SIMULATION · SENSORS MODELLED FROM DATASHEETS");
+        s += sottotitolo("In dense fog the cameras see a few metres.", "MoVi says so, and says the radar now stands alone.");
+        return svg(s);
+      }
+
+      PFX = "a"; document.getElementById("qA-in").innerHTML = quadroA();
+      PFX = "b"; document.getElementById("qB-in").innerHTML = quadroB();
+      PFX = "c"; document.getElementById("qC-in").innerHTML = quadroC();
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#qA-in", { opacity: 1 }, { opacity: 1, duration: 1 }, 0);
+      tl.fromTo("#qB-in", { opacity: 1 }, { opacity: 1, duration: 1 }, 1);
+      tl.fromTo("#qC-in", { opacity: 1 }, { opacity: 1, duration: 1 }, 2);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

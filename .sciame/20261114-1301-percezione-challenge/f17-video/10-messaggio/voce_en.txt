@@ -1,0 +1,32 @@
+An apron. A hangar. Two inspection drones. An aircraft taxiing.
+One drone slips behind the hangar.
+What should the screen say now?
+
+MoVi declares what it has not observed.
+For every object, one of three answers. I see it. I don't see it, and here is where it can be. Or: I don't know.
+What it has not observed, it never calls empty. A possible-presence warning stays on until a sensor looks again.
+
+Radar, LiDAR, visible and thermal cameras, and what aircraft and drones broadcast. All simulated from public data sheets.
+Each sensor has blind spots, and MoVi draws them. A silent transmitter proves nothing.
+
+Fog rolls in.
+The cameras' useful range collapses, and MoVi says so, per sensor, per class. Only the radar is left: no redundancy.
+If the radar drops too: reliability lost, warning not timely.
+
+The fog lifts. Two drones fly close.
+Too close to separate: unresolved tracks. Then they touch. Event: contact, inferred.
+A volume where debris can be, which never shrinks on its own, and a warning to the person below. The ground stays unverified until inspected.
+
+An aircraft on its take-off run. An engine fails.
+The flash blinds the cameras: MoVi marks them unreliable. The radar alone still sees the aircraft.
+Behind the smoke: not observed. Downstream: unverified, possible debris. The service vehicle is warned.
+
+First, the limits.
+Everything you saw is simulated, from public data sheets. No physical sensor. Object classes are labelled by hand. The full chain has not yet run end to end.
+What holds: written rules decide, not a trained model. In simulation, [CIFRA-V1 k] of [CIFRA-V1 n] simulated fragments stayed inside the declared volume. Tracks lost without a warning: [CIFRA-V2 k] of [CIFRA-V2 n].
+
+The core is the one of our short-range version: a person behind an obstacle, a depth camera, the same three answers.
+
+MoVi. It never calls a space empty unless it has looked.
+It observes and warns. No output is a command.
+By SDMs.

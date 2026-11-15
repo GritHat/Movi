@@ -1,0 +1,1650 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><script data-hf-gsap-fallback>
+(function(){
+  var cdnBase="/api/vendor/npm/gsap@3.15.0/dist/";
+  var loaded={};
+  function loadFallback(file){
+    if(loaded[file])return loaded[file];
+    return loaded[file]=new Promise(function(ok,fail){
+      var s=document.createElement("script");
+      s.src=cdnBase+file;s.hfGsapFallback=true;s.onload=ok;s.onerror=fail;
+      document.head.appendChild(s);
+    });
+  }
+  document.addEventListener("error",function(e){
+    var t=e.target;
+    if(!t||t.tagName!=="SCRIPT"||!t.src||t.hfGsapFallback)return;
+    var m=t.src.match(/gsap[^/]*\/dist\/(.+\.js)/);
+    if(m)loadFallback(m[1]).catch(function(){
+      reportError(new Error("GSAP could not load from "+t.src+" or "+cdnBase+m[1]+", so this preview's animations will not play."));
+    });
+  },true);
+})();
+</script>
+<meta name="hyperframes-gsap-base-url" content="/api/vendor/npm">
+<meta name="hyperframes-studio-preview"><script>(function(){var seen=window.__hfPreviewErrors=[],kinds=window.__hfPreviewErrorKinds=[],known={SyntaxError:1,TypeError:1,ReferenceError:1,RangeError:1},runtime="/api/runtime.js";
+addEventListener("error",function(e){seen.push(e.message||String(e));
+var name=e.error&&e.error.constructor&&e.error.constructor.name,path="";
+try{var url=e.filename&&new URL(e.filename,window.location.href);if(url&&url.origin===window.location.origin)path=url.pathname}catch(_){}
+kinds.push({name:known[name]===1?name:"other",origin:!path?"unknown":path===runtime?"runtime":path.indexOf("/api/projects/")===0?"project":"studio"})});})();</script>
+<script data-hyperframes-preview-runtime="1" src="/api/runtime.js"></script>
+<base href="/api/projects/prova/preview/">
+<script type="importmap">{"imports":{"/":"/api/projects/prova/preview/","/api/projects/prova/preview/":"/api/projects/prova/preview/"}}</script><style data-hf-scene-fonts="">@font-face { font-family: "InterLocale"; src: url("assets/fonts/InterVariable.woff2") format("woff2"); font-weight: 100 900; font-style: normal; }
+@font-face { font-family: "JBMonoLocale"; src: url("assets/fonts/JetBrainsMono-Regular.woff2") format("woff2"); font-weight: 400; }
+@font-face { font-family: "JBMonoLocale"; src: url("assets/fonts/JetBrainsMono-Bold.woff2") format("woff2"); font-weight: 700; }</style><style data-hyperframes-text-rendering="true">html,body,*{text-rendering:geometricPrecision}</style><script data-hf-after-fonts-fallback="">document.addEventListener("DOMContentLoaded", function () {
+  if (window.__hfAfterFontsClaimed) return;
+  var T = "text/hf-after-fonts";
+  var all = [].slice.call(document.querySelectorAll('script[type="text/hf-after-fonts"], script[type="text/hf-after-fonts+module"]'));
+  if (!all.length) return;
+  console.warn("[hyperframes] the runtime has no web-font gate; composition scripts run without waiting for fonts");
+  var late = function (el) { return el.type !== T || el.matches('[defer][src], [defer][data-hf-inlined-src]'); };
+  var queue = all.filter(function (el) { return !late(el); }).concat(all.filter(late));
+  (function next() {
+    var el = queue.shift();
+    if (!el) return;
+    var s = document.createElement("script");
+    for (var i = 0; i < el.attributes.length; i++) s.setAttribute(el.attributes[i].name, el.attributes[i].value);
+    if (el.type === T) s.removeAttribute("type"); else s.type = "module";
+    s.async = el.hasAttribute("async");
+    s.text = el.text;
+    var waits = s.type !== "module" && s.hasAttribute("src") && !s.async && !s.noModule;
+    if (waits) { s.addEventListener("load", next); s.addEventListener("error", next); }
+    el.replaceWith(s);
+    if (!waits) next();
+  })();
+});
+//# sourceURL=hyperframes://after-fonts-fallback</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, height=1080">
+    <script data-hf-inlined-src="assets/vendor/gsap.min.js">!(function(t, e) {
+  "object" == typeof exports && "undefined" != typeof module ? e(exports) : "function" == typeof define && define.amd ? define(["exports"], e) : e((t = t || self).window = t.window || {});
+})(this, function(e) {
+  "use strict";
+  function _inheritsLoose(t2, e2) {
+    t2.prototype = Object.create(e2.prototype), (t2.prototype.constructor = t2).__proto__ = e2;
+  }
+  function _assertThisInitialized(t2) {
+    if (void 0 === t2) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    return t2;
+  }
+  function r(t2) {
+    return "string" == typeof t2;
+  }
+  function s(t2) {
+    return "function" == typeof t2;
+  }
+  function t(t2) {
+    return "number" == typeof t2;
+  }
+  function u(t2) {
+    return void 0 === t2;
+  }
+  function v(t2) {
+    return "object" == typeof t2;
+  }
+  function w(t2) {
+    return false !== t2;
+  }
+  function x() {
+    return "undefined" != typeof window;
+  }
+  function y(t2) {
+    return s(t2) || r(t2);
+  }
+  function R(t2) {
+    return (i = bt(t2, ht)) && Fe;
+  }
+  function S(t2, e2) {
+    return console.warn("Invalid property", t2, "set to", e2, "Missing plugin? gsap.registerPlugin()");
+  }
+  function T(t2, e2) {
+    return !e2 && console.warn(t2);
+  }
+  function U(t2, e2) {
+    return t2 && (ht[t2] = e2) && i && (i[t2] = e2) || ht;
+  }
+  function V() {
+    return 0;
+  }
+  function ga(t2) {
+    var e2, r2, i2 = t2[0];
+    if (v(i2) || s(i2) || (t2 = [t2]), !(e2 = (i2._gsap || {}).harness)) {
+      for (r2 = yt.length; r2-- && !yt[r2].targetTest(i2); ) ;
+      e2 = yt[r2];
+    }
+    for (r2 = t2.length; r2--; ) t2[r2] && (t2[r2]._gsap || (t2[r2]._gsap = new Xt(t2[r2], e2))) || t2.splice(r2, 1);
+    return t2;
+  }
+  function ha(t2) {
+    return t2._gsap || ga(Pt(t2))[0]._gsap;
+  }
+  function ia(t2, e2, r2) {
+    return (r2 = t2[e2]) && s(r2) ? t2[e2]() : u(r2) && t2.getAttribute && t2.getAttribute(e2) || r2;
+  }
+  function ja(t2, e2) {
+    return (t2 = t2.split(",")).forEach(e2) || t2;
+  }
+  function ka(t2) {
+    return Math.round(1e5 * t2) / 1e5 || 0;
+  }
+  function la(t2) {
+    return Math.round(1e7 * t2) / 1e7 || 0;
+  }
+  function ma(t2, e2) {
+    var r2 = e2.charAt(0), i2 = parseFloat(e2.substr(2));
+    return t2 = parseFloat(t2), "+" === r2 ? t2 + i2 : "-" === r2 ? t2 - i2 : "*" === r2 ? t2 * i2 : t2 / i2;
+  }
+  function na(t2, e2) {
+    for (var r2 = e2.length, i2 = 0; t2.indexOf(e2[i2]) < 0 && ++i2 < r2; ) ;
+    return i2 < r2;
+  }
+  function oa() {
+    var t2, e2, r2 = pt.length, i2 = pt.slice(0);
+    for (_t = {}, t2 = pt.length = 0; t2 < r2; t2++) (e2 = i2[t2]) && e2._lazy && (e2.render(e2._lazy[0], e2._lazy[1], true)._lazy = 0);
+  }
+  function pa(t2) {
+    return !!(t2._initted || t2._startAt || t2.add);
+  }
+  function qa(t2, e2, r2, i2) {
+    pt.length && !I && oa(), t2.render(e2, r2, i2 || !!(I && e2 < 0 && pa(t2))), pt.length && !I && oa();
+  }
+  function ra(t2) {
+    var e2 = parseFloat(t2);
+    return (e2 || 0 === e2) && (t2 + "").match(ot).length < 2 ? e2 : r(t2) ? t2.trim() : t2;
+  }
+  function sa(t2) {
+    return t2;
+  }
+  function ta(t2, e2) {
+    for (var r2 in e2) r2 in t2 || (t2[r2] = e2[r2]);
+    return t2;
+  }
+  function wa(t2, e2) {
+    for (var r2 in e2) "__proto__" !== r2 && "constructor" !== r2 && "prototype" !== r2 && (t2[r2] = v(e2[r2]) ? wa(t2[r2] || (t2[r2] = {}), e2[r2]) : e2[r2]);
+    return t2;
+  }
+  function xa(t2, e2) {
+    var r2, i2 = {};
+    for (r2 in t2) r2 in e2 || (i2[r2] = t2[r2]);
+    return i2;
+  }
+  function ya(t2) {
+    var e2 = t2.parent || L, r2 = t2.keyframes ? /* @__PURE__ */ (function _setKeyframeDefaults(i2) {
+      return function(t3, e3) {
+        for (var r3 in e3) r3 in t3 || "duration" === r3 && i2 || "ease" === r3 || (t3[r3] = e3[r3]);
+      };
+    })(K(t2.keyframes)) : ta;
+    if (w(t2.inherit)) for (; e2; ) r2(t2, e2.vars.defaults), e2 = e2.parent || e2._dp;
+    return t2;
+  }
+  function Aa(t2, e2, r2, i2, n2) {
+    void 0 === r2 && (r2 = "_first"), void 0 === i2 && (i2 = "_last");
+    var a2, s2 = t2[i2];
+    if (n2) for (a2 = e2[n2]; s2 && s2[n2] > a2; ) s2 = s2._prev;
+    return s2 ? (e2._next = s2._next, s2._next = e2) : (e2._next = t2[r2], t2[r2] = e2), e2._next ? e2._next._prev = e2 : t2[i2] = e2, e2._prev = s2, e2.parent = e2._dp = t2, e2;
+  }
+  function Ba(t2, e2, r2, i2) {
+    void 0 === r2 && (r2 = "_first"), void 0 === i2 && (i2 = "_last");
+    var n2 = e2._prev, a2 = e2._next;
+    n2 ? n2._next = a2 : t2[r2] === e2 && (t2[r2] = a2), a2 ? a2._prev = n2 : t2[i2] === e2 && (t2[i2] = n2), e2._next = e2._prev = e2.parent = null;
+  }
+  function Ca(t2, e2) {
+    t2.parent && (!e2 || t2.parent.autoRemoveChildren) && t2.parent.remove && t2.parent.remove(t2), t2._act = 0;
+  }
+  function Da(t2, e2) {
+    if (t2 && (!e2 || e2._end > t2._dur || e2._start < 0)) for (var r2 = t2; r2; ) r2._dirty = 1, r2 = r2.parent;
+    return t2;
+  }
+  function Fa(t2, e2, r2, i2) {
+    return t2._startAt && (I ? t2._startAt.revert(ft) : t2.vars.immediateRender && !t2.vars.autoRevert || t2._startAt.render(e2, true, i2));
+  }
+  function Ha(t2) {
+    return t2._repeat ? wt(t2._tTime, t2 = t2.duration() + t2._rDelay) * t2 : 0;
+  }
+  function Ja(t2, e2) {
+    return (t2 - e2._start) * e2._ts + (0 <= e2._ts ? 0 : e2._dirty ? e2.totalDuration() : e2._tDur);
+  }
+  function Ka(t2) {
+    return t2._end = la(t2._start + (t2._tDur / Math.abs(t2._ts || t2._rts || q) || 0));
+  }
+  function La(t2, e2) {
+    var r2 = t2._dp;
+    return r2 && r2.smoothChildTiming && t2._ts && (t2._start = la(r2._time - (0 < t2._ts ? e2 / t2._ts : ((t2._dirty ? t2.totalDuration() : t2._tDur) - e2) / -t2._ts)), Ka(t2), r2._dirty || Da(r2, t2)), t2;
+  }
+  function Ma(t2, e2) {
+    var r2;
+    if ((e2._time || !e2._dur && e2._initted || e2._start < t2._time && (e2._dur || !e2.add)) && (r2 = Ja(t2.rawTime(), e2), (!e2._dur || Mt(0, e2.totalDuration(), r2) - e2._tTime > q) && e2.render(r2, true)), Da(t2, e2)._dp && t2._initted && t2._time >= t2._dur && t2._ts) {
+      if (t2._dur < t2.duration()) for (r2 = t2; r2._dp; ) 0 <= r2.rawTime() && r2.totalTime(r2._tTime), r2 = r2._dp;
+      t2._zTime = -q;
+    }
+  }
+  function Na(e2, r2, i2, n2) {
+    return r2.parent && Ca(r2), r2._start = la((t(i2) ? i2 : i2 || e2 !== L ? Ot(e2, i2, r2) : e2._time) + r2._delay), r2._end = la(r2._start + (r2.totalDuration() / Math.abs(r2.timeScale()) || 0)), Aa(e2, r2, "_first", "_last", e2._sort ? "_start" : 0), xt(r2) || (e2._recent = r2), n2 || Ma(e2, r2), e2._ts < 0 && La(e2, e2._tTime), e2;
+  }
+  function Oa(t2, e2) {
+    return (ht.ScrollTrigger || S("scrollTrigger", e2)) && ht.ScrollTrigger.create(e2, t2);
+  }
+  function Pa(t2, e2, r2, i2, n2) {
+    return Ht(t2, e2, n2), t2._initted ? !r2 && t2._pt && !I && (t2._dur && false !== t2.vars.lazy || !t2._dur && t2.vars.lazy) && f !== It.frame ? (pt.push(t2), t2._lazy = [n2, i2], 1) : void 0 : 1;
+  }
+  function Ua(t2, e2, r2, i2) {
+    var n2 = t2._repeat, a2 = la(e2) || 0, s2 = t2._tTime / t2._tDur;
+    return s2 && !i2 && (t2._time *= a2 / t2._dur), t2._dur = a2, t2._tDur = n2 ? n2 < 0 ? 1e10 : la(a2 * (n2 + 1) + t2._rDelay * n2) : a2, 0 < s2 && !i2 && La(t2, t2._tTime = t2._tDur * s2), t2.parent && Ka(t2), r2 || Da(t2.parent, t2), t2;
+  }
+  function Va(t2) {
+    return t2 instanceof Gt ? Da(t2) : Ua(t2, t2._dur);
+  }
+  function Ya(e2, r2, i2) {
+    var n2, a2, s2 = t(r2[1]), o2 = (s2 ? 2 : 1) + (e2 < 2 ? 0 : 1), u2 = r2[o2];
+    if (s2 && (u2.duration = r2[1]), u2.parent = i2, e2) {
+      for (n2 = u2, a2 = i2; a2 && !("immediateRender" in n2); ) n2 = a2.vars.defaults || {}, a2 = w(a2.vars.inherit) && a2.parent;
+      u2.immediateRender = w(n2.immediateRender), e2 < 2 ? u2.runBackwards = 1 : u2.startAt = r2[o2 - 1];
+    }
+    return new te(r2[0], u2, r2[1 + o2]);
+  }
+  function Za(t2, e2) {
+    return t2 || 0 === t2 ? e2(t2) : e2;
+  }
+  function _a(t2, e2) {
+    return r(t2) && (e2 = ut.exec(t2)) ? e2[1] : "";
+  }
+  function cb(t2, e2) {
+    return t2 && v(t2) && "length" in t2 && (!e2 && !t2.length || t2.length - 1 in t2 && v(t2[0])) && !t2.nodeType && t2 !== h;
+  }
+  function fb(r2) {
+    return r2 = Pt(r2)[0] || T("Invalid scope") || {}, function(t2) {
+      var e2 = r2.current || r2.nativeElement || r2;
+      return Pt(t2, e2.querySelectorAll ? e2 : e2 === r2 ? T("Invalid scope") || a.createElement("div") : r2);
+    };
+  }
+  function gb(t2) {
+    return t2.sort(function() {
+      return 0.5 - Math.random();
+    });
+  }
+  function hb(t2) {
+    if (s(t2)) return t2;
+    var p2 = v(t2) ? t2 : { each: t2 }, _2 = jt(p2.ease), m2 = p2.from || 0, g2 = parseFloat(p2.base) || 0, y2 = {}, e2 = 0 < m2 && m2 < 1, T2 = isNaN(m2) || e2, b2 = p2.axis, w2 = m2, x2 = m2;
+    return r(m2) ? w2 = x2 = { center: 0.5, edges: 0.5, end: 1 }[m2] || 0 : !e2 && T2 && (w2 = m2[0], x2 = m2[1]), function(t3, e3, r2) {
+      var i2, n2, a2, s2, o2, u2, h2, l2, f2, c2 = (r2 || p2).length, d2 = y2[c2];
+      if (!d2) {
+        if (!(f2 = "auto" === p2.grid ? 0 : (p2.grid || [1, X])[1])) {
+          for (h2 = -X; h2 < (h2 = r2[f2++].getBoundingClientRect().left) && f2 < c2; ) ;
+          f2 < c2 && f2--;
+        }
+        for (d2 = y2[c2] = [], i2 = T2 ? Math.min(f2, c2) * w2 - 0.5 : m2 % f2, n2 = f2 === X ? 0 : T2 ? c2 * x2 / f2 - 0.5 : m2 / f2 | 0, l2 = X, u2 = h2 = 0; u2 < c2; u2++) a2 = u2 % f2 - i2, s2 = n2 - (u2 / f2 | 0), d2[u2] = o2 = b2 ? Math.abs("y" === b2 ? s2 : a2) : $(a2 * a2 + s2 * s2), h2 < o2 && (h2 = o2), o2 < l2 && (l2 = o2);
+        "random" === m2 && gb(d2), d2.max = h2 - l2, d2.min = l2, d2.v = c2 = (parseFloat(p2.amount) || parseFloat(p2.each) * (c2 < f2 ? c2 - 1 : b2 ? "y" === b2 ? c2 / f2 : f2 : Math.max(f2, c2 / f2)) || 0) * ("edges" === m2 ? -1 : 1), d2.b = c2 < 0 ? g2 - c2 : g2, d2.u = _a(p2.amount || p2.each) || 0, _2 = _2 && c2 < 0 ? Yt(_2) : _2;
+      }
+      return c2 = (d2[t3] - d2.min) / d2.max || 0, la(d2.b + (_2 ? _2(c2) : c2) * d2.v) + d2.u;
+    };
+  }
+  function ib(i2) {
+    var n2 = Math.pow(10, ((i2 + "").split(".")[1] || "").length);
+    return function(e2) {
+      var r2 = la(Math.round(parseFloat(e2) / i2) * i2 * n2);
+      return (r2 - r2 % 1) / n2 + (t(e2) ? 0 : _a(e2));
+    };
+  }
+  function jb(h2, e2) {
+    var l2, f2, r2 = K(h2);
+    return !r2 && v(h2) && (l2 = r2 = h2.radius || X, h2.values ? (h2 = Pt(h2.values), (f2 = !t(h2[0])) && (l2 *= l2)) : h2 = ib(h2.increment)), Za(e2, r2 ? s(h2) ? function(t2) {
+      return f2 = h2(t2), Math.abs(f2 - t2) <= l2 ? f2 : t2;
+    } : function(e3) {
+      for (var r3, i2, n2 = parseFloat(f2 ? e3.x : e3), a2 = parseFloat(f2 ? e3.y : 0), s2 = X, o2 = 0, u2 = h2.length; u2--; ) (r3 = f2 ? (r3 = h2[u2].x - n2) * r3 + (i2 = h2[u2].y - a2) * i2 : Math.abs(h2[u2] - n2)) < s2 && (s2 = r3, o2 = u2);
+      return o2 = !l2 || s2 <= l2 ? h2[o2] : e3, f2 || o2 === e3 || t(e3) ? o2 : o2 + _a(e3);
+    } : ib(h2));
+  }
+  function kb(t2, e2, r2, i2) {
+    return Za(K(t2) ? !e2 : true === r2 ? !!(r2 = 0) : !i2, function() {
+      return K(t2) ? t2[~~(Math.random() * t2.length)] : (r2 = r2 || 1e-5) && (i2 = r2 < 1 ? Math.pow(10, (r2 + "").length - 2) : 1) && Math.floor(Math.round((t2 - r2 / 2 + Math.random() * (e2 - t2 + 0.99 * r2)) / r2) * r2 * i2) / i2;
+    });
+  }
+  function ob(e2, r2, t2) {
+    return Za(t2, function(t3) {
+      return e2[~~r2(t3)];
+    });
+  }
+  function rb(t2) {
+    return t2.replace(tt, function(t3) {
+      var e2 = t3.indexOf("[") + 1, r2 = t3.substring(e2 || 7, e2 ? t3.indexOf("]") : t3.length - 1).split(et);
+      return kb(e2 ? r2 : +r2[0], e2 ? 0 : +r2[1], +r2[2] || 1e-5);
+    });
+  }
+  function ub(t2, e2, r2) {
+    var i2, n2, a2, s2 = t2.labels, o2 = X;
+    for (i2 in s2) (n2 = s2[i2] - e2) < 0 == !!r2 && n2 && o2 > (n2 = Math.abs(n2)) && (a2 = i2, o2 = n2);
+    return a2;
+  }
+  function wb(t2) {
+    return Ca(t2), t2.scrollTrigger && t2.scrollTrigger.kill(!!I), t2.progress() < 1 && At(t2, "onInterrupt"), t2;
+  }
+  function zb(t2) {
+    if (t2) if (t2 = !t2.name && t2.default || t2, x() || t2.headless) {
+      var e2 = t2.name, r2 = s(t2), i2 = e2 && !r2 && t2.init ? function() {
+        this._props = [];
+      } : t2, n2 = { init: V, render: _e, add: $t, kill: Te, modifier: ve, rawVars: 0 }, a2 = { targetTest: 0, get: 0, getSetter: ue, aliases: {}, register: 0 };
+      if (Lt(), t2 !== i2) {
+        if (mt[e2]) return;
+        ta(i2, ta(xa(t2, n2), a2)), bt(i2.prototype, bt(n2, xa(t2, a2))), mt[i2.prop = e2] = i2, t2.targetTest && (yt.push(i2), dt[e2] = 1), e2 = ("css" === e2 ? "CSS" : e2.charAt(0).toUpperCase() + e2.substr(1)) + "Plugin";
+      }
+      U(e2, i2), t2.register && t2.register(Fe, i2, we);
+    } else Dt.push(t2);
+  }
+  function Cb(t2, e2, r2) {
+    return (6 * (t2 += t2 < 0 ? 1 : 1 < t2 ? -1 : 0) < 1 ? e2 + (r2 - e2) * t2 * 6 : t2 < 0.5 ? r2 : 3 * t2 < 2 ? e2 + (r2 - e2) * (2 / 3 - t2) * 6 : e2) * zt + 0.5 | 0;
+  }
+  function Db(e2, r2, i2) {
+    var n2, a2, s2, o2, u2, h2, l2, f2, c2, d2, p2 = e2 ? t(e2) ? [e2 >> 16, e2 >> 8 & zt, e2 & zt] : 0 : Rt.black;
+    if (!p2) {
+      if ("," === e2.substr(-1) && (e2 = e2.substr(0, e2.length - 1)), Rt[e2]) p2 = Rt[e2];
+      else if ("#" === e2.charAt(0)) {
+        if (e2.length < 6 && (e2 = "#" + (n2 = e2.charAt(1)) + n2 + (a2 = e2.charAt(2)) + a2 + (s2 = e2.charAt(3)) + s2 + (5 === e2.length ? e2.charAt(4) + e2.charAt(4) : "")), 9 === e2.length) return [(p2 = parseInt(e2.substr(1, 6), 16)) >> 16, p2 >> 8 & zt, p2 & zt, parseInt(e2.substr(7), 16) / 255];
+        p2 = [(e2 = parseInt(e2.substr(1), 16)) >> 16, e2 >> 8 & zt, e2 & zt];
+      } else if ("hsl" === e2.substr(0, 3)) if (p2 = d2 = e2.match(rt), r2) {
+        if (~e2.indexOf("=")) return p2 = e2.match(it), i2 && p2.length < 4 && (p2[3] = 1), p2;
+      } else o2 = +p2[0] % 360 / 360, u2 = p2[1] / 100, n2 = 2 * (h2 = p2[2] / 100) - (a2 = h2 <= 0.5 ? h2 * (u2 + 1) : h2 + u2 - h2 * u2), 3 < p2.length && (p2[3] *= 1), p2[0] = Cb(o2 + 1 / 3, n2, a2), p2[1] = Cb(o2, n2, a2), p2[2] = Cb(o2 - 1 / 3, n2, a2);
+      else p2 = e2.match(rt) || Rt.transparent;
+      p2 = p2.map(Number);
+    }
+    return r2 && !d2 && (n2 = p2[0] / zt, a2 = p2[1] / zt, s2 = p2[2] / zt, h2 = ((l2 = Math.max(n2, a2, s2)) + (f2 = Math.min(n2, a2, s2))) / 2, l2 === f2 ? o2 = u2 = 0 : (c2 = l2 - f2, u2 = 0.5 < h2 ? c2 / (2 - l2 - f2) : c2 / (l2 + f2), o2 = l2 === n2 ? (a2 - s2) / c2 + (a2 < s2 ? 6 : 0) : l2 === a2 ? (s2 - n2) / c2 + 2 : (n2 - a2) / c2 + 4, o2 *= 60), p2[0] = ~~(o2 + 0.5), p2[1] = ~~(100 * u2 + 0.5), p2[2] = ~~(100 * h2 + 0.5)), i2 && p2.length < 4 && (p2[3] = 1), p2;
+  }
+  function Eb(t2) {
+    var r2 = [], i2 = [], n2 = -1;
+    return t2.split(Et).forEach(function(t3) {
+      var e2 = t3.match(nt) || [];
+      r2.push.apply(r2, e2), i2.push(n2 += e2.length + 1);
+    }), r2.c = i2, r2;
+  }
+  function Fb(t2, e2, r2) {
+    var i2, n2, a2, s2, o2 = "", u2 = (t2 + o2).match(Et), h2 = e2 ? "hsla(" : "rgba(", l2 = 0;
+    if (!u2) return t2;
+    if (u2 = u2.map(function(t3) {
+      return (t3 = Db(t3, e2, 1)) && h2 + (e2 ? t3[0] + "," + t3[1] + "%," + t3[2] + "%," + t3[3] : t3.join(",")) + ")";
+    }), r2 && (a2 = Eb(t2), (i2 = r2.c).join(o2) !== a2.c.join(o2))) for (s2 = (n2 = t2.replace(Et, "1").split(nt)).length - 1; l2 < s2; l2++) o2 += n2[l2] + (~i2.indexOf(l2) ? u2.shift() || h2 + "0,0,0,0)" : (a2.length ? a2 : u2.length ? u2 : r2).shift());
+    if (!n2) for (s2 = (n2 = t2.split(Et)).length - 1; l2 < s2; l2++) o2 += n2[l2] + u2[l2];
+    return o2 + n2[s2];
+  }
+  function Ib(t2) {
+    var e2, r2 = t2.join(" ");
+    if (Et.lastIndex = 0, Et.test(r2)) return e2 = Ft.test(r2), t2[1] = Fb(t2[1], e2), t2[0] = Fb(t2[0], e2, Eb(t2[1])), true;
+  }
+  function Rb(t2) {
+    var e2 = (t2 + "").split("("), r2 = Bt[e2[0]];
+    return r2 && 1 < e2.length && r2.config ? r2.config.apply(null, ~t2.indexOf("{") ? [(function _parseObjectInString(t3) {
+      for (var e3, r3, i2, n2 = {}, a2 = t3.substr(1, t3.length - 3).split(":"), s2 = a2[0], o2 = 1, u2 = a2.length; o2 < u2; o2++) r3 = a2[o2], e3 = o2 !== u2 - 1 ? r3.lastIndexOf(",") : r3.length, i2 = r3.substr(0, e3), n2[s2] = isNaN(i2) ? i2.replace(Ut, "").trim() : +i2, s2 = r3.substr(e3 + 1).trim();
+      return n2;
+    })(e2[1])] : (function _valueInParentheses(t3) {
+      var e3 = t3.indexOf("(") + 1, r3 = t3.indexOf(")"), i2 = t3.indexOf("(", e3);
+      return t3.substring(e3, ~i2 && i2 < r3 ? t3.indexOf(")", r3 + 1) : r3);
+    })(t2).split(",").map(ra)) : Bt._CE && Nt.test(t2) ? Bt._CE("", t2) : r2;
+  }
+  function Ub(t2, e2, r2, i2) {
+    void 0 === r2 && (r2 = function easeOut(t3) {
+      return 1 - e2(1 - t3);
+    }), void 0 === i2 && (i2 = function easeInOut(t3) {
+      return t3 < 0.5 ? e2(2 * t3) / 2 : 1 - e2(2 * (1 - t3)) / 2;
+    });
+    var n2, a2 = { easeIn: e2, easeOut: r2, easeInOut: i2 };
+    return ja(t2, function(t3) {
+      for (var e3 in Bt[t3] = ht[t3] = a2, Bt[n2 = t3.toLowerCase()] = r2, a2) Bt[n2 + ("easeIn" === e3 ? ".in" : "easeOut" === e3 ? ".out" : ".inOut")] = Bt[t3 + "." + e3] = a2[e3];
+    }), a2;
+  }
+  function Vb(e2) {
+    return function(t2) {
+      return t2 < 0.5 ? (1 - e2(1 - 2 * t2)) / 2 : 0.5 + e2(2 * (t2 - 0.5)) / 2;
+    };
+  }
+  function Wb(r2, t2, e2) {
+    function Gm(t3) {
+      return 1 === t3 ? 1 : i2 * Math.pow(2, -10 * t3) * Q((t3 - a2) * n2) + 1;
+    }
+    var i2 = 1 <= t2 ? t2 : 1, n2 = (e2 || (r2 ? 0.3 : 0.45)) / (t2 < 1 ? t2 : 1), a2 = n2 / G * (Math.asin(1 / i2) || 0), s2 = "out" === r2 ? Gm : "in" === r2 ? function(t3) {
+      return 1 - Gm(1 - t3);
+    } : Vb(Gm);
+    return n2 = G / n2, s2.config = function(t3, e3) {
+      return Wb(r2, t3, e3);
+    }, s2;
+  }
+  function Xb(e2, r2) {
+    function Om(t3) {
+      return t3 ? --t3 * t3 * ((r2 + 1) * t3 + r2) + 1 : 0;
+    }
+    void 0 === r2 && (r2 = 1.70158);
+    var t2 = "out" === e2 ? Om : "in" === e2 ? function(t3) {
+      return 1 - Om(1 - t3);
+    } : Vb(Om);
+    return t2.config = function(t3) {
+      return Xb(e2, t3);
+    }, t2;
+  }
+  var F, I, l, L, h, n, a, i, o, f, c, d, p, _, m, g, b, k, O, M, C, P, A, D, z, E, B, N, Y = { autoSleep: 120, force3D: "auto", nullTargetWarn: 1, units: { lineHeight: "" } }, j = { duration: 0.5, overwrite: false, delay: 0 }, X = 1e8, q = 1 / X, G = 2 * Math.PI, Z = G / 4, W = 0, $ = Math.sqrt, H = Math.cos, Q = Math.sin, J = "function" == typeof ArrayBuffer && ArrayBuffer.isView || function() {
+  }, K = Array.isArray, tt = /random\([^)]+\)/g, et = /,\s*/g, rt = /(?:-?\.?\d|\.)+/gi, it = /[-+=.]*\d+[.e\-+]*\d*[e\-+]*\d*/g, nt = /[-+=.]*\d+[.e-]*\d*[a-z%]*/g, at = /[-+=.]*\d+\.?\d*(?:e-|e\+)?\d*/gi, st = /[+-]=-?[.\d]+/, ot = /[^,'"\[\]\s]+/gi, ut = /^[+\-=e\s\d]*\d+[.\d]*([a-z]*|%)\s*$/i, ht = {}, lt = { suppressEvents: true, isStart: true, kill: false }, ft = { suppressEvents: true, kill: false }, ct = { suppressEvents: true }, dt = {}, pt = [], _t = {}, mt = {}, gt = {}, vt = 30, yt = [], Tt = "", bt = function _merge(t2, e2) {
+    for (var r2 in e2) t2[r2] = e2[r2];
+    return t2;
+  }, wt = function _animationCycle(t2, e2) {
+    var r2 = Math.floor(t2 = la(t2 / e2));
+    return t2 && r2 === t2 ? r2 - 1 : r2;
+  }, xt = function _isFromOrFromStart(t2) {
+    var e2 = t2.data;
+    return "isFromStart" === e2 || "isStart" === e2;
+  }, kt = { _start: 0, endTime: V, totalDuration: V }, Ot = function _parsePosition(t2, e2, i2) {
+    var n2, a2, s2, o2 = t2.labels, u2 = t2._recent || kt, h2 = t2.duration() >= X ? u2.endTime(false) : t2._dur;
+    return r(e2) && (isNaN(e2) || e2 in o2) ? (a2 = e2.charAt(0), s2 = "%" === e2.substr(-1), n2 = e2.indexOf("="), "<" === a2 || ">" === a2 ? (0 <= n2 && (e2 = e2.replace(/=/, "")), ("<" === a2 ? u2._start : u2.endTime(0 <= u2._repeat)) + (parseFloat(e2.substr(1)) || 0) * (s2 ? (n2 < 0 ? u2 : i2).totalDuration() / 100 : 1)) : n2 < 0 ? (e2 in o2 || (o2[e2] = h2), o2[e2]) : (a2 = parseFloat(e2.charAt(n2 - 1) + e2.substr(n2 + 1)), s2 && i2 && (a2 = a2 / 100 * (K(i2) ? i2[0] : i2).totalDuration()), 1 < n2 ? _parsePosition(t2, e2.substr(0, n2 - 1), i2) + a2 : h2 + a2)) : null == e2 ? h2 : +e2;
+  }, Mt = function _clamp(t2, e2, r2) {
+    return r2 < t2 ? t2 : e2 < r2 ? e2 : r2;
+  }, Ct = [].slice, Pt = function toArray(t2, e2, i2) {
+    return l && !e2 && l.selector ? l.selector(t2) : !r(t2) || i2 || !n && Lt() ? K(t2) ? (function _flatten(t3, e3, i3) {
+      return void 0 === i3 && (i3 = []), t3.forEach(function(t4) {
+        return r(t4) && !e3 || cb(t4, 1) ? i3.push.apply(i3, Pt(t4)) : i3.push(t4);
+      }) || i3;
+    })(t2, i2) : cb(t2) ? Ct.call(t2, 0) : t2 ? [t2] : [] : Ct.call((e2 || a).querySelectorAll(t2), 0);
+  }, St = function mapRange(e2, t2, r2, i2, n2) {
+    var a2 = t2 - e2, s2 = i2 - r2;
+    return Za(n2, function(t3) {
+      return r2 + ((t3 - e2) / a2 * s2 || 0);
+    });
+  }, At = function _callback(t2, e2, r2) {
+    var i2, n2, a2, s2 = t2.vars, o2 = s2[e2], u2 = l, h2 = t2._ctx;
+    if (o2) return i2 = s2[e2 + "Params"], n2 = s2.callbackScope || t2, r2 && pt.length && oa(), h2 && (l = h2), a2 = i2 ? o2.apply(n2, i2) : o2.call(n2), l = u2, a2;
+  }, Dt = [], zt = 255, Rt = { aqua: [0, zt, zt], lime: [0, zt, 0], silver: [192, 192, 192], black: [0, 0, 0], maroon: [128, 0, 0], teal: [0, 128, 128], blue: [0, 0, zt], navy: [0, 0, 128], white: [zt, zt, zt], olive: [128, 128, 0], yellow: [zt, zt, 0], orange: [zt, 165, 0], gray: [128, 128, 128], purple: [128, 0, 128], green: [0, 128, 0], red: [zt, 0, 0], pink: [zt, 192, 203], cyan: [0, zt, zt], transparent: [zt, zt, zt, 0] }, Et = (function() {
+    var t2, e2 = "(?:\\b(?:(?:rgb|rgba|hsl|hsla)\\(.+?\\))|\\B#(?:[0-9a-f]{3,4}){1,2}\\b";
+    for (t2 in Rt) e2 += "|" + t2 + "\\b";
+    return new RegExp(e2 + ")", "gi");
+  })(), Ft = /hsl[a]?\(/, It = (O = Date.now, M = 500, C = 33, P = O(), A = P, z = D = 1e3 / 240, g = { time: 0, frame: 0, tick: function tick() {
+    zl(true);
+  }, deltaRatio: function deltaRatio(t2) {
+    return b / (1e3 / (t2 || 60));
+  }, wake: function wake() {
+    o && (!n && x() && (h = n = window, a = h.document || {}, ht.gsap = Fe, (h.gsapVersions || (h.gsapVersions = [])).push(Fe.version), R(i || h.GreenSockGlobals || !h.gsap && h || {}), Dt.forEach(zb)), m = "undefined" != typeof requestAnimationFrame && requestAnimationFrame, p && g.sleep(), _ = m || function(t2) {
+      return setTimeout(t2, z - 1e3 * g.time + 1 | 0);
+    }, d = 1, zl(2));
+  }, sleep: function sleep() {
+    (m ? cancelAnimationFrame : clearTimeout)(p), d = 0, _ = V;
+  }, lagSmoothing: function lagSmoothing(t2, e2) {
+    M = t2 || 1 / 0, C = Math.min(e2 || 33, M);
+  }, fps: function fps(t2) {
+    D = 1e3 / (t2 || 240), z = 1e3 * g.time + D;
+  }, add: function add(n2, t2, e2) {
+    var a2 = t2 ? function(t3, e3, r2, i2) {
+      n2(t3, e3, r2, i2), g.remove(a2);
+    } : n2;
+    return g.remove(n2), E[e2 ? "unshift" : "push"](a2), Lt(), a2;
+  }, remove: function remove(t2, e2) {
+    ~(e2 = E.indexOf(t2)) && E.splice(e2, 1) && e2 <= k && k--;
+  }, _listeners: E = [] }), Lt = function _wake() {
+    return !d && It.wake();
+  }, Bt = {}, Nt = /^[\d.\-M][\d.\-,\s]/, Ut = /["']/g, Yt = function _invertEase(e2) {
+    return function(t2) {
+      return 1 - e2(1 - t2);
+    };
+  }, jt = function _parseEase(t2, e2) {
+    return t2 && (s(t2) ? t2 : Bt[t2] || Rb(t2)) || e2;
+  };
+  function zl(t2) {
+    var e2, r2, i2, n2, a2 = O() - A, s2 = true === t2;
+    if ((M < a2 || a2 < 0) && (P += a2 - C), (0 < (e2 = (i2 = (A += a2) - P) - z) || s2) && (n2 = ++g.frame, b = i2 - 1e3 * g.time, g.time = i2 /= 1e3, z += e2 + (D <= e2 ? 4 : D - e2), r2 = 1), s2 || (p = _(zl)), r2) for (k = 0; k < E.length; k++) E[k](i2, b, n2, t2);
+  }
+  function dn(t2) {
+    return t2 < N ? B * t2 * t2 : t2 < 0.7272727272727273 ? B * Math.pow(t2 - 1.5 / 2.75, 2) + 0.75 : t2 < 0.9090909090909092 ? B * (t2 -= 2.25 / 2.75) * t2 + 0.9375 : B * Math.pow(t2 - 2.625 / 2.75, 2) + 0.984375;
+  }
+  ja("Linear,Quad,Cubic,Quart,Quint,Strong", function(t2, e2) {
+    var r2 = e2 < 5 ? e2 + 1 : e2;
+    Ub(t2 + ",Power" + (r2 - 1), e2 ? function(t3) {
+      return Math.pow(t3, r2);
+    } : function(t3) {
+      return t3;
+    }, function(t3) {
+      return 1 - Math.pow(1 - t3, r2);
+    }, function(t3) {
+      return t3 < 0.5 ? Math.pow(2 * t3, r2) / 2 : 1 - Math.pow(2 * (1 - t3), r2) / 2;
+    });
+  }), Bt.Linear.easeNone = Bt.none = Bt.Linear.easeIn, Ub("Elastic", Wb("in"), Wb("out"), Wb()), B = 7.5625, N = 1 / 2.75, Ub("Bounce", function(t2) {
+    return 1 - dn(1 - t2);
+  }, dn), Ub("Expo", function(t2) {
+    return Math.pow(2, 10 * (t2 - 1)) * t2 + t2 * t2 * t2 * t2 * t2 * t2 * (1 - t2);
+  }), Ub("Circ", function(t2) {
+    return -($(1 - t2 * t2) - 1);
+  }), Ub("Sine", function(t2) {
+    return 1 === t2 ? 1 : 1 - H(t2 * Z);
+  }), Ub("Back", Xb("in"), Xb("out"), Xb()), Bt.SteppedEase = Bt.steps = ht.SteppedEase = { config: function config(t2, e2) {
+    void 0 === t2 && (t2 = 1);
+    var r2 = 1 / t2, i2 = t2 + (e2 ? 0 : 1), n2 = e2 ? 1 : 0;
+    return function(t3) {
+      return ((i2 * Mt(0, 0.99999999, t3) | 0) + n2) * r2;
+    };
+  } }, j.ease = Bt["quad.out"], ja("onComplete,onUpdate,onStart,onRepeat,onReverseComplete,onInterrupt", function(t2) {
+    return Tt += t2 + "," + t2 + "Params,";
+  });
+  var Vt, Xt = function GSCache(t2, e2) {
+    this.id = W++, (t2._gsap = this).target = t2, this.harness = e2, this.get = e2 ? e2.get : ia, this.set = e2 ? e2.getSetter : ue;
+  }, qt = ((Vt = Animation.prototype).delay = function delay(t2) {
+    return t2 || 0 === t2 ? (this.parent && this.parent.smoothChildTiming && this.startTime(this._start + t2 - this._delay), this._delay = t2, this) : this._delay;
+  }, Vt.duration = function duration(t2) {
+    return arguments.length ? this.totalDuration(0 < this._repeat ? t2 + (t2 + this._rDelay) * this._repeat : t2) : this.totalDuration() && this._dur;
+  }, Vt.totalDuration = function totalDuration(t2) {
+    return arguments.length ? (this._dirty = 0, Ua(this, this._repeat < 0 ? t2 : (t2 - this._repeat * this._rDelay) / (this._repeat + 1))) : this._tDur;
+  }, Vt.totalTime = function totalTime(t2, e2) {
+    if (Lt(), !arguments.length) return this._tTime;
+    var r2 = this._dp;
+    if (r2 && r2.smoothChildTiming && this._ts) {
+      for (La(this, t2), !r2._dp || r2.parent || Ma(r2, this); r2 && r2.parent; ) r2.parent._time !== r2._start + (0 <= r2._ts ? r2._tTime / r2._ts : (r2.totalDuration() - r2._tTime) / -r2._ts) && r2.totalTime(r2._tTime, true), r2 = r2.parent;
+      !this.parent && this._dp.autoRemoveChildren && (0 < this._ts && t2 < this._tDur || this._ts < 0 && 0 < t2 || !this._tDur && !t2) && Na(this._dp, this, this._start - this._delay);
+    }
+    return (this._tTime !== t2 || !this._dur && !e2 || this._initted && Math.abs(this._zTime) === q || !this._initted && this._dur && t2 || !t2 && !this._initted && (this.add || this._ptLookup)) && (this._ts || (this._pTime = t2), qa(this, t2, e2)), this;
+  }, Vt.time = function time(t2, e2) {
+    return arguments.length ? this.totalTime(Math.min(this.totalDuration(), t2 + Ha(this)) % (this._dur + this._rDelay) || (t2 ? this._dur : 0), e2) : this._time;
+  }, Vt.totalProgress = function totalProgress(t2, e2) {
+    return arguments.length ? this.totalTime(this.totalDuration() * t2, e2) : this.totalDuration() ? Math.min(1, this._tTime / this._tDur) : 0 <= this.rawTime() && this._initted ? 1 : 0;
+  }, Vt.progress = function progress(t2, e2) {
+    return arguments.length ? this.totalTime(this.duration() * (!this._yoyo || 1 & this.iteration() ? t2 : 1 - t2) + Ha(this), e2) : this.duration() ? Math.min(1, this._time / this._dur) : 0 < this.rawTime() ? 1 : 0;
+  }, Vt.iteration = function iteration(t2, e2) {
+    var r2 = this.duration() + this._rDelay;
+    return arguments.length ? this.totalTime(this._time + (t2 - 1) * r2, e2) : this._repeat ? wt(this._tTime, r2) + 1 : 1;
+  }, Vt.timeScale = function timeScale(t2, e2) {
+    if (!arguments.length) return this._rts === -q ? 0 : this._rts;
+    if (this._rts === t2) return this;
+    var r2 = this.parent && this._ts ? Ja(this.parent._time, this) : this._tTime;
+    return this._rts = +t2 || 0, this._ts = this._ps || t2 === -q ? 0 : this._rts, this.totalTime(Mt(-Math.abs(this._delay), this.totalDuration(), r2), false !== e2), Ka(this), (function _recacheAncestors(t3) {
+      for (var e3 = t3.parent; e3 && e3.parent; ) e3._dirty = 1, e3.totalDuration(), e3 = e3.parent;
+      return t3;
+    })(this);
+  }, Vt.paused = function paused(t2) {
+    return arguments.length ? (this._ps !== t2 && ((this._ps = t2) ? (this._pTime = this._tTime || Math.max(-this._delay, this.rawTime()), this._ts = this._act = 0) : (Lt(), this._ts = this._rts, this.totalTime(this.parent && !this.parent.smoothChildTiming ? this.rawTime() : this._tTime || this._pTime, 1 === this.progress() && Math.abs(this._zTime) !== q && (this._tTime -= q)))), this) : this._ps;
+  }, Vt.startTime = function startTime(t2) {
+    if (arguments.length) {
+      this._start = la(t2);
+      var e2 = this.parent || this._dp;
+      return !e2 || !e2._sort && this.parent || Na(e2, this, this._start - this._delay), this;
+    }
+    return this._start;
+  }, Vt.endTime = function endTime(t2) {
+    return this._start + (w(t2) ? this.totalDuration() : this.duration()) / Math.abs(this._ts || 1);
+  }, Vt.rawTime = function rawTime(t2) {
+    var e2 = this.parent || this._dp;
+    return e2 ? t2 && (!this._ts || this._repeat && this._time && this.totalProgress() < 1) ? this._tTime % (this._dur + this._rDelay) : this._ts ? Ja(e2.rawTime(t2), this) : this._tTime : this._tTime;
+  }, Vt.revert = function revert(t2) {
+    void 0 === t2 && (t2 = ct);
+    var e2 = I;
+    return I = t2, pa(this) && (this.timeline && this.timeline.revert(t2), this.totalTime(-0.01, t2.suppressEvents)), "nested" !== this.data && false !== t2.kill && this.kill(), I = e2, this;
+  }, Vt.globalTime = function globalTime(t2) {
+    for (var e2 = this, r2 = arguments.length ? t2 : e2.rawTime(); e2; ) r2 = e2._start + r2 / (Math.abs(e2._ts) || 1), e2 = e2._dp;
+    return !this.parent && this._sat ? this._sat.globalTime(t2) : r2;
+  }, Vt.repeat = function repeat(t2) {
+    return arguments.length ? (this._repeat = t2 === 1 / 0 ? -2 : t2, Va(this)) : -2 === this._repeat ? 1 / 0 : this._repeat;
+  }, Vt.repeatDelay = function repeatDelay(t2) {
+    if (arguments.length) {
+      var e2 = this._time;
+      return this._rDelay = t2, Va(this), e2 ? this.time(e2) : this;
+    }
+    return this._rDelay;
+  }, Vt.yoyo = function yoyo(t2) {
+    return arguments.length ? (this._yoyo = t2, this) : this._yoyo;
+  }, Vt.seek = function seek(t2, e2) {
+    return this.totalTime(Ot(this, t2), w(e2));
+  }, Vt.restart = function restart(t2, e2) {
+    return this.play().totalTime(t2 ? -this._delay : 0, w(e2)), this._dur || (this._zTime = -q), this;
+  }, Vt.play = function play(t2, e2) {
+    return null != t2 && this.seek(t2, e2), this.reversed(false).paused(false);
+  }, Vt.reverse = function reverse(t2, e2) {
+    return null != t2 && this.seek(t2 || this.totalDuration(), e2), this.reversed(true).paused(false);
+  }, Vt.pause = function pause(t2, e2) {
+    return null != t2 && this.seek(t2, e2), this.paused(true);
+  }, Vt.resume = function resume() {
+    return this.paused(false);
+  }, Vt.reversed = function reversed(t2) {
+    return arguments.length ? (!!t2 !== this.reversed() && this.timeScale(-this._rts || (t2 ? -q : 0)), this) : this._rts < 0;
+  }, Vt.invalidate = function invalidate() {
+    return this._initted = this._act = 0, this._zTime = -q, this;
+  }, Vt.isActive = function isActive() {
+    var t2, e2 = this.parent || this._dp, r2 = this._start;
+    return !(e2 && !(this._ts && this._initted && e2.isActive() && (t2 = e2.rawTime(true)) >= r2 && t2 < this.endTime(true) - q));
+  }, Vt.eventCallback = function eventCallback(t2, e2, r2) {
+    var i2 = this.vars;
+    return 1 < arguments.length ? (e2 ? (i2[t2] = e2, r2 && (i2[t2 + "Params"] = r2), "onUpdate" === t2 && (this._onUpdate = e2)) : delete i2[t2], this) : i2[t2];
+  }, Vt.then = function then(t2) {
+    var i2 = this, n2 = i2._prom;
+    return new Promise(function(e2) {
+      function Ao() {
+        var t3 = i2.then;
+        i2.then = null, n2 && n2(), s(r2) && (r2 = r2(i2)) && (r2.then || r2 === i2) && (i2.then = t3), e2(r2), i2.then = t3;
+      }
+      var r2 = s(t2) ? t2 : sa;
+      i2._initted && 1 === i2.totalProgress() && 0 <= i2._ts || !i2._tTime && i2._ts < 0 ? Ao() : i2._prom = Ao;
+    });
+  }, Vt.kill = function kill() {
+    wb(this);
+  }, Animation);
+  function Animation(t2) {
+    this.vars = t2, this._delay = +t2.delay || 0, (this._repeat = t2.repeat === 1 / 0 ? -2 : t2.repeat || 0) && (this._rDelay = t2.repeatDelay || 0, this._yoyo = !!t2.yoyo || !!t2.yoyoEase), this._ts = 1, Ua(this, +t2.duration, 1, 1), this.data = t2.data, l && (this._ctx = l).data.push(this), d || It.wake();
+  }
+  ta(qt.prototype, { _time: 0, _start: 0, _end: 0, _tTime: 0, _tDur: 0, _dirty: 0, _repeat: 0, _yoyo: false, parent: null, _initted: false, _rDelay: 0, _ts: 1, _dp: 0, ratio: 0, _zTime: -q, _prom: 0, _ps: false, _rts: 1 });
+  var Gt = (function(i2) {
+    function Timeline(t2, e3) {
+      var r2;
+      return void 0 === t2 && (t2 = {}), (r2 = i2.call(this, t2) || this).labels = {}, r2.smoothChildTiming = !!t2.smoothChildTiming, r2.autoRemoveChildren = !!t2.autoRemoveChildren, r2._sort = w(t2.sortChildren), L && Na(t2.parent || L, _assertThisInitialized(r2), e3), t2.reversed && r2.reverse(), t2.paused && r2.paused(true), t2.scrollTrigger && Oa(_assertThisInitialized(r2), t2.scrollTrigger), r2;
+    }
+    _inheritsLoose(Timeline, i2);
+    var e2 = Timeline.prototype;
+    return e2.to = function to(t2, e3, r2) {
+      return Ya(0, arguments, this), this;
+    }, e2.from = function from(t2, e3, r2) {
+      return Ya(1, arguments, this), this;
+    }, e2.fromTo = function fromTo(t2, e3, r2, i3) {
+      return Ya(2, arguments, this), this;
+    }, e2.set = function set(t2, e3, r2) {
+      return e3.duration = 0, e3.parent = this, ya(e3).repeatDelay || (e3.repeat = 0), e3.immediateRender = !!e3.immediateRender, new te(t2, e3, Ot(this, r2), 1), this;
+    }, e2.call = function call(t2, e3, r2) {
+      return Na(this, te.delayedCall(0, t2, e3), r2);
+    }, e2.staggerTo = function staggerTo(t2, e3, r2, i3, n2, a2, s2) {
+      return r2.duration = e3, r2.stagger = r2.stagger || i3, r2.onComplete = a2, r2.onCompleteParams = s2, r2.parent = this, new te(t2, r2, Ot(this, n2)), this;
+    }, e2.staggerFrom = function staggerFrom(t2, e3, r2, i3, n2, a2, s2) {
+      return r2.runBackwards = 1, ya(r2).immediateRender = w(r2.immediateRender), this.staggerTo(t2, e3, r2, i3, n2, a2, s2);
+    }, e2.staggerFromTo = function staggerFromTo(t2, e3, r2, i3, n2, a2, s2, o2) {
+      return i3.startAt = r2, ya(i3).immediateRender = w(i3.immediateRender), this.staggerTo(t2, e3, i3, n2, a2, s2, o2);
+    }, e2.render = function render(t2, e3, r2) {
+      var i3, n2, a2, s2, o2, u2, h2, l2, f2, c2, d2, p2, _2 = this._time, m2 = this._dirty ? this.totalDuration() : this._tDur, g2 = this._dur, v2 = t2 <= 0 ? 0 : la(t2), y2 = this._zTime < 0 != t2 < 0 && (this._initted || !g2);
+      if (this !== L && m2 < v2 && 0 <= t2 && (v2 = m2), v2 !== this._tTime || r2 || y2) {
+        if (_2 !== this._time && g2 && (v2 += this._time - _2, t2 += this._time - _2), i3 = v2, f2 = this._start, u2 = !(l2 = this._ts), y2 && (g2 || (_2 = this._zTime), !t2 && e3 || (this._zTime = t2)), this._repeat) {
+          if (d2 = this._yoyo, o2 = g2 + this._rDelay, this._repeat < -1 && t2 < 0) return this.totalTime(100 * o2 + t2, e3, r2);
+          if (i3 = la(v2 % o2), v2 === m2 ? (s2 = this._repeat, i3 = g2) : ((s2 = ~~(c2 = la(v2 / o2))) && s2 === c2 && (i3 = g2, s2--), g2 < i3 && (i3 = g2)), c2 = wt(this._tTime, o2), !_2 && this._tTime && c2 !== s2 && this._tTime - c2 * o2 - this._dur <= 0 && (c2 = s2), d2 && 1 & s2 && (i3 = g2 - i3, p2 = 1), s2 !== c2 && !this._lock) {
+            var T2 = d2 && 1 & c2, b2 = T2 === (d2 && 1 & s2);
+            if (s2 < c2 && (T2 = !T2), _2 = T2 ? 0 : v2 % g2 ? g2 : v2, this._lock = 1, this.render(_2 || (p2 ? 0 : la(s2 * o2)), e3, !g2)._lock = 0, this._tTime = v2, !e3 && this.parent && At(this, "onRepeat"), this.vars.repeatRefresh && !p2 && (this.invalidate()._lock = 1, c2 = s2), _2 && _2 !== this._time || u2 != !this._ts || this.vars.onRepeat && !this.parent && !this._act) return this;
+            if (g2 = this._dur, m2 = this._tDur, b2 && (this._lock = 2, _2 = T2 ? g2 : -1e-4, this.render(_2, true), this.vars.repeatRefresh && !p2 && this.invalidate()), this._lock = 0, !this._ts && !u2) return this;
+          }
+        }
+        if (this._hasPause && !this._forcing && this._lock < 2 && (h2 = (function _findNextPauseTween(t3, e4, r3) {
+          var i4;
+          if (e4 < r3) for (i4 = t3._first; i4 && i4._start <= r3; ) {
+            if ("isPause" === i4.data && i4._start > e4) return i4;
+            i4 = i4._next;
+          }
+          else for (i4 = t3._last; i4 && i4._start >= r3; ) {
+            if ("isPause" === i4.data && i4._start < e4) return i4;
+            i4 = i4._prev;
+          }
+        })(this, la(_2), la(i3))) && (v2 -= i3 - (i3 = h2._start)), this._tTime = v2, this._time = i3, this._act = !!l2, this._initted || (this._onUpdate = this.vars.onUpdate, this._initted = 1, this._zTime = t2, _2 = 0), !_2 && v2 && g2 && !e3 && !c2 && (At(this, "onStart"), this._tTime !== v2)) return this;
+        if (_2 <= i3 && 0 <= t2) for (n2 = this._first; n2; ) {
+          if (a2 = n2._next, (n2._act || i3 >= n2._start) && n2._ts && h2 !== n2) {
+            if (n2.parent !== this) return this.render(t2, e3, r2);
+            if (n2.render(0 < n2._ts ? (i3 - n2._start) * n2._ts : (n2._dirty ? n2.totalDuration() : n2._tDur) + (i3 - n2._start) * n2._ts, e3, r2), i3 !== this._time || !this._ts && !u2) {
+              h2 = 0, a2 && (v2 += this._zTime = -q);
+              break;
+            }
+          }
+          n2 = a2;
+        }
+        else {
+          n2 = this._last;
+          for (var w2 = t2 < 0 ? t2 : i3; n2; ) {
+            if (a2 = n2._prev, (n2._act || w2 <= n2._end) && n2._ts && h2 !== n2) {
+              if (n2.parent !== this) return this.render(t2, e3, r2);
+              if (n2.render(0 < n2._ts ? (w2 - n2._start) * n2._ts : (n2._dirty ? n2.totalDuration() : n2._tDur) + (w2 - n2._start) * n2._ts, e3, r2 || I && pa(n2)), i3 !== this._time || !this._ts && !u2) {
+                h2 = 0, a2 && (v2 += this._zTime = w2 ? -q : q);
+                break;
+              }
+            }
+            n2 = a2;
+          }
+        }
+        if (h2 && !e3 && (this.pause(), h2.render(_2 <= i3 ? 0 : -q)._zTime = _2 <= i3 ? 1 : -1, this._ts)) return this._start = f2, Ka(this), this.render(t2, e3, r2);
+        this._onUpdate && !e3 && At(this, "onUpdate", true), (v2 === m2 && this._tTime >= this.totalDuration() || !v2 && _2) && (f2 !== this._start && Math.abs(l2) === Math.abs(this._ts) || this._lock || (!t2 && g2 || !(v2 === m2 && 0 < this._ts || !v2 && this._ts < 0) || Ca(this, 1), e3 || t2 < 0 && !_2 || !v2 && !_2 && m2 || (At(this, v2 === m2 && 0 <= t2 ? "onComplete" : "onReverseComplete", true), !this._prom || v2 < m2 && 0 < this.timeScale() || this._prom())));
+      }
+      return this;
+    }, e2.add = function add(e3, i3) {
+      var n2 = this;
+      if (t(i3) || (i3 = Ot(this, i3, e3)), !(e3 instanceof qt)) {
+        if (K(e3)) return e3.forEach(function(t2) {
+          return n2.add(t2, i3);
+        }), this;
+        if (r(e3)) return this.addLabel(e3, i3);
+        if (!s(e3)) return this;
+        e3 = te.delayedCall(0, e3);
+      }
+      return this !== e3 ? Na(this, e3, i3) : this;
+    }, e2.getChildren = function getChildren(t2, e3, r2, i3) {
+      void 0 === t2 && (t2 = true), void 0 === e3 && (e3 = true), void 0 === r2 && (r2 = true), void 0 === i3 && (i3 = -X);
+      for (var n2 = [], a2 = this._first; a2; ) a2._start >= i3 && (a2 instanceof te ? e3 && n2.push(a2) : (r2 && n2.push(a2), t2 && n2.push.apply(n2, a2.getChildren(true, e3, r2)))), a2 = a2._next;
+      return n2;
+    }, e2.getById = function getById(t2) {
+      for (var e3 = this.getChildren(1, 1, 1), r2 = e3.length; r2--; ) if (e3[r2].vars.id === t2) return e3[r2];
+    }, e2.remove = function remove(t2) {
+      return r(t2) ? this.removeLabel(t2) : s(t2) ? this.killTweensOf(t2) : (t2.parent === this && Ba(this, t2), t2 === this._recent && (this._recent = this._last), Da(this));
+    }, e2.totalTime = function totalTime(t2, e3) {
+      return arguments.length ? (this._forcing = 1, !this._dp && this._ts && (this._start = la(It.time - (0 < this._ts ? t2 / this._ts : (this.totalDuration() - t2) / -this._ts))), i2.prototype.totalTime.call(this, t2, e3), this._forcing = 0, this) : this._tTime;
+    }, e2.addLabel = function addLabel(t2, e3) {
+      return this.labels[t2] = Ot(this, e3), this;
+    }, e2.removeLabel = function removeLabel(t2) {
+      return delete this.labels[t2], this;
+    }, e2.addPause = function addPause(t2, e3, r2) {
+      var i3 = te.delayedCall(0, e3 || V, r2);
+      return i3.data = "isPause", this._hasPause = 1, Na(this, i3, Ot(this, t2));
+    }, e2.removePause = function removePause(t2) {
+      var e3 = this._first;
+      for (t2 = Ot(this, t2); e3; ) e3._start === t2 && "isPause" === e3.data && Ca(e3), e3 = e3._next;
+    }, e2.killTweensOf = function killTweensOf(t2, e3, r2) {
+      for (var i3 = this.getTweensOf(t2, r2), n2 = i3.length; n2--; ) Zt !== i3[n2] && i3[n2].kill(t2, e3);
+      return this;
+    }, e2.getTweensOf = function getTweensOf(e3, r2) {
+      for (var i3, n2 = [], a2 = Pt(e3), s2 = this._first, o2 = t(r2); s2; ) s2 instanceof te ? na(s2._targets, a2) && (o2 ? (!Zt || s2._initted && s2._ts) && s2.globalTime(0) <= r2 && s2.globalTime(s2.totalDuration()) > r2 : !r2 || s2.isActive()) && n2.push(s2) : (i3 = s2.getTweensOf(a2, r2)).length && n2.push.apply(n2, i3), s2 = s2._next;
+      return n2;
+    }, e2.tweenTo = function tweenTo(t2, e3) {
+      e3 = e3 || {};
+      var r2, i3 = this, n2 = Ot(i3, t2), a2 = e3.startAt, s2 = e3.onStart, o2 = e3.onStartParams, u2 = e3.immediateRender, h2 = te.to(i3, ta({ ease: e3.ease || "none", lazy: false, immediateRender: false, time: n2, overwrite: "auto", duration: e3.duration || Math.abs((n2 - (a2 && "time" in a2 ? a2.time : i3._time)) / i3.timeScale()) || q, onStart: function onStart() {
+        if (i3.pause(), !r2) {
+          var t3 = e3.duration || Math.abs((n2 - (a2 && "time" in a2 ? a2.time : i3._time)) / i3.timeScale());
+          h2._dur !== t3 && Ua(h2, t3, 0, 1).render(h2._time, true, true), r2 = 1;
+        }
+        s2 && s2.apply(h2, o2 || []);
+      } }, e3));
+      return u2 ? h2.render(0) : h2;
+    }, e2.tweenFromTo = function tweenFromTo(t2, e3, r2) {
+      return this.tweenTo(e3, ta({ startAt: { time: Ot(this, t2) } }, r2));
+    }, e2.recent = function recent() {
+      return this._recent;
+    }, e2.nextLabel = function nextLabel(t2) {
+      return void 0 === t2 && (t2 = this._time), ub(this, Ot(this, t2));
+    }, e2.previousLabel = function previousLabel(t2) {
+      return void 0 === t2 && (t2 = this._time), ub(this, Ot(this, t2), 1);
+    }, e2.currentLabel = function currentLabel(t2) {
+      return arguments.length ? this.seek(t2, true) : this.previousLabel(this._time + q);
+    }, e2.shiftChildren = function shiftChildren(t2, e3, r2) {
+      void 0 === r2 && (r2 = 0);
+      var i3, n2 = this._first, a2 = this.labels;
+      for (t2 = la(t2); n2; ) n2._start >= r2 && (n2._start += t2, n2._end += t2), n2 = n2._next;
+      if (e3) for (i3 in a2) a2[i3] >= r2 && (a2[i3] += t2);
+      return Da(this);
+    }, e2.invalidate = function invalidate(t2) {
+      var e3 = this._first;
+      for (this._lock = 0; e3; ) e3.invalidate(t2), e3 = e3._next;
+      return i2.prototype.invalidate.call(this, t2);
+    }, e2.clear = function clear(t2) {
+      void 0 === t2 && (t2 = true);
+      for (var e3, r2 = this._first; r2; ) e3 = r2._next, this.remove(r2), r2 = e3;
+      return this._dp && (this._time = this._tTime = this._pTime = 0), t2 && (this.labels = {}), Da(this);
+    }, e2.totalDuration = function totalDuration(t2) {
+      var e3, r2, i3, n2 = 0, a2 = this, s2 = a2._last, o2 = X;
+      if (arguments.length) return a2.timeScale((a2._repeat < 0 ? a2.duration() : a2.totalDuration()) / (a2.reversed() ? -t2 : t2));
+      if (a2._dirty) {
+        for (i3 = a2.parent; s2; ) e3 = s2._prev, s2._dirty && s2.totalDuration(), o2 < (r2 = s2._start) && a2._sort && s2._ts && !a2._lock ? (a2._lock = 1, Na(a2, s2, r2 - s2._delay, 1)._lock = 0) : o2 = r2, r2 < 0 && s2._ts && (n2 -= r2, (!i3 && !a2._dp || i3 && i3.smoothChildTiming) && (a2._start += la(r2 / a2._ts), a2._time -= r2, a2._tTime -= r2), a2.shiftChildren(-r2, false, -Infinity), o2 = 0), s2._end > n2 && s2._ts && (n2 = s2._end), s2 = e3;
+        Ua(a2, a2 === L && a2._time > n2 ? a2._time : n2, 1, 1), a2._dirty = 0;
+      }
+      return a2._tDur;
+    }, Timeline.updateRoot = function updateRoot(t2) {
+      if (L._ts && (qa(L, Ja(t2, L)), f = It.frame), It.frame >= vt) {
+        vt += Y.autoSleep || 120;
+        var e3 = L._first;
+        if ((!e3 || !e3._ts) && Y.autoSleep && It._listeners.length < 2) {
+          for (; e3 && !e3._ts; ) e3 = e3._next;
+          e3 || It.sleep();
+        }
+      }
+    }, Timeline;
+  })(qt);
+  ta(Gt.prototype, { _lock: 0, _hasPause: 0, _forcing: 0 });
+  function cc(t2, e2, i2, n2, a2, o2) {
+    var u2, h2, l2, f2;
+    if (mt[t2] && false !== (u2 = new mt[t2]()).init(a2, u2.rawVars ? e2[t2] : (function _processVars(t3, e3, i3, n3, a3) {
+      if (s(t3) && (t3 = Qt(t3, a3, e3, i3, n3)), !v(t3) || t3.style && t3.nodeType || K(t3) || J(t3)) return r(t3) ? Qt(t3, a3, e3, i3, n3) : t3;
+      var o3, u3 = {};
+      for (o3 in t3) u3[o3] = Qt(t3[o3], a3, e3, i3, n3);
+      return u3;
+    })(e2[t2], n2, a2, o2, i2), i2, n2, o2) && (i2._pt = h2 = new we(i2._pt, a2, t2, 0, 1, u2.render, u2, 0, u2.priority), i2 !== c)) for (l2 = i2._ptLookup[i2._targets.indexOf(a2)], f2 = u2._props.length; f2--; ) l2[u2._props[f2]] = h2;
+    return u2;
+  }
+  function ic(t2, r2, e2, i2) {
+    var n2, a2, s2 = r2.ease || i2 || "power1.inOut";
+    if (K(r2)) a2 = e2[t2] || (e2[t2] = []), r2.forEach(function(t3, e3) {
+      return a2.push({ t: e3 / (r2.length - 1) * 100, v: t3, e: s2 });
+    });
+    else for (n2 in r2) a2 = e2[n2] || (e2[n2] = []), "ease" === n2 || a2.push({ t: parseFloat(t2), v: r2[n2], e: s2 });
+  }
+  var Zt, Wt, $t = function _addPropTween(t2, e2, i2, n2, a2, o2, u2, h2, l2, f2) {
+    s(n2) && (n2 = n2(a2 || 0, t2, o2));
+    var c2, d2 = t2[e2], p2 = "get" !== i2 ? i2 : s(d2) ? l2 ? t2[e2.indexOf("set") || !s(t2["get" + e2.substr(3)]) ? e2 : "get" + e2.substr(3)](l2) : t2[e2]() : d2, _2 = s(d2) ? l2 ? se : ae : ie;
+    if (r(n2) && (~n2.indexOf("random(") && (n2 = rb(n2)), "=" === n2.charAt(1) && (!(c2 = ma(p2, n2) + (_a(p2) || 0)) && 0 !== c2 || (n2 = c2))), !f2 || p2 !== n2 || Wt) return isNaN(p2 * n2) || "" === n2 ? (d2 || e2 in t2 || S(e2, n2), function _addComplexStringPropTween(t3, e3, r2, i3, n3, a3, s2) {
+      var o3, u3, h3, l3, f3, c3, d3, p3, _3 = new we(this._pt, t3, e3, 0, 1, pe, null, n3), m2 = 0, g2 = 0;
+      for (_3.b = r2, _3.e = i3, r2 += "", (d3 = ~(i3 += "").indexOf("random(")) && (i3 = rb(i3)), a3 && (a3(p3 = [r2, i3], t3, e3), r2 = p3[0], i3 = p3[1]), u3 = r2.match(at) || []; o3 = at.exec(i3); ) l3 = o3[0], f3 = i3.substring(m2, o3.index), h3 ? h3 = (h3 + 1) % 5 : "rgba(" === f3.substr(-5) && (h3 = 1), l3 !== u3[g2++] && (c3 = parseFloat(u3[g2 - 1]) || 0, _3._pt = { _next: _3._pt, p: f3 || 1 === g2 ? f3 : ",", s: c3, c: "=" === l3.charAt(1) ? ma(c3, l3) - c3 : parseFloat(l3) - c3, m: h3 && h3 < 4 ? Math.round : 0 }, m2 = at.lastIndex);
+      return _3.c = m2 < i3.length ? i3.substring(m2, i3.length) : "", _3.fp = s2, (st.test(i3) || d3) && (_3.e = 0), this._pt = _3;
+    }.call(this, t2, e2, p2, n2, _2, h2 || Y.stringFilter, l2)) : (c2 = new we(this._pt, t2, e2, +p2 || 0, n2 - (p2 || 0), "boolean" == typeof d2 ? de : fe, 0, _2), l2 && (c2.fp = l2), u2 && c2.modifier(u2, this, t2), this._pt = c2);
+  }, Ht = function _initTween(t2, e2, r2) {
+    var i2, n2, a2, s2, o2, u2, h2, l2, f2, c2, d2, p2, _2, m2 = t2.vars, g2 = m2.ease, v2 = m2.startAt, y2 = m2.immediateRender, T2 = m2.lazy, b2 = m2.onUpdate, x2 = m2.runBackwards, k2 = m2.yoyoEase, O2 = m2.keyframes, M2 = m2.autoRevert, C2 = t2._dur, P2 = t2._startAt, S2 = t2._targets, A2 = t2.parent, D2 = A2 && "nested" === A2.data ? A2.vars.targets : S2, z2 = "auto" === t2._overwrite && !F, R2 = t2.timeline, E2 = m2.easeReverse || k2;
+    if (!R2 || O2 && g2 || (g2 = "none"), t2._ease = jt(g2, j.ease), t2._rEase = E2 && (jt(E2) || t2._ease), t2._from = !R2 && !!m2.runBackwards, t2._from && (t2.ratio = 1), !R2 || O2 && !m2.stagger) {
+      if (p2 = (l2 = S2[0] ? ha(S2[0]).harness : 0) && m2[l2.prop], i2 = xa(m2, dt), P2 && (P2._zTime < 0 && P2.progress(1), e2 < 0 && x2 && y2 && !M2 ? P2.render(-1, true) : P2.revert(x2 && C2 ? ft : lt), P2._lazy = 0), v2) {
+        if (Ca(t2._startAt = te.set(S2, ta({ data: "isStart", overwrite: false, parent: A2, immediateRender: true, lazy: !P2 && w(T2), startAt: null, delay: 0, onUpdate: b2 && function() {
+          return At(t2, "onUpdate");
+        }, stagger: 0 }, v2))), t2._startAt._dp = 0, t2._startAt._sat = t2, e2 < 0 && (I || !y2 && !M2) && t2._startAt.revert(ft), y2 && C2 && e2 <= 0 && r2 <= 0) return void (e2 && (t2._zTime = e2));
+      } else if (x2 && C2 && !P2) if (e2 && (y2 = false), a2 = ta({ overwrite: false, data: "isFromStart", lazy: y2 && !P2 && w(T2), immediateRender: y2, stagger: 0, parent: A2 }, i2), p2 && (a2[l2.prop] = p2), Ca(t2._startAt = te.set(S2, a2)), t2._startAt._dp = 0, t2._startAt._sat = t2, e2 < 0 && (I ? t2._startAt.revert(ft) : t2._startAt.render(-1, true)), t2._zTime = e2, y2) {
+        if (!e2) return;
+      } else _initTween(t2._startAt, q, q);
+      for (t2._pt = t2._ptCache = 0, T2 = C2 && w(T2) || T2 && !C2, n2 = 0; n2 < S2.length; n2++) {
+        if (h2 = (o2 = S2[n2])._gsap || ga(S2)[n2]._gsap, t2._ptLookup[n2] = c2 = {}, _t[h2.id] && pt.length && oa(), d2 = D2 === S2 ? n2 : D2.indexOf(o2), l2 && false !== (f2 = new l2()).init(o2, p2 || i2, t2, d2, D2) && (t2._pt = s2 = new we(t2._pt, o2, f2.name, 0, 1, f2.render, f2, 0, f2.priority), f2._props.forEach(function(t3) {
+          c2[t3] = s2;
+        }), f2.priority && (u2 = 1)), !l2 || p2) for (a2 in i2) mt[a2] && (f2 = cc(a2, i2, t2, d2, o2, D2)) ? f2.priority && (u2 = 1) : c2[a2] = s2 = $t.call(t2, o2, a2, "get", i2[a2], d2, D2, 0, m2.stringFilter);
+        t2._op && t2._op[n2] && t2.kill(o2, t2._op[n2]), z2 && t2._pt && (Zt = t2, L.killTweensOf(o2, c2, t2.globalTime(e2)), _2 = !t2.parent, Zt = 0), t2._pt && T2 && (_t[h2.id] = 1);
+      }
+      u2 && be(t2), t2._onInit && t2._onInit(t2);
+    }
+    t2._onUpdate = b2, t2._initted = (!t2._op || t2._pt) && !_2, O2 && e2 <= 0 && R2.render(X, true, true);
+  }, Qt = function _parseFuncOrString(t2, e2, i2, n2, a2) {
+    return s(t2) ? t2.call(e2, i2, n2, a2) : r(t2) && ~t2.indexOf("random(") ? rb(t2) : t2;
+  }, Jt = Tt + "repeat,repeatDelay,yoyo,repeatRefresh,yoyoEase,easeReverse,autoRevert", Kt = {};
+  ja(Jt + ",id,stagger,delay,duration,paused,scrollTrigger", function(t2) {
+    return Kt[t2] = 1;
+  });
+  var te = (function(E2) {
+    function Tween(e3, r2, i2, n2) {
+      var a2;
+      "number" == typeof r2 && (i2.duration = r2, r2 = i2, i2 = null);
+      var s2, o2, u2, h2, l2, f2, c2, d2, p2 = (a2 = E2.call(this, n2 ? r2 : ya(r2)) || this).vars, _2 = p2.duration, m2 = p2.delay, g2 = p2.immediateRender, b2 = p2.stagger, x2 = p2.overwrite, k2 = p2.keyframes, O2 = p2.defaults, M2 = p2.scrollTrigger, C2 = r2.parent || L, P2 = (K(e3) || J(e3) ? t(e3[0]) : "length" in r2) ? [e3] : Pt(e3);
+      if (a2._targets = P2.length ? ga(P2) : T("GSAP target " + e3 + " not found. https://gsap.com", !Y.nullTargetWarn) || [], a2._ptLookup = [], a2._overwrite = x2, k2 || b2 || y(_2) || y(m2)) {
+        var S2 = (r2 = a2.vars).easeReverse || r2.yoyoEase;
+        if ((s2 = a2.timeline = new Gt({ data: "nested", defaults: O2 || {}, targets: C2 && "nested" === C2.data ? C2.vars.targets : P2 })).kill(), s2.parent = s2._dp = _assertThisInitialized(a2), s2._start = 0, b2 || y(_2) || y(m2)) {
+          if (h2 = P2.length, c2 = b2 && hb(b2), v(b2)) for (l2 in b2) ~Jt.indexOf(l2) && ((d2 = d2 || {})[l2] = b2[l2]);
+          for (o2 = 0; o2 < h2; o2++) (u2 = xa(r2, Kt)).stagger = 0, S2 && (u2.easeReverse = S2), d2 && bt(u2, d2), f2 = P2[o2], u2.duration = +Qt(_2, _assertThisInitialized(a2), o2, f2, P2), u2.delay = (+Qt(m2, _assertThisInitialized(a2), o2, f2, P2) || 0) - a2._delay, !b2 && 1 === h2 && u2.delay && (a2._delay = m2 = u2.delay, a2._start += m2, u2.delay = 0), s2.to(f2, u2, c2 ? c2(o2, f2, P2) : 0), s2._ease = Bt.none;
+          s2.duration() ? _2 = m2 = 0 : a2.timeline = 0;
+        } else if (k2) {
+          ya(ta(s2.vars.defaults, { ease: "none" })), s2._ease = jt(k2.ease || r2.ease || "none");
+          var A2, D2, z2, R2 = 0;
+          if (K(k2)) k2.forEach(function(t2) {
+            return s2.to(P2, t2, ">");
+          }), s2.duration();
+          else {
+            for (l2 in u2 = {}, k2) "ease" === l2 || "easeEach" === l2 || ic(l2, k2[l2], u2, k2.easeEach);
+            for (l2 in u2) for (A2 = u2[l2].sort(function(t2, e4) {
+              return t2.t - e4.t;
+            }), o2 = R2 = 0; o2 < A2.length; o2++) (z2 = { ease: (D2 = A2[o2]).e, duration: (D2.t - (o2 ? A2[o2 - 1].t : 0)) / 100 * _2 })[l2] = D2.v, s2.to(P2, z2, R2), R2 += z2.duration;
+            s2.duration() < _2 && s2.to({}, { duration: _2 - s2.duration() });
+          }
+        }
+        _2 || a2.duration(_2 = s2.duration());
+      } else a2.timeline = 0;
+      return true !== x2 || F || (Zt = _assertThisInitialized(a2), L.killTweensOf(P2), Zt = 0), Na(C2, _assertThisInitialized(a2), i2), r2.reversed && a2.reverse(), r2.paused && a2.paused(true), (g2 || !_2 && !k2 && a2._start === la(C2._time) && w(g2) && (function _hasNoPausedAncestors(t2) {
+        return !t2 || t2._ts && _hasNoPausedAncestors(t2.parent);
+      })(_assertThisInitialized(a2)) && "nested" !== C2.data) && (a2._tTime = -q, a2.render(Math.max(0, -m2) || 0)), M2 && Oa(_assertThisInitialized(a2), M2), a2;
+    }
+    _inheritsLoose(Tween, E2);
+    var e2 = Tween.prototype;
+    return e2.render = function render(t2, e3, r2) {
+      var i2, n2, a2, s2, o2, u2, h2, l2, f2 = this._time, c2 = this._tDur, d2 = this._dur, p2 = t2 < 0, _2 = c2 - q < t2 && !p2 ? c2 : t2 < q ? 0 : t2;
+      if (d2) {
+        if (_2 !== this._tTime || !t2 || r2 || !this._initted && this._tTime || this._startAt && this._zTime < 0 != p2 || this._lazy) {
+          if (i2 = _2, l2 = this.timeline, this._repeat) {
+            if (s2 = d2 + this._rDelay, this._repeat < -1 && p2) return this.totalTime(100 * s2 + t2, e3, r2);
+            if (i2 = la(_2 % s2), _2 === c2 ? (a2 = this._repeat, i2 = d2) : (a2 = ~~(o2 = la(_2 / s2))) && a2 === o2 ? (i2 = d2, a2--) : d2 < i2 && (i2 = d2), (u2 = this._yoyo && 1 & a2) && (i2 = d2 - i2), o2 = wt(this._tTime, s2), i2 === f2 && !r2 && this._initted && a2 === o2) return this._tTime = _2, this;
+            a2 !== o2 && this.vars.repeatRefresh && !u2 && !this._lock && i2 !== s2 && this._initted && (this._lock = r2 = 1, this.render(la(s2 * a2), true).invalidate()._lock = 0);
+          }
+          if (!this._initted) {
+            if (Pa(this, p2 ? t2 : i2, r2, e3, _2)) return this._tTime = 0, this;
+            if (!(f2 === this._time || r2 && this.vars.repeatRefresh && a2 !== o2)) return this;
+            if (d2 !== this._dur) return this.render(t2, e3, r2);
+          }
+          if (this._rEase) {
+            var m2 = i2 < f2;
+            if (m2 !== this._inv) {
+              var g2 = m2 ? f2 : d2 - f2;
+              this._inv = m2, this._from && (this.ratio = 1 - this.ratio), this._invRatio = this.ratio, this._invTime = f2, this._invRecip = g2 ? (m2 ? -1 : 1) / g2 : 0, this._invScale = m2 ? -this.ratio : 1 - this.ratio, this._invEase = m2 ? this._rEase : this._ease;
+            }
+            this.ratio = h2 = this._invRatio + this._invScale * this._invEase((i2 - this._invTime) * this._invRecip);
+          } else this.ratio = h2 = this._ease(i2 / d2);
+          if (this._from && (this.ratio = h2 = 1 - h2), this._tTime = _2, this._time = i2, !this._act && this._ts && (this._act = 1, this._lazy = 0), !f2 && _2 && !e3 && !o2 && (At(this, "onStart"), this._tTime !== _2)) return this;
+          for (n2 = this._pt; n2; ) n2.r(h2, n2.d), n2 = n2._next;
+          l2 && l2.render(t2 < 0 ? t2 : l2._dur * l2._ease(i2 / this._dur), e3, r2) || this._startAt && (this._zTime = t2), this._onUpdate && !e3 && (p2 && Fa(this, t2, 0, r2), At(this, "onUpdate")), this._repeat && a2 !== o2 && this.vars.onRepeat && !e3 && this.parent && At(this, "onRepeat"), _2 !== this._tDur && _2 || this._tTime !== _2 || (p2 && !this._onUpdate && Fa(this, t2, 0, true), !t2 && d2 || !(_2 === this._tDur && 0 < this._ts || !_2 && this._ts < 0) || Ca(this, 1), e3 || p2 && !f2 || !(_2 || f2 || u2) || (At(this, _2 === c2 ? "onComplete" : "onReverseComplete", true), !this._prom || _2 < c2 && 0 < this.timeScale() || this._prom()));
+        }
+      } else !(function _renderZeroDurationTween(t3, e4, r3, i3) {
+        var n3, a3, s3, o3 = t3.ratio, u3 = e4 < 0 || !e4 && (!t3._start && (function _parentPlayheadIsBeforeStart(t4) {
+          var e5 = t4.parent;
+          return e5 && e5._ts && e5._initted && !e5._lock && (e5.rawTime() < 0 || _parentPlayheadIsBeforeStart(e5));
+        })(t3) && (t3._initted || !xt(t3)) || (t3._ts < 0 || t3._dp._ts < 0) && !xt(t3)) ? 0 : 1, h3 = t3._rDelay, l3 = 0;
+        if (h3 && t3._repeat && (l3 = Mt(0, t3._tDur, e4), a3 = wt(l3, h3), t3._yoyo && 1 & a3 && (u3 = 1 - u3), a3 !== wt(t3._tTime, h3) && (o3 = 1 - u3, t3.vars.repeatRefresh && t3._initted && t3.invalidate())), u3 !== o3 || I || i3 || t3._zTime === q || !e4 && t3._zTime) {
+          if (!t3._initted && Pa(t3, e4, i3, r3, l3)) return;
+          for (s3 = t3._zTime, t3._zTime = e4 || (r3 ? q : 0), r3 = r3 || e4 && !s3, t3.ratio = u3, t3._from && (u3 = 1 - u3), t3._time = 0, t3._tTime = l3, n3 = t3._pt; n3; ) n3.r(u3, n3.d), n3 = n3._next;
+          e4 < 0 && Fa(t3, e4, 0, true), t3._onUpdate && !r3 && At(t3, "onUpdate"), l3 && t3._repeat && !r3 && t3.parent && At(t3, "onRepeat"), (e4 >= t3._tDur || e4 < 0) && t3.ratio === u3 && (u3 && Ca(t3, 1), r3 || I || (At(t3, u3 ? "onComplete" : "onReverseComplete", true), t3._prom && t3._prom()));
+        } else t3._zTime || (t3._zTime = e4);
+      })(this, t2, e3, r2);
+      return this;
+    }, e2.targets = function targets() {
+      return this._targets;
+    }, e2.invalidate = function invalidate(t2) {
+      return t2 && this.vars.runBackwards || (this._startAt = 0), this._pt = this._op = this._onUpdate = this._lazy = this.ratio = 0, this._ptLookup = [], this.timeline && this.timeline.invalidate(t2), E2.prototype.invalidate.call(this, t2);
+    }, e2.resetTo = function resetTo(t2, e3, r2, i2, n2) {
+      d || It.wake(), this._ts || this.play();
+      var a2, s2 = Math.min(this._dur, (this._dp._time - this._start) * this._ts);
+      return this._initted || Ht(this, s2), a2 = this._ease(s2 / this._dur), (function _updatePropTweens(t3, e4, r3, i3, n3, a3, s3, o2) {
+        var u2, h2, l2, f2, c2 = (t3._pt && t3._ptCache || (t3._ptCache = {}))[e4];
+        if (!c2) for (c2 = t3._ptCache[e4] = [], l2 = t3._ptLookup, f2 = t3._targets.length; f2--; ) {
+          if ((u2 = l2[f2][e4]) && u2.d && u2.d._pt) for (u2 = u2.d._pt; u2 && u2.p !== e4 && u2.fp !== e4; ) u2 = u2._next;
+          if (!u2) return Wt = 1, t3.vars[e4] = "+=0", Ht(t3, s3), Wt = 0, o2 ? T(e4 + " not eligible for reset. Try splitting into individual properties") : 1;
+          c2.push(u2);
+        }
+        for (f2 = c2.length; f2--; ) (u2 = (h2 = c2[f2])._pt || h2).s = !i3 && 0 !== i3 || n3 ? u2.s + (i3 || 0) + a3 * u2.c : i3, u2.c = r3 - u2.s, h2.e && (h2.e = ka(r3) + _a(h2.e)), h2.b && (h2.b = u2.s + _a(h2.b));
+      })(this, t2, e3, r2, i2, a2, s2, n2) ? this.resetTo(t2, e3, r2, i2, 1) : (La(this, 0), this.parent || Aa(this._dp, this, "_first", "_last", this._dp._sort ? "_start" : 0), this.render(0));
+    }, e2.kill = function kill(t2, e3) {
+      if (void 0 === e3 && (e3 = "all"), !(t2 || e3 && "all" !== e3)) return this._lazy = this._pt = 0, this.parent ? wb(this) : this.scrollTrigger && this.scrollTrigger.kill(!!I), this;
+      if (this.timeline) {
+        var i2 = this.timeline.totalDuration();
+        return this.timeline.killTweensOf(t2, e3, Zt && true !== Zt.vars.overwrite)._first || wb(this), this.parent && i2 !== this.timeline.totalDuration() && Ua(this, this._dur * this.timeline._tDur / i2, 0, 1), this;
+      }
+      var n2, a2, s2, o2, u2, h2, l2, f2 = this._targets, c2 = t2 ? Pt(t2) : f2, d2 = this._ptLookup, p2 = this._pt;
+      if ((!e3 || "all" === e3) && (function _arraysMatch(t3, e4) {
+        for (var r2 = t3.length, i3 = r2 === e4.length; i3 && r2-- && t3[r2] === e4[r2]; ) ;
+        return r2 < 0;
+      })(f2, c2)) return "all" === e3 && (this._pt = 0), wb(this);
+      for (n2 = this._op = this._op || [], "all" !== e3 && (r(e3) && (u2 = {}, ja(e3, function(t3) {
+        return u2[t3] = 1;
+      }), e3 = u2), e3 = (function _addAliasesToVars(t3, e4) {
+        var r2, i3, n3, a3, s3 = t3[0] ? ha(t3[0]).harness : 0, o3 = s3 && s3.aliases;
+        if (!o3) return e4;
+        for (i3 in r2 = bt({}, e4), o3) if (i3 in r2) for (n3 = (a3 = o3[i3].split(",")).length; n3--; ) r2[a3[n3]] = r2[i3];
+        return r2;
+      })(f2, e3)), l2 = f2.length; l2--; ) if (~c2.indexOf(f2[l2])) for (u2 in a2 = d2[l2], "all" === e3 ? (n2[l2] = e3, o2 = a2, s2 = {}) : (s2 = n2[l2] = n2[l2] || {}, o2 = e3), o2) (h2 = a2 && a2[u2]) && ("kill" in h2.d && true !== h2.d.kill(u2) || Ba(this, h2, "_pt"), delete a2[u2]), "all" !== s2 && (s2[u2] = 1);
+      return this._initted && !this._pt && p2 && wb(this), this;
+    }, Tween.to = function to(t2, e3, r2) {
+      return new Tween(t2, e3, r2);
+    }, Tween.from = function from(t2, e3) {
+      return Ya(1, arguments);
+    }, Tween.delayedCall = function delayedCall(t2, e3, r2, i2) {
+      return new Tween(e3, 0, { immediateRender: false, lazy: false, overwrite: false, delay: t2, onComplete: e3, onReverseComplete: e3, onCompleteParams: r2, onReverseCompleteParams: r2, callbackScope: i2 });
+    }, Tween.fromTo = function fromTo(t2, e3, r2) {
+      return Ya(2, arguments);
+    }, Tween.set = function set(t2, e3) {
+      return e3.duration = 0, e3.repeatDelay || (e3.repeat = 0), new Tween(t2, e3);
+    }, Tween.killTweensOf = function killTweensOf(t2, e3, r2) {
+      return L.killTweensOf(t2, e3, r2);
+    }, Tween;
+  })(qt);
+  ta(te.prototype, { _targets: [], _lazy: 0, _startAt: 0, _op: 0, _onInit: 0 }), ja("staggerTo,staggerFrom,staggerFromTo", function(r2) {
+    te[r2] = function() {
+      var t2 = new Gt(), e2 = Ct.call(arguments, 0);
+      return e2.splice("staggerFromTo" === r2 ? 5 : 4, 0, 0), t2[r2].apply(t2, e2);
+    };
+  });
+  function qc(t2, e2, r2) {
+    return t2.setAttribute(e2, r2);
+  }
+  function yc(t2, e2, r2, i2) {
+    i2.mSet(t2, e2, i2.m.call(i2.tween, r2, i2.mt), i2);
+  }
+  var ie = function _setterPlain(t2, e2, r2) {
+    return t2[e2] = r2;
+  }, ae = function _setterFunc(t2, e2, r2) {
+    return t2[e2](r2);
+  }, se = function _setterFuncWithParam(t2, e2, r2, i2) {
+    return t2[e2](i2.fp, r2);
+  }, ue = function _getSetter(t2, e2) {
+    return s(t2[e2]) ? ae : u(t2[e2]) && t2.setAttribute ? qc : ie;
+  }, fe = function _renderPlain(t2, e2) {
+    return e2.set(e2.t, e2.p, Math.round(1e6 * (e2.s + e2.c * t2)) / 1e6, e2);
+  }, de = function _renderBoolean(t2, e2) {
+    return e2.set(e2.t, e2.p, !!(e2.s + e2.c * t2), e2);
+  }, pe = function _renderComplexString(t2, e2) {
+    var r2 = e2._pt, i2 = "";
+    if (!t2 && e2.b) i2 = e2.b;
+    else if (1 === t2 && e2.e) i2 = e2.e;
+    else {
+      for (; r2; ) i2 = r2.p + (r2.m ? r2.m(r2.s + r2.c * t2) : Math.round(1e4 * (r2.s + r2.c * t2)) / 1e4) + i2, r2 = r2._next;
+      i2 += e2.c;
+    }
+    e2.set(e2.t, e2.p, i2, e2);
+  }, _e = function _renderPropTweens(t2, e2) {
+    for (var r2 = e2._pt; r2; ) r2.r(t2, r2.d), r2 = r2._next;
+  }, ve = function _addPluginModifier(t2, e2, r2, i2) {
+    for (var n2, a2 = this._pt; a2; ) n2 = a2._next, a2.p === i2 && a2.modifier(t2, e2, r2), a2 = n2;
+  }, Te = function _killPropTweensOf(t2) {
+    for (var e2, r2, i2 = this._pt; i2; ) r2 = i2._next, i2.p === t2 && !i2.op || i2.op === t2 ? Ba(this, i2, "_pt") : i2.dep || (e2 = 1), i2 = r2;
+    return !e2;
+  }, be = function _sortPropTweensByPriority(t2) {
+    for (var e2, r2, i2, n2, a2 = t2._pt; a2; ) {
+      for (e2 = a2._next, r2 = i2; r2 && r2.pr > a2.pr; ) r2 = r2._next;
+      (a2._prev = r2 ? r2._prev : n2) ? a2._prev._next = a2 : i2 = a2, (a2._next = r2) ? r2._prev = a2 : n2 = a2, a2 = e2;
+    }
+    t2._pt = i2;
+  }, we = (PropTween.prototype.modifier = function modifier(t2, e2, r2) {
+    this.mSet = this.mSet || this.set, this.set = yc, this.m = t2, this.mt = r2, this.tween = e2;
+  }, PropTween);
+  function PropTween(t2, e2, r2, i2, n2, a2, s2, o2, u2) {
+    this.t = e2, this.s = i2, this.c = n2, this.p = r2, this.r = a2 || fe, this.d = s2 || this, this.set = o2 || ie, this.pr = u2 || 0, (this._next = t2) && (t2._prev = this);
+  }
+  ja(Tt + "parent,duration,ease,delay,overwrite,runBackwards,startAt,yoyo,immediateRender,repeat,repeatDelay,data,paused,reversed,lazy,callbackScope,stringFilter,id,yoyoEase,stagger,inherit,repeatRefresh,keyframes,autoRevert,scrollTrigger,easeReverse", function(t2) {
+    return dt[t2] = 1;
+  }), ht.TweenMax = ht.TweenLite = te, ht.TimelineLite = ht.TimelineMax = Gt, L = new Gt({ sortChildren: false, defaults: j, autoRemoveChildren: true, id: "root", smoothChildTiming: true }), Y.stringFilter = Ib;
+  function Gc(t2) {
+    return (Oe[t2] || Me).map(function(t3) {
+      return t3();
+    });
+  }
+  function Hc() {
+    var t2 = Date.now(), o2 = [];
+    2 < t2 - Ce && (Gc("matchMediaInit"), ke.forEach(function(t3) {
+      var e2, r2, i2, n2, a2 = t3.queries, s2 = t3.conditions;
+      for (r2 in a2) (e2 = h.matchMedia(a2[r2]).matches) && (i2 = 1), e2 !== s2[r2] && (s2[r2] = e2, n2 = 1);
+      n2 && (t3.revert(), i2 && o2.push(t3));
+    }), Gc("matchMediaRevert"), o2.forEach(function(e2) {
+      return e2.onMatch(e2, function(t3) {
+        return e2.add(null, t3);
+      });
+    }), Ce = t2, Gc("matchMedia"));
+  }
+  var xe, ke = [], Oe = {}, Me = [], Ce = 0, Pe = 0, Se = ((xe = Context.prototype).add = function add(t2, i2, n2) {
+    function Gw() {
+      var t3, e2 = l, r2 = a2.selector;
+      return e2 && e2 !== a2 && e2.data.push(a2), n2 && (a2.selector = fb(n2)), l = a2, t3 = i2.apply(a2, arguments), s(t3) && a2._r.push(t3), l = e2, a2.selector = r2, a2.isReverted = false, t3;
+    }
+    s(t2) && (n2 = i2, i2 = t2, t2 = s);
+    var a2 = this;
+    return a2.last = Gw, t2 === s ? Gw(a2, function(t3) {
+      return a2.add(null, t3);
+    }) : t2 ? a2[t2] = Gw : Gw;
+  }, xe.ignore = function ignore(t2) {
+    var e2 = l;
+    l = null, t2(this), l = e2;
+  }, xe.getTweens = function getTweens() {
+    var e2 = [];
+    return this.data.forEach(function(t2) {
+      return t2 instanceof Context ? e2.push.apply(e2, t2.getTweens()) : t2 instanceof te && !(t2.parent && "nested" === t2.parent.data) && e2.push(t2);
+    }), e2;
+  }, xe.clear = function clear() {
+    this._r.length = this.data.length = 0;
+  }, xe.kill = function kill(i2, t2) {
+    var n2 = this;
+    if (i2 ? (function() {
+      for (var t3, e3 = n2.getTweens(), r2 = n2.data.length; r2--; ) "isFlip" === (t3 = n2.data[r2]).data && (t3.revert(), t3.getChildren(true, true, false).forEach(function(t4) {
+        return e3.splice(e3.indexOf(t4), 1);
+      }));
+      for (e3.map(function(t4) {
+        return { g: t4._dur || t4._delay || t4._sat && !t4._sat.vars.immediateRender ? t4.globalTime(0) : -1 / 0, t: t4 };
+      }).sort(function(t4, e4) {
+        return e4.g - t4.g || -1 / 0;
+      }).forEach(function(t4) {
+        return t4.t.revert(i2);
+      }), r2 = n2.data.length; r2--; ) (t3 = n2.data[r2]) instanceof Gt ? "nested" !== t3.data && (t3.scrollTrigger && t3.scrollTrigger.revert(), t3.kill()) : t3 instanceof te || !t3.revert || t3.revert(i2);
+      n2._r.forEach(function(t4) {
+        return t4(i2, n2);
+      }), n2.isReverted = true;
+    })() : this.data.forEach(function(t3) {
+      return t3.kill && t3.kill();
+    }), this.clear(), t2) for (var e2 = ke.length; e2--; ) ke[e2].id === this.id && ke.splice(e2, 1);
+  }, xe.revert = function revert(t2) {
+    this.kill(t2 || {});
+  }, Context);
+  function Context(t2, e2) {
+    this.selector = e2 && fb(e2), this.data = [], this._r = [], this.isReverted = false, this.id = Pe++, t2 && this.add(t2);
+  }
+  var De, Re = ((De = MatchMedia.prototype).add = function add(t2, e2, r2) {
+    v(t2) || (t2 = { matches: t2 });
+    var i2, n2, a2, s2 = new Se(0, r2 || this.scope), o2 = s2.conditions = {};
+    for (n2 in l && !s2.selector && (s2.selector = l.selector), this.contexts.push(s2), e2 = s2.add("onMatch", e2), s2.queries = t2) "all" === n2 ? a2 = 1 : (i2 = h.matchMedia(t2[n2])) && (ke.indexOf(s2) < 0 && ke.push(s2), (o2[n2] = i2.matches) && (a2 = 1), i2.addListener ? i2.addListener(Hc) : i2.addEventListener("change", Hc));
+    return a2 && e2(s2, function(t3) {
+      return s2.add(null, t3);
+    }), this;
+  }, De.revert = function revert(t2) {
+    this.kill(t2 || {});
+  }, De.kill = function kill(e2) {
+    this.contexts.forEach(function(t2) {
+      return t2.kill(e2, true);
+    });
+  }, MatchMedia);
+  function MatchMedia(t2) {
+    this.contexts = [], this.scope = t2, l && l.data.push(this);
+  }
+  var Ee = { registerPlugin: function registerPlugin() {
+    for (var t2 = arguments.length, e2 = new Array(t2), r2 = 0; r2 < t2; r2++) e2[r2] = arguments[r2];
+    e2.forEach(function(t3) {
+      return zb(t3);
+    });
+  }, timeline: function timeline(t2) {
+    return new Gt(t2);
+  }, getTweensOf: function getTweensOf(t2, e2) {
+    return L.getTweensOf(t2, e2);
+  }, getProperty: function getProperty(i2, t2, e2, n2) {
+    r(i2) && (i2 = Pt(i2)[0]);
+    var a2 = ha(i2 || {}).get, s2 = e2 ? sa : ra;
+    return "native" === e2 && (e2 = ""), i2 ? t2 ? s2((mt[t2] && mt[t2].get || a2)(i2, t2, e2, n2)) : function(t3, e3, r2) {
+      return s2((mt[t3] && mt[t3].get || a2)(i2, t3, e3, r2));
+    } : i2;
+  }, quickSetter: function quickSetter(r2, e2, i2) {
+    if (1 < (r2 = Pt(r2)).length) {
+      var n2 = r2.map(function(t2) {
+        return Fe.quickSetter(t2, e2, i2);
+      }), a2 = n2.length;
+      return function(t2) {
+        for (var e3 = a2; e3--; ) n2[e3](t2);
+      };
+    }
+    r2 = r2[0] || {};
+    var s2 = mt[e2], o2 = ha(r2), u2 = o2.harness && (o2.harness.aliases || {})[e2] || e2, h2 = s2 ? function(t2) {
+      var e3 = new s2();
+      c._pt = 0, e3.init(r2, i2 ? t2 + i2 : t2, c, 0, [r2]), e3.render(1, e3), c._pt && _e(1, c);
+    } : o2.set(r2, u2);
+    return s2 ? h2 : function(t2) {
+      return h2(r2, u2, i2 ? t2 + i2 : t2, o2, 1);
+    };
+  }, quickTo: function quickTo(t2, i2, e2) {
+    function $x(t3, e3, r3) {
+      return n2.resetTo(i2, t3, e3, r3);
+    }
+    var r2, n2 = Fe.to(t2, ta(((r2 = {})[i2] = "+=0.1", r2.paused = true, r2.stagger = 0, r2), e2 || {}));
+    return $x.tween = n2, $x;
+  }, isTweening: function isTweening(t2) {
+    return 0 < L.getTweensOf(t2, true).length;
+  }, defaults: function defaults(t2) {
+    return t2 && t2.ease && (t2.ease = jt(t2.ease, j.ease)), wa(j, t2 || {});
+  }, config: function config(t2) {
+    return wa(Y, t2 || {});
+  }, registerEffect: function registerEffect(t2) {
+    var i2 = t2.name, n2 = t2.effect, e2 = t2.plugins, a2 = t2.defaults, r2 = t2.extendTimeline;
+    (e2 || "").split(",").forEach(function(t3) {
+      return t3 && !mt[t3] && !ht[t3] && T(i2 + " effect requires " + t3 + " plugin.");
+    }), gt[i2] = function(t3, e3, r3) {
+      return n2(Pt(t3), ta(e3 || {}, a2), r3);
+    }, r2 && (Gt.prototype[i2] = function(t3, e3, r3) {
+      return this.add(gt[i2](t3, v(e3) ? e3 : (r3 = e3) && {}, this), r3);
+    });
+  }, registerEase: function registerEase(t2, e2) {
+    Bt[t2] = jt(e2);
+  }, parseEase: function parseEase(t2, e2) {
+    return arguments.length ? jt(t2, e2) : Bt;
+  }, getById: function getById(t2) {
+    return L.getById(t2);
+  }, exportRoot: function exportRoot(t2, e2) {
+    void 0 === t2 && (t2 = {});
+    var r2, i2, n2 = new Gt(t2);
+    for (n2.smoothChildTiming = w(t2.smoothChildTiming), L.remove(n2), n2._dp = 0, n2._time = n2._tTime = L._time, r2 = L._first; r2; ) i2 = r2._next, !e2 && !r2._dur && r2 instanceof te && r2.vars.onComplete === r2._targets[0] || Na(n2, r2, r2._start - r2._delay), r2 = i2;
+    return Na(L, n2, 0), n2;
+  }, context: function context(t2, e2) {
+    return t2 ? new Se(t2, e2) : l;
+  }, matchMedia: function matchMedia(t2) {
+    return new Re(t2);
+  }, matchMediaRefresh: function matchMediaRefresh() {
+    return ke.forEach(function(t2) {
+      var e2, r2, i2 = t2.conditions;
+      for (r2 in i2) i2[r2] && (i2[r2] = false, e2 = 1);
+      e2 && t2.revert();
+    }) || Hc();
+  }, addEventListener: function addEventListener(t2, e2) {
+    var r2 = Oe[t2] || (Oe[t2] = []);
+    ~r2.indexOf(e2) || r2.push(e2);
+  }, removeEventListener: function removeEventListener(t2, e2) {
+    var r2 = Oe[t2], i2 = r2 && r2.indexOf(e2);
+    0 <= i2 && r2.splice(i2, 1);
+  }, utils: { wrap: function wrap(e2, t2, r2) {
+    var i2 = t2 - e2;
+    return K(e2) ? ob(e2, wrap(0, e2.length), t2) : Za(r2, function(t3) {
+      return (i2 + (t3 - e2) % i2) % i2 + e2;
+    });
+  }, wrapYoyo: function wrapYoyo(e2, t2, r2) {
+    var i2 = t2 - e2, n2 = 2 * i2;
+    return K(e2) ? ob(e2, wrapYoyo(0, e2.length - 1), t2) : Za(r2, function(t3) {
+      return e2 + (i2 < (t3 = (n2 + (t3 - e2) % n2) % n2 || 0) ? n2 - t3 : t3);
+    });
+  }, distribute: hb, random: kb, snap: jb, normalize: function normalize(t2, e2, r2) {
+    return St(t2, e2, 0, 1, r2);
+  }, getUnit: _a, clamp: function clamp(e2, r2, t2) {
+    return Za(t2, function(t3) {
+      return Mt(e2, r2, t3);
+    });
+  }, splitColor: Db, toArray: Pt, selector: fb, mapRange: St, pipe: function pipe() {
+    for (var t2 = arguments.length, e2 = new Array(t2), r2 = 0; r2 < t2; r2++) e2[r2] = arguments[r2];
+    return function(t3) {
+      return e2.reduce(function(t4, e3) {
+        return e3(t4);
+      }, t3);
+    };
+  }, unitize: function unitize(e2, r2) {
+    return function(t2) {
+      return e2(parseFloat(t2)) + (r2 || _a(t2));
+    };
+  }, interpolate: function interpolate(e2, i2, t2, n2) {
+    var a2 = isNaN(e2 + i2) ? 0 : function(t3) {
+      return (1 - t3) * e2 + t3 * i2;
+    };
+    if (!a2) {
+      var s2, o2, u2, h2, l2, f2 = r(e2), c2 = {};
+      if (true === t2 && (n2 = 1) && (t2 = null), f2) e2 = { p: e2 }, i2 = { p: i2 };
+      else if (K(e2) && !K(i2)) {
+        for (u2 = [], h2 = e2.length, l2 = h2 - 2, o2 = 1; o2 < h2; o2++) u2.push(interpolate(e2[o2 - 1], e2[o2]));
+        h2--, a2 = function func(t3) {
+          t3 *= h2;
+          var e3 = Math.min(l2, ~~t3);
+          return u2[e3](t3 - e3);
+        }, t2 = i2;
+      } else n2 || (e2 = bt(K(e2) ? [] : {}, e2));
+      if (!u2) {
+        for (s2 in i2) $t.call(c2, e2, s2, "get", i2[s2]);
+        a2 = function func(t3) {
+          return _e(t3, c2) || (f2 ? e2.p : e2);
+        };
+      }
+    }
+    return Za(t2, a2);
+  }, shuffle: gb }, install: R, effects: gt, ticker: It, updateRoot: Gt.updateRoot, plugins: mt, globalTimeline: L, core: { PropTween: we, globals: U, Tween: te, Timeline: Gt, Animation: qt, getCache: ha, _removeLinkedListItem: Ba, reverting: function reverting() {
+    return I;
+  }, context: function context(t2) {
+    return t2 && l && (l.data.push(t2), t2._ctx = l), l;
+  }, suppressOverwrites: function suppressOverwrites(t2) {
+    return F = t2;
+  } } };
+  ja("to,from,fromTo,delayedCall,set,killTweensOf", function(t2) {
+    return Ee[t2] = te[t2];
+  }), It.add(Gt.updateRoot), c = Ee.to({}, { duration: 0 });
+  function Lc(t2, e2) {
+    for (var r2 = t2._pt; r2 && r2.p !== e2 && r2.op !== e2 && r2.fp !== e2; ) r2 = r2._next;
+    return r2;
+  }
+  function Nc(t2, a2) {
+    return { name: t2, headless: 1, rawVars: 1, init: function init(t3, n2, e2) {
+      e2._onInit = function(t4) {
+        var e3, i2;
+        if (r(n2) && (e3 = {}, ja(n2, function(t5) {
+          return e3[t5] = 1;
+        }), n2 = e3), a2) {
+          for (i2 in e3 = {}, n2) e3[i2] = a2(n2[i2]);
+          n2 = e3;
+        }
+        !(function _addModifiers(t5, e4) {
+          var r2, i3, n3, a3 = t5._targets;
+          for (r2 in e4) for (i3 = a3.length; i3--; ) (n3 = (n3 = t5._ptLookup[i3][r2]) && n3.d) && (n3._pt && (n3 = Lc(n3, r2)), n3 && n3.modifier && n3.modifier(e4[r2], t5, a3[i3], r2));
+        })(t4, n2);
+      };
+    } };
+  }
+  var Fe = Ee.registerPlugin({ name: "attr", init: function init(t2, e2, r2, i2, n2) {
+    var a2, s2, o2;
+    for (a2 in this.tween = r2, e2) o2 = t2.getAttribute(a2) || "", (s2 = this.add(t2, "setAttribute", (o2 || 0) + "", e2[a2], i2, n2, 0, 0, a2)).op = a2, s2.b = o2, this._props.push(a2);
+  }, render: function render(t2, e2) {
+    for (var r2 = e2._pt; r2; ) I ? r2.set(r2.t, r2.p, r2.b, r2) : r2.r(t2, r2.d), r2 = r2._next;
+  } }, { name: "endArray", headless: 1, init: function init(t2, e2) {
+    for (var r2 = e2.length; r2--; ) this.add(t2, r2, t2[r2] || 0, e2[r2], 0, 0, 0, 0, 0, 1);
+  } }, Nc("roundProps", ib), Nc("modifiers"), Nc("snap", jb)) || Ee;
+  te.version = Gt.version = Fe.version = "3.15.0", o = 1, x() && Lt();
+  function xd(t2, e2) {
+    return e2.set(e2.t, e2.p, Math.round(1e4 * (e2.s + e2.c * t2)) / 1e4 + e2.u, e2);
+  }
+  function yd(t2, e2) {
+    return e2.set(e2.t, e2.p, 1 === t2 ? e2.e : Math.round(1e4 * (e2.s + e2.c * t2)) / 1e4 + e2.u, e2);
+  }
+  function zd(t2, e2) {
+    return e2.set(e2.t, e2.p, t2 ? Math.round(1e4 * (e2.s + e2.c * t2)) / 1e4 + e2.u : e2.b, e2);
+  }
+  function Ad(t2, e2) {
+    return e2.set(e2.t, e2.p, 1 === t2 ? e2.e : t2 ? Math.round(1e4 * (e2.s + e2.c * t2)) / 1e4 + e2.u : e2.b, e2);
+  }
+  function Bd(t2, e2) {
+    var r2 = e2.s + e2.c * t2;
+    e2.set(e2.t, e2.p, ~~(r2 + (r2 < 0 ? -0.5 : 0.5)) + e2.u, e2);
+  }
+  function Cd(t2, e2) {
+    return e2.set(e2.t, e2.p, t2 ? e2.e : e2.b, e2);
+  }
+  function Dd(t2, e2) {
+    return e2.set(e2.t, e2.p, 1 !== t2 ? e2.b : e2.e, e2);
+  }
+  function Ed(t2, e2, r2) {
+    return t2.style[e2] = r2;
+  }
+  function Fd(t2, e2, r2) {
+    return t2.style.setProperty(e2, r2);
+  }
+  function Gd(t2, e2, r2) {
+    return t2._gsap[e2] = r2;
+  }
+  function Hd(t2, e2, r2) {
+    return t2._gsap.scaleX = t2._gsap.scaleY = r2;
+  }
+  function Id(t2, e2, r2, i2, n2) {
+    var a2 = t2._gsap;
+    a2.scaleX = a2.scaleY = r2, a2.renderTransform(n2, a2);
+  }
+  function Jd(t2, e2, r2, i2, n2) {
+    var a2 = t2._gsap;
+    a2[e2] = r2, a2.renderTransform(n2, a2);
+  }
+  function Md(t2, e2) {
+    var r2 = this, i2 = this.target, n2 = i2.style, a2 = i2._gsap;
+    if (t2 in ur && n2) {
+      if (this.tfm = this.tfm || {}, "transform" === t2) return _r.transform.split(",").forEach(function(t3) {
+        return Md.call(r2, t3, e2);
+      });
+      if (~(t2 = _r[t2] || t2).indexOf(",") ? t2.split(",").forEach(function(t3) {
+        return r2.tfm[t3] = wr(i2, t3);
+      }) : this.tfm[t2] = a2.x ? a2[t2] : wr(i2, t2), t2 === gr && (this.tfm.zOrigin = a2.zOrigin), 0 <= this.props.indexOf(mr)) return;
+      a2.svg && (this.svgo = i2.getAttribute("data-svg-origin"), this.props.push(gr, e2, "")), t2 = mr;
+    }
+    (n2 || e2) && this.props.push(t2, e2, n2[t2]);
+  }
+  function Nd(t2) {
+    t2.translate && (t2.removeProperty("translate"), t2.removeProperty("scale"), t2.removeProperty("rotate"));
+  }
+  function Od() {
+    var t2, e2, r2 = this.props, i2 = this.target, n2 = i2.style, a2 = i2._gsap;
+    for (t2 = 0; t2 < r2.length; t2 += 3) r2[t2 + 1] ? 2 === r2[t2 + 1] ? i2[r2[t2]](r2[t2 + 2]) : i2[r2[t2]] = r2[t2 + 2] : r2[t2 + 2] ? n2[r2[t2]] = r2[t2 + 2] : n2.removeProperty("--" === r2[t2].substr(0, 2) ? r2[t2] : r2[t2].replace(cr, "-$1").toLowerCase());
+    if (this.tfm) {
+      for (e2 in this.tfm) a2[e2] = this.tfm[e2];
+      a2.svg && (a2.renderTransform(), i2.setAttribute("data-svg-origin", this.svgo || "")), (t2 = je()) && t2.isStart || n2[mr] || (Nd(n2), a2.zOrigin && n2[gr] && (n2[gr] += " " + a2.zOrigin + "px", a2.zOrigin = 0, a2.renderTransform()), a2.uncache = 1);
+    }
+  }
+  function Pd(t2, e2) {
+    var r2 = { target: t2, props: [], revert: Od, save: Md };
+    return t2._gsap || Fe.core.getCache(t2), e2 && t2.style && t2.nodeType && e2.split(",").forEach(function(t3) {
+      return r2.save(t3);
+    }), r2;
+  }
+  function Rd(t2, e2) {
+    var r2 = Le.createElementNS ? Le.createElementNS((e2 || "http://www.w3.org/1999/xhtml").replace(/^https/, "http"), t2) : Le.createElement(t2);
+    return r2 && r2.style ? r2 : Le.createElement(t2);
+  }
+  function Sd(t2, e2, r2) {
+    var i2 = getComputedStyle(t2);
+    return i2[e2] || i2.getPropertyValue(e2.replace(cr, "-$1").toLowerCase()) || i2.getPropertyValue(e2) || !r2 && Sd(t2, yr(e2) || e2, 1) || "";
+  }
+  function Vd() {
+    /* @__PURE__ */ (function _windowExists() {
+      return "undefined" != typeof window;
+    })() && window.document && (Ie = window, Le = Ie.document, Be = Le.documentElement, Ue = Rd("div") || { style: {} }, Rd("div"), mr = yr(mr), gr = mr + "Origin", Ue.style.cssText = "border-width:0;line-height:0;position:absolute;padding:0", Ve = !!yr("perspective"), je = Fe.core.reverting, Ne = 1);
+  }
+  function Wd(t2) {
+    var e2, r2 = t2.ownerSVGElement, i2 = Rd("svg", r2 && r2.getAttribute("xmlns") || "http://www.w3.org/2000/svg"), n2 = t2.cloneNode(true);
+    n2.style.display = "block", i2.appendChild(n2), Be.appendChild(i2);
+    try {
+      e2 = n2.getBBox();
+    } catch (t3) {
+    }
+    return i2.removeChild(n2), Be.removeChild(i2), e2;
+  }
+  function Xd(t2, e2) {
+    for (var r2 = e2.length; r2--; ) if (t2.hasAttribute(e2[r2])) return t2.getAttribute(e2[r2]);
+  }
+  function Yd(e2) {
+    var r2, i2;
+    try {
+      r2 = e2.getBBox();
+    } catch (t2) {
+      r2 = Wd(e2), i2 = 1;
+    }
+    return r2 && (r2.width || r2.height) || i2 || (r2 = Wd(e2)), !r2 || r2.width || r2.x || r2.y ? r2 : { x: +Xd(e2, ["x", "cx", "x1"]) || 0, y: +Xd(e2, ["y", "cy", "y1"]) || 0, width: 0, height: 0 };
+  }
+  function Zd(t2) {
+    return !(!t2.getCTM || t2.parentNode && !t2.ownerSVGElement || !Yd(t2));
+  }
+  function $d(t2, e2) {
+    if (e2) {
+      var r2, i2 = t2.style;
+      e2 in ur && e2 !== gr && (e2 = mr), i2.removeProperty ? ("ms" !== (r2 = e2.substr(0, 2)) && "webkit" !== e2.substr(0, 6) || (e2 = "-" + e2), i2.removeProperty("--" === r2 ? e2 : e2.replace(cr, "-$1").toLowerCase())) : i2.removeAttribute(e2);
+    }
+  }
+  function _d(t2, e2, r2, i2, n2, a2) {
+    var s2 = new we(t2._pt, e2, r2, 0, 1, a2 ? Dd : Cd);
+    return (t2._pt = s2).b = i2, s2.e = n2, t2._props.push(r2), s2;
+  }
+  function ce(t2, e2, r2, i2) {
+    var n2, a2, s2, o2, u2 = parseFloat(r2) || 0, h2 = (r2 + "").trim().substr((u2 + "").length) || "px", l2 = Ue.style, f2 = dr.test(e2), c2 = "svg" === t2.tagName.toLowerCase(), d2 = (c2 ? "client" : "offset") + (f2 ? "Width" : "Height"), p2 = "px" === i2, _2 = "%" === i2;
+    if (i2 === h2 || !u2 || Tr[i2] || Tr[h2]) return u2;
+    if ("px" === h2 || p2 || (u2 = ce(t2, e2, r2, "px")), o2 = t2.getCTM && Zd(t2), (_2 || "%" === h2) && (ur[e2] || ~e2.indexOf("adius"))) return n2 = o2 ? t2.getBBox()[f2 ? "width" : "height"] : t2[d2], ka(_2 ? u2 / n2 * 100 : u2 / 100 * n2);
+    if (l2[f2 ? "width" : "height"] = 100 + (p2 ? h2 : i2), a2 = "rem" !== i2 && ~e2.indexOf("adius") || "em" === i2 && t2.appendChild && !c2 ? t2 : t2.parentNode, o2 && (a2 = (t2.ownerSVGElement || {}).parentNode), a2 && a2 !== Le && a2.appendChild || (a2 = Le.body), (s2 = a2._gsap) && _2 && s2.width && f2 && s2.time === It.time && !s2.uncache) return ka(u2 / s2.width * 100);
+    if (!_2 || "height" !== e2 && "width" !== e2) !_2 && "%" !== h2 || br[Sd(a2, "display")] || (l2.position = Sd(t2, "position")), a2 === t2 && (l2.position = "static"), a2.appendChild(Ue), n2 = Ue[d2], a2.removeChild(Ue), l2.position = "absolute";
+    else {
+      var m2 = t2.style[e2];
+      t2.style[e2] = 100 + i2, n2 = t2[d2], m2 ? t2.style[e2] = m2 : $d(t2, e2);
+    }
+    return f2 && _2 && ((s2 = ha(a2)).time = It.time, s2.width = a2[d2]), ka(p2 ? n2 * u2 / 100 : n2 && u2 ? 100 / n2 * u2 : 0);
+  }
+  function ee(t2, e2, r2, i2) {
+    if (!r2 || "none" === r2) {
+      var n2 = yr(e2, t2, 1), a2 = n2 && Sd(t2, n2, 1);
+      a2 && a2 !== r2 ? (e2 = n2, r2 = a2) : "borderColor" === e2 && (r2 = Sd(t2, "borderTopColor"));
+    }
+    var s2, o2, u2, h2, l2, f2, c2, d2, p2, _2, m2, g2 = new we(this._pt, t2.style, e2, 0, 1, pe), v2 = 0, y2 = 0;
+    if (g2.b = r2, g2.e = i2, r2 += "", "var(--" === (i2 += "").substring(0, 6) && (i2 = Sd(t2, i2.substring(4, i2.indexOf(")")))), "auto" === i2 && (f2 = t2.style[e2], t2.style[e2] = i2, i2 = Sd(t2, e2) || i2, f2 ? t2.style[e2] = f2 : $d(t2, e2)), Ib(s2 = [r2, i2]), i2 = s2[1], u2 = (r2 = s2[0]).match(nt) || [], (i2.match(nt) || []).length) {
+      for (; o2 = nt.exec(i2); ) c2 = o2[0], p2 = i2.substring(v2, o2.index), l2 ? l2 = (l2 + 1) % 5 : "rgba(" !== p2.substr(-5) && "hsla(" !== p2.substr(-5) || (l2 = 1), c2 !== (f2 = u2[y2++] || "") && (h2 = parseFloat(f2) || 0, m2 = f2.substr((h2 + "").length), "=" === c2.charAt(1) && (c2 = ma(h2, c2) + m2), d2 = parseFloat(c2), _2 = c2.substr((d2 + "").length), v2 = nt.lastIndex - _2.length, _2 || (_2 = _2 || Y.units[e2] || m2, v2 === i2.length && (i2 += _2, g2.e += _2)), m2 !== _2 && (h2 = ce(t2, e2, f2, _2) || 0), g2._pt = { _next: g2._pt, p: p2 || 1 === y2 ? p2 : ",", s: h2, c: d2 - h2, m: l2 && l2 < 4 || "zIndex" === e2 ? Math.round : 0 });
+      g2.c = v2 < i2.length ? i2.substring(v2, i2.length) : "";
+    } else g2.r = "display" === e2 && "none" === i2 ? Dd : Cd;
+    return st.test(i2) && (g2.e = 0), this._pt = g2;
+  }
+  function ge(t2) {
+    var e2 = t2.split(" "), r2 = e2[0], i2 = e2[1] || "50%";
+    return "top" !== r2 && "bottom" !== r2 && "left" !== i2 && "right" !== i2 || (t2 = r2, r2 = i2, i2 = t2), e2[0] = xr[r2] || r2, e2[1] = xr[i2] || i2, e2.join(" ");
+  }
+  function he(t2, e2) {
+    if (e2.tween && e2.tween._time === e2.tween._dur) {
+      var r2, i2, n2, a2 = e2.t, s2 = a2.style, o2 = e2.u, u2 = a2._gsap;
+      if ("all" === o2 || true === o2) s2.cssText = "", i2 = 1;
+      else for (n2 = (o2 = o2.split(",")).length; -1 < --n2; ) r2 = o2[n2], ur[r2] && (i2 = 1, r2 = "transformOrigin" === r2 ? gr : mr), $d(a2, r2);
+      i2 && ($d(a2, mr), u2 && (u2.svg && a2.removeAttribute("transform"), s2.scale = s2.rotate = s2.translate = "none", Cr(a2, 1), u2.uncache = 1, Nd(s2)));
+    }
+  }
+  function le(t2) {
+    return "matrix(1, 0, 0, 1, 0, 0)" === t2 || "none" === t2 || !t2;
+  }
+  function me(t2) {
+    var e2 = Sd(t2, mr);
+    return le(e2) ? Or : e2.substr(7).match(it).map(ka);
+  }
+  function ne(t2, e2) {
+    var r2, i2, n2, a2, s2 = t2._gsap || ha(t2), o2 = t2.style, u2 = me(t2);
+    return s2.svg && t2.getAttribute("transform") ? "1,0,0,1,0,0" === (u2 = [(n2 = t2.transform.baseVal.consolidate().matrix).a, n2.b, n2.c, n2.d, n2.e, n2.f]).join(",") ? Or : u2 : (u2 !== Or || t2.offsetParent || t2 === Be || s2.svg || (n2 = o2.display, o2.display = "block", (r2 = t2.parentNode) && (t2.offsetParent || t2.getBoundingClientRect().width) || (a2 = 1, i2 = t2.nextElementSibling, Be.appendChild(t2)), u2 = me(t2), n2 ? o2.display = n2 : $d(t2, "display"), a2 && (i2 ? r2.insertBefore(t2, i2) : r2 ? r2.appendChild(t2) : Be.removeChild(t2))), e2 && 6 < u2.length ? [u2[0], u2[1], u2[4], u2[5], u2[12], u2[13]] : u2);
+  }
+  function oe(t2, e2, r2, i2, n2, a2) {
+    var s2, o2, u2, h2 = t2._gsap, l2 = n2 || ne(t2, true), f2 = h2.xOrigin || 0, c2 = h2.yOrigin || 0, d2 = h2.xOffset || 0, p2 = h2.yOffset || 0, _2 = l2[0], m2 = l2[1], g2 = l2[2], v2 = l2[3], y2 = l2[4], T2 = l2[5], b2 = e2.split(" "), w2 = parseFloat(b2[0]) || 0, x2 = parseFloat(b2[1]) || 0;
+    r2 ? l2 !== Or && (o2 = _2 * v2 - m2 * g2) && (u2 = w2 * (-m2 / o2) + x2 * (_2 / o2) - (_2 * T2 - m2 * y2) / o2, w2 = w2 * (v2 / o2) + x2 * (-g2 / o2) + (g2 * T2 - v2 * y2) / o2, x2 = u2) : (w2 = (s2 = Yd(t2)).x + (~b2[0].indexOf("%") ? w2 / 100 * s2.width : w2), x2 = s2.y + (~(b2[1] || b2[0]).indexOf("%") ? x2 / 100 * s2.height : x2)), i2 || false !== i2 && h2.smooth ? (y2 = w2 - f2, T2 = x2 - c2, h2.xOffset = d2 + (y2 * _2 + T2 * g2) - y2, h2.yOffset = p2 + (y2 * m2 + T2 * v2) - T2) : h2.xOffset = h2.yOffset = 0, h2.xOrigin = w2, h2.yOrigin = x2, h2.smooth = !!i2, h2.origin = e2, h2.originIsAbsolute = !!r2, t2.style[gr] = "0px 0px", a2 && (_d(a2, h2, "xOrigin", f2, w2), _d(a2, h2, "yOrigin", c2, x2), _d(a2, h2, "xOffset", d2, h2.xOffset), _d(a2, h2, "yOffset", p2, h2.yOffset)), t2.setAttribute("data-svg-origin", w2 + " " + x2);
+  }
+  function re(t2, e2, r2) {
+    var i2 = _a(e2);
+    return ka(parseFloat(e2) + parseFloat(ce(t2, "x", r2 + "px", i2))) + i2;
+  }
+  function ye(t2, e2, i2, n2, a2) {
+    var s2, o2, u2 = 360, h2 = r(a2), l2 = parseFloat(a2) * (h2 && ~a2.indexOf("rad") ? hr : 1) - n2, f2 = n2 + l2 + "deg";
+    return h2 && ("short" === (s2 = a2.split("_")[1]) && (l2 %= u2) !== l2 % 180 && (l2 += l2 < 0 ? u2 : -u2), "cw" === s2 && l2 < 0 ? l2 = (l2 + 36e9) % u2 - ~~(l2 / u2) * u2 : "ccw" === s2 && 0 < l2 && (l2 = (l2 - 36e9) % u2 - ~~(l2 / u2) * u2)), t2._pt = o2 = new we(t2._pt, e2, i2, n2, l2, yd), o2.e = f2, o2.u = "deg", t2._props.push(i2), o2;
+  }
+  function ze(t2, e2) {
+    for (var r2 in e2) t2[r2] = e2[r2];
+    return t2;
+  }
+  function Ae(t2, e2, r2) {
+    var i2, n2, a2, s2, o2, u2, h2, l2 = ze({}, r2._gsap), f2 = r2.style;
+    for (n2 in l2.svg ? (a2 = r2.getAttribute("transform"), r2.setAttribute("transform", ""), f2[mr] = e2, i2 = Cr(r2, 1), $d(r2, mr), r2.setAttribute("transform", a2)) : (a2 = getComputedStyle(r2)[mr], f2[mr] = e2, i2 = Cr(r2, 1), f2[mr] = a2), ur) (a2 = l2[n2]) !== (s2 = i2[n2]) && "perspective,force3D,transformOrigin,svgOrigin".indexOf(n2) < 0 && (o2 = _a(a2) !== (h2 = _a(s2)) ? ce(r2, n2, a2, h2) : parseFloat(a2), u2 = parseFloat(s2), t2._pt = new we(t2._pt, i2, n2, o2, u2 - o2, xd), t2._pt.u = h2 || 0, t2._props.push(n2));
+    ze(i2, l2);
+  }
+  var Ie, Le, Be, Ne, Ue, Ye, je, Ve, Xe = Bt.Power0, qe = Bt.Power1, Ge = Bt.Power2, Ze = Bt.Power3, We = Bt.Power4, $e = Bt.Linear, He = Bt.Quad, Qe = Bt.Cubic, Je = Bt.Quart, Ke = Bt.Quint, tr = Bt.Strong, er = Bt.Elastic, rr = Bt.Back, ir = Bt.SteppedEase, nr = Bt.Bounce, ar = Bt.Sine, sr = Bt.Expo, or = Bt.Circ, ur = {}, hr = 180 / Math.PI, lr = Math.PI / 180, fr = Math.atan2, cr = /([A-Z])/g, dr = /(left|right|width|margin|padding|x)/i, pr = /[\s,\(]\S/, _r = { autoAlpha: "opacity,visibility", scale: "scaleX,scaleY", alpha: "opacity" }, mr = "transform", gr = mr + "Origin", vr = "O,Moz,ms,Ms,Webkit".split(","), yr = function _checkPropPrefix(t2, e2, r2) {
+    var i2 = (e2 || Ue).style, n2 = 5;
+    if (t2 in i2 && !r2) return t2;
+    for (t2 = t2.charAt(0).toUpperCase() + t2.substr(1); n2-- && !(vr[n2] + t2 in i2); ) ;
+    return n2 < 0 ? null : (3 === n2 ? "ms" : 0 <= n2 ? vr[n2] : "") + t2;
+  }, Tr = { deg: 1, rad: 1, turn: 1 }, br = { grid: 1, flex: 1 }, wr = function _get(t2, e2, r2, i2) {
+    var n2;
+    return Ne || Vd(), e2 in _r && "transform" !== e2 && ~(e2 = _r[e2]).indexOf(",") && (e2 = e2.split(",")[0]), ur[e2] && "transform" !== e2 ? (n2 = Cr(t2, i2), n2 = "transformOrigin" !== e2 ? n2[e2] : n2.svg ? n2.origin : Pr(Sd(t2, gr)) + " " + n2.zOrigin + "px") : (n2 = t2.style[e2]) && "auto" !== n2 && !i2 && !~(n2 + "").indexOf("calc(") || (n2 = kr[e2] && kr[e2](t2, e2, r2) || Sd(t2, e2) || ia(t2, e2) || ("opacity" === e2 ? 1 : 0)), r2 && !~(n2 + "").trim().indexOf(" ") ? ce(t2, e2, n2, r2) + r2 : n2;
+  }, xr = { top: "0%", bottom: "100%", left: "0%", right: "100%", center: "50%" }, kr = { clearProps: function clearProps(t2, e2, r2, i2, n2) {
+    if ("isFromStart" !== n2.data) {
+      var a2 = t2._pt = new we(t2._pt, e2, r2, 0, 0, he);
+      return a2.u = i2, a2.pr = -10, a2.tween = n2, t2._props.push(r2), 1;
+    }
+  } }, Or = [1, 0, 0, 1, 0, 0], Mr = {}, Cr = function _parseTransform(t2, e2) {
+    var r2 = t2._gsap || new Xt(t2);
+    if ("x" in r2 && !e2 && !r2.uncache) return r2;
+    var i2, n2, a2, s2, o2, u2, h2, l2, f2, c2, d2, p2, _2, m2, g2, v2, y2, T2, b2, w2, x2, k2, O2, M2, C2, P2, S2, A2, D2, z2, R2, E2, F2 = t2.style, I2 = r2.scaleX < 0, L2 = "deg", B2 = getComputedStyle(t2), N2 = Sd(t2, gr) || "0";
+    return i2 = n2 = a2 = u2 = h2 = l2 = f2 = c2 = d2 = 0, s2 = o2 = 1, r2.svg = !(!t2.getCTM || !Zd(t2)), B2.translate && ("none" === B2.translate && "none" === B2.scale && "none" === B2.rotate || (F2[mr] = ("none" !== B2.translate ? "translate3d(" + (B2.translate + " 0 0").split(" ").slice(0, 3).join(", ") + ") " : "") + ("none" !== B2.rotate ? "rotate(" + B2.rotate + ") " : "") + ("none" !== B2.scale ? "scale(" + B2.scale.split(" ").join(",") + ") " : "") + ("none" !== B2[mr] ? B2[mr] : "")), F2.scale = F2.rotate = F2.translate = "none"), m2 = ne(t2, r2.svg), r2.svg && (M2 = r2.uncache ? (C2 = t2.getBBox(), N2 = r2.xOrigin - C2.x + "px " + (r2.yOrigin - C2.y) + "px", "") : !e2 && t2.getAttribute("data-svg-origin"), oe(t2, M2 || N2, !!M2 || r2.originIsAbsolute, false !== r2.smooth, m2)), p2 = r2.xOrigin || 0, _2 = r2.yOrigin || 0, m2 !== Or && (T2 = m2[0], b2 = m2[1], w2 = m2[2], x2 = m2[3], i2 = k2 = m2[4], n2 = O2 = m2[5], 6 === m2.length ? (s2 = Math.sqrt(T2 * T2 + b2 * b2), o2 = Math.sqrt(x2 * x2 + w2 * w2), u2 = T2 || b2 ? fr(b2, T2) * hr : 0, (f2 = w2 || x2 ? fr(w2, x2) * hr + u2 : 0) && (o2 *= Math.abs(Math.cos(f2 * lr))), r2.svg && (i2 -= p2 - (p2 * T2 + _2 * w2), n2 -= _2 - (p2 * b2 + _2 * x2))) : (E2 = m2[6], z2 = m2[7], S2 = m2[8], A2 = m2[9], D2 = m2[10], R2 = m2[11], i2 = m2[12], n2 = m2[13], a2 = m2[14], h2 = (g2 = fr(E2, D2)) * hr, g2 && (M2 = k2 * (v2 = Math.cos(-g2)) + S2 * (y2 = Math.sin(-g2)), C2 = O2 * v2 + A2 * y2, P2 = E2 * v2 + D2 * y2, S2 = k2 * -y2 + S2 * v2, A2 = O2 * -y2 + A2 * v2, D2 = E2 * -y2 + D2 * v2, R2 = z2 * -y2 + R2 * v2, k2 = M2, O2 = C2, E2 = P2), l2 = (g2 = fr(-w2, D2)) * hr, g2 && (v2 = Math.cos(-g2), R2 = x2 * (y2 = Math.sin(-g2)) + R2 * v2, T2 = M2 = T2 * v2 - S2 * y2, b2 = C2 = b2 * v2 - A2 * y2, w2 = P2 = w2 * v2 - D2 * y2), u2 = (g2 = fr(b2, T2)) * hr, g2 && (M2 = T2 * (v2 = Math.cos(g2)) + b2 * (y2 = Math.sin(g2)), C2 = k2 * v2 + O2 * y2, b2 = b2 * v2 - T2 * y2, O2 = O2 * v2 - k2 * y2, T2 = M2, k2 = C2), h2 && 359.9 < Math.abs(h2) + Math.abs(u2) && (h2 = u2 = 0, l2 = 180 - l2), s2 = ka(Math.sqrt(T2 * T2 + b2 * b2 + w2 * w2)), o2 = ka(Math.sqrt(O2 * O2 + E2 * E2)), g2 = fr(k2, O2), f2 = 2e-4 < Math.abs(g2) ? g2 * hr : 0, d2 = R2 ? 1 / (R2 < 0 ? -R2 : R2) : 0), r2.svg && (M2 = t2.getAttribute("transform"), r2.forceCSS = t2.setAttribute("transform", "") || !le(Sd(t2, mr)), M2 && t2.setAttribute("transform", M2))), 90 < Math.abs(f2) && Math.abs(f2) < 270 && (I2 ? (s2 *= -1, f2 += u2 <= 0 ? 180 : -180, u2 += u2 <= 0 ? 180 : -180) : (o2 *= -1, f2 += f2 <= 0 ? 180 : -180)), e2 = e2 || r2.uncache, r2.x = i2 - ((r2.xPercent = i2 && (!e2 && r2.xPercent || (Math.round(t2.offsetWidth / 2) === Math.round(-i2) ? -50 : 0))) ? t2.offsetWidth * r2.xPercent / 100 : 0) + "px", r2.y = n2 - ((r2.yPercent = n2 && (!e2 && r2.yPercent || (Math.round(t2.offsetHeight / 2) === Math.round(-n2) ? -50 : 0))) ? t2.offsetHeight * r2.yPercent / 100 : 0) + "px", r2.z = a2 + "px", r2.scaleX = ka(s2), r2.scaleY = ka(o2), r2.rotation = ka(u2) + L2, r2.rotationX = ka(h2) + L2, r2.rotationY = ka(l2) + L2, r2.skewX = f2 + L2, r2.skewY = c2 + L2, r2.transformPerspective = d2 + "px", (r2.zOrigin = parseFloat(N2.split(" ")[2]) || !e2 && r2.zOrigin || 0) && (F2[gr] = Pr(N2)), r2.xOffset = r2.yOffset = 0, r2.force3D = Y.force3D, r2.renderTransform = r2.svg ? Er : Ve ? Rr : Sr, r2.uncache = 0, r2;
+  }, Pr = function _firstTwoOnly(t2) {
+    return (t2 = t2.split(" "))[0] + " " + t2[1];
+  }, Sr = function _renderNon3DTransforms(t2, e2) {
+    e2.z = "0px", e2.rotationY = e2.rotationX = "0deg", e2.force3D = 0, Rr(t2, e2);
+  }, Ar = "0deg", Dr = "0px", zr = ") ", Rr = function _renderCSSTransforms(t2, e2) {
+    var r2 = e2 || this, i2 = r2.xPercent, n2 = r2.yPercent, a2 = r2.x, s2 = r2.y, o2 = r2.z, u2 = r2.rotation, h2 = r2.rotationY, l2 = r2.rotationX, f2 = r2.skewX, c2 = r2.skewY, d2 = r2.scaleX, p2 = r2.scaleY, _2 = r2.transformPerspective, m2 = r2.force3D, g2 = r2.target, v2 = r2.zOrigin, y2 = "", T2 = "auto" === m2 && t2 && 1 !== t2 || true === m2;
+    if (v2 && (l2 !== Ar || h2 !== Ar)) {
+      var b2, w2 = parseFloat(h2) * lr, x2 = Math.sin(w2), k2 = Math.cos(w2);
+      w2 = parseFloat(l2) * lr, b2 = Math.cos(w2), a2 = re(g2, a2, x2 * b2 * -v2), s2 = re(g2, s2, -Math.sin(w2) * -v2), o2 = re(g2, o2, k2 * b2 * -v2 + v2);
+    }
+    _2 !== Dr && (y2 += "perspective(" + _2 + zr), (i2 || n2) && (y2 += "translate(" + i2 + "%, " + n2 + "%) "), !T2 && a2 === Dr && s2 === Dr && o2 === Dr || (y2 += o2 !== Dr || T2 ? "translate3d(" + a2 + ", " + s2 + ", " + o2 + ") " : "translate(" + a2 + ", " + s2 + zr), u2 !== Ar && (y2 += "rotate(" + u2 + zr), h2 !== Ar && (y2 += "rotateY(" + h2 + zr), l2 !== Ar && (y2 += "rotateX(" + l2 + zr), f2 === Ar && c2 === Ar || (y2 += "skew(" + f2 + ", " + c2 + zr), 1 === d2 && 1 === p2 || (y2 += "scale(" + d2 + ", " + p2 + zr), g2.style[mr] = y2 || "translate(0, 0)";
+  }, Er = function _renderSVGTransforms(t2, e2) {
+    var r2, i2, n2, a2, s2, o2 = e2 || this, u2 = o2.xPercent, h2 = o2.yPercent, l2 = o2.x, f2 = o2.y, c2 = o2.rotation, d2 = o2.skewX, p2 = o2.skewY, _2 = o2.scaleX, m2 = o2.scaleY, g2 = o2.target, v2 = o2.xOrigin, y2 = o2.yOrigin, T2 = o2.xOffset, b2 = o2.yOffset, w2 = o2.forceCSS, x2 = parseFloat(l2), k2 = parseFloat(f2);
+    c2 = parseFloat(c2), d2 = parseFloat(d2), (p2 = parseFloat(p2)) && (d2 += p2 = parseFloat(p2), c2 += p2), c2 || d2 ? (c2 *= lr, d2 *= lr, r2 = Math.cos(c2) * _2, i2 = Math.sin(c2) * _2, n2 = Math.sin(c2 - d2) * -m2, a2 = Math.cos(c2 - d2) * m2, d2 && (p2 *= lr, s2 = Math.tan(d2 - p2), n2 *= s2 = Math.sqrt(1 + s2 * s2), a2 *= s2, p2 && (s2 = Math.tan(p2), r2 *= s2 = Math.sqrt(1 + s2 * s2), i2 *= s2)), r2 = ka(r2), i2 = ka(i2), n2 = ka(n2), a2 = ka(a2)) : (r2 = _2, a2 = m2, i2 = n2 = 0), (x2 && !~(l2 + "").indexOf("px") || k2 && !~(f2 + "").indexOf("px")) && (x2 = ce(g2, "x", l2, "px"), k2 = ce(g2, "y", f2, "px")), (v2 || y2 || T2 || b2) && (x2 = ka(x2 + v2 - (v2 * r2 + y2 * n2) + T2), k2 = ka(k2 + y2 - (v2 * i2 + y2 * a2) + b2)), (u2 || h2) && (s2 = g2.getBBox(), x2 = ka(x2 + u2 / 100 * s2.width), k2 = ka(k2 + h2 / 100 * s2.height)), s2 = "matrix(" + r2 + "," + i2 + "," + n2 + "," + a2 + "," + x2 + "," + k2 + ")", g2.setAttribute("transform", s2), w2 && (g2.style[mr] = s2);
+  };
+  ja("padding,margin,Width,Radius", function(e2, r2) {
+    var t2 = "Right", i2 = "Bottom", n2 = "Left", o2 = (r2 < 3 ? ["Top", t2, i2, n2] : ["Top" + n2, "Top" + t2, i2 + t2, i2 + n2]).map(function(t3) {
+      return r2 < 2 ? e2 + t3 : "border" + t3 + e2;
+    });
+    kr[1 < r2 ? "border" + e2 : e2] = function(e3, t3, r3, i3, n3) {
+      var a2, s2;
+      if (arguments.length < 4) return a2 = o2.map(function(t4) {
+        return wr(e3, t4, r3);
+      }), 5 === (s2 = a2.join(" ")).split(a2[0]).length ? a2[0] : s2;
+      a2 = (i3 + "").split(" "), s2 = {}, o2.forEach(function(t4, e4) {
+        return s2[t4] = a2[e4] = a2[e4] || a2[(e4 - 1) / 2 | 0];
+      }), e3.init(t3, s2, n3);
+    };
+  });
+  var Fr, Ir, Lr, Br = { name: "css", register: Vd, targetTest: function targetTest(t2) {
+    return t2.style && t2.nodeType;
+  }, init: function init(t2, e2, i2, n2, a2) {
+    var s2, o2, u2, h2, l2, f2, c2, d2, p2, _2, m2, g2, v2, y2, T2, b2, w2, x2 = this._props, k2 = t2.style, O2 = i2.vars.startAt;
+    for (c2 in Ne || Vd(), this.styles = this.styles || Pd(t2), b2 = this.styles.props, this.tween = i2, e2) if ("autoRound" !== c2 && (o2 = e2[c2], !mt[c2] || !cc(c2, e2, i2, n2, t2, a2))) {
+      if (l2 = typeof o2, f2 = kr[c2], "function" === l2 && (l2 = typeof (o2 = o2.call(i2, n2, t2, a2))), "string" === l2 && ~o2.indexOf("random(") && (o2 = rb(o2)), f2) f2(this, t2, c2, o2, i2) && (T2 = 1);
+      else if ("--" === c2.substr(0, 2)) s2 = (getComputedStyle(t2).getPropertyValue(c2) + "").trim(), o2 += "", Et.lastIndex = 0, Et.test(s2) || (d2 = _a(s2), (p2 = _a(o2)) ? d2 !== p2 && (s2 = ce(t2, c2, s2, p2) + p2) : d2 && (o2 += d2)), this.add(k2, "setProperty", s2, o2, n2, a2, 0, 0, c2), x2.push(c2), b2.push(c2, 0, k2[c2]);
+      else if ("undefined" !== l2) {
+        if (O2 && c2 in O2 ? (s2 = "function" == typeof O2[c2] ? O2[c2].call(i2, n2, t2, a2) : O2[c2], r(s2) && ~s2.indexOf("random(") && (s2 = rb(s2)), _a(s2 + "") || "auto" === s2 || (s2 += Y.units[c2] || _a(wr(t2, c2)) || ""), "=" === (s2 + "").charAt(1) && (s2 = wr(t2, c2))) : s2 = wr(t2, c2), h2 = parseFloat(s2), (_2 = "string" === l2 && "=" === o2.charAt(1) && o2.substr(0, 2)) && (o2 = o2.substr(2)), u2 = parseFloat(o2), c2 in _r && ("autoAlpha" === c2 && (1 === h2 && "hidden" === wr(t2, "visibility") && u2 && (h2 = 0), b2.push("visibility", 0, k2.visibility), _d(this, k2, "visibility", h2 ? "inherit" : "hidden", u2 ? "inherit" : "hidden", !u2)), "scale" !== c2 && "transform" !== c2 && ~(c2 = _r[c2]).indexOf(",") && (c2 = c2.split(",")[0])), m2 = c2 in ur) {
+          if (this.styles.save(c2), w2 = o2, "string" === l2 && "var(--" === o2.substring(0, 6)) {
+            if ("calc(" === (o2 = Sd(t2, o2.substring(4, o2.indexOf(")")))).substring(0, 5)) {
+              var M2 = t2.style.perspective;
+              t2.style.perspective = o2, o2 = Sd(t2, "perspective"), M2 ? t2.style.perspective = M2 : $d(t2, "perspective");
+            }
+            u2 = parseFloat(o2);
+          }
+          if (g2 || ((v2 = t2._gsap).renderTransform && !e2.parseTransform || Cr(t2, e2.parseTransform), y2 = false !== e2.smoothOrigin && v2.smooth, (g2 = this._pt = new we(this._pt, k2, mr, 0, 1, v2.renderTransform, v2, 0, -1)).dep = 1), "scale" === c2) this._pt = new we(this._pt, v2, "scaleY", v2.scaleY, (_2 ? ma(v2.scaleY, _2 + u2) : u2) - v2.scaleY || 0, xd), this._pt.u = 0, x2.push("scaleY", c2), c2 += "X";
+          else {
+            if ("transformOrigin" === c2) {
+              b2.push(gr, 0, k2[gr]), o2 = ge(o2), v2.svg ? oe(t2, o2, 0, y2, 0, this) : ((p2 = parseFloat(o2.split(" ")[2]) || 0) !== v2.zOrigin && _d(this, v2, "zOrigin", v2.zOrigin, p2), _d(this, k2, c2, Pr(s2), Pr(o2)));
+              continue;
+            }
+            if ("svgOrigin" === c2) {
+              oe(t2, o2, 1, y2, 0, this);
+              continue;
+            }
+            if (c2 in Mr) {
+              ye(this, v2, c2, h2, _2 ? ma(h2, _2 + o2) : o2);
+              continue;
+            }
+            if ("smoothOrigin" === c2) {
+              _d(this, v2, "smooth", v2.smooth, o2);
+              continue;
+            }
+            if ("force3D" === c2) {
+              v2[c2] = o2;
+              continue;
+            }
+            if ("transform" === c2) {
+              Ae(this, o2, t2);
+              continue;
+            }
+          }
+        } else c2 in k2 || (c2 = yr(c2) || c2);
+        if (m2 || (u2 || 0 === u2) && (h2 || 0 === h2) && !pr.test(o2) && c2 in k2) u2 = u2 || 0, (d2 = (s2 + "").substr((h2 + "").length)) !== (p2 = _a(o2) || (c2 in Y.units ? Y.units[c2] : d2)) && (h2 = ce(t2, c2, s2, p2)), this._pt = new we(this._pt, m2 ? v2 : k2, c2, h2, (_2 ? ma(h2, _2 + u2) : u2) - h2, m2 || "px" !== p2 && "zIndex" !== c2 || false === e2.autoRound ? xd : Bd), this._pt.u = p2 || 0, m2 && w2 !== o2 ? (this._pt.b = s2, this._pt.e = w2, this._pt.r = Ad) : d2 !== p2 && "%" !== p2 && (this._pt.b = s2, this._pt.r = zd);
+        else if (c2 in k2) ee.call(this, t2, c2, s2, _2 ? _2 + o2 : o2);
+        else if (c2 in t2) this.add(t2, c2, s2 || t2[c2], _2 ? _2 + o2 : o2, n2, a2);
+        else if ("parseTransform" !== c2) {
+          S(c2, o2);
+          continue;
+        }
+        m2 || (c2 in k2 ? b2.push(c2, 0, k2[c2]) : "function" == typeof t2[c2] ? b2.push(c2, 2, t2[c2]()) : b2.push(c2, 1, s2 || t2[c2])), x2.push(c2);
+      }
+    }
+    T2 && be(this);
+  }, render: function render(t2, e2) {
+    if (e2.tween._time || !je()) for (var r2 = e2._pt; r2; ) r2.r(t2, r2.d), r2 = r2._next;
+    else e2.styles.revert();
+  }, get: wr, aliases: _r, getSetter: function getSetter(t2, e2, r2) {
+    var i2 = _r[e2];
+    return i2 && i2.indexOf(",") < 0 && (e2 = i2), e2 in ur && e2 !== gr && (t2._gsap.x || wr(t2, "x")) ? r2 && Ye === r2 ? "scale" === e2 ? Hd : Gd : (Ye = r2 || {}) && ("scale" === e2 ? Id : Jd) : t2.style && !u(t2.style[e2]) ? Ed : ~e2.indexOf("-") ? Fd : ue(t2, e2);
+  }, core: { _removeProperty: $d, _getMatrix: ne } };
+  Fe.utils.checkPrefix = yr, Fe.core.getStyleSaver = Pd, Lr = ja((Fr = "x,y,z,scale,scaleX,scaleY,xPercent,yPercent") + "," + (Ir = "rotation,rotationX,rotationY,skewX,skewY") + ",transform,transformOrigin,svgOrigin,force3D,smoothOrigin,transformPerspective", function(t2) {
+    ur[t2] = 1;
+  }), ja(Ir, function(t2) {
+    Y.units[t2] = "deg", Mr[t2] = 1;
+  }), _r[Lr[13]] = Fr + "," + Ir, ja("0:translateX,1:translateY,2:translateZ,8:rotate,8:rotationZ,8:rotateZ,9:rotateX,10:rotateY", function(t2) {
+    var e2 = t2.split(":");
+    _r[e2[1]] = Lr[e2[0]];
+  }), ja("x,y,z,top,right,bottom,left,width,height,fontSize,padding,margin,perspective", function(t2) {
+    Y.units[t2] = "px";
+  }), Fe.registerPlugin(Br);
+  var Nr = Fe.registerPlugin(Br) || Fe, Ur = Nr.core.Tween;
+  e.Back = rr, e.Bounce = nr, e.CSSPlugin = Br, e.Circ = or, e.Cubic = Qe, e.Elastic = er, e.Expo = sr, e.Linear = $e, e.Power0 = Xe, e.Power1 = qe, e.Power2 = Ge, e.Power3 = Ze, e.Power4 = We, e.Quad = He, e.Quart = Je, e.Quint = Ke, e.Sine = ar, e.SteppedEase = ir, e.Strong = tr, e.TimelineLite = Gt, e.TimelineMax = Gt, e.TweenLite = te, e.TweenMax = Ur, e.default = Nr, e.gsap = Nr;
+  if (typeof window === "undefined" || window !== e) {
+    Object.defineProperty(e, "__esModule", { value: true });
+  } else {
+    delete e.default;
+  }
+});</script>
+    <script data-hf-inlined-src="assets/data/stati.js">window.__STATI = { "fps": 30, "n": 180, "frames": [{ "f": 0, "t": 0, "objs": [{ "id": 1, "x": 80, "y": 90, "poly": [[45, 73], [115, 73], [115, 107], [45, 107]], "label": "T1 8.0 m/s" }, { "id": 2, "x": 120, "y": 221.04, "poly": [[88.34, 198.41], [157.35, 210.14], [151.66, 243.66], [82.65, 231.93]], "label": "T2 11.0 m/s" }, { "id": 3, "x": 160, "y": 332.73, "poly": [[128.65, 309.68], [197.5, 322.34], [191.35, 355.78], [122.5, 343.12]], "label": "T3 14.0 m/s" }] }, { "f": 1, "t": 0.0333, "objs": [{ "id": 1, "x": 83, "y": 91.08, "poly": [[48.11, 73.85], [118.11, 74.32], [117.89, 108.32], [47.89, 107.85]], "label": "T1 8.0 m/s" }, { "id": 2, "x": 123.9, "y": 221.6, "poly": [[92.32, 198.87], [161.29, 210.84], [155.48, 244.34], [86.51, 232.37]], "label": "T2 11.0 m/s" }, { "id": 3, "x": 164.8, "y": 332.26, "poly": [[133.39, 309.3], [202.27, 321.76], [196.21, 355.22], [127.33, 342.76]], "label": "T3 14.0 m/s" }] }, { "f": 2, "t": 0.0667, "objs": [{ "id": 1, "x": 86, "y": 92.16, "poly": [[51.23, 74.7], [121.22, 75.63], [120.77, 109.63], [50.78, 108.7]], "label": "T1 8.1 m/s" }, { "id": 2, "x": 127.8, "y": 222.13, "poly": [[96.3, 199.29], [165.23, 211.48], [159.3, 244.96], [90.37, 232.77]], "label": "T2 11.1 m/s" }, { "id": 3, "x": 169.6, "y": 331.75, "poly": [[138.12, 308.88], [207.03, 321.13], [201.08, 354.61], [132.17, 342.36]], "label": "T3 14.1 m/s" }] }, { "f": 3, "t": 0.1, "objs": [{ "id": 1, "x": 89, "y": 93.24, "poly": [[54.35, 75.55], [124.33, 76.94], [123.65, 110.94], [53.67, 109.54]], "label": "T1 8.1 m/s" }, { "id": 2, "x": 131.7, "y": 222.61, "poly": [[100.27, 199.67], [169.16, 212.09], [163.13, 245.55], [94.24, 233.14]], "label": "T2 11.1 m/s" }, { "id": 3, "x": 174.4, "y": 331.19, "poly": [[142.84, 308.43], [211.8, 320.46], [205.96, 353.95], [137, 341.93]], "label": "T3 14.1 m/s" }] }, { "f": 4, "t": 0.1333, "objs": [{ "id": 1, "x": 92, "y": 94.31, "poly": [[57.46, 76.39], [127.44, 78.25], [126.54, 112.24], [56.56, 110.38]], "label": "T1 8.1 m/s" }, { "id": 2, "x": 135.6, "y": 223.05, "poly": [[104.24, 200.02], [173.09, 212.64], [166.96, 246.08], [98.11, 233.47]], "label": "T2 11.1 m/s" }, { "id": 3, "x": 179.2, "y": 330.6, "poly": [[147.56, 307.95], [216.56, 319.73], [210.84, 353.25], [141.84, 341.46]], "label": "T3 14.1 m/s" }] }, { "f": 5, "t": 0.1667, "objs": [{ "id": 1, "x": 95, "y": 95.37, "poly": [[60.58, 77.22], [130.54, 79.54], [129.42, 113.53], [59.46, 111.2]], "label": "T1 8.2 m/s" }, { "id": 2, "x": 139.5, "y": 223.45, "poly": [[108.2, 200.34], [177.02, 213.14], [170.8, 246.56], [101.98, 233.76]], "label": "T2 11.2 m/s" }, { "id": 3, "x": 184, "y": 329.96, "poly": [[152.28, 307.43], [221.32, 318.96], [215.72, 352.5], [146.68, 340.96]], "label": "T3 14.2 m/s" }] }, { "f": 6, "t": 0.2, "objs": [{ "id": 1, "x": 98, "y": 96.43, "poly": [[63.7, 78.05], [133.65, 80.83], [132.3, 114.8], [62.35, 112.02]], "label": "T1 8.2 m/s" }, { "id": 2, "x": 143.4, "y": 223.8, "poly": [[112.16, 200.61], [180.94, 213.58], [174.64, 246.99], [105.86, 234.02]], "label": "T2 11.2 m/s" }, { "id": 3, "x": 188.8, "y": 329.29, "poly": [[156.99, 306.88], [226.08, 318.15], [220.61, 351.71], [151.52, 340.44]], "label": "T3 14.2 m/s" }] }, { "f": 7, "t": 0.2333, "objs": [{ "id": 1, "x": 101, "y": 97.47, "poly": [[66.82, 78.87], [136.75, 82.1], [135.18, 116.07], [65.25, 112.83]], "label": "T1 8.2 m/s" }, { "id": 2, "x": 147.3, "y": 224.11, "poly": [[116.11, 200.85], [184.87, 213.98], [178.49, 247.38], [109.73, 234.24]], "label": "T2 11.2 m/s" }, { "id": 3, "x": 193.6, "y": 328.59, "poly": [[161.7, 306.3], [230.84, 317.29], [225.5, 350.87], [156.36, 339.88]], "label": "T3 14.2 m/s" }] }, { "f": 8, "t": 0.2667, "objs": [{ "id": 1, "x": 104, "y": 98.49, "poly": [[69.94, 79.67], [139.85, 83.36], [138.06, 117.31], [68.15, 113.63]], "label": "T1 8.3 m/s" }, { "id": 2, "x": 151.2, "y": 224.37, "poly": [[120.06, 201.04], [188.79, 214.32], [182.34, 247.7], [113.61, 234.43]], "label": "T2 11.3 m/s" }, { "id": 3, "x": 198.4, "y": 327.85, "poly": [[166.41, 305.69], [235.59, 316.4], [230.39, 350], [161.21, 339.29]], "label": "T3 14.3 m/s" }] }, { "f": 9, "t": 0.3, "objs": [{ "id": 1, "x": 107, "y": 99.5, "poly": [[73.07, 80.47], [142.94, 84.6], [140.93, 118.54], [71.06, 114.41]], "label": "T1 8.3 m/s" }, { "id": 2, "x": 155.1, "y": 224.59, "poly": [[124, 201.2], [192.71, 214.61], [186.2, 247.98], [117.49, 234.57]], "label": "T2 11.3 m/s" }, { "id": 3, "x": 203.2, "y": 327.07, "poly": [[171.11, 305.06], [240.34, 315.46], [235.29, 349.08], [166.06, 338.68]], "label": "T3 14.3 m/s" }] }, { "f": 10, "t": 0.3333, "objs": [{ "id": 1, "x": 110, "y": 100.5, "poly": [[76.19, 81.25], [146.04, 85.82], [143.81, 119.75], [73.96, 115.17]], "label": "T1 8.3 m/s" }, { "id": 2, "x": 159, "y": 224.76, "poly": [[127.94, 201.32], [196.62, 214.85], [190.06, 248.2], [121.38, 234.68]], "label": "T2 11.3 m/s" }, { "id": 3, "x": 208, "y": 326.26, "poly": [[175.82, 304.4], [245.08, 314.48], [240.18, 348.13], [170.92, 338.04]], "label": "T3 14.3 m/s" }] }, { "f": 11, "t": 0.3667, "objs": [{ "id": 1, "x": 113, "y": 101.47, "poly": [[79.31, 82.01], [149.13, 87.02], [146.69, 120.93], [76.87, 115.92]], "label": "T1 8.4 m/s" }, { "id": 2, "x": 162.9, "y": 224.89, "poly": [[131.88, 201.4], [200.54, 215.03], [193.92, 248.38], [125.26, 234.75]], "label": "T2 11.4 m/s" }, { "id": 3, "x": 212.8, "y": 325.43, "poly": [[180.51, 303.71], [249.83, 313.47], [245.09, 347.14], [175.77, 337.38]], "label": "T3 14.4 m/s" }] }, { "f": 12, "t": 0.4, "objs": [{ "id": 1, "x": 116, "y": 102.42, "poly": [[82.43, 82.75], [152.22, 88.2], [149.57, 122.09], [79.78, 116.65]], "label": "T1 8.4 m/s" }, { "id": 2, "x": 166.8, "y": 224.97, "poly": [[135.81, 201.44], [204.45, 215.15], [197.79, 248.49], [129.15, 234.79]], "label": "T2 11.4 m/s" }, { "id": 3, "x": 217.6, "y": 324.56, "poly": [[185.21, 303], [254.57, 312.43], [249.99, 346.12], [180.63, 336.69]], "label": "T3 14.4 m/s" }] }, { "f": 13, "t": 0.4333, "objs": [{ "id": 1, "x": 119, "y": 103.35, "poly": [[85.55, 83.47], [155.3, 89.35], [152.45, 123.23], [82.7, 117.35]], "label": "T1 8.4 m/s" }, { "id": 2, "x": 170.7, "y": 225, "poly": [[139.73, 201.44], [208.36, 215.22], [201.67, 248.56], [133.04, 234.78]], "label": "T2 11.4 m/s" }, { "id": 3, "x": 222.4, "y": 323.66, "poly": [[189.9, 302.27], [259.31, 311.35], [254.9, 345.06], [185.49, 335.98]], "label": "T3 14.4 m/s" }] }, { "f": 14, "t": 0.4667, "objs": [{ "id": 1, "x": 122, "y": 104.25, "poly": [[88.67, 84.18], [158.39, 90.47], [155.33, 124.33], [85.61, 118.04]], "label": "T1 8.4 m/s" }, { "id": 2, "x": 174.6, "y": 224.98, "poly": [[143.65, 201.4], [212.27, 215.24], [205.55, 248.56], [136.93, 234.73]], "label": "T2 11.4 m/s" }, { "id": 3, "x": 227.2, "y": 322.74, "poly": [[194.59, 301.51], [264.05, 310.24], [259.81, 343.97], [190.35, 335.25]], "label": "T3 14.4 m/s" }] }, { "f": 15, "t": 0.5, "objs": [{ "id": 1, "x": 125, "y": 105.13, "poly": [[91.79, 84.86], [161.47, 91.56], [158.21, 125.4], [88.53, 118.7]], "label": "T1 8.5 m/s" }, { "id": 2, "x": 178.5, "y": 224.92, "poly": [[147.56, 201.32], [216.17, 215.2], [209.44, 248.52], [140.83, 234.65]], "label": "T2 11.5 m/s" }, { "id": 3, "x": 232, "y": 321.8, "poly": [[199.28, 300.74], [268.78, 309.1], [264.72, 342.86], [195.22, 334.5]], "label": "T3 14.5 m/s" }] }, { "f": 16, "t": 0.5333, "objs": [{ "id": 1, "x": 128, "y": 105.98, "poly": [[94.91, 85.51], [164.54, 92.62], [161.09, 126.44], [91.46, 119.34]], "label": "T1 8.5 m/s" }, { "id": 2, "x": 182.4, "y": 224.81, "poly": [[151.47, 201.2], [220.08, 215.1], [213.33, 248.42], [144.72, 234.53]], "label": "T2 11.5 m/s" }, { "id": 3, "x": 236.8, "y": 320.83, "poly": [[203.97, 299.95], [273.51, 307.94], [269.63, 341.72], [200.09, 333.73]], "label": "T3 14.5 m/s" }] }, { "f": 17, "t": 0.5667, "objs": [{ "id": 1, "x": 131, "y": 106.8, "poly": [[98.02, 86.14], [167.62, 93.64], [163.98, 127.45], [94.38, 119.95]], "label": "T1 8.5 m/s" }, { "id": 2, "x": 186.3, "y": 224.66, "poly": [[155.38, 201.04], [223.98, 214.95], [217.22, 248.27], [148.62, 234.36]], "label": "T2 11.5 m/s" }, { "id": 3, "x": 241.6, "y": 319.85, "poly": [[208.65, 299.15], [278.24, 306.75], [274.55, 340.55], [204.96, 332.95]], "label": "T3 14.5 m/s" }] }, { "f": 18, "t": 0.6, "objs": [{ "id": 1, "x": 134, "y": 107.58, "poly": [[101.14, 86.75], [170.69, 94.63], [166.86, 128.42], [97.31, 120.53]], "label": "T1 8.6 m/s" }, { "id": 2, "x": 190.2, "y": 224.45, "poly": [[159.27, 200.84], [227.88, 214.74], [221.13, 248.07], [152.52, 234.17]], "label": "T2 11.6 m/s" }, { "id": 3, "x": 246.4, "y": 318.84, "poly": [[213.34, 298.33], [282.96, 305.54], [279.46, 339.36], [209.84, 332.15]], "label": "T3 14.6 m/s" }] }, { "f": 19, "t": 0.6333, "objs": [{ "id": 1, "x": 137, "y": 108.34, "poly": [[104.25, 87.32], [173.76, 95.59], [169.75, 129.35], [100.24, 121.08]], "label": "T1 8.6 m/s" }, { "id": 2, "x": 194.1, "y": 224.21, "poly": [[163.17, 200.6], [231.78, 214.48], [225.03, 247.81], [156.42, 233.93]], "label": "T2 11.6 m/s" }, { "id": 3, "x": 251.2, "y": 317.82, "poly": [[218.02, 297.5], [287.69, 304.3], [284.38, 338.14], [214.71, 331.34]], "label": "T3 14.6 m/s" }] }, { "f": 20, "t": 0.6667, "objs": [{ "id": 1, "x": 140, "y": 109.05, "poly": [[107.36, 87.87], [176.83, 96.5], [172.64, 130.24], [103.17, 121.61]], "label": "T1 8.6 m/s" }, { "id": 2, "x": 198, "y": 223.91, "poly": [[167.05, 200.33], [235.67, 214.17], [228.95, 247.5], [160.33, 233.66]], "label": "T2 11.6 m/s" }, { "id": 3, "x": 256, "y": 316.79, "poly": [[222.7, 296.66], [292.41, 303.05], [289.3, 336.91], [219.59, 330.52]], "label": "T3 14.6 m/s" }] }, { "f": 21, "t": 0.7, "objs": [{ "id": 1, "x": 143, "y": 109.74, "poly": [[110.47, 88.38], [179.89, 97.38], [175.53, 131.09], [106.11, 122.1]], "label": "T1 8.6 m/s" }, { "id": 2, "x": 201.9, "y": 223.58, "poly": [[170.94, 200.01], [239.56, 213.8], [232.86, 247.14], [164.24, 233.35]], "label": "T2 11.6 m/s" }, { "id": 3, "x": 260.8, "y": 315.74, "poly": [[227.38, 295.81], [297.12, 301.79], [294.22, 335.66], [224.48, 329.69]], "label": "T3 14.6 m/s" }] }, { "f": 22, "t": 0.7333, "objs": [{ "id": 1, "x": 146, "y": 110.38, "poly": [[113.58, 88.86], [182.96, 98.21], [178.42, 131.9], [109.04, 122.56]], "label": "T1 8.7 m/s" }, { "id": 2, "x": 205.8, "y": 223.19, "poly": [[174.81, 199.66], [243.45, 213.39], [236.79, 246.73], [168.15, 233]], "label": "T2 11.7 m/s" }, { "id": 3, "x": 265.6, "y": 314.68, "poly": [[232.06, 294.96], [301.84, 300.51], [299.14, 334.4], [229.36, 328.85]], "label": "T3 14.7 m/s" }] }, { "f": 23, "t": 0.7667, "objs": [{ "id": 1, "x": 149, "y": 110.99, "poly": [[116.69, 89.31], [186.01, 99], [181.31, 132.67], [111.99, 122.99]], "label": "T1 8.7 m/s" }, { "id": 2, "x": 209.7, "y": 222.77, "poly": [[178.68, 199.27], [247.34, 212.92], [240.72, 246.26], [172.06, 232.62]], "label": "T2 11.7 m/s" }, { "id": 3, "x": 270.4, "y": 313.61, "poly": [[236.74, 294.09], [306.55, 299.22], [304.06, 333.13], [234.25, 328]], "label": "T3 14.7 m/s" }] }, { "f": 24, "t": 0.8, "objs": [{ "id": 1, "x": 152, "y": 111.56, "poly": [[119.79, 89.73], [189.07, 99.74], [184.21, 133.39], [114.93, 123.38]], "label": "T1 8.7 m/s" }, { "id": 2, "x": 213.6, "y": 222.3, "poly": [[182.55, 198.85], [251.23, 212.39], [244.65, 245.75], [175.97, 232.2]], "label": "T2 11.7 m/s" }, { "id": 3, "x": 275.2, "y": 312.54, "poly": [[241.42, 293.23], [311.26, 297.92], [308.98, 331.84], [239.14, 327.15]], "label": "T3 14.7 m/s" }] }, { "f": 25, "t": 0.8333, "objs": [{ "id": 1, "x": 155, "y": 112.09, "poly": [[122.89, 90.11], [192.12, 100.44], [187.11, 134.06], [117.88, 123.74]], "label": "T1 8.7 m/s" }, { "id": 2, "x": 217.5, "y": 221.79, "poly": [[186.41, 198.39], [255.11, 211.82], [248.59, 245.19], [179.89, 231.75]], "label": "T2 11.7 m/s" }, { "id": 3, "x": 280, "y": 311.46, "poly": [[246.1, 292.36], [315.97, 296.61], [313.9, 330.55], [244.03, 326.3]], "label": "T3 14.7 m/s" }] }, { "f": 26, "t": 0.8667, "objs": [{ "id": 1, "x": 158, "y": 112.57, "poly": [[125.99, 90.46], [195.18, 101.09], [190.01, 134.69], [120.82, 124.06]], "label": "T1 8.8 m/s" }, { "id": 2, "x": 221.4, "y": 221.24, "poly": [[190.27, 197.89], [258.99, 211.2], [252.53, 244.58], [183.81, 231.27]], "label": "T2 11.8 m/s" }, { "id": 3, "x": 284.8, "y": 310.37, "poly": [[250.77, 291.5], [320.67, 295.3], [318.83, 329.25], [248.93, 325.45]], "label": "T3 14.8 m/s" }] }, { "f": 27, "t": 0.9, "objs": [{ "id": 1, "x": 161, "y": 113.02, "poly": [[129.08, 90.77], [198.22, 101.69], [192.92, 135.27], [123.78, 124.35]], "label": "T1 8.8 m/s" }, { "id": 2, "x": 225.3, "y": 220.64, "poly": [[194.12, 197.36], [262.87, 210.53], [256.48, 243.93], [187.73, 230.76]], "label": "T2 11.8 m/s" }, { "id": 3, "x": 289.6, "y": 309.29, "poly": [[255.45, 290.64], [325.37, 293.98], [323.75, 327.94], [253.83, 324.6]], "label": "T3 14.8 m/s" }] }, { "f": 28, "t": 0.9333, "objs": [{ "id": 1, "x": 164, "y": 113.42, "poly": [[132.17, 91.04], [201.27, 102.24], [195.83, 135.8], [126.73, 124.6]], "label": "T1 8.8 m/s" }, { "id": 2, "x": 229.2, "y": 220.01, "poly": [[197.97, 196.8], [266.75, 209.82], [260.43, 243.23], [191.65, 230.21]], "label": "T2 11.8 m/s" }, { "id": 3, "x": 294.4, "y": 308.21, "poly": [[260.13, 289.78], [330.07, 292.67], [328.67, 326.64], [258.73, 323.75]], "label": "T3 14.8 m/s" }] }, { "f": 29, "t": 0.9667, "objs": [{ "id": 1, "x": 167, "y": 113.78, "poly": [[135.26, 91.27], [204.31, 102.74], [198.74, 136.28], [129.69, 124.81]], "label": "T1 8.8 m/s" }, { "id": 2, "x": 233.1, "y": 219.35, "poly": [[201.81, 196.21], [270.63, 209.06], [264.39, 242.48], [195.57, 229.64]], "label": "T2 11.8 m/s" }, { "id": 3, "x": 299.2, "y": 307.13, "poly": [[264.81, 288.92], [334.77, 291.36], [333.59, 325.34], [263.63, 322.9]], "label": "T3 14.8 m/s" }] }, { "f": 30, "t": 1, "objs": [{ "id": 1, "x": 170, "y": 114.09, "poly": [[138.34, 91.47], [207.35, 103.19], [201.66, 136.71], [132.65, 124.99]], "label": "T1 8.8 m/s" }, { "id": 2, "x": 237, "y": 218.64, "poly": [[205.65, 195.59], [274.5, 208.25], [268.35, 241.69], [199.5, 229.03]], "label": "T2 11.8 m/s" }, { "id": 3, "x": 304, "y": 306.06, "poly": [[269.49, 288.08], [339.47, 290.05], [338.51, 324.04], [268.53, 322.06]], "label": "T3 14.8 m/s" }] }, { "f": 31, "t": 1.0333, "objs": [{ "id": 1, "x": 173, "y": 114.36, "poly": [[141.42, 91.62], [210.39, 103.59], [204.58, 137.09], [135.61, 125.12]], "label": "T1 8.9 m/s" }, { "id": 2, "x": 240.9, "y": 217.9, "poly": [[209.49, 194.94], [278.37, 207.41], [272.31, 240.86], [203.43, 228.4]], "label": "T2 11.9 m/s" }, { "id": 3, "x": 308.8, "y": 304.99, "poly": [[274.18, 287.24], [344.16, 288.75], [343.42, 322.74], [273.44, 321.23]], "label": "T3 14.9 m/s" }] }, { "f": 32, "t": 1.0667, "objs": [{ "id": 1, "x": 176, "y": 114.58, "poly": [[144.5, 91.74], [213.43, 103.94], [207.5, 137.42], [138.57, 125.22]], "label": "T1 8.9 m/s" }, { "id": 2, "x": 244.8, "y": 217.13, "poly": [[213.32, 194.27], [282.23, 206.52], [276.28, 239.99], [207.37, 227.74]], "label": "T2 11.9 m/s" }, { "id": 3, "x": 313.6, "y": 303.93, "poly": [[278.86, 286.41], [348.85, 287.46], [348.34, 321.46], [278.35, 320.41]], "label": "T3 14.9 m/s" }] }, { "f": 33, "t": 1.1, "objs": [{ "id": 1, "x": 179, "y": 114.75, "poly": [[147.57, 91.82], [216.46, 104.23], [210.43, 137.69], [141.54, 125.28]], "label": "T1 8.9 m/s" }, { "id": 2, "x": 248.7, "y": 216.33, "poly": [[217.14, 193.57], [286.1, 205.59], [280.26, 239.09], [211.3, 227.06]], "label": "T2 11.9 m/s" }, { "id": 3, "x": 318.4, "y": 302.89, "poly": [[283.54, 285.6], [353.54, 286.18], [353.26, 320.18], [283.26, 319.6]], "label": "T3 14.9 m/s" }] }, { "f": 34, "t": 1.1333, "objs": [{ "id": 1, "x": 182, "y": 114.88, "poly": [[150.64, 91.85], [219.49, 104.47], [213.36, 137.91], [144.51, 125.3]], "label": "T1 8.9 m/s" }, { "id": 2, "x": 252.6, "y": 215.49, "poly": [[220.96, 192.84], [289.96, 204.63], [284.24, 238.14], [215.24, 226.35]], "label": "T2 11.9 m/s" }, { "id": 3, "x": 323.2, "y": 301.86, "poly": [[288.23, 284.8], [358.23, 284.92], [358.17, 318.92], [288.17, 318.8]], "label": "T3 14.9 m/s" }] }, { "f": 35, "t": 1.1667, "objs": [{ "id": 1, "x": 185, "y": 114.96, "poly": [[153.7, 91.85], [222.52, 104.65], [216.3, 138.08], [147.48, 125.28]], "label": "T1 8.9 m/s" }, { "id": 2, "x": 256.5, "y": 214.63, "poly": [[224.78, 192.09], [293.82, 203.63], [288.22, 237.16], [219.18, 225.63]], "label": "T2 11.9 m/s" }, { "id": 3, "x": 328, "y": 300.84, "poly": [[292.92, 284.02], [362.91, 283.67], [363.08, 317.67], [293.09, 318.02]], "label": "T3 14.9 m/s" }] }, { "f": 36, "t": 1.2, "objs": [{ "id": 1, "x": 188, "y": 115, "poly": [[156.76, 91.81], [225.54, 104.78], [219.24, 138.19], [150.46, 125.22]], "label": "T1 8.9 m/s" }, { "id": 2, "x": 260.4, "y": 213.73, "poly": [[228.59, 191.32], [297.68, 202.59], [292.21, 236.15], [223.12, 224.88]], "label": "T2 11.9 m/s" }, { "id": 3, "x": 332.8, "y": 299.84, "poly": [[297.6, 283.25], [367.6, 282.43], [368, 316.43], [298, 317.25]], "label": "T3 14.9 m/s" }] }, { "f": 37, "t": 1.2333, "objs": [{ "id": 1, "x": 191, "y": 114.99, "poly": [[159.81, 91.72], [228.57, 104.85], [222.19, 138.25], [153.43, 125.12]], "label": "T1 8.9 m/s" }, { "id": 2, "x": 264.3, "y": 212.82, "poly": [[232.4, 190.53], [301.54, 201.52], [296.2, 235.1], [227.06, 224.11]], "label": "T2 11.9 m/s" }, { "id": 3, "x": 337.6, "y": 298.86, "poly": [[302.29, 282.51], [372.28, 281.22], [372.91, 315.22], [302.92, 316.5]], "label": "T3 14.9 m/s" }] }, { "f": 38, "t": 1.2667, "objs": [{ "id": 1, "x": 194, "y": 114.93, "poly": [[162.86, 91.6], [231.59, 104.87], [225.14, 138.26], [156.41, 124.98]], "label": "T1 9.0 m/s" }, { "id": 2, "x": 268.2, "y": 211.87, "poly": [[236.21, 189.72], [305.39, 200.43], [300.19, 234.03], [231.01, 223.32]], "label": "T2 12.0 m/s" }, { "id": 3, "x": 342.4, "y": 297.9, "poly": [[306.99, 281.78], [376.97, 280.04], [377.81, 314.02], [307.83, 315.77]], "label": "T3 15.0 m/s" }] }, { "f": 39, "t": 1.3, "objs": [{ "id": 1, "x": 197, "y": 114.82, "poly": [[165.9, 91.43], [234.61, 104.84], [228.1, 138.21], [159.39, 124.8]], "label": "T1 9.0 m/s" }, { "id": 2, "x": 272.1, "y": 210.91, "poly": [[240.01, 188.9], [309.24, 199.3], [304.19, 232.92], [234.96, 222.52]], "label": "T2 12.0 m/s" }, { "id": 3, "x": 347.2, "y": 296.97, "poly": [[311.68, 281.08], [381.65, 278.87], [382.72, 312.85], [312.75, 315.06]], "label": "T3 15.0 m/s" }] }, { "f": 40, "t": 1.3333, "objs": [{ "id": 1, "x": 200, "y": 114.67, "poly": [[168.94, 91.23], [237.62, 104.75], [231.06, 138.11], [162.38, 124.59]], "label": "T1 9.0 m/s" }, { "id": 2, "x": 276, "y": 209.93, "poly": [[243.82, 188.06], [313.08, 198.15], [308.18, 231.79], [238.92, 221.7]], "label": "T2 12.0 m/s" }, { "id": 3, "x": 352, "y": 296.05, "poly": [[316.38, 280.4], [386.33, 277.73], [387.62, 311.71], [317.67, 314.38]], "label": "T3 15.0 m/s" }] }, { "f": 41, "t": 1.3667, "objs": [{ "id": 1, "x": 203, "y": 114.47, "poly": [[171.98, 90.99], [240.64, 104.61], [234.02, 137.96], [165.36, 124.34]], "label": "T1 9.0 m/s" }, { "id": 2, "x": 279.9, "y": 208.92, "poly": [[247.61, 187.21], [316.93, 196.97], [312.19, 230.64], [242.87, 220.87]], "label": "T2 12.0 m/s" }, { "id": 3, "x": 356.8, "y": 295.17, "poly": [[321.08, 279.75], [391.01, 276.62], [392.52, 310.59], [322.59, 313.71]], "label": "T3 15.0 m/s" }] }, { "f": 42, "t": 1.4, "objs": [{ "id": 1, "x": 206, "y": 114.23, "poly": [[175.01, 90.7], [243.65, 104.41], [236.99, 137.75], [168.35, 124.05]], "label": "T1 9.0 m/s" }, { "id": 2, "x": 283.8, "y": 207.9, "poly": [[251.41, 186.34], [320.77, 195.77], [316.19, 229.46], [246.83, 220.03]], "label": "T2 12.0 m/s" }, { "id": 3, "x": 361.6, "y": 294.31, "poly": [[325.78, 279.12], [395.69, 275.55], [397.42, 309.5], [327.51, 313.08]], "label": "T3 15.0 m/s" }] }, { "f": 43, "t": 1.4333, "objs": [{ "id": 1, "x": 209, "y": 113.94, "poly": [[178.03, 90.38], [246.66, 104.16], [239.97, 137.49], [171.34, 123.72]], "label": "T1 9.0 m/s" }, { "id": 2, "x": 287.7, "y": 206.87, "poly": [[255.2, 185.47], [324.61, 194.55], [320.2, 228.26], [250.79, 219.18]], "label": "T2 12.0 m/s" }, { "id": 3, "x": 366.4, "y": 293.48, "poly": [[330.48, 278.52], [400.36, 274.5], [402.32, 308.44], [332.44, 312.47]], "label": "T3 15.0 m/s" }] }, { "f": 44, "t": 1.4667, "objs": [{ "id": 1, "x": 212, "y": 113.6, "poly": [[181.05, 90.02], [249.67, 103.85], [242.95, 137.18], [174.33, 123.35]], "label": "T1 9.0 m/s" }, { "id": 2, "x": 291.6, "y": 205.82, "poly": [[258.99, 184.59], [328.45, 193.31], [324.21, 227.05], [254.75, 218.32]], "label": "T2 12.0 m/s" }, { "id": 3, "x": 371.2, "y": 292.69, "poly": [[335.19, 277.95], [405.04, 273.49], [407.21, 307.42], [337.36, 311.88]], "label": "T3 15.0 m/s" }] }, { "f": 45, "t": 1.5, "objs": [{ "id": 1, "x": 215, "y": 113.22, "poly": [[184.06, 89.62], [252.67, 103.5], [245.94, 136.82], [177.33, 122.95]], "label": "T1 9.0 m/s" }, { "id": 2, "x": 295.5, "y": 204.76, "poly": [[262.78, 183.7], [332.28, 192.06], [328.22, 225.82], [258.72, 217.46]], "label": "T2 12.0 m/s" }, { "id": 3, "x": 376, "y": 291.92, "poly": [[339.89, 277.42], [409.72, 272.51], [412.11, 306.43], [342.28, 311.33]], "label": "T3 15.0 m/s" }] }, { "f": 46, "t": 1.5333, "objs": [{ "id": 1, "x": 218, "y": 112.8, "poly": [[187.07, 89.19], [255.68, 103.09], [248.93, 136.41], [180.32, 122.51]], "label": "T1 9.0 m/s" }, { "id": 2, "x": 299.4, "y": 203.69, "poly": [[266.57, 182.81], [336.11, 190.8], [332.23, 224.57], [262.69, 216.59]], "label": "T2 12.0 m/s" }, { "id": 3, "x": 380.8, "y": 291.19, "poly": [[344.61, 276.91], [414.4, 271.57], [416.99, 305.47], [347.2, 310.81]], "label": "T3 15.0 m/s" }] }, { "f": 47, "t": 1.5667, "objs": [{ "id": 1, "x": 221, "y": 112.34, "poly": [[190.08, 88.72], [258.68, 102.63], [251.92, 135.95], [183.32, 122.04]], "label": "T1 9.0 m/s" }, { "id": 2, "x": 303.3, "y": 202.62, "poly": [[270.35, 181.92], [339.94, 189.52], [336.25, 223.32], [266.66, 215.72]], "label": "T2 12.0 m/s" }, { "id": 3, "x": 385.6, "y": 290.49, "poly": [[349.32, 276.43], [419.08, 270.67], [421.88, 304.55], [352.12, 310.32]], "label": "T3 15.0 m/s" }] }, { "f": 48, "t": 1.6, "objs": [{ "id": 1, "x": 224, "y": 111.83, "poly": [[193.07, 88.22], [261.68, 102.12], [254.93, 135.44], [186.32, 121.54]], "label": "T1 9.0 m/s" }, { "id": 2, "x": 307.2, "y": 201.54, "poly": [[274.14, 181.03], [343.76, 188.23], [340.26, 222.05], [270.64, 214.85]], "label": "T2 12.0 m/s" }, { "id": 3, "x": 390.4, "y": 289.83, "poly": [[354.03, 275.99], [423.76, 269.81], [426.77, 303.67], [357.04, 309.86]], "label": "T3 15.0 m/s" }] }, { "f": 49, "t": 1.6333, "objs": [{ "id": 1, "x": 227, "y": 111.28, "poly": [[196.07, 87.68], [264.68, 101.56], [257.93, 134.88], [189.32, 121]], "label": "T1 9.0 m/s" }, { "id": 2, "x": 311.1, "y": 200.46, "poly": [[277.92, 180.14], [347.59, 186.94], [344.28, 220.78], [274.61, 213.97]], "label": "T2 12.0 m/s" }, { "id": 3, "x": 395.2, "y": 289.21, "poly": [[358.75, 275.59], [428.44, 268.99], [431.65, 302.84], [361.96, 309.44]], "label": "T3 15.0 m/s" }] }, { "f": 50, "t": 1.6667, "objs": [{ "id": 1, "x": 230, "y": 110.69, "poly": [[199.05, 87.11], [267.67, 100.95], [260.95, 134.28], [192.33, 120.43]], "label": "T1 9.0 m/s" }, { "id": 2, "x": 315, "y": 199.37, "poly": [[281.7, 179.25], [351.41, 185.64], [348.3, 219.5], [278.59, 213.11]], "label": "T2 12.0 m/s" }, { "id": 3, "x": 400, "y": 288.63, "poly": [[363.47, 275.22], [433.12, 268.21], [436.53, 302.04], [366.88, 309.05]], "label": "T3 15.0 m/s" }] }, { "f": 51, "t": 1.7, "objs": [{ "id": 1, "x": 233, "y": 110.06, "poly": [[202.04, 86.5], [270.66, 100.29], [263.96, 133.63], [195.34, 119.83]], "label": "T1 9.0 m/s" }, { "id": 2, "x": 318.9, "y": 198.29, "poly": [[285.48, 178.37], [355.22, 184.34], [352.32, 218.22], [282.58, 212.24]], "label": "T2 12.0 m/s" }, { "id": 3, "x": 404.8, "y": 288.09, "poly": [[368.2, 274.89], [437.81, 267.48], [441.4, 301.29], [371.79, 308.7]], "label": "T3 15.0 m/s" }] }, { "f": 52, "t": 1.7333, "objs": [{ "id": 1, "x": 236, "y": 109.4, "poly": [[205.01, 85.87], [273.65, 99.59], [266.99, 132.93], [198.35, 119.21]], "label": "T1 9.0 m/s" }, { "id": 2, "x": 322.8, "y": 197.21, "poly": [[289.26, 177.49], [359.04, 183.04], [356.34, 216.93], [286.56, 211.38]], "label": "T2 12.0 m/s" }, { "id": 3, "x": 409.6, "y": 287.59, "poly": [[372.92, 274.59], [442.49, 266.8], [446.28, 300.59], [376.71, 308.38]], "label": "T3 15.0 m/s" }] }, { "f": 53, "t": 1.7667, "objs": [{ "id": 1, "x": 239, "y": 108.7, "poly": [[207.98, 85.2], [276.64, 98.85], [270.02, 132.19], [201.36, 118.55]], "label": "T1 9.0 m/s" }, { "id": 2, "x": 326.7, "y": 196.14, "poly": [[293.04, 176.62], [362.85, 181.75], [360.36, 215.65], [290.55, 210.53]], "label": "T2 12.0 m/s" }, { "id": 3, "x": 414.4, "y": 287.13, "poly": [[377.65, 274.33], [447.18, 266.16], [451.15, 299.93], [381.62, 308.1]], "label": "T3 15.0 m/s" }] }, { "f": 54, "t": 1.8, "objs": [{ "id": 1, "x": 242, "y": 107.96, "poly": [[210.95, 84.51], [279.63, 98.06], [273.05, 131.41], [204.37, 117.87]], "label": "T1 9.0 m/s" }, { "id": 2, "x": 330.6, "y": 195.07, "poly": [[296.82, 175.77], [366.66, 180.45], [364.38, 214.38], [294.54, 209.69]], "label": "T2 12.0 m/s" }, { "id": 3, "x": 419.2, "y": 286.71, "poly": [[382.39, 274.11], [451.86, 265.57], [456.01, 299.31], [386.54, 307.86]], "label": "T3 15.0 m/s" }] }, { "f": 55, "t": 1.8333, "objs": [{ "id": 1, "x": 245, "y": 107.19, "poly": [[213.91, 83.79], [282.61, 97.23], [276.09, 130.59], [207.39, 117.16]], "label": "T1 9.0 m/s" }, { "id": 2, "x": 334.5, "y": 194.02, "poly": [[300.6, 174.92], [370.47, 179.17], [368.4, 213.11], [298.53, 208.86]], "label": "T2 12.0 m/s" }, { "id": 3, "x": 424, "y": 286.34, "poly": [[387.12, 273.93], [456.55, 265.03], [460.88, 298.75], [391.45, 307.66]], "label": "T3 15.0 m/s" }] }, { "f": 56, "t": 1.8667, "objs": [{ "id": 1, "x": 248, "y": 106.39, "poly": [[216.87, 83.04], [285.59, 96.35], [279.13, 129.73], [210.41, 116.42]], "label": "T1 9.0 m/s" }, { "id": 2, "x": 338.4, "y": 192.97, "poly": [[304.37, 174.09], [374.27, 177.89], [372.43, 211.84], [302.53, 208.04]], "label": "T2 12.0 m/s" }, { "id": 3, "x": 428.8, "y": 286.01, "poly": [[391.86, 273.79], [461.24, 264.53], [465.74, 298.24], [396.36, 307.49]], "label": "T3 15.0 m/s" }] }, { "f": 57, "t": 1.9, "objs": [{ "id": 1, "x": 251, "y": 105.56, "poly": [[219.82, 82.27], [288.57, 95.44], [282.18, 128.84], [213.43, 115.67]], "label": "T1 8.9 m/s" }, { "id": 2, "x": 342.3, "y": 191.94, "poly": [[308.15, 173.28], [378.07, 176.63], [376.45, 210.59], [306.53, 207.24]], "label": "T2 11.9 m/s" }, { "id": 3, "x": 433.6, "y": 285.73, "poly": [[396.6, 273.69], [465.94, 264.09], [470.6, 297.77], [401.26, 307.37]], "label": "T3 14.9 m/s" }] }, { "f": 58, "t": 1.9333, "objs": [{ "id": 1, "x": 254, "y": 104.69, "poly": [[222.77, 81.48], [291.55, 94.5], [285.23, 127.9], [216.45, 114.89]], "label": "T1 8.9 m/s" }, { "id": 2, "x": 346.2, "y": 190.92, "poly": [[311.93, 172.49], [381.87, 175.38], [380.47, 209.35], [310.53, 206.46]], "label": "T2 11.9 m/s" }, { "id": 3, "x": 438.4, "y": 285.49, "poly": [[401.34, 273.63], [470.63, 263.7], [475.46, 297.36], [406.17, 307.29]], "label": "T3 14.9 m/s" }] }, { "f": 59, "t": 1.9667, "objs": [{ "id": 1, "x": 257, "y": 103.8, "poly": [[225.71, 80.67], [294.53, 93.51], [288.29, 126.94], [219.47, 114.09]], "label": "T1 8.9 m/s" }, { "id": 2, "x": 350.1, "y": 189.92, "poly": [[315.71, 171.71], [385.67, 174.15], [384.49, 208.13], [314.53, 205.69]], "label": "T2 11.9 m/s" }, { "id": 3, "x": 443.2, "y": 285.3, "poly": [[406.09, 273.61], [475.33, 263.36], [480.31, 297], [411.07, 307.24]], "label": "T3 14.9 m/s" }] }, { "f": 60, "t": 2, "objs": [{ "id": 1, "x": 260, "y": 102.89, "poly": [[228.65, 79.84], [297.5, 92.5], [291.35, 125.94], [222.5, 113.28]], "label": "T1 8.9 m/s" }, { "id": 2, "x": 354, "y": 188.94, "poly": [[319.49, 170.96], [389.47, 172.93], [388.51, 206.92], [318.53, 204.94]], "label": "T2 11.9 m/s" }, { "id": 3, "x": 448, "y": 285.16, "poly": [[410.84, 273.63], [480.04, 263.07], [485.16, 296.69], [415.96, 307.24]], "label": "T3 14.9 m/s" }] }, { "f": 61, "t": 2.0333, "objs": [{ "id": 1, "x": 263, "y": 101.95, "poly": [[231.59, 78.99], [300.47, 91.45], [294.41, 124.91], [225.53, 112.44]], "label": "T1 8.9 m/s" }, { "id": 2, "x": 357.9, "y": 187.98, "poly": [[323.28, 170.22], [393.26, 171.74], [392.52, 205.73], [322.54, 204.22]], "label": "T2 11.9 m/s" }, { "id": 3, "x": 452.8, "y": 285.06, "poly": [[415.59, 273.69], [484.74, 262.84], [490.01, 296.43], [420.86, 307.28]], "label": "T3 14.9 m/s" }] }, { "f": 62, "t": 2.0667, "objs": [{ "id": 1, "x": 266, "y": 100.98, "poly": [[234.52, 78.12], [303.43, 90.37], [297.48, 123.85], [228.57, 111.6]], "label": "T1 8.9 m/s" }, { "id": 2, "x": 361.8, "y": 187.04, "poly": [[327.06, 169.52], [397.05, 170.56], [396.54, 204.56], [326.55, 203.51]], "label": "T2 11.9 m/s" }, { "id": 3, "x": 457.6, "y": 285.01, "poly": [[420.34, 273.79], [489.45, 262.66], [494.86, 296.22], [425.75, 307.36]], "label": "T3 14.9 m/s" }] }, { "f": 63, "t": 2.1, "objs": [{ "id": 1, "x": 269, "y": 100, "poly": [[237.44, 77.24], [306.4, 89.27], [300.56, 122.76], [231.6, 110.74]], "label": "T1 8.9 m/s" }, { "id": 2, "x": 365.7, "y": 186.12, "poly": [[330.84, 168.83], [400.84, 169.42], [400.56, 203.41], [330.56, 202.83]], "label": "T2 11.9 m/s" }, { "id": 3, "x": 462.4, "y": 285, "poly": [[425.1, 273.93], [494.16, 262.53], [499.7, 296.07], [430.64, 307.48]], "label": "T3 14.9 m/s" }] }, { "f": 64, "t": 2.1333, "objs": [{ "id": 1, "x": 272, "y": 99, "poly": [[240.36, 76.35], [309.36, 88.14], [303.64, 121.65], [234.64, 109.86]], "label": "T1 8.8 m/s" }, { "id": 2, "x": 369.6, "y": 185.24, "poly": [[334.63, 168.18], [404.63, 168.29], [404.57, 202.29], [334.57, 202.18]], "label": "T2 11.8 m/s" }, { "id": 3, "x": 467.2, "y": 285.05, "poly": [[429.86, 274.12], [498.88, 262.45], [504.54, 295.98], [435.52, 307.64]], "label": "T3 14.8 m/s" }] }, { "f": 65, "t": 2.1667, "objs": [{ "id": 1, "x": 275, "y": 97.98, "poly": [[243.28, 75.45], [312.32, 86.98], [306.72, 120.52], [237.68, 108.98]], "label": "T1 8.8 m/s" }, { "id": 2, "x": 373.5, "y": 184.38, "poly": [[338.42, 167.55], [408.41, 167.2], [408.58, 201.2], [338.59, 201.55]], "label": "T2 11.8 m/s" }, { "id": 3, "x": 472, "y": 285.14, "poly": [[434.62, 274.34], [503.6, 262.43], [509.38, 295.93], [440.4, 307.84]], "label": "T3 14.8 m/s" }] }, { "f": 66, "t": 2.2, "objs": [{ "id": 1, "x": 278, "y": 96.95, "poly": [[246.19, 74.53], [315.28, 85.8], [309.81, 119.36], [240.72, 108.09]], "label": "T1 8.8 m/s" }, { "id": 2, "x": 377.4, "y": 183.55, "poly": [[342.2, 166.96], [412.2, 166.14], [412.6, 200.14], [342.6, 200.95]], "label": "T2 11.8 m/s" }, { "id": 3, "x": 476.8, "y": 285.27, "poly": [[439.38, 274.6], [508.32, 262.46], [514.22, 295.94], [445.28, 308.08]], "label": "T3 14.8 m/s" }] }, { "f": 67, "t": 2.2333, "objs": [{ "id": 1, "x": 281, "y": 95.9, "poly": [[249.1, 73.62], [318.24, 84.61], [312.9, 118.19], [243.76, 107.19]], "label": "T1 8.8 m/s" }, { "id": 2, "x": 381.3, "y": 182.75, "poly": [[345.99, 166.39], [415.98, 165.11], [416.61, 199.1], [346.62, 200.38]], "label": "T2 11.8 m/s" }, { "id": 3, "x": 481.6, "y": 285.45, "poly": [[444.15, 274.9], [513.05, 262.54], [519.05, 296.01], [450.15, 308.37]], "label": "T3 14.8 m/s" }] }, { "f": 68, "t": 2.2667, "objs": [{ "id": 1, "x": 284, "y": 94.84, "poly": [[252.01, 72.69], [321.19, 83.39], [315.99, 116.99], [246.81, 106.29]], "label": "T1 8.8 m/s" }, { "id": 2, "x": 385.2, "y": 181.98, "poly": [[349.79, 165.86], [419.77, 164.11], [420.61, 198.1], [350.63, 199.85]], "label": "T2 11.8 m/s" }, { "id": 3, "x": 486.4, "y": 285.68, "poly": [[448.92, 275.24], [517.78, 262.68], [523.88, 296.13], [455.02, 308.69]], "label": "T3 14.8 m/s" }] }, { "f": 69, "t": 2.3, "objs": [{ "id": 1, "x": 287, "y": 93.78, "poly": [[254.91, 71.76], [324.14, 82.16], [319.09, 115.79], [249.86, 105.39]], "label": "T1 8.7 m/s" }, { "id": 2, "x": 389.1, "y": 181.24, "poly": [[353.58, 165.36], [423.55, 163.15], [424.62, 197.13], [354.65, 199.34]], "label": "T2 11.7 m/s" }, { "id": 3, "x": 491.2, "y": 285.96, "poly": [[453.69, 275.62], [522.52, 262.86], [528.71, 296.3], [459.88, 309.05]], "label": "T3 14.7 m/s" }] }, { "f": 70, "t": 2.3333, "objs": [{ "id": 1, "x": 290, "y": 92.7, "poly": [[257.82, 70.83], [327.08, 80.92], [322.18, 114.57], [252.92, 104.48]], "label": "T1 8.7 m/s" }, { "id": 2, "x": 393, "y": 180.55, "poly": [[357.38, 164.89], [427.33, 162.22], [428.62, 196.2], [358.67, 198.87]], "label": "T2 11.7 m/s" }, { "id": 3, "x": 496, "y": 286.28, "poly": [[458.46, 276.03], [527.26, 263.1], [533.54, 296.52], [464.74, 309.45]], "label": "T3 14.7 m/s" }] }, { "f": 71, "t": 2.3667, "objs": [{ "id": 1, "x": 293, "y": 91.62, "poly": [[260.71, 69.91], [330.03, 79.67], [325.29, 113.34], [255.97, 103.57]], "label": "T1 8.7 m/s" }, { "id": 2, "x": 396.9, "y": 179.88, "poly": [[361.18, 164.46], [431.11, 161.34], [432.62, 195.31], [362.69, 198.43]], "label": "T2 11.7 m/s" }, { "id": 3, "x": 500.8, "y": 286.64, "poly": [[463.24, 276.49], [532, 263.39], [538.36, 296.79], [469.6, 309.89]], "label": "T3 14.7 m/s" }] }, { "f": 72, "t": 2.4, "objs": [{ "id": 1, "x": 296, "y": 90.54, "poly": [[263.61, 68.98], [332.97, 78.41], [328.39, 112.1], [259.03, 102.67]], "label": "T1 8.7 m/s" }, { "id": 2, "x": 400.8, "y": 179.26, "poly": [[364.98, 164.07], [434.89, 160.49], [436.62, 194.45], [366.71, 198.03]], "label": "T2 11.7 m/s" }, { "id": 3, "x": 505.6, "y": 287.05, "poly": [[468.02, 276.98], [536.75, 263.73], [543.18, 297.12], [474.45, 310.36]], "label": "T3 14.7 m/s" }] }, { "f": 73, "t": 2.4333, "objs": [{ "id": 1, "x": 299, "y": 89.46, "poly": [[266.5, 68.06], [335.91, 77.14], [331.5, 110.85], [262.09, 101.77]], "label": "T1 8.7 m/s" }, { "id": 2, "x": 404.7, "y": 178.67, "poly": [[368.78, 163.71], [438.66, 159.69], [440.62, 193.63], [370.74, 197.66]], "label": "T2 11.7 m/s" }, { "id": 3, "x": 510.4, "y": 287.5, "poly": [[472.8, 277.5], [541.51, 264.12], [548, 297.5], [479.29, 310.87]], "label": "T3 14.7 m/s" }] }, { "f": 74, "t": 2.4667, "objs": [{ "id": 1, "x": 302, "y": 88.37, "poly": [[269.39, 67.14], [338.85, 75.87], [334.61, 109.6], [265.15, 100.88]], "label": "T1 8.6 m/s" }, { "id": 2, "x": 408.6, "y": 178.13, "poly": [[372.59, 163.4], [442.44, 158.93], [444.61, 192.86], [374.76, 197.33]], "label": "T2 11.6 m/s" }, { "id": 3, "x": 515.2, "y": 287.99, "poly": [[477.58, 278.06], [546.27, 264.56], [552.82, 297.93], [484.13, 311.42]], "label": "T3 14.6 m/s" }] }, { "f": 75, "t": 2.5, "objs": [{ "id": 1, "x": 305, "y": 87.3, "poly": [[272.28, 66.24], [341.78, 74.6], [337.72, 108.35], [268.22, 99.99]], "label": "T1 8.6 m/s" }, { "id": 2, "x": 412.5, "y": 177.63, "poly": [[376.39, 163.12], [446.22, 158.21], [448.61, 192.13], [378.78, 197.04]], "label": "T2 11.6 m/s" }, { "id": 3, "x": 520, "y": 288.53, "poly": [[482.36, 278.65], [551.03, 265.05], [557.64, 298.4], [488.97, 312]], "label": "T3 14.6 m/s" }] }, { "f": 76, "t": 2.5333, "objs": [{ "id": 1, "x": 308, "y": 86.22, "poly": [[275.17, 65.34], [344.71, 73.32], [340.83, 107.1], [271.29, 99.12]], "label": "T1 8.6 m/s" }, { "id": 2, "x": 416.4, "y": 177.16, "poly": [[380.21, 162.88], [450, 157.54], [452.59, 191.44], [382.8, 196.78]], "label": "T2 11.6 m/s" }, { "id": 3, "x": 524.8, "y": 289.1, "poly": [[487.15, 279.27], [555.8, 265.59], [562.45, 298.93], [493.8, 312.62]], "label": "T3 14.6 m/s" }] }, { "f": 77, "t": 2.5667, "objs": [{ "id": 1, "x": 311, "y": 85.15, "poly": [[278.05, 64.46], [347.64, 72.05], [343.95, 105.85], [274.36, 98.25]], "label": "T1 8.5 m/s" }, { "id": 2, "x": 420.3, "y": 176.74, "poly": [[384.02, 162.69], [453.78, 156.92], [456.58, 190.8], [386.82, 196.57]], "label": "T2 11.5 m/s" }, { "id": 3, "x": 529.6, "y": 289.72, "poly": [[491.94, 279.93], [560.57, 266.17], [567.26, 299.5], [498.63, 313.26]], "label": "T3 14.5 m/s" }] }, { "f": 78, "t": 2.6, "objs": [{ "id": 1, "x": 314, "y": 84.1, "poly": [[280.94, 63.58], [350.56, 70.79], [347.06, 104.61], [277.44, 97.4]], "label": "T1 8.5 m/s" }, { "id": 2, "x": 424.2, "y": 176.37, "poly": [[387.83, 162.53], [457.56, 156.34], [460.57, 190.21], [390.84, 196.4]], "label": "T2 11.5 m/s" }, { "id": 3, "x": 534.4, "y": 290.37, "poly": [[496.73, 280.61], [565.35, 266.79], [572.07, 300.12], [503.45, 313.94]], "label": "T3 14.5 m/s" }] }, { "f": 79, "t": 2.6333, "objs": [{ "id": 1, "x": 317, "y": 83.05, "poly": [[283.82, 62.73], [353.49, 69.53], [350.18, 103.37], [280.51, 96.57]], "label": "T1 8.5 m/s" }, { "id": 2, "x": 428.1, "y": 176.04, "poly": [[391.65, 162.41], [461.34, 155.81], [464.55, 189.66], [394.86, 196.26]], "label": "T2 11.5 m/s" }, { "id": 3, "x": 539.2, "y": 291.06, "poly": [[501.53, 281.33], [570.14, 267.46], [576.87, 300.79], [508.26, 314.65]], "label": "T3 14.5 m/s" }] }, { "f": 80, "t": 2.6667, "objs": [{ "id": 1, "x": 320, "y": 82.02, "poly": [[286.7, 61.89], [356.41, 68.28], [353.3, 102.14], [283.59, 95.75]], "label": "T1 8.5 m/s" }, { "id": 2, "x": 432, "y": 175.75, "poly": [[395.47, 162.34], [465.12, 155.33], [468.53, 189.16], [398.88, 196.17]], "label": "T2 11.5 m/s" }, { "id": 3, "x": 544, "y": 291.78, "poly": [[506.32, 282.07], [574.93, 268.17], [581.68, 301.5], [513.07, 315.39]], "label": "T3 14.5 m/s" }] }, { "f": 81, "t": 2.7, "objs": [{ "id": 1, "x": 323, "y": 81, "poly": [[289.58, 61.07], [359.32, 67.05], [356.42, 100.92], [286.68, 94.95]], "label": "T1 8.4 m/s" }, { "id": 2, "x": 435.9, "y": 175.51, "poly": [[399.3, 162.31], [468.91, 154.9], [472.5, 188.71], [402.89, 196.12]], "label": "T2 11.4 m/s" }, { "id": 3, "x": 548.8, "y": 292.54, "poly": [[511.12, 282.83], [579.73, 268.93], [586.48, 302.25], [517.87, 316.15]], "label": "T3 14.4 m/s" }] }, { "f": 82, "t": 2.7333, "objs": [{ "id": 1, "x": 326, "y": 79.99, "poly": [[292.46, 60.27], [362.24, 65.82], [359.54, 99.72], [289.76, 94.17]], "label": "T1 8.4 m/s" }, { "id": 2, "x": 439.8, "y": 175.32, "poly": [[403.12, 162.32], [472.69, 154.52], [476.48, 188.31], [406.91, 196.11]], "label": "T2 11.4 m/s" }, { "id": 3, "x": 553.6, "y": 293.33, "poly": [[515.92, 283.62], [584.53, 269.72], [591.28, 303.04], [522.67, 316.94]], "label": "T3 14.4 m/s" }] }, { "f": 83, "t": 2.7667, "objs": [{ "id": 1, "x": 329, "y": 79.01, "poly": [[295.34, 59.5], [365.15, 64.62], [362.66, 98.53], [292.85, 93.41]], "label": "T1 8.4 m/s" }, { "id": 2, "x": 443.7, "y": 175.17, "poly": [[406.95, 162.37], [476.48, 154.2], [480.45, 187.96], [410.92, 196.14]], "label": "T2 11.4 m/s" }, { "id": 3, "x": 558.4, "y": 294.15, "poly": [[520.72, 284.43], [589.33, 270.55], [596.08, 303.87], [527.47, 317.76]], "label": "T3 14.4 m/s" }] }, { "f": 84, "t": 2.8, "objs": [{ "id": 1, "x": 332, "y": 78.05, "poly": [[298.22, 58.74], [368.06, 63.43], [365.78, 97.35], [295.94, 92.67]], "label": "T1 8.3 m/s" }, { "id": 2, "x": 447.6, "y": 175.07, "poly": [[410.79, 162.46], [480.26, 153.92], [484.41, 187.67], [414.94, 196.21]], "label": "T2 11.3 m/s" }, { "id": 3, "x": 563.2, "y": 295.01, "poly": [[525.53, 285.27], [594.14, 271.42], [600.87, 304.74], [532.26, 318.6]], "label": "T3 14.3 m/s" }] }, { "f": 85, "t": 2.8333, "objs": [{ "id": 1, "x": 335, "y": 77.11, "poly": [[301.1, 58.02], [370.97, 62.26], [368.9, 96.2], [299.03, 91.96]], "label": "T1 8.3 m/s" }, { "id": 2, "x": 451.5, "y": 175.01, "poly": [[414.62, 162.6], [484.05, 153.7], [488.38, 187.42], [418.95, 196.33]], "label": "T2 11.3 m/s" }, { "id": 3, "x": 568, "y": 295.89, "poly": [[530.33, 286.12], [598.96, 272.32], [605.67, 305.65], [537.04, 319.46]], "label": "T3 14.3 m/s" }] }, { "f": 86, "t": 2.8667, "objs": [{ "id": 1, "x": 338, "y": 76.19, "poly": [[303.97, 57.32], [373.87, 61.12], [372.03, 95.07], [302.13, 91.27]], "label": "T1 8.3 m/s" }, { "id": 2, "x": 455.4, "y": 175, "poly": [[418.46, 162.78], [487.84, 153.52], [492.34, 187.22], [422.96, 196.48]], "label": "T2 11.3 m/s" }, { "id": 3, "x": 572.8, "y": 296.79, "poly": [[535.14, 287], [603.78, 273.25], [610.46, 306.59], [541.82, 320.34]], "label": "T3 14.3 m/s" }] }, { "f": 87, "t": 2.9, "objs": [{ "id": 1, "x": 341, "y": 75.3, "poly": [[306.85, 56.65], [376.77, 60], [375.15, 93.96], [305.23, 90.61]], "label": "T1 8.2 m/s" }, { "id": 2, "x": 459.3, "y": 175.04, "poly": [[422.3, 163], [491.64, 153.4], [496.3, 187.08], [426.96, 196.68]], "label": "T2 11.2 m/s" }, { "id": 3, "x": 577.6, "y": 297.73, "poly": [[539.95, 287.89], [608.61, 274.22], [615.25, 307.57], [546.59, 321.23]], "label": "T3 14.2 m/s" }] }, { "f": 88, "t": 2.9333, "objs": [{ "id": 1, "x": 344, "y": 74.44, "poly": [[309.73, 56.01], [379.67, 58.9], [378.27, 92.87], [308.33, 89.98]], "label": "T1 8.2 m/s" }, { "id": 2, "x": 463.2, "y": 175.13, "poly": [[426.14, 163.26], [495.43, 153.33], [500.26, 186.99], [430.97, 196.92]], "label": "T2 11.2 m/s" }, { "id": 3, "x": 582.4, "y": 298.68, "poly": [[544.77, 288.79], [613.44, 275.22], [620.03, 308.57], [551.36, 322.15]], "label": "T3 14.2 m/s" }] }, { "f": 89, "t": 2.9667, "objs": [{ "id": 1, "x": 347, "y": 73.61, "poly": [[312.61, 55.4], [382.57, 57.84], [381.39, 91.82], [311.43, 89.38]], "label": "T1 8.2 m/s" }, { "id": 2, "x": 467.1, "y": 175.26, "poly": [[429.99, 163.57], [499.23, 153.32], [504.21, 186.95], [434.97, 197.2]], "label": "T2 11.2 m/s" }, { "id": 3, "x": 587.2, "y": 299.66, "poly": [[549.58, 289.71], [618.28, 276.24], [624.82, 309.61], [556.12, 323.07]], "label": "T3 14.2 m/s" }] }, { "f": 90, "t": 3, "objs": [{ "id": 1, "x": 350, "y": 72.81, "poly": [[315.49, 54.82], [385.47, 56.8], [384.51, 90.79], [314.53, 88.81]], "label": "T1 8.1 m/s" }, { "id": 2, "x": 471, "y": 175.44, "poly": [[433.84, 163.91], [503.04, 153.36], [508.16, 186.97], [438.96, 197.52]], "label": "T2 11.1 m/s" }, { "id": 3, "x": 592, "y": 300.65, "poly": [[554.4, 290.64], [623.12, 277.29], [629.6, 310.67], [560.88, 324.01]], "label": "T3 14.1 m/s" }] }, { "f": 91, "t": 3.0333, "objs": [{ "id": 1, "x": 353, "y": 72.04, "poly": [[318.38, 54.28], [388.36, 55.8], [387.62, 89.79], [317.64, 88.28]], "label": "T1 8.1 m/s" }, { "id": 2, "x": 474.9, "y": 175.66, "poly": [[437.69, 164.29], [506.84, 153.44], [512.11, 187.03], [442.96, 197.88]], "label": "T2 11.1 m/s" }, { "id": 3, "x": 596.8, "y": 301.67, "poly": [[559.22, 291.57], [627.96, 278.37], [634.38, 311.76], [565.64, 324.96]], "label": "T3 14.1 m/s" }] }, { "f": 92, "t": 3.0667, "objs": [{ "id": 1, "x": 356, "y": 71.3, "poly": [[321.26, 53.78], [391.25, 54.83], [390.74, 88.82], [320.75, 87.77]], "label": "T1 8.1 m/s" }, { "id": 2, "x": 478.8, "y": 175.93, "poly": [[441.54, 164.72], [510.65, 153.58], [516.06, 187.15], [446.95, 198.28]], "label": "T2 11.1 m/s" }, { "id": 3, "x": 601.6, "y": 302.7, "poly": [[564.04, 292.52], [632.82, 279.47], [639.16, 312.87], [570.38, 325.92]], "label": "T3 14.1 m/s" }] }, { "f": 93, "t": 3.1, "objs": [{ "id": 1, "x": 359, "y": 70.6, "poly": [[324.14, 53.31], [394.14, 53.89], [393.86, 87.89], [323.86, 87.31]], "label": "T1 8.0 m/s" }, { "id": 2, "x": 482.7, "y": 176.25, "poly": [[445.4, 165.18], [514.46, 153.78], [520, 187.32], [450.94, 198.73]], "label": "T2 11.0 m/s" }, { "id": 3, "x": 606.4, "y": 303.74, "poly": [[568.87, 293.47], [637.67, 280.58], [643.93, 314], [575.13, 326.89]], "label": "T3 14.0 m/s" }] }, { "f": 94, "t": 3.1333, "objs": [{ "id": 1, "x": 362, "y": 69.93, "poly": [[327.03, 52.88], [397.03, 52.99], [396.97, 86.99], [326.97, 86.88]], "label": "T1 8.0 m/s" }, { "id": 2, "x": 486.6, "y": 176.61, "poly": [[449.26, 165.68], [518.28, 154.02], [523.94, 187.54], [454.92, 199.2]], "label": "T2 11.0 m/s" }, { "id": 3, "x": 611.2, "y": 304.79, "poly": [[573.7, 294.43], [642.53, 281.72], [648.7, 315.16], [579.87, 327.86]], "label": "T3 14.0 m/s" }] }, { "f": 95, "t": 3.1667, "objs": [{ "id": 1, "x": 365, "y": 69.31, "poly": [[329.92, 52.48], [399.91, 52.13], [400.08, 86.13], [330.09, 86.48]], "label": "T1 8.0 m/s" }, { "id": 2, "x": 490.5, "y": 177.02, "poly": [[453.12, 166.22], [522.1, 154.31], [527.88, 187.81], [458.9, 199.72]], "label": "T2 11.0 m/s" }, { "id": 3, "x": 616, "y": 305.86, "poly": [[578.52, 295.39], [647.4, 282.87], [653.48, 316.33], [584.6, 328.84]], "label": "T3 14.0 m/s" }] }, { "f": 96, "t": 3.2, "objs": [{ "id": 1, "x": 368, "y": 68.72, "poly": [[332.8, 52.13], [402.8, 51.31], [403.2, 85.31], [333.2, 86.13]], "label": "T1 7.9 m/s" }, { "id": 2, "x": 494.4, "y": 177.46, "poly": [[456.98, 166.79], [525.92, 154.65], [531.82, 188.14], [462.88, 200.28]], "label": "T2 10.9 m/s" }, { "id": 3, "x": 620.8, "y": 306.93, "poly": [[583.36, 296.34], [652.27, 284.04], [658.24, 317.51], [589.33, 329.82]], "label": "T3 13.9 m/s" }] }, { "f": 97, "t": 3.2333, "objs": [{ "id": 1, "x": 371, "y": 68.17, "poly": [[335.69, 51.81], [405.68, 50.53], [406.31, 84.53], [336.32, 85.81]], "label": "T1 7.9 m/s" }, { "id": 2, "x": 498.3, "y": 177.95, "poly": [[460.85, 167.4], [529.75, 155.04], [535.75, 188.51], [466.85, 200.87]], "label": "T2 10.9 m/s" }, { "id": 3, "x": 625.6, "y": 308.01, "poly": [[588.19, 297.3], [657.14, 285.22], [663.01, 318.71], [594.06, 330.79]], "label": "T3 13.9 m/s" }] }, { "f": 98, "t": 3.2667, "objs": [{ "id": 1, "x": 374, "y": 67.66, "poly": [[338.59, 51.54], [408.57, 49.79], [409.41, 83.78], [339.43, 85.53]], "label": "T1 7.9 m/s" }, { "id": 2, "x": 502.2, "y": 178.48, "poly": [[464.72, 168.04], [533.58, 155.48], [539.68, 188.93], [470.82, 201.49]], "label": "T2 10.9 m/s" }, { "id": 3, "x": 630.4, "y": 309.09, "poly": [[593.03, 298.26], [662.02, 286.41], [667.77, 319.92], [598.78, 331.77]], "label": "T3 13.9 m/s" }] }, { "f": 99, "t": 3.3, "objs": [{ "id": 1, "x": 377, "y": 67.2, "poly": [[341.48, 51.31], [411.45, 49.1], [412.52, 83.08], [342.55, 85.29]], "label": "T1 7.8 m/s" }, { "id": 2, "x": 506.1, "y": 179.06, "poly": [[468.59, 168.72], [537.42, 155.96], [543.61, 189.39], [474.78, 202.15]], "label": "T2 10.8 m/s" }, { "id": 3, "x": 635.2, "y": 310.17, "poly": [[597.87, 299.2], [666.9, 287.61], [672.53, 321.14], [603.5, 332.73]], "label": "T3 13.8 m/s" }] }, { "f": 100, "t": 3.3333, "objs": [{ "id": 1, "x": 380, "y": 66.77, "poly": [[344.38, 51.12], [414.33, 48.45], [415.62, 82.43], [345.67, 85.1]], "label": "T1 7.8 m/s" }, { "id": 2, "x": 510, "y": 179.67, "poly": [[472.46, 169.43], [541.26, 156.49], [547.54, 189.91], [478.74, 202.84]], "label": "T2 10.8 m/s" }, { "id": 3, "x": 640, "y": 311.25, "poly": [[602.71, 300.15], [671.78, 288.81], [677.29, 322.36], [608.22, 333.7]], "label": "T3 13.8 m/s" }] }, { "f": 101, "t": 3.3667, "objs": [{ "id": 1, "x": 383, "y": 66.4, "poly": [[347.28, 50.97], [417.21, 47.85], [418.72, 81.82], [348.79, 84.94]], "label": "T1 7.8 m/s" }, { "id": 2, "x": 513.9, "y": 180.32, "poly": [[476.34, 170.16], [545.1, 157.07], [551.46, 190.47], [482.7, 203.56]], "label": "T2 10.8 m/s" }, { "id": 3, "x": 644.8, "y": 312.33, "poly": [[607.55, 301.08], [676.67, 290.02], [682.05, 323.59], [612.93, 334.65]], "label": "T3 13.8 m/s" }] }, { "f": 102, "t": 3.4, "objs": [{ "id": 1, "x": 386, "y": 66.06, "poly": [[350.18, 50.87], [420.09, 47.3], [421.82, 81.25], [351.91, 84.83]], "label": "T1 7.7 m/s" }, { "id": 2, "x": 517.8, "y": 181, "poly": [[480.22, 170.93], [548.95, 157.69], [555.38, 191.07], [486.65, 204.32]], "label": "T2 10.7 m/s" }, { "id": 3, "x": 649.6, "y": 313.41, "poly": [[612.4, 302], [681.57, 291.22], [686.8, 324.82], [617.63, 335.59]], "label": "T3 13.7 m/s" }] }, { "f": 103, "t": 3.4333, "objs": [{ "id": 1, "x": 389, "y": 65.77, "poly": [[353.08, 50.81], [422.96, 46.79], [424.92, 80.73], [355.04, 84.76]], "label": "T1 7.7 m/s" }, { "id": 2, "x": 521.7, "y": 181.72, "poly": [[484.1, 171.72], [552.81, 158.35], [559.3, 191.72], [490.59, 205.1]], "label": "T2 10.7 m/s" }, { "id": 3, "x": 654.4, "y": 314.48, "poly": [[617.25, 302.91], [686.46, 292.43], [691.55, 326.05], [622.34, 336.53]], "label": "T3 13.7 m/s" }] }, { "f": 104, "t": 3.4667, "objs": [{ "id": 1, "x": 392, "y": 65.53, "poly": [[355.99, 50.8], [425.84, 46.33], [428.01, 80.26], [358.16, 84.73]], "label": "T1 7.7 m/s" }, { "id": 2, "x": 525.6, "y": 182.48, "poly": [[487.98, 172.55], [556.67, 159.05], [563.22, 192.41], [494.53, 205.91]], "label": "T2 10.7 m/s" }, { "id": 3, "x": 659.2, "y": 315.54, "poly": [[622.1, 303.8], [691.36, 293.64], [696.3, 327.28], [627.04, 337.44]], "label": "T3 13.7 m/s" }] }, { "f": 105, "t": 3.5, "objs": [{ "id": 1, "x": 395, "y": 65.33, "poly": [[358.89, 50.82], [428.72, 45.92], [431.11, 79.83], [361.28, 84.74]], "label": "T1 7.6 m/s" }, { "id": 2, "x": 529.5, "y": 183.27, "poly": [[491.86, 173.39], [560.53, 159.79], [567.14, 193.15], [498.47, 206.74]], "label": "T2 10.6 m/s" }, { "id": 3, "x": 664, "y": 316.59, "poly": [[626.96, 304.68], [696.26, 294.84], [701.04, 328.5], [631.74, 338.34]], "label": "T3 13.6 m/s" }] }, { "f": 106, "t": 3.5333, "objs": [{ "id": 1, "x": 398, "y": 65.18, "poly": [[361.81, 50.9], [431.6, 45.56], [434.19, 79.46], [364.4, 84.8]], "label": "T1 7.6 m/s" }, { "id": 2, "x": 533.4, "y": 184.09, "poly": [[495.75, 174.26], [564.4, 160.57], [571.05, 193.92], [502.4, 207.6]], "label": "T2 10.6 m/s" }, { "id": 3, "x": 668.8, "y": 317.63, "poly": [[631.81, 305.54], [701.17, 296.03], [705.79, 329.72], [636.43, 339.23]], "label": "T3 13.6 m/s" }] }, { "f": 107, "t": 3.5667, "objs": [{ "id": 1, "x": 401, "y": 65.07, "poly": [[364.72, 51.01], [434.48, 45.25], [437.28, 79.13], [367.52, 84.9]], "label": "T1 7.6 m/s" }, { "id": 2, "x": 537.3, "y": 184.94, "poly": [[499.64, 175.15], [568.27, 161.39], [574.96, 194.73], [506.33, 208.49]], "label": "T2 10.6 m/s" }, { "id": 3, "x": 673.6, "y": 318.65, "poly": [[636.67, 306.38], [706.07, 297.22], [710.53, 330.92], [641.13, 340.09]], "label": "T3 13.6 m/s" }] }, { "f": 108, "t": 3.6, "objs": [{ "id": 1, "x": 404, "y": 65.01, "poly": [[367.63, 51.17], [437.36, 44.99], [440.37, 78.85], [370.64, 85.04]], "label": "T1 7.6 m/s" }, { "id": 2, "x": 541.2, "y": 185.82, "poly": [[503.53, 176.06], [572.15, 162.24], [578.87, 195.57], [510.25, 209.39]], "label": "T2 10.6 m/s" }, { "id": 3, "x": 678.4, "y": 319.66, "poly": [[641.54, 307.2], [710.98, 298.39], [715.26, 332.12], [645.82, 340.93]], "label": "T3 13.6 m/s" }] }, { "f": 109, "t": 3.6333, "objs": [{ "id": 1, "x": 407, "y": 65, "poly": [[370.55, 51.38], [440.24, 44.78], [443.45, 78.63], [373.76, 85.23]], "label": "T1 7.5 m/s" }, { "id": 2, "x": 545.1, "y": 186.72, "poly": [[507.43, 176.99], [576.04, 163.13], [582.77, 196.45], [514.16, 210.32]], "label": "T2 10.5 m/s" }, { "id": 3, "x": 683.2, "y": 320.65, "poly": [[646.4, 308], [715.89, 299.55], [720, 333.3], [650.51, 341.75]], "label": "T3 13.5 m/s" }] }, { "f": 110, "t": 3.6667, "objs": [{ "id": 1, "x": 410, "y": 65.04, "poly": [[373.47, 51.63], [443.12, 44.62], [446.53, 78.45], [376.88, 85.45]], "label": "T1 7.5 m/s" }, { "id": 2, "x": 549, "y": 187.65, "poly": [[511.32, 177.94], [579.93, 164.05], [586.68, 197.37], [518.07, 211.26]], "label": "T2 10.5 m/s" }, { "id": 3, "x": 688, "y": 321.62, "poly": [[651.27, 308.77], [720.8, 300.7], [724.73, 334.47], [655.2, 342.55]], "label": "T3 13.5 m/s" }] }, { "f": 111, "t": 3.7, "objs": [{ "id": 1, "x": 413, "y": 65.12, "poly": [[376.4, 51.92], [446.01, 44.51], [449.6, 78.32], [379.99, 85.73]], "label": "T1 7.5 m/s" }, { "id": 2, "x": 552.9, "y": 188.61, "poly": [[515.22, 178.9], [583.83, 164.99], [590.58, 198.32], [521.97, 212.22]], "label": "T2 10.5 m/s" }, { "id": 3, "x": 692.8, "y": 322.57, "poly": [[656.14, 309.52], [725.72, 301.83], [729.46, 335.62], [659.88, 343.31]], "label": "T3 13.5 m/s" }] }, { "f": 112, "t": 3.7333, "objs": [{ "id": 1, "x": 416, "y": 65.25, "poly": [[379.32, 52.25], [448.89, 44.46], [452.68, 78.25], [383.11, 86.04]], "label": "T1 7.4 m/s" }, { "id": 2, "x": 556.8, "y": 189.58, "poly": [[519.12, 179.87], [587.73, 165.97], [594.48, 199.29], [525.87, 213.19]], "label": "T2 10.4 m/s" }, { "id": 3, "x": 697.6, "y": 323.49, "poly": [[661.02, 310.24], [730.64, 302.94], [734.18, 336.75], [664.56, 344.05]], "label": "T3 13.4 m/s" }] }, { "f": 113, "t": 3.7667, "objs": [{ "id": 1, "x": 419, "y": 65.42, "poly": [[382.25, 52.63], [451.78, 44.45], [455.75, 78.22], [386.22, 86.39]], "label": "T1 7.4 m/s" }, { "id": 2, "x": 560.7, "y": 190.58, "poly": [[523.02, 180.86], [591.63, 166.97], [598.38, 200.29], [529.77, 214.18]], "label": "T2 10.4 m/s" }, { "id": 3, "x": 702.4, "y": 324.39, "poly": [[665.89, 310.93], [735.55, 304.02], [738.91, 337.86], [669.25, 344.76]], "label": "T3 13.4 m/s" }] }, { "f": 114, "t": 3.8, "objs": [{ "id": 1, "x": 422, "y": 65.64, "poly": [[385.19, 53.04], [454.66, 44.5], [458.81, 78.25], [389.34, 86.79]], "label": "T1 7.4 m/s" }, { "id": 2, "x": 564.6, "y": 191.59, "poly": [[526.93, 181.85], [595.54, 168], [602.27, 201.32], [533.66, 215.18]], "label": "T2 10.4 m/s" }, { "id": 3, "x": 707.2, "y": 325.26, "poly": [[670.77, 311.59], [740.47, 305.09], [743.63, 338.94], [673.93, 345.44]], "label": "T3 13.4 m/s" }] }, { "f": 115, "t": 3.8333, "objs": [{ "id": 1, "x": 425, "y": 65.91, "poly": [[388.12, 53.5], [457.55, 44.6], [461.88, 78.32], [392.45, 87.23]], "label": "T1 7.4 m/s" }, { "id": 2, "x": 568.5, "y": 192.62, "poly": [[530.83, 182.85], [599.46, 169.05], [606.17, 202.38], [537.54, 216.18]], "label": "T2 10.4 m/s" }, { "id": 3, "x": 712, "y": 326.11, "poly": [[675.66, 312.21], [745.39, 306.13], [748.34, 340], [678.61, 346.08]], "label": "T3 13.4 m/s" }] }, { "f": 116, "t": 3.8667, "objs": [{ "id": 1, "x": 428, "y": 66.22, "poly": [[391.06, 54], [460.44, 44.75], [464.94, 78.45], [395.56, 87.7]], "label": "T1 7.3 m/s" }, { "id": 2, "x": 572.4, "y": 193.66, "poly": [[534.74, 183.86], [603.38, 170.12], [610.06, 203.45], [541.42, 217.2]], "label": "T2 10.3 m/s" }, { "id": 3, "x": 716.8, "y": 326.92, "poly": [[680.54, 312.81], [750.31, 307.15], [753.06, 341.04], [683.29, 346.69]], "label": "T3 13.3 m/s" }] }, { "f": 117, "t": 3.9, "objs": [{ "id": 1, "x": 431, "y": 66.58, "poly": [[394, 54.54], [463.34, 44.94], [468, 78.62], [398.66, 88.22]], "label": "T1 7.3 m/s" }, { "id": 2, "x": 576.3, "y": 194.71, "poly": [[538.65, 184.87], [607.31, 171.2], [613.95, 204.55], [545.29, 218.22]], "label": "T2 10.3 m/s" }, { "id": 3, "x": 721.6, "y": 327.7, "poly": [[685.43, 313.36], [755.23, 308.14], [757.77, 342.04], [687.97, 347.27]], "label": "T3 13.3 m/s" }] }, { "f": 118, "t": 3.9333, "objs": [{ "id": 1, "x": 434, "y": 66.98, "poly": [[396.94, 55.12], [466.23, 45.19], [471.06, 78.85], [401.77, 88.78]], "label": "T1 7.3 m/s" }, { "id": 2, "x": 580.2, "y": 195.77, "poly": [[542.57, 185.88], [611.24, 172.31], [617.83, 205.66], [549.16, 219.24]], "label": "T2 10.3 m/s" }, { "id": 3, "x": 726.4, "y": 328.45, "poly": [[690.32, 313.89], [760.15, 309.09], [762.48, 343.01], [692.65, 347.81]], "label": "T3 13.3 m/s" }] }, { "f": 119, "t": 3.9667, "objs": [{ "id": 1, "x": 437, "y": 67.43, "poly": [[399.89, 55.73], [469.13, 45.49], [474.11, 79.12], [404.87, 89.37]], "label": "T1 7.3 m/s" }, { "id": 2, "x": 584.1, "y": 196.85, "poly": [[546.48, 186.9], [615.18, 173.43], [621.72, 206.8], [553.02, 220.26]], "label": "T2 10.3 m/s" }, { "id": 3, "x": 731.2, "y": 329.16, "poly": [[695.21, 314.37], [765.07, 310.02], [767.19, 343.95], [697.33, 348.31]], "label": "T3 13.3 m/s" }] }, { "f": 120, "t": 4, "objs": [{ "id": 1, "x": 440, "y": 67.91, "poly": [[402.84, 56.39], [472.04, 45.83], [477.16, 79.44], [407.96, 90]], "label": "T1 7.2 m/s" }, { "id": 2, "x": 588, "y": 197.92, "poly": [[550.4, 187.91], [619.12, 174.56], [625.6, 207.94], [556.88, 221.28]], "label": "T2 10.2 m/s" }, { "id": 3, "x": 736, "y": 329.84, "poly": [[700.11, 314.82], [770, 310.91], [771.89, 344.86], [702, 348.77]], "label": "T3 13.2 m/s" }] }, { "f": 121, "t": 4.0333, "objs": [{ "id": 1, "x": 443, "y": 68.44, "poly": [[405.79, 57.07], [474.94, 46.22], [480.21, 79.81], [411.06, 90.66]], "label": "T1 7.2 m/s" }, { "id": 2, "x": 591.9, "y": 199, "poly": [[554.32, 188.91], [623.06, 175.71], [629.48, 209.1], [560.74, 222.3]], "label": "T2 10.2 m/s" }, { "id": 3, "x": 740.8, "y": 330.48, "poly": [[705, 315.23], [774.92, 311.77], [776.6, 345.73], [706.68, 349.19]], "label": "T3 13.2 m/s" }] }, { "f": 122, "t": 4.0667, "objs": [{ "id": 1, "x": 446, "y": 69.01, "poly": [[408.74, 57.79], [477.85, 46.66], [483.26, 80.23], [414.15, 91.36]], "label": "T1 7.2 m/s" }, { "id": 2, "x": 595.8, "y": 200.09, "poly": [[558.24, 189.91], [627.02, 176.86], [633.36, 210.26], [564.58, 223.32]], "label": "T2 10.2 m/s" }, { "id": 3, "x": 745.6, "y": 331.08, "poly": [[709.9, 315.6], [779.84, 312.6], [781.3, 346.56], [711.36, 349.57]], "label": "T3 13.2 m/s" }] }, { "f": 123, "t": 4.1, "objs": [{ "id": 1, "x": 449, "y": 69.62, "poly": [[411.7, 58.55], [480.76, 47.14], [486.3, 80.69], [417.24, 92.09]], "label": "T1 7.2 m/s" }, { "id": 2, "x": 599.7, "y": 201.17, "poly": [[562.17, 190.9], [630.97, 178.02], [637.23, 211.44], [568.43, 224.32]], "label": "T2 10.2 m/s" }, { "id": 3, "x": 750.4, "y": 331.65, "poly": [[714.8, 315.93], [784.76, 313.38], [786, 347.36], [716.04, 349.91]], "label": "T3 13.2 m/s" }] }, { "f": 124, "t": 4.1333, "objs": [{ "id": 1, "x": 452, "y": 70.26, "poly": [[414.66, 59.33], [483.68, 47.67], [489.34, 81.2], [420.32, 92.86]], "label": "T1 7.2 m/s" }, { "id": 2, "x": 603.6, "y": 202.25, "poly": [[566.1, 191.89], [634.93, 179.18], [641.1, 212.61], [572.27, 225.32]], "label": "T2 10.2 m/s" }, { "id": 3, "x": 755.2, "y": 332.17, "poly": [[719.71, 316.22], [789.68, 314.13], [790.69, 348.11], [720.72, 350.2]], "label": "T3 13.2 m/s" }] }, { "f": 125, "t": 4.1667, "objs": [{ "id": 1, "x": 455, "y": 70.95, "poly": [[417.62, 60.15], [486.6, 48.24], [492.38, 81.75], [423.4, 93.65]], "label": "T1 7.1 m/s" }, { "id": 2, "x": 607.5, "y": 203.33, "poly": [[570.02, 192.86], [638.9, 180.34], [644.98, 213.8], [576.1, 226.31]], "label": "T2 10.1 m/s" }, { "id": 3, "x": 760, "y": 332.65, "poly": [[724.61, 316.47], [794.6, 314.84], [795.39, 348.83], [725.4, 350.46]], "label": "T3 13.1 m/s" }] }, { "f": 126, "t": 4.2, "objs": [{ "id": 1, "x": 458, "y": 71.67, "poly": [[420.58, 60.99], [489.52, 48.85], [495.42, 82.34], [426.48, 94.48]], "label": "T1 7.1 m/s" }, { "id": 2, "x": 611.4, "y": 204.4, "poly": [[573.96, 193.81], [642.87, 181.51], [648.84, 214.98], [579.93, 227.28]], "label": "T2 10.1 m/s" }, { "id": 3, "x": 764.8, "y": 333.08, "poly": [[729.52, 316.67], [799.51, 315.51], [800.08, 349.5], [730.09, 350.66]], "label": "T3 13.1 m/s" }] }, { "f": 127, "t": 4.2333, "objs": [{ "id": 1, "x": 461, "y": 72.42, "poly": [[423.55, 61.87], [492.45, 49.51], [498.45, 82.97], [429.55, 95.33]], "label": "T1 7.1 m/s" }, { "id": 2, "x": 615.3, "y": 205.46, "poly": [[577.89, 194.76], [646.84, 182.67], [652.71, 216.16], [583.76, 228.25]], "label": "T2 10.1 m/s" }, { "id": 3, "x": 769.6, "y": 333.48, "poly": [[734.43, 316.83], [804.43, 316.13], [804.77, 350.13], [734.77, 350.83]], "label": "T3 13.1 m/s" }] }, { "f": 128, "t": 4.2667, "objs": [{ "id": 1, "x": 464, "y": 73.21, "poly": [[426.52, 62.77], [495.38, 50.2], [501.48, 83.65], [432.62, 96.21]], "label": "T1 7.1 m/s" }, { "id": 2, "x": 619.2, "y": 206.51, "poly": [[581.83, 195.68], [650.82, 183.83], [656.57, 217.34], [587.58, 229.19]], "label": "T2 10.1 m/s" }, { "id": 3, "x": 774.4, "y": 333.83, "poly": [[739.34, 316.94], [809.34, 316.71], [809.46, 350.71], [739.46, 350.94]], "label": "T3 13.1 m/s" }] }, { "f": 129, "t": 4.3, "objs": [{ "id": 1, "x": 467, "y": 74.03, "poly": [[429.49, 63.69], [498.32, 50.93], [504.51, 84.36], [435.68, 97.12]], "label": "T1 7.1 m/s" }, { "id": 2, "x": 623.1, "y": 207.55, "poly": [[585.77, 196.58], [654.8, 184.99], [660.43, 218.52], [591.4, 230.11]], "label": "T2 10.1 m/s" }, { "id": 3, "x": 779.2, "y": 334.13, "poly": [[744.26, 317.02], [814.26, 317.25], [814.14, 351.25], [744.14, 351.02]], "label": "T3 13.1 m/s" }] }, { "f": 130, "t": 4.3333, "objs": [{ "id": 1, "x": 470, "y": 74.87, "poly": [[432.46, 64.63], [501.26, 51.7], [507.54, 85.11], [438.74, 98.05]], "label": "T1 7.1 m/s" }, { "id": 2, "x": 627, "y": 208.58, "poly": [[589.71, 197.47], [658.78, 186.13], [664.29, 219.68], [595.22, 231.02]], "label": "T2 10.1 m/s" }, { "id": 3, "x": 784, "y": 334.39, "poly": [[749.17, 317.04], [819.17, 317.75], [818.83, 351.74], [748.83, 351.04]], "label": "T3 13.1 m/s" }] }, { "f": 131, "t": 4.3667, "objs": [{ "id": 1, "x": 473, "y": 75.75, "poly": [[435.44, 65.6], [504.2, 52.5], [510.56, 85.9], [441.8, 99]], "label": "T1 7.1 m/s" }, { "id": 2, "x": 630.9, "y": 209.59, "poly": [[593.65, 198.33], [662.77, 187.27], [668.15, 220.84], [599.03, 231.9]], "label": "T2 10.1 m/s" }, { "id": 3, "x": 788.8, "y": 334.61, "poly": [[754.09, 317.03], [824.08, 318.19], [823.51, 352.19], [753.52, 351.02]], "label": "T3 13.1 m/s" }] }, { "f": 132, "t": 4.4, "objs": [{ "id": 1, "x": 476, "y": 76.65, "poly": [[438.42, 66.58], [507.15, 53.34], [513.58, 86.72], [444.85, 99.97]], "label": "T1 7.0 m/s" }, { "id": 2, "x": 634.8, "y": 210.58, "poly": [[597.6, 199.17], [666.77, 188.39], [672, 221.99], [602.83, 232.76]], "label": "T2 10.0 m/s" }, { "id": 3, "x": 793.6, "y": 334.78, "poly": [[759.01, 316.96], [828.99, 318.6], [828.19, 352.59], [758.21, 350.96]], "label": "T3 13.0 m/s" }] }, { "f": 133, "t": 4.4333, "objs": [{ "id": 1, "x": 479, "y": 77.58, "poly": [[441.4, 67.58], [510.11, 54.21], [516.6, 87.58], [447.89, 100.96]], "label": "T1 7.0 m/s" }, { "id": 2, "x": 638.7, "y": 211.55, "poly": [[601.55, 199.98], [670.76, 189.5], [675.85, 223.12], [606.64, 233.59]], "label": "T2 10.0 m/s" }, { "id": 3, "x": 798.4, "y": 334.9, "poly": [[763.92, 316.86], [833.89, 318.95], [832.88, 352.94], [762.91, 350.84]], "label": "T3 13.0 m/s" }] }, { "f": 134, "t": 4.4667, "objs": [{ "id": 1, "x": 482, "y": 78.53, "poly": [[444.38, 68.6], [513.07, 55.1], [519.62, 88.47], [450.93, 101.96]], "label": "T1 7.0 m/s" }, { "id": 2, "x": 642.6, "y": 212.5, "poly": [[605.5, 200.76], [674.76, 190.59], [679.7, 224.23], [610.44, 234.4]], "label": "T2 10.0 m/s" }, { "id": 3, "x": 803.2, "y": 334.97, "poly": [[768.84, 316.71], [838.8, 319.26], [837.56, 353.24], [767.6, 350.68]], "label": "T3 13.0 m/s" }] }, { "f": 135, "t": 4.5, "objs": [{ "id": 1, "x": 485, "y": 79.51, "poly": [[447.36, 69.63], [516.03, 56.03], [522.64, 89.38], [453.97, 102.98]], "label": "T1 7.0 m/s" }, { "id": 2, "x": 646.5, "y": 213.42, "poly": [[609.46, 201.52], [678.76, 191.67], [683.54, 225.33], [614.24, 235.18]], "label": "T2 10.0 m/s" }, { "id": 3, "x": 808, "y": 335, "poly": [[773.76, 316.51], [843.7, 319.52], [842.24, 353.49], [772.3, 350.48]], "label": "T3 13.0 m/s" }] }, { "f": 136, "t": 4.5333, "objs": [{ "id": 1, "x": 488, "y": 80.5, "poly": [[450.35, 70.67], [519, 56.98], [525.65, 90.33], [457, 104.01]], "label": "T1 7.0 m/s" }, { "id": 2, "x": 650.4, "y": 214.32, "poly": [[613.41, 202.24], [682.77, 192.73], [687.39, 226.41], [618.03, 235.92]], "label": "T2 10.0 m/s" }, { "id": 3, "x": 812.8, "y": 334.98, "poly": [[778.68, 316.27], [848.6, 319.73], [846.92, 353.69], [777, 350.23]], "label": "T3 13.0 m/s" }] }, { "f": 137, "t": 4.5667, "objs": [{ "id": 1, "x": 491, "y": 81.51, "poly": [[453.34, 71.72], [521.97, 57.96], [528.66, 91.3], [460.03, 105.06]], "label": "T1 7.0 m/s" }, { "id": 2, "x": 654.3, "y": 215.2, "poly": [[617.37, 202.93], [686.77, 193.76], [691.23, 227.47], [621.83, 236.64]], "label": "T2 10.0 m/s" }, { "id": 3, "x": 817.6, "y": 334.91, "poly": [[783.61, 315.98], [853.5, 319.9], [851.59, 353.84], [781.7, 349.93]], "label": "T3 13.0 m/s" }] }, { "f": 138, "t": 4.6, "objs": [{ "id": 1, "x": 494, "y": 82.54, "poly": [[456.33, 72.78], [524.95, 58.96], [531.67, 92.29], [463.05, 106.11]], "label": "T1 7.0 m/s" }, { "id": 2, "x": 658.2, "y": 216.04, "poly": [[621.34, 203.59], [690.78, 194.77], [695.06, 228.5], [625.62, 237.32]], "label": "T2 10.0 m/s" }, { "id": 3, "x": 822.4, "y": 334.8, "poly": [[788.53, 315.66], [858.39, 320.01], [856.27, 353.95], [786.41, 349.59]], "label": "T3 13.0 m/s" }] }, { "f": 139, "t": 4.6333, "objs": [{ "id": 1, "x": 497, "y": 83.58, "poly": [[459.33, 73.85], [527.94, 59.98], [534.67, 93.31], [466.06, 107.17]], "label": "T1 7.0 m/s" }, { "id": 2, "x": 662.1, "y": 216.86, "poly": [[625.3, 204.21], [694.79, 195.76], [698.9, 229.51], [629.41, 237.96]], "label": "T2 10.0 m/s" }, { "id": 3, "x": 827.2, "y": 334.64, "poly": [[793.45, 315.28], [863.28, 320.08], [860.95, 354], [791.12, 349.2]], "label": "T3 13.0 m/s" }] }, { "f": 140, "t": 4.6667, "objs": [{ "id": 1, "x": 500, "y": 84.63, "poly": [[462.32, 74.91], [530.93, 61.02], [537.68, 94.34], [469.07, 108.24]], "label": "T1 7.0 m/s" }, { "id": 2, "x": 666, "y": 217.64, "poly": [[629.27, 204.8], [698.8, 196.72], [702.73, 230.49], [633.2, 238.57]], "label": "T2 10.0 m/s" }, { "id": 3, "x": 832, "y": 334.44, "poly": [[798.37, 314.87], [868.17, 320.1], [865.63, 354.01], [795.83, 348.77]], "label": "T3 13.0 m/s" }] }, { "f": 141, "t": 4.7, "objs": [{ "id": 1, "x": 503, "y": 85.69, "poly": [[465.32, 75.98], [533.93, 62.08], [540.68, 95.4], [472.07, 109.31]], "label": "T1 7.0 m/s" }, { "id": 2, "x": 669.9, "y": 218.39, "poly": [[633.24, 205.34], [702.82, 197.65], [706.56, 231.44], [636.98, 239.14]], "label": "T2 10.0 m/s" }, { "id": 3, "x": 836.8, "y": 334.19, "poly": [[803.29, 314.41], [873.06, 320.07], [870.31, 353.96], [800.54, 348.3]], "label": "T3 13.0 m/s" }] }, { "f": 142, "t": 4.7333, "objs": [{ "id": 1, "x": 506, "y": 86.76, "poly": [[468.32, 77.05], [536.93, 63.15], [543.68, 96.47], [475.07, 110.38]], "label": "T1 7.0 m/s" }, { "id": 2, "x": 673.8, "y": 219.11, "poly": [[637.22, 205.85], [706.84, 198.55], [710.38, 232.37], [640.76, 239.67]], "label": "T2 10.0 m/s" }, { "id": 3, "x": 841.6, "y": 333.89, "poly": [[808.21, 313.91], [877.95, 319.99], [874.99, 353.87], [805.25, 347.78]], "label": "T3 13.0 m/s" }] }, { "f": 143, "t": 4.7667, "objs": [{ "id": 1, "x": 509, "y": 87.84, "poly": [[471.32, 78.12], [539.93, 64.23], [546.68, 97.56], [478.07, 111.45]], "label": "T1 7.0 m/s" }, { "id": 2, "x": 677.7, "y": 219.79, "poly": [[641.19, 206.33], [710.85, 199.42], [714.21, 233.26], [644.55, 240.16]], "label": "T2 10.0 m/s" }, { "id": 3, "x": 846.4, "y": 333.55, "poly": [[813.13, 313.37], [882.83, 319.87], [879.67, 353.72], [809.97, 347.22]], "label": "T3 13.0 m/s" }] }, { "f": 144, "t": 4.8, "objs": [{ "id": 1, "x": 512, "y": 88.92, "poly": [[474.33, 79.18], [542.94, 65.33], [549.67, 98.66], [481.06, 112.51]], "label": "T1 7.0 m/s" }, { "id": 2, "x": 681.6, "y": 220.43, "poly": [[645.17, 206.75], [714.87, 200.26], [718.03, 234.11], [648.33, 240.61]], "label": "T2 10.0 m/s" }, { "id": 3, "x": 851.2, "y": 333.16, "poly": [[818.05, 312.79], [887.71, 319.7], [884.35, 353.53], [814.69, 346.62]], "label": "T3 13.0 m/s" }] }, { "f": 145, "t": 4.8333, "objs": [{ "id": 1, "x": 515, "y": 90, "poly": [[477.33, 80.24], [545.96, 66.43], [552.67, 99.77], [484.04, 113.57]], "label": "T1 7.0 m/s" }, { "id": 2, "x": 685.5, "y": 221.04, "poly": [[649.16, 207.14], [718.89, 201.06], [721.84, 234.93], [652.11, 241.01]], "label": "T2 10.0 m/s" }, { "id": 3, "x": 856, "y": 332.73, "poly": [[822.97, 312.17], [892.58, 319.48], [889.03, 353.29], [819.42, 345.99]], "label": "T3 13.0 m/s" }] }, { "f": 146, "t": 4.8667, "objs": [{ "id": 1, "x": 518, "y": 91.09, "poly": [[480.34, 81.29], [548.98, 67.55], [555.66, 100.88], [487.02, 114.63]], "label": "T1 7.0 m/s" }, { "id": 2, "x": 689.4, "y": 221.6, "poly": [[653.14, 207.49], [722.91, 201.83], [725.66, 235.72], [655.89, 241.38]], "label": "T2 10.0 m/s" }, { "id": 3, "x": 860.8, "y": 332.26, "poly": [[827.88, 311.51], [897.46, 319.21], [893.72, 353], [824.14, 345.31]], "label": "T3 13.0 m/s" }] }, { "f": 147, "t": 4.9, "objs": [{ "id": 1, "x": 521, "y": 92.17, "poly": [[483.35, 82.33], [552.01, 68.66], [558.65, 102.01], [489.99, 115.67]], "label": "T1 7.0 m/s" }, { "id": 2, "x": 693.3, "y": 222.13, "poly": [[657.13, 207.79], [726.93, 202.56], [729.47, 236.47], [659.67, 241.7]], "label": "T2 10.0 m/s" }, { "id": 3, "x": 865.6, "y": 331.74, "poly": [[832.8, 310.82], [902.33, 318.9], [898.4, 352.67], [828.87, 344.59]], "label": "T3 13.0 m/s" }] }, { "f": 148, "t": 4.9333, "objs": [{ "id": 1, "x": 524, "y": 93.24, "poly": [[486.37, 83.35], [555.04, 69.78], [561.63, 103.14], [492.96, 116.71]], "label": "T1 7.0 m/s" }, { "id": 2, "x": 697.2, "y": 222.61, "poly": [[661.12, 208.05], [730.95, 203.25], [733.28, 237.17], [663.45, 241.97]], "label": "T2 10.0 m/s" }, { "id": 3, "x": 870.4, "y": 331.19, "poly": [[837.71, 310.09], [907.2, 318.54], [903.09, 352.29], [833.6, 343.84]], "label": "T3 13.0 m/s" }] }, { "f": 149, "t": 4.9667, "objs": [{ "id": 1, "x": 527, "y": 94.32, "poly": [[489.38, 84.37], [558.08, 70.9], [564.62, 104.27], [495.92, 117.73]], "label": "T1 7.0 m/s" }, { "id": 2, "x": 701.1, "y": 223.05, "poly": [[665.11, 208.26], [734.97, 203.91], [737.09, 237.84], [667.23, 242.2]], "label": "T2 10.0 m/s" }, { "id": 3, "x": 875.2, "y": 330.6, "poly": [[842.62, 309.32], [912.06, 318.14], [907.78, 351.87], [838.34, 343.05]], "label": "T3 13.0 m/s" }] }, { "f": 150, "t": 5, "objs": [{ "id": 1, "x": 530, "y": 95.38, "poly": [[492.4, 85.36], [561.12, 72.02], [567.6, 105.39], [498.88, 118.74]], "label": "T1 7.0 m/s" }, { "id": 2, "x": 705, "y": 223.45, "poly": [[669.11, 208.43], [739, 204.52], [740.89, 238.47], [671, 242.38]], "label": "T2 10.0 m/s" }, { "id": 3, "x": 880, "y": 329.96, "poly": [[847.53, 308.52], [916.93, 317.69], [912.47, 351.4], [843.07, 342.23]], "label": "T3 13.0 m/s" }] }, { "f": 151, "t": 5.0333, "objs": [{ "id": 1, "x": 533, "y": 96.43, "poly": [[495.42, 86.34], [564.16, 73.13], [570.58, 106.52], [501.84, 119.73]], "label": "T1 7.1 m/s" }, { "id": 2, "x": 708.9, "y": 223.8, "poly": [[673.1, 208.55], [743.02, 205.09], [744.7, 239.05], [674.78, 242.51]], "label": "T2 10.1 m/s" }, { "id": 3, "x": 884.8, "y": 329.29, "poly": [[852.44, 307.69], [921.79, 317.21], [917.16, 350.89], [847.81, 341.38]], "label": "T3 13.1 m/s" }] }, { "f": 152, "t": 5.0667, "objs": [{ "id": 1, "x": 536, "y": 97.47, "poly": [[498.44, 87.3], [567.22, 74.24], [573.56, 107.65], [504.78, 120.7]], "label": "T1 7.1 m/s" }, { "id": 2, "x": 712.8, "y": 224.11, "poly": [[677.1, 208.63], [747.04, 205.62], [748.5, 239.59], [678.56, 242.6]], "label": "T2 10.1 m/s" }, { "id": 3, "x": 889.6, "y": 328.58, "poly": [[857.34, 306.83], [926.64, 316.68], [921.86, 350.34], [852.56, 340.49]], "label": "T3 13.1 m/s" }] }, { "f": 153, "t": 5.1, "objs": [{ "id": 1, "x": 539, "y": 98.5, "poly": [[501.47, 88.23], [570.27, 75.34], [576.53, 108.76], [507.73, 121.65]], "label": "T1 7.1 m/s" }, { "id": 2, "x": 716.7, "y": 224.38, "poly": [[681.1, 208.66], [751.06, 206.11], [752.3, 240.09], [682.34, 242.64]], "label": "T2 10.1 m/s" }, { "id": 3, "x": 894.4, "y": 327.84, "poly": [[862.24, 305.94], [931.5, 316.11], [926.56, 349.75], [857.3, 339.58]], "label": "T3 13.1 m/s" }] }, { "f": 154, "t": 5.1333, "objs": [{ "id": 1, "x": 542, "y": 99.51, "poly": [[504.5, 89.14], [573.33, 76.44], [579.5, 109.87], [510.67, 122.58]], "label": "T1 7.1 m/s" }, { "id": 2, "x": 720.6, "y": 224.59, "poly": [[685.11, 208.65], [755.08, 206.56], [756.09, 240.54], [686.12, 242.63]], "label": "T2 10.1 m/s" }, { "id": 3, "x": 899.2, "y": 327.07, "poly": [[867.14, 305.02], [936.35, 315.5], [931.26, 349.12], [862.05, 338.64]], "label": "T3 13.1 m/s" }] }, { "f": 155, "t": 5.1667, "objs": [{ "id": 1, "x": 545, "y": 100.5, "poly": [[507.52, 90.03], [576.4, 77.52], [582.48, 110.97], [513.6, 123.48]], "label": "T1 7.1 m/s" }, { "id": 2, "x": 724.5, "y": 224.76, "poly": [[689.11, 208.58], [759.1, 206.96], [759.89, 240.95], [689.9, 242.57]], "label": "T2 10.1 m/s" }, { "id": 3, "x": 904, "y": 326.26, "poly": [[872.03, 304.07], [941.2, 314.85], [935.97, 348.45], [866.8, 337.67]], "label": "T3 13.1 m/s" }] }, { "f": 156, "t": 5.2, "objs": [{ "id": 1, "x": 548, "y": 101.47, "poly": [[510.56, 90.89], [579.47, 78.59], [585.44, 112.06], [516.53, 124.36]], "label": "T1 7.1 m/s" }, { "id": 2, "x": 728.4, "y": 224.89, "poly": [[693.12, 208.47], [763.11, 207.31], [763.68, 241.31], [693.69, 242.47]], "label": "T2 10.1 m/s" }, { "id": 3, "x": 908.8, "y": 325.42, "poly": [[876.93, 303.1], [946.05, 314.17], [940.67, 347.74], [871.55, 336.68]], "label": "T3 13.1 m/s" }] }, { "f": 157, "t": 5.2333, "objs": [{ "id": 1, "x": 551, "y": 102.43, "poly": [[513.59, 91.72], [582.54, 79.64], [588.41, 113.13], [519.46, 125.21]], "label": "T1 7.1 m/s" }, { "id": 2, "x": 732.3, "y": 224.97, "poly": [[697.13, 208.32], [767.13, 207.62], [767.47, 241.62], [697.47, 242.32]], "label": "T2 10.1 m/s" }, { "id": 3, "x": 913.6, "y": 324.56, "poly": [[881.82, 302.11], [950.89, 313.45], [945.38, 347], [876.31, 335.66]], "label": "T3 13.1 m/s" }] }, { "f": 158, "t": 5.2667, "objs": [{ "id": 1, "x": 554, "y": 103.35, "poly": [[516.63, 92.52], [585.62, 80.68], [591.37, 114.18], [522.38, 126.03]], "label": "T1 7.1 m/s" }, { "id": 2, "x": 736.2, "y": 225, "poly": [[701.14, 208.12], [771.14, 207.88], [771.26, 241.88], [701.26, 242.11]], "label": "T2 10.1 m/s" }, { "id": 3, "x": 918.4, "y": 323.66, "poly": [[886.7, 301.1], [955.73, 312.7], [950.1, 346.23], [881.07, 334.63]], "label": "T3 13.1 m/s" }] }, { "f": 159, "t": 5.3, "objs": [{ "id": 1, "x": 557, "y": 104.26, "poly": [[519.67, 93.29], [588.7, 81.69], [594.33, 115.22], [525.3, 126.82]], "label": "T1 7.2 m/s" }, { "id": 2, "x": 740.1, "y": 224.98, "poly": [[705.16, 207.87], [775.16, 208.1], [775.04, 242.1], [705.04, 241.87]], "label": "T2 10.2 m/s" }, { "id": 3, "x": 923.2, "y": 322.74, "poly": [[891.58, 300.06], [960.57, 311.91], [954.82, 345.42], [885.83, 333.57]], "label": "T3 13.2 m/s" }] }, { "f": 160, "t": 5.3333, "objs": [{ "id": 1, "x": 560, "y": 105.13, "poly": [[522.71, 94.03], [591.78, 82.69], [597.29, 116.24], [528.22, 127.58]], "label": "T1 7.2 m/s" }, { "id": 2, "x": 744, "y": 224.92, "poly": [[709.17, 207.57], [779.17, 208.27], [778.83, 242.27], [708.83, 241.57]], "label": "T2 10.2 m/s" }, { "id": 3, "x": 928, "y": 321.8, "poly": [[896.46, 299.01], [965.41, 311.09], [959.54, 344.58], [890.59, 332.5]], "label": "T3 13.2 m/s" }] }, { "f": 161, "t": 5.3667, "objs": [{ "id": 1, "x": 563, "y": 105.98, "poly": [[525.75, 94.73], [594.87, 83.66], [600.25, 117.24], [531.13, 128.3]], "label": "T1 7.2 m/s" }, { "id": 2, "x": 747.9, "y": 224.81, "poly": [[713.19, 207.23], [783.18, 208.4], [782.61, 242.39], [712.62, 241.23]], "label": "T2 10.2 m/s" }, { "id": 3, "x": 932.8, "y": 320.83, "poly": [[901.33, 297.94], [970.24, 310.25], [964.27, 343.72], [895.36, 331.41]], "label": "T3 13.2 m/s" }] }, { "f": 162, "t": 5.4, "objs": [{ "id": 1, "x": 566, "y": 106.8, "poly": [[528.8, 95.39], [597.97, 84.61], [603.2, 118.21], [534.03, 128.98]], "label": "T1 7.2 m/s" }, { "id": 2, "x": 751.8, "y": 224.66, "poly": [[717.21, 206.85], [787.19, 208.48], [786.39, 242.47], [716.41, 240.84]], "label": "T2 10.2 m/s" }, { "id": 3, "x": 937.6, "y": 319.85, "poly": [[906.2, 296.86], [975.08, 309.38], [969, 342.83], [900.12, 330.31]], "label": "T3 13.2 m/s" }] }, { "f": 163, "t": 5.4333, "objs": [{ "id": 1, "x": 569, "y": 107.58, "poly": [[531.85, 96.01], [601.06, 85.54], [606.15, 119.15], [536.94, 129.63]], "label": "T1 7.2 m/s" }, { "id": 2, "x": 755.7, "y": 224.45, "poly": [[721.22, 206.41], [791.19, 208.51], [790.18, 242.49], [720.21, 240.4]], "label": "T2 10.2 m/s" }, { "id": 3, "x": 942.4, "y": 318.84, "poly": [[911.07, 295.77], [979.9, 308.48], [973.73, 341.91], [904.9, 329.2]], "label": "T3 13.2 m/s" }] }, { "f": 164, "t": 5.4667, "objs": [{ "id": 1, "x": 572, "y": 108.34, "poly": [[534.9, 96.6], [604.16, 86.43], [609.1, 120.07], [539.84, 130.24]], "label": "T1 7.3 m/s" }, { "id": 2, "x": 759.6, "y": 224.21, "poly": [[725.24, 205.94], [795.2, 208.49], [793.96, 242.47], [724, 239.92]], "label": "T2 10.3 m/s" }, { "id": 3, "x": 947.2, "y": 317.82, "poly": [[915.93, 294.67], [984.73, 307.55], [978.47, 340.97], [909.67, 328.08]], "label": "T3 13.3 m/s" }] }, { "f": 165, "t": 5.5, "objs": [{ "id": 1, "x": 575, "y": 109.06, "poly": [[537.96, 97.15], [607.26, 87.3], [612.04, 120.97], [542.74, 130.81]], "label": "T1 7.3 m/s" }, { "id": 2, "x": 763.5, "y": 223.91, "poly": [[729.26, 205.42], [799.2, 208.43], [797.74, 242.4], [727.8, 239.39]], "label": "T2 10.3 m/s" }, { "id": 3, "x": 952, "y": 316.78, "poly": [[920.78, 293.55], [989.56, 306.61], [983.22, 340.01], [914.44, 326.96]], "label": "T3 13.3 m/s" }] }, { "f": 166, "t": 5.5333, "objs": [{ "id": 1, "x": 578, "y": 109.74, "poly": [[541.01, 97.65], [610.37, 88.14], [614.99, 121.83], [545.63, 131.34]], "label": "T1 7.3 m/s" }, { "id": 2, "x": 767.4, "y": 223.57, "poly": [[733.28, 204.86], [803.2, 208.33], [801.52, 242.29], [731.6, 238.82]], "label": "T2 10.3 m/s" }, { "id": 3, "x": 956.8, "y": 315.73, "poly": [[925.64, 292.44], [994.38, 305.64], [987.96, 339.03], [919.22, 325.83]], "label": "T3 13.3 m/s" }] }, { "f": 167, "t": 5.5667, "objs": [{ "id": 1, "x": 581, "y": 110.39, "poly": [[544.07, 98.12], [613.47, 88.95], [617.93, 122.66], [548.53, 131.82]], "label": "T1 7.3 m/s" }, { "id": 2, "x": 771.3, "y": 223.19, "poly": [[737.31, 204.26], [807.2, 208.18], [805.29, 242.12], [735.4, 238.21]], "label": "T2 10.3 m/s" }, { "id": 3, "x": 961.6, "y": 314.68, "poly": [[930.48, 291.31], [999.2, 304.66], [992.72, 338.04], [924, 324.69]], "label": "T3 13.3 m/s" }] }, { "f": 168, "t": 5.6, "objs": [{ "id": 1, "x": 584, "y": 110.99, "poly": [[547.14, 98.54], [616.58, 89.72], [620.86, 123.45], [551.42, 132.27]], "label": "T1 7.4 m/s" }, { "id": 2, "x": 775.2, "y": 222.77, "poly": [[741.33, 203.62], [811.19, 207.98], [809.07, 241.91], [739.21, 237.55]], "label": "T2 10.4 m/s" }, { "id": 3, "x": 966.4, "y": 313.61, "poly": [[935.32, 290.19], [1004.02, 303.66], [997.48, 337.02], [928.78, 323.56]], "label": "T3 13.4 m/s" }] }, { "f": 169, "t": 5.6333, "objs": [{ "id": 1, "x": 587, "y": 111.56, "poly": [[550.2, 98.91], [619.69, 90.46], [623.8, 124.21], [554.31, 132.66]], "label": "T1 7.4 m/s" }, { "id": 2, "x": 779.1, "y": 222.3, "poly": [[745.35, 202.94], [815.18, 207.74], [812.85, 241.66], [743.02, 236.86]], "label": "T2 10.4 m/s" }, { "id": 3, "x": 971.2, "y": 312.53, "poly": [[940.16, 289.07], [1008.83, 302.64], [1002.24, 336], [933.57, 322.42]], "label": "T3 13.4 m/s" }] }, { "f": 170, "t": 5.6667, "objs": [{ "id": 1, "x": 590, "y": 112.09, "poly": [[553.27, 99.24], [622.8, 91.16], [626.73, 124.94], [557.2, 133.01]], "label": "T1 7.4 m/s" }, { "id": 2, "x": 783, "y": 221.79, "poly": [[749.37, 202.22], [819.17, 207.45], [816.63, 241.35], [746.83, 236.12]], "label": "T2 10.4 m/s" }, { "id": 3, "x": 976, "y": 311.45, "poly": [[944.99, 287.95], [1013.65, 301.61], [1007.01, 334.96], [938.35, 321.29]], "label": "T3 13.4 m/s" }] }, { "f": 171, "t": 5.7, "objs": [{ "id": 1, "x": 593, "y": 112.58, "poly": [[556.34, 99.53], [625.92, 91.83], [629.66, 125.63], [560.08, 133.32]], "label": "T1 7.4 m/s" }, { "id": 2, "x": 786.9, "y": 221.23, "poly": [[753.39, 201.46], [823.16, 207.12], [820.41, 241.01], [750.64, 235.35]], "label": "T2 10.4 m/s" }, { "id": 3, "x": 980.8, "y": 310.37, "poly": [[949.82, 286.83], [1018.46, 300.57], [1011.78, 333.91], [943.14, 320.17]], "label": "T3 13.4 m/s" }] }, { "f": 172, "t": 5.7333, "objs": [{ "id": 1, "x": 596, "y": 113.02, "poly": [[559.42, 99.76], [629.04, 92.46], [632.58, 126.28], [562.96, 133.58]], "label": "T1 7.5 m/s" }, { "id": 2, "x": 790.8, "y": 220.64, "poly": [[757.41, 200.67], [827.15, 206.75], [824.19, 240.62], [754.45, 234.54]], "label": "T2 10.5 m/s" }, { "id": 3, "x": 985.6, "y": 309.29, "poly": [[954.64, 285.72], [1023.27, 299.52], [1016.56, 332.86], [947.93, 319.05]], "label": "T3 13.5 m/s" }] }, { "f": 173, "t": 5.7667, "objs": [{ "id": 1, "x": 599, "y": 113.42, "poly": [[562.49, 99.96], [632.15, 93.05], [635.51, 126.89], [565.85, 133.79]], "label": "T1 7.5 m/s" }, { "id": 2, "x": 794.7, "y": 220.01, "poly": [[761.43, 199.84], [831.13, 206.34], [827.97, 240.19], [758.27, 233.69]], "label": "T2 10.5 m/s" }, { "id": 3, "x": 990.4, "y": 308.2, "poly": [[959.46, 284.61], [1028.07, 298.47], [1021.34, 331.8], [952.73, 317.94]], "label": "T3 13.5 m/s" }] }, { "f": 174, "t": 5.8, "objs": [{ "id": 1, "x": 602, "y": 113.78, "poly": [[565.57, 100.1], [635.27, 93.6], [638.43, 127.46], [568.73, 133.95]], "label": "T1 7.5 m/s" }, { "id": 2, "x": 798.6, "y": 219.34, "poly": [[765.45, 198.97], [835.11, 205.88], [831.75, 239.71], [762.09, 232.81]], "label": "T2 10.5 m/s" }, { "id": 3, "x": 995.2, "y": 307.13, "poly": [[964.27, 283.52], [1032.88, 297.41], [1026.13, 330.73], [957.52, 316.84]], "label": "T3 13.5 m/s" }] }, { "f": 175, "t": 5.8333, "objs": [{ "id": 1, "x": 605, "y": 114.09, "poly": [[568.66, 100.19], [638.39, 94.11], [641.34, 127.99], [571.61, 134.07]], "label": "T1 7.6 m/s" }, { "id": 2, "x": 802.5, "y": 218.64, "poly": [[769.47, 198.08], [839.08, 205.39], [835.53, 239.2], [765.92, 231.89]], "label": "T2 10.6 m/s" }, { "id": 3, "x": 1e3, "y": 306.05, "poly": [[969.07, 282.44], [1037.68, 296.34], [1030.93, 329.67], [962.32, 315.76]], "label": "T3 13.6 m/s" }] }, { "f": 176, "t": 5.8667, "objs": [{ "id": 1, "x": 608, "y": 114.36, "poly": [[571.74, 100.24], [641.51, 94.58], [644.26, 128.47], [574.49, 134.13]], "label": "T1 7.6 m/s" }, { "id": 2, "x": 806.4, "y": 217.9, "poly": [[773.48, 197.16], [843.06, 204.85], [839.32, 238.65], [769.74, 230.95]], "label": "T2 10.6 m/s" }, { "id": 3, "x": 1004.8, "y": 304.99, "poly": [[973.87, 281.37], [1042.48, 295.28], [1035.73, 328.6], [967.12, 314.7]], "label": "T3 13.6 m/s" }] }, { "f": 177, "t": 5.9, "objs": [{ "id": 1, "x": 611, "y": 114.58, "poly": [[574.83, 100.24], [644.63, 95.01], [647.17, 128.92], [577.37, 134.15]], "label": "T1 7.6 m/s" }, { "id": 2, "x": 810.3, "y": 217.13, "poly": [[777.5, 196.2], [847.03, 204.28], [843.1, 238.05], [773.57, 229.97]], "label": "T2 10.6 m/s" }, { "id": 3, "x": 1009.6, "y": 303.93, "poly": [[978.67, 280.32], [1047.28, 294.22], [1040.53, 327.54], [971.92, 313.65]], "label": "T3 13.6 m/s" }] }, { "f": 178, "t": 5.9333, "objs": [{ "id": 1, "x": 614, "y": 114.75, "poly": [[577.92, 100.19], [647.75, 95.4], [650.08, 129.32], [580.25, 134.11]], "label": "T1 7.7 m/s" }, { "id": 2, "x": 814.2, "y": 216.32, "poly": [[781.51, 195.22], [851, 203.67], [846.89, 237.43], [777.4, 228.97]], "label": "T2 10.7 m/s" }, { "id": 3, "x": 1014.4, "y": 302.89, "poly": [[983.46, 279.29], [1052.07, 293.15], [1045.34, 326.48], [976.73, 312.62]], "label": "T3 13.7 m/s" }] }, { "f": 179, "t": 5.9667, "objs": [{ "id": 1, "x": 617, "y": 114.88, "poly": [[581.01, 100.09], [650.87, 95.74], [652.99, 129.67], [583.13, 134.03]], "label": "T1 7.7 m/s" }, { "id": 2, "x": 818.1, "y": 215.49, "poly": [[785.52, 194.21], [854.96, 203.03], [850.68, 236.76], [781.24, 227.94]], "label": "T2 10.7 m/s" }, { "id": 3, "x": 1019.2, "y": 301.85, "poly": [[988.25, 278.28], [1056.87, 292.1], [1050.15, 325.43], [981.53, 311.61]], "label": "T3 13.7 m/s" }] }] };</script>
+    <style>
+      :root { --ground: #0b0f14; --ink: #e8eef5; --accent: #4cc2ff; --warn: #ffb347; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: var(--ground); }
+      #root { position: relative; width: 1920px; height: 1080px; font-family: "InterLocale", sans-serif; color: var(--ink); }
+      #bg { position: absolute; inset: 0; background: radial-gradient(1200px 700px at 30% 20%, #16202c, #0b0f14); }
+      #title { position: absolute; left: 140px; top: 130px; width: 1200px; height: 110px; }
+      #title-in { font-size: 88px; font-weight: 700; letter-spacing: -0.03em; }
+      #sub { position: absolute; left: 144px; top: 250px; width: 1200px; height: 50px; }
+      #sub-in { font-family: "JBMonoLocale", monospace; font-size: 34px; color: var(--accent); }
+      #shape { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+      #data { position: absolute; left: 140px; top: 420px; width: 1000px; height: 480px; }
+      #data svg { width: 1000px; height: 480px; background: #101821; border: 2px solid #24384d; }
+      #data text { font-family: "JBMonoLocale", monospace; font-size: 20px; fill: var(--ink); }
+      #hud { position: absolute; left: 1200px; top: 420px; width: 600px; height: 60px; }
+      #hud-in { font-family: "JBMonoLocale", monospace; font-weight: 700; font-size: 36px; color: var(--warn); }
+    </style>
+  
+<meta name="hyperframes-project-signature" content="4ead49397abec4230eee7973">
+</head>
+  <body>
+    <div data-hf-id="hf-kxfs" id="root" data-composition-id="main" data-start="0" data-duration="6" data-width="1920" data-height="1080" data-fps="30">
+      <div data-hf-id="hf-2xc0" id="bg"></div>
+      <div data-hf-id="hf-sghr" id="title" class="clip" data-start="0" data-duration="6" data-track-index="1"><div data-hf-id="hf-5no5" id="title-in">Deterministic motion test</div></div>
+      <div data-hf-id="hf-nle1" id="sub" class="clip" data-start="0.4" data-duration="5.6" data-track-index="2"><div data-hf-id="hf-rgwr" id="sub-in">1920x1080 @ 30 fps / Inter + JetBrains Mono</div></div>
+      <div data-hf-id="hf-c42f" id="shape" class="clip" data-start="0" data-duration="6" data-track-index="3" data-layout-ignore="">
+        <svg data-hf-id="hf-pqiq" width="1920" height="1080" viewBox="0 0 1920 1080">
+          <path data-hf-id="hf-542n" d="M1300 950 C 1500 700, 1700 900, 1800 620" fill="none" stroke="#24384d" stroke-width="3" stroke-dasharray="8 10" />
+          <g data-hf-id="hf-kxkm" id="hex"><polygon data-hf-id="hf-iqlj" points="0,-46 40,-23 40,23 0,46 -40,23 -40,-23" fill="none" stroke="#4cc2ff" stroke-width="6" /><circle data-hf-id="hf-p5we" r="8" fill="#ffb347" /></g>
+        </svg>
+      </div>
+      <div data-hf-id="hf-elb6" id="data" class="clip" data-start="0" data-duration="6" data-track-index="4">
+        <svg data-hf-id="hf-0w70" viewBox="0 0 1000 480"><g data-hf-id="hf-xr9d" id="objs" /></svg>
+      </div>
+      <div data-hf-id="hf-ho4i" id="hud" class="clip" data-start="0" data-duration="6" data-track-index="5"><div data-hf-id="hf-2t6t" id="hud-in">frame 000</div></div>
+      <audio data-hf-render-id="tono" data-hf-id="hf-tjae" id="tono" class="clip" src="assets/audio/tono.wav" data-start="0" data-duration="6" data-track-index="6" data-volume="1" data-end="6"></audio>
+    </div>
+    
+  <script type="text/hf-after-fonts">const tl = gsap.timeline({ paused: true });
+tl.fromTo("#title-in", { opacity: 0, y: 40, filter: "blur(10px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.7, ease: "power3.out" }, 0.1);
+tl.fromTo("#sub-in", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.5, ease: "power2.out" }, 0.5);
+tl.fromTo("#hex", { x: 1300, y: 950, rotation: 0, transformOrigin: "50% 50%" }, { x: 1800, y: 620, rotation: 360, duration: 5.6, ease: "sine.inOut" }, 0.2);
+const S = window.__STATI, NS = "http://www.w3.org/2000/svg", layer = document.getElementById("objs"), hud = document.getElementById("hud-in");
+const nodes = /* @__PURE__ */ new Map();
+function node(id) {
+  if (!nodes.has(id)) {
+    const g = document.createElementNS(NS, "g"), p = document.createElementNS(NS, "polygon"), tx = document.createElementNS(NS, "text");
+    p.setAttribute("fill", "rgba(76,194,255,0.18)");
+    p.setAttribute("stroke", "#4cc2ff");
+    p.setAttribute("stroke-width", "3");
+    g.append(p, tx);
+    layer.append(g);
+    nodes.set(id, { g, p, tx });
+  }
+  return nodes.get(id);
+}
+function drawAt(t) {
+  const i = Math.min(S.n - 1, Math.max(0, Math.floor(t * S.fps + 1e-6))), fr = S.frames[i], seen = /* @__PURE__ */ new Set();
+  for (const o of fr.objs) {
+    const n = node(o.id);
+    seen.add(o.id);
+    n.g.style.display = "";
+    n.p.setAttribute("points", o.poly.map((q) => q.join(",")).join(" "));
+    n.tx.setAttribute("x", o.x + 44);
+    n.tx.setAttribute("y", o.y - 24);
+    n.tx.textContent = o.label;
+  }
+  for (const [id, n] of nodes) if (!seen.has(id)) n.g.style.display = "none";
+  hud.textContent = "frame " + String(fr.f).padStart(3, "0");
+}
+const clock = { t: 0 };
+tl.to(clock, { t: 6, duration: 6, ease: "none", onUpdate: () => drawAt(clock.t) }, 0);
+drawAt(0);
+window.__timelines["main"] = tl;
+tl.seek(0);</script></body>
+</html>

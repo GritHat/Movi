@@ -1,0 +1,12 @@
+[
+ {
+  "inizio": 0.15,
+  "fine": 2.71,
+  "testo": "First paragraph, with 3 sensors."
+ },
+ {
+  "inizio": 4.21,
+  "fine": 7.495,
+  "testo": "Second paragraph, after 1.5 seconds."
+ }
+]

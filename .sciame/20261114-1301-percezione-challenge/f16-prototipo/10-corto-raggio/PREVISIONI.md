@@ -25,3 +25,17 @@ d (svolta dietro il pannello, si allontana e resta). Bracci: «base» (solo corr
 
 Nota onesta scritta prima: sv-P5 è la più a rischio (l'architetto ha visto 0 riagganci su `pannello_a12__s00`, critica 4);
 sv-P4b dipende da una libreria di percorsi rigenerata in Python (non quella del banco in C): se cade, lo si dice.
+
+## Aggiunta — 2026-11-15T00:25:23+01:00, PRIMA dei lanci di misura (dopo un solo passaggio di prova, d k=100, braccio zona+libero, per far girare lo script)
+
+Nota di provenienza: la tabella sopra era già in questa cartella all'avvio di questa sessione (00:15:23, prima che
+scrivessi il nucleo): la adotto senza cambiarla. Definizioni operative fissate ora, prima dei numeri:
+- «Inizio del nascosto» = primo fotogramma della corsa corrente con `visibile: false`; gli orizzonti 1, 2, 3 s sono i
+  fotogrammi 15, 30, 45 dopo. sv-P4 si conta su TUTTI i passaggi e a parte su quelli con la persona entro 3 m
+  (fuori portata la griglia non esiste: il sistema non dichiara niente, e lo si dice).
+- sv-P4b si conta solo dove la regione stretta esiste (n può essere piccolo: lo si dirà).
+- sv-P5: riaggancio con identità «presunta» nei passaggi a12, a05, b in cui la persona torna visibile.
+- sv-P6 si misura in un lancio a parte, UN processo, 10 passaggi (b, k=100…109); le campagne girano a 6 processi
+  con un filo numpy ciascuno, e i loro tempi non contano per sv-P6.
+- sv-P8: 10 passaggi (b, k=100…109), braccio zona+libero, con e senza file delle etichette, firme confrontate riga per riga.
+- sv-P9 e sv-P10 sulle sequenze del catalogo (pavimento_vuoto, sensore_coperto): NON sono semi nuovi; lo si dice.

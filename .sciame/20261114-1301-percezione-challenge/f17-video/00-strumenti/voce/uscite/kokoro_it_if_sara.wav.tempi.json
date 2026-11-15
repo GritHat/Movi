@@ -1,0 +1,17 @@
+[
+ {
+  "inizio": 0.15,
+  "fine": 3.819,
+  "testo": "La schiera di sensori esplora la strada 30 volte al secondo."
+ },
+ {
+  "inizio": 4.169,
+  "fine": 11.209,
+  "testo": "A 120 metri, un veicolo che viaggia a 90 chilometri orari viene rilevato in meno di 50 millisecondi."
+ },
+ {
+  "inizio": 11.559,
+  "fine": 16.338,
+  "testo": "Quattro telecamere e 2 radar fondono poi le loro misure in un'unica traccia continua."
+ }
+]

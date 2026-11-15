@@ -1,0 +1,162 @@
+{
+  "version": 1,
+  "historyId": "c255f493-3e94-455f-8a9f-86bc7d3b2356",
+  "currentRevision": null,
+  "pendingChanges": false,
+  "files": {
+    "AGENTS.md": {
+      "hash": "268ff46777938da818baa92a718571785e9acf2cef2d3ffbacbb93483dcba37a",
+      "content": "/home/fede/.cache/hyperframes/history/c255f493-3e94-455f-8a9f-86bc7d3b2356/blobs/26/268ff46777938da818baa92a718571785e9acf2cef2d3ffbacbb93483dcba37a"
+    },
+    "CLAUDE.md": {
+      "hash": "268ff46777938da818baa92a718571785e9acf2cef2d3ffbacbb93483dcba37a",
+      "content": "/home/fede/.cache/hyperframes/history/c255f493-3e94-455f-8a9f-86bc7d3b2356/blobs/26/268ff46777938da818baa92a718571785e9acf2cef2d3ffbacbb93483dcba37a"
+    },
+    "assets/data/stati.js": {
+      "hash": "1e2114b11c40d6bd8666c046d52a2110569a7514d4685e2fb23dc9e76d856938",
+      "content": "/home/fede/.cache/hyperframes/history/c255f493-3e94-455f-8a9f-86bc7d3b2356/blobs/1e/1e2114b11c40d6bd8666c046d52a2110569a7514d4685e2fb23dc9e76d856938"
+    },
+    "assets/data/stati.json": {
+      "hash": "22be1b4d5068531d9cf7ac74f1df6ce6d7b01791eef7da9d5f68338ff0e85261",
+      "content": "/home/fede/.cache/hyperframes/history/c255f493-3e94-455f-8a9f-86bc7d3b2356/blobs/22/22be1b4d5068531d9cf7ac74f1df6ce6d7b01791eef7da9d5f68338ff0e85261"
+    },
+    "assets/fonts/Inter-LICENSE-OFL.txt": {
+      "hash": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a",
+      "content": "/home/fede/.cache/hyperframes/history/c255f493-3e94-455f-8a9f-86bc7d3b2356/blobs/26/262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a"
+    },
+    "assets/fonts/Inter-Regular.ttf": {
+      "hash": "40d692fce188e4471e2b3cba937be967878f631ad3ebbbdcd587687c7ebe0c82",
+      "content": "/home/fede/.cache/hyperframes/history/c255f493-3e94-455f-8a9f-86bc7d3b2356/blobs/40/40d692fce188e4471e2b3cba937be967878f631ad3ebbbdcd587687c7ebe0c82"
+    },
+    "assets/fonts/Inter-SemiBold.ttf": {
+      "hash": "78a843fade9d4612a5567302fb595b56976eb5fcebf4fea5a5912d638bafcde3",
+      "content": "/home/fede/.cache/hyperframes/history/c255f493-3e94-455f-8a9f-86bc7d3b2356/blobs/78/78a843fade9d4612a5567302fb595b56976eb5fcebf4fea5a5912d638bafcde3"
+    },
+    "assets/fonts/InterVariable.woff2": {
+      "hash": "693b77d4f32ee9b8bfc995589b5fad5e99adf2832738661f5402f9978429a8e3",
+      "content": "/home/fede/.cache/hyperframes/history/c255f493-3e94-455f-8a9f-86bc7d3b2356/blobs/69/693b77d4f32ee9b8bfc995589b5fad5e99adf2832738661f5402f9978429a8e3"
+    },
+    "assets/fonts/JetBrainsMono-Bold.woff2": {
+      "hash": "c503cc5ec5f8b2c7666b7ecda1adf44bd45f2e6579b2eba0fc292150416588a2",
+      "content": "/home/fede/.cache/hyperframes/history/c255f493-3e94-455f-8a9f-86bc7d3b2356/blobs/c5/c503cc5ec5f8b2c7666b7ecda1adf44bd45f2e6579b2eba0fc292150416588a2"
+    },
+    "assets/fonts/JetBrainsMono-OFL.txt": {
+      "hash": "30f0c136e3c88e422d0791acd97238870f9054a9729bc34cf2ff0d4ed8cac4ad",
+      "content": "/home/fede/.cache/hyperframes/history/c255f493-3e94-455f-8a9f-86bc7d3b2356/blobs/30/30f0c136e3c88e422d0791acd97238870f9054a9729bc34cf2ff0d4ed8cac4ad"
+    },
+    "assets/fonts/JetBrainsMono-Regular.woff2": {
+      "hash": "a9cb1cd82332b23a47e3a1239d25d13c86d16c4220695e34b243effa999f45f2",
+      "content": "/home/fede/.cache/hyperframes/history/c255f493-3e94-455f-8a9f-86bc7d3b2356/blobs/a9/a9cb1cd82332b23a47e3a1239d25d13c86d16c4220695e34b243effa999f45f2"
+    },
+    "assets/vendor/gsap.min.js": {
+      "hash": "92bb9a96476f983d212a2bc4f54c889039c1696dd4461d40a736860938570fbb",
+      "content": "/home/fede/.cache/hyperframes/history/c255f493-3e94-455f-8a9f-86bc7d3b2356/blobs/92/92bb9a96476f983d212a2bc4f54c889039c1696dd4461d40a736860938570fbb"
+    },
+    "hyperframes.json": {
+      "hash": "53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50",
+      "content": "/home/fede/.cache/hyperframes/history/c255f493-3e94-455f-8a9f-86bc7d3b2356/blobs/53/53dbce1e19aa713cbb12ee0bc4d206143b45ab15e6ffbfcaa8f69572d4d24d50"
+    },
+    "index.html": {
+      "hash": "7180983c73c894b317f9698c0f0c42cf7ed944e1799bceb3908b9934660251d7",
+      "content": "/home/fede/.cache/hyperframes/history/c255f493-3e94-455f-8a9f-86bc7d3b2356/blobs/71/7180983c73c894b317f9698c0f0c42cf7ed944e1799bceb3908b9934660251d7"
+    },
+    "meta.json": {
+      "hash": "ab597a860da3756487b01d302c368ada8dd223edbee8291ddafc14b5341103a7",
+      "content": "/home/fede/.cache/hyperframes/history/c255f493-3e94-455f-8a9f-86bc7d3b2356/blobs/ab/ab597a860da3756487b01d302c368ada8dd223edbee8291ddafc14b5341103a7"
+    },
+    "package.json": {
+      "hash": "ea3c43bf929f30db24ca5e7e88624b87df777a75aa798bdb1405dcdde42212c5",
+      "content": "/home/fede/.cache/hyperframes/history/c255f493-3e94-455f-8a9f-86bc7d3b2356/blobs/ea/ea3c43bf929f30db24ca5e7e88624b87df777a75aa798bdb1405dcdde42212c5"
+    },
+    "assets/audio/tono.wav": {
+      "hash": "51ebdd30bddb1b2446f26300f1c5903409873b9a7801ac7e7c489d401ea521ed",
+      "content": "/home/fede/.cache/hyperframes/history/c255f493-3e94-455f-8a9f-86bc7d3b2356/blobs/51/51ebdd30bddb1b2446f26300f1c5903409873b9a7801ac7e7c489d401ea521ed"
+    }
+  },
+  "revisions": {},
+  "checks": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "snapshots": {
+    "latest": {
+      "revision": null,
+      "id": "3d3a166c-506a-41a5-9659-0b1e8ca1f061-2"
+    },
+    "revisions": {},
+    "unversioned": [
+      {
+        "scope": "full",
+        "id": "3d3a166c-506a-41a5-9659-0b1e8ca1f061-0",
+        "image": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f17-video/00-strumenti/hyperframes/prova/.hyperframes/artifacts/snapshots/301dde9e-f0fb-4b43-ac8d-34467a6d46d7/frame-00-at-1s.png",
+        "time": 1,
+        "metadata": {
+          "width": 1920,
+          "height": 1080,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1794697622908,
+        "contentHash": "e1759b369645a4bf649dabcd369fc7eb76d98252ec691f1414624bd0fa6384b1",
+        "revision": null,
+        "inputFingerprint": "d7d802c44efe3fd2ec7e1ace0f9109c0142d49447e73f4c411eb221e0af14af6",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "3d3a166c-506a-41a5-9659-0b1e8ca1f061-1",
+        "image": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f17-video/00-strumenti/hyperframes/prova/.hyperframes/artifacts/snapshots/301dde9e-f0fb-4b43-ac8d-34467a6d46d7/frame-01-at-3s.png",
+        "time": 3,
+        "metadata": {
+          "width": 1920,
+          "height": 1080,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1794697622908,
+        "contentHash": "fbdf8acb3a0b633e9e9a0ed773b7f8c42e1bd1cc09036f3927f001756d16e092",
+        "revision": null,
+        "inputFingerprint": "d7d802c44efe3fd2ec7e1ace0f9109c0142d49447e73f4c411eb221e0af14af6",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "scope": "full",
+        "id": "3d3a166c-506a-41a5-9659-0b1e8ca1f061-2",
+        "image": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f17-video/00-strumenti/hyperframes/prova/.hyperframes/artifacts/snapshots/301dde9e-f0fb-4b43-ac8d-34467a6d46d7/frame-02-at-5.82s.png",
+        "time": 5.82,
+        "metadata": {
+          "width": 1920,
+          "height": 1080,
+          "zoomScale": 1,
+          "browserGpuMode": "auto",
+          "warnings": [],
+          "partial": false
+        },
+        "createdAt": 1794697622908,
+        "contentHash": "7a1b7e5e4adf93cfe7a37ea41ee14b7d632f67106450ee9a6cb8edfa56e8cdf4",
+        "revision": null,
+        "inputFingerprint": "d7d802c44efe3fd2ec7e1ace0f9109c0142d49447e73f4c411eb221e0af14af6",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      }
+    ]
+  },
+  "renders": {
+    "latest": {
+      "id": "d28ea1fa-4242-4e37-acb7-f8c64de7b66d",
+      "completedAt": 1794697540200,
+      "output": "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f17-video/00-strumenti/hyperframes/prova/renders/prova_draft_w12.mp4",
+      "status": "completed",
+      "revision": null
+    },
+    "retainedRevisions": []
+  },
+  "pendingArtifactCleanup": []
+}

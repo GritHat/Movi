@@ -1,16 +1,6 @@
 {
- "commento": "ETICHETTE ASSEGNATE A MANO. Il classificatore non è realizzato: è supposto esistente e lasciato ai lavori futuri.",
+ "commento": "ETICHETTE ASSEGNATE A MANO. Il classificatore non è realizzato: è supposto esistente e lasciato ai lavori futuri. La regola lega la classe all'oggetto vero s1 della simulazione (traccia più vicina entro 0,5 m): il pannello, che la catena insegue come oggetto, resta «non_classificato».",
  "regole": [
-  {
-   "classe": "persona_a_piedi",
-   "da_s": 0,
-   "a_s": 1000000000.0,
-   "zona": [
-    -10,
-    10,
-    0,
-    10
-   ]
-  }
+  {"classe": "persona_a_piedi", "id_vero": "s1"}
  ]
 }

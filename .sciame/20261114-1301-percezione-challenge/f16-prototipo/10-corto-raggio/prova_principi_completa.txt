@@ -1,0 +1,6 @@
+[ok] sv-P9 pavimento vuoto: 30 fotogrammi, tracce confermate 0, fotogrammi con avviso 0; settori-fotogramma «visto libero fino a d»: 111 su 540
+[ok] sv-P10 sensore coperto: 18 fotogrammi coperti da t = 1.000 s; affidabilità persa dichiarata da t = 1.133333 (ritardo 0.133 s); coperti oltre 0,27 s senza dichiarazione: 0; celle libere o occupate con affidabilità persa: 0; settori tutti persi: True
+[ok] sv-P8 etichette non toccano avvisi, settori, celle: 10 passaggi b, righe diverse: 0
+[ok] sv-P7 controllo fra righe (artefatto): errori trovati: [(2, 'PRINCIPIO: avviso della traccia 1 tolto senza guardare')]
+[ok] principio 1 (artefatto): errori trovati: ['PRINCIPIO: affidabilità persa ma la griglia dichiara celle libere o occupate']
+[ok] sv-P6 tempo per ciclo (un processo): 899 cicli: mediana 9.4 ms, p95 10.4 ms, massimo 33.5 ms
