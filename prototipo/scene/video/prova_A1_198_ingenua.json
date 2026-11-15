@@ -1,0 +1,31 @@
+{
+ "commento": "VIDEO (fase 2b): prova SIMULAZIONE dalle schede, nessun sensore fisico; etichette a mano.",
+ "modo": "lungo",
+ "scenario": "A1",
+ "sorgente": {
+  "tipo": "scena_lp",
+  "scenario": "A1",
+  "condizione": {
+   "configurazione": "alta",
+   "cooperante": true
+  },
+  "piano": [
+   -100,
+   800,
+   -100,
+   800
+  ],
+  "celle_lato": 24,
+  "passaggio": 198,
+  "nucleo": "v1",
+  "chiamante": "interfaccia"
+ },
+ "classi_ammesse": [],
+ "profilo_portatore": "stazione_fissa",
+ "profilo_ricevente": "operatore_di_sito",
+ "etichette": "../etichette/lunga_portata.json",
+ "interruttori": {},
+ "parametri": {},
+ "seme": 0,
+ "origine_dati": "simulati"
+}

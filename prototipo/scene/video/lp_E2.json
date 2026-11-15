@@ -1,0 +1,29 @@
+{
+ "commento": "VIDEO (fase 2b, sciame-sviluppatore): avaria con fiammata in corsa di decollo: camere non affidabili, radar resta, detriti in pista, avviso al mezzo; nucleo e strato eventi v2. SIMULAZIONE dalle schede, nessun sensore fisico; etichette a mano.",
+ "modo": "lungo",
+ "scenario": "E2",
+ "sorgente": {
+  "tipo": "scena_lp",
+  "scenario": "E2",
+  "condizione": {
+   "configurazione": "alta"
+  },
+  "piano": [
+   0,
+   1450,
+   -700,
+   750
+  ],
+  "celle_lato": 24,
+  "passaggio": 0,
+  "nucleo": "v2"
+ },
+ "classi_ammesse": [],
+ "profilo_portatore": "stazione_fissa",
+ "profilo_ricevente": "operatore_di_sito",
+ "etichette": "../etichette/lunga_portata.json",
+ "interruttori": {},
+ "parametri": {},
+ "seme": 0,
+ "origine_dati": "simulati"
+}

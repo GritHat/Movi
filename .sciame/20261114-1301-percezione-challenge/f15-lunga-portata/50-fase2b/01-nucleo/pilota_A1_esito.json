@@ -1,0 +1,602 @@
+{
+ "N": 40,
+ "per_passaggio": [
+  {
+   "idx": 0,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 0,
+   "libero_viol": {
+    "multirotore": 0
+   },
+   "libero_tot": {
+    "multirotore": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 13
+  },
+  {
+   "idx": 1,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 0,
+   "libero_viol": {
+    "multirotore": 0
+   },
+   "libero_tot": {
+    "multirotore": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 10
+  },
+  {
+   "idx": 2,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 0,
+   "libero_viol": {
+    "multirotore": 0
+   },
+   "libero_tot": {
+    "multirotore": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 7
+  },
+  {
+   "idx": 3,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 0,
+   "libero_viol": {
+    "multirotore_C0": 0
+   },
+   "libero_tot": {
+    "multirotore_C0": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 7
+  },
+  {
+   "idx": 4,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 0,
+   "libero_viol": {
+    "multirotore": 0
+   },
+   "libero_tot": {
+    "multirotore": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 10
+  },
+  {
+   "idx": 5,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 0,
+   "libero_viol": {
+    "multirotore": 0
+   },
+   "libero_tot": {
+    "multirotore": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 10
+  },
+  {
+   "idx": 6,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 0,
+   "libero_viol": {
+    "multirotore": 0
+   },
+   "libero_tot": {
+    "multirotore": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 8
+  },
+  {
+   "idx": 7,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 0,
+   "libero_viol": {
+    "multirotore": 0
+   },
+   "libero_tot": {
+    "multirotore": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 8
+  },
+  {
+   "idx": 8,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 10,
+   "libero_viol": {
+    "multirotore": 0
+   },
+   "libero_tot": {
+    "multirotore": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 8
+  },
+  {
+   "idx": 9,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 0,
+   "libero_viol": {
+    "multirotore": 0
+   },
+   "libero_tot": {
+    "multirotore": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 7
+  },
+  {
+   "idx": 10,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 0,
+   "libero_viol": {
+    "multirotore_C0": 0
+   },
+   "libero_tot": {
+    "multirotore_C0": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 6
+  },
+  {
+   "idx": 11,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 0,
+   "libero_viol": {
+    "multirotore": 0
+   },
+   "libero_tot": {
+    "multirotore": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 5
+  },
+  {
+   "idx": 12,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 0,
+   "libero_viol": {
+    "multirotore": 0
+   },
+   "libero_tot": {
+    "multirotore": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 11
+  },
+  {
+   "idx": 13,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 0,
+   "libero_viol": {
+    "multirotore": 0
+   },
+   "libero_tot": {
+    "multirotore": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 10
+  },
+  {
+   "idx": 14,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 0,
+   "libero_viol": {
+    "multirotore": 0
+   },
+   "libero_tot": {
+    "multirotore": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 7
+  },
+  {
+   "idx": 15,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 0,
+   "libero_viol": {
+    "multirotore": 0
+   },
+   "libero_tot": {
+    "multirotore": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 10
+  },
+  {
+   "idx": 16,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 0,
+   "libero_viol": {
+    "multirotore": 0
+   },
+   "libero_tot": {
+    "multirotore": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 5
+  },
+  {
+   "idx": 17,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 0,
+   "libero_viol": {
+    "multirotore_C0": 0
+   },
+   "libero_tot": {
+    "multirotore_C0": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 8
+  },
+  {
+   "idx": 18,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 8,
+   "libero_viol": {
+    "multirotore": 0
+   },
+   "libero_tot": {
+    "multirotore": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 8
+  },
+  {
+   "idx": 19,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 0,
+   "libero_viol": {
+    "multirotore": 0
+   },
+   "libero_tot": {
+    "multirotore": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 6
+  },
+  {
+   "idx": 20,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 0,
+   "libero_viol": {
+    "multirotore": 0
+   },
+   "libero_tot": {
+    "multirotore": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 9
+  },
+  {
+   "idx": 21,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 0,
+   "libero_viol": {
+    "multirotore": 0
+   },
+   "libero_tot": {
+    "multirotore": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 10
+  },
+  {
+   "idx": 22,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 0,
+   "libero_viol": {
+    "multirotore": 0
+   },
+   "libero_tot": {
+    "multirotore": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 13
+  },
+  {
+   "idx": 23,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 0,
+   "libero_viol": {
+    "multirotore": 0
+   },
+   "libero_tot": {
+    "multirotore": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 9
+  },
+  {
+   "idx": 24,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 0,
+   "libero_viol": {
+    "multirotore_C0": 0
+   },
+   "libero_tot": {
+    "multirotore_C0": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 8
+  },
+  {
+   "idx": 25,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 0,
+   "libero_viol": {
+    "multirotore": 0
+   },
+   "libero_tot": {
+    "multirotore": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 6
+  },
+  {
+   "idx": 26,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 0,
+   "libero_viol": {
+    "multirotore": 0
+   },
+   "libero_tot": {
+    "multirotore": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 5
+  },
+  {
+   "idx": 27,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 0,
+   "libero_viol": {
+    "multirotore": 0
+   },
+   "libero_tot": {
+    "multirotore": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 8
+  },
+  {
+   "idx": 28,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 6,
+   "libero_viol": {
+    "multirotore": 0
+   },
+   "libero_tot": {
+    "multirotore": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 12
+  },
+  {
+   "idx": 29,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 0,
+   "libero_viol": {
+    "multirotore": 0
+   },
+   "libero_tot": {
+    "multirotore": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 10
+  },
+  {
+   "idx": 30,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 0,
+   "libero_viol": {
+    "multirotore": 0
+   },
+   "libero_tot": {
+    "multirotore": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 11
+  },
+  {
+   "idx": 31,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 0,
+   "libero_viol": {
+    "multirotore_C0": 0
+   },
+   "libero_tot": {
+    "multirotore_C0": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 8
+  },
+  {
+   "idx": 32,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 0,
+   "libero_viol": {
+    "multirotore": 0
+   },
+   "libero_tot": {
+    "multirotore": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 10
+  },
+  {
+   "idx": 33,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 9,
+   "libero_viol": {
+    "multirotore": 0
+   },
+   "libero_tot": {
+    "multirotore": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 9
+  },
+  {
+   "idx": 34,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 0,
+   "libero_viol": {
+    "multirotore": 0
+   },
+   "libero_tot": {
+    "multirotore": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 8
+  },
+  {
+   "idx": 35,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 0,
+   "libero_viol": {
+    "multirotore": 0
+   },
+   "libero_tot": {
+    "multirotore": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 6
+  },
+  {
+   "idx": 36,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 0,
+   "libero_viol": {
+    "multirotore": 0
+   },
+   "libero_tot": {
+    "multirotore": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 9
+  },
+  {
+   "idx": 37,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 0,
+   "libero_viol": {
+    "multirotore": 0
+   },
+   "libero_tot": {
+    "multirotore": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 12
+  },
+  {
+   "idx": 38,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 8,
+   "libero_viol": {
+    "multirotore_C0": 0
+   },
+   "libero_tot": {
+    "multirotore_C0": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 7
+  },
+  {
+   "idx": 39,
+   "senza_regione": 0,
+   "fuori_avviso": 0,
+   "nasc_tot": 0,
+   "libero_viol": {
+    "multirotore": 0
+   },
+   "libero_tot": {
+    "multirotore": 114
+   },
+   "tempestivo": true,
+   "falsi_confermati": 4
+  }
+ ],
+ "con_ciclo_senza_regione": [
+  0,
+  40,
+  [
+   0.0,
+   0.088
+  ]
+ ],
+ "con_ciclo_fuori_avviso": [
+  0,
+  40,
+  [
+   0.0,
+   0.088
+  ]
+ ],
+ "con_libero_sull_oggetto": [
+  0,
+  40,
+  [
+   0.0,
+   0.088
+  ]
+ ],
+ "tempestivi": [
+  40,
+  40,
+  [
+   0.912,
+   1.0
+  ]
+ ],
+ "istanti_libero_sull_oggetto": [
+  0,
+  4560
+ ],
+ "falsi_confermati_mediana": 8
+}

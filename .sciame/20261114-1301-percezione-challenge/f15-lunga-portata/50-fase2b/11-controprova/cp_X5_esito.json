@@ -1,0 +1,8 @@
+{
+ "mappa_certificata=True, edificio_in_pianta=False": "3",
+ "mappa_certificata=True, edificio_in_pianta=True": "2",
+ "mappa_certificata=False, edificio_in_pianta=False": "3",
+ "mappa_certificata=False, edificio_in_pianta=True": "2",
+ "mappa_certificata=None, edificio_in_pianta=False": "3",
+ "mappa_certificata=None, edificio_in_pianta=True": "2"
+}

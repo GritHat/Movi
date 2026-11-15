@@ -35,18 +35,58 @@ QUOTA_VISTA = {"A1": 30.0, "A2": 3.0, "A3": 60.0, "A4": 30.0, "S1": 1.0, "S2": 2
 _M = {}
 
 
+# ---- nucleo v2 (fase 2b, sciame-sviluppatore, 15-11-2026). AGGIUNTO: il v1 resta e si sceglie con --nucleo v1 o
+# con la voce "nucleo": "v1" della sorgente. v2 = riuso/lunga_portata_v2/ (movi_lp_v2.py, regole v2, eventi_v2.py;
+# PROVENIENZA.md). Con v2: regole v2; A1 e A2 nella famiglia sito_droni_rullaggio (caso centrale, inviluppo dei droni
+# e dei mezzi di terra), A3 in aeroporto_e_droni (aerei in volo a 210 m/s: limite dichiarato); mappa DICHIARATA
+# completa (il simulatore conosce gli ostacoli: ipotesi, scritta nell'intestazione); E1, E2, E4, E5 con lo strato
+# eventi_v2 (E3 non c'è: eventi_lp col nucleo v2).
+LP2 = riuso.percorso("lunga_portata_v2")
+NUCLEI = ("v1", "v2")
+NUCLEO_LP = os.environ.get("MOVI_NUCLEO_LP", "v2")
+FAMIGLIA_V2 = {"A1": "sito_droni_rullaggio", "A2": "sito_droni_rullaggio"}
+EVENTI_V2 = ("E1", "E2", "E4", "E5")
+NUCLEO_DA_RIGA_DI_COMANDO = False
+PASSO_REG_EV_S = 0.5              # eventi_v2 gira a 0,1 s: il registro ne tiene uno ogni 0,5 s (come gli altri modi lunghi)
+
+
+def scegli_nucleo(nome):
+    """Sceglie il nucleo del modo lungo prima di caricare i moduli (in un processo vale uno solo)."""
+    global NUCLEO_LP
+    if nome not in NUCLEI:
+        raise ValueError(f"nucleo sconosciuto: {nome} (ammessi: {NUCLEI})")
+    if _M and _M.get("nucleo") != nome:
+        raise RuntimeError(f"moduli già caricati col nucleo {_M.get('nucleo')}: un processo, un nucleo")
+    NUCLEO_LP = nome
+
+
 def moduli():
     """prove_lp, eventi_lp, sim_lp, movi_lp dalla copia in riuso/ (senza scrivere __pycache__)."""
     if not _M:
         sys.dont_write_bytecode = True
         if SIM not in sys.path:
             sys.path.insert(0, SIM)
+        if NUCLEO_LP == "v2":
+            import types
+            if LP2 not in sys.path:
+                sys.path.insert(0, LP2)
+            import movi_lp_v2
+            movi_lp_v2.MAPPA_CERTIFICATA_PREDEFINITA = True
+            sys.modules["movi_lp_import"] = types.SimpleNamespace(nucleo=movi_lp_v2)
         import prove_lp
         import sim_lp
         from movi_lp_import import nucleo as m
-        _M.update(prove=prove_lp, sim=sim_lp, m=m)
+        if NUCLEO_LP == "v2":
+            prove_lp.REG = m.carica_regole(os.path.join(LP2, "regole_lunga_portata_v2.json"))
+            prove_lp.FAMIGLIA.update(FAMIGLIA_V2)
+        _M.update(prove=prove_lp, sim=sim_lp, m=m, nucleo=NUCLEO_LP)
     if "eventi" not in _M:
         import eventi_lp
+        if NUCLEO_LP == "v2":
+            eventi_lp.REG = _M["prove"].REG
+            import eventi_v2
+            eventi_v2.NUCLEO = "riuso/lunga_portata_v2/movi_lp_v2.py"
+            _M["eventi_v2"] = eventi_v2
         _M["eventi"] = eventi_lp
     return _M
 
@@ -88,6 +128,26 @@ class _Osservatore:
                 out[j, i] = STATO_LP_A_REG[m.stato_fuso(gr, np.array([x, y, self.quota]), t, classi)]
         return out
 
+    def libere_per_classe(self, ins, t, stato=None, n_lato=12):
+        """v2: per ogni classe ammessa, quante celle della pianta (n_lato × n_lato, più rada della vista) sono «libere»
+        PER QUELLA CLASSE (stato_fuso con la sola classe; per gli eventi: stato_v2, che toglie i sensori accecati).
+        0 celle libere -> «zona non verificata per <classe>» nel registro."""
+        m = moduli()["m"]
+        x0, x1, y0, y1, _ = self.piano
+        gr = [g for g in ins.griglie if g.affidabile]
+        out = {}
+        for c in ins.classi:
+            cl = [ins.reg["classi"][c]]
+            k = 0
+            if gr:
+                for y in np.linspace(y0, y1, n_lato):
+                    for x in np.linspace(x0, x1, n_lato):
+                        p = np.array([x, y, self.quota])
+                        s = stato(p, t, cl) if stato else m.stato_fuso(gr, p, t, cl)
+                        k += int(s == m.LIBERO)
+            out[c] = [k, n_lato * n_lato]
+        return out
+
 
 def _osservato(osv, base):
     m = moduli()["m"]
@@ -119,6 +179,8 @@ def _osservato(osv, base):
             if osv.piano and abs(t / osv.ogni_s - round(t / osv.ogni_s)) < 1e-6:
                 c0 = time.perf_counter()
                 ist["pianta"] = osv.pianta(self, t)
+                if moduli()["nucleo"] == "v2":
+                    ist["libere_per_classe"] = osv.libere_per_classe(self, t)
                 osv.t_pianta += time.perf_counter() - c0
             osv.istanti[round(float(t), 2)] = ist           # E1–E5 chiamano uscite() due volte per ciclo: vale l'ultima
             return out
@@ -141,6 +203,8 @@ def _osservato(osv, base):
 
 def esegui_passaggio(cfg):
     """Esegue il passaggio della configurazione e rende (R di prove_lp/eventi_lp, osservatore, dichiarazione)."""
+    if cfg.sorgente.get("nucleo") and not _M and not NUCLEO_DA_RIGA_DI_COMANDO:
+        scegli_nucleo(cfg.sorgente["nucleo"])              # la scena chiede un nucleo; --nucleo la scavalca
     M = moduli()
     P, S, m = M["prove"], M["sim"], M["m"]
     s = cfg.sorgente
@@ -162,10 +226,17 @@ def esegui_passaggio(cfg):
             return orig_mis(t, z, R, sensore, None, **k)
         m.Misura = _senza
     dich = {"scenario": scen, "configurazione": conf, "condizione": cond}
+    dich["nucleo"] = M["nucleo"]
     try:
         if s.get("pubblica"):
             dich["registrazione_pubblica"] = _prepara_pubblica(P, S, scen, s["pubblica"], orig_gv)
-        if scen.startswith("E"):
+        if scen.startswith("E") and M["nucleo"] == "v2" and scen in EVENTI_V2:
+            sep = s.get("separazione_m", 5.0 if scen == "E5" else None)
+            idx = int(s.get("passaggio", 0))
+            R = passaggio_eventi_v2(M, scen, conf, idx, sep, osv)
+            dich.update(passaggio=idx, chiamante="eventi_v2 (strato eventi della fase 2b, semi 20261116)",
+                        separazione_m=sep)
+        elif scen.startswith("E"):
             E = M["eventi"]
             sep = s.get("separazione_m", 5.0 if scen == "E5" else None)
             idx = int(s.get("passaggio", 0))
@@ -315,6 +386,16 @@ class NucleoLungo(nucleo.Nucleo):
                                   "metriche_del_passaggio": {k: v for k, v in self.src.R.items() if k != "esemplare"},
                                   "durata_esecuzione_s": round(self.src.durata_s, 1),
                                   "durata_vista_in_pianta_s": round(self.src.osv.t_pianta, 1)}
+        if M["nucleo"] == "v2":
+            esc = P.REG["scenari"][fam].get("classi_escluse", [])
+            testa["lunga_portata"].update(
+                nucleo="v2", nucleo_file="riuso/lunga_portata_v2/movi_lp_v2.py",
+                regole_file="riuso/lunga_portata_v2/regole_lunga_portata_v2.json",
+                provenienza="riuso/lunga_portata_v2/PROVENIENZA.md", classi_escluse=esc,
+                mappa_certificata="dichiarata completa (il simulatore conosce gli ostacoli: ipotesi)",
+                tempestivita_conto=m.tempestivita(P.REG, fam), nota_famiglia=P.REG["scenari"][fam].get("nota"))
+        else:
+            testa["lunga_portata"]["nucleo"] = "v1"
         return testa
 
     def passo(self, fot, verita=None):
@@ -397,10 +478,13 @@ class NucleoLungo(nucleo.Nucleo):
             settori.append({"id": x["nome"], "azimut_gradi": None, "d_m": None,
                             "livello": "affidabilita_persa" if p else ("attenzione" if (tracce or avvisi) else "zona_non_verificata"),
                             "motivo": "sensore senza affidabilità" if p else "livello prudente (il modo lungo non scrive «visto libero fino a d»)"})
-        return {"tipo": "fotogramma", "modo": "lungo", "indice": fot.indice, "t": c["t"],
+        riga = {"tipo": "fotogramma", "modo": "lungo", "indice": fot.indice, "t": c["t"],
                 "dichiarazioni": self.cfg.dichiarazioni(), "verita": verita, "sensori": sensori, "affidabilita": aff,
                 "celle": {"griglia": "pianta_lp", "conteggi": conteggi, "per_sensore": per_sens},
                 "settori": settori, "tracce": tracce, "avvisi": avvisi, "eventi": eventi, "tempo_ciclo_ms": None}
+        if self.src.dich.get("nucleo") == "v2":
+            campi_v2(self, riga, c, ist)
+        return riga
 
     def griglia_stati(self):
         # collaudo (sciame-tester, 15-11-2026): prima della prima pianta (t < 2 s) la griglia intera è «non osservato»
@@ -410,3 +494,192 @@ class NucleoLungo(nucleo.Nucleo):
             n = piano[4] if piano else 1
             return np.zeros((n, n), np.int8)
         return np.asarray(self._griglia)
+
+
+# ============================================================================ nucleo v2: campi del registro e eventi
+def _cerchio(c, r, n=32):
+    return {"tipo": "poligono", "punti": [[float(c[0] + r * math.cos(a)), float(c[1] + r * math.sin(a))]
+                                          for a in np.linspace(0, 2 * math.pi, n, endpoint=False)]}
+
+
+def _capsula(a, b, r, n=16):
+    """Poligono del segmento [a, b] ingrossato di r (pianta)."""
+    a, b = np.asarray(a, float)[:2], np.asarray(b, float)[:2]
+    d = b - a
+    th = math.atan2(d[1], d[0]) if np.linalg.norm(d) > 1e-9 else 0.0
+    pts = [[float(b[0] + r * math.cos(th + f)), float(b[1] + r * math.sin(th + f))]
+           for f in np.linspace(-math.pi / 2, math.pi / 2, n)]
+    pts += [[float(a[0] + r * math.cos(th + f)), float(a[1] + r * math.sin(th + f))]
+            for f in np.linspace(math.pi / 2, 3 * math.pi / 2, n)]
+    return {"tipo": "poligono", "punti": pts}
+
+
+def campi_v2(nuc, riga, c, ist):
+    """I campi che il nucleo v2 aggiunge a ogni fotogramma (il validatore li controlla, registro.valida_riga):
+      affidabilita_per_sensore  [{sensore, stato: affidabile | persa | accecato, griglia, motivo}]
+      zona_non_verificata_per_classe [{classe, motivo, forma, celle_libere}]  (escluse dallo scenario, o 0 celle
+                                libere per quella classe nell'ultima pianta: il sensore non la può dichiarare)
+      libero_per_classi         le classi con almeno una cella libera nell'ultima pianta
+      detriti                   null | {stato, volume: [poligoni], impronta: [poligoni], come_lo_so: dedotto, …}"""
+    lp = nuc.src.dich
+    fam = nuc._fam_v2()
+    reg = moduli()["prove"].REG
+    esc = reg["scenari"][fam].get("classi_escluse", [])
+    persi = set(c.get("affidabilita_persa", []))
+    acc = set(c.get("accecati", []))
+    per_s = riga["celle"].get("per_sensore", {})
+    aff = []
+    for s in riga["sensori"]:
+        g = per_s.get(s["id"])
+        st = "accecato" if s["id"] in acc else ("persa" if (s["id"] in persi or (g is not None and not g["affidabile"]))
+                                                else "affidabile")
+        if st != "affidabile" and g is not None:      # una griglia senza affidabilità non dichiara niente
+            g["conteggi"] = {"non_osservato": int(sum(g["conteggi"].values()))}
+        aff.append({"sensore": s["id"], "stato": st, "griglia": g is not None,
+                    "motivo": {"accecato": "quadri saturi o nube opaca (EV-B, EV-C)",
+                               "persa": "controllo di salute (silenzio, saturazione, fondo)"}.get(st)})
+    riga["affidabilita_per_sensore"] = aff
+    if "libere_per_classe" in ist:
+        nuc._libere_v2 = ist["libere_per_classe"]
+    lib = getattr(nuc, "_libere_v2", None) or {}
+    x0, x1, y0, y1, _ = nuc.src.osv.piano
+    tutto = {"tipo": "poligono", "punti": [[x0, y0], [x1, y0], [x1, y1], [x0, y1]]}
+    znv = [{"classe": e, "motivo": "classe esclusa dallo scenario: «libero» non vale mai per lei", "forma": tutto,
+            "celle_libere": None} for e in esc]
+    for cl, (k, n) in sorted(lib.items()):
+        if k == 0:
+            znv.append({"classe": cl, "motivo": "nessuna cella «libera» per questa classe nella vista (Pd insufficiente "
+                        "o nessun sensore affidabile): zona non verificata", "forma": tutto, "celle_libere": [k, n]})
+    if riga["affidabilita"] == "persa":
+        znv = [{"classe": cl, "motivo": "affidabilità persa", "forma": tutto, "celle_libere": None}
+               for cl in list(lib) + list(esc)]
+    riga["zona_non_verificata_per_classe"] = znv
+    riga["libero_per_classi"] = sorted(cl for cl, (k, n) in lib.items() if k > 0) if riga["affidabilita"] == "ok" else []
+    R = nuc.src.R
+    if R.get("meteo") is not None and nuc.src.osv.ins is not None:   # E3: portata dichiarata con il meteo
+        if not hasattr(nuc, "_portata_v2"):
+            E, m, cat = moduli()["eventi"], moduli()["m"], moduli()["eventi"].CAT
+            pd_ = []
+            for g in nuc.src.osv.ins.griglie:
+                tipo = g.s.nome.split("#")[0]
+                for cl in ("multirotore_piccolo", "aereo_leggero"):
+                    rc_ = reg["classi"][cl]["rcs_m2"]
+                    nom = float(m.Sensore("x", [0, 0, 0], cat[tipo]).portata(rc_, 0.99, 5))
+                    pd_.append({"sensore": g.s.nome, "classe": cl, "nominale_m": round(nom, 1),
+                                "con_meteo_conto_m": round(float(E.fattore(R["meteo"], tipo, 1)) * nom, 1),
+                                "dichiarata_nucleo_m": round(float(g.s.portata(rc_, 0.99, 5)), 1)})
+            nuc._portata_v2 = pd_
+        riga["portata_dichiarata"] = nuc._portata_v2
+    det = c.get("detriti_v2")
+    riga["detriti"] = det
+    if det:
+        nuovi = [i for i in det["tracce_avvisate"] if i not in nuc.__dict__.setdefault("_avvisati_v2", set())]
+        for i in nuovi:
+            nuc._avvisati_v2.add(i)
+            riga["eventi"].append({"t": c["t"], "tipo": "avviso_detriti", "come_lo_so": "dedotto", "traccia": i,
+                                   "motivo": "il percorso previsto entra nell'impronta dei detriti (EV-E)"})
+        if not nuc.__dict__.get("_evento_v2_scritto"):
+            nuc._evento_v2_scritto = True
+            riga["eventi"].append({"t": c["t"], "tipo": "evento_" + det["tipo"].replace(" ", "_"), "come_lo_so": "dedotto",
+                                   "da_s": det["t_b"], "t_a": det["t_a"], "origine": det["origine"],
+                                   "volume": det["volume"], "impronta": det["impronta"]})
+    return riga
+
+
+def _fam_v2(self):
+    M = moduli()
+    scen = self.cfg.sorgente["scenario"]
+    return (M["prove"].FAMIGLIA.get(scen) if not scen.startswith("E") else M["eventi"].SE[scen].get("famiglia")) \
+        or "aeroporto_e_droni"
+
+
+NucleoLungo._fam_v2 = _fam_v2
+
+
+def passaggio_eventi_v2(M, eid, cfg, idx, sep, osv):
+    """Un passaggio di eventi_v2.passaggio (copia in riuso/lunga_portata_v2, NON modificata) con un registratore
+    per ciclo. La funzione è ricompilata dal suo sorgente con UNA riga in più alla fine del corpo del ciclo
+    («_REG_CICLO(locals())»), che legge senza scrivere: tracce, insieme di presenza, sensori persi o accecati, evento,
+    volume e impronta. Rende R di eventi_v2 con R["esemplare"] nella forma che usa SorgenteLungaPortata."""
+    import inspect
+    E2, m, FR = M["eventi_v2"], M["m"], M["eventi_v2"].FR
+    src = inspect.getsource(E2.passaggio)
+    marca = "    # ---- esiti per passaggio"
+    if src.count(marca) != 1:
+        raise RuntimeError("eventi_v2.passaggio è cambiato: il registratore non sa dove agganciarsi")
+    src = src.replace(marca, "        _REG_CICLO(locals())\n" + marca, 1).replace("def passaggio(", "def _passaggio_reg(", 1)
+    cicli, stato = [], {"griglie_viste": False}
+    amm = E2.REG["scenari"][E2.FAM]["classi_ammesse"]
+
+    def reg_ciclo(L):
+        tk, D, ins, ev = L["tk"], L["D"], L["ins"], L["evento"]
+        if abs(tk / PASSO_REG_EV_S - round(tk / PASSO_REG_EV_S)) > 1e-6:
+            return
+        if not stato["griglie_viste"]:
+            osv.ins, osv.sensori, stato["griglie_viste"] = ins, list(D["sensori"]), True
+        uscite, ist = [], {"t": tk, "binario": False, "tracce": [], "eventi_nucleo": list(ins.eventi), "griglie": []}
+        for tr in ins.tracce:
+            if not tr.confermata:
+                continue
+            tau = tk - tr.t_vista
+            o = {"id": tr.id, "classe": tr.classe or "non_classificato", "pos": [float(x) for x in tr.x[:3]],
+                 "parola": "vista" if tau <= 2.0 else "non vista da %.0f s" % tau}
+            uscite.append(o)
+            d = {"id": tr.id, "classe": o["classe"], "parola": o["parola"], "da_s": float(tau), "pos": o["pos"],
+                 "sensori": sorted(tr.sensori), "zona": None, "presenza": None}
+            if tau > 2.0:
+                pp = m.insieme_presenza(tr, tk, E2.REG, amm)
+                d["presenza"] = {"tipo": pp["tipo"], "centro": [float(x) for x in pp["centro"]],
+                                 "raggio": float(pp["raggio"]), "s_min": 0.0, "s_max": 0.0, "u": None}
+            ist["tracce"].append(d)
+        cl_all = [E2.REG["classi"][c] for c in amm]
+        for g in ins.griglie:
+            ist["griglie"].append({"sensore": g.s.nome, "affidabile": bool(g.affidabile),
+                                   "conteggi": np.bincount(g.stati(tk, cl_all).ravel(), minlength=4).tolist()})
+        if abs(tk / osv.ogni_s - round(tk / osv.ogni_s)) < 1e-6 and osv.piano:
+            c0 = time.perf_counter()
+            x0, x1, y0, y1, n = osv.piano
+            pl = np.zeros((n, n), np.int8)
+            for j, y in enumerate(np.linspace(y0, y1, n)):
+                for i, x in enumerate(np.linspace(x0, x1, n)):
+                    pl[j, i] = STATO_LP_A_REG[E2.stato_v2(D, [x, y, osv.quota], tk, cl_all)]
+            ist["pianta"] = pl
+            ist["libere_per_classe"] = osv.libere_per_classe(ins, tk, stato=lambda p, t, cl: E2.stato_v2(D, p, t, cl))
+            osv.t_pianta += time.perf_counter() - c0
+        osv.istanti[round(float(tk), 2)] = ist
+        i_t = int(round(tk / 0.1))
+        ver = {}
+        for k, (T, P, _) in D["ver"].items():
+            p = P[min(i_t, len(T) - 1)]
+            if k.startswith("fr") and (p[2] < -1 or abs(p[0]) > 1e6 or len([x for x in ver if x.startswith("fr")]) >= 40):
+                continue
+            ver[k] = [float(x) for x in p]
+        acc = sorted(nm for nm, k in L["cattivi"].items() if k > 0)
+        cy = {"t": tk, "uscite": uscite, "verita": ver, "affidabilita_persa": sorted(L["dichiarato"]), "accecati": acc}
+        if ev is not None:
+            tau = tk - ev["t_a"]
+            r, tq, zmin, zmax, _ = FR.inviluppo(tau, ev["ev"], ev["par"])
+            vol = [_capsula(ev["ev"]["p0"], np.asarray(ev["ev"]["p0"][:2]) + np.asarray(v[:2]) * tq, r)
+                   for v in ev["ev"]["vc"]]
+            Z = ev["Z"]
+            imp = [_cerchio(Z["c"], Z["R"], 48)]
+            if Z["striscia"] is not None:
+                imp.append(_capsula(Z["striscia"][0], Z["striscia"][1], Z["striscia"][2]))
+            cy["detriti_v2"] = {"stato": "zona_non_verificata_possibili_detriti", "come_lo_so": "dedotto",
+                                "tipo": ev["tipo"], "t_b": ev["t_b"], "t_a": round(ev["t_a"], 2),
+                                "origine": list(ev["origine"]), "volume": vol, "quota_volume_m": [float(zmin), float(zmax)],
+                                "raggio_volume_m": float(r), "impronta": imp, "impronta_raggio_m": float(Z["R"]),
+                                "tracce_avvisate": sorted(L["avvisati"]),
+                                "nota": "volume V(tau) in pianta (capsule) e impronta (disco R_imp + striscia): "
+                                        "frammenti.py, inviluppo prudente; nessuna etichetta"}
+            # l'evento entra nel registro da campi_v2 (una volta, con volume e impronta): qui niente cy["evento"]
+        cicli.append(cy)
+
+    ns = dict(vars(E2))
+    ns["_REG_CICLO"] = reg_ciclo
+    exec(compile(src, E2.__file__ + " [con registratore]", "exec"), ns)
+    R = ns["_passaggio_reg"](eid, cfg, idx, sep)
+    sens = [{"nome": s.nome, "pos": s.pos.tolist(), "fonte": s.base.get("fonte")} for s in osv.sensori]
+    R["esemplare"] = {"scenario": eid, "configurazione": cfg, "sensori": sens, "cicli": cicli,
+                      "ostacoli": E2.SE[eid].get("ostacoli", []), "strato": "eventi_v2"}
+    return R

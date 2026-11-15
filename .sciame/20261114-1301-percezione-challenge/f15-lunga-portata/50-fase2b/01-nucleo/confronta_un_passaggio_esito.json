@@ -1,0 +1,98 @@
+{
+ "v1": {
+  "chiamante": "interfaccia",
+  "comportamento": "nominale",
+  "coop": "presente",
+  "c0": false,
+  "fattore_v": 0.977,
+  "prima_estrazione": 0.34397840855022976,
+  "salute": null,
+  "t_conf": 2.0,
+  "d_conf_m": 960.4896934341272,
+  "d_ril_m": 970.7297823166797,
+  "t_ril": 1.344,
+  "tempestivo": true,
+  "nasc_tot": 0,
+  "nasc_senza_regione": 0,
+  "nasc_fuori_avviso": 0,
+  "libero_viol": {
+   "multirotore": 0
+  },
+  "libero_tot": {
+   "multirotore": 114
+  },
+  "falsi_confermati": 6,
+  "durata_s": 114.5,
+  "scambi": 0,
+  "ritardo_salute_s": null,
+  "costo_ciclo_ms_mediana": 16.15359949937556,
+  "costo_ciclo_ms_p95": 68.6691234997852,
+  "t_simulatore_s": 0.2683014050053316,
+  "n_record": 1955,
+  "lat_max_s": 0.1
+ },
+ "v2_regole_v1": {
+  "chiamante": "interfaccia",
+  "comportamento": "nominale",
+  "coop": "presente",
+  "c0": false,
+  "fattore_v": 0.977,
+  "prima_estrazione": 0.34397840855022976,
+  "salute": null,
+  "t_conf": 2.0,
+  "d_conf_m": 960.4896934341272,
+  "d_ril_m": 970.7297823166797,
+  "t_ril": 1.344,
+  "tempestivo": true,
+  "nasc_tot": 0,
+  "nasc_senza_regione": 0,
+  "nasc_fuori_avviso": 0,
+  "libero_viol": {
+   "multirotore": 0
+  },
+  "libero_tot": {
+   "multirotore": 114
+  },
+  "falsi_confermati": 5,
+  "durata_s": 114.5,
+  "scambi": 0,
+  "ritardo_salute_s": null,
+  "costo_ciclo_ms_mediana": 32.15484649990685,
+  "costo_ciclo_ms_p95": 74.92586454718547,
+  "t_simulatore_s": 0.6316990370032727,
+  "n_record": 1955,
+  "lat_max_s": 0.1
+ },
+ "v2_regole_v2": {
+  "chiamante": "interfaccia",
+  "comportamento": "nominale",
+  "coop": "presente",
+  "c0": false,
+  "fattore_v": 0.977,
+  "prima_estrazione": 0.34397840855022976,
+  "salute": null,
+  "t_conf": 2.0,
+  "d_conf_m": 960.4896934341272,
+  "d_ril_m": 970.7297823166797,
+  "t_ril": 1.344,
+  "tempestivo": true,
+  "nasc_tot": 0,
+  "nasc_senza_regione": 0,
+  "nasc_fuori_avviso": 0,
+  "libero_viol": {
+   "multirotore": 0
+  },
+  "libero_tot": {
+   "multirotore": 114
+  },
+  "falsi_confermati": 13,
+  "durata_s": 114.5,
+  "scambi": 0,
+  "ritardo_salute_s": null,
+  "costo_ciclo_ms_mediana": 41.1945995001588,
+  "costo_ciclo_ms_p95": 113.21179749938885,
+  "t_simulatore_s": 0.29188346800219733,
+  "n_record": 1955,
+  "lat_max_s": 0.1
+ }
+}

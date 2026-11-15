@@ -1,0 +1,78 @@
+{
+ "lp_A1": {
+  "fotogrammi": 228,
+  "conteggi": {
+   "conteggi_mostrati_diversi_dal_registro": 2,
+   "libero_dentro_avviso_mostrate": 56,
+   "libero_dentro_avviso_scritte": 56
+  },
+  "primo_esempio": {
+   "conteggi_mostrati_diversi_dal_registro": "(1.0, {'non_osservato': 576}, {})",
+   "libero_dentro_avviso_mostrate": "(46.0, (173.91304347826087, 330.4347826086956), 'avviso#4')",
+   "libero_dentro_avviso_scritte": "(46.0, (173.91304347826087, 330.4347826086956), 'avviso#4')"
+  }
+ },
+ "lp_A1_ingenua": {
+  "fotogrammi": 228,
+  "conteggi": {
+   "conteggi_mostrati_diversi_dal_registro": 2
+  },
+  "primo_esempio": {
+   "conteggi_mostrati_diversi_dal_registro": "(1.0, {'non_osservato': 576}, {})"
+  }
+ },
+ "lp_A2": {
+  "fotogrammi": 179,
+  "conteggi": {
+   "conteggi_mostrati_diversi_dal_registro": 2
+  },
+  "primo_esempio": {
+   "conteggi_mostrati_diversi_dal_registro": "(1.0, {'non_osservato': 576}, {})"
+  }
+ },
+ "lp_A3": {
+  "fotogrammi": 272,
+  "conteggi": {
+   "conteggi_mostrati_diversi_dal_registro": 2
+  },
+  "primo_esempio": {
+   "conteggi_mostrati_diversi_dal_registro": "(1.0, {'non_osservato': 576}, {})"
+  }
+ },
+ "lp_E1": {
+  "fotogrammi": 63,
+  "conteggi": {
+   "conteggi_mostrati_diversi_dal_registro": 3
+  },
+  "primo_esempio": {
+   "conteggi_mostrati_diversi_dal_registro": "(0.5, {'non_osservato': 576}, {})"
+  }
+ },
+ "lp_E2": {
+  "fotogrammi": 89,
+  "conteggi": {
+   "conteggi_mostrati_diversi_dal_registro": 3
+  },
+  "primo_esempio": {
+   "conteggi_mostrati_diversi_dal_registro": "(0.5, {'non_osservato': 576}, {})"
+  }
+ },
+ "lp_E3": {
+  "fotogrammi": 319,
+  "conteggi": {
+   "conteggi_mostrati_diversi_dal_registro": 3
+  },
+  "primo_esempio": {
+   "conteggi_mostrati_diversi_dal_registro": "(0.5, {'non_osservato': 576}, {})"
+  }
+ },
+ "lp_E4": {
+  "fotogrammi": 99,
+  "conteggi": {
+   "conteggi_mostrati_diversi_dal_registro": 3
+  },
+  "primo_esempio": {
+   "conteggi_mostrati_diversi_dal_registro": "(0.5, {'non_osservato': 576}, {})"
+  }
+ }
+}

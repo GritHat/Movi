@@ -1,0 +1,30 @@
+{
+ "commento": "VIDEO (fase 2b, sciame-sviluppatore): drone sotto la copertura del radar d'aeroporto (solo radar d'aeroporto + ADS-B): «zona non verificata per droni»; nucleo v2. SIMULAZIONE dalle schede, nessun sensore fisico; etichette a mano.",
+ "modo": "lungo",
+ "scenario": "A3",
+ "sorgente": {
+  "tipo": "scena_lp",
+  "scenario": "A3",
+  "condizione": {
+   "configurazione": "min"
+  },
+  "piano": [
+   -1500,
+   2000,
+   -6000,
+   2500
+  ],
+  "celle_lato": 24,
+  "passaggio": 0,
+  "nucleo": "v2",
+  "chiamante": "prudente"
+ },
+ "classi_ammesse": [],
+ "profilo_portatore": "stazione_fissa",
+ "profilo_ricevente": "operatore_di_sito",
+ "etichette": "../etichette/lunga_portata.json",
+ "interruttori": {},
+ "parametri": {},
+ "seme": 0,
+ "origine_dati": "simulati"
+}

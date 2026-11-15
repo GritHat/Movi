@@ -113,6 +113,65 @@ def valida_riga(riga):
     for ev in riga["eventi"]:
         if ev.get("come_lo_so") not in COME_LO_SO:
             e.append(f"evento {ev.get('tipo')}: manca «osservato» o «dedotto»")
+    e.extend(_valida_campi_v2(riga))
+    return e
+
+
+# campi del nucleo v2 a lunga portata (fase 2b, sciame-sviluppatore, 15-11-2026), FACOLTATIVI: se ci sono, si controllano
+#   affidabilita_per_sensore      [{sensore, stato: STATI_AFF_SENSORE, griglia, motivo}]
+#   zona_non_verificata_per_classe [{classe, motivo, forma, celle_libere}]
+#   libero_per_classi             [classe, …]   (mai una classe che è anche «non verificata», mai con affidabilità persa)
+#   detriti                       null | {stato: "zona_non_verificata_possibili_detriti", come_lo_so: "dedotto",
+#                                         volume: [poligoni], impronta: [poligoni], tracce_avvisate, …}
+STATI_AFF_SENSORE = ("affidabile", "persa", "accecato")
+EVENTI_IMPROVVISI = ("evento_contatto", "evento_separazione", "evento_avaria_o_fiammata", "evento_collisione",
+                     "evento_avaria_motore", "avviso_detriti")
+
+
+def _poligono_valido(f):
+    return (isinstance(f, dict) and f.get("tipo") == "poligono" and isinstance(f.get("punti"), list)
+            and len(f["punti"]) >= 3 and all(isinstance(p, list) and len(p) == 2 for p in f["punti"]))
+
+
+def _valida_campi_v2(riga):
+    e = []
+    ids = {s.get("id") for s in riga["sensori"]}
+    if "affidabilita_per_sensore" in riga:
+        for a in riga["affidabilita_per_sensore"]:
+            if a.get("stato") not in STATI_AFF_SENSORE:
+                e.append(f"sensore {a.get('sensore')}: affidabilità fuori elenco ({a.get('stato')})")
+            if a.get("sensore") not in ids:
+                e.append(f"affidabilità di un sensore che non è nell'elenco: {a.get('sensore')}")
+            g = (riga["celle"].get("per_sensore") or {}).get(a.get("sensore"))
+            if a.get("stato") != "affidabile" and g and (g["conteggi"].get("libero", 0) or g["conteggi"].get("occupato", 0)):
+                e.append(f"PRINCIPIO: sensore {a.get('sensore')} {a.get('stato')} ma la sua griglia dichiara celle libere")
+    nv = set()
+    for z in riga.get("zona_non_verificata_per_classe", []):
+        if not z.get("classe") or not z.get("motivo"):
+            e.append("zona non verificata senza classe o senza motivo")
+        if z.get("forma") is not None and not _forma_valida(z["forma"]):
+            e.append(f"zona non verificata per {z.get('classe')}: forma sconosciuta")
+        nv.add(z.get("classe"))
+    lib = set(riga.get("libero_per_classi", []))
+    if lib & nv:
+        e.append(f"PRINCIPIO: «libero» e «non verificata» insieme per {sorted(lib & nv)}")
+    if lib and riga["affidabilita"] == "persa":
+        e.append("PRINCIPIO: «libero per classi» con affidabilità persa")
+    det = riga.get("detriti")
+    if det:
+        if det.get("stato") != "zona_non_verificata_possibili_detriti":
+            e.append("detriti: stato diverso da «zona non verificata: possibili detriti»")
+        if det.get("come_lo_so") != "dedotto":
+            e.append("PRINCIPIO: i detriti sono dedotti, non osservati")
+        for nome in ("volume", "impronta"):
+            if not det.get(nome) or not all(_poligono_valido(f) for f in det[nome]):
+                e.append(f"detriti: «{nome}» non è una lista di poligoni")
+    for ev in riga["eventi"]:
+        if ev.get("tipo") in EVENTI_IMPROVVISI and ev.get("come_lo_so") != "dedotto":
+            e.append(f"PRINCIPIO: l'evento improvviso {ev.get('tipo')} va dichiarato «dedotto»")
+        if ev.get("tipo", "").startswith("evento_") and "volume" in ev:
+            if not all(_poligono_valido(f) for f in ev["volume"]) or not all(_poligono_valido(f) for f in ev.get("impronta", [])):
+                e.append(f"evento {ev.get('tipo')}: volume o impronta non poligoni")
     return e
 
 

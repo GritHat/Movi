@@ -22,14 +22,21 @@ passo 05_convalida timeout 60 sh movi.sh convalida uscite/registro_prova.jsonl
 # 2b. principi e nucleo corto: pavimento vuoto, sensore coperto, etichette, controlli fra righe, tempo (versione rapida)
 passo 06_principi timeout 900 "$PY" -I -B prove/prova_principi.py rapida
 # 2c. modo lungo: stessi passaggi esemplari di f15 (L1, 17 file) e avviso indipendente dalle etichette (L3)
-passo 07_lunga_esemplari timeout 1500 "$PY" -I -B prove/prova_lunga.py
-passo 08_lunga_etichette timeout 900 "$PY" -I -B prove/prova_lunga.py A1 --etichette
+#    fase 2b (sciame-sviluppatore, 15-11-2026): il modo lungo ha ora il nucleo v2 come predefinito; L1 e L3 confrontano
+#    con gli esemplari di f15, scritti col nucleo v1: girano con MOVI_NUCLEO_LP=v1
+passo 07_lunga_esemplari env MOVI_NUCLEO_LP=v1 timeout 1500 "$PY" -I -B prove/prova_lunga.py
+passo 08_lunga_etichette env MOVI_NUCLEO_LP=v1 timeout 900 "$PY" -I -B prove/prova_lunga.py A1 --etichette
 # 3. tutte le scene d'esempio: esegui, tabellone, mostra (le parti non ancora costruite escono con 4 e non contano)
 #    le scene lunghe (lp_*) girano a parte, al più 8 insieme: prove/scene_lunghe.sh
 sh movi.sh scene | awk '$2 == "lungo" {print $1}' > uscite/elenco_lunghe.txt
 #    collaudo (sciame-tester, 15-11-2026): le scene *_interfaccia DEVONO avere errori (mostrano la falla P2); tutte le
 #    altre devono averne 0. Prima lo script falliva sempre (esito 1) perché contava come fallimento anche le prime.
-passo 09_scene_lunghe sh -c 'timeout 1800 xargs -P 8 -n 1 sh prove/scene_lunghe.sh < uscite/elenco_lunghe.txt > uscite/scene_lunghe.txt 2>&1; f=uscite/scene_lunghe.txt; [ "$(wc -l < $f)" -eq "$(wc -l < uscite/elenco_lunghe.txt)" ] && ! grep -v "_interfaccia fatto:" $f | grep -v "fatto: errori: 0$" | grep -q . && ! grep "_interfaccia fatto:" $f | grep -v "fatto: errori: [1-9]" | grep -q .'
+#    fase 2b (sciame-sviluppatore, 15-11-2026): le scene *_interfaccia e *_ingenua mostrano la regola ingenua e sono
+#    ATTESE A FALLIRE la convalida: girano ma NON si contano (col nucleo v2 la validazione-1 è nel nucleo e possono
+#    anche passare). Tutte le altre devono avere 0 errori; nessuna scena deve mancare. Al più 3 scene insieme (≤ 8 processi).
+passo 09_scene_lunghe sh -c 'timeout 2400 xargs -P 3 -n 1 sh prove/scene_lunghe.sh < uscite/elenco_lunghe.txt > uscite/scene_lunghe.txt 2>&1; f=uscite/scene_lunghe.txt; [ "$(wc -l < $f)" -eq "$(wc -l < uscite/elenco_lunghe.txt)" ] && ! grep -v -e "_interfaccia fatto:" -e "_ingenua fatto:" $f | grep -v "fatto: errori: 0$" | grep -q .'
+#    il vecchio passo 09 (le *_interfaccia dovevano avere errori) resta qui sotto, spento, per confronto:
+# passo 09_scene_lunghe sh -c 'timeout 1800 xargs -P 8 -n 1 sh prove/scene_lunghe.sh < uscite/elenco_lunghe.txt > uscite/scene_lunghe.txt 2>&1; f=uscite/scene_lunghe.txt; [ "$(wc -l < $f)" -eq "$(wc -l < uscite/elenco_lunghe.txt)" ] && ! grep -v "_interfaccia fatto:" $f | grep -v "fatto: errori: 0$" | grep -q . && ! grep "_interfaccia fatto:" $f | grep -v "fatto: errori: [1-9]" | grep -q .'
 for s in $(sh movi.sh scene | awk '$2 == "corto" {print $1}'); do
   passo "scena_${s}_esegui" timeout 120 sh movi.sh esegui "$s" --config "scene/$s.json" --uscita "uscite/$s" --celle
   [ -f "uscite/$s/registro.jsonl" ] && passo "scena_${s}_tabellone" timeout 60 sh movi.sh tabellone "uscite/$s/registro.jsonl"

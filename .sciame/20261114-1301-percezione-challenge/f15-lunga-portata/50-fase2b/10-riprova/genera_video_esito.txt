@@ -1,0 +1,13 @@
+lp_A1 fatto in 39 s: errori: 0
+lp_A1_ingenua fatto in 39 s: errori: 7
+lp_A2 fatto in 19 s: errori: 0
+lp_A3 fatto in 54 s: errori: 0
+lp_E1 fatto in 17 s: errori: 0
+lp_E2 fatto in 18 s: errori: 0
+lp_E3 fatto in 87 s: errori: 0
+lp_E4 fatto in 16 s: errori: 0
+lp_A1 fatto in 40 s: errori: 0
+lp_A1_ingenua fatto in 39 s: errori: 53
+lp_E3 fatto in 85 s: errori: 0
+lp_A1 fatto in 40 s: errori: 0
+lp_A1_ingenua fatto in 36 s: errori: 7

@@ -1,0 +1,333 @@
+{
+ "avvertenza": "SIMULAZIONE; strato eventi v2 scritto da me; stesso simulatore e stesso autore della misura (non indipendente)",
+ "nucleo": "04-moto/movi_lp.py",
+ "soglie": {
+  "n_nuovi_min": 3,
+  "finestra_s": 2.0,
+  "r_porta_m": 150.0,
+  "grappolo_min": 2,
+  "contatto_memoria_s": 4.0,
+  "fiammata_angolo_rad": 0.03490658503988659,
+  "rumore_rilevamento_saturazione_rad": 0.002,
+  "a_arresto_m_s2": 1.5,
+  "raggio_striscia_m": 45.0,
+  "d_avv_mezzo_m": 140.0,
+  "H_min_s": 10.0,
+  "ciclo_s": 0.1
+ },
+ "inviluppo_scenario": {
+  "v_max": 210.0,
+  "a_max": 6.9,
+  "dec_max": 6.9,
+  "vincolo": "libero_3d",
+  "rcs_m2": 0.01
+ },
+ "semi": "SeedSequence(20261116, ...) nuovi",
+ "durata_s": 559.7,
+ "n": {
+  "E1_E2": 60,
+  "E4": 60,
+  "E5_5m": 300
+ },
+ "risultati": {
+  "E2/alta": {
+   "n": 60,
+   "evento_dichiarato": [
+    60,
+    60
+   ],
+   "entro_2s": [
+    60,
+    60,
+    0.9398,
+    1.0
+   ],
+   "ritardo_s_min_mediana_max": [
+    0.2,
+    0.2,
+    0.3
+   ],
+   "falsi_eventi": [
+    0,
+    60,
+    -0.0,
+    0.0602
+   ],
+   "frammenti_dentro_V_campioni": [
+    348000,
+    348000,
+    1.0
+   ],
+   "passaggi_con_tutti_i_frammenti_in_V": [
+    60,
+    60,
+    0.9398,
+    1.0
+   ],
+   "libero_in_impronta_punti": [
+    0,
+    55680
+   ],
+   "passaggi_con_libero_su_frammento": [
+    0,
+    60,
+    -0.0,
+    0.0602
+   ],
+   "libero_su_frammento_istanti": [
+    0,
+    174000
+   ],
+   "avviso_mezzo1_riuscito": [
+    0,
+    60,
+    -0.0,
+    0.0602
+   ],
+   "avviso_mezzo1_a_140m_dai_frammenti_veri": [
+    60,
+    60,
+    0.9398,
+    1.0
+   ],
+   "avviso_mezzo1_ritardo_dal_vero_max_s": 2.2,
+   "avviso_mezzo1_dati": {
+    "avvisati": 60,
+    "dist_al_avviso_min": -3082.4,
+    "dist_min_dopo_min": -3427.7
+   },
+   "salute_cicli_max": 3,
+   "passaggi_camere_dichiarate_entro_3": 60,
+   "tipi_evento": [
+    "avaria o fiammata"
+   ],
+   "errori": 0,
+   "esempio_errore": null
+  },
+  "E1/alta": {
+   "n": 60,
+   "evento_dichiarato": [
+    60,
+    60
+   ],
+   "entro_2s": [
+    51,
+    60,
+    0.7389,
+    0.919
+   ],
+   "ritardo_s_min_mediana_max": [
+    -12.5,
+    1.8,
+    2.2
+   ],
+   "falsi_eventi": [
+    0,
+    60,
+    -0.0,
+    0.0602
+   ],
+   "frammenti_dentro_V_campioni": [
+    108770,
+    109080,
+    0.99716
+   ],
+   "passaggi_con_tutti_i_frammenti_in_V": [
+    49,
+    60,
+    0.7008,
+    0.8944
+   ],
+   "libero_in_impronta_punti": [
+    0,
+    28960
+   ],
+   "passaggi_con_libero_su_frammento": [
+    0,
+    60,
+    -0.0,
+    0.0602
+   ],
+   "libero_su_frammento_istanti": [
+    0,
+    53476
+   ],
+   "avviso_persona1_riuscito": [
+    51,
+    60,
+    0.7389,
+    0.919
+   ],
+   "avviso_persona1_a_140m_dai_frammenti_veri": [
+    0,
+    60,
+    -0.0,
+    0.0602
+   ],
+   "avviso_persona1_ritardo_dal_vero_max_s": 2.2,
+   "avviso_persona1_dati": {
+    "avvisati": 60,
+    "dist_al_avviso_min": -22231.2,
+    "dist_min_dopo_min": -22231.2
+   },
+   "salute_cicli_max": null,
+   "passaggi_camere_dichiarate_entro_3": 0,
+   "tipi_evento": [
+    "contatto",
+    "separazione"
+   ],
+   "errori": 0,
+   "esempio_errore": null
+  },
+  "E4/alta": {
+   "n": 60,
+   "evento_dichiarato": [
+    0,
+    60
+   ],
+   "entro_2s": [
+    0,
+    60,
+    -0.0,
+    0.0602
+   ],
+   "ritardo_s_min_mediana_max": null,
+   "falsi_eventi": [
+    0,
+    60,
+    -0.0,
+    0.0602
+   ],
+   "frammenti_dentro_V_campioni": [
+    0,
+    0,
+    null
+   ],
+   "passaggi_con_tutti_i_frammenti_in_V": [
+    0,
+    60,
+    -0.0,
+    0.0602
+   ],
+   "libero_in_impronta_punti": [
+    0,
+    0
+   ],
+   "passaggi_con_libero_su_frammento": [
+    0,
+    60,
+    -0.0,
+    0.0602
+   ],
+   "libero_su_frammento_istanti": [
+    0,
+    0
+   ],
+   "salute_cicli_max": null,
+   "passaggi_camere_dichiarate_entro_3": 0,
+   "tipi_evento": [],
+   "errori": 0,
+   "esempio_errore": null
+  },
+  "E4/min": {
+   "n": 60,
+   "evento_dichiarato": [
+    0,
+    60
+   ],
+   "entro_2s": [
+    0,
+    60,
+    -0.0,
+    0.0602
+   ],
+   "ritardo_s_min_mediana_max": null,
+   "falsi_eventi": [
+    0,
+    60,
+    -0.0,
+    0.0602
+   ],
+   "frammenti_dentro_V_campioni": [
+    0,
+    0,
+    null
+   ],
+   "passaggi_con_tutti_i_frammenti_in_V": [
+    0,
+    60,
+    -0.0,
+    0.0602
+   ],
+   "libero_in_impronta_punti": [
+    0,
+    0
+   ],
+   "passaggi_con_libero_su_frammento": [
+    0,
+    60,
+    -0.0,
+    0.0602
+   ],
+   "libero_su_frammento_istanti": [
+    0,
+    0
+   ],
+   "salute_cicli_max": null,
+   "passaggi_camere_dichiarate_entro_3": 0,
+   "tipi_evento": [],
+   "errori": 0,
+   "esempio_errore": null
+  },
+  "E5/alta/sep5.0": {
+   "n": 300,
+   "evento_dichiarato": [
+    0,
+    300
+   ],
+   "entro_2s": [
+    0,
+    300,
+    0.0,
+    0.0126
+   ],
+   "ritardo_s_min_mediana_max": null,
+   "falsi_eventi": [
+    0,
+    300,
+    0.0,
+    0.0126
+   ],
+   "frammenti_dentro_V_campioni": [
+    0,
+    0,
+    null
+   ],
+   "passaggi_con_tutti_i_frammenti_in_V": [
+    0,
+    300,
+    0.0,
+    0.0126
+   ],
+   "libero_in_impronta_punti": [
+    0,
+    0
+   ],
+   "passaggi_con_libero_su_frammento": [
+    0,
+    300,
+    0.0,
+    0.0126
+   ],
+   "libero_su_frammento_istanti": [
+    0,
+    0
+   ],
+   "salute_cicli_max": null,
+   "passaggi_camere_dichiarate_entro_3": 0,
+   "tipi_evento": [],
+   "errori": 0,
+   "esempio_errore": null
+  }
+ }
+}

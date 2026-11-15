@@ -1,0 +1,29 @@
+{
+ "commento": "VIDEO (fase 2b, sciame-sviluppatore): drone che attraversa una colonna di fumo e ricompare; nucleo e strato eventi v2. SIMULAZIONE dalle schede, nessun sensore fisico; etichette a mano.",
+ "modo": "lungo",
+ "scenario": "E4",
+ "sorgente": {
+  "tipo": "scena_lp",
+  "scenario": "E4",
+  "condizione": {
+   "configurazione": "alta"
+  },
+  "piano": [
+   -50,
+   450,
+   -50,
+   450
+  ],
+  "celle_lato": 24,
+  "passaggio": 0,
+  "nucleo": "v2"
+ },
+ "classi_ammesse": [],
+ "profilo_portatore": "stazione_fissa",
+ "profilo_ricevente": "pilota_remoto_di_drone",
+ "etichette": "../etichette/lunga_portata.json",
+ "interruttori": {},
+ "parametri": {},
+ "seme": 0,
+ "origine_dati": "simulati"
+}

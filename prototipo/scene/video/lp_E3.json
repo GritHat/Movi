@@ -1,0 +1,29 @@
+{
+ "commento": "VIDEO (fase 2b, sciame-sviluppatore): nebbia o pioggia forte: la portata dichiarata si ritrae; eventi_lp col nucleo v2 (E3 non è nello strato v2). SIMULAZIONE dalle schede, nessun sensore fisico; etichette a mano.",
+ "modo": "lungo",
+ "scenario": "E3",
+ "sorgente": {
+  "tipo": "scena_lp",
+  "scenario": "E3",
+  "condizione": {
+   "configurazione": "alta"
+  },
+  "piano": [
+   -5000,
+   500,
+   -2700,
+   2700
+  ],
+  "celle_lato": 24,
+  "passaggio": 0,
+  "nucleo": "v2"
+ },
+ "classi_ammesse": [],
+ "profilo_portatore": "stazione_fissa",
+ "profilo_ricevente": "operatore_di_sito",
+ "etichette": "../etichette/lunga_portata.json",
+ "interruttori": {},
+ "parametri": {},
+ "seme": 0,
+ "origine_dati": "simulati"
+}

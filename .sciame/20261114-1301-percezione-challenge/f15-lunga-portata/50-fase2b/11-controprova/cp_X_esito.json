@@ -1,0 +1,113 @@
+{
+ "sito_droni_rullaggio": {
+  "inviluppo": {
+   "v_max": 45.0,
+   "a_max": 25.0,
+   "dec_max": 25.0,
+   "vincolo": "libero_3d",
+   "rcs_m2": 0.01,
+   "rho_passate": 1.0
+  },
+  "X1": [
+   {
+    "caso": "X1 ATTACCO: 22 m/s2 fino a 45",
+    "tau_fuori_[tau,vero,raggio]": []
+   },
+   {
+    "caso": "oltre: 30 m/s2 fino a 45",
+    "tau_fuori_[tau,vero,raggio]": []
+   },
+   {
+    "caso": "oltre: 25 m/s2 fino a 60 (FPV)",
+    "tau_fuori_[tau,vero,raggio]": [
+     [
+      8,
+      408.0,
+      374.1
+     ],
+     [
+      10,
+      528.0,
+      464.1
+     ],
+     [
+      20,
+      1128.0,
+      914.1
+     ],
+     [
+      30,
+      1728.0,
+      1364.1
+     ]
+    ]
+   }
+  ],
+  "X3_distanza_avviso_operatore_di_sito_m": 770.0,
+  "X4_n_eff_5_passate": 1.0
+ },
+ "aeroporto_e_droni": {
+  "inviluppo": {
+   "v_max": 210.0,
+   "a_max": 25.0,
+   "dec_max": 25.0,
+   "vincolo": "libero_3d",
+   "rcs_m2": 0.01,
+   "rho_passate": 1.0
+  },
+  "X1": [
+   {
+    "caso": "X1 ATTACCO: 22 m/s2 fino a 45",
+    "tau_fuori_[tau,vero,raggio]": []
+   },
+   {
+    "caso": "oltre: 30 m/s2 fino a 45",
+    "tau_fuori_[tau,vero,raggio]": []
+   },
+   {
+    "caso": "oltre: 25 m/s2 fino a 60 (FPV)",
+    "tau_fuori_[tau,vero,raggio]": []
+   }
+  ],
+  "X3_distanza_avviso_operatore_di_sito_m": 3410.0,
+  "X4_n_eff_5_passate": 1.0
+ },
+ "X5_mappa_nucleo_predefinita": false,
+ "X5_mappa_nel_prototipo": "movi/lungo.py:74 imposta MAPPA_CERTIFICATA_PREDEFINITA = True",
+ "X6_classi_ne_ammesse_ne_escluse": {
+  "aeroporto_e_droni": [
+   "auto_autostrada",
+   "auto_strada_urbana",
+   "treno_alta_velocita",
+   "treno_banchina"
+  ],
+  "ferrovia": [
+   "aereo_leggero",
+   "aereo_linea_avvicinamento",
+   "aereo_rullaggio",
+   "auto_autostrada",
+   "auto_strada_urbana",
+   "drone_ala_fissa",
+   "elicottero"
+  ],
+  "strada": [
+   "aereo_leggero",
+   "aereo_linea_avvicinamento",
+   "aereo_rullaggio",
+   "drone_ala_fissa",
+   "elicottero",
+   "multirotore_veloce",
+   "treno_alta_velocita",
+   "treno_banchina"
+  ],
+  "sito_droni_rullaggio": [
+   "aereo_leggero",
+   "aereo_linea_avvicinamento",
+   "auto_autostrada",
+   "auto_strada_urbana",
+   "elicottero",
+   "treno_alta_velocita",
+   "treno_banchina"
+  ]
+ }
+}

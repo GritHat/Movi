@@ -1,0 +1,151 @@
+{
+ "durata_s": 7.9,
+ "tutte_reggono": true,
+ "esiti": [
+  {
+   "prova": "X1 scatto da fermo (e X2 205 m/s)",
+   "v1_rompeva": true,
+   "v2_regge": true,
+   "dettagli": {
+    "v1_fuori(a,tau)": [
+     [
+      20.0,
+      5
+     ],
+     [
+      20.0,
+      8
+     ],
+     [
+      25.0,
+      3
+     ],
+     [
+      25.0,
+      5
+     ],
+     [
+      25.0,
+      8
+     ]
+    ],
+    "v2_fuori": [],
+    "v2_X2_fuori_tau": []
+   }
+  },
+  {
+   "prova": "X3 tempestivita' dichiarata",
+   "v1_rompeva": true,
+   "v2_regge": true,
+   "dettagli": {
+    "v1": {
+     "d_avv": 1490,
+     "portata": 2360
+    },
+    "v2_aeroporto": {
+     "d_avviso_m": 3410.0,
+     "portata_libero_m": 877.2,
+     "tempestivo": false
+    },
+    "v2_sito": {
+     "d_avviso_m": 770.0,
+     "portata_libero_m": 877.2,
+     "tempestivo": true
+    },
+    "v2_non_tempestivo_per": [
+     "operatore_di_sito",
+     "pilota_in_rullaggio",
+     "pilota_remoto_di_drone",
+     "macchinista"
+    ]
+   }
+  },
+  {
+   "prova": "X4 passate correlate",
+   "v1_rompeva": true,
+   "v2_regge": true,
+   "dettagli": {
+    "portata_v1_m": 2360,
+    "portata_v2_m": 877,
+    "Pd_1_passata_alla_portata_v2": 0.99,
+    "stato_2250m_v1": "libero",
+    "stato_2250m_v2": "non_osservato",
+    "stato_700m_v2": "libero"
+   }
+  },
+  {
+   "prova": "X5 edificio non in pianta",
+   "v1_rompeva": true,
+   "v2_regge": true,
+   "dettagli": {
+    "v1_senza_edificio_in_pianta": "libero",
+    "v2_senza_certificazione": "non_osservato",
+    "v2_sfondo_piu_vicino": "in_ombra",
+    "v2_ostacoli_nuovi_annotati": true,
+    "v2_sfondo_mancante": "non_osservato",
+    "v2_sfondo_come_atteso": "libero"
+   }
+  },
+  {
+   "prova": "X6 classi non ammesse",
+   "v1_rompeva": true,
+   "v2_regge": true,
+   "dettagli": {
+    "strada": {
+     "celle_libere_non_verificate_per_intruso": 9360,
+     "parola": "libero per auto_autostrada, auto_strada_urbana",
+     "non_verificata": "zona non verificata per pedone, due_ruote, multirotore_piccolo, multirotore_C0"
+    },
+    "aeroporto_e_droni": {
+     "celle_libere_non_verificate_per_intruso": 2160,
+     "parola": "libero per multirotore_piccolo, multirotore_veloce, drone_ala_fissa, aereo_leggero, elicottero, aereo_linea_avvicinamento, aereo_rullaggio",
+     "non_verificata": "zona non verificata per multirotore_C0"
+    }
+   }
+  },
+  {
+   "prova": "validazione-1 nel nucleo",
+   "v1_rompeva": true,
+   "v2_regge": true,
+   "dettagli": {
+    "v1_chiusa_con_meta_guardata": true,
+    "v2_chiusa_con_meta_guardata": false,
+    "v2_chiusa_con_tutto_guardato": true
+   }
+  },
+  {
+   "prova": "validazione-2 cella vicina e Doppler",
+   "v1_rompeva": true,
+   "v2_regge": true,
+   "dettagli": {
+    "cella_oggetto_v1": "libero",
+    "cella_oggetto_v2": "non_osservato",
+    "celle_libere_doppler_v1": 3960,
+    "celle_libere_doppler_v2": 0,
+    "traccia_chiusa_dal_doppler_v2": false
+   }
+  },
+  {
+   "prova": "compatibilita' prove_lp A1 (1 passaggio)",
+   "v1_rompeva": false,
+   "v2_regge": true,
+   "dettagli": {
+    "s": 7.8,
+    "chiavi": [
+     "c0",
+     "chiamante",
+     "comportamento",
+     "coop",
+     "costo_ciclo_ms_mediana",
+     "costo_ciclo_ms_p95",
+     "d_conf_m",
+     "d_ril_m",
+     "durata_s",
+     "eventi_nucleo",
+     "falsi_confermati",
+     "fattore_v"
+    ]
+   }
+  }
+ ]
+}

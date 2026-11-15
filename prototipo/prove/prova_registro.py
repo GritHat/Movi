@@ -48,6 +48,9 @@ def main(argv):
         s = registro.Scrittore(argv[2], severo=False)
         for r in righe:
             s.scrivi(r)
+        # fase 2b (sciame-sviluppatore, 15-11-2026): `movi convalida` vuole la riga di riassunto in fondo (collaudo);
+        # senza, il passo 05 di prova_tutto falliva con «registro interrotto». Riassunto minimo, dichiarato.
+        s.scrivi({"tipo": "riassunto", "fotogrammi": n, "nota": "prova del formato (prova_registro.py): riassunto minimo"})
         s.chiudi()
     return 3 if errori else 0
 
