@@ -1,0 +1,5 @@
+# Dipendenze del prototipo simulato MoVi (Python 3.10 o più recente)
+numpy>=2.0
+scipy>=1.13
+pillow>=10.0
+opencv-python-headless>=4.9

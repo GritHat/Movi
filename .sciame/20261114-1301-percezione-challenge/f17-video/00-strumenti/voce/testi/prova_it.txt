@@ -1,1 +1,0 @@
-La schiera di sensori esplora la strada 30 volte al secondo. A 120 metri, un veicolo che viaggia a 90 chilometri orari viene rilevato in meno di 50 millisecondi. Quattro telecamere e 2 radar fondono poi le loro misure in un'unica traccia continua.

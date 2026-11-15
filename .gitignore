@@ -1,0 +1,69 @@
+# ---------- ambiente e materiale temporaneo ----------
+.venv/
+venv/
+__pycache__/
+*.pyc
+node_modules/
+.hyperframes/
+*.bak_tmp
+.DS_Store
+
+# LaTeX: file ausiliari
+*.aux
+*.log
+*.out
+*.blg
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# media pesanti: si rigenerano; il video finale si consegna a parte
+*.mp4
+*.wav
+*.mp3
+*.avi
+*.webm
+
+# sciame: corsie temporanee, dati scaricati, ambienti, eseguibili compilati
+.sciame/.*.corsie/
+.sciame/**/scaricati/
+.sciame/**/scaricato/
+.sciame/**/ambiente/
+.sciame/**/pagine/
+.sciame/**/esemplari/
+.sciame/**/f17-video/00-strumenti/
+.claude/settings.local.json
+
+# ---------- versioni superate dei documenti ----------
+# proposta: resta solo la versione corrente (proposta_sciame.tex/.pdf) con VERSIONI.md
+proposta/proposta_sciame_v*.pdf
+proposta/proposta_sciame_v*.tex
+proposta/*_pre_correzioni.*
+# documento tecnico: resta solo la versione corrente
+allegato_tecnico/v1/
+allegato_tecnico/v2/
+allegato_tecnico/v2_bis/
+allegato_tecnico/capitoli/versioni_precedenti/
+allegato_tecnico/*_pre_correzioni.*
+allegato_tecnico/versioni_bib_v2.bib
+# stato e riferimenti: resta solo la versione corrente
+documentazione/STATO_PROGETTO_v*.md
+documentazione/RIFERIMENTI_*.md
+documentazione/riferimenti_*.bib
+# video: restano il marchio, gli script della voce e il progetto corrente (v4d); il resto è superato o si rigenera
+video/progetto/
+video/progetto_v3/
+video/progetto_v4/
+video/progetto_v4b/
+video/progetto_v4c/
+video/rendering/
+video/sottotitoli/
+video/esterni/
+video/consegna/*
+!video/consegna/MoVi_pitch_IT_v4.srt
+!video/consegna/MoVi_copione_v4.md
+video/voce/*
+!video/voce/*.sh
+!video/voce/*.txt
+!video/voce/*.md

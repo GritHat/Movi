@@ -1,9 +1,0 @@
-{
- "_nota": "v7 (animatic con voce): testi della scena 7 rifatti sulla voce guida v4. '@CHIAVE' = il testo 'it' di cifre.json (unica fonte delle cifre).",
- "v7.s7.righe": ["s7.l1", "v7.s7.l46", "s7.l2", "s7.l3", "v7.s7.lvolo", "s7.l4"],
- "v7.s7.l46": "@L-46",
- "v7.s7.lvolo": "@L-VOLO",
- "v7.s7.regge": "Che cosa regge, in simulazione:",
- "v7.s7.contatori": ["s7.c_a1", "s7.c_a4", "s7.c_v2"],
- "v7.s7.origine": "tutti i conteggi in simulazione · modelli dei sensori dalle schede pubbliche · probabilità di rilevamento ipotizzate"
-}

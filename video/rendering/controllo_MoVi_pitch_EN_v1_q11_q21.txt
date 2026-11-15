@@ -1,5 +1,0 @@
-fotogrammi analizzati (1/s): 173
-Q11 verde: massimo 8 pixel di campione in un fotogramma (t=83 s), area connessa massima 2 px di campione (= circa x4 a 1080p); fotogrammi con verde > 0: 28
-  primi 5: [(8, 2, 83), (7, 1, 82), (6, 1, 109), (6, 1, 86), (5, 1, 84)]
-Q21 cornice di 16 px: massimo 1019 pixel chiari (t=158 s); fotogrammi con pixel chiari: 159; primi 5: [(1019, 158), (1019, 157), (1019, 156), (1019, 155), (1019, 154)]
-fine

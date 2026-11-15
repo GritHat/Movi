@@ -1,5 +1,0 @@
-First paragraph, with 3 sensors.
-
-[pausa 1.5]
-
-Second paragraph, after 1.5 seconds.

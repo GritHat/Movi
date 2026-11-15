@@ -3,7 +3,12 @@
 # Tutto è SIMULATO: nessun sensore fisico. Tempo atteso: pochi minuti (ogni passo ha il suo timeout).
 set -u
 cd "$(dirname "$0")"
-PY=${PY:-$(cd ../.sciame/20261114-1301-percezione-challenge/f10-dati/ambiente/venv/bin && pwd)/python}
+if [ -z "$PY" ]; then
+  if [ -x ../.sciame/20261114-1301-percezione-challenge/f10-dati/ambiente/venv/bin/python ]; then
+    PY=$(cd ../.sciame/20261114-1301-percezione-challenge/f10-dati/ambiente/venv/bin && pwd)/python
+  elif [ -x ../.venv/bin/python ]; then PY=$(cd ../.venv/bin && pwd)/python
+  else PY=python3; fi
+fi
 export PY
 SEQ=${SEQ:-../.sciame/20261114-1301-percezione-challenge/f10-dati/11-simulatore/sequenze}
 mkdir -p uscite
