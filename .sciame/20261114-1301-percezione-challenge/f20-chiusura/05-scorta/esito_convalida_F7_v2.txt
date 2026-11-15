@@ -1,0 +1,5 @@
+/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/prototipo/uscite/video_volo/registro_F7_davanti_v2.jsonl: 240 fotogrammi, 0 violazioni
+/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/prototipo/uscite/video_volo/registro_F7_dietro_v2.jsonl: 240 fotogrammi, 0 violazioni
+/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/prototipo/uscite/video_volo/registro_F7_F7c_v2.jsonl: 240 fotogrammi, 0 violazioni
+/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/prototipo/uscite/video_volo/registro_F7_lato_v2.jsonl: 240 fotogrammi, 0 violazioni
+/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/prototipo/uscite/video_volo/registro_F7_vira_v2.jsonl: 240 fotogrammi, 0 violazioni

@@ -1,0 +1,762 @@
+{
+"lato/att": {
+"continuita": [
+60,
+60,
+0.94,
+1.0
+],
+"identita": [
+60,
+60,
+0.94,
+1.0
+],
+"riacq_2s": [
+60,
+60,
+0.94,
+1.0
+],
+"riacq_cam_2s": [
+60,
+60,
+0.94,
+1.0
+],
+"libero_bersaglio_passaggi": [
+0,
+60,
+0.0,
+0.06
+],
+"libero_frammento_passaggi": [
+0,
+60,
+0.0,
+0.06
+],
+"assoc_non_dichiarate_passaggi": [
+0,
+60,
+0.0,
+0.06
+],
+"assoc_dubbie_dichiarate_passaggi": [
+0,
+60,
+0.0,
+0.06
+],
+"evento_dichiarato": [
+1,
+60,
+0.003,
+0.089
+],
+"falsi_eventi": [
+0,
+60,
+0.0,
+0.06
+],
+"ritardo_evento_s_max": 0.0,
+"volume_campioni": [
+757,
+757
+],
+"volume_passaggi_tutti_dentro": [
+1,
+60,
+0.003,
+0.089
+],
+"intersecano": 0,
+"intersecano_con_avviso_prima": 0,
+"margine_avviso_s_min": null,
+"camera_affidabile_in_saturazione_cicli": 0,
+"cicli_fuori_regione_tot": 0
+},
+"lato/sda": {
+"continuita": [
+60,
+60,
+0.94,
+1.0
+],
+"identita": [
+60,
+60,
+0.94,
+1.0
+],
+"riacq_2s": [
+60,
+60,
+0.94,
+1.0
+],
+"riacq_cam_2s": [
+60,
+60,
+0.94,
+1.0
+],
+"libero_bersaglio_passaggi": [
+0,
+60,
+0.0,
+0.06
+],
+"libero_frammento_passaggi": [
+0,
+60,
+0.0,
+0.06
+],
+"assoc_non_dichiarate_passaggi": [
+0,
+60,
+0.0,
+0.06
+],
+"assoc_dubbie_dichiarate_passaggi": [
+3,
+60,
+0.017,
+0.137
+],
+"evento_dichiarato": [
+60,
+60,
+0.94,
+1.0
+],
+"falsi_eventi": [
+0,
+60,
+0.0,
+0.06
+],
+"ritardo_evento_s_max": 0.0,
+"volume_campioni": [
+44051,
+44051
+],
+"volume_passaggi_tutti_dentro": [
+60,
+60,
+0.94,
+1.0
+],
+"intersecano": 0,
+"intersecano_con_avviso_prima": 0,
+"margine_avviso_s_min": null,
+"camera_affidabile_in_saturazione_cicli": 0,
+"cicli_fuori_regione_tot": 0
+},
+"davanti/att": {
+"continuita": [
+59,
+60,
+0.911,
+0.997
+],
+"identita": [
+60,
+60,
+0.94,
+1.0
+],
+"riacq_2s": [
+60,
+60,
+0.94,
+1.0
+],
+"riacq_cam_2s": [
+57,
+60,
+0.863,
+0.983
+],
+"libero_bersaglio_passaggi": [
+0,
+60,
+0.0,
+0.06
+],
+"libero_frammento_passaggi": [
+0,
+60,
+0.0,
+0.06
+],
+"assoc_non_dichiarate_passaggi": [
+0,
+60,
+0.0,
+0.06
+],
+"assoc_dubbie_dichiarate_passaggi": [
+20,
+60,
+0.227,
+0.459
+],
+"evento_dichiarato": [
+60,
+60,
+0.94,
+1.0
+],
+"falsi_eventi": [
+0,
+60,
+0.0,
+0.06
+],
+"ritardo_evento_s_max": 0.0,
+"volume_campioni": [
+43681,
+43681
+],
+"volume_passaggi_tutti_dentro": [
+60,
+60,
+0.94,
+1.0
+],
+"intersecano": 56,
+"intersecano_con_avviso_prima": 56,
+"margine_avviso_s_min": 0.40000000000000036,
+"camera_affidabile_in_saturazione_cicli": 0,
+"cicli_fuori_regione_tot": 1
+},
+"davanti/sda": {
+"continuita": [
+60,
+60,
+0.94,
+1.0
+],
+"identita": [
+60,
+60,
+0.94,
+1.0
+],
+"riacq_2s": [
+60,
+60,
+0.94,
+1.0
+],
+"riacq_cam_2s": [
+57,
+60,
+0.863,
+0.983
+],
+"libero_bersaglio_passaggi": [
+0,
+60,
+0.0,
+0.06
+],
+"libero_frammento_passaggi": [
+0,
+60,
+0.0,
+0.06
+],
+"assoc_non_dichiarate_passaggi": [
+0,
+60,
+0.0,
+0.06
+],
+"assoc_dubbie_dichiarate_passaggi": [
+20,
+60,
+0.227,
+0.459
+],
+"evento_dichiarato": [
+60,
+60,
+0.94,
+1.0
+],
+"falsi_eventi": [
+0,
+60,
+0.0,
+0.06
+],
+"ritardo_evento_s_max": 0.0,
+"volume_campioni": [
+43681,
+43681
+],
+"volume_passaggi_tutti_dentro": [
+60,
+60,
+0.94,
+1.0
+],
+"intersecano": 56,
+"intersecano_con_avviso_prima": 56,
+"margine_avviso_s_min": 0.40000000000000036,
+"camera_affidabile_in_saturazione_cicli": 0,
+"cicli_fuori_regione_tot": 0
+},
+"dietro/att": {
+"continuita": [
+60,
+60,
+0.94,
+1.0
+],
+"identita": [
+60,
+60,
+0.94,
+1.0
+],
+"riacq_2s": [
+60,
+60,
+0.94,
+1.0
+],
+"riacq_cam_2s": [
+60,
+60,
+0.94,
+1.0
+],
+"libero_bersaglio_passaggi": [
+0,
+60,
+0.0,
+0.06
+],
+"libero_frammento_passaggi": [
+0,
+60,
+0.0,
+0.06
+],
+"assoc_non_dichiarate_passaggi": [
+0,
+60,
+0.0,
+0.06
+],
+"assoc_dubbie_dichiarate_passaggi": [
+0,
+60,
+0.0,
+0.06
+],
+"evento_dichiarato": [
+0,
+60,
+0.0,
+0.06
+],
+"falsi_eventi": [
+0,
+60,
+0.0,
+0.06
+],
+"ritardo_evento_s_max": null,
+"volume_campioni": [
+0,
+0
+],
+"volume_passaggi_tutti_dentro": [
+0,
+60,
+0.0,
+0.06
+],
+"intersecano": 0,
+"intersecano_con_avviso_prima": 0,
+"margine_avviso_s_min": null,
+"camera_affidabile_in_saturazione_cicli": 0,
+"cicli_fuori_regione_tot": 0
+},
+"dietro/sda": {
+"continuita": [
+60,
+60,
+0.94,
+1.0
+],
+"identita": [
+60,
+60,
+0.94,
+1.0
+],
+"riacq_2s": [
+60,
+60,
+0.94,
+1.0
+],
+"riacq_cam_2s": [
+60,
+60,
+0.94,
+1.0
+],
+"libero_bersaglio_passaggi": [
+0,
+60,
+0.0,
+0.06
+],
+"libero_frammento_passaggi": [
+0,
+60,
+0.0,
+0.06
+],
+"assoc_non_dichiarate_passaggi": [
+0,
+60,
+0.0,
+0.06
+],
+"assoc_dubbie_dichiarate_passaggi": [
+0,
+60,
+0.0,
+0.06
+],
+"evento_dichiarato": [
+60,
+60,
+0.94,
+1.0
+],
+"falsi_eventi": [
+0,
+60,
+0.0,
+0.06
+],
+"ritardo_evento_s_max": 0.0,
+"volume_campioni": [
+43600,
+43600
+],
+"volume_passaggi_tutti_dentro": [
+60,
+60,
+0.94,
+1.0
+],
+"intersecano": 0,
+"intersecano_con_avviso_prima": 0,
+"margine_avviso_s_min": null,
+"camera_affidabile_in_saturazione_cicli": 0,
+"cicli_fuori_regione_tot": 0
+},
+"vira/att": {
+"continuita": [
+60,
+60,
+0.94,
+1.0
+],
+"identita": [
+43,
+60,
+0.592,
+0.815
+],
+"riacq_2s": [
+60,
+60,
+0.94,
+1.0
+],
+"riacq_cam_2s": [
+56,
+60,
+0.841,
+0.974
+],
+"libero_bersaglio_passaggi": [
+0,
+60,
+0.0,
+0.06
+],
+"libero_frammento_passaggi": [
+0,
+60,
+0.0,
+0.06
+],
+"assoc_non_dichiarate_passaggi": [
+0,
+60,
+0.0,
+0.06
+],
+"assoc_dubbie_dichiarate_passaggi": [
+23,
+60,
+0.271,
+0.51
+],
+"evento_dichiarato": [
+60,
+60,
+0.94,
+1.0
+],
+"falsi_eventi": [
+0,
+60,
+0.0,
+0.06
+],
+"ritardo_evento_s_max": 0.0,
+"volume_campioni": [
+42950,
+42950
+],
+"volume_passaggi_tutti_dentro": [
+60,
+60,
+0.94,
+1.0
+],
+"intersecano": 54,
+"intersecano_con_avviso_prima": 54,
+"margine_avviso_s_min": 0.40000000000000036,
+"camera_affidabile_in_saturazione_cicli": 0,
+"cicli_fuori_regione_tot": 0
+},
+"vira/sda": {
+"continuita": [
+60,
+60,
+0.94,
+1.0
+],
+"identita": [
+60,
+60,
+0.94,
+1.0
+],
+"riacq_2s": [
+60,
+60,
+0.94,
+1.0
+],
+"riacq_cam_2s": [
+56,
+60,
+0.841,
+0.974
+],
+"libero_bersaglio_passaggi": [
+0,
+60,
+0.0,
+0.06
+],
+"libero_frammento_passaggi": [
+0,
+60,
+0.0,
+0.06
+],
+"assoc_non_dichiarate_passaggi": [
+0,
+60,
+0.0,
+0.06
+],
+"assoc_dubbie_dichiarate_passaggi": [
+25,
+60,
+0.301,
+0.543
+],
+"evento_dichiarato": [
+60,
+60,
+0.94,
+1.0
+],
+"falsi_eventi": [
+0,
+60,
+0.0,
+0.06
+],
+"ritardo_evento_s_max": 0.0,
+"volume_campioni": [
+42950,
+42950
+],
+"volume_passaggi_tutti_dentro": [
+60,
+60,
+0.94,
+1.0
+],
+"intersecano": 54,
+"intersecano_con_avviso_prima": 54,
+"margine_avviso_s_min": 0.40000000000000036,
+"camera_affidabile_in_saturazione_cicli": 0,
+"cicli_fuori_regione_tot": 0
+},
+"F7c/att": {
+"continuita": [
+200,
+200,
+0.981,
+1.0
+],
+"identita": [
+200,
+200,
+0.981,
+1.0
+],
+"riacq_2s": null,
+"riacq_cam_2s": null,
+"libero_bersaglio_passaggi": [
+0,
+200,
+0.0,
+0.019
+],
+"libero_frammento_passaggi": [
+0,
+200,
+0.0,
+0.019
+],
+"assoc_non_dichiarate_passaggi": [
+0,
+200,
+0.0,
+0.019
+],
+"assoc_dubbie_dichiarate_passaggi": [
+0,
+200,
+0.0,
+0.019
+],
+"evento_dichiarato": [
+0,
+200,
+0.0,
+0.019
+],
+"falsi_eventi": [
+0,
+200,
+0.0,
+0.019
+],
+"ritardo_evento_s_max": null,
+"volume_campioni": [
+0,
+0
+],
+"volume_passaggi_tutti_dentro": [
+0,
+200,
+0.0,
+0.019
+],
+"intersecano": 0,
+"intersecano_con_avviso_prima": 0,
+"margine_avviso_s_min": null,
+"camera_affidabile_in_saturazione_cicli": 0,
+"cicli_fuori_regione_tot": 0
+},
+"F7c/sda": {
+"continuita": [
+200,
+200,
+0.981,
+1.0
+],
+"identita": [
+200,
+200,
+0.981,
+1.0
+],
+"riacq_2s": null,
+"riacq_cam_2s": null,
+"libero_bersaglio_passaggi": [
+0,
+200,
+0.0,
+0.019
+],
+"libero_frammento_passaggi": [
+0,
+200,
+0.0,
+0.019
+],
+"assoc_non_dichiarate_passaggi": [
+0,
+200,
+0.0,
+0.019
+],
+"assoc_dubbie_dichiarate_passaggi": [
+0,
+200,
+0.0,
+0.019
+],
+"evento_dichiarato": [
+0,
+200,
+0.0,
+0.019
+],
+"falsi_eventi": [
+0,
+200,
+0.0,
+0.019
+],
+"ritardo_evento_s_max": null,
+"volume_campioni": [
+0,
+0
+],
+"volume_passaggi_tutti_dentro": [
+0,
+200,
+0.0,
+0.019
+],
+"intersecano": 0,
+"intersecano_con_avviso_prima": 0,
+"margine_avviso_s_min": null,
+"camera_affidabile_in_saturazione_cicli": 0,
+"cicli_fuori_regione_tot": 0
+}
+}

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f20-chiusura/05-scorta/scorta_f7.py", line 730, in <module>
+    main()
+    ~~~~^^
+  File "/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f20-chiusura/05-scorta/scorta_f7.py", line 689, in main
+    with open(os.path.join(QUI, "passaggi_%s.jsonl" % fase), "x", encoding="utf-8") as f:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileExistsError: [Errno 17] File exists: '/home/fede/Scrivania/ed/GitHub/Movi-Hackthon/.sciame/20261114-1301-percezione-challenge/f20-chiusura/05-scorta/passaggi_sviluppo.jsonl'

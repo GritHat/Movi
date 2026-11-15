@@ -252,3 +252,7 @@ L'utente, testualmente: «nello scenario di collisione veloce puoi anche conside
 Il lavoro va in `f20-chiusura/05-scorta/SCORTA.md`. F7 entra nel verdetto finale, nel documento tecnico, nella proposta e nel video come parte del caso centrale, con le stesse regole d'onestà. Solo osservazione e avviso: «seguire» vuol dire mantenere la traccia, non inseguire né intercettare.
 
 **Addendum 16 (circa 05:58).** L'utente vuole lo scenario F7 «scorta» nel video, perché «particolarmente di interesse e convincente». La scena va subito dopo il volo ad alta velocità principale e subito prima della sezione sul rullaggio e sugli altri usi.
+
+**Addendum 17 (06:10).** L'utente: «Il video non deve in nessun caso superare i 176 secondi totali». Vincolo assoluto: durata fra 168 e 175 s, mai oltre 176,0 s (ffprobe).
+
+**Nota del coordinatore (F7, 06:16).** Il rapporto è in `f20-chiusura/05-scorta/SCORTA.md`. I registri validi sono **solo** `prototipo/uscite/video_volo/registro_F7_*_v2.jsonl`, elencati in `INDICE_F7_v2.md`. Quelli senza `_v2` sono la prima stesura, violano la regola 5 del validatore e non si usano.

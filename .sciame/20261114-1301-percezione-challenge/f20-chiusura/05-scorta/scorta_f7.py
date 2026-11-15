@@ -34,6 +34,7 @@ T_FINE = 24.0
 T_EV = 6.0
 K99 = math.sqrt(11.3449)     # chi2_3 0,99
 K90 = math.sqrt(6.2514)      # chi2_3 0,90
+K9999 = math.sqrt(21.108)    # chi2_3 0,9999
 GATE = 16.27                 # chi2_3 0,999
 PFA_LN = math.log(1e-6)
 
@@ -57,7 +58,7 @@ PORTATORE = {"v_m_s": [25, 35], "a_max_m_s2": 4.0, "T_r_s": 0.25, "gdl": 6, "olo
              "sensore_in_moto": True, "nota": "profilo deterministico (schema f14 profili_portatore.json), valori I"}
 DETRITI = {"n": 30, "dv_sim": 50.0, "dv_decl": 80.0, "vt": [5.0, 30.0], "rcs": [1e-4, 1e-2], "v_mezzi": [30.0, 40.0],
            "nota": "dv_sim 50 m/s nel simulatore; dv_decl 80 m/s nel volume dichiarato (margine dichiarato, I)"}
-Q_TR = 40.0          # densita' del rumore d'accelerazione del tracciatore (m^2/s^3), I
+Q_TR = 80.0          # densita' del rumore d'accelerazione del tracciatore (m^2/s^3), I
 A_MAX_INV = 10.0     # inviluppo del bersaglio: |a| <= 10 m/s^2 (I; la virata simulata e' 8)
 GPORTA = 30.0        # porta per C(tau)
 VT_MAX_DECL = 40.0   # velocita' limite massima dichiarata dei frammenti (sim: <= 30), I
@@ -384,7 +385,7 @@ class Traccia:
         tau = max(0.0, t - self.t_vista)
         dist = 0.0 if pc is None else float(np.linalg.norm(self.x[:3] - pc))
         m_ins = 3 * (INS["s_p0"] + INS["s_b"] * t + INS["s_rw"] * math.sqrt(t)) + dist * 3 * (INS["s_att0"] + INS["s_om"] * t)
-        r99 = K99 * math.sqrt(np.trace(self.P[:3, :3]) / 3) + m_ins
+        r99 = K9999 * math.sqrt(np.trace(self.P[:3, :3]) / 3) + m_ins     # regione dichiarata al 99,99 % (dopo lo sviluppo: al 99 % mancava 1-2 cicli per passaggio)
         if tau <= 0.3:
             return r99, tau
         dv = 3 * math.sqrt(np.trace(self.P[3:, 3:]) / 3)
@@ -463,6 +464,8 @@ def passaggio(var, cfg, idx, base, registro=None):
             if M:
                 C = np.full((len(tracce), M), 1e6)
                 for a, tr in enumerate(tracce):
+                    if tr.ruolo == "bersaglio" and t - tr.t_vista > 1.0:
+                        continue      # bersaglio perso da > 1 s: niente aggiornamento da una misura sola (si riacquisisce da una traccia confermata)
                     for b, (z, R, vr, k, u) in enumerate(mis):
                         d2 = tr.d2(z, R, vr, u, pce, vce, rc["s_d"], True)
                         if d2 <= GATE + (8.0 if tr.colpi >= 3 else 0):
@@ -499,6 +502,23 @@ def passaggio(var, cfg, idx, base, registro=None):
                 if not tr.confermata and tr.colpi >= 3 and len([s for s in tr.storia if s >= t - 5 * rc["periodo"] - 1e-9]) >= 3:
                     tr.confermata = True
             tracce = [tr for tr in tracce if tr.ruolo == "bersaglio" or (t - tr.t_vista) < (3.0 if tr.confermata else 1.0)]
+            # riacquisizione presunta: il bersaglio non aggiornato da > 0,5 s; una traccia confermata nata dopo la
+            # perdita, fuori dal volume dei detriti, dentro l'insieme di presenza del bersaglio -> ne prende lo stato
+            # (identita' «presunta»; dichiarato nel registro). Aggiunta dopo lo sviluppo (vira/att idx 4 e 8).
+            if t - tb.t_vista > 0.5:
+                rB_, _ = tb.regione(t, W["Pc"][i])
+                tauB_ = t - tb.t_vista
+                svB_ = 3 * math.sqrt(np.trace(tb.P[3:, 3:]) / 3) + A_MAX_INV * tauB_
+                cand = [tr for tr in tracce if tr is not tb and tr.confermata and not tr.nel_volume and tr.colpi >= 5
+                        and np.linalg.norm(tr.x[3:] - tb.x[3:]) <= svB_
+                        and tr.storia[0] >= tb.t_vista - 0.5 and np.linalg.norm(tr.x[:3] - tb.x[:3]) <= rB_
+                        and not (ev_decl is not None and in_volume(ev_decl, tr.x[:3], t))]
+                if cand:
+                    c_ = min(cand, key=lambda tr: np.linalg.norm(tr.x[:3] - tb.x[:3]))
+                    tb.x, tb.P, tb.t_vista, tb.r_ult = c_.x.copy(), c_.P.copy(), c_.t_vista, c_.r_ult
+                    tb.riacquisizioni = getattr(tb, "riacquisizioni", 0) + 1
+                    tracce = [tr for tr in tracce if tr is not c_]
+                    res["riacq_presunte"] = res.get("riacq_presunte", 0) + 1
         # ---- evento: grappolo di >= 5 misure nuove entro 40 m in 1 s E (saturazione delle camere O tracce che convergono)
         nuove_recenti = [(s, z) for (s, z) in nuove_recenti if s >= t - 1.0]
         sat = saturata(W, t)
@@ -635,7 +655,7 @@ def _riga(W, i, t, tracce, tb, ev, stato_cam, avv, rc):
                        "insieme_presenza_r_m": round(r, 1)})
     evo = None
     if ev is not None:
-        evo = {"tipo": "collisione_o_esplosione_vicina", "t_dichiarato": ev["t_dich"], "parola": "volume dei detriti dichiarato; frammenti non verificati uno per uno: mai libero dentro",
+        evo = {"tipo": "collisione_o_esplosione_vicina", "t_dichiarato": ev["t_dich"], "parola": "volume dei detriti dichiarato, impronta non verificata: mai libero dentro",
                "volume": {"apice": [round(float(x), 1) for x in ev["p0"]], "vc": [round(float(x), 1) for x in ev["vc"]], "dv_m_s": ev["dv"],
                           "r0_m": round(ev["r0"], 1), "t0": round(ev["t0"], 2), "raggio_m": round(raggio_volume(ev, t), 1)},
                "impronta": {"ispezionati": [0, 1]}}
@@ -663,7 +683,7 @@ def main():
     if sys.argv[1] == "--registro":
         d = sys.argv[2]
         for var in VARIANTI:
-            passaggio(var, "sda", 0, 20261121, registro=os.path.join(d, "registro_F7_%s.jsonl" % var))
+            passaggio(var, "sda", 0, 20261121, registro=os.path.join(d, "registro_F7_%s%s.jsonl" % (var, os.environ.get("F7_REG_SUFFISSO", ""))))
         return
     fase = sys.argv[1]
     proc = int(sys.argv[2]) if len(sys.argv) > 2 else 6
@@ -672,7 +692,7 @@ def main():
     from multiprocessing import Pool
     with Pool(proc) as p:
         out = p.map(_lavoro, lav, chunksize=4)
-    with open(os.path.join(QUI, "passaggi_%s.jsonl" % fase), "x", encoding="utf-8") as f:
+    with open(os.path.join(QUI, "passaggi_%s%s.jsonl" % (fase, os.environ.get("F7_SUFFISSO", ""))), "x", encoding="utf-8") as f:
         for r in out:
             f.write(json.dumps(r, ensure_ascii=False, default=float) + "\n")
     print(json.dumps(riassumi(out), ensure_ascii=False, indent=0))
